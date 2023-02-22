@@ -60,7 +60,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Immutable. The resource name of the seasonality adjustment.
@@ -110,7 +111,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SEASONALITY_ADJUSTMENT_ID_FIELD_NUMBER = 2;
-  private long seasonalityAdjustmentId_;
+  private long seasonalityAdjustmentId_ = 0L;
   /**
    * <pre>
    * Output only. The ID of the seasonality adjustment.
@@ -125,7 +126,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SCOPE_FIELD_NUMBER = 3;
-  private int scope_;
+  private int scope_ = 0;
   /**
    * <pre>
    * The scope of the seasonality adjustment.
@@ -146,13 +147,12 @@ private static final long serialVersionUID = 0L;
    * @return The scope.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.SeasonalityEventScopeEnum.SeasonalityEventScope getScope() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.SeasonalityEventScopeEnum.SeasonalityEventScope result = com.google.ads.googleads.v12.enums.SeasonalityEventScopeEnum.SeasonalityEventScope.valueOf(scope_);
+    com.google.ads.googleads.v12.enums.SeasonalityEventScopeEnum.SeasonalityEventScope result = com.google.ads.googleads.v12.enums.SeasonalityEventScopeEnum.SeasonalityEventScope.forNumber(scope_);
     return result == null ? com.google.ads.googleads.v12.enums.SeasonalityEventScopeEnum.SeasonalityEventScope.UNRECOGNIZED : result;
   }
 
   public static final int STATUS_FIELD_NUMBER = 4;
-  private int status_;
+  private int status_ = 0;
   /**
    * <pre>
    * Output only. The status of the seasonality adjustment.
@@ -173,17 +173,17 @@ private static final long serialVersionUID = 0L;
    * @return The status.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.SeasonalityEventStatusEnum.SeasonalityEventStatus getStatus() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.SeasonalityEventStatusEnum.SeasonalityEventStatus result = com.google.ads.googleads.v12.enums.SeasonalityEventStatusEnum.SeasonalityEventStatus.valueOf(status_);
+    com.google.ads.googleads.v12.enums.SeasonalityEventStatusEnum.SeasonalityEventStatus result = com.google.ads.googleads.v12.enums.SeasonalityEventStatusEnum.SeasonalityEventStatus.forNumber(status_);
     return result == null ? com.google.ads.googleads.v12.enums.SeasonalityEventStatusEnum.SeasonalityEventStatus.UNRECOGNIZED : result;
   }
 
   public static final int START_DATE_TIME_FIELD_NUMBER = 5;
-  private volatile java.lang.Object startDateTime_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object startDateTime_ = "";
   /**
    * <pre>
-   * Required. The inclusive start time of the seasonality adjustment in yyyy-MM-dd
-   * HH:mm:ss format.
+   * Required. The inclusive start time of the seasonality adjustment in
+   * yyyy-MM-dd HH:mm:ss format.
    * A seasonality adjustment is forward looking and should be used for events
    * that start and end in the future.
    * </pre>
@@ -206,8 +206,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. The inclusive start time of the seasonality adjustment in yyyy-MM-dd
-   * HH:mm:ss format.
+   * Required. The inclusive start time of the seasonality adjustment in
+   * yyyy-MM-dd HH:mm:ss format.
    * A seasonality adjustment is forward looking and should be used for events
    * that start and end in the future.
    * </pre>
@@ -231,11 +231,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int END_DATE_TIME_FIELD_NUMBER = 6;
-  private volatile java.lang.Object endDateTime_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object endDateTime_ = "";
   /**
    * <pre>
-   * Required. The exclusive end time of the seasonality adjustment in yyyy-MM-dd HH:mm:ss
-   * format.
+   * Required. The exclusive end time of the seasonality adjustment in
+   * yyyy-MM-dd HH:mm:ss format.
    * The length of [start_date_time, end_date_time) interval must be
    * within (0, 14 days].
    * </pre>
@@ -258,8 +259,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. The exclusive end time of the seasonality adjustment in yyyy-MM-dd HH:mm:ss
-   * format.
+   * Required. The exclusive end time of the seasonality adjustment in
+   * yyyy-MM-dd HH:mm:ss format.
    * The length of [start_date_time, end_date_time) interval must be
    * within (0, 14 days].
    * </pre>
@@ -283,7 +284,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 7;
-  private volatile java.lang.Object name_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
   /**
    * <pre>
    * The name of the seasonality adjustment. The name can be at most 255
@@ -331,7 +333,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTION_FIELD_NUMBER = 8;
-  private volatile java.lang.Object description_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object description_ = "";
   /**
    * <pre>
    * The description of the seasonality adjustment. The description can be at
@@ -379,14 +382,14 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DEVICES_FIELD_NUMBER = 9;
+  @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> devices_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
       java.lang.Integer, com.google.ads.googleads.v12.enums.DeviceEnum.Device> devices_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, com.google.ads.googleads.v12.enums.DeviceEnum.Device>() {
             public com.google.ads.googleads.v12.enums.DeviceEnum.Device convert(java.lang.Integer from) {
-              @SuppressWarnings("deprecation")
-              com.google.ads.googleads.v12.enums.DeviceEnum.Device result = com.google.ads.googleads.v12.enums.DeviceEnum.Device.valueOf(from);
+              com.google.ads.googleads.v12.enums.DeviceEnum.Device result = com.google.ads.googleads.v12.enums.DeviceEnum.Device.forNumber(from);
               return result == null ? com.google.ads.googleads.v12.enums.DeviceEnum.Device.UNRECOGNIZED : result;
             }
           };
@@ -467,7 +470,7 @@ private static final long serialVersionUID = 0L;
   private int devicesMemoizedSerializedSize;
 
   public static final int CONVERSION_RATE_MODIFIER_FIELD_NUMBER = 10;
-  private double conversionRateModifier_;
+  private double conversionRateModifier_ = 0D;
   /**
    * <pre>
    * Conversion rate modifier estimated based on expected conversion rate
@@ -484,6 +487,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CAMPAIGNS_FIELD_NUMBER = 11;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList campaigns_;
   /**
    * <pre>
@@ -551,14 +555,14 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ADVERTISING_CHANNEL_TYPES_FIELD_NUMBER = 12;
+  @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> advertisingChannelTypes_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
       java.lang.Integer, com.google.ads.googleads.v12.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType> advertisingChannelTypes_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, com.google.ads.googleads.v12.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType>() {
             public com.google.ads.googleads.v12.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType convert(java.lang.Integer from) {
-              @SuppressWarnings("deprecation")
-              com.google.ads.googleads.v12.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType result = com.google.ads.googleads.v12.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType.valueOf(from);
+              com.google.ads.googleads.v12.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType result = com.google.ads.googleads.v12.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType.forNumber(from);
               return result == null ? com.google.ads.googleads.v12.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType.UNRECOGNIZED : result;
             }
           };
@@ -997,30 +1001,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       seasonalityAdjustmentId_ = 0L;
-
       scope_ = 0;
-
       status_ = 0;
-
       startDateTime_ = "";
-
       endDateTime_ = "";
-
       name_ = "";
-
       description_ = "";
-
       devices_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000100);
       conversionRateModifier_ = 0D;
-
       campaigns_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000400);
       advertisingChannelTypes_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000800);
       return this;
     }
 
@@ -1047,33 +1043,59 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.BiddingSeasonalityAdjustment buildPartial() {
       com.google.ads.googleads.v12.resources.BiddingSeasonalityAdjustment result = new com.google.ads.googleads.v12.resources.BiddingSeasonalityAdjustment(this);
-      int from_bitField0_ = bitField0_;
-      result.resourceName_ = resourceName_;
-      result.seasonalityAdjustmentId_ = seasonalityAdjustmentId_;
-      result.scope_ = scope_;
-      result.status_ = status_;
-      result.startDateTime_ = startDateTime_;
-      result.endDateTime_ = endDateTime_;
-      result.name_ = name_;
-      result.description_ = description_;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        devices_ = java.util.Collections.unmodifiableList(devices_);
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.devices_ = devices_;
-      result.conversionRateModifier_ = conversionRateModifier_;
-      if (((bitField0_ & 0x00000002) != 0)) {
-        campaigns_ = campaigns_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000002);
-      }
-      result.campaigns_ = campaigns_;
-      if (((bitField0_ & 0x00000004) != 0)) {
-        advertisingChannelTypes_ = java.util.Collections.unmodifiableList(advertisingChannelTypes_);
-        bitField0_ = (bitField0_ & ~0x00000004);
-      }
-      result.advertisingChannelTypes_ = advertisingChannelTypes_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.resources.BiddingSeasonalityAdjustment result) {
+      if (((bitField0_ & 0x00000100) != 0)) {
+        devices_ = java.util.Collections.unmodifiableList(devices_);
+        bitField0_ = (bitField0_ & ~0x00000100);
+      }
+      result.devices_ = devices_;
+      if (((bitField0_ & 0x00000400) != 0)) {
+        campaigns_ = campaigns_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000400);
+      }
+      result.campaigns_ = campaigns_;
+      if (((bitField0_ & 0x00000800) != 0)) {
+        advertisingChannelTypes_ = java.util.Collections.unmodifiableList(advertisingChannelTypes_);
+        bitField0_ = (bitField0_ & ~0x00000800);
+      }
+      result.advertisingChannelTypes_ = advertisingChannelTypes_;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.resources.BiddingSeasonalityAdjustment result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.seasonalityAdjustmentId_ = seasonalityAdjustmentId_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.scope_ = scope_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.status_ = status_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.startDateTime_ = startDateTime_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.endDateTime_ = endDateTime_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.name_ = name_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.description_ = description_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.conversionRateModifier_ = conversionRateModifier_;
+      }
     }
 
     @java.lang.Override
@@ -1122,6 +1144,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.resources.BiddingSeasonalityAdjustment.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.getSeasonalityAdjustmentId() != 0L) {
@@ -1135,24 +1158,28 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getStartDateTime().isEmpty()) {
         startDateTime_ = other.startDateTime_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (!other.getEndDateTime().isEmpty()) {
         endDateTime_ = other.endDateTime_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (!other.getDescription().isEmpty()) {
         description_ = other.description_;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       if (!other.devices_.isEmpty()) {
         if (devices_.isEmpty()) {
           devices_ = other.devices_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000100);
         } else {
           ensureDevicesIsMutable();
           devices_.addAll(other.devices_);
@@ -1165,7 +1192,7 @@ private static final long serialVersionUID = 0L;
       if (!other.campaigns_.isEmpty()) {
         if (campaigns_.isEmpty()) {
           campaigns_ = other.campaigns_;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000400);
         } else {
           ensureCampaignsIsMutable();
           campaigns_.addAll(other.campaigns_);
@@ -1175,7 +1202,7 @@ private static final long serialVersionUID = 0L;
       if (!other.advertisingChannelTypes_.isEmpty()) {
         if (advertisingChannelTypes_.isEmpty()) {
           advertisingChannelTypes_ = other.advertisingChannelTypes_;
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000800);
         } else {
           ensureAdvertisingChannelTypesIsMutable();
           advertisingChannelTypes_.addAll(other.advertisingChannelTypes_);
@@ -1210,42 +1237,42 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 16: {
               seasonalityAdjustmentId_ = input.readInt64();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             case 24: {
               scope_ = input.readEnum();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 24
             case 32: {
               status_ = input.readEnum();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 32
             case 42: {
               startDateTime_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 42
             case 50: {
               endDateTime_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000020;
               break;
             } // case 50
             case 58: {
               name_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000040;
               break;
             } // case 58
             case 66: {
               description_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000080;
               break;
             } // case 66
             case 72: {
@@ -1267,7 +1294,7 @@ private static final long serialVersionUID = 0L;
             } // case 74
             case 81: {
               conversionRateModifier_ = input.readDouble();
-
+              bitField0_ |= 0x00000200;
               break;
             } // case 81
             case 90: {
@@ -1369,11 +1396,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1388,8 +1413,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1406,12 +1431,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1441,6 +1464,7 @@ private static final long serialVersionUID = 0L;
     public Builder setSeasonalityAdjustmentId(long value) {
       
       seasonalityAdjustmentId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1453,7 +1477,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSeasonalityAdjustmentId() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       seasonalityAdjustmentId_ = 0L;
       onChanged();
       return this;
@@ -1481,8 +1505,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setScopeValue(int value) {
-      
       scope_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1496,8 +1520,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.SeasonalityEventScopeEnum.SeasonalityEventScope getScope() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.SeasonalityEventScopeEnum.SeasonalityEventScope result = com.google.ads.googleads.v12.enums.SeasonalityEventScopeEnum.SeasonalityEventScope.valueOf(scope_);
+      com.google.ads.googleads.v12.enums.SeasonalityEventScopeEnum.SeasonalityEventScope result = com.google.ads.googleads.v12.enums.SeasonalityEventScopeEnum.SeasonalityEventScope.forNumber(scope_);
       return result == null ? com.google.ads.googleads.v12.enums.SeasonalityEventScopeEnum.SeasonalityEventScope.UNRECOGNIZED : result;
     }
     /**
@@ -1513,7 +1536,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       scope_ = value.getNumber();
       onChanged();
       return this;
@@ -1527,7 +1550,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearScope() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       scope_ = 0;
       onChanged();
       return this;
@@ -1555,8 +1578,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
-      
       status_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1570,8 +1593,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.SeasonalityEventStatusEnum.SeasonalityEventStatus getStatus() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.SeasonalityEventStatusEnum.SeasonalityEventStatus result = com.google.ads.googleads.v12.enums.SeasonalityEventStatusEnum.SeasonalityEventStatus.valueOf(status_);
+      com.google.ads.googleads.v12.enums.SeasonalityEventStatusEnum.SeasonalityEventStatus result = com.google.ads.googleads.v12.enums.SeasonalityEventStatusEnum.SeasonalityEventStatus.forNumber(status_);
       return result == null ? com.google.ads.googleads.v12.enums.SeasonalityEventStatusEnum.SeasonalityEventStatus.UNRECOGNIZED : result;
     }
     /**
@@ -1587,7 +1609,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000008;
       status_ = value.getNumber();
       onChanged();
       return this;
@@ -1601,7 +1623,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       status_ = 0;
       onChanged();
       return this;
@@ -1610,8 +1632,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object startDateTime_ = "";
     /**
      * <pre>
-     * Required. The inclusive start time of the seasonality adjustment in yyyy-MM-dd
-     * HH:mm:ss format.
+     * Required. The inclusive start time of the seasonality adjustment in
+     * yyyy-MM-dd HH:mm:ss format.
      * A seasonality adjustment is forward looking and should be used for events
      * that start and end in the future.
      * </pre>
@@ -1633,8 +1655,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The inclusive start time of the seasonality adjustment in yyyy-MM-dd
-     * HH:mm:ss format.
+     * Required. The inclusive start time of the seasonality adjustment in
+     * yyyy-MM-dd HH:mm:ss format.
      * A seasonality adjustment is forward looking and should be used for events
      * that start and end in the future.
      * </pre>
@@ -1657,8 +1679,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The inclusive start time of the seasonality adjustment in yyyy-MM-dd
-     * HH:mm:ss format.
+     * Required. The inclusive start time of the seasonality adjustment in
+     * yyyy-MM-dd HH:mm:ss format.
      * A seasonality adjustment is forward looking and should be used for events
      * that start and end in the future.
      * </pre>
@@ -1669,18 +1691,16 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStartDateTime(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       startDateTime_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. The inclusive start time of the seasonality adjustment in yyyy-MM-dd
-     * HH:mm:ss format.
+     * Required. The inclusive start time of the seasonality adjustment in
+     * yyyy-MM-dd HH:mm:ss format.
      * A seasonality adjustment is forward looking and should be used for events
      * that start and end in the future.
      * </pre>
@@ -1689,15 +1709,15 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStartDateTime() {
-      
       startDateTime_ = getDefaultInstance().getStartDateTime();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. The inclusive start time of the seasonality adjustment in yyyy-MM-dd
-     * HH:mm:ss format.
+     * Required. The inclusive start time of the seasonality adjustment in
+     * yyyy-MM-dd HH:mm:ss format.
      * A seasonality adjustment is forward looking and should be used for events
      * that start and end in the future.
      * </pre>
@@ -1708,12 +1728,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStartDateTimeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       startDateTime_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1721,8 +1739,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object endDateTime_ = "";
     /**
      * <pre>
-     * Required. The exclusive end time of the seasonality adjustment in yyyy-MM-dd HH:mm:ss
-     * format.
+     * Required. The exclusive end time of the seasonality adjustment in
+     * yyyy-MM-dd HH:mm:ss format.
      * The length of [start_date_time, end_date_time) interval must be
      * within (0, 14 days].
      * </pre>
@@ -1744,8 +1762,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The exclusive end time of the seasonality adjustment in yyyy-MM-dd HH:mm:ss
-     * format.
+     * Required. The exclusive end time of the seasonality adjustment in
+     * yyyy-MM-dd HH:mm:ss format.
      * The length of [start_date_time, end_date_time) interval must be
      * within (0, 14 days].
      * </pre>
@@ -1768,8 +1786,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The exclusive end time of the seasonality adjustment in yyyy-MM-dd HH:mm:ss
-     * format.
+     * Required. The exclusive end time of the seasonality adjustment in
+     * yyyy-MM-dd HH:mm:ss format.
      * The length of [start_date_time, end_date_time) interval must be
      * within (0, 14 days].
      * </pre>
@@ -1780,18 +1798,16 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEndDateTime(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       endDateTime_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. The exclusive end time of the seasonality adjustment in yyyy-MM-dd HH:mm:ss
-     * format.
+     * Required. The exclusive end time of the seasonality adjustment in
+     * yyyy-MM-dd HH:mm:ss format.
      * The length of [start_date_time, end_date_time) interval must be
      * within (0, 14 days].
      * </pre>
@@ -1800,15 +1816,15 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEndDateTime() {
-      
       endDateTime_ = getDefaultInstance().getEndDateTime();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. The exclusive end time of the seasonality adjustment in yyyy-MM-dd HH:mm:ss
-     * format.
+     * Required. The exclusive end time of the seasonality adjustment in
+     * yyyy-MM-dd HH:mm:ss format.
      * The length of [start_date_time, end_date_time) interval must be
      * within (0, 14 days].
      * </pre>
@@ -1819,12 +1835,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEndDateTimeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       endDateTime_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1885,11 +1899,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       name_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1903,8 +1915,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      
       name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -1920,12 +1932,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1986,11 +1996,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       description_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2004,8 +2012,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
-      
       description_ = getDefaultInstance().getDescription();
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -2021,12 +2029,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescriptionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       description_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2034,9 +2040,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> devices_ =
       java.util.Collections.emptyList();
     private void ensureDevicesIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000100) != 0)) {
         devices_ = new java.util.ArrayList<java.lang.Integer>(devices_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000100;
       }
     }
     /**
@@ -2154,7 +2160,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearDevices() {
       devices_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000100);
       onChanged();
       return this;
     }
@@ -2272,6 +2278,7 @@ private static final long serialVersionUID = 0L;
     public Builder setConversionRateModifier(double value) {
       
       conversionRateModifier_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2286,7 +2293,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConversionRateModifier() {
-      
+      bitField0_ = (bitField0_ & ~0x00000200);
       conversionRateModifier_ = 0D;
       onChanged();
       return this;
@@ -2294,9 +2301,9 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.LazyStringList campaigns_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureCampaignsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000400) != 0)) {
         campaigns_ = new com.google.protobuf.LazyStringArrayList(campaigns_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000400;
        }
     }
     /**
@@ -2379,10 +2386,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaigns(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureCampaignsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureCampaignsIsMutable();
       campaigns_.set(index, value);
       onChanged();
       return this;
@@ -2402,10 +2407,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addCampaigns(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureCampaignsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureCampaignsIsMutable();
       campaigns_.add(value);
       onChanged();
       return this;
@@ -2445,7 +2448,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearCampaigns() {
       campaigns_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000400);
       onChanged();
       return this;
     }
@@ -2464,10 +2467,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addCampaignsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureCampaignsIsMutable();
       campaigns_.add(value);
       onChanged();
@@ -2477,9 +2478,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> advertisingChannelTypes_ =
       java.util.Collections.emptyList();
     private void ensureAdvertisingChannelTypesIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000800) != 0)) {
         advertisingChannelTypes_ = new java.util.ArrayList<java.lang.Integer>(advertisingChannelTypes_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000800;
       }
     }
     /**
@@ -2618,7 +2619,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearAdvertisingChannelTypes() {
       advertisingChannelTypes_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000800);
       onChanged();
       return this;
     }

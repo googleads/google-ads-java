@@ -9,8 +9,8 @@ public interface MobileAppAssetOrBuilder extends
 
   /**
    * <pre>
-   * Required. A string that uniquely identifies a mobile application. It should just
-   * contain the platform native id, like "com.android.ebay" for Android or
+   * Required. A string that uniquely identifies a mobile application. It should
+   * just contain the platform native id, like "com.android.ebay" for Android or
    * "12345689" for iOS.
    * </pre>
    *
@@ -20,8 +20,8 @@ public interface MobileAppAssetOrBuilder extends
   java.lang.String getAppId();
   /**
    * <pre>
-   * Required. A string that uniquely identifies a mobile application. It should just
-   * contain the platform native id, like "com.android.ebay" for Android or
+   * Required. A string that uniquely identifies a mobile application. It should
+   * just contain the platform native id, like "com.android.ebay" for Android or
    * "12345689" for iOS.
    * </pre>
    *

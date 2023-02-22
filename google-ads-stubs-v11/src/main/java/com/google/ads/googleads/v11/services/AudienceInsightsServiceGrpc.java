@@ -5,7 +5,8 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  * <pre>
  * Audience Insights Service helps users find information about groups of
- * people and how they can be reached with Google Ads.
+ * people and how they can be reached with Google Ads. Accessible to
+ * allowlisted customers only.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -159,7 +160,8 @@ public final class AudienceInsightsServiceGrpc {
   /**
    * <pre>
    * Audience Insights Service helps users find information about groups of
-   * people and how they can be reached with Google Ads.
+   * people and how they can be reached with Google Ads. Accessible to
+   * allowlisted customers only.
    * </pre>
    */
   public static abstract class AudienceInsightsServiceImplBase implements io.grpc.BindableService {
@@ -254,7 +256,8 @@ public final class AudienceInsightsServiceGrpc {
   /**
    * <pre>
    * Audience Insights Service helps users find information about groups of
-   * people and how they can be reached with Google Ads.
+   * people and how they can be reached with Google Ads. Accessible to
+   * allowlisted customers only.
    * </pre>
    */
   public static final class AudienceInsightsServiceStub extends io.grpc.stub.AbstractAsyncStub<AudienceInsightsServiceStub> {
@@ -336,7 +339,8 @@ public final class AudienceInsightsServiceGrpc {
   /**
    * <pre>
    * Audience Insights Service helps users find information about groups of
-   * people and how they can be reached with Google Ads.
+   * people and how they can be reached with Google Ads. Accessible to
+   * allowlisted customers only.
    * </pre>
    */
   public static final class AudienceInsightsServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<AudienceInsightsServiceBlockingStub> {
@@ -415,7 +419,8 @@ public final class AudienceInsightsServiceGrpc {
   /**
    * <pre>
    * Audience Insights Service helps users find information about groups of
-   * people and how they can be reached with Google Ads.
+   * people and how they can be reached with Google Ads. Accessible to
+   * allowlisted customers only.
    * </pre>
    */
   public static final class AudienceInsightsServiceFutureStub extends io.grpc.stub.AbstractFutureStub<AudienceInsightsServiceFutureStub> {

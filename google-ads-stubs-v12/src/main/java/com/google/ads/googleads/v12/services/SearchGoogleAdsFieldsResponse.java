@@ -5,7 +5,8 @@ package com.google.ads.googleads.v12.services;
 
 /**
  * <pre>
- * Response message for [GoogleAdsFieldService.SearchGoogleAdsFields][google.ads.googleads.v12.services.GoogleAdsFieldService.SearchGoogleAdsFields].
+ * Response message for
+ * [GoogleAdsFieldService.SearchGoogleAdsFields][google.ads.googleads.v12.services.GoogleAdsFieldService.SearchGoogleAdsFields].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v12.services.SearchGoogleAdsFieldsResponse}
@@ -50,6 +51,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESULTS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.resources.GoogleAdsField> results_;
   /**
    * <pre>
@@ -110,7 +112,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
-  private volatile java.lang.Object nextPageToken_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object nextPageToken_ = "";
   /**
    * <pre>
    * Pagination token used to retrieve the next page of results. Pass the
@@ -160,7 +163,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTAL_RESULTS_COUNT_FIELD_NUMBER = 3;
-  private long totalResultsCount_;
+  private long totalResultsCount_ = 0L;
   /**
    * <pre>
    * Total number of results that match the query ignoring the LIMIT clause.
@@ -355,7 +358,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Response message for [GoogleAdsFieldService.SearchGoogleAdsFields][google.ads.googleads.v12.services.GoogleAdsFieldService.SearchGoogleAdsFields].
+   * Response message for
+   * [GoogleAdsFieldService.SearchGoogleAdsFields][google.ads.googleads.v12.services.GoogleAdsFieldService.SearchGoogleAdsFields].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v12.services.SearchGoogleAdsFieldsResponse}
@@ -390,6 +394,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (resultsBuilder_ == null) {
         results_ = java.util.Collections.emptyList();
       } else {
@@ -398,9 +403,7 @@ private static final long serialVersionUID = 0L;
       }
       bitField0_ = (bitField0_ & ~0x00000001);
       nextPageToken_ = "";
-
       totalResultsCount_ = 0L;
-
       return this;
     }
 
@@ -427,7 +430,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.SearchGoogleAdsFieldsResponse buildPartial() {
       com.google.ads.googleads.v12.services.SearchGoogleAdsFieldsResponse result = new com.google.ads.googleads.v12.services.SearchGoogleAdsFieldsResponse(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.services.SearchGoogleAdsFieldsResponse result) {
       if (resultsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           results_ = java.util.Collections.unmodifiableList(results_);
@@ -437,10 +446,16 @@ private static final long serialVersionUID = 0L;
       } else {
         result.results_ = resultsBuilder_.build();
       }
-      result.nextPageToken_ = nextPageToken_;
-      result.totalResultsCount_ = totalResultsCount_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.SearchGoogleAdsFieldsResponse result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.nextPageToken_ = nextPageToken_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.totalResultsCount_ = totalResultsCount_;
+      }
     }
 
     @java.lang.Override
@@ -515,6 +530,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getNextPageToken().isEmpty()) {
         nextPageToken_ = other.nextPageToken_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.getTotalResultsCount() != 0L) {
@@ -561,12 +577,12 @@ private static final long serialVersionUID = 0L;
             } // case 10
             case 18: {
               nextPageToken_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 24: {
               totalResultsCount_ = input.readInt64();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 24
             default: {
@@ -957,11 +973,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNextPageToken(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       nextPageToken_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -976,8 +990,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearNextPageToken() {
-      
       nextPageToken_ = getDefaultInstance().getNextPageToken();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -994,12 +1008,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNextPageTokenBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       nextPageToken_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1029,6 +1041,7 @@ private static final long serialVersionUID = 0L;
     public Builder setTotalResultsCount(long value) {
       
       totalResultsCount_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1041,7 +1054,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalResultsCount() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       totalResultsCount_ = 0L;
       onChanged();
       return this;

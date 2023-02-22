@@ -62,8 +62,8 @@ public interface DomainCategoryOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Recommended category for the website domain, for example, if you have a
-   * website about electronics, the categories could be "cameras",
+   * Output only. Recommended category for the website domain, for example, if
+   * you have a website about electronics, the categories could be "cameras",
    * "televisions", etc.
    * </pre>
    *
@@ -73,8 +73,8 @@ public interface DomainCategoryOrBuilder extends
   boolean hasCategory();
   /**
    * <pre>
-   * Output only. Recommended category for the website domain, for example, if you have a
-   * website about electronics, the categories could be "cameras",
+   * Output only. Recommended category for the website domain, for example, if
+   * you have a website about electronics, the categories could be "cameras",
    * "televisions", etc.
    * </pre>
    *
@@ -84,8 +84,8 @@ public interface DomainCategoryOrBuilder extends
   java.lang.String getCategory();
   /**
    * <pre>
-   * Output only. Recommended category for the website domain, for example, if you have a
-   * website about electronics, the categories could be "cameras",
+   * Output only. Recommended category for the website domain, for example, if
+   * you have a website about electronics, the categories could be "cameras",
    * "televisions", etc.
    * </pre>
    *
@@ -97,11 +97,11 @@ public interface DomainCategoryOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The language code specifying the language of the website, for example, "en"
-   * for English. The language can be specified in the DynamicSearchAdsSetting
-   * required for dynamic search ads. This is the language of the pages from
-   * your website that you want Google Ads to find, create ads for,
-   * and match searches with.
+   * Output only. The language code specifying the language of the website, for
+   * example, "en" for English. The language can be specified in the
+   * DynamicSearchAdsSetting required for dynamic search ads. This is the
+   * language of the pages from your website that you want Google Ads to find,
+   * create ads for, and match searches with.
    * </pre>
    *
    * <code>optional string language_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -110,11 +110,11 @@ public interface DomainCategoryOrBuilder extends
   boolean hasLanguageCode();
   /**
    * <pre>
-   * Output only. The language code specifying the language of the website, for example, "en"
-   * for English. The language can be specified in the DynamicSearchAdsSetting
-   * required for dynamic search ads. This is the language of the pages from
-   * your website that you want Google Ads to find, create ads for,
-   * and match searches with.
+   * Output only. The language code specifying the language of the website, for
+   * example, "en" for English. The language can be specified in the
+   * DynamicSearchAdsSetting required for dynamic search ads. This is the
+   * language of the pages from your website that you want Google Ads to find,
+   * create ads for, and match searches with.
    * </pre>
    *
    * <code>optional string language_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -123,11 +123,11 @@ public interface DomainCategoryOrBuilder extends
   java.lang.String getLanguageCode();
   /**
    * <pre>
-   * Output only. The language code specifying the language of the website, for example, "en"
-   * for English. The language can be specified in the DynamicSearchAdsSetting
-   * required for dynamic search ads. This is the language of the pages from
-   * your website that you want Google Ads to find, create ads for,
-   * and match searches with.
+   * Output only. The language code specifying the language of the website, for
+   * example, "en" for English. The language can be specified in the
+   * DynamicSearchAdsSetting required for dynamic search ads. This is the
+   * language of the pages from your website that you want Google Ads to find,
+   * create ads for, and match searches with.
    * </pre>
    *
    * <code>optional string language_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -189,8 +189,9 @@ public interface DomainCategoryOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The position of this category in the set of categories. Lower numbers
-   * indicate a better match for the domain. null indicates not recommended.
+   * Output only. The position of this category in the set of categories. Lower
+   * numbers indicate a better match for the domain. null indicates not
+   * recommended.
    * </pre>
    *
    * <code>optional int64 category_rank = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -199,8 +200,9 @@ public interface DomainCategoryOrBuilder extends
   boolean hasCategoryRank();
   /**
    * <pre>
-   * Output only. The position of this category in the set of categories. Lower numbers
-   * indicate a better match for the domain. null indicates not recommended.
+   * Output only. The position of this category in the set of categories. Lower
+   * numbers indicate a better match for the domain. null indicates not
+   * recommended.
    * </pre>
    *
    * <code>optional int64 category_rank = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

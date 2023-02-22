@@ -60,7 +60,10 @@ import javax.annotation.Generated;
  * customerServiceSettingsBuilder
  *     .mutateCustomerSettings()
  *     .setRetrySettings(
- *         customerServiceSettingsBuilder.mutateCustomerSettings().getRetrySettings().toBuilder()
+ *         customerServiceSettingsBuilder
+ *             .mutateCustomerSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
  * CustomerServiceSettings customerServiceSettings = customerServiceSettingsBuilder.build();

@@ -49,7 +49,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int CPV_BID_MICROS_FIELD_NUMBER = 5;
-  private long cpvBidMicros_;
+  private long cpvBidMicros_ = 0L;
   /**
    * <pre>
    * The simulated CPV bid upon which projected metrics are based.
@@ -76,7 +76,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int COST_MICROS_FIELD_NUMBER = 6;
-  private long costMicros_;
+  private long costMicros_ = 0L;
   /**
    * <pre>
    * Projected cost in micros.
@@ -103,7 +103,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int IMPRESSIONS_FIELD_NUMBER = 7;
-  private long impressions_;
+  private long impressions_ = 0L;
   /**
    * <pre>
    * Projected number of impressions.
@@ -130,7 +130,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VIEWS_FIELD_NUMBER = 8;
-  private long views_;
+  private long views_ = 0L;
   /**
    * <pre>
    * Projected number of views.
@@ -405,14 +405,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       cpvBidMicros_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       costMicros_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000002);
       impressions_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000004);
       views_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000008);
       return this;
     }
 
@@ -439,6 +436,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.CpvBidSimulationPoint buildPartial() {
       com.google.ads.googleads.v12.common.CpvBidSimulationPoint result = new com.google.ads.googleads.v12.common.CpvBidSimulationPoint(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.CpvBidSimulationPoint result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -457,9 +460,7 @@ private static final long serialVersionUID = 0L;
         result.views_ = views_;
         to_bitField0_ |= 0x00000008;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -616,8 +617,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCpvBidMicros(long value) {
-      bitField0_ |= 0x00000001;
+      
       cpvBidMicros_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -671,8 +673,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCostMicros(long value) {
-      bitField0_ |= 0x00000002;
+      
       costMicros_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -726,8 +729,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setImpressions(long value) {
-      bitField0_ |= 0x00000004;
+      
       impressions_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -781,8 +785,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setViews(long value) {
-      bitField0_ |= 0x00000008;
+      
       views_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }

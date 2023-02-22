@@ -52,7 +52,8 @@ private static final long serialVersionUID = 0L;
   private com.google.ads.googleads.v12.common.SmartCampaignAdInfo adInfo_;
   /**
    * <pre>
-   * Optional. Ad info includes 3 creative headlines and 2 creative descriptions.
+   * Optional. Ad info includes 3 creative headlines and 2 creative
+   * descriptions.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.SmartCampaignAdInfo ad_info = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -64,7 +65,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. Ad info includes 3 creative headlines and 2 creative descriptions.
+   * Optional. Ad info includes 3 creative headlines and 2 creative
+   * descriptions.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.SmartCampaignAdInfo ad_info = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -76,14 +78,15 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. Ad info includes 3 creative headlines and 2 creative descriptions.
+   * Optional. Ad info includes 3 creative headlines and 2 creative
+   * descriptions.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.SmartCampaignAdInfo ad_info = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.common.SmartCampaignAdInfoOrBuilder getAdInfoOrBuilder() {
-    return getAdInfo();
+    return adInfo_ == null ? com.google.ads.googleads.v12.common.SmartCampaignAdInfo.getDefaultInstance() : adInfo_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -284,10 +287,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (adInfoBuilder_ == null) {
-        adInfo_ = null;
-      } else {
-        adInfo_ = null;
+      bitField0_ = 0;
+      adInfo_ = null;
+      if (adInfoBuilder_ != null) {
+        adInfoBuilder_.dispose();
         adInfoBuilder_ = null;
       }
       return this;
@@ -316,13 +319,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.SuggestSmartCampaignAdResponse buildPartial() {
       com.google.ads.googleads.v12.services.SuggestSmartCampaignAdResponse result = new com.google.ads.googleads.v12.services.SuggestSmartCampaignAdResponse(this);
-      if (adInfoBuilder_ == null) {
-        result.adInfo_ = adInfo_;
-      } else {
-        result.adInfo_ = adInfoBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.SuggestSmartCampaignAdResponse result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.adInfo_ = adInfoBuilder_ == null
+            ? adInfo_
+            : adInfoBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -402,7 +410,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getAdInfoFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             default: {
@@ -420,24 +428,27 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private com.google.ads.googleads.v12.common.SmartCampaignAdInfo adInfo_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v12.common.SmartCampaignAdInfo, com.google.ads.googleads.v12.common.SmartCampaignAdInfo.Builder, com.google.ads.googleads.v12.common.SmartCampaignAdInfoOrBuilder> adInfoBuilder_;
     /**
      * <pre>
-     * Optional. Ad info includes 3 creative headlines and 2 creative descriptions.
+     * Optional. Ad info includes 3 creative headlines and 2 creative
+     * descriptions.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.SmartCampaignAdInfo ad_info = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
      * @return Whether the adInfo field is set.
      */
     public boolean hasAdInfo() {
-      return adInfoBuilder_ != null || adInfo_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
-     * Optional. Ad info includes 3 creative headlines and 2 creative descriptions.
+     * Optional. Ad info includes 3 creative headlines and 2 creative
+     * descriptions.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.SmartCampaignAdInfo ad_info = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -452,7 +463,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Ad info includes 3 creative headlines and 2 creative descriptions.
+     * Optional. Ad info includes 3 creative headlines and 2 creative
+     * descriptions.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.SmartCampaignAdInfo ad_info = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -463,16 +475,17 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         adInfo_ = value;
-        onChanged();
       } else {
         adInfoBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Optional. Ad info includes 3 creative headlines and 2 creative descriptions.
+     * Optional. Ad info includes 3 creative headlines and 2 creative
+     * descriptions.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.SmartCampaignAdInfo ad_info = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -481,68 +494,72 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.SmartCampaignAdInfo.Builder builderForValue) {
       if (adInfoBuilder_ == null) {
         adInfo_ = builderForValue.build();
-        onChanged();
       } else {
         adInfoBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Optional. Ad info includes 3 creative headlines and 2 creative descriptions.
+     * Optional. Ad info includes 3 creative headlines and 2 creative
+     * descriptions.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.SmartCampaignAdInfo ad_info = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     public Builder mergeAdInfo(com.google.ads.googleads.v12.common.SmartCampaignAdInfo value) {
       if (adInfoBuilder_ == null) {
-        if (adInfo_ != null) {
-          adInfo_ =
-            com.google.ads.googleads.v12.common.SmartCampaignAdInfo.newBuilder(adInfo_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          adInfo_ != null &&
+          adInfo_ != com.google.ads.googleads.v12.common.SmartCampaignAdInfo.getDefaultInstance()) {
+          getAdInfoBuilder().mergeFrom(value);
         } else {
           adInfo_ = value;
         }
-        onChanged();
       } else {
         adInfoBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Optional. Ad info includes 3 creative headlines and 2 creative descriptions.
+     * Optional. Ad info includes 3 creative headlines and 2 creative
+     * descriptions.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.SmartCampaignAdInfo ad_info = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     public Builder clearAdInfo() {
-      if (adInfoBuilder_ == null) {
-        adInfo_ = null;
-        onChanged();
-      } else {
-        adInfo_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      adInfo_ = null;
+      if (adInfoBuilder_ != null) {
+        adInfoBuilder_.dispose();
         adInfoBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Optional. Ad info includes 3 creative headlines and 2 creative descriptions.
+     * Optional. Ad info includes 3 creative headlines and 2 creative
+     * descriptions.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.SmartCampaignAdInfo ad_info = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     public com.google.ads.googleads.v12.common.SmartCampaignAdInfo.Builder getAdInfoBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getAdInfoFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Optional. Ad info includes 3 creative headlines and 2 creative descriptions.
+     * Optional. Ad info includes 3 creative headlines and 2 creative
+     * descriptions.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.SmartCampaignAdInfo ad_info = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -557,7 +574,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Ad info includes 3 creative headlines and 2 creative descriptions.
+     * Optional. Ad info includes 3 creative headlines and 2 creative
+     * descriptions.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.SmartCampaignAdInfo ad_info = 1 [(.google.api.field_behavior) = OPTIONAL];</code>

@@ -52,7 +52,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int KEY_FIELD_NUMBER = 3;
-  private volatile java.lang.Object key_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object key_ = "";
   /**
    * <pre>
    * The key matching the parameter tag name.
@@ -110,7 +111,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VALUE_FIELD_NUMBER = 4;
-  private volatile java.lang.Object value_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object value_ = "";
   /**
    * <pre>
    * The value to be substituted.
@@ -379,10 +381,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       key_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       value_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -409,19 +410,23 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.CustomParameter buildPartial() {
       com.google.ads.googleads.v12.common.CustomParameter result = new com.google.ads.googleads.v12.common.CustomParameter(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.CustomParameter result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.key_ = key_;
         to_bitField0_ |= 0x00000001;
       }
-      result.key_ = key_;
       if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.value_ = value_;
         to_bitField0_ |= 0x00000002;
       }
-      result.value_ = value_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -469,13 +474,13 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v12.common.CustomParameter other) {
       if (other == com.google.ads.googleads.v12.common.CustomParameter.getDefaultInstance()) return this;
       if (other.hasKey()) {
-        bitField0_ |= 0x00000001;
         key_ = other.key_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasValue()) {
-        bitField0_ |= 0x00000002;
         value_ = other.value_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -595,11 +600,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKey(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       key_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -612,8 +615,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearKey() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       key_ = getDefaultInstance().getKey();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -628,12 +631,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKeyBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       key_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -702,11 +703,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setValue(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       value_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -719,8 +718,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearValue() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       value_ = getDefaultInstance().getValue();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -735,12 +734,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setValueBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       value_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

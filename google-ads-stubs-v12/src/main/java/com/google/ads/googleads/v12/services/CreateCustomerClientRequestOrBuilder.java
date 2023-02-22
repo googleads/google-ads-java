@@ -9,7 +9,8 @@ public interface CreateCustomerClientRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The ID of the Manager under whom client customer is being created.
+   * Required. The ID of the Manager under whom client customer is being
+   * created.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -18,7 +19,8 @@ public interface CreateCustomerClientRequestOrBuilder extends
   java.lang.String getCustomerId();
   /**
    * <pre>
-   * Required. The ID of the Manager under whom client customer is being created.
+   * Required. The ID of the Manager under whom client customer is being
+   * created.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -29,8 +31,8 @@ public interface CreateCustomerClientRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The new client customer to create. The resource name on this customer
-   * will be ignored.
+   * Required. The new client customer to create. The resource name on this
+   * customer will be ignored.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.Customer customer_client = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -39,8 +41,8 @@ public interface CreateCustomerClientRequestOrBuilder extends
   boolean hasCustomerClient();
   /**
    * <pre>
-   * Required. The new client customer to create. The resource name on this customer
-   * will be ignored.
+   * Required. The new client customer to create. The resource name on this
+   * customer will be ignored.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.Customer customer_client = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -49,8 +51,8 @@ public interface CreateCustomerClientRequestOrBuilder extends
   com.google.ads.googleads.v12.resources.Customer getCustomerClient();
   /**
    * <pre>
-   * Required. The new client customer to create. The resource name on this customer
-   * will be ignored.
+   * Required. The new client customer to create. The resource name on this
+   * customer will be ignored.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.Customer customer_client = 2 [(.google.api.field_behavior) = REQUIRED];</code>

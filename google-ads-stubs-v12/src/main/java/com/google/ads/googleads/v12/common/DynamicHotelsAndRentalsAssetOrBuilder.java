@@ -9,8 +9,8 @@ public interface DynamicHotelsAndRentalsAssetOrBuilder extends
 
   /**
    * <pre>
-   * Required. Property ID which can be any sequence of letters and digits, and must be
-   * unique and match the values of remarketing tag. Required.
+   * Required. Property ID which can be any sequence of letters and digits, and
+   * must be unique and match the values of remarketing tag. Required.
    * </pre>
    *
    * <code>string property_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -19,8 +19,8 @@ public interface DynamicHotelsAndRentalsAssetOrBuilder extends
   java.lang.String getPropertyId();
   /**
    * <pre>
-   * Required. Property ID which can be any sequence of letters and digits, and must be
-   * unique and match the values of remarketing tag. Required.
+   * Required. Property ID which can be any sequence of letters and digits, and
+   * must be unique and match the values of remarketing tag. Required.
    * </pre>
    *
    * <code>string property_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>

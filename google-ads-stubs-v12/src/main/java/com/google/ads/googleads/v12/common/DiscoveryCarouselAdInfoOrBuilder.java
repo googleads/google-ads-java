@@ -29,8 +29,8 @@ public interface DiscoveryCarouselAdInfoOrBuilder extends
 
   /**
    * <pre>
-   * Required. Logo image to be used in the ad.  The minimum size is 128x128 and the
-   * aspect ratio must be 1:1(+-1%).
+   * Required. Logo image to be used in the ad.  The minimum size is 128x128 and
+   * the aspect ratio must be 1:1(+-1%).
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.AdImageAsset logo_image = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -39,8 +39,8 @@ public interface DiscoveryCarouselAdInfoOrBuilder extends
   boolean hasLogoImage();
   /**
    * <pre>
-   * Required. Logo image to be used in the ad.  The minimum size is 128x128 and the
-   * aspect ratio must be 1:1(+-1%).
+   * Required. Logo image to be used in the ad.  The minimum size is 128x128 and
+   * the aspect ratio must be 1:1(+-1%).
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.AdImageAsset logo_image = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -49,8 +49,8 @@ public interface DiscoveryCarouselAdInfoOrBuilder extends
   com.google.ads.googleads.v12.common.AdImageAsset getLogoImage();
   /**
    * <pre>
-   * Required. Logo image to be used in the ad.  The minimum size is 128x128 and the
-   * aspect ratio must be 1:1(+-1%).
+   * Required. Logo image to be used in the ad.  The minimum size is 128x128 and
+   * the aspect ratio must be 1:1(+-1%).
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.AdImageAsset logo_image = 2 [(.google.api.field_behavior) = REQUIRED];</code>

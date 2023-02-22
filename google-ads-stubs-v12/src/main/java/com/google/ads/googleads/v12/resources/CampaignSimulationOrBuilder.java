@@ -81,7 +81,8 @@ public interface CampaignSimulationOrBuilder extends
 
   /**
    * <pre>
-   * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
+   * Output only. First day on which the simulation is based, in YYYY-MM-DD
+   * format.
    * </pre>
    *
    * <code>string start_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -90,7 +91,8 @@ public interface CampaignSimulationOrBuilder extends
   java.lang.String getStartDate();
   /**
    * <pre>
-   * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
+   * Output only. First day on which the simulation is based, in YYYY-MM-DD
+   * format.
    * </pre>
    *
    * <code>string start_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -101,7 +103,8 @@ public interface CampaignSimulationOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Last day on which the simulation is based, in YYYY-MM-DD format
+   * Output only. Last day on which the simulation is based, in YYYY-MM-DD
+   * format
    * </pre>
    *
    * <code>string end_date = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -110,7 +113,8 @@ public interface CampaignSimulationOrBuilder extends
   java.lang.String getEndDate();
   /**
    * <pre>
-   * Output only. Last day on which the simulation is based, in YYYY-MM-DD format
+   * Output only. Last day on which the simulation is based, in YYYY-MM-DD
+   * format
    * </pre>
    *
    * <code>string end_date = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -202,7 +206,8 @@ public interface CampaignSimulationOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Simulation points if the simulation type is TARGET_IMPRESSION_SHARE.
+   * Output only. Simulation points if the simulation type is
+   * TARGET_IMPRESSION_SHARE.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.TargetImpressionShareSimulationPointList target_impression_share_point_list = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -211,7 +216,8 @@ public interface CampaignSimulationOrBuilder extends
   boolean hasTargetImpressionSharePointList();
   /**
    * <pre>
-   * Output only. Simulation points if the simulation type is TARGET_IMPRESSION_SHARE.
+   * Output only. Simulation points if the simulation type is
+   * TARGET_IMPRESSION_SHARE.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.TargetImpressionShareSimulationPointList target_impression_share_point_list = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -220,7 +226,8 @@ public interface CampaignSimulationOrBuilder extends
   com.google.ads.googleads.v12.common.TargetImpressionShareSimulationPointList getTargetImpressionSharePointList();
   /**
    * <pre>
-   * Output only. Simulation points if the simulation type is TARGET_IMPRESSION_SHARE.
+   * Output only. Simulation points if the simulation type is
+   * TARGET_IMPRESSION_SHARE.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.TargetImpressionShareSimulationPointList target_impression_share_point_list = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

@@ -682,7 +682,8 @@ private static final long serialVersionUID = 0L;
   public static final int PRODUCT_GROUPING_FIELD_NUMBER = 17;
   /**
    * <pre>
-   * Grouping of a product offer.
+   * Grouping of a product offer. This listing dimension is deprecated and it
+   * is supported only in Display campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.ProductGroupingInfo product_grouping = 17;</code>
@@ -694,7 +695,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Grouping of a product offer.
+   * Grouping of a product offer. This listing dimension is deprecated and it
+   * is supported only in Display campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.ProductGroupingInfo product_grouping = 17;</code>
@@ -709,7 +711,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Grouping of a product offer.
+   * Grouping of a product offer. This listing dimension is deprecated and it
+   * is supported only in Display campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.ProductGroupingInfo product_grouping = 17;</code>
@@ -725,7 +728,8 @@ private static final long serialVersionUID = 0L;
   public static final int PRODUCT_LABELS_FIELD_NUMBER = 18;
   /**
    * <pre>
-   * Labels of a product offer.
+   * Labels of a product offer. This listing dimension is deprecated and it is
+   * supported only in Display campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.ProductLabelsInfo product_labels = 18;</code>
@@ -737,7 +741,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Labels of a product offer.
+   * Labels of a product offer. This listing dimension is deprecated and it is
+   * supported only in Display campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.ProductLabelsInfo product_labels = 18;</code>
@@ -752,7 +757,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Labels of a product offer.
+   * Labels of a product offer. This listing dimension is deprecated and it is
+   * supported only in Display campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.ProductLabelsInfo product_labels = 18;</code>
@@ -768,7 +774,8 @@ private static final long serialVersionUID = 0L;
   public static final int PRODUCT_LEGACY_CONDITION_FIELD_NUMBER = 19;
   /**
    * <pre>
-   * Legacy condition of a product offer.
+   * Legacy condition of a product offer. This listing dimension is deprecated
+   * and it is supported only in Display campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.ProductLegacyConditionInfo product_legacy_condition = 19;</code>
@@ -780,7 +787,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Legacy condition of a product offer.
+   * Legacy condition of a product offer. This listing dimension is deprecated
+   * and it is supported only in Display campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.ProductLegacyConditionInfo product_legacy_condition = 19;</code>
@@ -795,7 +803,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Legacy condition of a product offer.
+   * Legacy condition of a product offer. This listing dimension is deprecated
+   * and it is supported only in Display campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.ProductLegacyConditionInfo product_legacy_condition = 19;</code>
@@ -811,7 +820,8 @@ private static final long serialVersionUID = 0L;
   public static final int PRODUCT_TYPE_FULL_FIELD_NUMBER = 20;
   /**
    * <pre>
-   * Full type of a product offer.
+   * Full type of a product offer. This listing dimension is deprecated and it
+   * is supported only in Display campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.ProductTypeFullInfo product_type_full = 20;</code>
@@ -823,7 +833,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Full type of a product offer.
+   * Full type of a product offer. This listing dimension is deprecated and it
+   * is supported only in Display campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.ProductTypeFullInfo product_type_full = 20;</code>
@@ -838,7 +849,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Full type of a product offer.
+   * Full type of a product offer. This listing dimension is deprecated and it
+   * is supported only in Display campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.ProductTypeFullInfo product_type_full = 20;</code>
@@ -1354,6 +1366,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (hotelIdBuilder_ != null) {
         hotelIdBuilder_.clear();
       }
@@ -1436,135 +1449,91 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.ListingDimensionInfo buildPartial() {
       com.google.ads.googleads.v11.common.ListingDimensionInfo result = new com.google.ads.googleads.v11.common.ListingDimensionInfo(this);
-      if (dimensionCase_ == 2) {
-        if (hotelIdBuilder_ == null) {
-          result.dimension_ = dimension_;
-        } else {
-          result.dimension_ = hotelIdBuilder_.build();
-        }
-      }
-      if (dimensionCase_ == 3) {
-        if (hotelClassBuilder_ == null) {
-          result.dimension_ = dimension_;
-        } else {
-          result.dimension_ = hotelClassBuilder_.build();
-        }
-      }
-      if (dimensionCase_ == 4) {
-        if (hotelCountryRegionBuilder_ == null) {
-          result.dimension_ = dimension_;
-        } else {
-          result.dimension_ = hotelCountryRegionBuilder_.build();
-        }
-      }
-      if (dimensionCase_ == 5) {
-        if (hotelStateBuilder_ == null) {
-          result.dimension_ = dimension_;
-        } else {
-          result.dimension_ = hotelStateBuilder_.build();
-        }
-      }
-      if (dimensionCase_ == 6) {
-        if (hotelCityBuilder_ == null) {
-          result.dimension_ = dimension_;
-        } else {
-          result.dimension_ = hotelCityBuilder_.build();
-        }
-      }
-      if (dimensionCase_ == 13) {
-        if (productBiddingCategoryBuilder_ == null) {
-          result.dimension_ = dimension_;
-        } else {
-          result.dimension_ = productBiddingCategoryBuilder_.build();
-        }
-      }
-      if (dimensionCase_ == 15) {
-        if (productBrandBuilder_ == null) {
-          result.dimension_ = dimension_;
-        } else {
-          result.dimension_ = productBrandBuilder_.build();
-        }
-      }
-      if (dimensionCase_ == 8) {
-        if (productChannelBuilder_ == null) {
-          result.dimension_ = dimension_;
-        } else {
-          result.dimension_ = productChannelBuilder_.build();
-        }
-      }
-      if (dimensionCase_ == 9) {
-        if (productChannelExclusivityBuilder_ == null) {
-          result.dimension_ = dimension_;
-        } else {
-          result.dimension_ = productChannelExclusivityBuilder_.build();
-        }
-      }
-      if (dimensionCase_ == 10) {
-        if (productConditionBuilder_ == null) {
-          result.dimension_ = dimension_;
-        } else {
-          result.dimension_ = productConditionBuilder_.build();
-        }
-      }
-      if (dimensionCase_ == 16) {
-        if (productCustomAttributeBuilder_ == null) {
-          result.dimension_ = dimension_;
-        } else {
-          result.dimension_ = productCustomAttributeBuilder_.build();
-        }
-      }
-      if (dimensionCase_ == 11) {
-        if (productItemIdBuilder_ == null) {
-          result.dimension_ = dimension_;
-        } else {
-          result.dimension_ = productItemIdBuilder_.build();
-        }
-      }
-      if (dimensionCase_ == 12) {
-        if (productTypeBuilder_ == null) {
-          result.dimension_ = dimension_;
-        } else {
-          result.dimension_ = productTypeBuilder_.build();
-        }
-      }
-      if (dimensionCase_ == 17) {
-        if (productGroupingBuilder_ == null) {
-          result.dimension_ = dimension_;
-        } else {
-          result.dimension_ = productGroupingBuilder_.build();
-        }
-      }
-      if (dimensionCase_ == 18) {
-        if (productLabelsBuilder_ == null) {
-          result.dimension_ = dimension_;
-        } else {
-          result.dimension_ = productLabelsBuilder_.build();
-        }
-      }
-      if (dimensionCase_ == 19) {
-        if (productLegacyConditionBuilder_ == null) {
-          result.dimension_ = dimension_;
-        } else {
-          result.dimension_ = productLegacyConditionBuilder_.build();
-        }
-      }
-      if (dimensionCase_ == 20) {
-        if (productTypeFullBuilder_ == null) {
-          result.dimension_ = dimension_;
-        } else {
-          result.dimension_ = productTypeFullBuilder_.build();
-        }
-      }
-      if (dimensionCase_ == 14) {
-        if (unknownListingDimensionBuilder_ == null) {
-          result.dimension_ = dimension_;
-        } else {
-          result.dimension_ = unknownListingDimensionBuilder_.build();
-        }
-      }
-      result.dimensionCase_ = dimensionCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.ListingDimensionInfo result) {
+      int from_bitField0_ = bitField0_;
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v11.common.ListingDimensionInfo result) {
+      result.dimensionCase_ = dimensionCase_;
+      result.dimension_ = this.dimension_;
+      if (dimensionCase_ == 2 &&
+          hotelIdBuilder_ != null) {
+        result.dimension_ = hotelIdBuilder_.build();
+      }
+      if (dimensionCase_ == 3 &&
+          hotelClassBuilder_ != null) {
+        result.dimension_ = hotelClassBuilder_.build();
+      }
+      if (dimensionCase_ == 4 &&
+          hotelCountryRegionBuilder_ != null) {
+        result.dimension_ = hotelCountryRegionBuilder_.build();
+      }
+      if (dimensionCase_ == 5 &&
+          hotelStateBuilder_ != null) {
+        result.dimension_ = hotelStateBuilder_.build();
+      }
+      if (dimensionCase_ == 6 &&
+          hotelCityBuilder_ != null) {
+        result.dimension_ = hotelCityBuilder_.build();
+      }
+      if (dimensionCase_ == 13 &&
+          productBiddingCategoryBuilder_ != null) {
+        result.dimension_ = productBiddingCategoryBuilder_.build();
+      }
+      if (dimensionCase_ == 15 &&
+          productBrandBuilder_ != null) {
+        result.dimension_ = productBrandBuilder_.build();
+      }
+      if (dimensionCase_ == 8 &&
+          productChannelBuilder_ != null) {
+        result.dimension_ = productChannelBuilder_.build();
+      }
+      if (dimensionCase_ == 9 &&
+          productChannelExclusivityBuilder_ != null) {
+        result.dimension_ = productChannelExclusivityBuilder_.build();
+      }
+      if (dimensionCase_ == 10 &&
+          productConditionBuilder_ != null) {
+        result.dimension_ = productConditionBuilder_.build();
+      }
+      if (dimensionCase_ == 16 &&
+          productCustomAttributeBuilder_ != null) {
+        result.dimension_ = productCustomAttributeBuilder_.build();
+      }
+      if (dimensionCase_ == 11 &&
+          productItemIdBuilder_ != null) {
+        result.dimension_ = productItemIdBuilder_.build();
+      }
+      if (dimensionCase_ == 12 &&
+          productTypeBuilder_ != null) {
+        result.dimension_ = productTypeBuilder_.build();
+      }
+      if (dimensionCase_ == 17 &&
+          productGroupingBuilder_ != null) {
+        result.dimension_ = productGroupingBuilder_.build();
+      }
+      if (dimensionCase_ == 18 &&
+          productLabelsBuilder_ != null) {
+        result.dimension_ = productLabelsBuilder_.build();
+      }
+      if (dimensionCase_ == 19 &&
+          productLegacyConditionBuilder_ != null) {
+        result.dimension_ = productLegacyConditionBuilder_.build();
+      }
+      if (dimensionCase_ == 20 &&
+          productTypeFullBuilder_ != null) {
+        result.dimension_ = productTypeFullBuilder_.build();
+      }
+      if (dimensionCase_ == 14 &&
+          unknownListingDimensionBuilder_ != null) {
+        result.dimension_ = unknownListingDimensionBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -1870,6 +1839,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v11.common.HotelIdInfo, com.google.ads.googleads.v11.common.HotelIdInfo.Builder, com.google.ads.googleads.v11.common.HotelIdInfoOrBuilder> hotelIdBuilder_;
@@ -2045,7 +2015,7 @@ private static final long serialVersionUID = 0L;
         dimension_ = null;
       }
       dimensionCase_ = 2;
-      onChanged();;
+      onChanged();
       return hotelIdBuilder_;
     }
 
@@ -2223,7 +2193,7 @@ private static final long serialVersionUID = 0L;
         dimension_ = null;
       }
       dimensionCase_ = 3;
-      onChanged();;
+      onChanged();
       return hotelClassBuilder_;
     }
 
@@ -2401,7 +2371,7 @@ private static final long serialVersionUID = 0L;
         dimension_ = null;
       }
       dimensionCase_ = 4;
-      onChanged();;
+      onChanged();
       return hotelCountryRegionBuilder_;
     }
 
@@ -2579,7 +2549,7 @@ private static final long serialVersionUID = 0L;
         dimension_ = null;
       }
       dimensionCase_ = 5;
-      onChanged();;
+      onChanged();
       return hotelStateBuilder_;
     }
 
@@ -2757,7 +2727,7 @@ private static final long serialVersionUID = 0L;
         dimension_ = null;
       }
       dimensionCase_ = 6;
-      onChanged();;
+      onChanged();
       return hotelCityBuilder_;
     }
 
@@ -2935,7 +2905,7 @@ private static final long serialVersionUID = 0L;
         dimension_ = null;
       }
       dimensionCase_ = 13;
-      onChanged();;
+      onChanged();
       return productBiddingCategoryBuilder_;
     }
 
@@ -3113,7 +3083,7 @@ private static final long serialVersionUID = 0L;
         dimension_ = null;
       }
       dimensionCase_ = 15;
-      onChanged();;
+      onChanged();
       return productBrandBuilder_;
     }
 
@@ -3291,7 +3261,7 @@ private static final long serialVersionUID = 0L;
         dimension_ = null;
       }
       dimensionCase_ = 8;
-      onChanged();;
+      onChanged();
       return productChannelBuilder_;
     }
 
@@ -3469,7 +3439,7 @@ private static final long serialVersionUID = 0L;
         dimension_ = null;
       }
       dimensionCase_ = 9;
-      onChanged();;
+      onChanged();
       return productChannelExclusivityBuilder_;
     }
 
@@ -3647,7 +3617,7 @@ private static final long serialVersionUID = 0L;
         dimension_ = null;
       }
       dimensionCase_ = 10;
-      onChanged();;
+      onChanged();
       return productConditionBuilder_;
     }
 
@@ -3825,7 +3795,7 @@ private static final long serialVersionUID = 0L;
         dimension_ = null;
       }
       dimensionCase_ = 16;
-      onChanged();;
+      onChanged();
       return productCustomAttributeBuilder_;
     }
 
@@ -4003,7 +3973,7 @@ private static final long serialVersionUID = 0L;
         dimension_ = null;
       }
       dimensionCase_ = 11;
-      onChanged();;
+      onChanged();
       return productItemIdBuilder_;
     }
 
@@ -4181,7 +4151,7 @@ private static final long serialVersionUID = 0L;
         dimension_ = null;
       }
       dimensionCase_ = 12;
-      onChanged();;
+      onChanged();
       return productTypeBuilder_;
     }
 
@@ -4189,7 +4159,8 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.common.ProductGroupingInfo, com.google.ads.googleads.v11.common.ProductGroupingInfo.Builder, com.google.ads.googleads.v11.common.ProductGroupingInfoOrBuilder> productGroupingBuilder_;
     /**
      * <pre>
-     * Grouping of a product offer.
+     * Grouping of a product offer. This listing dimension is deprecated and it
+     * is supported only in Display campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.ProductGroupingInfo product_grouping = 17;</code>
@@ -4201,7 +4172,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Grouping of a product offer.
+     * Grouping of a product offer. This listing dimension is deprecated and it
+     * is supported only in Display campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.ProductGroupingInfo product_grouping = 17;</code>
@@ -4223,7 +4195,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Grouping of a product offer.
+     * Grouping of a product offer. This listing dimension is deprecated and it
+     * is supported only in Display campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.ProductGroupingInfo product_grouping = 17;</code>
@@ -4243,7 +4216,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Grouping of a product offer.
+     * Grouping of a product offer. This listing dimension is deprecated and it
+     * is supported only in Display campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.ProductGroupingInfo product_grouping = 17;</code>
@@ -4261,7 +4235,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Grouping of a product offer.
+     * Grouping of a product offer. This listing dimension is deprecated and it
+     * is supported only in Display campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.ProductGroupingInfo product_grouping = 17;</code>
@@ -4288,7 +4263,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Grouping of a product offer.
+     * Grouping of a product offer. This listing dimension is deprecated and it
+     * is supported only in Display campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.ProductGroupingInfo product_grouping = 17;</code>
@@ -4311,7 +4287,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Grouping of a product offer.
+     * Grouping of a product offer. This listing dimension is deprecated and it
+     * is supported only in Display campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.ProductGroupingInfo product_grouping = 17;</code>
@@ -4321,7 +4298,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Grouping of a product offer.
+     * Grouping of a product offer. This listing dimension is deprecated and it
+     * is supported only in Display campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.ProductGroupingInfo product_grouping = 17;</code>
@@ -4339,7 +4317,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Grouping of a product offer.
+     * Grouping of a product offer. This listing dimension is deprecated and it
+     * is supported only in Display campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.ProductGroupingInfo product_grouping = 17;</code>
@@ -4359,7 +4338,7 @@ private static final long serialVersionUID = 0L;
         dimension_ = null;
       }
       dimensionCase_ = 17;
-      onChanged();;
+      onChanged();
       return productGroupingBuilder_;
     }
 
@@ -4367,7 +4346,8 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.common.ProductLabelsInfo, com.google.ads.googleads.v11.common.ProductLabelsInfo.Builder, com.google.ads.googleads.v11.common.ProductLabelsInfoOrBuilder> productLabelsBuilder_;
     /**
      * <pre>
-     * Labels of a product offer.
+     * Labels of a product offer. This listing dimension is deprecated and it is
+     * supported only in Display campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.ProductLabelsInfo product_labels = 18;</code>
@@ -4379,7 +4359,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Labels of a product offer.
+     * Labels of a product offer. This listing dimension is deprecated and it is
+     * supported only in Display campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.ProductLabelsInfo product_labels = 18;</code>
@@ -4401,7 +4382,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Labels of a product offer.
+     * Labels of a product offer. This listing dimension is deprecated and it is
+     * supported only in Display campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.ProductLabelsInfo product_labels = 18;</code>
@@ -4421,7 +4403,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Labels of a product offer.
+     * Labels of a product offer. This listing dimension is deprecated and it is
+     * supported only in Display campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.ProductLabelsInfo product_labels = 18;</code>
@@ -4439,7 +4422,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Labels of a product offer.
+     * Labels of a product offer. This listing dimension is deprecated and it is
+     * supported only in Display campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.ProductLabelsInfo product_labels = 18;</code>
@@ -4466,7 +4450,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Labels of a product offer.
+     * Labels of a product offer. This listing dimension is deprecated and it is
+     * supported only in Display campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.ProductLabelsInfo product_labels = 18;</code>
@@ -4489,7 +4474,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Labels of a product offer.
+     * Labels of a product offer. This listing dimension is deprecated and it is
+     * supported only in Display campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.ProductLabelsInfo product_labels = 18;</code>
@@ -4499,7 +4485,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Labels of a product offer.
+     * Labels of a product offer. This listing dimension is deprecated and it is
+     * supported only in Display campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.ProductLabelsInfo product_labels = 18;</code>
@@ -4517,7 +4504,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Labels of a product offer.
+     * Labels of a product offer. This listing dimension is deprecated and it is
+     * supported only in Display campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.ProductLabelsInfo product_labels = 18;</code>
@@ -4537,7 +4525,7 @@ private static final long serialVersionUID = 0L;
         dimension_ = null;
       }
       dimensionCase_ = 18;
-      onChanged();;
+      onChanged();
       return productLabelsBuilder_;
     }
 
@@ -4545,7 +4533,8 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.common.ProductLegacyConditionInfo, com.google.ads.googleads.v11.common.ProductLegacyConditionInfo.Builder, com.google.ads.googleads.v11.common.ProductLegacyConditionInfoOrBuilder> productLegacyConditionBuilder_;
     /**
      * <pre>
-     * Legacy condition of a product offer.
+     * Legacy condition of a product offer. This listing dimension is deprecated
+     * and it is supported only in Display campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.ProductLegacyConditionInfo product_legacy_condition = 19;</code>
@@ -4557,7 +4546,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Legacy condition of a product offer.
+     * Legacy condition of a product offer. This listing dimension is deprecated
+     * and it is supported only in Display campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.ProductLegacyConditionInfo product_legacy_condition = 19;</code>
@@ -4579,7 +4569,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Legacy condition of a product offer.
+     * Legacy condition of a product offer. This listing dimension is deprecated
+     * and it is supported only in Display campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.ProductLegacyConditionInfo product_legacy_condition = 19;</code>
@@ -4599,7 +4590,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Legacy condition of a product offer.
+     * Legacy condition of a product offer. This listing dimension is deprecated
+     * and it is supported only in Display campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.ProductLegacyConditionInfo product_legacy_condition = 19;</code>
@@ -4617,7 +4609,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Legacy condition of a product offer.
+     * Legacy condition of a product offer. This listing dimension is deprecated
+     * and it is supported only in Display campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.ProductLegacyConditionInfo product_legacy_condition = 19;</code>
@@ -4644,7 +4637,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Legacy condition of a product offer.
+     * Legacy condition of a product offer. This listing dimension is deprecated
+     * and it is supported only in Display campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.ProductLegacyConditionInfo product_legacy_condition = 19;</code>
@@ -4667,7 +4661,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Legacy condition of a product offer.
+     * Legacy condition of a product offer. This listing dimension is deprecated
+     * and it is supported only in Display campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.ProductLegacyConditionInfo product_legacy_condition = 19;</code>
@@ -4677,7 +4672,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Legacy condition of a product offer.
+     * Legacy condition of a product offer. This listing dimension is deprecated
+     * and it is supported only in Display campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.ProductLegacyConditionInfo product_legacy_condition = 19;</code>
@@ -4695,7 +4691,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Legacy condition of a product offer.
+     * Legacy condition of a product offer. This listing dimension is deprecated
+     * and it is supported only in Display campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.ProductLegacyConditionInfo product_legacy_condition = 19;</code>
@@ -4715,7 +4712,7 @@ private static final long serialVersionUID = 0L;
         dimension_ = null;
       }
       dimensionCase_ = 19;
-      onChanged();;
+      onChanged();
       return productLegacyConditionBuilder_;
     }
 
@@ -4723,7 +4720,8 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.common.ProductTypeFullInfo, com.google.ads.googleads.v11.common.ProductTypeFullInfo.Builder, com.google.ads.googleads.v11.common.ProductTypeFullInfoOrBuilder> productTypeFullBuilder_;
     /**
      * <pre>
-     * Full type of a product offer.
+     * Full type of a product offer. This listing dimension is deprecated and it
+     * is supported only in Display campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.ProductTypeFullInfo product_type_full = 20;</code>
@@ -4735,7 +4733,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Full type of a product offer.
+     * Full type of a product offer. This listing dimension is deprecated and it
+     * is supported only in Display campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.ProductTypeFullInfo product_type_full = 20;</code>
@@ -4757,7 +4756,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Full type of a product offer.
+     * Full type of a product offer. This listing dimension is deprecated and it
+     * is supported only in Display campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.ProductTypeFullInfo product_type_full = 20;</code>
@@ -4777,7 +4777,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Full type of a product offer.
+     * Full type of a product offer. This listing dimension is deprecated and it
+     * is supported only in Display campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.ProductTypeFullInfo product_type_full = 20;</code>
@@ -4795,7 +4796,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Full type of a product offer.
+     * Full type of a product offer. This listing dimension is deprecated and it
+     * is supported only in Display campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.ProductTypeFullInfo product_type_full = 20;</code>
@@ -4822,7 +4824,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Full type of a product offer.
+     * Full type of a product offer. This listing dimension is deprecated and it
+     * is supported only in Display campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.ProductTypeFullInfo product_type_full = 20;</code>
@@ -4845,7 +4848,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Full type of a product offer.
+     * Full type of a product offer. This listing dimension is deprecated and it
+     * is supported only in Display campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.ProductTypeFullInfo product_type_full = 20;</code>
@@ -4855,7 +4859,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Full type of a product offer.
+     * Full type of a product offer. This listing dimension is deprecated and it
+     * is supported only in Display campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.ProductTypeFullInfo product_type_full = 20;</code>
@@ -4873,7 +4878,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Full type of a product offer.
+     * Full type of a product offer. This listing dimension is deprecated and it
+     * is supported only in Display campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.ProductTypeFullInfo product_type_full = 20;</code>
@@ -4893,7 +4899,7 @@ private static final long serialVersionUID = 0L;
         dimension_ = null;
       }
       dimensionCase_ = 20;
-      onChanged();;
+      onChanged();
       return productTypeFullBuilder_;
     }
 
@@ -5071,7 +5077,7 @@ private static final long serialVersionUID = 0L;
         dimension_ = null;
       }
       dimensionCase_ = 14;
-      onChanged();;
+      onChanged();
       return unknownListingDimensionBuilder_;
     }
     @java.lang.Override

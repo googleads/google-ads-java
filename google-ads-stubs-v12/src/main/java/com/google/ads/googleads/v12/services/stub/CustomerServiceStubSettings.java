@@ -74,7 +74,10 @@ import org.threeten.bp.Duration;
  * customerServiceSettingsBuilder
  *     .mutateCustomerSettings()
  *     .setRetrySettings(
- *         customerServiceSettingsBuilder.mutateCustomerSettings().getRetrySettings().toBuilder()
+ *         customerServiceSettingsBuilder
+ *             .mutateCustomerSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
  * CustomerServiceStubSettings customerServiceSettings = customerServiceSettingsBuilder.build();

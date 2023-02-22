@@ -50,7 +50,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int IS_SKIPPABLE_FIELD_NUMBER = 6;
-  private boolean isSkippable_;
+  private boolean isSkippable_ = false;
   /**
    * <pre>
    * True if ad skippable.
@@ -79,7 +79,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STARTS_WITH_SOUND_FIELD_NUMBER = 7;
-  private boolean startsWithSound_;
+  private boolean startsWithSound_ = false;
   /**
    * <pre>
    * True if ad start with sound.
@@ -108,7 +108,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AD_LENGTH_FIELD_NUMBER = 3;
-  private int adLength_;
+  private int adLength_ = 0;
   /**
    * <pre>
    * The length of the ad.
@@ -131,13 +131,12 @@ private static final long serialVersionUID = 0L;
    * @return The adLength.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.ReachPlanAdLengthEnum.ReachPlanAdLength getAdLength() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.ReachPlanAdLengthEnum.ReachPlanAdLength result = com.google.ads.googleads.v11.enums.ReachPlanAdLengthEnum.ReachPlanAdLength.valueOf(adLength_);
+    com.google.ads.googleads.v11.enums.ReachPlanAdLengthEnum.ReachPlanAdLength result = com.google.ads.googleads.v11.enums.ReachPlanAdLengthEnum.ReachPlanAdLength.forNumber(adLength_);
     return result == null ? com.google.ads.googleads.v11.enums.ReachPlanAdLengthEnum.ReachPlanAdLength.UNRECOGNIZED : result;
   }
 
   public static final int TOP_CONTENT_ONLY_FIELD_NUMBER = 8;
-  private boolean topContentOnly_;
+  private boolean topContentOnly_ = false;
   /**
    * <pre>
    * True if ad will only show on the top content.
@@ -166,7 +165,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HAS_GUARANTEED_PRICE_FIELD_NUMBER = 9;
-  private boolean hasGuaranteedPrice_;
+  private boolean hasGuaranteedPrice_ = false;
   /**
    * <pre>
    * True if the price is guaranteed. The cost of serving the ad is agreed
@@ -455,16 +454,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       isSkippable_ = false;
-      bitField0_ = (bitField0_ & ~0x00000001);
       startsWithSound_ = false;
-      bitField0_ = (bitField0_ & ~0x00000002);
       adLength_ = 0;
-
       topContentOnly_ = false;
-      bitField0_ = (bitField0_ & ~0x00000004);
       hasGuaranteedPrice_ = false;
-      bitField0_ = (bitField0_ & ~0x00000008);
       return this;
     }
 
@@ -491,6 +486,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.Preferences buildPartial() {
       com.google.ads.googleads.v11.services.Preferences result = new com.google.ads.googleads.v11.services.Preferences(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.Preferences result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -501,18 +502,18 @@ private static final long serialVersionUID = 0L;
         result.startsWithSound_ = startsWithSound_;
         to_bitField0_ |= 0x00000002;
       }
-      result.adLength_ = adLength_;
       if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.adLength_ = adLength_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.topContentOnly_ = topContentOnly_;
         to_bitField0_ |= 0x00000004;
       }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.hasGuaranteedPrice_ = hasGuaranteedPrice_;
         to_bitField0_ |= 0x00000008;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -602,7 +603,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 24: {
               adLength_ = input.readEnum();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 24
             case 48: {
@@ -617,12 +618,12 @@ private static final long serialVersionUID = 0L;
             } // case 56
             case 64: {
               topContentOnly_ = input.readBool();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               break;
             } // case 64
             case 72: {
               hasGuaranteedPrice_ = input.readBool();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000010;
               break;
             } // case 72
             default: {
@@ -680,8 +681,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIsSkippable(boolean value) {
-      bitField0_ |= 0x00000001;
+      
       isSkippable_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -739,8 +741,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStartsWithSound(boolean value) {
-      bitField0_ |= 0x00000002;
+      
       startsWithSound_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -784,8 +787,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAdLengthValue(int value) {
-      
       adLength_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -800,8 +803,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.ReachPlanAdLengthEnum.ReachPlanAdLength getAdLength() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.ReachPlanAdLengthEnum.ReachPlanAdLength result = com.google.ads.googleads.v11.enums.ReachPlanAdLengthEnum.ReachPlanAdLength.valueOf(adLength_);
+      com.google.ads.googleads.v11.enums.ReachPlanAdLengthEnum.ReachPlanAdLength result = com.google.ads.googleads.v11.enums.ReachPlanAdLengthEnum.ReachPlanAdLength.forNumber(adLength_);
       return result == null ? com.google.ads.googleads.v11.enums.ReachPlanAdLengthEnum.ReachPlanAdLength.UNRECOGNIZED : result;
     }
     /**
@@ -818,7 +820,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       adLength_ = value.getNumber();
       onChanged();
       return this;
@@ -833,7 +835,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAdLength() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       adLength_ = 0;
       onChanged();
       return this;
@@ -851,7 +853,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasTopContentOnly() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -877,8 +879,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTopContentOnly(boolean value) {
-      bitField0_ |= 0x00000004;
+      
       topContentOnly_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -892,7 +895,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTopContentOnly() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000008);
       topContentOnly_ = false;
       onChanged();
       return this;
@@ -911,7 +914,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasHasGuaranteedPrice() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -939,8 +942,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHasGuaranteedPrice(boolean value) {
-      bitField0_ |= 0x00000008;
+      
       hasGuaranteedPrice_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -955,7 +959,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHasGuaranteedPrice() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000010);
       hasGuaranteedPrice_ = false;
       onChanged();
       return this;

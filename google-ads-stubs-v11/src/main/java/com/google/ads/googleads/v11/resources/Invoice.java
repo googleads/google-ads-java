@@ -68,10 +68,9 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The resource name of the customer associated with this account budget.
-     * This contains the customer ID, which appears on the invoice PDF as
-     * "Account ID".
-     * Customer resource names have the form:
+     * Output only. The resource name of the customer associated with this
+     * account budget. This contains the customer ID, which appears on the
+     * invoice PDF as "Account ID". Customer resource names have the form:
      * `customers/{customer_id}`
      * </pre>
      *
@@ -81,10 +80,9 @@ private static final long serialVersionUID = 0L;
     boolean hasCustomer();
     /**
      * <pre>
-     * Output only. The resource name of the customer associated with this account budget.
-     * This contains the customer ID, which appears on the invoice PDF as
-     * "Account ID".
-     * Customer resource names have the form:
+     * Output only. The resource name of the customer associated with this
+     * account budget. This contains the customer ID, which appears on the
+     * invoice PDF as "Account ID". Customer resource names have the form:
      * `customers/{customer_id}`
      * </pre>
      *
@@ -94,10 +92,9 @@ private static final long serialVersionUID = 0L;
     java.lang.String getCustomer();
     /**
      * <pre>
-     * Output only. The resource name of the customer associated with this account budget.
-     * This contains the customer ID, which appears on the invoice PDF as
-     * "Account ID".
-     * Customer resource names have the form:
+     * Output only. The resource name of the customer associated with this
+     * account budget. This contains the customer ID, which appears on the
+     * invoice PDF as "Account ID". Customer resource names have the form:
      * `customers/{customer_id}`
      * </pre>
      *
@@ -109,8 +106,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The descriptive name of the account budget's customer. It appears on the
-     * invoice PDF as "Account".
+     * Output only. The descriptive name of the account budget's customer. It
+     * appears on the invoice PDF as "Account".
      * </pre>
      *
      * <code>optional string customer_descriptive_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -119,8 +116,8 @@ private static final long serialVersionUID = 0L;
     boolean hasCustomerDescriptiveName();
     /**
      * <pre>
-     * Output only. The descriptive name of the account budget's customer. It appears on the
-     * invoice PDF as "Account".
+     * Output only. The descriptive name of the account budget's customer. It
+     * appears on the invoice PDF as "Account".
      * </pre>
      *
      * <code>optional string customer_descriptive_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -129,8 +126,8 @@ private static final long serialVersionUID = 0L;
     java.lang.String getCustomerDescriptiveName();
     /**
      * <pre>
-     * Output only. The descriptive name of the account budget's customer. It appears on the
-     * invoice PDF as "Account".
+     * Output only. The descriptive name of the account budget's customer. It
+     * appears on the invoice PDF as "Account".
      * </pre>
      *
      * <code>optional string customer_descriptive_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -141,9 +138,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The resource name of the account budget associated with this summarized
-     * billable cost.
-     * AccountBudget resource names have the form:
+     * Output only. The resource name of the account budget associated with this
+     * summarized billable cost. AccountBudget resource names have the form:
      * `customers/{customer_id}/accountBudgets/{account_budget_id}`
      * </pre>
      *
@@ -153,9 +149,8 @@ private static final long serialVersionUID = 0L;
     boolean hasAccountBudget();
     /**
      * <pre>
-     * Output only. The resource name of the account budget associated with this summarized
-     * billable cost.
-     * AccountBudget resource names have the form:
+     * Output only. The resource name of the account budget associated with this
+     * summarized billable cost. AccountBudget resource names have the form:
      * `customers/{customer_id}/accountBudgets/{account_budget_id}`
      * </pre>
      *
@@ -165,9 +160,8 @@ private static final long serialVersionUID = 0L;
     java.lang.String getAccountBudget();
     /**
      * <pre>
-     * Output only. The resource name of the account budget associated with this summarized
-     * billable cost.
-     * AccountBudget resource names have the form:
+     * Output only. The resource name of the account budget associated with this
+     * summarized billable cost. AccountBudget resource names have the form:
      * `customers/{customer_id}/accountBudgets/{account_budget_id}`
      * </pre>
      *
@@ -179,8 +173,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The name of the account budget. It appears on the invoice PDF as "Account
-     * budget".
+     * Output only. The name of the account budget. It appears on the invoice
+     * PDF as "Account budget".
      * </pre>
      *
      * <code>optional string account_budget_name = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -189,8 +183,8 @@ private static final long serialVersionUID = 0L;
     boolean hasAccountBudgetName();
     /**
      * <pre>
-     * Output only. The name of the account budget. It appears on the invoice PDF as "Account
-     * budget".
+     * Output only. The name of the account budget. It appears on the invoice
+     * PDF as "Account budget".
      * </pre>
      *
      * <code>optional string account_budget_name = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -199,8 +193,8 @@ private static final long serialVersionUID = 0L;
     java.lang.String getAccountBudgetName();
     /**
      * <pre>
-     * Output only. The name of the account budget. It appears on the invoice PDF as "Account
-     * budget".
+     * Output only. The name of the account budget. It appears on the invoice
+     * PDF as "Account budget".
      * </pre>
      *
      * <code>optional string account_budget_name = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -211,8 +205,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The purchase order number of the account budget. It appears on the
-     * invoice PDF as "Purchase order".
+     * Output only. The purchase order number of the account budget. It appears
+     * on the invoice PDF as "Purchase order".
      * </pre>
      *
      * <code>optional string purchase_order_number = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -221,8 +215,8 @@ private static final long serialVersionUID = 0L;
     boolean hasPurchaseOrderNumber();
     /**
      * <pre>
-     * Output only. The purchase order number of the account budget. It appears on the
-     * invoice PDF as "Purchase order".
+     * Output only. The purchase order number of the account budget. It appears
+     * on the invoice PDF as "Purchase order".
      * </pre>
      *
      * <code>optional string purchase_order_number = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -231,8 +225,8 @@ private static final long serialVersionUID = 0L;
     java.lang.String getPurchaseOrderNumber();
     /**
      * <pre>
-     * Output only. The purchase order number of the account budget. It appears on the
-     * invoice PDF as "Purchase order".
+     * Output only. The purchase order number of the account budget. It appears
+     * on the invoice PDF as "Purchase order".
      * </pre>
      *
      * <code>optional string purchase_order_number = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -243,8 +237,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The pretax subtotal amount attributable to this budget during the service
-     * period, in micros.
+     * Output only. The pretax subtotal amount attributable to this budget
+     * during the service period, in micros.
      * </pre>
      *
      * <code>optional int64 subtotal_amount_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -253,8 +247,8 @@ private static final long serialVersionUID = 0L;
     boolean hasSubtotalAmountMicros();
     /**
      * <pre>
-     * Output only. The pretax subtotal amount attributable to this budget during the service
-     * period, in micros.
+     * Output only. The pretax subtotal amount attributable to this budget
+     * during the service period, in micros.
      * </pre>
      *
      * <code>optional int64 subtotal_amount_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -264,8 +258,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The tax amount attributable to this budget during the service period, in
-     * micros.
+     * Output only. The tax amount attributable to this budget during the
+     * service period, in micros.
      * </pre>
      *
      * <code>optional int64 tax_amount_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -274,8 +268,8 @@ private static final long serialVersionUID = 0L;
     boolean hasTaxAmountMicros();
     /**
      * <pre>
-     * Output only. The tax amount attributable to this budget during the service period, in
-     * micros.
+     * Output only. The tax amount attributable to this budget during the
+     * service period, in micros.
      * </pre>
      *
      * <code>optional int64 tax_amount_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -285,9 +279,9 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The total amount attributable to this budget during the service period,
-     * in micros. This equals the sum of the account budget subtotal amount and
-     * the account budget tax amount.
+     * Output only. The total amount attributable to this budget during the
+     * service period, in micros. This equals the sum of the account budget
+     * subtotal amount and the account budget tax amount.
      * </pre>
      *
      * <code>optional int64 total_amount_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -296,9 +290,9 @@ private static final long serialVersionUID = 0L;
     boolean hasTotalAmountMicros();
     /**
      * <pre>
-     * Output only. The total amount attributable to this budget during the service period,
-     * in micros. This equals the sum of the account budget subtotal amount and
-     * the account budget tax amount.
+     * Output only. The total amount attributable to this budget during the
+     * service period, in micros. This equals the sum of the account budget
+     * subtotal amount and the account budget tax amount.
      * </pre>
      *
      * <code>optional int64 total_amount_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -308,9 +302,9 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The billable activity date range of the account budget, within the
-     * service date range of this invoice. The end date is inclusive. This can
-     * be different from the account budget's start and end time.
+     * Output only. The billable activity date range of the account budget,
+     * within the service date range of this invoice. The end date is inclusive.
+     * This can be different from the account budget's start and end time.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -319,9 +313,9 @@ private static final long serialVersionUID = 0L;
     boolean hasBillableActivityDateRange();
     /**
      * <pre>
-     * Output only. The billable activity date range of the account budget, within the
-     * service date range of this invoice. The end date is inclusive. This can
-     * be different from the account budget's start and end time.
+     * Output only. The billable activity date range of the account budget,
+     * within the service date range of this invoice. The end date is inclusive.
+     * This can be different from the account budget's start and end time.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -330,9 +324,9 @@ private static final long serialVersionUID = 0L;
     com.google.ads.googleads.v11.common.DateRange getBillableActivityDateRange();
     /**
      * <pre>
-     * Output only. The billable activity date range of the account budget, within the
-     * service date range of this invoice. The end date is inclusive. This can
-     * be different from the account budget's start and end time.
+     * Output only. The billable activity date range of the account budget,
+     * within the service date range of this invoice. The end date is inclusive.
+     * This can be different from the account budget's start and end time.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -390,13 +384,13 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
     public static final int CUSTOMER_FIELD_NUMBER = 10;
-    private volatile java.lang.Object customer_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object customer_ = "";
     /**
      * <pre>
-     * Output only. The resource name of the customer associated with this account budget.
-     * This contains the customer ID, which appears on the invoice PDF as
-     * "Account ID".
-     * Customer resource names have the form:
+     * Output only. The resource name of the customer associated with this
+     * account budget. This contains the customer ID, which appears on the
+     * invoice PDF as "Account ID". Customer resource names have the form:
      * `customers/{customer_id}`
      * </pre>
      *
@@ -409,10 +403,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource name of the customer associated with this account budget.
-     * This contains the customer ID, which appears on the invoice PDF as
-     * "Account ID".
-     * Customer resource names have the form:
+     * Output only. The resource name of the customer associated with this
+     * account budget. This contains the customer ID, which appears on the
+     * invoice PDF as "Account ID". Customer resource names have the form:
      * `customers/{customer_id}`
      * </pre>
      *
@@ -434,10 +427,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource name of the customer associated with this account budget.
-     * This contains the customer ID, which appears on the invoice PDF as
-     * "Account ID".
-     * Customer resource names have the form:
+     * Output only. The resource name of the customer associated with this
+     * account budget. This contains the customer ID, which appears on the
+     * invoice PDF as "Account ID". Customer resource names have the form:
      * `customers/{customer_id}`
      * </pre>
      *
@@ -460,11 +452,12 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int CUSTOMER_DESCRIPTIVE_NAME_FIELD_NUMBER = 11;
-    private volatile java.lang.Object customerDescriptiveName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object customerDescriptiveName_ = "";
     /**
      * <pre>
-     * Output only. The descriptive name of the account budget's customer. It appears on the
-     * invoice PDF as "Account".
+     * Output only. The descriptive name of the account budget's customer. It
+     * appears on the invoice PDF as "Account".
      * </pre>
      *
      * <code>optional string customer_descriptive_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -476,8 +469,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The descriptive name of the account budget's customer. It appears on the
-     * invoice PDF as "Account".
+     * Output only. The descriptive name of the account budget's customer. It
+     * appears on the invoice PDF as "Account".
      * </pre>
      *
      * <code>optional string customer_descriptive_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -498,8 +491,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The descriptive name of the account budget's customer. It appears on the
-     * invoice PDF as "Account".
+     * Output only. The descriptive name of the account budget's customer. It
+     * appears on the invoice PDF as "Account".
      * </pre>
      *
      * <code>optional string customer_descriptive_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -521,12 +514,12 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int ACCOUNT_BUDGET_FIELD_NUMBER = 12;
-    private volatile java.lang.Object accountBudget_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object accountBudget_ = "";
     /**
      * <pre>
-     * Output only. The resource name of the account budget associated with this summarized
-     * billable cost.
-     * AccountBudget resource names have the form:
+     * Output only. The resource name of the account budget associated with this
+     * summarized billable cost. AccountBudget resource names have the form:
      * `customers/{customer_id}/accountBudgets/{account_budget_id}`
      * </pre>
      *
@@ -539,9 +532,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource name of the account budget associated with this summarized
-     * billable cost.
-     * AccountBudget resource names have the form:
+     * Output only. The resource name of the account budget associated with this
+     * summarized billable cost. AccountBudget resource names have the form:
      * `customers/{customer_id}/accountBudgets/{account_budget_id}`
      * </pre>
      *
@@ -563,9 +555,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource name of the account budget associated with this summarized
-     * billable cost.
-     * AccountBudget resource names have the form:
+     * Output only. The resource name of the account budget associated with this
+     * summarized billable cost. AccountBudget resource names have the form:
      * `customers/{customer_id}/accountBudgets/{account_budget_id}`
      * </pre>
      *
@@ -588,11 +579,12 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int ACCOUNT_BUDGET_NAME_FIELD_NUMBER = 13;
-    private volatile java.lang.Object accountBudgetName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object accountBudgetName_ = "";
     /**
      * <pre>
-     * Output only. The name of the account budget. It appears on the invoice PDF as "Account
-     * budget".
+     * Output only. The name of the account budget. It appears on the invoice
+     * PDF as "Account budget".
      * </pre>
      *
      * <code>optional string account_budget_name = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -604,8 +596,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The name of the account budget. It appears on the invoice PDF as "Account
-     * budget".
+     * Output only. The name of the account budget. It appears on the invoice
+     * PDF as "Account budget".
      * </pre>
      *
      * <code>optional string account_budget_name = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -626,8 +618,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The name of the account budget. It appears on the invoice PDF as "Account
-     * budget".
+     * Output only. The name of the account budget. It appears on the invoice
+     * PDF as "Account budget".
      * </pre>
      *
      * <code>optional string account_budget_name = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -649,11 +641,12 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int PURCHASE_ORDER_NUMBER_FIELD_NUMBER = 14;
-    private volatile java.lang.Object purchaseOrderNumber_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object purchaseOrderNumber_ = "";
     /**
      * <pre>
-     * Output only. The purchase order number of the account budget. It appears on the
-     * invoice PDF as "Purchase order".
+     * Output only. The purchase order number of the account budget. It appears
+     * on the invoice PDF as "Purchase order".
      * </pre>
      *
      * <code>optional string purchase_order_number = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -665,8 +658,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The purchase order number of the account budget. It appears on the
-     * invoice PDF as "Purchase order".
+     * Output only. The purchase order number of the account budget. It appears
+     * on the invoice PDF as "Purchase order".
      * </pre>
      *
      * <code>optional string purchase_order_number = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -687,8 +680,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The purchase order number of the account budget. It appears on the
-     * invoice PDF as "Purchase order".
+     * Output only. The purchase order number of the account budget. It appears
+     * on the invoice PDF as "Purchase order".
      * </pre>
      *
      * <code>optional string purchase_order_number = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -710,11 +703,11 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int SUBTOTAL_AMOUNT_MICROS_FIELD_NUMBER = 15;
-    private long subtotalAmountMicros_;
+    private long subtotalAmountMicros_ = 0L;
     /**
      * <pre>
-     * Output only. The pretax subtotal amount attributable to this budget during the service
-     * period, in micros.
+     * Output only. The pretax subtotal amount attributable to this budget
+     * during the service period, in micros.
      * </pre>
      *
      * <code>optional int64 subtotal_amount_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -726,8 +719,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The pretax subtotal amount attributable to this budget during the service
-     * period, in micros.
+     * Output only. The pretax subtotal amount attributable to this budget
+     * during the service period, in micros.
      * </pre>
      *
      * <code>optional int64 subtotal_amount_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -739,11 +732,11 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int TAX_AMOUNT_MICROS_FIELD_NUMBER = 16;
-    private long taxAmountMicros_;
+    private long taxAmountMicros_ = 0L;
     /**
      * <pre>
-     * Output only. The tax amount attributable to this budget during the service period, in
-     * micros.
+     * Output only. The tax amount attributable to this budget during the
+     * service period, in micros.
      * </pre>
      *
      * <code>optional int64 tax_amount_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -755,8 +748,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The tax amount attributable to this budget during the service period, in
-     * micros.
+     * Output only. The tax amount attributable to this budget during the
+     * service period, in micros.
      * </pre>
      *
      * <code>optional int64 tax_amount_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -768,12 +761,12 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int TOTAL_AMOUNT_MICROS_FIELD_NUMBER = 17;
-    private long totalAmountMicros_;
+    private long totalAmountMicros_ = 0L;
     /**
      * <pre>
-     * Output only. The total amount attributable to this budget during the service period,
-     * in micros. This equals the sum of the account budget subtotal amount and
-     * the account budget tax amount.
+     * Output only. The total amount attributable to this budget during the
+     * service period, in micros. This equals the sum of the account budget
+     * subtotal amount and the account budget tax amount.
      * </pre>
      *
      * <code>optional int64 total_amount_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -785,9 +778,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The total amount attributable to this budget during the service period,
-     * in micros. This equals the sum of the account budget subtotal amount and
-     * the account budget tax amount.
+     * Output only. The total amount attributable to this budget during the
+     * service period, in micros. This equals the sum of the account budget
+     * subtotal amount and the account budget tax amount.
      * </pre>
      *
      * <code>optional int64 total_amount_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -802,9 +795,9 @@ private static final long serialVersionUID = 0L;
     private com.google.ads.googleads.v11.common.DateRange billableActivityDateRange_;
     /**
      * <pre>
-     * Output only. The billable activity date range of the account budget, within the
-     * service date range of this invoice. The end date is inclusive. This can
-     * be different from the account budget's start and end time.
+     * Output only. The billable activity date range of the account budget,
+     * within the service date range of this invoice. The end date is inclusive.
+     * This can be different from the account budget's start and end time.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -816,9 +809,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The billable activity date range of the account budget, within the
-     * service date range of this invoice. The end date is inclusive. This can
-     * be different from the account budget's start and end time.
+     * Output only. The billable activity date range of the account budget,
+     * within the service date range of this invoice. The end date is inclusive.
+     * This can be different from the account budget's start and end time.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -830,16 +823,16 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The billable activity date range of the account budget, within the
-     * service date range of this invoice. The end date is inclusive. This can
-     * be different from the account budget's start and end time.
+     * Output only. The billable activity date range of the account budget,
+     * within the service date range of this invoice. The end date is inclusive.
+     * This can be different from the account budget's start and end time.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.common.DateRangeOrBuilder getBillableActivityDateRangeOrBuilder() {
-      return getBillableActivityDateRange();
+      return billableActivityDateRange_ == null ? com.google.ads.googleads.v11.common.DateRange.getDefaultInstance() : billableActivityDateRange_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1165,26 +1158,18 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         customer_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
         customerDescriptiveName_ = "";
-        bitField0_ = (bitField0_ & ~0x00000002);
         accountBudget_ = "";
-        bitField0_ = (bitField0_ & ~0x00000004);
         accountBudgetName_ = "";
-        bitField0_ = (bitField0_ & ~0x00000008);
         purchaseOrderNumber_ = "";
-        bitField0_ = (bitField0_ & ~0x00000010);
         subtotalAmountMicros_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000020);
         taxAmountMicros_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000040);
         totalAmountMicros_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000080);
-        if (billableActivityDateRangeBuilder_ == null) {
-          billableActivityDateRange_ = null;
-        } else {
-          billableActivityDateRange_ = null;
+        billableActivityDateRange_ = null;
+        if (billableActivityDateRangeBuilder_ != null) {
+          billableActivityDateRangeBuilder_.dispose();
           billableActivityDateRangeBuilder_ = null;
         }
         return this;
@@ -1213,28 +1198,34 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary buildPartial() {
         com.google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary result = new com.google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.customer_ = customer_;
           to_bitField0_ |= 0x00000001;
         }
-        result.customer_ = customer_;
         if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.customerDescriptiveName_ = customerDescriptiveName_;
           to_bitField0_ |= 0x00000002;
         }
-        result.customerDescriptiveName_ = customerDescriptiveName_;
         if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.accountBudget_ = accountBudget_;
           to_bitField0_ |= 0x00000004;
         }
-        result.accountBudget_ = accountBudget_;
         if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.accountBudgetName_ = accountBudgetName_;
           to_bitField0_ |= 0x00000008;
         }
-        result.accountBudgetName_ = accountBudgetName_;
         if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.purchaseOrderNumber_ = purchaseOrderNumber_;
           to_bitField0_ |= 0x00000010;
         }
-        result.purchaseOrderNumber_ = purchaseOrderNumber_;
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.subtotalAmountMicros_ = subtotalAmountMicros_;
           to_bitField0_ |= 0x00000020;
@@ -1247,14 +1238,12 @@ private static final long serialVersionUID = 0L;
           result.totalAmountMicros_ = totalAmountMicros_;
           to_bitField0_ |= 0x00000080;
         }
-        if (billableActivityDateRangeBuilder_ == null) {
-          result.billableActivityDateRange_ = billableActivityDateRange_;
-        } else {
-          result.billableActivityDateRange_ = billableActivityDateRangeBuilder_.build();
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.billableActivityDateRange_ = billableActivityDateRangeBuilder_ == null
+              ? billableActivityDateRange_
+              : billableActivityDateRangeBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1302,28 +1291,28 @@ private static final long serialVersionUID = 0L;
       public Builder mergeFrom(com.google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary other) {
         if (other == com.google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary.getDefaultInstance()) return this;
         if (other.hasCustomer()) {
-          bitField0_ |= 0x00000001;
           customer_ = other.customer_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.hasCustomerDescriptiveName()) {
-          bitField0_ |= 0x00000002;
           customerDescriptiveName_ = other.customerDescriptiveName_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.hasAccountBudget()) {
-          bitField0_ |= 0x00000004;
           accountBudget_ = other.accountBudget_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (other.hasAccountBudgetName()) {
-          bitField0_ |= 0x00000008;
           accountBudgetName_ = other.accountBudgetName_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (other.hasPurchaseOrderNumber()) {
-          bitField0_ |= 0x00000010;
           purchaseOrderNumber_ = other.purchaseOrderNumber_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         if (other.hasSubtotalAmountMicros()) {
@@ -1368,7 +1357,7 @@ private static final long serialVersionUID = 0L;
                 input.readMessage(
                     getBillableActivityDateRangeFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000100;
                 break;
               } // case 74
               case 82: {
@@ -1431,10 +1420,9 @@ private static final long serialVersionUID = 0L;
       private java.lang.Object customer_ = "";
       /**
        * <pre>
-       * Output only. The resource name of the customer associated with this account budget.
-       * This contains the customer ID, which appears on the invoice PDF as
-       * "Account ID".
-       * Customer resource names have the form:
+       * Output only. The resource name of the customer associated with this
+       * account budget. This contains the customer ID, which appears on the
+       * invoice PDF as "Account ID". Customer resource names have the form:
        * `customers/{customer_id}`
        * </pre>
        *
@@ -1446,10 +1434,9 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The resource name of the customer associated with this account budget.
-       * This contains the customer ID, which appears on the invoice PDF as
-       * "Account ID".
-       * Customer resource names have the form:
+       * Output only. The resource name of the customer associated with this
+       * account budget. This contains the customer ID, which appears on the
+       * invoice PDF as "Account ID". Customer resource names have the form:
        * `customers/{customer_id}`
        * </pre>
        *
@@ -1470,10 +1457,9 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The resource name of the customer associated with this account budget.
-       * This contains the customer ID, which appears on the invoice PDF as
-       * "Account ID".
-       * Customer resource names have the form:
+       * Output only. The resource name of the customer associated with this
+       * account budget. This contains the customer ID, which appears on the
+       * invoice PDF as "Account ID". Customer resource names have the form:
        * `customers/{customer_id}`
        * </pre>
        *
@@ -1495,10 +1481,9 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The resource name of the customer associated with this account budget.
-       * This contains the customer ID, which appears on the invoice PDF as
-       * "Account ID".
-       * Customer resource names have the form:
+       * Output only. The resource name of the customer associated with this
+       * account budget. This contains the customer ID, which appears on the
+       * invoice PDF as "Account ID". Customer resource names have the form:
        * `customers/{customer_id}`
        * </pre>
        *
@@ -1508,20 +1493,17 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setCustomer(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+        if (value == null) { throw new NullPointerException(); }
         customer_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The resource name of the customer associated with this account budget.
-       * This contains the customer ID, which appears on the invoice PDF as
-       * "Account ID".
-       * Customer resource names have the form:
+       * Output only. The resource name of the customer associated with this
+       * account budget. This contains the customer ID, which appears on the
+       * invoice PDF as "Account ID". Customer resource names have the form:
        * `customers/{customer_id}`
        * </pre>
        *
@@ -1529,17 +1511,16 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearCustomer() {
-        bitField0_ = (bitField0_ & ~0x00000001);
         customer_ = getDefaultInstance().getCustomer();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The resource name of the customer associated with this account budget.
-       * This contains the customer ID, which appears on the invoice PDF as
-       * "Account ID".
-       * Customer resource names have the form:
+       * Output only. The resource name of the customer associated with this
+       * account budget. This contains the customer ID, which appears on the
+       * invoice PDF as "Account ID". Customer resource names have the form:
        * `customers/{customer_id}`
        * </pre>
        *
@@ -1549,12 +1530,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setCustomerBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        bitField0_ |= 0x00000001;
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         customer_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1562,8 +1541,8 @@ private static final long serialVersionUID = 0L;
       private java.lang.Object customerDescriptiveName_ = "";
       /**
        * <pre>
-       * Output only. The descriptive name of the account budget's customer. It appears on the
-       * invoice PDF as "Account".
+       * Output only. The descriptive name of the account budget's customer. It
+       * appears on the invoice PDF as "Account".
        * </pre>
        *
        * <code>optional string customer_descriptive_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1574,8 +1553,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The descriptive name of the account budget's customer. It appears on the
-       * invoice PDF as "Account".
+       * Output only. The descriptive name of the account budget's customer. It
+       * appears on the invoice PDF as "Account".
        * </pre>
        *
        * <code>optional string customer_descriptive_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1595,8 +1574,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The descriptive name of the account budget's customer. It appears on the
-       * invoice PDF as "Account".
+       * Output only. The descriptive name of the account budget's customer. It
+       * appears on the invoice PDF as "Account".
        * </pre>
        *
        * <code>optional string customer_descriptive_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1617,8 +1596,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The descriptive name of the account budget's customer. It appears on the
-       * invoice PDF as "Account".
+       * Output only. The descriptive name of the account budget's customer. It
+       * appears on the invoice PDF as "Account".
        * </pre>
        *
        * <code>optional string customer_descriptive_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1627,33 +1606,31 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setCustomerDescriptiveName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+        if (value == null) { throw new NullPointerException(); }
         customerDescriptiveName_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The descriptive name of the account budget's customer. It appears on the
-       * invoice PDF as "Account".
+       * Output only. The descriptive name of the account budget's customer. It
+       * appears on the invoice PDF as "Account".
        * </pre>
        *
        * <code>optional string customer_descriptive_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return This builder for chaining.
        */
       public Builder clearCustomerDescriptiveName() {
-        bitField0_ = (bitField0_ & ~0x00000002);
         customerDescriptiveName_ = getDefaultInstance().getCustomerDescriptiveName();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The descriptive name of the account budget's customer. It appears on the
-       * invoice PDF as "Account".
+       * Output only. The descriptive name of the account budget's customer. It
+       * appears on the invoice PDF as "Account".
        * </pre>
        *
        * <code>optional string customer_descriptive_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1662,12 +1639,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setCustomerDescriptiveNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        bitField0_ |= 0x00000002;
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         customerDescriptiveName_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1675,9 +1650,8 @@ private static final long serialVersionUID = 0L;
       private java.lang.Object accountBudget_ = "";
       /**
        * <pre>
-       * Output only. The resource name of the account budget associated with this summarized
-       * billable cost.
-       * AccountBudget resource names have the form:
+       * Output only. The resource name of the account budget associated with this
+       * summarized billable cost. AccountBudget resource names have the form:
        * `customers/{customer_id}/accountBudgets/{account_budget_id}`
        * </pre>
        *
@@ -1689,9 +1663,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The resource name of the account budget associated with this summarized
-       * billable cost.
-       * AccountBudget resource names have the form:
+       * Output only. The resource name of the account budget associated with this
+       * summarized billable cost. AccountBudget resource names have the form:
        * `customers/{customer_id}/accountBudgets/{account_budget_id}`
        * </pre>
        *
@@ -1712,9 +1685,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The resource name of the account budget associated with this summarized
-       * billable cost.
-       * AccountBudget resource names have the form:
+       * Output only. The resource name of the account budget associated with this
+       * summarized billable cost. AccountBudget resource names have the form:
        * `customers/{customer_id}/accountBudgets/{account_budget_id}`
        * </pre>
        *
@@ -1736,9 +1708,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The resource name of the account budget associated with this summarized
-       * billable cost.
-       * AccountBudget resource names have the form:
+       * Output only. The resource name of the account budget associated with this
+       * summarized billable cost. AccountBudget resource names have the form:
        * `customers/{customer_id}/accountBudgets/{account_budget_id}`
        * </pre>
        *
@@ -1748,19 +1719,16 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setAccountBudget(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+        if (value == null) { throw new NullPointerException(); }
         accountBudget_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The resource name of the account budget associated with this summarized
-       * billable cost.
-       * AccountBudget resource names have the form:
+       * Output only. The resource name of the account budget associated with this
+       * summarized billable cost. AccountBudget resource names have the form:
        * `customers/{customer_id}/accountBudgets/{account_budget_id}`
        * </pre>
        *
@@ -1768,16 +1736,15 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearAccountBudget() {
-        bitField0_ = (bitField0_ & ~0x00000004);
         accountBudget_ = getDefaultInstance().getAccountBudget();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The resource name of the account budget associated with this summarized
-       * billable cost.
-       * AccountBudget resource names have the form:
+       * Output only. The resource name of the account budget associated with this
+       * summarized billable cost. AccountBudget resource names have the form:
        * `customers/{customer_id}/accountBudgets/{account_budget_id}`
        * </pre>
        *
@@ -1787,12 +1754,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setAccountBudgetBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        bitField0_ |= 0x00000004;
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         accountBudget_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1800,8 +1765,8 @@ private static final long serialVersionUID = 0L;
       private java.lang.Object accountBudgetName_ = "";
       /**
        * <pre>
-       * Output only. The name of the account budget. It appears on the invoice PDF as "Account
-       * budget".
+       * Output only. The name of the account budget. It appears on the invoice
+       * PDF as "Account budget".
        * </pre>
        *
        * <code>optional string account_budget_name = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1812,8 +1777,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The name of the account budget. It appears on the invoice PDF as "Account
-       * budget".
+       * Output only. The name of the account budget. It appears on the invoice
+       * PDF as "Account budget".
        * </pre>
        *
        * <code>optional string account_budget_name = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1833,8 +1798,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The name of the account budget. It appears on the invoice PDF as "Account
-       * budget".
+       * Output only. The name of the account budget. It appears on the invoice
+       * PDF as "Account budget".
        * </pre>
        *
        * <code>optional string account_budget_name = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1855,8 +1820,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The name of the account budget. It appears on the invoice PDF as "Account
-       * budget".
+       * Output only. The name of the account budget. It appears on the invoice
+       * PDF as "Account budget".
        * </pre>
        *
        * <code>optional string account_budget_name = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1865,33 +1830,31 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setAccountBudgetName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
+        if (value == null) { throw new NullPointerException(); }
         accountBudgetName_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The name of the account budget. It appears on the invoice PDF as "Account
-       * budget".
+       * Output only. The name of the account budget. It appears on the invoice
+       * PDF as "Account budget".
        * </pre>
        *
        * <code>optional string account_budget_name = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return This builder for chaining.
        */
       public Builder clearAccountBudgetName() {
-        bitField0_ = (bitField0_ & ~0x00000008);
         accountBudgetName_ = getDefaultInstance().getAccountBudgetName();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The name of the account budget. It appears on the invoice PDF as "Account
-       * budget".
+       * Output only. The name of the account budget. It appears on the invoice
+       * PDF as "Account budget".
        * </pre>
        *
        * <code>optional string account_budget_name = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1900,12 +1863,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setAccountBudgetNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        bitField0_ |= 0x00000008;
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         accountBudgetName_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1913,8 +1874,8 @@ private static final long serialVersionUID = 0L;
       private java.lang.Object purchaseOrderNumber_ = "";
       /**
        * <pre>
-       * Output only. The purchase order number of the account budget. It appears on the
-       * invoice PDF as "Purchase order".
+       * Output only. The purchase order number of the account budget. It appears
+       * on the invoice PDF as "Purchase order".
        * </pre>
        *
        * <code>optional string purchase_order_number = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1925,8 +1886,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The purchase order number of the account budget. It appears on the
-       * invoice PDF as "Purchase order".
+       * Output only. The purchase order number of the account budget. It appears
+       * on the invoice PDF as "Purchase order".
        * </pre>
        *
        * <code>optional string purchase_order_number = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1946,8 +1907,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The purchase order number of the account budget. It appears on the
-       * invoice PDF as "Purchase order".
+       * Output only. The purchase order number of the account budget. It appears
+       * on the invoice PDF as "Purchase order".
        * </pre>
        *
        * <code>optional string purchase_order_number = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1968,8 +1929,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The purchase order number of the account budget. It appears on the
-       * invoice PDF as "Purchase order".
+       * Output only. The purchase order number of the account budget. It appears
+       * on the invoice PDF as "Purchase order".
        * </pre>
        *
        * <code>optional string purchase_order_number = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1978,33 +1939,31 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setPurchaseOrderNumber(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
+        if (value == null) { throw new NullPointerException(); }
         purchaseOrderNumber_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The purchase order number of the account budget. It appears on the
-       * invoice PDF as "Purchase order".
+       * Output only. The purchase order number of the account budget. It appears
+       * on the invoice PDF as "Purchase order".
        * </pre>
        *
        * <code>optional string purchase_order_number = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return This builder for chaining.
        */
       public Builder clearPurchaseOrderNumber() {
-        bitField0_ = (bitField0_ & ~0x00000010);
         purchaseOrderNumber_ = getDefaultInstance().getPurchaseOrderNumber();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The purchase order number of the account budget. It appears on the
-       * invoice PDF as "Purchase order".
+       * Output only. The purchase order number of the account budget. It appears
+       * on the invoice PDF as "Purchase order".
        * </pre>
        *
        * <code>optional string purchase_order_number = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2013,12 +1972,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setPurchaseOrderNumberBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        bitField0_ |= 0x00000010;
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         purchaseOrderNumber_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -2026,8 +1983,8 @@ private static final long serialVersionUID = 0L;
       private long subtotalAmountMicros_ ;
       /**
        * <pre>
-       * Output only. The pretax subtotal amount attributable to this budget during the service
-       * period, in micros.
+       * Output only. The pretax subtotal amount attributable to this budget
+       * during the service period, in micros.
        * </pre>
        *
        * <code>optional int64 subtotal_amount_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2039,8 +1996,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The pretax subtotal amount attributable to this budget during the service
-       * period, in micros.
+       * Output only. The pretax subtotal amount attributable to this budget
+       * during the service period, in micros.
        * </pre>
        *
        * <code>optional int64 subtotal_amount_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2052,8 +2009,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The pretax subtotal amount attributable to this budget during the service
-       * period, in micros.
+       * Output only. The pretax subtotal amount attributable to this budget
+       * during the service period, in micros.
        * </pre>
        *
        * <code>optional int64 subtotal_amount_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2061,15 +2018,16 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setSubtotalAmountMicros(long value) {
-        bitField0_ |= 0x00000020;
+        
         subtotalAmountMicros_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The pretax subtotal amount attributable to this budget during the service
-       * period, in micros.
+       * Output only. The pretax subtotal amount attributable to this budget
+       * during the service period, in micros.
        * </pre>
        *
        * <code>optional int64 subtotal_amount_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2085,8 +2043,8 @@ private static final long serialVersionUID = 0L;
       private long taxAmountMicros_ ;
       /**
        * <pre>
-       * Output only. The tax amount attributable to this budget during the service period, in
-       * micros.
+       * Output only. The tax amount attributable to this budget during the
+       * service period, in micros.
        * </pre>
        *
        * <code>optional int64 tax_amount_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2098,8 +2056,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The tax amount attributable to this budget during the service period, in
-       * micros.
+       * Output only. The tax amount attributable to this budget during the
+       * service period, in micros.
        * </pre>
        *
        * <code>optional int64 tax_amount_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2111,8 +2069,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The tax amount attributable to this budget during the service period, in
-       * micros.
+       * Output only. The tax amount attributable to this budget during the
+       * service period, in micros.
        * </pre>
        *
        * <code>optional int64 tax_amount_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2120,15 +2078,16 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setTaxAmountMicros(long value) {
-        bitField0_ |= 0x00000040;
+        
         taxAmountMicros_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The tax amount attributable to this budget during the service period, in
-       * micros.
+       * Output only. The tax amount attributable to this budget during the
+       * service period, in micros.
        * </pre>
        *
        * <code>optional int64 tax_amount_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2144,9 +2103,9 @@ private static final long serialVersionUID = 0L;
       private long totalAmountMicros_ ;
       /**
        * <pre>
-       * Output only. The total amount attributable to this budget during the service period,
-       * in micros. This equals the sum of the account budget subtotal amount and
-       * the account budget tax amount.
+       * Output only. The total amount attributable to this budget during the
+       * service period, in micros. This equals the sum of the account budget
+       * subtotal amount and the account budget tax amount.
        * </pre>
        *
        * <code>optional int64 total_amount_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2158,9 +2117,9 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The total amount attributable to this budget during the service period,
-       * in micros. This equals the sum of the account budget subtotal amount and
-       * the account budget tax amount.
+       * Output only. The total amount attributable to this budget during the
+       * service period, in micros. This equals the sum of the account budget
+       * subtotal amount and the account budget tax amount.
        * </pre>
        *
        * <code>optional int64 total_amount_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2172,9 +2131,9 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The total amount attributable to this budget during the service period,
-       * in micros. This equals the sum of the account budget subtotal amount and
-       * the account budget tax amount.
+       * Output only. The total amount attributable to this budget during the
+       * service period, in micros. This equals the sum of the account budget
+       * subtotal amount and the account budget tax amount.
        * </pre>
        *
        * <code>optional int64 total_amount_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2182,16 +2141,17 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setTotalAmountMicros(long value) {
-        bitField0_ |= 0x00000080;
+        
         totalAmountMicros_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The total amount attributable to this budget during the service period,
-       * in micros. This equals the sum of the account budget subtotal amount and
-       * the account budget tax amount.
+       * Output only. The total amount attributable to this budget during the
+       * service period, in micros. This equals the sum of the account budget
+       * subtotal amount and the account budget tax amount.
        * </pre>
        *
        * <code>optional int64 total_amount_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2209,22 +2169,22 @@ private static final long serialVersionUID = 0L;
           com.google.ads.googleads.v11.common.DateRange, com.google.ads.googleads.v11.common.DateRange.Builder, com.google.ads.googleads.v11.common.DateRangeOrBuilder> billableActivityDateRangeBuilder_;
       /**
        * <pre>
-       * Output only. The billable activity date range of the account budget, within the
-       * service date range of this invoice. The end date is inclusive. This can
-       * be different from the account budget's start and end time.
+       * Output only. The billable activity date range of the account budget,
+       * within the service date range of this invoice. The end date is inclusive.
+       * This can be different from the account budget's start and end time.
        * </pre>
        *
        * <code>.google.ads.googleads.v11.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return Whether the billableActivityDateRange field is set.
        */
       public boolean hasBillableActivityDateRange() {
-        return billableActivityDateRangeBuilder_ != null || billableActivityDateRange_ != null;
+        return ((bitField0_ & 0x00000100) != 0);
       }
       /**
        * <pre>
-       * Output only. The billable activity date range of the account budget, within the
-       * service date range of this invoice. The end date is inclusive. This can
-       * be different from the account budget's start and end time.
+       * Output only. The billable activity date range of the account budget,
+       * within the service date range of this invoice. The end date is inclusive.
+       * This can be different from the account budget's start and end time.
        * </pre>
        *
        * <code>.google.ads.googleads.v11.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2239,9 +2199,9 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The billable activity date range of the account budget, within the
-       * service date range of this invoice. The end date is inclusive. This can
-       * be different from the account budget's start and end time.
+       * Output only. The billable activity date range of the account budget,
+       * within the service date range of this invoice. The end date is inclusive.
+       * This can be different from the account budget's start and end time.
        * </pre>
        *
        * <code>.google.ads.googleads.v11.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2252,18 +2212,18 @@ private static final long serialVersionUID = 0L;
             throw new NullPointerException();
           }
           billableActivityDateRange_ = value;
-          onChanged();
         } else {
           billableActivityDateRangeBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The billable activity date range of the account budget, within the
-       * service date range of this invoice. The end date is inclusive. This can
-       * be different from the account budget's start and end time.
+       * Output only. The billable activity date range of the account budget,
+       * within the service date range of this invoice. The end date is inclusive.
+       * This can be different from the account budget's start and end time.
        * </pre>
        *
        * <code>.google.ads.googleads.v11.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2272,76 +2232,76 @@ private static final long serialVersionUID = 0L;
           com.google.ads.googleads.v11.common.DateRange.Builder builderForValue) {
         if (billableActivityDateRangeBuilder_ == null) {
           billableActivityDateRange_ = builderForValue.build();
-          onChanged();
         } else {
           billableActivityDateRangeBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The billable activity date range of the account budget, within the
-       * service date range of this invoice. The end date is inclusive. This can
-       * be different from the account budget's start and end time.
+       * Output only. The billable activity date range of the account budget,
+       * within the service date range of this invoice. The end date is inclusive.
+       * This can be different from the account budget's start and end time.
        * </pre>
        *
        * <code>.google.ads.googleads.v11.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder mergeBillableActivityDateRange(com.google.ads.googleads.v11.common.DateRange value) {
         if (billableActivityDateRangeBuilder_ == null) {
-          if (billableActivityDateRange_ != null) {
-            billableActivityDateRange_ =
-              com.google.ads.googleads.v11.common.DateRange.newBuilder(billableActivityDateRange_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000100) != 0) &&
+            billableActivityDateRange_ != null &&
+            billableActivityDateRange_ != com.google.ads.googleads.v11.common.DateRange.getDefaultInstance()) {
+            getBillableActivityDateRangeBuilder().mergeFrom(value);
           } else {
             billableActivityDateRange_ = value;
           }
-          onChanged();
         } else {
           billableActivityDateRangeBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The billable activity date range of the account budget, within the
-       * service date range of this invoice. The end date is inclusive. This can
-       * be different from the account budget's start and end time.
+       * Output only. The billable activity date range of the account budget,
+       * within the service date range of this invoice. The end date is inclusive.
+       * This can be different from the account budget's start and end time.
        * </pre>
        *
        * <code>.google.ads.googleads.v11.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearBillableActivityDateRange() {
-        if (billableActivityDateRangeBuilder_ == null) {
-          billableActivityDateRange_ = null;
-          onChanged();
-        } else {
-          billableActivityDateRange_ = null;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        billableActivityDateRange_ = null;
+        if (billableActivityDateRangeBuilder_ != null) {
+          billableActivityDateRangeBuilder_.dispose();
           billableActivityDateRangeBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The billable activity date range of the account budget, within the
-       * service date range of this invoice. The end date is inclusive. This can
-       * be different from the account budget's start and end time.
+       * Output only. The billable activity date range of the account budget,
+       * within the service date range of this invoice. The end date is inclusive.
+       * This can be different from the account budget's start and end time.
        * </pre>
        *
        * <code>.google.ads.googleads.v11.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.ads.googleads.v11.common.DateRange.Builder getBillableActivityDateRangeBuilder() {
-        
+        bitField0_ |= 0x00000100;
         onChanged();
         return getBillableActivityDateRangeFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * Output only. The billable activity date range of the account budget, within the
-       * service date range of this invoice. The end date is inclusive. This can
-       * be different from the account budget's start and end time.
+       * Output only. The billable activity date range of the account budget,
+       * within the service date range of this invoice. The end date is inclusive.
+       * This can be different from the account budget's start and end time.
        * </pre>
        *
        * <code>.google.ads.googleads.v11.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2356,9 +2316,9 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The billable activity date range of the account budget, within the
-       * service date range of this invoice. The end date is inclusive. This can
-       * be different from the account budget's start and end time.
+       * Output only. The billable activity date range of the account budget,
+       * within the service date range of this invoice. The end date is inclusive.
+       * This can be different from the account budget's start and end time.
        * </pre>
        *
        * <code>.google.ads.googleads.v11.common.DateRange billable_activity_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2442,11 +2402,12 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
-   * Output only. The resource name of the invoice. Multiple customers can share a given
-   * invoice, so multiple resource names may point to the same invoice.
+   * Output only. The resource name of the invoice. Multiple customers can share
+   * a given invoice, so multiple resource names may point to the same invoice.
    * Invoice resource names have the form:
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
@@ -2469,8 +2430,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The resource name of the invoice. Multiple customers can share a given
-   * invoice, so multiple resource names may point to the same invoice.
+   * Output only. The resource name of the invoice. Multiple customers can share
+   * a given invoice, so multiple resource names may point to the same invoice.
    * Invoice resource names have the form:
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
@@ -2494,10 +2455,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ID_FIELD_NUMBER = 25;
-  private volatile java.lang.Object id_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object id_ = "";
   /**
    * <pre>
-   * Output only. The ID of the invoice. It appears on the invoice PDF as "Invoice number".
+   * Output only. The ID of the invoice. It appears on the invoice PDF as
+   * "Invoice number".
    * </pre>
    *
    * <code>optional string id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2509,7 +2472,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The ID of the invoice. It appears on the invoice PDF as "Invoice number".
+   * Output only. The ID of the invoice. It appears on the invoice PDF as
+   * "Invoice number".
    * </pre>
    *
    * <code>optional string id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2530,7 +2494,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The ID of the invoice. It appears on the invoice PDF as "Invoice number".
+   * Output only. The ID of the invoice. It appears on the invoice PDF as
+   * "Invoice number".
    * </pre>
    *
    * <code>optional string id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2552,7 +2517,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TYPE_FIELD_NUMBER = 3;
-  private int type_;
+  private int type_ = 0;
   /**
    * <pre>
    * Output only. The type of invoice.
@@ -2573,13 +2538,13 @@ private static final long serialVersionUID = 0L;
    * @return The type.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.InvoiceTypeEnum.InvoiceType getType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.InvoiceTypeEnum.InvoiceType result = com.google.ads.googleads.v11.enums.InvoiceTypeEnum.InvoiceType.valueOf(type_);
+    com.google.ads.googleads.v11.enums.InvoiceTypeEnum.InvoiceType result = com.google.ads.googleads.v11.enums.InvoiceTypeEnum.InvoiceType.forNumber(type_);
     return result == null ? com.google.ads.googleads.v11.enums.InvoiceTypeEnum.InvoiceType.UNRECOGNIZED : result;
   }
 
   public static final int BILLING_SETUP_FIELD_NUMBER = 26;
-  private volatile java.lang.Object billingSetup_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object billingSetup_ = "";
   /**
    * <pre>
    * Output only. The resource name of this invoice's billing setup.
@@ -2640,12 +2605,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PAYMENTS_ACCOUNT_ID_FIELD_NUMBER = 27;
-  private volatile java.lang.Object paymentsAccountId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object paymentsAccountId_ = "";
   /**
    * <pre>
-   * Output only. A 16 digit ID used to identify the payments account associated with the
-   * billing setup, for example, "1234-5678-9012-3456". It appears on the
-   * invoice PDF as "Billing Account Number".
+   * Output only. A 16 digit ID used to identify the payments account associated
+   * with the billing setup, for example, "1234-5678-9012-3456". It appears on
+   * the invoice PDF as "Billing Account Number".
    * </pre>
    *
    * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2657,9 +2623,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. A 16 digit ID used to identify the payments account associated with the
-   * billing setup, for example, "1234-5678-9012-3456". It appears on the
-   * invoice PDF as "Billing Account Number".
+   * Output only. A 16 digit ID used to identify the payments account associated
+   * with the billing setup, for example, "1234-5678-9012-3456". It appears on
+   * the invoice PDF as "Billing Account Number".
    * </pre>
    *
    * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2680,9 +2646,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. A 16 digit ID used to identify the payments account associated with the
-   * billing setup, for example, "1234-5678-9012-3456". It appears on the
-   * invoice PDF as "Billing Account Number".
+   * Output only. A 16 digit ID used to identify the payments account associated
+   * with the billing setup, for example, "1234-5678-9012-3456". It appears on
+   * the invoice PDF as "Billing Account Number".
    * </pre>
    *
    * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2704,12 +2670,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PAYMENTS_PROFILE_ID_FIELD_NUMBER = 28;
-  private volatile java.lang.Object paymentsProfileId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object paymentsProfileId_ = "";
   /**
    * <pre>
-   * Output only. A 12 digit ID used to identify the payments profile associated with the
-   * billing setup, for example, "1234-5678-9012". It appears on the invoice PDF
-   * as "Billing ID".
+   * Output only. A 12 digit ID used to identify the payments profile associated
+   * with the billing setup, for example, "1234-5678-9012". It appears on the
+   * invoice PDF as "Billing ID".
    * </pre>
    *
    * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2721,9 +2688,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. A 12 digit ID used to identify the payments profile associated with the
-   * billing setup, for example, "1234-5678-9012". It appears on the invoice PDF
-   * as "Billing ID".
+   * Output only. A 12 digit ID used to identify the payments profile associated
+   * with the billing setup, for example, "1234-5678-9012". It appears on the
+   * invoice PDF as "Billing ID".
    * </pre>
    *
    * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2744,9 +2711,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. A 12 digit ID used to identify the payments profile associated with the
-   * billing setup, for example, "1234-5678-9012". It appears on the invoice PDF
-   * as "Billing ID".
+   * Output only. A 12 digit ID used to identify the payments profile associated
+   * with the billing setup, for example, "1234-5678-9012". It appears on the
+   * invoice PDF as "Billing ID".
    * </pre>
    *
    * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2768,11 +2735,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ISSUE_DATE_FIELD_NUMBER = 29;
-  private volatile java.lang.Object issueDate_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object issueDate_ = "";
   /**
    * <pre>
-   * Output only. The issue date in yyyy-mm-dd format. It appears on the invoice PDF as
-   * either "Issue date" or "Invoice date".
+   * Output only. The issue date in yyyy-mm-dd format. It appears on the invoice
+   * PDF as either "Issue date" or "Invoice date".
    * </pre>
    *
    * <code>optional string issue_date = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2784,8 +2752,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The issue date in yyyy-mm-dd format. It appears on the invoice PDF as
-   * either "Issue date" or "Invoice date".
+   * Output only. The issue date in yyyy-mm-dd format. It appears on the invoice
+   * PDF as either "Issue date" or "Invoice date".
    * </pre>
    *
    * <code>optional string issue_date = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2806,8 +2774,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The issue date in yyyy-mm-dd format. It appears on the invoice PDF as
-   * either "Issue date" or "Invoice date".
+   * Output only. The issue date in yyyy-mm-dd format. It appears on the invoice
+   * PDF as either "Issue date" or "Invoice date".
    * </pre>
    *
    * <code>optional string issue_date = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2829,7 +2797,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DUE_DATE_FIELD_NUMBER = 30;
-  private volatile java.lang.Object dueDate_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object dueDate_ = "";
   /**
    * <pre>
    * Output only. The due date in yyyy-mm-dd format.
@@ -2890,7 +2859,8 @@ private static final long serialVersionUID = 0L;
   private com.google.ads.googleads.v11.common.DateRange serviceDateRange_;
   /**
    * <pre>
-   * Output only. The service period date range of this invoice. The end date is inclusive.
+   * Output only. The service period date range of this invoice. The end date is
+   * inclusive.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.DateRange service_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2902,7 +2872,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The service period date range of this invoice. The end date is inclusive.
+   * Output only. The service period date range of this invoice. The end date is
+   * inclusive.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.DateRange service_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2914,22 +2885,25 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The service period date range of this invoice. The end date is inclusive.
+   * Output only. The service period date range of this invoice. The end date is
+   * inclusive.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.DateRange service_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   @java.lang.Override
   public com.google.ads.googleads.v11.common.DateRangeOrBuilder getServiceDateRangeOrBuilder() {
-    return getServiceDateRange();
+    return serviceDateRange_ == null ? com.google.ads.googleads.v11.common.DateRange.getDefaultInstance() : serviceDateRange_;
   }
 
   public static final int CURRENCY_CODE_FIELD_NUMBER = 31;
-  private volatile java.lang.Object currencyCode_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object currencyCode_ = "";
   /**
    * <pre>
-   * Output only. The currency code. All costs are returned in this currency. A subset of the
-   * currency codes derived from the ISO 4217 standard is supported.
+   * Output only. The currency code. All costs are returned in this currency. A
+   * subset of the currency codes derived from the ISO 4217 standard is
+   * supported.
    * </pre>
    *
    * <code>optional string currency_code = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2941,8 +2915,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The currency code. All costs are returned in this currency. A subset of the
-   * currency codes derived from the ISO 4217 standard is supported.
+   * Output only. The currency code. All costs are returned in this currency. A
+   * subset of the currency codes derived from the ISO 4217 standard is
+   * supported.
    * </pre>
    *
    * <code>optional string currency_code = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2963,8 +2938,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The currency code. All costs are returned in this currency. A subset of the
-   * currency codes derived from the ISO 4217 standard is supported.
+   * Output only. The currency code. All costs are returned in this currency. A
+   * subset of the currency codes derived from the ISO 4217 standard is
+   * supported.
    * </pre>
    *
    * <code>optional string currency_code = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2986,10 +2962,11 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ADJUSTMENTS_SUBTOTAL_AMOUNT_MICROS_FIELD_NUMBER = 19;
-  private long adjustmentsSubtotalAmountMicros_;
+  private long adjustmentsSubtotalAmountMicros_ = 0L;
   /**
    * <pre>
-   * Output only. The pretax subtotal amount of invoice level adjustments, in micros.
+   * Output only. The pretax subtotal amount of invoice level adjustments, in
+   * micros.
    * </pre>
    *
    * <code>int64 adjustments_subtotal_amount_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3001,7 +2978,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ADJUSTMENTS_TAX_AMOUNT_MICROS_FIELD_NUMBER = 20;
-  private long adjustmentsTaxAmountMicros_;
+  private long adjustmentsTaxAmountMicros_ = 0L;
   /**
    * <pre>
    * Output only. The sum of taxes on the invoice level adjustments, in micros.
@@ -3016,7 +2993,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ADJUSTMENTS_TOTAL_AMOUNT_MICROS_FIELD_NUMBER = 21;
-  private long adjustmentsTotalAmountMicros_;
+  private long adjustmentsTotalAmountMicros_ = 0L;
   /**
    * <pre>
    * Output only. The total amount of invoice level adjustments, in micros.
@@ -3031,10 +3008,11 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int REGULATORY_COSTS_SUBTOTAL_AMOUNT_MICROS_FIELD_NUMBER = 22;
-  private long regulatoryCostsSubtotalAmountMicros_;
+  private long regulatoryCostsSubtotalAmountMicros_ = 0L;
   /**
    * <pre>
-   * Output only. The pretax subtotal amount of invoice level regulatory costs, in micros.
+   * Output only. The pretax subtotal amount of invoice level regulatory costs,
+   * in micros.
    * </pre>
    *
    * <code>int64 regulatory_costs_subtotal_amount_micros = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3046,10 +3024,11 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int REGULATORY_COSTS_TAX_AMOUNT_MICROS_FIELD_NUMBER = 23;
-  private long regulatoryCostsTaxAmountMicros_;
+  private long regulatoryCostsTaxAmountMicros_ = 0L;
   /**
    * <pre>
-   * Output only. The sum of taxes on the invoice level regulatory costs, in micros.
+   * Output only. The sum of taxes on the invoice level regulatory costs, in
+   * micros.
    * </pre>
    *
    * <code>int64 regulatory_costs_tax_amount_micros = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3061,7 +3040,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int REGULATORY_COSTS_TOTAL_AMOUNT_MICROS_FIELD_NUMBER = 24;
-  private long regulatoryCostsTotalAmountMicros_;
+  private long regulatoryCostsTotalAmountMicros_ = 0L;
   /**
    * <pre>
    * Output only. The total amount of invoice level regulatory costs, in micros.
@@ -3076,7 +3055,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SUBTOTAL_AMOUNT_MICROS_FIELD_NUMBER = 33;
-  private long subtotalAmountMicros_;
+  private long subtotalAmountMicros_ = 0L;
   /**
    * <pre>
    * Output only. The pretax subtotal amount, in micros. This equals the
@@ -3113,12 +3092,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TAX_AMOUNT_MICROS_FIELD_NUMBER = 34;
-  private long taxAmountMicros_;
+  private long taxAmountMicros_ = 0L;
   /**
    * <pre>
-   * Output only. The sum of all taxes on the invoice, in micros. This equals the sum of the
-   * AccountBudgetSummary tax amounts, plus taxes not associated with a specific
-   * account budget.
+   * Output only. The sum of all taxes on the invoice, in micros. This equals
+   * the sum of the AccountBudgetSummary tax amounts, plus taxes not associated
+   * with a specific account budget.
    * </pre>
    *
    * <code>optional int64 tax_amount_micros = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3130,9 +3109,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The sum of all taxes on the invoice, in micros. This equals the sum of the
-   * AccountBudgetSummary tax amounts, plus taxes not associated with a specific
-   * account budget.
+   * Output only. The sum of all taxes on the invoice, in micros. This equals
+   * the sum of the AccountBudgetSummary tax amounts, plus taxes not associated
+   * with a specific account budget.
    * </pre>
    *
    * <code>optional int64 tax_amount_micros = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3144,7 +3123,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTAL_AMOUNT_MICROS_FIELD_NUMBER = 35;
-  private long totalAmountMicros_;
+  private long totalAmountMicros_ = 0L;
   /**
    * <pre>
    * Output only. The total amount, in micros. This equals the sum of
@@ -3179,13 +3158,14 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CORRECTED_INVOICE_FIELD_NUMBER = 36;
-  private volatile java.lang.Object correctedInvoice_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object correctedInvoice_ = "";
   /**
    * <pre>
-   * Output only. The resource name of the original invoice corrected, wrote off, or canceled
-   * by this invoice, if applicable. If `corrected_invoice` is set,
-   * `replaced_invoices` will not be set.
-   * Invoice resource names have the form:
+   * Output only. The resource name of the original invoice corrected, wrote
+   * off, or canceled by this invoice, if applicable. If `corrected_invoice` is
+   * set, `replaced_invoices` will not be set. Invoice resource names have the
+   * form:
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
@@ -3198,10 +3178,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The resource name of the original invoice corrected, wrote off, or canceled
-   * by this invoice, if applicable. If `corrected_invoice` is set,
-   * `replaced_invoices` will not be set.
-   * Invoice resource names have the form:
+   * Output only. The resource name of the original invoice corrected, wrote
+   * off, or canceled by this invoice, if applicable. If `corrected_invoice` is
+   * set, `replaced_invoices` will not be set. Invoice resource names have the
+   * form:
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
@@ -3223,10 +3203,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The resource name of the original invoice corrected, wrote off, or canceled
-   * by this invoice, if applicable. If `corrected_invoice` is set,
-   * `replaced_invoices` will not be set.
-   * Invoice resource names have the form:
+   * Output only. The resource name of the original invoice corrected, wrote
+   * off, or canceled by this invoice, if applicable. If `corrected_invoice` is
+   * set, `replaced_invoices` will not be set. Invoice resource names have the
+   * form:
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
@@ -3249,15 +3229,15 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int REPLACED_INVOICES_FIELD_NUMBER = 37;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList replacedInvoices_;
   /**
    * <pre>
-   * Output only. The resource name of the original invoice(s) being rebilled or replaced by
-   * this invoice, if applicable. There might be multiple replaced invoices due
-   * to invoice consolidation. The replaced invoices may not belong to the same
-   * payments account. If `replaced_invoices` is set, `corrected_invoice` will
-   * not be set.
-   * Invoice resource names have the form:
+   * Output only. The resource name of the original invoice(s) being rebilled or
+   * replaced by this invoice, if applicable. There might be multiple replaced
+   * invoices due to invoice consolidation. The replaced invoices may not belong
+   * to the same payments account. If `replaced_invoices` is set,
+   * `corrected_invoice` will not be set. Invoice resource names have the form:
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
@@ -3270,12 +3250,11 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The resource name of the original invoice(s) being rebilled or replaced by
-   * this invoice, if applicable. There might be multiple replaced invoices due
-   * to invoice consolidation. The replaced invoices may not belong to the same
-   * payments account. If `replaced_invoices` is set, `corrected_invoice` will
-   * not be set.
-   * Invoice resource names have the form:
+   * Output only. The resource name of the original invoice(s) being rebilled or
+   * replaced by this invoice, if applicable. There might be multiple replaced
+   * invoices due to invoice consolidation. The replaced invoices may not belong
+   * to the same payments account. If `replaced_invoices` is set,
+   * `corrected_invoice` will not be set. Invoice resource names have the form:
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
@@ -3287,12 +3266,11 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The resource name of the original invoice(s) being rebilled or replaced by
-   * this invoice, if applicable. There might be multiple replaced invoices due
-   * to invoice consolidation. The replaced invoices may not belong to the same
-   * payments account. If `replaced_invoices` is set, `corrected_invoice` will
-   * not be set.
-   * Invoice resource names have the form:
+   * Output only. The resource name of the original invoice(s) being rebilled or
+   * replaced by this invoice, if applicable. There might be multiple replaced
+   * invoices due to invoice consolidation. The replaced invoices may not belong
+   * to the same payments account. If `replaced_invoices` is set,
+   * `corrected_invoice` will not be set. Invoice resource names have the form:
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
@@ -3305,12 +3283,11 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The resource name of the original invoice(s) being rebilled or replaced by
-   * this invoice, if applicable. There might be multiple replaced invoices due
-   * to invoice consolidation. The replaced invoices may not belong to the same
-   * payments account. If `replaced_invoices` is set, `corrected_invoice` will
-   * not be set.
-   * Invoice resource names have the form:
+   * Output only. The resource name of the original invoice(s) being rebilled or
+   * replaced by this invoice, if applicable. There might be multiple replaced
+   * invoices due to invoice consolidation. The replaced invoices may not belong
+   * to the same payments account. If `replaced_invoices` is set,
+   * `corrected_invoice` will not be set. Invoice resource names have the form:
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
@@ -3324,11 +3301,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PDF_URL_FIELD_NUMBER = 38;
-  private volatile java.lang.Object pdfUrl_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object pdfUrl_ = "";
   /**
    * <pre>
-   * Output only. The URL to a PDF copy of the invoice. Users need to pass in their OAuth
-   * token to request the PDF with this URL.
+   * Output only. The URL to a PDF copy of the invoice. Users need to pass in
+   * their OAuth token to request the PDF with this URL.
    * </pre>
    *
    * <code>optional string pdf_url = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3340,8 +3318,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The URL to a PDF copy of the invoice. Users need to pass in their OAuth
-   * token to request the PDF with this URL.
+   * Output only. The URL to a PDF copy of the invoice. Users need to pass in
+   * their OAuth token to request the PDF with this URL.
    * </pre>
    *
    * <code>optional string pdf_url = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3362,8 +3340,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The URL to a PDF copy of the invoice. Users need to pass in their OAuth
-   * token to request the PDF with this URL.
+   * Output only. The URL to a PDF copy of the invoice. Users need to pass in
+   * their OAuth token to request the PDF with this URL.
    * </pre>
    *
    * <code>optional string pdf_url = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3385,11 +3363,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ACCOUNT_BUDGET_SUMMARIES_FIELD_NUMBER = 18;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary> accountBudgetSummaries_;
   /**
    * <pre>
-   * Output only. The list of summarized account budget information associated with this
-   * invoice.
+   * Output only. The list of summarized account budget information associated
+   * with this invoice.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3400,8 +3379,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The list of summarized account budget information associated with this
-   * invoice.
+   * Output only. The list of summarized account budget information associated
+   * with this invoice.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3413,8 +3392,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The list of summarized account budget information associated with this
-   * invoice.
+   * Output only. The list of summarized account budget information associated
+   * with this invoice.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3425,8 +3404,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The list of summarized account budget information associated with this
-   * invoice.
+   * Output only. The list of summarized account budget information associated
+   * with this invoice.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3437,8 +3416,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The list of summarized account budget information associated with this
-   * invoice.
+   * Output only. The list of summarized account budget information associated
+   * with this invoice.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3956,61 +3935,41 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       id_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       type_ = 0;
-
       billingSetup_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       paymentsAccountId_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       paymentsProfileId_ = "";
-      bitField0_ = (bitField0_ & ~0x00000008);
       issueDate_ = "";
-      bitField0_ = (bitField0_ & ~0x00000010);
       dueDate_ = "";
-      bitField0_ = (bitField0_ & ~0x00000020);
-      if (serviceDateRangeBuilder_ == null) {
-        serviceDateRange_ = null;
-      } else {
-        serviceDateRange_ = null;
+      serviceDateRange_ = null;
+      if (serviceDateRangeBuilder_ != null) {
+        serviceDateRangeBuilder_.dispose();
         serviceDateRangeBuilder_ = null;
       }
       currencyCode_ = "";
-      bitField0_ = (bitField0_ & ~0x00000040);
       adjustmentsSubtotalAmountMicros_ = 0L;
-
       adjustmentsTaxAmountMicros_ = 0L;
-
       adjustmentsTotalAmountMicros_ = 0L;
-
       regulatoryCostsSubtotalAmountMicros_ = 0L;
-
       regulatoryCostsTaxAmountMicros_ = 0L;
-
       regulatoryCostsTotalAmountMicros_ = 0L;
-
       subtotalAmountMicros_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000080);
       taxAmountMicros_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000100);
       totalAmountMicros_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000200);
       correctedInvoice_ = "";
-      bitField0_ = (bitField0_ & ~0x00000400);
       replacedInvoices_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000800);
+      bitField0_ = (bitField0_ & ~0x00100000);
       pdfUrl_ = "";
-      bitField0_ = (bitField0_ & ~0x00001000);
       if (accountBudgetSummariesBuilder_ == null) {
         accountBudgetSummaries_ = java.util.Collections.emptyList();
       } else {
         accountBudgetSummaries_ = null;
         accountBudgetSummariesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00002000);
+      bitField0_ = (bitField0_ & ~0x00400000);
       return this;
     }
 
@@ -4037,86 +3996,110 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.Invoice buildPartial() {
       com.google.ads.googleads.v11.resources.Invoice result = new com.google.ads.googleads.v11.resources.Invoice(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        to_bitField0_ |= 0x00000001;
-      }
-      result.id_ = id_;
-      result.type_ = type_;
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        to_bitField0_ |= 0x00000002;
-      }
-      result.billingSetup_ = billingSetup_;
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        to_bitField0_ |= 0x00000004;
-      }
-      result.paymentsAccountId_ = paymentsAccountId_;
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        to_bitField0_ |= 0x00000008;
-      }
-      result.paymentsProfileId_ = paymentsProfileId_;
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        to_bitField0_ |= 0x00000010;
-      }
-      result.issueDate_ = issueDate_;
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        to_bitField0_ |= 0x00000020;
-      }
-      result.dueDate_ = dueDate_;
-      if (serviceDateRangeBuilder_ == null) {
-        result.serviceDateRange_ = serviceDateRange_;
-      } else {
-        result.serviceDateRange_ = serviceDateRangeBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
-        to_bitField0_ |= 0x00000040;
-      }
-      result.currencyCode_ = currencyCode_;
-      result.adjustmentsSubtotalAmountMicros_ = adjustmentsSubtotalAmountMicros_;
-      result.adjustmentsTaxAmountMicros_ = adjustmentsTaxAmountMicros_;
-      result.adjustmentsTotalAmountMicros_ = adjustmentsTotalAmountMicros_;
-      result.regulatoryCostsSubtotalAmountMicros_ = regulatoryCostsSubtotalAmountMicros_;
-      result.regulatoryCostsTaxAmountMicros_ = regulatoryCostsTaxAmountMicros_;
-      result.regulatoryCostsTotalAmountMicros_ = regulatoryCostsTotalAmountMicros_;
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.subtotalAmountMicros_ = subtotalAmountMicros_;
-        to_bitField0_ |= 0x00000080;
-      }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
-        result.taxAmountMicros_ = taxAmountMicros_;
-        to_bitField0_ |= 0x00000100;
-      }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
-        result.totalAmountMicros_ = totalAmountMicros_;
-        to_bitField0_ |= 0x00000200;
-      }
-      if (((from_bitField0_ & 0x00000400) != 0)) {
-        to_bitField0_ |= 0x00000400;
-      }
-      result.correctedInvoice_ = correctedInvoice_;
-      if (((bitField0_ & 0x00000800) != 0)) {
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.resources.Invoice result) {
+      if (((bitField0_ & 0x00100000) != 0)) {
         replacedInvoices_ = replacedInvoices_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00100000);
       }
       result.replacedInvoices_ = replacedInvoices_;
-      if (((from_bitField0_ & 0x00001000) != 0)) {
-        to_bitField0_ |= 0x00000800;
-      }
-      result.pdfUrl_ = pdfUrl_;
       if (accountBudgetSummariesBuilder_ == null) {
-        if (((bitField0_ & 0x00002000) != 0)) {
+        if (((bitField0_ & 0x00400000) != 0)) {
           accountBudgetSummaries_ = java.util.Collections.unmodifiableList(accountBudgetSummaries_);
-          bitField0_ = (bitField0_ & ~0x00002000);
+          bitField0_ = (bitField0_ & ~0x00400000);
         }
         result.accountBudgetSummaries_ = accountBudgetSummaries_;
       } else {
         result.accountBudgetSummaries_ = accountBudgetSummariesBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.Invoice result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.id_ = id_;
+        to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.type_ = type_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.billingSetup_ = billingSetup_;
+        to_bitField0_ |= 0x00000002;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.paymentsAccountId_ = paymentsAccountId_;
+        to_bitField0_ |= 0x00000004;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.paymentsProfileId_ = paymentsProfileId_;
+        to_bitField0_ |= 0x00000008;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.issueDate_ = issueDate_;
+        to_bitField0_ |= 0x00000010;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.dueDate_ = dueDate_;
+        to_bitField0_ |= 0x00000020;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.serviceDateRange_ = serviceDateRangeBuilder_ == null
+            ? serviceDateRange_
+            : serviceDateRangeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.currencyCode_ = currencyCode_;
+        to_bitField0_ |= 0x00000040;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.adjustmentsSubtotalAmountMicros_ = adjustmentsSubtotalAmountMicros_;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.adjustmentsTaxAmountMicros_ = adjustmentsTaxAmountMicros_;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.adjustmentsTotalAmountMicros_ = adjustmentsTotalAmountMicros_;
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.regulatoryCostsSubtotalAmountMicros_ = regulatoryCostsSubtotalAmountMicros_;
+      }
+      if (((from_bitField0_ & 0x00004000) != 0)) {
+        result.regulatoryCostsTaxAmountMicros_ = regulatoryCostsTaxAmountMicros_;
+      }
+      if (((from_bitField0_ & 0x00008000) != 0)) {
+        result.regulatoryCostsTotalAmountMicros_ = regulatoryCostsTotalAmountMicros_;
+      }
+      if (((from_bitField0_ & 0x00010000) != 0)) {
+        result.subtotalAmountMicros_ = subtotalAmountMicros_;
+        to_bitField0_ |= 0x00000080;
+      }
+      if (((from_bitField0_ & 0x00020000) != 0)) {
+        result.taxAmountMicros_ = taxAmountMicros_;
+        to_bitField0_ |= 0x00000100;
+      }
+      if (((from_bitField0_ & 0x00040000) != 0)) {
+        result.totalAmountMicros_ = totalAmountMicros_;
+        to_bitField0_ |= 0x00000200;
+      }
+      if (((from_bitField0_ & 0x00080000) != 0)) {
+        result.correctedInvoice_ = correctedInvoice_;
+        to_bitField0_ |= 0x00000400;
+      }
+      if (((from_bitField0_ & 0x00200000) != 0)) {
+        result.pdfUrl_ = pdfUrl_;
+        to_bitField0_ |= 0x00000800;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -4165,47 +4148,48 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.resources.Invoice.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasId()) {
-        bitField0_ |= 0x00000001;
         id_ = other.id_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.type_ != 0) {
         setTypeValue(other.getTypeValue());
       }
       if (other.hasBillingSetup()) {
-        bitField0_ |= 0x00000002;
         billingSetup_ = other.billingSetup_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.hasPaymentsAccountId()) {
-        bitField0_ |= 0x00000004;
         paymentsAccountId_ = other.paymentsAccountId_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (other.hasPaymentsProfileId()) {
-        bitField0_ |= 0x00000008;
         paymentsProfileId_ = other.paymentsProfileId_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (other.hasIssueDate()) {
-        bitField0_ |= 0x00000010;
         issueDate_ = other.issueDate_;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (other.hasDueDate()) {
-        bitField0_ |= 0x00000020;
         dueDate_ = other.dueDate_;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       if (other.hasServiceDateRange()) {
         mergeServiceDateRange(other.getServiceDateRange());
       }
       if (other.hasCurrencyCode()) {
-        bitField0_ |= 0x00000040;
         currencyCode_ = other.currencyCode_;
+        bitField0_ |= 0x00000200;
         onChanged();
       }
       if (other.getAdjustmentsSubtotalAmountMicros() != 0L) {
@@ -4236,14 +4220,14 @@ private static final long serialVersionUID = 0L;
         setTotalAmountMicros(other.getTotalAmountMicros());
       }
       if (other.hasCorrectedInvoice()) {
-        bitField0_ |= 0x00000400;
         correctedInvoice_ = other.correctedInvoice_;
+        bitField0_ |= 0x00080000;
         onChanged();
       }
       if (!other.replacedInvoices_.isEmpty()) {
         if (replacedInvoices_.isEmpty()) {
           replacedInvoices_ = other.replacedInvoices_;
-          bitField0_ = (bitField0_ & ~0x00000800);
+          bitField0_ = (bitField0_ & ~0x00100000);
         } else {
           ensureReplacedInvoicesIsMutable();
           replacedInvoices_.addAll(other.replacedInvoices_);
@@ -4251,15 +4235,15 @@ private static final long serialVersionUID = 0L;
         onChanged();
       }
       if (other.hasPdfUrl()) {
-        bitField0_ |= 0x00001000;
         pdfUrl_ = other.pdfUrl_;
+        bitField0_ |= 0x00200000;
         onChanged();
       }
       if (accountBudgetSummariesBuilder_ == null) {
         if (!other.accountBudgetSummaries_.isEmpty()) {
           if (accountBudgetSummaries_.isEmpty()) {
             accountBudgetSummaries_ = other.accountBudgetSummaries_;
-            bitField0_ = (bitField0_ & ~0x00002000);
+            bitField0_ = (bitField0_ & ~0x00400000);
           } else {
             ensureAccountBudgetSummariesIsMutable();
             accountBudgetSummaries_.addAll(other.accountBudgetSummaries_);
@@ -4272,7 +4256,7 @@ private static final long serialVersionUID = 0L;
             accountBudgetSummariesBuilder_.dispose();
             accountBudgetSummariesBuilder_ = null;
             accountBudgetSummaries_ = other.accountBudgetSummaries_;
-            bitField0_ = (bitField0_ & ~0x00002000);
+            bitField0_ = (bitField0_ & ~0x00400000);
             accountBudgetSummariesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getAccountBudgetSummariesFieldBuilder() : null;
@@ -4309,19 +4293,19 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 24: {
               type_ = input.readEnum();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 24
             case 74: {
               input.readMessage(
                   getServiceDateRangeFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000100;
               break;
             } // case 74
             case 146: {
@@ -4339,87 +4323,87 @@ private static final long serialVersionUID = 0L;
             } // case 146
             case 152: {
               adjustmentsSubtotalAmountMicros_ = input.readInt64();
-
+              bitField0_ |= 0x00000400;
               break;
             } // case 152
             case 160: {
               adjustmentsTaxAmountMicros_ = input.readInt64();
-
+              bitField0_ |= 0x00000800;
               break;
             } // case 160
             case 168: {
               adjustmentsTotalAmountMicros_ = input.readInt64();
-
+              bitField0_ |= 0x00001000;
               break;
             } // case 168
             case 176: {
               regulatoryCostsSubtotalAmountMicros_ = input.readInt64();
-
+              bitField0_ |= 0x00002000;
               break;
             } // case 176
             case 184: {
               regulatoryCostsTaxAmountMicros_ = input.readInt64();
-
+              bitField0_ |= 0x00004000;
               break;
             } // case 184
             case 192: {
               regulatoryCostsTotalAmountMicros_ = input.readInt64();
-
+              bitField0_ |= 0x00008000;
               break;
             } // case 192
             case 202: {
               id_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 202
             case 210: {
               billingSetup_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000008;
               break;
             } // case 210
             case 218: {
               paymentsAccountId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000010;
               break;
             } // case 218
             case 226: {
               paymentsProfileId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000020;
               break;
             } // case 226
             case 234: {
               issueDate_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000040;
               break;
             } // case 234
             case 242: {
               dueDate_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000080;
               break;
             } // case 242
             case 250: {
               currencyCode_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000200;
               break;
             } // case 250
             case 264: {
               subtotalAmountMicros_ = input.readInt64();
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00010000;
               break;
             } // case 264
             case 272: {
               taxAmountMicros_ = input.readInt64();
-              bitField0_ |= 0x00000100;
+              bitField0_ |= 0x00020000;
               break;
             } // case 272
             case 280: {
               totalAmountMicros_ = input.readInt64();
-              bitField0_ |= 0x00000200;
+              bitField0_ |= 0x00040000;
               break;
             } // case 280
             case 290: {
               correctedInvoice_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000400;
+              bitField0_ |= 0x00080000;
               break;
             } // case 290
             case 298: {
@@ -4430,7 +4414,7 @@ private static final long serialVersionUID = 0L;
             } // case 298
             case 306: {
               pdfUrl_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00001000;
+              bitField0_ |= 0x00200000;
               break;
             } // case 306
             default: {
@@ -4453,8 +4437,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * Output only. The resource name of the invoice. Multiple customers can share a given
-     * invoice, so multiple resource names may point to the same invoice.
+     * Output only. The resource name of the invoice. Multiple customers can share
+     * a given invoice, so multiple resource names may point to the same invoice.
      * Invoice resource names have the form:
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
@@ -4476,8 +4460,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource name of the invoice. Multiple customers can share a given
-     * invoice, so multiple resource names may point to the same invoice.
+     * Output only. The resource name of the invoice. Multiple customers can share
+     * a given invoice, so multiple resource names may point to the same invoice.
      * Invoice resource names have the form:
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
@@ -4500,8 +4484,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource name of the invoice. Multiple customers can share a given
-     * invoice, so multiple resource names may point to the same invoice.
+     * Output only. The resource name of the invoice. Multiple customers can share
+     * a given invoice, so multiple resource names may point to the same invoice.
      * Invoice resource names have the form:
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
@@ -4512,18 +4496,16 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The resource name of the invoice. Multiple customers can share a given
-     * invoice, so multiple resource names may point to the same invoice.
+     * Output only. The resource name of the invoice. Multiple customers can share
+     * a given invoice, so multiple resource names may point to the same invoice.
      * Invoice resource names have the form:
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
@@ -4532,15 +4514,15 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The resource name of the invoice. Multiple customers can share a given
-     * invoice, so multiple resource names may point to the same invoice.
+     * Output only. The resource name of the invoice. Multiple customers can share
+     * a given invoice, so multiple resource names may point to the same invoice.
      * Invoice resource names have the form:
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
@@ -4551,12 +4533,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -4564,18 +4544,20 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object id_ = "";
     /**
      * <pre>
-     * Output only. The ID of the invoice. It appears on the invoice PDF as "Invoice number".
+     * Output only. The ID of the invoice. It appears on the invoice PDF as
+     * "Invoice number".
      * </pre>
      *
      * <code>optional string id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the id field is set.
      */
     public boolean hasId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
-     * Output only. The ID of the invoice. It appears on the invoice PDF as "Invoice number".
+     * Output only. The ID of the invoice. It appears on the invoice PDF as
+     * "Invoice number".
      * </pre>
      *
      * <code>optional string id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4595,7 +4577,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The ID of the invoice. It appears on the invoice PDF as "Invoice number".
+     * Output only. The ID of the invoice. It appears on the invoice PDF as
+     * "Invoice number".
      * </pre>
      *
      * <code>optional string id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4616,7 +4599,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The ID of the invoice. It appears on the invoice PDF as "Invoice number".
+     * Output only. The ID of the invoice. It appears on the invoice PDF as
+     * "Invoice number".
      * </pre>
      *
      * <code>optional string id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4625,31 +4609,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       id_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The ID of the invoice. It appears on the invoice PDF as "Invoice number".
+     * Output only. The ID of the invoice. It appears on the invoice PDF as
+     * "Invoice number".
      * </pre>
      *
      * <code>optional string id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       id_ = getDefaultInstance().getId();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The ID of the invoice. It appears on the invoice PDF as "Invoice number".
+     * Output only. The ID of the invoice. It appears on the invoice PDF as
+     * "Invoice number".
      * </pre>
      *
      * <code>optional string id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4658,12 +4642,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       id_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -4690,8 +4672,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
-      
       type_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -4705,8 +4687,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.InvoiceTypeEnum.InvoiceType getType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.InvoiceTypeEnum.InvoiceType result = com.google.ads.googleads.v11.enums.InvoiceTypeEnum.InvoiceType.valueOf(type_);
+      com.google.ads.googleads.v11.enums.InvoiceTypeEnum.InvoiceType result = com.google.ads.googleads.v11.enums.InvoiceTypeEnum.InvoiceType.forNumber(type_);
       return result == null ? com.google.ads.googleads.v11.enums.InvoiceTypeEnum.InvoiceType.UNRECOGNIZED : result;
     }
     /**
@@ -4722,7 +4703,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       type_ = value.getNumber();
       onChanged();
       return this;
@@ -4736,7 +4717,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       type_ = 0;
       onChanged();
       return this;
@@ -4753,7 +4734,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the billingSetup field is set.
      */
     public boolean hasBillingSetup() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -4810,11 +4791,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBillingSetup(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       billingSetup_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -4828,8 +4807,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBillingSetup() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       billingSetup_ = getDefaultInstance().getBillingSetup();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -4845,12 +4824,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBillingSetupBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       billingSetup_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -4858,22 +4835,22 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object paymentsAccountId_ = "";
     /**
      * <pre>
-     * Output only. A 16 digit ID used to identify the payments account associated with the
-     * billing setup, for example, "1234-5678-9012-3456". It appears on the
-     * invoice PDF as "Billing Account Number".
+     * Output only. A 16 digit ID used to identify the payments account associated
+     * with the billing setup, for example, "1234-5678-9012-3456". It appears on
+     * the invoice PDF as "Billing Account Number".
      * </pre>
      *
      * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the paymentsAccountId field is set.
      */
     public boolean hasPaymentsAccountId() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
-     * Output only. A 16 digit ID used to identify the payments account associated with the
-     * billing setup, for example, "1234-5678-9012-3456". It appears on the
-     * invoice PDF as "Billing Account Number".
+     * Output only. A 16 digit ID used to identify the payments account associated
+     * with the billing setup, for example, "1234-5678-9012-3456". It appears on
+     * the invoice PDF as "Billing Account Number".
      * </pre>
      *
      * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4893,9 +4870,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A 16 digit ID used to identify the payments account associated with the
-     * billing setup, for example, "1234-5678-9012-3456". It appears on the
-     * invoice PDF as "Billing Account Number".
+     * Output only. A 16 digit ID used to identify the payments account associated
+     * with the billing setup, for example, "1234-5678-9012-3456". It appears on
+     * the invoice PDF as "Billing Account Number".
      * </pre>
      *
      * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4916,9 +4893,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A 16 digit ID used to identify the payments account associated with the
-     * billing setup, for example, "1234-5678-9012-3456". It appears on the
-     * invoice PDF as "Billing Account Number".
+     * Output only. A 16 digit ID used to identify the payments account associated
+     * with the billing setup, for example, "1234-5678-9012-3456". It appears on
+     * the invoice PDF as "Billing Account Number".
      * </pre>
      *
      * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4927,35 +4904,33 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPaymentsAccountId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       paymentsAccountId_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. A 16 digit ID used to identify the payments account associated with the
-     * billing setup, for example, "1234-5678-9012-3456". It appears on the
-     * invoice PDF as "Billing Account Number".
+     * Output only. A 16 digit ID used to identify the payments account associated
+     * with the billing setup, for example, "1234-5678-9012-3456". It appears on
+     * the invoice PDF as "Billing Account Number".
      * </pre>
      *
      * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearPaymentsAccountId() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       paymentsAccountId_ = getDefaultInstance().getPaymentsAccountId();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. A 16 digit ID used to identify the payments account associated with the
-     * billing setup, for example, "1234-5678-9012-3456". It appears on the
-     * invoice PDF as "Billing Account Number".
+     * Output only. A 16 digit ID used to identify the payments account associated
+     * with the billing setup, for example, "1234-5678-9012-3456". It appears on
+     * the invoice PDF as "Billing Account Number".
      * </pre>
      *
      * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4964,12 +4939,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPaymentsAccountIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       paymentsAccountId_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -4977,22 +4950,22 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object paymentsProfileId_ = "";
     /**
      * <pre>
-     * Output only. A 12 digit ID used to identify the payments profile associated with the
-     * billing setup, for example, "1234-5678-9012". It appears on the invoice PDF
-     * as "Billing ID".
+     * Output only. A 12 digit ID used to identify the payments profile associated
+     * with the billing setup, for example, "1234-5678-9012". It appears on the
+     * invoice PDF as "Billing ID".
      * </pre>
      *
      * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the paymentsProfileId field is set.
      */
     public boolean hasPaymentsProfileId() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
-     * Output only. A 12 digit ID used to identify the payments profile associated with the
-     * billing setup, for example, "1234-5678-9012". It appears on the invoice PDF
-     * as "Billing ID".
+     * Output only. A 12 digit ID used to identify the payments profile associated
+     * with the billing setup, for example, "1234-5678-9012". It appears on the
+     * invoice PDF as "Billing ID".
      * </pre>
      *
      * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5012,9 +4985,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A 12 digit ID used to identify the payments profile associated with the
-     * billing setup, for example, "1234-5678-9012". It appears on the invoice PDF
-     * as "Billing ID".
+     * Output only. A 12 digit ID used to identify the payments profile associated
+     * with the billing setup, for example, "1234-5678-9012". It appears on the
+     * invoice PDF as "Billing ID".
      * </pre>
      *
      * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5035,9 +5008,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A 12 digit ID used to identify the payments profile associated with the
-     * billing setup, for example, "1234-5678-9012". It appears on the invoice PDF
-     * as "Billing ID".
+     * Output only. A 12 digit ID used to identify the payments profile associated
+     * with the billing setup, for example, "1234-5678-9012". It appears on the
+     * invoice PDF as "Billing ID".
      * </pre>
      *
      * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5046,35 +5019,33 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPaymentsProfileId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
       paymentsProfileId_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. A 12 digit ID used to identify the payments profile associated with the
-     * billing setup, for example, "1234-5678-9012". It appears on the invoice PDF
-     * as "Billing ID".
+     * Output only. A 12 digit ID used to identify the payments profile associated
+     * with the billing setup, for example, "1234-5678-9012". It appears on the
+     * invoice PDF as "Billing ID".
      * </pre>
      *
      * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearPaymentsProfileId() {
-      bitField0_ = (bitField0_ & ~0x00000008);
       paymentsProfileId_ = getDefaultInstance().getPaymentsProfileId();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. A 12 digit ID used to identify the payments profile associated with the
-     * billing setup, for example, "1234-5678-9012". It appears on the invoice PDF
-     * as "Billing ID".
+     * Output only. A 12 digit ID used to identify the payments profile associated
+     * with the billing setup, for example, "1234-5678-9012". It appears on the
+     * invoice PDF as "Billing ID".
      * </pre>
      *
      * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5083,12 +5054,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPaymentsProfileIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       paymentsProfileId_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -5096,20 +5065,20 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object issueDate_ = "";
     /**
      * <pre>
-     * Output only. The issue date in yyyy-mm-dd format. It appears on the invoice PDF as
-     * either "Issue date" or "Invoice date".
+     * Output only. The issue date in yyyy-mm-dd format. It appears on the invoice
+     * PDF as either "Issue date" or "Invoice date".
      * </pre>
      *
      * <code>optional string issue_date = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the issueDate field is set.
      */
     public boolean hasIssueDate() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <pre>
-     * Output only. The issue date in yyyy-mm-dd format. It appears on the invoice PDF as
-     * either "Issue date" or "Invoice date".
+     * Output only. The issue date in yyyy-mm-dd format. It appears on the invoice
+     * PDF as either "Issue date" or "Invoice date".
      * </pre>
      *
      * <code>optional string issue_date = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5129,8 +5098,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The issue date in yyyy-mm-dd format. It appears on the invoice PDF as
-     * either "Issue date" or "Invoice date".
+     * Output only. The issue date in yyyy-mm-dd format. It appears on the invoice
+     * PDF as either "Issue date" or "Invoice date".
      * </pre>
      *
      * <code>optional string issue_date = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5151,8 +5120,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The issue date in yyyy-mm-dd format. It appears on the invoice PDF as
-     * either "Issue date" or "Invoice date".
+     * Output only. The issue date in yyyy-mm-dd format. It appears on the invoice
+     * PDF as either "Issue date" or "Invoice date".
      * </pre>
      *
      * <code>optional string issue_date = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5161,33 +5130,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setIssueDate(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
+      if (value == null) { throw new NullPointerException(); }
       issueDate_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The issue date in yyyy-mm-dd format. It appears on the invoice PDF as
-     * either "Issue date" or "Invoice date".
+     * Output only. The issue date in yyyy-mm-dd format. It appears on the invoice
+     * PDF as either "Issue date" or "Invoice date".
      * </pre>
      *
      * <code>optional string issue_date = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearIssueDate() {
-      bitField0_ = (bitField0_ & ~0x00000010);
       issueDate_ = getDefaultInstance().getIssueDate();
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The issue date in yyyy-mm-dd format. It appears on the invoice PDF as
-     * either "Issue date" or "Invoice date".
+     * Output only. The issue date in yyyy-mm-dd format. It appears on the invoice
+     * PDF as either "Issue date" or "Invoice date".
      * </pre>
      *
      * <code>optional string issue_date = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5196,12 +5163,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setIssueDateBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000010;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       issueDate_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -5216,7 +5181,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dueDate field is set.
      */
     public boolean hasDueDate() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
      * <pre>
@@ -5270,11 +5235,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDueDate(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000020;
+      if (value == null) { throw new NullPointerException(); }
       dueDate_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -5287,8 +5250,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDueDate() {
-      bitField0_ = (bitField0_ & ~0x00000020);
       dueDate_ = getDefaultInstance().getDueDate();
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -5303,12 +5266,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDueDateBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000020;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       dueDate_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -5318,18 +5279,20 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.common.DateRange, com.google.ads.googleads.v11.common.DateRange.Builder, com.google.ads.googleads.v11.common.DateRangeOrBuilder> serviceDateRangeBuilder_;
     /**
      * <pre>
-     * Output only. The service period date range of this invoice. The end date is inclusive.
+     * Output only. The service period date range of this invoice. The end date is
+     * inclusive.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.DateRange service_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the serviceDateRange field is set.
      */
     public boolean hasServiceDateRange() {
-      return serviceDateRangeBuilder_ != null || serviceDateRange_ != null;
+      return ((bitField0_ & 0x00000100) != 0);
     }
     /**
      * <pre>
-     * Output only. The service period date range of this invoice. The end date is inclusive.
+     * Output only. The service period date range of this invoice. The end date is
+     * inclusive.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.DateRange service_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5344,7 +5307,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The service period date range of this invoice. The end date is inclusive.
+     * Output only. The service period date range of this invoice. The end date is
+     * inclusive.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.DateRange service_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5355,16 +5319,17 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         serviceDateRange_ = value;
-        onChanged();
       } else {
         serviceDateRangeBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The service period date range of this invoice. The end date is inclusive.
+     * Output only. The service period date range of this invoice. The end date is
+     * inclusive.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.DateRange service_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5373,68 +5338,72 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.common.DateRange.Builder builderForValue) {
       if (serviceDateRangeBuilder_ == null) {
         serviceDateRange_ = builderForValue.build();
-        onChanged();
       } else {
         serviceDateRangeBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The service period date range of this invoice. The end date is inclusive.
+     * Output only. The service period date range of this invoice. The end date is
+     * inclusive.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.DateRange service_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeServiceDateRange(com.google.ads.googleads.v11.common.DateRange value) {
       if (serviceDateRangeBuilder_ == null) {
-        if (serviceDateRange_ != null) {
-          serviceDateRange_ =
-            com.google.ads.googleads.v11.common.DateRange.newBuilder(serviceDateRange_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000100) != 0) &&
+          serviceDateRange_ != null &&
+          serviceDateRange_ != com.google.ads.googleads.v11.common.DateRange.getDefaultInstance()) {
+          getServiceDateRangeBuilder().mergeFrom(value);
         } else {
           serviceDateRange_ = value;
         }
-        onChanged();
       } else {
         serviceDateRangeBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000100;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The service period date range of this invoice. The end date is inclusive.
+     * Output only. The service period date range of this invoice. The end date is
+     * inclusive.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.DateRange service_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearServiceDateRange() {
-      if (serviceDateRangeBuilder_ == null) {
-        serviceDateRange_ = null;
-        onChanged();
-      } else {
-        serviceDateRange_ = null;
+      bitField0_ = (bitField0_ & ~0x00000100);
+      serviceDateRange_ = null;
+      if (serviceDateRangeBuilder_ != null) {
+        serviceDateRangeBuilder_.dispose();
         serviceDateRangeBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The service period date range of this invoice. The end date is inclusive.
+     * Output only. The service period date range of this invoice. The end date is
+     * inclusive.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.DateRange service_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v11.common.DateRange.Builder getServiceDateRangeBuilder() {
-      
+      bitField0_ |= 0x00000100;
       onChanged();
       return getServiceDateRangeFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Output only. The service period date range of this invoice. The end date is inclusive.
+     * Output only. The service period date range of this invoice. The end date is
+     * inclusive.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.DateRange service_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5449,7 +5418,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The service period date range of this invoice. The end date is inclusive.
+     * Output only. The service period date range of this invoice. The end date is
+     * inclusive.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.DateRange service_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5471,20 +5441,22 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object currencyCode_ = "";
     /**
      * <pre>
-     * Output only. The currency code. All costs are returned in this currency. A subset of the
-     * currency codes derived from the ISO 4217 standard is supported.
+     * Output only. The currency code. All costs are returned in this currency. A
+     * subset of the currency codes derived from the ISO 4217 standard is
+     * supported.
      * </pre>
      *
      * <code>optional string currency_code = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the currencyCode field is set.
      */
     public boolean hasCurrencyCode() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return ((bitField0_ & 0x00000200) != 0);
     }
     /**
      * <pre>
-     * Output only. The currency code. All costs are returned in this currency. A subset of the
-     * currency codes derived from the ISO 4217 standard is supported.
+     * Output only. The currency code. All costs are returned in this currency. A
+     * subset of the currency codes derived from the ISO 4217 standard is
+     * supported.
      * </pre>
      *
      * <code>optional string currency_code = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5504,8 +5476,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The currency code. All costs are returned in this currency. A subset of the
-     * currency codes derived from the ISO 4217 standard is supported.
+     * Output only. The currency code. All costs are returned in this currency. A
+     * subset of the currency codes derived from the ISO 4217 standard is
+     * supported.
      * </pre>
      *
      * <code>optional string currency_code = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5526,8 +5499,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The currency code. All costs are returned in this currency. A subset of the
-     * currency codes derived from the ISO 4217 standard is supported.
+     * Output only. The currency code. All costs are returned in this currency. A
+     * subset of the currency codes derived from the ISO 4217 standard is
+     * supported.
      * </pre>
      *
      * <code>optional string currency_code = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5536,33 +5510,33 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCurrencyCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000040;
+      if (value == null) { throw new NullPointerException(); }
       currencyCode_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The currency code. All costs are returned in this currency. A subset of the
-     * currency codes derived from the ISO 4217 standard is supported.
+     * Output only. The currency code. All costs are returned in this currency. A
+     * subset of the currency codes derived from the ISO 4217 standard is
+     * supported.
      * </pre>
      *
      * <code>optional string currency_code = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearCurrencyCode() {
-      bitField0_ = (bitField0_ & ~0x00000040);
       currencyCode_ = getDefaultInstance().getCurrencyCode();
+      bitField0_ = (bitField0_ & ~0x00000200);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The currency code. All costs are returned in this currency. A subset of the
-     * currency codes derived from the ISO 4217 standard is supported.
+     * Output only. The currency code. All costs are returned in this currency. A
+     * subset of the currency codes derived from the ISO 4217 standard is
+     * supported.
      * </pre>
      *
      * <code>optional string currency_code = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5571,12 +5545,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCurrencyCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000040;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       currencyCode_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -5584,7 +5556,8 @@ private static final long serialVersionUID = 0L;
     private long adjustmentsSubtotalAmountMicros_ ;
     /**
      * <pre>
-     * Output only. The pretax subtotal amount of invoice level adjustments, in micros.
+     * Output only. The pretax subtotal amount of invoice level adjustments, in
+     * micros.
      * </pre>
      *
      * <code>int64 adjustments_subtotal_amount_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5596,7 +5569,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The pretax subtotal amount of invoice level adjustments, in micros.
+     * Output only. The pretax subtotal amount of invoice level adjustments, in
+     * micros.
      * </pre>
      *
      * <code>int64 adjustments_subtotal_amount_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5606,19 +5580,21 @@ private static final long serialVersionUID = 0L;
     public Builder setAdjustmentsSubtotalAmountMicros(long value) {
       
       adjustmentsSubtotalAmountMicros_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The pretax subtotal amount of invoice level adjustments, in micros.
+     * Output only. The pretax subtotal amount of invoice level adjustments, in
+     * micros.
      * </pre>
      *
      * <code>int64 adjustments_subtotal_amount_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearAdjustmentsSubtotalAmountMicros() {
-      
+      bitField0_ = (bitField0_ & ~0x00000400);
       adjustmentsSubtotalAmountMicros_ = 0L;
       onChanged();
       return this;
@@ -5649,6 +5625,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAdjustmentsTaxAmountMicros(long value) {
       
       adjustmentsTaxAmountMicros_ = value;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -5661,7 +5638,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAdjustmentsTaxAmountMicros() {
-      
+      bitField0_ = (bitField0_ & ~0x00000800);
       adjustmentsTaxAmountMicros_ = 0L;
       onChanged();
       return this;
@@ -5692,6 +5669,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAdjustmentsTotalAmountMicros(long value) {
       
       adjustmentsTotalAmountMicros_ = value;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -5704,7 +5682,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAdjustmentsTotalAmountMicros() {
-      
+      bitField0_ = (bitField0_ & ~0x00001000);
       adjustmentsTotalAmountMicros_ = 0L;
       onChanged();
       return this;
@@ -5713,7 +5691,8 @@ private static final long serialVersionUID = 0L;
     private long regulatoryCostsSubtotalAmountMicros_ ;
     /**
      * <pre>
-     * Output only. The pretax subtotal amount of invoice level regulatory costs, in micros.
+     * Output only. The pretax subtotal amount of invoice level regulatory costs,
+     * in micros.
      * </pre>
      *
      * <code>int64 regulatory_costs_subtotal_amount_micros = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5725,7 +5704,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The pretax subtotal amount of invoice level regulatory costs, in micros.
+     * Output only. The pretax subtotal amount of invoice level regulatory costs,
+     * in micros.
      * </pre>
      *
      * <code>int64 regulatory_costs_subtotal_amount_micros = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5735,19 +5715,21 @@ private static final long serialVersionUID = 0L;
     public Builder setRegulatoryCostsSubtotalAmountMicros(long value) {
       
       regulatoryCostsSubtotalAmountMicros_ = value;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The pretax subtotal amount of invoice level regulatory costs, in micros.
+     * Output only. The pretax subtotal amount of invoice level regulatory costs,
+     * in micros.
      * </pre>
      *
      * <code>int64 regulatory_costs_subtotal_amount_micros = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearRegulatoryCostsSubtotalAmountMicros() {
-      
+      bitField0_ = (bitField0_ & ~0x00002000);
       regulatoryCostsSubtotalAmountMicros_ = 0L;
       onChanged();
       return this;
@@ -5756,7 +5738,8 @@ private static final long serialVersionUID = 0L;
     private long regulatoryCostsTaxAmountMicros_ ;
     /**
      * <pre>
-     * Output only. The sum of taxes on the invoice level regulatory costs, in micros.
+     * Output only. The sum of taxes on the invoice level regulatory costs, in
+     * micros.
      * </pre>
      *
      * <code>int64 regulatory_costs_tax_amount_micros = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5768,7 +5751,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The sum of taxes on the invoice level regulatory costs, in micros.
+     * Output only. The sum of taxes on the invoice level regulatory costs, in
+     * micros.
      * </pre>
      *
      * <code>int64 regulatory_costs_tax_amount_micros = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5778,19 +5762,21 @@ private static final long serialVersionUID = 0L;
     public Builder setRegulatoryCostsTaxAmountMicros(long value) {
       
       regulatoryCostsTaxAmountMicros_ = value;
+      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The sum of taxes on the invoice level regulatory costs, in micros.
+     * Output only. The sum of taxes on the invoice level regulatory costs, in
+     * micros.
      * </pre>
      *
      * <code>int64 regulatory_costs_tax_amount_micros = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearRegulatoryCostsTaxAmountMicros() {
-      
+      bitField0_ = (bitField0_ & ~0x00004000);
       regulatoryCostsTaxAmountMicros_ = 0L;
       onChanged();
       return this;
@@ -5821,6 +5807,7 @@ private static final long serialVersionUID = 0L;
     public Builder setRegulatoryCostsTotalAmountMicros(long value) {
       
       regulatoryCostsTotalAmountMicros_ = value;
+      bitField0_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -5833,7 +5820,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRegulatoryCostsTotalAmountMicros() {
-      
+      bitField0_ = (bitField0_ & ~0x00008000);
       regulatoryCostsTotalAmountMicros_ = 0L;
       onChanged();
       return this;
@@ -5855,7 +5842,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasSubtotalAmountMicros() {
-      return ((bitField0_ & 0x00000080) != 0);
+      return ((bitField0_ & 0x00010000) != 0);
     }
     /**
      * <pre>
@@ -5889,8 +5876,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSubtotalAmountMicros(long value) {
-      bitField0_ |= 0x00000080;
+      
       subtotalAmountMicros_ = value;
+      bitField0_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -5908,7 +5896,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSubtotalAmountMicros() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00010000);
       subtotalAmountMicros_ = 0L;
       onChanged();
       return this;
@@ -5917,9 +5905,9 @@ private static final long serialVersionUID = 0L;
     private long taxAmountMicros_ ;
     /**
      * <pre>
-     * Output only. The sum of all taxes on the invoice, in micros. This equals the sum of the
-     * AccountBudgetSummary tax amounts, plus taxes not associated with a specific
-     * account budget.
+     * Output only. The sum of all taxes on the invoice, in micros. This equals
+     * the sum of the AccountBudgetSummary tax amounts, plus taxes not associated
+     * with a specific account budget.
      * </pre>
      *
      * <code>optional int64 tax_amount_micros = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5927,13 +5915,13 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasTaxAmountMicros() {
-      return ((bitField0_ & 0x00000100) != 0);
+      return ((bitField0_ & 0x00020000) != 0);
     }
     /**
      * <pre>
-     * Output only. The sum of all taxes on the invoice, in micros. This equals the sum of the
-     * AccountBudgetSummary tax amounts, plus taxes not associated with a specific
-     * account budget.
+     * Output only. The sum of all taxes on the invoice, in micros. This equals
+     * the sum of the AccountBudgetSummary tax amounts, plus taxes not associated
+     * with a specific account budget.
      * </pre>
      *
      * <code>optional int64 tax_amount_micros = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5945,9 +5933,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The sum of all taxes on the invoice, in micros. This equals the sum of the
-     * AccountBudgetSummary tax amounts, plus taxes not associated with a specific
-     * account budget.
+     * Output only. The sum of all taxes on the invoice, in micros. This equals
+     * the sum of the AccountBudgetSummary tax amounts, plus taxes not associated
+     * with a specific account budget.
      * </pre>
      *
      * <code>optional int64 tax_amount_micros = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5955,23 +5943,24 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTaxAmountMicros(long value) {
-      bitField0_ |= 0x00000100;
+      
       taxAmountMicros_ = value;
+      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The sum of all taxes on the invoice, in micros. This equals the sum of the
-     * AccountBudgetSummary tax amounts, plus taxes not associated with a specific
-     * account budget.
+     * Output only. The sum of all taxes on the invoice, in micros. This equals
+     * the sum of the AccountBudgetSummary tax amounts, plus taxes not associated
+     * with a specific account budget.
      * </pre>
      *
      * <code>optional int64 tax_amount_micros = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearTaxAmountMicros() {
-      bitField0_ = (bitField0_ & ~0x00000100);
+      bitField0_ = (bitField0_ & ~0x00020000);
       taxAmountMicros_ = 0L;
       onChanged();
       return this;
@@ -5992,7 +5981,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasTotalAmountMicros() {
-      return ((bitField0_ & 0x00000200) != 0);
+      return ((bitField0_ & 0x00040000) != 0);
     }
     /**
      * <pre>
@@ -6024,8 +6013,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalAmountMicros(long value) {
-      bitField0_ |= 0x00000200;
+      
       totalAmountMicros_ = value;
+      bitField0_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -6042,7 +6032,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalAmountMicros() {
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00040000);
       totalAmountMicros_ = 0L;
       onChanged();
       return this;
@@ -6051,10 +6041,10 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object correctedInvoice_ = "";
     /**
      * <pre>
-     * Output only. The resource name of the original invoice corrected, wrote off, or canceled
-     * by this invoice, if applicable. If `corrected_invoice` is set,
-     * `replaced_invoices` will not be set.
-     * Invoice resource names have the form:
+     * Output only. The resource name of the original invoice corrected, wrote
+     * off, or canceled by this invoice, if applicable. If `corrected_invoice` is
+     * set, `replaced_invoices` will not be set. Invoice resource names have the
+     * form:
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
@@ -6062,14 +6052,14 @@ private static final long serialVersionUID = 0L;
      * @return Whether the correctedInvoice field is set.
      */
     public boolean hasCorrectedInvoice() {
-      return ((bitField0_ & 0x00000400) != 0);
+      return ((bitField0_ & 0x00080000) != 0);
     }
     /**
      * <pre>
-     * Output only. The resource name of the original invoice corrected, wrote off, or canceled
-     * by this invoice, if applicable. If `corrected_invoice` is set,
-     * `replaced_invoices` will not be set.
-     * Invoice resource names have the form:
+     * Output only. The resource name of the original invoice corrected, wrote
+     * off, or canceled by this invoice, if applicable. If `corrected_invoice` is
+     * set, `replaced_invoices` will not be set. Invoice resource names have the
+     * form:
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
@@ -6090,10 +6080,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource name of the original invoice corrected, wrote off, or canceled
-     * by this invoice, if applicable. If `corrected_invoice` is set,
-     * `replaced_invoices` will not be set.
-     * Invoice resource names have the form:
+     * Output only. The resource name of the original invoice corrected, wrote
+     * off, or canceled by this invoice, if applicable. If `corrected_invoice` is
+     * set, `replaced_invoices` will not be set. Invoice resource names have the
+     * form:
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
@@ -6115,10 +6105,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource name of the original invoice corrected, wrote off, or canceled
-     * by this invoice, if applicable. If `corrected_invoice` is set,
-     * `replaced_invoices` will not be set.
-     * Invoice resource names have the form:
+     * Output only. The resource name of the original invoice corrected, wrote
+     * off, or canceled by this invoice, if applicable. If `corrected_invoice` is
+     * set, `replaced_invoices` will not be set. Invoice resource names have the
+     * form:
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
@@ -6128,20 +6118,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCorrectedInvoice(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000400;
+      if (value == null) { throw new NullPointerException(); }
       correctedInvoice_ = value;
+      bitField0_ |= 0x00080000;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The resource name of the original invoice corrected, wrote off, or canceled
-     * by this invoice, if applicable. If `corrected_invoice` is set,
-     * `replaced_invoices` will not be set.
-     * Invoice resource names have the form:
+     * Output only. The resource name of the original invoice corrected, wrote
+     * off, or canceled by this invoice, if applicable. If `corrected_invoice` is
+     * set, `replaced_invoices` will not be set. Invoice resource names have the
+     * form:
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
@@ -6149,17 +6137,17 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCorrectedInvoice() {
-      bitField0_ = (bitField0_ & ~0x00000400);
       correctedInvoice_ = getDefaultInstance().getCorrectedInvoice();
+      bitField0_ = (bitField0_ & ~0x00080000);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The resource name of the original invoice corrected, wrote off, or canceled
-     * by this invoice, if applicable. If `corrected_invoice` is set,
-     * `replaced_invoices` will not be set.
-     * Invoice resource names have the form:
+     * Output only. The resource name of the original invoice corrected, wrote
+     * off, or canceled by this invoice, if applicable. If `corrected_invoice` is
+     * set, `replaced_invoices` will not be set. Invoice resource names have the
+     * form:
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
@@ -6169,31 +6157,28 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCorrectedInvoiceBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000400;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       correctedInvoice_ = value;
+      bitField0_ |= 0x00080000;
       onChanged();
       return this;
     }
 
     private com.google.protobuf.LazyStringList replacedInvoices_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureReplacedInvoicesIsMutable() {
-      if (!((bitField0_ & 0x00000800) != 0)) {
+      if (!((bitField0_ & 0x00100000) != 0)) {
         replacedInvoices_ = new com.google.protobuf.LazyStringArrayList(replacedInvoices_);
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00100000;
        }
     }
     /**
      * <pre>
-     * Output only. The resource name of the original invoice(s) being rebilled or replaced by
-     * this invoice, if applicable. There might be multiple replaced invoices due
-     * to invoice consolidation. The replaced invoices may not belong to the same
-     * payments account. If `replaced_invoices` is set, `corrected_invoice` will
-     * not be set.
-     * Invoice resource names have the form:
+     * Output only. The resource name of the original invoice(s) being rebilled or
+     * replaced by this invoice, if applicable. There might be multiple replaced
+     * invoices due to invoice consolidation. The replaced invoices may not belong
+     * to the same payments account. If `replaced_invoices` is set,
+     * `corrected_invoice` will not be set. Invoice resource names have the form:
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
@@ -6206,12 +6191,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource name of the original invoice(s) being rebilled or replaced by
-     * this invoice, if applicable. There might be multiple replaced invoices due
-     * to invoice consolidation. The replaced invoices may not belong to the same
-     * payments account. If `replaced_invoices` is set, `corrected_invoice` will
-     * not be set.
-     * Invoice resource names have the form:
+     * Output only. The resource name of the original invoice(s) being rebilled or
+     * replaced by this invoice, if applicable. There might be multiple replaced
+     * invoices due to invoice consolidation. The replaced invoices may not belong
+     * to the same payments account. If `replaced_invoices` is set,
+     * `corrected_invoice` will not be set. Invoice resource names have the form:
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
@@ -6223,12 +6207,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource name of the original invoice(s) being rebilled or replaced by
-     * this invoice, if applicable. There might be multiple replaced invoices due
-     * to invoice consolidation. The replaced invoices may not belong to the same
-     * payments account. If `replaced_invoices` is set, `corrected_invoice` will
-     * not be set.
-     * Invoice resource names have the form:
+     * Output only. The resource name of the original invoice(s) being rebilled or
+     * replaced by this invoice, if applicable. There might be multiple replaced
+     * invoices due to invoice consolidation. The replaced invoices may not belong
+     * to the same payments account. If `replaced_invoices` is set,
+     * `corrected_invoice` will not be set. Invoice resource names have the form:
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
@@ -6241,12 +6224,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource name of the original invoice(s) being rebilled or replaced by
-     * this invoice, if applicable. There might be multiple replaced invoices due
-     * to invoice consolidation. The replaced invoices may not belong to the same
-     * payments account. If `replaced_invoices` is set, `corrected_invoice` will
-     * not be set.
-     * Invoice resource names have the form:
+     * Output only. The resource name of the original invoice(s) being rebilled or
+     * replaced by this invoice, if applicable. There might be multiple replaced
+     * invoices due to invoice consolidation. The replaced invoices may not belong
+     * to the same payments account. If `replaced_invoices` is set,
+     * `corrected_invoice` will not be set. Invoice resource names have the form:
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
@@ -6260,12 +6242,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource name of the original invoice(s) being rebilled or replaced by
-     * this invoice, if applicable. There might be multiple replaced invoices due
-     * to invoice consolidation. The replaced invoices may not belong to the same
-     * payments account. If `replaced_invoices` is set, `corrected_invoice` will
-     * not be set.
-     * Invoice resource names have the form:
+     * Output only. The resource name of the original invoice(s) being rebilled or
+     * replaced by this invoice, if applicable. There might be multiple replaced
+     * invoices due to invoice consolidation. The replaced invoices may not belong
+     * to the same payments account. If `replaced_invoices` is set,
+     * `corrected_invoice` will not be set. Invoice resource names have the form:
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
@@ -6276,22 +6257,19 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setReplacedInvoices(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureReplacedInvoicesIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureReplacedInvoicesIsMutable();
       replacedInvoices_.set(index, value);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The resource name of the original invoice(s) being rebilled or replaced by
-     * this invoice, if applicable. There might be multiple replaced invoices due
-     * to invoice consolidation. The replaced invoices may not belong to the same
-     * payments account. If `replaced_invoices` is set, `corrected_invoice` will
-     * not be set.
-     * Invoice resource names have the form:
+     * Output only. The resource name of the original invoice(s) being rebilled or
+     * replaced by this invoice, if applicable. There might be multiple replaced
+     * invoices due to invoice consolidation. The replaced invoices may not belong
+     * to the same payments account. If `replaced_invoices` is set,
+     * `corrected_invoice` will not be set. Invoice resource names have the form:
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
@@ -6301,22 +6279,19 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addReplacedInvoices(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureReplacedInvoicesIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureReplacedInvoicesIsMutable();
       replacedInvoices_.add(value);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The resource name of the original invoice(s) being rebilled or replaced by
-     * this invoice, if applicable. There might be multiple replaced invoices due
-     * to invoice consolidation. The replaced invoices may not belong to the same
-     * payments account. If `replaced_invoices` is set, `corrected_invoice` will
-     * not be set.
-     * Invoice resource names have the form:
+     * Output only. The resource name of the original invoice(s) being rebilled or
+     * replaced by this invoice, if applicable. There might be multiple replaced
+     * invoices due to invoice consolidation. The replaced invoices may not belong
+     * to the same payments account. If `replaced_invoices` is set,
+     * `corrected_invoice` will not be set. Invoice resource names have the form:
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
@@ -6334,12 +6309,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource name of the original invoice(s) being rebilled or replaced by
-     * this invoice, if applicable. There might be multiple replaced invoices due
-     * to invoice consolidation. The replaced invoices may not belong to the same
-     * payments account. If `replaced_invoices` is set, `corrected_invoice` will
-     * not be set.
-     * Invoice resource names have the form:
+     * Output only. The resource name of the original invoice(s) being rebilled or
+     * replaced by this invoice, if applicable. There might be multiple replaced
+     * invoices due to invoice consolidation. The replaced invoices may not belong
+     * to the same payments account. If `replaced_invoices` is set,
+     * `corrected_invoice` will not be set. Invoice resource names have the form:
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
@@ -6348,18 +6322,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearReplacedInvoices() {
       replacedInvoices_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000800);
+      bitField0_ = (bitField0_ & ~0x00100000);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The resource name of the original invoice(s) being rebilled or replaced by
-     * this invoice, if applicable. There might be multiple replaced invoices due
-     * to invoice consolidation. The replaced invoices may not belong to the same
-     * payments account. If `replaced_invoices` is set, `corrected_invoice` will
-     * not be set.
-     * Invoice resource names have the form:
+     * Output only. The resource name of the original invoice(s) being rebilled or
+     * replaced by this invoice, if applicable. There might be multiple replaced
+     * invoices due to invoice consolidation. The replaced invoices may not belong
+     * to the same payments account. If `replaced_invoices` is set,
+     * `corrected_invoice` will not be set. Invoice resource names have the form:
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
@@ -6369,10 +6342,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addReplacedInvoicesBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureReplacedInvoicesIsMutable();
       replacedInvoices_.add(value);
       onChanged();
@@ -6382,20 +6353,20 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object pdfUrl_ = "";
     /**
      * <pre>
-     * Output only. The URL to a PDF copy of the invoice. Users need to pass in their OAuth
-     * token to request the PDF with this URL.
+     * Output only. The URL to a PDF copy of the invoice. Users need to pass in
+     * their OAuth token to request the PDF with this URL.
      * </pre>
      *
      * <code>optional string pdf_url = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the pdfUrl field is set.
      */
     public boolean hasPdfUrl() {
-      return ((bitField0_ & 0x00001000) != 0);
+      return ((bitField0_ & 0x00200000) != 0);
     }
     /**
      * <pre>
-     * Output only. The URL to a PDF copy of the invoice. Users need to pass in their OAuth
-     * token to request the PDF with this URL.
+     * Output only. The URL to a PDF copy of the invoice. Users need to pass in
+     * their OAuth token to request the PDF with this URL.
      * </pre>
      *
      * <code>optional string pdf_url = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6415,8 +6386,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The URL to a PDF copy of the invoice. Users need to pass in their OAuth
-     * token to request the PDF with this URL.
+     * Output only. The URL to a PDF copy of the invoice. Users need to pass in
+     * their OAuth token to request the PDF with this URL.
      * </pre>
      *
      * <code>optional string pdf_url = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6437,8 +6408,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The URL to a PDF copy of the invoice. Users need to pass in their OAuth
-     * token to request the PDF with this URL.
+     * Output only. The URL to a PDF copy of the invoice. Users need to pass in
+     * their OAuth token to request the PDF with this URL.
      * </pre>
      *
      * <code>optional string pdf_url = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6447,33 +6418,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPdfUrl(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00001000;
+      if (value == null) { throw new NullPointerException(); }
       pdfUrl_ = value;
+      bitField0_ |= 0x00200000;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The URL to a PDF copy of the invoice. Users need to pass in their OAuth
-     * token to request the PDF with this URL.
+     * Output only. The URL to a PDF copy of the invoice. Users need to pass in
+     * their OAuth token to request the PDF with this URL.
      * </pre>
      *
      * <code>optional string pdf_url = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearPdfUrl() {
-      bitField0_ = (bitField0_ & ~0x00001000);
       pdfUrl_ = getDefaultInstance().getPdfUrl();
+      bitField0_ = (bitField0_ & ~0x00200000);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The URL to a PDF copy of the invoice. Users need to pass in their OAuth
-     * token to request the PDF with this URL.
+     * Output only. The URL to a PDF copy of the invoice. Users need to pass in
+     * their OAuth token to request the PDF with this URL.
      * </pre>
      *
      * <code>optional string pdf_url = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6482,12 +6451,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPdfUrlBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00001000;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       pdfUrl_ = value;
+      bitField0_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -6495,9 +6462,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary> accountBudgetSummaries_ =
       java.util.Collections.emptyList();
     private void ensureAccountBudgetSummariesIsMutable() {
-      if (!((bitField0_ & 0x00002000) != 0)) {
+      if (!((bitField0_ & 0x00400000) != 0)) {
         accountBudgetSummaries_ = new java.util.ArrayList<com.google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary>(accountBudgetSummaries_);
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00400000;
        }
     }
 
@@ -6506,8 +6473,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The list of summarized account budget information associated with this
-     * invoice.
+     * Output only. The list of summarized account budget information associated
+     * with this invoice.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6521,8 +6488,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The list of summarized account budget information associated with this
-     * invoice.
+     * Output only. The list of summarized account budget information associated
+     * with this invoice.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6536,8 +6503,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The list of summarized account budget information associated with this
-     * invoice.
+     * Output only. The list of summarized account budget information associated
+     * with this invoice.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6551,8 +6518,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The list of summarized account budget information associated with this
-     * invoice.
+     * Output only. The list of summarized account budget information associated
+     * with this invoice.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6573,8 +6540,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The list of summarized account budget information associated with this
-     * invoice.
+     * Output only. The list of summarized account budget information associated
+     * with this invoice.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6592,8 +6559,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The list of summarized account budget information associated with this
-     * invoice.
+     * Output only. The list of summarized account budget information associated
+     * with this invoice.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6613,8 +6580,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The list of summarized account budget information associated with this
-     * invoice.
+     * Output only. The list of summarized account budget information associated
+     * with this invoice.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6635,8 +6602,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The list of summarized account budget information associated with this
-     * invoice.
+     * Output only. The list of summarized account budget information associated
+     * with this invoice.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6654,8 +6621,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The list of summarized account budget information associated with this
-     * invoice.
+     * Output only. The list of summarized account budget information associated
+     * with this invoice.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6673,8 +6640,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The list of summarized account budget information associated with this
-     * invoice.
+     * Output only. The list of summarized account budget information associated
+     * with this invoice.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6693,8 +6660,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The list of summarized account budget information associated with this
-     * invoice.
+     * Output only. The list of summarized account budget information associated
+     * with this invoice.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6702,7 +6669,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearAccountBudgetSummaries() {
       if (accountBudgetSummariesBuilder_ == null) {
         accountBudgetSummaries_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00002000);
+        bitField0_ = (bitField0_ & ~0x00400000);
         onChanged();
       } else {
         accountBudgetSummariesBuilder_.clear();
@@ -6711,8 +6678,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The list of summarized account budget information associated with this
-     * invoice.
+     * Output only. The list of summarized account budget information associated
+     * with this invoice.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6729,8 +6696,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The list of summarized account budget information associated with this
-     * invoice.
+     * Output only. The list of summarized account budget information associated
+     * with this invoice.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6741,8 +6708,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The list of summarized account budget information associated with this
-     * invoice.
+     * Output only. The list of summarized account budget information associated
+     * with this invoice.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6756,8 +6723,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The list of summarized account budget information associated with this
-     * invoice.
+     * Output only. The list of summarized account budget information associated
+     * with this invoice.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6772,8 +6739,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The list of summarized account budget information associated with this
-     * invoice.
+     * Output only. The list of summarized account budget information associated
+     * with this invoice.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6784,8 +6751,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The list of summarized account budget information associated with this
-     * invoice.
+     * Output only. The list of summarized account budget information associated
+     * with this invoice.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6797,8 +6764,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The list of summarized account budget information associated with this
-     * invoice.
+     * Output only. The list of summarized account budget information associated
+     * with this invoice.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6814,7 +6781,7 @@ private static final long serialVersionUID = 0L;
         accountBudgetSummariesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary, com.google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary.Builder, com.google.ads.googleads.v11.resources.Invoice.AccountBudgetSummaryOrBuilder>(
                 accountBudgetSummaries_,
-                ((bitField0_ & 0x00002000) != 0),
+                ((bitField0_ & 0x00400000) != 0),
                 getParentForChildren(),
                 isClean());
         accountBudgetSummaries_ = null;

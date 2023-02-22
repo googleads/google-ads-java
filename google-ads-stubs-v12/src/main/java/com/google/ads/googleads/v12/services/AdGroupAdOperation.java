@@ -125,7 +125,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
-    return getUpdateMask();
+    return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
   }
 
   public static final int POLICY_VALIDATION_PARAMETER_FIELD_NUMBER = 5;
@@ -163,7 +163,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.common.PolicyValidationParameterOrBuilder getPolicyValidationParameterOrBuilder() {
-    return getPolicyValidationParameter();
+    return policyValidationParameter_ == null ? com.google.ads.googleads.v12.common.PolicyValidationParameter.getDefaultInstance() : policyValidationParameter_;
   }
 
   public static final int CREATE_FIELD_NUMBER = 1;
@@ -588,16 +588,15 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (updateMaskBuilder_ == null) {
-        updateMask_ = null;
-      } else {
-        updateMask_ = null;
+      bitField0_ = 0;
+      updateMask_ = null;
+      if (updateMaskBuilder_ != null) {
+        updateMaskBuilder_.dispose();
         updateMaskBuilder_ = null;
       }
-      if (policyValidationParameterBuilder_ == null) {
-        policyValidationParameter_ = null;
-      } else {
-        policyValidationParameter_ = null;
+      policyValidationParameter_ = null;
+      if (policyValidationParameterBuilder_ != null) {
+        policyValidationParameterBuilder_.dispose();
         policyValidationParameterBuilder_ = null;
       }
       if (createBuilder_ != null) {
@@ -634,36 +633,37 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.AdGroupAdOperation buildPartial() {
       com.google.ads.googleads.v12.services.AdGroupAdOperation result = new com.google.ads.googleads.v12.services.AdGroupAdOperation(this);
-      if (updateMaskBuilder_ == null) {
-        result.updateMask_ = updateMask_;
-      } else {
-        result.updateMask_ = updateMaskBuilder_.build();
-      }
-      if (policyValidationParameterBuilder_ == null) {
-        result.policyValidationParameter_ = policyValidationParameter_;
-      } else {
-        result.policyValidationParameter_ = policyValidationParameterBuilder_.build();
-      }
-      if (operationCase_ == 1) {
-        if (createBuilder_ == null) {
-          result.operation_ = operation_;
-        } else {
-          result.operation_ = createBuilder_.build();
-        }
-      }
-      if (operationCase_ == 2) {
-        if (updateBuilder_ == null) {
-          result.operation_ = operation_;
-        } else {
-          result.operation_ = updateBuilder_.build();
-        }
-      }
-      if (operationCase_ == 3) {
-        result.operation_ = operation_;
-      }
-      result.operationCase_ = operationCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.AdGroupAdOperation result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.updateMask_ = updateMaskBuilder_ == null
+            ? updateMask_
+            : updateMaskBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.policyValidationParameter_ = policyValidationParameterBuilder_ == null
+            ? policyValidationParameter_
+            : policyValidationParameterBuilder_.build();
+      }
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v12.services.AdGroupAdOperation result) {
+      result.operationCase_ = operationCase_;
+      result.operation_ = this.operation_;
+      if (operationCase_ == 1 &&
+          createBuilder_ != null) {
+        result.operation_ = createBuilder_.build();
+      }
+      if (operationCase_ == 2 &&
+          updateBuilder_ != null) {
+        result.operation_ = updateBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -785,14 +785,14 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getUpdateMaskFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 34
             case 42: {
               input.readMessage(
                   getPolicyValidationParameterFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 42
             default: {
@@ -825,6 +825,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private com.google.protobuf.FieldMask updateMask_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -838,7 +839,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the updateMask field is set.
      */
     public boolean hasUpdateMask() {
-      return updateMaskBuilder_ != null || updateMask_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -868,11 +869,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         updateMask_ = value;
-        onChanged();
       } else {
         updateMaskBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -886,11 +887,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.FieldMask.Builder builderForValue) {
       if (updateMaskBuilder_ == null) {
         updateMask_ = builderForValue.build();
-        onChanged();
       } else {
         updateMaskBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -902,17 +903,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
       if (updateMaskBuilder_ == null) {
-        if (updateMask_ != null) {
-          updateMask_ =
-            com.google.protobuf.FieldMask.newBuilder(updateMask_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          updateMask_ != null &&
+          updateMask_ != com.google.protobuf.FieldMask.getDefaultInstance()) {
+          getUpdateMaskBuilder().mergeFrom(value);
         } else {
           updateMask_ = value;
         }
-        onChanged();
       } else {
         updateMaskBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -923,14 +925,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.FieldMask update_mask = 4;</code>
      */
     public Builder clearUpdateMask() {
-      if (updateMaskBuilder_ == null) {
-        updateMask_ = null;
-        onChanged();
-      } else {
-        updateMask_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      updateMask_ = null;
+      if (updateMaskBuilder_ != null) {
+        updateMaskBuilder_.dispose();
         updateMaskBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -941,7 +942,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.FieldMask update_mask = 4;</code>
      */
     public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getUpdateMaskFieldBuilder().getBuilder();
     }
@@ -993,7 +994,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the policyValidationParameter field is set.
      */
     public boolean hasPolicyValidationParameter() {
-      return policyValidationParameterBuilder_ != null || policyValidationParameter_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -1023,11 +1024,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         policyValidationParameter_ = value;
-        onChanged();
       } else {
         policyValidationParameterBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -1041,11 +1042,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.PolicyValidationParameter.Builder builderForValue) {
       if (policyValidationParameterBuilder_ == null) {
         policyValidationParameter_ = builderForValue.build();
-        onChanged();
       } else {
         policyValidationParameterBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -1057,17 +1058,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergePolicyValidationParameter(com.google.ads.googleads.v12.common.PolicyValidationParameter value) {
       if (policyValidationParameterBuilder_ == null) {
-        if (policyValidationParameter_ != null) {
-          policyValidationParameter_ =
-            com.google.ads.googleads.v12.common.PolicyValidationParameter.newBuilder(policyValidationParameter_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          policyValidationParameter_ != null &&
+          policyValidationParameter_ != com.google.ads.googleads.v12.common.PolicyValidationParameter.getDefaultInstance()) {
+          getPolicyValidationParameterBuilder().mergeFrom(value);
         } else {
           policyValidationParameter_ = value;
         }
-        onChanged();
       } else {
         policyValidationParameterBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -1078,14 +1080,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.PolicyValidationParameter policy_validation_parameter = 5;</code>
      */
     public Builder clearPolicyValidationParameter() {
-      if (policyValidationParameterBuilder_ == null) {
-        policyValidationParameter_ = null;
-        onChanged();
-      } else {
-        policyValidationParameter_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      policyValidationParameter_ = null;
+      if (policyValidationParameterBuilder_ != null) {
+        policyValidationParameterBuilder_.dispose();
         policyValidationParameterBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1096,7 +1097,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.PolicyValidationParameter policy_validation_parameter = 5;</code>
      */
     public com.google.ads.googleads.v12.common.PolicyValidationParameter.Builder getPolicyValidationParameterBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getPolicyValidationParameterFieldBuilder().getBuilder();
     }
@@ -1310,7 +1311,7 @@ private static final long serialVersionUID = 0L;
         operation_ = null;
       }
       operationCase_ = 1;
-      onChanged();;
+      onChanged();
       return createBuilder_;
     }
 
@@ -1488,7 +1489,7 @@ private static final long serialVersionUID = 0L;
         operation_ = null;
       }
       operationCase_ = 2;
-      onChanged();;
+      onChanged();
       return updateBuilder_;
     }
 
@@ -1576,10 +1577,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRemove(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  operationCase_ = 3;
+      if (value == null) { throw new NullPointerException(); }
+      operationCase_ = 3;
       operation_ = value;
       onChanged();
       return this;
@@ -1615,10 +1614,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRemoveBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       operationCase_ = 3;
       operation_ = value;
       onChanged();

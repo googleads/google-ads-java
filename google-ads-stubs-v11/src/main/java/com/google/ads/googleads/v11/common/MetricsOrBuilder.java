@@ -50,7 +50,7 @@ public interface MetricsOrBuilder extends
   /**
    * <pre>
    * Active view measurable clicks divided by active view viewable impressions.
-   * This metric is reported only for display network.
+   * This metric is reported only for the Display Network.
    * </pre>
    *
    * <code>optional double active_view_ctr = 185;</code>
@@ -60,7 +60,7 @@ public interface MetricsOrBuilder extends
   /**
    * <pre>
    * Active view measurable clicks divided by active view viewable impressions.
-   * This metric is reported only for display network.
+   * This metric is reported only for the Display Network.
    * </pre>
    *
    * <code>optional double active_view_ctr = 185;</code>

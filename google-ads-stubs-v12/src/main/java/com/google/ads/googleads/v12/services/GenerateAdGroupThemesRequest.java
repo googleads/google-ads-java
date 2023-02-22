@@ -52,7 +52,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CUSTOMER_ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object customerId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object customerId_ = "";
   /**
    * <pre>
    * Required. The ID of the customer.
@@ -98,6 +99,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int KEYWORDS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList keywords_;
   /**
    * <pre>
@@ -149,6 +151,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AD_GROUPS_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList adGroups_;
   /**
    * <pre>
@@ -429,12 +432,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       customerId_ = "";
-
       keywords_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
-      adGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       bitField0_ = (bitField0_ & ~0x00000002);
+      adGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -461,20 +464,30 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.GenerateAdGroupThemesRequest buildPartial() {
       com.google.ads.googleads.v12.services.GenerateAdGroupThemesRequest result = new com.google.ads.googleads.v12.services.GenerateAdGroupThemesRequest(this);
-      int from_bitField0_ = bitField0_;
-      result.customerId_ = customerId_;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        keywords_ = keywords_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.keywords_ = keywords_;
-      if (((bitField0_ & 0x00000002) != 0)) {
-        adGroups_ = adGroups_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000002);
-      }
-      result.adGroups_ = adGroups_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.services.GenerateAdGroupThemesRequest result) {
+      if (((bitField0_ & 0x00000002) != 0)) {
+        keywords_ = keywords_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000002);
+      }
+      result.keywords_ = keywords_;
+      if (((bitField0_ & 0x00000004) != 0)) {
+        adGroups_ = adGroups_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000004);
+      }
+      result.adGroups_ = adGroups_;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.GenerateAdGroupThemesRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.customerId_ = customerId_;
+      }
     }
 
     @java.lang.Override
@@ -523,12 +536,13 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.services.GenerateAdGroupThemesRequest.getDefaultInstance()) return this;
       if (!other.getCustomerId().isEmpty()) {
         customerId_ = other.customerId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.keywords_.isEmpty()) {
         if (keywords_.isEmpty()) {
           keywords_ = other.keywords_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           ensureKeywordsIsMutable();
           keywords_.addAll(other.keywords_);
@@ -538,7 +552,7 @@ private static final long serialVersionUID = 0L;
       if (!other.adGroups_.isEmpty()) {
         if (adGroups_.isEmpty()) {
           adGroups_ = other.adGroups_;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
           ensureAdGroupsIsMutable();
           adGroups_.addAll(other.adGroups_);
@@ -573,7 +587,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               customerId_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
@@ -658,11 +672,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       customerId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -675,8 +687,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCustomerId() {
-      
       customerId_ = getDefaultInstance().getCustomerId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -691,21 +703,19 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       customerId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
 
     private com.google.protobuf.LazyStringList keywords_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureKeywordsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         keywords_ = new com.google.protobuf.LazyStringArrayList(keywords_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
        }
     }
     /**
@@ -768,10 +778,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKeywords(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureKeywordsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureKeywordsIsMutable();
       keywords_.set(index, value);
       onChanged();
       return this;
@@ -787,10 +795,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addKeywords(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureKeywordsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureKeywordsIsMutable();
       keywords_.add(value);
       onChanged();
       return this;
@@ -822,7 +828,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearKeywords() {
       keywords_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -837,10 +843,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addKeywordsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureKeywordsIsMutable();
       keywords_.add(value);
       onChanged();
@@ -849,9 +853,9 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.LazyStringList adGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureAdGroupsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         adGroups_ = new com.google.protobuf.LazyStringArrayList(adGroups_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
        }
     }
     /**
@@ -919,10 +923,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAdGroups(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAdGroupsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureAdGroupsIsMutable();
       adGroups_.set(index, value);
       onChanged();
       return this;
@@ -939,10 +941,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addAdGroups(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAdGroupsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureAdGroupsIsMutable();
       adGroups_.add(value);
       onChanged();
       return this;
@@ -976,7 +976,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearAdGroups() {
       adGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -992,10 +992,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addAdGroupsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureAdGroupsIsMutable();
       adGroups_.add(value);
       onChanged();

@@ -55,7 +55,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Immutable. The resource name of the conversion custom variable.
@@ -105,7 +106,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ID_FIELD_NUMBER = 2;
-  private long id_;
+  private long id_ = 0L;
   /**
    * <pre>
    * Output only. The ID of the conversion custom variable.
@@ -120,7 +121,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 3;
-  private volatile java.lang.Object name_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
   /**
    * <pre>
    * Required. The name of the conversion custom variable.
@@ -170,15 +172,15 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TAG_FIELD_NUMBER = 4;
-  private volatile java.lang.Object tag_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object tag_ = "";
   /**
    * <pre>
-   * Required. Immutable. The tag of the conversion custom variable. It is used in the event snippet
-   * and sent to Google Ads along with conversion pings. For conversion uploads
-   * in Google Ads API, the resource name of the conversion custom variable is
-   * used.
-   * Tag should be unique. The maximum size of tag is 100 bytes.
-   * There should not be any extra spaces before and after.
+   * Required. Immutable. The tag of the conversion custom variable. It is used
+   * in the event snippet and sent to Google Ads along with conversion pings.
+   * For conversion uploads in Google Ads API, the resource name of the
+   * conversion custom variable is used. Tag should be unique. The maximum size
+   * of tag is 100 bytes. There should not be any extra spaces before and after.
    * Currently only lowercase letters, numbers and underscores are allowed in
    * the tag.
    * </pre>
@@ -201,12 +203,11 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. Immutable. The tag of the conversion custom variable. It is used in the event snippet
-   * and sent to Google Ads along with conversion pings. For conversion uploads
-   * in Google Ads API, the resource name of the conversion custom variable is
-   * used.
-   * Tag should be unique. The maximum size of tag is 100 bytes.
-   * There should not be any extra spaces before and after.
+   * Required. Immutable. The tag of the conversion custom variable. It is used
+   * in the event snippet and sent to Google Ads along with conversion pings.
+   * For conversion uploads in Google Ads API, the resource name of the
+   * conversion custom variable is used. Tag should be unique. The maximum size
+   * of tag is 100 bytes. There should not be any extra spaces before and after.
    * Currently only lowercase letters, numbers and underscores are allowed in
    * the tag.
    * </pre>
@@ -230,7 +231,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STATUS_FIELD_NUMBER = 5;
-  private int status_;
+  private int status_ = 0;
   /**
    * <pre>
    * The status of the conversion custom variable for conversion event accrual.
@@ -251,16 +252,17 @@ private static final long serialVersionUID = 0L;
    * @return The status.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.ConversionCustomVariableStatusEnum.ConversionCustomVariableStatus getStatus() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.ConversionCustomVariableStatusEnum.ConversionCustomVariableStatus result = com.google.ads.googleads.v12.enums.ConversionCustomVariableStatusEnum.ConversionCustomVariableStatus.valueOf(status_);
+    com.google.ads.googleads.v12.enums.ConversionCustomVariableStatusEnum.ConversionCustomVariableStatus result = com.google.ads.googleads.v12.enums.ConversionCustomVariableStatusEnum.ConversionCustomVariableStatus.forNumber(status_);
     return result == null ? com.google.ads.googleads.v12.enums.ConversionCustomVariableStatusEnum.ConversionCustomVariableStatus.UNRECOGNIZED : result;
   }
 
   public static final int OWNER_CUSTOMER_FIELD_NUMBER = 6;
-  private volatile java.lang.Object ownerCustomer_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object ownerCustomer_ = "";
   /**
    * <pre>
-   * Output only. The resource name of the customer that owns the conversion custom variable.
+   * Output only. The resource name of the customer that owns the conversion
+   * custom variable.
    * </pre>
    *
    * <code>string owner_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -281,7 +283,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The resource name of the customer that owns the conversion custom variable.
+   * Output only. The resource name of the customer that owns the conversion
+   * custom variable.
    * </pre>
    *
    * <code>string owner_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -547,18 +550,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       id_ = 0L;
-
       name_ = "";
-
       tag_ = "";
-
       status_ = 0;
-
       ownerCustomer_ = "";
-
       return this;
     }
 
@@ -585,14 +583,31 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.ConversionCustomVariable buildPartial() {
       com.google.ads.googleads.v12.resources.ConversionCustomVariable result = new com.google.ads.googleads.v12.resources.ConversionCustomVariable(this);
-      result.resourceName_ = resourceName_;
-      result.id_ = id_;
-      result.name_ = name_;
-      result.tag_ = tag_;
-      result.status_ = status_;
-      result.ownerCustomer_ = ownerCustomer_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.resources.ConversionCustomVariable result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.id_ = id_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.name_ = name_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.tag_ = tag_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.status_ = status_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.ownerCustomer_ = ownerCustomer_;
+      }
     }
 
     @java.lang.Override
@@ -641,6 +656,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.resources.ConversionCustomVariable.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.getId() != 0L) {
@@ -648,10 +664,12 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getTag().isEmpty()) {
         tag_ = other.tag_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.status_ != 0) {
@@ -659,6 +677,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getOwnerCustomer().isEmpty()) {
         ownerCustomer_ = other.ownerCustomer_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -689,32 +708,32 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 16: {
               id_ = input.readInt64();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             case 26: {
               name_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 34: {
               tag_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 34
             case 40: {
               status_ = input.readEnum();
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 40
             case 50: {
               ownerCustomer_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000020;
               break;
             } // case 50
             default: {
@@ -732,6 +751,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object resourceName_ = "";
     /**
@@ -792,11 +812,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -811,8 +829,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -829,12 +847,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -864,6 +880,7 @@ private static final long serialVersionUID = 0L;
     public Builder setId(long value) {
       
       id_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -876,7 +893,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearId() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       id_ = 0L;
       onChanged();
       return this;
@@ -941,11 +958,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       name_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -960,8 +975,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      
       name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -978,12 +993,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -991,12 +1004,11 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object tag_ = "";
     /**
      * <pre>
-     * Required. Immutable. The tag of the conversion custom variable. It is used in the event snippet
-     * and sent to Google Ads along with conversion pings. For conversion uploads
-     * in Google Ads API, the resource name of the conversion custom variable is
-     * used.
-     * Tag should be unique. The maximum size of tag is 100 bytes.
-     * There should not be any extra spaces before and after.
+     * Required. Immutable. The tag of the conversion custom variable. It is used
+     * in the event snippet and sent to Google Ads along with conversion pings.
+     * For conversion uploads in Google Ads API, the resource name of the
+     * conversion custom variable is used. Tag should be unique. The maximum size
+     * of tag is 100 bytes. There should not be any extra spaces before and after.
      * Currently only lowercase letters, numbers and underscores are allowed in
      * the tag.
      * </pre>
@@ -1018,12 +1030,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Immutable. The tag of the conversion custom variable. It is used in the event snippet
-     * and sent to Google Ads along with conversion pings. For conversion uploads
-     * in Google Ads API, the resource name of the conversion custom variable is
-     * used.
-     * Tag should be unique. The maximum size of tag is 100 bytes.
-     * There should not be any extra spaces before and after.
+     * Required. Immutable. The tag of the conversion custom variable. It is used
+     * in the event snippet and sent to Google Ads along with conversion pings.
+     * For conversion uploads in Google Ads API, the resource name of the
+     * conversion custom variable is used. Tag should be unique. The maximum size
+     * of tag is 100 bytes. There should not be any extra spaces before and after.
      * Currently only lowercase letters, numbers and underscores are allowed in
      * the tag.
      * </pre>
@@ -1046,12 +1057,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Immutable. The tag of the conversion custom variable. It is used in the event snippet
-     * and sent to Google Ads along with conversion pings. For conversion uploads
-     * in Google Ads API, the resource name of the conversion custom variable is
-     * used.
-     * Tag should be unique. The maximum size of tag is 100 bytes.
-     * There should not be any extra spaces before and after.
+     * Required. Immutable. The tag of the conversion custom variable. It is used
+     * in the event snippet and sent to Google Ads along with conversion pings.
+     * For conversion uploads in Google Ads API, the resource name of the
+     * conversion custom variable is used. Tag should be unique. The maximum size
+     * of tag is 100 bytes. There should not be any extra spaces before and after.
      * Currently only lowercase letters, numbers and underscores are allowed in
      * the tag.
      * </pre>
@@ -1062,22 +1072,19 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTag(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       tag_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. Immutable. The tag of the conversion custom variable. It is used in the event snippet
-     * and sent to Google Ads along with conversion pings. For conversion uploads
-     * in Google Ads API, the resource name of the conversion custom variable is
-     * used.
-     * Tag should be unique. The maximum size of tag is 100 bytes.
-     * There should not be any extra spaces before and after.
+     * Required. Immutable. The tag of the conversion custom variable. It is used
+     * in the event snippet and sent to Google Ads along with conversion pings.
+     * For conversion uploads in Google Ads API, the resource name of the
+     * conversion custom variable is used. Tag should be unique. The maximum size
+     * of tag is 100 bytes. There should not be any extra spaces before and after.
      * Currently only lowercase letters, numbers and underscores are allowed in
      * the tag.
      * </pre>
@@ -1086,19 +1093,18 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTag() {
-      
       tag_ = getDefaultInstance().getTag();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. Immutable. The tag of the conversion custom variable. It is used in the event snippet
-     * and sent to Google Ads along with conversion pings. For conversion uploads
-     * in Google Ads API, the resource name of the conversion custom variable is
-     * used.
-     * Tag should be unique. The maximum size of tag is 100 bytes.
-     * There should not be any extra spaces before and after.
+     * Required. Immutable. The tag of the conversion custom variable. It is used
+     * in the event snippet and sent to Google Ads along with conversion pings.
+     * For conversion uploads in Google Ads API, the resource name of the
+     * conversion custom variable is used. Tag should be unique. The maximum size
+     * of tag is 100 bytes. There should not be any extra spaces before and after.
      * Currently only lowercase letters, numbers and underscores are allowed in
      * the tag.
      * </pre>
@@ -1109,12 +1115,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTagBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       tag_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1141,8 +1145,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
-      
       status_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1156,8 +1160,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.ConversionCustomVariableStatusEnum.ConversionCustomVariableStatus getStatus() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.ConversionCustomVariableStatusEnum.ConversionCustomVariableStatus result = com.google.ads.googleads.v12.enums.ConversionCustomVariableStatusEnum.ConversionCustomVariableStatus.valueOf(status_);
+      com.google.ads.googleads.v12.enums.ConversionCustomVariableStatusEnum.ConversionCustomVariableStatus result = com.google.ads.googleads.v12.enums.ConversionCustomVariableStatusEnum.ConversionCustomVariableStatus.forNumber(status_);
       return result == null ? com.google.ads.googleads.v12.enums.ConversionCustomVariableStatusEnum.ConversionCustomVariableStatus.UNRECOGNIZED : result;
     }
     /**
@@ -1173,7 +1176,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000010;
       status_ = value.getNumber();
       onChanged();
       return this;
@@ -1187,7 +1190,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       status_ = 0;
       onChanged();
       return this;
@@ -1196,7 +1199,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object ownerCustomer_ = "";
     /**
      * <pre>
-     * Output only. The resource name of the customer that owns the conversion custom variable.
+     * Output only. The resource name of the customer that owns the conversion
+     * custom variable.
      * </pre>
      *
      * <code>string owner_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -1216,7 +1220,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource name of the customer that owns the conversion custom variable.
+     * Output only. The resource name of the customer that owns the conversion
+     * custom variable.
      * </pre>
      *
      * <code>string owner_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -1237,7 +1242,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource name of the customer that owns the conversion custom variable.
+     * Output only. The resource name of the customer that owns the conversion
+     * custom variable.
      * </pre>
      *
      * <code>string owner_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -1246,31 +1252,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOwnerCustomer(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       ownerCustomer_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The resource name of the customer that owns the conversion custom variable.
+     * Output only. The resource name of the customer that owns the conversion
+     * custom variable.
      * </pre>
      *
      * <code>string owner_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearOwnerCustomer() {
-      
       ownerCustomer_ = getDefaultInstance().getOwnerCustomer();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The resource name of the customer that owns the conversion custom variable.
+     * Output only. The resource name of the customer that owns the conversion
+     * custom variable.
      * </pre>
      *
      * <code>string owner_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -1279,12 +1285,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOwnerCustomerBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ownerCustomer_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }

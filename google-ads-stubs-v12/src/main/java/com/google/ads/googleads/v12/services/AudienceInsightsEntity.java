@@ -49,7 +49,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int KNOWLEDGE_GRAPH_MACHINE_ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object knowledgeGraphMachineId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object knowledgeGraphMachineId_ = "";
   /**
    * <pre>
    * Required. The machine id (mid) of the Knowledge Graph entity.
@@ -285,8 +286,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       knowledgeGraphMachineId_ = "";
-
       return this;
     }
 
@@ -313,9 +314,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.AudienceInsightsEntity buildPartial() {
       com.google.ads.googleads.v12.services.AudienceInsightsEntity result = new com.google.ads.googleads.v12.services.AudienceInsightsEntity(this);
-      result.knowledgeGraphMachineId_ = knowledgeGraphMachineId_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.AudienceInsightsEntity result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.knowledgeGraphMachineId_ = knowledgeGraphMachineId_;
+      }
     }
 
     @java.lang.Override
@@ -364,6 +372,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.services.AudienceInsightsEntity.getDefaultInstance()) return this;
       if (!other.getKnowledgeGraphMachineId().isEmpty()) {
         knowledgeGraphMachineId_ = other.knowledgeGraphMachineId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -394,7 +403,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               knowledgeGraphMachineId_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             default: {
@@ -412,6 +421,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object knowledgeGraphMachineId_ = "";
     /**
@@ -466,11 +476,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKnowledgeGraphMachineId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       knowledgeGraphMachineId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -483,8 +491,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearKnowledgeGraphMachineId() {
-      
       knowledgeGraphMachineId_ = getDefaultInstance().getKnowledgeGraphMachineId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -499,12 +507,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKnowledgeGraphMachineIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       knowledgeGraphMachineId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

@@ -5,7 +5,8 @@ package com.google.ads.googleads.v11.services;
 
 /**
  * <pre>
- * Request message for [ReachPlanService.GenerateProductMixIdeas][google.ads.googleads.v11.services.ReachPlanService.GenerateProductMixIdeas].
+ * Request message for
+ * [ReachPlanService.GenerateProductMixIdeas][google.ads.googleads.v11.services.ReachPlanService.GenerateProductMixIdeas].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v11.services.GenerateProductMixIdeasRequest}
@@ -51,7 +52,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CUSTOMER_ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object customerId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object customerId_ = "";
   /**
    * <pre>
    * Required. The ID of the customer.
@@ -97,7 +99,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PLANNABLE_LOCATION_ID_FIELD_NUMBER = 6;
-  private volatile java.lang.Object plannableLocationId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object plannableLocationId_ = "";
   /**
    * <pre>
    * Required. The ID of the location, this is one of the IDs returned by
@@ -145,7 +148,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CURRENCY_CODE_FIELD_NUMBER = 7;
-  private volatile java.lang.Object currencyCode_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object currencyCode_ = "";
   /**
    * <pre>
    * Required. Currency code.
@@ -193,7 +197,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BUDGET_MICROS_FIELD_NUMBER = 8;
-  private long budgetMicros_;
+  private long budgetMicros_ = 0L;
   /**
    * <pre>
    * Required. Total budget.
@@ -249,7 +253,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v11.services.PreferencesOrBuilder getPreferencesOrBuilder() {
-    return getPreferences();
+    return preferences_ == null ? com.google.ads.googleads.v11.services.Preferences.getDefaultInstance() : preferences_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -456,7 +460,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Request message for [ReachPlanService.GenerateProductMixIdeas][google.ads.googleads.v11.services.ReachPlanService.GenerateProductMixIdeas].
+   * Request message for
+   * [ReachPlanService.GenerateProductMixIdeas][google.ads.googleads.v11.services.ReachPlanService.GenerateProductMixIdeas].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v11.services.GenerateProductMixIdeasRequest}
@@ -491,18 +496,14 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       customerId_ = "";
-
       plannableLocationId_ = "";
-
       currencyCode_ = "";
-
       budgetMicros_ = 0L;
-
-      if (preferencesBuilder_ == null) {
-        preferences_ = null;
-      } else {
-        preferences_ = null;
+      preferences_ = null;
+      if (preferencesBuilder_ != null) {
+        preferencesBuilder_.dispose();
         preferencesBuilder_ = null;
       }
       return this;
@@ -531,17 +532,30 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.GenerateProductMixIdeasRequest buildPartial() {
       com.google.ads.googleads.v11.services.GenerateProductMixIdeasRequest result = new com.google.ads.googleads.v11.services.GenerateProductMixIdeasRequest(this);
-      result.customerId_ = customerId_;
-      result.plannableLocationId_ = plannableLocationId_;
-      result.currencyCode_ = currencyCode_;
-      result.budgetMicros_ = budgetMicros_;
-      if (preferencesBuilder_ == null) {
-        result.preferences_ = preferences_;
-      } else {
-        result.preferences_ = preferencesBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.GenerateProductMixIdeasRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.customerId_ = customerId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.plannableLocationId_ = plannableLocationId_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.currencyCode_ = currencyCode_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.budgetMicros_ = budgetMicros_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.preferences_ = preferencesBuilder_ == null
+            ? preferences_
+            : preferencesBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -590,14 +604,17 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.services.GenerateProductMixIdeasRequest.getDefaultInstance()) return this;
       if (!other.getCustomerId().isEmpty()) {
         customerId_ = other.customerId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getPlannableLocationId().isEmpty()) {
         plannableLocationId_ = other.plannableLocationId_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getCurrencyCode().isEmpty()) {
         currencyCode_ = other.currencyCode_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.getBudgetMicros() != 0L) {
@@ -634,29 +651,29 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               customerId_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 42: {
               input.readMessage(
                   getPreferencesFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 42
             case 50: {
               plannableLocationId_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 50
             case 58: {
               currencyCode_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 58
             case 64: {
               budgetMicros_ = input.readInt64();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 64
             default: {
@@ -674,6 +691,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object customerId_ = "";
     /**
@@ -728,11 +746,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       customerId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -745,8 +761,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCustomerId() {
-      
       customerId_ = getDefaultInstance().getCustomerId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -761,12 +777,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       customerId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -827,11 +841,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPlannableLocationId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       plannableLocationId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -845,8 +857,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPlannableLocationId() {
-      
       plannableLocationId_ = getDefaultInstance().getPlannableLocationId();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -862,12 +874,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPlannableLocationIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       plannableLocationId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -928,11 +938,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCurrencyCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       currencyCode_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -946,8 +954,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCurrencyCode() {
-      
       currencyCode_ = getDefaultInstance().getCurrencyCode();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -963,12 +971,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCurrencyCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       currencyCode_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1000,6 +1006,7 @@ private static final long serialVersionUID = 0L;
     public Builder setBudgetMicros(long value) {
       
       budgetMicros_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1013,7 +1020,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBudgetMicros() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       budgetMicros_ = 0L;
       onChanged();
       return this;
@@ -1033,7 +1040,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the preferences field is set.
      */
     public boolean hasPreferences() {
-      return preferencesBuilder_ != null || preferences_ != null;
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -1067,11 +1074,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         preferences_ = value;
-        onChanged();
       } else {
         preferencesBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1087,11 +1094,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.services.Preferences.Builder builderForValue) {
       if (preferencesBuilder_ == null) {
         preferences_ = builderForValue.build();
-        onChanged();
       } else {
         preferencesBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1105,17 +1112,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergePreferences(com.google.ads.googleads.v11.services.Preferences value) {
       if (preferencesBuilder_ == null) {
-        if (preferences_ != null) {
-          preferences_ =
-            com.google.ads.googleads.v11.services.Preferences.newBuilder(preferences_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000010) != 0) &&
+          preferences_ != null &&
+          preferences_ != com.google.ads.googleads.v11.services.Preferences.getDefaultInstance()) {
+          getPreferencesBuilder().mergeFrom(value);
         } else {
           preferences_ = value;
         }
-        onChanged();
       } else {
         preferencesBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1128,14 +1136,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.services.Preferences preferences = 5;</code>
      */
     public Builder clearPreferences() {
-      if (preferencesBuilder_ == null) {
-        preferences_ = null;
-        onChanged();
-      } else {
-        preferences_ = null;
+      bitField0_ = (bitField0_ & ~0x00000010);
+      preferences_ = null;
+      if (preferencesBuilder_ != null) {
+        preferencesBuilder_.dispose();
         preferencesBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1148,7 +1155,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.services.Preferences preferences = 5;</code>
      */
     public com.google.ads.googleads.v11.services.Preferences.Builder getPreferencesBuilder() {
-      
+      bitField0_ |= 0x00000010;
       onChanged();
       return getPreferencesFieldBuilder().getBuilder();
     }

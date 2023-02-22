@@ -33,7 +33,8 @@ public interface ChangeStatusOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Time at which the most recent change has occurred on this resource.
+   * Output only. Time at which the most recent change has occurred on this
+   * resource.
    * </pre>
    *
    * <code>optional string last_change_date_time = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -42,7 +43,8 @@ public interface ChangeStatusOrBuilder extends
   boolean hasLastChangeDateTime();
   /**
    * <pre>
-   * Output only. Time at which the most recent change has occurred on this resource.
+   * Output only. Time at which the most recent change has occurred on this
+   * resource.
    * </pre>
    *
    * <code>optional string last_change_date_time = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -51,7 +53,8 @@ public interface ChangeStatusOrBuilder extends
   java.lang.String getLastChangeDateTime();
   /**
    * <pre>
-   * Output only. Time at which the most recent change has occurred on this resource.
+   * Output only. Time at which the most recent change has occurred on this
+   * resource.
    * </pre>
    *
    * <code>optional string last_change_date_time = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -62,9 +65,9 @@ public interface ChangeStatusOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Represents the type of the changed resource. This dictates what fields
-   * will be set. For example, for AD_GROUP, campaign and ad_group fields will
-   * be set.
+   * Output only. Represents the type of the changed resource. This dictates
+   * what fields will be set. For example, for AD_GROUP, campaign and ad_group
+   * fields will be set.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -73,9 +76,9 @@ public interface ChangeStatusOrBuilder extends
   int getResourceTypeValue();
   /**
    * <pre>
-   * Output only. Represents the type of the changed resource. This dictates what fields
-   * will be set. For example, for AD_GROUP, campaign and ad_group fields will
-   * be set.
+   * Output only. Represents the type of the changed resource. This dictates
+   * what fields will be set. For example, for AD_GROUP, campaign and ad_group
+   * fields will be set.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType resource_type = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

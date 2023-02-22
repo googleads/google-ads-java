@@ -55,7 +55,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int BUSINESS_NAME_FIELD_NUMBER = 6;
-  private volatile java.lang.Object businessName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object businessName_ = "";
   /**
    * <pre>
    * The business name to prepend to the message text.
@@ -116,7 +117,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int COUNTRY_CODE_FIELD_NUMBER = 7;
-  private volatile java.lang.Object countryCode_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object countryCode_ = "";
   /**
    * <pre>
    * Uppercase two-letter country code of the advertiser's phone number.
@@ -177,7 +179,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PHONE_NUMBER_FIELD_NUMBER = 8;
-  private volatile java.lang.Object phoneNumber_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object phoneNumber_ = "";
   /**
    * <pre>
    * The advertiser's phone number the message will be sent to. Required.
@@ -235,7 +238,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TEXT_FIELD_NUMBER = 9;
-  private volatile java.lang.Object text_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object text_ = "";
   /**
    * <pre>
    * The text to show in the ad.
@@ -296,7 +300,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EXTENSION_TEXT_FIELD_NUMBER = 10;
-  private volatile java.lang.Object extensionText_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object extensionText_ = "";
   /**
    * <pre>
    * The message extension_text populated in the messaging app.
@@ -610,16 +615,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       businessName_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       countryCode_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       phoneNumber_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       text_ = "";
-      bitField0_ = (bitField0_ & ~0x00000008);
       extensionText_ = "";
-      bitField0_ = (bitField0_ & ~0x00000010);
       return this;
     }
 
@@ -646,31 +647,35 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.TextMessageFeedItem buildPartial() {
       com.google.ads.googleads.v12.common.TextMessageFeedItem result = new com.google.ads.googleads.v12.common.TextMessageFeedItem(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.TextMessageFeedItem result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.businessName_ = businessName_;
         to_bitField0_ |= 0x00000001;
       }
-      result.businessName_ = businessName_;
       if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.countryCode_ = countryCode_;
         to_bitField0_ |= 0x00000002;
       }
-      result.countryCode_ = countryCode_;
       if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.phoneNumber_ = phoneNumber_;
         to_bitField0_ |= 0x00000004;
       }
-      result.phoneNumber_ = phoneNumber_;
       if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.text_ = text_;
         to_bitField0_ |= 0x00000008;
       }
-      result.text_ = text_;
       if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.extensionText_ = extensionText_;
         to_bitField0_ |= 0x00000010;
       }
-      result.extensionText_ = extensionText_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -718,28 +723,28 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v12.common.TextMessageFeedItem other) {
       if (other == com.google.ads.googleads.v12.common.TextMessageFeedItem.getDefaultInstance()) return this;
       if (other.hasBusinessName()) {
-        bitField0_ |= 0x00000001;
         businessName_ = other.businessName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasCountryCode()) {
-        bitField0_ |= 0x00000002;
         countryCode_ = other.countryCode_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasPhoneNumber()) {
-        bitField0_ |= 0x00000004;
         phoneNumber_ = other.phoneNumber_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.hasText()) {
-        bitField0_ |= 0x00000008;
         text_ = other.text_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.hasExtensionText()) {
-        bitField0_ |= 0x00000010;
         extensionText_ = other.extensionText_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -878,11 +883,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBusinessName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       businessName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -896,8 +899,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBusinessName() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       businessName_ = getDefaultInstance().getBusinessName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -913,12 +916,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBusinessNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       businessName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -991,11 +992,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCountryCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       countryCode_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1009,8 +1008,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCountryCode() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       countryCode_ = getDefaultInstance().getCountryCode();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1026,12 +1025,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCountryCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       countryCode_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1100,11 +1097,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPhoneNumber(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       phoneNumber_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1117,8 +1112,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPhoneNumber() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       phoneNumber_ = getDefaultInstance().getPhoneNumber();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1133,12 +1128,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPhoneNumberBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       phoneNumber_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1211,11 +1204,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setText(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
       text_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1229,8 +1220,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearText() {
-      bitField0_ = (bitField0_ & ~0x00000008);
       text_ = getDefaultInstance().getText();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1246,12 +1237,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTextBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       text_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1320,11 +1309,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setExtensionText(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
+      if (value == null) { throw new NullPointerException(); }
       extensionText_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1337,8 +1324,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearExtensionText() {
-      bitField0_ = (bitField0_ & ~0x00000010);
       extensionText_ = getDefaultInstance().getExtensionText();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1353,12 +1340,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setExtensionTextBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000010;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       extensionText_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }

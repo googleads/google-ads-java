@@ -59,7 +59,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Immutable. The resource name of the asset group.
@@ -109,7 +110,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ID_FIELD_NUMBER = 9;
-  private long id_;
+  private long id_ = 0L;
   /**
    * <pre>
    * Output only. The ID of the asset group.
@@ -124,7 +125,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CAMPAIGN_FIELD_NUMBER = 2;
-  private volatile java.lang.Object campaign_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object campaign_ = "";
   /**
    * <pre>
    * Immutable. The campaign with which this asset group is associated.
@@ -172,11 +174,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 3;
-  private volatile java.lang.Object name_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
   /**
    * <pre>
-   * Required. Name of the asset group. Required. It must have a minimum length of 1 and
-   * maximum length of 128. It must be unique under a campaign.
+   * Required. Name of the asset group. Required. It must have a minimum length
+   * of 1 and maximum length of 128. It must be unique under a campaign.
    * </pre>
    *
    * <code>string name = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -197,8 +200,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. Name of the asset group. Required. It must have a minimum length of 1 and
-   * maximum length of 128. It must be unique under a campaign.
+   * Required. Name of the asset group. Required. It must have a minimum length
+   * of 1 and maximum length of 128. It must be unique under a campaign.
    * </pre>
    *
    * <code>string name = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -220,6 +223,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FINAL_URLS_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList finalUrls_;
   /**
    * <pre>
@@ -275,6 +279,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FINAL_MOBILE_URLS_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList finalMobileUrls_;
   /**
    * <pre>
@@ -334,7 +339,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STATUS_FIELD_NUMBER = 6;
-  private int status_;
+  private int status_ = 0;
   /**
    * <pre>
    * The status of the asset group.
@@ -355,13 +360,13 @@ private static final long serialVersionUID = 0L;
    * @return The status.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.AssetGroupStatusEnum.AssetGroupStatus getStatus() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.AssetGroupStatusEnum.AssetGroupStatus result = com.google.ads.googleads.v12.enums.AssetGroupStatusEnum.AssetGroupStatus.valueOf(status_);
+    com.google.ads.googleads.v12.enums.AssetGroupStatusEnum.AssetGroupStatus result = com.google.ads.googleads.v12.enums.AssetGroupStatusEnum.AssetGroupStatus.forNumber(status_);
     return result == null ? com.google.ads.googleads.v12.enums.AssetGroupStatusEnum.AssetGroupStatus.UNRECOGNIZED : result;
   }
 
   public static final int PATH1_FIELD_NUMBER = 7;
-  private volatile java.lang.Object path1_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object path1_ = "";
   /**
    * <pre>
    * First part of text that may appear appended to the url displayed in
@@ -409,7 +414,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PATH2_FIELD_NUMBER = 8;
-  private volatile java.lang.Object path2_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object path2_ = "";
   /**
    * <pre>
    * Second part of text that may appear appended to the url displayed in
@@ -457,7 +463,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AD_STRENGTH_FIELD_NUMBER = 10;
-  private int adStrength_;
+  private int adStrength_ = 0;
   /**
    * <pre>
    * Output only. Overall ad strength of this asset group.
@@ -478,8 +484,7 @@ private static final long serialVersionUID = 0L;
    * @return The adStrength.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.AdStrengthEnum.AdStrength getAdStrength() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.AdStrengthEnum.AdStrength result = com.google.ads.googleads.v12.enums.AdStrengthEnum.AdStrength.valueOf(adStrength_);
+    com.google.ads.googleads.v12.enums.AdStrengthEnum.AdStrength result = com.google.ads.googleads.v12.enums.AdStrengthEnum.AdStrength.forNumber(adStrength_);
     return result == null ? com.google.ads.googleads.v12.enums.AdStrengthEnum.AdStrength.UNRECOGNIZED : result;
   }
 
@@ -782,26 +787,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       id_ = 0L;
-
       campaign_ = "";
-
       name_ = "";
-
       finalUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000010);
       finalMobileUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000020);
       status_ = 0;
-
       path1_ = "";
-
       path2_ = "";
-
       adStrength_ = 0;
-
       return this;
     }
 
@@ -828,27 +826,51 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.AssetGroup buildPartial() {
       com.google.ads.googleads.v12.resources.AssetGroup result = new com.google.ads.googleads.v12.resources.AssetGroup(this);
-      int from_bitField0_ = bitField0_;
-      result.resourceName_ = resourceName_;
-      result.id_ = id_;
-      result.campaign_ = campaign_;
-      result.name_ = name_;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        finalUrls_ = finalUrls_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.finalUrls_ = finalUrls_;
-      if (((bitField0_ & 0x00000002) != 0)) {
-        finalMobileUrls_ = finalMobileUrls_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000002);
-      }
-      result.finalMobileUrls_ = finalMobileUrls_;
-      result.status_ = status_;
-      result.path1_ = path1_;
-      result.path2_ = path2_;
-      result.adStrength_ = adStrength_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.resources.AssetGroup result) {
+      if (((bitField0_ & 0x00000010) != 0)) {
+        finalUrls_ = finalUrls_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000010);
+      }
+      result.finalUrls_ = finalUrls_;
+      if (((bitField0_ & 0x00000020) != 0)) {
+        finalMobileUrls_ = finalMobileUrls_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000020);
+      }
+      result.finalMobileUrls_ = finalMobileUrls_;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.resources.AssetGroup result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.id_ = id_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.campaign_ = campaign_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.name_ = name_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.status_ = status_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.path1_ = path1_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.path2_ = path2_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.adStrength_ = adStrength_;
+      }
     }
 
     @java.lang.Override
@@ -897,6 +919,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.resources.AssetGroup.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.getId() != 0L) {
@@ -904,16 +927,18 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getCampaign().isEmpty()) {
         campaign_ = other.campaign_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.finalUrls_.isEmpty()) {
         if (finalUrls_.isEmpty()) {
           finalUrls_ = other.finalUrls_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000010);
         } else {
           ensureFinalUrlsIsMutable();
           finalUrls_.addAll(other.finalUrls_);
@@ -923,7 +948,7 @@ private static final long serialVersionUID = 0L;
       if (!other.finalMobileUrls_.isEmpty()) {
         if (finalMobileUrls_.isEmpty()) {
           finalMobileUrls_ = other.finalMobileUrls_;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000020);
         } else {
           ensureFinalMobileUrlsIsMutable();
           finalMobileUrls_.addAll(other.finalMobileUrls_);
@@ -935,10 +960,12 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getPath1().isEmpty()) {
         path1_ = other.path1_;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       if (!other.getPath2().isEmpty()) {
         path2_ = other.path2_;
+        bitField0_ |= 0x00000100;
         onChanged();
       }
       if (other.adStrength_ != 0) {
@@ -972,17 +999,17 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               campaign_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 18
             case 26: {
               name_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 26
             case 34: {
@@ -999,27 +1026,27 @@ private static final long serialVersionUID = 0L;
             } // case 42
             case 48: {
               status_ = input.readEnum();
-
+              bitField0_ |= 0x00000040;
               break;
             } // case 48
             case 58: {
               path1_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000080;
               break;
             } // case 58
             case 66: {
               path2_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000100;
               break;
             } // case 66
             case 72: {
               id_ = input.readInt64();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 72
             case 80: {
               adStrength_ = input.readEnum();
-
+              bitField0_ |= 0x00000200;
               break;
             } // case 80
             default: {
@@ -1098,11 +1125,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1117,8 +1142,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1135,12 +1160,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1170,6 +1193,7 @@ private static final long serialVersionUID = 0L;
     public Builder setId(long value) {
       
       id_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1182,7 +1206,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearId() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       id_ = 0L;
       onChanged();
       return this;
@@ -1244,11 +1268,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaign(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       campaign_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1262,8 +1284,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCampaign() {
-      
       campaign_ = getDefaultInstance().getCampaign();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1279,12 +1301,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaignBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       campaign_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1292,8 +1312,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object name_ = "";
     /**
      * <pre>
-     * Required. Name of the asset group. Required. It must have a minimum length of 1 and
-     * maximum length of 128. It must be unique under a campaign.
+     * Required. Name of the asset group. Required. It must have a minimum length
+     * of 1 and maximum length of 128. It must be unique under a campaign.
      * </pre>
      *
      * <code>string name = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1313,8 +1333,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Name of the asset group. Required. It must have a minimum length of 1 and
-     * maximum length of 128. It must be unique under a campaign.
+     * Required. Name of the asset group. Required. It must have a minimum length
+     * of 1 and maximum length of 128. It must be unique under a campaign.
      * </pre>
      *
      * <code>string name = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1335,8 +1355,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Name of the asset group. Required. It must have a minimum length of 1 and
-     * maximum length of 128. It must be unique under a campaign.
+     * Required. Name of the asset group. Required. It must have a minimum length
+     * of 1 and maximum length of 128. It must be unique under a campaign.
      * </pre>
      *
      * <code>string name = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1345,33 +1365,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       name_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. Name of the asset group. Required. It must have a minimum length of 1 and
-     * maximum length of 128. It must be unique under a campaign.
+     * Required. Name of the asset group. Required. It must have a minimum length
+     * of 1 and maximum length of 128. It must be unique under a campaign.
      * </pre>
      *
      * <code>string name = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      
       name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. Name of the asset group. Required. It must have a minimum length of 1 and
-     * maximum length of 128. It must be unique under a campaign.
+     * Required. Name of the asset group. Required. It must have a minimum length
+     * of 1 and maximum length of 128. It must be unique under a campaign.
      * </pre>
      *
      * <code>string name = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1380,21 +1398,19 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
 
     private com.google.protobuf.LazyStringList finalUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureFinalUrlsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000010) != 0)) {
         finalUrls_ = new com.google.protobuf.LazyStringArrayList(finalUrls_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000010;
        }
     }
     /**
@@ -1462,10 +1478,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFinalUrls(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFinalUrlsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureFinalUrlsIsMutable();
       finalUrls_.set(index, value);
       onChanged();
       return this;
@@ -1482,10 +1496,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addFinalUrls(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFinalUrlsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureFinalUrlsIsMutable();
       finalUrls_.add(value);
       onChanged();
       return this;
@@ -1519,7 +1531,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearFinalUrls() {
       finalUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1535,10 +1547,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addFinalUrlsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureFinalUrlsIsMutable();
       finalUrls_.add(value);
       onChanged();
@@ -1547,9 +1557,9 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.LazyStringList finalMobileUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureFinalMobileUrlsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000020) != 0)) {
         finalMobileUrls_ = new com.google.protobuf.LazyStringArrayList(finalMobileUrls_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000020;
        }
     }
     /**
@@ -1622,10 +1632,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFinalMobileUrls(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFinalMobileUrlsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureFinalMobileUrlsIsMutable();
       finalMobileUrls_.set(index, value);
       onChanged();
       return this;
@@ -1643,10 +1651,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addFinalMobileUrls(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFinalMobileUrlsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureFinalMobileUrlsIsMutable();
       finalMobileUrls_.add(value);
       onChanged();
       return this;
@@ -1682,7 +1688,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearFinalMobileUrls() {
       finalMobileUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1699,10 +1705,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addFinalMobileUrlsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureFinalMobileUrlsIsMutable();
       finalMobileUrls_.add(value);
       onChanged();
@@ -1731,8 +1735,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
-      
       status_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1746,8 +1750,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.AssetGroupStatusEnum.AssetGroupStatus getStatus() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.AssetGroupStatusEnum.AssetGroupStatus result = com.google.ads.googleads.v12.enums.AssetGroupStatusEnum.AssetGroupStatus.valueOf(status_);
+      com.google.ads.googleads.v12.enums.AssetGroupStatusEnum.AssetGroupStatus result = com.google.ads.googleads.v12.enums.AssetGroupStatusEnum.AssetGroupStatus.forNumber(status_);
       return result == null ? com.google.ads.googleads.v12.enums.AssetGroupStatusEnum.AssetGroupStatus.UNRECOGNIZED : result;
     }
     /**
@@ -1763,7 +1766,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000040;
       status_ = value.getNumber();
       onChanged();
       return this;
@@ -1777,7 +1780,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000040);
       status_ = 0;
       onChanged();
       return this;
@@ -1839,11 +1842,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPath1(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       path1_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1857,8 +1858,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPath1() {
-      
       path1_ = getDefaultInstance().getPath1();
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -1874,12 +1875,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPath1Bytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       path1_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1940,11 +1939,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPath2(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       path2_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1958,8 +1955,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPath2() {
-      
       path2_ = getDefaultInstance().getPath2();
+      bitField0_ = (bitField0_ & ~0x00000100);
       onChanged();
       return this;
     }
@@ -1975,12 +1972,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPath2Bytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       path2_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2007,8 +2002,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAdStrengthValue(int value) {
-      
       adStrength_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2022,8 +2017,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.AdStrengthEnum.AdStrength getAdStrength() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.AdStrengthEnum.AdStrength result = com.google.ads.googleads.v12.enums.AdStrengthEnum.AdStrength.valueOf(adStrength_);
+      com.google.ads.googleads.v12.enums.AdStrengthEnum.AdStrength result = com.google.ads.googleads.v12.enums.AdStrengthEnum.AdStrength.forNumber(adStrength_);
       return result == null ? com.google.ads.googleads.v12.enums.AdStrengthEnum.AdStrength.UNRECOGNIZED : result;
     }
     /**
@@ -2039,7 +2033,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000200;
       adStrength_ = value.getNumber();
       onChanged();
       return this;
@@ -2053,7 +2047,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAdStrength() {
-      
+      bitField0_ = (bitField0_ & ~0x00000200);
       adStrength_ = 0;
       onChanged();
       return this;

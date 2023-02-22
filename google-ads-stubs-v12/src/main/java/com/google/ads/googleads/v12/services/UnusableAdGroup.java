@@ -53,7 +53,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AD_GROUP_FIELD_NUMBER = 1;
-  private volatile java.lang.Object adGroup_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object adGroup_ = "";
   /**
    * <pre>
    * The AdGroup resource name.
@@ -101,7 +102,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CAMPAIGN_FIELD_NUMBER = 2;
-  private volatile java.lang.Object campaign_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object campaign_ = "";
   /**
    * <pre>
    * The Campaign resource name.
@@ -352,10 +354,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       adGroup_ = "";
-
       campaign_ = "";
-
       return this;
     }
 
@@ -382,10 +383,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.UnusableAdGroup buildPartial() {
       com.google.ads.googleads.v12.services.UnusableAdGroup result = new com.google.ads.googleads.v12.services.UnusableAdGroup(this);
-      result.adGroup_ = adGroup_;
-      result.campaign_ = campaign_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.UnusableAdGroup result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.adGroup_ = adGroup_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.campaign_ = campaign_;
+      }
     }
 
     @java.lang.Override
@@ -434,10 +444,12 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.services.UnusableAdGroup.getDefaultInstance()) return this;
       if (!other.getAdGroup().isEmpty()) {
         adGroup_ = other.adGroup_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getCampaign().isEmpty()) {
         campaign_ = other.campaign_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -468,12 +480,12 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               adGroup_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               campaign_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             default: {
@@ -491,6 +503,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object adGroup_ = "";
     /**
@@ -548,11 +561,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAdGroup(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       adGroup_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -566,8 +577,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAdGroup() {
-      
       adGroup_ = getDefaultInstance().getAdGroup();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -583,12 +594,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAdGroupBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       adGroup_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -649,11 +658,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaign(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       campaign_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -667,8 +674,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCampaign() {
-      
       campaign_ = getDefaultInstance().getCampaign();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -684,12 +691,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaignBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       campaign_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

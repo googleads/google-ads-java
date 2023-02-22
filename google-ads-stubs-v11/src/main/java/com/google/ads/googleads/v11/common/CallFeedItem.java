@@ -53,7 +53,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int PHONE_NUMBER_FIELD_NUMBER = 7;
-  private volatile java.lang.Object phoneNumber_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object phoneNumber_ = "";
   /**
    * <pre>
    * The advertiser's phone number to append to the ad.
@@ -114,7 +115,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int COUNTRY_CODE_FIELD_NUMBER = 8;
-  private volatile java.lang.Object countryCode_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object countryCode_ = "";
   /**
    * <pre>
    * Uppercase two-letter country code of the advertiser's phone number.
@@ -175,7 +177,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALL_TRACKING_ENABLED_FIELD_NUMBER = 9;
-  private boolean callTrackingEnabled_;
+  private boolean callTrackingEnabled_ = false;
   /**
    * <pre>
    * Indicates whether call tracking is enabled. By default, call tracking is
@@ -204,7 +206,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALL_CONVERSION_ACTION_FIELD_NUMBER = 10;
-  private volatile java.lang.Object callConversionAction_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object callConversionAction_ = "";
   /**
    * <pre>
    * The conversion action to attribute a call conversion to. If not set a
@@ -268,7 +271,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALL_CONVERSION_TRACKING_DISABLED_FIELD_NUMBER = 11;
-  private boolean callConversionTrackingDisabled_;
+  private boolean callConversionTrackingDisabled_ = false;
   /**
    * <pre>
    * If true, disable call conversion tracking. call_conversion_action should
@@ -297,7 +300,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALL_CONVERSION_REPORTING_STATE_FIELD_NUMBER = 6;
-  private int callConversionReportingState_;
+  private int callConversionReportingState_ = 0;
   /**
    * <pre>
    * Enum value that indicates whether this call extension uses its own call
@@ -322,8 +325,7 @@ private static final long serialVersionUID = 0L;
    * @return The callConversionReportingState.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.CallConversionReportingStateEnum.CallConversionReportingState getCallConversionReportingState() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.CallConversionReportingStateEnum.CallConversionReportingState result = com.google.ads.googleads.v11.enums.CallConversionReportingStateEnum.CallConversionReportingState.valueOf(callConversionReportingState_);
+    com.google.ads.googleads.v11.enums.CallConversionReportingStateEnum.CallConversionReportingState result = com.google.ads.googleads.v11.enums.CallConversionReportingStateEnum.CallConversionReportingState.forNumber(callConversionReportingState_);
     return result == null ? com.google.ads.googleads.v11.enums.CallConversionReportingStateEnum.CallConversionReportingState.UNRECOGNIZED : result;
   }
 
@@ -597,18 +599,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       phoneNumber_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       countryCode_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       callTrackingEnabled_ = false;
-      bitField0_ = (bitField0_ & ~0x00000004);
       callConversionAction_ = "";
-      bitField0_ = (bitField0_ & ~0x00000008);
       callConversionTrackingDisabled_ = false;
-      bitField0_ = (bitField0_ & ~0x00000010);
       callConversionReportingState_ = 0;
-
       return this;
     }
 
@@ -635,32 +632,38 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.CallFeedItem buildPartial() {
       com.google.ads.googleads.v11.common.CallFeedItem result = new com.google.ads.googleads.v11.common.CallFeedItem(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.CallFeedItem result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.phoneNumber_ = phoneNumber_;
         to_bitField0_ |= 0x00000001;
       }
-      result.phoneNumber_ = phoneNumber_;
       if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.countryCode_ = countryCode_;
         to_bitField0_ |= 0x00000002;
       }
-      result.countryCode_ = countryCode_;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.callTrackingEnabled_ = callTrackingEnabled_;
         to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.callConversionAction_ = callConversionAction_;
         to_bitField0_ |= 0x00000008;
       }
-      result.callConversionAction_ = callConversionAction_;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.callConversionTrackingDisabled_ = callConversionTrackingDisabled_;
         to_bitField0_ |= 0x00000010;
       }
-      result.callConversionReportingState_ = callConversionReportingState_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.callConversionReportingState_ = callConversionReportingState_;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -708,21 +711,21 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v11.common.CallFeedItem other) {
       if (other == com.google.ads.googleads.v11.common.CallFeedItem.getDefaultInstance()) return this;
       if (other.hasPhoneNumber()) {
-        bitField0_ |= 0x00000001;
         phoneNumber_ = other.phoneNumber_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasCountryCode()) {
-        bitField0_ |= 0x00000002;
         countryCode_ = other.countryCode_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasCallTrackingEnabled()) {
         setCallTrackingEnabled(other.getCallTrackingEnabled());
       }
       if (other.hasCallConversionAction()) {
-        bitField0_ |= 0x00000008;
         callConversionAction_ = other.callConversionAction_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.hasCallConversionTrackingDisabled()) {
@@ -759,7 +762,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 48: {
               callConversionReportingState_ = input.readEnum();
-
+              bitField0_ |= 0x00000020;
               break;
             } // case 48
             case 58: {
@@ -872,11 +875,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPhoneNumber(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       phoneNumber_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -890,8 +891,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPhoneNumber() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       phoneNumber_ = getDefaultInstance().getPhoneNumber();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -907,12 +908,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPhoneNumberBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       phoneNumber_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -985,11 +984,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCountryCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       countryCode_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1003,8 +1000,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCountryCode() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       countryCode_ = getDefaultInstance().getCountryCode();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1020,12 +1017,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCountryCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       countryCode_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1068,8 +1063,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCallTrackingEnabled(boolean value) {
-      bitField0_ |= 0x00000004;
+      
       callTrackingEnabled_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1161,11 +1157,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallConversionAction(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
       callConversionAction_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1180,8 +1174,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallConversionAction() {
-      bitField0_ = (bitField0_ & ~0x00000008);
       callConversionAction_ = getDefaultInstance().getCallConversionAction();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1198,12 +1192,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallConversionActionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       callConversionAction_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1246,8 +1238,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCallConversionTrackingDisabled(boolean value) {
-      bitField0_ |= 0x00000010;
+      
       callConversionTrackingDisabled_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1293,8 +1286,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCallConversionReportingStateValue(int value) {
-      
       callConversionReportingState_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1310,8 +1303,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.CallConversionReportingStateEnum.CallConversionReportingState getCallConversionReportingState() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.CallConversionReportingStateEnum.CallConversionReportingState result = com.google.ads.googleads.v11.enums.CallConversionReportingStateEnum.CallConversionReportingState.valueOf(callConversionReportingState_);
+      com.google.ads.googleads.v11.enums.CallConversionReportingStateEnum.CallConversionReportingState result = com.google.ads.googleads.v11.enums.CallConversionReportingStateEnum.CallConversionReportingState.forNumber(callConversionReportingState_);
       return result == null ? com.google.ads.googleads.v11.enums.CallConversionReportingStateEnum.CallConversionReportingState.UNRECOGNIZED : result;
     }
     /**
@@ -1329,7 +1321,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000020;
       callConversionReportingState_ = value.getNumber();
       onChanged();
       return this;
@@ -1345,7 +1337,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallConversionReportingState() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       callConversionReportingState_ = 0;
       onChanged();
       return this;

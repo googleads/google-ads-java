@@ -49,6 +49,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RULE_ITEMS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.UserListRuleItemInfo> ruleItems_;
   /**
    * <pre>
@@ -302,6 +303,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (ruleItemsBuilder_ == null) {
         ruleItems_ = java.util.Collections.emptyList();
       } else {
@@ -335,7 +337,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.UserListRuleItemGroupInfo buildPartial() {
       com.google.ads.googleads.v12.common.UserListRuleItemGroupInfo result = new com.google.ads.googleads.v12.common.UserListRuleItemGroupInfo(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.common.UserListRuleItemGroupInfo result) {
       if (ruleItemsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           ruleItems_ = java.util.Collections.unmodifiableList(ruleItems_);
@@ -345,8 +353,10 @@ private static final long serialVersionUID = 0L;
       } else {
         result.ruleItems_ = ruleItemsBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.UserListRuleItemGroupInfo result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override

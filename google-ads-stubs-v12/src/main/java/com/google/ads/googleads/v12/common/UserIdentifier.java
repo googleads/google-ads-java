@@ -96,7 +96,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int USER_IDENTIFIER_SOURCE_FIELD_NUMBER = 6;
-  private int userIdentifierSource_;
+  private int userIdentifierSource_ = 0;
   /**
    * <pre>
    * Source of the user identifier when the upload is from Store Sales,
@@ -119,8 +119,7 @@ private static final long serialVersionUID = 0L;
    * @return The userIdentifierSource.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.UserIdentifierSourceEnum.UserIdentifierSource getUserIdentifierSource() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.UserIdentifierSourceEnum.UserIdentifierSource result = com.google.ads.googleads.v12.enums.UserIdentifierSourceEnum.UserIdentifierSource.valueOf(userIdentifierSource_);
+    com.google.ads.googleads.v12.enums.UserIdentifierSourceEnum.UserIdentifierSource result = com.google.ads.googleads.v12.enums.UserIdentifierSourceEnum.UserIdentifierSource.forNumber(userIdentifierSource_);
     return result == null ? com.google.ads.googleads.v12.enums.UserIdentifierSourceEnum.UserIdentifierSource.UNRECOGNIZED : result;
   }
 
@@ -715,8 +714,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       userIdentifierSource_ = 0;
-
       if (addressInfoBuilder_ != null) {
         addressInfoBuilder_.clear();
       }
@@ -748,29 +747,26 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.UserIdentifier buildPartial() {
       com.google.ads.googleads.v12.common.UserIdentifier result = new com.google.ads.googleads.v12.common.UserIdentifier(this);
-      result.userIdentifierSource_ = userIdentifierSource_;
-      if (identifierCase_ == 7) {
-        result.identifier_ = identifier_;
-      }
-      if (identifierCase_ == 8) {
-        result.identifier_ = identifier_;
-      }
-      if (identifierCase_ == 9) {
-        result.identifier_ = identifier_;
-      }
-      if (identifierCase_ == 10) {
-        result.identifier_ = identifier_;
-      }
-      if (identifierCase_ == 5) {
-        if (addressInfoBuilder_ == null) {
-          result.identifier_ = identifier_;
-        } else {
-          result.identifier_ = addressInfoBuilder_.build();
-        }
-      }
-      result.identifierCase_ = identifierCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.UserIdentifier result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.userIdentifierSource_ = userIdentifierSource_;
+      }
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v12.common.UserIdentifier result) {
+      result.identifierCase_ = identifierCase_;
+      result.identifier_ = this.identifier_;
+      if (identifierCase_ == 5 &&
+          addressInfoBuilder_ != null) {
+        result.identifier_ = addressInfoBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -888,7 +884,7 @@ private static final long serialVersionUID = 0L;
             } // case 42
             case 48: {
               userIdentifierSource_ = input.readEnum();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 48
             case 58: {
@@ -945,6 +941,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private int userIdentifierSource_ = 0;
     /**
@@ -970,8 +967,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setUserIdentifierSourceValue(int value) {
-      
       userIdentifierSource_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -986,8 +983,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.UserIdentifierSourceEnum.UserIdentifierSource getUserIdentifierSource() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.UserIdentifierSourceEnum.UserIdentifierSource result = com.google.ads.googleads.v12.enums.UserIdentifierSourceEnum.UserIdentifierSource.valueOf(userIdentifierSource_);
+      com.google.ads.googleads.v12.enums.UserIdentifierSourceEnum.UserIdentifierSource result = com.google.ads.googleads.v12.enums.UserIdentifierSourceEnum.UserIdentifierSource.forNumber(userIdentifierSource_);
       return result == null ? com.google.ads.googleads.v12.enums.UserIdentifierSourceEnum.UserIdentifierSource.UNRECOGNIZED : result;
     }
     /**
@@ -1004,7 +1000,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       userIdentifierSource_ = value.getNumber();
       onChanged();
       return this;
@@ -1019,7 +1015,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUserIdentifierSource() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       userIdentifierSource_ = 0;
       onChanged();
       return this;
@@ -1109,10 +1105,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHashedEmail(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  identifierCase_ = 7;
+      if (value == null) { throw new NullPointerException(); }
+      identifierCase_ = 7;
       identifier_ = value;
       onChanged();
       return this;
@@ -1148,10 +1142,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHashedEmailBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       identifierCase_ = 7;
       identifier_ = value;
       onChanged();
@@ -1242,10 +1234,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHashedPhoneNumber(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  identifierCase_ = 8;
+      if (value == null) { throw new NullPointerException(); }
+      identifierCase_ = 8;
       identifier_ = value;
       onChanged();
       return this;
@@ -1281,10 +1271,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHashedPhoneNumberBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       identifierCase_ = 8;
       identifier_ = value;
       onChanged();
@@ -1367,10 +1355,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setMobileId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  identifierCase_ = 9;
+      if (value == null) { throw new NullPointerException(); }
+      identifierCase_ = 9;
       identifier_ = value;
       onChanged();
       return this;
@@ -1402,10 +1388,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setMobileIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       identifierCase_ = 9;
       identifier_ = value;
       onChanged();
@@ -1496,10 +1480,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setThirdPartyUserId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  identifierCase_ = 10;
+      if (value == null) { throw new NullPointerException(); }
+      identifierCase_ = 10;
       identifier_ = value;
       onChanged();
       return this;
@@ -1535,10 +1517,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setThirdPartyUserIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       identifierCase_ = 10;
       identifier_ = value;
       onChanged();
@@ -1728,7 +1708,7 @@ private static final long serialVersionUID = 0L;
         identifier_ = null;
       }
       identifierCase_ = 5;
-      onChanged();;
+      onChanged();
       return addressInfoBuilder_;
     }
     @java.lang.Override

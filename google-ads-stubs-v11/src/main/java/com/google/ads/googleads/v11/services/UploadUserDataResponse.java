@@ -5,7 +5,8 @@ package com.google.ads.googleads.v11.services;
 
 /**
  * <pre>
- * Response message for [UserDataService.UploadUserData][google.ads.googleads.v11.services.UserDataService.UploadUserData]
+ * Response message for
+ * [UserDataService.UploadUserData][google.ads.googleads.v11.services.UserDataService.UploadUserData]
  * Uploads made through this service will not be visible under the 'Segment
  * members' section for the Customer Match List in the Google Ads UI.
  * </pre>
@@ -52,7 +53,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int UPLOAD_DATE_TIME_FIELD_NUMBER = 3;
-  private volatile java.lang.Object uploadDateTime_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object uploadDateTime_ = "";
   /**
    * <pre>
    * The date time at which the request was received by API, formatted as
@@ -113,7 +115,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RECEIVED_OPERATIONS_COUNT_FIELD_NUMBER = 4;
-  private int receivedOperationsCount_;
+  private int receivedOperationsCount_ = 0;
   /**
    * <pre>
    * Number of upload data operations received by API.
@@ -316,7 +318,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Response message for [UserDataService.UploadUserData][google.ads.googleads.v11.services.UserDataService.UploadUserData]
+   * Response message for
+   * [UserDataService.UploadUserData][google.ads.googleads.v11.services.UserDataService.UploadUserData]
    * Uploads made through this service will not be visible under the 'Segment
    * members' section for the Customer Match List in the Google Ads UI.
    * </pre>
@@ -353,10 +356,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       uploadDateTime_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       receivedOperationsCount_ = 0;
-      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -383,19 +385,23 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.UploadUserDataResponse buildPartial() {
       com.google.ads.googleads.v11.services.UploadUserDataResponse result = new com.google.ads.googleads.v11.services.UploadUserDataResponse(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.UploadUserDataResponse result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.uploadDateTime_ = uploadDateTime_;
         to_bitField0_ |= 0x00000001;
       }
-      result.uploadDateTime_ = uploadDateTime_;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.receivedOperationsCount_ = receivedOperationsCount_;
         to_bitField0_ |= 0x00000002;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -443,8 +449,8 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v11.services.UploadUserDataResponse other) {
       if (other == com.google.ads.googleads.v11.services.UploadUserDataResponse.getDefaultInstance()) return this;
       if (other.hasUploadDateTime()) {
-        bitField0_ |= 0x00000001;
         uploadDateTime_ = other.uploadDateTime_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasReceivedOperationsCount()) {
@@ -571,11 +577,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUploadDateTime(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       uploadDateTime_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -589,8 +593,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUploadDateTime() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       uploadDateTime_ = getDefaultInstance().getUploadDateTime();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -606,12 +610,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUploadDateTimeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       uploadDateTime_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -651,8 +653,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setReceivedOperationsCount(int value) {
-      bitField0_ |= 0x00000002;
+      
       receivedOperationsCount_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

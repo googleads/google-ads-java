@@ -51,7 +51,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int TEXT_FIELD_NUMBER = 5;
-  private volatile java.lang.Object text_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object text_ = "";
   /**
    * <pre>
    * Text of the keyword idea.
@@ -152,7 +153,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.common.KeywordPlanHistoricalMetricsOrBuilder getKeywordIdeaMetricsOrBuilder() {
-    return getKeywordIdeaMetrics();
+    return keywordIdeaMetrics_ == null ? com.google.ads.googleads.v12.common.KeywordPlanHistoricalMetrics.getDefaultInstance() : keywordIdeaMetrics_;
   }
 
   public static final int KEYWORD_ANNOTATIONS_FIELD_NUMBER = 6;
@@ -193,10 +194,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.common.KeywordAnnotationsOrBuilder getKeywordAnnotationsOrBuilder() {
-    return getKeywordAnnotations();
+    return keywordAnnotations_ == null ? com.google.ads.googleads.v12.common.KeywordAnnotations.getDefaultInstance() : keywordAnnotations_;
   }
 
   public static final int CLOSE_VARIANTS_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList closeVariants_;
   /**
    * <pre>
@@ -504,22 +506,20 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       text_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
-      if (keywordIdeaMetricsBuilder_ == null) {
-        keywordIdeaMetrics_ = null;
-      } else {
-        keywordIdeaMetrics_ = null;
+      keywordIdeaMetrics_ = null;
+      if (keywordIdeaMetricsBuilder_ != null) {
+        keywordIdeaMetricsBuilder_.dispose();
         keywordIdeaMetricsBuilder_ = null;
       }
-      if (keywordAnnotationsBuilder_ == null) {
-        keywordAnnotations_ = null;
-      } else {
-        keywordAnnotations_ = null;
+      keywordAnnotations_ = null;
+      if (keywordAnnotationsBuilder_ != null) {
+        keywordAnnotationsBuilder_.dispose();
         keywordAnnotationsBuilder_ = null;
       }
       closeVariants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000008);
       return this;
     }
 
@@ -546,30 +546,38 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.GenerateKeywordIdeaResult buildPartial() {
       com.google.ads.googleads.v12.services.GenerateKeywordIdeaResult result = new com.google.ads.googleads.v12.services.GenerateKeywordIdeaResult(this);
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.services.GenerateKeywordIdeaResult result) {
+      if (((bitField0_ & 0x00000008) != 0)) {
+        closeVariants_ = closeVariants_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000008);
+      }
+      result.closeVariants_ = closeVariants_;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.GenerateKeywordIdeaResult result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.text_ = text_;
         to_bitField0_ |= 0x00000001;
       }
-      result.text_ = text_;
-      if (keywordIdeaMetricsBuilder_ == null) {
-        result.keywordIdeaMetrics_ = keywordIdeaMetrics_;
-      } else {
-        result.keywordIdeaMetrics_ = keywordIdeaMetricsBuilder_.build();
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.keywordIdeaMetrics_ = keywordIdeaMetricsBuilder_ == null
+            ? keywordIdeaMetrics_
+            : keywordIdeaMetricsBuilder_.build();
       }
-      if (keywordAnnotationsBuilder_ == null) {
-        result.keywordAnnotations_ = keywordAnnotations_;
-      } else {
-        result.keywordAnnotations_ = keywordAnnotationsBuilder_.build();
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.keywordAnnotations_ = keywordAnnotationsBuilder_ == null
+            ? keywordAnnotations_
+            : keywordAnnotationsBuilder_.build();
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        closeVariants_ = closeVariants_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000002);
-      }
-      result.closeVariants_ = closeVariants_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -617,8 +625,8 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v12.services.GenerateKeywordIdeaResult other) {
       if (other == com.google.ads.googleads.v12.services.GenerateKeywordIdeaResult.getDefaultInstance()) return this;
       if (other.hasText()) {
-        bitField0_ |= 0x00000001;
         text_ = other.text_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasKeywordIdeaMetrics()) {
@@ -630,7 +638,7 @@ private static final long serialVersionUID = 0L;
       if (!other.closeVariants_.isEmpty()) {
         if (closeVariants_.isEmpty()) {
           closeVariants_ = other.closeVariants_;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
           ensureCloseVariantsIsMutable();
           closeVariants_.addAll(other.closeVariants_);
@@ -667,7 +675,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getKeywordIdeaMetricsFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 26
             case 42: {
@@ -679,7 +687,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getKeywordAnnotationsFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 50
             case 58: {
@@ -781,11 +789,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setText(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       text_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -801,8 +807,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearText() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       text_ = getDefaultInstance().getText();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -820,12 +826,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTextBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       text_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -842,7 +846,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the keywordIdeaMetrics field is set.
      */
     public boolean hasKeywordIdeaMetrics() {
-      return keywordIdeaMetricsBuilder_ != null || keywordIdeaMetrics_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -872,11 +876,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         keywordIdeaMetrics_ = value;
-        onChanged();
       } else {
         keywordIdeaMetricsBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -890,11 +894,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.KeywordPlanHistoricalMetrics.Builder builderForValue) {
       if (keywordIdeaMetricsBuilder_ == null) {
         keywordIdeaMetrics_ = builderForValue.build();
-        onChanged();
       } else {
         keywordIdeaMetricsBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -906,17 +910,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeKeywordIdeaMetrics(com.google.ads.googleads.v12.common.KeywordPlanHistoricalMetrics value) {
       if (keywordIdeaMetricsBuilder_ == null) {
-        if (keywordIdeaMetrics_ != null) {
-          keywordIdeaMetrics_ =
-            com.google.ads.googleads.v12.common.KeywordPlanHistoricalMetrics.newBuilder(keywordIdeaMetrics_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          keywordIdeaMetrics_ != null &&
+          keywordIdeaMetrics_ != com.google.ads.googleads.v12.common.KeywordPlanHistoricalMetrics.getDefaultInstance()) {
+          getKeywordIdeaMetricsBuilder().mergeFrom(value);
         } else {
           keywordIdeaMetrics_ = value;
         }
-        onChanged();
       } else {
         keywordIdeaMetricsBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -927,14 +932,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.KeywordPlanHistoricalMetrics keyword_idea_metrics = 3;</code>
      */
     public Builder clearKeywordIdeaMetrics() {
-      if (keywordIdeaMetricsBuilder_ == null) {
-        keywordIdeaMetrics_ = null;
-        onChanged();
-      } else {
-        keywordIdeaMetrics_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      keywordIdeaMetrics_ = null;
+      if (keywordIdeaMetricsBuilder_ != null) {
+        keywordIdeaMetricsBuilder_.dispose();
         keywordIdeaMetricsBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -945,7 +949,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.KeywordPlanHistoricalMetrics keyword_idea_metrics = 3;</code>
      */
     public com.google.ads.googleads.v12.common.KeywordPlanHistoricalMetrics.Builder getKeywordIdeaMetricsBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getKeywordIdeaMetricsFieldBuilder().getBuilder();
     }
@@ -998,7 +1002,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the keywordAnnotations field is set.
      */
     public boolean hasKeywordAnnotations() {
-      return keywordAnnotationsBuilder_ != null || keywordAnnotations_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -1030,11 +1034,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         keywordAnnotations_ = value;
-        onChanged();
       } else {
         keywordAnnotationsBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1049,11 +1053,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.KeywordAnnotations.Builder builderForValue) {
       if (keywordAnnotationsBuilder_ == null) {
         keywordAnnotations_ = builderForValue.build();
-        onChanged();
       } else {
         keywordAnnotationsBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1066,17 +1070,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeKeywordAnnotations(com.google.ads.googleads.v12.common.KeywordAnnotations value) {
       if (keywordAnnotationsBuilder_ == null) {
-        if (keywordAnnotations_ != null) {
-          keywordAnnotations_ =
-            com.google.ads.googleads.v12.common.KeywordAnnotations.newBuilder(keywordAnnotations_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000004) != 0) &&
+          keywordAnnotations_ != null &&
+          keywordAnnotations_ != com.google.ads.googleads.v12.common.KeywordAnnotations.getDefaultInstance()) {
+          getKeywordAnnotationsBuilder().mergeFrom(value);
         } else {
           keywordAnnotations_ = value;
         }
-        onChanged();
       } else {
         keywordAnnotationsBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1088,14 +1093,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.KeywordAnnotations keyword_annotations = 6;</code>
      */
     public Builder clearKeywordAnnotations() {
-      if (keywordAnnotationsBuilder_ == null) {
-        keywordAnnotations_ = null;
-        onChanged();
-      } else {
-        keywordAnnotations_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      keywordAnnotations_ = null;
+      if (keywordAnnotationsBuilder_ != null) {
+        keywordAnnotationsBuilder_.dispose();
         keywordAnnotationsBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1107,7 +1111,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.KeywordAnnotations keyword_annotations = 6;</code>
      */
     public com.google.ads.googleads.v12.common.KeywordAnnotations.Builder getKeywordAnnotationsBuilder() {
-      
+      bitField0_ |= 0x00000004;
       onChanged();
       return getKeywordAnnotationsFieldBuilder().getBuilder();
     }
@@ -1151,9 +1155,9 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.LazyStringList closeVariants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureCloseVariantsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         closeVariants_ = new com.google.protobuf.LazyStringArrayList(closeVariants_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000008;
        }
     }
     /**
@@ -1231,10 +1235,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCloseVariants(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureCloseVariantsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureCloseVariantsIsMutable();
       closeVariants_.set(index, value);
       onChanged();
       return this;
@@ -1253,10 +1255,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addCloseVariants(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureCloseVariantsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureCloseVariantsIsMutable();
       closeVariants_.add(value);
       onChanged();
       return this;
@@ -1294,7 +1294,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearCloseVariants() {
       closeVariants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1312,10 +1312,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addCloseVariantsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureCloseVariantsIsMutable();
       closeVariants_.add(value);
       onChanged();

@@ -94,10 +94,11 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LOCATION_OWNERSHIP_TYPE_FIELD_NUMBER = 3;
-  private int locationOwnershipType_;
+  private int locationOwnershipType_ = 0;
   /**
    * <pre>
-   * Required. Immutable. Location Ownership Type (owned location or affiliate location).
+   * Required. Immutable. Location Ownership Type (owned location or affiliate
+   * location).
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.LocationOwnershipTypeEnum.LocationOwnershipType location_ownership_type = 3 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
@@ -108,15 +109,15 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. Immutable. Location Ownership Type (owned location or affiliate location).
+   * Required. Immutable. Location Ownership Type (owned location or affiliate
+   * location).
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.LocationOwnershipTypeEnum.LocationOwnershipType location_ownership_type = 3 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The locationOwnershipType.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.LocationOwnershipTypeEnum.LocationOwnershipType getLocationOwnershipType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.LocationOwnershipTypeEnum.LocationOwnershipType result = com.google.ads.googleads.v12.enums.LocationOwnershipTypeEnum.LocationOwnershipType.valueOf(locationOwnershipType_);
+    com.google.ads.googleads.v12.enums.LocationOwnershipTypeEnum.LocationOwnershipType result = com.google.ads.googleads.v12.enums.LocationOwnershipTypeEnum.LocationOwnershipType.forNumber(locationOwnershipType_);
     return result == null ? com.google.ads.googleads.v12.enums.LocationOwnershipTypeEnum.LocationOwnershipType.UNRECOGNIZED : result;
   }
 
@@ -502,8 +503,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       locationOwnershipType_ = 0;
-
       if (businessProfileLocationSetBuilder_ != null) {
         businessProfileLocationSetBuilder_.clear();
       }
@@ -541,31 +542,34 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.LocationSet buildPartial() {
       com.google.ads.googleads.v12.common.LocationSet result = new com.google.ads.googleads.v12.common.LocationSet(this);
-      result.locationOwnershipType_ = locationOwnershipType_;
-      if (sourceCase_ == 1) {
-        if (businessProfileLocationSetBuilder_ == null) {
-          result.source_ = source_;
-        } else {
-          result.source_ = businessProfileLocationSetBuilder_.build();
-        }
-      }
-      if (sourceCase_ == 2) {
-        if (chainLocationSetBuilder_ == null) {
-          result.source_ = source_;
-        } else {
-          result.source_ = chainLocationSetBuilder_.build();
-        }
-      }
-      if (sourceCase_ == 5) {
-        if (mapsLocationSetBuilder_ == null) {
-          result.source_ = source_;
-        } else {
-          result.source_ = mapsLocationSetBuilder_.build();
-        }
-      }
-      result.sourceCase_ = sourceCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.LocationSet result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.locationOwnershipType_ = locationOwnershipType_;
+      }
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v12.common.LocationSet result) {
+      result.sourceCase_ = sourceCase_;
+      result.source_ = this.source_;
+      if (sourceCase_ == 1 &&
+          businessProfileLocationSetBuilder_ != null) {
+        result.source_ = businessProfileLocationSetBuilder_.build();
+      }
+      if (sourceCase_ == 2 &&
+          chainLocationSetBuilder_ != null) {
+        result.source_ = chainLocationSetBuilder_.build();
+      }
+      if (sourceCase_ == 5 &&
+          mapsLocationSetBuilder_ != null) {
+        result.source_ = mapsLocationSetBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -674,7 +678,7 @@ private static final long serialVersionUID = 0L;
             } // case 18
             case 24: {
               locationOwnershipType_ = input.readEnum();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 24
             case 42: {
@@ -714,11 +718,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private int locationOwnershipType_ = 0;
     /**
      * <pre>
-     * Required. Immutable. Location Ownership Type (owned location or affiliate location).
+     * Required. Immutable. Location Ownership Type (owned location or affiliate
+     * location).
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.LocationOwnershipTypeEnum.LocationOwnershipType location_ownership_type = 3 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
@@ -729,7 +735,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Immutable. Location Ownership Type (owned location or affiliate location).
+     * Required. Immutable. Location Ownership Type (owned location or affiliate
+     * location).
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.LocationOwnershipTypeEnum.LocationOwnershipType location_ownership_type = 3 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
@@ -737,14 +744,15 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLocationOwnershipTypeValue(int value) {
-      
       locationOwnershipType_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. Immutable. Location Ownership Type (owned location or affiliate location).
+     * Required. Immutable. Location Ownership Type (owned location or affiliate
+     * location).
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.LocationOwnershipTypeEnum.LocationOwnershipType location_ownership_type = 3 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
@@ -752,13 +760,13 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.LocationOwnershipTypeEnum.LocationOwnershipType getLocationOwnershipType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.LocationOwnershipTypeEnum.LocationOwnershipType result = com.google.ads.googleads.v12.enums.LocationOwnershipTypeEnum.LocationOwnershipType.valueOf(locationOwnershipType_);
+      com.google.ads.googleads.v12.enums.LocationOwnershipTypeEnum.LocationOwnershipType result = com.google.ads.googleads.v12.enums.LocationOwnershipTypeEnum.LocationOwnershipType.forNumber(locationOwnershipType_);
       return result == null ? com.google.ads.googleads.v12.enums.LocationOwnershipTypeEnum.LocationOwnershipType.UNRECOGNIZED : result;
     }
     /**
      * <pre>
-     * Required. Immutable. Location Ownership Type (owned location or affiliate location).
+     * Required. Immutable. Location Ownership Type (owned location or affiliate
+     * location).
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.LocationOwnershipTypeEnum.LocationOwnershipType location_ownership_type = 3 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
@@ -769,21 +777,22 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       locationOwnershipType_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. Immutable. Location Ownership Type (owned location or affiliate location).
+     * Required. Immutable. Location Ownership Type (owned location or affiliate
+     * location).
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.LocationOwnershipTypeEnum.LocationOwnershipType location_ownership_type = 3 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
      * @return This builder for chaining.
      */
     public Builder clearLocationOwnershipType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       locationOwnershipType_ = 0;
       onChanged();
       return this;
@@ -972,7 +981,7 @@ private static final long serialVersionUID = 0L;
         source_ = null;
       }
       sourceCase_ = 1;
-      onChanged();;
+      onChanged();
       return businessProfileLocationSetBuilder_;
     }
 
@@ -1159,7 +1168,7 @@ private static final long serialVersionUID = 0L;
         source_ = null;
       }
       sourceCase_ = 2;
-      onChanged();;
+      onChanged();
       return chainLocationSetBuilder_;
     }
 
@@ -1337,7 +1346,7 @@ private static final long serialVersionUID = 0L;
         source_ = null;
       }
       sourceCase_ = 5;
-      onChanged();;
+      onChanged();
       return mapsLocationSetBuilder_;
     }
     @java.lang.Override

@@ -192,8 +192,8 @@ public final class CampaignDraftServiceGrpc {
      * is done. Only a done status is returned in the response. See the status
      * in the Campaign Draft resource to determine if the promotion was
      * successful. If the LRO failed, use
-     * [CampaignDraftService.ListCampaignDraftAsyncErrors][google.ads.googleads.v12.services.CampaignDraftService.ListCampaignDraftAsyncErrors] to view the list of
-     * error reasons.
+     * [CampaignDraftService.ListCampaignDraftAsyncErrors][google.ads.googleads.v12.services.CampaignDraftService.ListCampaignDraftAsyncErrors]
+     * to view the list of error reasons.
      * List of thrown errors:
      *   [AuthenticationError]()
      *   [AuthorizationError]()
@@ -303,8 +303,8 @@ public final class CampaignDraftServiceGrpc {
      * is done. Only a done status is returned in the response. See the status
      * in the Campaign Draft resource to determine if the promotion was
      * successful. If the LRO failed, use
-     * [CampaignDraftService.ListCampaignDraftAsyncErrors][google.ads.googleads.v12.services.CampaignDraftService.ListCampaignDraftAsyncErrors] to view the list of
-     * error reasons.
+     * [CampaignDraftService.ListCampaignDraftAsyncErrors][google.ads.googleads.v12.services.CampaignDraftService.ListCampaignDraftAsyncErrors]
+     * to view the list of error reasons.
      * List of thrown errors:
      *   [AuthenticationError]()
      *   [AuthorizationError]()
@@ -389,8 +389,8 @@ public final class CampaignDraftServiceGrpc {
      * is done. Only a done status is returned in the response. See the status
      * in the Campaign Draft resource to determine if the promotion was
      * successful. If the LRO failed, use
-     * [CampaignDraftService.ListCampaignDraftAsyncErrors][google.ads.googleads.v12.services.CampaignDraftService.ListCampaignDraftAsyncErrors] to view the list of
-     * error reasons.
+     * [CampaignDraftService.ListCampaignDraftAsyncErrors][google.ads.googleads.v12.services.CampaignDraftService.ListCampaignDraftAsyncErrors]
+     * to view the list of error reasons.
      * List of thrown errors:
      *   [AuthenticationError]()
      *   [AuthorizationError]()
@@ -474,8 +474,8 @@ public final class CampaignDraftServiceGrpc {
      * is done. Only a done status is returned in the response. See the status
      * in the Campaign Draft resource to determine if the promotion was
      * successful. If the LRO failed, use
-     * [CampaignDraftService.ListCampaignDraftAsyncErrors][google.ads.googleads.v12.services.CampaignDraftService.ListCampaignDraftAsyncErrors] to view the list of
-     * error reasons.
+     * [CampaignDraftService.ListCampaignDraftAsyncErrors][google.ads.googleads.v12.services.CampaignDraftService.ListCampaignDraftAsyncErrors]
+     * to view the list of error reasons.
      * List of thrown errors:
      *   [AuthenticationError]()
      *   [AuthorizationError]()

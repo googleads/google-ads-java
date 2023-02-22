@@ -663,8 +663,8 @@ public interface CampaignOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The resource name of the base campaign of a draft or experiment campaign.
-   * For base campaigns, this is equal to `resource_name`.
+   * Output only. The resource name of the base campaign of a draft or
+   * experiment campaign. For base campaigns, this is equal to `resource_name`.
    * This field is read-only.
    * </pre>
    *
@@ -674,8 +674,8 @@ public interface CampaignOrBuilder extends
   boolean hasBaseCampaign();
   /**
    * <pre>
-   * Output only. The resource name of the base campaign of a draft or experiment campaign.
-   * For base campaigns, this is equal to `resource_name`.
+   * Output only. The resource name of the base campaign of a draft or
+   * experiment campaign. For base campaigns, this is equal to `resource_name`.
    * This field is read-only.
    * </pre>
    *
@@ -685,8 +685,8 @@ public interface CampaignOrBuilder extends
   java.lang.String getBaseCampaign();
   /**
    * <pre>
-   * Output only. The resource name of the base campaign of a draft or experiment campaign.
-   * For base campaigns, this is equal to `resource_name`.
+   * Output only. The resource name of the base campaign of a draft or
+   * experiment campaign. For base campaigns, this is equal to `resource_name`.
    * This field is read-only.
    * </pre>
    *
@@ -754,12 +754,11 @@ public interface CampaignOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Resource name of AccessibleBiddingStrategy, a read-only view of the
-   * unrestricted attributes of the attached portfolio bidding
-   * strategy identified by 'bidding_strategy'. Empty, if the campaign does not
-   * use a portfolio strategy.
-   * Unrestricted strategy attributes are available to all customers
-   * with whom the strategy is shared and are read from the
+   * Output only. Resource name of AccessibleBiddingStrategy, a read-only view
+   * of the unrestricted attributes of the attached portfolio bidding strategy
+   * identified by 'bidding_strategy'. Empty, if the campaign does not use a
+   * portfolio strategy. Unrestricted strategy attributes are available to all
+   * customers with whom the strategy is shared and are read from the
    * AccessibleBiddingStrategy resource. In contrast, restricted attributes are
    * only available to the owner customer of the strategy and their managers.
    * Restricted attributes can only be read from the BiddingStrategy resource.
@@ -771,12 +770,11 @@ public interface CampaignOrBuilder extends
   java.lang.String getAccessibleBiddingStrategy();
   /**
    * <pre>
-   * Output only. Resource name of AccessibleBiddingStrategy, a read-only view of the
-   * unrestricted attributes of the attached portfolio bidding
-   * strategy identified by 'bidding_strategy'. Empty, if the campaign does not
-   * use a portfolio strategy.
-   * Unrestricted strategy attributes are available to all customers
-   * with whom the strategy is shared and are read from the
+   * Output only. Resource name of AccessibleBiddingStrategy, a read-only view
+   * of the unrestricted attributes of the attached portfolio bidding strategy
+   * identified by 'bidding_strategy'. Empty, if the campaign does not use a
+   * portfolio strategy. Unrestricted strategy attributes are available to all
+   * customers with whom the strategy is shared and are read from the
    * AccessibleBiddingStrategy resource. In contrast, restricted attributes are
    * only available to the owner customer of the strategy and their managers.
    * Restricted attributes can only be read from the BiddingStrategy resource.
@@ -1420,7 +1418,8 @@ public interface CampaignOrBuilder extends
 
   /**
    * <pre>
-   * Output only. A bidding strategy that pays a configurable amount per video view.
+   * Output only. A bidding strategy that pays a configurable amount per video
+   * view.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.ManualCpv manual_cpv = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1429,7 +1428,8 @@ public interface CampaignOrBuilder extends
   boolean hasManualCpv();
   /**
    * <pre>
-   * Output only. A bidding strategy that pays a configurable amount per video view.
+   * Output only. A bidding strategy that pays a configurable amount per video
+   * view.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.ManualCpv manual_cpv = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1438,7 +1438,8 @@ public interface CampaignOrBuilder extends
   com.google.ads.googleads.v11.common.ManualCpv getManualCpv();
   /**
    * <pre>
-   * Output only. A bidding strategy that pays a configurable amount per video view.
+   * Output only. A bidding strategy that pays a configurable amount per video
+   * view.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.ManualCpv manual_cpv = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

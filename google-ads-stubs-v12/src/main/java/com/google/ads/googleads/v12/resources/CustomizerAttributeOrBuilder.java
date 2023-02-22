@@ -43,9 +43,9 @@ public interface CustomizerAttributeOrBuilder extends
 
   /**
    * <pre>
-   * Required. Immutable. Name of the customizer attribute. Required. It must have a minimum length
-   * of 1 and maximum length of 40. Name of an enabled customizer attribute must
-   * be unique (case insensitive).
+   * Required. Immutable. Name of the customizer attribute. Required. It must
+   * have a minimum length of 1 and maximum length of 40. Name of an enabled
+   * customizer attribute must be unique (case insensitive).
    * </pre>
    *
    * <code>string name = 3 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
@@ -54,9 +54,9 @@ public interface CustomizerAttributeOrBuilder extends
   java.lang.String getName();
   /**
    * <pre>
-   * Required. Immutable. Name of the customizer attribute. Required. It must have a minimum length
-   * of 1 and maximum length of 40. Name of an enabled customizer attribute must
-   * be unique (case insensitive).
+   * Required. Immutable. Name of the customizer attribute. Required. It must
+   * have a minimum length of 1 and maximum length of 40. Name of an enabled
+   * customizer attribute must be unique (case insensitive).
    * </pre>
    *
    * <code>string name = 3 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>

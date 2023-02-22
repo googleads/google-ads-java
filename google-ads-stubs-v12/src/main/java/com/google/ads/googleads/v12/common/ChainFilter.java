@@ -50,11 +50,11 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CHAIN_ID_FIELD_NUMBER = 1;
-  private long chainId_;
+  private long chainId_ = 0L;
   /**
    * <pre>
-   * Required. Used to filter chain locations by chain id. Only chain locations that
-   * belong to the specified chain will be in the asset set.
+   * Required. Used to filter chain locations by chain id. Only chain locations
+   * that belong to the specified chain will be in the asset set.
    * </pre>
    *
    * <code>int64 chain_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -66,6 +66,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LOCATION_ATTRIBUTES_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList locationAttributes_;
   /**
    * <pre>
@@ -339,10 +340,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       chainId_ = 0L;
-
       locationAttributes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -369,15 +370,25 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.ChainFilter buildPartial() {
       com.google.ads.googleads.v12.common.ChainFilter result = new com.google.ads.googleads.v12.common.ChainFilter(this);
-      int from_bitField0_ = bitField0_;
-      result.chainId_ = chainId_;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        locationAttributes_ = locationAttributes_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.locationAttributes_ = locationAttributes_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.common.ChainFilter result) {
+      if (((bitField0_ & 0x00000002) != 0)) {
+        locationAttributes_ = locationAttributes_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000002);
+      }
+      result.locationAttributes_ = locationAttributes_;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.ChainFilter result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.chainId_ = chainId_;
+      }
     }
 
     @java.lang.Override
@@ -430,7 +441,7 @@ private static final long serialVersionUID = 0L;
       if (!other.locationAttributes_.isEmpty()) {
         if (locationAttributes_.isEmpty()) {
           locationAttributes_ = other.locationAttributes_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           ensureLocationAttributesIsMutable();
           locationAttributes_.addAll(other.locationAttributes_);
@@ -465,7 +476,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               chainId_ = input.readInt64();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             case 18: {
@@ -494,8 +505,8 @@ private static final long serialVersionUID = 0L;
     private long chainId_ ;
     /**
      * <pre>
-     * Required. Used to filter chain locations by chain id. Only chain locations that
-     * belong to the specified chain will be in the asset set.
+     * Required. Used to filter chain locations by chain id. Only chain locations
+     * that belong to the specified chain will be in the asset set.
      * </pre>
      *
      * <code>int64 chain_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -507,8 +518,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Used to filter chain locations by chain id. Only chain locations that
-     * belong to the specified chain will be in the asset set.
+     * Required. Used to filter chain locations by chain id. Only chain locations
+     * that belong to the specified chain will be in the asset set.
      * </pre>
      *
      * <code>int64 chain_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -518,20 +529,21 @@ private static final long serialVersionUID = 0L;
     public Builder setChainId(long value) {
       
       chainId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. Used to filter chain locations by chain id. Only chain locations that
-     * belong to the specified chain will be in the asset set.
+     * Required. Used to filter chain locations by chain id. Only chain locations
+     * that belong to the specified chain will be in the asset set.
      * </pre>
      *
      * <code>int64 chain_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return This builder for chaining.
      */
     public Builder clearChainId() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       chainId_ = 0L;
       onChanged();
       return this;
@@ -539,9 +551,9 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.LazyStringList locationAttributes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureLocationAttributesIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         locationAttributes_ = new com.google.protobuf.LazyStringArrayList(locationAttributes_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
        }
     }
     /**
@@ -619,10 +631,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLocationAttributes(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureLocationAttributesIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureLocationAttributesIsMutable();
       locationAttributes_.set(index, value);
       onChanged();
       return this;
@@ -641,10 +651,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addLocationAttributes(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureLocationAttributesIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureLocationAttributesIsMutable();
       locationAttributes_.add(value);
       onChanged();
       return this;
@@ -682,7 +690,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearLocationAttributes() {
       locationAttributes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -700,10 +708,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addLocationAttributesBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureLocationAttributesIsMutable();
       locationAttributes_.add(value);
       onChanged();

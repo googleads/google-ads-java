@@ -129,7 +129,8 @@ public interface UserInterestOrBuilder extends
 
   /**
    * <pre>
-   * Output only. True if the user interest is launched to all channels and locales.
+   * Output only. True if the user interest is launched to all channels and
+   * locales.
    * </pre>
    *
    * <code>optional bool launched_to_all = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -138,7 +139,8 @@ public interface UserInterestOrBuilder extends
   boolean hasLaunchedToAll();
   /**
    * <pre>
-   * Output only. True if the user interest is launched to all channels and locales.
+   * Output only. True if the user interest is launched to all channels and
+   * locales.
    * </pre>
    *
    * <code>optional bool launched_to_all = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

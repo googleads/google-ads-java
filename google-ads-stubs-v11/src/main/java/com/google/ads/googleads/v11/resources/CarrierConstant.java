@@ -52,7 +52,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Output only. The resource name of the carrier criterion.
@@ -102,7 +103,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ID_FIELD_NUMBER = 5;
-  private long id_;
+  private long id_ = 0L;
   /**
    * <pre>
    * Output only. The ID of the carrier criterion.
@@ -129,7 +130,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 6;
-  private volatile java.lang.Object name_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
   /**
    * <pre>
    * Output only. The full name of the carrier in English.
@@ -187,11 +189,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int COUNTRY_CODE_FIELD_NUMBER = 7;
-  private volatile java.lang.Object countryCode_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object countryCode_ = "";
   /**
    * <pre>
-   * Output only. The country code of the country where the carrier is located, for example,
-   * "AR", "FR", etc.
+   * Output only. The country code of the country where the carrier is located,
+   * for example, "AR", "FR", etc.
    * </pre>
    *
    * <code>optional string country_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -203,8 +206,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The country code of the country where the carrier is located, for example,
-   * "AR", "FR", etc.
+   * Output only. The country code of the country where the carrier is located,
+   * for example, "AR", "FR", etc.
    * </pre>
    *
    * <code>optional string country_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -225,8 +228,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The country code of the country where the carrier is located, for example,
-   * "AR", "FR", etc.
+   * Output only. The country code of the country where the carrier is located,
+   * for example, "AR", "FR", etc.
    * </pre>
    *
    * <code>optional string country_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -485,14 +488,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       id_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       name_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       countryCode_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -519,24 +519,30 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.CarrierConstant buildPartial() {
       com.google.ads.googleads.v11.resources.CarrierConstant result = new com.google.ads.googleads.v11.resources.CarrierConstant(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.CarrierConstant result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.id_ = id_;
         to_bitField0_ |= 0x00000001;
       }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.name_ = name_;
         to_bitField0_ |= 0x00000002;
       }
-      result.name_ = name_;
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.countryCode_ = countryCode_;
         to_bitField0_ |= 0x00000004;
       }
-      result.countryCode_ = countryCode_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -585,19 +591,20 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.resources.CarrierConstant.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasId()) {
         setId(other.getId());
       }
       if (other.hasName()) {
-        bitField0_ |= 0x00000002;
         name_ = other.name_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.hasCountryCode()) {
-        bitField0_ |= 0x00000004;
         countryCode_ = other.countryCode_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -628,22 +635,22 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 40: {
               id_ = input.readInt64();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 40
             case 50: {
               name_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 50
             case 58: {
               countryCode_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               break;
             } // case 58
             default: {
@@ -722,11 +729,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -741,8 +746,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -759,12 +764,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -780,7 +783,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -804,8 +807,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      bitField0_ |= 0x00000001;
+      
       id_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -818,7 +822,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       id_ = 0L;
       onChanged();
       return this;
@@ -834,7 +838,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the name field is set.
      */
     public boolean hasName() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -888,11 +892,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       name_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -905,8 +907,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -921,12 +923,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -934,20 +934,20 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object countryCode_ = "";
     /**
      * <pre>
-     * Output only. The country code of the country where the carrier is located, for example,
-     * "AR", "FR", etc.
+     * Output only. The country code of the country where the carrier is located,
+     * for example, "AR", "FR", etc.
      * </pre>
      *
      * <code>optional string country_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the countryCode field is set.
      */
     public boolean hasCountryCode() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
-     * Output only. The country code of the country where the carrier is located, for example,
-     * "AR", "FR", etc.
+     * Output only. The country code of the country where the carrier is located,
+     * for example, "AR", "FR", etc.
      * </pre>
      *
      * <code>optional string country_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -967,8 +967,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The country code of the country where the carrier is located, for example,
-     * "AR", "FR", etc.
+     * Output only. The country code of the country where the carrier is located,
+     * for example, "AR", "FR", etc.
      * </pre>
      *
      * <code>optional string country_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -989,8 +989,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The country code of the country where the carrier is located, for example,
-     * "AR", "FR", etc.
+     * Output only. The country code of the country where the carrier is located,
+     * for example, "AR", "FR", etc.
      * </pre>
      *
      * <code>optional string country_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -999,33 +999,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCountryCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       countryCode_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The country code of the country where the carrier is located, for example,
-     * "AR", "FR", etc.
+     * Output only. The country code of the country where the carrier is located,
+     * for example, "AR", "FR", etc.
      * </pre>
      *
      * <code>optional string country_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearCountryCode() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       countryCode_ = getDefaultInstance().getCountryCode();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The country code of the country where the carrier is located, for example,
-     * "AR", "FR", etc.
+     * Output only. The country code of the country where the carrier is located,
+     * for example, "AR", "FR", etc.
      * </pre>
      *
      * <code>optional string country_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1034,12 +1032,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCountryCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       countryCode_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }

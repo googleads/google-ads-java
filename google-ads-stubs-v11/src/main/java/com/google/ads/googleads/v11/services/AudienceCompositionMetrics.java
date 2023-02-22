@@ -49,7 +49,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BASELINE_AUDIENCE_SHARE_FIELD_NUMBER = 1;
-  private double baselineAudienceShare_;
+  private double baselineAudienceShare_ = 0D;
   /**
    * <pre>
    * The fraction (from 0 to 1 inclusive) of the baseline audience that match
@@ -65,7 +65,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AUDIENCE_SHARE_FIELD_NUMBER = 2;
-  private double audienceShare_;
+  private double audienceShare_ = 0D;
   /**
    * <pre>
    * The fraction (from 0 to 1 inclusive) of the specific audience that match
@@ -81,7 +81,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INDEX_FIELD_NUMBER = 3;
-  private double index_;
+  private double index_ = 0D;
   /**
    * <pre>
    * The ratio of audience_share to baseline_audience_share, or zero if this
@@ -97,7 +97,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SCORE_FIELD_NUMBER = 4;
-  private double score_;
+  private double score_ = 0D;
   /**
    * <pre>
    * A relevance score from 0 to 1 inclusive.
@@ -345,14 +345,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       baselineAudienceShare_ = 0D;
-
       audienceShare_ = 0D;
-
       index_ = 0D;
-
       score_ = 0D;
-
       return this;
     }
 
@@ -379,12 +376,25 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.AudienceCompositionMetrics buildPartial() {
       com.google.ads.googleads.v11.services.AudienceCompositionMetrics result = new com.google.ads.googleads.v11.services.AudienceCompositionMetrics(this);
-      result.baselineAudienceShare_ = baselineAudienceShare_;
-      result.audienceShare_ = audienceShare_;
-      result.index_ = index_;
-      result.score_ = score_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.AudienceCompositionMetrics result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.baselineAudienceShare_ = baselineAudienceShare_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.audienceShare_ = audienceShare_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.index_ = index_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.score_ = score_;
+      }
     }
 
     @java.lang.Override
@@ -471,22 +481,22 @@ private static final long serialVersionUID = 0L;
               break;
             case 9: {
               baselineAudienceShare_ = input.readDouble();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 9
             case 17: {
               audienceShare_ = input.readDouble();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 17
             case 25: {
               index_ = input.readDouble();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 25
             case 33: {
               score_ = input.readDouble();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 33
             default: {
@@ -504,6 +514,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private double baselineAudienceShare_ ;
     /**
@@ -532,6 +543,7 @@ private static final long serialVersionUID = 0L;
     public Builder setBaselineAudienceShare(double value) {
       
       baselineAudienceShare_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -545,7 +557,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBaselineAudienceShare() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       baselineAudienceShare_ = 0D;
       onChanged();
       return this;
@@ -578,6 +590,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAudienceShare(double value) {
       
       audienceShare_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -591,7 +604,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAudienceShare() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       audienceShare_ = 0D;
       onChanged();
       return this;
@@ -624,6 +637,7 @@ private static final long serialVersionUID = 0L;
     public Builder setIndex(double value) {
       
       index_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -637,7 +651,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIndex() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       index_ = 0D;
       onChanged();
       return this;
@@ -668,6 +682,7 @@ private static final long serialVersionUID = 0L;
     public Builder setScore(double value) {
       
       score_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -680,7 +695,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearScore() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       score_ = 0D;
       onChanged();
       return this;

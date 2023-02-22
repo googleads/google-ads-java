@@ -9,7 +9,8 @@ public interface MutateCampaignLabelsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. ID of the customer whose campaign-label relationships are being modified.
+   * Required. ID of the customer whose campaign-label relationships are being
+   * modified.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -18,7 +19,8 @@ public interface MutateCampaignLabelsRequestOrBuilder extends
   java.lang.String getCustomerId();
   /**
    * <pre>
-   * Required. ID of the customer whose campaign-label relationships are being modified.
+   * Required. ID of the customer whose campaign-label relationships are being
+   * modified.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -29,7 +31,8 @@ public interface MutateCampaignLabelsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The list of operations to perform on campaign-label relationships.
+   * Required. The list of operations to perform on campaign-label
+   * relationships.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.services.CampaignLabelOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -38,7 +41,8 @@ public interface MutateCampaignLabelsRequestOrBuilder extends
       getOperationsList();
   /**
    * <pre>
-   * Required. The list of operations to perform on campaign-label relationships.
+   * Required. The list of operations to perform on campaign-label
+   * relationships.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.services.CampaignLabelOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -46,7 +50,8 @@ public interface MutateCampaignLabelsRequestOrBuilder extends
   com.google.ads.googleads.v12.services.CampaignLabelOperation getOperations(int index);
   /**
    * <pre>
-   * Required. The list of operations to perform on campaign-label relationships.
+   * Required. The list of operations to perform on campaign-label
+   * relationships.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.services.CampaignLabelOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -54,7 +59,8 @@ public interface MutateCampaignLabelsRequestOrBuilder extends
   int getOperationsCount();
   /**
    * <pre>
-   * Required. The list of operations to perform on campaign-label relationships.
+   * Required. The list of operations to perform on campaign-label
+   * relationships.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.services.CampaignLabelOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -63,7 +69,8 @@ public interface MutateCampaignLabelsRequestOrBuilder extends
       getOperationsOrBuilderList();
   /**
    * <pre>
-   * Required. The list of operations to perform on campaign-label relationships.
+   * Required. The list of operations to perform on campaign-label
+   * relationships.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.services.CampaignLabelOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>

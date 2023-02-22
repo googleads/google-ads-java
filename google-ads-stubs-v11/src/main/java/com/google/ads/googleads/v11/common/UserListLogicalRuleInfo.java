@@ -51,7 +51,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int OPERATOR_FIELD_NUMBER = 1;
-  private int operator_;
+  private int operator_ = 0;
   /**
    * <pre>
    * The logical operator of the rule.
@@ -72,12 +72,12 @@ private static final long serialVersionUID = 0L;
    * @return The operator.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator getOperator() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator result = com.google.ads.googleads.v11.enums.UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator.valueOf(operator_);
+    com.google.ads.googleads.v11.enums.UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator result = com.google.ads.googleads.v11.enums.UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator.forNumber(operator_);
     return result == null ? com.google.ads.googleads.v11.enums.UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator.UNRECOGNIZED : result;
   }
 
   public static final int RULE_OPERANDS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.common.LogicalUserListOperandInfo> ruleOperands_;
   /**
    * <pre>
@@ -342,15 +342,15 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       operator_ = 0;
-
       if (ruleOperandsBuilder_ == null) {
         ruleOperands_ = java.util.Collections.emptyList();
       } else {
         ruleOperands_ = null;
         ruleOperandsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -377,19 +377,29 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.UserListLogicalRuleInfo buildPartial() {
       com.google.ads.googleads.v11.common.UserListLogicalRuleInfo result = new com.google.ads.googleads.v11.common.UserListLogicalRuleInfo(this);
-      int from_bitField0_ = bitField0_;
-      result.operator_ = operator_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.common.UserListLogicalRuleInfo result) {
       if (ruleOperandsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           ruleOperands_ = java.util.Collections.unmodifiableList(ruleOperands_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.ruleOperands_ = ruleOperands_;
       } else {
         result.ruleOperands_ = ruleOperandsBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.UserListLogicalRuleInfo result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.operator_ = operator_;
+      }
     }
 
     @java.lang.Override
@@ -443,7 +453,7 @@ private static final long serialVersionUID = 0L;
         if (!other.ruleOperands_.isEmpty()) {
           if (ruleOperands_.isEmpty()) {
             ruleOperands_ = other.ruleOperands_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureRuleOperandsIsMutable();
             ruleOperands_.addAll(other.ruleOperands_);
@@ -456,7 +466,7 @@ private static final long serialVersionUID = 0L;
             ruleOperandsBuilder_.dispose();
             ruleOperandsBuilder_ = null;
             ruleOperands_ = other.ruleOperands_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
             ruleOperandsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getRuleOperandsFieldBuilder() : null;
@@ -493,7 +503,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               operator_ = input.readEnum();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             case 18: {
@@ -548,8 +558,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOperatorValue(int value) {
-      
       operator_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -563,8 +573,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator getOperator() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator result = com.google.ads.googleads.v11.enums.UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator.valueOf(operator_);
+      com.google.ads.googleads.v11.enums.UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator result = com.google.ads.googleads.v11.enums.UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator.forNumber(operator_);
       return result == null ? com.google.ads.googleads.v11.enums.UserListLogicalRuleOperatorEnum.UserListLogicalRuleOperator.UNRECOGNIZED : result;
     }
     /**
@@ -580,7 +589,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       operator_ = value.getNumber();
       onChanged();
       return this;
@@ -594,7 +603,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOperator() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       operator_ = 0;
       onChanged();
       return this;
@@ -603,9 +612,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v11.common.LogicalUserListOperandInfo> ruleOperands_ =
       java.util.Collections.emptyList();
     private void ensureRuleOperandsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         ruleOperands_ = new java.util.ArrayList<com.google.ads.googleads.v11.common.LogicalUserListOperandInfo>(ruleOperands_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -799,7 +808,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearRuleOperands() {
       if (ruleOperandsBuilder_ == null) {
         ruleOperands_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         ruleOperandsBuilder_.clear();
@@ -904,7 +913,7 @@ private static final long serialVersionUID = 0L;
         ruleOperandsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v11.common.LogicalUserListOperandInfo, com.google.ads.googleads.v11.common.LogicalUserListOperandInfo.Builder, com.google.ads.googleads.v11.common.LogicalUserListOperandInfoOrBuilder>(
                 ruleOperands_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         ruleOperands_ = null;

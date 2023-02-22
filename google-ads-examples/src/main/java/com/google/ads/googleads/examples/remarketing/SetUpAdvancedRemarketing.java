@@ -20,25 +20,27 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v12.common.ExpressionRuleUserListInfo;
-import com.google.ads.googleads.v12.common.RuleBasedUserListInfo;
-import com.google.ads.googleads.v12.common.UserListDateRuleItemInfo;
-import com.google.ads.googleads.v12.common.UserListNumberRuleItemInfo;
-import com.google.ads.googleads.v12.common.UserListRuleInfo;
-import com.google.ads.googleads.v12.common.UserListRuleItemGroupInfo;
-import com.google.ads.googleads.v12.common.UserListRuleItemInfo;
-import com.google.ads.googleads.v12.common.UserListStringRuleItemInfo;
-import com.google.ads.googleads.v12.enums.UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator;
-import com.google.ads.googleads.v12.enums.UserListMembershipStatusEnum.UserListMembershipStatus;
-import com.google.ads.googleads.v12.enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator;
-import com.google.ads.googleads.v12.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus;
-import com.google.ads.googleads.v12.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator;
-import com.google.ads.googleads.v12.errors.GoogleAdsError;
-import com.google.ads.googleads.v12.errors.GoogleAdsException;
-import com.google.ads.googleads.v12.resources.UserList;
-import com.google.ads.googleads.v12.services.MutateUserListsResponse;
-import com.google.ads.googleads.v12.services.UserListOperation;
-import com.google.ads.googleads.v12.services.UserListServiceClient;
+import com.google.ads.googleads.v13.common.FlexibleRuleOperandInfo;
+import com.google.ads.googleads.v13.common.FlexibleRuleUserListInfo;
+import com.google.ads.googleads.v13.common.RuleBasedUserListInfo;
+import com.google.ads.googleads.v13.common.UserListDateRuleItemInfo;
+import com.google.ads.googleads.v13.common.UserListNumberRuleItemInfo;
+import com.google.ads.googleads.v13.common.UserListRuleInfo;
+import com.google.ads.googleads.v13.common.UserListRuleItemGroupInfo;
+import com.google.ads.googleads.v13.common.UserListRuleItemInfo;
+import com.google.ads.googleads.v13.common.UserListStringRuleItemInfo;
+import com.google.ads.googleads.v13.enums.UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator;
+import com.google.ads.googleads.v13.enums.UserListFlexibleRuleOperatorEnum.UserListFlexibleRuleOperator;
+import com.google.ads.googleads.v13.enums.UserListMembershipStatusEnum.UserListMembershipStatus;
+import com.google.ads.googleads.v13.enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator;
+import com.google.ads.googleads.v13.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus;
+import com.google.ads.googleads.v13.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator;
+import com.google.ads.googleads.v13.errors.GoogleAdsError;
+import com.google.ads.googleads.v13.errors.GoogleAdsException;
+import com.google.ads.googleads.v13.resources.UserList;
+import com.google.ads.googleads.v13.services.MutateUserListsResponse;
+import com.google.ads.googleads.v13.services.UserListOperation;
+import com.google.ads.googleads.v13.services.UserListServiceClient;
 import com.google.common.collect.ImmutableList;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -187,17 +189,24 @@ public class SetUpAdvancedRemarketing {
             .build();
     // [END setup_advanced_remarketing_5]
 
-    // Creates an ExpressionRuleUserListInfo object, or a boolean rule that defines this user list.
-    // The default rule_type for a UserListRuleInfo object is OR of ANDs (disjunctive normal form).
-    // That is, rule items will be ANDed together within rule item groups and the groups themselves
-    // will be ORed together.
+    // Creates a FlexibleRuleUserListInfo object, or a flexible rule representation of visitors with
+    // multiple actions. FlexibleRuleUserListInfo wraps UserListRuleInfo in a
+    // FlexibleRuleOperandInfo object that represents which user lists to include or exclude.
     // [START setup_advanced_remarketing_6]
-    ExpressionRuleUserListInfo expressionRuleUserListInfo =
-        ExpressionRuleUserListInfo.newBuilder()
-            .setRule(
-                UserListRuleInfo.newBuilder()
-                    .addAllRuleItemGroups(
-                        ImmutableList.of(checkoutAndCartSizeRuleGroup, checkoutDateRuleGroup)))
+    FlexibleRuleUserListInfo flexibleRuleUserListInfo =
+        FlexibleRuleUserListInfo.newBuilder()
+            .setInclusiveRuleOperator(UserListFlexibleRuleOperator.AND)
+            .addInclusiveOperands(
+                FlexibleRuleOperandInfo.newBuilder()
+                    .setRule(
+                        // The default rule_type for a UserListRuleInfo object is OR of ANDs
+                        // (disjunctive normal form). That is, rule items will be ANDed together
+                        // within rule item groups and the groups themselves will be ORed together.
+                        UserListRuleInfo.newBuilder()
+                            .addRuleItemGroups(checkoutDateRuleGroup)
+                            .addRuleItemGroups(checkoutAndCartSizeRuleGroup))
+                    // Optional: includes a lookback window for this rule, in days.
+                    .setLookbackWindowDays(7L))
             .build();
     // [END setup_advanced_remarketing_6]
 
@@ -207,7 +216,7 @@ public class SetUpAdvancedRemarketing {
             // Optional: To include past users in the user list, set the prepopulation_status to
             // REQUESTED.
             .setPrepopulationStatus(UserListPrepopulationStatus.REQUESTED)
-            .setExpressionRuleUserList(expressionRuleUserListInfo)
+            .setFlexibleRuleUserList(flexibleRuleUserListInfo)
             .build();
 
     // Creates a user list.

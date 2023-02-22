@@ -90,11 +90,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.common.GeoPointInfoOrBuilder getGeoPointOrBuilder() {
-    return getGeoPoint();
+    return geoPoint_ == null ? com.google.ads.googleads.v12.common.GeoPointInfo.getDefaultInstance() : geoPoint_;
   }
 
   public static final int RADIUS_FIELD_NUMBER = 5;
-  private double radius_;
+  private double radius_ = 0D;
   /**
    * <pre>
    * The radius of the proximity.
@@ -121,7 +121,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RADIUS_UNITS_FIELD_NUMBER = 3;
-  private int radiusUnits_;
+  private int radiusUnits_ = 0;
   /**
    * <pre>
    * The unit of measurement of the radius. Default is KILOMETERS.
@@ -142,8 +142,7 @@ private static final long serialVersionUID = 0L;
    * @return The radiusUnits.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits getRadiusUnits() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits result = com.google.ads.googleads.v12.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits.valueOf(radiusUnits_);
+    com.google.ads.googleads.v12.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits result = com.google.ads.googleads.v12.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits.forNumber(radiusUnits_);
     return result == null ? com.google.ads.googleads.v12.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits.UNRECOGNIZED : result;
   }
 
@@ -182,7 +181,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.common.AddressInfoOrBuilder getAddressOrBuilder() {
-    return getAddress();
+    return address_ == null ? com.google.ads.googleads.v12.common.AddressInfo.getDefaultInstance() : address_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -432,20 +431,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (geoPointBuilder_ == null) {
-        geoPoint_ = null;
-      } else {
-        geoPoint_ = null;
+      bitField0_ = 0;
+      geoPoint_ = null;
+      if (geoPointBuilder_ != null) {
+        geoPointBuilder_.dispose();
         geoPointBuilder_ = null;
       }
       radius_ = 0D;
-      bitField0_ = (bitField0_ & ~0x00000001);
       radiusUnits_ = 0;
-
-      if (addressBuilder_ == null) {
-        address_ = null;
-      } else {
-        address_ = null;
+      address_ = null;
+      if (addressBuilder_ != null) {
+        addressBuilder_.dispose();
         addressBuilder_ = null;
       }
       return this;
@@ -474,26 +470,32 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.ProximityInfo buildPartial() {
       com.google.ads.googleads.v12.common.ProximityInfo result = new com.google.ads.googleads.v12.common.ProximityInfo(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.ProximityInfo result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      if (geoPointBuilder_ == null) {
-        result.geoPoint_ = geoPoint_;
-      } else {
-        result.geoPoint_ = geoPointBuilder_.build();
-      }
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.geoPoint_ = geoPointBuilder_ == null
+            ? geoPoint_
+            : geoPointBuilder_.build();
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.radius_ = radius_;
         to_bitField0_ |= 0x00000001;
       }
-      result.radiusUnits_ = radiusUnits_;
-      if (addressBuilder_ == null) {
-        result.address_ = address_;
-      } else {
-        result.address_ = addressBuilder_.build();
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.radiusUnits_ = radiusUnits_;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.address_ = addressBuilder_ == null
+            ? address_
+            : addressBuilder_.build();
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -582,24 +584,24 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getGeoPointFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 24: {
               radiusUnits_ = input.readEnum();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 24
             case 34: {
               input.readMessage(
                   getAddressFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 34
             case 41: {
               radius_ = input.readDouble();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 41
             default: {
@@ -631,7 +633,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the geoPoint field is set.
      */
     public boolean hasGeoPoint() {
-      return geoPointBuilder_ != null || geoPoint_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -661,11 +663,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         geoPoint_ = value;
-        onChanged();
       } else {
         geoPointBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -679,11 +681,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.GeoPointInfo.Builder builderForValue) {
       if (geoPointBuilder_ == null) {
         geoPoint_ = builderForValue.build();
-        onChanged();
       } else {
         geoPointBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -695,17 +697,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeGeoPoint(com.google.ads.googleads.v12.common.GeoPointInfo value) {
       if (geoPointBuilder_ == null) {
-        if (geoPoint_ != null) {
-          geoPoint_ =
-            com.google.ads.googleads.v12.common.GeoPointInfo.newBuilder(geoPoint_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          geoPoint_ != null &&
+          geoPoint_ != com.google.ads.googleads.v12.common.GeoPointInfo.getDefaultInstance()) {
+          getGeoPointBuilder().mergeFrom(value);
         } else {
           geoPoint_ = value;
         }
-        onChanged();
       } else {
         geoPointBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -716,14 +719,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.GeoPointInfo geo_point = 1;</code>
      */
     public Builder clearGeoPoint() {
-      if (geoPointBuilder_ == null) {
-        geoPoint_ = null;
-        onChanged();
-      } else {
-        geoPoint_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      geoPoint_ = null;
+      if (geoPointBuilder_ != null) {
+        geoPointBuilder_.dispose();
         geoPointBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -734,7 +736,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.GeoPointInfo geo_point = 1;</code>
      */
     public com.google.ads.googleads.v12.common.GeoPointInfo.Builder getGeoPointBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getGeoPointFieldBuilder().getBuilder();
     }
@@ -785,7 +787,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasRadius() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -809,8 +811,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRadius(double value) {
-      bitField0_ |= 0x00000001;
+      
       radius_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -823,7 +826,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRadius() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       radius_ = 0D;
       onChanged();
       return this;
@@ -851,8 +854,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRadiusUnitsValue(int value) {
-      
       radiusUnits_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -866,8 +869,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits getRadiusUnits() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits result = com.google.ads.googleads.v12.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits.valueOf(radiusUnits_);
+      com.google.ads.googleads.v12.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits result = com.google.ads.googleads.v12.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits.forNumber(radiusUnits_);
       return result == null ? com.google.ads.googleads.v12.enums.ProximityRadiusUnitsEnum.ProximityRadiusUnits.UNRECOGNIZED : result;
     }
     /**
@@ -883,7 +885,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       radiusUnits_ = value.getNumber();
       onChanged();
       return this;
@@ -897,7 +899,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRadiusUnits() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       radiusUnits_ = 0;
       onChanged();
       return this;
@@ -915,7 +917,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the address field is set.
      */
     public boolean hasAddress() {
-      return addressBuilder_ != null || address_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -945,11 +947,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         address_ = value;
-        onChanged();
       } else {
         addressBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -963,11 +965,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.AddressInfo.Builder builderForValue) {
       if (addressBuilder_ == null) {
         address_ = builderForValue.build();
-        onChanged();
       } else {
         addressBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -979,17 +981,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAddress(com.google.ads.googleads.v12.common.AddressInfo value) {
       if (addressBuilder_ == null) {
-        if (address_ != null) {
-          address_ =
-            com.google.ads.googleads.v12.common.AddressInfo.newBuilder(address_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000008) != 0) &&
+          address_ != null &&
+          address_ != com.google.ads.googleads.v12.common.AddressInfo.getDefaultInstance()) {
+          getAddressBuilder().mergeFrom(value);
         } else {
           address_ = value;
         }
-        onChanged();
       } else {
         addressBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1000,14 +1003,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.AddressInfo address = 4;</code>
      */
     public Builder clearAddress() {
-      if (addressBuilder_ == null) {
-        address_ = null;
-        onChanged();
-      } else {
-        address_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
+      address_ = null;
+      if (addressBuilder_ != null) {
+        addressBuilder_.dispose();
         addressBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1018,7 +1020,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.AddressInfo address = 4;</code>
      */
     public com.google.ads.googleads.v12.common.AddressInfo.Builder getAddressBuilder() {
-      
+      bitField0_ |= 0x00000008;
       onChanged();
       return getAddressFieldBuilder().getBuilder();
     }

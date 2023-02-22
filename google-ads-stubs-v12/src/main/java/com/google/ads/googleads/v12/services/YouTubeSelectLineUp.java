@@ -49,7 +49,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LINEUP_ID_FIELD_NUMBER = 1;
-  private long lineupId_;
+  private long lineupId_ = 0L;
   /**
    * <pre>
    * The ID of the YouTube Select Lineup.
@@ -64,7 +64,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LINEUP_NAME_FIELD_NUMBER = 2;
-  private volatile java.lang.Object lineupName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object lineupName_ = "";
   /**
    * <pre>
    * The unique name of the YouTube Select Lineup.
@@ -312,10 +313,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       lineupId_ = 0L;
-
       lineupName_ = "";
-
       return this;
     }
 
@@ -342,10 +342,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.YouTubeSelectLineUp buildPartial() {
       com.google.ads.googleads.v12.services.YouTubeSelectLineUp result = new com.google.ads.googleads.v12.services.YouTubeSelectLineUp(this);
-      result.lineupId_ = lineupId_;
-      result.lineupName_ = lineupName_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.YouTubeSelectLineUp result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.lineupId_ = lineupId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.lineupName_ = lineupName_;
+      }
     }
 
     @java.lang.Override
@@ -397,6 +406,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getLineupName().isEmpty()) {
         lineupName_ = other.lineupName_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -427,12 +437,12 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               lineupId_ = input.readInt64();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             case 18: {
               lineupName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             default: {
@@ -450,6 +460,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private long lineupId_ ;
     /**
@@ -476,6 +487,7 @@ private static final long serialVersionUID = 0L;
     public Builder setLineupId(long value) {
       
       lineupId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -488,7 +500,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLineupId() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       lineupId_ = 0L;
       onChanged();
       return this;
@@ -547,11 +559,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLineupName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       lineupName_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -564,8 +574,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLineupName() {
-      
       lineupName_ = getDefaultInstance().getLineupName();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -580,12 +590,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLineupNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       lineupName_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

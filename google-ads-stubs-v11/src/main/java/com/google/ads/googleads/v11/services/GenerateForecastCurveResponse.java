@@ -5,7 +5,8 @@ package com.google.ads.googleads.v11.services;
 
 /**
  * <pre>
- * Response message for [KeywordPlanService.GenerateForecastCurve][google.ads.googleads.v11.services.KeywordPlanService.GenerateForecastCurve].
+ * Response message for
+ * [KeywordPlanService.GenerateForecastCurve][google.ads.googleads.v11.services.KeywordPlanService.GenerateForecastCurve].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v11.services.GenerateForecastCurveResponse}
@@ -49,6 +50,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CAMPAIGN_FORECAST_CURVES_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.services.KeywordPlanCampaignForecastCurve> campaignForecastCurves_;
   /**
    * <pre>
@@ -272,7 +274,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Response message for [KeywordPlanService.GenerateForecastCurve][google.ads.googleads.v11.services.KeywordPlanService.GenerateForecastCurve].
+   * Response message for
+   * [KeywordPlanService.GenerateForecastCurve][google.ads.googleads.v11.services.KeywordPlanService.GenerateForecastCurve].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v11.services.GenerateForecastCurveResponse}
@@ -307,6 +310,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (campaignForecastCurvesBuilder_ == null) {
         campaignForecastCurves_ = java.util.Collections.emptyList();
       } else {
@@ -340,7 +344,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.GenerateForecastCurveResponse buildPartial() {
       com.google.ads.googleads.v11.services.GenerateForecastCurveResponse result = new com.google.ads.googleads.v11.services.GenerateForecastCurveResponse(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.services.GenerateForecastCurveResponse result) {
       if (campaignForecastCurvesBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           campaignForecastCurves_ = java.util.Collections.unmodifiableList(campaignForecastCurves_);
@@ -350,8 +360,10 @@ private static final long serialVersionUID = 0L;
       } else {
         result.campaignForecastCurves_ = campaignForecastCurvesBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.GenerateForecastCurveResponse result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override

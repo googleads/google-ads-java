@@ -49,7 +49,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Returned for successful operations.
@@ -135,7 +136,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.resources.ConversionActionOrBuilder getConversionActionOrBuilder() {
-    return getConversionAction();
+    return conversionAction_ == null ? com.google.ads.googleads.v12.resources.ConversionAction.getDefaultInstance() : conversionAction_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -345,12 +346,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
-      if (conversionActionBuilder_ == null) {
-        conversionAction_ = null;
-      } else {
-        conversionAction_ = null;
+      conversionAction_ = null;
+      if (conversionActionBuilder_ != null) {
+        conversionActionBuilder_.dispose();
         conversionActionBuilder_ = null;
       }
       return this;
@@ -379,14 +379,21 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.MutateConversionActionResult buildPartial() {
       com.google.ads.googleads.v12.services.MutateConversionActionResult result = new com.google.ads.googleads.v12.services.MutateConversionActionResult(this);
-      result.resourceName_ = resourceName_;
-      if (conversionActionBuilder_ == null) {
-        result.conversionAction_ = conversionAction_;
-      } else {
-        result.conversionAction_ = conversionActionBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.MutateConversionActionResult result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.conversionAction_ = conversionActionBuilder_ == null
+            ? conversionAction_
+            : conversionActionBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -435,6 +442,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.services.MutateConversionActionResult.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasConversionAction()) {
@@ -468,14 +476,14 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               input.readMessage(
                   getConversionActionFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             default: {
@@ -493,6 +501,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object resourceName_ = "";
     /**
@@ -547,11 +556,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -564,8 +571,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -580,12 +587,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -604,7 +609,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the conversionAction field is set.
      */
     public boolean hasConversionAction() {
-      return conversionActionBuilder_ != null || conversionAction_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -638,11 +643,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         conversionAction_ = value;
-        onChanged();
       } else {
         conversionActionBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -658,11 +663,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.resources.ConversionAction.Builder builderForValue) {
       if (conversionActionBuilder_ == null) {
         conversionAction_ = builderForValue.build();
-        onChanged();
       } else {
         conversionActionBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -676,17 +681,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeConversionAction(com.google.ads.googleads.v12.resources.ConversionAction value) {
       if (conversionActionBuilder_ == null) {
-        if (conversionAction_ != null) {
-          conversionAction_ =
-            com.google.ads.googleads.v12.resources.ConversionAction.newBuilder(conversionAction_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          conversionAction_ != null &&
+          conversionAction_ != com.google.ads.googleads.v12.resources.ConversionAction.getDefaultInstance()) {
+          getConversionActionBuilder().mergeFrom(value);
         } else {
           conversionAction_ = value;
         }
-        onChanged();
       } else {
         conversionActionBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -699,14 +705,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.resources.ConversionAction conversion_action = 2;</code>
      */
     public Builder clearConversionAction() {
-      if (conversionActionBuilder_ == null) {
-        conversionAction_ = null;
-        onChanged();
-      } else {
-        conversionAction_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      conversionAction_ = null;
+      if (conversionActionBuilder_ != null) {
+        conversionActionBuilder_.dispose();
         conversionActionBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -719,7 +724,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.resources.ConversionAction conversion_action = 2;</code>
      */
     public com.google.ads.googleads.v12.resources.ConversionAction.Builder getConversionActionBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getConversionActionFieldBuilder().getBuilder();
     }

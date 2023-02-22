@@ -9,8 +9,8 @@ public interface AdGroupAdAssetCombinationViewOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The resource name of the ad group ad asset combination view. The
-   * combination ID is 128 bits long, where the upper 64 bits are stored in
+   * Output only. The resource name of the ad group ad asset combination view.
+   * The combination ID is 128 bits long, where the upper 64 bits are stored in
    * asset_combination_id_high, and the lower 64 bits are stored in
    * asset_combination_id_low.
    * AdGroupAd Asset Combination view resource names have the form:
@@ -23,8 +23,8 @@ public interface AdGroupAdAssetCombinationViewOrBuilder extends
   java.lang.String getResourceName();
   /**
    * <pre>
-   * Output only. The resource name of the ad group ad asset combination view. The
-   * combination ID is 128 bits long, where the upper 64 bits are stored in
+   * Output only. The resource name of the ad group ad asset combination view.
+   * The combination ID is 128 bits long, where the upper 64 bits are stored in
    * asset_combination_id_high, and the lower 64 bits are stored in
    * asset_combination_id_low.
    * AdGroupAd Asset Combination view resource names have the form:
@@ -83,10 +83,10 @@ public interface AdGroupAdAssetCombinationViewOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The status between the asset combination and the latest version of the ad.
-   * If true, the asset combination is linked to the latest version of the ad.
-   * If false, it means the link once existed but has been removed and is no
-   * longer present in the latest version of the ad.
+   * Output only. The status between the asset combination and the latest
+   * version of the ad. If true, the asset combination is linked to the latest
+   * version of the ad. If false, it means the link once existed but has been
+   * removed and is no longer present in the latest version of the ad.
    * </pre>
    *
    * <code>optional bool enabled = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -95,10 +95,10 @@ public interface AdGroupAdAssetCombinationViewOrBuilder extends
   boolean hasEnabled();
   /**
    * <pre>
-   * Output only. The status between the asset combination and the latest version of the ad.
-   * If true, the asset combination is linked to the latest version of the ad.
-   * If false, it means the link once existed but has been removed and is no
-   * longer present in the latest version of the ad.
+   * Output only. The status between the asset combination and the latest
+   * version of the ad. If true, the asset combination is linked to the latest
+   * version of the ad. If false, it means the link once existed but has been
+   * removed and is no longer present in the latest version of the ad.
    * </pre>
    *
    * <code>optional bool enabled = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

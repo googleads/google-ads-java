@@ -51,7 +51,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int APP_ANALYTICS_PROVIDER_ID_FIELD_NUMBER = 4;
-  private long appAnalyticsProviderId_;
+  private long appAnalyticsProviderId_ = 0L;
   /**
    * <pre>
    * Immutable. The ID of the app analytics provider.
@@ -84,13 +84,14 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int APP_ID_FIELD_NUMBER = 5;
-  private volatile java.lang.Object appId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object appId_ = "";
   /**
    * <pre>
-   * Immutable. A string that uniquely identifies a mobile application from which the data
-   * was collected to the Google Ads API. For iOS, the ID string is the 9 digit
-   * string that appears at the end of an App Store URL (for example,
-   * "422689480" for "Gmail" whose App Store link is
+   * Immutable. A string that uniquely identifies a mobile application from
+   * which the data was collected to the Google Ads API. For iOS, the ID string
+   * is the 9 digit string that appears at the end of an App Store URL (for
+   * example, "422689480" for "Gmail" whose App Store link is
    * https://apps.apple.com/us/app/gmail-email-by-google/id422689480). For
    * Android, the ID string is the application's package name (for example,
    * "com.google.android.gm" for "Gmail" given Google Play link
@@ -109,10 +110,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. A string that uniquely identifies a mobile application from which the data
-   * was collected to the Google Ads API. For iOS, the ID string is the 9 digit
-   * string that appears at the end of an App Store URL (for example,
-   * "422689480" for "Gmail" whose App Store link is
+   * Immutable. A string that uniquely identifies a mobile application from
+   * which the data was collected to the Google Ads API. For iOS, the ID string
+   * is the 9 digit string that appears at the end of an App Store URL (for
+   * example, "422689480" for "Gmail" whose App Store link is
    * https://apps.apple.com/us/app/gmail-email-by-google/id422689480). For
    * Android, the ID string is the application's package name (for example,
    * "com.google.android.gm" for "Gmail" given Google Play link
@@ -140,10 +141,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. A string that uniquely identifies a mobile application from which the data
-   * was collected to the Google Ads API. For iOS, the ID string is the 9 digit
-   * string that appears at the end of an App Store URL (for example,
-   * "422689480" for "Gmail" whose App Store link is
+   * Immutable. A string that uniquely identifies a mobile application from
+   * which the data was collected to the Google Ads API. For iOS, the ID string
+   * is the 9 digit string that appears at the end of an App Store URL (for
+   * example, "422689480" for "Gmail" whose App Store link is
    * https://apps.apple.com/us/app/gmail-email-by-google/id422689480). For
    * Android, the ID string is the application's package name (for example,
    * "com.google.android.gm" for "Gmail" given Google Play link
@@ -172,7 +173,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int APP_VENDOR_FIELD_NUMBER = 3;
-  private int appVendor_;
+  private int appVendor_ = 0;
   /**
    * <pre>
    * Immutable. The vendor of the app.
@@ -199,8 +200,7 @@ private static final long serialVersionUID = 0L;
    * @return The appVendor.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.MobileAppVendorEnum.MobileAppVendor getAppVendor() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.MobileAppVendorEnum.MobileAppVendor result = com.google.ads.googleads.v11.enums.MobileAppVendorEnum.MobileAppVendor.valueOf(appVendor_);
+    com.google.ads.googleads.v11.enums.MobileAppVendorEnum.MobileAppVendor result = com.google.ads.googleads.v11.enums.MobileAppVendorEnum.MobileAppVendor.forNumber(appVendor_);
     return result == null ? com.google.ads.googleads.v11.enums.MobileAppVendorEnum.MobileAppVendor.UNRECOGNIZED : result;
   }
 
@@ -427,12 +427,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       appAnalyticsProviderId_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       appId_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       appVendor_ = 0;
-
       return this;
     }
 
@@ -459,6 +457,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.ThirdPartyAppAnalyticsLinkIdentifier buildPartial() {
       com.google.ads.googleads.v11.resources.ThirdPartyAppAnalyticsLinkIdentifier result = new com.google.ads.googleads.v11.resources.ThirdPartyAppAnalyticsLinkIdentifier(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.ThirdPartyAppAnalyticsLinkIdentifier result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -466,13 +470,13 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.appId_ = appId_;
         to_bitField0_ |= 0x00000002;
       }
-      result.appId_ = appId_;
-      result.appVendor_ = appVendor_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.appVendor_ = appVendor_;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -523,8 +527,8 @@ private static final long serialVersionUID = 0L;
         setAppAnalyticsProviderId(other.getAppAnalyticsProviderId());
       }
       if (other.hasAppId()) {
-        bitField0_ |= 0x00000002;
         appId_ = other.appId_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.appVendor_ != 0) {
@@ -558,7 +562,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 24: {
               appVendor_ = input.readEnum();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 24
             case 32: {
@@ -632,8 +636,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAppAnalyticsProviderId(long value) {
-      bitField0_ |= 0x00000001;
+      
       appAnalyticsProviderId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -658,10 +663,10 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object appId_ = "";
     /**
      * <pre>
-     * Immutable. A string that uniquely identifies a mobile application from which the data
-     * was collected to the Google Ads API. For iOS, the ID string is the 9 digit
-     * string that appears at the end of an App Store URL (for example,
-     * "422689480" for "Gmail" whose App Store link is
+     * Immutable. A string that uniquely identifies a mobile application from
+     * which the data was collected to the Google Ads API. For iOS, the ID string
+     * is the 9 digit string that appears at the end of an App Store URL (for
+     * example, "422689480" for "Gmail" whose App Store link is
      * https://apps.apple.com/us/app/gmail-email-by-google/id422689480). For
      * Android, the ID string is the application's package name (for example,
      * "com.google.android.gm" for "Gmail" given Google Play link
@@ -679,10 +684,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. A string that uniquely identifies a mobile application from which the data
-     * was collected to the Google Ads API. For iOS, the ID string is the 9 digit
-     * string that appears at the end of an App Store URL (for example,
-     * "422689480" for "Gmail" whose App Store link is
+     * Immutable. A string that uniquely identifies a mobile application from
+     * which the data was collected to the Google Ads API. For iOS, the ID string
+     * is the 9 digit string that appears at the end of an App Store URL (for
+     * example, "422689480" for "Gmail" whose App Store link is
      * https://apps.apple.com/us/app/gmail-email-by-google/id422689480). For
      * Android, the ID string is the application's package name (for example,
      * "com.google.android.gm" for "Gmail" given Google Play link
@@ -709,10 +714,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. A string that uniquely identifies a mobile application from which the data
-     * was collected to the Google Ads API. For iOS, the ID string is the 9 digit
-     * string that appears at the end of an App Store URL (for example,
-     * "422689480" for "Gmail" whose App Store link is
+     * Immutable. A string that uniquely identifies a mobile application from
+     * which the data was collected to the Google Ads API. For iOS, the ID string
+     * is the 9 digit string that appears at the end of an App Store URL (for
+     * example, "422689480" for "Gmail" whose App Store link is
      * https://apps.apple.com/us/app/gmail-email-by-google/id422689480). For
      * Android, the ID string is the application's package name (for example,
      * "com.google.android.gm" for "Gmail" given Google Play link
@@ -740,10 +745,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. A string that uniquely identifies a mobile application from which the data
-     * was collected to the Google Ads API. For iOS, the ID string is the 9 digit
-     * string that appears at the end of an App Store URL (for example,
-     * "422689480" for "Gmail" whose App Store link is
+     * Immutable. A string that uniquely identifies a mobile application from
+     * which the data was collected to the Google Ads API. For iOS, the ID string
+     * is the 9 digit string that appears at the end of an App Store URL (for
+     * example, "422689480" for "Gmail" whose App Store link is
      * https://apps.apple.com/us/app/gmail-email-by-google/id422689480). For
      * Android, the ID string is the application's package name (for example,
      * "com.google.android.gm" for "Gmail" given Google Play link
@@ -759,20 +764,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAppId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       appId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Immutable. A string that uniquely identifies a mobile application from which the data
-     * was collected to the Google Ads API. For iOS, the ID string is the 9 digit
-     * string that appears at the end of an App Store URL (for example,
-     * "422689480" for "Gmail" whose App Store link is
+     * Immutable. A string that uniquely identifies a mobile application from
+     * which the data was collected to the Google Ads API. For iOS, the ID string
+     * is the 9 digit string that appears at the end of an App Store URL (for
+     * example, "422689480" for "Gmail" whose App Store link is
      * https://apps.apple.com/us/app/gmail-email-by-google/id422689480). For
      * Android, the ID string is the application's package name (for example,
      * "com.google.android.gm" for "Gmail" given Google Play link
@@ -786,17 +789,17 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAppId() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       appId_ = getDefaultInstance().getAppId();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Immutable. A string that uniquely identifies a mobile application from which the data
-     * was collected to the Google Ads API. For iOS, the ID string is the 9 digit
-     * string that appears at the end of an App Store URL (for example,
-     * "422689480" for "Gmail" whose App Store link is
+     * Immutable. A string that uniquely identifies a mobile application from
+     * which the data was collected to the Google Ads API. For iOS, the ID string
+     * is the 9 digit string that appears at the end of an App Store URL (for
+     * example, "422689480" for "Gmail" whose App Store link is
      * https://apps.apple.com/us/app/gmail-email-by-google/id422689480). For
      * Android, the ID string is the application's package name (for example,
      * "com.google.android.gm" for "Gmail" given Google Play link
@@ -812,12 +815,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAppIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       appId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -850,8 +851,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAppVendorValue(int value) {
-      
       appVendor_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -868,8 +869,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.MobileAppVendorEnum.MobileAppVendor getAppVendor() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.MobileAppVendorEnum.MobileAppVendor result = com.google.ads.googleads.v11.enums.MobileAppVendorEnum.MobileAppVendor.valueOf(appVendor_);
+      com.google.ads.googleads.v11.enums.MobileAppVendorEnum.MobileAppVendor result = com.google.ads.googleads.v11.enums.MobileAppVendorEnum.MobileAppVendor.forNumber(appVendor_);
       return result == null ? com.google.ads.googleads.v11.enums.MobileAppVendorEnum.MobileAppVendor.UNRECOGNIZED : result;
     }
     /**
@@ -888,7 +888,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       appVendor_ = value.getNumber();
       onChanged();
       return this;
@@ -905,7 +905,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAppVendor() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       appVendor_ = 0;
       onChanged();
       return this;

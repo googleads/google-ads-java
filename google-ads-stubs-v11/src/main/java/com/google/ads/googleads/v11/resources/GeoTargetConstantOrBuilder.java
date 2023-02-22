@@ -81,7 +81,8 @@ public interface GeoTargetConstantOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The ISO-3166-1 alpha-2 country code that is associated with the target.
+   * Output only. The ISO-3166-1 alpha-2 country code that is associated with
+   * the target.
    * </pre>
    *
    * <code>optional string country_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -90,7 +91,8 @@ public interface GeoTargetConstantOrBuilder extends
   boolean hasCountryCode();
   /**
    * <pre>
-   * Output only. The ISO-3166-1 alpha-2 country code that is associated with the target.
+   * Output only. The ISO-3166-1 alpha-2 country code that is associated with
+   * the target.
    * </pre>
    *
    * <code>optional string country_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -99,7 +101,8 @@ public interface GeoTargetConstantOrBuilder extends
   java.lang.String getCountryCode();
   /**
    * <pre>
-   * Output only. The ISO-3166-1 alpha-2 country code that is associated with the target.
+   * Output only. The ISO-3166-1 alpha-2 country code that is associated with
+   * the target.
    * </pre>
    *
    * <code>optional string country_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -158,8 +161,8 @@ public interface GeoTargetConstantOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The fully qualified English name, consisting of the target's name and that
-   * of its parent and country.
+   * Output only. The fully qualified English name, consisting of the target's
+   * name and that of its parent and country.
    * </pre>
    *
    * <code>optional string canonical_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -168,8 +171,8 @@ public interface GeoTargetConstantOrBuilder extends
   boolean hasCanonicalName();
   /**
    * <pre>
-   * Output only. The fully qualified English name, consisting of the target's name and that
-   * of its parent and country.
+   * Output only. The fully qualified English name, consisting of the target's
+   * name and that of its parent and country.
    * </pre>
    *
    * <code>optional string canonical_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -178,8 +181,8 @@ public interface GeoTargetConstantOrBuilder extends
   java.lang.String getCanonicalName();
   /**
    * <pre>
-   * Output only. The fully qualified English name, consisting of the target's name and that
-   * of its parent and country.
+   * Output only. The fully qualified English name, consisting of the target's
+   * name and that of its parent and country.
    * </pre>
    *
    * <code>optional string canonical_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

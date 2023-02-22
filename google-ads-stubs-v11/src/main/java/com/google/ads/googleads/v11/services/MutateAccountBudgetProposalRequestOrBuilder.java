@@ -29,7 +29,8 @@ public interface MutateAccountBudgetProposalRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The operation to perform on an individual account-level budget proposal.
+   * Required. The operation to perform on an individual account-level budget
+   * proposal.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.AccountBudgetProposalOperation operation = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -38,7 +39,8 @@ public interface MutateAccountBudgetProposalRequestOrBuilder extends
   boolean hasOperation();
   /**
    * <pre>
-   * Required. The operation to perform on an individual account-level budget proposal.
+   * Required. The operation to perform on an individual account-level budget
+   * proposal.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.AccountBudgetProposalOperation operation = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -47,7 +49,8 @@ public interface MutateAccountBudgetProposalRequestOrBuilder extends
   com.google.ads.googleads.v11.services.AccountBudgetProposalOperation getOperation();
   /**
    * <pre>
-   * Required. The operation to perform on an individual account-level budget proposal.
+   * Required. The operation to perform on an individual account-level budget
+   * proposal.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.AccountBudgetProposalOperation operation = 2 [(.google.api.field_behavior) = REQUIRED];</code>

@@ -50,7 +50,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int HEIGHT_PIXELS_FIELD_NUMBER = 4;
-  private long heightPixels_;
+  private long heightPixels_ = 0L;
   /**
    * <pre>
    * Height of the image.
@@ -77,7 +77,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WIDTH_PIXELS_FIELD_NUMBER = 5;
-  private long widthPixels_;
+  private long widthPixels_ = 0L;
   /**
    * <pre>
    * Width of the image.
@@ -104,7 +104,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int URL_FIELD_NUMBER = 6;
-  private volatile java.lang.Object url_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object url_ = "";
   /**
    * <pre>
    * A URL that returns the image with this height and width.
@@ -391,12 +392,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       heightPixels_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       widthPixels_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000002);
       url_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -423,6 +422,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.ImageDimension buildPartial() {
       com.google.ads.googleads.v11.common.ImageDimension result = new com.google.ads.googleads.v11.common.ImageDimension(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.ImageDimension result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -434,12 +439,10 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.url_ = url_;
         to_bitField0_ |= 0x00000004;
       }
-      result.url_ = url_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -493,8 +496,8 @@ private static final long serialVersionUID = 0L;
         setWidthPixels(other.getWidthPixels());
       }
       if (other.hasUrl()) {
-        bitField0_ |= 0x00000004;
         url_ = other.url_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -590,8 +593,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHeightPixels(long value) {
-      bitField0_ |= 0x00000001;
+      
       heightPixels_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -645,8 +649,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setWidthPixels(long value) {
-      bitField0_ |= 0x00000002;
+      
       widthPixels_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -729,11 +734,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUrl(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       url_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -746,8 +749,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUrl() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       url_ = getDefaultInstance().getUrl();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -762,12 +765,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUrlBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       url_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }

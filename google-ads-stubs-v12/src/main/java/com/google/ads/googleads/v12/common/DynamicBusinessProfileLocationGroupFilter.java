@@ -52,6 +52,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int LABEL_FILTERS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList labelFilters_;
   /**
    * <pre>
@@ -149,6 +150,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LISTING_ID_FILTERS_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
   private com.google.protobuf.Internal.LongList listingIdFilters_;
   /**
    * <pre>
@@ -437,16 +439,15 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       labelFilters_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       bitField0_ = (bitField0_ & ~0x00000001);
-      if (businessNameFilterBuilder_ == null) {
-        businessNameFilter_ = null;
-      } else {
-        businessNameFilterBuilder_.clear();
+      businessNameFilter_ = null;
+      if (businessNameFilterBuilder_ != null) {
+        businessNameFilterBuilder_.dispose();
+        businessNameFilterBuilder_ = null;
       }
-      bitField0_ = (bitField0_ & ~0x00000002);
       listingIdFilters_ = emptyLongList();
-      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -473,29 +474,35 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.DynamicBusinessProfileLocationGroupFilter buildPartial() {
       com.google.ads.googleads.v12.common.DynamicBusinessProfileLocationGroupFilter result = new com.google.ads.googleads.v12.common.DynamicBusinessProfileLocationGroupFilter(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.common.DynamicBusinessProfileLocationGroupFilter result) {
       if (((bitField0_ & 0x00000001) != 0)) {
         labelFilters_ = labelFilters_.getUnmodifiableView();
         bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.labelFilters_ = labelFilters_;
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        if (businessNameFilterBuilder_ == null) {
-          result.businessNameFilter_ = businessNameFilter_;
-        } else {
-          result.businessNameFilter_ = businessNameFilterBuilder_.build();
-        }
-        to_bitField0_ |= 0x00000001;
-      }
       if (((bitField0_ & 0x00000004) != 0)) {
         listingIdFilters_.makeImmutable();
         bitField0_ = (bitField0_ & ~0x00000004);
       }
       result.listingIdFilters_ = listingIdFilters_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.DynamicBusinessProfileLocationGroupFilter result) {
+      int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.businessNameFilter_ = businessNameFilterBuilder_ == null
+            ? businessNameFilter_
+            : businessNameFilterBuilder_.build();
+        to_bitField0_ |= 0x00000001;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -714,10 +721,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLabelFilters(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureLabelFiltersIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureLabelFiltersIsMutable();
       labelFilters_.set(index, value);
       onChanged();
       return this;
@@ -735,10 +740,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addLabelFilters(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureLabelFiltersIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureLabelFiltersIsMutable();
       labelFilters_.add(value);
       onChanged();
       return this;
@@ -791,10 +794,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addLabelFiltersBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureLabelFiltersIsMutable();
       labelFilters_.add(value);
       onChanged();
@@ -843,11 +844,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         businessNameFilter_ = value;
-        onChanged();
       } else {
         businessNameFilterBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -861,11 +862,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.BusinessProfileBusinessNameFilter.Builder builderForValue) {
       if (businessNameFilterBuilder_ == null) {
         businessNameFilter_ = builderForValue.build();
-        onChanged();
       } else {
         businessNameFilterBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -878,18 +879,17 @@ private static final long serialVersionUID = 0L;
     public Builder mergeBusinessNameFilter(com.google.ads.googleads.v12.common.BusinessProfileBusinessNameFilter value) {
       if (businessNameFilterBuilder_ == null) {
         if (((bitField0_ & 0x00000002) != 0) &&
-            businessNameFilter_ != null &&
-            businessNameFilter_ != com.google.ads.googleads.v12.common.BusinessProfileBusinessNameFilter.getDefaultInstance()) {
-          businessNameFilter_ =
-            com.google.ads.googleads.v12.common.BusinessProfileBusinessNameFilter.newBuilder(businessNameFilter_).mergeFrom(value).buildPartial();
+          businessNameFilter_ != null &&
+          businessNameFilter_ != com.google.ads.googleads.v12.common.BusinessProfileBusinessNameFilter.getDefaultInstance()) {
+          getBusinessNameFilterBuilder().mergeFrom(value);
         } else {
           businessNameFilter_ = value;
         }
-        onChanged();
       } else {
         businessNameFilterBuilder_.mergeFrom(value);
       }
       bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -900,13 +900,13 @@ private static final long serialVersionUID = 0L;
      * <code>optional .google.ads.googleads.v12.common.BusinessProfileBusinessNameFilter business_name_filter = 2;</code>
      */
     public Builder clearBusinessNameFilter() {
-      if (businessNameFilterBuilder_ == null) {
-        businessNameFilter_ = null;
-        onChanged();
-      } else {
-        businessNameFilterBuilder_.clear();
-      }
       bitField0_ = (bitField0_ & ~0x00000002);
+      businessNameFilter_ = null;
+      if (businessNameFilterBuilder_ != null) {
+        businessNameFilterBuilder_.dispose();
+        businessNameFilterBuilder_ = null;
+      }
+      onChanged();
       return this;
     }
     /**
@@ -962,7 +962,7 @@ private static final long serialVersionUID = 0L;
       if (!((bitField0_ & 0x00000004) != 0)) {
         listingIdFilters_ = mutableCopy(listingIdFilters_);
         bitField0_ |= 0x00000004;
-       }
+      }
     }
     /**
      * <pre>
@@ -1012,6 +1012,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setListingIdFilters(
         int index, long value) {
+      
       ensureListingIdFiltersIsMutable();
       listingIdFilters_.setLong(index, value);
       onChanged();
@@ -1027,6 +1028,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder addListingIdFilters(long value) {
+      
       ensureListingIdFiltersIsMutable();
       listingIdFilters_.addLong(value);
       onChanged();

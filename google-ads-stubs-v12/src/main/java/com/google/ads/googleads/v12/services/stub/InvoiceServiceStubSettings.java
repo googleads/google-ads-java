@@ -70,7 +70,10 @@ import org.threeten.bp.Duration;
  * invoiceServiceSettingsBuilder
  *     .listInvoicesSettings()
  *     .setRetrySettings(
- *         invoiceServiceSettingsBuilder.listInvoicesSettings().getRetrySettings().toBuilder()
+ *         invoiceServiceSettingsBuilder
+ *             .listInvoicesSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
  * InvoiceServiceStubSettings invoiceServiceSettings = invoiceServiceSettingsBuilder.build();

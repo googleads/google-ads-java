@@ -50,7 +50,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int TARGETING_DIMENSION_FIELD_NUMBER = 1;
-  private int targetingDimension_;
+  private int targetingDimension_ = 0;
   /**
    * <pre>
    * The targeting dimension that these settings apply to.
@@ -71,13 +71,12 @@ private static final long serialVersionUID = 0L;
    * @return The targetingDimension.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.TargetingDimensionEnum.TargetingDimension getTargetingDimension() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.TargetingDimensionEnum.TargetingDimension result = com.google.ads.googleads.v12.enums.TargetingDimensionEnum.TargetingDimension.valueOf(targetingDimension_);
+    com.google.ads.googleads.v12.enums.TargetingDimensionEnum.TargetingDimension result = com.google.ads.googleads.v12.enums.TargetingDimensionEnum.TargetingDimension.forNumber(targetingDimension_);
     return result == null ? com.google.ads.googleads.v12.enums.TargetingDimensionEnum.TargetingDimension.UNRECOGNIZED : result;
   }
 
   public static final int BID_ONLY_FIELD_NUMBER = 3;
-  private boolean bidOnly_;
+  private boolean bidOnly_ = false;
   /**
    * <pre>
    * Indicates whether to restrict your ads to show only for the criteria you
@@ -323,10 +322,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       targetingDimension_ = 0;
-
       bidOnly_ = false;
-      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -353,16 +351,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.TargetRestriction buildPartial() {
       com.google.ads.googleads.v12.common.TargetRestriction result = new com.google.ads.googleads.v12.common.TargetRestriction(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.TargetRestriction result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.targetingDimension_ = targetingDimension_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.targetingDimension_ = targetingDimension_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.bidOnly_ = bidOnly_;
         to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -443,12 +447,12 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               targetingDimension_ = input.readEnum();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             case 24: {
               bidOnly_ = input.readBool();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 24
             default: {
@@ -490,8 +494,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTargetingDimensionValue(int value) {
-      
       targetingDimension_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -505,8 +509,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.TargetingDimensionEnum.TargetingDimension getTargetingDimension() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.TargetingDimensionEnum.TargetingDimension result = com.google.ads.googleads.v12.enums.TargetingDimensionEnum.TargetingDimension.valueOf(targetingDimension_);
+      com.google.ads.googleads.v12.enums.TargetingDimensionEnum.TargetingDimension result = com.google.ads.googleads.v12.enums.TargetingDimensionEnum.TargetingDimension.forNumber(targetingDimension_);
       return result == null ? com.google.ads.googleads.v12.enums.TargetingDimensionEnum.TargetingDimension.UNRECOGNIZED : result;
     }
     /**
@@ -522,7 +525,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       targetingDimension_ = value.getNumber();
       onChanged();
       return this;
@@ -536,7 +539,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTargetingDimension() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       targetingDimension_ = 0;
       onChanged();
       return this;
@@ -559,7 +562,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasBidOnly() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -595,8 +598,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBidOnly(boolean value) {
-      bitField0_ |= 0x00000001;
+      
       bidOnly_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -615,7 +619,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBidOnly() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       bidOnly_ = false;
       onChanged();
       return this;

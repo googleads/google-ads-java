@@ -83,7 +83,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.common.YearMonthOrBuilder getStartOrBuilder() {
-    return getStart();
+    return start_ == null ? com.google.ads.googleads.v12.common.YearMonth.getDefaultInstance() : start_;
   }
 
   public static final int END_FIELD_NUMBER = 2;
@@ -121,7 +121,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.common.YearMonthOrBuilder getEndOrBuilder() {
-    return getEnd();
+    return end_ == null ? com.google.ads.googleads.v12.common.YearMonth.getDefaultInstance() : end_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -338,16 +338,15 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (startBuilder_ == null) {
-        start_ = null;
-      } else {
-        start_ = null;
+      bitField0_ = 0;
+      start_ = null;
+      if (startBuilder_ != null) {
+        startBuilder_.dispose();
         startBuilder_ = null;
       }
-      if (endBuilder_ == null) {
-        end_ = null;
-      } else {
-        end_ = null;
+      end_ = null;
+      if (endBuilder_ != null) {
+        endBuilder_.dispose();
         endBuilder_ = null;
       }
       return this;
@@ -376,18 +375,23 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.YearMonthRange buildPartial() {
       com.google.ads.googleads.v12.common.YearMonthRange result = new com.google.ads.googleads.v12.common.YearMonthRange(this);
-      if (startBuilder_ == null) {
-        result.start_ = start_;
-      } else {
-        result.start_ = startBuilder_.build();
-      }
-      if (endBuilder_ == null) {
-        result.end_ = end_;
-      } else {
-        result.end_ = endBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.YearMonthRange result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.start_ = startBuilder_ == null
+            ? start_
+            : startBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.end_ = endBuilder_ == null
+            ? end_
+            : endBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -470,14 +474,14 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getStartFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               input.readMessage(
                   getEndFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             default: {
@@ -495,6 +499,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private com.google.ads.googleads.v12.common.YearMonth start_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -508,7 +513,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the start field is set.
      */
     public boolean hasStart() {
-      return startBuilder_ != null || start_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -538,11 +543,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         start_ = value;
-        onChanged();
       } else {
         startBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -556,11 +561,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.YearMonth.Builder builderForValue) {
       if (startBuilder_ == null) {
         start_ = builderForValue.build();
-        onChanged();
       } else {
         startBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -572,17 +577,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeStart(com.google.ads.googleads.v12.common.YearMonth value) {
       if (startBuilder_ == null) {
-        if (start_ != null) {
-          start_ =
-            com.google.ads.googleads.v12.common.YearMonth.newBuilder(start_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          start_ != null &&
+          start_ != com.google.ads.googleads.v12.common.YearMonth.getDefaultInstance()) {
+          getStartBuilder().mergeFrom(value);
         } else {
           start_ = value;
         }
-        onChanged();
       } else {
         startBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -593,14 +599,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.YearMonth start = 1;</code>
      */
     public Builder clearStart() {
-      if (startBuilder_ == null) {
-        start_ = null;
-        onChanged();
-      } else {
-        start_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      start_ = null;
+      if (startBuilder_ != null) {
+        startBuilder_.dispose();
         startBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -611,7 +616,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.YearMonth start = 1;</code>
      */
     public com.google.ads.googleads.v12.common.YearMonth.Builder getStartBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getStartFieldBuilder().getBuilder();
     }
@@ -663,7 +668,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the end field is set.
      */
     public boolean hasEnd() {
-      return endBuilder_ != null || end_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -693,11 +698,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         end_ = value;
-        onChanged();
       } else {
         endBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -711,11 +716,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.YearMonth.Builder builderForValue) {
       if (endBuilder_ == null) {
         end_ = builderForValue.build();
-        onChanged();
       } else {
         endBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -727,17 +732,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeEnd(com.google.ads.googleads.v12.common.YearMonth value) {
       if (endBuilder_ == null) {
-        if (end_ != null) {
-          end_ =
-            com.google.ads.googleads.v12.common.YearMonth.newBuilder(end_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          end_ != null &&
+          end_ != com.google.ads.googleads.v12.common.YearMonth.getDefaultInstance()) {
+          getEndBuilder().mergeFrom(value);
         } else {
           end_ = value;
         }
-        onChanged();
       } else {
         endBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -748,14 +754,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.YearMonth end = 2;</code>
      */
     public Builder clearEnd() {
-      if (endBuilder_ == null) {
-        end_ = null;
-        onChanged();
-      } else {
-        end_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      end_ = null;
+      if (endBuilder_ != null) {
+        endBuilder_.dispose();
         endBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -766,7 +771,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.YearMonth end = 2;</code>
      */
     public com.google.ads.googleads.v12.common.YearMonth.Builder getEndBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getEndFieldBuilder().getBuilder();
     }

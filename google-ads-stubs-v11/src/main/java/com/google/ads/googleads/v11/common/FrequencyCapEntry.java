@@ -87,11 +87,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v11.common.FrequencyCapKeyOrBuilder getKeyOrBuilder() {
-    return getKey();
+    return key_ == null ? com.google.ads.googleads.v11.common.FrequencyCapKey.getDefaultInstance() : key_;
   }
 
   public static final int CAP_FIELD_NUMBER = 3;
-  private int cap_;
+  private int cap_ = 0;
   /**
    * <pre>
    * Maximum number of events allowed during the time range by this cap.
@@ -331,14 +331,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (keyBuilder_ == null) {
-        key_ = null;
-      } else {
-        key_ = null;
+      bitField0_ = 0;
+      key_ = null;
+      if (keyBuilder_ != null) {
+        keyBuilder_.dispose();
         keyBuilder_ = null;
       }
       cap_ = 0;
-      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -365,20 +364,24 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.FrequencyCapEntry buildPartial() {
       com.google.ads.googleads.v11.common.FrequencyCapEntry result = new com.google.ads.googleads.v11.common.FrequencyCapEntry(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.FrequencyCapEntry result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      if (keyBuilder_ == null) {
-        result.key_ = key_;
-      } else {
-        result.key_ = keyBuilder_.build();
-      }
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.key_ = keyBuilder_ == null
+            ? key_
+            : keyBuilder_.build();
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.cap_ = cap_;
         to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -461,12 +464,12 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getKeyFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 24: {
               cap_ = input.readInt32();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 24
             default: {
@@ -499,7 +502,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the key field is set.
      */
     public boolean hasKey() {
-      return keyBuilder_ != null || key_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -531,11 +534,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         key_ = value;
-        onChanged();
       } else {
         keyBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -550,11 +553,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.common.FrequencyCapKey.Builder builderForValue) {
       if (keyBuilder_ == null) {
         key_ = builderForValue.build();
-        onChanged();
       } else {
         keyBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -567,17 +570,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeKey(com.google.ads.googleads.v11.common.FrequencyCapKey value) {
       if (keyBuilder_ == null) {
-        if (key_ != null) {
-          key_ =
-            com.google.ads.googleads.v11.common.FrequencyCapKey.newBuilder(key_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          key_ != null &&
+          key_ != com.google.ads.googleads.v11.common.FrequencyCapKey.getDefaultInstance()) {
+          getKeyBuilder().mergeFrom(value);
         } else {
           key_ = value;
         }
-        onChanged();
       } else {
         keyBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -589,14 +593,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.common.FrequencyCapKey key = 1;</code>
      */
     public Builder clearKey() {
-      if (keyBuilder_ == null) {
-        key_ = null;
-        onChanged();
-      } else {
-        key_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      key_ = null;
+      if (keyBuilder_ != null) {
+        keyBuilder_.dispose();
         keyBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -608,7 +611,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.common.FrequencyCapKey key = 1;</code>
      */
     public com.google.ads.googleads.v11.common.FrequencyCapKey.Builder getKeyBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getKeyFieldBuilder().getBuilder();
     }
@@ -661,7 +664,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCap() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -685,8 +688,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCap(int value) {
-      bitField0_ |= 0x00000001;
+      
       cap_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -699,7 +703,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCap() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       cap_ = 0;
       onChanged();
       return this;

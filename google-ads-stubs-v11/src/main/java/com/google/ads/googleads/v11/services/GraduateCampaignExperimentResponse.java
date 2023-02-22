@@ -49,7 +49,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int GRADUATED_CAMPAIGN_FIELD_NUMBER = 1;
-  private volatile java.lang.Object graduatedCampaign_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object graduatedCampaign_ = "";
   /**
    * <pre>
    * The resource name of the campaign from the graduated experiment.
@@ -287,8 +288,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       graduatedCampaign_ = "";
-
       return this;
     }
 
@@ -315,9 +316,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.GraduateCampaignExperimentResponse buildPartial() {
       com.google.ads.googleads.v11.services.GraduateCampaignExperimentResponse result = new com.google.ads.googleads.v11.services.GraduateCampaignExperimentResponse(this);
-      result.graduatedCampaign_ = graduatedCampaign_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.GraduateCampaignExperimentResponse result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.graduatedCampaign_ = graduatedCampaign_;
+      }
     }
 
     @java.lang.Override
@@ -366,6 +374,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.services.GraduateCampaignExperimentResponse.getDefaultInstance()) return this;
       if (!other.getGraduatedCampaign().isEmpty()) {
         graduatedCampaign_ = other.graduatedCampaign_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -396,7 +405,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               graduatedCampaign_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             default: {
@@ -414,6 +423,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object graduatedCampaign_ = "";
     /**
@@ -471,11 +481,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setGraduatedCampaign(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       graduatedCampaign_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -489,8 +497,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGraduatedCampaign() {
-      
       graduatedCampaign_ = getDefaultInstance().getGraduatedCampaign();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -506,12 +514,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setGraduatedCampaignBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       graduatedCampaign_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

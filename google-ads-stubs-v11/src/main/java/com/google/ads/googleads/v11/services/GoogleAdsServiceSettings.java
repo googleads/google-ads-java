@@ -64,7 +64,10 @@ import javax.annotation.Generated;
  * googleAdsServiceSettingsBuilder
  *     .mutateSettings()
  *     .setRetrySettings(
- *         googleAdsServiceSettingsBuilder.mutateSettings().getRetrySettings().toBuilder()
+ *         googleAdsServiceSettingsBuilder
+ *             .mutateSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
  * GoogleAdsServiceSettings googleAdsServiceSettings = googleAdsServiceSettingsBuilder.build();

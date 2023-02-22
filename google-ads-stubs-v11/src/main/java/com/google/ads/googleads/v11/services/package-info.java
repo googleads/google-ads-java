@@ -500,7 +500,7 @@
  * <p>======================= AudienceInsightsServiceClient =======================
  *
  * <p>Service Description: Audience Insights Service helps users find information about groups of
- * people and how they can be reached with Google Ads.
+ * people and how they can be reached with Google Ads. Accessible to allowlisted customers only.
  *
  * <p>Sample for AudienceInsightsServiceClient:
  *

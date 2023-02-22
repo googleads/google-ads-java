@@ -51,6 +51,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AD_GROUP_KEYWORD_SUGGESTIONS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.services.AdGroupKeywordSuggestion> adGroupKeywordSuggestions_;
   /**
    * <pre>
@@ -111,6 +112,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int UNUSABLE_AD_GROUPS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.services.UnusableAdGroup> unusableAdGroups_;
   /**
    * <pre>
@@ -378,6 +380,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (adGroupKeywordSuggestionsBuilder_ == null) {
         adGroupKeywordSuggestions_ = java.util.Collections.emptyList();
       } else {
@@ -418,7 +421,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.GenerateAdGroupThemesResponse buildPartial() {
       com.google.ads.googleads.v11.services.GenerateAdGroupThemesResponse result = new com.google.ads.googleads.v11.services.GenerateAdGroupThemesResponse(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.services.GenerateAdGroupThemesResponse result) {
       if (adGroupKeywordSuggestionsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           adGroupKeywordSuggestions_ = java.util.Collections.unmodifiableList(adGroupKeywordSuggestions_);
@@ -437,8 +446,10 @@ private static final long serialVersionUID = 0L;
       } else {
         result.unusableAdGroups_ = unusableAdGroupsBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.GenerateAdGroupThemesResponse result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override

@@ -25,7 +25,7 @@ dependencies {
     api project(":google-ads-stubs-lib")
     implementation 'org.slf4j:slf4j-api:1.7.25'
     implementation 'com.squareup:javapoet:1.11.1'
-    testImplementation 'com.google.api:gax-grpc:2.12.2:testlib'
+    testImplementation 'com.google.api:gax-grpc:2.22.0:testlib'
     testImplementation 'org.hamcrest:java-hamcrest:2.0.0.0'
     testImplementation 'org.mockito:mockito-all:1.9.5'
     // Finds all the stubs modules and adds these as dependencies.

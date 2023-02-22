@@ -33,7 +33,8 @@ public interface AssetGroupListingGroupFilterOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. The asset group which this asset group listing group filter is part of.
+   * Immutable. The asset group which this asset group listing group filter is
+   * part of.
    * </pre>
    *
    * <code>string asset_group = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -42,7 +43,8 @@ public interface AssetGroupListingGroupFilterOrBuilder extends
   java.lang.String getAssetGroup();
   /**
    * <pre>
-   * Immutable. The asset group which this asset group listing group filter is part of.
+   * Immutable. The asset group which this asset group listing group filter is
+   * part of.
    * </pre>
    *
    * <code>string asset_group = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -82,8 +84,8 @@ public interface AssetGroupListingGroupFilterOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. The vertical the current node tree represents. All nodes in the same tree
-   * must belong to the same vertical.
+   * Immutable. The vertical the current node tree represents. All nodes in the
+   * same tree must belong to the same vertical.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.ListingGroupFilterVerticalEnum.ListingGroupFilterVertical vertical = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -92,8 +94,8 @@ public interface AssetGroupListingGroupFilterOrBuilder extends
   int getVerticalValue();
   /**
    * <pre>
-   * Immutable. The vertical the current node tree represents. All nodes in the same tree
-   * must belong to the same vertical.
+   * Immutable. The vertical the current node tree represents. All nodes in the
+   * same tree must belong to the same vertical.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.ListingGroupFilterVerticalEnum.ListingGroupFilterVertical vertical = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -133,8 +135,8 @@ public interface AssetGroupListingGroupFilterOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. Resource name of the parent listing group subdivision. Null for the root
-   * listing group filter node.
+   * Immutable. Resource name of the parent listing group subdivision. Null for
+   * the root listing group filter node.
    * </pre>
    *
    * <code>string parent_listing_group_filter = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -143,8 +145,8 @@ public interface AssetGroupListingGroupFilterOrBuilder extends
   java.lang.String getParentListingGroupFilter();
   /**
    * <pre>
-   * Immutable. Resource name of the parent listing group subdivision. Null for the root
-   * listing group filter node.
+   * Immutable. Resource name of the parent listing group subdivision. Null for
+   * the root listing group filter node.
    * </pre>
    *
    * <code>string parent_listing_group_filter = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>

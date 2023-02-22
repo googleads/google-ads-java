@@ -9,7 +9,8 @@ public interface LocationSetOrBuilder extends
 
   /**
    * <pre>
-   * Required. Immutable. Location Ownership Type (owned location or affiliate location).
+   * Required. Immutable. Location Ownership Type (owned location or affiliate
+   * location).
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.LocationOwnershipTypeEnum.LocationOwnershipType location_ownership_type = 3 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
@@ -18,7 +19,8 @@ public interface LocationSetOrBuilder extends
   int getLocationOwnershipTypeValue();
   /**
    * <pre>
-   * Required. Immutable. Location Ownership Type (owned location or affiliate location).
+   * Required. Immutable. Location Ownership Type (owned location or affiliate
+   * location).
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.LocationOwnershipTypeEnum.LocationOwnershipType location_ownership_type = 3 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>

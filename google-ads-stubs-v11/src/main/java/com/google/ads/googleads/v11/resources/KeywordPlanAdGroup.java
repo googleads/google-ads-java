@@ -53,7 +53,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Immutable. The resource name of the Keyword Planner ad group.
@@ -103,7 +104,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int KEYWORD_PLAN_CAMPAIGN_FIELD_NUMBER = 6;
-  private volatile java.lang.Object keywordPlanCampaign_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object keywordPlanCampaign_ = "";
   /**
    * <pre>
    * The keyword plan campaign to which this ad group belongs.
@@ -161,7 +163,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ID_FIELD_NUMBER = 7;
-  private long id_;
+  private long id_ = 0L;
   /**
    * <pre>
    * Output only. The ID of the keyword plan ad group.
@@ -188,7 +190,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 8;
-  private volatile java.lang.Object name_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
   /**
    * <pre>
    * The name of the keyword plan ad group.
@@ -252,7 +255,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CPC_BID_MICROS_FIELD_NUMBER = 9;
-  private long cpcBidMicros_;
+  private long cpcBidMicros_ = 0L;
   /**
    * <pre>
    * A default ad group max cpc bid in micros in account currency for all
@@ -538,16 +541,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       keywordPlanCampaign_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       id_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000002);
       name_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       cpcBidMicros_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000008);
       return this;
     }
 
@@ -574,28 +573,34 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.KeywordPlanAdGroup buildPartial() {
       com.google.ads.googleads.v11.resources.KeywordPlanAdGroup result = new com.google.ads.googleads.v11.resources.KeywordPlanAdGroup(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.KeywordPlanAdGroup result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.keywordPlanCampaign_ = keywordPlanCampaign_;
         to_bitField0_ |= 0x00000001;
       }
-      result.keywordPlanCampaign_ = keywordPlanCampaign_;
-      if (((from_bitField0_ & 0x00000002) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.id_ = id_;
         to_bitField0_ |= 0x00000002;
       }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.name_ = name_;
         to_bitField0_ |= 0x00000004;
       }
-      result.name_ = name_;
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.cpcBidMicros_ = cpcBidMicros_;
         to_bitField0_ |= 0x00000008;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -644,19 +649,20 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.resources.KeywordPlanAdGroup.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasKeywordPlanCampaign()) {
-        bitField0_ |= 0x00000001;
         keywordPlanCampaign_ = other.keywordPlanCampaign_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasId()) {
         setId(other.getId());
       }
       if (other.hasName()) {
-        bitField0_ |= 0x00000004;
         name_ = other.name_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.hasCpcBidMicros()) {
@@ -690,27 +696,27 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 50: {
               keywordPlanCampaign_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 50
             case 56: {
               id_ = input.readInt64();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 56
             case 66: {
               name_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               break;
             } // case 66
             case 72: {
               cpcBidMicros_ = input.readInt64();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000010;
               break;
             } // case 72
             default: {
@@ -789,11 +795,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -808,8 +812,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -826,12 +830,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -846,7 +848,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the keywordPlanCampaign field is set.
      */
     public boolean hasKeywordPlanCampaign() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -900,11 +902,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKeywordPlanCampaign(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       keywordPlanCampaign_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -917,8 +917,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearKeywordPlanCampaign() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       keywordPlanCampaign_ = getDefaultInstance().getKeywordPlanCampaign();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -933,12 +933,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKeywordPlanCampaignBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       keywordPlanCampaign_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -954,7 +952,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasId() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -978,8 +976,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      bitField0_ |= 0x00000002;
+      
       id_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -992,7 +991,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearId() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       id_ = 0L;
       onChanged();
       return this;
@@ -1010,7 +1009,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the name field is set.
      */
     public boolean hasName() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -1070,11 +1069,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       name_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1089,8 +1086,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1107,12 +1104,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1130,7 +1125,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCpcBidMicros() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -1158,8 +1153,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCpcBidMicros(long value) {
-      bitField0_ |= 0x00000008;
+      
       cpcBidMicros_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1174,7 +1170,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCpcBidMicros() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000010);
       cpcBidMicros_ = 0L;
       onChanged();
       return this;

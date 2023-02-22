@@ -53,7 +53,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Immutable. Name of the resource.
@@ -103,7 +104,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INVITATION_ID_FIELD_NUMBER = 2;
-  private long invitationId_;
+  private long invitationId_ = 0L;
   /**
    * <pre>
    * Output only. The ID of the invitation.
@@ -119,7 +120,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ACCESS_ROLE_FIELD_NUMBER = 3;
-  private int accessRole_;
+  private int accessRole_ = 0;
   /**
    * <pre>
    * Immutable. Access role of the user.
@@ -140,13 +141,13 @@ private static final long serialVersionUID = 0L;
    * @return The accessRole.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.AccessRoleEnum.AccessRole getAccessRole() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.AccessRoleEnum.AccessRole result = com.google.ads.googleads.v11.enums.AccessRoleEnum.AccessRole.valueOf(accessRole_);
+    com.google.ads.googleads.v11.enums.AccessRoleEnum.AccessRole result = com.google.ads.googleads.v11.enums.AccessRoleEnum.AccessRole.forNumber(accessRole_);
     return result == null ? com.google.ads.googleads.v11.enums.AccessRoleEnum.AccessRole.UNRECOGNIZED : result;
   }
 
   public static final int EMAIL_ADDRESS_FIELD_NUMBER = 4;
-  private volatile java.lang.Object emailAddress_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object emailAddress_ = "";
   /**
    * <pre>
    * Immutable. Email address the invitation was sent to.
@@ -196,7 +197,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CREATION_DATE_TIME_FIELD_NUMBER = 5;
-  private volatile java.lang.Object creationDateTime_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object creationDateTime_ = "";
   /**
    * <pre>
    * Output only. Time invitation was created.
@@ -248,7 +250,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INVITATION_STATUS_FIELD_NUMBER = 6;
-  private int invitationStatus_;
+  private int invitationStatus_ = 0;
   /**
    * <pre>
    * Output only. Invitation status of the user.
@@ -269,8 +271,7 @@ private static final long serialVersionUID = 0L;
    * @return The invitationStatus.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.AccessInvitationStatusEnum.AccessInvitationStatus getInvitationStatus() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.AccessInvitationStatusEnum.AccessInvitationStatus result = com.google.ads.googleads.v11.enums.AccessInvitationStatusEnum.AccessInvitationStatus.valueOf(invitationStatus_);
+    com.google.ads.googleads.v11.enums.AccessInvitationStatusEnum.AccessInvitationStatus result = com.google.ads.googleads.v11.enums.AccessInvitationStatusEnum.AccessInvitationStatus.forNumber(invitationStatus_);
     return result == null ? com.google.ads.googleads.v11.enums.AccessInvitationStatusEnum.AccessInvitationStatus.UNRECOGNIZED : result;
   }
 
@@ -517,18 +518,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       invitationId_ = 0L;
-
       accessRole_ = 0;
-
       emailAddress_ = "";
-
       creationDateTime_ = "";
-
       invitationStatus_ = 0;
-
       return this;
     }
 
@@ -555,14 +551,31 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.CustomerUserAccessInvitation buildPartial() {
       com.google.ads.googleads.v11.resources.CustomerUserAccessInvitation result = new com.google.ads.googleads.v11.resources.CustomerUserAccessInvitation(this);
-      result.resourceName_ = resourceName_;
-      result.invitationId_ = invitationId_;
-      result.accessRole_ = accessRole_;
-      result.emailAddress_ = emailAddress_;
-      result.creationDateTime_ = creationDateTime_;
-      result.invitationStatus_ = invitationStatus_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.CustomerUserAccessInvitation result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.invitationId_ = invitationId_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.accessRole_ = accessRole_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.emailAddress_ = emailAddress_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.creationDateTime_ = creationDateTime_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.invitationStatus_ = invitationStatus_;
+      }
     }
 
     @java.lang.Override
@@ -611,6 +624,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.resources.CustomerUserAccessInvitation.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.getInvitationId() != 0L) {
@@ -621,10 +635,12 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getEmailAddress().isEmpty()) {
         emailAddress_ = other.emailAddress_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.getCreationDateTime().isEmpty()) {
         creationDateTime_ = other.creationDateTime_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (other.invitationStatus_ != 0) {
@@ -658,32 +674,32 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 16: {
               invitationId_ = input.readInt64();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             case 24: {
               accessRole_ = input.readEnum();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 24
             case 34: {
               emailAddress_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 34
             case 42: {
               creationDateTime_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 42
             case 48: {
               invitationStatus_ = input.readEnum();
-
+              bitField0_ |= 0x00000020;
               break;
             } // case 48
             default: {
@@ -701,6 +717,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object resourceName_ = "";
     /**
@@ -761,11 +778,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -780,8 +795,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -798,12 +813,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -835,6 +848,7 @@ private static final long serialVersionUID = 0L;
     public Builder setInvitationId(long value) {
       
       invitationId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -848,7 +862,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearInvitationId() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       invitationId_ = 0L;
       onChanged();
       return this;
@@ -876,8 +890,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAccessRoleValue(int value) {
-      
       accessRole_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -891,8 +905,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.AccessRoleEnum.AccessRole getAccessRole() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.AccessRoleEnum.AccessRole result = com.google.ads.googleads.v11.enums.AccessRoleEnum.AccessRole.valueOf(accessRole_);
+      com.google.ads.googleads.v11.enums.AccessRoleEnum.AccessRole result = com.google.ads.googleads.v11.enums.AccessRoleEnum.AccessRole.forNumber(accessRole_);
       return result == null ? com.google.ads.googleads.v11.enums.AccessRoleEnum.AccessRole.UNRECOGNIZED : result;
     }
     /**
@@ -908,7 +921,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       accessRole_ = value.getNumber();
       onChanged();
       return this;
@@ -922,7 +935,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAccessRole() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       accessRole_ = 0;
       onChanged();
       return this;
@@ -987,11 +1000,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEmailAddress(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       emailAddress_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1006,8 +1017,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEmailAddress() {
-      
       emailAddress_ = getDefaultInstance().getEmailAddress();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1024,12 +1035,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEmailAddressBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       emailAddress_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1096,11 +1105,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCreationDateTime(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       creationDateTime_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1116,8 +1123,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCreationDateTime() {
-      
       creationDateTime_ = getDefaultInstance().getCreationDateTime();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1135,12 +1142,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCreationDateTimeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       creationDateTime_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1167,8 +1172,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setInvitationStatusValue(int value) {
-      
       invitationStatus_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1182,8 +1187,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.AccessInvitationStatusEnum.AccessInvitationStatus getInvitationStatus() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.AccessInvitationStatusEnum.AccessInvitationStatus result = com.google.ads.googleads.v11.enums.AccessInvitationStatusEnum.AccessInvitationStatus.valueOf(invitationStatus_);
+      com.google.ads.googleads.v11.enums.AccessInvitationStatusEnum.AccessInvitationStatus result = com.google.ads.googleads.v11.enums.AccessInvitationStatusEnum.AccessInvitationStatus.forNumber(invitationStatus_);
       return result == null ? com.google.ads.googleads.v11.enums.AccessInvitationStatusEnum.AccessInvitationStatus.UNRECOGNIZED : result;
     }
     /**
@@ -1199,7 +1203,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000020;
       invitationStatus_ = value.getNumber();
       onChanged();
       return this;
@@ -1213,7 +1217,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearInvitationStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       invitationStatus_ = 0;
       onChanged();
       return this;

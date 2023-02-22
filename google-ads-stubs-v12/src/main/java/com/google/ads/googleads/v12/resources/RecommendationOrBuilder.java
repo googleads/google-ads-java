@@ -80,8 +80,8 @@ public interface RecommendationOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The budget targeted by this recommendation. This will be set only when
-   * the recommendation affects a single campaign budget.
+   * Output only. The budget targeted by this recommendation. This will be set
+   * only when the recommendation affects a single campaign budget.
    * This field will be set for the following recommendation types:
    * CAMPAIGN_BUDGET, FORECASTING_CAMPAIGN_BUDGET, MARGINAL_ROI_CAMPAIGN_BUDGET,
    * MOVE_UNUSED_BUDGET
@@ -93,8 +93,8 @@ public interface RecommendationOrBuilder extends
   boolean hasCampaignBudget();
   /**
    * <pre>
-   * Output only. The budget targeted by this recommendation. This will be set only when
-   * the recommendation affects a single campaign budget.
+   * Output only. The budget targeted by this recommendation. This will be set
+   * only when the recommendation affects a single campaign budget.
    * This field will be set for the following recommendation types:
    * CAMPAIGN_BUDGET, FORECASTING_CAMPAIGN_BUDGET, MARGINAL_ROI_CAMPAIGN_BUDGET,
    * MOVE_UNUSED_BUDGET
@@ -106,8 +106,8 @@ public interface RecommendationOrBuilder extends
   java.lang.String getCampaignBudget();
   /**
    * <pre>
-   * Output only. The budget targeted by this recommendation. This will be set only when
-   * the recommendation affects a single campaign budget.
+   * Output only. The budget targeted by this recommendation. This will be set
+   * only when the recommendation affects a single campaign budget.
    * This field will be set for the following recommendation types:
    * CAMPAIGN_BUDGET, FORECASTING_CAMPAIGN_BUDGET, MARGINAL_ROI_CAMPAIGN_BUDGET,
    * MOVE_UNUSED_BUDGET
@@ -121,8 +121,7 @@ public interface RecommendationOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The campaign targeted by this recommendation. This will be set only when
-   * the recommendation affects a single campaign.
+   * Output only. The campaign targeted by this recommendation.
    * This field will be set for the following recommendation types:
    * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
    * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
@@ -143,8 +142,7 @@ public interface RecommendationOrBuilder extends
   boolean hasCampaign();
   /**
    * <pre>
-   * Output only. The campaign targeted by this recommendation. This will be set only when
-   * the recommendation affects a single campaign.
+   * Output only. The campaign targeted by this recommendation.
    * This field will be set for the following recommendation types:
    * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
    * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
@@ -165,8 +163,7 @@ public interface RecommendationOrBuilder extends
   java.lang.String getCampaign();
   /**
    * <pre>
-   * Output only. The campaign targeted by this recommendation. This will be set only when
-   * the recommendation affects a single campaign.
+   * Output only. The campaign targeted by this recommendation.
    * This field will be set for the following recommendation types:
    * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
    * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
@@ -189,8 +186,8 @@ public interface RecommendationOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The ad group targeted by this recommendation. This will be set only when
-   * the recommendation affects a single ad group.
+   * Output only. The ad group targeted by this recommendation. This will be set
+   * only when the recommendation affects a single ad group.
    * This field will be set for the following recommendation types:
    * KEYWORD, OPTIMIZE_AD_ROTATION, RESPONSIVE_SEARCH_AD,
    * RESPONSIVE_SEARCH_AD_ASSET, TEXT_AD
@@ -202,8 +199,8 @@ public interface RecommendationOrBuilder extends
   boolean hasAdGroup();
   /**
    * <pre>
-   * Output only. The ad group targeted by this recommendation. This will be set only when
-   * the recommendation affects a single ad group.
+   * Output only. The ad group targeted by this recommendation. This will be set
+   * only when the recommendation affects a single ad group.
    * This field will be set for the following recommendation types:
    * KEYWORD, OPTIMIZE_AD_ROTATION, RESPONSIVE_SEARCH_AD,
    * RESPONSIVE_SEARCH_AD_ASSET, TEXT_AD
@@ -215,8 +212,8 @@ public interface RecommendationOrBuilder extends
   java.lang.String getAdGroup();
   /**
    * <pre>
-   * Output only. The ad group targeted by this recommendation. This will be set only when
-   * the recommendation affects a single ad group.
+   * Output only. The ad group targeted by this recommendation. This will be set
+   * only when the recommendation affects a single ad group.
    * This field will be set for the following recommendation types:
    * KEYWORD, OPTIMIZE_AD_ROTATION, RESPONSIVE_SEARCH_AD,
    * RESPONSIVE_SEARCH_AD_ASSET, TEXT_AD
@@ -789,8 +786,8 @@ public interface RecommendationOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The upgrade a Smart Shopping campaign to a Performance Max campaign
-   * recommendation.
+   * Output only. The upgrade a Smart Shopping campaign to a Performance Max
+   * campaign recommendation.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.Recommendation.UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation upgrade_smart_shopping_campaign_to_performance_max_recommendation = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -799,8 +796,8 @@ public interface RecommendationOrBuilder extends
   boolean hasUpgradeSmartShoppingCampaignToPerformanceMaxRecommendation();
   /**
    * <pre>
-   * Output only. The upgrade a Smart Shopping campaign to a Performance Max campaign
-   * recommendation.
+   * Output only. The upgrade a Smart Shopping campaign to a Performance Max
+   * campaign recommendation.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.Recommendation.UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation upgrade_smart_shopping_campaign_to_performance_max_recommendation = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -809,8 +806,8 @@ public interface RecommendationOrBuilder extends
   com.google.ads.googleads.v12.resources.Recommendation.UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation getUpgradeSmartShoppingCampaignToPerformanceMaxRecommendation();
   /**
    * <pre>
-   * Output only. The upgrade a Smart Shopping campaign to a Performance Max campaign
-   * recommendation.
+   * Output only. The upgrade a Smart Shopping campaign to a Performance Max
+   * campaign recommendation.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.Recommendation.UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation upgrade_smart_shopping_campaign_to_performance_max_recommendation = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

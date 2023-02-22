@@ -49,6 +49,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DIMENSIONS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.ListingDimensionInfo> dimensions_;
   /**
    * <pre>
@@ -302,6 +303,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (dimensionsBuilder_ == null) {
         dimensions_ = java.util.Collections.emptyList();
       } else {
@@ -335,7 +337,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.ListingScopeInfo buildPartial() {
       com.google.ads.googleads.v12.common.ListingScopeInfo result = new com.google.ads.googleads.v12.common.ListingScopeInfo(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.common.ListingScopeInfo result) {
       if (dimensionsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           dimensions_ = java.util.Collections.unmodifiableList(dimensions_);
@@ -345,8 +353,10 @@ private static final long serialVersionUID = 0L;
       } else {
         result.dimensions_ = dimensionsBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.ListingScopeInfo result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override

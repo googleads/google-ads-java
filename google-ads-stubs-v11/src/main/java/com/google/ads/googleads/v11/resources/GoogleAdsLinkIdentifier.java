@@ -50,7 +50,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int CUSTOMER_FIELD_NUMBER = 3;
-  private volatile java.lang.Object customer_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object customer_ = "";
   /**
    * <pre>
    * Immutable. The resource name of the Google Ads account.
@@ -312,8 +313,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       customer_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -340,15 +341,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.GoogleAdsLinkIdentifier buildPartial() {
       com.google.ads.googleads.v11.resources.GoogleAdsLinkIdentifier result = new com.google.ads.googleads.v11.resources.GoogleAdsLinkIdentifier(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.GoogleAdsLinkIdentifier result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.customer_ = customer_;
         to_bitField0_ |= 0x00000001;
       }
-      result.customer_ = customer_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -396,8 +401,8 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v11.resources.GoogleAdsLinkIdentifier other) {
       if (other == com.google.ads.googleads.v11.resources.GoogleAdsLinkIdentifier.getDefaultInstance()) return this;
       if (other.hasCustomer()) {
-        bitField0_ |= 0x00000001;
         customer_ = other.customer_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -524,11 +529,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomer(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       customer_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -544,8 +547,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCustomer() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       customer_ = getDefaultInstance().getCustomer();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -563,12 +566,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       customer_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

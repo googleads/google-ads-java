@@ -146,6 +146,7 @@ public interface CustomerOrBuilder extends
   /**
    * <pre>
    * The URL template for constructing a tracking URL out of parameters.
+   * Only mutable in an `update` operation.
    * </pre>
    *
    * <code>optional string tracking_url_template = 23;</code>
@@ -155,6 +156,7 @@ public interface CustomerOrBuilder extends
   /**
    * <pre>
    * The URL template for constructing a tracking URL out of parameters.
+   * Only mutable in an `update` operation.
    * </pre>
    *
    * <code>optional string tracking_url_template = 23;</code>
@@ -164,6 +166,7 @@ public interface CustomerOrBuilder extends
   /**
    * <pre>
    * The URL template for constructing a tracking URL out of parameters.
+   * Only mutable in an `update` operation.
    * </pre>
    *
    * <code>optional string tracking_url_template = 23;</code>
@@ -174,7 +177,8 @@ public interface CustomerOrBuilder extends
 
   /**
    * <pre>
-   * The URL template for appending params to the final URL
+   * The URL template for appending params to the final URL.
+   * Only mutable in an `update` operation.
    * </pre>
    *
    * <code>optional string final_url_suffix = 24;</code>
@@ -183,7 +187,8 @@ public interface CustomerOrBuilder extends
   boolean hasFinalUrlSuffix();
   /**
    * <pre>
-   * The URL template for appending params to the final URL
+   * The URL template for appending params to the final URL.
+   * Only mutable in an `update` operation.
    * </pre>
    *
    * <code>optional string final_url_suffix = 24;</code>
@@ -192,7 +197,8 @@ public interface CustomerOrBuilder extends
   java.lang.String getFinalUrlSuffix();
   /**
    * <pre>
-   * The URL template for appending params to the final URL
+   * The URL template for appending params to the final URL.
+   * Only mutable in an `update` operation.
    * </pre>
    *
    * <code>optional string final_url_suffix = 24;</code>
@@ -222,9 +228,10 @@ public interface CustomerOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Whether the Customer has a Partners program badge. If the Customer is not
-   * associated with the Partners program, this will be false. For more
-   * information, see https://support.google.com/partners/answer/3125774.
+   * Output only. Whether the Customer has a Partners program badge. If the
+   * Customer is not associated with the Partners program, this will be false.
+   * For more information, see
+   * https://support.google.com/partners/answer/3125774.
    * </pre>
    *
    * <code>optional bool has_partners_badge = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -233,9 +240,10 @@ public interface CustomerOrBuilder extends
   boolean hasHasPartnersBadge();
   /**
    * <pre>
-   * Output only. Whether the Customer has a Partners program badge. If the Customer is not
-   * associated with the Partners program, this will be false. For more
-   * information, see https://support.google.com/partners/answer/3125774.
+   * Output only. Whether the Customer has a Partners program badge. If the
+   * Customer is not associated with the Partners program, this will be false.
+   * For more information, see
+   * https://support.google.com/partners/answer/3125774.
    * </pre>
    *
    * <code>optional bool has_partners_badge = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -367,8 +375,9 @@ public interface CustomerOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
-   * the list is empty, the customer is eligible. This field is read-only.
+   * Output only. Reasons why the customer is not eligible to use
+   * PaymentMode.CONVERSIONS. If the list is empty, the customer is eligible.
+   * This field is read-only.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -377,8 +386,9 @@ public interface CustomerOrBuilder extends
   java.util.List<com.google.ads.googleads.v11.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason> getPayPerConversionEligibilityFailureReasonsList();
   /**
    * <pre>
-   * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
-   * the list is empty, the customer is eligible. This field is read-only.
+   * Output only. Reasons why the customer is not eligible to use
+   * PaymentMode.CONVERSIONS. If the list is empty, the customer is eligible.
+   * This field is read-only.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -387,8 +397,9 @@ public interface CustomerOrBuilder extends
   int getPayPerConversionEligibilityFailureReasonsCount();
   /**
    * <pre>
-   * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
-   * the list is empty, the customer is eligible. This field is read-only.
+   * Output only. Reasons why the customer is not eligible to use
+   * PaymentMode.CONVERSIONS. If the list is empty, the customer is eligible.
+   * This field is read-only.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -398,8 +409,9 @@ public interface CustomerOrBuilder extends
   com.google.ads.googleads.v11.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason getPayPerConversionEligibilityFailureReasons(int index);
   /**
    * <pre>
-   * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
-   * the list is empty, the customer is eligible. This field is read-only.
+   * Output only. Reasons why the customer is not eligible to use
+   * PaymentMode.CONVERSIONS. If the list is empty, the customer is eligible.
+   * This field is read-only.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -409,8 +421,9 @@ public interface CustomerOrBuilder extends
   getPayPerConversionEligibilityFailureReasonsValueList();
   /**
    * <pre>
-   * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
-   * the list is empty, the customer is eligible. This field is read-only.
+   * Output only. Reasons why the customer is not eligible to use
+   * PaymentMode.CONVERSIONS. If the list is empty, the customer is eligible.
+   * This field is read-only.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

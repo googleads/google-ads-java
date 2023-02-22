@@ -54,7 +54,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int AVG_MONTHLY_SEARCHES_FIELD_NUMBER = 7;
-  private long avgMonthlySearches_;
+  private long avgMonthlySearches_ = 0L;
   /**
    * <pre>
    * Approximate number of monthly searches on this query averaged
@@ -83,6 +83,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MONTHLY_SEARCH_VOLUMES_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.common.MonthlySearchVolume> monthlySearchVolumes_;
   /**
    * <pre>
@@ -143,7 +144,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int COMPETITION_FIELD_NUMBER = 2;
-  private int competition_;
+  private int competition_ = 0;
   /**
    * <pre>
    * The competition level for the query.
@@ -164,13 +165,12 @@ private static final long serialVersionUID = 0L;
    * @return The competition.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel getCompetition() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel result = com.google.ads.googleads.v11.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel.valueOf(competition_);
+    com.google.ads.googleads.v11.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel result = com.google.ads.googleads.v11.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel.forNumber(competition_);
     return result == null ? com.google.ads.googleads.v11.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel.UNRECOGNIZED : result;
   }
 
   public static final int COMPETITION_INDEX_FIELD_NUMBER = 8;
-  private long competitionIndex_;
+  private long competitionIndex_ = 0L;
   /**
    * <pre>
    * The competition index for the query in the range [0, 100].
@@ -205,7 +205,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LOW_TOP_OF_PAGE_BID_MICROS_FIELD_NUMBER = 9;
-  private long lowTopOfPageBidMicros_;
+  private long lowTopOfPageBidMicros_ = 0L;
   /**
    * <pre>
    * Top of page bid low range (20th percentile) in micros for the keyword.
@@ -232,7 +232,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HIGH_TOP_OF_PAGE_BID_MICROS_FIELD_NUMBER = 10;
-  private long highTopOfPageBidMicros_;
+  private long highTopOfPageBidMicros_ = 0L;
   /**
    * <pre>
    * Top of page bid high range (80th percentile) in micros for the keyword.
@@ -259,7 +259,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AVERAGE_CPC_MICROS_FIELD_NUMBER = 11;
-  private long averageCpcMicros_;
+  private long averageCpcMicros_ = 0L;
   /**
    * <pre>
    * Average Cost Per Click in micros for the keyword.
@@ -577,8 +577,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       avgMonthlySearches_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       if (monthlySearchVolumesBuilder_ == null) {
         monthlySearchVolumes_ = java.util.Collections.emptyList();
       } else {
@@ -587,15 +587,10 @@ private static final long serialVersionUID = 0L;
       }
       bitField0_ = (bitField0_ & ~0x00000002);
       competition_ = 0;
-
       competitionIndex_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000004);
       lowTopOfPageBidMicros_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000008);
       highTopOfPageBidMicros_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000010);
       averageCpcMicros_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000020);
       return this;
     }
 
@@ -622,12 +617,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.KeywordPlanHistoricalMetrics buildPartial() {
       com.google.ads.googleads.v11.common.KeywordPlanHistoricalMetrics result = new com.google.ads.googleads.v11.common.KeywordPlanHistoricalMetrics(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.avgMonthlySearches_ = avgMonthlySearches_;
-        to_bitField0_ |= 0x00000001;
-      }
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.common.KeywordPlanHistoricalMetrics result) {
       if (monthlySearchVolumesBuilder_ == null) {
         if (((bitField0_ & 0x00000002) != 0)) {
           monthlySearchVolumes_ = java.util.Collections.unmodifiableList(monthlySearchVolumes_);
@@ -637,26 +633,35 @@ private static final long serialVersionUID = 0L;
       } else {
         result.monthlySearchVolumes_ = monthlySearchVolumesBuilder_.build();
       }
-      result.competition_ = competition_;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.KeywordPlanHistoricalMetrics result) {
+      int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.avgMonthlySearches_ = avgMonthlySearches_;
+        to_bitField0_ |= 0x00000001;
+      }
       if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.competition_ = competition_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.competitionIndex_ = competitionIndex_;
         to_bitField0_ |= 0x00000002;
       }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.lowTopOfPageBidMicros_ = lowTopOfPageBidMicros_;
         to_bitField0_ |= 0x00000004;
       }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000020) != 0)) {
         result.highTopOfPageBidMicros_ = highTopOfPageBidMicros_;
         to_bitField0_ |= 0x00000008;
       }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000040) != 0)) {
         result.averageCpcMicros_ = averageCpcMicros_;
         to_bitField0_ |= 0x00000010;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -775,7 +780,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 16: {
               competition_ = input.readEnum();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 16
             case 50: {
@@ -798,22 +803,22 @@ private static final long serialVersionUID = 0L;
             } // case 56
             case 64: {
               competitionIndex_ = input.readInt64();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               break;
             } // case 64
             case 72: {
               lowTopOfPageBidMicros_ = input.readInt64();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000010;
               break;
             } // case 72
             case 80: {
               highTopOfPageBidMicros_ = input.readInt64();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000020;
               break;
             } // case 80
             case 88: {
               averageCpcMicros_ = input.readInt64();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000040;
               break;
             } // case 88
             default: {
@@ -871,8 +876,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAvgMonthlySearches(long value) {
-      bitField0_ |= 0x00000001;
+      
       avgMonthlySearches_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1226,8 +1232,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCompetitionValue(int value) {
-      
       competition_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1241,8 +1247,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel getCompetition() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel result = com.google.ads.googleads.v11.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel.valueOf(competition_);
+      com.google.ads.googleads.v11.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel result = com.google.ads.googleads.v11.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel.forNumber(competition_);
       return result == null ? com.google.ads.googleads.v11.enums.KeywordPlanCompetitionLevelEnum.KeywordPlanCompetitionLevel.UNRECOGNIZED : result;
     }
     /**
@@ -1258,7 +1263,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       competition_ = value.getNumber();
       onChanged();
       return this;
@@ -1272,7 +1277,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCompetition() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       competition_ = 0;
       onChanged();
       return this;
@@ -1293,7 +1298,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCompetitionIndex() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -1325,8 +1330,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCompetitionIndex(long value) {
-      bitField0_ |= 0x00000004;
+      
       competitionIndex_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1343,7 +1349,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCompetitionIndex() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000008);
       competitionIndex_ = 0L;
       onChanged();
       return this;
@@ -1360,7 +1366,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasLowTopOfPageBidMicros() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -1384,8 +1390,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLowTopOfPageBidMicros(long value) {
-      bitField0_ |= 0x00000008;
+      
       lowTopOfPageBidMicros_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1398,7 +1405,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLowTopOfPageBidMicros() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000010);
       lowTopOfPageBidMicros_ = 0L;
       onChanged();
       return this;
@@ -1415,7 +1422,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasHighTopOfPageBidMicros() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -1439,8 +1446,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHighTopOfPageBidMicros(long value) {
-      bitField0_ |= 0x00000010;
+      
       highTopOfPageBidMicros_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1453,7 +1461,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHighTopOfPageBidMicros() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000020);
       highTopOfPageBidMicros_ = 0L;
       onChanged();
       return this;
@@ -1470,7 +1478,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAverageCpcMicros() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -1494,8 +1502,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAverageCpcMicros(long value) {
-      bitField0_ |= 0x00000020;
+      
       averageCpcMicros_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1508,7 +1517,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAverageCpcMicros() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000040);
       averageCpcMicros_ = 0L;
       onChanged();
       return this;

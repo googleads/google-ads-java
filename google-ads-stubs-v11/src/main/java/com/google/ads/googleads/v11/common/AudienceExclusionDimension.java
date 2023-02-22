@@ -49,6 +49,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EXCLUSIONS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.common.ExclusionSegment> exclusions_;
   /**
    * <pre>
@@ -302,6 +303,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (exclusionsBuilder_ == null) {
         exclusions_ = java.util.Collections.emptyList();
       } else {
@@ -335,7 +337,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.AudienceExclusionDimension buildPartial() {
       com.google.ads.googleads.v11.common.AudienceExclusionDimension result = new com.google.ads.googleads.v11.common.AudienceExclusionDimension(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.common.AudienceExclusionDimension result) {
       if (exclusionsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           exclusions_ = java.util.Collections.unmodifiableList(exclusions_);
@@ -345,8 +353,10 @@ private static final long serialVersionUID = 0L;
       } else {
         result.exclusions_ = exclusionsBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.AudienceExclusionDimension result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override

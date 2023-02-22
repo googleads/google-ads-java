@@ -51,7 +51,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BUSINESS_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object businessName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object businessName_ = "";
   /**
    * <pre>
    * Required. The Advertiser/brand name.
@@ -100,8 +101,8 @@ private static final long serialVersionUID = 0L;
   private com.google.ads.googleads.v12.common.AdImageAsset logoImage_;
   /**
    * <pre>
-   * Required. Logo image to be used in the ad.  The minimum size is 128x128 and the
-   * aspect ratio must be 1:1(+-1%).
+   * Required. Logo image to be used in the ad.  The minimum size is 128x128 and
+   * the aspect ratio must be 1:1(+-1%).
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.AdImageAsset logo_image = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -113,8 +114,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. Logo image to be used in the ad.  The minimum size is 128x128 and the
-   * aspect ratio must be 1:1(+-1%).
+   * Required. Logo image to be used in the ad.  The minimum size is 128x128 and
+   * the aspect ratio must be 1:1(+-1%).
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.AdImageAsset logo_image = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -126,15 +127,15 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. Logo image to be used in the ad.  The minimum size is 128x128 and the
-   * aspect ratio must be 1:1(+-1%).
+   * Required. Logo image to be used in the ad.  The minimum size is 128x128 and
+   * the aspect ratio must be 1:1(+-1%).
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.AdImageAsset logo_image = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.common.AdImageAssetOrBuilder getLogoImageOrBuilder() {
-    return getLogoImage();
+    return logoImage_ == null ? com.google.ads.googleads.v12.common.AdImageAsset.getDefaultInstance() : logoImage_;
   }
 
   public static final int HEADLINE_FIELD_NUMBER = 3;
@@ -172,7 +173,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.common.AdTextAssetOrBuilder getHeadlineOrBuilder() {
-    return getHeadline();
+    return headline_ == null ? com.google.ads.googleads.v12.common.AdTextAsset.getDefaultInstance() : headline_;
   }
 
   public static final int DESCRIPTION_FIELD_NUMBER = 4;
@@ -210,11 +211,12 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.common.AdTextAssetOrBuilder getDescriptionOrBuilder() {
-    return getDescription();
+    return description_ == null ? com.google.ads.googleads.v12.common.AdTextAsset.getDefaultInstance() : description_;
   }
 
   public static final int CALL_TO_ACTION_TEXT_FIELD_NUMBER = 5;
-  private volatile java.lang.Object callToActionText_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object callToActionText_ = "";
   /**
    * <pre>
    * Call to action text.
@@ -260,6 +262,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CAROUSEL_CARDS_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.AdDiscoveryCarouselCardAsset> carouselCards_;
   /**
    * <pre>
@@ -581,35 +584,31 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       businessName_ = "";
-
-      if (logoImageBuilder_ == null) {
-        logoImage_ = null;
-      } else {
-        logoImage_ = null;
+      logoImage_ = null;
+      if (logoImageBuilder_ != null) {
+        logoImageBuilder_.dispose();
         logoImageBuilder_ = null;
       }
-      if (headlineBuilder_ == null) {
-        headline_ = null;
-      } else {
-        headline_ = null;
+      headline_ = null;
+      if (headlineBuilder_ != null) {
+        headlineBuilder_.dispose();
         headlineBuilder_ = null;
       }
-      if (descriptionBuilder_ == null) {
-        description_ = null;
-      } else {
-        description_ = null;
+      description_ = null;
+      if (descriptionBuilder_ != null) {
+        descriptionBuilder_.dispose();
         descriptionBuilder_ = null;
       }
       callToActionText_ = "";
-
       if (carouselCardsBuilder_ == null) {
         carouselCards_ = java.util.Collections.emptyList();
       } else {
         carouselCards_ = null;
         carouselCardsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000020);
       return this;
     }
 
@@ -636,35 +635,47 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.DiscoveryCarouselAdInfo buildPartial() {
       com.google.ads.googleads.v12.common.DiscoveryCarouselAdInfo result = new com.google.ads.googleads.v12.common.DiscoveryCarouselAdInfo(this);
-      int from_bitField0_ = bitField0_;
-      result.businessName_ = businessName_;
-      if (logoImageBuilder_ == null) {
-        result.logoImage_ = logoImage_;
-      } else {
-        result.logoImage_ = logoImageBuilder_.build();
-      }
-      if (headlineBuilder_ == null) {
-        result.headline_ = headline_;
-      } else {
-        result.headline_ = headlineBuilder_.build();
-      }
-      if (descriptionBuilder_ == null) {
-        result.description_ = description_;
-      } else {
-        result.description_ = descriptionBuilder_.build();
-      }
-      result.callToActionText_ = callToActionText_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.common.DiscoveryCarouselAdInfo result) {
       if (carouselCardsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000020) != 0)) {
           carouselCards_ = java.util.Collections.unmodifiableList(carouselCards_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000020);
         }
         result.carouselCards_ = carouselCards_;
       } else {
         result.carouselCards_ = carouselCardsBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.DiscoveryCarouselAdInfo result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.businessName_ = businessName_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.logoImage_ = logoImageBuilder_ == null
+            ? logoImage_
+            : logoImageBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.headline_ = headlineBuilder_ == null
+            ? headline_
+            : headlineBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.description_ = descriptionBuilder_ == null
+            ? description_
+            : descriptionBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.callToActionText_ = callToActionText_;
+      }
     }
 
     @java.lang.Override
@@ -713,6 +724,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.common.DiscoveryCarouselAdInfo.getDefaultInstance()) return this;
       if (!other.getBusinessName().isEmpty()) {
         businessName_ = other.businessName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasLogoImage()) {
@@ -726,13 +738,14 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getCallToActionText().isEmpty()) {
         callToActionText_ = other.callToActionText_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (carouselCardsBuilder_ == null) {
         if (!other.carouselCards_.isEmpty()) {
           if (carouselCards_.isEmpty()) {
             carouselCards_ = other.carouselCards_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
             ensureCarouselCardsIsMutable();
             carouselCards_.addAll(other.carouselCards_);
@@ -745,7 +758,7 @@ private static final long serialVersionUID = 0L;
             carouselCardsBuilder_.dispose();
             carouselCardsBuilder_ = null;
             carouselCards_ = other.carouselCards_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000020);
             carouselCardsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getCarouselCardsFieldBuilder() : null;
@@ -782,33 +795,33 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               businessName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               input.readMessage(
                   getLogoImageFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
               input.readMessage(
                   getHeadlineFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 34: {
               input.readMessage(
                   getDescriptionFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 34
             case 42: {
               callToActionText_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 42
             case 50: {
@@ -894,11 +907,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBusinessName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       businessName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -911,8 +922,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBusinessName() {
-      
       businessName_ = getDefaultInstance().getBusinessName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -927,12 +938,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBusinessNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       businessName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -942,20 +951,20 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.AdImageAsset, com.google.ads.googleads.v12.common.AdImageAsset.Builder, com.google.ads.googleads.v12.common.AdImageAssetOrBuilder> logoImageBuilder_;
     /**
      * <pre>
-     * Required. Logo image to be used in the ad.  The minimum size is 128x128 and the
-     * aspect ratio must be 1:1(+-1%).
+     * Required. Logo image to be used in the ad.  The minimum size is 128x128 and
+     * the aspect ratio must be 1:1(+-1%).
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.AdImageAsset logo_image = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return Whether the logoImage field is set.
      */
     public boolean hasLogoImage() {
-      return logoImageBuilder_ != null || logoImage_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
-     * Required. Logo image to be used in the ad.  The minimum size is 128x128 and the
-     * aspect ratio must be 1:1(+-1%).
+     * Required. Logo image to be used in the ad.  The minimum size is 128x128 and
+     * the aspect ratio must be 1:1(+-1%).
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.AdImageAsset logo_image = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -970,8 +979,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Logo image to be used in the ad.  The minimum size is 128x128 and the
-     * aspect ratio must be 1:1(+-1%).
+     * Required. Logo image to be used in the ad.  The minimum size is 128x128 and
+     * the aspect ratio must be 1:1(+-1%).
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.AdImageAsset logo_image = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -982,17 +991,17 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         logoImage_ = value;
-        onChanged();
       } else {
         logoImageBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. Logo image to be used in the ad.  The minimum size is 128x128 and the
-     * aspect ratio must be 1:1(+-1%).
+     * Required. Logo image to be used in the ad.  The minimum size is 128x128 and
+     * the aspect ratio must be 1:1(+-1%).
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.AdImageAsset logo_image = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1001,72 +1010,72 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.AdImageAsset.Builder builderForValue) {
       if (logoImageBuilder_ == null) {
         logoImage_ = builderForValue.build();
-        onChanged();
       } else {
         logoImageBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. Logo image to be used in the ad.  The minimum size is 128x128 and the
-     * aspect ratio must be 1:1(+-1%).
+     * Required. Logo image to be used in the ad.  The minimum size is 128x128 and
+     * the aspect ratio must be 1:1(+-1%).
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.AdImageAsset logo_image = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder mergeLogoImage(com.google.ads.googleads.v12.common.AdImageAsset value) {
       if (logoImageBuilder_ == null) {
-        if (logoImage_ != null) {
-          logoImage_ =
-            com.google.ads.googleads.v12.common.AdImageAsset.newBuilder(logoImage_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          logoImage_ != null &&
+          logoImage_ != com.google.ads.googleads.v12.common.AdImageAsset.getDefaultInstance()) {
+          getLogoImageBuilder().mergeFrom(value);
         } else {
           logoImage_ = value;
         }
-        onChanged();
       } else {
         logoImageBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. Logo image to be used in the ad.  The minimum size is 128x128 and the
-     * aspect ratio must be 1:1(+-1%).
+     * Required. Logo image to be used in the ad.  The minimum size is 128x128 and
+     * the aspect ratio must be 1:1(+-1%).
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.AdImageAsset logo_image = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder clearLogoImage() {
-      if (logoImageBuilder_ == null) {
-        logoImage_ = null;
-        onChanged();
-      } else {
-        logoImage_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      logoImage_ = null;
+      if (logoImageBuilder_ != null) {
+        logoImageBuilder_.dispose();
         logoImageBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. Logo image to be used in the ad.  The minimum size is 128x128 and the
-     * aspect ratio must be 1:1(+-1%).
+     * Required. Logo image to be used in the ad.  The minimum size is 128x128 and
+     * the aspect ratio must be 1:1(+-1%).
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.AdImageAsset logo_image = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.google.ads.googleads.v12.common.AdImageAsset.Builder getLogoImageBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getLogoImageFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Required. Logo image to be used in the ad.  The minimum size is 128x128 and the
-     * aspect ratio must be 1:1(+-1%).
+     * Required. Logo image to be used in the ad.  The minimum size is 128x128 and
+     * the aspect ratio must be 1:1(+-1%).
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.AdImageAsset logo_image = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1081,8 +1090,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Logo image to be used in the ad.  The minimum size is 128x128 and the
-     * aspect ratio must be 1:1(+-1%).
+     * Required. Logo image to be used in the ad.  The minimum size is 128x128 and
+     * the aspect ratio must be 1:1(+-1%).
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.AdImageAsset logo_image = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1113,7 +1122,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the headline field is set.
      */
     public boolean hasHeadline() {
-      return headlineBuilder_ != null || headline_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -1143,11 +1152,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         headline_ = value;
-        onChanged();
       } else {
         headlineBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1161,11 +1170,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.AdTextAsset.Builder builderForValue) {
       if (headlineBuilder_ == null) {
         headline_ = builderForValue.build();
-        onChanged();
       } else {
         headlineBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1177,17 +1186,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeHeadline(com.google.ads.googleads.v12.common.AdTextAsset value) {
       if (headlineBuilder_ == null) {
-        if (headline_ != null) {
-          headline_ =
-            com.google.ads.googleads.v12.common.AdTextAsset.newBuilder(headline_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000004) != 0) &&
+          headline_ != null &&
+          headline_ != com.google.ads.googleads.v12.common.AdTextAsset.getDefaultInstance()) {
+          getHeadlineBuilder().mergeFrom(value);
         } else {
           headline_ = value;
         }
-        onChanged();
       } else {
         headlineBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1198,14 +1208,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.AdTextAsset headline = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder clearHeadline() {
-      if (headlineBuilder_ == null) {
-        headline_ = null;
-        onChanged();
-      } else {
-        headline_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      headline_ = null;
+      if (headlineBuilder_ != null) {
+        headlineBuilder_.dispose();
         headlineBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1216,7 +1225,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.AdTextAsset headline = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.google.ads.googleads.v12.common.AdTextAsset.Builder getHeadlineBuilder() {
-      
+      bitField0_ |= 0x00000004;
       onChanged();
       return getHeadlineFieldBuilder().getBuilder();
     }
@@ -1268,7 +1277,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the description field is set.
      */
     public boolean hasDescription() {
-      return descriptionBuilder_ != null || description_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -1298,11 +1307,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         description_ = value;
-        onChanged();
       } else {
         descriptionBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1316,11 +1325,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.AdTextAsset.Builder builderForValue) {
       if (descriptionBuilder_ == null) {
         description_ = builderForValue.build();
-        onChanged();
       } else {
         descriptionBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1332,17 +1341,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDescription(com.google.ads.googleads.v12.common.AdTextAsset value) {
       if (descriptionBuilder_ == null) {
-        if (description_ != null) {
-          description_ =
-            com.google.ads.googleads.v12.common.AdTextAsset.newBuilder(description_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000008) != 0) &&
+          description_ != null &&
+          description_ != com.google.ads.googleads.v12.common.AdTextAsset.getDefaultInstance()) {
+          getDescriptionBuilder().mergeFrom(value);
         } else {
           description_ = value;
         }
-        onChanged();
       } else {
         descriptionBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1353,14 +1363,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.AdTextAsset description = 4 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder clearDescription() {
-      if (descriptionBuilder_ == null) {
-        description_ = null;
-        onChanged();
-      } else {
-        description_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
+      description_ = null;
+      if (descriptionBuilder_ != null) {
+        descriptionBuilder_.dispose();
         descriptionBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1371,7 +1380,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.AdTextAsset description = 4 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.google.ads.googleads.v12.common.AdTextAsset.Builder getDescriptionBuilder() {
-      
+      bitField0_ |= 0x00000008;
       onChanged();
       return getDescriptionFieldBuilder().getBuilder();
     }
@@ -1464,11 +1473,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallToActionText(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       callToActionText_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1481,8 +1488,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallToActionText() {
-      
       callToActionText_ = getDefaultInstance().getCallToActionText();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1497,12 +1504,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallToActionTextBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       callToActionText_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1510,9 +1515,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v12.common.AdDiscoveryCarouselCardAsset> carouselCards_ =
       java.util.Collections.emptyList();
     private void ensureCarouselCardsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000020) != 0)) {
         carouselCards_ = new java.util.ArrayList<com.google.ads.googleads.v12.common.AdDiscoveryCarouselCardAsset>(carouselCards_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000020;
        }
     }
 
@@ -1706,7 +1711,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearCarouselCards() {
       if (carouselCardsBuilder_ == null) {
         carouselCards_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
       } else {
         carouselCardsBuilder_.clear();
@@ -1811,7 +1816,7 @@ private static final long serialVersionUID = 0L;
         carouselCardsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v12.common.AdDiscoveryCarouselCardAsset, com.google.ads.googleads.v12.common.AdDiscoveryCarouselCardAsset.Builder, com.google.ads.googleads.v12.common.AdDiscoveryCarouselCardAssetOrBuilder>(
                 carouselCards_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000020) != 0),
                 getParentForChildren(),
                 isClean());
         carouselCards_ = null;

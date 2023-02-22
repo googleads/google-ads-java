@@ -50,7 +50,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CUSTOMER_ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object customerId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object customerId_ = "";
   /**
    * <pre>
    * Required. The ID of the customer.
@@ -148,7 +149,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.services.SmartCampaignSuggestionInfoOrBuilder getSuggestionInfoOrBuilder() {
-    return getSuggestionInfo();
+    return suggestionInfo_ == null ? com.google.ads.googleads.v12.services.SmartCampaignSuggestionInfo.getDefaultInstance() : suggestionInfo_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -359,12 +360,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       customerId_ = "";
-
-      if (suggestionInfoBuilder_ == null) {
-        suggestionInfo_ = null;
-      } else {
-        suggestionInfo_ = null;
+      suggestionInfo_ = null;
+      if (suggestionInfoBuilder_ != null) {
+        suggestionInfoBuilder_.dispose();
         suggestionInfoBuilder_ = null;
       }
       return this;
@@ -393,14 +393,21 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.SuggestKeywordThemesRequest buildPartial() {
       com.google.ads.googleads.v12.services.SuggestKeywordThemesRequest result = new com.google.ads.googleads.v12.services.SuggestKeywordThemesRequest(this);
-      result.customerId_ = customerId_;
-      if (suggestionInfoBuilder_ == null) {
-        result.suggestionInfo_ = suggestionInfo_;
-      } else {
-        result.suggestionInfo_ = suggestionInfoBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.SuggestKeywordThemesRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.customerId_ = customerId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.suggestionInfo_ = suggestionInfoBuilder_ == null
+            ? suggestionInfo_
+            : suggestionInfoBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -449,6 +456,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.services.SuggestKeywordThemesRequest.getDefaultInstance()) return this;
       if (!other.getCustomerId().isEmpty()) {
         customerId_ = other.customerId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasSuggestionInfo()) {
@@ -482,14 +490,14 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               customerId_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               input.readMessage(
                   getSuggestionInfoFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             default: {
@@ -507,6 +515,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object customerId_ = "";
     /**
@@ -561,11 +570,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       customerId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -578,8 +585,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCustomerId() {
-      
       customerId_ = getDefaultInstance().getCustomerId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -594,12 +601,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       customerId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -622,7 +627,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the suggestionInfo field is set.
      */
     public boolean hasSuggestionInfo() {
-      return suggestionInfoBuilder_ != null || suggestionInfo_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -664,11 +669,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         suggestionInfo_ = value;
-        onChanged();
       } else {
         suggestionInfoBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -688,11 +693,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.services.SmartCampaignSuggestionInfo.Builder builderForValue) {
       if (suggestionInfoBuilder_ == null) {
         suggestionInfo_ = builderForValue.build();
-        onChanged();
       } else {
         suggestionInfoBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -710,17 +715,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeSuggestionInfo(com.google.ads.googleads.v12.services.SmartCampaignSuggestionInfo value) {
       if (suggestionInfoBuilder_ == null) {
-        if (suggestionInfo_ != null) {
-          suggestionInfo_ =
-            com.google.ads.googleads.v12.services.SmartCampaignSuggestionInfo.newBuilder(suggestionInfo_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          suggestionInfo_ != null &&
+          suggestionInfo_ != com.google.ads.googleads.v12.services.SmartCampaignSuggestionInfo.getDefaultInstance()) {
+          getSuggestionInfoBuilder().mergeFrom(value);
         } else {
           suggestionInfo_ = value;
         }
-        onChanged();
       } else {
         suggestionInfoBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -737,14 +743,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.services.SmartCampaignSuggestionInfo suggestion_info = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder clearSuggestionInfo() {
-      if (suggestionInfoBuilder_ == null) {
-        suggestionInfo_ = null;
-        onChanged();
-      } else {
-        suggestionInfo_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      suggestionInfo_ = null;
+      if (suggestionInfoBuilder_ != null) {
+        suggestionInfoBuilder_.dispose();
         suggestionInfoBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -761,7 +766,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.services.SmartCampaignSuggestionInfo suggestion_info = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.google.ads.googleads.v12.services.SmartCampaignSuggestionInfo.Builder getSuggestionInfoBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getSuggestionInfoFieldBuilder().getBuilder();
     }

@@ -9,8 +9,8 @@ public interface ListMerchantCenterLinksRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The ID of the customer onto which to apply the Merchant Center link list
-   * operation.
+   * Required. The ID of the customer onto which to apply the Merchant Center
+   * link list operation.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -19,8 +19,8 @@ public interface ListMerchantCenterLinksRequestOrBuilder extends
   java.lang.String getCustomerId();
   /**
    * <pre>
-   * Required. The ID of the customer onto which to apply the Merchant Center link list
-   * operation.
+   * Required. The ID of the customer onto which to apply the Merchant Center
+   * link list operation.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>

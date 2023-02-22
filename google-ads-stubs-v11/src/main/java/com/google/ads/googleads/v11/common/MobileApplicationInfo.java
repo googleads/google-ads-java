@@ -51,7 +51,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int APP_ID_FIELD_NUMBER = 4;
-  private volatile java.lang.Object appId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object appId_ = "";
   /**
    * <pre>
    * A string that uniquely identifies a mobile application to Google Ads API.
@@ -151,7 +152,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 5;
-  private volatile java.lang.Object name_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
   /**
    * <pre>
    * Name of this mobile application.
@@ -419,10 +421,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       appId_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       name_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -449,19 +450,23 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.MobileApplicationInfo buildPartial() {
       com.google.ads.googleads.v11.common.MobileApplicationInfo result = new com.google.ads.googleads.v11.common.MobileApplicationInfo(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.MobileApplicationInfo result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.appId_ = appId_;
         to_bitField0_ |= 0x00000001;
       }
-      result.appId_ = appId_;
       if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.name_ = name_;
         to_bitField0_ |= 0x00000002;
       }
-      result.name_ = name_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -509,13 +514,13 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v11.common.MobileApplicationInfo other) {
       if (other == com.google.ads.googleads.v11.common.MobileApplicationInfo.getDefaultInstance()) return this;
       if (other.hasAppId()) {
-        bitField0_ |= 0x00000001;
         appId_ = other.appId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasName()) {
-        bitField0_ |= 0x00000002;
         name_ = other.name_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -691,11 +696,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAppId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       appId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -722,8 +725,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAppId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       appId_ = getDefaultInstance().getAppId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -752,12 +755,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAppIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       appId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -826,11 +827,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       name_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -843,8 +842,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -859,12 +858,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

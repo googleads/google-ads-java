@@ -5,7 +5,8 @@ package com.google.ads.googleads.v11.services;
 
 /**
  * <pre>
- * Response message for [CustomerService.ListAccessibleCustomers][google.ads.googleads.v11.services.CustomerService.ListAccessibleCustomers].
+ * Response message for
+ * [CustomerService.ListAccessibleCustomers][google.ads.googleads.v11.services.CustomerService.ListAccessibleCustomers].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v11.services.ListAccessibleCustomersResponse}
@@ -49,6 +50,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESOURCE_NAMES_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList resourceNames_;
   /**
    * <pre>
@@ -266,7 +268,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Response message for [CustomerService.ListAccessibleCustomers][google.ads.googleads.v11.services.CustomerService.ListAccessibleCustomers].
+   * Response message for
+   * [CustomerService.ListAccessibleCustomers][google.ads.googleads.v11.services.CustomerService.ListAccessibleCustomers].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v11.services.ListAccessibleCustomersResponse}
@@ -301,6 +304,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       bitField0_ = (bitField0_ & ~0x00000001);
       return this;
@@ -329,14 +333,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.ListAccessibleCustomersResponse buildPartial() {
       com.google.ads.googleads.v11.services.ListAccessibleCustomersResponse result = new com.google.ads.googleads.v11.services.ListAccessibleCustomersResponse(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.services.ListAccessibleCustomersResponse result) {
       if (((bitField0_ & 0x00000001) != 0)) {
         resourceNames_ = resourceNames_.getUnmodifiableView();
         bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.resourceNames_ = resourceNames_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.ListAccessibleCustomersResponse result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override
@@ -514,10 +526,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNames(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureResourceNamesIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureResourceNamesIsMutable();
       resourceNames_.set(index, value);
       onChanged();
       return this;
@@ -534,10 +544,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addResourceNames(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureResourceNamesIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureResourceNamesIsMutable();
       resourceNames_.add(value);
       onChanged();
       return this;
@@ -587,10 +595,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addResourceNamesBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureResourceNamesIsMutable();
       resourceNames_.add(value);
       onChanged();

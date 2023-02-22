@@ -334,6 +334,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (youtubeSelectSettingsBuilder_ != null) {
         youtubeSelectSettingsBuilder_.clear();
       }
@@ -365,16 +366,23 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.AdvancedProductTargeting buildPartial() {
       com.google.ads.googleads.v12.services.AdvancedProductTargeting result = new com.google.ads.googleads.v12.services.AdvancedProductTargeting(this);
-      if (advancedTargetingCase_ == 1) {
-        if (youtubeSelectSettingsBuilder_ == null) {
-          result.advancedTargeting_ = advancedTargeting_;
-        } else {
-          result.advancedTargeting_ = youtubeSelectSettingsBuilder_.build();
-        }
-      }
-      result.advancedTargetingCase_ = advancedTargetingCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.AdvancedProductTargeting result) {
+      int from_bitField0_ = bitField0_;
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v12.services.AdvancedProductTargeting result) {
+      result.advancedTargetingCase_ = advancedTargetingCase_;
+      result.advancedTargeting_ = this.advancedTargeting_;
+      if (advancedTargetingCase_ == 1 &&
+          youtubeSelectSettingsBuilder_ != null) {
+        result.advancedTargeting_ = youtubeSelectSettingsBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -493,6 +501,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v12.services.YouTubeSelectSettings, com.google.ads.googleads.v12.services.YouTubeSelectSettings.Builder, com.google.ads.googleads.v12.services.YouTubeSelectSettingsOrBuilder> youtubeSelectSettingsBuilder_;
@@ -668,7 +677,7 @@ private static final long serialVersionUID = 0L;
         advancedTargeting_ = null;
       }
       advancedTargetingCase_ = 1;
-      onChanged();;
+      onChanged();
       return youtubeSelectSettingsBuilder_;
     }
     @java.lang.Override

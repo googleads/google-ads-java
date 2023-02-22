@@ -483,6 +483,9 @@ public interface CampaignCriterionOrBuilder extends
   /**
    * <pre>
    * Immutable. User List.
+   * The Similar Audiences sunset starts May 2023. Refer to
+   * https://ads-developers.googleblog.com/2022/11/announcing-deprecation-and-sunset-of.html
+   * for other options.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.UserListInfo user_list = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -492,6 +495,9 @@ public interface CampaignCriterionOrBuilder extends
   /**
    * <pre>
    * Immutable. User List.
+   * The Similar Audiences sunset starts May 2023. Refer to
+   * https://ads-developers.googleblog.com/2022/11/announcing-deprecation-and-sunset-of.html
+   * for other options.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.UserListInfo user_list = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -501,6 +507,9 @@ public interface CampaignCriterionOrBuilder extends
   /**
    * <pre>
    * Immutable. User List.
+   * The Similar Audiences sunset starts May 2023. Refer to
+   * https://ads-developers.googleblog.com/2022/11/announcing-deprecation-and-sunset-of.html
+   * for other options.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.UserListInfo user_list = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>

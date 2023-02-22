@@ -60,7 +60,10 @@ import javax.annotation.Generated;
  * audienceServiceSettingsBuilder
  *     .mutateAudiencesSettings()
  *     .setRetrySettings(
- *         audienceServiceSettingsBuilder.mutateAudiencesSettings().getRetrySettings().toBuilder()
+ *         audienceServiceSettingsBuilder
+ *             .mutateAudiencesSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
  * AudienceServiceSettings audienceServiceSettings = audienceServiceSettingsBuilder.build();

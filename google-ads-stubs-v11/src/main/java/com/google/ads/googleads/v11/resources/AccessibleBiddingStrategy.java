@@ -61,11 +61,11 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The target return on ad spend (ROAS) option. If set, the bid strategy
-     * will maximize revenue while averaging the target return on ad spend. If
-     * the target ROAS is high, the bid strategy may not be able to spend the
-     * full budget. If the target ROAS is not set, the bid strategy will aim to
-     * achieve the highest possible ROAS for the budget.
+     * Output only. The target return on ad spend (ROAS) option. If set, the bid
+     * strategy will maximize revenue while averaging the target return on ad
+     * spend. If the target ROAS is high, the bid strategy may not be able to
+     * spend the full budget. If the target ROAS is not set, the bid strategy
+     * will aim to achieve the highest possible ROAS for the budget.
      * </pre>
      *
      * <code>double target_roas = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -119,14 +119,14 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int TARGET_ROAS_FIELD_NUMBER = 1;
-    private double targetRoas_;
+    private double targetRoas_ = 0D;
     /**
      * <pre>
-     * Output only. The target return on ad spend (ROAS) option. If set, the bid strategy
-     * will maximize revenue while averaging the target return on ad spend. If
-     * the target ROAS is high, the bid strategy may not be able to spend the
-     * full budget. If the target ROAS is not set, the bid strategy will aim to
-     * achieve the highest possible ROAS for the budget.
+     * Output only. The target return on ad spend (ROAS) option. If set, the bid
+     * strategy will maximize revenue while averaging the target return on ad
+     * spend. If the target ROAS is high, the bid strategy may not be able to
+     * spend the full budget. If the target ROAS is not set, the bid strategy
+     * will aim to achieve the highest possible ROAS for the budget.
      * </pre>
      *
      * <code>double target_roas = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -332,8 +332,8 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         targetRoas_ = 0D;
-
         return this;
       }
 
@@ -360,9 +360,16 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversionValue buildPartial() {
         com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversionValue result = new com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversionValue(this);
-        result.targetRoas_ = targetRoas_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversionValue result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.targetRoas_ = targetRoas_;
+        }
       }
 
       @java.lang.Override
@@ -440,7 +447,7 @@ private static final long serialVersionUID = 0L;
                 break;
               case 9: {
                 targetRoas_ = input.readDouble();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 9
               default: {
@@ -458,15 +465,16 @@ private static final long serialVersionUID = 0L;
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private double targetRoas_ ;
       /**
        * <pre>
-       * Output only. The target return on ad spend (ROAS) option. If set, the bid strategy
-       * will maximize revenue while averaging the target return on ad spend. If
-       * the target ROAS is high, the bid strategy may not be able to spend the
-       * full budget. If the target ROAS is not set, the bid strategy will aim to
-       * achieve the highest possible ROAS for the budget.
+       * Output only. The target return on ad spend (ROAS) option. If set, the bid
+       * strategy will maximize revenue while averaging the target return on ad
+       * spend. If the target ROAS is high, the bid strategy may not be able to
+       * spend the full budget. If the target ROAS is not set, the bid strategy
+       * will aim to achieve the highest possible ROAS for the budget.
        * </pre>
        *
        * <code>double target_roas = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -478,11 +486,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The target return on ad spend (ROAS) option. If set, the bid strategy
-       * will maximize revenue while averaging the target return on ad spend. If
-       * the target ROAS is high, the bid strategy may not be able to spend the
-       * full budget. If the target ROAS is not set, the bid strategy will aim to
-       * achieve the highest possible ROAS for the budget.
+       * Output only. The target return on ad spend (ROAS) option. If set, the bid
+       * strategy will maximize revenue while averaging the target return on ad
+       * spend. If the target ROAS is high, the bid strategy may not be able to
+       * spend the full budget. If the target ROAS is not set, the bid strategy
+       * will aim to achieve the highest possible ROAS for the budget.
        * </pre>
        *
        * <code>double target_roas = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -492,23 +500,24 @@ private static final long serialVersionUID = 0L;
       public Builder setTargetRoas(double value) {
         
         targetRoas_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The target return on ad spend (ROAS) option. If set, the bid strategy
-       * will maximize revenue while averaging the target return on ad spend. If
-       * the target ROAS is high, the bid strategy may not be able to spend the
-       * full budget. If the target ROAS is not set, the bid strategy will aim to
-       * achieve the highest possible ROAS for the budget.
+       * Output only. The target return on ad spend (ROAS) option. If set, the bid
+       * strategy will maximize revenue while averaging the target return on ad
+       * spend. If the target ROAS is high, the bid strategy may not be able to
+       * spend the full budget. If the target ROAS is not set, the bid strategy
+       * will aim to achieve the highest possible ROAS for the budget.
        * </pre>
        *
        * <code>double target_roas = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return This builder for chaining.
        */
       public Builder clearTargetRoas() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         targetRoas_ = 0D;
         onChanged();
         return this;
@@ -583,8 +592,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The target cost per acquisition (CPA) option. This is the average amount
-     * that you would like to spend per acquisition.
+     * Output only. The target cost per acquisition (CPA) option. This is the
+     * average amount that you would like to spend per acquisition.
      * </pre>
      *
      * <code>int64 target_cpa_micros = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -638,11 +647,11 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int TARGET_CPA_MICROS_FIELD_NUMBER = 2;
-    private long targetCpaMicros_;
+    private long targetCpaMicros_ = 0L;
     /**
      * <pre>
-     * Output only. The target cost per acquisition (CPA) option. This is the average amount
-     * that you would like to spend per acquisition.
+     * Output only. The target cost per acquisition (CPA) option. This is the
+     * average amount that you would like to spend per acquisition.
      * </pre>
      *
      * <code>int64 target_cpa_micros = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -847,8 +856,8 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         targetCpaMicros_ = 0L;
-
         return this;
       }
 
@@ -875,9 +884,16 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversions buildPartial() {
         com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversions result = new com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversions(this);
-        result.targetCpaMicros_ = targetCpaMicros_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversions result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.targetCpaMicros_ = targetCpaMicros_;
+        }
       }
 
       @java.lang.Override
@@ -955,7 +971,7 @@ private static final long serialVersionUID = 0L;
                 break;
               case 16: {
                 targetCpaMicros_ = input.readInt64();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 16
               default: {
@@ -973,12 +989,13 @@ private static final long serialVersionUID = 0L;
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private long targetCpaMicros_ ;
       /**
        * <pre>
-       * Output only. The target cost per acquisition (CPA) option. This is the average amount
-       * that you would like to spend per acquisition.
+       * Output only. The target cost per acquisition (CPA) option. This is the
+       * average amount that you would like to spend per acquisition.
        * </pre>
        *
        * <code>int64 target_cpa_micros = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -990,8 +1007,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The target cost per acquisition (CPA) option. This is the average amount
-       * that you would like to spend per acquisition.
+       * Output only. The target cost per acquisition (CPA) option. This is the
+       * average amount that you would like to spend per acquisition.
        * </pre>
        *
        * <code>int64 target_cpa_micros = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1001,20 +1018,21 @@ private static final long serialVersionUID = 0L;
       public Builder setTargetCpaMicros(long value) {
         
         targetCpaMicros_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The target cost per acquisition (CPA) option. This is the average amount
-       * that you would like to spend per acquisition.
+       * Output only. The target cost per acquisition (CPA) option. This is the
+       * average amount that you would like to spend per acquisition.
        * </pre>
        *
        * <code>int64 target_cpa_micros = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return This builder for chaining.
        */
       public Builder clearTargetCpaMicros() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         targetCpaMicros_ = 0L;
         onChanged();
         return this;
@@ -1157,7 +1175,7 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
     public static final int TARGET_CPA_MICROS_FIELD_NUMBER = 1;
-    private long targetCpaMicros_;
+    private long targetCpaMicros_ = 0L;
     /**
      * <pre>
      * Output only. Average CPA target.
@@ -1386,8 +1404,8 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         targetCpaMicros_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -1414,15 +1432,19 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetCpa buildPartial() {
         com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetCpa result = new com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetCpa(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetCpa result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.targetCpaMicros_ = targetCpaMicros_;
           to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1561,8 +1583,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setTargetCpaMicros(long value) {
-        bitField0_ |= 0x00000001;
+        
         targetCpaMicros_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1692,9 +1715,9 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The highest CPC bid the automated bidding system is permitted to specify.
-     * This is a required field entered by the advertiser that sets the ceiling
-     * and specified in local micros.
+     * Output only. The highest CPC bid the automated bidding system is
+     * permitted to specify. This is a required field entered by the advertiser
+     * that sets the ceiling and specified in local micros.
      * </pre>
      *
      * <code>optional int64 cpc_bid_ceiling_micros = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1703,9 +1726,9 @@ private static final long serialVersionUID = 0L;
     boolean hasCpcBidCeilingMicros();
     /**
      * <pre>
-     * Output only. The highest CPC bid the automated bidding system is permitted to specify.
-     * This is a required field entered by the advertiser that sets the ceiling
-     * and specified in local micros.
+     * Output only. The highest CPC bid the automated bidding system is
+     * permitted to specify. This is a required field entered by the advertiser
+     * that sets the ceiling and specified in local micros.
      * </pre>
      *
      * <code>optional int64 cpc_bid_ceiling_micros = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1762,7 +1785,7 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
     public static final int LOCATION_FIELD_NUMBER = 1;
-    private int location_;
+    private int location_ = 0;
     /**
      * <pre>
      * Output only. The targeted location on the search results page.
@@ -1783,13 +1806,12 @@ private static final long serialVersionUID = 0L;
      * @return The location.
      */
     @java.lang.Override public com.google.ads.googleads.v11.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation getLocation() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation result = com.google.ads.googleads.v11.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation.valueOf(location_);
+      com.google.ads.googleads.v11.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation result = com.google.ads.googleads.v11.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation.forNumber(location_);
       return result == null ? com.google.ads.googleads.v11.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation.UNRECOGNIZED : result;
     }
 
     public static final int LOCATION_FRACTION_MICROS_FIELD_NUMBER = 2;
-    private long locationFractionMicros_;
+    private long locationFractionMicros_ = 0L;
     /**
      * <pre>
      * The chosen fraction of ads to be shown in the targeted location in
@@ -1818,12 +1840,12 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int CPC_BID_CEILING_MICROS_FIELD_NUMBER = 3;
-    private long cpcBidCeilingMicros_;
+    private long cpcBidCeilingMicros_ = 0L;
     /**
      * <pre>
-     * Output only. The highest CPC bid the automated bidding system is permitted to specify.
-     * This is a required field entered by the advertiser that sets the ceiling
-     * and specified in local micros.
+     * Output only. The highest CPC bid the automated bidding system is
+     * permitted to specify. This is a required field entered by the advertiser
+     * that sets the ceiling and specified in local micros.
      * </pre>
      *
      * <code>optional int64 cpc_bid_ceiling_micros = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1835,9 +1857,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The highest CPC bid the automated bidding system is permitted to specify.
-     * This is a required field entered by the advertiser that sets the ceiling
-     * and specified in local micros.
+     * Output only. The highest CPC bid the automated bidding system is
+     * permitted to specify. This is a required field entered by the advertiser
+     * that sets the ceiling and specified in local micros.
      * </pre>
      *
      * <code>optional int64 cpc_bid_ceiling_micros = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2075,12 +2097,10 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         location_ = 0;
-
         locationFractionMicros_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000001);
         cpcBidCeilingMicros_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -2107,20 +2127,26 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetImpressionShare buildPartial() {
         com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetImpressionShare result = new com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetImpressionShare(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetImpressionShare result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        result.location_ = location_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.location_ = location_;
+        }
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
           result.locationFractionMicros_ = locationFractionMicros_;
           to_bitField0_ |= 0x00000001;
         }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
+        if (((from_bitField0_ & 0x00000004) != 0)) {
           result.cpcBidCeilingMicros_ = cpcBidCeilingMicros_;
           to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2204,17 +2230,17 @@ private static final long serialVersionUID = 0L;
                 break;
               case 8: {
                 location_ = input.readEnum();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               case 16: {
                 locationFractionMicros_ = input.readInt64();
-                bitField0_ |= 0x00000001;
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               case 24: {
                 cpcBidCeilingMicros_ = input.readInt64();
-                bitField0_ |= 0x00000002;
+                bitField0_ |= 0x00000004;
                 break;
               } // case 24
               default: {
@@ -2256,8 +2282,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setLocationValue(int value) {
-        
         location_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2271,8 +2297,7 @@ private static final long serialVersionUID = 0L;
        */
       @java.lang.Override
       public com.google.ads.googleads.v11.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation getLocation() {
-        @SuppressWarnings("deprecation")
-        com.google.ads.googleads.v11.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation result = com.google.ads.googleads.v11.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation.valueOf(location_);
+        com.google.ads.googleads.v11.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation result = com.google.ads.googleads.v11.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation.forNumber(location_);
         return result == null ? com.google.ads.googleads.v11.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation.UNRECOGNIZED : result;
       }
       /**
@@ -2288,7 +2313,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000001;
         location_ = value.getNumber();
         onChanged();
         return this;
@@ -2302,7 +2327,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearLocation() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         location_ = 0;
         onChanged();
         return this;
@@ -2320,7 +2345,7 @@ private static final long serialVersionUID = 0L;
        */
       @java.lang.Override
       public boolean hasLocationFractionMicros() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -2346,8 +2371,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setLocationFractionMicros(long value) {
-        bitField0_ |= 0x00000001;
+        
         locationFractionMicros_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2361,7 +2387,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearLocationFractionMicros() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         locationFractionMicros_ = 0L;
         onChanged();
         return this;
@@ -2370,9 +2396,9 @@ private static final long serialVersionUID = 0L;
       private long cpcBidCeilingMicros_ ;
       /**
        * <pre>
-       * Output only. The highest CPC bid the automated bidding system is permitted to specify.
-       * This is a required field entered by the advertiser that sets the ceiling
-       * and specified in local micros.
+       * Output only. The highest CPC bid the automated bidding system is
+       * permitted to specify. This is a required field entered by the advertiser
+       * that sets the ceiling and specified in local micros.
        * </pre>
        *
        * <code>optional int64 cpc_bid_ceiling_micros = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2380,13 +2406,13 @@ private static final long serialVersionUID = 0L;
        */
       @java.lang.Override
       public boolean hasCpcBidCeilingMicros() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <pre>
-       * Output only. The highest CPC bid the automated bidding system is permitted to specify.
-       * This is a required field entered by the advertiser that sets the ceiling
-       * and specified in local micros.
+       * Output only. The highest CPC bid the automated bidding system is
+       * permitted to specify. This is a required field entered by the advertiser
+       * that sets the ceiling and specified in local micros.
        * </pre>
        *
        * <code>optional int64 cpc_bid_ceiling_micros = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2398,9 +2424,9 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The highest CPC bid the automated bidding system is permitted to specify.
-       * This is a required field entered by the advertiser that sets the ceiling
-       * and specified in local micros.
+       * Output only. The highest CPC bid the automated bidding system is
+       * permitted to specify. This is a required field entered by the advertiser
+       * that sets the ceiling and specified in local micros.
        * </pre>
        *
        * <code>optional int64 cpc_bid_ceiling_micros = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2408,23 +2434,24 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setCpcBidCeilingMicros(long value) {
-        bitField0_ |= 0x00000002;
+        
         cpcBidCeilingMicros_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The highest CPC bid the automated bidding system is permitted to specify.
-       * This is a required field entered by the advertiser that sets the ceiling
-       * and specified in local micros.
+       * Output only. The highest CPC bid the automated bidding system is
+       * permitted to specify. This is a required field entered by the advertiser
+       * that sets the ceiling and specified in local micros.
        * </pre>
        *
        * <code>optional int64 cpc_bid_ceiling_micros = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return This builder for chaining.
        */
       public Builder clearCpcBidCeilingMicros() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         cpcBidCeilingMicros_ = 0L;
         onChanged();
         return this;
@@ -2499,7 +2526,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The chosen revenue (based on conversion data) per unit of spend.
+     * Output only. The chosen revenue (based on conversion data) per unit of
+     * spend.
      * </pre>
      *
      * <code>optional double target_roas = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2508,7 +2536,8 @@ private static final long serialVersionUID = 0L;
     boolean hasTargetRoas();
     /**
      * <pre>
-     * Output only. The chosen revenue (based on conversion data) per unit of spend.
+     * Output only. The chosen revenue (based on conversion data) per unit of
+     * spend.
      * </pre>
      *
      * <code>optional double target_roas = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2563,10 +2592,11 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
     public static final int TARGET_ROAS_FIELD_NUMBER = 1;
-    private double targetRoas_;
+    private double targetRoas_ = 0D;
     /**
      * <pre>
-     * Output only. The chosen revenue (based on conversion data) per unit of spend.
+     * Output only. The chosen revenue (based on conversion data) per unit of
+     * spend.
      * </pre>
      *
      * <code>optional double target_roas = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2578,7 +2608,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The chosen revenue (based on conversion data) per unit of spend.
+     * Output only. The chosen revenue (based on conversion data) per unit of
+     * spend.
      * </pre>
      *
      * <code>optional double target_roas = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2789,8 +2820,8 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         targetRoas_ = 0D;
-        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -2817,15 +2848,19 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetRoas buildPartial() {
         com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetRoas result = new com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetRoas(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetRoas result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.targetRoas_ = targetRoas_;
           to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2926,7 +2961,8 @@ private static final long serialVersionUID = 0L;
       private double targetRoas_ ;
       /**
        * <pre>
-       * Output only. The chosen revenue (based on conversion data) per unit of spend.
+       * Output only. The chosen revenue (based on conversion data) per unit of
+       * spend.
        * </pre>
        *
        * <code>optional double target_roas = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2938,7 +2974,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The chosen revenue (based on conversion data) per unit of spend.
+       * Output only. The chosen revenue (based on conversion data) per unit of
+       * spend.
        * </pre>
        *
        * <code>optional double target_roas = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2950,7 +2987,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The chosen revenue (based on conversion data) per unit of spend.
+       * Output only. The chosen revenue (based on conversion data) per unit of
+       * spend.
        * </pre>
        *
        * <code>optional double target_roas = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2958,14 +2996,16 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setTargetRoas(double value) {
-        bitField0_ |= 0x00000001;
+        
         targetRoas_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The chosen revenue (based on conversion data) per unit of spend.
+       * Output only. The chosen revenue (based on conversion data) per unit of
+       * spend.
        * </pre>
        *
        * <code>optional double target_roas = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3058,7 +3098,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 target_spend_micros = 1 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @deprecated google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetSpend.target_spend_micros is deprecated.
-     *     See google/ads/googleads/v11/resources/accessible_bidding_strategy.proto;l=106
+     *     See google/ads/googleads/v11/resources/accessible_bidding_strategy.proto;l=111
      * @return Whether the targetSpendMicros field is set.
      */
     @java.lang.Deprecated boolean hasTargetSpendMicros();
@@ -3075,7 +3115,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 target_spend_micros = 1 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @deprecated google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetSpend.target_spend_micros is deprecated.
-     *     See google/ads/googleads/v11/resources/accessible_bidding_strategy.proto;l=106
+     *     See google/ads/googleads/v11/resources/accessible_bidding_strategy.proto;l=111
      * @return The targetSpendMicros.
      */
     @java.lang.Deprecated long getTargetSpendMicros();
@@ -3148,7 +3188,7 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
     public static final int TARGET_SPEND_MICROS_FIELD_NUMBER = 1;
-    private long targetSpendMicros_;
+    private long targetSpendMicros_ = 0L;
     /**
      * <pre>
      * Output only. The spend target under which to maximize clicks.
@@ -3162,7 +3202,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 target_spend_micros = 1 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @deprecated google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetSpend.target_spend_micros is deprecated.
-     *     See google/ads/googleads/v11/resources/accessible_bidding_strategy.proto;l=106
+     *     See google/ads/googleads/v11/resources/accessible_bidding_strategy.proto;l=111
      * @return Whether the targetSpendMicros field is set.
      */
     @java.lang.Override
@@ -3182,7 +3222,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int64 target_spend_micros = 1 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @deprecated google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetSpend.target_spend_micros is deprecated.
-     *     See google/ads/googleads/v11/resources/accessible_bidding_strategy.proto;l=106
+     *     See google/ads/googleads/v11/resources/accessible_bidding_strategy.proto;l=111
      * @return The targetSpendMicros.
      */
     @java.lang.Override
@@ -3191,7 +3231,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int CPC_BID_CEILING_MICROS_FIELD_NUMBER = 2;
-    private long cpcBidCeilingMicros_;
+    private long cpcBidCeilingMicros_ = 0L;
     /**
      * <pre>
      * Output only. Maximum bid limit that can be set by the bid strategy.
@@ -3435,10 +3475,9 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         targetSpendMicros_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000001);
         cpcBidCeilingMicros_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -3465,6 +3504,12 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetSpend buildPartial() {
         com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetSpend result = new com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetSpend(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetSpend result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -3475,9 +3520,7 @@ private static final long serialVersionUID = 0L;
           result.cpcBidCeilingMicros_ = cpcBidCeilingMicros_;
           to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3597,7 +3640,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int64 target_spend_micros = 1 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @deprecated google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetSpend.target_spend_micros is deprecated.
-       *     See google/ads/googleads/v11/resources/accessible_bidding_strategy.proto;l=106
+       *     See google/ads/googleads/v11/resources/accessible_bidding_strategy.proto;l=111
        * @return Whether the targetSpendMicros field is set.
        */
       @java.lang.Override
@@ -3617,7 +3660,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int64 target_spend_micros = 1 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @deprecated google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetSpend.target_spend_micros is deprecated.
-       *     See google/ads/googleads/v11/resources/accessible_bidding_strategy.proto;l=106
+       *     See google/ads/googleads/v11/resources/accessible_bidding_strategy.proto;l=111
        * @return The targetSpendMicros.
        */
       @java.lang.Override
@@ -3637,13 +3680,14 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int64 target_spend_micros = 1 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @deprecated google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetSpend.target_spend_micros is deprecated.
-       *     See google/ads/googleads/v11/resources/accessible_bidding_strategy.proto;l=106
+       *     See google/ads/googleads/v11/resources/accessible_bidding_strategy.proto;l=111
        * @param value The targetSpendMicros to set.
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder setTargetSpendMicros(long value) {
-        bitField0_ |= 0x00000001;
+        
         targetSpendMicros_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3660,7 +3704,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int64 target_spend_micros = 1 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @deprecated google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetSpend.target_spend_micros is deprecated.
-       *     See google/ads/googleads/v11/resources/accessible_bidding_strategy.proto;l=106
+       *     See google/ads/googleads/v11/resources/accessible_bidding_strategy.proto;l=111
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearTargetSpendMicros() {
@@ -3708,8 +3752,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setCpcBidCeilingMicros(long value) {
-        bitField0_ |= 0x00000002;
+        
         cpcBidCeilingMicros_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3842,7 +3887,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Output only. The resource name of the accessible bidding strategy.
@@ -3892,7 +3938,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ID_FIELD_NUMBER = 2;
-  private long id_;
+  private long id_ = 0L;
   /**
    * <pre>
    * Output only. The ID of the bidding strategy.
@@ -3907,7 +3953,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 3;
-  private volatile java.lang.Object name_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
   /**
    * <pre>
    * Output only. The name of the bidding strategy.
@@ -3953,7 +4000,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TYPE_FIELD_NUMBER = 4;
-  private int type_;
+  private int type_ = 0;
   /**
    * <pre>
    * Output only. The type of the bidding strategy.
@@ -3974,13 +4021,12 @@ private static final long serialVersionUID = 0L;
    * @return The type.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.BiddingStrategyTypeEnum.BiddingStrategyType getType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.BiddingStrategyTypeEnum.BiddingStrategyType result = com.google.ads.googleads.v11.enums.BiddingStrategyTypeEnum.BiddingStrategyType.valueOf(type_);
+    com.google.ads.googleads.v11.enums.BiddingStrategyTypeEnum.BiddingStrategyType result = com.google.ads.googleads.v11.enums.BiddingStrategyTypeEnum.BiddingStrategyType.forNumber(type_);
     return result == null ? com.google.ads.googleads.v11.enums.BiddingStrategyTypeEnum.BiddingStrategyType.UNRECOGNIZED : result;
   }
 
   public static final int OWNER_CUSTOMER_ID_FIELD_NUMBER = 5;
-  private long ownerCustomerId_;
+  private long ownerCustomerId_ = 0L;
   /**
    * <pre>
    * Output only. The ID of the Customer which owns the bidding strategy.
@@ -3995,10 +4041,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int OWNER_DESCRIPTIVE_NAME_FIELD_NUMBER = 6;
-  private volatile java.lang.Object ownerDescriptiveName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object ownerDescriptiveName_ = "";
   /**
    * <pre>
-   * Output only. descriptive_name of the Customer which owns the bidding strategy.
+   * Output only. descriptive_name of the Customer which owns the bidding
+   * strategy.
    * </pre>
    *
    * <code>string owner_descriptive_name = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4019,7 +4067,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. descriptive_name of the Customer which owns the bidding strategy.
+   * Output only. descriptive_name of the Customer which owns the bidding
+   * strategy.
    * </pre>
    *
    * <code>string owner_descriptive_name = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4043,8 +4092,8 @@ private static final long serialVersionUID = 0L;
   public static final int MAXIMIZE_CONVERSION_VALUE_FIELD_NUMBER = 7;
   /**
    * <pre>
-   * Output only. An automated bidding strategy to help get the most conversion value for
-   * your campaigns while spending your budget.
+   * Output only. An automated bidding strategy to help get the most
+   * conversion value for your campaigns while spending your budget.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversionValue maximize_conversion_value = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4056,8 +4105,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. An automated bidding strategy to help get the most conversion value for
-   * your campaigns while spending your budget.
+   * Output only. An automated bidding strategy to help get the most
+   * conversion value for your campaigns while spending your budget.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversionValue maximize_conversion_value = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4072,8 +4121,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. An automated bidding strategy to help get the most conversion value for
-   * your campaigns while spending your budget.
+   * Output only. An automated bidding strategy to help get the most
+   * conversion value for your campaigns while spending your budget.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversionValue maximize_conversion_value = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4089,8 +4138,8 @@ private static final long serialVersionUID = 0L;
   public static final int MAXIMIZE_CONVERSIONS_FIELD_NUMBER = 8;
   /**
    * <pre>
-   * Output only. An automated bidding strategy to help get the most conversions for your
-   * campaigns while spending your budget.
+   * Output only. An automated bidding strategy to help get the most
+   * conversions for your campaigns while spending your budget.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversions maximize_conversions = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4102,8 +4151,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. An automated bidding strategy to help get the most conversions for your
-   * campaigns while spending your budget.
+   * Output only. An automated bidding strategy to help get the most
+   * conversions for your campaigns while spending your budget.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversions maximize_conversions = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4118,8 +4167,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. An automated bidding strategy to help get the most conversions for your
-   * campaigns while spending your budget.
+   * Output only. An automated bidding strategy to help get the most
+   * conversions for your campaigns while spending your budget.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversions maximize_conversions = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4135,8 +4184,8 @@ private static final long serialVersionUID = 0L;
   public static final int TARGET_CPA_FIELD_NUMBER = 9;
   /**
    * <pre>
-   * Output only. A bidding strategy that sets bids to help get as many conversions as
-   * possible at the target cost-per-acquisition (CPA) you set.
+   * Output only. A bidding strategy that sets bids to help get as many
+   * conversions as possible at the target cost-per-acquisition (CPA) you set.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetCpa target_cpa = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4148,8 +4197,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. A bidding strategy that sets bids to help get as many conversions as
-   * possible at the target cost-per-acquisition (CPA) you set.
+   * Output only. A bidding strategy that sets bids to help get as many
+   * conversions as possible at the target cost-per-acquisition (CPA) you set.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetCpa target_cpa = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4164,8 +4213,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. A bidding strategy that sets bids to help get as many conversions as
-   * possible at the target cost-per-acquisition (CPA) you set.
+   * Output only. A bidding strategy that sets bids to help get as many
+   * conversions as possible at the target cost-per-acquisition (CPA) you set.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetCpa target_cpa = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4181,8 +4230,8 @@ private static final long serialVersionUID = 0L;
   public static final int TARGET_IMPRESSION_SHARE_FIELD_NUMBER = 10;
   /**
    * <pre>
-   * Output only. A bidding strategy that automatically optimizes towards a chosen
-   * percentage of impressions.
+   * Output only. A bidding strategy that automatically optimizes towards a
+   * chosen percentage of impressions.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetImpressionShare target_impression_share = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4194,8 +4243,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. A bidding strategy that automatically optimizes towards a chosen
-   * percentage of impressions.
+   * Output only. A bidding strategy that automatically optimizes towards a
+   * chosen percentage of impressions.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetImpressionShare target_impression_share = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4210,8 +4259,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. A bidding strategy that automatically optimizes towards a chosen
-   * percentage of impressions.
+   * Output only. A bidding strategy that automatically optimizes towards a
+   * chosen percentage of impressions.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetImpressionShare target_impression_share = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4227,8 +4276,8 @@ private static final long serialVersionUID = 0L;
   public static final int TARGET_ROAS_FIELD_NUMBER = 11;
   /**
    * <pre>
-   * Output only. A bidding strategy that helps you maximize revenue while averaging a
-   * specific target Return On Ad Spend (ROAS).
+   * Output only. A bidding strategy that helps you maximize revenue while
+   * averaging a specific target Return On Ad Spend (ROAS).
    * </pre>
    *
    * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetRoas target_roas = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4240,8 +4289,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. A bidding strategy that helps you maximize revenue while averaging a
-   * specific target Return On Ad Spend (ROAS).
+   * Output only. A bidding strategy that helps you maximize revenue while
+   * averaging a specific target Return On Ad Spend (ROAS).
    * </pre>
    *
    * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetRoas target_roas = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4256,8 +4305,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. A bidding strategy that helps you maximize revenue while averaging a
-   * specific target Return On Ad Spend (ROAS).
+   * Output only. A bidding strategy that helps you maximize revenue while
+   * averaging a specific target Return On Ad Spend (ROAS).
    * </pre>
    *
    * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetRoas target_roas = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4273,8 +4322,8 @@ private static final long serialVersionUID = 0L;
   public static final int TARGET_SPEND_FIELD_NUMBER = 12;
   /**
    * <pre>
-   * Output only. A bid strategy that sets your bids to help get as many clicks as
-   * possible within your budget.
+   * Output only. A bid strategy that sets your bids to help get as many
+   * clicks as possible within your budget.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetSpend target_spend = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4286,8 +4335,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. A bid strategy that sets your bids to help get as many clicks as
-   * possible within your budget.
+   * Output only. A bid strategy that sets your bids to help get as many
+   * clicks as possible within your budget.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetSpend target_spend = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4302,8 +4351,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. A bid strategy that sets your bids to help get as many clicks as
-   * possible within your budget.
+   * Output only. A bid strategy that sets your bids to help get as many
+   * clicks as possible within your budget.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetSpend target_spend = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4664,18 +4713,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       id_ = 0L;
-
       name_ = "";
-
       type_ = 0;
-
       ownerCustomerId_ = 0L;
-
       ownerDescriptiveName_ = "";
-
       if (maximizeConversionValueBuilder_ != null) {
         maximizeConversionValueBuilder_.clear();
       }
@@ -4722,57 +4766,61 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy buildPartial() {
       com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy result = new com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy(this);
-      result.resourceName_ = resourceName_;
-      result.id_ = id_;
-      result.name_ = name_;
-      result.type_ = type_;
-      result.ownerCustomerId_ = ownerCustomerId_;
-      result.ownerDescriptiveName_ = ownerDescriptiveName_;
-      if (schemeCase_ == 7) {
-        if (maximizeConversionValueBuilder_ == null) {
-          result.scheme_ = scheme_;
-        } else {
-          result.scheme_ = maximizeConversionValueBuilder_.build();
-        }
-      }
-      if (schemeCase_ == 8) {
-        if (maximizeConversionsBuilder_ == null) {
-          result.scheme_ = scheme_;
-        } else {
-          result.scheme_ = maximizeConversionsBuilder_.build();
-        }
-      }
-      if (schemeCase_ == 9) {
-        if (targetCpaBuilder_ == null) {
-          result.scheme_ = scheme_;
-        } else {
-          result.scheme_ = targetCpaBuilder_.build();
-        }
-      }
-      if (schemeCase_ == 10) {
-        if (targetImpressionShareBuilder_ == null) {
-          result.scheme_ = scheme_;
-        } else {
-          result.scheme_ = targetImpressionShareBuilder_.build();
-        }
-      }
-      if (schemeCase_ == 11) {
-        if (targetRoasBuilder_ == null) {
-          result.scheme_ = scheme_;
-        } else {
-          result.scheme_ = targetRoasBuilder_.build();
-        }
-      }
-      if (schemeCase_ == 12) {
-        if (targetSpendBuilder_ == null) {
-          result.scheme_ = scheme_;
-        } else {
-          result.scheme_ = targetSpendBuilder_.build();
-        }
-      }
-      result.schemeCase_ = schemeCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.id_ = id_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.name_ = name_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.type_ = type_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.ownerCustomerId_ = ownerCustomerId_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.ownerDescriptiveName_ = ownerDescriptiveName_;
+      }
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy result) {
+      result.schemeCase_ = schemeCase_;
+      result.scheme_ = this.scheme_;
+      if (schemeCase_ == 7 &&
+          maximizeConversionValueBuilder_ != null) {
+        result.scheme_ = maximizeConversionValueBuilder_.build();
+      }
+      if (schemeCase_ == 8 &&
+          maximizeConversionsBuilder_ != null) {
+        result.scheme_ = maximizeConversionsBuilder_.build();
+      }
+      if (schemeCase_ == 9 &&
+          targetCpaBuilder_ != null) {
+        result.scheme_ = targetCpaBuilder_.build();
+      }
+      if (schemeCase_ == 10 &&
+          targetImpressionShareBuilder_ != null) {
+        result.scheme_ = targetImpressionShareBuilder_.build();
+      }
+      if (schemeCase_ == 11 &&
+          targetRoasBuilder_ != null) {
+        result.scheme_ = targetRoasBuilder_.build();
+      }
+      if (schemeCase_ == 12 &&
+          targetSpendBuilder_ != null) {
+        result.scheme_ = targetSpendBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -4821,6 +4869,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.getId() != 0L) {
@@ -4828,6 +4877,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.type_ != 0) {
@@ -4838,6 +4888,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getOwnerDescriptiveName().isEmpty()) {
         ownerDescriptiveName_ = other.ownerDescriptiveName_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       switch (other.getSchemeCase()) {
@@ -4897,32 +4948,32 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 16: {
               id_ = input.readInt64();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             case 26: {
               name_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 32: {
               type_ = input.readEnum();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 32
             case 40: {
               ownerCustomerId_ = input.readInt64();
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 40
             case 50: {
               ownerDescriptiveName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000020;
               break;
             } // case 50
             case 58: {
@@ -4997,6 +5048,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private java.lang.Object resourceName_ = "";
     /**
@@ -5057,11 +5109,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -5076,8 +5126,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -5094,12 +5144,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -5129,6 +5177,7 @@ private static final long serialVersionUID = 0L;
     public Builder setId(long value) {
       
       id_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -5141,7 +5190,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearId() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       id_ = 0L;
       onChanged();
       return this;
@@ -5200,11 +5249,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       name_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -5217,8 +5264,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      
       name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -5233,12 +5280,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -5265,8 +5310,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
-      
       type_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -5280,8 +5325,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.BiddingStrategyTypeEnum.BiddingStrategyType getType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.BiddingStrategyTypeEnum.BiddingStrategyType result = com.google.ads.googleads.v11.enums.BiddingStrategyTypeEnum.BiddingStrategyType.valueOf(type_);
+      com.google.ads.googleads.v11.enums.BiddingStrategyTypeEnum.BiddingStrategyType result = com.google.ads.googleads.v11.enums.BiddingStrategyTypeEnum.BiddingStrategyType.forNumber(type_);
       return result == null ? com.google.ads.googleads.v11.enums.BiddingStrategyTypeEnum.BiddingStrategyType.UNRECOGNIZED : result;
     }
     /**
@@ -5297,7 +5341,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000008;
       type_ = value.getNumber();
       onChanged();
       return this;
@@ -5311,7 +5355,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       type_ = 0;
       onChanged();
       return this;
@@ -5342,6 +5386,7 @@ private static final long serialVersionUID = 0L;
     public Builder setOwnerCustomerId(long value) {
       
       ownerCustomerId_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -5354,7 +5399,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOwnerCustomerId() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       ownerCustomerId_ = 0L;
       onChanged();
       return this;
@@ -5363,7 +5408,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object ownerDescriptiveName_ = "";
     /**
      * <pre>
-     * Output only. descriptive_name of the Customer which owns the bidding strategy.
+     * Output only. descriptive_name of the Customer which owns the bidding
+     * strategy.
      * </pre>
      *
      * <code>string owner_descriptive_name = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5383,7 +5429,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. descriptive_name of the Customer which owns the bidding strategy.
+     * Output only. descriptive_name of the Customer which owns the bidding
+     * strategy.
      * </pre>
      *
      * <code>string owner_descriptive_name = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5404,7 +5451,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. descriptive_name of the Customer which owns the bidding strategy.
+     * Output only. descriptive_name of the Customer which owns the bidding
+     * strategy.
      * </pre>
      *
      * <code>string owner_descriptive_name = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5413,31 +5461,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOwnerDescriptiveName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       ownerDescriptiveName_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. descriptive_name of the Customer which owns the bidding strategy.
+     * Output only. descriptive_name of the Customer which owns the bidding
+     * strategy.
      * </pre>
      *
      * <code>string owner_descriptive_name = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearOwnerDescriptiveName() {
-      
       ownerDescriptiveName_ = getDefaultInstance().getOwnerDescriptiveName();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. descriptive_name of the Customer which owns the bidding strategy.
+     * Output only. descriptive_name of the Customer which owns the bidding
+     * strategy.
      * </pre>
      *
      * <code>string owner_descriptive_name = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5446,12 +5494,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOwnerDescriptiveNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ownerDescriptiveName_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -5460,8 +5506,8 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversionValue, com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversionValue.Builder, com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversionValueOrBuilder> maximizeConversionValueBuilder_;
     /**
      * <pre>
-     * Output only. An automated bidding strategy to help get the most conversion value for
-     * your campaigns while spending your budget.
+     * Output only. An automated bidding strategy to help get the most
+     * conversion value for your campaigns while spending your budget.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversionValue maximize_conversion_value = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5473,8 +5519,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. An automated bidding strategy to help get the most conversion value for
-     * your campaigns while spending your budget.
+     * Output only. An automated bidding strategy to help get the most
+     * conversion value for your campaigns while spending your budget.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversionValue maximize_conversion_value = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5496,8 +5542,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. An automated bidding strategy to help get the most conversion value for
-     * your campaigns while spending your budget.
+     * Output only. An automated bidding strategy to help get the most
+     * conversion value for your campaigns while spending your budget.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversionValue maximize_conversion_value = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5517,8 +5563,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. An automated bidding strategy to help get the most conversion value for
-     * your campaigns while spending your budget.
+     * Output only. An automated bidding strategy to help get the most
+     * conversion value for your campaigns while spending your budget.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversionValue maximize_conversion_value = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5536,8 +5582,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. An automated bidding strategy to help get the most conversion value for
-     * your campaigns while spending your budget.
+     * Output only. An automated bidding strategy to help get the most
+     * conversion value for your campaigns while spending your budget.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversionValue maximize_conversion_value = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5564,8 +5610,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. An automated bidding strategy to help get the most conversion value for
-     * your campaigns while spending your budget.
+     * Output only. An automated bidding strategy to help get the most
+     * conversion value for your campaigns while spending your budget.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversionValue maximize_conversion_value = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5588,8 +5634,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. An automated bidding strategy to help get the most conversion value for
-     * your campaigns while spending your budget.
+     * Output only. An automated bidding strategy to help get the most
+     * conversion value for your campaigns while spending your budget.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversionValue maximize_conversion_value = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5599,8 +5645,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. An automated bidding strategy to help get the most conversion value for
-     * your campaigns while spending your budget.
+     * Output only. An automated bidding strategy to help get the most
+     * conversion value for your campaigns while spending your budget.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversionValue maximize_conversion_value = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5618,8 +5664,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. An automated bidding strategy to help get the most conversion value for
-     * your campaigns while spending your budget.
+     * Output only. An automated bidding strategy to help get the most
+     * conversion value for your campaigns while spending your budget.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversionValue maximize_conversion_value = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5639,7 +5685,7 @@ private static final long serialVersionUID = 0L;
         scheme_ = null;
       }
       schemeCase_ = 7;
-      onChanged();;
+      onChanged();
       return maximizeConversionValueBuilder_;
     }
 
@@ -5647,8 +5693,8 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversions, com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversions.Builder, com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversionsOrBuilder> maximizeConversionsBuilder_;
     /**
      * <pre>
-     * Output only. An automated bidding strategy to help get the most conversions for your
-     * campaigns while spending your budget.
+     * Output only. An automated bidding strategy to help get the most
+     * conversions for your campaigns while spending your budget.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversions maximize_conversions = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5660,8 +5706,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. An automated bidding strategy to help get the most conversions for your
-     * campaigns while spending your budget.
+     * Output only. An automated bidding strategy to help get the most
+     * conversions for your campaigns while spending your budget.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversions maximize_conversions = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5683,8 +5729,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. An automated bidding strategy to help get the most conversions for your
-     * campaigns while spending your budget.
+     * Output only. An automated bidding strategy to help get the most
+     * conversions for your campaigns while spending your budget.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversions maximize_conversions = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5704,8 +5750,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. An automated bidding strategy to help get the most conversions for your
-     * campaigns while spending your budget.
+     * Output only. An automated bidding strategy to help get the most
+     * conversions for your campaigns while spending your budget.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversions maximize_conversions = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5723,8 +5769,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. An automated bidding strategy to help get the most conversions for your
-     * campaigns while spending your budget.
+     * Output only. An automated bidding strategy to help get the most
+     * conversions for your campaigns while spending your budget.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversions maximize_conversions = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5751,8 +5797,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. An automated bidding strategy to help get the most conversions for your
-     * campaigns while spending your budget.
+     * Output only. An automated bidding strategy to help get the most
+     * conversions for your campaigns while spending your budget.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversions maximize_conversions = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5775,8 +5821,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. An automated bidding strategy to help get the most conversions for your
-     * campaigns while spending your budget.
+     * Output only. An automated bidding strategy to help get the most
+     * conversions for your campaigns while spending your budget.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversions maximize_conversions = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5786,8 +5832,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. An automated bidding strategy to help get the most conversions for your
-     * campaigns while spending your budget.
+     * Output only. An automated bidding strategy to help get the most
+     * conversions for your campaigns while spending your budget.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversions maximize_conversions = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5805,8 +5851,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. An automated bidding strategy to help get the most conversions for your
-     * campaigns while spending your budget.
+     * Output only. An automated bidding strategy to help get the most
+     * conversions for your campaigns while spending your budget.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.MaximizeConversions maximize_conversions = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5826,7 +5872,7 @@ private static final long serialVersionUID = 0L;
         scheme_ = null;
       }
       schemeCase_ = 8;
-      onChanged();;
+      onChanged();
       return maximizeConversionsBuilder_;
     }
 
@@ -5834,8 +5880,8 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetCpa, com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetCpa.Builder, com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetCpaOrBuilder> targetCpaBuilder_;
     /**
      * <pre>
-     * Output only. A bidding strategy that sets bids to help get as many conversions as
-     * possible at the target cost-per-acquisition (CPA) you set.
+     * Output only. A bidding strategy that sets bids to help get as many
+     * conversions as possible at the target cost-per-acquisition (CPA) you set.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetCpa target_cpa = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5847,8 +5893,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bidding strategy that sets bids to help get as many conversions as
-     * possible at the target cost-per-acquisition (CPA) you set.
+     * Output only. A bidding strategy that sets bids to help get as many
+     * conversions as possible at the target cost-per-acquisition (CPA) you set.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetCpa target_cpa = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5870,8 +5916,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bidding strategy that sets bids to help get as many conversions as
-     * possible at the target cost-per-acquisition (CPA) you set.
+     * Output only. A bidding strategy that sets bids to help get as many
+     * conversions as possible at the target cost-per-acquisition (CPA) you set.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetCpa target_cpa = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5891,8 +5937,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bidding strategy that sets bids to help get as many conversions as
-     * possible at the target cost-per-acquisition (CPA) you set.
+     * Output only. A bidding strategy that sets bids to help get as many
+     * conversions as possible at the target cost-per-acquisition (CPA) you set.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetCpa target_cpa = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5910,8 +5956,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bidding strategy that sets bids to help get as many conversions as
-     * possible at the target cost-per-acquisition (CPA) you set.
+     * Output only. A bidding strategy that sets bids to help get as many
+     * conversions as possible at the target cost-per-acquisition (CPA) you set.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetCpa target_cpa = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5938,8 +5984,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bidding strategy that sets bids to help get as many conversions as
-     * possible at the target cost-per-acquisition (CPA) you set.
+     * Output only. A bidding strategy that sets bids to help get as many
+     * conversions as possible at the target cost-per-acquisition (CPA) you set.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetCpa target_cpa = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5962,8 +6008,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bidding strategy that sets bids to help get as many conversions as
-     * possible at the target cost-per-acquisition (CPA) you set.
+     * Output only. A bidding strategy that sets bids to help get as many
+     * conversions as possible at the target cost-per-acquisition (CPA) you set.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetCpa target_cpa = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5973,8 +6019,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bidding strategy that sets bids to help get as many conversions as
-     * possible at the target cost-per-acquisition (CPA) you set.
+     * Output only. A bidding strategy that sets bids to help get as many
+     * conversions as possible at the target cost-per-acquisition (CPA) you set.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetCpa target_cpa = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5992,8 +6038,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bidding strategy that sets bids to help get as many conversions as
-     * possible at the target cost-per-acquisition (CPA) you set.
+     * Output only. A bidding strategy that sets bids to help get as many
+     * conversions as possible at the target cost-per-acquisition (CPA) you set.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetCpa target_cpa = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6013,7 +6059,7 @@ private static final long serialVersionUID = 0L;
         scheme_ = null;
       }
       schemeCase_ = 9;
-      onChanged();;
+      onChanged();
       return targetCpaBuilder_;
     }
 
@@ -6021,8 +6067,8 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetImpressionShare, com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetImpressionShare.Builder, com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetImpressionShareOrBuilder> targetImpressionShareBuilder_;
     /**
      * <pre>
-     * Output only. A bidding strategy that automatically optimizes towards a chosen
-     * percentage of impressions.
+     * Output only. A bidding strategy that automatically optimizes towards a
+     * chosen percentage of impressions.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetImpressionShare target_impression_share = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6034,8 +6080,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bidding strategy that automatically optimizes towards a chosen
-     * percentage of impressions.
+     * Output only. A bidding strategy that automatically optimizes towards a
+     * chosen percentage of impressions.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetImpressionShare target_impression_share = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6057,8 +6103,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bidding strategy that automatically optimizes towards a chosen
-     * percentage of impressions.
+     * Output only. A bidding strategy that automatically optimizes towards a
+     * chosen percentage of impressions.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetImpressionShare target_impression_share = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6078,8 +6124,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bidding strategy that automatically optimizes towards a chosen
-     * percentage of impressions.
+     * Output only. A bidding strategy that automatically optimizes towards a
+     * chosen percentage of impressions.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetImpressionShare target_impression_share = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6097,8 +6143,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bidding strategy that automatically optimizes towards a chosen
-     * percentage of impressions.
+     * Output only. A bidding strategy that automatically optimizes towards a
+     * chosen percentage of impressions.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetImpressionShare target_impression_share = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6125,8 +6171,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bidding strategy that automatically optimizes towards a chosen
-     * percentage of impressions.
+     * Output only. A bidding strategy that automatically optimizes towards a
+     * chosen percentage of impressions.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetImpressionShare target_impression_share = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6149,8 +6195,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bidding strategy that automatically optimizes towards a chosen
-     * percentage of impressions.
+     * Output only. A bidding strategy that automatically optimizes towards a
+     * chosen percentage of impressions.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetImpressionShare target_impression_share = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6160,8 +6206,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bidding strategy that automatically optimizes towards a chosen
-     * percentage of impressions.
+     * Output only. A bidding strategy that automatically optimizes towards a
+     * chosen percentage of impressions.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetImpressionShare target_impression_share = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6179,8 +6225,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bidding strategy that automatically optimizes towards a chosen
-     * percentage of impressions.
+     * Output only. A bidding strategy that automatically optimizes towards a
+     * chosen percentage of impressions.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetImpressionShare target_impression_share = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6200,7 +6246,7 @@ private static final long serialVersionUID = 0L;
         scheme_ = null;
       }
       schemeCase_ = 10;
-      onChanged();;
+      onChanged();
       return targetImpressionShareBuilder_;
     }
 
@@ -6208,8 +6254,8 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetRoas, com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetRoas.Builder, com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetRoasOrBuilder> targetRoasBuilder_;
     /**
      * <pre>
-     * Output only. A bidding strategy that helps you maximize revenue while averaging a
-     * specific target Return On Ad Spend (ROAS).
+     * Output only. A bidding strategy that helps you maximize revenue while
+     * averaging a specific target Return On Ad Spend (ROAS).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetRoas target_roas = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6221,8 +6267,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bidding strategy that helps you maximize revenue while averaging a
-     * specific target Return On Ad Spend (ROAS).
+     * Output only. A bidding strategy that helps you maximize revenue while
+     * averaging a specific target Return On Ad Spend (ROAS).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetRoas target_roas = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6244,8 +6290,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bidding strategy that helps you maximize revenue while averaging a
-     * specific target Return On Ad Spend (ROAS).
+     * Output only. A bidding strategy that helps you maximize revenue while
+     * averaging a specific target Return On Ad Spend (ROAS).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetRoas target_roas = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6265,8 +6311,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bidding strategy that helps you maximize revenue while averaging a
-     * specific target Return On Ad Spend (ROAS).
+     * Output only. A bidding strategy that helps you maximize revenue while
+     * averaging a specific target Return On Ad Spend (ROAS).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetRoas target_roas = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6284,8 +6330,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bidding strategy that helps you maximize revenue while averaging a
-     * specific target Return On Ad Spend (ROAS).
+     * Output only. A bidding strategy that helps you maximize revenue while
+     * averaging a specific target Return On Ad Spend (ROAS).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetRoas target_roas = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6312,8 +6358,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bidding strategy that helps you maximize revenue while averaging a
-     * specific target Return On Ad Spend (ROAS).
+     * Output only. A bidding strategy that helps you maximize revenue while
+     * averaging a specific target Return On Ad Spend (ROAS).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetRoas target_roas = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6336,8 +6382,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bidding strategy that helps you maximize revenue while averaging a
-     * specific target Return On Ad Spend (ROAS).
+     * Output only. A bidding strategy that helps you maximize revenue while
+     * averaging a specific target Return On Ad Spend (ROAS).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetRoas target_roas = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6347,8 +6393,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bidding strategy that helps you maximize revenue while averaging a
-     * specific target Return On Ad Spend (ROAS).
+     * Output only. A bidding strategy that helps you maximize revenue while
+     * averaging a specific target Return On Ad Spend (ROAS).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetRoas target_roas = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6366,8 +6412,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bidding strategy that helps you maximize revenue while averaging a
-     * specific target Return On Ad Spend (ROAS).
+     * Output only. A bidding strategy that helps you maximize revenue while
+     * averaging a specific target Return On Ad Spend (ROAS).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetRoas target_roas = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6387,7 +6433,7 @@ private static final long serialVersionUID = 0L;
         scheme_ = null;
       }
       schemeCase_ = 11;
-      onChanged();;
+      onChanged();
       return targetRoasBuilder_;
     }
 
@@ -6395,8 +6441,8 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetSpend, com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetSpend.Builder, com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetSpendOrBuilder> targetSpendBuilder_;
     /**
      * <pre>
-     * Output only. A bid strategy that sets your bids to help get as many clicks as
-     * possible within your budget.
+     * Output only. A bid strategy that sets your bids to help get as many
+     * clicks as possible within your budget.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetSpend target_spend = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6408,8 +6454,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bid strategy that sets your bids to help get as many clicks as
-     * possible within your budget.
+     * Output only. A bid strategy that sets your bids to help get as many
+     * clicks as possible within your budget.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetSpend target_spend = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6431,8 +6477,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bid strategy that sets your bids to help get as many clicks as
-     * possible within your budget.
+     * Output only. A bid strategy that sets your bids to help get as many
+     * clicks as possible within your budget.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetSpend target_spend = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6452,8 +6498,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bid strategy that sets your bids to help get as many clicks as
-     * possible within your budget.
+     * Output only. A bid strategy that sets your bids to help get as many
+     * clicks as possible within your budget.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetSpend target_spend = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6471,8 +6517,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bid strategy that sets your bids to help get as many clicks as
-     * possible within your budget.
+     * Output only. A bid strategy that sets your bids to help get as many
+     * clicks as possible within your budget.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetSpend target_spend = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6499,8 +6545,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bid strategy that sets your bids to help get as many clicks as
-     * possible within your budget.
+     * Output only. A bid strategy that sets your bids to help get as many
+     * clicks as possible within your budget.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetSpend target_spend = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6523,8 +6569,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bid strategy that sets your bids to help get as many clicks as
-     * possible within your budget.
+     * Output only. A bid strategy that sets your bids to help get as many
+     * clicks as possible within your budget.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetSpend target_spend = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6534,8 +6580,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bid strategy that sets your bids to help get as many clicks as
-     * possible within your budget.
+     * Output only. A bid strategy that sets your bids to help get as many
+     * clicks as possible within your budget.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetSpend target_spend = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6553,8 +6599,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bid strategy that sets your bids to help get as many clicks as
-     * possible within your budget.
+     * Output only. A bid strategy that sets your bids to help get as many
+     * clicks as possible within your budget.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetSpend target_spend = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6574,7 +6620,7 @@ private static final long serialVersionUID = 0L;
         scheme_ = null;
       }
       schemeCase_ = 12;
-      onChanged();;
+      onChanged();
       return targetSpendBuilder_;
     }
     @java.lang.Override

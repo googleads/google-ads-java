@@ -49,6 +49,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DATA_MONTHS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList dataMonths_;
   /**
    * <pre>
@@ -301,6 +302,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       dataMonths_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       bitField0_ = (bitField0_ & ~0x00000001);
       return this;
@@ -329,14 +331,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.ListInsightsEligibleDatesResponse buildPartial() {
       com.google.ads.googleads.v12.services.ListInsightsEligibleDatesResponse result = new com.google.ads.googleads.v12.services.ListInsightsEligibleDatesResponse(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.services.ListInsightsEligibleDatesResponse result) {
       if (((bitField0_ & 0x00000001) != 0)) {
         dataMonths_ = dataMonths_.getUnmodifiableView();
         bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.dataMonths_ = dataMonths_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.ListInsightsEligibleDatesResponse result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override
@@ -514,10 +524,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDataMonths(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureDataMonthsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureDataMonthsIsMutable();
       dataMonths_.set(index, value);
       onChanged();
       return this;
@@ -534,10 +542,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addDataMonths(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureDataMonthsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureDataMonthsIsMutable();
       dataMonths_.add(value);
       onChanged();
       return this;
@@ -587,10 +593,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addDataMonthsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureDataMonthsIsMutable();
       dataMonths_.add(value);
       onChanged();

@@ -52,7 +52,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Immutable. Name of the resource.
@@ -102,7 +103,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ID_FIELD_NUMBER = 6;
-  private long id_;
+  private long id_ = 0L;
   /**
    * <pre>
    * Output only. ID of the label. Read only.
@@ -129,7 +130,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 7;
-  private volatile java.lang.Object name_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
   /**
    * <pre>
    * The name of the label.
@@ -193,7 +195,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STATUS_FIELD_NUMBER = 4;
-  private int status_;
+  private int status_ = 0;
   /**
    * <pre>
    * Output only. Status of the label. Read only.
@@ -214,8 +216,7 @@ private static final long serialVersionUID = 0L;
    * @return The status.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.LabelStatusEnum.LabelStatus getStatus() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.LabelStatusEnum.LabelStatus result = com.google.ads.googleads.v12.enums.LabelStatusEnum.LabelStatus.valueOf(status_);
+    com.google.ads.googleads.v12.enums.LabelStatusEnum.LabelStatus result = com.google.ads.googleads.v12.enums.LabelStatusEnum.LabelStatus.forNumber(status_);
     return result == null ? com.google.ads.googleads.v12.enums.LabelStatusEnum.LabelStatus.UNRECOGNIZED : result;
   }
 
@@ -254,7 +255,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.common.TextLabelOrBuilder getTextLabelOrBuilder() {
-    return getTextLabel();
+    return textLabel_ == null ? com.google.ads.googleads.v12.common.TextLabel.getDefaultInstance() : textLabel_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -506,18 +507,14 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       id_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       name_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       status_ = 0;
-
-      if (textLabelBuilder_ == null) {
-        textLabel_ = null;
-      } else {
-        textLabel_ = null;
+      textLabel_ = null;
+      if (textLabelBuilder_ != null) {
+        textLabelBuilder_.dispose();
         textLabelBuilder_ = null;
       }
       return this;
@@ -546,26 +543,34 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.Label buildPartial() {
       com.google.ads.googleads.v12.resources.Label result = new com.google.ads.googleads.v12.resources.Label(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.resources.Label result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.id_ = id_;
         to_bitField0_ |= 0x00000001;
       }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.name_ = name_;
         to_bitField0_ |= 0x00000002;
       }
-      result.name_ = name_;
-      result.status_ = status_;
-      if (textLabelBuilder_ == null) {
-        result.textLabel_ = textLabel_;
-      } else {
-        result.textLabel_ = textLabelBuilder_.build();
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.status_ = status_;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.textLabel_ = textLabelBuilder_ == null
+            ? textLabel_
+            : textLabelBuilder_.build();
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -614,14 +619,15 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.resources.Label.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasId()) {
         setId(other.getId());
       }
       if (other.hasName()) {
-        bitField0_ |= 0x00000002;
         name_ = other.name_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.status_ != 0) {
@@ -658,29 +664,29 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 32: {
               status_ = input.readEnum();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 32
             case 42: {
               input.readMessage(
                   getTextLabelFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 42
             case 48: {
               id_ = input.readInt64();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 48
             case 58: {
               name_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 58
             default: {
@@ -759,11 +765,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -778,8 +782,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -796,12 +800,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -817,7 +819,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -841,8 +843,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      bitField0_ |= 0x00000001;
+      
       id_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -855,7 +858,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       id_ = 0L;
       onChanged();
       return this;
@@ -873,7 +876,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the name field is set.
      */
     public boolean hasName() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -933,11 +936,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       name_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -952,8 +953,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -970,12 +971,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1002,8 +1001,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
-      
       status_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1017,8 +1016,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.LabelStatusEnum.LabelStatus getStatus() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.LabelStatusEnum.LabelStatus result = com.google.ads.googleads.v12.enums.LabelStatusEnum.LabelStatus.valueOf(status_);
+      com.google.ads.googleads.v12.enums.LabelStatusEnum.LabelStatus result = com.google.ads.googleads.v12.enums.LabelStatusEnum.LabelStatus.forNumber(status_);
       return result == null ? com.google.ads.googleads.v12.enums.LabelStatusEnum.LabelStatus.UNRECOGNIZED : result;
     }
     /**
@@ -1034,7 +1032,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000008;
       status_ = value.getNumber();
       onChanged();
       return this;
@@ -1048,7 +1046,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       status_ = 0;
       onChanged();
       return this;
@@ -1066,7 +1064,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the textLabel field is set.
      */
     public boolean hasTextLabel() {
-      return textLabelBuilder_ != null || textLabel_ != null;
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -1096,11 +1094,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         textLabel_ = value;
-        onChanged();
       } else {
         textLabelBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1114,11 +1112,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.TextLabel.Builder builderForValue) {
       if (textLabelBuilder_ == null) {
         textLabel_ = builderForValue.build();
-        onChanged();
       } else {
         textLabelBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1130,17 +1128,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeTextLabel(com.google.ads.googleads.v12.common.TextLabel value) {
       if (textLabelBuilder_ == null) {
-        if (textLabel_ != null) {
-          textLabel_ =
-            com.google.ads.googleads.v12.common.TextLabel.newBuilder(textLabel_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000010) != 0) &&
+          textLabel_ != null &&
+          textLabel_ != com.google.ads.googleads.v12.common.TextLabel.getDefaultInstance()) {
+          getTextLabelBuilder().mergeFrom(value);
         } else {
           textLabel_ = value;
         }
-        onChanged();
       } else {
         textLabelBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1151,14 +1150,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.TextLabel text_label = 5;</code>
      */
     public Builder clearTextLabel() {
-      if (textLabelBuilder_ == null) {
-        textLabel_ = null;
-        onChanged();
-      } else {
-        textLabel_ = null;
+      bitField0_ = (bitField0_ & ~0x00000010);
+      textLabel_ = null;
+      if (textLabelBuilder_ != null) {
+        textLabelBuilder_.dispose();
         textLabelBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1169,7 +1167,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.TextLabel text_label = 5;</code>
      */
     public com.google.ads.googleads.v12.common.TextLabel.Builder getTextLabelBuilder() {
-      
+      bitField0_ |= 0x00000010;
       onChanged();
       return getTextLabelFieldBuilder().getBuilder();
     }

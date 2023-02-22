@@ -92,7 +92,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.rpc.StatusOrBuilder getPartialFailureErrorOrBuilder() {
-    return getPartialFailureError();
+    return partialFailureError_ == null ? com.google.rpc.Status.getDefaultInstance() : partialFailureError_;
   }
 
   public static final int WARNING_FIELD_NUMBER = 2;
@@ -133,7 +133,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.rpc.StatusOrBuilder getWarningOrBuilder() {
-    return getWarning();
+    return warning_ == null ? com.google.rpc.Status.getDefaultInstance() : warning_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -350,16 +350,15 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (partialFailureErrorBuilder_ == null) {
-        partialFailureError_ = null;
-      } else {
-        partialFailureError_ = null;
+      bitField0_ = 0;
+      partialFailureError_ = null;
+      if (partialFailureErrorBuilder_ != null) {
+        partialFailureErrorBuilder_.dispose();
         partialFailureErrorBuilder_ = null;
       }
-      if (warningBuilder_ == null) {
-        warning_ = null;
-      } else {
-        warning_ = null;
+      warning_ = null;
+      if (warningBuilder_ != null) {
+        warningBuilder_.dispose();
         warningBuilder_ = null;
       }
       return this;
@@ -388,18 +387,23 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.AddOfflineUserDataJobOperationsResponse buildPartial() {
       com.google.ads.googleads.v11.services.AddOfflineUserDataJobOperationsResponse result = new com.google.ads.googleads.v11.services.AddOfflineUserDataJobOperationsResponse(this);
-      if (partialFailureErrorBuilder_ == null) {
-        result.partialFailureError_ = partialFailureError_;
-      } else {
-        result.partialFailureError_ = partialFailureErrorBuilder_.build();
-      }
-      if (warningBuilder_ == null) {
-        result.warning_ = warning_;
-      } else {
-        result.warning_ = warningBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.AddOfflineUserDataJobOperationsResponse result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.partialFailureError_ = partialFailureErrorBuilder_ == null
+            ? partialFailureError_
+            : partialFailureErrorBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.warning_ = warningBuilder_ == null
+            ? warning_
+            : warningBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -482,14 +486,14 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getPartialFailureErrorFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               input.readMessage(
                   getWarningFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             default: {
@@ -507,6 +511,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private com.google.rpc.Status partialFailureError_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -523,7 +528,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the partialFailureError field is set.
      */
     public boolean hasPartialFailureError() {
-      return partialFailureErrorBuilder_ != null || partialFailureError_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -559,11 +564,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         partialFailureError_ = value;
-        onChanged();
       } else {
         partialFailureErrorBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -580,11 +585,11 @@ private static final long serialVersionUID = 0L;
         com.google.rpc.Status.Builder builderForValue) {
       if (partialFailureErrorBuilder_ == null) {
         partialFailureError_ = builderForValue.build();
-        onChanged();
       } else {
         partialFailureErrorBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -599,17 +604,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergePartialFailureError(com.google.rpc.Status value) {
       if (partialFailureErrorBuilder_ == null) {
-        if (partialFailureError_ != null) {
-          partialFailureError_ =
-            com.google.rpc.Status.newBuilder(partialFailureError_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          partialFailureError_ != null &&
+          partialFailureError_ != com.google.rpc.Status.getDefaultInstance()) {
+          getPartialFailureErrorBuilder().mergeFrom(value);
         } else {
           partialFailureError_ = value;
         }
-        onChanged();
       } else {
         partialFailureErrorBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -623,14 +629,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
      */
     public Builder clearPartialFailureError() {
-      if (partialFailureErrorBuilder_ == null) {
-        partialFailureError_ = null;
-        onChanged();
-      } else {
-        partialFailureError_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      partialFailureError_ = null;
+      if (partialFailureErrorBuilder_ != null) {
+        partialFailureErrorBuilder_.dispose();
         partialFailureErrorBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -644,7 +649,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
      */
     public com.google.rpc.Status.Builder getPartialFailureErrorBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getPartialFailureErrorFieldBuilder().getBuilder();
     }
@@ -703,7 +708,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the warning field is set.
      */
     public boolean hasWarning() {
-      return warningBuilder_ != null || warning_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -735,11 +740,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         warning_ = value;
-        onChanged();
       } else {
         warningBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -754,11 +759,11 @@ private static final long serialVersionUID = 0L;
         com.google.rpc.Status.Builder builderForValue) {
       if (warningBuilder_ == null) {
         warning_ = builderForValue.build();
-        onChanged();
       } else {
         warningBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -771,17 +776,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeWarning(com.google.rpc.Status value) {
       if (warningBuilder_ == null) {
-        if (warning_ != null) {
-          warning_ =
-            com.google.rpc.Status.newBuilder(warning_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          warning_ != null &&
+          warning_ != com.google.rpc.Status.getDefaultInstance()) {
+          getWarningBuilder().mergeFrom(value);
         } else {
           warning_ = value;
         }
-        onChanged();
       } else {
         warningBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -793,14 +799,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.rpc.Status warning = 2;</code>
      */
     public Builder clearWarning() {
-      if (warningBuilder_ == null) {
-        warning_ = null;
-        onChanged();
-      } else {
-        warning_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      warning_ = null;
+      if (warningBuilder_ != null) {
+        warningBuilder_.dispose();
         warningBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -812,7 +817,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.rpc.Status warning = 2;</code>
      */
     public com.google.rpc.Status.Builder getWarningBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getWarningFieldBuilder().getBuilder();
     }

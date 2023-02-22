@@ -54,7 +54,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Immutable. The resource name of the remarketing action.
@@ -104,7 +105,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ID_FIELD_NUMBER = 5;
-  private long id_;
+  private long id_ = 0L;
   /**
    * <pre>
    * Output only. Id of the remarketing action.
@@ -131,7 +132,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 6;
-  private volatile java.lang.Object name_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
   /**
    * <pre>
    * The name of the remarketing action.
@@ -195,6 +197,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TAG_SNIPPETS_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.common.TagSnippet> tagSnippets_;
   /**
    * <pre>
@@ -492,19 +495,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       id_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       name_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       if (tagSnippetsBuilder_ == null) {
         tagSnippets_ = java.util.Collections.emptyList();
       } else {
         tagSnippets_ = null;
         tagSnippetsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000008);
       return this;
     }
 
@@ -531,29 +532,39 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.RemarketingAction buildPartial() {
       com.google.ads.googleads.v11.resources.RemarketingAction result = new com.google.ads.googleads.v11.resources.RemarketingAction(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.id_ = id_;
-        to_bitField0_ |= 0x00000001;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        to_bitField0_ |= 0x00000002;
-      }
-      result.name_ = name_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.resources.RemarketingAction result) {
       if (tagSnippetsBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           tagSnippets_ = java.util.Collections.unmodifiableList(tagSnippets_);
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.tagSnippets_ = tagSnippets_;
       } else {
         result.tagSnippets_ = tagSnippetsBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.RemarketingAction result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.id_ = id_;
+        to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.name_ = name_;
+        to_bitField0_ |= 0x00000002;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -602,21 +613,22 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.resources.RemarketingAction.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasId()) {
         setId(other.getId());
       }
       if (other.hasName()) {
-        bitField0_ |= 0x00000002;
         name_ = other.name_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (tagSnippetsBuilder_ == null) {
         if (!other.tagSnippets_.isEmpty()) {
           if (tagSnippets_.isEmpty()) {
             tagSnippets_ = other.tagSnippets_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureTagSnippetsIsMutable();
             tagSnippets_.addAll(other.tagSnippets_);
@@ -629,7 +641,7 @@ private static final long serialVersionUID = 0L;
             tagSnippetsBuilder_.dispose();
             tagSnippetsBuilder_ = null;
             tagSnippets_ = other.tagSnippets_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
             tagSnippetsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getTagSnippetsFieldBuilder() : null;
@@ -666,7 +678,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 34: {
@@ -684,12 +696,12 @@ private static final long serialVersionUID = 0L;
             } // case 34
             case 40: {
               id_ = input.readInt64();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 40
             case 50: {
               name_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 50
             default: {
@@ -768,11 +780,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -787,8 +797,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -805,12 +815,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -826,7 +834,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -850,8 +858,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      bitField0_ |= 0x00000001;
+      
       id_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -864,7 +873,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       id_ = 0L;
       onChanged();
       return this;
@@ -882,7 +891,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the name field is set.
      */
     public boolean hasName() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -942,11 +951,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       name_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -961,8 +968,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -979,12 +986,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -992,9 +997,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v11.common.TagSnippet> tagSnippets_ =
       java.util.Collections.emptyList();
     private void ensureTagSnippetsIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         tagSnippets_ = new java.util.ArrayList<com.google.ads.googleads.v11.common.TagSnippet>(tagSnippets_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
        }
     }
 
@@ -1188,7 +1193,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearTagSnippets() {
       if (tagSnippetsBuilder_ == null) {
         tagSnippets_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
       } else {
         tagSnippetsBuilder_.clear();
@@ -1293,7 +1298,7 @@ private static final long serialVersionUID = 0L;
         tagSnippetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v11.common.TagSnippet, com.google.ads.googleads.v11.common.TagSnippet.Builder, com.google.ads.googleads.v11.common.TagSnippetOrBuilder>(
                 tagSnippets_,
-                ((bitField0_ & 0x00000004) != 0),
+                ((bitField0_ & 0x00000008) != 0),
                 getParentForChildren(),
                 isClean());
         tagSnippets_ = null;

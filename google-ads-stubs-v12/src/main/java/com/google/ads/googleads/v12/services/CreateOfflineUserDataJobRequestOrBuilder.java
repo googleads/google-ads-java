@@ -9,7 +9,8 @@ public interface CreateOfflineUserDataJobRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The ID of the customer for which to create an offline user data job.
+   * Required. The ID of the customer for which to create an offline user data
+   * job.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -18,7 +19,8 @@ public interface CreateOfflineUserDataJobRequestOrBuilder extends
   java.lang.String getCustomerId();
   /**
    * <pre>
-   * Required. The ID of the customer for which to create an offline user data job.
+   * Required. The ID of the customer for which to create an offline user data
+   * job.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>

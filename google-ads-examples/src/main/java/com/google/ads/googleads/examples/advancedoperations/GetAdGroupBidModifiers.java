@@ -18,15 +18,15 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v12.errors.GoogleAdsError;
-import com.google.ads.googleads.v12.errors.GoogleAdsException;
-import com.google.ads.googleads.v12.resources.AdGroup;
-import com.google.ads.googleads.v12.resources.AdGroupBidModifier;
-import com.google.ads.googleads.v12.resources.Campaign;
-import com.google.ads.googleads.v12.services.GoogleAdsRow;
-import com.google.ads.googleads.v12.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v12.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v12.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v13.errors.GoogleAdsError;
+import com.google.ads.googleads.v13.errors.GoogleAdsException;
+import com.google.ads.googleads.v13.resources.AdGroup;
+import com.google.ads.googleads.v13.resources.AdGroupBidModifier;
+import com.google.ads.googleads.v13.resources.Campaign;
+import com.google.ads.googleads.v13.services.GoogleAdsRow;
+import com.google.ads.googleads.v13.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v13.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v13.services.SearchGoogleAdsRequest;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import javax.annotation.Nullable;
@@ -112,8 +112,7 @@ public class GetAdGroupBidModifiers {
               + "  ad_group_bid_modifier.hotel_advance_booking_window.max_days,"
               + "  ad_group_bid_modifier.hotel_length_of_stay.min_nights,"
               + "  ad_group_bid_modifier.hotel_length_of_stay.max_nights,"
-              + "  ad_group_bid_modifier.hotel_check_in_day.day_of_week,"
-              + "  ad_group_bid_modifier.preferred_content.type "
+              + "  ad_group_bid_modifier.hotel_check_in_day.day_of_week "
               + "FROM"
               + "  ad_group_bid_modifier";
       if (adGroupId != null) {
@@ -145,7 +144,8 @@ public class GetAdGroupBidModifiers {
             adGroup.getId(),
             campaign.getId());
         // Gets a detailed message specific to the type of criterion.
-        String criterionDetails = "  - Criterion type: " + adGroupBidModifier.getCriterionCase();
+        String criterionDetails =
+            "  - Criterion type: " + adGroupBidModifier.getCriterionCase() + " ";
         switch (adGroupBidModifier.getCriterionCase()) {
           case DEVICE:
             criterionDetails += "Type: " + adGroupBidModifier.getDevice().getType();
@@ -171,9 +171,6 @@ public class GetAdGroupBidModifiers {
                     + adGroupBidModifier.getHotelLengthOfStay().getMinNights()
                     + ", Max Nights: "
                     + adGroupBidModifier.getHotelLengthOfStay().getMaxNights();
-            break;
-          case PREFERRED_CONTENT:
-            criterionDetails += "Type: " + adGroupBidModifier.getPreferredContent().getType();
             break;
         }
         System.out.println(criterionDetails);

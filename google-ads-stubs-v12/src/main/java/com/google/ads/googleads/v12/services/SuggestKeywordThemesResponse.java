@@ -522,6 +522,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (keywordThemeConstantBuilder_ != null) {
           keywordThemeConstantBuilder_.clear();
         }
@@ -553,19 +554,23 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v12.services.SuggestKeywordThemesResponse.KeywordTheme buildPartial() {
         com.google.ads.googleads.v12.services.SuggestKeywordThemesResponse.KeywordTheme result = new com.google.ads.googleads.v12.services.SuggestKeywordThemesResponse.KeywordTheme(this);
-        if (keywordThemeCase_ == 1) {
-          if (keywordThemeConstantBuilder_ == null) {
-            result.keywordTheme_ = keywordTheme_;
-          } else {
-            result.keywordTheme_ = keywordThemeConstantBuilder_.build();
-          }
-        }
-        if (keywordThemeCase_ == 2) {
-          result.keywordTheme_ = keywordTheme_;
-        }
-        result.keywordThemeCase_ = keywordThemeCase_;
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v12.services.SuggestKeywordThemesResponse.KeywordTheme result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      private void buildPartialOneofs(com.google.ads.googleads.v12.services.SuggestKeywordThemesResponse.KeywordTheme result) {
+        result.keywordThemeCase_ = keywordThemeCase_;
+        result.keywordTheme_ = this.keywordTheme_;
+        if (keywordThemeCase_ == 1 &&
+            keywordThemeConstantBuilder_ != null) {
+          result.keywordTheme_ = keywordThemeConstantBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -696,6 +701,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      private int bitField0_;
 
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.ads.googleads.v12.resources.KeywordThemeConstant, com.google.ads.googleads.v12.resources.KeywordThemeConstant.Builder, com.google.ads.googleads.v12.resources.KeywordThemeConstantOrBuilder> keywordThemeConstantBuilder_;
@@ -871,7 +877,7 @@ private static final long serialVersionUID = 0L;
           keywordTheme_ = null;
         }
         keywordThemeCase_ = 1;
-        onChanged();;
+        onChanged();
         return keywordThemeConstantBuilder_;
       }
 
@@ -951,10 +957,8 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setFreeFormKeywordTheme(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  keywordThemeCase_ = 2;
+        if (value == null) { throw new NullPointerException(); }
+        keywordThemeCase_ = 2;
         keywordTheme_ = value;
         onChanged();
         return this;
@@ -986,10 +990,8 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setFreeFormKeywordThemeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         keywordThemeCase_ = 2;
         keywordTheme_ = value;
         onChanged();
@@ -1060,6 +1062,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int KEYWORD_THEMES_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.services.SuggestKeywordThemesResponse.KeywordTheme> keywordThemes_;
   /**
    * <pre>
@@ -1314,6 +1317,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (keywordThemesBuilder_ == null) {
         keywordThemes_ = java.util.Collections.emptyList();
       } else {
@@ -1347,7 +1351,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.SuggestKeywordThemesResponse buildPartial() {
       com.google.ads.googleads.v12.services.SuggestKeywordThemesResponse result = new com.google.ads.googleads.v12.services.SuggestKeywordThemesResponse(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.services.SuggestKeywordThemesResponse result) {
       if (keywordThemesBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           keywordThemes_ = java.util.Collections.unmodifiableList(keywordThemes_);
@@ -1357,8 +1367,10 @@ private static final long serialVersionUID = 0L;
       } else {
         result.keywordThemes_ = keywordThemesBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.SuggestKeywordThemesResponse result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override

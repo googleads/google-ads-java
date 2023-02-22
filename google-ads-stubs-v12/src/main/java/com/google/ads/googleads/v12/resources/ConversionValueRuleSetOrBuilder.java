@@ -158,11 +158,10 @@ public interface ConversionValueRuleSetOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The resource name of the conversion value rule set's owner customer.
-   * When the value rule set is inherited from a manager
-   * customer, owner_customer will be the resource name of the manager whereas
-   * the customer in the resource_name will be of the requesting serving
-   * customer.
+   * Output only. The resource name of the conversion value rule set's owner
+   * customer. When the value rule set is inherited from a manager customer,
+   * owner_customer will be the resource name of the manager whereas the
+   * customer in the resource_name will be of the requesting serving customer.
    * ** Read-only **
    * </pre>
    *
@@ -172,11 +171,10 @@ public interface ConversionValueRuleSetOrBuilder extends
   java.lang.String getOwnerCustomer();
   /**
    * <pre>
-   * Output only. The resource name of the conversion value rule set's owner customer.
-   * When the value rule set is inherited from a manager
-   * customer, owner_customer will be the resource name of the manager whereas
-   * the customer in the resource_name will be of the requesting serving
-   * customer.
+   * Output only. The resource name of the conversion value rule set's owner
+   * customer. When the value rule set is inherited from a manager customer,
+   * owner_customer will be the resource name of the manager whereas the
+   * customer in the resource_name will be of the requesting serving customer.
    * ** Read-only **
    * </pre>
    *
@@ -188,7 +186,8 @@ public interface ConversionValueRuleSetOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. Defines the scope where the conversion value rule set is attached.
+   * Immutable. Defines the scope where the conversion value rule set is
+   * attached.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.ValueRuleSetAttachmentTypeEnum.ValueRuleSetAttachmentType attachment_type = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -197,7 +196,8 @@ public interface ConversionValueRuleSetOrBuilder extends
   int getAttachmentTypeValue();
   /**
    * <pre>
-   * Immutable. Defines the scope where the conversion value rule set is attached.
+   * Immutable. Defines the scope where the conversion value rule set is
+   * attached.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.ValueRuleSetAttachmentTypeEnum.ValueRuleSetAttachmentType attachment_type = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -250,7 +250,8 @@ public interface ConversionValueRuleSetOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. The conversion action categories of the conversion value rule set.
+   * Immutable. The conversion action categories of the conversion value rule
+   * set.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.enums.ConversionActionCategoryEnum.ConversionActionCategory conversion_action_categories = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -259,7 +260,8 @@ public interface ConversionValueRuleSetOrBuilder extends
   java.util.List<com.google.ads.googleads.v12.enums.ConversionActionCategoryEnum.ConversionActionCategory> getConversionActionCategoriesList();
   /**
    * <pre>
-   * Immutable. The conversion action categories of the conversion value rule set.
+   * Immutable. The conversion action categories of the conversion value rule
+   * set.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.enums.ConversionActionCategoryEnum.ConversionActionCategory conversion_action_categories = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -268,7 +270,8 @@ public interface ConversionValueRuleSetOrBuilder extends
   int getConversionActionCategoriesCount();
   /**
    * <pre>
-   * Immutable. The conversion action categories of the conversion value rule set.
+   * Immutable. The conversion action categories of the conversion value rule
+   * set.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.enums.ConversionActionCategoryEnum.ConversionActionCategory conversion_action_categories = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -278,7 +281,8 @@ public interface ConversionValueRuleSetOrBuilder extends
   com.google.ads.googleads.v12.enums.ConversionActionCategoryEnum.ConversionActionCategory getConversionActionCategories(int index);
   /**
    * <pre>
-   * Immutable. The conversion action categories of the conversion value rule set.
+   * Immutable. The conversion action categories of the conversion value rule
+   * set.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.enums.ConversionActionCategoryEnum.ConversionActionCategory conversion_action_categories = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -288,7 +292,8 @@ public interface ConversionValueRuleSetOrBuilder extends
   getConversionActionCategoriesValueList();
   /**
    * <pre>
-   * Immutable. The conversion action categories of the conversion value rule set.
+   * Immutable. The conversion action categories of the conversion value rule
+   * set.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.enums.ConversionActionCategoryEnum.ConversionActionCategory conversion_action_categories = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>

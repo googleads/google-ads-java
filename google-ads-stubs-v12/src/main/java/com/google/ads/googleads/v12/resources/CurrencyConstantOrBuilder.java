@@ -91,8 +91,8 @@ public interface CurrencyConstantOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Standard symbol for describing this currency, for example, '$' for US
-   * Dollars.
+   * Output only. Standard symbol for describing this currency, for example, '$'
+   * for US Dollars.
    * </pre>
    *
    * <code>optional string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -101,8 +101,8 @@ public interface CurrencyConstantOrBuilder extends
   boolean hasSymbol();
   /**
    * <pre>
-   * Output only. Standard symbol for describing this currency, for example, '$' for US
-   * Dollars.
+   * Output only. Standard symbol for describing this currency, for example, '$'
+   * for US Dollars.
    * </pre>
    *
    * <code>optional string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -111,8 +111,8 @@ public interface CurrencyConstantOrBuilder extends
   java.lang.String getSymbol();
   /**
    * <pre>
-   * Output only. Standard symbol for describing this currency, for example, '$' for US
-   * Dollars.
+   * Output only. Standard symbol for describing this currency, for example, '$'
+   * for US Dollars.
    * </pre>
    *
    * <code>optional string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -123,8 +123,8 @@ public interface CurrencyConstantOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The billable unit for this currency. Billed amounts should be multiples of
-   * this value.
+   * Output only. The billable unit for this currency. Billed amounts should be
+   * multiples of this value.
    * </pre>
    *
    * <code>optional int64 billable_unit_micros = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -133,8 +133,8 @@ public interface CurrencyConstantOrBuilder extends
   boolean hasBillableUnitMicros();
   /**
    * <pre>
-   * Output only. The billable unit for this currency. Billed amounts should be multiples of
-   * this value.
+   * Output only. The billable unit for this currency. Billed amounts should be
+   * multiples of this value.
    * </pre>
    *
    * <code>optional int64 billable_unit_micros = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

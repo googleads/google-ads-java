@@ -49,14 +49,14 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AGGREGATE_METRIC_TYPES_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> aggregateMetricTypes_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
       java.lang.Integer, com.google.ads.googleads.v11.enums.KeywordPlanAggregateMetricTypeEnum.KeywordPlanAggregateMetricType> aggregateMetricTypes_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, com.google.ads.googleads.v11.enums.KeywordPlanAggregateMetricTypeEnum.KeywordPlanAggregateMetricType>() {
             public com.google.ads.googleads.v11.enums.KeywordPlanAggregateMetricTypeEnum.KeywordPlanAggregateMetricType convert(java.lang.Integer from) {
-              @SuppressWarnings("deprecation")
-              com.google.ads.googleads.v11.enums.KeywordPlanAggregateMetricTypeEnum.KeywordPlanAggregateMetricType result = com.google.ads.googleads.v11.enums.KeywordPlanAggregateMetricTypeEnum.KeywordPlanAggregateMetricType.valueOf(from);
+              com.google.ads.googleads.v11.enums.KeywordPlanAggregateMetricTypeEnum.KeywordPlanAggregateMetricType result = com.google.ads.googleads.v11.enums.KeywordPlanAggregateMetricTypeEnum.KeywordPlanAggregateMetricType.forNumber(from);
               return result == null ? com.google.ads.googleads.v11.enums.KeywordPlanAggregateMetricTypeEnum.KeywordPlanAggregateMetricType.UNRECOGNIZED : result;
             }
           };
@@ -332,6 +332,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       aggregateMetricTypes_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000001);
       return this;
@@ -360,14 +361,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.KeywordPlanAggregateMetrics buildPartial() {
       com.google.ads.googleads.v11.common.KeywordPlanAggregateMetrics result = new com.google.ads.googleads.v11.common.KeywordPlanAggregateMetrics(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.common.KeywordPlanAggregateMetrics result) {
       if (((bitField0_ & 0x00000001) != 0)) {
         aggregateMetricTypes_ = java.util.Collections.unmodifiableList(aggregateMetricTypes_);
         bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.aggregateMetricTypes_ = aggregateMetricTypes_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.KeywordPlanAggregateMetrics result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override

@@ -49,6 +49,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SAMPLE_URLS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList sampleUrls_;
   /**
    * <pre>
@@ -297,6 +298,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       sampleUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       bitField0_ = (bitField0_ & ~0x00000001);
       return this;
@@ -325,14 +327,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.WebpageSampleInfo buildPartial() {
       com.google.ads.googleads.v12.common.WebpageSampleInfo result = new com.google.ads.googleads.v12.common.WebpageSampleInfo(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.common.WebpageSampleInfo result) {
       if (((bitField0_ & 0x00000001) != 0)) {
         sampleUrls_ = sampleUrls_.getUnmodifiableView();
         bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.sampleUrls_ = sampleUrls_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.WebpageSampleInfo result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override
@@ -505,10 +515,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSampleUrls(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSampleUrlsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureSampleUrlsIsMutable();
       sampleUrls_.set(index, value);
       onChanged();
       return this;
@@ -524,10 +532,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addSampleUrls(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSampleUrlsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureSampleUrlsIsMutable();
       sampleUrls_.add(value);
       onChanged();
       return this;
@@ -574,10 +580,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addSampleUrlsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureSampleUrlsIsMutable();
       sampleUrls_.add(value);
       onChanged();

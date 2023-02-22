@@ -52,7 +52,8 @@ public interface LanguageConstantOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The language code, for example, "en_US", "en_AU", "es", "fr", etc.
+   * Output only. The language code, for example, "en_US", "en_AU", "es", "fr",
+   * etc.
    * </pre>
    *
    * <code>optional string code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -61,7 +62,8 @@ public interface LanguageConstantOrBuilder extends
   boolean hasCode();
   /**
    * <pre>
-   * Output only. The language code, for example, "en_US", "en_AU", "es", "fr", etc.
+   * Output only. The language code, for example, "en_US", "en_AU", "es", "fr",
+   * etc.
    * </pre>
    *
    * <code>optional string code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -70,7 +72,8 @@ public interface LanguageConstantOrBuilder extends
   java.lang.String getCode();
   /**
    * <pre>
-   * Output only. The language code, for example, "en_US", "en_AU", "es", "fr", etc.
+   * Output only. The language code, for example, "en_US", "en_AU", "es", "fr",
+   * etc.
    * </pre>
    *
    * <code>optional string code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -81,8 +84,8 @@ public interface LanguageConstantOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The full name of the language in English, for example, "English (US)",
-   * "Spanish", etc.
+   * Output only. The full name of the language in English, for example,
+   * "English (US)", "Spanish", etc.
    * </pre>
    *
    * <code>optional string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -91,8 +94,8 @@ public interface LanguageConstantOrBuilder extends
   boolean hasName();
   /**
    * <pre>
-   * Output only. The full name of the language in English, for example, "English (US)",
-   * "Spanish", etc.
+   * Output only. The full name of the language in English, for example,
+   * "English (US)", "Spanish", etc.
    * </pre>
    *
    * <code>optional string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -101,8 +104,8 @@ public interface LanguageConstantOrBuilder extends
   java.lang.String getName();
   /**
    * <pre>
-   * Output only. The full name of the language in English, for example, "English (US)",
-   * "Spanish", etc.
+   * Output only. The full name of the language in English, for example,
+   * "English (US)", "Spanish", etc.
    * </pre>
    *
    * <code>optional string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

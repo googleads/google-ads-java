@@ -50,7 +50,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int AD_GROUP_CRITERION_FIELD_NUMBER = 3;
-  private volatile java.lang.Object adGroupCriterion_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object adGroupCriterion_ = "";
   /**
    * <pre>
    * The AdGroupCriterion resource name.
@@ -142,7 +143,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.common.KeywordInfoOrBuilder getInfoOrBuilder() {
-    return getInfo();
+    return info_ == null ? com.google.ads.googleads.v12.common.KeywordInfo.getDefaultInstance() : info_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -357,12 +358,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       adGroupCriterion_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
-      if (infoBuilder_ == null) {
-        info_ = null;
-      } else {
-        info_ = null;
+      info_ = null;
+      if (infoBuilder_ != null) {
+        infoBuilder_.dispose();
         infoBuilder_ = null;
       }
       return this;
@@ -391,20 +391,24 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.Keyword buildPartial() {
       com.google.ads.googleads.v12.common.Keyword result = new com.google.ads.googleads.v12.common.Keyword(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.Keyword result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.adGroupCriterion_ = adGroupCriterion_;
         to_bitField0_ |= 0x00000001;
       }
-      result.adGroupCriterion_ = adGroupCriterion_;
-      if (infoBuilder_ == null) {
-        result.info_ = info_;
-      } else {
-        result.info_ = infoBuilder_.build();
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.info_ = infoBuilder_ == null
+            ? info_
+            : infoBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -452,8 +456,8 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v12.common.Keyword other) {
       if (other == com.google.ads.googleads.v12.common.Keyword.getDefaultInstance()) return this;
       if (other.hasAdGroupCriterion()) {
-        bitField0_ |= 0x00000001;
         adGroupCriterion_ = other.adGroupCriterion_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasInfo()) {
@@ -489,7 +493,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getInfoFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
@@ -578,11 +582,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAdGroupCriterion(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       adGroupCriterion_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -595,8 +597,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAdGroupCriterion() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       adGroupCriterion_ = getDefaultInstance().getAdGroupCriterion();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -611,12 +613,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAdGroupCriterionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       adGroupCriterion_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -633,7 +633,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the info field is set.
      */
     public boolean hasInfo() {
-      return infoBuilder_ != null || info_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -663,11 +663,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         info_ = value;
-        onChanged();
       } else {
         infoBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -681,11 +681,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.KeywordInfo.Builder builderForValue) {
       if (infoBuilder_ == null) {
         info_ = builderForValue.build();
-        onChanged();
       } else {
         infoBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -697,17 +697,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeInfo(com.google.ads.googleads.v12.common.KeywordInfo value) {
       if (infoBuilder_ == null) {
-        if (info_ != null) {
-          info_ =
-            com.google.ads.googleads.v12.common.KeywordInfo.newBuilder(info_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          info_ != null &&
+          info_ != com.google.ads.googleads.v12.common.KeywordInfo.getDefaultInstance()) {
+          getInfoBuilder().mergeFrom(value);
         } else {
           info_ = value;
         }
-        onChanged();
       } else {
         infoBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -718,14 +719,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.KeywordInfo info = 2;</code>
      */
     public Builder clearInfo() {
-      if (infoBuilder_ == null) {
-        info_ = null;
-        onChanged();
-      } else {
-        info_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      info_ = null;
+      if (infoBuilder_ != null) {
+        infoBuilder_.dispose();
         infoBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -736,7 +736,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.KeywordInfo info = 2;</code>
      */
     public com.google.ads.googleads.v12.common.KeywordInfo.Builder getInfoBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getInfoFieldBuilder().getBuilder();
     }

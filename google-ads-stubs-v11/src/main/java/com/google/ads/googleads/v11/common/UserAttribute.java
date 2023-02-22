@@ -55,7 +55,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int LIFETIME_VALUE_MICROS_FIELD_NUMBER = 1;
-  private long lifetimeValueMicros_;
+  private long lifetimeValueMicros_ = 0L;
   /**
    * <pre>
    * Advertiser defined lifetime value for the user.
@@ -82,7 +82,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LIFETIME_VALUE_BUCKET_FIELD_NUMBER = 2;
-  private int lifetimeValueBucket_;
+  private int lifetimeValueBucket_ = 0;
   /**
    * <pre>
    * Advertiser defined lifetime value bucket for the user. The valid range for
@@ -113,7 +113,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LAST_PURCHASE_DATE_TIME_FIELD_NUMBER = 3;
-  private volatile java.lang.Object lastPurchaseDateTime_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object lastPurchaseDateTime_ = "";
   /**
    * <pre>
    * Timestamp of the last purchase made by the user.
@@ -165,7 +166,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AVERAGE_PURCHASE_COUNT_FIELD_NUMBER = 4;
-  private int averagePurchaseCount_;
+  private int averagePurchaseCount_ = 0;
   /**
    * <pre>
    * Advertiser defined average number of purchases that are made by the user in
@@ -181,7 +182,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AVERAGE_PURCHASE_VALUE_MICROS_FIELD_NUMBER = 5;
-  private long averagePurchaseValueMicros_;
+  private long averagePurchaseValueMicros_ = 0L;
   /**
    * <pre>
    * Advertiser defined average purchase value in micros for the user.
@@ -196,7 +197,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ACQUISITION_DATE_TIME_FIELD_NUMBER = 6;
-  private volatile java.lang.Object acquisitionDateTime_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object acquisitionDateTime_ = "";
   /**
    * <pre>
    * Timestamp when the user was acquired.
@@ -292,11 +294,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LIFECYCLE_STAGE_FIELD_NUMBER = 8;
-  private volatile java.lang.Object lifecycleStage_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object lifecycleStage_ = "";
   /**
    * <pre>
-   * Optional. Advertiser defined lifecycle stage for the user. The accepted values are
-   * "Lead", "Active" and "Churned".
+   * Optional. Advertiser defined lifecycle stage for the user. The accepted
+   * values are "Lead", "Active" and "Churned".
    * </pre>
    *
    * <code>string lifecycle_stage = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -317,8 +320,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. Advertiser defined lifecycle stage for the user. The accepted values are
-   * "Lead", "Active" and "Churned".
+   * Optional. Advertiser defined lifecycle stage for the user. The accepted
+   * values are "Lead", "Active" and "Churned".
    * </pre>
    *
    * <code>string lifecycle_stage = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -340,7 +343,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FIRST_PURCHASE_DATE_TIME_FIELD_NUMBER = 9;
-  private volatile java.lang.Object firstPurchaseDateTime_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object firstPurchaseDateTime_ = "";
   /**
    * <pre>
    * Optional. Timestamp of the first purchase made by the user.
@@ -392,11 +396,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EVENT_ATTRIBUTE_FIELD_NUMBER = 10;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.common.EventAttribute> eventAttribute_;
   /**
    * <pre>
-   * Optional. Advertiser defined events and their attributes. All the values in the
-   * nested fields are required. Currently this field is in beta.
+   * Optional. Advertiser defined events and their attributes. All the values in
+   * the nested fields are required. Currently this field is in beta.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -407,8 +412,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. Advertiser defined events and their attributes. All the values in the
-   * nested fields are required. Currently this field is in beta.
+   * Optional. Advertiser defined events and their attributes. All the values in
+   * the nested fields are required. Currently this field is in beta.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -420,8 +425,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. Advertiser defined events and their attributes. All the values in the
-   * nested fields are required. Currently this field is in beta.
+   * Optional. Advertiser defined events and their attributes. All the values in
+   * the nested fields are required. Currently this field is in beta.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -432,8 +437,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. Advertiser defined events and their attributes. All the values in the
-   * nested fields are required. Currently this field is in beta.
+   * Optional. Advertiser defined events and their attributes. All the values in
+   * the nested fields are required. Currently this field is in beta.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -444,8 +449,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. Advertiser defined events and their attributes. All the values in the
-   * nested fields are required. Currently this field is in beta.
+   * Optional. Advertiser defined events and their attributes. All the values in
+   * the nested fields are required. Currently this field is in beta.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -770,35 +775,27 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       lifetimeValueMicros_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       lifetimeValueBucket_ = 0;
-      bitField0_ = (bitField0_ & ~0x00000002);
       lastPurchaseDateTime_ = "";
-
       averagePurchaseCount_ = 0;
-
       averagePurchaseValueMicros_ = 0L;
-
       acquisitionDateTime_ = "";
-
-      if (shoppingLoyaltyBuilder_ == null) {
-        shoppingLoyalty_ = null;
-      } else {
-        shoppingLoyaltyBuilder_.clear();
+      shoppingLoyalty_ = null;
+      if (shoppingLoyaltyBuilder_ != null) {
+        shoppingLoyaltyBuilder_.dispose();
+        shoppingLoyaltyBuilder_ = null;
       }
-      bitField0_ = (bitField0_ & ~0x00000004);
       lifecycleStage_ = "";
-
       firstPurchaseDateTime_ = "";
-
       if (eventAttributeBuilder_ == null) {
         eventAttribute_ = java.util.Collections.emptyList();
       } else {
         eventAttribute_ = null;
         eventAttributeBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000200);
       return this;
     }
 
@@ -825,6 +822,25 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.UserAttribute buildPartial() {
       com.google.ads.googleads.v11.common.UserAttribute result = new com.google.ads.googleads.v11.common.UserAttribute(this);
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.common.UserAttribute result) {
+      if (eventAttributeBuilder_ == null) {
+        if (((bitField0_ & 0x00000200) != 0)) {
+          eventAttribute_ = java.util.Collections.unmodifiableList(eventAttribute_);
+          bitField0_ = (bitField0_ & ~0x00000200);
+        }
+        result.eventAttribute_ = eventAttribute_;
+      } else {
+        result.eventAttribute_ = eventAttributeBuilder_.build();
+      }
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.UserAttribute result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -835,32 +851,31 @@ private static final long serialVersionUID = 0L;
         result.lifetimeValueBucket_ = lifetimeValueBucket_;
         to_bitField0_ |= 0x00000002;
       }
-      result.lastPurchaseDateTime_ = lastPurchaseDateTime_;
-      result.averagePurchaseCount_ = averagePurchaseCount_;
-      result.averagePurchaseValueMicros_ = averagePurchaseValueMicros_;
-      result.acquisitionDateTime_ = acquisitionDateTime_;
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        if (shoppingLoyaltyBuilder_ == null) {
-          result.shoppingLoyalty_ = shoppingLoyalty_;
-        } else {
-          result.shoppingLoyalty_ = shoppingLoyaltyBuilder_.build();
-        }
+        result.lastPurchaseDateTime_ = lastPurchaseDateTime_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.averagePurchaseCount_ = averagePurchaseCount_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.averagePurchaseValueMicros_ = averagePurchaseValueMicros_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.acquisitionDateTime_ = acquisitionDateTime_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.shoppingLoyalty_ = shoppingLoyaltyBuilder_ == null
+            ? shoppingLoyalty_
+            : shoppingLoyaltyBuilder_.build();
         to_bitField0_ |= 0x00000004;
       }
-      result.lifecycleStage_ = lifecycleStage_;
-      result.firstPurchaseDateTime_ = firstPurchaseDateTime_;
-      if (eventAttributeBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0)) {
-          eventAttribute_ = java.util.Collections.unmodifiableList(eventAttribute_);
-          bitField0_ = (bitField0_ & ~0x00000008);
-        }
-        result.eventAttribute_ = eventAttribute_;
-      } else {
-        result.eventAttribute_ = eventAttributeBuilder_.build();
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.lifecycleStage_ = lifecycleStage_;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.firstPurchaseDateTime_ = firstPurchaseDateTime_;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -915,6 +930,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getLastPurchaseDateTime().isEmpty()) {
         lastPurchaseDateTime_ = other.lastPurchaseDateTime_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.getAveragePurchaseCount() != 0) {
@@ -925,6 +941,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getAcquisitionDateTime().isEmpty()) {
         acquisitionDateTime_ = other.acquisitionDateTime_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (other.hasShoppingLoyalty()) {
@@ -932,17 +949,19 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getLifecycleStage().isEmpty()) {
         lifecycleStage_ = other.lifecycleStage_;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       if (!other.getFirstPurchaseDateTime().isEmpty()) {
         firstPurchaseDateTime_ = other.firstPurchaseDateTime_;
+        bitField0_ |= 0x00000100;
         onChanged();
       }
       if (eventAttributeBuilder_ == null) {
         if (!other.eventAttribute_.isEmpty()) {
           if (eventAttribute_.isEmpty()) {
             eventAttribute_ = other.eventAttribute_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000200);
           } else {
             ensureEventAttributeIsMutable();
             eventAttribute_.addAll(other.eventAttribute_);
@@ -955,7 +974,7 @@ private static final long serialVersionUID = 0L;
             eventAttributeBuilder_.dispose();
             eventAttributeBuilder_ = null;
             eventAttribute_ = other.eventAttribute_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000200);
             eventAttributeBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getEventAttributeFieldBuilder() : null;
@@ -1002,39 +1021,39 @@ private static final long serialVersionUID = 0L;
             } // case 16
             case 26: {
               lastPurchaseDateTime_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 32: {
               averagePurchaseCount_ = input.readInt32();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 32
             case 40: {
               averagePurchaseValueMicros_ = input.readInt64();
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 40
             case 50: {
               acquisitionDateTime_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000020;
               break;
             } // case 50
             case 58: {
               input.readMessage(
                   getShoppingLoyaltyFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000040;
               break;
             } // case 58
             case 66: {
               lifecycleStage_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000080;
               break;
             } // case 66
             case 74: {
               firstPurchaseDateTime_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000100;
               break;
             } // case 74
             case 82: {
@@ -1102,8 +1121,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLifetimeValueMicros(long value) {
-      bitField0_ |= 0x00000001;
+      
       lifetimeValueMicros_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1163,8 +1183,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLifetimeValueBucket(int value) {
-      bitField0_ |= 0x00000002;
+      
       lifetimeValueBucket_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1247,11 +1268,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLastPurchaseDateTime(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       lastPurchaseDateTime_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1267,8 +1286,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLastPurchaseDateTime() {
-      
       lastPurchaseDateTime_ = getDefaultInstance().getLastPurchaseDateTime();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1286,12 +1305,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLastPurchaseDateTimeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       lastPurchaseDateTime_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1323,6 +1340,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAveragePurchaseCount(int value) {
       
       averagePurchaseCount_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1336,7 +1354,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAveragePurchaseCount() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       averagePurchaseCount_ = 0;
       onChanged();
       return this;
@@ -1367,6 +1385,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAveragePurchaseValueMicros(long value) {
       
       averagePurchaseValueMicros_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1379,7 +1398,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAveragePurchaseValueMicros() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       averagePurchaseValueMicros_ = 0L;
       onChanged();
       return this;
@@ -1447,11 +1466,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAcquisitionDateTime(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       acquisitionDateTime_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1467,8 +1484,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAcquisitionDateTime() {
-      
       acquisitionDateTime_ = getDefaultInstance().getAcquisitionDateTime();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1486,12 +1503,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAcquisitionDateTimeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       acquisitionDateTime_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1510,7 +1525,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the shoppingLoyalty field is set.
      */
     public boolean hasShoppingLoyalty() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -1544,11 +1559,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         shoppingLoyalty_ = value;
-        onChanged();
       } else {
         shoppingLoyaltyBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -1564,11 +1579,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.common.ShoppingLoyalty.Builder builderForValue) {
       if (shoppingLoyaltyBuilder_ == null) {
         shoppingLoyalty_ = builderForValue.build();
-        onChanged();
       } else {
         shoppingLoyaltyBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -1582,19 +1597,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeShoppingLoyalty(com.google.ads.googleads.v11.common.ShoppingLoyalty value) {
       if (shoppingLoyaltyBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0) &&
-            shoppingLoyalty_ != null &&
-            shoppingLoyalty_ != com.google.ads.googleads.v11.common.ShoppingLoyalty.getDefaultInstance()) {
-          shoppingLoyalty_ =
-            com.google.ads.googleads.v11.common.ShoppingLoyalty.newBuilder(shoppingLoyalty_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000040) != 0) &&
+          shoppingLoyalty_ != null &&
+          shoppingLoyalty_ != com.google.ads.googleads.v11.common.ShoppingLoyalty.getDefaultInstance()) {
+          getShoppingLoyaltyBuilder().mergeFrom(value);
         } else {
           shoppingLoyalty_ = value;
         }
-        onChanged();
       } else {
         shoppingLoyaltyBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -1607,13 +1621,13 @@ private static final long serialVersionUID = 0L;
      * <code>optional .google.ads.googleads.v11.common.ShoppingLoyalty shopping_loyalty = 7;</code>
      */
     public Builder clearShoppingLoyalty() {
-      if (shoppingLoyaltyBuilder_ == null) {
-        shoppingLoyalty_ = null;
-        onChanged();
-      } else {
-        shoppingLoyaltyBuilder_.clear();
+      bitField0_ = (bitField0_ & ~0x00000040);
+      shoppingLoyalty_ = null;
+      if (shoppingLoyaltyBuilder_ != null) {
+        shoppingLoyaltyBuilder_.dispose();
+        shoppingLoyaltyBuilder_ = null;
       }
-      bitField0_ = (bitField0_ & ~0x00000004);
+      onChanged();
       return this;
     }
     /**
@@ -1626,7 +1640,7 @@ private static final long serialVersionUID = 0L;
      * <code>optional .google.ads.googleads.v11.common.ShoppingLoyalty shopping_loyalty = 7;</code>
      */
     public com.google.ads.googleads.v11.common.ShoppingLoyalty.Builder getShoppingLoyaltyBuilder() {
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000040;
       onChanged();
       return getShoppingLoyaltyFieldBuilder().getBuilder();
     }
@@ -1673,8 +1687,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object lifecycleStage_ = "";
     /**
      * <pre>
-     * Optional. Advertiser defined lifecycle stage for the user. The accepted values are
-     * "Lead", "Active" and "Churned".
+     * Optional. Advertiser defined lifecycle stage for the user. The accepted
+     * values are "Lead", "Active" and "Churned".
      * </pre>
      *
      * <code>string lifecycle_stage = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -1694,8 +1708,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Advertiser defined lifecycle stage for the user. The accepted values are
-     * "Lead", "Active" and "Churned".
+     * Optional. Advertiser defined lifecycle stage for the user. The accepted
+     * values are "Lead", "Active" and "Churned".
      * </pre>
      *
      * <code>string lifecycle_stage = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -1716,8 +1730,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Advertiser defined lifecycle stage for the user. The accepted values are
-     * "Lead", "Active" and "Churned".
+     * Optional. Advertiser defined lifecycle stage for the user. The accepted
+     * values are "Lead", "Active" and "Churned".
      * </pre>
      *
      * <code>string lifecycle_stage = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -1726,33 +1740,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLifecycleStage(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       lifecycleStage_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Optional. Advertiser defined lifecycle stage for the user. The accepted values are
-     * "Lead", "Active" and "Churned".
+     * Optional. Advertiser defined lifecycle stage for the user. The accepted
+     * values are "Lead", "Active" and "Churned".
      * </pre>
      *
      * <code>string lifecycle_stage = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
      * @return This builder for chaining.
      */
     public Builder clearLifecycleStage() {
-      
       lifecycleStage_ = getDefaultInstance().getLifecycleStage();
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Optional. Advertiser defined lifecycle stage for the user. The accepted values are
-     * "Lead", "Active" and "Churned".
+     * Optional. Advertiser defined lifecycle stage for the user. The accepted
+     * values are "Lead", "Active" and "Churned".
      * </pre>
      *
      * <code>string lifecycle_stage = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -1761,12 +1773,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLifecycleStageBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       lifecycleStage_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1833,11 +1843,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFirstPurchaseDateTime(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       firstPurchaseDateTime_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1853,8 +1861,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFirstPurchaseDateTime() {
-      
       firstPurchaseDateTime_ = getDefaultInstance().getFirstPurchaseDateTime();
+      bitField0_ = (bitField0_ & ~0x00000100);
       onChanged();
       return this;
     }
@@ -1872,12 +1880,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFirstPurchaseDateTimeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       firstPurchaseDateTime_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1885,9 +1891,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v11.common.EventAttribute> eventAttribute_ =
       java.util.Collections.emptyList();
     private void ensureEventAttributeIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
+      if (!((bitField0_ & 0x00000200) != 0)) {
         eventAttribute_ = new java.util.ArrayList<com.google.ads.googleads.v11.common.EventAttribute>(eventAttribute_);
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000200;
        }
     }
 
@@ -1896,8 +1902,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Optional. Advertiser defined events and their attributes. All the values in the
-     * nested fields are required. Currently this field is in beta.
+     * Optional. Advertiser defined events and their attributes. All the values in
+     * the nested fields are required. Currently this field is in beta.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -1911,8 +1917,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Advertiser defined events and their attributes. All the values in the
-     * nested fields are required. Currently this field is in beta.
+     * Optional. Advertiser defined events and their attributes. All the values in
+     * the nested fields are required. Currently this field is in beta.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -1926,8 +1932,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Advertiser defined events and their attributes. All the values in the
-     * nested fields are required. Currently this field is in beta.
+     * Optional. Advertiser defined events and their attributes. All the values in
+     * the nested fields are required. Currently this field is in beta.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -1941,8 +1947,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Advertiser defined events and their attributes. All the values in the
-     * nested fields are required. Currently this field is in beta.
+     * Optional. Advertiser defined events and their attributes. All the values in
+     * the nested fields are required. Currently this field is in beta.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -1963,8 +1969,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Advertiser defined events and their attributes. All the values in the
-     * nested fields are required. Currently this field is in beta.
+     * Optional. Advertiser defined events and their attributes. All the values in
+     * the nested fields are required. Currently this field is in beta.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -1982,8 +1988,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Advertiser defined events and their attributes. All the values in the
-     * nested fields are required. Currently this field is in beta.
+     * Optional. Advertiser defined events and their attributes. All the values in
+     * the nested fields are required. Currently this field is in beta.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -2003,8 +2009,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Advertiser defined events and their attributes. All the values in the
-     * nested fields are required. Currently this field is in beta.
+     * Optional. Advertiser defined events and their attributes. All the values in
+     * the nested fields are required. Currently this field is in beta.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -2025,8 +2031,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Advertiser defined events and their attributes. All the values in the
-     * nested fields are required. Currently this field is in beta.
+     * Optional. Advertiser defined events and their attributes. All the values in
+     * the nested fields are required. Currently this field is in beta.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -2044,8 +2050,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Advertiser defined events and their attributes. All the values in the
-     * nested fields are required. Currently this field is in beta.
+     * Optional. Advertiser defined events and their attributes. All the values in
+     * the nested fields are required. Currently this field is in beta.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -2063,8 +2069,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Advertiser defined events and their attributes. All the values in the
-     * nested fields are required. Currently this field is in beta.
+     * Optional. Advertiser defined events and their attributes. All the values in
+     * the nested fields are required. Currently this field is in beta.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -2083,8 +2089,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Advertiser defined events and their attributes. All the values in the
-     * nested fields are required. Currently this field is in beta.
+     * Optional. Advertiser defined events and their attributes. All the values in
+     * the nested fields are required. Currently this field is in beta.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -2092,7 +2098,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearEventAttribute() {
       if (eventAttributeBuilder_ == null) {
         eventAttribute_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000200);
         onChanged();
       } else {
         eventAttributeBuilder_.clear();
@@ -2101,8 +2107,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Advertiser defined events and their attributes. All the values in the
-     * nested fields are required. Currently this field is in beta.
+     * Optional. Advertiser defined events and their attributes. All the values in
+     * the nested fields are required. Currently this field is in beta.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -2119,8 +2125,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Advertiser defined events and their attributes. All the values in the
-     * nested fields are required. Currently this field is in beta.
+     * Optional. Advertiser defined events and their attributes. All the values in
+     * the nested fields are required. Currently this field is in beta.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -2131,8 +2137,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Advertiser defined events and their attributes. All the values in the
-     * nested fields are required. Currently this field is in beta.
+     * Optional. Advertiser defined events and their attributes. All the values in
+     * the nested fields are required. Currently this field is in beta.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -2146,8 +2152,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Advertiser defined events and their attributes. All the values in the
-     * nested fields are required. Currently this field is in beta.
+     * Optional. Advertiser defined events and their attributes. All the values in
+     * the nested fields are required. Currently this field is in beta.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -2162,8 +2168,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Advertiser defined events and their attributes. All the values in the
-     * nested fields are required. Currently this field is in beta.
+     * Optional. Advertiser defined events and their attributes. All the values in
+     * the nested fields are required. Currently this field is in beta.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -2174,8 +2180,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Advertiser defined events and their attributes. All the values in the
-     * nested fields are required. Currently this field is in beta.
+     * Optional. Advertiser defined events and their attributes. All the values in
+     * the nested fields are required. Currently this field is in beta.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -2187,8 +2193,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. Advertiser defined events and their attributes. All the values in the
-     * nested fields are required. Currently this field is in beta.
+     * Optional. Advertiser defined events and their attributes. All the values in
+     * the nested fields are required. Currently this field is in beta.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -2204,7 +2210,7 @@ private static final long serialVersionUID = 0L;
         eventAttributeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v11.common.EventAttribute, com.google.ads.googleads.v11.common.EventAttribute.Builder, com.google.ads.googleads.v11.common.EventAttributeOrBuilder>(
                 eventAttribute_,
-                ((bitField0_ & 0x00000008) != 0),
+                ((bitField0_ & 0x00000200) != 0),
                 getParentForChildren(),
                 isClean());
         eventAttribute_ = null;

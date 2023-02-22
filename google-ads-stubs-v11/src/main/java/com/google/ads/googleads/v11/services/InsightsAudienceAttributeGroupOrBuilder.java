@@ -9,8 +9,8 @@ public interface InsightsAudienceAttributeGroupOrBuilder extends
 
   /**
    * <pre>
-   * Required. A collection of audience attributes to be combined with logical OR.
-   * Attributes need not all be the same dimension.  Only Knowledge Graph
+   * Required. A collection of audience attributes to be combined with logical
+   * OR. Attributes need not all be the same dimension.  Only Knowledge Graph
    * entities, Product &amp; Service Categories, and Affinity and In-Market
    * audiences are supported in this context.
    * </pre>
@@ -21,8 +21,8 @@ public interface InsightsAudienceAttributeGroupOrBuilder extends
       getAttributesList();
   /**
    * <pre>
-   * Required. A collection of audience attributes to be combined with logical OR.
-   * Attributes need not all be the same dimension.  Only Knowledge Graph
+   * Required. A collection of audience attributes to be combined with logical
+   * OR. Attributes need not all be the same dimension.  Only Knowledge Graph
    * entities, Product &amp; Service Categories, and Affinity and In-Market
    * audiences are supported in this context.
    * </pre>
@@ -32,8 +32,8 @@ public interface InsightsAudienceAttributeGroupOrBuilder extends
   com.google.ads.googleads.v11.services.AudienceInsightsAttribute getAttributes(int index);
   /**
    * <pre>
-   * Required. A collection of audience attributes to be combined with logical OR.
-   * Attributes need not all be the same dimension.  Only Knowledge Graph
+   * Required. A collection of audience attributes to be combined with logical
+   * OR. Attributes need not all be the same dimension.  Only Knowledge Graph
    * entities, Product &amp; Service Categories, and Affinity and In-Market
    * audiences are supported in this context.
    * </pre>
@@ -43,8 +43,8 @@ public interface InsightsAudienceAttributeGroupOrBuilder extends
   int getAttributesCount();
   /**
    * <pre>
-   * Required. A collection of audience attributes to be combined with logical OR.
-   * Attributes need not all be the same dimension.  Only Knowledge Graph
+   * Required. A collection of audience attributes to be combined with logical
+   * OR. Attributes need not all be the same dimension.  Only Knowledge Graph
    * entities, Product &amp; Service Categories, and Affinity and In-Market
    * audiences are supported in this context.
    * </pre>
@@ -55,8 +55,8 @@ public interface InsightsAudienceAttributeGroupOrBuilder extends
       getAttributesOrBuilderList();
   /**
    * <pre>
-   * Required. A collection of audience attributes to be combined with logical OR.
-   * Attributes need not all be the same dimension.  Only Knowledge Graph
+   * Required. A collection of audience attributes to be combined with logical
+   * OR. Attributes need not all be the same dimension.  Only Knowledge Graph
    * entities, Product &amp; Service Categories, and Affinity and In-Market
    * audiences are supported in this context.
    * </pre>

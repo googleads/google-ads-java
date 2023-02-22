@@ -154,9 +154,9 @@ public interface AdGroupAdOrBuilder extends
 
   /**
    * <pre>
-   * Output only. A list of recommendations to improve the ad strength. For example, a
-   * recommendation could be "Your headlines are a little too similar.
-   * Try adding more distinct headlines.".
+   * Output only. A list of recommendations to improve the ad strength. For
+   * example, a recommendation could be "Your headlines are a little too
+   * similar. Try adding more distinct headlines.".
    * </pre>
    *
    * <code>repeated string action_items = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -166,9 +166,9 @@ public interface AdGroupAdOrBuilder extends
       getActionItemsList();
   /**
    * <pre>
-   * Output only. A list of recommendations to improve the ad strength. For example, a
-   * recommendation could be "Your headlines are a little too similar.
-   * Try adding more distinct headlines.".
+   * Output only. A list of recommendations to improve the ad strength. For
+   * example, a recommendation could be "Your headlines are a little too
+   * similar. Try adding more distinct headlines.".
    * </pre>
    *
    * <code>repeated string action_items = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -177,9 +177,9 @@ public interface AdGroupAdOrBuilder extends
   int getActionItemsCount();
   /**
    * <pre>
-   * Output only. A list of recommendations to improve the ad strength. For example, a
-   * recommendation could be "Your headlines are a little too similar.
-   * Try adding more distinct headlines.".
+   * Output only. A list of recommendations to improve the ad strength. For
+   * example, a recommendation could be "Your headlines are a little too
+   * similar. Try adding more distinct headlines.".
    * </pre>
    *
    * <code>repeated string action_items = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -189,9 +189,9 @@ public interface AdGroupAdOrBuilder extends
   java.lang.String getActionItems(int index);
   /**
    * <pre>
-   * Output only. A list of recommendations to improve the ad strength. For example, a
-   * recommendation could be "Your headlines are a little too similar.
-   * Try adding more distinct headlines.".
+   * Output only. A list of recommendations to improve the ad strength. For
+   * example, a recommendation could be "Your headlines are a little too
+   * similar. Try adding more distinct headlines.".
    * </pre>
    *
    * <code>repeated string action_items = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

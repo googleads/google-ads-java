@@ -57,7 +57,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Immutable. The resource name of the ad parameter.
@@ -107,7 +108,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AD_GROUP_CRITERION_FIELD_NUMBER = 5;
-  private volatile java.lang.Object adGroupCriterion_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object adGroupCriterion_ = "";
   /**
    * <pre>
    * Immutable. The ad group criterion that this ad parameter belongs to.
@@ -165,7 +167,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PARAMETER_INDEX_FIELD_NUMBER = 6;
-  private long parameterIndex_;
+  private long parameterIndex_ = 0L;
   /**
    * <pre>
    * Immutable. The unique index of this ad parameter. Must be either 1 or 2.
@@ -192,7 +194,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INSERTION_TEXT_FIELD_NUMBER = 7;
-  private volatile java.lang.Object insertionText_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object insertionText_ = "";
   /**
    * <pre>
    * Numeric value to insert into the ad text. The following restrictions
@@ -528,14 +531,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       adGroupCriterion_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       parameterIndex_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000002);
       insertionText_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -562,24 +562,30 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.AdParameter buildPartial() {
       com.google.ads.googleads.v11.resources.AdParameter result = new com.google.ads.googleads.v11.resources.AdParameter(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.AdParameter result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.adGroupCriterion_ = adGroupCriterion_;
         to_bitField0_ |= 0x00000001;
       }
-      result.adGroupCriterion_ = adGroupCriterion_;
-      if (((from_bitField0_ & 0x00000002) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.parameterIndex_ = parameterIndex_;
         to_bitField0_ |= 0x00000002;
       }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.insertionText_ = insertionText_;
         to_bitField0_ |= 0x00000004;
       }
-      result.insertionText_ = insertionText_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -628,19 +634,20 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.resources.AdParameter.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasAdGroupCriterion()) {
-        bitField0_ |= 0x00000001;
         adGroupCriterion_ = other.adGroupCriterion_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasParameterIndex()) {
         setParameterIndex(other.getParameterIndex());
       }
       if (other.hasInsertionText()) {
-        bitField0_ |= 0x00000004;
         insertionText_ = other.insertionText_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -671,22 +678,22 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 42: {
               adGroupCriterion_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 42
             case 48: {
               parameterIndex_ = input.readInt64();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 48
             case 58: {
               insertionText_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               break;
             } // case 58
             default: {
@@ -765,11 +772,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -784,8 +789,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -802,12 +807,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -822,7 +825,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the adGroupCriterion field is set.
      */
     public boolean hasAdGroupCriterion() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -876,11 +879,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAdGroupCriterion(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       adGroupCriterion_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -893,8 +894,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAdGroupCriterion() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       adGroupCriterion_ = getDefaultInstance().getAdGroupCriterion();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -909,12 +910,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAdGroupCriterionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       adGroupCriterion_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -930,7 +929,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasParameterIndex() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -954,8 +953,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setParameterIndex(long value) {
-      bitField0_ |= 0x00000002;
+      
       parameterIndex_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -968,7 +968,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearParameterIndex() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       parameterIndex_ = 0L;
       onChanged();
       return this;
@@ -996,7 +996,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the insertionText field is set.
      */
     public boolean hasInsertionText() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -1086,11 +1086,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setInsertionText(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       insertionText_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1115,8 +1113,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearInsertionText() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       insertionText_ = getDefaultInstance().getInsertionText();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1143,12 +1141,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setInsertionTextBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       insertionText_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }

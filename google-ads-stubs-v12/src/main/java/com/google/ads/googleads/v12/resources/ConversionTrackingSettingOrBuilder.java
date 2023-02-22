@@ -9,9 +9,9 @@ public interface ConversionTrackingSettingOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The conversion tracking id used for this account. This id doesn't indicate
-   * whether the customer uses conversion tracking (conversion_tracking_status
-   * does). This field is read-only.
+   * Output only. The conversion tracking id used for this account. This id
+   * doesn't indicate whether the customer uses conversion tracking
+   * (conversion_tracking_status does). This field is read-only.
    * </pre>
    *
    * <code>optional int64 conversion_tracking_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -20,9 +20,9 @@ public interface ConversionTrackingSettingOrBuilder extends
   boolean hasConversionTrackingId();
   /**
    * <pre>
-   * Output only. The conversion tracking id used for this account. This id doesn't indicate
-   * whether the customer uses conversion tracking (conversion_tracking_status
-   * does). This field is read-only.
+   * Output only. The conversion tracking id used for this account. This id
+   * doesn't indicate whether the customer uses conversion tracking
+   * (conversion_tracking_status does). This field is read-only.
    * </pre>
    *
    * <code>optional int64 conversion_tracking_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -32,10 +32,10 @@ public interface ConversionTrackingSettingOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The conversion tracking id of the customer's manager. This is set when the
-   * customer is opted into cross account conversion tracking, and it overrides
-   * conversion_tracking_id. This field can only be managed through the Google
-   * Ads UI. This field is read-only.
+   * Output only. The conversion tracking id of the customer's manager. This is
+   * set when the customer is opted into cross account conversion tracking, and
+   * it overrides conversion_tracking_id. This field can only be managed through
+   * the Google Ads UI. This field is read-only.
    * </pre>
    *
    * <code>optional int64 cross_account_conversion_tracking_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -44,10 +44,10 @@ public interface ConversionTrackingSettingOrBuilder extends
   boolean hasCrossAccountConversionTrackingId();
   /**
    * <pre>
-   * Output only. The conversion tracking id of the customer's manager. This is set when the
-   * customer is opted into cross account conversion tracking, and it overrides
-   * conversion_tracking_id. This field can only be managed through the Google
-   * Ads UI. This field is read-only.
+   * Output only. The conversion tracking id of the customer's manager. This is
+   * set when the customer is opted into cross account conversion tracking, and
+   * it overrides conversion_tracking_id. This field can only be managed through
+   * the Google Ads UI. This field is read-only.
    * </pre>
    *
    * <code>optional int64 cross_account_conversion_tracking_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -57,8 +57,8 @@ public interface ConversionTrackingSettingOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Whether the customer has accepted customer data terms. If using
-   * cross-account conversion tracking, this value is inherited from the
+   * Output only. Whether the customer has accepted customer data terms. If
+   * using cross-account conversion tracking, this value is inherited from the
    * manager. This field is read-only. For more
    * information, see https://support.google.com/adspolicy/answer/7475709.
    * </pre>
@@ -70,9 +70,9 @@ public interface ConversionTrackingSettingOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Conversion tracking status. It indicates whether the customer is using
-   * conversion tracking, and who is the conversion tracking owner of this
-   * customer. If this customer is using cross-account conversion tracking,
+   * Output only. Conversion tracking status. It indicates whether the customer
+   * is using conversion tracking, and who is the conversion tracking owner of
+   * this customer. If this customer is using cross-account conversion tracking,
    * the value returned will differ based on the `login-customer-id` of the
    * request.
    * </pre>
@@ -83,9 +83,9 @@ public interface ConversionTrackingSettingOrBuilder extends
   int getConversionTrackingStatusValue();
   /**
    * <pre>
-   * Output only. Conversion tracking status. It indicates whether the customer is using
-   * conversion tracking, and who is the conversion tracking owner of this
-   * customer. If this customer is using cross-account conversion tracking,
+   * Output only. Conversion tracking status. It indicates whether the customer
+   * is using conversion tracking, and who is the conversion tracking owner of
+   * this customer. If this customer is using cross-account conversion tracking,
    * the value returned will differ based on the `login-customer-id` of the
    * request.
    * </pre>
@@ -109,8 +109,8 @@ public interface ConversionTrackingSettingOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The resource name of the customer where conversions are created and
-   * managed. This field is read-only.
+   * Output only. The resource name of the customer where conversions are
+   * created and managed. This field is read-only.
    * </pre>
    *
    * <code>string google_ads_conversion_customer = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -119,8 +119,8 @@ public interface ConversionTrackingSettingOrBuilder extends
   java.lang.String getGoogleAdsConversionCustomer();
   /**
    * <pre>
-   * Output only. The resource name of the customer where conversions are created and
-   * managed. This field is read-only.
+   * Output only. The resource name of the customer where conversions are
+   * created and managed. This field is read-only.
    * </pre>
    *
    * <code>string google_ads_conversion_customer = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

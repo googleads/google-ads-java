@@ -51,7 +51,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int OPERATOR_FIELD_NUMBER = 1;
-  private int operator_;
+  private int operator_ = 0;
   /**
    * <pre>
    * Date comparison operator.
@@ -76,13 +76,13 @@ private static final long serialVersionUID = 0L;
    * @return The operator.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator getOperator() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator result = com.google.ads.googleads.v11.enums.UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator.valueOf(operator_);
+    com.google.ads.googleads.v11.enums.UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator result = com.google.ads.googleads.v11.enums.UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator.forNumber(operator_);
     return result == null ? com.google.ads.googleads.v11.enums.UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator.UNRECOGNIZED : result;
   }
 
   public static final int VALUE_FIELD_NUMBER = 4;
-  private volatile java.lang.Object value_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object value_ = "";
   /**
    * <pre>
    * String representing date value to be compared with the rule variable.
@@ -146,7 +146,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int OFFSET_IN_DAYS_FIELD_NUMBER = 5;
-  private long offsetInDays_;
+  private long offsetInDays_ = 0L;
   /**
    * <pre>
    * The relative date value of the right hand side denoted by number of days
@@ -399,12 +399,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       operator_ = 0;
-
       value_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       offsetInDays_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -431,20 +429,26 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.UserListDateRuleItemInfo buildPartial() {
       com.google.ads.googleads.v11.common.UserListDateRuleItemInfo result = new com.google.ads.googleads.v11.common.UserListDateRuleItemInfo(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.UserListDateRuleItemInfo result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.operator_ = operator_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.operator_ = operator_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.value_ = value_;
         to_bitField0_ |= 0x00000001;
       }
-      result.value_ = value_;
-      if (((from_bitField0_ & 0x00000002) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.offsetInDays_ = offsetInDays_;
         to_bitField0_ |= 0x00000002;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -495,8 +499,8 @@ private static final long serialVersionUID = 0L;
         setOperatorValue(other.getOperatorValue());
       }
       if (other.hasValue()) {
-        bitField0_ |= 0x00000001;
         value_ = other.value_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasOffsetInDays()) {
@@ -530,17 +534,17 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               operator_ = input.readEnum();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             case 34: {
               value_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 34
             case 40: {
               offsetInDays_ = input.readInt64();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 40
             default: {
@@ -586,8 +590,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOperatorValue(int value) {
-      
       operator_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -603,8 +607,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator getOperator() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator result = com.google.ads.googleads.v11.enums.UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator.valueOf(operator_);
+      com.google.ads.googleads.v11.enums.UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator result = com.google.ads.googleads.v11.enums.UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator.forNumber(operator_);
       return result == null ? com.google.ads.googleads.v11.enums.UserListDateRuleItemOperatorEnum.UserListDateRuleItemOperator.UNRECOGNIZED : result;
     }
     /**
@@ -622,7 +625,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       operator_ = value.getNumber();
       onChanged();
       return this;
@@ -638,7 +641,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOperator() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       operator_ = 0;
       onChanged();
       return this;
@@ -656,7 +659,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the value field is set.
      */
     public boolean hasValue() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -716,11 +719,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setValue(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       value_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -735,8 +736,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearValue() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       value_ = getDefaultInstance().getValue();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -753,12 +754,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setValueBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       value_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -776,7 +775,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasOffsetInDays() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -804,8 +803,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOffsetInDays(long value) {
-      bitField0_ |= 0x00000002;
+      
       offsetInDays_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -820,7 +820,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOffsetInDays() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       offsetInDays_ = 0L;
       onChanged();
       return this;

@@ -70,7 +70,10 @@ import org.threeten.bp.Duration;
  * feedServiceSettingsBuilder
  *     .mutateFeedsSettings()
  *     .setRetrySettings(
- *         feedServiceSettingsBuilder.mutateFeedsSettings().getRetrySettings().toBuilder()
+ *         feedServiceSettingsBuilder
+ *             .mutateFeedsSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
  * FeedServiceStubSettings feedServiceSettings = feedServiceSettingsBuilder.build();

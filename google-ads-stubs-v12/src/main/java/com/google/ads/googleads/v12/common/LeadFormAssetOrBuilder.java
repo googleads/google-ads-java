@@ -48,8 +48,8 @@ public interface LeadFormAssetOrBuilder extends
 
   /**
    * <pre>
-   * Required. Text giving a clear value proposition of what users expect once they expand
-   * the form.
+   * Required. Text giving a clear value proposition of what users expect once
+   * they expand the form.
    * </pre>
    *
    * <code>string call_to_action_description = 18 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -58,8 +58,8 @@ public interface LeadFormAssetOrBuilder extends
   java.lang.String getCallToActionDescription();
   /**
    * <pre>
-   * Required. Text giving a clear value proposition of what users expect once they expand
-   * the form.
+   * Required. Text giving a clear value proposition of what users expect once
+   * they expand the form.
    * </pre>
    *
    * <code>string call_to_action_description = 18 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -70,8 +70,8 @@ public interface LeadFormAssetOrBuilder extends
 
   /**
    * <pre>
-   * Required. Headline of the expanded form to describe what the form is asking for or
-   * facilitating.
+   * Required. Headline of the expanded form to describe what the form is asking
+   * for or facilitating.
    * </pre>
    *
    * <code>string headline = 12 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -80,8 +80,8 @@ public interface LeadFormAssetOrBuilder extends
   java.lang.String getHeadline();
   /**
    * <pre>
-   * Required. Headline of the expanded form to describe what the form is asking for or
-   * facilitating.
+   * Required. Headline of the expanded form to describe what the form is asking
+   * for or facilitating.
    * </pre>
    *
    * <code>string headline = 12 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -92,8 +92,8 @@ public interface LeadFormAssetOrBuilder extends
 
   /**
    * <pre>
-   * Required. Detailed description of the expanded form to describe what the form is
-   * asking for or facilitating.
+   * Required. Detailed description of the expanded form to describe what the
+   * form is asking for or facilitating.
    * </pre>
    *
    * <code>string description = 13 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -102,8 +102,8 @@ public interface LeadFormAssetOrBuilder extends
   java.lang.String getDescription();
   /**
    * <pre>
-   * Required. Detailed description of the expanded form to describe what the form is
-   * asking for or facilitating.
+   * Required. Detailed description of the expanded form to describe what the
+   * form is asking for or facilitating.
    * </pre>
    *
    * <code>string description = 13 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -114,8 +114,8 @@ public interface LeadFormAssetOrBuilder extends
 
   /**
    * <pre>
-   * Required. Link to a page describing the policy on how the collected data is handled
-   * by the advertiser/business.
+   * Required. Link to a page describing the policy on how the collected data is
+   * handled by the advertiser/business.
    * </pre>
    *
    * <code>string privacy_policy_url = 14 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -124,8 +124,8 @@ public interface LeadFormAssetOrBuilder extends
   java.lang.String getPrivacyPolicyUrl();
   /**
    * <pre>
-   * Required. Link to a page describing the policy on how the collected data is handled
-   * by the advertiser/business.
+   * Required. Link to a page describing the policy on how the collected data is
+   * handled by the advertiser/business.
    * </pre>
    *
    * <code>string privacy_policy_url = 14 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -249,7 +249,8 @@ public interface LeadFormAssetOrBuilder extends
 
   /**
    * <pre>
-   * Ordered list of custom question fields.
+   * Ordered list of custom question fields. This field is subject to a limit of
+   * 5 qualifying questions per form.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.LeadFormCustomQuestionField custom_question_fields = 23;</code>
@@ -258,7 +259,8 @@ public interface LeadFormAssetOrBuilder extends
       getCustomQuestionFieldsList();
   /**
    * <pre>
-   * Ordered list of custom question fields.
+   * Ordered list of custom question fields. This field is subject to a limit of
+   * 5 qualifying questions per form.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.LeadFormCustomQuestionField custom_question_fields = 23;</code>
@@ -266,7 +268,8 @@ public interface LeadFormAssetOrBuilder extends
   com.google.ads.googleads.v12.common.LeadFormCustomQuestionField getCustomQuestionFields(int index);
   /**
    * <pre>
-   * Ordered list of custom question fields.
+   * Ordered list of custom question fields. This field is subject to a limit of
+   * 5 qualifying questions per form.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.LeadFormCustomQuestionField custom_question_fields = 23;</code>
@@ -274,7 +277,8 @@ public interface LeadFormAssetOrBuilder extends
   int getCustomQuestionFieldsCount();
   /**
    * <pre>
-   * Ordered list of custom question fields.
+   * Ordered list of custom question fields. This field is subject to a limit of
+   * 5 qualifying questions per form.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.LeadFormCustomQuestionField custom_question_fields = 23;</code>
@@ -283,7 +287,8 @@ public interface LeadFormAssetOrBuilder extends
       getCustomQuestionFieldsOrBuilderList();
   /**
    * <pre>
-   * Ordered list of custom question fields.
+   * Ordered list of custom question fields. This field is subject to a limit of
+   * 5 qualifying questions per form.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.LeadFormCustomQuestionField custom_question_fields = 23;</code>

@@ -95,7 +95,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DIMENSION_FIELD_NUMBER = 1;
-  private int dimension_;
+  private int dimension_ = 0;
   /**
    * <pre>
    * The type of the attribute.
@@ -116,8 +116,7 @@ private static final long serialVersionUID = 0L;
    * @return The dimension.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension getDimension() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension result = com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension.valueOf(dimension_);
+    com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension result = com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension.forNumber(dimension_);
     return result == null ? com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension.UNRECOGNIZED : result;
   }
 
@@ -156,11 +155,12 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.services.AudienceInsightsAttributeOrBuilder getAttributeOrBuilder() {
-    return getAttribute();
+    return attribute_ == null ? com.google.ads.googleads.v12.services.AudienceInsightsAttribute.getDefaultInstance() : attribute_;
   }
 
   public static final int DISPLAY_NAME_FIELD_NUMBER = 3;
-  private volatile java.lang.Object displayName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object displayName_ = "";
   /**
    * <pre>
    * The human-readable name of the attribute.
@@ -206,7 +206,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SCORE_FIELD_NUMBER = 4;
-  private double score_;
+  private double score_ = 0D;
   /**
    * <pre>
    * A relevance score for this attribute, between 0 and 1.
@@ -221,7 +221,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DISPLAY_INFO_FIELD_NUMBER = 5;
-  private volatile java.lang.Object displayInfo_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object displayInfo_ = "";
   /**
    * <pre>
    * A string that supplements the display_name to identify the attribute.
@@ -700,20 +701,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       dimension_ = 0;
-
-      if (attributeBuilder_ == null) {
-        attribute_ = null;
-      } else {
-        attribute_ = null;
+      attribute_ = null;
+      if (attributeBuilder_ != null) {
+        attributeBuilder_.dispose();
         attributeBuilder_ = null;
       }
       displayName_ = "";
-
       score_ = 0D;
-
       displayInfo_ = "";
-
       if (youtubeChannelMetadataBuilder_ != null) {
         youtubeChannelMetadataBuilder_.clear();
       }
@@ -751,39 +748,48 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.AudienceInsightsAttributeMetadata buildPartial() {
       com.google.ads.googleads.v12.services.AudienceInsightsAttributeMetadata result = new com.google.ads.googleads.v12.services.AudienceInsightsAttributeMetadata(this);
-      result.dimension_ = dimension_;
-      if (attributeBuilder_ == null) {
-        result.attribute_ = attribute_;
-      } else {
-        result.attribute_ = attributeBuilder_.build();
-      }
-      result.displayName_ = displayName_;
-      result.score_ = score_;
-      result.displayInfo_ = displayInfo_;
-      if (dimensionMetadataCase_ == 6) {
-        if (youtubeChannelMetadataBuilder_ == null) {
-          result.dimensionMetadata_ = dimensionMetadata_;
-        } else {
-          result.dimensionMetadata_ = youtubeChannelMetadataBuilder_.build();
-        }
-      }
-      if (dimensionMetadataCase_ == 7) {
-        if (dynamicAttributeMetadataBuilder_ == null) {
-          result.dimensionMetadata_ = dimensionMetadata_;
-        } else {
-          result.dimensionMetadata_ = dynamicAttributeMetadataBuilder_.build();
-        }
-      }
-      if (dimensionMetadataCase_ == 8) {
-        if (locationAttributeMetadataBuilder_ == null) {
-          result.dimensionMetadata_ = dimensionMetadata_;
-        } else {
-          result.dimensionMetadata_ = locationAttributeMetadataBuilder_.build();
-        }
-      }
-      result.dimensionMetadataCase_ = dimensionMetadataCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.AudienceInsightsAttributeMetadata result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.dimension_ = dimension_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.attribute_ = attributeBuilder_ == null
+            ? attribute_
+            : attributeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.displayName_ = displayName_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.score_ = score_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.displayInfo_ = displayInfo_;
+      }
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v12.services.AudienceInsightsAttributeMetadata result) {
+      result.dimensionMetadataCase_ = dimensionMetadataCase_;
+      result.dimensionMetadata_ = this.dimensionMetadata_;
+      if (dimensionMetadataCase_ == 6 &&
+          youtubeChannelMetadataBuilder_ != null) {
+        result.dimensionMetadata_ = youtubeChannelMetadataBuilder_.build();
+      }
+      if (dimensionMetadataCase_ == 7 &&
+          dynamicAttributeMetadataBuilder_ != null) {
+        result.dimensionMetadata_ = dynamicAttributeMetadataBuilder_.build();
+      }
+      if (dimensionMetadataCase_ == 8 &&
+          locationAttributeMetadataBuilder_ != null) {
+        result.dimensionMetadata_ = locationAttributeMetadataBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -838,6 +844,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getDisplayName().isEmpty()) {
         displayName_ = other.displayName_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.getScore() != 0D) {
@@ -845,6 +852,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getDisplayInfo().isEmpty()) {
         displayInfo_ = other.displayInfo_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       switch (other.getDimensionMetadataCase()) {
@@ -892,29 +900,29 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               dimension_ = input.readEnum();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             case 18: {
               input.readMessage(
                   getAttributeFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
               displayName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 33: {
               score_ = input.readDouble();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 33
             case 42: {
               displayInfo_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 42
             case 50: {
@@ -968,6 +976,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private int dimension_ = 0;
     /**
@@ -991,8 +1000,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDimensionValue(int value) {
-      
       dimension_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1006,8 +1015,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension getDimension() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension result = com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension.valueOf(dimension_);
+      com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension result = com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension.forNumber(dimension_);
       return result == null ? com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension.UNRECOGNIZED : result;
     }
     /**
@@ -1023,7 +1031,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       dimension_ = value.getNumber();
       onChanged();
       return this;
@@ -1037,7 +1045,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDimension() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       dimension_ = 0;
       onChanged();
       return this;
@@ -1055,7 +1063,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the attribute field is set.
      */
     public boolean hasAttribute() {
-      return attributeBuilder_ != null || attribute_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -1085,11 +1093,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         attribute_ = value;
-        onChanged();
       } else {
         attributeBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -1103,11 +1111,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.services.AudienceInsightsAttribute.Builder builderForValue) {
       if (attributeBuilder_ == null) {
         attribute_ = builderForValue.build();
-        onChanged();
       } else {
         attributeBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -1119,17 +1127,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAttribute(com.google.ads.googleads.v12.services.AudienceInsightsAttribute value) {
       if (attributeBuilder_ == null) {
-        if (attribute_ != null) {
-          attribute_ =
-            com.google.ads.googleads.v12.services.AudienceInsightsAttribute.newBuilder(attribute_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          attribute_ != null &&
+          attribute_ != com.google.ads.googleads.v12.services.AudienceInsightsAttribute.getDefaultInstance()) {
+          getAttributeBuilder().mergeFrom(value);
         } else {
           attribute_ = value;
         }
-        onChanged();
       } else {
         attributeBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -1140,14 +1149,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.services.AudienceInsightsAttribute attribute = 2;</code>
      */
     public Builder clearAttribute() {
-      if (attributeBuilder_ == null) {
-        attribute_ = null;
-        onChanged();
-      } else {
-        attribute_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      attribute_ = null;
+      if (attributeBuilder_ != null) {
+        attributeBuilder_.dispose();
         attributeBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1158,7 +1166,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.services.AudienceInsightsAttribute attribute = 2;</code>
      */
     public com.google.ads.googleads.v12.services.AudienceInsightsAttribute.Builder getAttributeBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getAttributeFieldBuilder().getBuilder();
     }
@@ -1251,11 +1259,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDisplayName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       displayName_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1268,8 +1274,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayName() {
-      
       displayName_ = getDefaultInstance().getDisplayName();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1284,12 +1290,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDisplayNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       displayName_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1319,6 +1323,7 @@ private static final long serialVersionUID = 0L;
     public Builder setScore(double value) {
       
       score_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1331,7 +1336,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearScore() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       score_ = 0D;
       onChanged();
       return this;
@@ -1405,11 +1410,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDisplayInfo(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       displayInfo_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1427,8 +1430,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayInfo() {
-      
       displayInfo_ = getDefaultInstance().getDisplayInfo();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1448,12 +1451,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDisplayInfoBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       displayInfo_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1632,7 +1633,7 @@ private static final long serialVersionUID = 0L;
         dimensionMetadata_ = null;
       }
       dimensionMetadataCase_ = 6;
-      onChanged();;
+      onChanged();
       return youtubeChannelMetadataBuilder_;
     }
 
@@ -1810,7 +1811,7 @@ private static final long serialVersionUID = 0L;
         dimensionMetadata_ = null;
       }
       dimensionMetadataCase_ = 7;
-      onChanged();;
+      onChanged();
       return dynamicAttributeMetadataBuilder_;
     }
 
@@ -1988,7 +1989,7 @@ private static final long serialVersionUID = 0L;
         dimensionMetadata_ = null;
       }
       dimensionMetadataCase_ = 8;
-      onChanged();;
+      onChanged();
       return locationAttributeMetadataBuilder_;
     }
     @java.lang.Override

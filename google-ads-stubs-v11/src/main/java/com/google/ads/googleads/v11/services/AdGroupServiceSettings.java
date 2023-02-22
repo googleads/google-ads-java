@@ -60,7 +60,10 @@ import javax.annotation.Generated;
  * adGroupServiceSettingsBuilder
  *     .mutateAdGroupsSettings()
  *     .setRetrySettings(
- *         adGroupServiceSettingsBuilder.mutateAdGroupsSettings().getRetrySettings().toBuilder()
+ *         adGroupServiceSettingsBuilder
+ *             .mutateAdGroupsSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
  * AdGroupServiceSettings adGroupServiceSettings = adGroupServiceSettingsBuilder.build();

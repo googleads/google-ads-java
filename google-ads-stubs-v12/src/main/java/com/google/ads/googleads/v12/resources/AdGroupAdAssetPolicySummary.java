@@ -51,6 +51,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int POLICY_TOPIC_ENTRIES_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.PolicyTopicEntry> policyTopicEntries_;
   /**
    * <pre>
@@ -111,7 +112,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int REVIEW_STATUS_FIELD_NUMBER = 2;
-  private int reviewStatus_;
+  private int reviewStatus_ = 0;
   /**
    * <pre>
    * Output only. Where in the review process this ad group ad asset is.
@@ -132,17 +133,16 @@ private static final long serialVersionUID = 0L;
    * @return The reviewStatus.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.PolicyReviewStatusEnum.PolicyReviewStatus getReviewStatus() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.PolicyReviewStatusEnum.PolicyReviewStatus result = com.google.ads.googleads.v12.enums.PolicyReviewStatusEnum.PolicyReviewStatus.valueOf(reviewStatus_);
+    com.google.ads.googleads.v12.enums.PolicyReviewStatusEnum.PolicyReviewStatus result = com.google.ads.googleads.v12.enums.PolicyReviewStatusEnum.PolicyReviewStatus.forNumber(reviewStatus_);
     return result == null ? com.google.ads.googleads.v12.enums.PolicyReviewStatusEnum.PolicyReviewStatus.UNRECOGNIZED : result;
   }
 
   public static final int APPROVAL_STATUS_FIELD_NUMBER = 3;
-  private int approvalStatus_;
+  private int approvalStatus_ = 0;
   /**
    * <pre>
-   * Output only. The overall approval status of this ad group ad asset, calculated based on
-   * the status of its individual policy topic entries.
+   * Output only. The overall approval status of this ad group ad asset,
+   * calculated based on the status of its individual policy topic entries.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -153,16 +153,15 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The overall approval status of this ad group ad asset, calculated based on
-   * the status of its individual policy topic entries.
+   * Output only. The overall approval status of this ad group ad asset,
+   * calculated based on the status of its individual policy topic entries.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The approvalStatus.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus getApprovalStatus() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus result = com.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus.valueOf(approvalStatus_);
+    com.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus result = com.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus.forNumber(approvalStatus_);
     return result == null ? com.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus.UNRECOGNIZED : result;
   }
 
@@ -380,6 +379,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (policyTopicEntriesBuilder_ == null) {
         policyTopicEntries_ = java.util.Collections.emptyList();
       } else {
@@ -388,9 +388,7 @@ private static final long serialVersionUID = 0L;
       }
       bitField0_ = (bitField0_ & ~0x00000001);
       reviewStatus_ = 0;
-
       approvalStatus_ = 0;
-
       return this;
     }
 
@@ -417,7 +415,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.AdGroupAdAssetPolicySummary buildPartial() {
       com.google.ads.googleads.v12.resources.AdGroupAdAssetPolicySummary result = new com.google.ads.googleads.v12.resources.AdGroupAdAssetPolicySummary(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.resources.AdGroupAdAssetPolicySummary result) {
       if (policyTopicEntriesBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           policyTopicEntries_ = java.util.Collections.unmodifiableList(policyTopicEntries_);
@@ -427,10 +431,16 @@ private static final long serialVersionUID = 0L;
       } else {
         result.policyTopicEntries_ = policyTopicEntriesBuilder_.build();
       }
-      result.reviewStatus_ = reviewStatus_;
-      result.approvalStatus_ = approvalStatus_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.resources.AdGroupAdAssetPolicySummary result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.reviewStatus_ = reviewStatus_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.approvalStatus_ = approvalStatus_;
+      }
     }
 
     @java.lang.Override
@@ -550,12 +560,12 @@ private static final long serialVersionUID = 0L;
             } // case 10
             case 16: {
               reviewStatus_ = input.readEnum();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             case 24: {
               approvalStatus_ = input.readEnum();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 24
             default: {
@@ -909,8 +919,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setReviewStatusValue(int value) {
-      
       reviewStatus_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -924,8 +934,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.PolicyReviewStatusEnum.PolicyReviewStatus getReviewStatus() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.PolicyReviewStatusEnum.PolicyReviewStatus result = com.google.ads.googleads.v12.enums.PolicyReviewStatusEnum.PolicyReviewStatus.valueOf(reviewStatus_);
+      com.google.ads.googleads.v12.enums.PolicyReviewStatusEnum.PolicyReviewStatus result = com.google.ads.googleads.v12.enums.PolicyReviewStatusEnum.PolicyReviewStatus.forNumber(reviewStatus_);
       return result == null ? com.google.ads.googleads.v12.enums.PolicyReviewStatusEnum.PolicyReviewStatus.UNRECOGNIZED : result;
     }
     /**
@@ -941,7 +950,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000002;
       reviewStatus_ = value.getNumber();
       onChanged();
       return this;
@@ -955,7 +964,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearReviewStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       reviewStatus_ = 0;
       onChanged();
       return this;
@@ -964,8 +973,8 @@ private static final long serialVersionUID = 0L;
     private int approvalStatus_ = 0;
     /**
      * <pre>
-     * Output only. The overall approval status of this ad group ad asset, calculated based on
-     * the status of its individual policy topic entries.
+     * Output only. The overall approval status of this ad group ad asset,
+     * calculated based on the status of its individual policy topic entries.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -976,8 +985,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The overall approval status of this ad group ad asset, calculated based on
-     * the status of its individual policy topic entries.
+     * Output only. The overall approval status of this ad group ad asset,
+     * calculated based on the status of its individual policy topic entries.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -985,15 +994,15 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setApprovalStatusValue(int value) {
-      
       approvalStatus_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The overall approval status of this ad group ad asset, calculated based on
-     * the status of its individual policy topic entries.
+     * Output only. The overall approval status of this ad group ad asset,
+     * calculated based on the status of its individual policy topic entries.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1001,14 +1010,13 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus getApprovalStatus() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus result = com.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus.valueOf(approvalStatus_);
+      com.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus result = com.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus.forNumber(approvalStatus_);
       return result == null ? com.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus.UNRECOGNIZED : result;
     }
     /**
      * <pre>
-     * Output only. The overall approval status of this ad group ad asset, calculated based on
-     * the status of its individual policy topic entries.
+     * Output only. The overall approval status of this ad group ad asset,
+     * calculated based on the status of its individual policy topic entries.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1019,22 +1027,22 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       approvalStatus_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The overall approval status of this ad group ad asset, calculated based on
-     * the status of its individual policy topic entries.
+     * Output only. The overall approval status of this ad group ad asset,
+     * calculated based on the status of its individual policy topic entries.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearApprovalStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       approvalStatus_ = 0;
       onChanged();
       return this;

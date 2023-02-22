@@ -51,7 +51,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int SEED_USER_LIST_FIELD_NUMBER = 2;
-  private volatile java.lang.Object seedUserList_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object seedUserList_ = "";
   /**
    * <pre>
    * Seed UserList from which this list is derived.
@@ -305,8 +306,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       seedUserList_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -333,15 +334,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.SimilarUserListInfo buildPartial() {
       com.google.ads.googleads.v11.common.SimilarUserListInfo result = new com.google.ads.googleads.v11.common.SimilarUserListInfo(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.SimilarUserListInfo result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.seedUserList_ = seedUserList_;
         to_bitField0_ |= 0x00000001;
       }
-      result.seedUserList_ = seedUserList_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -389,8 +394,8 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v11.common.SimilarUserListInfo other) {
       if (other == com.google.ads.googleads.v11.common.SimilarUserListInfo.getDefaultInstance()) return this;
       if (other.hasSeedUserList()) {
-        bitField0_ |= 0x00000001;
         seedUserList_ = other.seedUserList_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -505,11 +510,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSeedUserList(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       seedUserList_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -522,8 +525,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSeedUserList() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       seedUserList_ = getDefaultInstance().getSeedUserList();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -538,12 +541,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSeedUserListBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       seedUserList_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

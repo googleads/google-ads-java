@@ -72,8 +72,8 @@ public interface AssetPolicySummaryOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The overall approval status of this asset, calculated based on the status
-   * of its individual policy topic entries.
+   * Output only. The overall approval status of this asset, calculated based on
+   * the status of its individual policy topic entries.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -82,8 +82,8 @@ public interface AssetPolicySummaryOrBuilder extends
   int getApprovalStatusValue();
   /**
    * <pre>
-   * Output only. The overall approval status of this asset, calculated based on the status
-   * of its individual policy topic entries.
+   * Output only. The overall approval status of this asset, calculated based on
+   * the status of its individual policy topic entries.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

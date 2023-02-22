@@ -80,7 +80,8 @@ public interface GenerateAudienceCompositionInsightsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The audience dimensions for which composition insights should be returned.
+   * Required. The audience dimensions for which composition insights should be
+   * returned.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -89,7 +90,8 @@ public interface GenerateAudienceCompositionInsightsRequestOrBuilder extends
   java.util.List<com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension> getDimensionsList();
   /**
    * <pre>
-   * Required. The audience dimensions for which composition insights should be returned.
+   * Required. The audience dimensions for which composition insights should be
+   * returned.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -98,7 +100,8 @@ public interface GenerateAudienceCompositionInsightsRequestOrBuilder extends
   int getDimensionsCount();
   /**
    * <pre>
-   * Required. The audience dimensions for which composition insights should be returned.
+   * Required. The audience dimensions for which composition insights should be
+   * returned.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -108,7 +111,8 @@ public interface GenerateAudienceCompositionInsightsRequestOrBuilder extends
   com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension getDimensions(int index);
   /**
    * <pre>
-   * Required. The audience dimensions for which composition insights should be returned.
+   * Required. The audience dimensions for which composition insights should be
+   * returned.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -118,7 +122,8 @@ public interface GenerateAudienceCompositionInsightsRequestOrBuilder extends
   getDimensionsValueList();
   /**
    * <pre>
-   * Required. The audience dimensions for which composition insights should be returned.
+   * Required. The audience dimensions for which composition insights should be
+   * returned.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>

@@ -49,6 +49,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MAPS_LOCATIONS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.MapsLocationInfo> mapsLocations_;
   /**
    * <pre>
@@ -302,6 +303,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (mapsLocationsBuilder_ == null) {
         mapsLocations_ = java.util.Collections.emptyList();
       } else {
@@ -335,7 +337,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.MapsLocationSet buildPartial() {
       com.google.ads.googleads.v12.common.MapsLocationSet result = new com.google.ads.googleads.v12.common.MapsLocationSet(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.common.MapsLocationSet result) {
       if (mapsLocationsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           mapsLocations_ = java.util.Collections.unmodifiableList(mapsLocations_);
@@ -345,8 +353,10 @@ private static final long serialVersionUID = 0L;
       } else {
         result.mapsLocations_ = mapsLocationsBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.MapsLocationSet result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override

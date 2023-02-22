@@ -70,7 +70,10 @@ import org.threeten.bp.Duration;
  * campaignServiceSettingsBuilder
  *     .mutateCampaignsSettings()
  *     .setRetrySettings(
- *         campaignServiceSettingsBuilder.mutateCampaignsSettings().getRetrySettings().toBuilder()
+ *         campaignServiceSettingsBuilder
+ *             .mutateCampaignsSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
  * CampaignServiceStubSettings campaignServiceSettings = campaignServiceSettingsBuilder.build();

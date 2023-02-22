@@ -33,8 +33,8 @@ public interface CustomerLabelOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The resource name of the customer to which the label is attached.
-   * Read only.
+   * Output only. The resource name of the customer to which the label is
+   * attached. Read only.
    * </pre>
    *
    * <code>optional string customer = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -43,8 +43,8 @@ public interface CustomerLabelOrBuilder extends
   boolean hasCustomer();
   /**
    * <pre>
-   * Output only. The resource name of the customer to which the label is attached.
-   * Read only.
+   * Output only. The resource name of the customer to which the label is
+   * attached. Read only.
    * </pre>
    *
    * <code>optional string customer = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -53,8 +53,8 @@ public interface CustomerLabelOrBuilder extends
   java.lang.String getCustomer();
   /**
    * <pre>
-   * Output only. The resource name of the customer to which the label is attached.
-   * Read only.
+   * Output only. The resource name of the customer to which the label is
+   * attached. Read only.
    * </pre>
    *
    * <code>optional string customer = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>

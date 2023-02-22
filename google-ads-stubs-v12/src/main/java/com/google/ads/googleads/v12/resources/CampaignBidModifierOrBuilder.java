@@ -102,7 +102,8 @@ public interface CampaignBidModifierOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. Criterion for interaction type. Only supported for search campaigns.
+   * Immutable. Criterion for interaction type. Only supported for search
+   * campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.InteractionTypeInfo interaction_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -111,7 +112,8 @@ public interface CampaignBidModifierOrBuilder extends
   boolean hasInteractionType();
   /**
    * <pre>
-   * Immutable. Criterion for interaction type. Only supported for search campaigns.
+   * Immutable. Criterion for interaction type. Only supported for search
+   * campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.InteractionTypeInfo interaction_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -120,7 +122,8 @@ public interface CampaignBidModifierOrBuilder extends
   com.google.ads.googleads.v12.common.InteractionTypeInfo getInteractionType();
   /**
    * <pre>
-   * Immutable. Criterion for interaction type. Only supported for search campaigns.
+   * Immutable. Criterion for interaction type. Only supported for search
+   * campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.InteractionTypeInfo interaction_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>

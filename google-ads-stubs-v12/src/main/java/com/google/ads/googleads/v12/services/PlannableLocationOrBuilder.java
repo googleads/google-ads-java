@@ -70,8 +70,8 @@ public interface PlannableLocationOrBuilder extends
    * The parent country (not present if location is a country).
    * If present, will always be a GeoTargetConstant ID. Additional information
    * such as country name is provided by
-   * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v12.services.ReachPlanService.ListPlannableLocations] or
-   * [GoogleAdsService.Search/SearchStream][].
+   * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v12.services.ReachPlanService.ListPlannableLocations]
+   * or [GoogleAdsService.Search/SearchStream][].
    * </pre>
    *
    * <code>optional int64 parent_country_id = 6;</code>
@@ -83,8 +83,8 @@ public interface PlannableLocationOrBuilder extends
    * The parent country (not present if location is a country).
    * If present, will always be a GeoTargetConstant ID. Additional information
    * such as country name is provided by
-   * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v12.services.ReachPlanService.ListPlannableLocations] or
-   * [GoogleAdsService.Search/SearchStream][].
+   * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v12.services.ReachPlanService.ListPlannableLocations]
+   * or [GoogleAdsService.Search/SearchStream][].
    * </pre>
    *
    * <code>optional int64 parent_country_id = 6;</code>

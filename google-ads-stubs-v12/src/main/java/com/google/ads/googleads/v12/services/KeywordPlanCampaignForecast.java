@@ -50,7 +50,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int KEYWORD_PLAN_CAMPAIGN_FIELD_NUMBER = 3;
-  private volatile java.lang.Object keywordPlanCampaign_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object keywordPlanCampaign_ = "";
   /**
    * <pre>
    * The resource name of the Keyword Plan campaign related to the forecast.
@@ -145,7 +146,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.services.ForecastMetricsOrBuilder getCampaignForecastOrBuilder() {
-    return getCampaignForecast();
+    return campaignForecast_ == null ? com.google.ads.googleads.v12.services.ForecastMetrics.getDefaultInstance() : campaignForecast_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -360,12 +361,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       keywordPlanCampaign_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
-      if (campaignForecastBuilder_ == null) {
-        campaignForecast_ = null;
-      } else {
-        campaignForecast_ = null;
+      campaignForecast_ = null;
+      if (campaignForecastBuilder_ != null) {
+        campaignForecastBuilder_.dispose();
         campaignForecastBuilder_ = null;
       }
       return this;
@@ -394,20 +394,24 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.KeywordPlanCampaignForecast buildPartial() {
       com.google.ads.googleads.v12.services.KeywordPlanCampaignForecast result = new com.google.ads.googleads.v12.services.KeywordPlanCampaignForecast(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.KeywordPlanCampaignForecast result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.keywordPlanCampaign_ = keywordPlanCampaign_;
         to_bitField0_ |= 0x00000001;
       }
-      result.keywordPlanCampaign_ = keywordPlanCampaign_;
-      if (campaignForecastBuilder_ == null) {
-        result.campaignForecast_ = campaignForecast_;
-      } else {
-        result.campaignForecast_ = campaignForecastBuilder_.build();
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.campaignForecast_ = campaignForecastBuilder_ == null
+            ? campaignForecast_
+            : campaignForecastBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -455,8 +459,8 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v12.services.KeywordPlanCampaignForecast other) {
       if (other == com.google.ads.googleads.v12.services.KeywordPlanCampaignForecast.getDefaultInstance()) return this;
       if (other.hasKeywordPlanCampaign()) {
-        bitField0_ |= 0x00000001;
         keywordPlanCampaign_ = other.keywordPlanCampaign_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasCampaignForecast()) {
@@ -492,7 +496,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getCampaignForecastFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
@@ -585,11 +589,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKeywordPlanCampaign(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       keywordPlanCampaign_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -603,8 +605,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearKeywordPlanCampaign() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       keywordPlanCampaign_ = getDefaultInstance().getKeywordPlanCampaign();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -620,12 +622,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKeywordPlanCampaignBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       keywordPlanCampaign_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -642,7 +642,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the campaignForecast field is set.
      */
     public boolean hasCampaignForecast() {
-      return campaignForecastBuilder_ != null || campaignForecast_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -672,11 +672,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         campaignForecast_ = value;
-        onChanged();
       } else {
         campaignForecastBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -690,11 +690,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.services.ForecastMetrics.Builder builderForValue) {
       if (campaignForecastBuilder_ == null) {
         campaignForecast_ = builderForValue.build();
-        onChanged();
       } else {
         campaignForecastBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -706,17 +706,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCampaignForecast(com.google.ads.googleads.v12.services.ForecastMetrics value) {
       if (campaignForecastBuilder_ == null) {
-        if (campaignForecast_ != null) {
-          campaignForecast_ =
-            com.google.ads.googleads.v12.services.ForecastMetrics.newBuilder(campaignForecast_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          campaignForecast_ != null &&
+          campaignForecast_ != com.google.ads.googleads.v12.services.ForecastMetrics.getDefaultInstance()) {
+          getCampaignForecastBuilder().mergeFrom(value);
         } else {
           campaignForecast_ = value;
         }
-        onChanged();
       } else {
         campaignForecastBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -727,14 +728,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.services.ForecastMetrics campaign_forecast = 2;</code>
      */
     public Builder clearCampaignForecast() {
-      if (campaignForecastBuilder_ == null) {
-        campaignForecast_ = null;
-        onChanged();
-      } else {
-        campaignForecast_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      campaignForecast_ = null;
+      if (campaignForecastBuilder_ != null) {
+        campaignForecastBuilder_.dispose();
         campaignForecastBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -745,7 +745,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.services.ForecastMetrics campaign_forecast = 2;</code>
      */
     public com.google.ads.googleads.v12.services.ForecastMetrics.Builder getCampaignForecastBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getCampaignForecastFieldBuilder().getBuilder();
     }

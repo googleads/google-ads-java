@@ -90,7 +90,8 @@ public interface AdGroupSimulationOrBuilder extends
 
   /**
    * <pre>
-   * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
+   * Output only. First day on which the simulation is based, in YYYY-MM-DD
+   * format.
    * </pre>
    *
    * <code>optional string start_date = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -99,7 +100,8 @@ public interface AdGroupSimulationOrBuilder extends
   boolean hasStartDate();
   /**
    * <pre>
-   * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
+   * Output only. First day on which the simulation is based, in YYYY-MM-DD
+   * format.
    * </pre>
    *
    * <code>optional string start_date = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -108,7 +110,8 @@ public interface AdGroupSimulationOrBuilder extends
   java.lang.String getStartDate();
   /**
    * <pre>
-   * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
+   * Output only. First day on which the simulation is based, in YYYY-MM-DD
+   * format.
    * </pre>
    *
    * <code>optional string start_date = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -119,7 +122,8 @@ public interface AdGroupSimulationOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Last day on which the simulation is based, in YYYY-MM-DD format
+   * Output only. Last day on which the simulation is based, in YYYY-MM-DD
+   * format
    * </pre>
    *
    * <code>optional string end_date = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -128,7 +132,8 @@ public interface AdGroupSimulationOrBuilder extends
   boolean hasEndDate();
   /**
    * <pre>
-   * Output only. Last day on which the simulation is based, in YYYY-MM-DD format
+   * Output only. Last day on which the simulation is based, in YYYY-MM-DD
+   * format
    * </pre>
    *
    * <code>optional string end_date = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -137,7 +142,8 @@ public interface AdGroupSimulationOrBuilder extends
   java.lang.String getEndDate();
   /**
    * <pre>
-   * Output only. Last day on which the simulation is based, in YYYY-MM-DD format
+   * Output only. Last day on which the simulation is based, in YYYY-MM-DD
+   * format
    * </pre>
    *
    * <code>optional string end_date = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

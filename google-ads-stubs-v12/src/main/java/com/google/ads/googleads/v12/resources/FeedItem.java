@@ -58,7 +58,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Immutable. The resource name of the feed item.
@@ -108,7 +109,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FEED_FIELD_NUMBER = 11;
-  private volatile java.lang.Object feed_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object feed_ = "";
   /**
    * <pre>
    * Immutable. The feed to which this feed item belongs.
@@ -166,7 +168,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ID_FIELD_NUMBER = 12;
-  private long id_;
+  private long id_ = 0L;
   /**
    * <pre>
    * Output only. The ID of this feed item.
@@ -193,7 +195,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int START_DATE_TIME_FIELD_NUMBER = 13;
-  private volatile java.lang.Object startDateTime_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object startDateTime_ = "";
   /**
    * <pre>
    * Start time in which this feed item is effective and can begin serving. The
@@ -260,7 +263,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int END_DATE_TIME_FIELD_NUMBER = 14;
-  private volatile java.lang.Object endDateTime_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object endDateTime_ = "";
   /**
    * <pre>
    * End time in which this feed item is no longer effective and will stop
@@ -327,6 +331,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ATTRIBUTE_VALUES_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.resources.FeedItemAttributeValue> attributeValues_;
   /**
    * <pre>
@@ -387,7 +392,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int GEO_TARGETING_RESTRICTION_FIELD_NUMBER = 7;
-  private int geoTargetingRestriction_;
+  private int geoTargetingRestriction_ = 0;
   /**
    * <pre>
    * Geo targeting restriction specifies the type of location that can be used
@@ -410,12 +415,12 @@ private static final long serialVersionUID = 0L;
    * @return The geoTargetingRestriction.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction getGeoTargetingRestriction() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction result = com.google.ads.googleads.v12.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction.valueOf(geoTargetingRestriction_);
+    com.google.ads.googleads.v12.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction result = com.google.ads.googleads.v12.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction.forNumber(geoTargetingRestriction_);
     return result == null ? com.google.ads.googleads.v12.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction.UNRECOGNIZED : result;
   }
 
   public static final int URL_CUSTOM_PARAMETERS_FIELD_NUMBER = 8;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.CustomParameter> urlCustomParameters_;
   /**
    * <pre>
@@ -481,7 +486,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STATUS_FIELD_NUMBER = 9;
-  private int status_;
+  private int status_ = 0;
   /**
    * <pre>
    * Output only. Status of the feed item.
@@ -504,21 +509,21 @@ private static final long serialVersionUID = 0L;
    * @return The status.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.FeedItemStatusEnum.FeedItemStatus getStatus() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.FeedItemStatusEnum.FeedItemStatus result = com.google.ads.googleads.v12.enums.FeedItemStatusEnum.FeedItemStatus.valueOf(status_);
+    com.google.ads.googleads.v12.enums.FeedItemStatusEnum.FeedItemStatus result = com.google.ads.googleads.v12.enums.FeedItemStatusEnum.FeedItemStatus.forNumber(status_);
     return result == null ? com.google.ads.googleads.v12.enums.FeedItemStatusEnum.FeedItemStatus.UNRECOGNIZED : result;
   }
 
   public static final int POLICY_INFOS_FIELD_NUMBER = 10;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.resources.FeedItemPlaceholderPolicyInfo> policyInfos_;
   /**
    * <pre>
-   * Output only. List of info about a feed item's validation and approval state for active
-   * feed mappings. There will be an entry in the list for each type of feed
-   * mapping associated with the feed, for example, a feed with a sitelink and a
-   * call feed mapping would cause every feed item associated with that feed to
-   * have an entry in this list for both sitelink and call. This field is
-   * read-only.
+   * Output only. List of info about a feed item's validation and approval state
+   * for active feed mappings. There will be an entry in the list for each type
+   * of feed mapping associated with the feed, for example, a feed with a
+   * sitelink and a call feed mapping would cause every feed item associated
+   * with that feed to have an entry in this list for both sitelink and call.
+   * This field is read-only.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -529,12 +534,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. List of info about a feed item's validation and approval state for active
-   * feed mappings. There will be an entry in the list for each type of feed
-   * mapping associated with the feed, for example, a feed with a sitelink and a
-   * call feed mapping would cause every feed item associated with that feed to
-   * have an entry in this list for both sitelink and call. This field is
-   * read-only.
+   * Output only. List of info about a feed item's validation and approval state
+   * for active feed mappings. There will be an entry in the list for each type
+   * of feed mapping associated with the feed, for example, a feed with a
+   * sitelink and a call feed mapping would cause every feed item associated
+   * with that feed to have an entry in this list for both sitelink and call.
+   * This field is read-only.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -546,12 +551,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. List of info about a feed item's validation and approval state for active
-   * feed mappings. There will be an entry in the list for each type of feed
-   * mapping associated with the feed, for example, a feed with a sitelink and a
-   * call feed mapping would cause every feed item associated with that feed to
-   * have an entry in this list for both sitelink and call. This field is
-   * read-only.
+   * Output only. List of info about a feed item's validation and approval state
+   * for active feed mappings. There will be an entry in the list for each type
+   * of feed mapping associated with the feed, for example, a feed with a
+   * sitelink and a call feed mapping would cause every feed item associated
+   * with that feed to have an entry in this list for both sitelink and call.
+   * This field is read-only.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -562,12 +567,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. List of info about a feed item's validation and approval state for active
-   * feed mappings. There will be an entry in the list for each type of feed
-   * mapping associated with the feed, for example, a feed with a sitelink and a
-   * call feed mapping would cause every feed item associated with that feed to
-   * have an entry in this list for both sitelink and call. This field is
-   * read-only.
+   * Output only. List of info about a feed item's validation and approval state
+   * for active feed mappings. There will be an entry in the list for each type
+   * of feed mapping associated with the feed, for example, a feed with a
+   * sitelink and a call feed mapping would cause every feed item associated
+   * with that feed to have an entry in this list for both sitelink and call.
+   * This field is read-only.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -578,12 +583,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. List of info about a feed item's validation and approval state for active
-   * feed mappings. There will be an entry in the list for each type of feed
-   * mapping associated with the feed, for example, a feed with a sitelink and a
-   * call feed mapping would cause every feed item associated with that feed to
-   * have an entry in this list for both sitelink and call. This field is
-   * read-only.
+   * Output only. List of info about a feed item's validation and approval state
+   * for active feed mappings. There will be an entry in the list for each type
+   * of feed mapping associated with the feed, for example, a feed with a
+   * sitelink and a call feed mapping would cause every feed item associated
+   * with that feed to have an entry in this list for both sitelink and call.
+   * This field is read-only.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -906,41 +911,35 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       feed_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       id_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000002);
       startDateTime_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       endDateTime_ = "";
-      bitField0_ = (bitField0_ & ~0x00000008);
       if (attributeValuesBuilder_ == null) {
         attributeValues_ = java.util.Collections.emptyList();
       } else {
         attributeValues_ = null;
         attributeValuesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000020);
       geoTargetingRestriction_ = 0;
-
       if (urlCustomParametersBuilder_ == null) {
         urlCustomParameters_ = java.util.Collections.emptyList();
       } else {
         urlCustomParameters_ = null;
         urlCustomParametersBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000080);
       status_ = 0;
-
       if (policyInfosBuilder_ == null) {
         policyInfos_ = java.util.Collections.emptyList();
       } else {
         policyInfos_ = null;
         policyInfosBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000200);
       return this;
     }
 
@@ -967,57 +966,71 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.FeedItem buildPartial() {
       com.google.ads.googleads.v12.resources.FeedItem result = new com.google.ads.googleads.v12.resources.FeedItem(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        to_bitField0_ |= 0x00000001;
-      }
-      result.feed_ = feed_;
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.id_ = id_;
-        to_bitField0_ |= 0x00000002;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        to_bitField0_ |= 0x00000004;
-      }
-      result.startDateTime_ = startDateTime_;
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        to_bitField0_ |= 0x00000008;
-      }
-      result.endDateTime_ = endDateTime_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.resources.FeedItem result) {
       if (attributeValuesBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0)) {
+        if (((bitField0_ & 0x00000020) != 0)) {
           attributeValues_ = java.util.Collections.unmodifiableList(attributeValues_);
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000020);
         }
         result.attributeValues_ = attributeValues_;
       } else {
         result.attributeValues_ = attributeValuesBuilder_.build();
       }
-      result.geoTargetingRestriction_ = geoTargetingRestriction_;
       if (urlCustomParametersBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0)) {
+        if (((bitField0_ & 0x00000080) != 0)) {
           urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000080);
         }
         result.urlCustomParameters_ = urlCustomParameters_;
       } else {
         result.urlCustomParameters_ = urlCustomParametersBuilder_.build();
       }
-      result.status_ = status_;
       if (policyInfosBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0)) {
+        if (((bitField0_ & 0x00000200) != 0)) {
           policyInfos_ = java.util.Collections.unmodifiableList(policyInfos_);
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000200);
         }
         result.policyInfos_ = policyInfos_;
       } else {
         result.policyInfos_ = policyInfosBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.resources.FeedItem result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.feed_ = feed_;
+        to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.id_ = id_;
+        to_bitField0_ |= 0x00000002;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.startDateTime_ = startDateTime_;
+        to_bitField0_ |= 0x00000004;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.endDateTime_ = endDateTime_;
+        to_bitField0_ |= 0x00000008;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.geoTargetingRestriction_ = geoTargetingRestriction_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.status_ = status_;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1066,31 +1079,32 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.resources.FeedItem.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasFeed()) {
-        bitField0_ |= 0x00000001;
         feed_ = other.feed_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasId()) {
         setId(other.getId());
       }
       if (other.hasStartDateTime()) {
-        bitField0_ |= 0x00000004;
         startDateTime_ = other.startDateTime_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.hasEndDateTime()) {
-        bitField0_ |= 0x00000008;
         endDateTime_ = other.endDateTime_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (attributeValuesBuilder_ == null) {
         if (!other.attributeValues_.isEmpty()) {
           if (attributeValues_.isEmpty()) {
             attributeValues_ = other.attributeValues_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
             ensureAttributeValuesIsMutable();
             attributeValues_.addAll(other.attributeValues_);
@@ -1103,7 +1117,7 @@ private static final long serialVersionUID = 0L;
             attributeValuesBuilder_.dispose();
             attributeValuesBuilder_ = null;
             attributeValues_ = other.attributeValues_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000020);
             attributeValuesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getAttributeValuesFieldBuilder() : null;
@@ -1119,7 +1133,7 @@ private static final long serialVersionUID = 0L;
         if (!other.urlCustomParameters_.isEmpty()) {
           if (urlCustomParameters_.isEmpty()) {
             urlCustomParameters_ = other.urlCustomParameters_;
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000080);
           } else {
             ensureUrlCustomParametersIsMutable();
             urlCustomParameters_.addAll(other.urlCustomParameters_);
@@ -1132,7 +1146,7 @@ private static final long serialVersionUID = 0L;
             urlCustomParametersBuilder_.dispose();
             urlCustomParametersBuilder_ = null;
             urlCustomParameters_ = other.urlCustomParameters_;
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000080);
             urlCustomParametersBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getUrlCustomParametersFieldBuilder() : null;
@@ -1148,7 +1162,7 @@ private static final long serialVersionUID = 0L;
         if (!other.policyInfos_.isEmpty()) {
           if (policyInfos_.isEmpty()) {
             policyInfos_ = other.policyInfos_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000200);
           } else {
             ensurePolicyInfosIsMutable();
             policyInfos_.addAll(other.policyInfos_);
@@ -1161,7 +1175,7 @@ private static final long serialVersionUID = 0L;
             policyInfosBuilder_.dispose();
             policyInfosBuilder_ = null;
             policyInfos_ = other.policyInfos_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000200);
             policyInfosBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getPolicyInfosFieldBuilder() : null;
@@ -1198,7 +1212,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 50: {
@@ -1216,7 +1230,7 @@ private static final long serialVersionUID = 0L;
             } // case 50
             case 56: {
               geoTargetingRestriction_ = input.readEnum();
-
+              bitField0_ |= 0x00000040;
               break;
             } // case 56
             case 66: {
@@ -1234,7 +1248,7 @@ private static final long serialVersionUID = 0L;
             } // case 66
             case 72: {
               status_ = input.readEnum();
-
+              bitField0_ |= 0x00000100;
               break;
             } // case 72
             case 82: {
@@ -1252,22 +1266,22 @@ private static final long serialVersionUID = 0L;
             } // case 82
             case 90: {
               feed_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 90
             case 96: {
               id_ = input.readInt64();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 96
             case 106: {
               startDateTime_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               break;
             } // case 106
             case 114: {
               endDateTime_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000010;
               break;
             } // case 114
             default: {
@@ -1346,11 +1360,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1365,8 +1377,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1383,12 +1395,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1403,7 +1413,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the feed field is set.
      */
     public boolean hasFeed() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -1457,11 +1467,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFeed(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       feed_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1474,8 +1482,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFeed() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       feed_ = getDefaultInstance().getFeed();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1490,12 +1498,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFeedBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       feed_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1511,7 +1517,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasId() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -1535,8 +1541,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      bitField0_ |= 0x00000002;
+      
       id_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1549,7 +1556,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearId() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       id_ = 0L;
       onChanged();
       return this;
@@ -1568,7 +1575,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the startDateTime field is set.
      */
     public boolean hasStartDateTime() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -1631,11 +1638,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStartDateTime(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       startDateTime_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1651,8 +1656,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStartDateTime() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       startDateTime_ = getDefaultInstance().getStartDateTime();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1670,12 +1675,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStartDateTimeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       startDateTime_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1693,7 +1696,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the endDateTime field is set.
      */
     public boolean hasEndDateTime() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -1756,11 +1759,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEndDateTime(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
       endDateTime_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1776,8 +1777,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEndDateTime() {
-      bitField0_ = (bitField0_ & ~0x00000008);
       endDateTime_ = getDefaultInstance().getEndDateTime();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1795,12 +1796,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEndDateTimeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       endDateTime_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1808,9 +1807,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v12.resources.FeedItemAttributeValue> attributeValues_ =
       java.util.Collections.emptyList();
     private void ensureAttributeValuesIsMutable() {
-      if (!((bitField0_ & 0x00000010) != 0)) {
+      if (!((bitField0_ & 0x00000020) != 0)) {
         attributeValues_ = new java.util.ArrayList<com.google.ads.googleads.v12.resources.FeedItemAttributeValue>(attributeValues_);
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000020;
        }
     }
 
@@ -2004,7 +2003,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearAttributeValues() {
       if (attributeValuesBuilder_ == null) {
         attributeValues_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
       } else {
         attributeValuesBuilder_.clear();
@@ -2109,7 +2108,7 @@ private static final long serialVersionUID = 0L;
         attributeValuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v12.resources.FeedItemAttributeValue, com.google.ads.googleads.v12.resources.FeedItemAttributeValue.Builder, com.google.ads.googleads.v12.resources.FeedItemAttributeValueOrBuilder>(
                 attributeValues_,
-                ((bitField0_ & 0x00000010) != 0),
+                ((bitField0_ & 0x00000020) != 0),
                 getParentForChildren(),
                 isClean());
         attributeValues_ = null;
@@ -2141,8 +2140,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setGeoTargetingRestrictionValue(int value) {
-      
       geoTargetingRestriction_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2157,8 +2156,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction getGeoTargetingRestriction() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction result = com.google.ads.googleads.v12.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction.valueOf(geoTargetingRestriction_);
+      com.google.ads.googleads.v12.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction result = com.google.ads.googleads.v12.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction.forNumber(geoTargetingRestriction_);
       return result == null ? com.google.ads.googleads.v12.enums.GeoTargetingRestrictionEnum.GeoTargetingRestriction.UNRECOGNIZED : result;
     }
     /**
@@ -2175,7 +2173,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000040;
       geoTargetingRestriction_ = value.getNumber();
       onChanged();
       return this;
@@ -2190,7 +2188,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGeoTargetingRestriction() {
-      
+      bitField0_ = (bitField0_ & ~0x00000040);
       geoTargetingRestriction_ = 0;
       onChanged();
       return this;
@@ -2199,9 +2197,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v12.common.CustomParameter> urlCustomParameters_ =
       java.util.Collections.emptyList();
     private void ensureUrlCustomParametersIsMutable() {
-      if (!((bitField0_ & 0x00000020) != 0)) {
+      if (!((bitField0_ & 0x00000080) != 0)) {
         urlCustomParameters_ = new java.util.ArrayList<com.google.ads.googleads.v12.common.CustomParameter>(urlCustomParameters_);
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000080;
        }
     }
 
@@ -2406,7 +2404,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearUrlCustomParameters() {
       if (urlCustomParametersBuilder_ == null) {
         urlCustomParameters_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
       } else {
         urlCustomParametersBuilder_.clear();
@@ -2518,7 +2516,7 @@ private static final long serialVersionUID = 0L;
         urlCustomParametersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v12.common.CustomParameter, com.google.ads.googleads.v12.common.CustomParameter.Builder, com.google.ads.googleads.v12.common.CustomParameterOrBuilder>(
                 urlCustomParameters_,
-                ((bitField0_ & 0x00000020) != 0),
+                ((bitField0_ & 0x00000080) != 0),
                 getParentForChildren(),
                 isClean());
         urlCustomParameters_ = null;
@@ -2550,8 +2548,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
-      
       status_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2566,8 +2564,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.FeedItemStatusEnum.FeedItemStatus getStatus() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.FeedItemStatusEnum.FeedItemStatus result = com.google.ads.googleads.v12.enums.FeedItemStatusEnum.FeedItemStatus.valueOf(status_);
+      com.google.ads.googleads.v12.enums.FeedItemStatusEnum.FeedItemStatus result = com.google.ads.googleads.v12.enums.FeedItemStatusEnum.FeedItemStatus.forNumber(status_);
       return result == null ? com.google.ads.googleads.v12.enums.FeedItemStatusEnum.FeedItemStatus.UNRECOGNIZED : result;
     }
     /**
@@ -2584,7 +2581,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000100;
       status_ = value.getNumber();
       onChanged();
       return this;
@@ -2599,7 +2596,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000100);
       status_ = 0;
       onChanged();
       return this;
@@ -2608,9 +2605,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v12.resources.FeedItemPlaceholderPolicyInfo> policyInfos_ =
       java.util.Collections.emptyList();
     private void ensurePolicyInfosIsMutable() {
-      if (!((bitField0_ & 0x00000040) != 0)) {
+      if (!((bitField0_ & 0x00000200) != 0)) {
         policyInfos_ = new java.util.ArrayList<com.google.ads.googleads.v12.resources.FeedItemPlaceholderPolicyInfo>(policyInfos_);
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000200;
        }
     }
 
@@ -2619,12 +2616,12 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. List of info about a feed item's validation and approval state for active
-     * feed mappings. There will be an entry in the list for each type of feed
-     * mapping associated with the feed, for example, a feed with a sitelink and a
-     * call feed mapping would cause every feed item associated with that feed to
-     * have an entry in this list for both sitelink and call. This field is
-     * read-only.
+     * Output only. List of info about a feed item's validation and approval state
+     * for active feed mappings. There will be an entry in the list for each type
+     * of feed mapping associated with the feed, for example, a feed with a
+     * sitelink and a call feed mapping would cause every feed item associated
+     * with that feed to have an entry in this list for both sitelink and call.
+     * This field is read-only.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2638,12 +2635,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. List of info about a feed item's validation and approval state for active
-     * feed mappings. There will be an entry in the list for each type of feed
-     * mapping associated with the feed, for example, a feed with a sitelink and a
-     * call feed mapping would cause every feed item associated with that feed to
-     * have an entry in this list for both sitelink and call. This field is
-     * read-only.
+     * Output only. List of info about a feed item's validation and approval state
+     * for active feed mappings. There will be an entry in the list for each type
+     * of feed mapping associated with the feed, for example, a feed with a
+     * sitelink and a call feed mapping would cause every feed item associated
+     * with that feed to have an entry in this list for both sitelink and call.
+     * This field is read-only.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2657,12 +2654,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. List of info about a feed item's validation and approval state for active
-     * feed mappings. There will be an entry in the list for each type of feed
-     * mapping associated with the feed, for example, a feed with a sitelink and a
-     * call feed mapping would cause every feed item associated with that feed to
-     * have an entry in this list for both sitelink and call. This field is
-     * read-only.
+     * Output only. List of info about a feed item's validation and approval state
+     * for active feed mappings. There will be an entry in the list for each type
+     * of feed mapping associated with the feed, for example, a feed with a
+     * sitelink and a call feed mapping would cause every feed item associated
+     * with that feed to have an entry in this list for both sitelink and call.
+     * This field is read-only.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2676,12 +2673,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. List of info about a feed item's validation and approval state for active
-     * feed mappings. There will be an entry in the list for each type of feed
-     * mapping associated with the feed, for example, a feed with a sitelink and a
-     * call feed mapping would cause every feed item associated with that feed to
-     * have an entry in this list for both sitelink and call. This field is
-     * read-only.
+     * Output only. List of info about a feed item's validation and approval state
+     * for active feed mappings. There will be an entry in the list for each type
+     * of feed mapping associated with the feed, for example, a feed with a
+     * sitelink and a call feed mapping would cause every feed item associated
+     * with that feed to have an entry in this list for both sitelink and call.
+     * This field is read-only.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2702,12 +2699,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. List of info about a feed item's validation and approval state for active
-     * feed mappings. There will be an entry in the list for each type of feed
-     * mapping associated with the feed, for example, a feed with a sitelink and a
-     * call feed mapping would cause every feed item associated with that feed to
-     * have an entry in this list for both sitelink and call. This field is
-     * read-only.
+     * Output only. List of info about a feed item's validation and approval state
+     * for active feed mappings. There will be an entry in the list for each type
+     * of feed mapping associated with the feed, for example, a feed with a
+     * sitelink and a call feed mapping would cause every feed item associated
+     * with that feed to have an entry in this list for both sitelink and call.
+     * This field is read-only.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2725,12 +2722,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. List of info about a feed item's validation and approval state for active
-     * feed mappings. There will be an entry in the list for each type of feed
-     * mapping associated with the feed, for example, a feed with a sitelink and a
-     * call feed mapping would cause every feed item associated with that feed to
-     * have an entry in this list for both sitelink and call. This field is
-     * read-only.
+     * Output only. List of info about a feed item's validation and approval state
+     * for active feed mappings. There will be an entry in the list for each type
+     * of feed mapping associated with the feed, for example, a feed with a
+     * sitelink and a call feed mapping would cause every feed item associated
+     * with that feed to have an entry in this list for both sitelink and call.
+     * This field is read-only.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2750,12 +2747,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. List of info about a feed item's validation and approval state for active
-     * feed mappings. There will be an entry in the list for each type of feed
-     * mapping associated with the feed, for example, a feed with a sitelink and a
-     * call feed mapping would cause every feed item associated with that feed to
-     * have an entry in this list for both sitelink and call. This field is
-     * read-only.
+     * Output only. List of info about a feed item's validation and approval state
+     * for active feed mappings. There will be an entry in the list for each type
+     * of feed mapping associated with the feed, for example, a feed with a
+     * sitelink and a call feed mapping would cause every feed item associated
+     * with that feed to have an entry in this list for both sitelink and call.
+     * This field is read-only.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2776,12 +2773,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. List of info about a feed item's validation and approval state for active
-     * feed mappings. There will be an entry in the list for each type of feed
-     * mapping associated with the feed, for example, a feed with a sitelink and a
-     * call feed mapping would cause every feed item associated with that feed to
-     * have an entry in this list for both sitelink and call. This field is
-     * read-only.
+     * Output only. List of info about a feed item's validation and approval state
+     * for active feed mappings. There will be an entry in the list for each type
+     * of feed mapping associated with the feed, for example, a feed with a
+     * sitelink and a call feed mapping would cause every feed item associated
+     * with that feed to have an entry in this list for both sitelink and call.
+     * This field is read-only.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2799,12 +2796,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. List of info about a feed item's validation and approval state for active
-     * feed mappings. There will be an entry in the list for each type of feed
-     * mapping associated with the feed, for example, a feed with a sitelink and a
-     * call feed mapping would cause every feed item associated with that feed to
-     * have an entry in this list for both sitelink and call. This field is
-     * read-only.
+     * Output only. List of info about a feed item's validation and approval state
+     * for active feed mappings. There will be an entry in the list for each type
+     * of feed mapping associated with the feed, for example, a feed with a
+     * sitelink and a call feed mapping would cause every feed item associated
+     * with that feed to have an entry in this list for both sitelink and call.
+     * This field is read-only.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2822,12 +2819,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. List of info about a feed item's validation and approval state for active
-     * feed mappings. There will be an entry in the list for each type of feed
-     * mapping associated with the feed, for example, a feed with a sitelink and a
-     * call feed mapping would cause every feed item associated with that feed to
-     * have an entry in this list for both sitelink and call. This field is
-     * read-only.
+     * Output only. List of info about a feed item's validation and approval state
+     * for active feed mappings. There will be an entry in the list for each type
+     * of feed mapping associated with the feed, for example, a feed with a
+     * sitelink and a call feed mapping would cause every feed item associated
+     * with that feed to have an entry in this list for both sitelink and call.
+     * This field is read-only.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2846,12 +2843,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. List of info about a feed item's validation and approval state for active
-     * feed mappings. There will be an entry in the list for each type of feed
-     * mapping associated with the feed, for example, a feed with a sitelink and a
-     * call feed mapping would cause every feed item associated with that feed to
-     * have an entry in this list for both sitelink and call. This field is
-     * read-only.
+     * Output only. List of info about a feed item's validation and approval state
+     * for active feed mappings. There will be an entry in the list for each type
+     * of feed mapping associated with the feed, for example, a feed with a
+     * sitelink and a call feed mapping would cause every feed item associated
+     * with that feed to have an entry in this list for both sitelink and call.
+     * This field is read-only.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2859,7 +2856,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearPolicyInfos() {
       if (policyInfosBuilder_ == null) {
         policyInfos_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000200);
         onChanged();
       } else {
         policyInfosBuilder_.clear();
@@ -2868,12 +2865,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. List of info about a feed item's validation and approval state for active
-     * feed mappings. There will be an entry in the list for each type of feed
-     * mapping associated with the feed, for example, a feed with a sitelink and a
-     * call feed mapping would cause every feed item associated with that feed to
-     * have an entry in this list for both sitelink and call. This field is
-     * read-only.
+     * Output only. List of info about a feed item's validation and approval state
+     * for active feed mappings. There will be an entry in the list for each type
+     * of feed mapping associated with the feed, for example, a feed with a
+     * sitelink and a call feed mapping would cause every feed item associated
+     * with that feed to have an entry in this list for both sitelink and call.
+     * This field is read-only.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2890,12 +2887,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. List of info about a feed item's validation and approval state for active
-     * feed mappings. There will be an entry in the list for each type of feed
-     * mapping associated with the feed, for example, a feed with a sitelink and a
-     * call feed mapping would cause every feed item associated with that feed to
-     * have an entry in this list for both sitelink and call. This field is
-     * read-only.
+     * Output only. List of info about a feed item's validation and approval state
+     * for active feed mappings. There will be an entry in the list for each type
+     * of feed mapping associated with the feed, for example, a feed with a
+     * sitelink and a call feed mapping would cause every feed item associated
+     * with that feed to have an entry in this list for both sitelink and call.
+     * This field is read-only.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2906,12 +2903,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. List of info about a feed item's validation and approval state for active
-     * feed mappings. There will be an entry in the list for each type of feed
-     * mapping associated with the feed, for example, a feed with a sitelink and a
-     * call feed mapping would cause every feed item associated with that feed to
-     * have an entry in this list for both sitelink and call. This field is
-     * read-only.
+     * Output only. List of info about a feed item's validation and approval state
+     * for active feed mappings. There will be an entry in the list for each type
+     * of feed mapping associated with the feed, for example, a feed with a
+     * sitelink and a call feed mapping would cause every feed item associated
+     * with that feed to have an entry in this list for both sitelink and call.
+     * This field is read-only.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2925,12 +2922,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. List of info about a feed item's validation and approval state for active
-     * feed mappings. There will be an entry in the list for each type of feed
-     * mapping associated with the feed, for example, a feed with a sitelink and a
-     * call feed mapping would cause every feed item associated with that feed to
-     * have an entry in this list for both sitelink and call. This field is
-     * read-only.
+     * Output only. List of info about a feed item's validation and approval state
+     * for active feed mappings. There will be an entry in the list for each type
+     * of feed mapping associated with the feed, for example, a feed with a
+     * sitelink and a call feed mapping would cause every feed item associated
+     * with that feed to have an entry in this list for both sitelink and call.
+     * This field is read-only.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2945,12 +2942,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. List of info about a feed item's validation and approval state for active
-     * feed mappings. There will be an entry in the list for each type of feed
-     * mapping associated with the feed, for example, a feed with a sitelink and a
-     * call feed mapping would cause every feed item associated with that feed to
-     * have an entry in this list for both sitelink and call. This field is
-     * read-only.
+     * Output only. List of info about a feed item's validation and approval state
+     * for active feed mappings. There will be an entry in the list for each type
+     * of feed mapping associated with the feed, for example, a feed with a
+     * sitelink and a call feed mapping would cause every feed item associated
+     * with that feed to have an entry in this list for both sitelink and call.
+     * This field is read-only.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2961,12 +2958,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. List of info about a feed item's validation and approval state for active
-     * feed mappings. There will be an entry in the list for each type of feed
-     * mapping associated with the feed, for example, a feed with a sitelink and a
-     * call feed mapping would cause every feed item associated with that feed to
-     * have an entry in this list for both sitelink and call. This field is
-     * read-only.
+     * Output only. List of info about a feed item's validation and approval state
+     * for active feed mappings. There will be an entry in the list for each type
+     * of feed mapping associated with the feed, for example, a feed with a
+     * sitelink and a call feed mapping would cause every feed item associated
+     * with that feed to have an entry in this list for both sitelink and call.
+     * This field is read-only.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2978,12 +2975,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. List of info about a feed item's validation and approval state for active
-     * feed mappings. There will be an entry in the list for each type of feed
-     * mapping associated with the feed, for example, a feed with a sitelink and a
-     * call feed mapping would cause every feed item associated with that feed to
-     * have an entry in this list for both sitelink and call. This field is
-     * read-only.
+     * Output only. List of info about a feed item's validation and approval state
+     * for active feed mappings. There will be an entry in the list for each type
+     * of feed mapping associated with the feed, for example, a feed with a
+     * sitelink and a call feed mapping would cause every feed item associated
+     * with that feed to have an entry in this list for both sitelink and call.
+     * This field is read-only.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2999,7 +2996,7 @@ private static final long serialVersionUID = 0L;
         policyInfosBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v12.resources.FeedItemPlaceholderPolicyInfo, com.google.ads.googleads.v12.resources.FeedItemPlaceholderPolicyInfo.Builder, com.google.ads.googleads.v12.resources.FeedItemPlaceholderPolicyInfoOrBuilder>(
                 policyInfos_,
-                ((bitField0_ & 0x00000040) != 0),
+                ((bitField0_ & 0x00000200) != 0),
                 getParentForChildren(),
                 isClean());
         policyInfos_ = null;

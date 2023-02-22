@@ -124,8 +124,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v11.enums.KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval getDateInterval() {
     if (intervalCase_ == 1) {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval result = com.google.ads.googleads.v11.enums.KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval.valueOf(
+      com.google.ads.googleads.v11.enums.KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval result = com.google.ads.googleads.v11.enums.KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval.forNumber(
           (java.lang.Integer) interval_);
       return result == null ? com.google.ads.googleads.v11.enums.KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval.UNRECOGNIZED : result;
     }
@@ -407,6 +406,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (dateRangeBuilder_ != null) {
         dateRangeBuilder_.clear();
       }
@@ -438,19 +438,23 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.KeywordPlanForecastPeriod buildPartial() {
       com.google.ads.googleads.v11.resources.KeywordPlanForecastPeriod result = new com.google.ads.googleads.v11.resources.KeywordPlanForecastPeriod(this);
-      if (intervalCase_ == 1) {
-        result.interval_ = interval_;
-      }
-      if (intervalCase_ == 2) {
-        if (dateRangeBuilder_ == null) {
-          result.interval_ = interval_;
-        } else {
-          result.interval_ = dateRangeBuilder_.build();
-        }
-      }
-      result.intervalCase_ = intervalCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.KeywordPlanForecastPeriod result) {
+      int from_bitField0_ = bitField0_;
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v11.resources.KeywordPlanForecastPeriod result) {
+      result.intervalCase_ = intervalCase_;
+      result.interval_ = this.interval_;
+      if (intervalCase_ == 2 &&
+          dateRangeBuilder_ != null) {
+        result.interval_ = dateRangeBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -579,6 +583,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     /**
      * <pre>
@@ -633,8 +638,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval getDateInterval() {
       if (intervalCase_ == 1) {
-        @SuppressWarnings("deprecation")
-        com.google.ads.googleads.v11.enums.KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval result = com.google.ads.googleads.v11.enums.KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval.valueOf(
+        com.google.ads.googleads.v11.enums.KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval result = com.google.ads.googleads.v11.enums.KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval.forNumber(
             (java.lang.Integer) interval_);
         return result == null ? com.google.ads.googleads.v11.enums.KeywordPlanForecastIntervalEnum.KeywordPlanForecastInterval.UNRECOGNIZED : result;
       }
@@ -885,7 +889,7 @@ private static final long serialVersionUID = 0L;
         interval_ = null;
       }
       intervalCase_ = 2;
-      onChanged();;
+      onChanged();
       return dateRangeBuilder_;
     }
     @java.lang.Override

@@ -49,7 +49,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONDITION_FIELD_NUMBER = 1;
-  private int condition_;
+  private int condition_ = 0;
   /**
    * <pre>
    * Value of the condition.
@@ -70,8 +70,7 @@ private static final long serialVersionUID = 0L;
    * @return The condition.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.ProductConditionEnum.ProductCondition getCondition() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.ProductConditionEnum.ProductCondition result = com.google.ads.googleads.v12.enums.ProductConditionEnum.ProductCondition.valueOf(condition_);
+    com.google.ads.googleads.v12.enums.ProductConditionEnum.ProductCondition result = com.google.ads.googleads.v12.enums.ProductConditionEnum.ProductCondition.forNumber(condition_);
     return result == null ? com.google.ads.googleads.v12.enums.ProductConditionEnum.ProductCondition.UNRECOGNIZED : result;
   }
 
@@ -266,8 +265,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       condition_ = 0;
-
       return this;
     }
 
@@ -294,9 +293,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.ProductConditionInfo buildPartial() {
       com.google.ads.googleads.v12.common.ProductConditionInfo result = new com.google.ads.googleads.v12.common.ProductConditionInfo(this);
-      result.condition_ = condition_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.ProductConditionInfo result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.condition_ = condition_;
+      }
     }
 
     @java.lang.Override
@@ -374,7 +380,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               condition_ = input.readEnum();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             default: {
@@ -392,6 +398,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private int condition_ = 0;
     /**
@@ -415,8 +422,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setConditionValue(int value) {
-      
       condition_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -430,8 +437,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.ProductConditionEnum.ProductCondition getCondition() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.ProductConditionEnum.ProductCondition result = com.google.ads.googleads.v12.enums.ProductConditionEnum.ProductCondition.valueOf(condition_);
+      com.google.ads.googleads.v12.enums.ProductConditionEnum.ProductCondition result = com.google.ads.googleads.v12.enums.ProductConditionEnum.ProductCondition.forNumber(condition_);
       return result == null ? com.google.ads.googleads.v12.enums.ProductConditionEnum.ProductCondition.UNRECOGNIZED : result;
     }
     /**
@@ -447,7 +453,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       condition_ = value.getNumber();
       onChanged();
       return this;
@@ -461,7 +467,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCondition() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       condition_ = 0;
       onChanged();
       return this;

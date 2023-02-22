@@ -49,7 +49,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int MIN_AGE_FIELD_NUMBER = 1;
-  private int minAge_;
+  private int minAge_ = 0;
   /**
    * <pre>
    * Minimum age to include. A minimum age must be specified and must be at
@@ -78,7 +78,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MAX_AGE_FIELD_NUMBER = 2;
-  private int maxAge_;
+  private int maxAge_ = 0;
   /**
    * <pre>
    * Maximum age to include. A maximum age need not be specified. If specified,
@@ -321,10 +321,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       minAge_ = 0;
-      bitField0_ = (bitField0_ & ~0x00000001);
       maxAge_ = 0;
-      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -351,6 +350,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.AgeSegment buildPartial() {
       com.google.ads.googleads.v11.common.AgeSegment result = new com.google.ads.googleads.v11.common.AgeSegment(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.AgeSegment result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -361,9 +366,7 @@ private static final long serialVersionUID = 0L;
         result.maxAge_ = maxAge_;
         to_bitField0_ |= 0x00000002;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -507,8 +510,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMinAge(int value) {
-      bitField0_ |= 0x00000001;
+      
       minAge_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -569,8 +573,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMaxAge(int value) {
-      bitField0_ |= 0x00000002;
+      
       maxAge_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

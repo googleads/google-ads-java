@@ -50,7 +50,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int OPERATOR_FIELD_NUMBER = 1;
-  private int operator_;
+  private int operator_ = 0;
   /**
    * <pre>
    * Number comparison operator.
@@ -75,13 +75,12 @@ private static final long serialVersionUID = 0L;
    * @return The operator.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator getOperator() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator result = com.google.ads.googleads.v12.enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator.valueOf(operator_);
+    com.google.ads.googleads.v12.enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator result = com.google.ads.googleads.v12.enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator.forNumber(operator_);
     return result == null ? com.google.ads.googleads.v12.enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator.UNRECOGNIZED : result;
   }
 
   public static final int VALUE_FIELD_NUMBER = 3;
-  private double value_;
+  private double value_ = 0D;
   /**
    * <pre>
    * Number value to be compared with the variable.
@@ -320,10 +319,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       operator_ = 0;
-
       value_ = 0D;
-      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -350,16 +348,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.UserListNumberRuleItemInfo buildPartial() {
       com.google.ads.googleads.v12.common.UserListNumberRuleItemInfo result = new com.google.ads.googleads.v12.common.UserListNumberRuleItemInfo(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.UserListNumberRuleItemInfo result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.operator_ = operator_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.operator_ = operator_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.value_ = value_;
         to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -440,12 +444,12 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               operator_ = input.readEnum();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             case 25: {
               value_ = input.readDouble();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 25
             default: {
@@ -491,8 +495,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOperatorValue(int value) {
-      
       operator_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -508,8 +512,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator getOperator() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator result = com.google.ads.googleads.v12.enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator.valueOf(operator_);
+      com.google.ads.googleads.v12.enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator result = com.google.ads.googleads.v12.enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator.forNumber(operator_);
       return result == null ? com.google.ads.googleads.v12.enums.UserListNumberRuleItemOperatorEnum.UserListNumberRuleItemOperator.UNRECOGNIZED : result;
     }
     /**
@@ -527,7 +530,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       operator_ = value.getNumber();
       onChanged();
       return this;
@@ -543,7 +546,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOperator() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       operator_ = 0;
       onChanged();
       return this;
@@ -562,7 +565,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasValue() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -590,8 +593,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setValue(double value) {
-      bitField0_ |= 0x00000001;
+      
       value_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -606,7 +610,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearValue() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       value_ = 0D;
       onChanged();
       return this;

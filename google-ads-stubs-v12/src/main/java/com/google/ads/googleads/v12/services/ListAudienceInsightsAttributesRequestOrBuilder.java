@@ -78,8 +78,8 @@ public interface ListAudienceInsightsAttributesRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. A free text query.  Attributes matching or related to this string will be
-   * returned.
+   * Required. A free text query.  Attributes matching or related to this string
+   * will be returned.
    * </pre>
    *
    * <code>string query_text = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -88,8 +88,8 @@ public interface ListAudienceInsightsAttributesRequestOrBuilder extends
   java.lang.String getQueryText();
   /**
    * <pre>
-   * Required. A free text query.  Attributes matching or related to this string will be
-   * returned.
+   * Required. A free text query.  Attributes matching or related to this string
+   * will be returned.
    * </pre>
    *
    * <code>string query_text = 3 [(.google.api.field_behavior) = REQUIRED];</code>

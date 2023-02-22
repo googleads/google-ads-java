@@ -58,7 +58,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Output only. The resource name of the customer client.
@@ -108,7 +109,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CLIENT_CUSTOMER_FIELD_NUMBER = 12;
-  private volatile java.lang.Object clientCustomer_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object clientCustomer_ = "";
   /**
    * <pre>
    * Output only. The resource name of the client-customer which is linked to
@@ -169,7 +171,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HIDDEN_FIELD_NUMBER = 13;
-  private boolean hidden_;
+  private boolean hidden_ = false;
   /**
    * <pre>
    * Output only. Specifies whether this is a
@@ -200,11 +202,11 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LEVEL_FIELD_NUMBER = 14;
-  private long level_;
+  private long level_ = 0L;
   /**
    * <pre>
-   * Output only. Distance between given customer and client. For self link, the level value
-   * will be 0. Read only.
+   * Output only. Distance between given customer and client. For self link, the
+   * level value will be 0. Read only.
    * </pre>
    *
    * <code>optional int64 level = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -216,8 +218,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Distance between given customer and client. For self link, the level value
-   * will be 0. Read only.
+   * Output only. Distance between given customer and client. For self link, the
+   * level value will be 0. Read only.
    * </pre>
    *
    * <code>optional int64 level = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -229,11 +231,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TIME_ZONE_FIELD_NUMBER = 15;
-  private volatile java.lang.Object timeZone_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object timeZone_ = "";
   /**
    * <pre>
-   * Output only. Common Locale Data Repository (CLDR) string representation of the
-   * time zone of the client, for example, America/Los_Angeles. Read only.
+   * Output only. Common Locale Data Repository (CLDR) string representation of
+   * the time zone of the client, for example, America/Los_Angeles. Read only.
    * </pre>
    *
    * <code>optional string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -245,8 +248,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Common Locale Data Repository (CLDR) string representation of the
-   * time zone of the client, for example, America/Los_Angeles. Read only.
+   * Output only. Common Locale Data Repository (CLDR) string representation of
+   * the time zone of the client, for example, America/Los_Angeles. Read only.
    * </pre>
    *
    * <code>optional string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -267,8 +270,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Common Locale Data Repository (CLDR) string representation of the
-   * time zone of the client, for example, America/Los_Angeles. Read only.
+   * Output only. Common Locale Data Repository (CLDR) string representation of
+   * the time zone of the client, for example, America/Los_Angeles. Read only.
    * </pre>
    *
    * <code>optional string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -290,7 +293,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TEST_ACCOUNT_FIELD_NUMBER = 16;
-  private boolean testAccount_;
+  private boolean testAccount_ = false;
   /**
    * <pre>
    * Output only. Identifies if the client is a test account. Read only.
@@ -317,7 +320,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MANAGER_FIELD_NUMBER = 17;
-  private boolean manager_;
+  private boolean manager_ = false;
   /**
    * <pre>
    * Output only. Identifies if the client is a manager. Read only.
@@ -344,7 +347,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTIVE_NAME_FIELD_NUMBER = 18;
-  private volatile java.lang.Object descriptiveName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object descriptiveName_ = "";
   /**
    * <pre>
    * Output only. Descriptive name for the client. Read only.
@@ -402,10 +406,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CURRENCY_CODE_FIELD_NUMBER = 19;
-  private volatile java.lang.Object currencyCode_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object currencyCode_ = "";
   /**
    * <pre>
-   * Output only. Currency code (for example, 'USD', 'EUR') for the client. Read only.
+   * Output only. Currency code (for example, 'USD', 'EUR') for the client. Read
+   * only.
    * </pre>
    *
    * <code>optional string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -417,7 +423,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Currency code (for example, 'USD', 'EUR') for the client. Read only.
+   * Output only. Currency code (for example, 'USD', 'EUR') for the client. Read
+   * only.
    * </pre>
    *
    * <code>optional string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -438,7 +445,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Currency code (for example, 'USD', 'EUR') for the client. Read only.
+   * Output only. Currency code (for example, 'USD', 'EUR') for the client. Read
+   * only.
    * </pre>
    *
    * <code>optional string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -460,7 +468,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ID_FIELD_NUMBER = 20;
-  private long id_;
+  private long id_ = 0L;
   /**
    * <pre>
    * Output only. The ID of the client customer. Read only.
@@ -487,12 +495,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int APPLIED_LABELS_FIELD_NUMBER = 21;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList appliedLabels_;
   /**
    * <pre>
-   * Output only. The resource names of the labels owned by the requesting customer that are
-   * applied to the client customer.
-   * Label resource names have the form:
+   * Output only. The resource names of the labels owned by the requesting
+   * customer that are applied to the client customer. Label resource names have
+   * the form:
    * `customers/{customer_id}/labels/{label_id}`
    * </pre>
    *
@@ -505,9 +514,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The resource names of the labels owned by the requesting customer that are
-   * applied to the client customer.
-   * Label resource names have the form:
+   * Output only. The resource names of the labels owned by the requesting
+   * customer that are applied to the client customer. Label resource names have
+   * the form:
    * `customers/{customer_id}/labels/{label_id}`
    * </pre>
    *
@@ -519,9 +528,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The resource names of the labels owned by the requesting customer that are
-   * applied to the client customer.
-   * Label resource names have the form:
+   * Output only. The resource names of the labels owned by the requesting
+   * customer that are applied to the client customer. Label resource names have
+   * the form:
    * `customers/{customer_id}/labels/{label_id}`
    * </pre>
    *
@@ -534,9 +543,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The resource names of the labels owned by the requesting customer that are
-   * applied to the client customer.
-   * Label resource names have the form:
+   * Output only. The resource names of the labels owned by the requesting
+   * customer that are applied to the client customer. Label resource names have
+   * the form:
    * `customers/{customer_id}/labels/{label_id}`
    * </pre>
    *
@@ -550,7 +559,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STATUS_FIELD_NUMBER = 22;
-  private int status_;
+  private int status_ = 0;
   /**
    * <pre>
    * Output only. The status of the client customer. Read only.
@@ -571,8 +580,7 @@ private static final long serialVersionUID = 0L;
    * @return The status.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.CustomerStatusEnum.CustomerStatus getStatus() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.CustomerStatusEnum.CustomerStatus result = com.google.ads.googleads.v12.enums.CustomerStatusEnum.CustomerStatus.valueOf(status_);
+    com.google.ads.googleads.v12.enums.CustomerStatusEnum.CustomerStatus result = com.google.ads.googleads.v12.enums.CustomerStatusEnum.CustomerStatus.forNumber(status_);
     return result == null ? com.google.ads.googleads.v12.enums.CustomerStatusEnum.CustomerStatus.UNRECOGNIZED : result;
   }
 
@@ -941,30 +949,20 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       clientCustomer_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       hidden_ = false;
-      bitField0_ = (bitField0_ & ~0x00000002);
       level_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000004);
       timeZone_ = "";
-      bitField0_ = (bitField0_ & ~0x00000008);
       testAccount_ = false;
-      bitField0_ = (bitField0_ & ~0x00000010);
       manager_ = false;
-      bitField0_ = (bitField0_ & ~0x00000020);
       descriptiveName_ = "";
-      bitField0_ = (bitField0_ & ~0x00000040);
       currencyCode_ = "";
-      bitField0_ = (bitField0_ & ~0x00000080);
       id_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000100);
       appliedLabels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00000400);
       status_ = 0;
-
       return this;
     }
 
@@ -991,54 +989,66 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.CustomerClient buildPartial() {
       com.google.ads.googleads.v12.resources.CustomerClient result = new com.google.ads.googleads.v12.resources.CustomerClient(this);
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.resources.CustomerClient result) {
+      if (((bitField0_ & 0x00000400) != 0)) {
+        appliedLabels_ = appliedLabels_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000400);
+      }
+      result.appliedLabels_ = appliedLabels_;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.resources.CustomerClient result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.clientCustomer_ = clientCustomer_;
         to_bitField0_ |= 0x00000001;
       }
-      result.clientCustomer_ = clientCustomer_;
-      if (((from_bitField0_ & 0x00000002) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.hidden_ = hidden_;
         to_bitField0_ |= 0x00000002;
       }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.level_ = level_;
         to_bitField0_ |= 0x00000004;
       }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.timeZone_ = timeZone_;
         to_bitField0_ |= 0x00000008;
       }
-      result.timeZone_ = timeZone_;
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000020) != 0)) {
         result.testAccount_ = testAccount_;
         to_bitField0_ |= 0x00000010;
       }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000040) != 0)) {
         result.manager_ = manager_;
         to_bitField0_ |= 0x00000020;
       }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.descriptiveName_ = descriptiveName_;
         to_bitField0_ |= 0x00000040;
       }
-      result.descriptiveName_ = descriptiveName_;
-      if (((from_bitField0_ & 0x00000080) != 0)) {
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.currencyCode_ = currencyCode_;
         to_bitField0_ |= 0x00000080;
       }
-      result.currencyCode_ = currencyCode_;
-      if (((from_bitField0_ & 0x00000100) != 0)) {
+      if (((from_bitField0_ & 0x00000200) != 0)) {
         result.id_ = id_;
         to_bitField0_ |= 0x00000100;
       }
-      if (((bitField0_ & 0x00000200) != 0)) {
-        appliedLabels_ = appliedLabels_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000200);
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.status_ = status_;
       }
-      result.appliedLabels_ = appliedLabels_;
-      result.status_ = status_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1087,11 +1097,12 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.resources.CustomerClient.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasClientCustomer()) {
-        bitField0_ |= 0x00000001;
         clientCustomer_ = other.clientCustomer_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasHidden()) {
@@ -1101,8 +1112,8 @@ private static final long serialVersionUID = 0L;
         setLevel(other.getLevel());
       }
       if (other.hasTimeZone()) {
-        bitField0_ |= 0x00000008;
         timeZone_ = other.timeZone_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (other.hasTestAccount()) {
@@ -1112,13 +1123,13 @@ private static final long serialVersionUID = 0L;
         setManager(other.getManager());
       }
       if (other.hasDescriptiveName()) {
-        bitField0_ |= 0x00000040;
         descriptiveName_ = other.descriptiveName_;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       if (other.hasCurrencyCode()) {
-        bitField0_ |= 0x00000080;
         currencyCode_ = other.currencyCode_;
+        bitField0_ |= 0x00000100;
         onChanged();
       }
       if (other.hasId()) {
@@ -1127,7 +1138,7 @@ private static final long serialVersionUID = 0L;
       if (!other.appliedLabels_.isEmpty()) {
         if (appliedLabels_.isEmpty()) {
           appliedLabels_ = other.appliedLabels_;
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ = (bitField0_ & ~0x00000400);
         } else {
           ensureAppliedLabelsIsMutable();
           appliedLabels_.addAll(other.appliedLabels_);
@@ -1165,52 +1176,52 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 98: {
               clientCustomer_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 98
             case 104: {
               hidden_ = input.readBool();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 104
             case 112: {
               level_ = input.readInt64();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               break;
             } // case 112
             case 122: {
               timeZone_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000010;
               break;
             } // case 122
             case 128: {
               testAccount_ = input.readBool();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000020;
               break;
             } // case 128
             case 136: {
               manager_ = input.readBool();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000040;
               break;
             } // case 136
             case 146: {
               descriptiveName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000080;
               break;
             } // case 146
             case 154: {
               currencyCode_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000100;
               break;
             } // case 154
             case 160: {
               id_ = input.readInt64();
-              bitField0_ |= 0x00000100;
+              bitField0_ |= 0x00000200;
               break;
             } // case 160
             case 170: {
@@ -1221,7 +1232,7 @@ private static final long serialVersionUID = 0L;
             } // case 170
             case 176: {
               status_ = input.readEnum();
-
+              bitField0_ |= 0x00000800;
               break;
             } // case 176
             default: {
@@ -1300,11 +1311,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1319,8 +1328,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1337,12 +1346,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1358,7 +1365,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the clientCustomer field is set.
      */
     public boolean hasClientCustomer() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -1415,11 +1422,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setClientCustomer(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       clientCustomer_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1433,8 +1438,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearClientCustomer() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       clientCustomer_ = getDefaultInstance().getClientCustomer();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1450,12 +1455,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setClientCustomerBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       clientCustomer_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1473,7 +1476,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasHidden() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -1501,8 +1504,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHidden(boolean value) {
-      bitField0_ |= 0x00000002;
+      
       hidden_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1517,7 +1521,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHidden() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       hidden_ = false;
       onChanged();
       return this;
@@ -1526,8 +1530,8 @@ private static final long serialVersionUID = 0L;
     private long level_ ;
     /**
      * <pre>
-     * Output only. Distance between given customer and client. For self link, the level value
-     * will be 0. Read only.
+     * Output only. Distance between given customer and client. For self link, the
+     * level value will be 0. Read only.
      * </pre>
      *
      * <code>optional int64 level = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1535,12 +1539,12 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasLevel() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
-     * Output only. Distance between given customer and client. For self link, the level value
-     * will be 0. Read only.
+     * Output only. Distance between given customer and client. For self link, the
+     * level value will be 0. Read only.
      * </pre>
      *
      * <code>optional int64 level = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1552,8 +1556,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Distance between given customer and client. For self link, the level value
-     * will be 0. Read only.
+     * Output only. Distance between given customer and client. For self link, the
+     * level value will be 0. Read only.
      * </pre>
      *
      * <code>optional int64 level = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1561,22 +1565,23 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLevel(long value) {
-      bitField0_ |= 0x00000004;
+      
       level_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Distance between given customer and client. For self link, the level value
-     * will be 0. Read only.
+     * Output only. Distance between given customer and client. For self link, the
+     * level value will be 0. Read only.
      * </pre>
      *
      * <code>optional int64 level = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearLevel() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000008);
       level_ = 0L;
       onChanged();
       return this;
@@ -1585,20 +1590,20 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object timeZone_ = "";
     /**
      * <pre>
-     * Output only. Common Locale Data Repository (CLDR) string representation of the
-     * time zone of the client, for example, America/Los_Angeles. Read only.
+     * Output only. Common Locale Data Repository (CLDR) string representation of
+     * the time zone of the client, for example, America/Los_Angeles. Read only.
      * </pre>
      *
      * <code>optional string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the timeZone field is set.
      */
     public boolean hasTimeZone() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
-     * Output only. Common Locale Data Repository (CLDR) string representation of the
-     * time zone of the client, for example, America/Los_Angeles. Read only.
+     * Output only. Common Locale Data Repository (CLDR) string representation of
+     * the time zone of the client, for example, America/Los_Angeles. Read only.
      * </pre>
      *
      * <code>optional string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1618,8 +1623,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Common Locale Data Repository (CLDR) string representation of the
-     * time zone of the client, for example, America/Los_Angeles. Read only.
+     * Output only. Common Locale Data Repository (CLDR) string representation of
+     * the time zone of the client, for example, America/Los_Angeles. Read only.
      * </pre>
      *
      * <code>optional string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1640,8 +1645,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Common Locale Data Repository (CLDR) string representation of the
-     * time zone of the client, for example, America/Los_Angeles. Read only.
+     * Output only. Common Locale Data Repository (CLDR) string representation of
+     * the time zone of the client, for example, America/Los_Angeles. Read only.
      * </pre>
      *
      * <code>optional string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1650,33 +1655,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTimeZone(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
       timeZone_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Common Locale Data Repository (CLDR) string representation of the
-     * time zone of the client, for example, America/Los_Angeles. Read only.
+     * Output only. Common Locale Data Repository (CLDR) string representation of
+     * the time zone of the client, for example, America/Los_Angeles. Read only.
      * </pre>
      *
      * <code>optional string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearTimeZone() {
-      bitField0_ = (bitField0_ & ~0x00000008);
       timeZone_ = getDefaultInstance().getTimeZone();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Common Locale Data Repository (CLDR) string representation of the
-     * time zone of the client, for example, America/Los_Angeles. Read only.
+     * Output only. Common Locale Data Repository (CLDR) string representation of
+     * the time zone of the client, for example, America/Los_Angeles. Read only.
      * </pre>
      *
      * <code>optional string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1685,12 +1688,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTimeZoneBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       timeZone_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1706,7 +1707,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasTestAccount() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -1730,8 +1731,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTestAccount(boolean value) {
-      bitField0_ |= 0x00000010;
+      
       testAccount_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1744,7 +1746,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTestAccount() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000020);
       testAccount_ = false;
       onChanged();
       return this;
@@ -1761,7 +1763,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasManager() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -1785,8 +1787,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setManager(boolean value) {
-      bitField0_ |= 0x00000020;
+      
       manager_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1799,7 +1802,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearManager() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000040);
       manager_ = false;
       onChanged();
       return this;
@@ -1815,7 +1818,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the descriptiveName field is set.
      */
     public boolean hasDescriptiveName() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
      * <pre>
@@ -1869,11 +1872,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescriptiveName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000040;
+      if (value == null) { throw new NullPointerException(); }
       descriptiveName_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1886,8 +1887,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDescriptiveName() {
-      bitField0_ = (bitField0_ & ~0x00000040);
       descriptiveName_ = getDefaultInstance().getDescriptiveName();
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -1902,12 +1903,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescriptiveNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000040;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       descriptiveName_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1915,18 +1914,20 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object currencyCode_ = "";
     /**
      * <pre>
-     * Output only. Currency code (for example, 'USD', 'EUR') for the client. Read only.
+     * Output only. Currency code (for example, 'USD', 'EUR') for the client. Read
+     * only.
      * </pre>
      *
      * <code>optional string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the currencyCode field is set.
      */
     public boolean hasCurrencyCode() {
-      return ((bitField0_ & 0x00000080) != 0);
+      return ((bitField0_ & 0x00000100) != 0);
     }
     /**
      * <pre>
-     * Output only. Currency code (for example, 'USD', 'EUR') for the client. Read only.
+     * Output only. Currency code (for example, 'USD', 'EUR') for the client. Read
+     * only.
      * </pre>
      *
      * <code>optional string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1946,7 +1947,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Currency code (for example, 'USD', 'EUR') for the client. Read only.
+     * Output only. Currency code (for example, 'USD', 'EUR') for the client. Read
+     * only.
      * </pre>
      *
      * <code>optional string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1967,7 +1969,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Currency code (for example, 'USD', 'EUR') for the client. Read only.
+     * Output only. Currency code (for example, 'USD', 'EUR') for the client. Read
+     * only.
      * </pre>
      *
      * <code>optional string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1976,31 +1979,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCurrencyCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000080;
+      if (value == null) { throw new NullPointerException(); }
       currencyCode_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Currency code (for example, 'USD', 'EUR') for the client. Read only.
+     * Output only. Currency code (for example, 'USD', 'EUR') for the client. Read
+     * only.
      * </pre>
      *
      * <code>optional string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearCurrencyCode() {
-      bitField0_ = (bitField0_ & ~0x00000080);
       currencyCode_ = getDefaultInstance().getCurrencyCode();
+      bitField0_ = (bitField0_ & ~0x00000100);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Currency code (for example, 'USD', 'EUR') for the client. Read only.
+     * Output only. Currency code (for example, 'USD', 'EUR') for the client. Read
+     * only.
      * </pre>
      *
      * <code>optional string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2009,12 +2012,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCurrencyCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000080;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       currencyCode_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2030,7 +2031,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasId() {
-      return ((bitField0_ & 0x00000100) != 0);
+      return ((bitField0_ & 0x00000200) != 0);
     }
     /**
      * <pre>
@@ -2054,8 +2055,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      bitField0_ |= 0x00000100;
+      
       id_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2068,7 +2070,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearId() {
-      bitField0_ = (bitField0_ & ~0x00000100);
+      bitField0_ = (bitField0_ & ~0x00000200);
       id_ = 0L;
       onChanged();
       return this;
@@ -2076,16 +2078,16 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.LazyStringList appliedLabels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureAppliedLabelsIsMutable() {
-      if (!((bitField0_ & 0x00000200) != 0)) {
+      if (!((bitField0_ & 0x00000400) != 0)) {
         appliedLabels_ = new com.google.protobuf.LazyStringArrayList(appliedLabels_);
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000400;
        }
     }
     /**
      * <pre>
-     * Output only. The resource names of the labels owned by the requesting customer that are
-     * applied to the client customer.
-     * Label resource names have the form:
+     * Output only. The resource names of the labels owned by the requesting
+     * customer that are applied to the client customer. Label resource names have
+     * the form:
      * `customers/{customer_id}/labels/{label_id}`
      * </pre>
      *
@@ -2098,9 +2100,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource names of the labels owned by the requesting customer that are
-     * applied to the client customer.
-     * Label resource names have the form:
+     * Output only. The resource names of the labels owned by the requesting
+     * customer that are applied to the client customer. Label resource names have
+     * the form:
      * `customers/{customer_id}/labels/{label_id}`
      * </pre>
      *
@@ -2112,9 +2114,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource names of the labels owned by the requesting customer that are
-     * applied to the client customer.
-     * Label resource names have the form:
+     * Output only. The resource names of the labels owned by the requesting
+     * customer that are applied to the client customer. Label resource names have
+     * the form:
      * `customers/{customer_id}/labels/{label_id}`
      * </pre>
      *
@@ -2127,9 +2129,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource names of the labels owned by the requesting customer that are
-     * applied to the client customer.
-     * Label resource names have the form:
+     * Output only. The resource names of the labels owned by the requesting
+     * customer that are applied to the client customer. Label resource names have
+     * the form:
      * `customers/{customer_id}/labels/{label_id}`
      * </pre>
      *
@@ -2143,9 +2145,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource names of the labels owned by the requesting customer that are
-     * applied to the client customer.
-     * Label resource names have the form:
+     * Output only. The resource names of the labels owned by the requesting
+     * customer that are applied to the client customer. Label resource names have
+     * the form:
      * `customers/{customer_id}/labels/{label_id}`
      * </pre>
      *
@@ -2156,19 +2158,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAppliedLabels(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAppliedLabelsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureAppliedLabelsIsMutable();
       appliedLabels_.set(index, value);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The resource names of the labels owned by the requesting customer that are
-     * applied to the client customer.
-     * Label resource names have the form:
+     * Output only. The resource names of the labels owned by the requesting
+     * customer that are applied to the client customer. Label resource names have
+     * the form:
      * `customers/{customer_id}/labels/{label_id}`
      * </pre>
      *
@@ -2178,19 +2178,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addAppliedLabels(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAppliedLabelsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureAppliedLabelsIsMutable();
       appliedLabels_.add(value);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The resource names of the labels owned by the requesting customer that are
-     * applied to the client customer.
-     * Label resource names have the form:
+     * Output only. The resource names of the labels owned by the requesting
+     * customer that are applied to the client customer. Label resource names have
+     * the form:
      * `customers/{customer_id}/labels/{label_id}`
      * </pre>
      *
@@ -2208,9 +2206,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource names of the labels owned by the requesting customer that are
-     * applied to the client customer.
-     * Label resource names have the form:
+     * Output only. The resource names of the labels owned by the requesting
+     * customer that are applied to the client customer. Label resource names have
+     * the form:
      * `customers/{customer_id}/labels/{label_id}`
      * </pre>
      *
@@ -2219,15 +2217,15 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearAppliedLabels() {
       appliedLabels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00000400);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The resource names of the labels owned by the requesting customer that are
-     * applied to the client customer.
-     * Label resource names have the form:
+     * Output only. The resource names of the labels owned by the requesting
+     * customer that are applied to the client customer. Label resource names have
+     * the form:
      * `customers/{customer_id}/labels/{label_id}`
      * </pre>
      *
@@ -2237,10 +2235,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addAppliedLabelsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureAppliedLabelsIsMutable();
       appliedLabels_.add(value);
       onChanged();
@@ -2269,8 +2265,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
-      
       status_ = value;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -2284,8 +2280,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.CustomerStatusEnum.CustomerStatus getStatus() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.CustomerStatusEnum.CustomerStatus result = com.google.ads.googleads.v12.enums.CustomerStatusEnum.CustomerStatus.valueOf(status_);
+      com.google.ads.googleads.v12.enums.CustomerStatusEnum.CustomerStatus result = com.google.ads.googleads.v12.enums.CustomerStatusEnum.CustomerStatus.forNumber(status_);
       return result == null ? com.google.ads.googleads.v12.enums.CustomerStatusEnum.CustomerStatus.UNRECOGNIZED : result;
     }
     /**
@@ -2301,7 +2296,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000800;
       status_ = value.getNumber();
       onChanged();
       return this;
@@ -2315,7 +2310,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000800);
       status_ = 0;
       onChanged();
       return this;

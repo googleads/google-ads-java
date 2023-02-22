@@ -53,7 +53,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int ADVERTISER_WEBHOOK_URL_FIELD_NUMBER = 4;
-  private volatile java.lang.Object advertiserWebhookUrl_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object advertiserWebhookUrl_ = "";
   /**
    * <pre>
    * Webhook url specified by advertiser to send the lead.
@@ -111,7 +112,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int GOOGLE_SECRET_FIELD_NUMBER = 5;
-  private volatile java.lang.Object googleSecret_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object googleSecret_ = "";
   /**
    * <pre>
    * Anti-spoofing secret set by the advertiser as part of the webhook payload.
@@ -169,7 +171,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PAYLOAD_SCHEMA_VERSION_FIELD_NUMBER = 6;
-  private long payloadSchemaVersion_;
+  private long payloadSchemaVersion_ = 0L;
   /**
    * <pre>
    * The schema version that this delivery instance will use.
@@ -425,12 +427,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       advertiserWebhookUrl_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       googleSecret_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       payloadSchemaVersion_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -457,23 +457,27 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.WebhookDelivery buildPartial() {
       com.google.ads.googleads.v11.common.WebhookDelivery result = new com.google.ads.googleads.v11.common.WebhookDelivery(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.WebhookDelivery result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.advertiserWebhookUrl_ = advertiserWebhookUrl_;
         to_bitField0_ |= 0x00000001;
       }
-      result.advertiserWebhookUrl_ = advertiserWebhookUrl_;
       if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.googleSecret_ = googleSecret_;
         to_bitField0_ |= 0x00000002;
       }
-      result.googleSecret_ = googleSecret_;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.payloadSchemaVersion_ = payloadSchemaVersion_;
         to_bitField0_ |= 0x00000004;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -521,13 +525,13 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v11.common.WebhookDelivery other) {
       if (other == com.google.ads.googleads.v11.common.WebhookDelivery.getDefaultInstance()) return this;
       if (other.hasAdvertiserWebhookUrl()) {
-        bitField0_ |= 0x00000001;
         advertiserWebhookUrl_ = other.advertiserWebhookUrl_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasGoogleSecret()) {
-        bitField0_ |= 0x00000002;
         googleSecret_ = other.googleSecret_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasPayloadSchemaVersion()) {
@@ -655,11 +659,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAdvertiserWebhookUrl(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       advertiserWebhookUrl_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -672,8 +674,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAdvertiserWebhookUrl() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       advertiserWebhookUrl_ = getDefaultInstance().getAdvertiserWebhookUrl();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -688,12 +690,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAdvertiserWebhookUrlBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       advertiserWebhookUrl_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -762,11 +762,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setGoogleSecret(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       googleSecret_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -779,8 +777,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGoogleSecret() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       googleSecret_ = getDefaultInstance().getGoogleSecret();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -795,12 +793,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setGoogleSecretBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       googleSecret_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -840,8 +836,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPayloadSchemaVersion(long value) {
-      bitField0_ |= 0x00000004;
+      
       payloadSchemaVersion_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }

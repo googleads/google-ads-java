@@ -50,7 +50,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int CALLOUT_TEXT_FIELD_NUMBER = 2;
-  private volatile java.lang.Object calloutText_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object calloutText_ = "";
   /**
    * <pre>
    * The callout text.
@@ -306,8 +307,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       calloutText_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -334,15 +335,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.CalloutFeedItem buildPartial() {
       com.google.ads.googleads.v12.common.CalloutFeedItem result = new com.google.ads.googleads.v12.common.CalloutFeedItem(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.CalloutFeedItem result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.calloutText_ = calloutText_;
         to_bitField0_ |= 0x00000001;
       }
-      result.calloutText_ = calloutText_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -390,8 +395,8 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v12.common.CalloutFeedItem other) {
       if (other == com.google.ads.googleads.v12.common.CalloutFeedItem.getDefaultInstance()) return this;
       if (other.hasCalloutText()) {
-        bitField0_ |= 0x00000001;
         calloutText_ = other.calloutText_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -510,11 +515,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCalloutText(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       calloutText_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -528,8 +531,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCalloutText() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       calloutText_ = getDefaultInstance().getCalloutText();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -545,12 +548,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCalloutTextBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       calloutText_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

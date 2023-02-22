@@ -83,11 +83,12 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v11.errors.ErrorCodeOrBuilder getErrorCodeOrBuilder() {
-    return getErrorCode();
+    return errorCode_ == null ? com.google.ads.googleads.v11.errors.ErrorCode.getDefaultInstance() : errorCode_;
   }
 
   public static final int MESSAGE_FIELD_NUMBER = 2;
-  private volatile java.lang.Object message_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object message_ = "";
   /**
    * <pre>
    * A human-readable description of the error.
@@ -167,7 +168,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v11.common.ValueOrBuilder getTriggerOrBuilder() {
-    return getTrigger();
+    return trigger_ == null ? com.google.ads.googleads.v11.common.Value.getDefaultInstance() : trigger_;
   }
 
   public static final int LOCATION_FIELD_NUMBER = 4;
@@ -205,7 +206,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v11.errors.ErrorLocationOrBuilder getLocationOrBuilder() {
-    return getLocation();
+    return location_ == null ? com.google.ads.googleads.v11.errors.ErrorLocation.getDefaultInstance() : location_;
   }
 
   public static final int DETAILS_FIELD_NUMBER = 5;
@@ -246,7 +247,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v11.errors.ErrorDetailsOrBuilder getDetailsOrBuilder() {
-    return getDetails();
+    return details_ == null ? com.google.ads.googleads.v11.errors.ErrorDetails.getDefaultInstance() : details_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -504,30 +505,26 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (errorCodeBuilder_ == null) {
-        errorCode_ = null;
-      } else {
-        errorCode_ = null;
+      bitField0_ = 0;
+      errorCode_ = null;
+      if (errorCodeBuilder_ != null) {
+        errorCodeBuilder_.dispose();
         errorCodeBuilder_ = null;
       }
       message_ = "";
-
-      if (triggerBuilder_ == null) {
-        trigger_ = null;
-      } else {
-        trigger_ = null;
+      trigger_ = null;
+      if (triggerBuilder_ != null) {
+        triggerBuilder_.dispose();
         triggerBuilder_ = null;
       }
-      if (locationBuilder_ == null) {
-        location_ = null;
-      } else {
-        location_ = null;
+      location_ = null;
+      if (locationBuilder_ != null) {
+        locationBuilder_.dispose();
         locationBuilder_ = null;
       }
-      if (detailsBuilder_ == null) {
-        details_ = null;
-      } else {
-        details_ = null;
+      details_ = null;
+      if (detailsBuilder_ != null) {
+        detailsBuilder_.dispose();
         detailsBuilder_ = null;
       }
       return this;
@@ -556,29 +553,36 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.errors.GoogleAdsError buildPartial() {
       com.google.ads.googleads.v11.errors.GoogleAdsError result = new com.google.ads.googleads.v11.errors.GoogleAdsError(this);
-      if (errorCodeBuilder_ == null) {
-        result.errorCode_ = errorCode_;
-      } else {
-        result.errorCode_ = errorCodeBuilder_.build();
-      }
-      result.message_ = message_;
-      if (triggerBuilder_ == null) {
-        result.trigger_ = trigger_;
-      } else {
-        result.trigger_ = triggerBuilder_.build();
-      }
-      if (locationBuilder_ == null) {
-        result.location_ = location_;
-      } else {
-        result.location_ = locationBuilder_.build();
-      }
-      if (detailsBuilder_ == null) {
-        result.details_ = details_;
-      } else {
-        result.details_ = detailsBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.errors.GoogleAdsError result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.errorCode_ = errorCodeBuilder_ == null
+            ? errorCode_
+            : errorCodeBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.message_ = message_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.trigger_ = triggerBuilder_ == null
+            ? trigger_
+            : triggerBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.location_ = locationBuilder_ == null
+            ? location_
+            : locationBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.details_ = detailsBuilder_ == null
+            ? details_
+            : detailsBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -630,6 +634,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getMessage().isEmpty()) {
         message_ = other.message_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasTrigger()) {
@@ -671,33 +676,33 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getErrorCodeFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               message_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
               input.readMessage(
                   getTriggerFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 34: {
               input.readMessage(
                   getLocationFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 34
             case 42: {
               input.readMessage(
                   getDetailsFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 42
             default: {
@@ -715,6 +720,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private com.google.ads.googleads.v11.errors.ErrorCode errorCode_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -728,7 +734,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the errorCode field is set.
      */
     public boolean hasErrorCode() {
-      return errorCodeBuilder_ != null || errorCode_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -758,11 +764,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         errorCode_ = value;
-        onChanged();
       } else {
         errorCodeBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -776,11 +782,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.errors.ErrorCode.Builder builderForValue) {
       if (errorCodeBuilder_ == null) {
         errorCode_ = builderForValue.build();
-        onChanged();
       } else {
         errorCodeBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -792,17 +798,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeErrorCode(com.google.ads.googleads.v11.errors.ErrorCode value) {
       if (errorCodeBuilder_ == null) {
-        if (errorCode_ != null) {
-          errorCode_ =
-            com.google.ads.googleads.v11.errors.ErrorCode.newBuilder(errorCode_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          errorCode_ != null &&
+          errorCode_ != com.google.ads.googleads.v11.errors.ErrorCode.getDefaultInstance()) {
+          getErrorCodeBuilder().mergeFrom(value);
         } else {
           errorCode_ = value;
         }
-        onChanged();
       } else {
         errorCodeBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -813,14 +820,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.errors.ErrorCode error_code = 1;</code>
      */
     public Builder clearErrorCode() {
-      if (errorCodeBuilder_ == null) {
-        errorCode_ = null;
-        onChanged();
-      } else {
-        errorCode_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      errorCode_ = null;
+      if (errorCodeBuilder_ != null) {
+        errorCodeBuilder_.dispose();
         errorCodeBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -831,7 +837,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.errors.ErrorCode error_code = 1;</code>
      */
     public com.google.ads.googleads.v11.errors.ErrorCode.Builder getErrorCodeBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getErrorCodeFieldBuilder().getBuilder();
     }
@@ -924,11 +930,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setMessage(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       message_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -941,8 +945,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMessage() {
-      
       message_ = getDefaultInstance().getMessage();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -957,12 +961,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setMessageBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       message_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -979,7 +981,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the trigger field is set.
      */
     public boolean hasTrigger() {
-      return triggerBuilder_ != null || trigger_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -1009,11 +1011,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         trigger_ = value;
-        onChanged();
       } else {
         triggerBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1027,11 +1029,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.common.Value.Builder builderForValue) {
       if (triggerBuilder_ == null) {
         trigger_ = builderForValue.build();
-        onChanged();
       } else {
         triggerBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1043,17 +1045,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeTrigger(com.google.ads.googleads.v11.common.Value value) {
       if (triggerBuilder_ == null) {
-        if (trigger_ != null) {
-          trigger_ =
-            com.google.ads.googleads.v11.common.Value.newBuilder(trigger_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000004) != 0) &&
+          trigger_ != null &&
+          trigger_ != com.google.ads.googleads.v11.common.Value.getDefaultInstance()) {
+          getTriggerBuilder().mergeFrom(value);
         } else {
           trigger_ = value;
         }
-        onChanged();
       } else {
         triggerBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1064,14 +1067,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.common.Value trigger = 3;</code>
      */
     public Builder clearTrigger() {
-      if (triggerBuilder_ == null) {
-        trigger_ = null;
-        onChanged();
-      } else {
-        trigger_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      trigger_ = null;
+      if (triggerBuilder_ != null) {
+        triggerBuilder_.dispose();
         triggerBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1082,7 +1084,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.common.Value trigger = 3;</code>
      */
     public com.google.ads.googleads.v11.common.Value.Builder getTriggerBuilder() {
-      
+      bitField0_ |= 0x00000004;
       onChanged();
       return getTriggerFieldBuilder().getBuilder();
     }
@@ -1134,7 +1136,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the location field is set.
      */
     public boolean hasLocation() {
-      return locationBuilder_ != null || location_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -1164,11 +1166,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         location_ = value;
-        onChanged();
       } else {
         locationBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1182,11 +1184,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.errors.ErrorLocation.Builder builderForValue) {
       if (locationBuilder_ == null) {
         location_ = builderForValue.build();
-        onChanged();
       } else {
         locationBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1198,17 +1200,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeLocation(com.google.ads.googleads.v11.errors.ErrorLocation value) {
       if (locationBuilder_ == null) {
-        if (location_ != null) {
-          location_ =
-            com.google.ads.googleads.v11.errors.ErrorLocation.newBuilder(location_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000008) != 0) &&
+          location_ != null &&
+          location_ != com.google.ads.googleads.v11.errors.ErrorLocation.getDefaultInstance()) {
+          getLocationBuilder().mergeFrom(value);
         } else {
           location_ = value;
         }
-        onChanged();
       } else {
         locationBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1219,14 +1222,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.errors.ErrorLocation location = 4;</code>
      */
     public Builder clearLocation() {
-      if (locationBuilder_ == null) {
-        location_ = null;
-        onChanged();
-      } else {
-        location_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
+      location_ = null;
+      if (locationBuilder_ != null) {
+        locationBuilder_.dispose();
         locationBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1237,7 +1239,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.errors.ErrorLocation location = 4;</code>
      */
     public com.google.ads.googleads.v11.errors.ErrorLocation.Builder getLocationBuilder() {
-      
+      bitField0_ |= 0x00000008;
       onChanged();
       return getLocationFieldBuilder().getBuilder();
     }
@@ -1290,7 +1292,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the details field is set.
      */
     public boolean hasDetails() {
-      return detailsBuilder_ != null || details_ != null;
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -1322,11 +1324,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         details_ = value;
-        onChanged();
       } else {
         detailsBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1341,11 +1343,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.errors.ErrorDetails.Builder builderForValue) {
       if (detailsBuilder_ == null) {
         details_ = builderForValue.build();
-        onChanged();
       } else {
         detailsBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1358,17 +1360,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDetails(com.google.ads.googleads.v11.errors.ErrorDetails value) {
       if (detailsBuilder_ == null) {
-        if (details_ != null) {
-          details_ =
-            com.google.ads.googleads.v11.errors.ErrorDetails.newBuilder(details_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000010) != 0) &&
+          details_ != null &&
+          details_ != com.google.ads.googleads.v11.errors.ErrorDetails.getDefaultInstance()) {
+          getDetailsBuilder().mergeFrom(value);
         } else {
           details_ = value;
         }
-        onChanged();
       } else {
         detailsBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1380,14 +1383,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.errors.ErrorDetails details = 5;</code>
      */
     public Builder clearDetails() {
-      if (detailsBuilder_ == null) {
-        details_ = null;
-        onChanged();
-      } else {
-        details_ = null;
+      bitField0_ = (bitField0_ & ~0x00000010);
+      details_ = null;
+      if (detailsBuilder_ != null) {
+        detailsBuilder_.dispose();
         detailsBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1399,7 +1401,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.errors.ErrorDetails details = 5;</code>
      */
     public com.google.ads.googleads.v11.errors.ErrorDetails.Builder getDetailsBuilder() {
-      
+      bitField0_ |= 0x00000010;
       onChanged();
       return getDetailsFieldBuilder().getBuilder();
     }

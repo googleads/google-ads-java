@@ -52,9 +52,9 @@ public interface CampaignExtensionSettingOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. The resource name of the campaign. The linked extension feed items will
-   * serve under this campaign.
-   * Campaign resource names have the form:
+   * Immutable. The resource name of the campaign. The linked extension feed
+   * items will serve under this campaign. Campaign resource names have the
+   * form:
    * `customers/{customer_id}/campaigns/{campaign_id}`
    * </pre>
    *
@@ -64,9 +64,9 @@ public interface CampaignExtensionSettingOrBuilder extends
   boolean hasCampaign();
   /**
    * <pre>
-   * Immutable. The resource name of the campaign. The linked extension feed items will
-   * serve under this campaign.
-   * Campaign resource names have the form:
+   * Immutable. The resource name of the campaign. The linked extension feed
+   * items will serve under this campaign. Campaign resource names have the
+   * form:
    * `customers/{customer_id}/campaigns/{campaign_id}`
    * </pre>
    *
@@ -76,9 +76,9 @@ public interface CampaignExtensionSettingOrBuilder extends
   java.lang.String getCampaign();
   /**
    * <pre>
-   * Immutable. The resource name of the campaign. The linked extension feed items will
-   * serve under this campaign.
-   * Campaign resource names have the form:
+   * Immutable. The resource name of the campaign. The linked extension feed
+   * items will serve under this campaign. Campaign resource names have the
+   * form:
    * `customers/{customer_id}/campaigns/{campaign_id}`
    * </pre>
    *

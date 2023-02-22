@@ -9,8 +9,8 @@ public interface InvoiceOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The resource name of the invoice. Multiple customers can share a given
-   * invoice, so multiple resource names may point to the same invoice.
+   * Output only. The resource name of the invoice. Multiple customers can share
+   * a given invoice, so multiple resource names may point to the same invoice.
    * Invoice resource names have the form:
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
@@ -21,8 +21,8 @@ public interface InvoiceOrBuilder extends
   java.lang.String getResourceName();
   /**
    * <pre>
-   * Output only. The resource name of the invoice. Multiple customers can share a given
-   * invoice, so multiple resource names may point to the same invoice.
+   * Output only. The resource name of the invoice. Multiple customers can share
+   * a given invoice, so multiple resource names may point to the same invoice.
    * Invoice resource names have the form:
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
@@ -35,7 +35,8 @@ public interface InvoiceOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The ID of the invoice. It appears on the invoice PDF as "Invoice number".
+   * Output only. The ID of the invoice. It appears on the invoice PDF as
+   * "Invoice number".
    * </pre>
    *
    * <code>optional string id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -44,7 +45,8 @@ public interface InvoiceOrBuilder extends
   boolean hasId();
   /**
    * <pre>
-   * Output only. The ID of the invoice. It appears on the invoice PDF as "Invoice number".
+   * Output only. The ID of the invoice. It appears on the invoice PDF as
+   * "Invoice number".
    * </pre>
    *
    * <code>optional string id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -53,7 +55,8 @@ public interface InvoiceOrBuilder extends
   java.lang.String getId();
   /**
    * <pre>
-   * Output only. The ID of the invoice. It appears on the invoice PDF as "Invoice number".
+   * Output only. The ID of the invoice. It appears on the invoice PDF as
+   * "Invoice number".
    * </pre>
    *
    * <code>optional string id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -115,9 +118,9 @@ public interface InvoiceOrBuilder extends
 
   /**
    * <pre>
-   * Output only. A 16 digit ID used to identify the payments account associated with the
-   * billing setup, for example, "1234-5678-9012-3456". It appears on the
-   * invoice PDF as "Billing Account Number".
+   * Output only. A 16 digit ID used to identify the payments account associated
+   * with the billing setup, for example, "1234-5678-9012-3456". It appears on
+   * the invoice PDF as "Billing Account Number".
    * </pre>
    *
    * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -126,9 +129,9 @@ public interface InvoiceOrBuilder extends
   boolean hasPaymentsAccountId();
   /**
    * <pre>
-   * Output only. A 16 digit ID used to identify the payments account associated with the
-   * billing setup, for example, "1234-5678-9012-3456". It appears on the
-   * invoice PDF as "Billing Account Number".
+   * Output only. A 16 digit ID used to identify the payments account associated
+   * with the billing setup, for example, "1234-5678-9012-3456". It appears on
+   * the invoice PDF as "Billing Account Number".
    * </pre>
    *
    * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -137,9 +140,9 @@ public interface InvoiceOrBuilder extends
   java.lang.String getPaymentsAccountId();
   /**
    * <pre>
-   * Output only. A 16 digit ID used to identify the payments account associated with the
-   * billing setup, for example, "1234-5678-9012-3456". It appears on the
-   * invoice PDF as "Billing Account Number".
+   * Output only. A 16 digit ID used to identify the payments account associated
+   * with the billing setup, for example, "1234-5678-9012-3456". It appears on
+   * the invoice PDF as "Billing Account Number".
    * </pre>
    *
    * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -150,9 +153,9 @@ public interface InvoiceOrBuilder extends
 
   /**
    * <pre>
-   * Output only. A 12 digit ID used to identify the payments profile associated with the
-   * billing setup, for example, "1234-5678-9012". It appears on the invoice PDF
-   * as "Billing ID".
+   * Output only. A 12 digit ID used to identify the payments profile associated
+   * with the billing setup, for example, "1234-5678-9012". It appears on the
+   * invoice PDF as "Billing ID".
    * </pre>
    *
    * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -161,9 +164,9 @@ public interface InvoiceOrBuilder extends
   boolean hasPaymentsProfileId();
   /**
    * <pre>
-   * Output only. A 12 digit ID used to identify the payments profile associated with the
-   * billing setup, for example, "1234-5678-9012". It appears on the invoice PDF
-   * as "Billing ID".
+   * Output only. A 12 digit ID used to identify the payments profile associated
+   * with the billing setup, for example, "1234-5678-9012". It appears on the
+   * invoice PDF as "Billing ID".
    * </pre>
    *
    * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -172,9 +175,9 @@ public interface InvoiceOrBuilder extends
   java.lang.String getPaymentsProfileId();
   /**
    * <pre>
-   * Output only. A 12 digit ID used to identify the payments profile associated with the
-   * billing setup, for example, "1234-5678-9012". It appears on the invoice PDF
-   * as "Billing ID".
+   * Output only. A 12 digit ID used to identify the payments profile associated
+   * with the billing setup, for example, "1234-5678-9012". It appears on the
+   * invoice PDF as "Billing ID".
    * </pre>
    *
    * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -185,8 +188,8 @@ public interface InvoiceOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The issue date in yyyy-mm-dd format. It appears on the invoice PDF as
-   * either "Issue date" or "Invoice date".
+   * Output only. The issue date in yyyy-mm-dd format. It appears on the invoice
+   * PDF as either "Issue date" or "Invoice date".
    * </pre>
    *
    * <code>optional string issue_date = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -195,8 +198,8 @@ public interface InvoiceOrBuilder extends
   boolean hasIssueDate();
   /**
    * <pre>
-   * Output only. The issue date in yyyy-mm-dd format. It appears on the invoice PDF as
-   * either "Issue date" or "Invoice date".
+   * Output only. The issue date in yyyy-mm-dd format. It appears on the invoice
+   * PDF as either "Issue date" or "Invoice date".
    * </pre>
    *
    * <code>optional string issue_date = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -205,8 +208,8 @@ public interface InvoiceOrBuilder extends
   java.lang.String getIssueDate();
   /**
    * <pre>
-   * Output only. The issue date in yyyy-mm-dd format. It appears on the invoice PDF as
-   * either "Issue date" or "Invoice date".
+   * Output only. The issue date in yyyy-mm-dd format. It appears on the invoice
+   * PDF as either "Issue date" or "Invoice date".
    * </pre>
    *
    * <code>optional string issue_date = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -246,7 +249,8 @@ public interface InvoiceOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The service period date range of this invoice. The end date is inclusive.
+   * Output only. The service period date range of this invoice. The end date is
+   * inclusive.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.DateRange service_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -255,7 +259,8 @@ public interface InvoiceOrBuilder extends
   boolean hasServiceDateRange();
   /**
    * <pre>
-   * Output only. The service period date range of this invoice. The end date is inclusive.
+   * Output only. The service period date range of this invoice. The end date is
+   * inclusive.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.DateRange service_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -264,7 +269,8 @@ public interface InvoiceOrBuilder extends
   com.google.ads.googleads.v11.common.DateRange getServiceDateRange();
   /**
    * <pre>
-   * Output only. The service period date range of this invoice. The end date is inclusive.
+   * Output only. The service period date range of this invoice. The end date is
+   * inclusive.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.DateRange service_date_range = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -273,8 +279,9 @@ public interface InvoiceOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The currency code. All costs are returned in this currency. A subset of the
-   * currency codes derived from the ISO 4217 standard is supported.
+   * Output only. The currency code. All costs are returned in this currency. A
+   * subset of the currency codes derived from the ISO 4217 standard is
+   * supported.
    * </pre>
    *
    * <code>optional string currency_code = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -283,8 +290,9 @@ public interface InvoiceOrBuilder extends
   boolean hasCurrencyCode();
   /**
    * <pre>
-   * Output only. The currency code. All costs are returned in this currency. A subset of the
-   * currency codes derived from the ISO 4217 standard is supported.
+   * Output only. The currency code. All costs are returned in this currency. A
+   * subset of the currency codes derived from the ISO 4217 standard is
+   * supported.
    * </pre>
    *
    * <code>optional string currency_code = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -293,8 +301,9 @@ public interface InvoiceOrBuilder extends
   java.lang.String getCurrencyCode();
   /**
    * <pre>
-   * Output only. The currency code. All costs are returned in this currency. A subset of the
-   * currency codes derived from the ISO 4217 standard is supported.
+   * Output only. The currency code. All costs are returned in this currency. A
+   * subset of the currency codes derived from the ISO 4217 standard is
+   * supported.
    * </pre>
    *
    * <code>optional string currency_code = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -305,7 +314,8 @@ public interface InvoiceOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The pretax subtotal amount of invoice level adjustments, in micros.
+   * Output only. The pretax subtotal amount of invoice level adjustments, in
+   * micros.
    * </pre>
    *
    * <code>int64 adjustments_subtotal_amount_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -335,7 +345,8 @@ public interface InvoiceOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The pretax subtotal amount of invoice level regulatory costs, in micros.
+   * Output only. The pretax subtotal amount of invoice level regulatory costs,
+   * in micros.
    * </pre>
    *
    * <code>int64 regulatory_costs_subtotal_amount_micros = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -345,7 +356,8 @@ public interface InvoiceOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The sum of taxes on the invoice level regulatory costs, in micros.
+   * Output only. The sum of taxes on the invoice level regulatory costs, in
+   * micros.
    * </pre>
    *
    * <code>int64 regulatory_costs_tax_amount_micros = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -394,9 +406,9 @@ public interface InvoiceOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The sum of all taxes on the invoice, in micros. This equals the sum of the
-   * AccountBudgetSummary tax amounts, plus taxes not associated with a specific
-   * account budget.
+   * Output only. The sum of all taxes on the invoice, in micros. This equals
+   * the sum of the AccountBudgetSummary tax amounts, plus taxes not associated
+   * with a specific account budget.
    * </pre>
    *
    * <code>optional int64 tax_amount_micros = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -405,9 +417,9 @@ public interface InvoiceOrBuilder extends
   boolean hasTaxAmountMicros();
   /**
    * <pre>
-   * Output only. The sum of all taxes on the invoice, in micros. This equals the sum of the
-   * AccountBudgetSummary tax amounts, plus taxes not associated with a specific
-   * account budget.
+   * Output only. The sum of all taxes on the invoice, in micros. This equals
+   * the sum of the AccountBudgetSummary tax amounts, plus taxes not associated
+   * with a specific account budget.
    * </pre>
    *
    * <code>optional int64 tax_amount_micros = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -444,10 +456,10 @@ public interface InvoiceOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The resource name of the original invoice corrected, wrote off, or canceled
-   * by this invoice, if applicable. If `corrected_invoice` is set,
-   * `replaced_invoices` will not be set.
-   * Invoice resource names have the form:
+   * Output only. The resource name of the original invoice corrected, wrote
+   * off, or canceled by this invoice, if applicable. If `corrected_invoice` is
+   * set, `replaced_invoices` will not be set. Invoice resource names have the
+   * form:
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
@@ -457,10 +469,10 @@ public interface InvoiceOrBuilder extends
   boolean hasCorrectedInvoice();
   /**
    * <pre>
-   * Output only. The resource name of the original invoice corrected, wrote off, or canceled
-   * by this invoice, if applicable. If `corrected_invoice` is set,
-   * `replaced_invoices` will not be set.
-   * Invoice resource names have the form:
+   * Output only. The resource name of the original invoice corrected, wrote
+   * off, or canceled by this invoice, if applicable. If `corrected_invoice` is
+   * set, `replaced_invoices` will not be set. Invoice resource names have the
+   * form:
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
@@ -470,10 +482,10 @@ public interface InvoiceOrBuilder extends
   java.lang.String getCorrectedInvoice();
   /**
    * <pre>
-   * Output only. The resource name of the original invoice corrected, wrote off, or canceled
-   * by this invoice, if applicable. If `corrected_invoice` is set,
-   * `replaced_invoices` will not be set.
-   * Invoice resource names have the form:
+   * Output only. The resource name of the original invoice corrected, wrote
+   * off, or canceled by this invoice, if applicable. If `corrected_invoice` is
+   * set, `replaced_invoices` will not be set. Invoice resource names have the
+   * form:
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
@@ -485,12 +497,11 @@ public interface InvoiceOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The resource name of the original invoice(s) being rebilled or replaced by
-   * this invoice, if applicable. There might be multiple replaced invoices due
-   * to invoice consolidation. The replaced invoices may not belong to the same
-   * payments account. If `replaced_invoices` is set, `corrected_invoice` will
-   * not be set.
-   * Invoice resource names have the form:
+   * Output only. The resource name of the original invoice(s) being rebilled or
+   * replaced by this invoice, if applicable. There might be multiple replaced
+   * invoices due to invoice consolidation. The replaced invoices may not belong
+   * to the same payments account. If `replaced_invoices` is set,
+   * `corrected_invoice` will not be set. Invoice resource names have the form:
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
@@ -501,12 +512,11 @@ public interface InvoiceOrBuilder extends
       getReplacedInvoicesList();
   /**
    * <pre>
-   * Output only. The resource name of the original invoice(s) being rebilled or replaced by
-   * this invoice, if applicable. There might be multiple replaced invoices due
-   * to invoice consolidation. The replaced invoices may not belong to the same
-   * payments account. If `replaced_invoices` is set, `corrected_invoice` will
-   * not be set.
-   * Invoice resource names have the form:
+   * Output only. The resource name of the original invoice(s) being rebilled or
+   * replaced by this invoice, if applicable. There might be multiple replaced
+   * invoices due to invoice consolidation. The replaced invoices may not belong
+   * to the same payments account. If `replaced_invoices` is set,
+   * `corrected_invoice` will not be set. Invoice resource names have the form:
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
@@ -516,12 +526,11 @@ public interface InvoiceOrBuilder extends
   int getReplacedInvoicesCount();
   /**
    * <pre>
-   * Output only. The resource name of the original invoice(s) being rebilled or replaced by
-   * this invoice, if applicable. There might be multiple replaced invoices due
-   * to invoice consolidation. The replaced invoices may not belong to the same
-   * payments account. If `replaced_invoices` is set, `corrected_invoice` will
-   * not be set.
-   * Invoice resource names have the form:
+   * Output only. The resource name of the original invoice(s) being rebilled or
+   * replaced by this invoice, if applicable. There might be multiple replaced
+   * invoices due to invoice consolidation. The replaced invoices may not belong
+   * to the same payments account. If `replaced_invoices` is set,
+   * `corrected_invoice` will not be set. Invoice resource names have the form:
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
@@ -532,12 +541,11 @@ public interface InvoiceOrBuilder extends
   java.lang.String getReplacedInvoices(int index);
   /**
    * <pre>
-   * Output only. The resource name of the original invoice(s) being rebilled or replaced by
-   * this invoice, if applicable. There might be multiple replaced invoices due
-   * to invoice consolidation. The replaced invoices may not belong to the same
-   * payments account. If `replaced_invoices` is set, `corrected_invoice` will
-   * not be set.
-   * Invoice resource names have the form:
+   * Output only. The resource name of the original invoice(s) being rebilled or
+   * replaced by this invoice, if applicable. There might be multiple replaced
+   * invoices due to invoice consolidation. The replaced invoices may not belong
+   * to the same payments account. If `replaced_invoices` is set,
+   * `corrected_invoice` will not be set. Invoice resource names have the form:
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
@@ -550,8 +558,8 @@ public interface InvoiceOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The URL to a PDF copy of the invoice. Users need to pass in their OAuth
-   * token to request the PDF with this URL.
+   * Output only. The URL to a PDF copy of the invoice. Users need to pass in
+   * their OAuth token to request the PDF with this URL.
    * </pre>
    *
    * <code>optional string pdf_url = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -560,8 +568,8 @@ public interface InvoiceOrBuilder extends
   boolean hasPdfUrl();
   /**
    * <pre>
-   * Output only. The URL to a PDF copy of the invoice. Users need to pass in their OAuth
-   * token to request the PDF with this URL.
+   * Output only. The URL to a PDF copy of the invoice. Users need to pass in
+   * their OAuth token to request the PDF with this URL.
    * </pre>
    *
    * <code>optional string pdf_url = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -570,8 +578,8 @@ public interface InvoiceOrBuilder extends
   java.lang.String getPdfUrl();
   /**
    * <pre>
-   * Output only. The URL to a PDF copy of the invoice. Users need to pass in their OAuth
-   * token to request the PDF with this URL.
+   * Output only. The URL to a PDF copy of the invoice. Users need to pass in
+   * their OAuth token to request the PDF with this URL.
    * </pre>
    *
    * <code>optional string pdf_url = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -582,8 +590,8 @@ public interface InvoiceOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The list of summarized account budget information associated with this
-   * invoice.
+   * Output only. The list of summarized account budget information associated
+   * with this invoice.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -592,8 +600,8 @@ public interface InvoiceOrBuilder extends
       getAccountBudgetSummariesList();
   /**
    * <pre>
-   * Output only. The list of summarized account budget information associated with this
-   * invoice.
+   * Output only. The list of summarized account budget information associated
+   * with this invoice.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -601,8 +609,8 @@ public interface InvoiceOrBuilder extends
   com.google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary getAccountBudgetSummaries(int index);
   /**
    * <pre>
-   * Output only. The list of summarized account budget information associated with this
-   * invoice.
+   * Output only. The list of summarized account budget information associated
+   * with this invoice.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -610,8 +618,8 @@ public interface InvoiceOrBuilder extends
   int getAccountBudgetSummariesCount();
   /**
    * <pre>
-   * Output only. The list of summarized account budget information associated with this
-   * invoice.
+   * Output only. The list of summarized account budget information associated
+   * with this invoice.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -620,8 +628,8 @@ public interface InvoiceOrBuilder extends
       getAccountBudgetSummariesOrBuilderList();
   /**
    * <pre>
-   * Output only. The list of summarized account budget information associated with this
-   * invoice.
+   * Output only. The list of summarized account budget information associated
+   * with this invoice.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

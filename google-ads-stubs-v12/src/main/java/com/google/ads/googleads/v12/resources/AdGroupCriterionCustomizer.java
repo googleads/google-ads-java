@@ -54,7 +54,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Immutable. The resource name of the ad group criterion customizer.
@@ -104,11 +105,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AD_GROUP_CRITERION_FIELD_NUMBER = 2;
-  private volatile java.lang.Object adGroupCriterion_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object adGroupCriterion_ = "";
   /**
    * <pre>
-   * Immutable. The ad group criterion to which the customizer attribute is linked.
-   * It must be a keyword criterion.
+   * Immutable. The ad group criterion to which the customizer attribute is
+   * linked. It must be a keyword criterion.
    * </pre>
    *
    * <code>optional string ad_group_criterion = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -120,8 +122,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. The ad group criterion to which the customizer attribute is linked.
-   * It must be a keyword criterion.
+   * Immutable. The ad group criterion to which the customizer attribute is
+   * linked. It must be a keyword criterion.
    * </pre>
    *
    * <code>optional string ad_group_criterion = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -142,8 +144,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. The ad group criterion to which the customizer attribute is linked.
-   * It must be a keyword criterion.
+   * Immutable. The ad group criterion to which the customizer attribute is
+   * linked. It must be a keyword criterion.
    * </pre>
    *
    * <code>optional string ad_group_criterion = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -165,10 +167,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CUSTOMIZER_ATTRIBUTE_FIELD_NUMBER = 3;
-  private volatile java.lang.Object customizerAttribute_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object customizerAttribute_ = "";
   /**
    * <pre>
-   * Required. Immutable. The customizer attribute which is linked to the ad group criterion.
+   * Required. Immutable. The customizer attribute which is linked to the ad
+   * group criterion.
    * </pre>
    *
    * <code>string customizer_attribute = 3 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -189,7 +193,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. Immutable. The customizer attribute which is linked to the ad group criterion.
+   * Required. Immutable. The customizer attribute which is linked to the ad
+   * group criterion.
    * </pre>
    *
    * <code>string customizer_attribute = 3 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -211,7 +216,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STATUS_FIELD_NUMBER = 4;
-  private int status_;
+  private int status_ = 0;
   /**
    * <pre>
    * Output only. The status of the ad group criterion customizer.
@@ -232,8 +237,7 @@ private static final long serialVersionUID = 0L;
    * @return The status.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.CustomizerValueStatusEnum.CustomizerValueStatus getStatus() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.CustomizerValueStatusEnum.CustomizerValueStatus result = com.google.ads.googleads.v12.enums.CustomizerValueStatusEnum.CustomizerValueStatus.valueOf(status_);
+    com.google.ads.googleads.v12.enums.CustomizerValueStatusEnum.CustomizerValueStatus result = com.google.ads.googleads.v12.enums.CustomizerValueStatusEnum.CustomizerValueStatus.forNumber(status_);
     return result == null ? com.google.ads.googleads.v12.enums.CustomizerValueStatusEnum.CustomizerValueStatus.UNRECOGNIZED : result;
   }
 
@@ -241,8 +245,8 @@ private static final long serialVersionUID = 0L;
   private com.google.ads.googleads.v12.common.CustomizerValue value_;
   /**
    * <pre>
-   * Required. The value to associate with the customizer attribute at this level. The
-   * value must be of the type specified for the CustomizerAttribute.
+   * Required. The value to associate with the customizer attribute at this
+   * level. The value must be of the type specified for the CustomizerAttribute.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.CustomizerValue value = 5 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -254,8 +258,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. The value to associate with the customizer attribute at this level. The
-   * value must be of the type specified for the CustomizerAttribute.
+   * Required. The value to associate with the customizer attribute at this
+   * level. The value must be of the type specified for the CustomizerAttribute.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.CustomizerValue value = 5 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -267,15 +271,15 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. The value to associate with the customizer attribute at this level. The
-   * value must be of the type specified for the CustomizerAttribute.
+   * Required. The value to associate with the customizer attribute at this
+   * level. The value must be of the type specified for the CustomizerAttribute.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.CustomizerValue value = 5 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.common.CustomizerValueOrBuilder getValueOrBuilder() {
-    return getValue();
+    return value_ == null ? com.google.ads.googleads.v12.common.CustomizerValue.getDefaultInstance() : value_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -521,18 +525,14 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       adGroupCriterion_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       customizerAttribute_ = "";
-
       status_ = 0;
-
-      if (valueBuilder_ == null) {
-        value_ = null;
-      } else {
-        value_ = null;
+      value_ = null;
+      if (valueBuilder_ != null) {
+        valueBuilder_.dispose();
         valueBuilder_ = null;
       }
       return this;
@@ -561,23 +561,33 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.AdGroupCriterionCustomizer buildPartial() {
       com.google.ads.googleads.v12.resources.AdGroupCriterionCustomizer result = new com.google.ads.googleads.v12.resources.AdGroupCriterionCustomizer(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        to_bitField0_ |= 0x00000001;
-      }
-      result.adGroupCriterion_ = adGroupCriterion_;
-      result.customizerAttribute_ = customizerAttribute_;
-      result.status_ = status_;
-      if (valueBuilder_ == null) {
-        result.value_ = value_;
-      } else {
-        result.value_ = valueBuilder_.build();
-      }
-      result.bitField0_ = to_bitField0_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.resources.AdGroupCriterionCustomizer result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.adGroupCriterion_ = adGroupCriterion_;
+        to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.customizerAttribute_ = customizerAttribute_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.status_ = status_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.value_ = valueBuilder_ == null
+            ? value_
+            : valueBuilder_.build();
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -626,15 +636,17 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.resources.AdGroupCriterionCustomizer.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasAdGroupCriterion()) {
-        bitField0_ |= 0x00000001;
         adGroupCriterion_ = other.adGroupCriterion_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getCustomizerAttribute().isEmpty()) {
         customizerAttribute_ = other.customizerAttribute_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.status_ != 0) {
@@ -671,29 +683,29 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               adGroupCriterion_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
               customizerAttribute_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 32: {
               status_ = input.readEnum();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 32
             case 42: {
               input.readMessage(
                   getValueFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 42
             default: {
@@ -772,11 +784,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -791,8 +801,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -809,12 +819,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -822,20 +830,20 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object adGroupCriterion_ = "";
     /**
      * <pre>
-     * Immutable. The ad group criterion to which the customizer attribute is linked.
-     * It must be a keyword criterion.
+     * Immutable. The ad group criterion to which the customizer attribute is
+     * linked. It must be a keyword criterion.
      * </pre>
      *
      * <code>optional string ad_group_criterion = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the adGroupCriterion field is set.
      */
     public boolean hasAdGroupCriterion() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
-     * Immutable. The ad group criterion to which the customizer attribute is linked.
-     * It must be a keyword criterion.
+     * Immutable. The ad group criterion to which the customizer attribute is
+     * linked. It must be a keyword criterion.
      * </pre>
      *
      * <code>optional string ad_group_criterion = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -855,8 +863,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The ad group criterion to which the customizer attribute is linked.
-     * It must be a keyword criterion.
+     * Immutable. The ad group criterion to which the customizer attribute is
+     * linked. It must be a keyword criterion.
      * </pre>
      *
      * <code>optional string ad_group_criterion = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -877,8 +885,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The ad group criterion to which the customizer attribute is linked.
-     * It must be a keyword criterion.
+     * Immutable. The ad group criterion to which the customizer attribute is
+     * linked. It must be a keyword criterion.
      * </pre>
      *
      * <code>optional string ad_group_criterion = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -887,33 +895,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAdGroupCriterion(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       adGroupCriterion_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Immutable. The ad group criterion to which the customizer attribute is linked.
-     * It must be a keyword criterion.
+     * Immutable. The ad group criterion to which the customizer attribute is
+     * linked. It must be a keyword criterion.
      * </pre>
      *
      * <code>optional string ad_group_criterion = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearAdGroupCriterion() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       adGroupCriterion_ = getDefaultInstance().getAdGroupCriterion();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Immutable. The ad group criterion to which the customizer attribute is linked.
-     * It must be a keyword criterion.
+     * Immutable. The ad group criterion to which the customizer attribute is
+     * linked. It must be a keyword criterion.
      * </pre>
      *
      * <code>optional string ad_group_criterion = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -922,12 +928,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAdGroupCriterionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       adGroupCriterion_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -935,7 +939,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object customizerAttribute_ = "";
     /**
      * <pre>
-     * Required. Immutable. The customizer attribute which is linked to the ad group criterion.
+     * Required. Immutable. The customizer attribute which is linked to the ad
+     * group criterion.
      * </pre>
      *
      * <code>string customizer_attribute = 3 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -955,7 +960,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Immutable. The customizer attribute which is linked to the ad group criterion.
+     * Required. Immutable. The customizer attribute which is linked to the ad
+     * group criterion.
      * </pre>
      *
      * <code>string customizer_attribute = 3 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -976,7 +982,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Immutable. The customizer attribute which is linked to the ad group criterion.
+     * Required. Immutable. The customizer attribute which is linked to the ad
+     * group criterion.
      * </pre>
      *
      * <code>string customizer_attribute = 3 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -985,31 +992,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomizerAttribute(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       customizerAttribute_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. Immutable. The customizer attribute which is linked to the ad group criterion.
+     * Required. Immutable. The customizer attribute which is linked to the ad
+     * group criterion.
      * </pre>
      *
      * <code>string customizer_attribute = 3 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearCustomizerAttribute() {
-      
       customizerAttribute_ = getDefaultInstance().getCustomizerAttribute();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. Immutable. The customizer attribute which is linked to the ad group criterion.
+     * Required. Immutable. The customizer attribute which is linked to the ad
+     * group criterion.
      * </pre>
      *
      * <code>string customizer_attribute = 3 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -1018,12 +1025,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomizerAttributeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       customizerAttribute_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1050,8 +1055,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
-      
       status_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1065,8 +1070,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.CustomizerValueStatusEnum.CustomizerValueStatus getStatus() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.CustomizerValueStatusEnum.CustomizerValueStatus result = com.google.ads.googleads.v12.enums.CustomizerValueStatusEnum.CustomizerValueStatus.valueOf(status_);
+      com.google.ads.googleads.v12.enums.CustomizerValueStatusEnum.CustomizerValueStatus result = com.google.ads.googleads.v12.enums.CustomizerValueStatusEnum.CustomizerValueStatus.forNumber(status_);
       return result == null ? com.google.ads.googleads.v12.enums.CustomizerValueStatusEnum.CustomizerValueStatus.UNRECOGNIZED : result;
     }
     /**
@@ -1082,7 +1086,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000008;
       status_ = value.getNumber();
       onChanged();
       return this;
@@ -1096,7 +1100,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       status_ = 0;
       onChanged();
       return this;
@@ -1107,20 +1111,20 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.CustomizerValue, com.google.ads.googleads.v12.common.CustomizerValue.Builder, com.google.ads.googleads.v12.common.CustomizerValueOrBuilder> valueBuilder_;
     /**
      * <pre>
-     * Required. The value to associate with the customizer attribute at this level. The
-     * value must be of the type specified for the CustomizerAttribute.
+     * Required. The value to associate with the customizer attribute at this
+     * level. The value must be of the type specified for the CustomizerAttribute.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.CustomizerValue value = 5 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return Whether the value field is set.
      */
     public boolean hasValue() {
-      return valueBuilder_ != null || value_ != null;
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
-     * Required. The value to associate with the customizer attribute at this level. The
-     * value must be of the type specified for the CustomizerAttribute.
+     * Required. The value to associate with the customizer attribute at this
+     * level. The value must be of the type specified for the CustomizerAttribute.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.CustomizerValue value = 5 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1135,8 +1139,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The value to associate with the customizer attribute at this level. The
-     * value must be of the type specified for the CustomizerAttribute.
+     * Required. The value to associate with the customizer attribute at this
+     * level. The value must be of the type specified for the CustomizerAttribute.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.CustomizerValue value = 5 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1147,17 +1151,17 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         value_ = value;
-        onChanged();
       } else {
         valueBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. The value to associate with the customizer attribute at this level. The
-     * value must be of the type specified for the CustomizerAttribute.
+     * Required. The value to associate with the customizer attribute at this
+     * level. The value must be of the type specified for the CustomizerAttribute.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.CustomizerValue value = 5 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1166,72 +1170,72 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.CustomizerValue.Builder builderForValue) {
       if (valueBuilder_ == null) {
         value_ = builderForValue.build();
-        onChanged();
       } else {
         valueBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. The value to associate with the customizer attribute at this level. The
-     * value must be of the type specified for the CustomizerAttribute.
+     * Required. The value to associate with the customizer attribute at this
+     * level. The value must be of the type specified for the CustomizerAttribute.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.CustomizerValue value = 5 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder mergeValue(com.google.ads.googleads.v12.common.CustomizerValue value) {
       if (valueBuilder_ == null) {
-        if (value_ != null) {
-          value_ =
-            com.google.ads.googleads.v12.common.CustomizerValue.newBuilder(value_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000010) != 0) &&
+          value_ != null &&
+          value_ != com.google.ads.googleads.v12.common.CustomizerValue.getDefaultInstance()) {
+          getValueBuilder().mergeFrom(value);
         } else {
           value_ = value;
         }
-        onChanged();
       } else {
         valueBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. The value to associate with the customizer attribute at this level. The
-     * value must be of the type specified for the CustomizerAttribute.
+     * Required. The value to associate with the customizer attribute at this
+     * level. The value must be of the type specified for the CustomizerAttribute.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.CustomizerValue value = 5 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder clearValue() {
-      if (valueBuilder_ == null) {
-        value_ = null;
-        onChanged();
-      } else {
-        value_ = null;
+      bitField0_ = (bitField0_ & ~0x00000010);
+      value_ = null;
+      if (valueBuilder_ != null) {
+        valueBuilder_.dispose();
         valueBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. The value to associate with the customizer attribute at this level. The
-     * value must be of the type specified for the CustomizerAttribute.
+     * Required. The value to associate with the customizer attribute at this
+     * level. The value must be of the type specified for the CustomizerAttribute.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.CustomizerValue value = 5 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.google.ads.googleads.v12.common.CustomizerValue.Builder getValueBuilder() {
-      
+      bitField0_ |= 0x00000010;
       onChanged();
       return getValueFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Required. The value to associate with the customizer attribute at this level. The
-     * value must be of the type specified for the CustomizerAttribute.
+     * Required. The value to associate with the customizer attribute at this
+     * level. The value must be of the type specified for the CustomizerAttribute.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.CustomizerValue value = 5 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1246,8 +1250,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The value to associate with the customizer attribute at this level. The
-     * value must be of the type specified for the CustomizerAttribute.
+     * Required. The value to associate with the customizer attribute at this
+     * level. The value must be of the type specified for the CustomizerAttribute.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.CustomizerValue value = 5 [(.google.api.field_behavior) = REQUIRED];</code>

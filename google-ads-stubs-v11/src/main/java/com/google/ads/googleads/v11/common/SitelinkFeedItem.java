@@ -57,7 +57,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int LINK_TEXT_FIELD_NUMBER = 9;
-  private volatile java.lang.Object linkText_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object linkText_ = "";
   /**
    * <pre>
    * URL display text for the sitelink.
@@ -118,7 +119,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LINE1_FIELD_NUMBER = 10;
-  private volatile java.lang.Object line1_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object line1_ = "";
   /**
    * <pre>
    * First line of the description for the sitelink.
@@ -182,7 +184,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LINE2_FIELD_NUMBER = 11;
-  private volatile java.lang.Object line2_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object line2_ = "";
   /**
    * <pre>
    * Second line of the description for the sitelink.
@@ -246,6 +249,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FINAL_URLS_FIELD_NUMBER = 12;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList finalUrls_;
   /**
    * <pre>
@@ -297,6 +301,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FINAL_MOBILE_URLS_FIELD_NUMBER = 13;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList finalMobileUrls_;
   /**
    * <pre>
@@ -348,7 +353,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TRACKING_URL_TEMPLATE_FIELD_NUMBER = 14;
-  private volatile java.lang.Object trackingUrlTemplate_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object trackingUrlTemplate_ = "";
   /**
    * <pre>
    * URL template for constructing a tracking URL.
@@ -406,6 +412,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int URL_CUSTOM_PARAMETERS_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.common.CustomParameter> urlCustomParameters_;
   /**
    * <pre>
@@ -471,7 +478,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FINAL_URL_SUFFIX_FIELD_NUMBER = 15;
-  private volatile java.lang.Object finalUrlSuffix_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object finalUrlSuffix_ = "";
   /**
    * <pre>
    * Final URL suffix to be appended to landing page URLs served with
@@ -834,18 +842,15 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       linkText_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       line1_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       line2_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       finalUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       bitField0_ = (bitField0_ & ~0x00000008);
       finalMobileUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       bitField0_ = (bitField0_ & ~0x00000010);
       trackingUrlTemplate_ = "";
-      bitField0_ = (bitField0_ & ~0x00000020);
       if (urlCustomParametersBuilder_ == null) {
         urlCustomParameters_ = java.util.Collections.emptyList();
       } else {
@@ -854,7 +859,6 @@ private static final long serialVersionUID = 0L;
       }
       bitField0_ = (bitField0_ & ~0x00000040);
       finalUrlSuffix_ = "";
-      bitField0_ = (bitField0_ & ~0x00000080);
       return this;
     }
 
@@ -881,20 +885,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.SitelinkFeedItem buildPartial() {
       com.google.ads.googleads.v11.common.SitelinkFeedItem result = new com.google.ads.googleads.v11.common.SitelinkFeedItem(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        to_bitField0_ |= 0x00000001;
-      }
-      result.linkText_ = linkText_;
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        to_bitField0_ |= 0x00000002;
-      }
-      result.line1_ = line1_;
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        to_bitField0_ |= 0x00000004;
-      }
-      result.line2_ = line2_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.common.SitelinkFeedItem result) {
       if (((bitField0_ & 0x00000008) != 0)) {
         finalUrls_ = finalUrls_.getUnmodifiableView();
         bitField0_ = (bitField0_ & ~0x00000008);
@@ -905,10 +902,6 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000010);
       }
       result.finalMobileUrls_ = finalMobileUrls_;
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        to_bitField0_ |= 0x00000008;
-      }
-      result.trackingUrlTemplate_ = trackingUrlTemplate_;
       if (urlCustomParametersBuilder_ == null) {
         if (((bitField0_ & 0x00000040) != 0)) {
           urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
@@ -918,13 +911,32 @@ private static final long serialVersionUID = 0L;
       } else {
         result.urlCustomParameters_ = urlCustomParametersBuilder_.build();
       }
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.SitelinkFeedItem result) {
+      int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.linkText_ = linkText_;
+        to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.line1_ = line1_;
+        to_bitField0_ |= 0x00000002;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.line2_ = line2_;
+        to_bitField0_ |= 0x00000004;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.trackingUrlTemplate_ = trackingUrlTemplate_;
+        to_bitField0_ |= 0x00000008;
+      }
       if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.finalUrlSuffix_ = finalUrlSuffix_;
         to_bitField0_ |= 0x00000010;
       }
-      result.finalUrlSuffix_ = finalUrlSuffix_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -972,18 +984,18 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v11.common.SitelinkFeedItem other) {
       if (other == com.google.ads.googleads.v11.common.SitelinkFeedItem.getDefaultInstance()) return this;
       if (other.hasLinkText()) {
-        bitField0_ |= 0x00000001;
         linkText_ = other.linkText_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasLine1()) {
-        bitField0_ |= 0x00000002;
         line1_ = other.line1_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasLine2()) {
-        bitField0_ |= 0x00000004;
         line2_ = other.line2_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.finalUrls_.isEmpty()) {
@@ -1007,8 +1019,8 @@ private static final long serialVersionUID = 0L;
         onChanged();
       }
       if (other.hasTrackingUrlTemplate()) {
-        bitField0_ |= 0x00000020;
         trackingUrlTemplate_ = other.trackingUrlTemplate_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (urlCustomParametersBuilder_ == null) {
@@ -1038,8 +1050,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       if (other.hasFinalUrlSuffix()) {
-        bitField0_ |= 0x00000080;
         finalUrlSuffix_ = other.finalUrlSuffix_;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -1203,11 +1215,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLinkText(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       linkText_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1221,8 +1231,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLinkText() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       linkText_ = getDefaultInstance().getLinkText();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1238,12 +1248,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLinkTextBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       linkText_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1320,11 +1328,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLine1(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       line1_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1339,8 +1345,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLine1() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       line1_ = getDefaultInstance().getLine1();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1357,12 +1363,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLine1Bytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       line1_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1439,11 +1443,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLine2(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       line2_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1458,8 +1460,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLine2() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       line2_ = getDefaultInstance().getLine2();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1476,12 +1478,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLine2Bytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       line2_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1553,10 +1553,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFinalUrls(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFinalUrlsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureFinalUrlsIsMutable();
       finalUrls_.set(index, value);
       onChanged();
       return this;
@@ -1572,10 +1570,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addFinalUrls(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFinalUrlsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureFinalUrlsIsMutable();
       finalUrls_.add(value);
       onChanged();
       return this;
@@ -1622,10 +1618,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addFinalUrlsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureFinalUrlsIsMutable();
       finalUrls_.add(value);
       onChanged();
@@ -1699,10 +1693,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFinalMobileUrls(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFinalMobileUrlsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureFinalMobileUrlsIsMutable();
       finalMobileUrls_.set(index, value);
       onChanged();
       return this;
@@ -1718,10 +1710,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addFinalMobileUrls(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFinalMobileUrlsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureFinalMobileUrlsIsMutable();
       finalMobileUrls_.add(value);
       onChanged();
       return this;
@@ -1768,10 +1758,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addFinalMobileUrlsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureFinalMobileUrlsIsMutable();
       finalMobileUrls_.add(value);
       onChanged();
@@ -1842,11 +1830,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTrackingUrlTemplate(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000020;
+      if (value == null) { throw new NullPointerException(); }
       trackingUrlTemplate_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1859,8 +1845,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTrackingUrlTemplate() {
-      bitField0_ = (bitField0_ & ~0x00000020);
       trackingUrlTemplate_ = getDefaultInstance().getTrackingUrlTemplate();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1875,12 +1861,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTrackingUrlTemplateBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000020;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       trackingUrlTemplate_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -2283,11 +2267,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFinalUrlSuffix(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000080;
+      if (value == null) { throw new NullPointerException(); }
       finalUrlSuffix_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2301,8 +2283,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFinalUrlSuffix() {
-      bitField0_ = (bitField0_ & ~0x00000080);
       finalUrlSuffix_ = getDefaultInstance().getFinalUrlSuffix();
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -2318,12 +2300,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFinalUrlSuffixBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000080;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       finalUrlSuffix_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }

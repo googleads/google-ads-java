@@ -51,6 +51,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CHAIN_IDS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private com.google.protobuf.Internal.LongList chainIds_;
   /**
    * <pre>
@@ -304,8 +305,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       chainIds_ = emptyLongList();
-      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -332,14 +333,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.DynamicAffiliateLocationSetFilter buildPartial() {
       com.google.ads.googleads.v11.common.DynamicAffiliateLocationSetFilter result = new com.google.ads.googleads.v11.common.DynamicAffiliateLocationSetFilter(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.common.DynamicAffiliateLocationSetFilter result) {
       if (((bitField0_ & 0x00000001) != 0)) {
         chainIds_.makeImmutable();
         bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.chainIds_ = chainIds_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.DynamicAffiliateLocationSetFilter result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override
@@ -460,7 +469,7 @@ private static final long serialVersionUID = 0L;
       if (!((bitField0_ & 0x00000001) != 0)) {
         chainIds_ = mutableCopy(chainIds_);
         bitField0_ |= 0x00000001;
-       }
+      }
     }
     /**
      * <pre>
@@ -514,6 +523,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setChainIds(
         int index, long value) {
+      
       ensureChainIdsIsMutable();
       chainIds_.setLong(index, value);
       onChanged();
@@ -530,6 +540,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder addChainIds(long value) {
+      
       ensureChainIdsIsMutable();
       chainIds_.addLong(value);
       onChanged();

@@ -29,8 +29,8 @@ public interface GraduateCampaignExperimentRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. Resource name of the budget to attach to the campaign graduated from the
-   * experiment.
+   * Required. Resource name of the budget to attach to the campaign graduated
+   * from the experiment.
    * </pre>
    *
    * <code>string campaign_budget = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -39,8 +39,8 @@ public interface GraduateCampaignExperimentRequestOrBuilder extends
   java.lang.String getCampaignBudget();
   /**
    * <pre>
-   * Required. Resource name of the budget to attach to the campaign graduated from the
-   * experiment.
+   * Required. Resource name of the budget to attach to the campaign graduated
+   * from the experiment.
    * </pre>
    *
    * <code>string campaign_budget = 2 [(.google.api.field_behavior) = REQUIRED];</code>

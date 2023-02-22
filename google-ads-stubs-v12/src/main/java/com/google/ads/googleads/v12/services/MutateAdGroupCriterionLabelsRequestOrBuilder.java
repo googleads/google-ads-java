@@ -9,7 +9,8 @@ public interface MutateAdGroupCriterionLabelsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. ID of the customer whose ad group criterion labels are being modified.
+   * Required. ID of the customer whose ad group criterion labels are being
+   * modified.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -18,7 +19,8 @@ public interface MutateAdGroupCriterionLabelsRequestOrBuilder extends
   java.lang.String getCustomerId();
   /**
    * <pre>
-   * Required. ID of the customer whose ad group criterion labels are being modified.
+   * Required. ID of the customer whose ad group criterion labels are being
+   * modified.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>

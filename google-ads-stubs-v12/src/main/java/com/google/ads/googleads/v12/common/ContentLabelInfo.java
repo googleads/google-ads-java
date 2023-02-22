@@ -49,7 +49,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TYPE_FIELD_NUMBER = 1;
-  private int type_;
+  private int type_ = 0;
   /**
    * <pre>
    * Content label type, required for CREATE operations.
@@ -70,8 +70,7 @@ private static final long serialVersionUID = 0L;
    * @return The type.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.ContentLabelTypeEnum.ContentLabelType getType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.ContentLabelTypeEnum.ContentLabelType result = com.google.ads.googleads.v12.enums.ContentLabelTypeEnum.ContentLabelType.valueOf(type_);
+    com.google.ads.googleads.v12.enums.ContentLabelTypeEnum.ContentLabelType result = com.google.ads.googleads.v12.enums.ContentLabelTypeEnum.ContentLabelType.forNumber(type_);
     return result == null ? com.google.ads.googleads.v12.enums.ContentLabelTypeEnum.ContentLabelType.UNRECOGNIZED : result;
   }
 
@@ -266,8 +265,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       type_ = 0;
-
       return this;
     }
 
@@ -294,9 +293,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.ContentLabelInfo buildPartial() {
       com.google.ads.googleads.v12.common.ContentLabelInfo result = new com.google.ads.googleads.v12.common.ContentLabelInfo(this);
-      result.type_ = type_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.ContentLabelInfo result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.type_ = type_;
+      }
     }
 
     @java.lang.Override
@@ -374,7 +380,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               type_ = input.readEnum();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             default: {
@@ -392,6 +398,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private int type_ = 0;
     /**
@@ -415,8 +422,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
-      
       type_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -430,8 +437,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.ContentLabelTypeEnum.ContentLabelType getType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.ContentLabelTypeEnum.ContentLabelType result = com.google.ads.googleads.v12.enums.ContentLabelTypeEnum.ContentLabelType.valueOf(type_);
+      com.google.ads.googleads.v12.enums.ContentLabelTypeEnum.ContentLabelType result = com.google.ads.googleads.v12.enums.ContentLabelTypeEnum.ContentLabelType.forNumber(type_);
       return result == null ? com.google.ads.googleads.v12.enums.ContentLabelTypeEnum.ContentLabelType.UNRECOGNIZED : result;
     }
     /**
@@ -447,7 +453,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       type_ = value.getNumber();
       onChanged();
       return this;
@@ -461,7 +467,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       type_ = 0;
       onChanged();
       return this;

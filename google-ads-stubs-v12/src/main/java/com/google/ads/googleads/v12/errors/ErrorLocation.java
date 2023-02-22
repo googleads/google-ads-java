@@ -138,7 +138,8 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
     public static final int FIELD_NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object fieldName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object fieldName_ = "";
     /**
      * <pre>
      * The name of a field or a oneof
@@ -184,7 +185,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int INDEX_FIELD_NUMBER = 3;
-    private int index_;
+    private int index_ = 0;
     /**
      * <pre>
      * If field_name is a repeated field, this is the element that failed
@@ -417,10 +418,9 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         fieldName_ = "";
-
         index_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -447,16 +447,22 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v12.errors.ErrorLocation.FieldPathElement buildPartial() {
         com.google.ads.googleads.v12.errors.ErrorLocation.FieldPathElement result = new com.google.ads.googleads.v12.errors.ErrorLocation.FieldPathElement(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v12.errors.ErrorLocation.FieldPathElement result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        result.fieldName_ = fieldName_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.fieldName_ = fieldName_;
+        }
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
           result.index_ = index_;
           to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -505,6 +511,7 @@ private static final long serialVersionUID = 0L;
         if (other == com.google.ads.googleads.v12.errors.ErrorLocation.FieldPathElement.getDefaultInstance()) return this;
         if (!other.getFieldName().isEmpty()) {
           fieldName_ = other.fieldName_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.hasIndex()) {
@@ -538,12 +545,12 @@ private static final long serialVersionUID = 0L;
                 break;
               case 10: {
                 fieldName_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 24: {
                 index_ = input.readInt32();
-                bitField0_ |= 0x00000001;
+                bitField0_ |= 0x00000002;
                 break;
               } // case 24
               default: {
@@ -616,11 +623,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setFieldName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         fieldName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -633,8 +638,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearFieldName() {
-        
         fieldName_ = getDefaultInstance().getFieldName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -649,12 +654,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setFieldNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         fieldName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -670,7 +673,7 @@ private static final long serialVersionUID = 0L;
        */
       @java.lang.Override
       public boolean hasIndex() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -694,8 +697,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setIndex(int value) {
-        bitField0_ |= 0x00000001;
+        
         index_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -708,7 +712,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearIndex() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         index_ = 0;
         onChanged();
         return this;
@@ -778,6 +782,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FIELD_PATH_ELEMENTS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.errors.ErrorLocation.FieldPathElement> fieldPathElements_;
   /**
    * <pre>
@@ -1031,6 +1036,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (fieldPathElementsBuilder_ == null) {
         fieldPathElements_ = java.util.Collections.emptyList();
       } else {
@@ -1064,7 +1070,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.errors.ErrorLocation buildPartial() {
       com.google.ads.googleads.v12.errors.ErrorLocation result = new com.google.ads.googleads.v12.errors.ErrorLocation(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.errors.ErrorLocation result) {
       if (fieldPathElementsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           fieldPathElements_ = java.util.Collections.unmodifiableList(fieldPathElements_);
@@ -1074,8 +1086,10 @@ private static final long serialVersionUID = 0L;
       } else {
         result.fieldPathElements_ = fieldPathElementsBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.errors.ErrorLocation result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override

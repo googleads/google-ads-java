@@ -21,36 +21,38 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.utils.FieldMasks;
-import com.google.ads.googleads.v12.common.ExpressionRuleUserListInfo;
-import com.google.ads.googleads.v12.common.RuleBasedUserListInfo;
-import com.google.ads.googleads.v12.common.UserListInfo;
-import com.google.ads.googleads.v12.common.UserListRuleInfo;
-import com.google.ads.googleads.v12.common.UserListRuleItemGroupInfo;
-import com.google.ads.googleads.v12.common.UserListRuleItemInfo;
-import com.google.ads.googleads.v12.common.UserListStringRuleItemInfo;
-import com.google.ads.googleads.v12.enums.UserListMembershipStatusEnum.UserListMembershipStatus;
-import com.google.ads.googleads.v12.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus;
-import com.google.ads.googleads.v12.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator;
-import com.google.ads.googleads.v12.errors.GoogleAdsError;
-import com.google.ads.googleads.v12.errors.GoogleAdsException;
-import com.google.ads.googleads.v12.resources.AdGroupCriterion;
-import com.google.ads.googleads.v12.resources.CampaignCriterion;
-import com.google.ads.googleads.v12.resources.UserList;
-import com.google.ads.googleads.v12.services.AdGroupCriterionOperation;
-import com.google.ads.googleads.v12.services.AdGroupCriterionServiceClient;
-import com.google.ads.googleads.v12.services.CampaignCriterionOperation;
-import com.google.ads.googleads.v12.services.CampaignCriterionServiceClient;
-import com.google.ads.googleads.v12.services.GoogleAdsRow;
-import com.google.ads.googleads.v12.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v12.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v12.services.MutateAdGroupCriteriaResponse;
-import com.google.ads.googleads.v12.services.MutateAdGroupCriterionResult;
-import com.google.ads.googleads.v12.services.MutateCampaignCriteriaResponse;
-import com.google.ads.googleads.v12.services.MutateUserListsResponse;
-import com.google.ads.googleads.v12.services.SearchGoogleAdsRequest;
-import com.google.ads.googleads.v12.services.UserListOperation;
-import com.google.ads.googleads.v12.services.UserListServiceClient;
-import com.google.ads.googleads.v12.utils.ResourceNames;
+import com.google.ads.googleads.v13.common.FlexibleRuleOperandInfo;
+import com.google.ads.googleads.v13.common.FlexibleRuleUserListInfo;
+import com.google.ads.googleads.v13.common.RuleBasedUserListInfo;
+import com.google.ads.googleads.v13.common.UserListInfo;
+import com.google.ads.googleads.v13.common.UserListRuleInfo;
+import com.google.ads.googleads.v13.common.UserListRuleItemGroupInfo;
+import com.google.ads.googleads.v13.common.UserListRuleItemInfo;
+import com.google.ads.googleads.v13.common.UserListStringRuleItemInfo;
+import com.google.ads.googleads.v13.enums.UserListFlexibleRuleOperatorEnum.UserListFlexibleRuleOperator;
+import com.google.ads.googleads.v13.enums.UserListMembershipStatusEnum.UserListMembershipStatus;
+import com.google.ads.googleads.v13.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus;
+import com.google.ads.googleads.v13.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator;
+import com.google.ads.googleads.v13.errors.GoogleAdsError;
+import com.google.ads.googleads.v13.errors.GoogleAdsException;
+import com.google.ads.googleads.v13.resources.AdGroupCriterion;
+import com.google.ads.googleads.v13.resources.CampaignCriterion;
+import com.google.ads.googleads.v13.resources.UserList;
+import com.google.ads.googleads.v13.services.AdGroupCriterionOperation;
+import com.google.ads.googleads.v13.services.AdGroupCriterionServiceClient;
+import com.google.ads.googleads.v13.services.CampaignCriterionOperation;
+import com.google.ads.googleads.v13.services.CampaignCriterionServiceClient;
+import com.google.ads.googleads.v13.services.GoogleAdsRow;
+import com.google.ads.googleads.v13.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v13.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v13.services.MutateAdGroupCriteriaResponse;
+import com.google.ads.googleads.v13.services.MutateAdGroupCriterionResult;
+import com.google.ads.googleads.v13.services.MutateCampaignCriteriaResponse;
+import com.google.ads.googleads.v13.services.MutateUserListsResponse;
+import com.google.ads.googleads.v13.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v13.services.UserListOperation;
+import com.google.ads.googleads.v13.services.UserListServiceClient;
+import com.google.ads.googleads.v13.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -182,13 +184,18 @@ public class SetUpRemarketing {
             .build();
 
     // Specifies that the user list targets visitors of a page based on the provided rule.
-    ExpressionRuleUserListInfo expressionRuleUserListInfo =
-        ExpressionRuleUserListInfo.newBuilder()
-            .setRule(
-                UserListRuleInfo.newBuilder()
-                    .addRuleItemGroups(
-                        UserListRuleItemGroupInfo.newBuilder().addRuleItems(rule).build())
-                    .build())
+    FlexibleRuleUserListInfo flexibleRuleUserListInfo =
+        FlexibleRuleUserListInfo.newBuilder()
+            .setInclusiveRuleOperator(UserListFlexibleRuleOperator.AND)
+            // Inclusive operands are joined together with the specified inclusiveRuleOperator.
+            .addInclusiveOperands(
+                FlexibleRuleOperandInfo.newBuilder()
+                    .setRule(
+                        UserListRuleInfo.newBuilder()
+                            .addRuleItemGroups(
+                                UserListRuleItemGroupInfo.newBuilder().addRuleItems(rule)))
+                    // Optional: adds a lookback window for this rule, in days.
+                    .setLookbackWindowDays(7L))
             .build();
 
     // Defines a representation of a user list that is generated by a rule.
@@ -197,7 +204,7 @@ public class SetUpRemarketing {
             // Optional: To include past users in the user list, set the prepopulation_status to
             // REQUESTED.
             .setPrepopulationStatus(UserListPrepopulationStatus.REQUESTED)
-            .setExpressionRuleUserList(expressionRuleUserListInfo)
+            .setFlexibleRuleUserList(flexibleRuleUserListInfo)
             .build();
 
     // Creates the user list.

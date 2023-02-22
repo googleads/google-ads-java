@@ -52,9 +52,8 @@ public interface AdGroupExtensionSettingOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. The resource name of the ad group. The linked extension feed items will
-   * serve under this ad group.
-   * AdGroup resource names have the form:
+   * Immutable. The resource name of the ad group. The linked extension feed
+   * items will serve under this ad group. AdGroup resource names have the form:
    * `customers/{customer_id}/adGroups/{ad_group_id}`
    * </pre>
    *
@@ -64,9 +63,8 @@ public interface AdGroupExtensionSettingOrBuilder extends
   boolean hasAdGroup();
   /**
    * <pre>
-   * Immutable. The resource name of the ad group. The linked extension feed items will
-   * serve under this ad group.
-   * AdGroup resource names have the form:
+   * Immutable. The resource name of the ad group. The linked extension feed
+   * items will serve under this ad group. AdGroup resource names have the form:
    * `customers/{customer_id}/adGroups/{ad_group_id}`
    * </pre>
    *
@@ -76,9 +74,8 @@ public interface AdGroupExtensionSettingOrBuilder extends
   java.lang.String getAdGroup();
   /**
    * <pre>
-   * Immutable. The resource name of the ad group. The linked extension feed items will
-   * serve under this ad group.
-   * AdGroup resource names have the form:
+   * Immutable. The resource name of the ad group. The linked extension feed
+   * items will serve under this ad group. AdGroup resource names have the form:
    * `customers/{customer_id}/adGroups/{ad_group_id}`
    * </pre>
    *

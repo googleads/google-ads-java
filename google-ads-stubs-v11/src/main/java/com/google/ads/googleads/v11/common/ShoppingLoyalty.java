@@ -52,7 +52,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int LOYALTY_TIER_FIELD_NUMBER = 1;
-  private volatile java.lang.Object loyaltyTier_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object loyaltyTier_ = "";
   /**
    * <pre>
    * The membership tier. It is a free-form string as each merchant may have
@@ -313,8 +314,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       loyaltyTier_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -341,15 +342,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.ShoppingLoyalty buildPartial() {
       com.google.ads.googleads.v11.common.ShoppingLoyalty result = new com.google.ads.googleads.v11.common.ShoppingLoyalty(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.ShoppingLoyalty result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.loyaltyTier_ = loyaltyTier_;
         to_bitField0_ |= 0x00000001;
       }
-      result.loyaltyTier_ = loyaltyTier_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -397,8 +402,8 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v11.common.ShoppingLoyalty other) {
       if (other == com.google.ads.googleads.v11.common.ShoppingLoyalty.getDefaultInstance()) return this;
       if (other.hasLoyaltyTier()) {
-        bitField0_ |= 0x00000001;
         loyaltyTier_ = other.loyaltyTier_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -521,11 +526,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLoyaltyTier(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       loyaltyTier_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -540,8 +543,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLoyaltyTier() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       loyaltyTier_ = getDefaultInstance().getLoyaltyTier();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -558,12 +561,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLoyaltyTierBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       loyaltyTier_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

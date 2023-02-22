@@ -9,7 +9,8 @@ public interface CustomLeadFormSubmissionFieldOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Question text for custom question, maximum number of characters is 300.
+   * Output only. Question text for custom question, maximum number of
+   * characters is 300.
    * </pre>
    *
    * <code>string question_text = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -18,7 +19,8 @@ public interface CustomLeadFormSubmissionFieldOrBuilder extends
   java.lang.String getQuestionText();
   /**
    * <pre>
-   * Output only. Question text for custom question, maximum number of characters is 300.
+   * Output only. Question text for custom question, maximum number of
+   * characters is 300.
    * </pre>
    *
    * <code>string question_text = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -29,8 +31,8 @@ public interface CustomLeadFormSubmissionFieldOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Field value for custom question response, maximum number of characters
-   * is 70.
+   * Output only. Field value for custom question response, maximum number of
+   * characters is 70.
    * </pre>
    *
    * <code>string field_value = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -39,8 +41,8 @@ public interface CustomLeadFormSubmissionFieldOrBuilder extends
   java.lang.String getFieldValue();
   /**
    * <pre>
-   * Output only. Field value for custom question response, maximum number of characters
-   * is 70.
+   * Output only. Field value for custom question response, maximum number of
+   * characters is 70.
    * </pre>
    *
    * <code>string field_value = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

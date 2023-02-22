@@ -9,7 +9,8 @@ public interface MutateFeedItemTargetsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The ID of the customer whose feed item targets are being modified.
+   * Required. The ID of the customer whose feed item targets are being
+   * modified.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -18,7 +19,8 @@ public interface MutateFeedItemTargetsRequestOrBuilder extends
   java.lang.String getCustomerId();
   /**
    * <pre>
-   * Required. The ID of the customer whose feed item targets are being modified.
+   * Required. The ID of the customer whose feed item targets are being
+   * modified.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -29,7 +31,8 @@ public interface MutateFeedItemTargetsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The list of operations to perform on individual feed item targets.
+   * Required. The list of operations to perform on individual feed item
+   * targets.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.services.FeedItemTargetOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -38,7 +41,8 @@ public interface MutateFeedItemTargetsRequestOrBuilder extends
       getOperationsList();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual feed item targets.
+   * Required. The list of operations to perform on individual feed item
+   * targets.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.services.FeedItemTargetOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -46,7 +50,8 @@ public interface MutateFeedItemTargetsRequestOrBuilder extends
   com.google.ads.googleads.v12.services.FeedItemTargetOperation getOperations(int index);
   /**
    * <pre>
-   * Required. The list of operations to perform on individual feed item targets.
+   * Required. The list of operations to perform on individual feed item
+   * targets.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.services.FeedItemTargetOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -54,7 +59,8 @@ public interface MutateFeedItemTargetsRequestOrBuilder extends
   int getOperationsCount();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual feed item targets.
+   * Required. The list of operations to perform on individual feed item
+   * targets.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.services.FeedItemTargetOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -63,7 +69,8 @@ public interface MutateFeedItemTargetsRequestOrBuilder extends
       getOperationsOrBuilderList();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual feed item targets.
+   * Required. The list of operations to perform on individual feed item
+   * targets.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.services.FeedItemTargetOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>

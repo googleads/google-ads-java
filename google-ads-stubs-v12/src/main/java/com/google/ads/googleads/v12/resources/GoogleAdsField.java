@@ -59,7 +59,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Output only. The resource name of the artifact.
@@ -109,7 +110,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 21;
-  private volatile java.lang.Object name_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
   /**
    * <pre>
    * Output only. The name of the artifact.
@@ -167,7 +169,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CATEGORY_FIELD_NUMBER = 3;
-  private int category_;
+  private int category_ = 0;
   /**
    * <pre>
    * Output only. The category of the artifact.
@@ -188,13 +190,12 @@ private static final long serialVersionUID = 0L;
    * @return The category.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory getCategory() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory result = com.google.ads.googleads.v12.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory.valueOf(category_);
+    com.google.ads.googleads.v12.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory result = com.google.ads.googleads.v12.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory.forNumber(category_);
     return result == null ? com.google.ads.googleads.v12.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory.UNRECOGNIZED : result;
   }
 
   public static final int SELECTABLE_FIELD_NUMBER = 22;
-  private boolean selectable_;
+  private boolean selectable_ = false;
   /**
    * <pre>
    * Output only. Whether the artifact can be used in a SELECT clause in search
@@ -223,7 +224,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FILTERABLE_FIELD_NUMBER = 23;
-  private boolean filterable_;
+  private boolean filterable_ = false;
   /**
    * <pre>
    * Output only. Whether the artifact can be used in a WHERE clause in search
@@ -252,11 +253,11 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SORTABLE_FIELD_NUMBER = 24;
-  private boolean sortable_;
+  private boolean sortable_ = false;
   /**
    * <pre>
-   * Output only. Whether the artifact can be used in a ORDER BY clause in search
-   * queries.
+   * Output only. Whether the artifact can be used in a ORDER BY clause in
+   * search queries.
    * </pre>
    *
    * <code>optional bool sortable = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -268,8 +269,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Whether the artifact can be used in a ORDER BY clause in search
-   * queries.
+   * Output only. Whether the artifact can be used in a ORDER BY clause in
+   * search queries.
    * </pre>
    *
    * <code>optional bool sortable = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -281,11 +282,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SELECTABLE_WITH_FIELD_NUMBER = 25;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList selectableWith_;
   /**
    * <pre>
-   * Output only. The names of all resources, segments, and metrics that are selectable with
-   * the described artifact.
+   * Output only. The names of all resources, segments, and metrics that are
+   * selectable with the described artifact.
    * </pre>
    *
    * <code>repeated string selectable_with = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -297,8 +299,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The names of all resources, segments, and metrics that are selectable with
-   * the described artifact.
+   * Output only. The names of all resources, segments, and metrics that are
+   * selectable with the described artifact.
    * </pre>
    *
    * <code>repeated string selectable_with = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -309,8 +311,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The names of all resources, segments, and metrics that are selectable with
-   * the described artifact.
+   * Output only. The names of all resources, segments, and metrics that are
+   * selectable with the described artifact.
    * </pre>
    *
    * <code>repeated string selectable_with = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -322,8 +324,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The names of all resources, segments, and metrics that are selectable with
-   * the described artifact.
+   * Output only. The names of all resources, segments, and metrics that are
+   * selectable with the described artifact.
    * </pre>
    *
    * <code>repeated string selectable_with = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -336,12 +338,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ATTRIBUTE_RESOURCES_FIELD_NUMBER = 26;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList attributeResources_;
   /**
    * <pre>
-   * Output only. The names of all resources that are selectable with the described
-   * artifact. Fields from these resources do not segment metrics when included
-   * in search queries.
+   * Output only. The names of all resources that are selectable with the
+   * described artifact. Fields from these resources do not segment metrics when
+   * included in search queries.
    * This field is only set for artifacts whose category is RESOURCE.
    * </pre>
    *
@@ -354,9 +357,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The names of all resources that are selectable with the described
-   * artifact. Fields from these resources do not segment metrics when included
-   * in search queries.
+   * Output only. The names of all resources that are selectable with the
+   * described artifact. Fields from these resources do not segment metrics when
+   * included in search queries.
    * This field is only set for artifacts whose category is RESOURCE.
    * </pre>
    *
@@ -368,9 +371,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The names of all resources that are selectable with the described
-   * artifact. Fields from these resources do not segment metrics when included
-   * in search queries.
+   * Output only. The names of all resources that are selectable with the
+   * described artifact. Fields from these resources do not segment metrics when
+   * included in search queries.
    * This field is only set for artifacts whose category is RESOURCE.
    * </pre>
    *
@@ -383,9 +386,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The names of all resources that are selectable with the described
-   * artifact. Fields from these resources do not segment metrics when included
-   * in search queries.
+   * Output only. The names of all resources that are selectable with the
+   * described artifact. Fields from these resources do not segment metrics when
+   * included in search queries.
    * This field is only set for artifacts whose category is RESOURCE.
    * </pre>
    *
@@ -399,12 +402,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int METRICS_FIELD_NUMBER = 27;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList metrics_;
   /**
    * <pre>
-   * Output only. This field lists the names of all metrics that are selectable with the
-   * described artifact when it is used in the FROM clause.
-   * It is only set for artifacts whose category is RESOURCE.
+   * Output only. This field lists the names of all metrics that are selectable
+   * with the described artifact when it is used in the FROM clause. It is only
+   * set for artifacts whose category is RESOURCE.
    * </pre>
    *
    * <code>repeated string metrics = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -416,9 +420,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. This field lists the names of all metrics that are selectable with the
-   * described artifact when it is used in the FROM clause.
-   * It is only set for artifacts whose category is RESOURCE.
+   * Output only. This field lists the names of all metrics that are selectable
+   * with the described artifact when it is used in the FROM clause. It is only
+   * set for artifacts whose category is RESOURCE.
    * </pre>
    *
    * <code>repeated string metrics = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -429,9 +433,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. This field lists the names of all metrics that are selectable with the
-   * described artifact when it is used in the FROM clause.
-   * It is only set for artifacts whose category is RESOURCE.
+   * Output only. This field lists the names of all metrics that are selectable
+   * with the described artifact when it is used in the FROM clause. It is only
+   * set for artifacts whose category is RESOURCE.
    * </pre>
    *
    * <code>repeated string metrics = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -443,9 +447,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. This field lists the names of all metrics that are selectable with the
-   * described artifact when it is used in the FROM clause.
-   * It is only set for artifacts whose category is RESOURCE.
+   * Output only. This field lists the names of all metrics that are selectable
+   * with the described artifact when it is used in the FROM clause. It is only
+   * set for artifacts whose category is RESOURCE.
    * </pre>
    *
    * <code>repeated string metrics = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -458,13 +462,14 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SEGMENTS_FIELD_NUMBER = 28;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList segments_;
   /**
    * <pre>
-   * Output only. This field lists the names of all artifacts, whether a segment or another
-   * resource, that segment metrics when included in search queries and when the
-   * described artifact is used in the FROM clause. It is only set for artifacts
-   * whose category is RESOURCE.
+   * Output only. This field lists the names of all artifacts, whether a segment
+   * or another resource, that segment metrics when included in search queries
+   * and when the described artifact is used in the FROM clause. It is only set
+   * for artifacts whose category is RESOURCE.
    * </pre>
    *
    * <code>repeated string segments = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -476,10 +481,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. This field lists the names of all artifacts, whether a segment or another
-   * resource, that segment metrics when included in search queries and when the
-   * described artifact is used in the FROM clause. It is only set for artifacts
-   * whose category is RESOURCE.
+   * Output only. This field lists the names of all artifacts, whether a segment
+   * or another resource, that segment metrics when included in search queries
+   * and when the described artifact is used in the FROM clause. It is only set
+   * for artifacts whose category is RESOURCE.
    * </pre>
    *
    * <code>repeated string segments = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -490,10 +495,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. This field lists the names of all artifacts, whether a segment or another
-   * resource, that segment metrics when included in search queries and when the
-   * described artifact is used in the FROM clause. It is only set for artifacts
-   * whose category is RESOURCE.
+   * Output only. This field lists the names of all artifacts, whether a segment
+   * or another resource, that segment metrics when included in search queries
+   * and when the described artifact is used in the FROM clause. It is only set
+   * for artifacts whose category is RESOURCE.
    * </pre>
    *
    * <code>repeated string segments = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -505,10 +510,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. This field lists the names of all artifacts, whether a segment or another
-   * resource, that segment metrics when included in search queries and when the
-   * described artifact is used in the FROM clause. It is only set for artifacts
-   * whose category is RESOURCE.
+   * Output only. This field lists the names of all artifacts, whether a segment
+   * or another resource, that segment metrics when included in search queries
+   * and when the described artifact is used in the FROM clause. It is only set
+   * for artifacts whose category is RESOURCE.
    * </pre>
    *
    * <code>repeated string segments = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -521,6 +526,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ENUM_VALUES_FIELD_NUMBER = 29;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList enumValues_;
   /**
    * <pre>
@@ -576,11 +582,11 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DATA_TYPE_FIELD_NUMBER = 12;
-  private int dataType_;
+  private int dataType_ = 0;
   /**
    * <pre>
-   * Output only. This field determines the operators that can be used with the artifact
-   * in WHERE clauses.
+   * Output only. This field determines the operators that can be used with the
+   * artifact in WHERE clauses.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType data_type = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -591,21 +597,21 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. This field determines the operators that can be used with the artifact
-   * in WHERE clauses.
+   * Output only. This field determines the operators that can be used with the
+   * artifact in WHERE clauses.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType data_type = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The dataType.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType getDataType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType result = com.google.ads.googleads.v12.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType.valueOf(dataType_);
+    com.google.ads.googleads.v12.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType result = com.google.ads.googleads.v12.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType.forNumber(dataType_);
     return result == null ? com.google.ads.googleads.v12.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType.UNRECOGNIZED : result;
   }
 
   public static final int TYPE_URL_FIELD_NUMBER = 30;
-  private volatile java.lang.Object typeUrl_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object typeUrl_ = "";
   /**
    * <pre>
    * Output only. The URL of proto describing the artifact's data type.
@@ -663,7 +669,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int IS_REPEATED_FIELD_NUMBER = 31;
-  private boolean isRepeated_;
+  private boolean isRepeated_ = false;
   /**
    * <pre>
    * Output only. Whether the field artifact is repeated.
@@ -1083,34 +1089,26 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       name_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       category_ = 0;
-
       selectable_ = false;
-      bitField0_ = (bitField0_ & ~0x00000002);
       filterable_ = false;
-      bitField0_ = (bitField0_ & ~0x00000004);
       sortable_ = false;
-      bitField0_ = (bitField0_ & ~0x00000008);
       selectableWith_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000010);
-      attributeResources_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000020);
-      metrics_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       bitField0_ = (bitField0_ & ~0x00000040);
-      segments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      attributeResources_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       bitField0_ = (bitField0_ & ~0x00000080);
-      enumValues_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      metrics_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       bitField0_ = (bitField0_ & ~0x00000100);
-      dataType_ = 0;
-
-      typeUrl_ = "";
+      segments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       bitField0_ = (bitField0_ & ~0x00000200);
-      isRepeated_ = false;
+      enumValues_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       bitField0_ = (bitField0_ & ~0x00000400);
+      dataType_ = 0;
+      typeUrl_ = "";
+      isRepeated_ = false;
       return this;
     }
 
@@ -1137,63 +1135,77 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.GoogleAdsField buildPartial() {
       com.google.ads.googleads.v12.resources.GoogleAdsField result = new com.google.ads.googleads.v12.resources.GoogleAdsField(this);
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.resources.GoogleAdsField result) {
+      if (((bitField0_ & 0x00000040) != 0)) {
+        selectableWith_ = selectableWith_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000040);
+      }
+      result.selectableWith_ = selectableWith_;
+      if (((bitField0_ & 0x00000080) != 0)) {
+        attributeResources_ = attributeResources_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000080);
+      }
+      result.attributeResources_ = attributeResources_;
+      if (((bitField0_ & 0x00000100) != 0)) {
+        metrics_ = metrics_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000100);
+      }
+      result.metrics_ = metrics_;
+      if (((bitField0_ & 0x00000200) != 0)) {
+        segments_ = segments_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000200);
+      }
+      result.segments_ = segments_;
+      if (((bitField0_ & 0x00000400) != 0)) {
+        enumValues_ = enumValues_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000400);
+      }
+      result.enumValues_ = enumValues_;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.resources.GoogleAdsField result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.name_ = name_;
         to_bitField0_ |= 0x00000001;
       }
-      result.name_ = name_;
-      result.category_ = category_;
-      if (((from_bitField0_ & 0x00000002) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.category_ = category_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.selectable_ = selectable_;
         to_bitField0_ |= 0x00000002;
       }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.filterable_ = filterable_;
         to_bitField0_ |= 0x00000004;
       }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000020) != 0)) {
         result.sortable_ = sortable_;
         to_bitField0_ |= 0x00000008;
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
-        selectableWith_ = selectableWith_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000010);
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.dataType_ = dataType_;
       }
-      result.selectableWith_ = selectableWith_;
-      if (((bitField0_ & 0x00000020) != 0)) {
-        attributeResources_ = attributeResources_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000020);
-      }
-      result.attributeResources_ = attributeResources_;
-      if (((bitField0_ & 0x00000040) != 0)) {
-        metrics_ = metrics_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000040);
-      }
-      result.metrics_ = metrics_;
-      if (((bitField0_ & 0x00000080) != 0)) {
-        segments_ = segments_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000080);
-      }
-      result.segments_ = segments_;
-      if (((bitField0_ & 0x00000100) != 0)) {
-        enumValues_ = enumValues_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000100);
-      }
-      result.enumValues_ = enumValues_;
-      result.dataType_ = dataType_;
-      if (((from_bitField0_ & 0x00000200) != 0)) {
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.typeUrl_ = typeUrl_;
         to_bitField0_ |= 0x00000010;
       }
-      result.typeUrl_ = typeUrl_;
-      if (((from_bitField0_ & 0x00000400) != 0)) {
+      if (((from_bitField0_ & 0x00002000) != 0)) {
         result.isRepeated_ = isRepeated_;
         to_bitField0_ |= 0x00000020;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1242,11 +1254,12 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.resources.GoogleAdsField.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasName()) {
-        bitField0_ |= 0x00000001;
         name_ = other.name_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.category_ != 0) {
@@ -1264,7 +1277,7 @@ private static final long serialVersionUID = 0L;
       if (!other.selectableWith_.isEmpty()) {
         if (selectableWith_.isEmpty()) {
           selectableWith_ = other.selectableWith_;
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000040);
         } else {
           ensureSelectableWithIsMutable();
           selectableWith_.addAll(other.selectableWith_);
@@ -1274,7 +1287,7 @@ private static final long serialVersionUID = 0L;
       if (!other.attributeResources_.isEmpty()) {
         if (attributeResources_.isEmpty()) {
           attributeResources_ = other.attributeResources_;
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000080);
         } else {
           ensureAttributeResourcesIsMutable();
           attributeResources_.addAll(other.attributeResources_);
@@ -1284,7 +1297,7 @@ private static final long serialVersionUID = 0L;
       if (!other.metrics_.isEmpty()) {
         if (metrics_.isEmpty()) {
           metrics_ = other.metrics_;
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000100);
         } else {
           ensureMetricsIsMutable();
           metrics_.addAll(other.metrics_);
@@ -1294,7 +1307,7 @@ private static final long serialVersionUID = 0L;
       if (!other.segments_.isEmpty()) {
         if (segments_.isEmpty()) {
           segments_ = other.segments_;
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000200);
         } else {
           ensureSegmentsIsMutable();
           segments_.addAll(other.segments_);
@@ -1304,7 +1317,7 @@ private static final long serialVersionUID = 0L;
       if (!other.enumValues_.isEmpty()) {
         if (enumValues_.isEmpty()) {
           enumValues_ = other.enumValues_;
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ = (bitField0_ & ~0x00000400);
         } else {
           ensureEnumValuesIsMutable();
           enumValues_.addAll(other.enumValues_);
@@ -1315,8 +1328,8 @@ private static final long serialVersionUID = 0L;
         setDataTypeValue(other.getDataTypeValue());
       }
       if (other.hasTypeUrl()) {
-        bitField0_ |= 0x00000200;
         typeUrl_ = other.typeUrl_;
+        bitField0_ |= 0x00001000;
         onChanged();
       }
       if (other.hasIsRepeated()) {
@@ -1350,37 +1363,37 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 24: {
               category_ = input.readEnum();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 24
             case 96: {
               dataType_ = input.readEnum();
-
+              bitField0_ |= 0x00000800;
               break;
             } // case 96
             case 170: {
               name_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 170
             case 176: {
               selectable_ = input.readBool();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000008;
               break;
             } // case 176
             case 184: {
               filterable_ = input.readBool();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000010;
               break;
             } // case 184
             case 192: {
               sortable_ = input.readBool();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000020;
               break;
             } // case 192
             case 202: {
@@ -1415,12 +1428,12 @@ private static final long serialVersionUID = 0L;
             } // case 234
             case 242: {
               typeUrl_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000200;
+              bitField0_ |= 0x00001000;
               break;
             } // case 242
             case 248: {
               isRepeated_ = input.readBool();
-              bitField0_ |= 0x00000400;
+              bitField0_ |= 0x00002000;
               break;
             } // case 248
             default: {
@@ -1499,11 +1512,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1518,8 +1529,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1536,12 +1547,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1556,7 +1565,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the name field is set.
      */
     public boolean hasName() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -1610,11 +1619,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       name_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1627,8 +1634,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1643,12 +1650,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1675,8 +1680,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCategoryValue(int value) {
-      
       category_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1690,8 +1695,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory getCategory() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory result = com.google.ads.googleads.v12.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory.valueOf(category_);
+      com.google.ads.googleads.v12.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory result = com.google.ads.googleads.v12.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory.forNumber(category_);
       return result == null ? com.google.ads.googleads.v12.enums.GoogleAdsFieldCategoryEnum.GoogleAdsFieldCategory.UNRECOGNIZED : result;
     }
     /**
@@ -1707,7 +1711,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       category_ = value.getNumber();
       onChanged();
       return this;
@@ -1721,7 +1725,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCategory() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       category_ = 0;
       onChanged();
       return this;
@@ -1739,7 +1743,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasSelectable() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -1765,8 +1769,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSelectable(boolean value) {
-      bitField0_ |= 0x00000002;
+      
       selectable_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1780,7 +1785,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSelectable() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000008);
       selectable_ = false;
       onChanged();
       return this;
@@ -1798,7 +1803,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasFilterable() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -1824,8 +1829,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFilterable(boolean value) {
-      bitField0_ |= 0x00000004;
+      
       filterable_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1839,7 +1845,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFilterable() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000010);
       filterable_ = false;
       onChanged();
       return this;
@@ -1848,8 +1854,8 @@ private static final long serialVersionUID = 0L;
     private boolean sortable_ ;
     /**
      * <pre>
-     * Output only. Whether the artifact can be used in a ORDER BY clause in search
-     * queries.
+     * Output only. Whether the artifact can be used in a ORDER BY clause in
+     * search queries.
      * </pre>
      *
      * <code>optional bool sortable = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1857,12 +1863,12 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasSortable() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
-     * Output only. Whether the artifact can be used in a ORDER BY clause in search
-     * queries.
+     * Output only. Whether the artifact can be used in a ORDER BY clause in
+     * search queries.
      * </pre>
      *
      * <code>optional bool sortable = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1874,8 +1880,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Whether the artifact can be used in a ORDER BY clause in search
-     * queries.
+     * Output only. Whether the artifact can be used in a ORDER BY clause in
+     * search queries.
      * </pre>
      *
      * <code>optional bool sortable = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1883,22 +1889,23 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSortable(boolean value) {
-      bitField0_ |= 0x00000008;
+      
       sortable_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Whether the artifact can be used in a ORDER BY clause in search
-     * queries.
+     * Output only. Whether the artifact can be used in a ORDER BY clause in
+     * search queries.
      * </pre>
      *
      * <code>optional bool sortable = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearSortable() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000020);
       sortable_ = false;
       onChanged();
       return this;
@@ -1906,15 +1913,15 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.LazyStringList selectableWith_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureSelectableWithIsMutable() {
-      if (!((bitField0_ & 0x00000010) != 0)) {
+      if (!((bitField0_ & 0x00000040) != 0)) {
         selectableWith_ = new com.google.protobuf.LazyStringArrayList(selectableWith_);
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000040;
        }
     }
     /**
      * <pre>
-     * Output only. The names of all resources, segments, and metrics that are selectable with
-     * the described artifact.
+     * Output only. The names of all resources, segments, and metrics that are
+     * selectable with the described artifact.
      * </pre>
      *
      * <code>repeated string selectable_with = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1926,8 +1933,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The names of all resources, segments, and metrics that are selectable with
-     * the described artifact.
+     * Output only. The names of all resources, segments, and metrics that are
+     * selectable with the described artifact.
      * </pre>
      *
      * <code>repeated string selectable_with = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1938,8 +1945,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The names of all resources, segments, and metrics that are selectable with
-     * the described artifact.
+     * Output only. The names of all resources, segments, and metrics that are
+     * selectable with the described artifact.
      * </pre>
      *
      * <code>repeated string selectable_with = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1951,8 +1958,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The names of all resources, segments, and metrics that are selectable with
-     * the described artifact.
+     * Output only. The names of all resources, segments, and metrics that are
+     * selectable with the described artifact.
      * </pre>
      *
      * <code>repeated string selectable_with = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1965,8 +1972,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The names of all resources, segments, and metrics that are selectable with
-     * the described artifact.
+     * Output only. The names of all resources, segments, and metrics that are
+     * selectable with the described artifact.
      * </pre>
      *
      * <code>repeated string selectable_with = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1976,18 +1983,16 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSelectableWith(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSelectableWithIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureSelectableWithIsMutable();
       selectableWith_.set(index, value);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The names of all resources, segments, and metrics that are selectable with
-     * the described artifact.
+     * Output only. The names of all resources, segments, and metrics that are
+     * selectable with the described artifact.
      * </pre>
      *
      * <code>repeated string selectable_with = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1996,18 +2001,16 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addSelectableWith(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSelectableWithIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureSelectableWithIsMutable();
       selectableWith_.add(value);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The names of all resources, segments, and metrics that are selectable with
-     * the described artifact.
+     * Output only. The names of all resources, segments, and metrics that are
+     * selectable with the described artifact.
      * </pre>
      *
      * <code>repeated string selectable_with = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2024,8 +2027,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The names of all resources, segments, and metrics that are selectable with
-     * the described artifact.
+     * Output only. The names of all resources, segments, and metrics that are
+     * selectable with the described artifact.
      * </pre>
      *
      * <code>repeated string selectable_with = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2033,14 +2036,14 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearSelectableWith() {
       selectableWith_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The names of all resources, segments, and metrics that are selectable with
-     * the described artifact.
+     * Output only. The names of all resources, segments, and metrics that are
+     * selectable with the described artifact.
      * </pre>
      *
      * <code>repeated string selectable_with = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2049,10 +2052,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addSelectableWithBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureSelectableWithIsMutable();
       selectableWith_.add(value);
       onChanged();
@@ -2061,16 +2062,16 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.LazyStringList attributeResources_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureAttributeResourcesIsMutable() {
-      if (!((bitField0_ & 0x00000020) != 0)) {
+      if (!((bitField0_ & 0x00000080) != 0)) {
         attributeResources_ = new com.google.protobuf.LazyStringArrayList(attributeResources_);
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000080;
        }
     }
     /**
      * <pre>
-     * Output only. The names of all resources that are selectable with the described
-     * artifact. Fields from these resources do not segment metrics when included
-     * in search queries.
+     * Output only. The names of all resources that are selectable with the
+     * described artifact. Fields from these resources do not segment metrics when
+     * included in search queries.
      * This field is only set for artifacts whose category is RESOURCE.
      * </pre>
      *
@@ -2083,9 +2084,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The names of all resources that are selectable with the described
-     * artifact. Fields from these resources do not segment metrics when included
-     * in search queries.
+     * Output only. The names of all resources that are selectable with the
+     * described artifact. Fields from these resources do not segment metrics when
+     * included in search queries.
      * This field is only set for artifacts whose category is RESOURCE.
      * </pre>
      *
@@ -2097,9 +2098,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The names of all resources that are selectable with the described
-     * artifact. Fields from these resources do not segment metrics when included
-     * in search queries.
+     * Output only. The names of all resources that are selectable with the
+     * described artifact. Fields from these resources do not segment metrics when
+     * included in search queries.
      * This field is only set for artifacts whose category is RESOURCE.
      * </pre>
      *
@@ -2112,9 +2113,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The names of all resources that are selectable with the described
-     * artifact. Fields from these resources do not segment metrics when included
-     * in search queries.
+     * Output only. The names of all resources that are selectable with the
+     * described artifact. Fields from these resources do not segment metrics when
+     * included in search queries.
      * This field is only set for artifacts whose category is RESOURCE.
      * </pre>
      *
@@ -2128,9 +2129,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The names of all resources that are selectable with the described
-     * artifact. Fields from these resources do not segment metrics when included
-     * in search queries.
+     * Output only. The names of all resources that are selectable with the
+     * described artifact. Fields from these resources do not segment metrics when
+     * included in search queries.
      * This field is only set for artifacts whose category is RESOURCE.
      * </pre>
      *
@@ -2141,19 +2142,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAttributeResources(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAttributeResourcesIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureAttributeResourcesIsMutable();
       attributeResources_.set(index, value);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The names of all resources that are selectable with the described
-     * artifact. Fields from these resources do not segment metrics when included
-     * in search queries.
+     * Output only. The names of all resources that are selectable with the
+     * described artifact. Fields from these resources do not segment metrics when
+     * included in search queries.
      * This field is only set for artifacts whose category is RESOURCE.
      * </pre>
      *
@@ -2163,19 +2162,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addAttributeResources(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAttributeResourcesIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureAttributeResourcesIsMutable();
       attributeResources_.add(value);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The names of all resources that are selectable with the described
-     * artifact. Fields from these resources do not segment metrics when included
-     * in search queries.
+     * Output only. The names of all resources that are selectable with the
+     * described artifact. Fields from these resources do not segment metrics when
+     * included in search queries.
      * This field is only set for artifacts whose category is RESOURCE.
      * </pre>
      *
@@ -2193,9 +2190,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The names of all resources that are selectable with the described
-     * artifact. Fields from these resources do not segment metrics when included
-     * in search queries.
+     * Output only. The names of all resources that are selectable with the
+     * described artifact. Fields from these resources do not segment metrics when
+     * included in search queries.
      * This field is only set for artifacts whose category is RESOURCE.
      * </pre>
      *
@@ -2204,15 +2201,15 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearAttributeResources() {
       attributeResources_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The names of all resources that are selectable with the described
-     * artifact. Fields from these resources do not segment metrics when included
-     * in search queries.
+     * Output only. The names of all resources that are selectable with the
+     * described artifact. Fields from these resources do not segment metrics when
+     * included in search queries.
      * This field is only set for artifacts whose category is RESOURCE.
      * </pre>
      *
@@ -2222,10 +2219,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addAttributeResourcesBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureAttributeResourcesIsMutable();
       attributeResources_.add(value);
       onChanged();
@@ -2234,16 +2229,16 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.LazyStringList metrics_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureMetricsIsMutable() {
-      if (!((bitField0_ & 0x00000040) != 0)) {
+      if (!((bitField0_ & 0x00000100) != 0)) {
         metrics_ = new com.google.protobuf.LazyStringArrayList(metrics_);
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000100;
        }
     }
     /**
      * <pre>
-     * Output only. This field lists the names of all metrics that are selectable with the
-     * described artifact when it is used in the FROM clause.
-     * It is only set for artifacts whose category is RESOURCE.
+     * Output only. This field lists the names of all metrics that are selectable
+     * with the described artifact when it is used in the FROM clause. It is only
+     * set for artifacts whose category is RESOURCE.
      * </pre>
      *
      * <code>repeated string metrics = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2255,9 +2250,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. This field lists the names of all metrics that are selectable with the
-     * described artifact when it is used in the FROM clause.
-     * It is only set for artifacts whose category is RESOURCE.
+     * Output only. This field lists the names of all metrics that are selectable
+     * with the described artifact when it is used in the FROM clause. It is only
+     * set for artifacts whose category is RESOURCE.
      * </pre>
      *
      * <code>repeated string metrics = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2268,9 +2263,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. This field lists the names of all metrics that are selectable with the
-     * described artifact when it is used in the FROM clause.
-     * It is only set for artifacts whose category is RESOURCE.
+     * Output only. This field lists the names of all metrics that are selectable
+     * with the described artifact when it is used in the FROM clause. It is only
+     * set for artifacts whose category is RESOURCE.
      * </pre>
      *
      * <code>repeated string metrics = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2282,9 +2277,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. This field lists the names of all metrics that are selectable with the
-     * described artifact when it is used in the FROM clause.
-     * It is only set for artifacts whose category is RESOURCE.
+     * Output only. This field lists the names of all metrics that are selectable
+     * with the described artifact when it is used in the FROM clause. It is only
+     * set for artifacts whose category is RESOURCE.
      * </pre>
      *
      * <code>repeated string metrics = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2297,9 +2292,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. This field lists the names of all metrics that are selectable with the
-     * described artifact when it is used in the FROM clause.
-     * It is only set for artifacts whose category is RESOURCE.
+     * Output only. This field lists the names of all metrics that are selectable
+     * with the described artifact when it is used in the FROM clause. It is only
+     * set for artifacts whose category is RESOURCE.
      * </pre>
      *
      * <code>repeated string metrics = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2309,19 +2304,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setMetrics(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureMetricsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureMetricsIsMutable();
       metrics_.set(index, value);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. This field lists the names of all metrics that are selectable with the
-     * described artifact when it is used in the FROM clause.
-     * It is only set for artifacts whose category is RESOURCE.
+     * Output only. This field lists the names of all metrics that are selectable
+     * with the described artifact when it is used in the FROM clause. It is only
+     * set for artifacts whose category is RESOURCE.
      * </pre>
      *
      * <code>repeated string metrics = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2330,19 +2323,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addMetrics(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureMetricsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureMetricsIsMutable();
       metrics_.add(value);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. This field lists the names of all metrics that are selectable with the
-     * described artifact when it is used in the FROM clause.
-     * It is only set for artifacts whose category is RESOURCE.
+     * Output only. This field lists the names of all metrics that are selectable
+     * with the described artifact when it is used in the FROM clause. It is only
+     * set for artifacts whose category is RESOURCE.
      * </pre>
      *
      * <code>repeated string metrics = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2359,9 +2350,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. This field lists the names of all metrics that are selectable with the
-     * described artifact when it is used in the FROM clause.
-     * It is only set for artifacts whose category is RESOURCE.
+     * Output only. This field lists the names of all metrics that are selectable
+     * with the described artifact when it is used in the FROM clause. It is only
+     * set for artifacts whose category is RESOURCE.
      * </pre>
      *
      * <code>repeated string metrics = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2369,15 +2360,15 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearMetrics() {
       metrics_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000100);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. This field lists the names of all metrics that are selectable with the
-     * described artifact when it is used in the FROM clause.
-     * It is only set for artifacts whose category is RESOURCE.
+     * Output only. This field lists the names of all metrics that are selectable
+     * with the described artifact when it is used in the FROM clause. It is only
+     * set for artifacts whose category is RESOURCE.
      * </pre>
      *
      * <code>repeated string metrics = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2386,10 +2377,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addMetricsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureMetricsIsMutable();
       metrics_.add(value);
       onChanged();
@@ -2398,17 +2387,17 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.LazyStringList segments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureSegmentsIsMutable() {
-      if (!((bitField0_ & 0x00000080) != 0)) {
+      if (!((bitField0_ & 0x00000200) != 0)) {
         segments_ = new com.google.protobuf.LazyStringArrayList(segments_);
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000200;
        }
     }
     /**
      * <pre>
-     * Output only. This field lists the names of all artifacts, whether a segment or another
-     * resource, that segment metrics when included in search queries and when the
-     * described artifact is used in the FROM clause. It is only set for artifacts
-     * whose category is RESOURCE.
+     * Output only. This field lists the names of all artifacts, whether a segment
+     * or another resource, that segment metrics when included in search queries
+     * and when the described artifact is used in the FROM clause. It is only set
+     * for artifacts whose category is RESOURCE.
      * </pre>
      *
      * <code>repeated string segments = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2420,10 +2409,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. This field lists the names of all artifacts, whether a segment or another
-     * resource, that segment metrics when included in search queries and when the
-     * described artifact is used in the FROM clause. It is only set for artifacts
-     * whose category is RESOURCE.
+     * Output only. This field lists the names of all artifacts, whether a segment
+     * or another resource, that segment metrics when included in search queries
+     * and when the described artifact is used in the FROM clause. It is only set
+     * for artifacts whose category is RESOURCE.
      * </pre>
      *
      * <code>repeated string segments = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2434,10 +2423,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. This field lists the names of all artifacts, whether a segment or another
-     * resource, that segment metrics when included in search queries and when the
-     * described artifact is used in the FROM clause. It is only set for artifacts
-     * whose category is RESOURCE.
+     * Output only. This field lists the names of all artifacts, whether a segment
+     * or another resource, that segment metrics when included in search queries
+     * and when the described artifact is used in the FROM clause. It is only set
+     * for artifacts whose category is RESOURCE.
      * </pre>
      *
      * <code>repeated string segments = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2449,10 +2438,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. This field lists the names of all artifacts, whether a segment or another
-     * resource, that segment metrics when included in search queries and when the
-     * described artifact is used in the FROM clause. It is only set for artifacts
-     * whose category is RESOURCE.
+     * Output only. This field lists the names of all artifacts, whether a segment
+     * or another resource, that segment metrics when included in search queries
+     * and when the described artifact is used in the FROM clause. It is only set
+     * for artifacts whose category is RESOURCE.
      * </pre>
      *
      * <code>repeated string segments = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2465,10 +2454,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. This field lists the names of all artifacts, whether a segment or another
-     * resource, that segment metrics when included in search queries and when the
-     * described artifact is used in the FROM clause. It is only set for artifacts
-     * whose category is RESOURCE.
+     * Output only. This field lists the names of all artifacts, whether a segment
+     * or another resource, that segment metrics when included in search queries
+     * and when the described artifact is used in the FROM clause. It is only set
+     * for artifacts whose category is RESOURCE.
      * </pre>
      *
      * <code>repeated string segments = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2478,20 +2467,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSegments(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSegmentsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureSegmentsIsMutable();
       segments_.set(index, value);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. This field lists the names of all artifacts, whether a segment or another
-     * resource, that segment metrics when included in search queries and when the
-     * described artifact is used in the FROM clause. It is only set for artifacts
-     * whose category is RESOURCE.
+     * Output only. This field lists the names of all artifacts, whether a segment
+     * or another resource, that segment metrics when included in search queries
+     * and when the described artifact is used in the FROM clause. It is only set
+     * for artifacts whose category is RESOURCE.
      * </pre>
      *
      * <code>repeated string segments = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2500,20 +2487,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addSegments(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSegmentsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureSegmentsIsMutable();
       segments_.add(value);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. This field lists the names of all artifacts, whether a segment or another
-     * resource, that segment metrics when included in search queries and when the
-     * described artifact is used in the FROM clause. It is only set for artifacts
-     * whose category is RESOURCE.
+     * Output only. This field lists the names of all artifacts, whether a segment
+     * or another resource, that segment metrics when included in search queries
+     * and when the described artifact is used in the FROM clause. It is only set
+     * for artifacts whose category is RESOURCE.
      * </pre>
      *
      * <code>repeated string segments = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2530,10 +2515,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. This field lists the names of all artifacts, whether a segment or another
-     * resource, that segment metrics when included in search queries and when the
-     * described artifact is used in the FROM clause. It is only set for artifacts
-     * whose category is RESOURCE.
+     * Output only. This field lists the names of all artifacts, whether a segment
+     * or another resource, that segment metrics when included in search queries
+     * and when the described artifact is used in the FROM clause. It is only set
+     * for artifacts whose category is RESOURCE.
      * </pre>
      *
      * <code>repeated string segments = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2541,16 +2526,16 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearSegments() {
       segments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000200);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. This field lists the names of all artifacts, whether a segment or another
-     * resource, that segment metrics when included in search queries and when the
-     * described artifact is used in the FROM clause. It is only set for artifacts
-     * whose category is RESOURCE.
+     * Output only. This field lists the names of all artifacts, whether a segment
+     * or another resource, that segment metrics when included in search queries
+     * and when the described artifact is used in the FROM clause. It is only set
+     * for artifacts whose category is RESOURCE.
      * </pre>
      *
      * <code>repeated string segments = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2559,10 +2544,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addSegmentsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureSegmentsIsMutable();
       segments_.add(value);
       onChanged();
@@ -2571,9 +2554,9 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.LazyStringList enumValues_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureEnumValuesIsMutable() {
-      if (!((bitField0_ & 0x00000100) != 0)) {
+      if (!((bitField0_ & 0x00000400) != 0)) {
         enumValues_ = new com.google.protobuf.LazyStringArrayList(enumValues_);
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000400;
        }
     }
     /**
@@ -2641,10 +2624,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEnumValues(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureEnumValuesIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureEnumValuesIsMutable();
       enumValues_.set(index, value);
       onChanged();
       return this;
@@ -2661,10 +2642,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addEnumValues(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureEnumValuesIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureEnumValuesIsMutable();
       enumValues_.add(value);
       onChanged();
       return this;
@@ -2698,7 +2677,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearEnumValues() {
       enumValues_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000100);
+      bitField0_ = (bitField0_ & ~0x00000400);
       onChanged();
       return this;
     }
@@ -2714,10 +2693,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addEnumValuesBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureEnumValuesIsMutable();
       enumValues_.add(value);
       onChanged();
@@ -2727,8 +2704,8 @@ private static final long serialVersionUID = 0L;
     private int dataType_ = 0;
     /**
      * <pre>
-     * Output only. This field determines the operators that can be used with the artifact
-     * in WHERE clauses.
+     * Output only. This field determines the operators that can be used with the
+     * artifact in WHERE clauses.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType data_type = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2739,8 +2716,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. This field determines the operators that can be used with the artifact
-     * in WHERE clauses.
+     * Output only. This field determines the operators that can be used with the
+     * artifact in WHERE clauses.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType data_type = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2748,15 +2725,15 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDataTypeValue(int value) {
-      
       dataType_ = value;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. This field determines the operators that can be used with the artifact
-     * in WHERE clauses.
+     * Output only. This field determines the operators that can be used with the
+     * artifact in WHERE clauses.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType data_type = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2764,14 +2741,13 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType getDataType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType result = com.google.ads.googleads.v12.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType.valueOf(dataType_);
+      com.google.ads.googleads.v12.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType result = com.google.ads.googleads.v12.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType.forNumber(dataType_);
       return result == null ? com.google.ads.googleads.v12.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType.UNRECOGNIZED : result;
     }
     /**
      * <pre>
-     * Output only. This field determines the operators that can be used with the artifact
-     * in WHERE clauses.
+     * Output only. This field determines the operators that can be used with the
+     * artifact in WHERE clauses.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType data_type = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2782,22 +2758,22 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000800;
       dataType_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. This field determines the operators that can be used with the artifact
-     * in WHERE clauses.
+     * Output only. This field determines the operators that can be used with the
+     * artifact in WHERE clauses.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType data_type = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearDataType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000800);
       dataType_ = 0;
       onChanged();
       return this;
@@ -2813,7 +2789,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the typeUrl field is set.
      */
     public boolean hasTypeUrl() {
-      return ((bitField0_ & 0x00000200) != 0);
+      return ((bitField0_ & 0x00001000) != 0);
     }
     /**
      * <pre>
@@ -2867,11 +2843,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTypeUrl(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000200;
+      if (value == null) { throw new NullPointerException(); }
       typeUrl_ = value;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -2884,8 +2858,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTypeUrl() {
-      bitField0_ = (bitField0_ & ~0x00000200);
       typeUrl_ = getDefaultInstance().getTypeUrl();
+      bitField0_ = (bitField0_ & ~0x00001000);
       onChanged();
       return this;
     }
@@ -2900,12 +2874,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTypeUrlBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000200;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       typeUrl_ = value;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -2921,7 +2893,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasIsRepeated() {
-      return ((bitField0_ & 0x00000400) != 0);
+      return ((bitField0_ & 0x00002000) != 0);
     }
     /**
      * <pre>
@@ -2945,8 +2917,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIsRepeated(boolean value) {
-      bitField0_ |= 0x00000400;
+      
       isRepeated_ = value;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -2959,7 +2932,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIsRepeated() {
-      bitField0_ = (bitField0_ & ~0x00000400);
+      bitField0_ = (bitField0_ & ~0x00002000);
       isRepeated_ = false;
       onChanged();
       return this;

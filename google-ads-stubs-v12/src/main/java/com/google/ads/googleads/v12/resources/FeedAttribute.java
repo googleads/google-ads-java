@@ -54,7 +54,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int ID_FIELD_NUMBER = 5;
-  private long id_;
+  private long id_ = 0L;
   /**
    * <pre>
    * ID of the attribute.
@@ -81,7 +81,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 6;
-  private volatile java.lang.Object name_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
   /**
    * <pre>
    * The name of the attribute. Required.
@@ -139,7 +140,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TYPE_FIELD_NUMBER = 3;
-  private int type_;
+  private int type_ = 0;
   /**
    * <pre>
    * Data type for feed attribute. Required.
@@ -160,13 +161,12 @@ private static final long serialVersionUID = 0L;
    * @return The type.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.FeedAttributeTypeEnum.FeedAttributeType getType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.FeedAttributeTypeEnum.FeedAttributeType result = com.google.ads.googleads.v12.enums.FeedAttributeTypeEnum.FeedAttributeType.valueOf(type_);
+    com.google.ads.googleads.v12.enums.FeedAttributeTypeEnum.FeedAttributeType result = com.google.ads.googleads.v12.enums.FeedAttributeTypeEnum.FeedAttributeType.forNumber(type_);
     return result == null ? com.google.ads.googleads.v12.enums.FeedAttributeTypeEnum.FeedAttributeType.UNRECOGNIZED : result;
   }
 
   public static final int IS_PART_OF_KEY_FIELD_NUMBER = 7;
-  private boolean isPartOfKey_;
+  private boolean isPartOfKey_ = false;
   /**
    * <pre>
    * Indicates that data corresponding to this attribute is part of a
@@ -441,14 +441,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       id_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       name_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       type_ = 0;
-
       isPartOfKey_ = false;
-      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -475,6 +472,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.FeedAttribute buildPartial() {
       com.google.ads.googleads.v12.resources.FeedAttribute result = new com.google.ads.googleads.v12.resources.FeedAttribute(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.resources.FeedAttribute result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -482,17 +485,17 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.name_ = name_;
         to_bitField0_ |= 0x00000002;
       }
-      result.name_ = name_;
-      result.type_ = type_;
       if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.type_ = type_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.isPartOfKey_ = isPartOfKey_;
         to_bitField0_ |= 0x00000004;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -543,8 +546,8 @@ private static final long serialVersionUID = 0L;
         setId(other.getId());
       }
       if (other.hasName()) {
-        bitField0_ |= 0x00000002;
         name_ = other.name_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.type_ != 0) {
@@ -581,7 +584,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 24: {
               type_ = input.readEnum();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 24
             case 40: {
@@ -596,7 +599,7 @@ private static final long serialVersionUID = 0L;
             } // case 50
             case 56: {
               isPartOfKey_ = input.readBool();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               break;
             } // case 56
             default: {
@@ -651,8 +654,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      bitField0_ |= 0x00000001;
+      
       id_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -735,11 +739,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       name_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -752,8 +754,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -768,12 +770,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -800,8 +800,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
-      
       type_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -815,8 +815,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.FeedAttributeTypeEnum.FeedAttributeType getType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.FeedAttributeTypeEnum.FeedAttributeType result = com.google.ads.googleads.v12.enums.FeedAttributeTypeEnum.FeedAttributeType.valueOf(type_);
+      com.google.ads.googleads.v12.enums.FeedAttributeTypeEnum.FeedAttributeType result = com.google.ads.googleads.v12.enums.FeedAttributeTypeEnum.FeedAttributeType.forNumber(type_);
       return result == null ? com.google.ads.googleads.v12.enums.FeedAttributeTypeEnum.FeedAttributeType.UNRECOGNIZED : result;
     }
     /**
@@ -832,7 +831,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       type_ = value.getNumber();
       onChanged();
       return this;
@@ -846,7 +845,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       type_ = 0;
       onChanged();
       return this;
@@ -866,7 +865,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasIsPartOfKey() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -896,8 +895,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIsPartOfKey(boolean value) {
-      bitField0_ |= 0x00000004;
+      
       isPartOfKey_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -913,7 +913,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIsPartOfKey() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000008);
       isPartOfKey_ = false;
       onChanged();
       return this;

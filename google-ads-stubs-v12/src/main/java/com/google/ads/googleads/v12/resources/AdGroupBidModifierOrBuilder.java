@@ -106,11 +106,11 @@ public interface AdGroupBidModifierOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The base ad group from which this draft/trial adgroup bid modifier was
-   * created. If ad_group is a base ad group then this field will be equal to
-   * ad_group. If the ad group was created in the draft or trial and has no
-   * corresponding base ad group, then this field will be null.
-   * This field is readonly.
+   * Output only. The base ad group from which this draft/trial adgroup bid
+   * modifier was created. If ad_group is a base ad group then this field will
+   * be equal to ad_group. If the ad group was created in the draft or trial and
+   * has no corresponding base ad group, then this field will be null. This
+   * field is readonly.
    * </pre>
    *
    * <code>optional string base_ad_group = 16 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -119,11 +119,11 @@ public interface AdGroupBidModifierOrBuilder extends
   boolean hasBaseAdGroup();
   /**
    * <pre>
-   * Output only. The base ad group from which this draft/trial adgroup bid modifier was
-   * created. If ad_group is a base ad group then this field will be equal to
-   * ad_group. If the ad group was created in the draft or trial and has no
-   * corresponding base ad group, then this field will be null.
-   * This field is readonly.
+   * Output only. The base ad group from which this draft/trial adgroup bid
+   * modifier was created. If ad_group is a base ad group then this field will
+   * be equal to ad_group. If the ad group was created in the draft or trial and
+   * has no corresponding base ad group, then this field will be null. This
+   * field is readonly.
    * </pre>
    *
    * <code>optional string base_ad_group = 16 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -132,11 +132,11 @@ public interface AdGroupBidModifierOrBuilder extends
   java.lang.String getBaseAdGroup();
   /**
    * <pre>
-   * Output only. The base ad group from which this draft/trial adgroup bid modifier was
-   * created. If ad_group is a base ad group then this field will be equal to
-   * ad_group. If the ad group was created in the draft or trial and has no
-   * corresponding base ad group, then this field will be null.
-   * This field is readonly.
+   * Output only. The base ad group from which this draft/trial adgroup bid
+   * modifier was created. If ad_group is a base ad group then this field will
+   * be equal to ad_group. If the ad group was created in the draft or trial and
+   * has no corresponding base ad group, then this field will be null. This
+   * field is readonly.
    * </pre>
    *
    * <code>optional string base_ad_group = 16 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -166,7 +166,8 @@ public interface AdGroupBidModifierOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. Criterion for hotel date selection (default dates versus user selected).
+   * Immutable. Criterion for hotel date selection (default dates versus user
+   * selected).
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -175,7 +176,8 @@ public interface AdGroupBidModifierOrBuilder extends
   boolean hasHotelDateSelectionType();
   /**
    * <pre>
-   * Immutable. Criterion for hotel date selection (default dates versus user selected).
+   * Immutable. Criterion for hotel date selection (default dates versus user
+   * selected).
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -184,7 +186,8 @@ public interface AdGroupBidModifierOrBuilder extends
   com.google.ads.googleads.v12.common.HotelDateSelectionTypeInfo getHotelDateSelectionType();
   /**
    * <pre>
-   * Immutable. Criterion for hotel date selection (default dates versus user selected).
+   * Immutable. Criterion for hotel date selection (default dates versus user
+   * selected).
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -193,7 +196,8 @@ public interface AdGroupBidModifierOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. Criterion for number of days prior to the stay the booking is being made.
+   * Immutable. Criterion for number of days prior to the stay the booking is
+   * being made.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.HotelAdvanceBookingWindowInfo hotel_advance_booking_window = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -202,7 +206,8 @@ public interface AdGroupBidModifierOrBuilder extends
   boolean hasHotelAdvanceBookingWindow();
   /**
    * <pre>
-   * Immutable. Criterion for number of days prior to the stay the booking is being made.
+   * Immutable. Criterion for number of days prior to the stay the booking is
+   * being made.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.HotelAdvanceBookingWindowInfo hotel_advance_booking_window = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -211,7 +216,8 @@ public interface AdGroupBidModifierOrBuilder extends
   com.google.ads.googleads.v12.common.HotelAdvanceBookingWindowInfo getHotelAdvanceBookingWindow();
   /**
    * <pre>
-   * Immutable. Criterion for number of days prior to the stay the booking is being made.
+   * Immutable. Criterion for number of days prior to the stay the booking is
+   * being made.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.HotelAdvanceBookingWindowInfo hotel_advance_booking_window = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>

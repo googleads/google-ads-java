@@ -9,8 +9,8 @@ public interface GenerateHistoricalMetricsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The resource name of the keyword plan of which historical metrics are
-   * requested.
+   * Required. The resource name of the keyword plan of which historical metrics
+   * are requested.
    * </pre>
    *
    * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
@@ -19,8 +19,8 @@ public interface GenerateHistoricalMetricsRequestOrBuilder extends
   java.lang.String getKeywordPlan();
   /**
    * <pre>
-   * Required. The resource name of the keyword plan of which historical metrics are
-   * requested.
+   * Required. The resource name of the keyword plan of which historical metrics
+   * are requested.
    * </pre>
    *
    * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>

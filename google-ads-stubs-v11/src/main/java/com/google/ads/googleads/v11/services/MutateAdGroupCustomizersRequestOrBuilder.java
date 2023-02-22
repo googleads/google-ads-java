@@ -9,7 +9,8 @@ public interface MutateAdGroupCustomizersRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The ID of the customer whose ad group customizers are being modified.
+   * Required. The ID of the customer whose ad group customizers are being
+   * modified.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -18,7 +19,8 @@ public interface MutateAdGroupCustomizersRequestOrBuilder extends
   java.lang.String getCustomerId();
   /**
    * <pre>
-   * Required. The ID of the customer whose ad group customizers are being modified.
+   * Required. The ID of the customer whose ad group customizers are being
+   * modified.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -29,7 +31,8 @@ public interface MutateAdGroupCustomizersRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The list of operations to perform on individual ad group customizers.
+   * Required. The list of operations to perform on individual ad group
+   * customizers.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.AdGroupCustomizerOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -38,7 +41,8 @@ public interface MutateAdGroupCustomizersRequestOrBuilder extends
       getOperationsList();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual ad group customizers.
+   * Required. The list of operations to perform on individual ad group
+   * customizers.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.AdGroupCustomizerOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -46,7 +50,8 @@ public interface MutateAdGroupCustomizersRequestOrBuilder extends
   com.google.ads.googleads.v11.services.AdGroupCustomizerOperation getOperations(int index);
   /**
    * <pre>
-   * Required. The list of operations to perform on individual ad group customizers.
+   * Required. The list of operations to perform on individual ad group
+   * customizers.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.AdGroupCustomizerOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -54,7 +59,8 @@ public interface MutateAdGroupCustomizersRequestOrBuilder extends
   int getOperationsCount();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual ad group customizers.
+   * Required. The list of operations to perform on individual ad group
+   * customizers.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.AdGroupCustomizerOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -63,7 +69,8 @@ public interface MutateAdGroupCustomizersRequestOrBuilder extends
       getOperationsOrBuilderList();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual ad group customizers.
+   * Required. The list of operations to perform on individual ad group
+   * customizers.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.AdGroupCustomizerOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>

@@ -9,7 +9,8 @@ public interface MutateAssetGroupAssetsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The ID of the customer whose asset group assets are being modified.
+   * Required. The ID of the customer whose asset group assets are being
+   * modified.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -18,7 +19,8 @@ public interface MutateAssetGroupAssetsRequestOrBuilder extends
   java.lang.String getCustomerId();
   /**
    * <pre>
-   * Required. The ID of the customer whose asset group assets are being modified.
+   * Required. The ID of the customer whose asset group assets are being
+   * modified.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -29,7 +31,8 @@ public interface MutateAssetGroupAssetsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The list of operations to perform on individual asset group assets.
+   * Required. The list of operations to perform on individual asset group
+   * assets.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.services.AssetGroupAssetOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -38,7 +41,8 @@ public interface MutateAssetGroupAssetsRequestOrBuilder extends
       getOperationsList();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual asset group assets.
+   * Required. The list of operations to perform on individual asset group
+   * assets.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.services.AssetGroupAssetOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -46,7 +50,8 @@ public interface MutateAssetGroupAssetsRequestOrBuilder extends
   com.google.ads.googleads.v12.services.AssetGroupAssetOperation getOperations(int index);
   /**
    * <pre>
-   * Required. The list of operations to perform on individual asset group assets.
+   * Required. The list of operations to perform on individual asset group
+   * assets.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.services.AssetGroupAssetOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -54,7 +59,8 @@ public interface MutateAssetGroupAssetsRequestOrBuilder extends
   int getOperationsCount();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual asset group assets.
+   * Required. The list of operations to perform on individual asset group
+   * assets.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.services.AssetGroupAssetOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -63,7 +69,8 @@ public interface MutateAssetGroupAssetsRequestOrBuilder extends
       getOperationsOrBuilderList();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual asset group assets.
+   * Required. The list of operations to perform on individual asset group
+   * assets.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.services.AssetGroupAssetOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>

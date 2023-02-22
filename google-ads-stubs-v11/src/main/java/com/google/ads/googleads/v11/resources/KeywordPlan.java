@@ -53,7 +53,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Immutable. The resource name of the Keyword Planner plan.
@@ -103,7 +104,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ID_FIELD_NUMBER = 5;
-  private long id_;
+  private long id_ = 0L;
   /**
    * <pre>
    * Output only. The ID of the keyword plan.
@@ -130,7 +131,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 6;
-  private volatile java.lang.Object name_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
   /**
    * <pre>
    * The name of the keyword plan.
@@ -228,7 +230,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v11.resources.KeywordPlanForecastPeriodOrBuilder getForecastPeriodOrBuilder() {
-    return getForecastPeriod();
+    return forecastPeriod_ == null ? com.google.ads.googleads.v11.resources.KeywordPlanForecastPeriod.getDefaultInstance() : forecastPeriod_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -472,16 +474,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       id_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       name_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
-      if (forecastPeriodBuilder_ == null) {
-        forecastPeriod_ = null;
-      } else {
-        forecastPeriod_ = null;
+      forecastPeriod_ = null;
+      if (forecastPeriodBuilder_ != null) {
+        forecastPeriodBuilder_.dispose();
         forecastPeriodBuilder_ = null;
       }
       return this;
@@ -510,25 +509,31 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.KeywordPlan buildPartial() {
       com.google.ads.googleads.v11.resources.KeywordPlan result = new com.google.ads.googleads.v11.resources.KeywordPlan(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.KeywordPlan result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.id_ = id_;
         to_bitField0_ |= 0x00000001;
       }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.name_ = name_;
         to_bitField0_ |= 0x00000002;
       }
-      result.name_ = name_;
-      if (forecastPeriodBuilder_ == null) {
-        result.forecastPeriod_ = forecastPeriod_;
-      } else {
-        result.forecastPeriod_ = forecastPeriodBuilder_.build();
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.forecastPeriod_ = forecastPeriodBuilder_ == null
+            ? forecastPeriod_
+            : forecastPeriodBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -577,14 +582,15 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.resources.KeywordPlan.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasId()) {
         setId(other.getId());
       }
       if (other.hasName()) {
-        bitField0_ |= 0x00000002;
         name_ = other.name_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.hasForecastPeriod()) {
@@ -618,24 +624,24 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 34: {
               input.readMessage(
                   getForecastPeriodFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 34
             case 40: {
               id_ = input.readInt64();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 40
             case 50: {
               name_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 50
             default: {
@@ -714,11 +720,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -733,8 +737,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -751,12 +755,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -772,7 +774,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -796,8 +798,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      bitField0_ |= 0x00000001;
+      
       id_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -810,7 +813,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       id_ = 0L;
       onChanged();
       return this;
@@ -828,7 +831,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the name field is set.
      */
     public boolean hasName() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -888,11 +891,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       name_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -907,8 +908,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -925,12 +926,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -947,7 +946,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the forecastPeriod field is set.
      */
     public boolean hasForecastPeriod() {
-      return forecastPeriodBuilder_ != null || forecastPeriod_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -977,11 +976,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         forecastPeriod_ = value;
-        onChanged();
       } else {
         forecastPeriodBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -995,11 +994,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.resources.KeywordPlanForecastPeriod.Builder builderForValue) {
       if (forecastPeriodBuilder_ == null) {
         forecastPeriod_ = builderForValue.build();
-        onChanged();
       } else {
         forecastPeriodBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1011,17 +1010,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeForecastPeriod(com.google.ads.googleads.v11.resources.KeywordPlanForecastPeriod value) {
       if (forecastPeriodBuilder_ == null) {
-        if (forecastPeriod_ != null) {
-          forecastPeriod_ =
-            com.google.ads.googleads.v11.resources.KeywordPlanForecastPeriod.newBuilder(forecastPeriod_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000008) != 0) &&
+          forecastPeriod_ != null &&
+          forecastPeriod_ != com.google.ads.googleads.v11.resources.KeywordPlanForecastPeriod.getDefaultInstance()) {
+          getForecastPeriodBuilder().mergeFrom(value);
         } else {
           forecastPeriod_ = value;
         }
-        onChanged();
       } else {
         forecastPeriodBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1032,14 +1032,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.resources.KeywordPlanForecastPeriod forecast_period = 4;</code>
      */
     public Builder clearForecastPeriod() {
-      if (forecastPeriodBuilder_ == null) {
-        forecastPeriod_ = null;
-        onChanged();
-      } else {
-        forecastPeriod_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
+      forecastPeriod_ = null;
+      if (forecastPeriodBuilder_ != null) {
+        forecastPeriodBuilder_.dispose();
         forecastPeriodBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1050,7 +1049,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.resources.KeywordPlanForecastPeriod forecast_period = 4;</code>
      */
     public com.google.ads.googleads.v11.resources.KeywordPlanForecastPeriod.Builder getForecastPeriodBuilder() {
-      
+      bitField0_ |= 0x00000008;
       onChanged();
       return getForecastPeriodFieldBuilder().getBuilder();
     }

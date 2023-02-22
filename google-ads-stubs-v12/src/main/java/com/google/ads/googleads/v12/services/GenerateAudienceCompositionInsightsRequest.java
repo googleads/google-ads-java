@@ -53,7 +53,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CUSTOMER_ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object customerId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object customerId_ = "";
   /**
    * <pre>
    * Required. The ID of the customer.
@@ -133,11 +134,12 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.services.InsightsAudienceOrBuilder getAudienceOrBuilder() {
-    return getAudience();
+    return audience_ == null ? com.google.ads.googleads.v12.services.InsightsAudience.getDefaultInstance() : audience_;
   }
 
   public static final int DATA_MONTH_FIELD_NUMBER = 3;
-  private volatile java.lang.Object dataMonth_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object dataMonth_ = "";
   /**
    * <pre>
    * The one-month range of historical data to use for insights, in the format
@@ -187,20 +189,21 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DIMENSIONS_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> dimensions_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
       java.lang.Integer, com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension> dimensions_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension>() {
             public com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension convert(java.lang.Integer from) {
-              @SuppressWarnings("deprecation")
-              com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension result = com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension.valueOf(from);
+              com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension result = com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension.forNumber(from);
               return result == null ? com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension.UNRECOGNIZED : result;
             }
           };
   /**
    * <pre>
-   * Required. The audience dimensions for which composition insights should be returned.
+   * Required. The audience dimensions for which composition insights should be
+   * returned.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -213,7 +216,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. The audience dimensions for which composition insights should be returned.
+   * Required. The audience dimensions for which composition insights should be
+   * returned.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -225,7 +229,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. The audience dimensions for which composition insights should be returned.
+   * Required. The audience dimensions for which composition insights should be
+   * returned.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -238,7 +243,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. The audience dimensions for which composition insights should be returned.
+   * Required. The audience dimensions for which composition insights should be
+   * returned.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -251,7 +257,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. The audience dimensions for which composition insights should be returned.
+   * Required. The audience dimensions for which composition insights should be
+   * returned.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -265,7 +272,8 @@ private static final long serialVersionUID = 0L;
   private int dimensionsMemoizedSerializedSize;
 
   public static final int CUSTOMER_INSIGHTS_GROUP_FIELD_NUMBER = 5;
-  private volatile java.lang.Object customerInsightsGroup_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object customerInsightsGroup_ = "";
   /**
    * <pre>
    * The name of the customer being planned for.  This is a user-defined value.
@@ -563,20 +571,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       customerId_ = "";
-
-      if (audienceBuilder_ == null) {
-        audience_ = null;
-      } else {
-        audience_ = null;
+      audience_ = null;
+      if (audienceBuilder_ != null) {
+        audienceBuilder_.dispose();
         audienceBuilder_ = null;
       }
       dataMonth_ = "";
-
       dimensions_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000008);
       customerInsightsGroup_ = "";
-
       return this;
     }
 
@@ -603,22 +608,36 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.GenerateAudienceCompositionInsightsRequest buildPartial() {
       com.google.ads.googleads.v12.services.GenerateAudienceCompositionInsightsRequest result = new com.google.ads.googleads.v12.services.GenerateAudienceCompositionInsightsRequest(this);
-      int from_bitField0_ = bitField0_;
-      result.customerId_ = customerId_;
-      if (audienceBuilder_ == null) {
-        result.audience_ = audience_;
-      } else {
-        result.audience_ = audienceBuilder_.build();
-      }
-      result.dataMonth_ = dataMonth_;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        dimensions_ = java.util.Collections.unmodifiableList(dimensions_);
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.dimensions_ = dimensions_;
-      result.customerInsightsGroup_ = customerInsightsGroup_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.services.GenerateAudienceCompositionInsightsRequest result) {
+      if (((bitField0_ & 0x00000008) != 0)) {
+        dimensions_ = java.util.Collections.unmodifiableList(dimensions_);
+        bitField0_ = (bitField0_ & ~0x00000008);
+      }
+      result.dimensions_ = dimensions_;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.GenerateAudienceCompositionInsightsRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.customerId_ = customerId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.audience_ = audienceBuilder_ == null
+            ? audience_
+            : audienceBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.dataMonth_ = dataMonth_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.customerInsightsGroup_ = customerInsightsGroup_;
+      }
     }
 
     @java.lang.Override
@@ -667,6 +686,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.services.GenerateAudienceCompositionInsightsRequest.getDefaultInstance()) return this;
       if (!other.getCustomerId().isEmpty()) {
         customerId_ = other.customerId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasAudience()) {
@@ -674,12 +694,13 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getDataMonth().isEmpty()) {
         dataMonth_ = other.dataMonth_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.dimensions_.isEmpty()) {
         if (dimensions_.isEmpty()) {
           dimensions_ = other.dimensions_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
           ensureDimensionsIsMutable();
           dimensions_.addAll(other.dimensions_);
@@ -688,6 +709,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getCustomerInsightsGroup().isEmpty()) {
         customerInsightsGroup_ = other.customerInsightsGroup_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -718,19 +740,19 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               customerId_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               input.readMessage(
                   getAudienceFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
               dataMonth_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 32: {
@@ -752,7 +774,7 @@ private static final long serialVersionUID = 0L;
             } // case 34
             case 42: {
               customerInsightsGroup_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 42
             default: {
@@ -825,11 +847,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       customerId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -842,8 +862,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCustomerId() {
-      
       customerId_ = getDefaultInstance().getCustomerId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -858,12 +878,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       customerId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -880,7 +898,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the audience field is set.
      */
     public boolean hasAudience() {
-      return audienceBuilder_ != null || audience_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -910,11 +928,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         audience_ = value;
-        onChanged();
       } else {
         audienceBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -928,11 +946,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.services.InsightsAudience.Builder builderForValue) {
       if (audienceBuilder_ == null) {
         audience_ = builderForValue.build();
-        onChanged();
       } else {
         audienceBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -944,17 +962,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAudience(com.google.ads.googleads.v12.services.InsightsAudience value) {
       if (audienceBuilder_ == null) {
-        if (audience_ != null) {
-          audience_ =
-            com.google.ads.googleads.v12.services.InsightsAudience.newBuilder(audience_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          audience_ != null &&
+          audience_ != com.google.ads.googleads.v12.services.InsightsAudience.getDefaultInstance()) {
+          getAudienceBuilder().mergeFrom(value);
         } else {
           audience_ = value;
         }
-        onChanged();
       } else {
         audienceBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -965,14 +984,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.services.InsightsAudience audience = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder clearAudience() {
-      if (audienceBuilder_ == null) {
-        audience_ = null;
-        onChanged();
-      } else {
-        audience_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      audience_ = null;
+      if (audienceBuilder_ != null) {
+        audienceBuilder_.dispose();
         audienceBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -983,7 +1001,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.services.InsightsAudience audience = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.google.ads.googleads.v12.services.InsightsAudience.Builder getAudienceBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getAudienceFieldBuilder().getBuilder();
     }
@@ -1082,11 +1100,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDataMonth(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       dataMonth_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1101,8 +1117,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDataMonth() {
-      
       dataMonth_ = getDefaultInstance().getDataMonth();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1119,12 +1135,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDataMonthBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       dataMonth_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1132,14 +1146,15 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> dimensions_ =
       java.util.Collections.emptyList();
     private void ensureDimensionsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         dimensions_ = new java.util.ArrayList<java.lang.Integer>(dimensions_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000008;
       }
     }
     /**
      * <pre>
-     * Required. The audience dimensions for which composition insights should be returned.
+     * Required. The audience dimensions for which composition insights should be
+     * returned.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1151,7 +1166,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The audience dimensions for which composition insights should be returned.
+     * Required. The audience dimensions for which composition insights should be
+     * returned.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1162,7 +1178,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The audience dimensions for which composition insights should be returned.
+     * Required. The audience dimensions for which composition insights should be
+     * returned.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1174,7 +1191,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The audience dimensions for which composition insights should be returned.
+     * Required. The audience dimensions for which composition insights should be
+     * returned.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1194,7 +1212,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The audience dimensions for which composition insights should be returned.
+     * Required. The audience dimensions for which composition insights should be
+     * returned.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1212,7 +1231,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The audience dimensions for which composition insights should be returned.
+     * Required. The audience dimensions for which composition insights should be
+     * returned.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1230,7 +1250,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The audience dimensions for which composition insights should be returned.
+     * Required. The audience dimensions for which composition insights should be
+     * returned.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1238,13 +1259,14 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearDimensions() {
       dimensions_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. The audience dimensions for which composition insights should be returned.
+     * Required. The audience dimensions for which composition insights should be
+     * returned.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1256,7 +1278,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The audience dimensions for which composition insights should be returned.
+     * Required. The audience dimensions for which composition insights should be
+     * returned.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1268,7 +1291,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The audience dimensions for which composition insights should be returned.
+     * Required. The audience dimensions for which composition insights should be
+     * returned.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1285,7 +1309,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The audience dimensions for which composition insights should be returned.
+     * Required. The audience dimensions for which composition insights should be
+     * returned.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1300,7 +1325,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The audience dimensions for which composition insights should be returned.
+     * Required. The audience dimensions for which composition insights should be
+     * returned.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension dimensions = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1370,11 +1396,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerInsightsGroup(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       customerInsightsGroup_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1387,8 +1411,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCustomerInsightsGroup() {
-      
       customerInsightsGroup_ = getDefaultInstance().getCustomerInsightsGroup();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1403,12 +1427,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerInsightsGroupBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       customerInsightsGroup_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }

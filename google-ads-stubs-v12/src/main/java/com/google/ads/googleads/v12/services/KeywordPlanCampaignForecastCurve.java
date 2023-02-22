@@ -50,7 +50,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int KEYWORD_PLAN_CAMPAIGN_FIELD_NUMBER = 3;
-  private volatile java.lang.Object keywordPlanCampaign_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object keywordPlanCampaign_ = "";
   /**
    * <pre>
    * The resource name of the Keyword Plan campaign related to the forecast.
@@ -145,7 +146,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.services.KeywordPlanMaxCpcBidForecastCurveOrBuilder getMaxCpcBidForecastCurveOrBuilder() {
-    return getMaxCpcBidForecastCurve();
+    return maxCpcBidForecastCurve_ == null ? com.google.ads.googleads.v12.services.KeywordPlanMaxCpcBidForecastCurve.getDefaultInstance() : maxCpcBidForecastCurve_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -360,12 +361,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       keywordPlanCampaign_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
-      if (maxCpcBidForecastCurveBuilder_ == null) {
-        maxCpcBidForecastCurve_ = null;
-      } else {
-        maxCpcBidForecastCurve_ = null;
+      maxCpcBidForecastCurve_ = null;
+      if (maxCpcBidForecastCurveBuilder_ != null) {
+        maxCpcBidForecastCurveBuilder_.dispose();
         maxCpcBidForecastCurveBuilder_ = null;
       }
       return this;
@@ -394,20 +394,24 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.KeywordPlanCampaignForecastCurve buildPartial() {
       com.google.ads.googleads.v12.services.KeywordPlanCampaignForecastCurve result = new com.google.ads.googleads.v12.services.KeywordPlanCampaignForecastCurve(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.KeywordPlanCampaignForecastCurve result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.keywordPlanCampaign_ = keywordPlanCampaign_;
         to_bitField0_ |= 0x00000001;
       }
-      result.keywordPlanCampaign_ = keywordPlanCampaign_;
-      if (maxCpcBidForecastCurveBuilder_ == null) {
-        result.maxCpcBidForecastCurve_ = maxCpcBidForecastCurve_;
-      } else {
-        result.maxCpcBidForecastCurve_ = maxCpcBidForecastCurveBuilder_.build();
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.maxCpcBidForecastCurve_ = maxCpcBidForecastCurveBuilder_ == null
+            ? maxCpcBidForecastCurve_
+            : maxCpcBidForecastCurveBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -455,8 +459,8 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v12.services.KeywordPlanCampaignForecastCurve other) {
       if (other == com.google.ads.googleads.v12.services.KeywordPlanCampaignForecastCurve.getDefaultInstance()) return this;
       if (other.hasKeywordPlanCampaign()) {
-        bitField0_ |= 0x00000001;
         keywordPlanCampaign_ = other.keywordPlanCampaign_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasMaxCpcBidForecastCurve()) {
@@ -492,7 +496,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getMaxCpcBidForecastCurveFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
@@ -585,11 +589,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKeywordPlanCampaign(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       keywordPlanCampaign_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -603,8 +605,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearKeywordPlanCampaign() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       keywordPlanCampaign_ = getDefaultInstance().getKeywordPlanCampaign();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -620,12 +622,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKeywordPlanCampaignBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       keywordPlanCampaign_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -642,7 +642,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the maxCpcBidForecastCurve field is set.
      */
     public boolean hasMaxCpcBidForecastCurve() {
-      return maxCpcBidForecastCurveBuilder_ != null || maxCpcBidForecastCurve_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -672,11 +672,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         maxCpcBidForecastCurve_ = value;
-        onChanged();
       } else {
         maxCpcBidForecastCurveBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -690,11 +690,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.services.KeywordPlanMaxCpcBidForecastCurve.Builder builderForValue) {
       if (maxCpcBidForecastCurveBuilder_ == null) {
         maxCpcBidForecastCurve_ = builderForValue.build();
-        onChanged();
       } else {
         maxCpcBidForecastCurveBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -706,17 +706,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeMaxCpcBidForecastCurve(com.google.ads.googleads.v12.services.KeywordPlanMaxCpcBidForecastCurve value) {
       if (maxCpcBidForecastCurveBuilder_ == null) {
-        if (maxCpcBidForecastCurve_ != null) {
-          maxCpcBidForecastCurve_ =
-            com.google.ads.googleads.v12.services.KeywordPlanMaxCpcBidForecastCurve.newBuilder(maxCpcBidForecastCurve_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          maxCpcBidForecastCurve_ != null &&
+          maxCpcBidForecastCurve_ != com.google.ads.googleads.v12.services.KeywordPlanMaxCpcBidForecastCurve.getDefaultInstance()) {
+          getMaxCpcBidForecastCurveBuilder().mergeFrom(value);
         } else {
           maxCpcBidForecastCurve_ = value;
         }
-        onChanged();
       } else {
         maxCpcBidForecastCurveBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -727,14 +728,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.services.KeywordPlanMaxCpcBidForecastCurve max_cpc_bid_forecast_curve = 2;</code>
      */
     public Builder clearMaxCpcBidForecastCurve() {
-      if (maxCpcBidForecastCurveBuilder_ == null) {
-        maxCpcBidForecastCurve_ = null;
-        onChanged();
-      } else {
-        maxCpcBidForecastCurve_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      maxCpcBidForecastCurve_ = null;
+      if (maxCpcBidForecastCurveBuilder_ != null) {
+        maxCpcBidForecastCurveBuilder_.dispose();
         maxCpcBidForecastCurveBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -745,7 +745,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.services.KeywordPlanMaxCpcBidForecastCurve max_cpc_bid_forecast_curve = 2;</code>
      */
     public com.google.ads.googleads.v12.services.KeywordPlanMaxCpcBidForecastCurve.Builder getMaxCpcBidForecastCurveBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getMaxCpcBidForecastCurveFieldBuilder().getBuilder();
     }

@@ -50,7 +50,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int EXTERNAL_ATTRIBUTION_CREDIT_FIELD_NUMBER = 3;
-  private double externalAttributionCredit_;
+  private double externalAttributionCredit_ = 0D;
   /**
    * <pre>
    * Represents the fraction of the conversion that is attributed to the
@@ -79,7 +79,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EXTERNAL_ATTRIBUTION_MODEL_FIELD_NUMBER = 4;
-  private volatile java.lang.Object externalAttributionModel_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object externalAttributionModel_ = "";
   /**
    * <pre>
    * Specifies the attribution model name.
@@ -350,10 +351,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       externalAttributionCredit_ = 0D;
-      bitField0_ = (bitField0_ & ~0x00000001);
       externalAttributionModel_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -380,6 +380,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.ExternalAttributionData buildPartial() {
       com.google.ads.googleads.v11.services.ExternalAttributionData result = new com.google.ads.googleads.v11.services.ExternalAttributionData(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.ExternalAttributionData result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -387,12 +393,10 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.externalAttributionModel_ = externalAttributionModel_;
         to_bitField0_ |= 0x00000002;
       }
-      result.externalAttributionModel_ = externalAttributionModel_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -443,8 +447,8 @@ private static final long serialVersionUID = 0L;
         setExternalAttributionCredit(other.getExternalAttributionCredit());
       }
       if (other.hasExternalAttributionModel()) {
-        bitField0_ |= 0x00000002;
         externalAttributionModel_ = other.externalAttributionModel_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -538,8 +542,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setExternalAttributionCredit(double value) {
-      bitField0_ |= 0x00000001;
+      
       externalAttributionCredit_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -623,11 +628,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setExternalAttributionModel(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       externalAttributionModel_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -640,8 +643,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearExternalAttributionModel() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       externalAttributionModel_ = getDefaultInstance().getExternalAttributionModel();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -656,12 +659,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setExternalAttributionModelBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       externalAttributionModel_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

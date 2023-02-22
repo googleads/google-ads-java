@@ -334,6 +334,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (userListBuilder_ != null) {
         userListBuilder_.clear();
       }
@@ -365,16 +366,23 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.ExclusionSegment buildPartial() {
       com.google.ads.googleads.v12.common.ExclusionSegment result = new com.google.ads.googleads.v12.common.ExclusionSegment(this);
-      if (segmentCase_ == 1) {
-        if (userListBuilder_ == null) {
-          result.segment_ = segment_;
-        } else {
-          result.segment_ = userListBuilder_.build();
-        }
-      }
-      result.segmentCase_ = segmentCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.ExclusionSegment result) {
+      int from_bitField0_ = bitField0_;
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v12.common.ExclusionSegment result) {
+      result.segmentCase_ = segmentCase_;
+      result.segment_ = this.segment_;
+      if (segmentCase_ == 1 &&
+          userListBuilder_ != null) {
+        result.segment_ = userListBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -493,6 +501,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v12.common.UserListSegment, com.google.ads.googleads.v12.common.UserListSegment.Builder, com.google.ads.googleads.v12.common.UserListSegmentOrBuilder> userListBuilder_;
@@ -668,7 +677,7 @@ private static final long serialVersionUID = 0L;
         segment_ = null;
       }
       segmentCase_ = 1;
-      onChanged();;
+      onChanged();
       return userListBuilder_;
     }
     @java.lang.Override

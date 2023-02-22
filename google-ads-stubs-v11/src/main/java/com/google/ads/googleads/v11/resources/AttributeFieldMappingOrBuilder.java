@@ -28,10 +28,9 @@ public interface AttributeFieldMappingOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The placeholder field ID. If a placeholder field enum is not published in
-   * the current API version, then this field will be populated and the field
-   * oneof will be empty.
-   * This field is read-only.
+   * Output only. The placeholder field ID. If a placeholder field enum is not
+   * published in the current API version, then this field will be populated and
+   * the field oneof will be empty. This field is read-only.
    * </pre>
    *
    * <code>optional int64 field_id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -40,10 +39,9 @@ public interface AttributeFieldMappingOrBuilder extends
   boolean hasFieldId();
   /**
    * <pre>
-   * Output only. The placeholder field ID. If a placeholder field enum is not published in
-   * the current API version, then this field will be populated and the field
-   * oneof will be empty.
-   * This field is read-only.
+   * Output only. The placeholder field ID. If a placeholder field enum is not
+   * published in the current API version, then this field will be populated and
+   * the field oneof will be empty. This field is read-only.
    * </pre>
    *
    * <code>optional int64 field_id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -165,7 +163,8 @@ public interface AttributeFieldMappingOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Affiliate Location Placeholder Fields. This field is read-only.
+   * Output only. Affiliate Location Placeholder Fields. This field is
+   * read-only.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField affiliate_location_field = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -174,7 +173,8 @@ public interface AttributeFieldMappingOrBuilder extends
   boolean hasAffiliateLocationField();
   /**
    * <pre>
-   * Output only. Affiliate Location Placeholder Fields. This field is read-only.
+   * Output only. Affiliate Location Placeholder Fields. This field is
+   * read-only.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField affiliate_location_field = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -183,7 +183,8 @@ public interface AttributeFieldMappingOrBuilder extends
   int getAffiliateLocationFieldValue();
   /**
    * <pre>
-   * Output only. Affiliate Location Placeholder Fields. This field is read-only.
+   * Output only. Affiliate Location Placeholder Fields. This field is
+   * read-only.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.AffiliateLocationPlaceholderFieldEnum.AffiliateLocationPlaceholderField affiliate_location_field = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

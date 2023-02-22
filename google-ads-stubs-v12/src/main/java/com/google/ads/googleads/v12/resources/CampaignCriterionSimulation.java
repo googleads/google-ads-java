@@ -97,7 +97,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Output only. The resource name of the campaign criterion simulation.
@@ -147,7 +148,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CAMPAIGN_ID_FIELD_NUMBER = 9;
-  private long campaignId_;
+  private long campaignId_ = 0L;
   /**
    * <pre>
    * Output only. Campaign ID of the simulation.
@@ -174,7 +175,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CRITERION_ID_FIELD_NUMBER = 10;
-  private long criterionId_;
+  private long criterionId_ = 0L;
   /**
    * <pre>
    * Output only. Criterion ID of the simulation.
@@ -201,7 +202,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TYPE_FIELD_NUMBER = 4;
-  private int type_;
+  private int type_ = 0;
   /**
    * <pre>
    * Output only. The field that the simulation modifies.
@@ -222,13 +223,12 @@ private static final long serialVersionUID = 0L;
    * @return The type.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.SimulationTypeEnum.SimulationType getType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.SimulationTypeEnum.SimulationType result = com.google.ads.googleads.v12.enums.SimulationTypeEnum.SimulationType.valueOf(type_);
+    com.google.ads.googleads.v12.enums.SimulationTypeEnum.SimulationType result = com.google.ads.googleads.v12.enums.SimulationTypeEnum.SimulationType.forNumber(type_);
     return result == null ? com.google.ads.googleads.v12.enums.SimulationTypeEnum.SimulationType.UNRECOGNIZED : result;
   }
 
   public static final int MODIFICATION_METHOD_FIELD_NUMBER = 5;
-  private int modificationMethod_;
+  private int modificationMethod_ = 0;
   /**
    * <pre>
    * Output only. How the simulation modifies the field.
@@ -249,16 +249,17 @@ private static final long serialVersionUID = 0L;
    * @return The modificationMethod.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.SimulationModificationMethodEnum.SimulationModificationMethod getModificationMethod() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.SimulationModificationMethodEnum.SimulationModificationMethod result = com.google.ads.googleads.v12.enums.SimulationModificationMethodEnum.SimulationModificationMethod.valueOf(modificationMethod_);
+    com.google.ads.googleads.v12.enums.SimulationModificationMethodEnum.SimulationModificationMethod result = com.google.ads.googleads.v12.enums.SimulationModificationMethodEnum.SimulationModificationMethod.forNumber(modificationMethod_);
     return result == null ? com.google.ads.googleads.v12.enums.SimulationModificationMethodEnum.SimulationModificationMethod.UNRECOGNIZED : result;
   }
 
   public static final int START_DATE_FIELD_NUMBER = 11;
-  private volatile java.lang.Object startDate_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object startDate_ = "";
   /**
    * <pre>
-   * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
+   * Output only. First day on which the simulation is based, in YYYY-MM-DD
+   * format.
    * </pre>
    *
    * <code>optional string start_date = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -270,7 +271,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
+   * Output only. First day on which the simulation is based, in YYYY-MM-DD
+   * format.
    * </pre>
    *
    * <code>optional string start_date = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -291,7 +293,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
+   * Output only. First day on which the simulation is based, in YYYY-MM-DD
+   * format.
    * </pre>
    *
    * <code>optional string start_date = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -313,10 +316,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int END_DATE_FIELD_NUMBER = 12;
-  private volatile java.lang.Object endDate_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object endDate_ = "";
   /**
    * <pre>
-   * Output only. Last day on which the simulation is based, in YYYY-MM-DD format.
+   * Output only. Last day on which the simulation is based, in YYYY-MM-DD
+   * format.
    * </pre>
    *
    * <code>optional string end_date = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -328,7 +333,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Last day on which the simulation is based, in YYYY-MM-DD format.
+   * Output only. Last day on which the simulation is based, in YYYY-MM-DD
+   * format.
    * </pre>
    *
    * <code>optional string end_date = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -349,7 +355,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Last day on which the simulation is based, in YYYY-MM-DD format.
+   * Output only. Last day on which the simulation is based, in YYYY-MM-DD
+   * format.
    * </pre>
    *
    * <code>optional string end_date = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -716,20 +723,14 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       campaignId_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       criterionId_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000002);
       type_ = 0;
-
       modificationMethod_ = 0;
-
       startDate_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       endDate_ = "";
-      bitField0_ = (bitField0_ & ~0x00000008);
       if (bidModifierPointListBuilder_ != null) {
         bidModifierPointListBuilder_.clear();
       }
@@ -761,38 +762,50 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.CampaignCriterionSimulation buildPartial() {
       com.google.ads.googleads.v12.resources.CampaignCriterionSimulation result = new com.google.ads.googleads.v12.resources.CampaignCriterionSimulation(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.resources.CampaignCriterionSimulation result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.campaignId_ = campaignId_;
         to_bitField0_ |= 0x00000001;
       }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.criterionId_ = criterionId_;
         to_bitField0_ |= 0x00000002;
       }
-      result.type_ = type_;
-      result.modificationMethod_ = modificationMethod_;
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.type_ = type_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.modificationMethod_ = modificationMethod_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.startDate_ = startDate_;
         to_bitField0_ |= 0x00000004;
       }
-      result.startDate_ = startDate_;
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.endDate_ = endDate_;
         to_bitField0_ |= 0x00000008;
       }
-      result.endDate_ = endDate_;
-      if (pointListCase_ == 8) {
-        if (bidModifierPointListBuilder_ == null) {
-          result.pointList_ = pointList_;
-        } else {
-          result.pointList_ = bidModifierPointListBuilder_.build();
-        }
-      }
-      result.bitField0_ = to_bitField0_;
+      result.bitField0_ |= to_bitField0_;
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v12.resources.CampaignCriterionSimulation result) {
       result.pointListCase_ = pointListCase_;
-      onBuilt();
-      return result;
+      result.pointList_ = this.pointList_;
+      if (pointListCase_ == 8 &&
+          bidModifierPointListBuilder_ != null) {
+        result.pointList_ = bidModifierPointListBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -841,6 +854,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.resources.CampaignCriterionSimulation.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasCampaignId()) {
@@ -856,13 +870,13 @@ private static final long serialVersionUID = 0L;
         setModificationMethodValue(other.getModificationMethodValue());
       }
       if (other.hasStartDate()) {
-        bitField0_ |= 0x00000004;
         startDate_ = other.startDate_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (other.hasEndDate()) {
-        bitField0_ |= 0x00000008;
         endDate_ = other.endDate_;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       switch (other.getPointListCase()) {
@@ -902,17 +916,17 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 32: {
               type_ = input.readEnum();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 32
             case 40: {
               modificationMethod_ = input.readEnum();
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 40
             case 66: {
@@ -924,22 +938,22 @@ private static final long serialVersionUID = 0L;
             } // case 66
             case 72: {
               campaignId_ = input.readInt64();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 72
             case 80: {
               criterionId_ = input.readInt64();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 80
             case 90: {
               startDate_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000020;
               break;
             } // case 90
             case 98: {
               endDate_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000040;
               break;
             } // case 98
             default: {
@@ -1033,11 +1047,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1052,8 +1064,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1070,12 +1082,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1091,7 +1101,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCampaignId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -1115,8 +1125,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCampaignId(long value) {
-      bitField0_ |= 0x00000001;
+      
       campaignId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1129,7 +1140,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCampaignId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       campaignId_ = 0L;
       onChanged();
       return this;
@@ -1146,7 +1157,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCriterionId() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -1170,8 +1181,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCriterionId(long value) {
-      bitField0_ |= 0x00000002;
+      
       criterionId_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1184,7 +1196,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCriterionId() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       criterionId_ = 0L;
       onChanged();
       return this;
@@ -1212,8 +1224,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
-      
       type_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1227,8 +1239,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.SimulationTypeEnum.SimulationType getType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.SimulationTypeEnum.SimulationType result = com.google.ads.googleads.v12.enums.SimulationTypeEnum.SimulationType.valueOf(type_);
+      com.google.ads.googleads.v12.enums.SimulationTypeEnum.SimulationType result = com.google.ads.googleads.v12.enums.SimulationTypeEnum.SimulationType.forNumber(type_);
       return result == null ? com.google.ads.googleads.v12.enums.SimulationTypeEnum.SimulationType.UNRECOGNIZED : result;
     }
     /**
@@ -1244,7 +1255,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000008;
       type_ = value.getNumber();
       onChanged();
       return this;
@@ -1258,7 +1269,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       type_ = 0;
       onChanged();
       return this;
@@ -1286,8 +1297,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setModificationMethodValue(int value) {
-      
       modificationMethod_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1301,8 +1312,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.SimulationModificationMethodEnum.SimulationModificationMethod getModificationMethod() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.SimulationModificationMethodEnum.SimulationModificationMethod result = com.google.ads.googleads.v12.enums.SimulationModificationMethodEnum.SimulationModificationMethod.valueOf(modificationMethod_);
+      com.google.ads.googleads.v12.enums.SimulationModificationMethodEnum.SimulationModificationMethod result = com.google.ads.googleads.v12.enums.SimulationModificationMethodEnum.SimulationModificationMethod.forNumber(modificationMethod_);
       return result == null ? com.google.ads.googleads.v12.enums.SimulationModificationMethodEnum.SimulationModificationMethod.UNRECOGNIZED : result;
     }
     /**
@@ -1318,7 +1328,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000010;
       modificationMethod_ = value.getNumber();
       onChanged();
       return this;
@@ -1332,7 +1342,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearModificationMethod() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       modificationMethod_ = 0;
       onChanged();
       return this;
@@ -1341,18 +1351,20 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object startDate_ = "";
     /**
      * <pre>
-     * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
+     * Output only. First day on which the simulation is based, in YYYY-MM-DD
+     * format.
      * </pre>
      *
      * <code>optional string start_date = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the startDate field is set.
      */
     public boolean hasStartDate() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
-     * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
+     * Output only. First day on which the simulation is based, in YYYY-MM-DD
+     * format.
      * </pre>
      *
      * <code>optional string start_date = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1372,7 +1384,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
+     * Output only. First day on which the simulation is based, in YYYY-MM-DD
+     * format.
      * </pre>
      *
      * <code>optional string start_date = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1393,7 +1406,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
+     * Output only. First day on which the simulation is based, in YYYY-MM-DD
+     * format.
      * </pre>
      *
      * <code>optional string start_date = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1402,31 +1416,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStartDate(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       startDate_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
+     * Output only. First day on which the simulation is based, in YYYY-MM-DD
+     * format.
      * </pre>
      *
      * <code>optional string start_date = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearStartDate() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       startDate_ = getDefaultInstance().getStartDate();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
+     * Output only. First day on which the simulation is based, in YYYY-MM-DD
+     * format.
      * </pre>
      *
      * <code>optional string start_date = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1435,12 +1449,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStartDateBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       startDate_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1448,18 +1460,20 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object endDate_ = "";
     /**
      * <pre>
-     * Output only. Last day on which the simulation is based, in YYYY-MM-DD format.
+     * Output only. Last day on which the simulation is based, in YYYY-MM-DD
+     * format.
      * </pre>
      *
      * <code>optional string end_date = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the endDate field is set.
      */
     public boolean hasEndDate() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <pre>
-     * Output only. Last day on which the simulation is based, in YYYY-MM-DD format.
+     * Output only. Last day on which the simulation is based, in YYYY-MM-DD
+     * format.
      * </pre>
      *
      * <code>optional string end_date = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1479,7 +1493,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Last day on which the simulation is based, in YYYY-MM-DD format.
+     * Output only. Last day on which the simulation is based, in YYYY-MM-DD
+     * format.
      * </pre>
      *
      * <code>optional string end_date = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1500,7 +1515,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Last day on which the simulation is based, in YYYY-MM-DD format.
+     * Output only. Last day on which the simulation is based, in YYYY-MM-DD
+     * format.
      * </pre>
      *
      * <code>optional string end_date = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1509,31 +1525,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEndDate(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
       endDate_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Last day on which the simulation is based, in YYYY-MM-DD format.
+     * Output only. Last day on which the simulation is based, in YYYY-MM-DD
+     * format.
      * </pre>
      *
      * <code>optional string end_date = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearEndDate() {
-      bitField0_ = (bitField0_ & ~0x00000008);
       endDate_ = getDefaultInstance().getEndDate();
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Last day on which the simulation is based, in YYYY-MM-DD format.
+     * Output only. Last day on which the simulation is based, in YYYY-MM-DD
+     * format.
      * </pre>
      *
      * <code>optional string end_date = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1542,12 +1558,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEndDateBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       endDate_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1726,7 +1740,7 @@ private static final long serialVersionUID = 0L;
         pointList_ = null;
       }
       pointListCase_ = 8;
-      onChanged();;
+      onChanged();
       return bidModifierPointListBuilder_;
     }
     @java.lang.Override

@@ -33,8 +33,8 @@ public interface GroupPlacementViewOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The automatic placement string at group level, e. g. web domain, mobile
-   * app ID, or a YouTube channel ID.
+   * Output only. The automatic placement string at group level, e. g. web
+   * domain, mobile app ID, or a YouTube channel ID.
    * </pre>
    *
    * <code>optional string placement = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -43,8 +43,8 @@ public interface GroupPlacementViewOrBuilder extends
   boolean hasPlacement();
   /**
    * <pre>
-   * Output only. The automatic placement string at group level, e. g. web domain, mobile
-   * app ID, or a YouTube channel ID.
+   * Output only. The automatic placement string at group level, e. g. web
+   * domain, mobile app ID, or a YouTube channel ID.
    * </pre>
    *
    * <code>optional string placement = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -53,8 +53,8 @@ public interface GroupPlacementViewOrBuilder extends
   java.lang.String getPlacement();
   /**
    * <pre>
-   * Output only. The automatic placement string at group level, e. g. web domain, mobile
-   * app ID, or a YouTube channel ID.
+   * Output only. The automatic placement string at group level, e. g. web
+   * domain, mobile app ID, or a YouTube channel ID.
    * </pre>
    *
    * <code>optional string placement = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -65,7 +65,8 @@ public interface GroupPlacementViewOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Domain name for websites and YouTube channel name for YouTube channels.
+   * Output only. Domain name for websites and YouTube channel name for YouTube
+   * channels.
    * </pre>
    *
    * <code>optional string display_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -74,7 +75,8 @@ public interface GroupPlacementViewOrBuilder extends
   boolean hasDisplayName();
   /**
    * <pre>
-   * Output only. Domain name for websites and YouTube channel name for YouTube channels.
+   * Output only. Domain name for websites and YouTube channel name for YouTube
+   * channels.
    * </pre>
    *
    * <code>optional string display_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -83,7 +85,8 @@ public interface GroupPlacementViewOrBuilder extends
   java.lang.String getDisplayName();
   /**
    * <pre>
-   * Output only. Domain name for websites and YouTube channel name for YouTube channels.
+   * Output only. Domain name for websites and YouTube channel name for YouTube
+   * channels.
    * </pre>
    *
    * <code>optional string display_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -94,8 +97,8 @@ public interface GroupPlacementViewOrBuilder extends
 
   /**
    * <pre>
-   * Output only. URL of the group placement, for example, domain, link to the mobile
-   * application in app store, or a YouTube channel URL.
+   * Output only. URL of the group placement, for example, domain, link to the
+   * mobile application in app store, or a YouTube channel URL.
    * </pre>
    *
    * <code>optional string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -104,8 +107,8 @@ public interface GroupPlacementViewOrBuilder extends
   boolean hasTargetUrl();
   /**
    * <pre>
-   * Output only. URL of the group placement, for example, domain, link to the mobile
-   * application in app store, or a YouTube channel URL.
+   * Output only. URL of the group placement, for example, domain, link to the
+   * mobile application in app store, or a YouTube channel URL.
    * </pre>
    *
    * <code>optional string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -114,8 +117,8 @@ public interface GroupPlacementViewOrBuilder extends
   java.lang.String getTargetUrl();
   /**
    * <pre>
-   * Output only. URL of the group placement, for example, domain, link to the mobile
-   * application in app store, or a YouTube channel URL.
+   * Output only. URL of the group placement, for example, domain, link to the
+   * mobile application in app store, or a YouTube channel URL.
    * </pre>
    *
    * <code>optional string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -126,8 +129,8 @@ public interface GroupPlacementViewOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Type of the placement, for example, Website, YouTube Channel, Mobile
-   * Application.
+   * Output only. Type of the placement, for example, Website, YouTube Channel,
+   * Mobile Application.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.PlacementTypeEnum.PlacementType placement_type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -136,8 +139,8 @@ public interface GroupPlacementViewOrBuilder extends
   int getPlacementTypeValue();
   /**
    * <pre>
-   * Output only. Type of the placement, for example, Website, YouTube Channel, Mobile
-   * Application.
+   * Output only. Type of the placement, for example, Website, YouTube Channel,
+   * Mobile Application.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.PlacementTypeEnum.PlacementType placement_type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

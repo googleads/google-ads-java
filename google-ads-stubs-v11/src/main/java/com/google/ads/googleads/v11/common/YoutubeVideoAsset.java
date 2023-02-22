@@ -51,7 +51,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int YOUTUBE_VIDEO_ID_FIELD_NUMBER = 2;
-  private volatile java.lang.Object youtubeVideoId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object youtubeVideoId_ = "";
   /**
    * <pre>
    * YouTube video id. This is the 11 character string value used in the
@@ -112,7 +113,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int YOUTUBE_VIDEO_TITLE_FIELD_NUMBER = 3;
-  private volatile java.lang.Object youtubeVideoTitle_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object youtubeVideoTitle_ = "";
   /**
    * <pre>
    * YouTube video title.
@@ -363,10 +365,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       youtubeVideoId_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       youtubeVideoTitle_ = "";
-
       return this;
     }
 
@@ -393,16 +394,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.YoutubeVideoAsset buildPartial() {
       com.google.ads.googleads.v11.common.YoutubeVideoAsset result = new com.google.ads.googleads.v11.common.YoutubeVideoAsset(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.YoutubeVideoAsset result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.youtubeVideoId_ = youtubeVideoId_;
         to_bitField0_ |= 0x00000001;
       }
-      result.youtubeVideoId_ = youtubeVideoId_;
-      result.youtubeVideoTitle_ = youtubeVideoTitle_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.youtubeVideoTitle_ = youtubeVideoTitle_;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -450,12 +457,13 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v11.common.YoutubeVideoAsset other) {
       if (other == com.google.ads.googleads.v11.common.YoutubeVideoAsset.getDefaultInstance()) return this;
       if (other.hasYoutubeVideoId()) {
-        bitField0_ |= 0x00000001;
         youtubeVideoId_ = other.youtubeVideoId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getYoutubeVideoTitle().isEmpty()) {
         youtubeVideoTitle_ = other.youtubeVideoTitle_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -491,7 +499,7 @@ private static final long serialVersionUID = 0L;
             } // case 18
             case 26: {
               youtubeVideoTitle_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 26
             default: {
@@ -579,11 +587,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setYoutubeVideoId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       youtubeVideoId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -597,8 +603,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearYoutubeVideoId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       youtubeVideoId_ = getDefaultInstance().getYoutubeVideoId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -614,12 +620,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setYoutubeVideoIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       youtubeVideoId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -677,11 +681,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setYoutubeVideoTitle(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       youtubeVideoTitle_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -694,8 +696,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearYoutubeVideoTitle() {
-      
       youtubeVideoTitle_ = getDefaultInstance().getYoutubeVideoTitle();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -710,12 +712,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setYoutubeVideoTitleBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       youtubeVideoTitle_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

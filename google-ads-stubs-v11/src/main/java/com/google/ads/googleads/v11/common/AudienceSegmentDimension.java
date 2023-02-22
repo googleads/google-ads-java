@@ -49,6 +49,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SEGMENTS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.common.AudienceSegment> segments_;
   /**
    * <pre>
@@ -307,6 +308,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (segmentsBuilder_ == null) {
         segments_ = java.util.Collections.emptyList();
       } else {
@@ -340,7 +342,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.AudienceSegmentDimension buildPartial() {
       com.google.ads.googleads.v11.common.AudienceSegmentDimension result = new com.google.ads.googleads.v11.common.AudienceSegmentDimension(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.common.AudienceSegmentDimension result) {
       if (segmentsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           segments_ = java.util.Collections.unmodifiableList(segments_);
@@ -350,8 +358,10 @@ private static final long serialVersionUID = 0L;
       } else {
         result.segments_ = segmentsBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.AudienceSegmentDimension result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override

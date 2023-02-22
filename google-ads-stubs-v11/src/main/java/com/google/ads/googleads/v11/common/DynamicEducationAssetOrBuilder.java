@@ -9,8 +9,8 @@ public interface DynamicEducationAssetOrBuilder extends
 
   /**
    * <pre>
-   * Required. Program ID which can be any sequence of letters and digits, and must be
-   * unique and match the values of remarketing tag. Required.
+   * Required. Program ID which can be any sequence of letters and digits, and
+   * must be unique and match the values of remarketing tag. Required.
    * </pre>
    *
    * <code>string program_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -19,8 +19,8 @@ public interface DynamicEducationAssetOrBuilder extends
   java.lang.String getProgramId();
   /**
    * <pre>
-   * Required. Program ID which can be any sequence of letters and digits, and must be
-   * unique and match the values of remarketing tag. Required.
+   * Required. Program ID which can be any sequence of letters and digits, and
+   * must be unique and match the values of remarketing tag. Required.
    * </pre>
    *
    * <code>string program_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>

@@ -53,7 +53,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int TOPIC_CONSTANT_FIELD_NUMBER = 3;
-  private volatile java.lang.Object topicConstant_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object topicConstant_ = "";
   /**
    * <pre>
    * The Topic Constant resource name.
@@ -111,6 +112,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PATH_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList path_;
   /**
    * <pre>
@@ -388,8 +390,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       topicConstant_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       path_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       bitField0_ = (bitField0_ & ~0x00000002);
       return this;
@@ -418,20 +420,28 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.TopicInfo buildPartial() {
       com.google.ads.googleads.v12.common.TopicInfo result = new com.google.ads.googleads.v12.common.TopicInfo(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        to_bitField0_ |= 0x00000001;
-      }
-      result.topicConstant_ = topicConstant_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.common.TopicInfo result) {
       if (((bitField0_ & 0x00000002) != 0)) {
         path_ = path_.getUnmodifiableView();
         bitField0_ = (bitField0_ & ~0x00000002);
       }
       result.path_ = path_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.TopicInfo result) {
+      int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.topicConstant_ = topicConstant_;
+        to_bitField0_ |= 0x00000001;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -479,8 +489,8 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v12.common.TopicInfo other) {
       if (other == com.google.ads.googleads.v12.common.TopicInfo.getDefaultInstance()) return this;
       if (other.hasTopicConstant()) {
-        bitField0_ |= 0x00000001;
         topicConstant_ = other.topicConstant_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.path_.isEmpty()) {
@@ -611,11 +621,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTopicConstant(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       topicConstant_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -628,8 +636,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTopicConstant() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       topicConstant_ = getDefaultInstance().getTopicConstant();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -644,12 +652,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTopicConstantBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       topicConstant_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -736,10 +742,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPath(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensurePathIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensurePathIsMutable();
       path_.set(index, value);
       onChanged();
       return this;
@@ -758,10 +762,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addPath(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensurePathIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensurePathIsMutable();
       path_.add(value);
       onChanged();
       return this;
@@ -817,10 +819,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addPathBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensurePathIsMutable();
       path_.add(value);
       onChanged();

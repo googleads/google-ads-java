@@ -92,7 +92,10 @@ import org.threeten.bp.Duration;
  * batchJobServiceSettingsBuilder
  *     .mutateBatchJobSettings()
  *     .setRetrySettings(
- *         batchJobServiceSettingsBuilder.mutateBatchJobSettings().getRetrySettings().toBuilder()
+ *         batchJobServiceSettingsBuilder
+ *             .mutateBatchJobSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
  * BatchJobServiceStubSettings batchJobServiceSettings = batchJobServiceSettingsBuilder.build();

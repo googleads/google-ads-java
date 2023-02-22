@@ -33,8 +33,8 @@ public interface AdGroupCriterionCustomizerOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. The ad group criterion to which the customizer attribute is linked.
-   * It must be a keyword criterion.
+   * Immutable. The ad group criterion to which the customizer attribute is
+   * linked. It must be a keyword criterion.
    * </pre>
    *
    * <code>optional string ad_group_criterion = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -43,8 +43,8 @@ public interface AdGroupCriterionCustomizerOrBuilder extends
   boolean hasAdGroupCriterion();
   /**
    * <pre>
-   * Immutable. The ad group criterion to which the customizer attribute is linked.
-   * It must be a keyword criterion.
+   * Immutable. The ad group criterion to which the customizer attribute is
+   * linked. It must be a keyword criterion.
    * </pre>
    *
    * <code>optional string ad_group_criterion = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -53,8 +53,8 @@ public interface AdGroupCriterionCustomizerOrBuilder extends
   java.lang.String getAdGroupCriterion();
   /**
    * <pre>
-   * Immutable. The ad group criterion to which the customizer attribute is linked.
-   * It must be a keyword criterion.
+   * Immutable. The ad group criterion to which the customizer attribute is
+   * linked. It must be a keyword criterion.
    * </pre>
    *
    * <code>optional string ad_group_criterion = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -65,7 +65,8 @@ public interface AdGroupCriterionCustomizerOrBuilder extends
 
   /**
    * <pre>
-   * Required. Immutable. The customizer attribute which is linked to the ad group criterion.
+   * Required. Immutable. The customizer attribute which is linked to the ad
+   * group criterion.
    * </pre>
    *
    * <code>string customizer_attribute = 3 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -74,7 +75,8 @@ public interface AdGroupCriterionCustomizerOrBuilder extends
   java.lang.String getCustomizerAttribute();
   /**
    * <pre>
-   * Required. Immutable. The customizer attribute which is linked to the ad group criterion.
+   * Required. Immutable. The customizer attribute which is linked to the ad
+   * group criterion.
    * </pre>
    *
    * <code>string customizer_attribute = 3 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -104,8 +106,8 @@ public interface AdGroupCriterionCustomizerOrBuilder extends
 
   /**
    * <pre>
-   * Required. The value to associate with the customizer attribute at this level. The
-   * value must be of the type specified for the CustomizerAttribute.
+   * Required. The value to associate with the customizer attribute at this
+   * level. The value must be of the type specified for the CustomizerAttribute.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.CustomizerValue value = 5 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -114,8 +116,8 @@ public interface AdGroupCriterionCustomizerOrBuilder extends
   boolean hasValue();
   /**
    * <pre>
-   * Required. The value to associate with the customizer attribute at this level. The
-   * value must be of the type specified for the CustomizerAttribute.
+   * Required. The value to associate with the customizer attribute at this
+   * level. The value must be of the type specified for the CustomizerAttribute.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.CustomizerValue value = 5 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -124,8 +126,8 @@ public interface AdGroupCriterionCustomizerOrBuilder extends
   com.google.ads.googleads.v11.common.CustomizerValue getValue();
   /**
    * <pre>
-   * Required. The value to associate with the customizer attribute at this level. The
-   * value must be of the type specified for the CustomizerAttribute.
+   * Required. The value to associate with the customizer attribute at this
+   * level. The value must be of the type specified for the CustomizerAttribute.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.CustomizerValue value = 5 [(.google.api.field_behavior) = REQUIRED];</code>

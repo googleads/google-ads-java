@@ -5,7 +5,8 @@ package com.google.ads.googleads.v12.services;
 
 /**
  * <pre>
- * Response message for [GoogleAdsService.Search][google.ads.googleads.v12.services.GoogleAdsService.Search].
+ * Response message for
+ * [GoogleAdsService.Search][google.ads.googleads.v12.services.GoogleAdsService.Search].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v12.services.SearchGoogleAdsResponse}
@@ -50,6 +51,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESULTS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.services.GoogleAdsRow> results_;
   /**
    * <pre>
@@ -110,7 +112,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
-  private volatile java.lang.Object nextPageToken_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object nextPageToken_ = "";
   /**
    * <pre>
    * Pagination token used to retrieve the next page of results.
@@ -162,7 +165,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTAL_RESULTS_COUNT_FIELD_NUMBER = 3;
-  private long totalResultsCount_;
+  private long totalResultsCount_ = 0L;
   /**
    * <pre>
    * Total number of results that match the query ignoring the LIMIT
@@ -212,7 +215,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder() {
-    return getFieldMask();
+    return fieldMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : fieldMask_;
   }
 
   public static final int SUMMARY_ROW_FIELD_NUMBER = 6;
@@ -256,7 +259,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.services.GoogleAdsRowOrBuilder getSummaryRowOrBuilder() {
-    return getSummaryRow();
+    return summaryRow_ == null ? com.google.ads.googleads.v12.services.GoogleAdsRow.getDefaultInstance() : summaryRow_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -472,7 +475,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Response message for [GoogleAdsService.Search][google.ads.googleads.v12.services.GoogleAdsService.Search].
+   * Response message for
+   * [GoogleAdsService.Search][google.ads.googleads.v12.services.GoogleAdsService.Search].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v12.services.SearchGoogleAdsResponse}
@@ -507,6 +511,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (resultsBuilder_ == null) {
         results_ = java.util.Collections.emptyList();
       } else {
@@ -515,19 +520,15 @@ private static final long serialVersionUID = 0L;
       }
       bitField0_ = (bitField0_ & ~0x00000001);
       nextPageToken_ = "";
-
       totalResultsCount_ = 0L;
-
-      if (fieldMaskBuilder_ == null) {
-        fieldMask_ = null;
-      } else {
-        fieldMask_ = null;
+      fieldMask_ = null;
+      if (fieldMaskBuilder_ != null) {
+        fieldMaskBuilder_.dispose();
         fieldMaskBuilder_ = null;
       }
-      if (summaryRowBuilder_ == null) {
-        summaryRow_ = null;
-      } else {
-        summaryRow_ = null;
+      summaryRow_ = null;
+      if (summaryRowBuilder_ != null) {
+        summaryRowBuilder_.dispose();
         summaryRowBuilder_ = null;
       }
       return this;
@@ -556,7 +557,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.SearchGoogleAdsResponse buildPartial() {
       com.google.ads.googleads.v12.services.SearchGoogleAdsResponse result = new com.google.ads.googleads.v12.services.SearchGoogleAdsResponse(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.services.SearchGoogleAdsResponse result) {
       if (resultsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           results_ = java.util.Collections.unmodifiableList(results_);
@@ -566,20 +573,26 @@ private static final long serialVersionUID = 0L;
       } else {
         result.results_ = resultsBuilder_.build();
       }
-      result.nextPageToken_ = nextPageToken_;
-      result.totalResultsCount_ = totalResultsCount_;
-      if (fieldMaskBuilder_ == null) {
-        result.fieldMask_ = fieldMask_;
-      } else {
-        result.fieldMask_ = fieldMaskBuilder_.build();
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.SearchGoogleAdsResponse result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.nextPageToken_ = nextPageToken_;
       }
-      if (summaryRowBuilder_ == null) {
-        result.summaryRow_ = summaryRow_;
-      } else {
-        result.summaryRow_ = summaryRowBuilder_.build();
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.totalResultsCount_ = totalResultsCount_;
       }
-      onBuilt();
-      return result;
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.fieldMask_ = fieldMaskBuilder_ == null
+            ? fieldMask_
+            : fieldMaskBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.summaryRow_ = summaryRowBuilder_ == null
+            ? summaryRow_
+            : summaryRowBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -654,6 +667,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getNextPageToken().isEmpty()) {
         nextPageToken_ = other.nextPageToken_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.getTotalResultsCount() != 0L) {
@@ -706,26 +720,26 @@ private static final long serialVersionUID = 0L;
             } // case 10
             case 18: {
               nextPageToken_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 24: {
               totalResultsCount_ = input.readInt64();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 24
             case 42: {
               input.readMessage(
                   getFieldMaskFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 42
             case 50: {
               input.readMessage(
                   getSummaryRowFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 50
             default: {
@@ -1119,11 +1133,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNextPageToken(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       nextPageToken_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1139,8 +1151,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearNextPageToken() {
-      
       nextPageToken_ = getDefaultInstance().getNextPageToken();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1158,12 +1170,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNextPageTokenBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       nextPageToken_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1195,6 +1205,7 @@ private static final long serialVersionUID = 0L;
     public Builder setTotalResultsCount(long value) {
       
       totalResultsCount_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1208,7 +1219,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalResultsCount() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       totalResultsCount_ = 0L;
       onChanged();
       return this;
@@ -1226,7 +1237,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the fieldMask field is set.
      */
     public boolean hasFieldMask() {
-      return fieldMaskBuilder_ != null || fieldMask_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -1256,11 +1267,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         fieldMask_ = value;
-        onChanged();
       } else {
         fieldMaskBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1274,11 +1285,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.FieldMask.Builder builderForValue) {
       if (fieldMaskBuilder_ == null) {
         fieldMask_ = builderForValue.build();
-        onChanged();
       } else {
         fieldMaskBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1290,17 +1301,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeFieldMask(com.google.protobuf.FieldMask value) {
       if (fieldMaskBuilder_ == null) {
-        if (fieldMask_ != null) {
-          fieldMask_ =
-            com.google.protobuf.FieldMask.newBuilder(fieldMask_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000008) != 0) &&
+          fieldMask_ != null &&
+          fieldMask_ != com.google.protobuf.FieldMask.getDefaultInstance()) {
+          getFieldMaskBuilder().mergeFrom(value);
         } else {
           fieldMask_ = value;
         }
-        onChanged();
       } else {
         fieldMaskBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1311,14 +1323,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.FieldMask field_mask = 5;</code>
      */
     public Builder clearFieldMask() {
-      if (fieldMaskBuilder_ == null) {
-        fieldMask_ = null;
-        onChanged();
-      } else {
-        fieldMask_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
+      fieldMask_ = null;
+      if (fieldMaskBuilder_ != null) {
+        fieldMaskBuilder_.dispose();
         fieldMaskBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1329,7 +1340,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.FieldMask field_mask = 5;</code>
      */
     public com.google.protobuf.FieldMask.Builder getFieldMaskBuilder() {
-      
+      bitField0_ |= 0x00000008;
       onChanged();
       return getFieldMaskFieldBuilder().getBuilder();
     }
@@ -1383,7 +1394,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the summaryRow field is set.
      */
     public boolean hasSummaryRow() {
-      return summaryRowBuilder_ != null || summaryRow_ != null;
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -1417,11 +1428,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         summaryRow_ = value;
-        onChanged();
       } else {
         summaryRowBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1437,11 +1448,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.services.GoogleAdsRow.Builder builderForValue) {
       if (summaryRowBuilder_ == null) {
         summaryRow_ = builderForValue.build();
-        onChanged();
       } else {
         summaryRowBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1455,17 +1466,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeSummaryRow(com.google.ads.googleads.v12.services.GoogleAdsRow value) {
       if (summaryRowBuilder_ == null) {
-        if (summaryRow_ != null) {
-          summaryRow_ =
-            com.google.ads.googleads.v12.services.GoogleAdsRow.newBuilder(summaryRow_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000010) != 0) &&
+          summaryRow_ != null &&
+          summaryRow_ != com.google.ads.googleads.v12.services.GoogleAdsRow.getDefaultInstance()) {
+          getSummaryRowBuilder().mergeFrom(value);
         } else {
           summaryRow_ = value;
         }
-        onChanged();
       } else {
         summaryRowBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1478,14 +1490,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.services.GoogleAdsRow summary_row = 6;</code>
      */
     public Builder clearSummaryRow() {
-      if (summaryRowBuilder_ == null) {
-        summaryRow_ = null;
-        onChanged();
-      } else {
-        summaryRow_ = null;
+      bitField0_ = (bitField0_ & ~0x00000010);
+      summaryRow_ = null;
+      if (summaryRowBuilder_ != null) {
+        summaryRowBuilder_.dispose();
         summaryRowBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1498,7 +1509,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.services.GoogleAdsRow summary_row = 6;</code>
      */
     public com.google.ads.googleads.v12.services.GoogleAdsRow.Builder getSummaryRowBuilder() {
-      
+      bitField0_ |= 0x00000010;
       onChanged();
       return getSummaryRowFieldBuilder().getBuilder();
     }

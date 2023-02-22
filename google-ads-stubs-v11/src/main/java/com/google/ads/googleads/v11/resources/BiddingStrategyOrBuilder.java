@@ -134,7 +134,8 @@ public interface BiddingStrategyOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. The currency used by the bidding strategy (ISO 4217 three-letter code).
+   * Immutable. The currency used by the bidding strategy (ISO 4217 three-letter
+   * code).
    * For bidding strategies in manager customers, this currency can be set on
    * creation and defaults to the manager customer's currency. For serving
    * customers, this field cannot be set; all strategies in a serving customer
@@ -148,7 +149,8 @@ public interface BiddingStrategyOrBuilder extends
   java.lang.String getCurrencyCode();
   /**
    * <pre>
-   * Immutable. The currency used by the bidding strategy (ISO 4217 three-letter code).
+   * Immutable. The currency used by the bidding strategy (ISO 4217 three-letter
+   * code).
    * For bidding strategies in manager customers, this currency can be set on
    * creation and defaults to the manager customer's currency. For serving
    * customers, this field cannot be set; all strategies in a serving customer
@@ -164,7 +166,8 @@ public interface BiddingStrategyOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The currency used by the bidding strategy (ISO 4217 three-letter code).
+   * Output only. The currency used by the bidding strategy (ISO 4217
+   * three-letter code).
    * For bidding strategies in manager customers, this is the currency set by
    * the advertiser when creating the strategy. For serving customers, this is
    * the customer's currency_code.
@@ -178,7 +181,8 @@ public interface BiddingStrategyOrBuilder extends
   boolean hasEffectiveCurrencyCode();
   /**
    * <pre>
-   * Output only. The currency used by the bidding strategy (ISO 4217 three-letter code).
+   * Output only. The currency used by the bidding strategy (ISO 4217
+   * three-letter code).
    * For bidding strategies in manager customers, this is the currency set by
    * the advertiser when creating the strategy. For serving customers, this is
    * the customer's currency_code.
@@ -192,7 +196,8 @@ public interface BiddingStrategyOrBuilder extends
   java.lang.String getEffectiveCurrencyCode();
   /**
    * <pre>
-   * Output only. The currency used by the bidding strategy (ISO 4217 three-letter code).
+   * Output only. The currency used by the bidding strategy (ISO 4217
+   * three-letter code).
    * For bidding strategies in manager customers, this is the currency set by
    * the advertiser when creating the strategy. For serving customers, this is
    * the customer's currency_code.
@@ -229,7 +234,8 @@ public interface BiddingStrategyOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The number of non-removed campaigns attached to this bidding strategy.
+   * Output only. The number of non-removed campaigns attached to this bidding
+   * strategy.
    * This field is read-only.
    * </pre>
    *
@@ -239,7 +245,8 @@ public interface BiddingStrategyOrBuilder extends
   boolean hasNonRemovedCampaignCount();
   /**
    * <pre>
-   * Output only. The number of non-removed campaigns attached to this bidding strategy.
+   * Output only. The number of non-removed campaigns attached to this bidding
+   * strategy.
    * This field is read-only.
    * </pre>
    *

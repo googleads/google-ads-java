@@ -59,7 +59,10 @@ import javax.annotation.Generated;
  * labelServiceSettingsBuilder
  *     .mutateLabelsSettings()
  *     .setRetrySettings(
- *         labelServiceSettingsBuilder.mutateLabelsSettings().getRetrySettings().toBuilder()
+ *         labelServiceSettingsBuilder
+ *             .mutateLabelsSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
  * LabelServiceSettings labelServiceSettings = labelServiceSettingsBuilder.build();

@@ -5,7 +5,8 @@ package com.google.ads.googleads.v12.services;
 
 /**
  * <pre>
- * Request message for [CustomerManagerLinkService.MoveManagerLink][google.ads.googleads.v12.services.CustomerManagerLinkService.MoveManagerLink].
+ * Request message for
+ * [CustomerManagerLinkService.MoveManagerLink][google.ads.googleads.v12.services.CustomerManagerLinkService.MoveManagerLink].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v12.services.MoveManagerLinkRequest}
@@ -51,7 +52,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CUSTOMER_ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object customerId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object customerId_ = "";
   /**
    * <pre>
    * Required. The ID of the client customer that is being moved.
@@ -97,7 +99,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PREVIOUS_CUSTOMER_MANAGER_LINK_FIELD_NUMBER = 2;
-  private volatile java.lang.Object previousCustomerManagerLink_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object previousCustomerManagerLink_ = "";
   /**
    * <pre>
    * Required. The resource name of the previous CustomerManagerLink.
@@ -147,11 +150,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NEW_MANAGER_FIELD_NUMBER = 3;
-  private volatile java.lang.Object newManager_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object newManager_ = "";
   /**
    * <pre>
-   * Required. The resource name of the new manager customer that the client wants to move
-   * to. Customer resource names have the format: "customers/{customer_id}"
+   * Required. The resource name of the new manager customer that the client
+   * wants to move to. Customer resource names have the format:
+   * "customers/{customer_id}"
    * </pre>
    *
    * <code>string new_manager = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -172,8 +177,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. The resource name of the new manager customer that the client wants to move
-   * to. Customer resource names have the format: "customers/{customer_id}"
+   * Required. The resource name of the new manager customer that the client
+   * wants to move to. Customer resource names have the format:
+   * "customers/{customer_id}"
    * </pre>
    *
    * <code>string new_manager = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -195,7 +201,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VALIDATE_ONLY_FIELD_NUMBER = 4;
-  private boolean validateOnly_;
+  private boolean validateOnly_ = false;
   /**
    * <pre>
    * If true, the request is validated but not executed. Only errors are
@@ -398,7 +404,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Request message for [CustomerManagerLinkService.MoveManagerLink][google.ads.googleads.v12.services.CustomerManagerLinkService.MoveManagerLink].
+   * Request message for
+   * [CustomerManagerLinkService.MoveManagerLink][google.ads.googleads.v12.services.CustomerManagerLinkService.MoveManagerLink].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v12.services.MoveManagerLinkRequest}
@@ -433,14 +440,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       customerId_ = "";
-
       previousCustomerManagerLink_ = "";
-
       newManager_ = "";
-
       validateOnly_ = false;
-
       return this;
     }
 
@@ -467,12 +471,25 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.MoveManagerLinkRequest buildPartial() {
       com.google.ads.googleads.v12.services.MoveManagerLinkRequest result = new com.google.ads.googleads.v12.services.MoveManagerLinkRequest(this);
-      result.customerId_ = customerId_;
-      result.previousCustomerManagerLink_ = previousCustomerManagerLink_;
-      result.newManager_ = newManager_;
-      result.validateOnly_ = validateOnly_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.MoveManagerLinkRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.customerId_ = customerId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.previousCustomerManagerLink_ = previousCustomerManagerLink_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.newManager_ = newManager_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.validateOnly_ = validateOnly_;
+      }
     }
 
     @java.lang.Override
@@ -521,14 +538,17 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.services.MoveManagerLinkRequest.getDefaultInstance()) return this;
       if (!other.getCustomerId().isEmpty()) {
         customerId_ = other.customerId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getPreviousCustomerManagerLink().isEmpty()) {
         previousCustomerManagerLink_ = other.previousCustomerManagerLink_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getNewManager().isEmpty()) {
         newManager_ = other.newManager_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.getValidateOnly() != false) {
@@ -562,22 +582,22 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               customerId_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               previousCustomerManagerLink_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
               newManager_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 32: {
               validateOnly_ = input.readBool();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 32
             default: {
@@ -595,6 +615,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object customerId_ = "";
     /**
@@ -649,11 +670,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       customerId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -666,8 +685,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCustomerId() {
-      
       customerId_ = getDefaultInstance().getCustomerId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -682,12 +701,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       customerId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -751,11 +768,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPreviousCustomerManagerLink(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       previousCustomerManagerLink_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -770,8 +785,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPreviousCustomerManagerLink() {
-      
       previousCustomerManagerLink_ = getDefaultInstance().getPreviousCustomerManagerLink();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -788,12 +803,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPreviousCustomerManagerLinkBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       previousCustomerManagerLink_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -801,8 +814,9 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object newManager_ = "";
     /**
      * <pre>
-     * Required. The resource name of the new manager customer that the client wants to move
-     * to. Customer resource names have the format: "customers/{customer_id}"
+     * Required. The resource name of the new manager customer that the client
+     * wants to move to. Customer resource names have the format:
+     * "customers/{customer_id}"
      * </pre>
      *
      * <code>string new_manager = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -822,8 +836,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The resource name of the new manager customer that the client wants to move
-     * to. Customer resource names have the format: "customers/{customer_id}"
+     * Required. The resource name of the new manager customer that the client
+     * wants to move to. Customer resource names have the format:
+     * "customers/{customer_id}"
      * </pre>
      *
      * <code>string new_manager = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -844,8 +859,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The resource name of the new manager customer that the client wants to move
-     * to. Customer resource names have the format: "customers/{customer_id}"
+     * Required. The resource name of the new manager customer that the client
+     * wants to move to. Customer resource names have the format:
+     * "customers/{customer_id}"
      * </pre>
      *
      * <code>string new_manager = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -854,33 +870,33 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNewManager(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       newManager_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. The resource name of the new manager customer that the client wants to move
-     * to. Customer resource names have the format: "customers/{customer_id}"
+     * Required. The resource name of the new manager customer that the client
+     * wants to move to. Customer resource names have the format:
+     * "customers/{customer_id}"
      * </pre>
      *
      * <code>string new_manager = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return This builder for chaining.
      */
     public Builder clearNewManager() {
-      
       newManager_ = getDefaultInstance().getNewManager();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. The resource name of the new manager customer that the client wants to move
-     * to. Customer resource names have the format: "customers/{customer_id}"
+     * Required. The resource name of the new manager customer that the client
+     * wants to move to. Customer resource names have the format:
+     * "customers/{customer_id}"
      * </pre>
      *
      * <code>string new_manager = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -889,12 +905,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNewManagerBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       newManager_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -926,6 +940,7 @@ private static final long serialVersionUID = 0L;
     public Builder setValidateOnly(boolean value) {
       
       validateOnly_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -939,7 +954,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearValidateOnly() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       validateOnly_ = false;
       onChanged();
       return this;

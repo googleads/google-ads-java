@@ -52,8 +52,8 @@ public interface AccountBudgetOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The resource name of the billing setup associated with this account-level
-   * budget.  BillingSetup resource names have the form:
+   * Output only. The resource name of the billing setup associated with this
+   * account-level budget.  BillingSetup resource names have the form:
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
@@ -63,8 +63,8 @@ public interface AccountBudgetOrBuilder extends
   boolean hasBillingSetup();
   /**
    * <pre>
-   * Output only. The resource name of the billing setup associated with this account-level
-   * budget.  BillingSetup resource names have the form:
+   * Output only. The resource name of the billing setup associated with this
+   * account-level budget.  BillingSetup resource names have the form:
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
@@ -74,8 +74,8 @@ public interface AccountBudgetOrBuilder extends
   java.lang.String getBillingSetup();
   /**
    * <pre>
-   * Output only. The resource name of the billing setup associated with this account-level
-   * budget.  BillingSetup resource names have the form:
+   * Output only. The resource name of the billing setup associated with this
+   * account-level budget.  BillingSetup resource names have the form:
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
@@ -170,8 +170,8 @@ public interface AccountBudgetOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The approved start time of the account-level budget in yyyy-MM-dd HH:mm:ss
-   * format.
+   * Output only. The approved start time of the account-level budget in
+   * yyyy-MM-dd HH:mm:ss format.
    * For example, if a new budget is approved after the proposed start time,
    * the approved start time is the time of approval.
    * </pre>
@@ -182,8 +182,8 @@ public interface AccountBudgetOrBuilder extends
   boolean hasApprovedStartDateTime();
   /**
    * <pre>
-   * Output only. The approved start time of the account-level budget in yyyy-MM-dd HH:mm:ss
-   * format.
+   * Output only. The approved start time of the account-level budget in
+   * yyyy-MM-dd HH:mm:ss format.
    * For example, if a new budget is approved after the proposed start time,
    * the approved start time is the time of approval.
    * </pre>
@@ -194,8 +194,8 @@ public interface AccountBudgetOrBuilder extends
   java.lang.String getApprovedStartDateTime();
   /**
    * <pre>
-   * Output only. The approved start time of the account-level budget in yyyy-MM-dd HH:mm:ss
-   * format.
+   * Output only. The approved start time of the account-level budget in
+   * yyyy-MM-dd HH:mm:ss format.
    * For example, if a new budget is approved after the proposed start time,
    * the approved start time is the time of approval.
    * </pre>
@@ -231,8 +231,8 @@ public interface AccountBudgetOrBuilder extends
 
   /**
    * <pre>
-   * Output only. A purchase order number is a value that helps users reference this budget
-   * in their monthly invoices.
+   * Output only. A purchase order number is a value that helps users reference
+   * this budget in their monthly invoices.
    * </pre>
    *
    * <code>optional string purchase_order_number = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -241,8 +241,8 @@ public interface AccountBudgetOrBuilder extends
   boolean hasPurchaseOrderNumber();
   /**
    * <pre>
-   * Output only. A purchase order number is a value that helps users reference this budget
-   * in their monthly invoices.
+   * Output only. A purchase order number is a value that helps users reference
+   * this budget in their monthly invoices.
    * </pre>
    *
    * <code>optional string purchase_order_number = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -251,8 +251,8 @@ public interface AccountBudgetOrBuilder extends
   java.lang.String getPurchaseOrderNumber();
   /**
    * <pre>
-   * Output only. A purchase order number is a value that helps users reference this budget
-   * in their monthly invoices.
+   * Output only. A purchase order number is a value that helps users reference
+   * this budget in their monthly invoices.
    * </pre>
    *
    * <code>optional string purchase_order_number = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -348,7 +348,8 @@ public interface AccountBudgetOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The proposed end time as a well-defined type, for example, FOREVER.
+   * Output only. The proposed end time as a well-defined type, for example,
+   * FOREVER.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -357,7 +358,8 @@ public interface AccountBudgetOrBuilder extends
   boolean hasProposedEndTimeType();
   /**
    * <pre>
-   * Output only. The proposed end time as a well-defined type, for example, FOREVER.
+   * Output only. The proposed end time as a well-defined type, for example,
+   * FOREVER.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -366,7 +368,8 @@ public interface AccountBudgetOrBuilder extends
   int getProposedEndTimeTypeValue();
   /**
    * <pre>
-   * Output only. The proposed end time as a well-defined type, for example, FOREVER.
+   * Output only. The proposed end time as a well-defined type, for example,
+   * FOREVER.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -405,7 +408,8 @@ public interface AccountBudgetOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The approved end time as a well-defined type, for example, FOREVER.
+   * Output only. The approved end time as a well-defined type, for example,
+   * FOREVER.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.TimeTypeEnum.TimeType approved_end_time_type = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -414,7 +418,8 @@ public interface AccountBudgetOrBuilder extends
   boolean hasApprovedEndTimeType();
   /**
    * <pre>
-   * Output only. The approved end time as a well-defined type, for example, FOREVER.
+   * Output only. The approved end time as a well-defined type, for example,
+   * FOREVER.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.TimeTypeEnum.TimeType approved_end_time_type = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -423,7 +428,8 @@ public interface AccountBudgetOrBuilder extends
   int getApprovedEndTimeTypeValue();
   /**
    * <pre>
-   * Output only. The approved end time as a well-defined type, for example, FOREVER.
+   * Output only. The approved end time as a well-defined type, for example,
+   * FOREVER.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.TimeTypeEnum.TimeType approved_end_time_type = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -433,8 +439,8 @@ public interface AccountBudgetOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The proposed spending limit in micros.  One million is equivalent to
-   * one unit.
+   * Output only. The proposed spending limit in micros.  One million is
+   * equivalent to one unit.
    * </pre>
    *
    * <code>int64 proposed_spending_limit_micros = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -443,8 +449,8 @@ public interface AccountBudgetOrBuilder extends
   boolean hasProposedSpendingLimitMicros();
   /**
    * <pre>
-   * Output only. The proposed spending limit in micros.  One million is equivalent to
-   * one unit.
+   * Output only. The proposed spending limit in micros.  One million is
+   * equivalent to one unit.
    * </pre>
    *
    * <code>int64 proposed_spending_limit_micros = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -454,8 +460,8 @@ public interface AccountBudgetOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The proposed spending limit as a well-defined type, for example,
-   * INFINITE.
+   * Output only. The proposed spending limit as a well-defined type, for
+   * example, INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -464,8 +470,8 @@ public interface AccountBudgetOrBuilder extends
   boolean hasProposedSpendingLimitType();
   /**
    * <pre>
-   * Output only. The proposed spending limit as a well-defined type, for example,
-   * INFINITE.
+   * Output only. The proposed spending limit as a well-defined type, for
+   * example, INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -474,8 +480,8 @@ public interface AccountBudgetOrBuilder extends
   int getProposedSpendingLimitTypeValue();
   /**
    * <pre>
-   * Output only. The proposed spending limit as a well-defined type, for example,
-   * INFINITE.
+   * Output only. The proposed spending limit as a well-defined type, for
+   * example, INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -485,9 +491,9 @@ public interface AccountBudgetOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The approved spending limit in micros.  One million is equivalent to
-   * one unit.  This will only be populated if the proposed spending limit
-   * is finite, and will always be greater than or equal to the
+   * Output only. The approved spending limit in micros.  One million is
+   * equivalent to one unit.  This will only be populated if the proposed
+   * spending limit is finite, and will always be greater than or equal to the
    * proposed spending limit.
    * </pre>
    *
@@ -497,9 +503,9 @@ public interface AccountBudgetOrBuilder extends
   boolean hasApprovedSpendingLimitMicros();
   /**
    * <pre>
-   * Output only. The approved spending limit in micros.  One million is equivalent to
-   * one unit.  This will only be populated if the proposed spending limit
-   * is finite, and will always be greater than or equal to the
+   * Output only. The approved spending limit in micros.  One million is
+   * equivalent to one unit.  This will only be populated if the proposed
+   * spending limit is finite, and will always be greater than or equal to the
    * proposed spending limit.
    * </pre>
    *
@@ -510,9 +516,9 @@ public interface AccountBudgetOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The approved spending limit as a well-defined type, for example,
-   * INFINITE.  This will only be populated if the approved spending limit is
-   * INFINITE.
+   * Output only. The approved spending limit as a well-defined type, for
+   * example, INFINITE.  This will only be populated if the approved spending
+   * limit is INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -521,9 +527,9 @@ public interface AccountBudgetOrBuilder extends
   boolean hasApprovedSpendingLimitType();
   /**
    * <pre>
-   * Output only. The approved spending limit as a well-defined type, for example,
-   * INFINITE.  This will only be populated if the approved spending limit is
-   * INFINITE.
+   * Output only. The approved spending limit as a well-defined type, for
+   * example, INFINITE.  This will only be populated if the approved spending
+   * limit is INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -532,9 +538,9 @@ public interface AccountBudgetOrBuilder extends
   int getApprovedSpendingLimitTypeValue();
   /**
    * <pre>
-   * Output only. The approved spending limit as a well-defined type, for example,
-   * INFINITE.  This will only be populated if the approved spending limit is
-   * INFINITE.
+   * Output only. The approved spending limit as a well-defined type, for
+   * example, INFINITE.  This will only be populated if the approved spending
+   * limit is INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -544,8 +550,8 @@ public interface AccountBudgetOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The adjusted spending limit in micros.  One million is equivalent to
-   * one unit.
+   * Output only. The adjusted spending limit in micros.  One million is
+   * equivalent to one unit.
    * If the approved spending limit is finite, the adjusted
    * spending limit may vary depending on the types of adjustments applied
    * to this budget, if applicable.
@@ -561,8 +567,8 @@ public interface AccountBudgetOrBuilder extends
   boolean hasAdjustedSpendingLimitMicros();
   /**
    * <pre>
-   * Output only. The adjusted spending limit in micros.  One million is equivalent to
-   * one unit.
+   * Output only. The adjusted spending limit in micros.  One million is
+   * equivalent to one unit.
    * If the approved spending limit is finite, the adjusted
    * spending limit may vary depending on the types of adjustments applied
    * to this budget, if applicable.
@@ -579,10 +585,10 @@ public interface AccountBudgetOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The adjusted spending limit as a well-defined type, for example,
-   * INFINITE. This will only be populated if the adjusted spending limit is
-   * INFINITE, which is guaranteed to be true if the approved spending limit
-   * is INFINITE.
+   * Output only. The adjusted spending limit as a well-defined type, for
+   * example, INFINITE. This will only be populated if the adjusted spending
+   * limit is INFINITE, which is guaranteed to be true if the approved
+   * spending limit is INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.SpendingLimitTypeEnum.SpendingLimitType adjusted_spending_limit_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -591,10 +597,10 @@ public interface AccountBudgetOrBuilder extends
   boolean hasAdjustedSpendingLimitType();
   /**
    * <pre>
-   * Output only. The adjusted spending limit as a well-defined type, for example,
-   * INFINITE. This will only be populated if the adjusted spending limit is
-   * INFINITE, which is guaranteed to be true if the approved spending limit
-   * is INFINITE.
+   * Output only. The adjusted spending limit as a well-defined type, for
+   * example, INFINITE. This will only be populated if the adjusted spending
+   * limit is INFINITE, which is guaranteed to be true if the approved
+   * spending limit is INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.SpendingLimitTypeEnum.SpendingLimitType adjusted_spending_limit_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -603,10 +609,10 @@ public interface AccountBudgetOrBuilder extends
   int getAdjustedSpendingLimitTypeValue();
   /**
    * <pre>
-   * Output only. The adjusted spending limit as a well-defined type, for example,
-   * INFINITE. This will only be populated if the adjusted spending limit is
-   * INFINITE, which is guaranteed to be true if the approved spending limit
-   * is INFINITE.
+   * Output only. The adjusted spending limit as a well-defined type, for
+   * example, INFINITE. This will only be populated if the adjusted spending
+   * limit is INFINITE, which is guaranteed to be true if the approved
+   * spending limit is INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.SpendingLimitTypeEnum.SpendingLimitType adjusted_spending_limit_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

@@ -5,7 +5,8 @@ package com.google.ads.googleads.v12.services;
 
 /**
  * <pre>
- * Request message for [OfflineUserDataJobService.RunOfflineUserDataJob][google.ads.googleads.v12.services.OfflineUserDataJobService.RunOfflineUserDataJob].
+ * Request message for
+ * [OfflineUserDataJobService.RunOfflineUserDataJob][google.ads.googleads.v12.services.OfflineUserDataJobService.RunOfflineUserDataJob].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v12.services.RunOfflineUserDataJobRequest}
@@ -49,7 +50,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Required. The resource name of the OfflineUserDataJob to run.
@@ -95,7 +97,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VALIDATE_ONLY_FIELD_NUMBER = 2;
-  private boolean validateOnly_;
+  private boolean validateOnly_ = false;
   /**
    * <pre>
    * If true, the request is validated but not executed. Only errors are
@@ -278,7 +280,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Request message for [OfflineUserDataJobService.RunOfflineUserDataJob][google.ads.googleads.v12.services.OfflineUserDataJobService.RunOfflineUserDataJob].
+   * Request message for
+   * [OfflineUserDataJobService.RunOfflineUserDataJob][google.ads.googleads.v12.services.OfflineUserDataJobService.RunOfflineUserDataJob].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v12.services.RunOfflineUserDataJobRequest}
@@ -313,10 +316,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       validateOnly_ = false;
-
       return this;
     }
 
@@ -343,10 +345,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.RunOfflineUserDataJobRequest buildPartial() {
       com.google.ads.googleads.v12.services.RunOfflineUserDataJobRequest result = new com.google.ads.googleads.v12.services.RunOfflineUserDataJobRequest(this);
-      result.resourceName_ = resourceName_;
-      result.validateOnly_ = validateOnly_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.RunOfflineUserDataJobRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.validateOnly_ = validateOnly_;
+      }
     }
 
     @java.lang.Override
@@ -395,6 +406,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.services.RunOfflineUserDataJobRequest.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.getValidateOnly() != false) {
@@ -428,12 +440,12 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 16: {
               validateOnly_ = input.readBool();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             default: {
@@ -451,6 +463,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object resourceName_ = "";
     /**
@@ -505,11 +518,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -522,8 +533,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -538,12 +549,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -575,6 +584,7 @@ private static final long serialVersionUID = 0L;
     public Builder setValidateOnly(boolean value) {
       
       validateOnly_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -588,7 +598,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearValidateOnly() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       validateOnly_ = false;
       onChanged();
       return this;

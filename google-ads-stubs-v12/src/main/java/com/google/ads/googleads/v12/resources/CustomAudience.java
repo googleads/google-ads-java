@@ -54,7 +54,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Immutable. The resource name of the custom audience.
@@ -104,7 +105,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ID_FIELD_NUMBER = 2;
-  private long id_;
+  private long id_ = 0L;
   /**
    * <pre>
    * Output only. ID of the custom audience.
@@ -119,11 +120,11 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STATUS_FIELD_NUMBER = 3;
-  private int status_;
+  private int status_ = 0;
   /**
    * <pre>
-   * Output only. Status of this custom audience. Indicates whether the custom audience is
-   * enabled or removed.
+   * Output only. Status of this custom audience. Indicates whether the custom
+   * audience is enabled or removed.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.CustomAudienceStatusEnum.CustomAudienceStatus status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -134,21 +135,21 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Status of this custom audience. Indicates whether the custom audience is
-   * enabled or removed.
+   * Output only. Status of this custom audience. Indicates whether the custom
+   * audience is enabled or removed.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.CustomAudienceStatusEnum.CustomAudienceStatus status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The status.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.CustomAudienceStatusEnum.CustomAudienceStatus getStatus() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.CustomAudienceStatusEnum.CustomAudienceStatus result = com.google.ads.googleads.v12.enums.CustomAudienceStatusEnum.CustomAudienceStatus.valueOf(status_);
+    com.google.ads.googleads.v12.enums.CustomAudienceStatusEnum.CustomAudienceStatus result = com.google.ads.googleads.v12.enums.CustomAudienceStatusEnum.CustomAudienceStatus.forNumber(status_);
     return result == null ? com.google.ads.googleads.v12.enums.CustomAudienceStatusEnum.CustomAudienceStatus.UNRECOGNIZED : result;
   }
 
   public static final int NAME_FIELD_NUMBER = 4;
-  private volatile java.lang.Object name_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
   /**
    * <pre>
    * Name of the custom audience. It should be unique for all custom audiences
@@ -198,7 +199,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TYPE_FIELD_NUMBER = 5;
-  private int type_;
+  private int type_ = 0;
   /**
    * <pre>
    * Type of the custom audience.
@@ -223,13 +224,13 @@ private static final long serialVersionUID = 0L;
    * @return The type.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.CustomAudienceTypeEnum.CustomAudienceType getType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.CustomAudienceTypeEnum.CustomAudienceType result = com.google.ads.googleads.v12.enums.CustomAudienceTypeEnum.CustomAudienceType.valueOf(type_);
+    com.google.ads.googleads.v12.enums.CustomAudienceTypeEnum.CustomAudienceType result = com.google.ads.googleads.v12.enums.CustomAudienceTypeEnum.CustomAudienceType.forNumber(type_);
     return result == null ? com.google.ads.googleads.v12.enums.CustomAudienceTypeEnum.CustomAudienceType.UNRECOGNIZED : result;
   }
 
   public static final int DESCRIPTION_FIELD_NUMBER = 6;
-  private volatile java.lang.Object description_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object description_ = "";
   /**
    * <pre>
    * Description of this custom audience.
@@ -275,6 +276,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MEMBERS_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.resources.CustomAudienceMember> members_;
   /**
    * <pre>
@@ -600,25 +602,20 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       id_ = 0L;
-
       status_ = 0;
-
       name_ = "";
-
       type_ = 0;
-
       description_ = "";
-
       if (membersBuilder_ == null) {
         members_ = java.util.Collections.emptyList();
       } else {
         members_ = null;
         membersBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000040);
       return this;
     }
 
@@ -645,24 +642,44 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.CustomAudience buildPartial() {
       com.google.ads.googleads.v12.resources.CustomAudience result = new com.google.ads.googleads.v12.resources.CustomAudience(this);
-      int from_bitField0_ = bitField0_;
-      result.resourceName_ = resourceName_;
-      result.id_ = id_;
-      result.status_ = status_;
-      result.name_ = name_;
-      result.type_ = type_;
-      result.description_ = description_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.resources.CustomAudience result) {
       if (membersBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000040) != 0)) {
           members_ = java.util.Collections.unmodifiableList(members_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000040);
         }
         result.members_ = members_;
       } else {
         result.members_ = membersBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.resources.CustomAudience result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.id_ = id_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.status_ = status_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.name_ = name_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.type_ = type_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.description_ = description_;
+      }
     }
 
     @java.lang.Override
@@ -711,6 +728,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.resources.CustomAudience.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.getId() != 0L) {
@@ -721,6 +739,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.type_ != 0) {
@@ -728,13 +747,14 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getDescription().isEmpty()) {
         description_ = other.description_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (membersBuilder_ == null) {
         if (!other.members_.isEmpty()) {
           if (members_.isEmpty()) {
             members_ = other.members_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000040);
           } else {
             ensureMembersIsMutable();
             members_.addAll(other.members_);
@@ -747,7 +767,7 @@ private static final long serialVersionUID = 0L;
             membersBuilder_.dispose();
             membersBuilder_ = null;
             members_ = other.members_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000040);
             membersBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getMembersFieldBuilder() : null;
@@ -784,32 +804,32 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 16: {
               id_ = input.readInt64();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             case 24: {
               status_ = input.readEnum();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 24
             case 34: {
               name_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 34
             case 40: {
               type_ = input.readEnum();
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 40
             case 50: {
               description_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000020;
               break;
             } // case 50
             case 58: {
@@ -901,11 +921,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -920,8 +938,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -938,12 +956,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -973,6 +989,7 @@ private static final long serialVersionUID = 0L;
     public Builder setId(long value) {
       
       id_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -985,7 +1002,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearId() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       id_ = 0L;
       onChanged();
       return this;
@@ -994,8 +1011,8 @@ private static final long serialVersionUID = 0L;
     private int status_ = 0;
     /**
      * <pre>
-     * Output only. Status of this custom audience. Indicates whether the custom audience is
-     * enabled or removed.
+     * Output only. Status of this custom audience. Indicates whether the custom
+     * audience is enabled or removed.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.CustomAudienceStatusEnum.CustomAudienceStatus status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1006,8 +1023,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Status of this custom audience. Indicates whether the custom audience is
-     * enabled or removed.
+     * Output only. Status of this custom audience. Indicates whether the custom
+     * audience is enabled or removed.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.CustomAudienceStatusEnum.CustomAudienceStatus status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1015,15 +1032,15 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
-      
       status_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Status of this custom audience. Indicates whether the custom audience is
-     * enabled or removed.
+     * Output only. Status of this custom audience. Indicates whether the custom
+     * audience is enabled or removed.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.CustomAudienceStatusEnum.CustomAudienceStatus status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1031,14 +1048,13 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.CustomAudienceStatusEnum.CustomAudienceStatus getStatus() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.CustomAudienceStatusEnum.CustomAudienceStatus result = com.google.ads.googleads.v12.enums.CustomAudienceStatusEnum.CustomAudienceStatus.valueOf(status_);
+      com.google.ads.googleads.v12.enums.CustomAudienceStatusEnum.CustomAudienceStatus result = com.google.ads.googleads.v12.enums.CustomAudienceStatusEnum.CustomAudienceStatus.forNumber(status_);
       return result == null ? com.google.ads.googleads.v12.enums.CustomAudienceStatusEnum.CustomAudienceStatus.UNRECOGNIZED : result;
     }
     /**
      * <pre>
-     * Output only. Status of this custom audience. Indicates whether the custom audience is
-     * enabled or removed.
+     * Output only. Status of this custom audience. Indicates whether the custom
+     * audience is enabled or removed.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.CustomAudienceStatusEnum.CustomAudienceStatus status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1049,22 +1065,22 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       status_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Status of this custom audience. Indicates whether the custom audience is
-     * enabled or removed.
+     * Output only. Status of this custom audience. Indicates whether the custom
+     * audience is enabled or removed.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.CustomAudienceStatusEnum.CustomAudienceStatus status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       status_ = 0;
       onChanged();
       return this;
@@ -1129,11 +1145,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       name_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1148,8 +1162,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      
       name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1166,12 +1180,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1202,8 +1214,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
-      
       type_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1219,8 +1231,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.CustomAudienceTypeEnum.CustomAudienceType getType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.CustomAudienceTypeEnum.CustomAudienceType result = com.google.ads.googleads.v12.enums.CustomAudienceTypeEnum.CustomAudienceType.valueOf(type_);
+      com.google.ads.googleads.v12.enums.CustomAudienceTypeEnum.CustomAudienceType result = com.google.ads.googleads.v12.enums.CustomAudienceTypeEnum.CustomAudienceType.forNumber(type_);
       return result == null ? com.google.ads.googleads.v12.enums.CustomAudienceTypeEnum.CustomAudienceType.UNRECOGNIZED : result;
     }
     /**
@@ -1238,7 +1249,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000010;
       type_ = value.getNumber();
       onChanged();
       return this;
@@ -1254,7 +1265,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       type_ = 0;
       onChanged();
       return this;
@@ -1313,11 +1324,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       description_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1330,8 +1339,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
-      
       description_ = getDefaultInstance().getDescription();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1346,12 +1355,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescriptionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       description_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1359,9 +1366,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v12.resources.CustomAudienceMember> members_ =
       java.util.Collections.emptyList();
     private void ensureMembersIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000040) != 0)) {
         members_ = new java.util.ArrayList<com.google.ads.googleads.v12.resources.CustomAudienceMember>(members_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000040;
        }
     }
 
@@ -1577,7 +1584,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearMembers() {
       if (membersBuilder_ == null) {
         members_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
       } else {
         membersBuilder_.clear();
@@ -1696,7 +1703,7 @@ private static final long serialVersionUID = 0L;
         membersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v12.resources.CustomAudienceMember, com.google.ads.googleads.v12.resources.CustomAudienceMember.Builder, com.google.ads.googleads.v12.resources.CustomAudienceMemberOrBuilder>(
                 members_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000040) != 0),
                 getParentForChildren(),
                 isClean());
         members_ = null;

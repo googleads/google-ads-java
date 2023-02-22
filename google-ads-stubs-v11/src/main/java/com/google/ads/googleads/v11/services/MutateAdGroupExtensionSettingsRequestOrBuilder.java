@@ -9,8 +9,8 @@ public interface MutateAdGroupExtensionSettingsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The ID of the customer whose ad group extension settings are being
-   * modified.
+   * Required. The ID of the customer whose ad group extension settings are
+   * being modified.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -19,8 +19,8 @@ public interface MutateAdGroupExtensionSettingsRequestOrBuilder extends
   java.lang.String getCustomerId();
   /**
    * <pre>
-   * Required. The ID of the customer whose ad group extension settings are being
-   * modified.
+   * Required. The ID of the customer whose ad group extension settings are
+   * being modified.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -31,8 +31,8 @@ public interface MutateAdGroupExtensionSettingsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The list of operations to perform on individual ad group extension
-   * settings.
+   * Required. The list of operations to perform on individual ad group
+   * extension settings.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.AdGroupExtensionSettingOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -41,8 +41,8 @@ public interface MutateAdGroupExtensionSettingsRequestOrBuilder extends
       getOperationsList();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual ad group extension
-   * settings.
+   * Required. The list of operations to perform on individual ad group
+   * extension settings.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.AdGroupExtensionSettingOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -50,8 +50,8 @@ public interface MutateAdGroupExtensionSettingsRequestOrBuilder extends
   com.google.ads.googleads.v11.services.AdGroupExtensionSettingOperation getOperations(int index);
   /**
    * <pre>
-   * Required. The list of operations to perform on individual ad group extension
-   * settings.
+   * Required. The list of operations to perform on individual ad group
+   * extension settings.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.AdGroupExtensionSettingOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -59,8 +59,8 @@ public interface MutateAdGroupExtensionSettingsRequestOrBuilder extends
   int getOperationsCount();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual ad group extension
-   * settings.
+   * Required. The list of operations to perform on individual ad group
+   * extension settings.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.AdGroupExtensionSettingOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -69,8 +69,8 @@ public interface MutateAdGroupExtensionSettingsRequestOrBuilder extends
       getOperationsOrBuilderList();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual ad group extension
-   * settings.
+   * Required. The list of operations to perform on individual ad group
+   * extension settings.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.AdGroupExtensionSettingOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>

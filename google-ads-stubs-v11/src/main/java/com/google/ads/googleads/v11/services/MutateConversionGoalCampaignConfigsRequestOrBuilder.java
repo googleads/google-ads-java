@@ -9,7 +9,8 @@ public interface MutateConversionGoalCampaignConfigsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The ID of the customer whose custom conversion goals are being modified.
+   * Required. The ID of the customer whose custom conversion goals are being
+   * modified.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -18,7 +19,8 @@ public interface MutateConversionGoalCampaignConfigsRequestOrBuilder extends
   java.lang.String getCustomerId();
   /**
    * <pre>
-   * Required. The ID of the customer whose custom conversion goals are being modified.
+   * Required. The ID of the customer whose custom conversion goals are being
+   * modified.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -29,8 +31,8 @@ public interface MutateConversionGoalCampaignConfigsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The list of operations to perform on individual conversion goal campaign
-   * config.
+   * Required. The list of operations to perform on individual conversion goal
+   * campaign config.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.ConversionGoalCampaignConfigOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -39,8 +41,8 @@ public interface MutateConversionGoalCampaignConfigsRequestOrBuilder extends
       getOperationsList();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual conversion goal campaign
-   * config.
+   * Required. The list of operations to perform on individual conversion goal
+   * campaign config.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.ConversionGoalCampaignConfigOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -48,8 +50,8 @@ public interface MutateConversionGoalCampaignConfigsRequestOrBuilder extends
   com.google.ads.googleads.v11.services.ConversionGoalCampaignConfigOperation getOperations(int index);
   /**
    * <pre>
-   * Required. The list of operations to perform on individual conversion goal campaign
-   * config.
+   * Required. The list of operations to perform on individual conversion goal
+   * campaign config.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.ConversionGoalCampaignConfigOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -57,8 +59,8 @@ public interface MutateConversionGoalCampaignConfigsRequestOrBuilder extends
   int getOperationsCount();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual conversion goal campaign
-   * config.
+   * Required. The list of operations to perform on individual conversion goal
+   * campaign config.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.ConversionGoalCampaignConfigOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -67,8 +69,8 @@ public interface MutateConversionGoalCampaignConfigsRequestOrBuilder extends
       getOperationsOrBuilderList();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual conversion goal campaign
-   * config.
+   * Required. The list of operations to perform on individual conversion goal
+   * campaign config.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.ConversionGoalCampaignConfigOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>

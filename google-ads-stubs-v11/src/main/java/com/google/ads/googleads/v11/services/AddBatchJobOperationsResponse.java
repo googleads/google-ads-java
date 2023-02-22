@@ -5,7 +5,8 @@ package com.google.ads.googleads.v11.services;
 
 /**
  * <pre>
- * Response message for [BatchJobService.AddBatchJobOperations][google.ads.googleads.v11.services.BatchJobService.AddBatchJobOperations].
+ * Response message for
+ * [BatchJobService.AddBatchJobOperations][google.ads.googleads.v11.services.BatchJobService.AddBatchJobOperations].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v11.services.AddBatchJobOperationsResponse}
@@ -49,7 +50,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTAL_OPERATIONS_FIELD_NUMBER = 1;
-  private long totalOperations_;
+  private long totalOperations_ = 0L;
   /**
    * <pre>
    * The total number of operations added so far for this batch job.
@@ -64,7 +65,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NEXT_SEQUENCE_TOKEN_FIELD_NUMBER = 2;
-  private volatile java.lang.Object nextSequenceToken_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object nextSequenceToken_ = "";
   /**
    * <pre>
    * The sequence token to be used when calling AddBatchJobOperations again if
@@ -281,7 +283,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Response message for [BatchJobService.AddBatchJobOperations][google.ads.googleads.v11.services.BatchJobService.AddBatchJobOperations].
+   * Response message for
+   * [BatchJobService.AddBatchJobOperations][google.ads.googleads.v11.services.BatchJobService.AddBatchJobOperations].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v11.services.AddBatchJobOperationsResponse}
@@ -316,10 +319,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       totalOperations_ = 0L;
-
       nextSequenceToken_ = "";
-
       return this;
     }
 
@@ -346,10 +348,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.AddBatchJobOperationsResponse buildPartial() {
       com.google.ads.googleads.v11.services.AddBatchJobOperationsResponse result = new com.google.ads.googleads.v11.services.AddBatchJobOperationsResponse(this);
-      result.totalOperations_ = totalOperations_;
-      result.nextSequenceToken_ = nextSequenceToken_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.AddBatchJobOperationsResponse result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.totalOperations_ = totalOperations_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.nextSequenceToken_ = nextSequenceToken_;
+      }
     }
 
     @java.lang.Override
@@ -401,6 +412,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getNextSequenceToken().isEmpty()) {
         nextSequenceToken_ = other.nextSequenceToken_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -431,12 +443,12 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               totalOperations_ = input.readInt64();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             case 18: {
               nextSequenceToken_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             default: {
@@ -454,6 +466,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private long totalOperations_ ;
     /**
@@ -480,6 +493,7 @@ private static final long serialVersionUID = 0L;
     public Builder setTotalOperations(long value) {
       
       totalOperations_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -492,7 +506,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalOperations() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       totalOperations_ = 0L;
       onChanged();
       return this;
@@ -557,11 +571,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNextSequenceToken(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       nextSequenceToken_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -576,8 +588,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearNextSequenceToken() {
-      
       nextSequenceToken_ = getDefaultInstance().getNextSequenceToken();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -594,12 +606,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNextSequenceTokenBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       nextSequenceToken_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

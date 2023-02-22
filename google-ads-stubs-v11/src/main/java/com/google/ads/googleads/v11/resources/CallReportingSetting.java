@@ -50,7 +50,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int CALL_REPORTING_ENABLED_FIELD_NUMBER = 10;
-  private boolean callReportingEnabled_;
+  private boolean callReportingEnabled_ = false;
   /**
    * <pre>
    * Enable reporting of phone call events by redirecting them through Google
@@ -79,7 +79,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALL_CONVERSION_REPORTING_ENABLED_FIELD_NUMBER = 11;
-  private boolean callConversionReportingEnabled_;
+  private boolean callConversionReportingEnabled_ = false;
   /**
    * <pre>
    * Whether to enable call conversion reporting.
@@ -106,7 +106,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALL_CONVERSION_ACTION_FIELD_NUMBER = 12;
-  private volatile java.lang.Object callConversionAction_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object callConversionAction_ = "";
   /**
    * <pre>
    * Customer-level call conversion action to attribute a call conversion to.
@@ -399,12 +400,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       callReportingEnabled_ = false;
-      bitField0_ = (bitField0_ & ~0x00000001);
       callConversionReportingEnabled_ = false;
-      bitField0_ = (bitField0_ & ~0x00000002);
       callConversionAction_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -431,6 +430,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.CallReportingSetting buildPartial() {
       com.google.ads.googleads.v11.resources.CallReportingSetting result = new com.google.ads.googleads.v11.resources.CallReportingSetting(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.CallReportingSetting result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -442,12 +447,10 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.callConversionAction_ = callConversionAction_;
         to_bitField0_ |= 0x00000004;
       }
-      result.callConversionAction_ = callConversionAction_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -501,8 +504,8 @@ private static final long serialVersionUID = 0L;
         setCallConversionReportingEnabled(other.getCallConversionReportingEnabled());
       }
       if (other.hasCallConversionAction()) {
-        bitField0_ |= 0x00000004;
         callConversionAction_ = other.callConversionAction_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -601,8 +604,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCallReportingEnabled(boolean value) {
-      bitField0_ |= 0x00000001;
+      
       callReportingEnabled_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -657,8 +661,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCallConversionReportingEnabled(boolean value) {
-      bitField0_ |= 0x00000002;
+      
       callConversionReportingEnabled_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -749,11 +754,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallConversionAction(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       callConversionAction_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -768,8 +771,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallConversionAction() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       callConversionAction_ = getDefaultInstance().getCallConversionAction();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -786,12 +789,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallConversionActionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       callConversionAction_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }

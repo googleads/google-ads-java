@@ -33,7 +33,8 @@ public interface CampaignConversionGoalOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. The campaign with which this campaign conversion goal is associated.
+   * Immutable. The campaign with which this campaign conversion goal is
+   * associated.
    * </pre>
    *
    * <code>string campaign = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -42,7 +43,8 @@ public interface CampaignConversionGoalOrBuilder extends
   java.lang.String getCampaign();
   /**
    * <pre>
-   * Immutable. The campaign with which this campaign conversion goal is associated.
+   * Immutable. The campaign with which this campaign conversion goal is
+   * associated.
    * </pre>
    *
    * <code>string campaign = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>

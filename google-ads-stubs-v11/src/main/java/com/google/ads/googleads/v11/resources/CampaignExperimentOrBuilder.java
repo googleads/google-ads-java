@@ -156,9 +156,9 @@ public interface CampaignExperimentOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. Share of traffic directed to experiment as a percent (must be between 1 and
-   * 99 inclusive. Base campaign receives the remainder of the traffic
-   * (100 - traffic_split_percent). Required for create.
+   * Immutable. Share of traffic directed to experiment as a percent (must be
+   * between 1 and 99 inclusive. Base campaign receives the remainder of the
+   * traffic (100 - traffic_split_percent). Required for create.
    * </pre>
    *
    * <code>optional int64 traffic_split_percent = 17 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -167,9 +167,9 @@ public interface CampaignExperimentOrBuilder extends
   boolean hasTrafficSplitPercent();
   /**
    * <pre>
-   * Immutable. Share of traffic directed to experiment as a percent (must be between 1 and
-   * 99 inclusive. Base campaign receives the remainder of the traffic
-   * (100 - traffic_split_percent). Required for create.
+   * Immutable. Share of traffic directed to experiment as a percent (must be
+   * between 1 and 99 inclusive. Base campaign receives the remainder of the
+   * traffic (100 - traffic_split_percent). Required for create.
    * </pre>
    *
    * <code>optional int64 traffic_split_percent = 17 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -227,7 +227,8 @@ public interface CampaignExperimentOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The status of the campaign experiment. This field is read-only.
+   * Output only. The status of the campaign experiment. This field is
+   * read-only.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.CampaignExperimentStatusEnum.CampaignExperimentStatus status = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -236,7 +237,8 @@ public interface CampaignExperimentOrBuilder extends
   int getStatusValue();
   /**
    * <pre>
-   * Output only. The status of the campaign experiment. This field is read-only.
+   * Output only. The status of the campaign experiment. This field is
+   * read-only.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.CampaignExperimentStatusEnum.CampaignExperimentStatus status = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -246,9 +248,9 @@ public interface CampaignExperimentOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The resource name of the long-running operation that can be used to poll
-   * for completion of experiment create or promote. The most recent long
-   * running operation is returned.
+   * Output only. The resource name of the long-running operation that can be
+   * used to poll for completion of experiment create or promote. The most
+   * recent long running operation is returned.
    * </pre>
    *
    * <code>optional string long_running_operation = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -257,9 +259,9 @@ public interface CampaignExperimentOrBuilder extends
   boolean hasLongRunningOperation();
   /**
    * <pre>
-   * Output only. The resource name of the long-running operation that can be used to poll
-   * for completion of experiment create or promote. The most recent long
-   * running operation is returned.
+   * Output only. The resource name of the long-running operation that can be
+   * used to poll for completion of experiment create or promote. The most
+   * recent long running operation is returned.
    * </pre>
    *
    * <code>optional string long_running_operation = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -268,9 +270,9 @@ public interface CampaignExperimentOrBuilder extends
   java.lang.String getLongRunningOperation();
   /**
    * <pre>
-   * Output only. The resource name of the long-running operation that can be used to poll
-   * for completion of experiment create or promote. The most recent long
-   * running operation is returned.
+   * Output only. The resource name of the long-running operation that can be
+   * used to poll for completion of experiment create or promote. The most
+   * recent long running operation is returned.
    * </pre>
    *
    * <code>optional string long_running_operation = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

@@ -160,7 +160,8 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
     public static final int PHONE_NUMBER_FIELD_NUMBER = 1;
-    private volatile java.lang.Object phoneNumber_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object phoneNumber_ = "";
     /**
      * <pre>
      * Phone number of the smart campaign.
@@ -218,7 +219,8 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int COUNTRY_CODE_FIELD_NUMBER = 2;
-    private volatile java.lang.Object countryCode_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object countryCode_ = "";
     /**
      * <pre>
      * Upper-case, two-letter country code as defined by ISO-3166.
@@ -486,10 +488,9 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         phoneNumber_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
         countryCode_ = "";
-        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -516,19 +517,23 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v12.resources.SmartCampaignSetting.PhoneNumber buildPartial() {
         com.google.ads.googleads.v12.resources.SmartCampaignSetting.PhoneNumber result = new com.google.ads.googleads.v12.resources.SmartCampaignSetting.PhoneNumber(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v12.resources.SmartCampaignSetting.PhoneNumber result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.phoneNumber_ = phoneNumber_;
           to_bitField0_ |= 0x00000001;
         }
-        result.phoneNumber_ = phoneNumber_;
         if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.countryCode_ = countryCode_;
           to_bitField0_ |= 0x00000002;
         }
-        result.countryCode_ = countryCode_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -576,13 +581,13 @@ private static final long serialVersionUID = 0L;
       public Builder mergeFrom(com.google.ads.googleads.v12.resources.SmartCampaignSetting.PhoneNumber other) {
         if (other == com.google.ads.googleads.v12.resources.SmartCampaignSetting.PhoneNumber.getDefaultInstance()) return this;
         if (other.hasPhoneNumber()) {
-          bitField0_ |= 0x00000001;
           phoneNumber_ = other.phoneNumber_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.hasCountryCode()) {
-          bitField0_ |= 0x00000002;
           countryCode_ = other.countryCode_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -702,11 +707,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setPhoneNumber(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+        if (value == null) { throw new NullPointerException(); }
         phoneNumber_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -719,8 +722,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearPhoneNumber() {
-        bitField0_ = (bitField0_ & ~0x00000001);
         phoneNumber_ = getDefaultInstance().getPhoneNumber();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -735,12 +738,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setPhoneNumberBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        bitField0_ |= 0x00000001;
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         phoneNumber_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -809,11 +810,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setCountryCode(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+        if (value == null) { throw new NullPointerException(); }
         countryCode_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -826,8 +825,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearCountryCode() {
-        bitField0_ = (bitField0_ & ~0x00000002);
         countryCode_ = getDefaultInstance().getCountryCode();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -842,12 +841,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setCountryCodeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        bitField0_ |= 0x00000002;
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         countryCode_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -989,7 +986,7 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
     public static final int INCLUDE_LEAD_FORM_FIELD_NUMBER = 1;
-    private boolean includeLeadForm_;
+    private boolean includeLeadForm_ = false;
     /**
      * <pre>
      * Enabling a lead form on your business profile enables prospective
@@ -1218,8 +1215,8 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         includeLeadForm_ = false;
-        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -1246,15 +1243,19 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v12.resources.SmartCampaignSetting.AdOptimizedBusinessProfileSetting buildPartial() {
         com.google.ads.googleads.v12.resources.SmartCampaignSetting.AdOptimizedBusinessProfileSetting result = new com.google.ads.googleads.v12.resources.SmartCampaignSetting.AdOptimizedBusinessProfileSetting(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v12.resources.SmartCampaignSetting.AdOptimizedBusinessProfileSetting result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.includeLeadForm_ = includeLeadForm_;
           to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1393,8 +1394,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setIncludeLeadForm(boolean value) {
-        bitField0_ |= 0x00000001;
+        
         includeLeadForm_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1561,7 +1563,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Immutable. The resource name of the Smart campaign setting.
@@ -1611,7 +1614,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CAMPAIGN_FIELD_NUMBER = 2;
-  private volatile java.lang.Object campaign_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object campaign_ = "";
   /**
    * <pre>
    * Output only. The campaign to which these settings apply.
@@ -1691,14 +1695,17 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.resources.SmartCampaignSetting.PhoneNumberOrBuilder getPhoneNumberOrBuilder() {
-    return getPhoneNumber();
+    return phoneNumber_ == null ? com.google.ads.googleads.v12.resources.SmartCampaignSetting.PhoneNumber.getDefaultInstance() : phoneNumber_;
   }
 
   public static final int ADVERTISING_LANGUAGE_CODE_FIELD_NUMBER = 7;
-  private volatile java.lang.Object advertisingLanguageCode_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object advertisingLanguageCode_ = "";
   /**
    * <pre>
-   * The ISO-639-1 language code to advertise in.
+   * The language code to advertise in from the set of
+   * [supported language codes]
+   * (https://developers.google.com/google-ads/api/reference/data/codes-formats#languages).
    * </pre>
    *
    * <code>string advertising_language_code = 7;</code>
@@ -1719,7 +1726,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The ISO-639-1 language code to advertise in.
+   * The language code to advertise in from the set of
+   * [supported language codes]
+   * (https://developers.google.com/google-ads/api/reference/data/codes-formats#languages).
    * </pre>
    *
    * <code>string advertising_language_code = 7;</code>
@@ -2304,18 +2313,15 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       campaign_ = "";
-
-      if (phoneNumberBuilder_ == null) {
-        phoneNumber_ = null;
-      } else {
-        phoneNumber_ = null;
+      phoneNumber_ = null;
+      if (phoneNumberBuilder_ != null) {
+        phoneNumberBuilder_.dispose();
         phoneNumberBuilder_ = null;
       }
       advertisingLanguageCode_ = "";
-
       if (adOptimizedBusinessProfileSettingBuilder_ != null) {
         adOptimizedBusinessProfileSettingBuilder_.clear();
       }
@@ -2349,34 +2355,39 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.SmartCampaignSetting buildPartial() {
       com.google.ads.googleads.v12.resources.SmartCampaignSetting result = new com.google.ads.googleads.v12.resources.SmartCampaignSetting(this);
-      result.resourceName_ = resourceName_;
-      result.campaign_ = campaign_;
-      if (phoneNumberBuilder_ == null) {
-        result.phoneNumber_ = phoneNumber_;
-      } else {
-        result.phoneNumber_ = phoneNumberBuilder_.build();
-      }
-      result.advertisingLanguageCode_ = advertisingLanguageCode_;
-      if (landingPageCase_ == 8) {
-        result.landingPage_ = landingPage_;
-      }
-      if (landingPageCase_ == 9) {
-        if (adOptimizedBusinessProfileSettingBuilder_ == null) {
-          result.landingPage_ = landingPage_;
-        } else {
-          result.landingPage_ = adOptimizedBusinessProfileSettingBuilder_.build();
-        }
-      }
-      if (businessSettingCase_ == 5) {
-        result.businessSetting_ = businessSetting_;
-      }
-      if (businessSettingCase_ == 10) {
-        result.businessSetting_ = businessSetting_;
-      }
-      result.landingPageCase_ = landingPageCase_;
-      result.businessSettingCase_ = businessSettingCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.resources.SmartCampaignSetting result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.campaign_ = campaign_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.phoneNumber_ = phoneNumberBuilder_ == null
+            ? phoneNumber_
+            : phoneNumberBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.advertisingLanguageCode_ = advertisingLanguageCode_;
+      }
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v12.resources.SmartCampaignSetting result) {
+      result.landingPageCase_ = landingPageCase_;
+      result.landingPage_ = this.landingPage_;
+      if (landingPageCase_ == 9 &&
+          adOptimizedBusinessProfileSettingBuilder_ != null) {
+        result.landingPage_ = adOptimizedBusinessProfileSettingBuilder_.build();
+      }
+      result.businessSettingCase_ = businessSettingCase_;
+      result.businessSetting_ = this.businessSetting_;
     }
 
     @java.lang.Override
@@ -2425,10 +2436,12 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.resources.SmartCampaignSetting.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getCampaign().isEmpty()) {
         campaign_ = other.campaign_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasPhoneNumber()) {
@@ -2436,6 +2449,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getAdvertisingLanguageCode().isEmpty()) {
         advertisingLanguageCode_ = other.advertisingLanguageCode_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       switch (other.getLandingPageCase()) {
@@ -2498,19 +2512,19 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               campaign_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
               input.readMessage(
                   getPhoneNumberFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 42: {
@@ -2521,7 +2535,7 @@ private static final long serialVersionUID = 0L;
             } // case 42
             case 58: {
               advertisingLanguageCode_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 58
             case 66: {
@@ -2588,6 +2602,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private java.lang.Object resourceName_ = "";
     /**
@@ -2648,11 +2663,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -2667,8 +2680,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -2685,12 +2698,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -2748,11 +2759,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaign(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       campaign_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -2765,8 +2774,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCampaign() {
-      
       campaign_ = getDefaultInstance().getCampaign();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -2781,12 +2790,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaignBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       campaign_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -2803,7 +2810,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the phoneNumber field is set.
      */
     public boolean hasPhoneNumber() {
-      return phoneNumberBuilder_ != null || phoneNumber_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -2833,11 +2840,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         phoneNumber_ = value;
-        onChanged();
       } else {
         phoneNumberBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -2851,11 +2858,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.resources.SmartCampaignSetting.PhoneNumber.Builder builderForValue) {
       if (phoneNumberBuilder_ == null) {
         phoneNumber_ = builderForValue.build();
-        onChanged();
       } else {
         phoneNumberBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -2867,17 +2874,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergePhoneNumber(com.google.ads.googleads.v12.resources.SmartCampaignSetting.PhoneNumber value) {
       if (phoneNumberBuilder_ == null) {
-        if (phoneNumber_ != null) {
-          phoneNumber_ =
-            com.google.ads.googleads.v12.resources.SmartCampaignSetting.PhoneNumber.newBuilder(phoneNumber_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000004) != 0) &&
+          phoneNumber_ != null &&
+          phoneNumber_ != com.google.ads.googleads.v12.resources.SmartCampaignSetting.PhoneNumber.getDefaultInstance()) {
+          getPhoneNumberBuilder().mergeFrom(value);
         } else {
           phoneNumber_ = value;
         }
-        onChanged();
       } else {
         phoneNumberBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -2888,14 +2896,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.resources.SmartCampaignSetting.PhoneNumber phone_number = 3;</code>
      */
     public Builder clearPhoneNumber() {
-      if (phoneNumberBuilder_ == null) {
-        phoneNumber_ = null;
-        onChanged();
-      } else {
-        phoneNumber_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      phoneNumber_ = null;
+      if (phoneNumberBuilder_ != null) {
+        phoneNumberBuilder_.dispose();
         phoneNumberBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -2906,7 +2913,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.resources.SmartCampaignSetting.PhoneNumber phone_number = 3;</code>
      */
     public com.google.ads.googleads.v12.resources.SmartCampaignSetting.PhoneNumber.Builder getPhoneNumberBuilder() {
-      
+      bitField0_ |= 0x00000004;
       onChanged();
       return getPhoneNumberFieldBuilder().getBuilder();
     }
@@ -2949,7 +2956,9 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object advertisingLanguageCode_ = "";
     /**
      * <pre>
-     * The ISO-639-1 language code to advertise in.
+     * The language code to advertise in from the set of
+     * [supported language codes]
+     * (https://developers.google.com/google-ads/api/reference/data/codes-formats#languages).
      * </pre>
      *
      * <code>string advertising_language_code = 7;</code>
@@ -2969,7 +2978,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ISO-639-1 language code to advertise in.
+     * The language code to advertise in from the set of
+     * [supported language codes]
+     * (https://developers.google.com/google-ads/api/reference/data/codes-formats#languages).
      * </pre>
      *
      * <code>string advertising_language_code = 7;</code>
@@ -2990,7 +3001,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ISO-639-1 language code to advertise in.
+     * The language code to advertise in from the set of
+     * [supported language codes]
+     * (https://developers.google.com/google-ads/api/reference/data/codes-formats#languages).
      * </pre>
      *
      * <code>string advertising_language_code = 7;</code>
@@ -2999,31 +3012,33 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAdvertisingLanguageCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       advertisingLanguageCode_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The ISO-639-1 language code to advertise in.
+     * The language code to advertise in from the set of
+     * [supported language codes]
+     * (https://developers.google.com/google-ads/api/reference/data/codes-formats#languages).
      * </pre>
      *
      * <code>string advertising_language_code = 7;</code>
      * @return This builder for chaining.
      */
     public Builder clearAdvertisingLanguageCode() {
-      
       advertisingLanguageCode_ = getDefaultInstance().getAdvertisingLanguageCode();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The ISO-639-1 language code to advertise in.
+     * The language code to advertise in from the set of
+     * [supported language codes]
+     * (https://developers.google.com/google-ads/api/reference/data/codes-formats#languages).
      * </pre>
      *
      * <code>string advertising_language_code = 7;</code>
@@ -3032,12 +3047,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAdvertisingLanguageCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       advertisingLanguageCode_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -3118,10 +3131,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFinalUrl(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  landingPageCase_ = 8;
+      if (value == null) { throw new NullPointerException(); }
+      landingPageCase_ = 8;
       landingPage_ = value;
       onChanged();
       return this;
@@ -3153,10 +3164,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFinalUrlBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       landingPageCase_ = 8;
       landingPage_ = value;
       onChanged();
@@ -3364,7 +3373,7 @@ private static final long serialVersionUID = 0L;
         landingPage_ = null;
       }
       landingPageCase_ = 9;
-      onChanged();;
+      onChanged();
       return adOptimizedBusinessProfileSettingBuilder_;
     }
 
@@ -3444,10 +3453,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBusinessName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  businessSettingCase_ = 5;
+      if (value == null) { throw new NullPointerException(); }
+      businessSettingCase_ = 5;
       businessSetting_ = value;
       onChanged();
       return this;
@@ -3479,10 +3486,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBusinessNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       businessSettingCase_ = 5;
       businessSetting_ = value;
       onChanged();
@@ -3589,10 +3594,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBusinessProfileLocation(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  businessSettingCase_ = 10;
+      if (value == null) { throw new NullPointerException(); }
+      businessSettingCase_ = 10;
       businessSetting_ = value;
       onChanged();
       return this;
@@ -3636,10 +3639,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBusinessProfileLocationBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       businessSettingCase_ = 10;
       businessSetting_ = value;
       onChanged();

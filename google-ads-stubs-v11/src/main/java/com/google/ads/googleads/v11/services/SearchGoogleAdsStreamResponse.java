@@ -5,7 +5,8 @@ package com.google.ads.googleads.v11.services;
 
 /**
  * <pre>
- * Response message for [GoogleAdsService.SearchStream][google.ads.googleads.v11.services.GoogleAdsService.SearchStream].
+ * Response message for
+ * [GoogleAdsService.SearchStream][google.ads.googleads.v11.services.GoogleAdsService.SearchStream].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v11.services.SearchGoogleAdsStreamResponse}
@@ -50,6 +51,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESULTS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.services.GoogleAdsRow> results_;
   /**
    * <pre>
@@ -144,7 +146,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.FieldMaskOrBuilder getFieldMaskOrBuilder() {
-    return getFieldMask();
+    return fieldMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : fieldMask_;
   }
 
   public static final int SUMMARY_ROW_FIELD_NUMBER = 3;
@@ -188,11 +190,12 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v11.services.GoogleAdsRowOrBuilder getSummaryRowOrBuilder() {
-    return getSummaryRow();
+    return summaryRow_ == null ? com.google.ads.googleads.v11.services.GoogleAdsRow.getDefaultInstance() : summaryRow_;
   }
 
   public static final int REQUEST_ID_FIELD_NUMBER = 4;
-  private volatile java.lang.Object requestId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object requestId_ = "";
   /**
    * <pre>
    * The unique id of the request that is used for debugging purposes.
@@ -438,7 +441,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Response message for [GoogleAdsService.SearchStream][google.ads.googleads.v11.services.GoogleAdsService.SearchStream].
+   * Response message for
+   * [GoogleAdsService.SearchStream][google.ads.googleads.v11.services.GoogleAdsService.SearchStream].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v11.services.SearchGoogleAdsStreamResponse}
@@ -473,6 +477,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (resultsBuilder_ == null) {
         results_ = java.util.Collections.emptyList();
       } else {
@@ -480,20 +485,17 @@ private static final long serialVersionUID = 0L;
         resultsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000001);
-      if (fieldMaskBuilder_ == null) {
-        fieldMask_ = null;
-      } else {
-        fieldMask_ = null;
+      fieldMask_ = null;
+      if (fieldMaskBuilder_ != null) {
+        fieldMaskBuilder_.dispose();
         fieldMaskBuilder_ = null;
       }
-      if (summaryRowBuilder_ == null) {
-        summaryRow_ = null;
-      } else {
-        summaryRow_ = null;
+      summaryRow_ = null;
+      if (summaryRowBuilder_ != null) {
+        summaryRowBuilder_.dispose();
         summaryRowBuilder_ = null;
       }
       requestId_ = "";
-
       return this;
     }
 
@@ -520,7 +522,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.SearchGoogleAdsStreamResponse buildPartial() {
       com.google.ads.googleads.v11.services.SearchGoogleAdsStreamResponse result = new com.google.ads.googleads.v11.services.SearchGoogleAdsStreamResponse(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.services.SearchGoogleAdsStreamResponse result) {
       if (resultsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           results_ = java.util.Collections.unmodifiableList(results_);
@@ -530,19 +538,23 @@ private static final long serialVersionUID = 0L;
       } else {
         result.results_ = resultsBuilder_.build();
       }
-      if (fieldMaskBuilder_ == null) {
-        result.fieldMask_ = fieldMask_;
-      } else {
-        result.fieldMask_ = fieldMaskBuilder_.build();
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.SearchGoogleAdsStreamResponse result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.fieldMask_ = fieldMaskBuilder_ == null
+            ? fieldMask_
+            : fieldMaskBuilder_.build();
       }
-      if (summaryRowBuilder_ == null) {
-        result.summaryRow_ = summaryRow_;
-      } else {
-        result.summaryRow_ = summaryRowBuilder_.build();
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.summaryRow_ = summaryRowBuilder_ == null
+            ? summaryRow_
+            : summaryRowBuilder_.build();
       }
-      result.requestId_ = requestId_;
-      onBuilt();
-      return result;
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.requestId_ = requestId_;
+      }
     }
 
     @java.lang.Override
@@ -623,6 +635,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getRequestId().isEmpty()) {
         requestId_ = other.requestId_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -668,19 +681,19 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getFieldMaskFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
               input.readMessage(
                   getSummaryRowFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 34: {
               requestId_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 34
             default: {
@@ -1024,7 +1037,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the fieldMask field is set.
      */
     public boolean hasFieldMask() {
-      return fieldMaskBuilder_ != null || fieldMask_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -1054,11 +1067,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         fieldMask_ = value;
-        onChanged();
       } else {
         fieldMaskBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -1072,11 +1085,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.FieldMask.Builder builderForValue) {
       if (fieldMaskBuilder_ == null) {
         fieldMask_ = builderForValue.build();
-        onChanged();
       } else {
         fieldMaskBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -1088,17 +1101,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeFieldMask(com.google.protobuf.FieldMask value) {
       if (fieldMaskBuilder_ == null) {
-        if (fieldMask_ != null) {
-          fieldMask_ =
-            com.google.protobuf.FieldMask.newBuilder(fieldMask_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          fieldMask_ != null &&
+          fieldMask_ != com.google.protobuf.FieldMask.getDefaultInstance()) {
+          getFieldMaskBuilder().mergeFrom(value);
         } else {
           fieldMask_ = value;
         }
-        onChanged();
       } else {
         fieldMaskBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -1109,14 +1123,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.FieldMask field_mask = 2;</code>
      */
     public Builder clearFieldMask() {
-      if (fieldMaskBuilder_ == null) {
-        fieldMask_ = null;
-        onChanged();
-      } else {
-        fieldMask_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      fieldMask_ = null;
+      if (fieldMaskBuilder_ != null) {
+        fieldMaskBuilder_.dispose();
         fieldMaskBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1127,7 +1140,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.FieldMask field_mask = 2;</code>
      */
     public com.google.protobuf.FieldMask.Builder getFieldMaskBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getFieldMaskFieldBuilder().getBuilder();
     }
@@ -1181,7 +1194,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the summaryRow field is set.
      */
     public boolean hasSummaryRow() {
-      return summaryRowBuilder_ != null || summaryRow_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -1215,11 +1228,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         summaryRow_ = value;
-        onChanged();
       } else {
         summaryRowBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1235,11 +1248,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.services.GoogleAdsRow.Builder builderForValue) {
       if (summaryRowBuilder_ == null) {
         summaryRow_ = builderForValue.build();
-        onChanged();
       } else {
         summaryRowBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1253,17 +1266,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeSummaryRow(com.google.ads.googleads.v11.services.GoogleAdsRow value) {
       if (summaryRowBuilder_ == null) {
-        if (summaryRow_ != null) {
-          summaryRow_ =
-            com.google.ads.googleads.v11.services.GoogleAdsRow.newBuilder(summaryRow_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000004) != 0) &&
+          summaryRow_ != null &&
+          summaryRow_ != com.google.ads.googleads.v11.services.GoogleAdsRow.getDefaultInstance()) {
+          getSummaryRowBuilder().mergeFrom(value);
         } else {
           summaryRow_ = value;
         }
-        onChanged();
       } else {
         summaryRowBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1276,14 +1290,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.services.GoogleAdsRow summary_row = 3;</code>
      */
     public Builder clearSummaryRow() {
-      if (summaryRowBuilder_ == null) {
-        summaryRow_ = null;
-        onChanged();
-      } else {
-        summaryRow_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      summaryRow_ = null;
+      if (summaryRowBuilder_ != null) {
+        summaryRowBuilder_.dispose();
         summaryRowBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1296,7 +1309,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.services.GoogleAdsRow summary_row = 3;</code>
      */
     public com.google.ads.googleads.v11.services.GoogleAdsRow.Builder getSummaryRowBuilder() {
-      
+      bitField0_ |= 0x00000004;
       onChanged();
       return getSummaryRowFieldBuilder().getBuilder();
     }
@@ -1393,11 +1406,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRequestId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       requestId_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1410,8 +1421,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRequestId() {
-      
       requestId_ = getDefaultInstance().getRequestId();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1426,12 +1437,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRequestIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       requestId_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }

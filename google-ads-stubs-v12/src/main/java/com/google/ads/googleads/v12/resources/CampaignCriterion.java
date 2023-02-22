@@ -151,7 +151,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Immutable. The resource name of the campaign criterion.
@@ -201,7 +202,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CAMPAIGN_FIELD_NUMBER = 37;
-  private volatile java.lang.Object campaign_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object campaign_ = "";
   /**
    * <pre>
    * Immutable. The campaign to which the criterion belongs.
@@ -259,7 +261,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CRITERION_ID_FIELD_NUMBER = 38;
-  private long criterionId_;
+  private long criterionId_ = 0L;
   /**
    * <pre>
    * Output only. The ID of the criterion.
@@ -288,7 +290,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DISPLAY_NAME_FIELD_NUMBER = 43;
-  private volatile java.lang.Object displayName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object displayName_ = "";
   /**
    * <pre>
    * Output only. The display name of the criterion.
@@ -336,7 +339,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BID_MODIFIER_FIELD_NUMBER = 39;
-  private float bidModifier_;
+  private float bidModifier_ = 0F;
   /**
    * <pre>
    * The modifier for the bids when the criterion matches. The modifier must be
@@ -367,7 +370,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NEGATIVE_FIELD_NUMBER = 40;
-  private boolean negative_;
+  private boolean negative_ = false;
   /**
    * <pre>
    * Immutable. Whether to target (`false`) or exclude (`true`) the criterion.
@@ -394,7 +397,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TYPE_FIELD_NUMBER = 6;
-  private int type_;
+  private int type_ = 0;
   /**
    * <pre>
    * Output only. The type of the criterion.
@@ -415,13 +418,12 @@ private static final long serialVersionUID = 0L;
    * @return The type.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.CriterionTypeEnum.CriterionType getType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.CriterionTypeEnum.CriterionType result = com.google.ads.googleads.v12.enums.CriterionTypeEnum.CriterionType.valueOf(type_);
+    com.google.ads.googleads.v12.enums.CriterionTypeEnum.CriterionType result = com.google.ads.googleads.v12.enums.CriterionTypeEnum.CriterionType.forNumber(type_);
     return result == null ? com.google.ads.googleads.v12.enums.CriterionTypeEnum.CriterionType.UNRECOGNIZED : result;
   }
 
   public static final int STATUS_FIELD_NUMBER = 35;
-  private int status_;
+  private int status_ = 0;
   /**
    * <pre>
    * The status of the criterion.
@@ -442,8 +444,7 @@ private static final long serialVersionUID = 0L;
    * @return The status.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus getStatus() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus result = com.google.ads.googleads.v12.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus.valueOf(status_);
+    com.google.ads.googleads.v12.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus result = com.google.ads.googleads.v12.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus.forNumber(status_);
     return result == null ? com.google.ads.googleads.v12.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus.UNRECOGNIZED : result;
   }
 
@@ -924,6 +925,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Immutable. User List.
+   * The Similar Audiences sunset starts May 2023. Refer to
+   * https://ads-developers.googleblog.com/2022/11/announcing-deprecation-and-sunset-of.html
+   * for other options.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.UserListInfo user_list = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -936,6 +940,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Immutable. User List.
+   * The Similar Audiences sunset starts May 2023. Refer to
+   * https://ads-developers.googleblog.com/2022/11/announcing-deprecation-and-sunset-of.html
+   * for other options.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.UserListInfo user_list = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -951,6 +958,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Immutable. User List.
+   * The Similar Audiences sunset starts May 2023. Refer to
+   * https://ads-developers.googleblog.com/2022/11/announcing-deprecation-and-sunset-of.html
+   * for other options.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.UserListInfo user_list = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2484,22 +2494,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      bitField1_ = 0;
       resourceName_ = "";
-
       campaign_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       criterionId_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000002);
       displayName_ = "";
-
       bidModifier_ = 0F;
-      bitField0_ = (bitField0_ & ~0x00000004);
       negative_ = false;
-      bitField0_ = (bitField0_ & ~0x00000008);
       type_ = 0;
-
       status_ = 0;
-
       if (keywordBuilder_ != null) {
         keywordBuilder_.clear();
       }
@@ -2618,242 +2622,174 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.CampaignCriterion buildPartial() {
       com.google.ads.googleads.v12.resources.CampaignCriterion result = new com.google.ads.googleads.v12.resources.CampaignCriterion(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      if (bitField1_ != 0) { buildPartial1(result); }
+      buildPartialOneofs(result);
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.resources.CampaignCriterion result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.campaign_ = campaign_;
         to_bitField0_ |= 0x00000001;
       }
-      result.campaign_ = campaign_;
-      if (((from_bitField0_ & 0x00000002) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.criterionId_ = criterionId_;
         to_bitField0_ |= 0x00000002;
       }
-      result.displayName_ = displayName_;
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.displayName_ = displayName_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.bidModifier_ = bidModifier_;
         to_bitField0_ |= 0x00000004;
       }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000020) != 0)) {
         result.negative_ = negative_;
         to_bitField0_ |= 0x00000008;
       }
-      result.type_ = type_;
-      result.status_ = status_;
-      if (criterionCase_ == 8) {
-        if (keywordBuilder_ == null) {
-          result.criterion_ = criterion_;
-        } else {
-          result.criterion_ = keywordBuilder_.build();
-        }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.type_ = type_;
       }
-      if (criterionCase_ == 9) {
-        if (placementBuilder_ == null) {
-          result.criterion_ = criterion_;
-        } else {
-          result.criterion_ = placementBuilder_.build();
-        }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.status_ = status_;
       }
-      if (criterionCase_ == 10) {
-        if (mobileAppCategoryBuilder_ == null) {
-          result.criterion_ = criterion_;
-        } else {
-          result.criterion_ = mobileAppCategoryBuilder_.build();
-        }
-      }
-      if (criterionCase_ == 11) {
-        if (mobileApplicationBuilder_ == null) {
-          result.criterion_ = criterion_;
-        } else {
-          result.criterion_ = mobileApplicationBuilder_.build();
-        }
-      }
-      if (criterionCase_ == 12) {
-        if (locationBuilder_ == null) {
-          result.criterion_ = criterion_;
-        } else {
-          result.criterion_ = locationBuilder_.build();
-        }
-      }
-      if (criterionCase_ == 13) {
-        if (deviceBuilder_ == null) {
-          result.criterion_ = criterion_;
-        } else {
-          result.criterion_ = deviceBuilder_.build();
-        }
-      }
-      if (criterionCase_ == 15) {
-        if (adScheduleBuilder_ == null) {
-          result.criterion_ = criterion_;
-        } else {
-          result.criterion_ = adScheduleBuilder_.build();
-        }
-      }
-      if (criterionCase_ == 16) {
-        if (ageRangeBuilder_ == null) {
-          result.criterion_ = criterion_;
-        } else {
-          result.criterion_ = ageRangeBuilder_.build();
-        }
-      }
-      if (criterionCase_ == 17) {
-        if (genderBuilder_ == null) {
-          result.criterion_ = criterion_;
-        } else {
-          result.criterion_ = genderBuilder_.build();
-        }
-      }
-      if (criterionCase_ == 18) {
-        if (incomeRangeBuilder_ == null) {
-          result.criterion_ = criterion_;
-        } else {
-          result.criterion_ = incomeRangeBuilder_.build();
-        }
-      }
-      if (criterionCase_ == 19) {
-        if (parentalStatusBuilder_ == null) {
-          result.criterion_ = criterion_;
-        } else {
-          result.criterion_ = parentalStatusBuilder_.build();
-        }
-      }
-      if (criterionCase_ == 22) {
-        if (userListBuilder_ == null) {
-          result.criterion_ = criterion_;
-        } else {
-          result.criterion_ = userListBuilder_.build();
-        }
-      }
-      if (criterionCase_ == 20) {
-        if (youtubeVideoBuilder_ == null) {
-          result.criterion_ = criterion_;
-        } else {
-          result.criterion_ = youtubeVideoBuilder_.build();
-        }
-      }
-      if (criterionCase_ == 21) {
-        if (youtubeChannelBuilder_ == null) {
-          result.criterion_ = criterion_;
-        } else {
-          result.criterion_ = youtubeChannelBuilder_.build();
-        }
-      }
-      if (criterionCase_ == 23) {
-        if (proximityBuilder_ == null) {
-          result.criterion_ = criterion_;
-        } else {
-          result.criterion_ = proximityBuilder_.build();
-        }
-      }
-      if (criterionCase_ == 24) {
-        if (topicBuilder_ == null) {
-          result.criterion_ = criterion_;
-        } else {
-          result.criterion_ = topicBuilder_.build();
-        }
-      }
-      if (criterionCase_ == 25) {
-        if (listingScopeBuilder_ == null) {
-          result.criterion_ = criterion_;
-        } else {
-          result.criterion_ = listingScopeBuilder_.build();
-        }
-      }
-      if (criterionCase_ == 26) {
-        if (languageBuilder_ == null) {
-          result.criterion_ = criterion_;
-        } else {
-          result.criterion_ = languageBuilder_.build();
-        }
-      }
-      if (criterionCase_ == 27) {
-        if (ipBlockBuilder_ == null) {
-          result.criterion_ = criterion_;
-        } else {
-          result.criterion_ = ipBlockBuilder_.build();
-        }
-      }
-      if (criterionCase_ == 28) {
-        if (contentLabelBuilder_ == null) {
-          result.criterion_ = criterion_;
-        } else {
-          result.criterion_ = contentLabelBuilder_.build();
-        }
-      }
-      if (criterionCase_ == 29) {
-        if (carrierBuilder_ == null) {
-          result.criterion_ = criterion_;
-        } else {
-          result.criterion_ = carrierBuilder_.build();
-        }
-      }
-      if (criterionCase_ == 30) {
-        if (userInterestBuilder_ == null) {
-          result.criterion_ = criterion_;
-        } else {
-          result.criterion_ = userInterestBuilder_.build();
-        }
-      }
-      if (criterionCase_ == 31) {
-        if (webpageBuilder_ == null) {
-          result.criterion_ = criterion_;
-        } else {
-          result.criterion_ = webpageBuilder_.build();
-        }
-      }
-      if (criterionCase_ == 32) {
-        if (operatingSystemVersionBuilder_ == null) {
-          result.criterion_ = criterion_;
-        } else {
-          result.criterion_ = operatingSystemVersionBuilder_.build();
-        }
-      }
-      if (criterionCase_ == 33) {
-        if (mobileDeviceBuilder_ == null) {
-          result.criterion_ = criterion_;
-        } else {
-          result.criterion_ = mobileDeviceBuilder_.build();
-        }
-      }
-      if (criterionCase_ == 34) {
-        if (locationGroupBuilder_ == null) {
-          result.criterion_ = criterion_;
-        } else {
-          result.criterion_ = locationGroupBuilder_.build();
-        }
-      }
-      if (criterionCase_ == 36) {
-        if (customAffinityBuilder_ == null) {
-          result.criterion_ = criterion_;
-        } else {
-          result.criterion_ = customAffinityBuilder_.build();
-        }
-      }
-      if (criterionCase_ == 41) {
-        if (customAudienceBuilder_ == null) {
-          result.criterion_ = criterion_;
-        } else {
-          result.criterion_ = customAudienceBuilder_.build();
-        }
-      }
-      if (criterionCase_ == 42) {
-        if (combinedAudienceBuilder_ == null) {
-          result.criterion_ = criterion_;
-        } else {
-          result.criterion_ = combinedAudienceBuilder_.build();
-        }
-      }
-      if (criterionCase_ == 45) {
-        if (keywordThemeBuilder_ == null) {
-          result.criterion_ = criterion_;
-        } else {
-          result.criterion_ = keywordThemeBuilder_.build();
-        }
-      }
-      result.bitField0_ = to_bitField0_;
+      result.bitField0_ |= to_bitField0_;
+    }
+
+    private void buildPartial1(com.google.ads.googleads.v12.resources.CampaignCriterion result) {
+      int from_bitField1_ = bitField1_;
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v12.resources.CampaignCriterion result) {
       result.criterionCase_ = criterionCase_;
-      onBuilt();
-      return result;
+      result.criterion_ = this.criterion_;
+      if (criterionCase_ == 8 &&
+          keywordBuilder_ != null) {
+        result.criterion_ = keywordBuilder_.build();
+      }
+      if (criterionCase_ == 9 &&
+          placementBuilder_ != null) {
+        result.criterion_ = placementBuilder_.build();
+      }
+      if (criterionCase_ == 10 &&
+          mobileAppCategoryBuilder_ != null) {
+        result.criterion_ = mobileAppCategoryBuilder_.build();
+      }
+      if (criterionCase_ == 11 &&
+          mobileApplicationBuilder_ != null) {
+        result.criterion_ = mobileApplicationBuilder_.build();
+      }
+      if (criterionCase_ == 12 &&
+          locationBuilder_ != null) {
+        result.criterion_ = locationBuilder_.build();
+      }
+      if (criterionCase_ == 13 &&
+          deviceBuilder_ != null) {
+        result.criterion_ = deviceBuilder_.build();
+      }
+      if (criterionCase_ == 15 &&
+          adScheduleBuilder_ != null) {
+        result.criterion_ = adScheduleBuilder_.build();
+      }
+      if (criterionCase_ == 16 &&
+          ageRangeBuilder_ != null) {
+        result.criterion_ = ageRangeBuilder_.build();
+      }
+      if (criterionCase_ == 17 &&
+          genderBuilder_ != null) {
+        result.criterion_ = genderBuilder_.build();
+      }
+      if (criterionCase_ == 18 &&
+          incomeRangeBuilder_ != null) {
+        result.criterion_ = incomeRangeBuilder_.build();
+      }
+      if (criterionCase_ == 19 &&
+          parentalStatusBuilder_ != null) {
+        result.criterion_ = parentalStatusBuilder_.build();
+      }
+      if (criterionCase_ == 22 &&
+          userListBuilder_ != null) {
+        result.criterion_ = userListBuilder_.build();
+      }
+      if (criterionCase_ == 20 &&
+          youtubeVideoBuilder_ != null) {
+        result.criterion_ = youtubeVideoBuilder_.build();
+      }
+      if (criterionCase_ == 21 &&
+          youtubeChannelBuilder_ != null) {
+        result.criterion_ = youtubeChannelBuilder_.build();
+      }
+      if (criterionCase_ == 23 &&
+          proximityBuilder_ != null) {
+        result.criterion_ = proximityBuilder_.build();
+      }
+      if (criterionCase_ == 24 &&
+          topicBuilder_ != null) {
+        result.criterion_ = topicBuilder_.build();
+      }
+      if (criterionCase_ == 25 &&
+          listingScopeBuilder_ != null) {
+        result.criterion_ = listingScopeBuilder_.build();
+      }
+      if (criterionCase_ == 26 &&
+          languageBuilder_ != null) {
+        result.criterion_ = languageBuilder_.build();
+      }
+      if (criterionCase_ == 27 &&
+          ipBlockBuilder_ != null) {
+        result.criterion_ = ipBlockBuilder_.build();
+      }
+      if (criterionCase_ == 28 &&
+          contentLabelBuilder_ != null) {
+        result.criterion_ = contentLabelBuilder_.build();
+      }
+      if (criterionCase_ == 29 &&
+          carrierBuilder_ != null) {
+        result.criterion_ = carrierBuilder_.build();
+      }
+      if (criterionCase_ == 30 &&
+          userInterestBuilder_ != null) {
+        result.criterion_ = userInterestBuilder_.build();
+      }
+      if (criterionCase_ == 31 &&
+          webpageBuilder_ != null) {
+        result.criterion_ = webpageBuilder_.build();
+      }
+      if (criterionCase_ == 32 &&
+          operatingSystemVersionBuilder_ != null) {
+        result.criterion_ = operatingSystemVersionBuilder_.build();
+      }
+      if (criterionCase_ == 33 &&
+          mobileDeviceBuilder_ != null) {
+        result.criterion_ = mobileDeviceBuilder_.build();
+      }
+      if (criterionCase_ == 34 &&
+          locationGroupBuilder_ != null) {
+        result.criterion_ = locationGroupBuilder_.build();
+      }
+      if (criterionCase_ == 36 &&
+          customAffinityBuilder_ != null) {
+        result.criterion_ = customAffinityBuilder_.build();
+      }
+      if (criterionCase_ == 41 &&
+          customAudienceBuilder_ != null) {
+        result.criterion_ = customAudienceBuilder_.build();
+      }
+      if (criterionCase_ == 42 &&
+          combinedAudienceBuilder_ != null) {
+        result.criterion_ = combinedAudienceBuilder_.build();
+      }
+      if (criterionCase_ == 45 &&
+          keywordThemeBuilder_ != null) {
+        result.criterion_ = keywordThemeBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -2902,11 +2838,12 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.resources.CampaignCriterion.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasCampaign()) {
-        bitField0_ |= 0x00000001;
         campaign_ = other.campaign_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasCriterionId()) {
@@ -2914,6 +2851,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getDisplayName().isEmpty()) {
         displayName_ = other.displayName_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.hasBidModifier()) {
@@ -3081,12 +3019,12 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 48: {
               type_ = input.readEnum();
-
+              bitField0_ |= 0x00000040;
               break;
             } // case 48
             case 66: {
@@ -3273,7 +3211,7 @@ private static final long serialVersionUID = 0L;
             } // case 274
             case 280: {
               status_ = input.readEnum();
-
+              bitField0_ |= 0x00000080;
               break;
             } // case 280
             case 290: {
@@ -3285,22 +3223,22 @@ private static final long serialVersionUID = 0L;
             } // case 290
             case 298: {
               campaign_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 298
             case 304: {
               criterionId_ = input.readInt64();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 304
             case 317: {
               bidModifier_ = input.readFloat();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000010;
               break;
             } // case 317
             case 320: {
               negative_ = input.readBool();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000020;
               break;
             } // case 320
             case 330: {
@@ -3319,7 +3257,7 @@ private static final long serialVersionUID = 0L;
             } // case 338
             case 346: {
               displayName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 346
             case 362: {
@@ -3360,6 +3298,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private int bitField0_;
+    private int bitField1_;
 
     private java.lang.Object resourceName_ = "";
     /**
@@ -3420,11 +3359,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -3439,8 +3376,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -3457,12 +3394,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -3477,7 +3412,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the campaign field is set.
      */
     public boolean hasCampaign() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -3531,11 +3466,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaign(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       campaign_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -3548,8 +3481,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCampaign() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       campaign_ = getDefaultInstance().getCampaign();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -3564,12 +3497,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaignBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       campaign_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -3586,7 +3517,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCriterionId() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -3612,8 +3543,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCriterionId(long value) {
-      bitField0_ |= 0x00000002;
+      
       criterionId_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -3627,7 +3559,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCriterionId() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       criterionId_ = 0L;
       onChanged();
       return this;
@@ -3689,11 +3621,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDisplayName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       displayName_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -3707,8 +3637,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayName() {
-      
       displayName_ = getDefaultInstance().getDisplayName();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -3724,12 +3654,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDisplayNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       displayName_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -3747,7 +3675,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasBidModifier() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -3775,8 +3703,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBidModifier(float value) {
-      bitField0_ |= 0x00000004;
+      
       bidModifier_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -3791,7 +3720,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBidModifier() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000010);
       bidModifier_ = 0F;
       onChanged();
       return this;
@@ -3808,7 +3737,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasNegative() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -3832,8 +3761,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setNegative(boolean value) {
-      bitField0_ |= 0x00000008;
+      
       negative_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -3846,7 +3776,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearNegative() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000020);
       negative_ = false;
       onChanged();
       return this;
@@ -3874,8 +3804,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
-      
       type_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -3889,8 +3819,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.CriterionTypeEnum.CriterionType getType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.CriterionTypeEnum.CriterionType result = com.google.ads.googleads.v12.enums.CriterionTypeEnum.CriterionType.valueOf(type_);
+      com.google.ads.googleads.v12.enums.CriterionTypeEnum.CriterionType result = com.google.ads.googleads.v12.enums.CriterionTypeEnum.CriterionType.forNumber(type_);
       return result == null ? com.google.ads.googleads.v12.enums.CriterionTypeEnum.CriterionType.UNRECOGNIZED : result;
     }
     /**
@@ -3906,7 +3835,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000040;
       type_ = value.getNumber();
       onChanged();
       return this;
@@ -3920,7 +3849,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000040);
       type_ = 0;
       onChanged();
       return this;
@@ -3948,8 +3877,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
-      
       status_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -3963,8 +3892,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus getStatus() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus result = com.google.ads.googleads.v12.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus.valueOf(status_);
+      com.google.ads.googleads.v12.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus result = com.google.ads.googleads.v12.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus.forNumber(status_);
       return result == null ? com.google.ads.googleads.v12.enums.CampaignCriterionStatusEnum.CampaignCriterionStatus.UNRECOGNIZED : result;
     }
     /**
@@ -3980,7 +3908,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000080;
       status_ = value.getNumber();
       onChanged();
       return this;
@@ -3994,7 +3922,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000080);
       status_ = 0;
       onChanged();
       return this;
@@ -4174,7 +4102,7 @@ private static final long serialVersionUID = 0L;
         criterion_ = null;
       }
       criterionCase_ = 8;
-      onChanged();;
+      onChanged();
       return keywordBuilder_;
     }
 
@@ -4352,7 +4280,7 @@ private static final long serialVersionUID = 0L;
         criterion_ = null;
       }
       criterionCase_ = 9;
-      onChanged();;
+      onChanged();
       return placementBuilder_;
     }
 
@@ -4530,7 +4458,7 @@ private static final long serialVersionUID = 0L;
         criterion_ = null;
       }
       criterionCase_ = 10;
-      onChanged();;
+      onChanged();
       return mobileAppCategoryBuilder_;
     }
 
@@ -4708,7 +4636,7 @@ private static final long serialVersionUID = 0L;
         criterion_ = null;
       }
       criterionCase_ = 11;
-      onChanged();;
+      onChanged();
       return mobileApplicationBuilder_;
     }
 
@@ -4886,7 +4814,7 @@ private static final long serialVersionUID = 0L;
         criterion_ = null;
       }
       criterionCase_ = 12;
-      onChanged();;
+      onChanged();
       return locationBuilder_;
     }
 
@@ -5064,7 +4992,7 @@ private static final long serialVersionUID = 0L;
         criterion_ = null;
       }
       criterionCase_ = 13;
-      onChanged();;
+      onChanged();
       return deviceBuilder_;
     }
 
@@ -5242,7 +5170,7 @@ private static final long serialVersionUID = 0L;
         criterion_ = null;
       }
       criterionCase_ = 15;
-      onChanged();;
+      onChanged();
       return adScheduleBuilder_;
     }
 
@@ -5420,7 +5348,7 @@ private static final long serialVersionUID = 0L;
         criterion_ = null;
       }
       criterionCase_ = 16;
-      onChanged();;
+      onChanged();
       return ageRangeBuilder_;
     }
 
@@ -5598,7 +5526,7 @@ private static final long serialVersionUID = 0L;
         criterion_ = null;
       }
       criterionCase_ = 17;
-      onChanged();;
+      onChanged();
       return genderBuilder_;
     }
 
@@ -5776,7 +5704,7 @@ private static final long serialVersionUID = 0L;
         criterion_ = null;
       }
       criterionCase_ = 18;
-      onChanged();;
+      onChanged();
       return incomeRangeBuilder_;
     }
 
@@ -5954,7 +5882,7 @@ private static final long serialVersionUID = 0L;
         criterion_ = null;
       }
       criterionCase_ = 19;
-      onChanged();;
+      onChanged();
       return parentalStatusBuilder_;
     }
 
@@ -5963,6 +5891,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. User List.
+     * The Similar Audiences sunset starts May 2023. Refer to
+     * https://ads-developers.googleblog.com/2022/11/announcing-deprecation-and-sunset-of.html
+     * for other options.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.UserListInfo user_list = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -5975,6 +5906,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. User List.
+     * The Similar Audiences sunset starts May 2023. Refer to
+     * https://ads-developers.googleblog.com/2022/11/announcing-deprecation-and-sunset-of.html
+     * for other options.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.UserListInfo user_list = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -5997,6 +5931,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. User List.
+     * The Similar Audiences sunset starts May 2023. Refer to
+     * https://ads-developers.googleblog.com/2022/11/announcing-deprecation-and-sunset-of.html
+     * for other options.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.UserListInfo user_list = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -6017,6 +5954,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. User List.
+     * The Similar Audiences sunset starts May 2023. Refer to
+     * https://ads-developers.googleblog.com/2022/11/announcing-deprecation-and-sunset-of.html
+     * for other options.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.UserListInfo user_list = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -6035,6 +5975,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. User List.
+     * The Similar Audiences sunset starts May 2023. Refer to
+     * https://ads-developers.googleblog.com/2022/11/announcing-deprecation-and-sunset-of.html
+     * for other options.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.UserListInfo user_list = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -6062,6 +6005,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. User List.
+     * The Similar Audiences sunset starts May 2023. Refer to
+     * https://ads-developers.googleblog.com/2022/11/announcing-deprecation-and-sunset-of.html
+     * for other options.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.UserListInfo user_list = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -6085,6 +6031,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. User List.
+     * The Similar Audiences sunset starts May 2023. Refer to
+     * https://ads-developers.googleblog.com/2022/11/announcing-deprecation-and-sunset-of.html
+     * for other options.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.UserListInfo user_list = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -6095,6 +6044,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. User List.
+     * The Similar Audiences sunset starts May 2023. Refer to
+     * https://ads-developers.googleblog.com/2022/11/announcing-deprecation-and-sunset-of.html
+     * for other options.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.UserListInfo user_list = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -6113,6 +6065,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. User List.
+     * The Similar Audiences sunset starts May 2023. Refer to
+     * https://ads-developers.googleblog.com/2022/11/announcing-deprecation-and-sunset-of.html
+     * for other options.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.UserListInfo user_list = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -6132,7 +6087,7 @@ private static final long serialVersionUID = 0L;
         criterion_ = null;
       }
       criterionCase_ = 22;
-      onChanged();;
+      onChanged();
       return userListBuilder_;
     }
 
@@ -6310,7 +6265,7 @@ private static final long serialVersionUID = 0L;
         criterion_ = null;
       }
       criterionCase_ = 20;
-      onChanged();;
+      onChanged();
       return youtubeVideoBuilder_;
     }
 
@@ -6488,7 +6443,7 @@ private static final long serialVersionUID = 0L;
         criterion_ = null;
       }
       criterionCase_ = 21;
-      onChanged();;
+      onChanged();
       return youtubeChannelBuilder_;
     }
 
@@ -6666,7 +6621,7 @@ private static final long serialVersionUID = 0L;
         criterion_ = null;
       }
       criterionCase_ = 23;
-      onChanged();;
+      onChanged();
       return proximityBuilder_;
     }
 
@@ -6844,7 +6799,7 @@ private static final long serialVersionUID = 0L;
         criterion_ = null;
       }
       criterionCase_ = 24;
-      onChanged();;
+      onChanged();
       return topicBuilder_;
     }
 
@@ -7022,7 +6977,7 @@ private static final long serialVersionUID = 0L;
         criterion_ = null;
       }
       criterionCase_ = 25;
-      onChanged();;
+      onChanged();
       return listingScopeBuilder_;
     }
 
@@ -7200,7 +7155,7 @@ private static final long serialVersionUID = 0L;
         criterion_ = null;
       }
       criterionCase_ = 26;
-      onChanged();;
+      onChanged();
       return languageBuilder_;
     }
 
@@ -7378,7 +7333,7 @@ private static final long serialVersionUID = 0L;
         criterion_ = null;
       }
       criterionCase_ = 27;
-      onChanged();;
+      onChanged();
       return ipBlockBuilder_;
     }
 
@@ -7556,7 +7511,7 @@ private static final long serialVersionUID = 0L;
         criterion_ = null;
       }
       criterionCase_ = 28;
-      onChanged();;
+      onChanged();
       return contentLabelBuilder_;
     }
 
@@ -7734,7 +7689,7 @@ private static final long serialVersionUID = 0L;
         criterion_ = null;
       }
       criterionCase_ = 29;
-      onChanged();;
+      onChanged();
       return carrierBuilder_;
     }
 
@@ -7912,7 +7867,7 @@ private static final long serialVersionUID = 0L;
         criterion_ = null;
       }
       criterionCase_ = 30;
-      onChanged();;
+      onChanged();
       return userInterestBuilder_;
     }
 
@@ -8090,7 +8045,7 @@ private static final long serialVersionUID = 0L;
         criterion_ = null;
       }
       criterionCase_ = 31;
-      onChanged();;
+      onChanged();
       return webpageBuilder_;
     }
 
@@ -8268,7 +8223,7 @@ private static final long serialVersionUID = 0L;
         criterion_ = null;
       }
       criterionCase_ = 32;
-      onChanged();;
+      onChanged();
       return operatingSystemVersionBuilder_;
     }
 
@@ -8446,7 +8401,7 @@ private static final long serialVersionUID = 0L;
         criterion_ = null;
       }
       criterionCase_ = 33;
-      onChanged();;
+      onChanged();
       return mobileDeviceBuilder_;
     }
 
@@ -8624,7 +8579,7 @@ private static final long serialVersionUID = 0L;
         criterion_ = null;
       }
       criterionCase_ = 34;
-      onChanged();;
+      onChanged();
       return locationGroupBuilder_;
     }
 
@@ -8802,7 +8757,7 @@ private static final long serialVersionUID = 0L;
         criterion_ = null;
       }
       criterionCase_ = 36;
-      onChanged();;
+      onChanged();
       return customAffinityBuilder_;
     }
 
@@ -8980,7 +8935,7 @@ private static final long serialVersionUID = 0L;
         criterion_ = null;
       }
       criterionCase_ = 41;
-      onChanged();;
+      onChanged();
       return customAudienceBuilder_;
     }
 
@@ -9158,7 +9113,7 @@ private static final long serialVersionUID = 0L;
         criterion_ = null;
       }
       criterionCase_ = 42;
-      onChanged();;
+      onChanged();
       return combinedAudienceBuilder_;
     }
 
@@ -9336,7 +9291,7 @@ private static final long serialVersionUID = 0L;
         criterion_ = null;
       }
       criterionCase_ = 45;
-      onChanged();;
+      onChanged();
       return keywordThemeBuilder_;
     }
     @java.lang.Override

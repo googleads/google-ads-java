@@ -70,7 +70,10 @@ import org.threeten.bp.Duration;
  * userListServiceSettingsBuilder
  *     .mutateUserListsSettings()
  *     .setRetrySettings(
- *         userListServiceSettingsBuilder.mutateUserListsSettings().getRetrySettings().toBuilder()
+ *         userListServiceSettingsBuilder
+ *             .mutateUserListsSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
  * UserListServiceStubSettings userListServiceSettings = userListServiceSettingsBuilder.build();

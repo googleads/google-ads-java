@@ -53,8 +53,8 @@ public interface ExperimentArmOrBuilder extends
 
   /**
    * <pre>
-   * Required. The name of the experiment arm. It must have a minimum length of 1 and
-   * maximum length of 1024. It must be unique under an experiment.
+   * Required. The name of the experiment arm. It must have a minimum length of
+   * 1 and maximum length of 1024. It must be unique under an experiment.
    * </pre>
    *
    * <code>string name = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -63,8 +63,8 @@ public interface ExperimentArmOrBuilder extends
   java.lang.String getName();
   /**
    * <pre>
-   * Required. The name of the experiment arm. It must have a minimum length of 1 and
-   * maximum length of 1024. It must be unique under an experiment.
+   * Required. The name of the experiment arm. It must have a minimum length of
+   * 1 and maximum length of 1024. It must be unique under an experiment.
    * </pre>
    *
    * <code>string name = 3 [(.google.api.field_behavior) = REQUIRED];</code>

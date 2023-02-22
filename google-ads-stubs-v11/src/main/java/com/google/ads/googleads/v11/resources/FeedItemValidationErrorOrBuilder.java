@@ -9,8 +9,8 @@ public interface FeedItemValidationErrorOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Error code indicating what validation error was triggered. The description
-   * of the error can be found in the 'description' field.
+   * Output only. Error code indicating what validation error was triggered. The
+   * description of the error can be found in the 'description' field.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.errors.FeedItemValidationErrorEnum.FeedItemValidationError validation_error = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -19,8 +19,8 @@ public interface FeedItemValidationErrorOrBuilder extends
   int getValidationErrorValue();
   /**
    * <pre>
-   * Output only. Error code indicating what validation error was triggered. The description
-   * of the error can be found in the 'description' field.
+   * Output only. Error code indicating what validation error was triggered. The
+   * description of the error can be found in the 'description' field.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.errors.FeedItemValidationErrorEnum.FeedItemValidationError validation_error = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -59,9 +59,9 @@ public interface FeedItemValidationErrorOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Set of feed attributes in the feed item flagged during validation. If
-   * empty, no specific feed attributes can be associated with the error
-   * (for example, error across the entire feed item).
+   * Output only. Set of feed attributes in the feed item flagged during
+   * validation. If empty, no specific feed attributes can be associated with
+   * the error (for example, error across the entire feed item).
    * </pre>
    *
    * <code>repeated int64 feed_attribute_ids = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -70,9 +70,9 @@ public interface FeedItemValidationErrorOrBuilder extends
   java.util.List<java.lang.Long> getFeedAttributeIdsList();
   /**
    * <pre>
-   * Output only. Set of feed attributes in the feed item flagged during validation. If
-   * empty, no specific feed attributes can be associated with the error
-   * (for example, error across the entire feed item).
+   * Output only. Set of feed attributes in the feed item flagged during
+   * validation. If empty, no specific feed attributes can be associated with
+   * the error (for example, error across the entire feed item).
    * </pre>
    *
    * <code>repeated int64 feed_attribute_ids = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -81,9 +81,9 @@ public interface FeedItemValidationErrorOrBuilder extends
   int getFeedAttributeIdsCount();
   /**
    * <pre>
-   * Output only. Set of feed attributes in the feed item flagged during validation. If
-   * empty, no specific feed attributes can be associated with the error
-   * (for example, error across the entire feed item).
+   * Output only. Set of feed attributes in the feed item flagged during
+   * validation. If empty, no specific feed attributes can be associated with
+   * the error (for example, error across the entire feed item).
    * </pre>
    *
    * <code>repeated int64 feed_attribute_ids = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -94,10 +94,10 @@ public interface FeedItemValidationErrorOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Any extra information related to this error which is not captured by
-   * validation_error and feed_attribute_id (for example, placeholder field IDs
-   * when feed_attribute_id is not mapped). Note that extra_info is not
-   * localized.
+   * Output only. Any extra information related to this error which is not
+   * captured by validation_error and feed_attribute_id (for example,
+   * placeholder field IDs when feed_attribute_id is not mapped). Note that
+   * extra_info is not localized.
    * </pre>
    *
    * <code>optional string extra_info = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -106,10 +106,10 @@ public interface FeedItemValidationErrorOrBuilder extends
   boolean hasExtraInfo();
   /**
    * <pre>
-   * Output only. Any extra information related to this error which is not captured by
-   * validation_error and feed_attribute_id (for example, placeholder field IDs
-   * when feed_attribute_id is not mapped). Note that extra_info is not
-   * localized.
+   * Output only. Any extra information related to this error which is not
+   * captured by validation_error and feed_attribute_id (for example,
+   * placeholder field IDs when feed_attribute_id is not mapped). Note that
+   * extra_info is not localized.
    * </pre>
    *
    * <code>optional string extra_info = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -118,10 +118,10 @@ public interface FeedItemValidationErrorOrBuilder extends
   java.lang.String getExtraInfo();
   /**
    * <pre>
-   * Output only. Any extra information related to this error which is not captured by
-   * validation_error and feed_attribute_id (for example, placeholder field IDs
-   * when feed_attribute_id is not mapped). Note that extra_info is not
-   * localized.
+   * Output only. Any extra information related to this error which is not
+   * captured by validation_error and feed_attribute_id (for example,
+   * placeholder field IDs when feed_attribute_id is not mapped). Note that
+   * extra_info is not localized.
    * </pre>
    *
    * <code>optional string extra_info = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

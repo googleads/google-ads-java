@@ -43,8 +43,8 @@ public interface AssetSetOrBuilder extends
 
   /**
    * <pre>
-   * Required. Name of the asset set. Required. It must have a minimum length of 1 and
-   * maximum length of 128.
+   * Required. Name of the asset set. Required. It must have a minimum length of
+   * 1 and maximum length of 128.
    * </pre>
    *
    * <code>string name = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -53,8 +53,8 @@ public interface AssetSetOrBuilder extends
   java.lang.String getName();
   /**
    * <pre>
-   * Required. Name of the asset set. Required. It must have a minimum length of 1 and
-   * maximum length of 128.
+   * Required. Name of the asset set. Required. It must have a minimum length of
+   * 1 and maximum length of 128.
    * </pre>
    *
    * <code>string name = 2 [(.google.api.field_behavior) = REQUIRED];</code>

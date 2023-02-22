@@ -53,7 +53,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int KEYWORD_TEXT_FIELD_NUMBER = 1;
-  private volatile java.lang.Object keywordText_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object keywordText_ = "";
   /**
    * <pre>
    * The original keyword text.
@@ -99,7 +100,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SUGGESTED_KEYWORD_TEXT_FIELD_NUMBER = 2;
-  private volatile java.lang.Object suggestedKeywordText_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object suggestedKeywordText_ = "";
   /**
    * <pre>
    * The normalized version of keyword_text for BROAD/EXACT/PHRASE suggestions.
@@ -145,7 +147,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SUGGESTED_MATCH_TYPE_FIELD_NUMBER = 3;
-  private int suggestedMatchType_;
+  private int suggestedMatchType_ = 0;
   /**
    * <pre>
    * The suggested keyword match type.
@@ -166,13 +168,13 @@ private static final long serialVersionUID = 0L;
    * @return The suggestedMatchType.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.KeywordMatchTypeEnum.KeywordMatchType getSuggestedMatchType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.KeywordMatchTypeEnum.KeywordMatchType result = com.google.ads.googleads.v11.enums.KeywordMatchTypeEnum.KeywordMatchType.valueOf(suggestedMatchType_);
+    com.google.ads.googleads.v11.enums.KeywordMatchTypeEnum.KeywordMatchType result = com.google.ads.googleads.v11.enums.KeywordMatchTypeEnum.KeywordMatchType.forNumber(suggestedMatchType_);
     return result == null ? com.google.ads.googleads.v11.enums.KeywordMatchTypeEnum.KeywordMatchType.UNRECOGNIZED : result;
   }
 
   public static final int SUGGESTED_AD_GROUP_FIELD_NUMBER = 4;
-  private volatile java.lang.Object suggestedAdGroup_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object suggestedAdGroup_ = "";
   /**
    * <pre>
    * The suggested AdGroup for the keyword.
@@ -220,7 +222,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SUGGESTED_CAMPAIGN_FIELD_NUMBER = 5;
-  private volatile java.lang.Object suggestedCampaign_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object suggestedCampaign_ = "";
   /**
    * <pre>
    * The suggested Campaign for the keyword.
@@ -498,16 +501,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       keywordText_ = "";
-
       suggestedKeywordText_ = "";
-
       suggestedMatchType_ = 0;
-
       suggestedAdGroup_ = "";
-
       suggestedCampaign_ = "";
-
       return this;
     }
 
@@ -534,13 +533,28 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.AdGroupKeywordSuggestion buildPartial() {
       com.google.ads.googleads.v11.services.AdGroupKeywordSuggestion result = new com.google.ads.googleads.v11.services.AdGroupKeywordSuggestion(this);
-      result.keywordText_ = keywordText_;
-      result.suggestedKeywordText_ = suggestedKeywordText_;
-      result.suggestedMatchType_ = suggestedMatchType_;
-      result.suggestedAdGroup_ = suggestedAdGroup_;
-      result.suggestedCampaign_ = suggestedCampaign_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.AdGroupKeywordSuggestion result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.keywordText_ = keywordText_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.suggestedKeywordText_ = suggestedKeywordText_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.suggestedMatchType_ = suggestedMatchType_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.suggestedAdGroup_ = suggestedAdGroup_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.suggestedCampaign_ = suggestedCampaign_;
+      }
     }
 
     @java.lang.Override
@@ -589,10 +603,12 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.services.AdGroupKeywordSuggestion.getDefaultInstance()) return this;
       if (!other.getKeywordText().isEmpty()) {
         keywordText_ = other.keywordText_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getSuggestedKeywordText().isEmpty()) {
         suggestedKeywordText_ = other.suggestedKeywordText_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.suggestedMatchType_ != 0) {
@@ -600,10 +616,12 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getSuggestedAdGroup().isEmpty()) {
         suggestedAdGroup_ = other.suggestedAdGroup_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.getSuggestedCampaign().isEmpty()) {
         suggestedCampaign_ = other.suggestedCampaign_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -634,27 +652,27 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               keywordText_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               suggestedKeywordText_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 24: {
               suggestedMatchType_ = input.readEnum();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 24
             case 34: {
               suggestedAdGroup_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 34
             case 42: {
               suggestedCampaign_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 42
             default: {
@@ -672,6 +690,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object keywordText_ = "";
     /**
@@ -726,11 +745,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKeywordText(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       keywordText_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -743,8 +760,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearKeywordText() {
-      
       keywordText_ = getDefaultInstance().getKeywordText();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -759,12 +776,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKeywordTextBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       keywordText_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -822,11 +837,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSuggestedKeywordText(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       suggestedKeywordText_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -839,8 +852,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSuggestedKeywordText() {
-      
       suggestedKeywordText_ = getDefaultInstance().getSuggestedKeywordText();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -855,12 +868,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSuggestedKeywordTextBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       suggestedKeywordText_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -887,8 +898,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSuggestedMatchTypeValue(int value) {
-      
       suggestedMatchType_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -902,8 +913,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.KeywordMatchTypeEnum.KeywordMatchType getSuggestedMatchType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.KeywordMatchTypeEnum.KeywordMatchType result = com.google.ads.googleads.v11.enums.KeywordMatchTypeEnum.KeywordMatchType.valueOf(suggestedMatchType_);
+      com.google.ads.googleads.v11.enums.KeywordMatchTypeEnum.KeywordMatchType result = com.google.ads.googleads.v11.enums.KeywordMatchTypeEnum.KeywordMatchType.forNumber(suggestedMatchType_);
       return result == null ? com.google.ads.googleads.v11.enums.KeywordMatchTypeEnum.KeywordMatchType.UNRECOGNIZED : result;
     }
     /**
@@ -919,7 +929,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       suggestedMatchType_ = value.getNumber();
       onChanged();
       return this;
@@ -933,7 +943,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSuggestedMatchType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       suggestedMatchType_ = 0;
       onChanged();
       return this;
@@ -995,11 +1005,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSuggestedAdGroup(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       suggestedAdGroup_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1013,8 +1021,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSuggestedAdGroup() {
-      
       suggestedAdGroup_ = getDefaultInstance().getSuggestedAdGroup();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1030,12 +1038,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSuggestedAdGroupBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       suggestedAdGroup_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1096,11 +1102,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSuggestedCampaign(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       suggestedCampaign_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1114,8 +1118,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSuggestedCampaign() {
-      
       suggestedCampaign_ = getDefaultInstance().getSuggestedCampaign();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1131,12 +1135,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSuggestedCampaignBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       suggestedCampaign_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }

@@ -52,7 +52,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int QUERY_TEXT_FIELD_NUMBER = 1;
-  private volatile java.lang.Object queryText_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object queryText_ = "";
   /**
    * <pre>
    * The query text of a keyword theme that will be used to map to similar
@@ -100,7 +101,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int COUNTRY_CODE_FIELD_NUMBER = 2;
-  private volatile java.lang.Object countryCode_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object countryCode_ = "";
   /**
    * <pre>
    * Upper-case, two-letter country code as defined by ISO-3166. This for
@@ -148,7 +150,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LANGUAGE_CODE_FIELD_NUMBER = 3;
-  private volatile java.lang.Object languageCode_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object languageCode_ = "";
   /**
    * <pre>
    * The two letter language code for get corresponding keyword theme for
@@ -407,12 +410,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       queryText_ = "";
-
       countryCode_ = "";
-
       languageCode_ = "";
-
       return this;
     }
 
@@ -439,11 +440,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.SuggestKeywordThemeConstantsRequest buildPartial() {
       com.google.ads.googleads.v12.services.SuggestKeywordThemeConstantsRequest result = new com.google.ads.googleads.v12.services.SuggestKeywordThemeConstantsRequest(this);
-      result.queryText_ = queryText_;
-      result.countryCode_ = countryCode_;
-      result.languageCode_ = languageCode_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.SuggestKeywordThemeConstantsRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.queryText_ = queryText_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.countryCode_ = countryCode_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.languageCode_ = languageCode_;
+      }
     }
 
     @java.lang.Override
@@ -492,14 +504,17 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.services.SuggestKeywordThemeConstantsRequest.getDefaultInstance()) return this;
       if (!other.getQueryText().isEmpty()) {
         queryText_ = other.queryText_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getCountryCode().isEmpty()) {
         countryCode_ = other.countryCode_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getLanguageCode().isEmpty()) {
         languageCode_ = other.languageCode_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -530,17 +545,17 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               queryText_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               countryCode_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
               languageCode_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             default: {
@@ -558,6 +573,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object queryText_ = "";
     /**
@@ -615,11 +631,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setQueryText(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       queryText_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -633,8 +647,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearQueryText() {
-      
       queryText_ = getDefaultInstance().getQueryText();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -650,12 +664,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setQueryTextBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       queryText_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -716,11 +728,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCountryCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       countryCode_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -734,8 +744,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCountryCode() {
-      
       countryCode_ = getDefaultInstance().getCountryCode();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -751,12 +761,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCountryCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       countryCode_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -817,11 +825,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLanguageCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       languageCode_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -835,8 +841,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLanguageCode() {
-      
       languageCode_ = getDefaultInstance().getLanguageCode();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -852,12 +858,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLanguageCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       languageCode_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }

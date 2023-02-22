@@ -82,7 +82,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.services.OnTargetAudienceMetricsOrBuilder getOnTargetAudienceMetricsOrBuilder() {
-    return getOnTargetAudienceMetrics();
+    return onTargetAudienceMetrics_ == null ? com.google.ads.googleads.v12.services.OnTargetAudienceMetrics.getDefaultInstance() : onTargetAudienceMetrics_;
   }
 
   public static final int REACH_CURVE_FIELD_NUMBER = 2;
@@ -120,7 +120,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.services.ReachCurveOrBuilder getReachCurveOrBuilder() {
-    return getReachCurve();
+    return reachCurve_ == null ? com.google.ads.googleads.v12.services.ReachCurve.getDefaultInstance() : reachCurve_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -336,16 +336,15 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (onTargetAudienceMetricsBuilder_ == null) {
-        onTargetAudienceMetrics_ = null;
-      } else {
-        onTargetAudienceMetrics_ = null;
+      bitField0_ = 0;
+      onTargetAudienceMetrics_ = null;
+      if (onTargetAudienceMetricsBuilder_ != null) {
+        onTargetAudienceMetricsBuilder_.dispose();
         onTargetAudienceMetricsBuilder_ = null;
       }
-      if (reachCurveBuilder_ == null) {
-        reachCurve_ = null;
-      } else {
-        reachCurve_ = null;
+      reachCurve_ = null;
+      if (reachCurveBuilder_ != null) {
+        reachCurveBuilder_.dispose();
         reachCurveBuilder_ = null;
       }
       return this;
@@ -374,18 +373,23 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.GenerateReachForecastResponse buildPartial() {
       com.google.ads.googleads.v12.services.GenerateReachForecastResponse result = new com.google.ads.googleads.v12.services.GenerateReachForecastResponse(this);
-      if (onTargetAudienceMetricsBuilder_ == null) {
-        result.onTargetAudienceMetrics_ = onTargetAudienceMetrics_;
-      } else {
-        result.onTargetAudienceMetrics_ = onTargetAudienceMetricsBuilder_.build();
-      }
-      if (reachCurveBuilder_ == null) {
-        result.reachCurve_ = reachCurve_;
-      } else {
-        result.reachCurve_ = reachCurveBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.GenerateReachForecastResponse result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.onTargetAudienceMetrics_ = onTargetAudienceMetricsBuilder_ == null
+            ? onTargetAudienceMetrics_
+            : onTargetAudienceMetricsBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.reachCurve_ = reachCurveBuilder_ == null
+            ? reachCurve_
+            : reachCurveBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -468,14 +472,14 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getOnTargetAudienceMetricsFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               input.readMessage(
                   getReachCurveFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             default: {
@@ -493,6 +497,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private com.google.ads.googleads.v12.services.OnTargetAudienceMetrics onTargetAudienceMetrics_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -506,7 +511,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the onTargetAudienceMetrics field is set.
      */
     public boolean hasOnTargetAudienceMetrics() {
-      return onTargetAudienceMetricsBuilder_ != null || onTargetAudienceMetrics_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -536,11 +541,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         onTargetAudienceMetrics_ = value;
-        onChanged();
       } else {
         onTargetAudienceMetricsBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -554,11 +559,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.services.OnTargetAudienceMetrics.Builder builderForValue) {
       if (onTargetAudienceMetricsBuilder_ == null) {
         onTargetAudienceMetrics_ = builderForValue.build();
-        onChanged();
       } else {
         onTargetAudienceMetricsBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -570,17 +575,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeOnTargetAudienceMetrics(com.google.ads.googleads.v12.services.OnTargetAudienceMetrics value) {
       if (onTargetAudienceMetricsBuilder_ == null) {
-        if (onTargetAudienceMetrics_ != null) {
-          onTargetAudienceMetrics_ =
-            com.google.ads.googleads.v12.services.OnTargetAudienceMetrics.newBuilder(onTargetAudienceMetrics_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          onTargetAudienceMetrics_ != null &&
+          onTargetAudienceMetrics_ != com.google.ads.googleads.v12.services.OnTargetAudienceMetrics.getDefaultInstance()) {
+          getOnTargetAudienceMetricsBuilder().mergeFrom(value);
         } else {
           onTargetAudienceMetrics_ = value;
         }
-        onChanged();
       } else {
         onTargetAudienceMetricsBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -591,14 +597,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.services.OnTargetAudienceMetrics on_target_audience_metrics = 1;</code>
      */
     public Builder clearOnTargetAudienceMetrics() {
-      if (onTargetAudienceMetricsBuilder_ == null) {
-        onTargetAudienceMetrics_ = null;
-        onChanged();
-      } else {
-        onTargetAudienceMetrics_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      onTargetAudienceMetrics_ = null;
+      if (onTargetAudienceMetricsBuilder_ != null) {
+        onTargetAudienceMetricsBuilder_.dispose();
         onTargetAudienceMetricsBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -609,7 +614,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.services.OnTargetAudienceMetrics on_target_audience_metrics = 1;</code>
      */
     public com.google.ads.googleads.v12.services.OnTargetAudienceMetrics.Builder getOnTargetAudienceMetricsBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getOnTargetAudienceMetricsFieldBuilder().getBuilder();
     }
@@ -661,7 +666,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the reachCurve field is set.
      */
     public boolean hasReachCurve() {
-      return reachCurveBuilder_ != null || reachCurve_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -691,11 +696,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         reachCurve_ = value;
-        onChanged();
       } else {
         reachCurveBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -709,11 +714,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.services.ReachCurve.Builder builderForValue) {
       if (reachCurveBuilder_ == null) {
         reachCurve_ = builderForValue.build();
-        onChanged();
       } else {
         reachCurveBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -725,17 +730,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeReachCurve(com.google.ads.googleads.v12.services.ReachCurve value) {
       if (reachCurveBuilder_ == null) {
-        if (reachCurve_ != null) {
-          reachCurve_ =
-            com.google.ads.googleads.v12.services.ReachCurve.newBuilder(reachCurve_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          reachCurve_ != null &&
+          reachCurve_ != com.google.ads.googleads.v12.services.ReachCurve.getDefaultInstance()) {
+          getReachCurveBuilder().mergeFrom(value);
         } else {
           reachCurve_ = value;
         }
-        onChanged();
       } else {
         reachCurveBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -746,14 +752,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.services.ReachCurve reach_curve = 2;</code>
      */
     public Builder clearReachCurve() {
-      if (reachCurveBuilder_ == null) {
-        reachCurve_ = null;
-        onChanged();
-      } else {
-        reachCurve_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      reachCurve_ = null;
+      if (reachCurveBuilder_ != null) {
+        reachCurveBuilder_.dispose();
         reachCurveBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -764,7 +769,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.services.ReachCurve reach_curve = 2;</code>
      */
     public com.google.ads.googleads.v12.services.ReachCurve.Builder getReachCurveBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getReachCurveFieldBuilder().getBuilder();
     }

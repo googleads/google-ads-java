@@ -51,7 +51,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int URL_FIELD_NUMBER = 3;
-  private volatile java.lang.Object url_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object url_ = "";
   /**
    * <pre>
    * The URL to crawl in order to generate keyword ideas.
@@ -109,6 +110,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int KEYWORDS_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList keywords_;
   /**
    * <pre>
@@ -372,8 +374,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       url_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       keywords_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       bitField0_ = (bitField0_ & ~0x00000002);
       return this;
@@ -402,20 +404,28 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.KeywordAndUrlSeed buildPartial() {
       com.google.ads.googleads.v11.services.KeywordAndUrlSeed result = new com.google.ads.googleads.v11.services.KeywordAndUrlSeed(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        to_bitField0_ |= 0x00000001;
-      }
-      result.url_ = url_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.services.KeywordAndUrlSeed result) {
       if (((bitField0_ & 0x00000002) != 0)) {
         keywords_ = keywords_.getUnmodifiableView();
         bitField0_ = (bitField0_ & ~0x00000002);
       }
       result.keywords_ = keywords_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.KeywordAndUrlSeed result) {
+      int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.url_ = url_;
+        to_bitField0_ |= 0x00000001;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -463,8 +473,8 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v11.services.KeywordAndUrlSeed other) {
       if (other == com.google.ads.googleads.v11.services.KeywordAndUrlSeed.getDefaultInstance()) return this;
       if (other.hasUrl()) {
-        bitField0_ |= 0x00000001;
         url_ = other.url_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.keywords_.isEmpty()) {
@@ -595,11 +605,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUrl(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       url_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -612,8 +620,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUrl() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       url_ = getDefaultInstance().getUrl();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -628,12 +636,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUrlBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       url_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -705,10 +711,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKeywords(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureKeywordsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureKeywordsIsMutable();
       keywords_.set(index, value);
       onChanged();
       return this;
@@ -724,10 +728,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addKeywords(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureKeywordsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureKeywordsIsMutable();
       keywords_.add(value);
       onChanged();
       return this;
@@ -774,10 +776,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addKeywordsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureKeywordsIsMutable();
       keywords_.add(value);
       onChanged();

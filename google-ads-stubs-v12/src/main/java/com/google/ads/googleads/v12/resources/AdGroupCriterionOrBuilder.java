@@ -300,7 +300,8 @@ public interface AdGroupCriterionOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The resource names of labels attached to this ad group criterion.
+   * Output only. The resource names of labels attached to this ad group
+   * criterion.
    * </pre>
    *
    * <code>repeated string labels = 60 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -310,7 +311,8 @@ public interface AdGroupCriterionOrBuilder extends
       getLabelsList();
   /**
    * <pre>
-   * Output only. The resource names of labels attached to this ad group criterion.
+   * Output only. The resource names of labels attached to this ad group
+   * criterion.
    * </pre>
    *
    * <code>repeated string labels = 60 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -319,7 +321,8 @@ public interface AdGroupCriterionOrBuilder extends
   int getLabelsCount();
   /**
    * <pre>
-   * Output only. The resource names of labels attached to this ad group criterion.
+   * Output only. The resource names of labels attached to this ad group
+   * criterion.
    * </pre>
    *
    * <code>repeated string labels = 60 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -329,7 +332,8 @@ public interface AdGroupCriterionOrBuilder extends
   java.lang.String getLabels(int index);
   /**
    * <pre>
-   * Output only. The resource names of labels attached to this ad group criterion.
+   * Output only. The resource names of labels attached to this ad group
+   * criterion.
    * </pre>
    *
    * <code>repeated string labels = 60 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -461,7 +465,8 @@ public interface AdGroupCriterionOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The effective CPM (cost-per-thousand viewable impressions) bid.
+   * Output only. The effective CPM (cost-per-thousand viewable impressions)
+   * bid.
    * </pre>
    *
    * <code>optional int64 effective_cpm_bid_micros = 67 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -470,7 +475,8 @@ public interface AdGroupCriterionOrBuilder extends
   boolean hasEffectiveCpmBidMicros();
   /**
    * <pre>
-   * Output only. The effective CPM (cost-per-thousand viewable impressions) bid.
+   * Output only. The effective CPM (cost-per-thousand viewable impressions)
+   * bid.
    * </pre>
    *
    * <code>optional int64 effective_cpm_bid_micros = 67 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1058,6 +1064,9 @@ public interface AdGroupCriterionOrBuilder extends
   /**
    * <pre>
    * Immutable. User List.
+   * The Similar Audiences sunset starts May 2023. Refer to
+   * https://ads-developers.googleblog.com/2022/11/announcing-deprecation-and-sunset-of.html
+   * for other options.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.UserListInfo user_list = 42 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1067,6 +1076,9 @@ public interface AdGroupCriterionOrBuilder extends
   /**
    * <pre>
    * Immutable. User List.
+   * The Similar Audiences sunset starts May 2023. Refer to
+   * https://ads-developers.googleblog.com/2022/11/announcing-deprecation-and-sunset-of.html
+   * for other options.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.UserListInfo user_list = 42 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1076,6 +1088,9 @@ public interface AdGroupCriterionOrBuilder extends
   /**
    * <pre>
    * Immutable. User List.
+   * The Similar Audiences sunset starts May 2023. Refer to
+   * https://ads-developers.googleblog.com/2022/11/announcing-deprecation-and-sunset-of.html
+   * for other options.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.UserListInfo user_list = 42 [(.google.api.field_behavior) = IMMUTABLE];</code>

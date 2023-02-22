@@ -49,7 +49,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CHANNEL_EXCLUSIVITY_FIELD_NUMBER = 1;
-  private int channelExclusivity_;
+  private int channelExclusivity_ = 0;
   /**
    * <pre>
    * Value of the availability.
@@ -70,8 +70,7 @@ private static final long serialVersionUID = 0L;
    * @return The channelExclusivity.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity getChannelExclusivity() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity result = com.google.ads.googleads.v11.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity.valueOf(channelExclusivity_);
+    com.google.ads.googleads.v11.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity result = com.google.ads.googleads.v11.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity.forNumber(channelExclusivity_);
     return result == null ? com.google.ads.googleads.v11.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity.UNRECOGNIZED : result;
   }
 
@@ -266,8 +265,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       channelExclusivity_ = 0;
-
       return this;
     }
 
@@ -294,9 +293,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.ProductChannelExclusivityInfo buildPartial() {
       com.google.ads.googleads.v11.common.ProductChannelExclusivityInfo result = new com.google.ads.googleads.v11.common.ProductChannelExclusivityInfo(this);
-      result.channelExclusivity_ = channelExclusivity_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.ProductChannelExclusivityInfo result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.channelExclusivity_ = channelExclusivity_;
+      }
     }
 
     @java.lang.Override
@@ -374,7 +380,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               channelExclusivity_ = input.readEnum();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             default: {
@@ -392,6 +398,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private int channelExclusivity_ = 0;
     /**
@@ -415,8 +422,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setChannelExclusivityValue(int value) {
-      
       channelExclusivity_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -430,8 +437,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity getChannelExclusivity() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity result = com.google.ads.googleads.v11.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity.valueOf(channelExclusivity_);
+      com.google.ads.googleads.v11.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity result = com.google.ads.googleads.v11.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity.forNumber(channelExclusivity_);
       return result == null ? com.google.ads.googleads.v11.enums.ProductChannelExclusivityEnum.ProductChannelExclusivity.UNRECOGNIZED : result;
     }
     /**
@@ -447,7 +453,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       channelExclusivity_ = value.getNumber();
       onChanged();
       return this;
@@ -461,7 +467,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearChannelExclusivity() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       channelExclusivity_ = 0;
       onChanged();
       return this;

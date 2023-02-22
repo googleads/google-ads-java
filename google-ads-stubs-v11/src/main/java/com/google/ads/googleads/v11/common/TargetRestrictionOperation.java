@@ -211,7 +211,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int OPERATOR_FIELD_NUMBER = 1;
-  private int operator_;
+  private int operator_ = 0;
   /**
    * <pre>
    * Type of list operation to perform.
@@ -232,8 +232,7 @@ private static final long serialVersionUID = 0L;
    * @return The operator.
    */
   @java.lang.Override public com.google.ads.googleads.v11.common.TargetRestrictionOperation.Operator getOperator() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.common.TargetRestrictionOperation.Operator result = com.google.ads.googleads.v11.common.TargetRestrictionOperation.Operator.valueOf(operator_);
+    com.google.ads.googleads.v11.common.TargetRestrictionOperation.Operator result = com.google.ads.googleads.v11.common.TargetRestrictionOperation.Operator.forNumber(operator_);
     return result == null ? com.google.ads.googleads.v11.common.TargetRestrictionOperation.Operator.UNRECOGNIZED : result;
   }
 
@@ -272,7 +271,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v11.common.TargetRestrictionOrBuilder getValueOrBuilder() {
-    return getValue();
+    return value_ == null ? com.google.ads.googleads.v11.common.TargetRestriction.getDefaultInstance() : value_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -482,12 +481,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       operator_ = 0;
-
-      if (valueBuilder_ == null) {
-        value_ = null;
-      } else {
-        value_ = null;
+      value_ = null;
+      if (valueBuilder_ != null) {
+        valueBuilder_.dispose();
         valueBuilder_ = null;
       }
       return this;
@@ -516,14 +514,21 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.TargetRestrictionOperation buildPartial() {
       com.google.ads.googleads.v11.common.TargetRestrictionOperation result = new com.google.ads.googleads.v11.common.TargetRestrictionOperation(this);
-      result.operator_ = operator_;
-      if (valueBuilder_ == null) {
-        result.value_ = value_;
-      } else {
-        result.value_ = valueBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.TargetRestrictionOperation result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.operator_ = operator_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.value_ = valueBuilder_ == null
+            ? value_
+            : valueBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -604,14 +609,14 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               operator_ = input.readEnum();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             case 18: {
               input.readMessage(
                   getValueFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             default: {
@@ -629,6 +634,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private int operator_ = 0;
     /**
@@ -652,8 +658,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOperatorValue(int value) {
-      
       operator_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -667,8 +673,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.common.TargetRestrictionOperation.Operator getOperator() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.common.TargetRestrictionOperation.Operator result = com.google.ads.googleads.v11.common.TargetRestrictionOperation.Operator.valueOf(operator_);
+      com.google.ads.googleads.v11.common.TargetRestrictionOperation.Operator result = com.google.ads.googleads.v11.common.TargetRestrictionOperation.Operator.forNumber(operator_);
       return result == null ? com.google.ads.googleads.v11.common.TargetRestrictionOperation.Operator.UNRECOGNIZED : result;
     }
     /**
@@ -684,7 +689,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       operator_ = value.getNumber();
       onChanged();
       return this;
@@ -698,7 +703,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOperator() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       operator_ = 0;
       onChanged();
       return this;
@@ -716,7 +721,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the value field is set.
      */
     public boolean hasValue() {
-      return valueBuilder_ != null || value_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -746,11 +751,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         value_ = value;
-        onChanged();
       } else {
         valueBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -764,11 +769,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.common.TargetRestriction.Builder builderForValue) {
       if (valueBuilder_ == null) {
         value_ = builderForValue.build();
-        onChanged();
       } else {
         valueBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -780,17 +785,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeValue(com.google.ads.googleads.v11.common.TargetRestriction value) {
       if (valueBuilder_ == null) {
-        if (value_ != null) {
-          value_ =
-            com.google.ads.googleads.v11.common.TargetRestriction.newBuilder(value_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          value_ != null &&
+          value_ != com.google.ads.googleads.v11.common.TargetRestriction.getDefaultInstance()) {
+          getValueBuilder().mergeFrom(value);
         } else {
           value_ = value;
         }
-        onChanged();
       } else {
         valueBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -801,14 +807,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.common.TargetRestriction value = 2;</code>
      */
     public Builder clearValue() {
-      if (valueBuilder_ == null) {
-        value_ = null;
-        onChanged();
-      } else {
-        value_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      value_ = null;
+      if (valueBuilder_ != null) {
+        valueBuilder_.dispose();
         valueBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -819,7 +824,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.common.TargetRestriction value = 2;</code>
      */
     public com.google.ads.googleads.v11.common.TargetRestriction.Builder getValueBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getValueFieldBuilder().getBuilder();
     }

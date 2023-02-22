@@ -50,7 +50,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PAGE_URL_FIELD_NUMBER = 1;
-  private volatile java.lang.Object pageUrl_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object pageUrl_ = "";
   /**
    * <pre>
    * Required. The webpage that advertisers want to target.
@@ -96,6 +97,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LABELS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList labels_;
   /**
    * <pre>
@@ -354,10 +356,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       pageUrl_ = "";
-
       labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -384,15 +386,25 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.PageFeedAsset buildPartial() {
       com.google.ads.googleads.v12.common.PageFeedAsset result = new com.google.ads.googleads.v12.common.PageFeedAsset(this);
-      int from_bitField0_ = bitField0_;
-      result.pageUrl_ = pageUrl_;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        labels_ = labels_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.labels_ = labels_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.common.PageFeedAsset result) {
+      if (((bitField0_ & 0x00000002) != 0)) {
+        labels_ = labels_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000002);
+      }
+      result.labels_ = labels_;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.PageFeedAsset result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.pageUrl_ = pageUrl_;
+      }
     }
 
     @java.lang.Override
@@ -441,12 +453,13 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.common.PageFeedAsset.getDefaultInstance()) return this;
       if (!other.getPageUrl().isEmpty()) {
         pageUrl_ = other.pageUrl_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.labels_.isEmpty()) {
         if (labels_.isEmpty()) {
           labels_ = other.labels_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           ensureLabelsIsMutable();
           labels_.addAll(other.labels_);
@@ -481,7 +494,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               pageUrl_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
@@ -560,11 +573,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPageUrl(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       pageUrl_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -577,8 +588,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPageUrl() {
-      
       pageUrl_ = getDefaultInstance().getPageUrl();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -593,21 +604,19 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPageUrlBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       pageUrl_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
 
     private com.google.protobuf.LazyStringList labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureLabelsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         labels_ = new com.google.protobuf.LazyStringArrayList(labels_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
        }
     }
     /**
@@ -670,10 +679,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLabels(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureLabelsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureLabelsIsMutable();
       labels_.set(index, value);
       onChanged();
       return this;
@@ -689,10 +696,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addLabels(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureLabelsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureLabelsIsMutable();
       labels_.add(value);
       onChanged();
       return this;
@@ -724,7 +729,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearLabels() {
       labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -739,10 +744,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addLabelsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureLabelsIsMutable();
       labels_.add(value);
       onChanged();

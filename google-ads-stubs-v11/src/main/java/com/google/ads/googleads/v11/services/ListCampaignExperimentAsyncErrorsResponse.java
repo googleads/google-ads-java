@@ -51,6 +51,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ERRORS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.rpc.Status> errors_;
   /**
    * <pre>
@@ -111,7 +112,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
-  private volatile java.lang.Object nextPageToken_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object nextPageToken_ = "";
   /**
    * <pre>
    * Pagination token used to retrieve the next page of results.
@@ -367,6 +369,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (errorsBuilder_ == null) {
         errors_ = java.util.Collections.emptyList();
       } else {
@@ -375,7 +378,6 @@ private static final long serialVersionUID = 0L;
       }
       bitField0_ = (bitField0_ & ~0x00000001);
       nextPageToken_ = "";
-
       return this;
     }
 
@@ -402,7 +404,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.ListCampaignExperimentAsyncErrorsResponse buildPartial() {
       com.google.ads.googleads.v11.services.ListCampaignExperimentAsyncErrorsResponse result = new com.google.ads.googleads.v11.services.ListCampaignExperimentAsyncErrorsResponse(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.services.ListCampaignExperimentAsyncErrorsResponse result) {
       if (errorsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           errors_ = java.util.Collections.unmodifiableList(errors_);
@@ -412,9 +420,13 @@ private static final long serialVersionUID = 0L;
       } else {
         result.errors_ = errorsBuilder_.build();
       }
-      result.nextPageToken_ = nextPageToken_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.ListCampaignExperimentAsyncErrorsResponse result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.nextPageToken_ = nextPageToken_;
+      }
     }
 
     @java.lang.Override
@@ -489,6 +501,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getNextPageToken().isEmpty()) {
         nextPageToken_ = other.nextPageToken_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -532,7 +545,7 @@ private static final long serialVersionUID = 0L;
             } // case 10
             case 18: {
               nextPageToken_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             default: {
@@ -926,11 +939,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNextPageToken(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       nextPageToken_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -946,8 +957,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearNextPageToken() {
-      
       nextPageToken_ = getDefaultInstance().getNextPageToken();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -965,12 +976,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNextPageTokenBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       nextPageToken_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

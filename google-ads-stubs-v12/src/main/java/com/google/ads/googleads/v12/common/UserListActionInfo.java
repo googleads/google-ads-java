@@ -434,6 +434,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       userListActionCase_ = 0;
       userListAction_ = null;
       return this;
@@ -462,15 +463,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.UserListActionInfo buildPartial() {
       com.google.ads.googleads.v12.common.UserListActionInfo result = new com.google.ads.googleads.v12.common.UserListActionInfo(this);
-      if (userListActionCase_ == 3) {
-        result.userListAction_ = userListAction_;
-      }
-      if (userListActionCase_ == 4) {
-        result.userListAction_ = userListAction_;
-      }
-      result.userListActionCase_ = userListActionCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.UserListActionInfo result) {
+      int from_bitField0_ = bitField0_;
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v12.common.UserListActionInfo result) {
+      result.userListActionCase_ = userListActionCase_;
+      result.userListAction_ = this.userListAction_;
     }
 
     @java.lang.Override
@@ -602,6 +607,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     /**
      * <pre>
@@ -679,10 +685,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setConversionAction(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  userListActionCase_ = 3;
+      if (value == null) { throw new NullPointerException(); }
+      userListActionCase_ = 3;
       userListAction_ = value;
       onChanged();
       return this;
@@ -714,10 +718,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setConversionActionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       userListActionCase_ = 3;
       userListAction_ = value;
       onChanged();
@@ -800,10 +802,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRemarketingAction(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  userListActionCase_ = 4;
+      if (value == null) { throw new NullPointerException(); }
+      userListActionCase_ = 4;
       userListAction_ = value;
       onChanged();
       return this;
@@ -835,10 +835,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRemarketingActionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       userListActionCase_ = 4;
       userListAction_ = value;
       onChanged();

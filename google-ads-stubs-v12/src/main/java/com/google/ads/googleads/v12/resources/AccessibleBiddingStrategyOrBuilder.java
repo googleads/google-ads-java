@@ -92,7 +92,8 @@ public interface AccessibleBiddingStrategyOrBuilder extends
 
   /**
    * <pre>
-   * Output only. descriptive_name of the Customer which owns the bidding strategy.
+   * Output only. descriptive_name of the Customer which owns the bidding
+   * strategy.
    * </pre>
    *
    * <code>string owner_descriptive_name = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -101,7 +102,8 @@ public interface AccessibleBiddingStrategyOrBuilder extends
   java.lang.String getOwnerDescriptiveName();
   /**
    * <pre>
-   * Output only. descriptive_name of the Customer which owns the bidding strategy.
+   * Output only. descriptive_name of the Customer which owns the bidding
+   * strategy.
    * </pre>
    *
    * <code>string owner_descriptive_name = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -112,8 +114,8 @@ public interface AccessibleBiddingStrategyOrBuilder extends
 
   /**
    * <pre>
-   * Output only. An automated bidding strategy to help get the most conversion value for
-   * your campaigns while spending your budget.
+   * Output only. An automated bidding strategy to help get the most
+   * conversion value for your campaigns while spending your budget.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.MaximizeConversionValue maximize_conversion_value = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -122,8 +124,8 @@ public interface AccessibleBiddingStrategyOrBuilder extends
   boolean hasMaximizeConversionValue();
   /**
    * <pre>
-   * Output only. An automated bidding strategy to help get the most conversion value for
-   * your campaigns while spending your budget.
+   * Output only. An automated bidding strategy to help get the most
+   * conversion value for your campaigns while spending your budget.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.MaximizeConversionValue maximize_conversion_value = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -132,8 +134,8 @@ public interface AccessibleBiddingStrategyOrBuilder extends
   com.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.MaximizeConversionValue getMaximizeConversionValue();
   /**
    * <pre>
-   * Output only. An automated bidding strategy to help get the most conversion value for
-   * your campaigns while spending your budget.
+   * Output only. An automated bidding strategy to help get the most
+   * conversion value for your campaigns while spending your budget.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.MaximizeConversionValue maximize_conversion_value = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -142,8 +144,8 @@ public interface AccessibleBiddingStrategyOrBuilder extends
 
   /**
    * <pre>
-   * Output only. An automated bidding strategy to help get the most conversions for your
-   * campaigns while spending your budget.
+   * Output only. An automated bidding strategy to help get the most
+   * conversions for your campaigns while spending your budget.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.MaximizeConversions maximize_conversions = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -152,8 +154,8 @@ public interface AccessibleBiddingStrategyOrBuilder extends
   boolean hasMaximizeConversions();
   /**
    * <pre>
-   * Output only. An automated bidding strategy to help get the most conversions for your
-   * campaigns while spending your budget.
+   * Output only. An automated bidding strategy to help get the most
+   * conversions for your campaigns while spending your budget.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.MaximizeConversions maximize_conversions = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -162,8 +164,8 @@ public interface AccessibleBiddingStrategyOrBuilder extends
   com.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.MaximizeConversions getMaximizeConversions();
   /**
    * <pre>
-   * Output only. An automated bidding strategy to help get the most conversions for your
-   * campaigns while spending your budget.
+   * Output only. An automated bidding strategy to help get the most
+   * conversions for your campaigns while spending your budget.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.MaximizeConversions maximize_conversions = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -172,8 +174,8 @@ public interface AccessibleBiddingStrategyOrBuilder extends
 
   /**
    * <pre>
-   * Output only. A bidding strategy that sets bids to help get as many conversions as
-   * possible at the target cost-per-acquisition (CPA) you set.
+   * Output only. A bidding strategy that sets bids to help get as many
+   * conversions as possible at the target cost-per-acquisition (CPA) you set.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.TargetCpa target_cpa = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -182,8 +184,8 @@ public interface AccessibleBiddingStrategyOrBuilder extends
   boolean hasTargetCpa();
   /**
    * <pre>
-   * Output only. A bidding strategy that sets bids to help get as many conversions as
-   * possible at the target cost-per-acquisition (CPA) you set.
+   * Output only. A bidding strategy that sets bids to help get as many
+   * conversions as possible at the target cost-per-acquisition (CPA) you set.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.TargetCpa target_cpa = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -192,8 +194,8 @@ public interface AccessibleBiddingStrategyOrBuilder extends
   com.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.TargetCpa getTargetCpa();
   /**
    * <pre>
-   * Output only. A bidding strategy that sets bids to help get as many conversions as
-   * possible at the target cost-per-acquisition (CPA) you set.
+   * Output only. A bidding strategy that sets bids to help get as many
+   * conversions as possible at the target cost-per-acquisition (CPA) you set.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.TargetCpa target_cpa = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -202,8 +204,8 @@ public interface AccessibleBiddingStrategyOrBuilder extends
 
   /**
    * <pre>
-   * Output only. A bidding strategy that automatically optimizes towards a chosen
-   * percentage of impressions.
+   * Output only. A bidding strategy that automatically optimizes towards a
+   * chosen percentage of impressions.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.TargetImpressionShare target_impression_share = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -212,8 +214,8 @@ public interface AccessibleBiddingStrategyOrBuilder extends
   boolean hasTargetImpressionShare();
   /**
    * <pre>
-   * Output only. A bidding strategy that automatically optimizes towards a chosen
-   * percentage of impressions.
+   * Output only. A bidding strategy that automatically optimizes towards a
+   * chosen percentage of impressions.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.TargetImpressionShare target_impression_share = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -222,8 +224,8 @@ public interface AccessibleBiddingStrategyOrBuilder extends
   com.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.TargetImpressionShare getTargetImpressionShare();
   /**
    * <pre>
-   * Output only. A bidding strategy that automatically optimizes towards a chosen
-   * percentage of impressions.
+   * Output only. A bidding strategy that automatically optimizes towards a
+   * chosen percentage of impressions.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.TargetImpressionShare target_impression_share = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -232,8 +234,8 @@ public interface AccessibleBiddingStrategyOrBuilder extends
 
   /**
    * <pre>
-   * Output only. A bidding strategy that helps you maximize revenue while averaging a
-   * specific target Return On Ad Spend (ROAS).
+   * Output only. A bidding strategy that helps you maximize revenue while
+   * averaging a specific target Return On Ad Spend (ROAS).
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.TargetRoas target_roas = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -242,8 +244,8 @@ public interface AccessibleBiddingStrategyOrBuilder extends
   boolean hasTargetRoas();
   /**
    * <pre>
-   * Output only. A bidding strategy that helps you maximize revenue while averaging a
-   * specific target Return On Ad Spend (ROAS).
+   * Output only. A bidding strategy that helps you maximize revenue while
+   * averaging a specific target Return On Ad Spend (ROAS).
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.TargetRoas target_roas = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -252,8 +254,8 @@ public interface AccessibleBiddingStrategyOrBuilder extends
   com.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.TargetRoas getTargetRoas();
   /**
    * <pre>
-   * Output only. A bidding strategy that helps you maximize revenue while averaging a
-   * specific target Return On Ad Spend (ROAS).
+   * Output only. A bidding strategy that helps you maximize revenue while
+   * averaging a specific target Return On Ad Spend (ROAS).
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.TargetRoas target_roas = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -262,8 +264,8 @@ public interface AccessibleBiddingStrategyOrBuilder extends
 
   /**
    * <pre>
-   * Output only. A bid strategy that sets your bids to help get as many clicks as
-   * possible within your budget.
+   * Output only. A bid strategy that sets your bids to help get as many
+   * clicks as possible within your budget.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.TargetSpend target_spend = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -272,8 +274,8 @@ public interface AccessibleBiddingStrategyOrBuilder extends
   boolean hasTargetSpend();
   /**
    * <pre>
-   * Output only. A bid strategy that sets your bids to help get as many clicks as
-   * possible within your budget.
+   * Output only. A bid strategy that sets your bids to help get as many
+   * clicks as possible within your budget.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.TargetSpend target_spend = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -282,8 +284,8 @@ public interface AccessibleBiddingStrategyOrBuilder extends
   com.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.TargetSpend getTargetSpend();
   /**
    * <pre>
-   * Output only. A bid strategy that sets your bids to help get as many clicks as
-   * possible within your budget.
+   * Output only. A bid strategy that sets your bids to help get as many
+   * clicks as possible within your budget.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.TargetSpend target_spend = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

@@ -50,7 +50,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONVERSION_CUSTOM_VARIABLE_FIELD_NUMBER = 1;
-  private volatile java.lang.Object conversionCustomVariable_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object conversionCustomVariable_ = "";
   /**
    * <pre>
    * Resource name of the custom variable associated with this conversion.
@@ -104,7 +105,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VALUE_FIELD_NUMBER = 2;
-  private volatile java.lang.Object value_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object value_ = "";
   /**
    * <pre>
    * The value string of this custom variable.
@@ -354,10 +356,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       conversionCustomVariable_ = "";
-
       value_ = "";
-
       return this;
     }
 
@@ -384,10 +385,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.CustomVariable buildPartial() {
       com.google.ads.googleads.v12.services.CustomVariable result = new com.google.ads.googleads.v12.services.CustomVariable(this);
-      result.conversionCustomVariable_ = conversionCustomVariable_;
-      result.value_ = value_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.CustomVariable result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.conversionCustomVariable_ = conversionCustomVariable_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.value_ = value_;
+      }
     }
 
     @java.lang.Override
@@ -436,10 +446,12 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.services.CustomVariable.getDefaultInstance()) return this;
       if (!other.getConversionCustomVariable().isEmpty()) {
         conversionCustomVariable_ = other.conversionCustomVariable_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getValue().isEmpty()) {
         value_ = other.value_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -470,12 +482,12 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               conversionCustomVariable_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               value_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             default: {
@@ -493,6 +505,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object conversionCustomVariable_ = "";
     /**
@@ -559,11 +572,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setConversionCustomVariable(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       conversionCustomVariable_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -580,8 +591,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConversionCustomVariable() {
-      
       conversionCustomVariable_ = getDefaultInstance().getConversionCustomVariable();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -600,12 +611,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setConversionCustomVariableBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       conversionCustomVariable_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -669,11 +678,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setValue(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       value_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -688,8 +695,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearValue() {
-      
       value_ = getDefaultInstance().getValue();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -706,12 +713,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setValueBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       value_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

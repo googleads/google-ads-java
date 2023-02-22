@@ -5,7 +5,8 @@ package com.google.ads.googleads.v11.services;
 
 /**
  * <pre>
- * Response message for [KeywordPlanService.GenerateForecastMetrics][google.ads.googleads.v11.services.KeywordPlanService.GenerateForecastMetrics].
+ * Response message for
+ * [KeywordPlanService.GenerateForecastMetrics][google.ads.googleads.v11.services.KeywordPlanService.GenerateForecastMetrics].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v11.services.GenerateForecastMetricsResponse}
@@ -51,6 +52,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CAMPAIGN_FORECASTS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.services.KeywordPlanCampaignForecast> campaignForecasts_;
   /**
    * <pre>
@@ -116,6 +118,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AD_GROUP_FORECASTS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.services.KeywordPlanAdGroupForecast> adGroupForecasts_;
   /**
    * <pre>
@@ -176,6 +179,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int KEYWORD_FORECASTS_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.services.KeywordPlanKeywordForecast> keywordForecasts_;
   /**
    * <pre>
@@ -420,7 +424,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Response message for [KeywordPlanService.GenerateForecastMetrics][google.ads.googleads.v11.services.KeywordPlanService.GenerateForecastMetrics].
+   * Response message for
+   * [KeywordPlanService.GenerateForecastMetrics][google.ads.googleads.v11.services.KeywordPlanService.GenerateForecastMetrics].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v11.services.GenerateForecastMetricsResponse}
@@ -455,6 +460,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (campaignForecastsBuilder_ == null) {
         campaignForecasts_ = java.util.Collections.emptyList();
       } else {
@@ -502,7 +508,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.GenerateForecastMetricsResponse buildPartial() {
       com.google.ads.googleads.v11.services.GenerateForecastMetricsResponse result = new com.google.ads.googleads.v11.services.GenerateForecastMetricsResponse(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.services.GenerateForecastMetricsResponse result) {
       if (campaignForecastsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           campaignForecasts_ = java.util.Collections.unmodifiableList(campaignForecasts_);
@@ -530,8 +542,10 @@ private static final long serialVersionUID = 0L;
       } else {
         result.keywordForecasts_ = keywordForecastsBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.GenerateForecastMetricsResponse result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override

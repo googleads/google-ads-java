@@ -50,7 +50,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int START_DATE_FIELD_NUMBER = 1;
-  private volatile java.lang.Object startDate_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object startDate_ = "";
   /**
    * <pre>
    * Start date in the YYYY-MM-DD format.
@@ -96,7 +97,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int END_DATE_FIELD_NUMBER = 2;
-  private volatile java.lang.Object endDate_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object endDate_ = "";
   /**
    * <pre>
    * End date in the YYYY-MM-DD format.
@@ -342,10 +344,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       startDate_ = "";
-
       endDate_ = "";
-
       return this;
     }
 
@@ -372,10 +373,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.HotelCheckInDateRangeInfo buildPartial() {
       com.google.ads.googleads.v11.common.HotelCheckInDateRangeInfo result = new com.google.ads.googleads.v11.common.HotelCheckInDateRangeInfo(this);
-      result.startDate_ = startDate_;
-      result.endDate_ = endDate_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.HotelCheckInDateRangeInfo result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.startDate_ = startDate_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.endDate_ = endDate_;
+      }
     }
 
     @java.lang.Override
@@ -424,10 +434,12 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.common.HotelCheckInDateRangeInfo.getDefaultInstance()) return this;
       if (!other.getStartDate().isEmpty()) {
         startDate_ = other.startDate_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getEndDate().isEmpty()) {
         endDate_ = other.endDate_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -458,12 +470,12 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               startDate_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               endDate_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             default: {
@@ -481,6 +493,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object startDate_ = "";
     /**
@@ -535,11 +548,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStartDate(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       startDate_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -552,8 +563,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStartDate() {
-      
       startDate_ = getDefaultInstance().getStartDate();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -568,12 +579,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStartDateBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       startDate_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -631,11 +640,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEndDate(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       endDate_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -648,8 +655,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEndDate() {
-      
       endDate_ = getDefaultInstance().getEndDate();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -664,12 +671,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEndDateBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       endDate_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

@@ -5,7 +5,8 @@ package com.google.ads.googleads.v11.services;
 
 /**
  * <pre>
- * Request message for [BatchJobService.ListBatchJobResults][google.ads.googleads.v11.services.BatchJobService.ListBatchJobResults].
+ * Request message for
+ * [BatchJobService.ListBatchJobResults][google.ads.googleads.v11.services.BatchJobService.ListBatchJobResults].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v11.services.ListBatchJobResultsRequest}
@@ -51,10 +52,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
-   * Required. The resource name of the batch job whose results are being listed.
+   * Required. The resource name of the batch job whose results are being
+   * listed.
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
@@ -75,7 +78,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. The resource name of the batch job whose results are being listed.
+   * Required. The resource name of the batch job whose results are being
+   * listed.
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
@@ -97,7 +101,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PAGE_TOKEN_FIELD_NUMBER = 2;
-  private volatile java.lang.Object pageToken_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object pageToken_ = "";
   /**
    * <pre>
    * Token of the page to retrieve. If not specified, the first
@@ -149,7 +154,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PAGE_SIZE_FIELD_NUMBER = 3;
-  private int pageSize_;
+  private int pageSize_ = 0;
   /**
    * <pre>
    * Number of elements to retrieve in a single page.
@@ -166,7 +171,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESPONSE_CONTENT_TYPE_FIELD_NUMBER = 4;
-  private int responseContentType_;
+  private int responseContentType_ = 0;
   /**
    * <pre>
    * The response content type setting. Determines whether the mutable resource
@@ -189,8 +194,7 @@ private static final long serialVersionUID = 0L;
    * @return The responseContentType.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.ResponseContentTypeEnum.ResponseContentType getResponseContentType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.ResponseContentTypeEnum.ResponseContentType result = com.google.ads.googleads.v11.enums.ResponseContentTypeEnum.ResponseContentType.valueOf(responseContentType_);
+    com.google.ads.googleads.v11.enums.ResponseContentTypeEnum.ResponseContentType result = com.google.ads.googleads.v11.enums.ResponseContentTypeEnum.ResponseContentType.forNumber(responseContentType_);
     return result == null ? com.google.ads.googleads.v11.enums.ResponseContentTypeEnum.ResponseContentType.UNRECOGNIZED : result;
   }
 
@@ -381,7 +385,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Request message for [BatchJobService.ListBatchJobResults][google.ads.googleads.v11.services.BatchJobService.ListBatchJobResults].
+   * Request message for
+   * [BatchJobService.ListBatchJobResults][google.ads.googleads.v11.services.BatchJobService.ListBatchJobResults].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v11.services.ListBatchJobResultsRequest}
@@ -416,14 +421,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       pageToken_ = "";
-
       pageSize_ = 0;
-
       responseContentType_ = 0;
-
       return this;
     }
 
@@ -450,12 +452,25 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.ListBatchJobResultsRequest buildPartial() {
       com.google.ads.googleads.v11.services.ListBatchJobResultsRequest result = new com.google.ads.googleads.v11.services.ListBatchJobResultsRequest(this);
-      result.resourceName_ = resourceName_;
-      result.pageToken_ = pageToken_;
-      result.pageSize_ = pageSize_;
-      result.responseContentType_ = responseContentType_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.ListBatchJobResultsRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.pageToken_ = pageToken_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.pageSize_ = pageSize_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.responseContentType_ = responseContentType_;
+      }
     }
 
     @java.lang.Override
@@ -504,10 +519,12 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.services.ListBatchJobResultsRequest.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getPageToken().isEmpty()) {
         pageToken_ = other.pageToken_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.getPageSize() != 0) {
@@ -544,22 +561,22 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               pageToken_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 24: {
               pageSize_ = input.readInt32();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 24
             case 32: {
               responseContentType_ = input.readEnum();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 32
             default: {
@@ -577,11 +594,13 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object resourceName_ = "";
     /**
      * <pre>
-     * Required. The resource name of the batch job whose results are being listed.
+     * Required. The resource name of the batch job whose results are being
+     * listed.
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
@@ -601,7 +620,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The resource name of the batch job whose results are being listed.
+     * Required. The resource name of the batch job whose results are being
+     * listed.
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
@@ -622,7 +642,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The resource name of the batch job whose results are being listed.
+     * Required. The resource name of the batch job whose results are being
+     * listed.
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
@@ -631,31 +652,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. The resource name of the batch job whose results are being listed.
+     * Required. The resource name of the batch job whose results are being
+     * listed.
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. The resource name of the batch job whose results are being listed.
+     * Required. The resource name of the batch job whose results are being
+     * listed.
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
@@ -664,12 +685,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -736,11 +755,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPageToken(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       pageToken_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -756,8 +773,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPageToken() {
-      
       pageToken_ = getDefaultInstance().getPageToken();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -775,12 +792,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPageTokenBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       pageToken_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -814,6 +829,7 @@ private static final long serialVersionUID = 0L;
     public Builder setPageSize(int value) {
       
       pageSize_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -828,7 +844,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPageSize() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       pageSize_ = 0;
       onChanged();
       return this;
@@ -858,8 +874,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setResponseContentTypeValue(int value) {
-      
       responseContentType_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -874,8 +890,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.ResponseContentTypeEnum.ResponseContentType getResponseContentType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.ResponseContentTypeEnum.ResponseContentType result = com.google.ads.googleads.v11.enums.ResponseContentTypeEnum.ResponseContentType.valueOf(responseContentType_);
+      com.google.ads.googleads.v11.enums.ResponseContentTypeEnum.ResponseContentType result = com.google.ads.googleads.v11.enums.ResponseContentTypeEnum.ResponseContentType.forNumber(responseContentType_);
       return result == null ? com.google.ads.googleads.v11.enums.ResponseContentTypeEnum.ResponseContentType.UNRECOGNIZED : result;
     }
     /**
@@ -892,7 +907,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000008;
       responseContentType_ = value.getNumber();
       onChanged();
       return this;
@@ -907,7 +922,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResponseContentType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       responseContentType_ = 0;
       onChanged();
       return this;

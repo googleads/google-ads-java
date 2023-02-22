@@ -9,8 +9,8 @@ public interface MutateConversionCustomVariablesRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The ID of the customer whose conversion custom variables are being
-   * modified.
+   * Required. The ID of the customer whose conversion custom variables are
+   * being modified.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -19,8 +19,8 @@ public interface MutateConversionCustomVariablesRequestOrBuilder extends
   java.lang.String getCustomerId();
   /**
    * <pre>
-   * Required. The ID of the customer whose conversion custom variables are being
-   * modified.
+   * Required. The ID of the customer whose conversion custom variables are
+   * being modified.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>

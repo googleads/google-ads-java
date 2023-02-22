@@ -107,7 +107,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Immutable. The resource name of the user list.
@@ -157,7 +158,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ID_FIELD_NUMBER = 25;
-  private long id_;
+  private long id_ = 0L;
   /**
    * <pre>
    * Output only. Id of the user list.
@@ -184,12 +185,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int READ_ONLY_FIELD_NUMBER = 26;
-  private boolean readOnly_;
+  private boolean readOnly_ = false;
   /**
    * <pre>
-   * Output only. An option that indicates if a user may edit a list. Depends on the list
-   * ownership and list type. For example, external remarketing user lists are
-   * not editable.
+   * Output only. An option that indicates if a user may edit a list. Depends on
+   * the list ownership and list type. For example, external remarketing user
+   * lists are not editable.
    * This field is read-only.
    * </pre>
    *
@@ -202,9 +203,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. An option that indicates if a user may edit a list. Depends on the list
-   * ownership and list type. For example, external remarketing user lists are
-   * not editable.
+   * Output only. An option that indicates if a user may edit a list. Depends on
+   * the list ownership and list type. For example, external remarketing user
+   * lists are not editable.
    * This field is read-only.
    * </pre>
    *
@@ -217,7 +218,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 27;
-  private volatile java.lang.Object name_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
   /**
    * <pre>
    * Name of this user list. Depending on its access_reason, the user list name
@@ -278,7 +280,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTION_FIELD_NUMBER = 28;
-  private volatile java.lang.Object description_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object description_ = "";
   /**
    * <pre>
    * Description of this user list.
@@ -336,7 +339,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MEMBERSHIP_STATUS_FIELD_NUMBER = 6;
-  private int membershipStatus_;
+  private int membershipStatus_ = 0;
   /**
    * <pre>
    * Membership status of this user list. Indicates whether a user list is open
@@ -361,13 +364,13 @@ private static final long serialVersionUID = 0L;
    * @return The membershipStatus.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.UserListMembershipStatusEnum.UserListMembershipStatus getMembershipStatus() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.UserListMembershipStatusEnum.UserListMembershipStatus result = com.google.ads.googleads.v11.enums.UserListMembershipStatusEnum.UserListMembershipStatus.valueOf(membershipStatus_);
+    com.google.ads.googleads.v11.enums.UserListMembershipStatusEnum.UserListMembershipStatus result = com.google.ads.googleads.v11.enums.UserListMembershipStatusEnum.UserListMembershipStatus.forNumber(membershipStatus_);
     return result == null ? com.google.ads.googleads.v11.enums.UserListMembershipStatusEnum.UserListMembershipStatus.UNRECOGNIZED : result;
   }
 
   public static final int INTEGRATION_CODE_FIELD_NUMBER = 29;
-  private volatile java.lang.Object integrationCode_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object integrationCode_ = "";
   /**
    * <pre>
    * An ID from external system. It is used by user list sellers to correlate
@@ -428,7 +431,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MEMBERSHIP_LIFE_SPAN_FIELD_NUMBER = 30;
-  private long membershipLifeSpan_;
+  private long membershipLifeSpan_ = 0L;
   /**
    * <pre>
    * Number of days a user's cookie stays on your list since its most recent
@@ -463,11 +466,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SIZE_FOR_DISPLAY_FIELD_NUMBER = 31;
-  private long sizeForDisplay_;
+  private long sizeForDisplay_ = 0L;
   /**
    * <pre>
-   * Output only. Estimated number of users in this user list, on the Google Display Network.
-   * This value is null if the number of users has not yet been determined.
+   * Output only. Estimated number of users in this user list, on the Google
+   * Display Network. This value is null if the number of users has not yet been
+   * determined.
    * This field is read-only.
    * </pre>
    *
@@ -480,8 +484,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Estimated number of users in this user list, on the Google Display Network.
-   * This value is null if the number of users has not yet been determined.
+   * Output only. Estimated number of users in this user list, on the Google
+   * Display Network. This value is null if the number of users has not yet been
+   * determined.
    * This field is read-only.
    * </pre>
    *
@@ -494,11 +499,11 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SIZE_RANGE_FOR_DISPLAY_FIELD_NUMBER = 10;
-  private int sizeRangeForDisplay_;
+  private int sizeRangeForDisplay_ = 0;
   /**
    * <pre>
-   * Output only. Size range in terms of number of users of the UserList, on the Google
-   * Display Network.
+   * Output only. Size range in terms of number of users of the UserList, on the
+   * Google Display Network.
    * This field is read-only.
    * </pre>
    *
@@ -510,8 +515,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Size range in terms of number of users of the UserList, on the Google
-   * Display Network.
+   * Output only. Size range in terms of number of users of the UserList, on the
+   * Google Display Network.
    * This field is read-only.
    * </pre>
    *
@@ -519,17 +524,16 @@ private static final long serialVersionUID = 0L;
    * @return The sizeRangeForDisplay.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.UserListSizeRangeEnum.UserListSizeRange getSizeRangeForDisplay() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.UserListSizeRangeEnum.UserListSizeRange result = com.google.ads.googleads.v11.enums.UserListSizeRangeEnum.UserListSizeRange.valueOf(sizeRangeForDisplay_);
+    com.google.ads.googleads.v11.enums.UserListSizeRangeEnum.UserListSizeRange result = com.google.ads.googleads.v11.enums.UserListSizeRangeEnum.UserListSizeRange.forNumber(sizeRangeForDisplay_);
     return result == null ? com.google.ads.googleads.v11.enums.UserListSizeRangeEnum.UserListSizeRange.UNRECOGNIZED : result;
   }
 
   public static final int SIZE_FOR_SEARCH_FIELD_NUMBER = 32;
-  private long sizeForSearch_;
+  private long sizeForSearch_ = 0L;
   /**
    * <pre>
-   * Output only. Estimated number of users in this user list in the google.com domain.
-   * These are the users available for targeting in Search campaigns.
+   * Output only. Estimated number of users in this user list in the google.com
+   * domain. These are the users available for targeting in Search campaigns.
    * This value is null if the number of users has not yet been determined.
    * This field is read-only.
    * </pre>
@@ -543,8 +547,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Estimated number of users in this user list in the google.com domain.
-   * These are the users available for targeting in Search campaigns.
+   * Output only. Estimated number of users in this user list in the google.com
+   * domain. These are the users available for targeting in Search campaigns.
    * This value is null if the number of users has not yet been determined.
    * This field is read-only.
    * </pre>
@@ -558,10 +562,11 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SIZE_RANGE_FOR_SEARCH_FIELD_NUMBER = 12;
-  private int sizeRangeForSearch_;
+  private int sizeRangeForSearch_ = 0;
   /**
    * <pre>
-   * Output only. Size range in terms of number of users of the UserList, for Search ads.
+   * Output only. Size range in terms of number of users of the UserList, for
+   * Search ads.
    * This field is read-only.
    * </pre>
    *
@@ -573,7 +578,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Size range in terms of number of users of the UserList, for Search ads.
+   * Output only. Size range in terms of number of users of the UserList, for
+   * Search ads.
    * This field is read-only.
    * </pre>
    *
@@ -581,13 +587,12 @@ private static final long serialVersionUID = 0L;
    * @return The sizeRangeForSearch.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.UserListSizeRangeEnum.UserListSizeRange getSizeRangeForSearch() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.UserListSizeRangeEnum.UserListSizeRange result = com.google.ads.googleads.v11.enums.UserListSizeRangeEnum.UserListSizeRange.valueOf(sizeRangeForSearch_);
+    com.google.ads.googleads.v11.enums.UserListSizeRangeEnum.UserListSizeRange result = com.google.ads.googleads.v11.enums.UserListSizeRangeEnum.UserListSizeRange.forNumber(sizeRangeForSearch_);
     return result == null ? com.google.ads.googleads.v11.enums.UserListSizeRangeEnum.UserListSizeRange.UNRECOGNIZED : result;
   }
 
   public static final int TYPE_FIELD_NUMBER = 13;
-  private int type_;
+  private int type_ = 0;
   /**
    * <pre>
    * Output only. Type of this list.
@@ -610,13 +615,12 @@ private static final long serialVersionUID = 0L;
    * @return The type.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.UserListTypeEnum.UserListType getType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.UserListTypeEnum.UserListType result = com.google.ads.googleads.v11.enums.UserListTypeEnum.UserListType.valueOf(type_);
+    com.google.ads.googleads.v11.enums.UserListTypeEnum.UserListType result = com.google.ads.googleads.v11.enums.UserListTypeEnum.UserListType.forNumber(type_);
     return result == null ? com.google.ads.googleads.v11.enums.UserListTypeEnum.UserListType.UNRECOGNIZED : result;
   }
 
   public static final int CLOSING_REASON_FIELD_NUMBER = 14;
-  private int closingReason_;
+  private int closingReason_ = 0;
   /**
    * <pre>
    * Indicating the reason why this user list membership status is closed. It is
@@ -641,17 +645,16 @@ private static final long serialVersionUID = 0L;
    * @return The closingReason.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.UserListClosingReasonEnum.UserListClosingReason getClosingReason() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.UserListClosingReasonEnum.UserListClosingReason result = com.google.ads.googleads.v11.enums.UserListClosingReasonEnum.UserListClosingReason.valueOf(closingReason_);
+    com.google.ads.googleads.v11.enums.UserListClosingReasonEnum.UserListClosingReason result = com.google.ads.googleads.v11.enums.UserListClosingReasonEnum.UserListClosingReason.forNumber(closingReason_);
     return result == null ? com.google.ads.googleads.v11.enums.UserListClosingReasonEnum.UserListClosingReason.UNRECOGNIZED : result;
   }
 
   public static final int ACCESS_REASON_FIELD_NUMBER = 15;
-  private int accessReason_;
+  private int accessReason_ = 0;
   /**
    * <pre>
-   * Output only. Indicates the reason this account has been granted access to the list.
-   * The reason can be SHARED, OWNED, LICENSED or SUBSCRIBED.
+   * Output only. Indicates the reason this account has been granted access to
+   * the list. The reason can be SHARED, OWNED, LICENSED or SUBSCRIBED.
    * This field is read-only.
    * </pre>
    *
@@ -663,8 +666,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Indicates the reason this account has been granted access to the list.
-   * The reason can be SHARED, OWNED, LICENSED or SUBSCRIBED.
+   * Output only. Indicates the reason this account has been granted access to
+   * the list. The reason can be SHARED, OWNED, LICENSED or SUBSCRIBED.
    * This field is read-only.
    * </pre>
    *
@@ -672,13 +675,12 @@ private static final long serialVersionUID = 0L;
    * @return The accessReason.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.AccessReasonEnum.AccessReason getAccessReason() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.AccessReasonEnum.AccessReason result = com.google.ads.googleads.v11.enums.AccessReasonEnum.AccessReason.valueOf(accessReason_);
+    com.google.ads.googleads.v11.enums.AccessReasonEnum.AccessReason result = com.google.ads.googleads.v11.enums.AccessReasonEnum.AccessReason.forNumber(accessReason_);
     return result == null ? com.google.ads.googleads.v11.enums.AccessReasonEnum.AccessReason.UNRECOGNIZED : result;
   }
 
   public static final int ACCOUNT_USER_LIST_STATUS_FIELD_NUMBER = 16;
-  private int accountUserListStatus_;
+  private int accountUserListStatus_ = 0;
   /**
    * <pre>
    * Indicates if this share is still enabled. When a UserList is shared with
@@ -705,13 +707,12 @@ private static final long serialVersionUID = 0L;
    * @return The accountUserListStatus.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.UserListAccessStatusEnum.UserListAccessStatus getAccountUserListStatus() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.UserListAccessStatusEnum.UserListAccessStatus result = com.google.ads.googleads.v11.enums.UserListAccessStatusEnum.UserListAccessStatus.valueOf(accountUserListStatus_);
+    com.google.ads.googleads.v11.enums.UserListAccessStatusEnum.UserListAccessStatus result = com.google.ads.googleads.v11.enums.UserListAccessStatusEnum.UserListAccessStatus.forNumber(accountUserListStatus_);
     return result == null ? com.google.ads.googleads.v11.enums.UserListAccessStatusEnum.UserListAccessStatus.UNRECOGNIZED : result;
   }
 
   public static final int ELIGIBLE_FOR_SEARCH_FIELD_NUMBER = 33;
-  private boolean eligibleForSearch_;
+  private boolean eligibleForSearch_ = false;
   /**
    * <pre>
    * Indicates if this user list is eligible for Google Search Network.
@@ -738,10 +739,11 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ELIGIBLE_FOR_DISPLAY_FIELD_NUMBER = 34;
-  private boolean eligibleForDisplay_;
+  private boolean eligibleForDisplay_ = false;
   /**
    * <pre>
-   * Output only. Indicates this user list is eligible for Google Display Network.
+   * Output only. Indicates this user list is eligible for Google Display
+   * Network.
    * This field is read-only.
    * </pre>
    *
@@ -754,7 +756,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Indicates this user list is eligible for Google Display Network.
+   * Output only. Indicates this user list is eligible for Google Display
+   * Network.
    * This field is read-only.
    * </pre>
    *
@@ -767,12 +770,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MATCH_RATE_PERCENTAGE_FIELD_NUMBER = 24;
-  private int matchRatePercentage_;
+  private int matchRatePercentage_ = 0;
   /**
    * <pre>
-   * Output only. Indicates match rate for Customer Match lists. The range of this field is
-   * [0-100]. This will be null for other list types or when it's not possible
-   * to calculate the match rate.
+   * Output only. Indicates match rate for Customer Match lists. The range of
+   * this field is [0-100]. This will be null for other list types or when it's
+   * not possible to calculate the match rate.
    * This field is read-only.
    * </pre>
    *
@@ -785,9 +788,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Indicates match rate for Customer Match lists. The range of this field is
-   * [0-100]. This will be null for other list types or when it's not possible
-   * to calculate the match rate.
+   * Output only. Indicates match rate for Customer Match lists. The range of
+   * this field is [0-100]. This will be null for other list types or when it's
+   * not possible to calculate the match rate.
    * This field is read-only.
    * </pre>
    *
@@ -1542,44 +1545,26 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       id_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       readOnly_ = false;
-      bitField0_ = (bitField0_ & ~0x00000002);
       name_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       description_ = "";
-      bitField0_ = (bitField0_ & ~0x00000008);
       membershipStatus_ = 0;
-
       integrationCode_ = "";
-      bitField0_ = (bitField0_ & ~0x00000010);
       membershipLifeSpan_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000020);
       sizeForDisplay_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000040);
       sizeRangeForDisplay_ = 0;
-
       sizeForSearch_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000080);
       sizeRangeForSearch_ = 0;
-
       type_ = 0;
-
       closingReason_ = 0;
-
       accessReason_ = 0;
-
       accountUserListStatus_ = 0;
-
       eligibleForSearch_ = false;
-      bitField0_ = (bitField0_ & ~0x00000100);
       eligibleForDisplay_ = false;
-      bitField0_ = (bitField0_ & ~0x00000200);
       matchRatePercentage_ = 0;
-      bitField0_ = (bitField0_ & ~0x00000400);
       if (crmBasedUserListBuilder_ != null) {
         crmBasedUserListBuilder_.clear();
       }
@@ -1623,99 +1608,109 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.UserList buildPartial() {
       com.google.ads.googleads.v11.resources.UserList result = new com.google.ads.googleads.v11.resources.UserList(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.UserList result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.id_ = id_;
         to_bitField0_ |= 0x00000001;
       }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.readOnly_ = readOnly_;
         to_bitField0_ |= 0x00000002;
       }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.name_ = name_;
         to_bitField0_ |= 0x00000004;
       }
-      result.name_ = name_;
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.description_ = description_;
         to_bitField0_ |= 0x00000008;
       }
-      result.description_ = description_;
-      result.membershipStatus_ = membershipStatus_;
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.membershipStatus_ = membershipStatus_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.integrationCode_ = integrationCode_;
         to_bitField0_ |= 0x00000010;
       }
-      result.integrationCode_ = integrationCode_;
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000080) != 0)) {
         result.membershipLifeSpan_ = membershipLifeSpan_;
         to_bitField0_ |= 0x00000020;
       }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
+      if (((from_bitField0_ & 0x00000100) != 0)) {
         result.sizeForDisplay_ = sizeForDisplay_;
         to_bitField0_ |= 0x00000040;
       }
-      result.sizeRangeForDisplay_ = sizeRangeForDisplay_;
-      if (((from_bitField0_ & 0x00000080) != 0)) {
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.sizeRangeForDisplay_ = sizeRangeForDisplay_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
         result.sizeForSearch_ = sizeForSearch_;
         to_bitField0_ |= 0x00000080;
       }
-      result.sizeRangeForSearch_ = sizeRangeForSearch_;
-      result.type_ = type_;
-      result.closingReason_ = closingReason_;
-      result.accessReason_ = accessReason_;
-      result.accountUserListStatus_ = accountUserListStatus_;
-      if (((from_bitField0_ & 0x00000100) != 0)) {
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.sizeRangeForSearch_ = sizeRangeForSearch_;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.type_ = type_;
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.closingReason_ = closingReason_;
+      }
+      if (((from_bitField0_ & 0x00004000) != 0)) {
+        result.accessReason_ = accessReason_;
+      }
+      if (((from_bitField0_ & 0x00008000) != 0)) {
+        result.accountUserListStatus_ = accountUserListStatus_;
+      }
+      if (((from_bitField0_ & 0x00010000) != 0)) {
         result.eligibleForSearch_ = eligibleForSearch_;
         to_bitField0_ |= 0x00000100;
       }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
+      if (((from_bitField0_ & 0x00020000) != 0)) {
         result.eligibleForDisplay_ = eligibleForDisplay_;
         to_bitField0_ |= 0x00000200;
       }
-      if (((from_bitField0_ & 0x00000400) != 0)) {
+      if (((from_bitField0_ & 0x00040000) != 0)) {
         result.matchRatePercentage_ = matchRatePercentage_;
         to_bitField0_ |= 0x00000400;
       }
-      if (userListCase_ == 19) {
-        if (crmBasedUserListBuilder_ == null) {
-          result.userList_ = userList_;
-        } else {
-          result.userList_ = crmBasedUserListBuilder_.build();
-        }
-      }
-      if (userListCase_ == 20) {
-        if (similarUserListBuilder_ == null) {
-          result.userList_ = userList_;
-        } else {
-          result.userList_ = similarUserListBuilder_.build();
-        }
-      }
-      if (userListCase_ == 21) {
-        if (ruleBasedUserListBuilder_ == null) {
-          result.userList_ = userList_;
-        } else {
-          result.userList_ = ruleBasedUserListBuilder_.build();
-        }
-      }
-      if (userListCase_ == 22) {
-        if (logicalUserListBuilder_ == null) {
-          result.userList_ = userList_;
-        } else {
-          result.userList_ = logicalUserListBuilder_.build();
-        }
-      }
-      if (userListCase_ == 23) {
-        if (basicUserListBuilder_ == null) {
-          result.userList_ = userList_;
-        } else {
-          result.userList_ = basicUserListBuilder_.build();
-        }
-      }
-      result.bitField0_ = to_bitField0_;
+      result.bitField0_ |= to_bitField0_;
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v11.resources.UserList result) {
       result.userListCase_ = userListCase_;
-      onBuilt();
-      return result;
+      result.userList_ = this.userList_;
+      if (userListCase_ == 19 &&
+          crmBasedUserListBuilder_ != null) {
+        result.userList_ = crmBasedUserListBuilder_.build();
+      }
+      if (userListCase_ == 20 &&
+          similarUserListBuilder_ != null) {
+        result.userList_ = similarUserListBuilder_.build();
+      }
+      if (userListCase_ == 21 &&
+          ruleBasedUserListBuilder_ != null) {
+        result.userList_ = ruleBasedUserListBuilder_.build();
+      }
+      if (userListCase_ == 22 &&
+          logicalUserListBuilder_ != null) {
+        result.userList_ = logicalUserListBuilder_.build();
+      }
+      if (userListCase_ == 23 &&
+          basicUserListBuilder_ != null) {
+        result.userList_ = basicUserListBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -1764,6 +1759,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.resources.UserList.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasId()) {
@@ -1773,21 +1769,21 @@ private static final long serialVersionUID = 0L;
         setReadOnly(other.getReadOnly());
       }
       if (other.hasName()) {
-        bitField0_ |= 0x00000004;
         name_ = other.name_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.hasDescription()) {
-        bitField0_ |= 0x00000008;
         description_ = other.description_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (other.membershipStatus_ != 0) {
         setMembershipStatusValue(other.getMembershipStatusValue());
       }
       if (other.hasIntegrationCode()) {
-        bitField0_ |= 0x00000010;
         integrationCode_ = other.integrationCode_;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (other.hasMembershipLifeSpan()) {
@@ -1879,42 +1875,42 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 48: {
               membershipStatus_ = input.readEnum();
-
+              bitField0_ |= 0x00000020;
               break;
             } // case 48
             case 80: {
               sizeRangeForDisplay_ = input.readEnum();
-
+              bitField0_ |= 0x00000200;
               break;
             } // case 80
             case 96: {
               sizeRangeForSearch_ = input.readEnum();
-
+              bitField0_ |= 0x00000800;
               break;
             } // case 96
             case 104: {
               type_ = input.readEnum();
-
+              bitField0_ |= 0x00001000;
               break;
             } // case 104
             case 112: {
               closingReason_ = input.readEnum();
-
+              bitField0_ |= 0x00002000;
               break;
             } // case 112
             case 120: {
               accessReason_ = input.readEnum();
-
+              bitField0_ |= 0x00004000;
               break;
             } // case 120
             case 128: {
               accountUserListStatus_ = input.readEnum();
-
+              bitField0_ |= 0x00008000;
               break;
             } // case 128
             case 154: {
@@ -1954,57 +1950,57 @@ private static final long serialVersionUID = 0L;
             } // case 186
             case 192: {
               matchRatePercentage_ = input.readInt32();
-              bitField0_ |= 0x00000400;
+              bitField0_ |= 0x00040000;
               break;
             } // case 192
             case 200: {
               id_ = input.readInt64();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 200
             case 208: {
               readOnly_ = input.readBool();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 208
             case 218: {
               name_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               break;
             } // case 218
             case 226: {
               description_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000010;
               break;
             } // case 226
             case 234: {
               integrationCode_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000040;
               break;
             } // case 234
             case 240: {
               membershipLifeSpan_ = input.readInt64();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000080;
               break;
             } // case 240
             case 248: {
               sizeForDisplay_ = input.readInt64();
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000100;
               break;
             } // case 248
             case 256: {
               sizeForSearch_ = input.readInt64();
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000400;
               break;
             } // case 256
             case 264: {
               eligibleForSearch_ = input.readBool();
-              bitField0_ |= 0x00000100;
+              bitField0_ |= 0x00010000;
               break;
             } // case 264
             case 272: {
               eligibleForDisplay_ = input.readBool();
-              bitField0_ |= 0x00000200;
+              bitField0_ |= 0x00020000;
               break;
             } // case 272
             default: {
@@ -2098,11 +2094,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -2117,8 +2111,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -2135,12 +2129,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -2156,7 +2148,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -2180,8 +2172,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      bitField0_ |= 0x00000001;
+      
       id_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -2194,7 +2187,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       id_ = 0L;
       onChanged();
       return this;
@@ -2203,9 +2196,9 @@ private static final long serialVersionUID = 0L;
     private boolean readOnly_ ;
     /**
      * <pre>
-     * Output only. An option that indicates if a user may edit a list. Depends on the list
-     * ownership and list type. For example, external remarketing user lists are
-     * not editable.
+     * Output only. An option that indicates if a user may edit a list. Depends on
+     * the list ownership and list type. For example, external remarketing user
+     * lists are not editable.
      * This field is read-only.
      * </pre>
      *
@@ -2214,13 +2207,13 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasReadOnly() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
-     * Output only. An option that indicates if a user may edit a list. Depends on the list
-     * ownership and list type. For example, external remarketing user lists are
-     * not editable.
+     * Output only. An option that indicates if a user may edit a list. Depends on
+     * the list ownership and list type. For example, external remarketing user
+     * lists are not editable.
      * This field is read-only.
      * </pre>
      *
@@ -2233,9 +2226,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. An option that indicates if a user may edit a list. Depends on the list
-     * ownership and list type. For example, external remarketing user lists are
-     * not editable.
+     * Output only. An option that indicates if a user may edit a list. Depends on
+     * the list ownership and list type. For example, external remarketing user
+     * lists are not editable.
      * This field is read-only.
      * </pre>
      *
@@ -2244,16 +2237,17 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setReadOnly(boolean value) {
-      bitField0_ |= 0x00000002;
+      
       readOnly_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. An option that indicates if a user may edit a list. Depends on the list
-     * ownership and list type. For example, external remarketing user lists are
-     * not editable.
+     * Output only. An option that indicates if a user may edit a list. Depends on
+     * the list ownership and list type. For example, external remarketing user
+     * lists are not editable.
      * This field is read-only.
      * </pre>
      *
@@ -2261,7 +2255,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearReadOnly() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       readOnly_ = false;
       onChanged();
       return this;
@@ -2278,7 +2272,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the name field is set.
      */
     public boolean hasName() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -2335,11 +2329,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       name_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -2353,8 +2345,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -2370,12 +2362,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -2390,7 +2380,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the description field is set.
      */
     public boolean hasDescription() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -2444,11 +2434,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
       description_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -2461,8 +2449,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
-      bitField0_ = (bitField0_ & ~0x00000008);
       description_ = getDefaultInstance().getDescription();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -2477,12 +2465,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescriptionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       description_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -2513,8 +2499,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMembershipStatusValue(int value) {
-      
       membershipStatus_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -2530,8 +2516,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.UserListMembershipStatusEnum.UserListMembershipStatus getMembershipStatus() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.UserListMembershipStatusEnum.UserListMembershipStatus result = com.google.ads.googleads.v11.enums.UserListMembershipStatusEnum.UserListMembershipStatus.valueOf(membershipStatus_);
+      com.google.ads.googleads.v11.enums.UserListMembershipStatusEnum.UserListMembershipStatus result = com.google.ads.googleads.v11.enums.UserListMembershipStatusEnum.UserListMembershipStatus.forNumber(membershipStatus_);
       return result == null ? com.google.ads.googleads.v11.enums.UserListMembershipStatusEnum.UserListMembershipStatus.UNRECOGNIZED : result;
     }
     /**
@@ -2549,7 +2534,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000020;
       membershipStatus_ = value.getNumber();
       onChanged();
       return this;
@@ -2565,7 +2550,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMembershipStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       membershipStatus_ = 0;
       onChanged();
       return this;
@@ -2582,7 +2567,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the integrationCode field is set.
      */
     public boolean hasIntegrationCode() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -2639,11 +2624,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setIntegrationCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
+      if (value == null) { throw new NullPointerException(); }
       integrationCode_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2657,8 +2640,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIntegrationCode() {
-      bitField0_ = (bitField0_ & ~0x00000010);
       integrationCode_ = getDefaultInstance().getIntegrationCode();
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -2674,12 +2657,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setIntegrationCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000010;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       integrationCode_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2699,7 +2680,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasMembershipLifeSpan() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
      * <pre>
@@ -2731,8 +2712,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMembershipLifeSpan(long value) {
-      bitField0_ |= 0x00000020;
+      
       membershipLifeSpan_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2749,7 +2731,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMembershipLifeSpan() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000080);
       membershipLifeSpan_ = 0L;
       onChanged();
       return this;
@@ -2758,8 +2740,9 @@ private static final long serialVersionUID = 0L;
     private long sizeForDisplay_ ;
     /**
      * <pre>
-     * Output only. Estimated number of users in this user list, on the Google Display Network.
-     * This value is null if the number of users has not yet been determined.
+     * Output only. Estimated number of users in this user list, on the Google
+     * Display Network. This value is null if the number of users has not yet been
+     * determined.
      * This field is read-only.
      * </pre>
      *
@@ -2768,12 +2751,13 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasSizeForDisplay() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return ((bitField0_ & 0x00000100) != 0);
     }
     /**
      * <pre>
-     * Output only. Estimated number of users in this user list, on the Google Display Network.
-     * This value is null if the number of users has not yet been determined.
+     * Output only. Estimated number of users in this user list, on the Google
+     * Display Network. This value is null if the number of users has not yet been
+     * determined.
      * This field is read-only.
      * </pre>
      *
@@ -2786,8 +2770,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Estimated number of users in this user list, on the Google Display Network.
-     * This value is null if the number of users has not yet been determined.
+     * Output only. Estimated number of users in this user list, on the Google
+     * Display Network. This value is null if the number of users has not yet been
+     * determined.
      * This field is read-only.
      * </pre>
      *
@@ -2796,15 +2781,17 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSizeForDisplay(long value) {
-      bitField0_ |= 0x00000040;
+      
       sizeForDisplay_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Estimated number of users in this user list, on the Google Display Network.
-     * This value is null if the number of users has not yet been determined.
+     * Output only. Estimated number of users in this user list, on the Google
+     * Display Network. This value is null if the number of users has not yet been
+     * determined.
      * This field is read-only.
      * </pre>
      *
@@ -2812,7 +2799,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSizeForDisplay() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000100);
       sizeForDisplay_ = 0L;
       onChanged();
       return this;
@@ -2821,8 +2808,8 @@ private static final long serialVersionUID = 0L;
     private int sizeRangeForDisplay_ = 0;
     /**
      * <pre>
-     * Output only. Size range in terms of number of users of the UserList, on the Google
-     * Display Network.
+     * Output only. Size range in terms of number of users of the UserList, on the
+     * Google Display Network.
      * This field is read-only.
      * </pre>
      *
@@ -2834,8 +2821,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Size range in terms of number of users of the UserList, on the Google
-     * Display Network.
+     * Output only. Size range in terms of number of users of the UserList, on the
+     * Google Display Network.
      * This field is read-only.
      * </pre>
      *
@@ -2844,15 +2831,15 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSizeRangeForDisplayValue(int value) {
-      
       sizeRangeForDisplay_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Size range in terms of number of users of the UserList, on the Google
-     * Display Network.
+     * Output only. Size range in terms of number of users of the UserList, on the
+     * Google Display Network.
      * This field is read-only.
      * </pre>
      *
@@ -2861,14 +2848,13 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.UserListSizeRangeEnum.UserListSizeRange getSizeRangeForDisplay() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.UserListSizeRangeEnum.UserListSizeRange result = com.google.ads.googleads.v11.enums.UserListSizeRangeEnum.UserListSizeRange.valueOf(sizeRangeForDisplay_);
+      com.google.ads.googleads.v11.enums.UserListSizeRangeEnum.UserListSizeRange result = com.google.ads.googleads.v11.enums.UserListSizeRangeEnum.UserListSizeRange.forNumber(sizeRangeForDisplay_);
       return result == null ? com.google.ads.googleads.v11.enums.UserListSizeRangeEnum.UserListSizeRange.UNRECOGNIZED : result;
     }
     /**
      * <pre>
-     * Output only. Size range in terms of number of users of the UserList, on the Google
-     * Display Network.
+     * Output only. Size range in terms of number of users of the UserList, on the
+     * Google Display Network.
      * This field is read-only.
      * </pre>
      *
@@ -2880,15 +2866,15 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000200;
       sizeRangeForDisplay_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Size range in terms of number of users of the UserList, on the Google
-     * Display Network.
+     * Output only. Size range in terms of number of users of the UserList, on the
+     * Google Display Network.
      * This field is read-only.
      * </pre>
      *
@@ -2896,7 +2882,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSizeRangeForDisplay() {
-      
+      bitField0_ = (bitField0_ & ~0x00000200);
       sizeRangeForDisplay_ = 0;
       onChanged();
       return this;
@@ -2905,8 +2891,8 @@ private static final long serialVersionUID = 0L;
     private long sizeForSearch_ ;
     /**
      * <pre>
-     * Output only. Estimated number of users in this user list in the google.com domain.
-     * These are the users available for targeting in Search campaigns.
+     * Output only. Estimated number of users in this user list in the google.com
+     * domain. These are the users available for targeting in Search campaigns.
      * This value is null if the number of users has not yet been determined.
      * This field is read-only.
      * </pre>
@@ -2916,12 +2902,12 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasSizeForSearch() {
-      return ((bitField0_ & 0x00000080) != 0);
+      return ((bitField0_ & 0x00000400) != 0);
     }
     /**
      * <pre>
-     * Output only. Estimated number of users in this user list in the google.com domain.
-     * These are the users available for targeting in Search campaigns.
+     * Output only. Estimated number of users in this user list in the google.com
+     * domain. These are the users available for targeting in Search campaigns.
      * This value is null if the number of users has not yet been determined.
      * This field is read-only.
      * </pre>
@@ -2935,8 +2921,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Estimated number of users in this user list in the google.com domain.
-     * These are the users available for targeting in Search campaigns.
+     * Output only. Estimated number of users in this user list in the google.com
+     * domain. These are the users available for targeting in Search campaigns.
      * This value is null if the number of users has not yet been determined.
      * This field is read-only.
      * </pre>
@@ -2946,15 +2932,16 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSizeForSearch(long value) {
-      bitField0_ |= 0x00000080;
+      
       sizeForSearch_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Estimated number of users in this user list in the google.com domain.
-     * These are the users available for targeting in Search campaigns.
+     * Output only. Estimated number of users in this user list in the google.com
+     * domain. These are the users available for targeting in Search campaigns.
      * This value is null if the number of users has not yet been determined.
      * This field is read-only.
      * </pre>
@@ -2963,7 +2950,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSizeForSearch() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000400);
       sizeForSearch_ = 0L;
       onChanged();
       return this;
@@ -2972,7 +2959,8 @@ private static final long serialVersionUID = 0L;
     private int sizeRangeForSearch_ = 0;
     /**
      * <pre>
-     * Output only. Size range in terms of number of users of the UserList, for Search ads.
+     * Output only. Size range in terms of number of users of the UserList, for
+     * Search ads.
      * This field is read-only.
      * </pre>
      *
@@ -2984,7 +2972,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Size range in terms of number of users of the UserList, for Search ads.
+     * Output only. Size range in terms of number of users of the UserList, for
+     * Search ads.
      * This field is read-only.
      * </pre>
      *
@@ -2993,14 +2982,15 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSizeRangeForSearchValue(int value) {
-      
       sizeRangeForSearch_ = value;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Size range in terms of number of users of the UserList, for Search ads.
+     * Output only. Size range in terms of number of users of the UserList, for
+     * Search ads.
      * This field is read-only.
      * </pre>
      *
@@ -3009,13 +2999,13 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.UserListSizeRangeEnum.UserListSizeRange getSizeRangeForSearch() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.UserListSizeRangeEnum.UserListSizeRange result = com.google.ads.googleads.v11.enums.UserListSizeRangeEnum.UserListSizeRange.valueOf(sizeRangeForSearch_);
+      com.google.ads.googleads.v11.enums.UserListSizeRangeEnum.UserListSizeRange result = com.google.ads.googleads.v11.enums.UserListSizeRangeEnum.UserListSizeRange.forNumber(sizeRangeForSearch_);
       return result == null ? com.google.ads.googleads.v11.enums.UserListSizeRangeEnum.UserListSizeRange.UNRECOGNIZED : result;
     }
     /**
      * <pre>
-     * Output only. Size range in terms of number of users of the UserList, for Search ads.
+     * Output only. Size range in terms of number of users of the UserList, for
+     * Search ads.
      * This field is read-only.
      * </pre>
      *
@@ -3027,14 +3017,15 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000800;
       sizeRangeForSearch_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Size range in terms of number of users of the UserList, for Search ads.
+     * Output only. Size range in terms of number of users of the UserList, for
+     * Search ads.
      * This field is read-only.
      * </pre>
      *
@@ -3042,7 +3033,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSizeRangeForSearch() {
-      
+      bitField0_ = (bitField0_ & ~0x00000800);
       sizeRangeForSearch_ = 0;
       onChanged();
       return this;
@@ -3072,8 +3063,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
-      
       type_ = value;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -3088,8 +3079,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.UserListTypeEnum.UserListType getType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.UserListTypeEnum.UserListType result = com.google.ads.googleads.v11.enums.UserListTypeEnum.UserListType.valueOf(type_);
+      com.google.ads.googleads.v11.enums.UserListTypeEnum.UserListType result = com.google.ads.googleads.v11.enums.UserListTypeEnum.UserListType.forNumber(type_);
       return result == null ? com.google.ads.googleads.v11.enums.UserListTypeEnum.UserListType.UNRECOGNIZED : result;
     }
     /**
@@ -3106,7 +3096,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00001000;
       type_ = value.getNumber();
       onChanged();
       return this;
@@ -3121,7 +3111,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearType() {
-      
+      bitField0_ = (bitField0_ & ~0x00001000);
       type_ = 0;
       onChanged();
       return this;
@@ -3153,8 +3143,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setClosingReasonValue(int value) {
-      
       closingReason_ = value;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -3170,8 +3160,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.UserListClosingReasonEnum.UserListClosingReason getClosingReason() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.UserListClosingReasonEnum.UserListClosingReason result = com.google.ads.googleads.v11.enums.UserListClosingReasonEnum.UserListClosingReason.valueOf(closingReason_);
+      com.google.ads.googleads.v11.enums.UserListClosingReasonEnum.UserListClosingReason result = com.google.ads.googleads.v11.enums.UserListClosingReasonEnum.UserListClosingReason.forNumber(closingReason_);
       return result == null ? com.google.ads.googleads.v11.enums.UserListClosingReasonEnum.UserListClosingReason.UNRECOGNIZED : result;
     }
     /**
@@ -3189,7 +3178,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00002000;
       closingReason_ = value.getNumber();
       onChanged();
       return this;
@@ -3205,7 +3194,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearClosingReason() {
-      
+      bitField0_ = (bitField0_ & ~0x00002000);
       closingReason_ = 0;
       onChanged();
       return this;
@@ -3214,8 +3203,8 @@ private static final long serialVersionUID = 0L;
     private int accessReason_ = 0;
     /**
      * <pre>
-     * Output only. Indicates the reason this account has been granted access to the list.
-     * The reason can be SHARED, OWNED, LICENSED or SUBSCRIBED.
+     * Output only. Indicates the reason this account has been granted access to
+     * the list. The reason can be SHARED, OWNED, LICENSED or SUBSCRIBED.
      * This field is read-only.
      * </pre>
      *
@@ -3227,8 +3216,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Indicates the reason this account has been granted access to the list.
-     * The reason can be SHARED, OWNED, LICENSED or SUBSCRIBED.
+     * Output only. Indicates the reason this account has been granted access to
+     * the list. The reason can be SHARED, OWNED, LICENSED or SUBSCRIBED.
      * This field is read-only.
      * </pre>
      *
@@ -3237,15 +3226,15 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAccessReasonValue(int value) {
-      
       accessReason_ = value;
+      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Indicates the reason this account has been granted access to the list.
-     * The reason can be SHARED, OWNED, LICENSED or SUBSCRIBED.
+     * Output only. Indicates the reason this account has been granted access to
+     * the list. The reason can be SHARED, OWNED, LICENSED or SUBSCRIBED.
      * This field is read-only.
      * </pre>
      *
@@ -3254,14 +3243,13 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.AccessReasonEnum.AccessReason getAccessReason() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.AccessReasonEnum.AccessReason result = com.google.ads.googleads.v11.enums.AccessReasonEnum.AccessReason.valueOf(accessReason_);
+      com.google.ads.googleads.v11.enums.AccessReasonEnum.AccessReason result = com.google.ads.googleads.v11.enums.AccessReasonEnum.AccessReason.forNumber(accessReason_);
       return result == null ? com.google.ads.googleads.v11.enums.AccessReasonEnum.AccessReason.UNRECOGNIZED : result;
     }
     /**
      * <pre>
-     * Output only. Indicates the reason this account has been granted access to the list.
-     * The reason can be SHARED, OWNED, LICENSED or SUBSCRIBED.
+     * Output only. Indicates the reason this account has been granted access to
+     * the list. The reason can be SHARED, OWNED, LICENSED or SUBSCRIBED.
      * This field is read-only.
      * </pre>
      *
@@ -3273,15 +3261,15 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00004000;
       accessReason_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Indicates the reason this account has been granted access to the list.
-     * The reason can be SHARED, OWNED, LICENSED or SUBSCRIBED.
+     * Output only. Indicates the reason this account has been granted access to
+     * the list. The reason can be SHARED, OWNED, LICENSED or SUBSCRIBED.
      * This field is read-only.
      * </pre>
      *
@@ -3289,7 +3277,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAccessReason() {
-      
+      bitField0_ = (bitField0_ & ~0x00004000);
       accessReason_ = 0;
       onChanged();
       return this;
@@ -3323,8 +3311,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAccountUserListStatusValue(int value) {
-      
       accountUserListStatus_ = value;
+      bitField0_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -3341,8 +3329,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.UserListAccessStatusEnum.UserListAccessStatus getAccountUserListStatus() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.UserListAccessStatusEnum.UserListAccessStatus result = com.google.ads.googleads.v11.enums.UserListAccessStatusEnum.UserListAccessStatus.valueOf(accountUserListStatus_);
+      com.google.ads.googleads.v11.enums.UserListAccessStatusEnum.UserListAccessStatus result = com.google.ads.googleads.v11.enums.UserListAccessStatusEnum.UserListAccessStatus.forNumber(accountUserListStatus_);
       return result == null ? com.google.ads.googleads.v11.enums.UserListAccessStatusEnum.UserListAccessStatus.UNRECOGNIZED : result;
     }
     /**
@@ -3361,7 +3348,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00008000;
       accountUserListStatus_ = value.getNumber();
       onChanged();
       return this;
@@ -3378,7 +3365,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAccountUserListStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00008000);
       accountUserListStatus_ = 0;
       onChanged();
       return this;
@@ -3395,7 +3382,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasEligibleForSearch() {
-      return ((bitField0_ & 0x00000100) != 0);
+      return ((bitField0_ & 0x00010000) != 0);
     }
     /**
      * <pre>
@@ -3419,8 +3406,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEligibleForSearch(boolean value) {
-      bitField0_ |= 0x00000100;
+      
       eligibleForSearch_ = value;
+      bitField0_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -3433,7 +3421,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEligibleForSearch() {
-      bitField0_ = (bitField0_ & ~0x00000100);
+      bitField0_ = (bitField0_ & ~0x00010000);
       eligibleForSearch_ = false;
       onChanged();
       return this;
@@ -3442,7 +3430,8 @@ private static final long serialVersionUID = 0L;
     private boolean eligibleForDisplay_ ;
     /**
      * <pre>
-     * Output only. Indicates this user list is eligible for Google Display Network.
+     * Output only. Indicates this user list is eligible for Google Display
+     * Network.
      * This field is read-only.
      * </pre>
      *
@@ -3451,11 +3440,12 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasEligibleForDisplay() {
-      return ((bitField0_ & 0x00000200) != 0);
+      return ((bitField0_ & 0x00020000) != 0);
     }
     /**
      * <pre>
-     * Output only. Indicates this user list is eligible for Google Display Network.
+     * Output only. Indicates this user list is eligible for Google Display
+     * Network.
      * This field is read-only.
      * </pre>
      *
@@ -3468,7 +3458,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Indicates this user list is eligible for Google Display Network.
+     * Output only. Indicates this user list is eligible for Google Display
+     * Network.
      * This field is read-only.
      * </pre>
      *
@@ -3477,14 +3468,16 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEligibleForDisplay(boolean value) {
-      bitField0_ |= 0x00000200;
+      
       eligibleForDisplay_ = value;
+      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Indicates this user list is eligible for Google Display Network.
+     * Output only. Indicates this user list is eligible for Google Display
+     * Network.
      * This field is read-only.
      * </pre>
      *
@@ -3492,7 +3485,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEligibleForDisplay() {
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00020000);
       eligibleForDisplay_ = false;
       onChanged();
       return this;
@@ -3501,9 +3494,9 @@ private static final long serialVersionUID = 0L;
     private int matchRatePercentage_ ;
     /**
      * <pre>
-     * Output only. Indicates match rate for Customer Match lists. The range of this field is
-     * [0-100]. This will be null for other list types or when it's not possible
-     * to calculate the match rate.
+     * Output only. Indicates match rate for Customer Match lists. The range of
+     * this field is [0-100]. This will be null for other list types or when it's
+     * not possible to calculate the match rate.
      * This field is read-only.
      * </pre>
      *
@@ -3512,13 +3505,13 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasMatchRatePercentage() {
-      return ((bitField0_ & 0x00000400) != 0);
+      return ((bitField0_ & 0x00040000) != 0);
     }
     /**
      * <pre>
-     * Output only. Indicates match rate for Customer Match lists. The range of this field is
-     * [0-100]. This will be null for other list types or when it's not possible
-     * to calculate the match rate.
+     * Output only. Indicates match rate for Customer Match lists. The range of
+     * this field is [0-100]. This will be null for other list types or when it's
+     * not possible to calculate the match rate.
      * This field is read-only.
      * </pre>
      *
@@ -3531,9 +3524,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Indicates match rate for Customer Match lists. The range of this field is
-     * [0-100]. This will be null for other list types or when it's not possible
-     * to calculate the match rate.
+     * Output only. Indicates match rate for Customer Match lists. The range of
+     * this field is [0-100]. This will be null for other list types or when it's
+     * not possible to calculate the match rate.
      * This field is read-only.
      * </pre>
      *
@@ -3542,16 +3535,17 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMatchRatePercentage(int value) {
-      bitField0_ |= 0x00000400;
+      
       matchRatePercentage_ = value;
+      bitField0_ |= 0x00040000;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Indicates match rate for Customer Match lists. The range of this field is
-     * [0-100]. This will be null for other list types or when it's not possible
-     * to calculate the match rate.
+     * Output only. Indicates match rate for Customer Match lists. The range of
+     * this field is [0-100]. This will be null for other list types or when it's
+     * not possible to calculate the match rate.
      * This field is read-only.
      * </pre>
      *
@@ -3559,7 +3553,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMatchRatePercentage() {
-      bitField0_ = (bitField0_ & ~0x00000400);
+      bitField0_ = (bitField0_ & ~0x00040000);
       matchRatePercentage_ = 0;
       onChanged();
       return this;
@@ -3739,7 +3733,7 @@ private static final long serialVersionUID = 0L;
         userList_ = null;
       }
       userListCase_ = 19;
-      onChanged();;
+      onChanged();
       return crmBasedUserListBuilder_;
     }
 
@@ -3926,7 +3920,7 @@ private static final long serialVersionUID = 0L;
         userList_ = null;
       }
       userListCase_ = 20;
-      onChanged();;
+      onChanged();
       return similarUserListBuilder_;
     }
 
@@ -4104,7 +4098,7 @@ private static final long serialVersionUID = 0L;
         userList_ = null;
       }
       userListCase_ = 21;
-      onChanged();;
+      onChanged();
       return ruleBasedUserListBuilder_;
     }
 
@@ -4282,7 +4276,7 @@ private static final long serialVersionUID = 0L;
         userList_ = null;
       }
       userListCase_ = 22;
-      onChanged();;
+      onChanged();
       return logicalUserListBuilder_;
     }
 
@@ -4460,7 +4454,7 @@ private static final long serialVersionUID = 0L;
         userList_ = null;
       }
       userListCase_ = 23;
-      onChanged();;
+      onChanged();
       return basicUserListBuilder_;
     }
     @java.lang.Override

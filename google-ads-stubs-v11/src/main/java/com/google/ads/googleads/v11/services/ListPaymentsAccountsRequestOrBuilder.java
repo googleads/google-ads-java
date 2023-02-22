@@ -9,7 +9,8 @@ public interface ListPaymentsAccountsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The ID of the customer to apply the PaymentsAccount list operation to.
+   * Required. The ID of the customer to apply the PaymentsAccount list
+   * operation to.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -18,7 +19,8 @@ public interface ListPaymentsAccountsRequestOrBuilder extends
   java.lang.String getCustomerId();
   /**
    * <pre>
-   * Required. The ID of the customer to apply the PaymentsAccount list operation to.
+   * Required. The ID of the customer to apply the PaymentsAccount list
+   * operation to.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>

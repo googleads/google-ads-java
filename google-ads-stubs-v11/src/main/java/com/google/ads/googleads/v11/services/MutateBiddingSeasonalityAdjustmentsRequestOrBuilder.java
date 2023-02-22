@@ -9,7 +9,8 @@ public interface MutateBiddingSeasonalityAdjustmentsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. ID of the customer whose seasonality adjustments are being modified.
+   * Required. ID of the customer whose seasonality adjustments are being
+   * modified.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -18,7 +19,8 @@ public interface MutateBiddingSeasonalityAdjustmentsRequestOrBuilder extends
   java.lang.String getCustomerId();
   /**
    * <pre>
-   * Required. ID of the customer whose seasonality adjustments are being modified.
+   * Required. ID of the customer whose seasonality adjustments are being
+   * modified.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -29,7 +31,8 @@ public interface MutateBiddingSeasonalityAdjustmentsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The list of operations to perform on individual seasonality adjustments.
+   * Required. The list of operations to perform on individual seasonality
+   * adjustments.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.BiddingSeasonalityAdjustmentOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -38,7 +41,8 @@ public interface MutateBiddingSeasonalityAdjustmentsRequestOrBuilder extends
       getOperationsList();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual seasonality adjustments.
+   * Required. The list of operations to perform on individual seasonality
+   * adjustments.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.BiddingSeasonalityAdjustmentOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -46,7 +50,8 @@ public interface MutateBiddingSeasonalityAdjustmentsRequestOrBuilder extends
   com.google.ads.googleads.v11.services.BiddingSeasonalityAdjustmentOperation getOperations(int index);
   /**
    * <pre>
-   * Required. The list of operations to perform on individual seasonality adjustments.
+   * Required. The list of operations to perform on individual seasonality
+   * adjustments.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.BiddingSeasonalityAdjustmentOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -54,7 +59,8 @@ public interface MutateBiddingSeasonalityAdjustmentsRequestOrBuilder extends
   int getOperationsCount();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual seasonality adjustments.
+   * Required. The list of operations to perform on individual seasonality
+   * adjustments.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.BiddingSeasonalityAdjustmentOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -63,7 +69,8 @@ public interface MutateBiddingSeasonalityAdjustmentsRequestOrBuilder extends
       getOperationsOrBuilderList();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual seasonality adjustments.
+   * Required. The list of operations to perform on individual seasonality
+   * adjustments.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.BiddingSeasonalityAdjustmentOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>

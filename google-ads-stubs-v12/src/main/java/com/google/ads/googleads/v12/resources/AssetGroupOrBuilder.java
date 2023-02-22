@@ -65,8 +65,8 @@ public interface AssetGroupOrBuilder extends
 
   /**
    * <pre>
-   * Required. Name of the asset group. Required. It must have a minimum length of 1 and
-   * maximum length of 128. It must be unique under a campaign.
+   * Required. Name of the asset group. Required. It must have a minimum length
+   * of 1 and maximum length of 128. It must be unique under a campaign.
    * </pre>
    *
    * <code>string name = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -75,8 +75,8 @@ public interface AssetGroupOrBuilder extends
   java.lang.String getName();
   /**
    * <pre>
-   * Required. Name of the asset group. Required. It must have a minimum length of 1 and
-   * maximum length of 128. It must be unique under a campaign.
+   * Required. Name of the asset group. Required. It must have a minimum length
+   * of 1 and maximum length of 128. It must be unique under a campaign.
    * </pre>
    *
    * <code>string name = 3 [(.google.api.field_behavior) = REQUIRED];</code>

@@ -50,7 +50,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BUSINESS_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object businessName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object businessName_ = "";
   /**
    * <pre>
    * Business name string to use for filtering.
@@ -96,7 +97,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FILTER_TYPE_FIELD_NUMBER = 2;
-  private int filterType_;
+  private int filterType_ = 0;
   /**
    * <pre>
    * The type of string matching to use when filtering with business_name.
@@ -117,8 +118,7 @@ private static final long serialVersionUID = 0L;
    * @return The filterType.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.LocationStringFilterTypeEnum.LocationStringFilterType getFilterType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.LocationStringFilterTypeEnum.LocationStringFilterType result = com.google.ads.googleads.v12.enums.LocationStringFilterTypeEnum.LocationStringFilterType.valueOf(filterType_);
+    com.google.ads.googleads.v12.enums.LocationStringFilterTypeEnum.LocationStringFilterType result = com.google.ads.googleads.v12.enums.LocationStringFilterTypeEnum.LocationStringFilterType.forNumber(filterType_);
     return result == null ? com.google.ads.googleads.v12.enums.LocationStringFilterTypeEnum.LocationStringFilterType.UNRECOGNIZED : result;
   }
 
@@ -323,10 +323,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       businessName_ = "";
-
       filterType_ = 0;
-
       return this;
     }
 
@@ -353,10 +352,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.BusinessProfileBusinessNameFilter buildPartial() {
       com.google.ads.googleads.v12.common.BusinessProfileBusinessNameFilter result = new com.google.ads.googleads.v12.common.BusinessProfileBusinessNameFilter(this);
-      result.businessName_ = businessName_;
-      result.filterType_ = filterType_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.BusinessProfileBusinessNameFilter result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.businessName_ = businessName_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.filterType_ = filterType_;
+      }
     }
 
     @java.lang.Override
@@ -405,6 +413,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.common.BusinessProfileBusinessNameFilter.getDefaultInstance()) return this;
       if (!other.getBusinessName().isEmpty()) {
         businessName_ = other.businessName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.filterType_ != 0) {
@@ -438,12 +447,12 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               businessName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 16: {
               filterType_ = input.readEnum();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             default: {
@@ -461,6 +470,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object businessName_ = "";
     /**
@@ -515,11 +525,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBusinessName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       businessName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -532,8 +540,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBusinessName() {
-      
       businessName_ = getDefaultInstance().getBusinessName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -548,12 +556,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBusinessNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       businessName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -580,8 +586,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFilterTypeValue(int value) {
-      
       filterType_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -595,8 +601,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.LocationStringFilterTypeEnum.LocationStringFilterType getFilterType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.LocationStringFilterTypeEnum.LocationStringFilterType result = com.google.ads.googleads.v12.enums.LocationStringFilterTypeEnum.LocationStringFilterType.valueOf(filterType_);
+      com.google.ads.googleads.v12.enums.LocationStringFilterTypeEnum.LocationStringFilterType result = com.google.ads.googleads.v12.enums.LocationStringFilterTypeEnum.LocationStringFilterType.forNumber(filterType_);
       return result == null ? com.google.ads.googleads.v12.enums.LocationStringFilterTypeEnum.LocationStringFilterType.UNRECOGNIZED : result;
     }
     /**
@@ -612,7 +617,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000002;
       filterType_ = value.getNumber();
       onChanged();
       return this;
@@ -626,7 +631,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFilterType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       filterType_ = 0;
       onChanged();
       return this;

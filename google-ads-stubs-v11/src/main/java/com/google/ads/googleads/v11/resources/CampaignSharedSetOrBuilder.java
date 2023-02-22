@@ -62,12 +62,12 @@ public interface CampaignSharedSetOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. The shared set associated with the campaign. This may be a negative keyword
-   * shared set of another customer. This customer should be a manager of the
-   * other customer, otherwise the campaign shared set will exist but have no
-   * serving effect. Only negative keyword shared sets can be associated with
-   * Shopping campaigns. Only negative placement shared sets can be associated
-   * with Display mobile app campaigns.
+   * Immutable. The shared set associated with the campaign. This may be a
+   * negative keyword shared set of another customer. This customer should be a
+   * manager of the other customer, otherwise the campaign shared set will exist
+   * but have no serving effect. Only negative keyword shared sets can be
+   * associated with Shopping campaigns. Only negative placement shared sets can
+   * be associated with Display mobile app campaigns.
    * </pre>
    *
    * <code>optional string shared_set = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -76,12 +76,12 @@ public interface CampaignSharedSetOrBuilder extends
   boolean hasSharedSet();
   /**
    * <pre>
-   * Immutable. The shared set associated with the campaign. This may be a negative keyword
-   * shared set of another customer. This customer should be a manager of the
-   * other customer, otherwise the campaign shared set will exist but have no
-   * serving effect. Only negative keyword shared sets can be associated with
-   * Shopping campaigns. Only negative placement shared sets can be associated
-   * with Display mobile app campaigns.
+   * Immutable. The shared set associated with the campaign. This may be a
+   * negative keyword shared set of another customer. This customer should be a
+   * manager of the other customer, otherwise the campaign shared set will exist
+   * but have no serving effect. Only negative keyword shared sets can be
+   * associated with Shopping campaigns. Only negative placement shared sets can
+   * be associated with Display mobile app campaigns.
    * </pre>
    *
    * <code>optional string shared_set = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -90,12 +90,12 @@ public interface CampaignSharedSetOrBuilder extends
   java.lang.String getSharedSet();
   /**
    * <pre>
-   * Immutable. The shared set associated with the campaign. This may be a negative keyword
-   * shared set of another customer. This customer should be a manager of the
-   * other customer, otherwise the campaign shared set will exist but have no
-   * serving effect. Only negative keyword shared sets can be associated with
-   * Shopping campaigns. Only negative placement shared sets can be associated
-   * with Display mobile app campaigns.
+   * Immutable. The shared set associated with the campaign. This may be a
+   * negative keyword shared set of another customer. This customer should be a
+   * manager of the other customer, otherwise the campaign shared set will exist
+   * but have no serving effect. Only negative keyword shared sets can be
+   * associated with Shopping campaigns. Only negative placement shared sets can
+   * be associated with Display mobile app campaigns.
    * </pre>
    *
    * <code>optional string shared_set = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>

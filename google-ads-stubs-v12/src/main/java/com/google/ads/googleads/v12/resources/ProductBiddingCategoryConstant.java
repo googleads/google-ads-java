@@ -56,7 +56,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Output only. The resource name of the product bidding category.
@@ -106,7 +107,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ID_FIELD_NUMBER = 10;
-  private long id_;
+  private long id_ = 0L;
   /**
    * <pre>
    * Output only. ID of the product bidding category.
@@ -137,10 +138,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int COUNTRY_CODE_FIELD_NUMBER = 11;
-  private volatile java.lang.Object countryCode_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object countryCode_ = "";
   /**
    * <pre>
-   * Output only. Two-letter upper-case country code of the product bidding category.
+   * Output only. Two-letter upper-case country code of the product bidding
+   * category.
    * </pre>
    *
    * <code>optional string country_code = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -152,7 +155,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Two-letter upper-case country code of the product bidding category.
+   * Output only. Two-letter upper-case country code of the product bidding
+   * category.
    * </pre>
    *
    * <code>optional string country_code = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -173,7 +177,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Two-letter upper-case country code of the product bidding category.
+   * Output only. Two-letter upper-case country code of the product bidding
+   * category.
    * </pre>
    *
    * <code>optional string country_code = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -195,7 +200,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PRODUCT_BIDDING_CATEGORY_CONSTANT_PARENT_FIELD_NUMBER = 12;
-  private volatile java.lang.Object productBiddingCategoryConstantParent_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object productBiddingCategoryConstantParent_ = "";
   /**
    * <pre>
    * Output only. Resource name of the parent product bidding category.
@@ -253,7 +259,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LEVEL_FIELD_NUMBER = 5;
-  private int level_;
+  private int level_ = 0;
   /**
    * <pre>
    * Output only. Level of the product bidding category.
@@ -274,13 +280,12 @@ private static final long serialVersionUID = 0L;
    * @return The level.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel getLevel() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel result = com.google.ads.googleads.v12.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel.valueOf(level_);
+    com.google.ads.googleads.v12.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel result = com.google.ads.googleads.v12.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel.forNumber(level_);
     return result == null ? com.google.ads.googleads.v12.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel.UNRECOGNIZED : result;
   }
 
   public static final int STATUS_FIELD_NUMBER = 6;
-  private int status_;
+  private int status_ = 0;
   /**
    * <pre>
    * Output only. Status of the product bidding category.
@@ -301,13 +306,13 @@ private static final long serialVersionUID = 0L;
    * @return The status.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus getStatus() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus result = com.google.ads.googleads.v12.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus.valueOf(status_);
+    com.google.ads.googleads.v12.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus result = com.google.ads.googleads.v12.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus.forNumber(status_);
     return result == null ? com.google.ads.googleads.v12.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus.UNRECOGNIZED : result;
   }
 
   public static final int LANGUAGE_CODE_FIELD_NUMBER = 13;
-  private volatile java.lang.Object languageCode_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object languageCode_ = "";
   /**
    * <pre>
    * Output only. Language code of the product bidding category.
@@ -365,11 +370,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LOCALIZED_NAME_FIELD_NUMBER = 14;
-  private volatile java.lang.Object localizedName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object localizedName_ = "";
   /**
    * <pre>
-   * Output only. Display value of the product bidding category localized according to
-   * language_code.
+   * Output only. Display value of the product bidding category localized
+   * according to language_code.
    * </pre>
    *
    * <code>optional string localized_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -381,8 +387,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Display value of the product bidding category localized according to
-   * language_code.
+   * Output only. Display value of the product bidding category localized
+   * according to language_code.
    * </pre>
    *
    * <code>optional string localized_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -403,8 +409,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Display value of the product bidding category localized according to
-   * language_code.
+   * Output only. Display value of the product bidding category localized
+   * according to language_code.
    * </pre>
    *
    * <code>optional string localized_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -713,22 +719,15 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       id_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       countryCode_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       productBiddingCategoryConstantParent_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       level_ = 0;
-
       status_ = 0;
-
       languageCode_ = "";
-      bitField0_ = (bitField0_ & ~0x00000008);
       localizedName_ = "";
-      bitField0_ = (bitField0_ & ~0x00000010);
       return this;
     }
 
@@ -755,34 +754,44 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.ProductBiddingCategoryConstant buildPartial() {
       com.google.ads.googleads.v12.resources.ProductBiddingCategoryConstant result = new com.google.ads.googleads.v12.resources.ProductBiddingCategoryConstant(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.resources.ProductBiddingCategoryConstant result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.id_ = id_;
         to_bitField0_ |= 0x00000001;
       }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.countryCode_ = countryCode_;
         to_bitField0_ |= 0x00000002;
       }
-      result.countryCode_ = countryCode_;
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.productBiddingCategoryConstantParent_ = productBiddingCategoryConstantParent_;
         to_bitField0_ |= 0x00000004;
       }
-      result.productBiddingCategoryConstantParent_ = productBiddingCategoryConstantParent_;
-      result.level_ = level_;
-      result.status_ = status_;
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.level_ = level_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.status_ = status_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.languageCode_ = languageCode_;
         to_bitField0_ |= 0x00000008;
       }
-      result.languageCode_ = languageCode_;
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.localizedName_ = localizedName_;
         to_bitField0_ |= 0x00000010;
       }
-      result.localizedName_ = localizedName_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -831,19 +840,20 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.resources.ProductBiddingCategoryConstant.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasId()) {
         setId(other.getId());
       }
       if (other.hasCountryCode()) {
-        bitField0_ |= 0x00000002;
         countryCode_ = other.countryCode_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.hasProductBiddingCategoryConstantParent()) {
-        bitField0_ |= 0x00000004;
         productBiddingCategoryConstantParent_ = other.productBiddingCategoryConstantParent_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.level_ != 0) {
@@ -853,13 +863,13 @@ private static final long serialVersionUID = 0L;
         setStatusValue(other.getStatusValue());
       }
       if (other.hasLanguageCode()) {
-        bitField0_ |= 0x00000008;
         languageCode_ = other.languageCode_;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (other.hasLocalizedName()) {
-        bitField0_ |= 0x00000010;
         localizedName_ = other.localizedName_;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -890,42 +900,42 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 40: {
               level_ = input.readEnum();
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 40
             case 48: {
               status_ = input.readEnum();
-
+              bitField0_ |= 0x00000020;
               break;
             } // case 48
             case 80: {
               id_ = input.readInt64();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 80
             case 90: {
               countryCode_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 90
             case 98: {
               productBiddingCategoryConstantParent_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               break;
             } // case 98
             case 106: {
               languageCode_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000040;
               break;
             } // case 106
             case 114: {
               localizedName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000080;
               break;
             } // case 114
             default: {
@@ -1004,11 +1014,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1023,8 +1031,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1041,12 +1049,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1064,7 +1070,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -1092,8 +1098,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      bitField0_ |= 0x00000001;
+      
       id_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1108,7 +1115,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       id_ = 0L;
       onChanged();
       return this;
@@ -1117,18 +1124,20 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object countryCode_ = "";
     /**
      * <pre>
-     * Output only. Two-letter upper-case country code of the product bidding category.
+     * Output only. Two-letter upper-case country code of the product bidding
+     * category.
      * </pre>
      *
      * <code>optional string country_code = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the countryCode field is set.
      */
     public boolean hasCountryCode() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
-     * Output only. Two-letter upper-case country code of the product bidding category.
+     * Output only. Two-letter upper-case country code of the product bidding
+     * category.
      * </pre>
      *
      * <code>optional string country_code = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1148,7 +1157,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Two-letter upper-case country code of the product bidding category.
+     * Output only. Two-letter upper-case country code of the product bidding
+     * category.
      * </pre>
      *
      * <code>optional string country_code = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1169,7 +1179,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Two-letter upper-case country code of the product bidding category.
+     * Output only. Two-letter upper-case country code of the product bidding
+     * category.
      * </pre>
      *
      * <code>optional string country_code = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1178,31 +1189,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCountryCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       countryCode_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Two-letter upper-case country code of the product bidding category.
+     * Output only. Two-letter upper-case country code of the product bidding
+     * category.
      * </pre>
      *
      * <code>optional string country_code = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearCountryCode() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       countryCode_ = getDefaultInstance().getCountryCode();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Two-letter upper-case country code of the product bidding category.
+     * Output only. Two-letter upper-case country code of the product bidding
+     * category.
      * </pre>
      *
      * <code>optional string country_code = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1211,12 +1222,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCountryCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       countryCode_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1231,7 +1240,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the productBiddingCategoryConstantParent field is set.
      */
     public boolean hasProductBiddingCategoryConstantParent() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -1285,11 +1294,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setProductBiddingCategoryConstantParent(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       productBiddingCategoryConstantParent_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1302,8 +1309,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearProductBiddingCategoryConstantParent() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       productBiddingCategoryConstantParent_ = getDefaultInstance().getProductBiddingCategoryConstantParent();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1318,12 +1325,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setProductBiddingCategoryConstantParentBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       productBiddingCategoryConstantParent_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1350,8 +1355,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLevelValue(int value) {
-      
       level_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1365,8 +1370,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel getLevel() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel result = com.google.ads.googleads.v12.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel.valueOf(level_);
+      com.google.ads.googleads.v12.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel result = com.google.ads.googleads.v12.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel.forNumber(level_);
       return result == null ? com.google.ads.googleads.v12.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel.UNRECOGNIZED : result;
     }
     /**
@@ -1382,7 +1386,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000010;
       level_ = value.getNumber();
       onChanged();
       return this;
@@ -1396,7 +1400,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLevel() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       level_ = 0;
       onChanged();
       return this;
@@ -1424,8 +1428,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
-      
       status_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1439,8 +1443,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus getStatus() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus result = com.google.ads.googleads.v12.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus.valueOf(status_);
+      com.google.ads.googleads.v12.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus result = com.google.ads.googleads.v12.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus.forNumber(status_);
       return result == null ? com.google.ads.googleads.v12.enums.ProductBiddingCategoryStatusEnum.ProductBiddingCategoryStatus.UNRECOGNIZED : result;
     }
     /**
@@ -1456,7 +1459,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000020;
       status_ = value.getNumber();
       onChanged();
       return this;
@@ -1470,7 +1473,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       status_ = 0;
       onChanged();
       return this;
@@ -1486,7 +1489,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the languageCode field is set.
      */
     public boolean hasLanguageCode() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -1540,11 +1543,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLanguageCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
       languageCode_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1557,8 +1558,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLanguageCode() {
-      bitField0_ = (bitField0_ & ~0x00000008);
       languageCode_ = getDefaultInstance().getLanguageCode();
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -1573,12 +1574,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLanguageCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       languageCode_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1586,20 +1585,20 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object localizedName_ = "";
     /**
      * <pre>
-     * Output only. Display value of the product bidding category localized according to
-     * language_code.
+     * Output only. Display value of the product bidding category localized
+     * according to language_code.
      * </pre>
      *
      * <code>optional string localized_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the localizedName field is set.
      */
     public boolean hasLocalizedName() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
      * <pre>
-     * Output only. Display value of the product bidding category localized according to
-     * language_code.
+     * Output only. Display value of the product bidding category localized
+     * according to language_code.
      * </pre>
      *
      * <code>optional string localized_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1619,8 +1618,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Display value of the product bidding category localized according to
-     * language_code.
+     * Output only. Display value of the product bidding category localized
+     * according to language_code.
      * </pre>
      *
      * <code>optional string localized_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1641,8 +1640,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Display value of the product bidding category localized according to
-     * language_code.
+     * Output only. Display value of the product bidding category localized
+     * according to language_code.
      * </pre>
      *
      * <code>optional string localized_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1651,33 +1650,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLocalizedName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
+      if (value == null) { throw new NullPointerException(); }
       localizedName_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Display value of the product bidding category localized according to
-     * language_code.
+     * Output only. Display value of the product bidding category localized
+     * according to language_code.
      * </pre>
      *
      * <code>optional string localized_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearLocalizedName() {
-      bitField0_ = (bitField0_ & ~0x00000010);
       localizedName_ = getDefaultInstance().getLocalizedName();
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Display value of the product bidding category localized according to
-     * language_code.
+     * Output only. Display value of the product bidding category localized
+     * according to language_code.
      * </pre>
      *
      * <code>optional string localized_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1686,12 +1683,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLocalizedNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000010;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       localizedName_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }

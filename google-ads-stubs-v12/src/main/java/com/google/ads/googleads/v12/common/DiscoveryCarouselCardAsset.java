@@ -53,7 +53,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MARKETING_IMAGE_ASSET_FIELD_NUMBER = 1;
-  private volatile java.lang.Object marketingImageAsset_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object marketingImageAsset_ = "";
   /**
    * <pre>
    * Asset resource name of the associated 1.91:1 marketing image. This and/or
@@ -101,7 +102,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SQUARE_MARKETING_IMAGE_ASSET_FIELD_NUMBER = 2;
-  private volatile java.lang.Object squareMarketingImageAsset_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object squareMarketingImageAsset_ = "";
   /**
    * <pre>
    * Asset resource name of the associated square marketing image. This
@@ -149,7 +151,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PORTRAIT_MARKETING_IMAGE_ASSET_FIELD_NUMBER = 3;
-  private volatile java.lang.Object portraitMarketingImageAsset_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object portraitMarketingImageAsset_ = "";
   /**
    * <pre>
    * Asset resource name of the associated 4:5 portrait marketing image.
@@ -195,7 +198,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HEADLINE_FIELD_NUMBER = 4;
-  private volatile java.lang.Object headline_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object headline_ = "";
   /**
    * <pre>
    * Required. Headline of the carousel card.
@@ -241,7 +245,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALL_TO_ACTION_TEXT_FIELD_NUMBER = 5;
-  private volatile java.lang.Object callToActionText_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object callToActionText_ = "";
   /**
    * <pre>
    * Call to action text.
@@ -517,16 +522,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       marketingImageAsset_ = "";
-
       squareMarketingImageAsset_ = "";
-
       portraitMarketingImageAsset_ = "";
-
       headline_ = "";
-
       callToActionText_ = "";
-
       return this;
     }
 
@@ -553,13 +554,28 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.DiscoveryCarouselCardAsset buildPartial() {
       com.google.ads.googleads.v12.common.DiscoveryCarouselCardAsset result = new com.google.ads.googleads.v12.common.DiscoveryCarouselCardAsset(this);
-      result.marketingImageAsset_ = marketingImageAsset_;
-      result.squareMarketingImageAsset_ = squareMarketingImageAsset_;
-      result.portraitMarketingImageAsset_ = portraitMarketingImageAsset_;
-      result.headline_ = headline_;
-      result.callToActionText_ = callToActionText_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.DiscoveryCarouselCardAsset result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.marketingImageAsset_ = marketingImageAsset_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.squareMarketingImageAsset_ = squareMarketingImageAsset_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.portraitMarketingImageAsset_ = portraitMarketingImageAsset_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.headline_ = headline_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.callToActionText_ = callToActionText_;
+      }
     }
 
     @java.lang.Override
@@ -608,22 +624,27 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.common.DiscoveryCarouselCardAsset.getDefaultInstance()) return this;
       if (!other.getMarketingImageAsset().isEmpty()) {
         marketingImageAsset_ = other.marketingImageAsset_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getSquareMarketingImageAsset().isEmpty()) {
         squareMarketingImageAsset_ = other.squareMarketingImageAsset_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getPortraitMarketingImageAsset().isEmpty()) {
         portraitMarketingImageAsset_ = other.portraitMarketingImageAsset_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getHeadline().isEmpty()) {
         headline_ = other.headline_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.getCallToActionText().isEmpty()) {
         callToActionText_ = other.callToActionText_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -654,27 +675,27 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               marketingImageAsset_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               squareMarketingImageAsset_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
               portraitMarketingImageAsset_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 34: {
               headline_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 34
             case 42: {
               callToActionText_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 42
             default: {
@@ -692,6 +713,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object marketingImageAsset_ = "";
     /**
@@ -749,11 +771,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setMarketingImageAsset(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       marketingImageAsset_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -767,8 +787,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMarketingImageAsset() {
-      
       marketingImageAsset_ = getDefaultInstance().getMarketingImageAsset();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -784,12 +804,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setMarketingImageAssetBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       marketingImageAsset_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -850,11 +868,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSquareMarketingImageAsset(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       squareMarketingImageAsset_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -868,8 +884,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSquareMarketingImageAsset() {
-      
       squareMarketingImageAsset_ = getDefaultInstance().getSquareMarketingImageAsset();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -885,12 +901,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSquareMarketingImageAssetBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       squareMarketingImageAsset_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -948,11 +962,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPortraitMarketingImageAsset(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       portraitMarketingImageAsset_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -965,8 +977,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPortraitMarketingImageAsset() {
-      
       portraitMarketingImageAsset_ = getDefaultInstance().getPortraitMarketingImageAsset();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -981,12 +993,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPortraitMarketingImageAssetBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       portraitMarketingImageAsset_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1044,11 +1054,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHeadline(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       headline_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1061,8 +1069,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHeadline() {
-      
       headline_ = getDefaultInstance().getHeadline();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1077,12 +1085,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHeadlineBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       headline_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1140,11 +1146,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallToActionText(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       callToActionText_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1157,8 +1161,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallToActionText() {
-      
       callToActionText_ = getDefaultInstance().getCallToActionText();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1173,12 +1177,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallToActionTextBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       callToActionText_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }

@@ -62,8 +62,8 @@ public interface ClickViewOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The location criteria matching the area of interest associated with the
-   * impression.
+   * Output only. The location criteria matching the area of interest associated
+   * with the impression.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.ClickLocation area_of_interest = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -72,8 +72,8 @@ public interface ClickViewOrBuilder extends
   boolean hasAreaOfInterest();
   /**
    * <pre>
-   * Output only. The location criteria matching the area of interest associated with the
-   * impression.
+   * Output only. The location criteria matching the area of interest associated
+   * with the impression.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.ClickLocation area_of_interest = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -82,8 +82,8 @@ public interface ClickViewOrBuilder extends
   com.google.ads.googleads.v12.common.ClickLocation getAreaOfInterest();
   /**
    * <pre>
-   * Output only. The location criteria matching the area of interest associated with the
-   * impression.
+   * Output only. The location criteria matching the area of interest associated
+   * with the impression.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.ClickLocation area_of_interest = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -92,8 +92,8 @@ public interface ClickViewOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The location criteria matching the location of presence associated with the
-   * impression.
+   * Output only. The location criteria matching the location of presence
+   * associated with the impression.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.ClickLocation location_of_presence = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -102,8 +102,8 @@ public interface ClickViewOrBuilder extends
   boolean hasLocationOfPresence();
   /**
    * <pre>
-   * Output only. The location criteria matching the location of presence associated with the
-   * impression.
+   * Output only. The location criteria matching the location of presence
+   * associated with the impression.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.ClickLocation location_of_presence = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -112,8 +112,8 @@ public interface ClickViewOrBuilder extends
   com.google.ads.googleads.v12.common.ClickLocation getLocationOfPresence();
   /**
    * <pre>
-   * Output only. The location criteria matching the location of presence associated with the
-   * impression.
+   * Output only. The location criteria matching the location of presence
+   * associated with the impression.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.ClickLocation location_of_presence = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -228,8 +228,8 @@ public interface ClickViewOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The associated keyword, if one exists and the click corresponds to the
-   * SEARCH channel.
+   * Output only. The associated keyword, if one exists and the click
+   * corresponds to the SEARCH channel.
    * </pre>
    *
    * <code>string keyword = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -238,8 +238,8 @@ public interface ClickViewOrBuilder extends
   java.lang.String getKeyword();
   /**
    * <pre>
-   * Output only. The associated keyword, if one exists and the click corresponds to the
-   * SEARCH channel.
+   * Output only. The associated keyword, if one exists and the click
+   * corresponds to the SEARCH channel.
    * </pre>
    *
    * <code>string keyword = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>

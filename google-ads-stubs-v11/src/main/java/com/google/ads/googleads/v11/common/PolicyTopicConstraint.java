@@ -161,7 +161,7 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
     public static final int TOTAL_TARGETED_COUNTRIES_FIELD_NUMBER = 3;
-    private int totalTargetedCountries_;
+    private int totalTargetedCountries_ = 0;
     /**
      * <pre>
      * Total number of countries targeted by the resource.
@@ -188,6 +188,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int COUNTRIES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.ads.googleads.v11.common.PolicyTopicConstraint.CountryConstraint> countries_;
     /**
      * <pre>
@@ -457,8 +458,8 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         totalTargetedCountries_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000001);
         if (countriesBuilder_ == null) {
           countries_ = java.util.Collections.emptyList();
         } else {
@@ -492,12 +493,13 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v11.common.PolicyTopicConstraint.CountryConstraintList buildPartial() {
         com.google.ads.googleads.v11.common.PolicyTopicConstraint.CountryConstraintList result = new com.google.ads.googleads.v11.common.PolicyTopicConstraint.CountryConstraintList(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.totalTargetedCountries_ = totalTargetedCountries_;
-          to_bitField0_ |= 0x00000001;
-        }
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.google.ads.googleads.v11.common.PolicyTopicConstraint.CountryConstraintList result) {
         if (countriesBuilder_ == null) {
           if (((bitField0_ & 0x00000002) != 0)) {
             countries_ = java.util.Collections.unmodifiableList(countries_);
@@ -507,9 +509,16 @@ private static final long serialVersionUID = 0L;
         } else {
           result.countries_ = countriesBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v11.common.PolicyTopicConstraint.CountryConstraintList result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.totalTargetedCountries_ = totalTargetedCountries_;
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -681,8 +690,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setTotalTargetedCountries(int value) {
-        bitField0_ |= 0x00000001;
+        
         totalTargetedCountries_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1570,7 +1580,8 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
     public static final int COUNTRY_CRITERION_FIELD_NUMBER = 2;
-    private volatile java.lang.Object countryCriterion_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object countryCriterion_ = "";
     /**
      * <pre>
      * Geo target constant resource name of the country in which serving is
@@ -1827,8 +1838,8 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         countryCriterion_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -1855,15 +1866,19 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v11.common.PolicyTopicConstraint.CountryConstraint buildPartial() {
         com.google.ads.googleads.v11.common.PolicyTopicConstraint.CountryConstraint result = new com.google.ads.googleads.v11.common.PolicyTopicConstraint.CountryConstraint(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v11.common.PolicyTopicConstraint.CountryConstraint result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.countryCriterion_ = countryCriterion_;
           to_bitField0_ |= 0x00000001;
         }
-        result.countryCriterion_ = countryCriterion_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1911,8 +1926,8 @@ private static final long serialVersionUID = 0L;
       public Builder mergeFrom(com.google.ads.googleads.v11.common.PolicyTopicConstraint.CountryConstraint other) {
         if (other == com.google.ads.googleads.v11.common.PolicyTopicConstraint.CountryConstraint.getDefaultInstance()) return this;
         if (other.hasCountryCriterion()) {
-          bitField0_ |= 0x00000001;
           countryCriterion_ = other.countryCriterion_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -2031,11 +2046,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setCountryCriterion(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+        if (value == null) { throw new NullPointerException(); }
         countryCriterion_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2049,8 +2062,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearCountryCriterion() {
-        bitField0_ = (bitField0_ & ~0x00000001);
         countryCriterion_ = getDefaultInstance().getCountryCriterion();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -2066,12 +2079,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setCountryCriterionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        bitField0_ |= 0x00000001;
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         countryCriterion_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2609,6 +2620,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (countryConstraintListBuilder_ != null) {
         countryConstraintListBuilder_.clear();
       }
@@ -2649,37 +2661,35 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.PolicyTopicConstraint buildPartial() {
       com.google.ads.googleads.v11.common.PolicyTopicConstraint result = new com.google.ads.googleads.v11.common.PolicyTopicConstraint(this);
-      if (valueCase_ == 1) {
-        if (countryConstraintListBuilder_ == null) {
-          result.value_ = value_;
-        } else {
-          result.value_ = countryConstraintListBuilder_.build();
-        }
-      }
-      if (valueCase_ == 2) {
-        if (resellerConstraintBuilder_ == null) {
-          result.value_ = value_;
-        } else {
-          result.value_ = resellerConstraintBuilder_.build();
-        }
-      }
-      if (valueCase_ == 3) {
-        if (certificateMissingInCountryListBuilder_ == null) {
-          result.value_ = value_;
-        } else {
-          result.value_ = certificateMissingInCountryListBuilder_.build();
-        }
-      }
-      if (valueCase_ == 4) {
-        if (certificateDomainMismatchInCountryListBuilder_ == null) {
-          result.value_ = value_;
-        } else {
-          result.value_ = certificateDomainMismatchInCountryListBuilder_.build();
-        }
-      }
-      result.valueCase_ = valueCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.PolicyTopicConstraint result) {
+      int from_bitField0_ = bitField0_;
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v11.common.PolicyTopicConstraint result) {
+      result.valueCase_ = valueCase_;
+      result.value_ = this.value_;
+      if (valueCase_ == 1 &&
+          countryConstraintListBuilder_ != null) {
+        result.value_ = countryConstraintListBuilder_.build();
+      }
+      if (valueCase_ == 2 &&
+          resellerConstraintBuilder_ != null) {
+        result.value_ = resellerConstraintBuilder_.build();
+      }
+      if (valueCase_ == 3 &&
+          certificateMissingInCountryListBuilder_ != null) {
+        result.value_ = certificateMissingInCountryListBuilder_.build();
+      }
+      if (valueCase_ == 4 &&
+          certificateDomainMismatchInCountryListBuilder_ != null) {
+        result.value_ = certificateDomainMismatchInCountryListBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -2831,6 +2841,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v11.common.PolicyTopicConstraint.CountryConstraintList, com.google.ads.googleads.v11.common.PolicyTopicConstraint.CountryConstraintList.Builder, com.google.ads.googleads.v11.common.PolicyTopicConstraint.CountryConstraintListOrBuilder> countryConstraintListBuilder_;
@@ -3006,7 +3017,7 @@ private static final long serialVersionUID = 0L;
         value_ = null;
       }
       valueCase_ = 1;
-      onChanged();;
+      onChanged();
       return countryConstraintListBuilder_;
     }
 
@@ -3184,7 +3195,7 @@ private static final long serialVersionUID = 0L;
         value_ = null;
       }
       valueCase_ = 2;
-      onChanged();;
+      onChanged();
       return resellerConstraintBuilder_;
     }
 
@@ -3362,7 +3373,7 @@ private static final long serialVersionUID = 0L;
         value_ = null;
       }
       valueCase_ = 3;
-      onChanged();;
+      onChanged();
       return certificateMissingInCountryListBuilder_;
     }
 
@@ -3549,7 +3560,7 @@ private static final long serialVersionUID = 0L;
         value_ = null;
       }
       valueCase_ = 4;
-      onChanged();;
+      onChanged();
       return certificateDomainMismatchInCountryListBuilder_;
     }
     @java.lang.Override

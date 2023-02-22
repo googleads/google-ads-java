@@ -153,9 +153,10 @@ public interface AdGroupOrBuilder extends
 
   /**
    * <pre>
-   * Output only. For draft or experiment ad groups, this field is the resource name of the
-   * base ad group from which this ad group was created. If a draft or
-   * experiment ad group does not have a base ad group, then this field is null.
+   * Output only. For draft or experiment ad groups, this field is the resource
+   * name of the base ad group from which this ad group was created. If a draft
+   * or experiment ad group does not have a base ad group, then this field is
+   * null.
    * For base ad groups, this field equals the ad group resource name.
    * This field is read-only.
    * </pre>
@@ -166,9 +167,10 @@ public interface AdGroupOrBuilder extends
   boolean hasBaseAdGroup();
   /**
    * <pre>
-   * Output only. For draft or experiment ad groups, this field is the resource name of the
-   * base ad group from which this ad group was created. If a draft or
-   * experiment ad group does not have a base ad group, then this field is null.
+   * Output only. For draft or experiment ad groups, this field is the resource
+   * name of the base ad group from which this ad group was created. If a draft
+   * or experiment ad group does not have a base ad group, then this field is
+   * null.
    * For base ad groups, this field equals the ad group resource name.
    * This field is read-only.
    * </pre>
@@ -179,9 +181,10 @@ public interface AdGroupOrBuilder extends
   java.lang.String getBaseAdGroup();
   /**
    * <pre>
-   * Output only. For draft or experiment ad groups, this field is the resource name of the
-   * base ad group from which this ad group was created. If a draft or
-   * experiment ad group does not have a base ad group, then this field is null.
+   * Output only. For draft or experiment ad groups, this field is the resource
+   * name of the base ad group from which this ad group was created. If a draft
+   * or experiment ad group does not have a base ad group, then this field is
+   * null.
    * For base ad groups, this field equals the ad group resource name.
    * This field is read-only.
    * </pre>
@@ -320,9 +323,9 @@ public interface AdGroupOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Value will be same as that of the CPC (cost-per-click) bid value when the
-   * bidding strategy is one of manual cpc, enhanced cpc, page one promoted or
-   * target outrank share, otherwise the value will be null.
+   * Output only. Value will be same as that of the CPC (cost-per-click) bid
+   * value when the bidding strategy is one of manual cpc, enhanced cpc, page
+   * one promoted or target outrank share, otherwise the value will be null.
    * </pre>
    *
    * <code>optional int64 effective_cpc_bid_micros = 57 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -331,9 +334,9 @@ public interface AdGroupOrBuilder extends
   boolean hasEffectiveCpcBidMicros();
   /**
    * <pre>
-   * Output only. Value will be same as that of the CPC (cost-per-click) bid value when the
-   * bidding strategy is one of manual cpc, enhanced cpc, page one promoted or
-   * target outrank share, otherwise the value will be null.
+   * Output only. Value will be same as that of the CPC (cost-per-click) bid
+   * value when the bidding strategy is one of manual cpc, enhanced cpc, page
+   * one promoted or target outrank share, otherwise the value will be null.
    * </pre>
    *
    * <code>optional int64 effective_cpc_bid_micros = 57 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

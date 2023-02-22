@@ -52,7 +52,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int AD_DURATION_MILLIS_FIELD_NUMBER = 5;
-  private long adDurationMillis_;
+  private long adDurationMillis_ = 0L;
   /**
    * <pre>
    * Output only. The duration of the Video in milliseconds.
@@ -79,7 +79,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int YOUTUBE_VIDEO_ID_FIELD_NUMBER = 6;
-  private volatile java.lang.Object youtubeVideoId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object youtubeVideoId_ = "";
   /**
    * <pre>
    * Immutable. The YouTube video ID (as seen in YouTube URLs). Adding prefix
@@ -143,12 +144,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ADVERTISING_ID_CODE_FIELD_NUMBER = 7;
-  private volatile java.lang.Object advertisingIdCode_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object advertisingIdCode_ = "";
   /**
    * <pre>
-   * Output only. The Advertising Digital Identification code for this video, as defined by
-   * the American Association of Advertising Agencies, used mainly for
-   * television commercials.
+   * Output only. The Advertising Digital Identification code for this video, as
+   * defined by the American Association of Advertising Agencies, used mainly
+   * for television commercials.
    * </pre>
    *
    * <code>optional string advertising_id_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -160,9 +162,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The Advertising Digital Identification code for this video, as defined by
-   * the American Association of Advertising Agencies, used mainly for
-   * television commercials.
+   * Output only. The Advertising Digital Identification code for this video, as
+   * defined by the American Association of Advertising Agencies, used mainly
+   * for television commercials.
    * </pre>
    *
    * <code>optional string advertising_id_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -183,9 +185,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The Advertising Digital Identification code for this video, as defined by
-   * the American Association of Advertising Agencies, used mainly for
-   * television commercials.
+   * Output only. The Advertising Digital Identification code for this video, as
+   * defined by the American Association of Advertising Agencies, used mainly
+   * for television commercials.
    * </pre>
    *
    * <code>optional string advertising_id_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -207,11 +209,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ISCI_CODE_FIELD_NUMBER = 8;
-  private volatile java.lang.Object isciCode_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object isciCode_ = "";
   /**
    * <pre>
-   * Output only. The Industry Standard Commercial Identifier code for this video, used
-   * mainly for television commercials.
+   * Output only. The Industry Standard Commercial Identifier code for this
+   * video, used mainly for television commercials.
    * </pre>
    *
    * <code>optional string isci_code = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -223,8 +226,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The Industry Standard Commercial Identifier code for this video, used
-   * mainly for television commercials.
+   * Output only. The Industry Standard Commercial Identifier code for this
+   * video, used mainly for television commercials.
    * </pre>
    *
    * <code>optional string isci_code = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -245,8 +248,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The Industry Standard Commercial Identifier code for this video, used
-   * mainly for television commercials.
+   * Output only. The Industry Standard Commercial Identifier code for this
+   * video, used mainly for television commercials.
    * </pre>
    *
    * <code>optional string isci_code = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -510,14 +513,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       adDurationMillis_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       youtubeVideoId_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       advertisingIdCode_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       isciCode_ = "";
-      bitField0_ = (bitField0_ & ~0x00000008);
       return this;
     }
 
@@ -544,6 +544,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.MediaVideo buildPartial() {
       com.google.ads.googleads.v11.resources.MediaVideo result = new com.google.ads.googleads.v11.resources.MediaVideo(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.MediaVideo result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -551,20 +557,18 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.youtubeVideoId_ = youtubeVideoId_;
         to_bitField0_ |= 0x00000002;
       }
-      result.youtubeVideoId_ = youtubeVideoId_;
       if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.advertisingIdCode_ = advertisingIdCode_;
         to_bitField0_ |= 0x00000004;
       }
-      result.advertisingIdCode_ = advertisingIdCode_;
       if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.isciCode_ = isciCode_;
         to_bitField0_ |= 0x00000008;
       }
-      result.isciCode_ = isciCode_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -615,18 +619,18 @@ private static final long serialVersionUID = 0L;
         setAdDurationMillis(other.getAdDurationMillis());
       }
       if (other.hasYoutubeVideoId()) {
-        bitField0_ |= 0x00000002;
         youtubeVideoId_ = other.youtubeVideoId_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasAdvertisingIdCode()) {
-        bitField0_ |= 0x00000004;
         advertisingIdCode_ = other.advertisingIdCode_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.hasIsciCode()) {
-        bitField0_ |= 0x00000008;
         isciCode_ = other.isciCode_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -727,8 +731,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAdDurationMillis(long value) {
-      bitField0_ |= 0x00000001;
+      
       adDurationMillis_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -819,11 +824,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setYoutubeVideoId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       youtubeVideoId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -838,8 +841,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearYoutubeVideoId() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       youtubeVideoId_ = getDefaultInstance().getYoutubeVideoId();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -856,12 +859,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setYoutubeVideoIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       youtubeVideoId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -869,9 +870,9 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object advertisingIdCode_ = "";
     /**
      * <pre>
-     * Output only. The Advertising Digital Identification code for this video, as defined by
-     * the American Association of Advertising Agencies, used mainly for
-     * television commercials.
+     * Output only. The Advertising Digital Identification code for this video, as
+     * defined by the American Association of Advertising Agencies, used mainly
+     * for television commercials.
      * </pre>
      *
      * <code>optional string advertising_id_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -882,9 +883,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The Advertising Digital Identification code for this video, as defined by
-     * the American Association of Advertising Agencies, used mainly for
-     * television commercials.
+     * Output only. The Advertising Digital Identification code for this video, as
+     * defined by the American Association of Advertising Agencies, used mainly
+     * for television commercials.
      * </pre>
      *
      * <code>optional string advertising_id_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -904,9 +905,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The Advertising Digital Identification code for this video, as defined by
-     * the American Association of Advertising Agencies, used mainly for
-     * television commercials.
+     * Output only. The Advertising Digital Identification code for this video, as
+     * defined by the American Association of Advertising Agencies, used mainly
+     * for television commercials.
      * </pre>
      *
      * <code>optional string advertising_id_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -927,9 +928,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The Advertising Digital Identification code for this video, as defined by
-     * the American Association of Advertising Agencies, used mainly for
-     * television commercials.
+     * Output only. The Advertising Digital Identification code for this video, as
+     * defined by the American Association of Advertising Agencies, used mainly
+     * for television commercials.
      * </pre>
      *
      * <code>optional string advertising_id_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -938,35 +939,33 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAdvertisingIdCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       advertisingIdCode_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The Advertising Digital Identification code for this video, as defined by
-     * the American Association of Advertising Agencies, used mainly for
-     * television commercials.
+     * Output only. The Advertising Digital Identification code for this video, as
+     * defined by the American Association of Advertising Agencies, used mainly
+     * for television commercials.
      * </pre>
      *
      * <code>optional string advertising_id_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearAdvertisingIdCode() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       advertisingIdCode_ = getDefaultInstance().getAdvertisingIdCode();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The Advertising Digital Identification code for this video, as defined by
-     * the American Association of Advertising Agencies, used mainly for
-     * television commercials.
+     * Output only. The Advertising Digital Identification code for this video, as
+     * defined by the American Association of Advertising Agencies, used mainly
+     * for television commercials.
      * </pre>
      *
      * <code>optional string advertising_id_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -975,12 +974,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAdvertisingIdCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       advertisingIdCode_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -988,8 +985,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object isciCode_ = "";
     /**
      * <pre>
-     * Output only. The Industry Standard Commercial Identifier code for this video, used
-     * mainly for television commercials.
+     * Output only. The Industry Standard Commercial Identifier code for this
+     * video, used mainly for television commercials.
      * </pre>
      *
      * <code>optional string isci_code = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1000,8 +997,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The Industry Standard Commercial Identifier code for this video, used
-     * mainly for television commercials.
+     * Output only. The Industry Standard Commercial Identifier code for this
+     * video, used mainly for television commercials.
      * </pre>
      *
      * <code>optional string isci_code = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1021,8 +1018,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The Industry Standard Commercial Identifier code for this video, used
-     * mainly for television commercials.
+     * Output only. The Industry Standard Commercial Identifier code for this
+     * video, used mainly for television commercials.
      * </pre>
      *
      * <code>optional string isci_code = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1043,8 +1040,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The Industry Standard Commercial Identifier code for this video, used
-     * mainly for television commercials.
+     * Output only. The Industry Standard Commercial Identifier code for this
+     * video, used mainly for television commercials.
      * </pre>
      *
      * <code>optional string isci_code = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1053,33 +1050,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setIsciCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
       isciCode_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The Industry Standard Commercial Identifier code for this video, used
-     * mainly for television commercials.
+     * Output only. The Industry Standard Commercial Identifier code for this
+     * video, used mainly for television commercials.
      * </pre>
      *
      * <code>optional string isci_code = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearIsciCode() {
-      bitField0_ = (bitField0_ & ~0x00000008);
       isciCode_ = getDefaultInstance().getIsciCode();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The Industry Standard Commercial Identifier code for this video, used
-     * mainly for television commercials.
+     * Output only. The Industry Standard Commercial Identifier code for this
+     * video, used mainly for television commercials.
      * </pre>
      *
      * <code>optional string isci_code = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1088,12 +1083,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setIsciCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       isciCode_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }

@@ -60,7 +60,10 @@ import javax.annotation.Generated;
  * userDataServiceSettingsBuilder
  *     .uploadUserDataSettings()
  *     .setRetrySettings(
- *         userDataServiceSettingsBuilder.uploadUserDataSettings().getRetrySettings().toBuilder()
+ *         userDataServiceSettingsBuilder
+ *             .uploadUserDataSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
  * UserDataServiceSettings userDataServiceSettings = userDataServiceSettingsBuilder.build();

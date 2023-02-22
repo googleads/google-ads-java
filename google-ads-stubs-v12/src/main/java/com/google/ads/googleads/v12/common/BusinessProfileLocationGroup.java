@@ -84,7 +84,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.common.DynamicBusinessProfileLocationGroupFilterOrBuilder getDynamicBusinessProfileLocationGroupFilterOrBuilder() {
-    return getDynamicBusinessProfileLocationGroupFilter();
+    return dynamicBusinessProfileLocationGroupFilter_ == null ? com.google.ads.googleads.v12.common.DynamicBusinessProfileLocationGroupFilter.getDefaultInstance() : dynamicBusinessProfileLocationGroupFilter_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -286,10 +286,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (dynamicBusinessProfileLocationGroupFilterBuilder_ == null) {
-        dynamicBusinessProfileLocationGroupFilter_ = null;
-      } else {
-        dynamicBusinessProfileLocationGroupFilter_ = null;
+      bitField0_ = 0;
+      dynamicBusinessProfileLocationGroupFilter_ = null;
+      if (dynamicBusinessProfileLocationGroupFilterBuilder_ != null) {
+        dynamicBusinessProfileLocationGroupFilterBuilder_.dispose();
         dynamicBusinessProfileLocationGroupFilterBuilder_ = null;
       }
       return this;
@@ -318,13 +318,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.BusinessProfileLocationGroup buildPartial() {
       com.google.ads.googleads.v12.common.BusinessProfileLocationGroup result = new com.google.ads.googleads.v12.common.BusinessProfileLocationGroup(this);
-      if (dynamicBusinessProfileLocationGroupFilterBuilder_ == null) {
-        result.dynamicBusinessProfileLocationGroupFilter_ = dynamicBusinessProfileLocationGroupFilter_;
-      } else {
-        result.dynamicBusinessProfileLocationGroupFilter_ = dynamicBusinessProfileLocationGroupFilterBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.BusinessProfileLocationGroup result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.dynamicBusinessProfileLocationGroupFilter_ = dynamicBusinessProfileLocationGroupFilterBuilder_ == null
+            ? dynamicBusinessProfileLocationGroupFilter_
+            : dynamicBusinessProfileLocationGroupFilterBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -404,7 +409,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getDynamicBusinessProfileLocationGroupFilterFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             default: {
@@ -422,6 +427,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private com.google.ads.googleads.v12.common.DynamicBusinessProfileLocationGroupFilter dynamicBusinessProfileLocationGroupFilter_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -435,7 +441,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dynamicBusinessProfileLocationGroupFilter field is set.
      */
     public boolean hasDynamicBusinessProfileLocationGroupFilter() {
-      return dynamicBusinessProfileLocationGroupFilterBuilder_ != null || dynamicBusinessProfileLocationGroupFilter_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -465,11 +471,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dynamicBusinessProfileLocationGroupFilter_ = value;
-        onChanged();
       } else {
         dynamicBusinessProfileLocationGroupFilterBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -483,11 +489,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.DynamicBusinessProfileLocationGroupFilter.Builder builderForValue) {
       if (dynamicBusinessProfileLocationGroupFilterBuilder_ == null) {
         dynamicBusinessProfileLocationGroupFilter_ = builderForValue.build();
-        onChanged();
       } else {
         dynamicBusinessProfileLocationGroupFilterBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -499,17 +505,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDynamicBusinessProfileLocationGroupFilter(com.google.ads.googleads.v12.common.DynamicBusinessProfileLocationGroupFilter value) {
       if (dynamicBusinessProfileLocationGroupFilterBuilder_ == null) {
-        if (dynamicBusinessProfileLocationGroupFilter_ != null) {
-          dynamicBusinessProfileLocationGroupFilter_ =
-            com.google.ads.googleads.v12.common.DynamicBusinessProfileLocationGroupFilter.newBuilder(dynamicBusinessProfileLocationGroupFilter_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          dynamicBusinessProfileLocationGroupFilter_ != null &&
+          dynamicBusinessProfileLocationGroupFilter_ != com.google.ads.googleads.v12.common.DynamicBusinessProfileLocationGroupFilter.getDefaultInstance()) {
+          getDynamicBusinessProfileLocationGroupFilterBuilder().mergeFrom(value);
         } else {
           dynamicBusinessProfileLocationGroupFilter_ = value;
         }
-        onChanged();
       } else {
         dynamicBusinessProfileLocationGroupFilterBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -520,14 +527,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.DynamicBusinessProfileLocationGroupFilter dynamic_business_profile_location_group_filter = 1;</code>
      */
     public Builder clearDynamicBusinessProfileLocationGroupFilter() {
-      if (dynamicBusinessProfileLocationGroupFilterBuilder_ == null) {
-        dynamicBusinessProfileLocationGroupFilter_ = null;
-        onChanged();
-      } else {
-        dynamicBusinessProfileLocationGroupFilter_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      dynamicBusinessProfileLocationGroupFilter_ = null;
+      if (dynamicBusinessProfileLocationGroupFilterBuilder_ != null) {
+        dynamicBusinessProfileLocationGroupFilterBuilder_.dispose();
         dynamicBusinessProfileLocationGroupFilterBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -538,7 +544,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.DynamicBusinessProfileLocationGroupFilter dynamic_business_profile_location_group_filter = 1;</code>
      */
     public com.google.ads.googleads.v12.common.DynamicBusinessProfileLocationGroupFilter.Builder getDynamicBusinessProfileLocationGroupFilterBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getDynamicBusinessProfileLocationGroupFilterFieldBuilder().getBuilder();
     }

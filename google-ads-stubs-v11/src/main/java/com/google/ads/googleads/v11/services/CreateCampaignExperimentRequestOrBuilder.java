@@ -9,7 +9,8 @@ public interface CreateCampaignExperimentRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The ID of the customer whose campaign experiment is being created.
+   * Required. The ID of the customer whose campaign experiment is being
+   * created.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -18,7 +19,8 @@ public interface CreateCampaignExperimentRequestOrBuilder extends
   java.lang.String getCustomerId();
   /**
    * <pre>
-   * Required. The ID of the customer whose campaign experiment is being created.
+   * Required. The ID of the customer whose campaign experiment is being
+   * created.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>

@@ -9,8 +9,8 @@ public interface DynamicLocalAssetOrBuilder extends
 
   /**
    * <pre>
-   * Required. Deal ID which can be any sequence of letters and digits, and must be
-   * unique and match the values of remarketing tag. Required.
+   * Required. Deal ID which can be any sequence of letters and digits, and must
+   * be unique and match the values of remarketing tag. Required.
    * </pre>
    *
    * <code>string deal_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -19,8 +19,8 @@ public interface DynamicLocalAssetOrBuilder extends
   java.lang.String getDealId();
   /**
    * <pre>
-   * Required. Deal ID which can be any sequence of letters and digits, and must be
-   * unique and match the values of remarketing tag. Required.
+   * Required. Deal ID which can be any sequence of letters and digits, and must
+   * be unique and match the values of remarketing tag. Required.
    * </pre>
    *
    * <code>string deal_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -31,7 +31,8 @@ public interface DynamicLocalAssetOrBuilder extends
 
   /**
    * <pre>
-   * Required. Deal name, for example, 50% off at Mountain View Grocers. Required.
+   * Required. Deal name, for example, 50% off at Mountain View Grocers.
+   * Required.
    * </pre>
    *
    * <code>string deal_name = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -40,7 +41,8 @@ public interface DynamicLocalAssetOrBuilder extends
   java.lang.String getDealName();
   /**
    * <pre>
-   * Required. Deal name, for example, 50% off at Mountain View Grocers. Required.
+   * Required. Deal name, for example, 50% off at Mountain View Grocers.
+   * Required.
    * </pre>
    *
    * <code>string deal_name = 2 [(.google.api.field_behavior) = REQUIRED];</code>

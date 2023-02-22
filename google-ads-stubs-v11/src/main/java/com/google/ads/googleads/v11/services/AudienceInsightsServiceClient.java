@@ -29,7 +29,7 @@ import javax.annotation.Generated;
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
  * Service Description: Audience Insights Service helps users find information about groups of
- * people and how they can be reached with Google Ads.
+ * people and how they can be reached with Google Ads. Accessible to allowlisted customers only.
  *
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:

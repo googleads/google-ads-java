@@ -5,7 +5,8 @@ package com.google.ads.googleads.v12.services;
 
 /**
  * <pre>
- * Request message for [CustomerService.ListAccessibleCustomers][google.ads.googleads.v12.services.CustomerService.ListAccessibleCustomers].
+ * Request message for
+ * [CustomerService.ListAccessibleCustomers][google.ads.googleads.v12.services.CustomerService.ListAccessibleCustomers].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v12.services.ListAccessibleCustomersRequest}
@@ -193,7 +194,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Request message for [CustomerService.ListAccessibleCustomers][google.ads.googleads.v12.services.CustomerService.ListAccessibleCustomers].
+   * Request message for
+   * [CustomerService.ListAccessibleCustomers][google.ads.googleads.v12.services.CustomerService.ListAccessibleCustomers].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v12.services.ListAccessibleCustomersRequest}

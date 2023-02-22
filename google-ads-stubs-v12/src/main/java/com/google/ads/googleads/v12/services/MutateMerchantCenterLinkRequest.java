@@ -5,7 +5,8 @@ package com.google.ads.googleads.v12.services;
 
 /**
  * <pre>
- * Request message for [MerchantCenterLinkService.MutateMerchantCenterLink][google.ads.googleads.v12.services.MerchantCenterLinkService.MutateMerchantCenterLink].
+ * Request message for
+ * [MerchantCenterLinkService.MutateMerchantCenterLink][google.ads.googleads.v12.services.MerchantCenterLinkService.MutateMerchantCenterLink].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v12.services.MutateMerchantCenterLinkRequest}
@@ -49,7 +50,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CUSTOMER_ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object customerId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object customerId_ = "";
   /**
    * <pre>
    * Required. The ID of the customer being modified.
@@ -129,11 +131,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.services.MerchantCenterLinkOperationOrBuilder getOperationOrBuilder() {
-    return getOperation();
+    return operation_ == null ? com.google.ads.googleads.v12.services.MerchantCenterLinkOperation.getDefaultInstance() : operation_;
   }
 
   public static final int VALIDATE_ONLY_FIELD_NUMBER = 3;
-  private boolean validateOnly_;
+  private boolean validateOnly_ = false;
   /**
    * <pre>
    * If true, the request is validated but not executed. Only errors are
@@ -332,7 +334,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Request message for [MerchantCenterLinkService.MutateMerchantCenterLink][google.ads.googleads.v12.services.MerchantCenterLinkService.MutateMerchantCenterLink].
+   * Request message for
+   * [MerchantCenterLinkService.MutateMerchantCenterLink][google.ads.googleads.v12.services.MerchantCenterLinkService.MutateMerchantCenterLink].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v12.services.MutateMerchantCenterLinkRequest}
@@ -367,16 +370,14 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       customerId_ = "";
-
-      if (operationBuilder_ == null) {
-        operation_ = null;
-      } else {
-        operation_ = null;
+      operation_ = null;
+      if (operationBuilder_ != null) {
+        operationBuilder_.dispose();
         operationBuilder_ = null;
       }
       validateOnly_ = false;
-
       return this;
     }
 
@@ -403,15 +404,24 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.MutateMerchantCenterLinkRequest buildPartial() {
       com.google.ads.googleads.v12.services.MutateMerchantCenterLinkRequest result = new com.google.ads.googleads.v12.services.MutateMerchantCenterLinkRequest(this);
-      result.customerId_ = customerId_;
-      if (operationBuilder_ == null) {
-        result.operation_ = operation_;
-      } else {
-        result.operation_ = operationBuilder_.build();
-      }
-      result.validateOnly_ = validateOnly_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.MutateMerchantCenterLinkRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.customerId_ = customerId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.operation_ = operationBuilder_ == null
+            ? operation_
+            : operationBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.validateOnly_ = validateOnly_;
+      }
     }
 
     @java.lang.Override
@@ -460,6 +470,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.services.MutateMerchantCenterLinkRequest.getDefaultInstance()) return this;
       if (!other.getCustomerId().isEmpty()) {
         customerId_ = other.customerId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasOperation()) {
@@ -496,19 +507,19 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               customerId_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               input.readMessage(
                   getOperationFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 24: {
               validateOnly_ = input.readBool();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 24
             default: {
@@ -526,6 +537,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object customerId_ = "";
     /**
@@ -580,11 +592,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       customerId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -597,8 +607,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCustomerId() {
-      
       customerId_ = getDefaultInstance().getCustomerId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -613,12 +623,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       customerId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -635,7 +643,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the operation field is set.
      */
     public boolean hasOperation() {
-      return operationBuilder_ != null || operation_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -665,11 +673,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         operation_ = value;
-        onChanged();
       } else {
         operationBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -683,11 +691,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.services.MerchantCenterLinkOperation.Builder builderForValue) {
       if (operationBuilder_ == null) {
         operation_ = builderForValue.build();
-        onChanged();
       } else {
         operationBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -699,17 +707,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeOperation(com.google.ads.googleads.v12.services.MerchantCenterLinkOperation value) {
       if (operationBuilder_ == null) {
-        if (operation_ != null) {
-          operation_ =
-            com.google.ads.googleads.v12.services.MerchantCenterLinkOperation.newBuilder(operation_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          operation_ != null &&
+          operation_ != com.google.ads.googleads.v12.services.MerchantCenterLinkOperation.getDefaultInstance()) {
+          getOperationBuilder().mergeFrom(value);
         } else {
           operation_ = value;
         }
-        onChanged();
       } else {
         operationBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -720,14 +729,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.services.MerchantCenterLinkOperation operation = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder clearOperation() {
-      if (operationBuilder_ == null) {
-        operation_ = null;
-        onChanged();
-      } else {
-        operation_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      operation_ = null;
+      if (operationBuilder_ != null) {
+        operationBuilder_.dispose();
         operationBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -738,7 +746,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.services.MerchantCenterLinkOperation operation = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.google.ads.googleads.v12.services.MerchantCenterLinkOperation.Builder getOperationBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getOperationFieldBuilder().getBuilder();
     }
@@ -805,6 +813,7 @@ private static final long serialVersionUID = 0L;
     public Builder setValidateOnly(boolean value) {
       
       validateOnly_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -818,7 +827,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearValidateOnly() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       validateOnly_ = false;
       onChanged();
       return this;

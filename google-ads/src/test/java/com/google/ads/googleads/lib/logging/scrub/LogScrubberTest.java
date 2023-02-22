@@ -16,10 +16,10 @@ package com.google.ads.googleads.lib.logging.scrub;
 
 import static org.junit.Assert.assertEquals;
 
-import com.google.ads.googleads.v12.resources.CustomerUserAccessInvitation;
-import com.google.ads.googleads.v12.services.CreateCustomerClientRequest;
-import com.google.ads.googleads.v12.services.SearchGoogleAdsResponse;
-import com.google.ads.googleads.v12.services.SearchGoogleAdsStreamResponse;
+import com.google.ads.googleads.v13.resources.CustomerUserAccessInvitation;
+import com.google.ads.googleads.v13.services.CreateCustomerClientRequest;
+import com.google.ads.googleads.v13.services.SearchGoogleAdsResponse;
+import com.google.ads.googleads.v13.services.SearchGoogleAdsStreamResponse;
 import com.google.common.io.Resources;
 import com.google.protobuf.Message;
 import com.google.protobuf.TextFormat;

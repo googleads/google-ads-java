@@ -53,7 +53,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int CALLER_ID_FIELD_NUMBER = 5;
-  private volatile java.lang.Object callerId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object callerId_ = "";
   /**
    * <pre>
    * The caller id from which this call was placed. Caller id is expected to be
@@ -114,7 +115,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALL_START_DATE_TIME_FIELD_NUMBER = 6;
-  private volatile java.lang.Object callStartDateTime_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object callStartDateTime_ = "";
   /**
    * <pre>
    * The date time at which the call occurred. The format is
@@ -175,7 +177,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONVERSION_ACTION_FIELD_NUMBER = 7;
-  private volatile java.lang.Object conversionAction_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object conversionAction_ = "";
   /**
    * <pre>
    * Resource name of the conversion action associated with this conversion.
@@ -233,7 +236,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONVERSION_DATE_TIME_FIELD_NUMBER = 8;
-  private volatile java.lang.Object conversionDateTime_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object conversionDateTime_ = "";
   /**
    * <pre>
    * The date time at which the conversion occurred. The format is
@@ -534,14 +538,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       callerId_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       callStartDateTime_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       conversionAction_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       conversionDateTime_ = "";
-      bitField0_ = (bitField0_ & ~0x00000008);
       return this;
     }
 
@@ -568,27 +569,31 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.CallConversionResult buildPartial() {
       com.google.ads.googleads.v11.services.CallConversionResult result = new com.google.ads.googleads.v11.services.CallConversionResult(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.CallConversionResult result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.callerId_ = callerId_;
         to_bitField0_ |= 0x00000001;
       }
-      result.callerId_ = callerId_;
       if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.callStartDateTime_ = callStartDateTime_;
         to_bitField0_ |= 0x00000002;
       }
-      result.callStartDateTime_ = callStartDateTime_;
       if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.conversionAction_ = conversionAction_;
         to_bitField0_ |= 0x00000004;
       }
-      result.conversionAction_ = conversionAction_;
       if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.conversionDateTime_ = conversionDateTime_;
         to_bitField0_ |= 0x00000008;
       }
-      result.conversionDateTime_ = conversionDateTime_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -636,23 +641,23 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v11.services.CallConversionResult other) {
       if (other == com.google.ads.googleads.v11.services.CallConversionResult.getDefaultInstance()) return this;
       if (other.hasCallerId()) {
-        bitField0_ |= 0x00000001;
         callerId_ = other.callerId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasCallStartDateTime()) {
-        bitField0_ |= 0x00000002;
         callStartDateTime_ = other.callStartDateTime_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasConversionAction()) {
-        bitField0_ |= 0x00000004;
         conversionAction_ = other.conversionAction_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.hasConversionDateTime()) {
-        bitField0_ |= 0x00000008;
         conversionDateTime_ = other.conversionDateTime_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -786,11 +791,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallerId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       callerId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -804,8 +807,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallerId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       callerId_ = getDefaultInstance().getCallerId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -821,12 +824,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallerIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       callerId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -899,11 +900,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallStartDateTime(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       callStartDateTime_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -917,8 +916,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallStartDateTime() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       callStartDateTime_ = getDefaultInstance().getCallStartDateTime();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -934,12 +933,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallStartDateTimeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       callStartDateTime_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1008,11 +1005,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setConversionAction(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       conversionAction_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1025,8 +1020,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConversionAction() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       conversionAction_ = getDefaultInstance().getConversionAction();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1041,12 +1036,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setConversionActionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       conversionAction_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1119,11 +1112,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setConversionDateTime(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
       conversionDateTime_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1137,8 +1128,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConversionDateTime() {
-      bitField0_ = (bitField0_ & ~0x00000008);
       conversionDateTime_ = getDefaultInstance().getConversionDateTime();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1154,12 +1145,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setConversionDateTimeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       conversionDateTime_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }

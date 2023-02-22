@@ -51,7 +51,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Output only. The resource name of the asset group product group view.
@@ -101,7 +102,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ASSET_GROUP_FIELD_NUMBER = 2;
-  private volatile java.lang.Object assetGroup_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object assetGroup_ = "";
   /**
    * <pre>
    * Output only. The asset group associated with the listing group filter.
@@ -147,7 +149,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ASSET_GROUP_LISTING_GROUP_FILTER_FIELD_NUMBER = 4;
-  private volatile java.lang.Object assetGroupListingGroupFilter_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object assetGroupListingGroupFilter_ = "";
   /**
    * <pre>
    * Output only. The resource name of the asset group listing group filter.
@@ -403,12 +406,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       assetGroup_ = "";
-
       assetGroupListingGroupFilter_ = "";
-
       return this;
     }
 
@@ -435,11 +436,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.AssetGroupProductGroupView buildPartial() {
       com.google.ads.googleads.v11.resources.AssetGroupProductGroupView result = new com.google.ads.googleads.v11.resources.AssetGroupProductGroupView(this);
-      result.resourceName_ = resourceName_;
-      result.assetGroup_ = assetGroup_;
-      result.assetGroupListingGroupFilter_ = assetGroupListingGroupFilter_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.AssetGroupProductGroupView result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.assetGroup_ = assetGroup_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.assetGroupListingGroupFilter_ = assetGroupListingGroupFilter_;
+      }
     }
 
     @java.lang.Override
@@ -488,14 +500,17 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.resources.AssetGroupProductGroupView.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getAssetGroup().isEmpty()) {
         assetGroup_ = other.assetGroup_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getAssetGroupListingGroupFilter().isEmpty()) {
         assetGroupListingGroupFilter_ = other.assetGroupListingGroupFilter_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -526,17 +541,17 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               assetGroup_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 34: {
               assetGroupListingGroupFilter_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 34
             default: {
@@ -554,6 +569,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object resourceName_ = "";
     /**
@@ -614,11 +630,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -633,8 +647,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -651,12 +665,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -714,11 +726,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAssetGroup(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       assetGroup_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -731,8 +741,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAssetGroup() {
-      
       assetGroup_ = getDefaultInstance().getAssetGroup();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -747,12 +757,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAssetGroupBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       assetGroup_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -810,11 +818,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAssetGroupListingGroupFilter(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       assetGroupListingGroupFilter_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -827,8 +833,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAssetGroupListingGroupFilter() {
-      
       assetGroupListingGroupFilter_ = getDefaultInstance().getAssetGroupListingGroupFilter();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -843,12 +849,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAssetGroupListingGroupFilterBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       assetGroupListingGroupFilter_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }

@@ -68,9 +68,9 @@ public interface KeywordThemeConstantOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The ISO-639-1 language code with 2 letters of the constant, eg. "en".
-   * To display and query matching purpose, the keyword theme needs to be
-   * localized.
+   * Output only. The ISO-639-1 language code with 2 letters of the constant,
+   * eg. "en". To display and query matching purpose, the keyword theme needs to
+   * be localized.
    * </pre>
    *
    * <code>optional string language_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -79,9 +79,9 @@ public interface KeywordThemeConstantOrBuilder extends
   boolean hasLanguageCode();
   /**
    * <pre>
-   * Output only. The ISO-639-1 language code with 2 letters of the constant, eg. "en".
-   * To display and query matching purpose, the keyword theme needs to be
-   * localized.
+   * Output only. The ISO-639-1 language code with 2 letters of the constant,
+   * eg. "en". To display and query matching purpose, the keyword theme needs to
+   * be localized.
    * </pre>
    *
    * <code>optional string language_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -90,9 +90,9 @@ public interface KeywordThemeConstantOrBuilder extends
   java.lang.String getLanguageCode();
   /**
    * <pre>
-   * Output only. The ISO-639-1 language code with 2 letters of the constant, eg. "en".
-   * To display and query matching purpose, the keyword theme needs to be
-   * localized.
+   * Output only. The ISO-639-1 language code with 2 letters of the constant,
+   * eg. "en". To display and query matching purpose, the keyword theme needs to
+   * be localized.
    * </pre>
    *
    * <code>optional string language_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

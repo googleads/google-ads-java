@@ -54,7 +54,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Immutable. The resource name of the campaign extension setting.
@@ -104,7 +105,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EXTENSION_TYPE_FIELD_NUMBER = 2;
-  private int extensionType_;
+  private int extensionType_ = 0;
   /**
    * <pre>
    * Immutable. The extension type of the customer extension setting.
@@ -125,18 +126,18 @@ private static final long serialVersionUID = 0L;
    * @return The extensionType.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.ExtensionTypeEnum.ExtensionType getExtensionType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.ExtensionTypeEnum.ExtensionType result = com.google.ads.googleads.v11.enums.ExtensionTypeEnum.ExtensionType.valueOf(extensionType_);
+    com.google.ads.googleads.v11.enums.ExtensionTypeEnum.ExtensionType result = com.google.ads.googleads.v11.enums.ExtensionTypeEnum.ExtensionType.forNumber(extensionType_);
     return result == null ? com.google.ads.googleads.v11.enums.ExtensionTypeEnum.ExtensionType.UNRECOGNIZED : result;
   }
 
   public static final int CAMPAIGN_FIELD_NUMBER = 6;
-  private volatile java.lang.Object campaign_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object campaign_ = "";
   /**
    * <pre>
-   * Immutable. The resource name of the campaign. The linked extension feed items will
-   * serve under this campaign.
-   * Campaign resource names have the form:
+   * Immutable. The resource name of the campaign. The linked extension feed
+   * items will serve under this campaign. Campaign resource names have the
+   * form:
    * `customers/{customer_id}/campaigns/{campaign_id}`
    * </pre>
    *
@@ -149,9 +150,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. The resource name of the campaign. The linked extension feed items will
-   * serve under this campaign.
-   * Campaign resource names have the form:
+   * Immutable. The resource name of the campaign. The linked extension feed
+   * items will serve under this campaign. Campaign resource names have the
+   * form:
    * `customers/{customer_id}/campaigns/{campaign_id}`
    * </pre>
    *
@@ -173,9 +174,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. The resource name of the campaign. The linked extension feed items will
-   * serve under this campaign.
-   * Campaign resource names have the form:
+   * Immutable. The resource name of the campaign. The linked extension feed
+   * items will serve under this campaign. Campaign resource names have the
+   * form:
    * `customers/{customer_id}/campaigns/{campaign_id}`
    * </pre>
    *
@@ -198,6 +199,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EXTENSION_FEED_ITEMS_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList extensionFeedItems_;
   /**
    * <pre>
@@ -257,7 +259,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DEVICE_FIELD_NUMBER = 5;
-  private int device_;
+  private int device_ = 0;
   /**
    * <pre>
    * The device for which the extensions will serve. Optional.
@@ -278,8 +280,7 @@ private static final long serialVersionUID = 0L;
    * @return The device.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice getDevice() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice result = com.google.ads.googleads.v11.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice.valueOf(device_);
+    com.google.ads.googleads.v11.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice result = com.google.ads.googleads.v11.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice.forNumber(device_);
     return result == null ? com.google.ads.googleads.v11.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice.UNRECOGNIZED : result;
   }
 
@@ -526,16 +527,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       extensionType_ = 0;
-
       campaign_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       extensionFeedItems_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000008);
       device_ = 0;
-
       return this;
     }
 
@@ -562,23 +560,37 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.CampaignExtensionSetting buildPartial() {
       com.google.ads.googleads.v11.resources.CampaignExtensionSetting result = new com.google.ads.googleads.v11.resources.CampaignExtensionSetting(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
-      result.extensionType_ = extensionType_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        to_bitField0_ |= 0x00000001;
-      }
-      result.campaign_ = campaign_;
-      if (((bitField0_ & 0x00000002) != 0)) {
-        extensionFeedItems_ = extensionFeedItems_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000002);
-      }
-      result.extensionFeedItems_ = extensionFeedItems_;
-      result.device_ = device_;
-      result.bitField0_ = to_bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.resources.CampaignExtensionSetting result) {
+      if (((bitField0_ & 0x00000008) != 0)) {
+        extensionFeedItems_ = extensionFeedItems_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000008);
+      }
+      result.extensionFeedItems_ = extensionFeedItems_;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.CampaignExtensionSetting result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.extensionType_ = extensionType_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.campaign_ = campaign_;
+        to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.device_ = device_;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -627,20 +639,21 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.resources.CampaignExtensionSetting.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.extensionType_ != 0) {
         setExtensionTypeValue(other.getExtensionTypeValue());
       }
       if (other.hasCampaign()) {
-        bitField0_ |= 0x00000001;
         campaign_ = other.campaign_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.extensionFeedItems_.isEmpty()) {
         if (extensionFeedItems_.isEmpty()) {
           extensionFeedItems_ = other.extensionFeedItems_;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
           ensureExtensionFeedItemsIsMutable();
           extensionFeedItems_.addAll(other.extensionFeedItems_);
@@ -678,22 +691,22 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 16: {
               extensionType_ = input.readEnum();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             case 40: {
               device_ = input.readEnum();
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 40
             case 50: {
               campaign_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000004;
               break;
             } // case 50
             case 58: {
@@ -778,11 +791,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -797,8 +808,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -815,12 +826,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -847,8 +856,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setExtensionTypeValue(int value) {
-      
       extensionType_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -862,8 +871,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.ExtensionTypeEnum.ExtensionType getExtensionType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.ExtensionTypeEnum.ExtensionType result = com.google.ads.googleads.v11.enums.ExtensionTypeEnum.ExtensionType.valueOf(extensionType_);
+      com.google.ads.googleads.v11.enums.ExtensionTypeEnum.ExtensionType result = com.google.ads.googleads.v11.enums.ExtensionTypeEnum.ExtensionType.forNumber(extensionType_);
       return result == null ? com.google.ads.googleads.v11.enums.ExtensionTypeEnum.ExtensionType.UNRECOGNIZED : result;
     }
     /**
@@ -879,7 +887,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000002;
       extensionType_ = value.getNumber();
       onChanged();
       return this;
@@ -893,7 +901,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearExtensionType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       extensionType_ = 0;
       onChanged();
       return this;
@@ -902,9 +910,9 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object campaign_ = "";
     /**
      * <pre>
-     * Immutable. The resource name of the campaign. The linked extension feed items will
-     * serve under this campaign.
-     * Campaign resource names have the form:
+     * Immutable. The resource name of the campaign. The linked extension feed
+     * items will serve under this campaign. Campaign resource names have the
+     * form:
      * `customers/{customer_id}/campaigns/{campaign_id}`
      * </pre>
      *
@@ -912,13 +920,13 @@ private static final long serialVersionUID = 0L;
      * @return Whether the campaign field is set.
      */
     public boolean hasCampaign() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
-     * Immutable. The resource name of the campaign. The linked extension feed items will
-     * serve under this campaign.
-     * Campaign resource names have the form:
+     * Immutable. The resource name of the campaign. The linked extension feed
+     * items will serve under this campaign. Campaign resource names have the
+     * form:
      * `customers/{customer_id}/campaigns/{campaign_id}`
      * </pre>
      *
@@ -939,9 +947,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The resource name of the campaign. The linked extension feed items will
-     * serve under this campaign.
-     * Campaign resource names have the form:
+     * Immutable. The resource name of the campaign. The linked extension feed
+     * items will serve under this campaign. Campaign resource names have the
+     * form:
      * `customers/{customer_id}/campaigns/{campaign_id}`
      * </pre>
      *
@@ -963,9 +971,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The resource name of the campaign. The linked extension feed items will
-     * serve under this campaign.
-     * Campaign resource names have the form:
+     * Immutable. The resource name of the campaign. The linked extension feed
+     * items will serve under this campaign. Campaign resource names have the
+     * form:
      * `customers/{customer_id}/campaigns/{campaign_id}`
      * </pre>
      *
@@ -975,19 +983,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaign(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       campaign_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Immutable. The resource name of the campaign. The linked extension feed items will
-     * serve under this campaign.
-     * Campaign resource names have the form:
+     * Immutable. The resource name of the campaign. The linked extension feed
+     * items will serve under this campaign. Campaign resource names have the
+     * form:
      * `customers/{customer_id}/campaigns/{campaign_id}`
      * </pre>
      *
@@ -995,16 +1001,16 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCampaign() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       campaign_ = getDefaultInstance().getCampaign();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Immutable. The resource name of the campaign. The linked extension feed items will
-     * serve under this campaign.
-     * Campaign resource names have the form:
+     * Immutable. The resource name of the campaign. The linked extension feed
+     * items will serve under this campaign. Campaign resource names have the
+     * form:
      * `customers/{customer_id}/campaigns/{campaign_id}`
      * </pre>
      *
@@ -1014,21 +1020,19 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaignBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       campaign_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
 
     private com.google.protobuf.LazyStringList extensionFeedItems_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureExtensionFeedItemsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         extensionFeedItems_ = new com.google.protobuf.LazyStringArrayList(extensionFeedItems_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000008;
        }
     }
     /**
@@ -1101,10 +1105,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setExtensionFeedItems(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureExtensionFeedItemsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureExtensionFeedItemsIsMutable();
       extensionFeedItems_.set(index, value);
       onChanged();
       return this;
@@ -1122,10 +1124,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addExtensionFeedItems(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureExtensionFeedItemsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureExtensionFeedItemsIsMutable();
       extensionFeedItems_.add(value);
       onChanged();
       return this;
@@ -1161,7 +1161,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearExtensionFeedItems() {
       extensionFeedItems_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1178,10 +1178,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addExtensionFeedItemsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureExtensionFeedItemsIsMutable();
       extensionFeedItems_.add(value);
       onChanged();
@@ -1210,8 +1208,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDeviceValue(int value) {
-      
       device_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1225,8 +1223,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice getDevice() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice result = com.google.ads.googleads.v11.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice.valueOf(device_);
+      com.google.ads.googleads.v11.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice result = com.google.ads.googleads.v11.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice.forNumber(device_);
       return result == null ? com.google.ads.googleads.v11.enums.ExtensionSettingDeviceEnum.ExtensionSettingDevice.UNRECOGNIZED : result;
     }
     /**
@@ -1242,7 +1239,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000010;
       device_ = value.getNumber();
       onChanged();
       return this;
@@ -1256,7 +1253,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDevice() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       device_ = 0;
       onChanged();
       return this;

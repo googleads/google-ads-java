@@ -60,7 +60,10 @@ import javax.annotation.Generated;
  * userListServiceSettingsBuilder
  *     .mutateUserListsSettings()
  *     .setRetrySettings(
- *         userListServiceSettingsBuilder.mutateUserListsSettings().getRetrySettings().toBuilder()
+ *         userListServiceSettingsBuilder
+ *             .mutateUserListsSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
  * UserListServiceSettings userListServiceSettings = userListServiceSettingsBuilder.build();

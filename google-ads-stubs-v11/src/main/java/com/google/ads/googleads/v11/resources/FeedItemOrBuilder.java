@@ -292,12 +292,12 @@ public interface FeedItemOrBuilder extends
 
   /**
    * <pre>
-   * Output only. List of info about a feed item's validation and approval state for active
-   * feed mappings. There will be an entry in the list for each type of feed
-   * mapping associated with the feed, for example, a feed with a sitelink and a
-   * call feed mapping would cause every feed item associated with that feed to
-   * have an entry in this list for both sitelink and call. This field is
-   * read-only.
+   * Output only. List of info about a feed item's validation and approval state
+   * for active feed mappings. There will be an entry in the list for each type
+   * of feed mapping associated with the feed, for example, a feed with a
+   * sitelink and a call feed mapping would cause every feed item associated
+   * with that feed to have an entry in this list for both sitelink and call.
+   * This field is read-only.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -306,12 +306,12 @@ public interface FeedItemOrBuilder extends
       getPolicyInfosList();
   /**
    * <pre>
-   * Output only. List of info about a feed item's validation and approval state for active
-   * feed mappings. There will be an entry in the list for each type of feed
-   * mapping associated with the feed, for example, a feed with a sitelink and a
-   * call feed mapping would cause every feed item associated with that feed to
-   * have an entry in this list for both sitelink and call. This field is
-   * read-only.
+   * Output only. List of info about a feed item's validation and approval state
+   * for active feed mappings. There will be an entry in the list for each type
+   * of feed mapping associated with the feed, for example, a feed with a
+   * sitelink and a call feed mapping would cause every feed item associated
+   * with that feed to have an entry in this list for both sitelink and call.
+   * This field is read-only.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -319,12 +319,12 @@ public interface FeedItemOrBuilder extends
   com.google.ads.googleads.v11.resources.FeedItemPlaceholderPolicyInfo getPolicyInfos(int index);
   /**
    * <pre>
-   * Output only. List of info about a feed item's validation and approval state for active
-   * feed mappings. There will be an entry in the list for each type of feed
-   * mapping associated with the feed, for example, a feed with a sitelink and a
-   * call feed mapping would cause every feed item associated with that feed to
-   * have an entry in this list for both sitelink and call. This field is
-   * read-only.
+   * Output only. List of info about a feed item's validation and approval state
+   * for active feed mappings. There will be an entry in the list for each type
+   * of feed mapping associated with the feed, for example, a feed with a
+   * sitelink and a call feed mapping would cause every feed item associated
+   * with that feed to have an entry in this list for both sitelink and call.
+   * This field is read-only.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -332,12 +332,12 @@ public interface FeedItemOrBuilder extends
   int getPolicyInfosCount();
   /**
    * <pre>
-   * Output only. List of info about a feed item's validation and approval state for active
-   * feed mappings. There will be an entry in the list for each type of feed
-   * mapping associated with the feed, for example, a feed with a sitelink and a
-   * call feed mapping would cause every feed item associated with that feed to
-   * have an entry in this list for both sitelink and call. This field is
-   * read-only.
+   * Output only. List of info about a feed item's validation and approval state
+   * for active feed mappings. There will be an entry in the list for each type
+   * of feed mapping associated with the feed, for example, a feed with a
+   * sitelink and a call feed mapping would cause every feed item associated
+   * with that feed to have an entry in this list for both sitelink and call.
+   * This field is read-only.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -346,12 +346,12 @@ public interface FeedItemOrBuilder extends
       getPolicyInfosOrBuilderList();
   /**
    * <pre>
-   * Output only. List of info about a feed item's validation and approval state for active
-   * feed mappings. There will be an entry in the list for each type of feed
-   * mapping associated with the feed, for example, a feed with a sitelink and a
-   * call feed mapping would cause every feed item associated with that feed to
-   * have an entry in this list for both sitelink and call. This field is
-   * read-only.
+   * Output only. List of info about a feed item's validation and approval state
+   * for active feed mappings. There will be an entry in the list for each type
+   * of feed mapping associated with the feed, for example, a feed with a
+   * sitelink and a call feed mapping would cause every feed item associated
+   * with that feed to have an entry in this list for both sitelink and call.
+   * This field is read-only.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.resources.FeedItemPlaceholderPolicyInfo policy_infos = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

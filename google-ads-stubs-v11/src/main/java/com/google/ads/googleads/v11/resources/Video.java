@@ -53,7 +53,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Output only. The resource name of the video.
@@ -103,7 +104,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ID_FIELD_NUMBER = 6;
-  private volatile java.lang.Object id_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object id_ = "";
   /**
    * <pre>
    * Output only. The ID of the video.
@@ -161,7 +163,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CHANNEL_ID_FIELD_NUMBER = 7;
-  private volatile java.lang.Object channelId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object channelId_ = "";
   /**
    * <pre>
    * Output only. The owner channel id of the video.
@@ -219,7 +222,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DURATION_MILLIS_FIELD_NUMBER = 8;
-  private long durationMillis_;
+  private long durationMillis_ = 0L;
   /**
    * <pre>
    * Output only. The duration of the video in milliseconds.
@@ -246,7 +249,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TITLE_FIELD_NUMBER = 9;
-  private volatile java.lang.Object title_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object title_ = "";
   /**
    * <pre>
    * Output only. The title of the video.
@@ -556,16 +560,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       id_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       channelId_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       durationMillis_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000004);
       title_ = "";
-      bitField0_ = (bitField0_ & ~0x00000008);
       return this;
     }
 
@@ -592,28 +592,34 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.Video buildPartial() {
       com.google.ads.googleads.v11.resources.Video result = new com.google.ads.googleads.v11.resources.Video(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.Video result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.id_ = id_;
         to_bitField0_ |= 0x00000001;
       }
-      result.id_ = id_;
-      if (((from_bitField0_ & 0x00000002) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.channelId_ = channelId_;
         to_bitField0_ |= 0x00000002;
       }
-      result.channelId_ = channelId_;
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.durationMillis_ = durationMillis_;
         to_bitField0_ |= 0x00000004;
       }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.title_ = title_;
         to_bitField0_ |= 0x00000008;
       }
-      result.title_ = title_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -662,24 +668,25 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.resources.Video.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasId()) {
-        bitField0_ |= 0x00000001;
         id_ = other.id_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasChannelId()) {
-        bitField0_ |= 0x00000002;
         channelId_ = other.channelId_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.hasDurationMillis()) {
         setDurationMillis(other.getDurationMillis());
       }
       if (other.hasTitle()) {
-        bitField0_ |= 0x00000008;
         title_ = other.title_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -710,27 +717,27 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 50: {
               id_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 50
             case 58: {
               channelId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 58
             case 64: {
               durationMillis_ = input.readInt64();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               break;
             } // case 64
             case 74: {
               title_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000010;
               break;
             } // case 74
             default: {
@@ -809,11 +816,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -828,8 +833,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -846,12 +851,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -866,7 +869,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the id field is set.
      */
     public boolean hasId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -920,11 +923,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       id_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -937,8 +938,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       id_ = getDefaultInstance().getId();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -953,12 +954,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       id_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -973,7 +972,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the channelId field is set.
      */
     public boolean hasChannelId() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -1027,11 +1026,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setChannelId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       channelId_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1044,8 +1041,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearChannelId() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       channelId_ = getDefaultInstance().getChannelId();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1060,12 +1057,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setChannelIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       channelId_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1081,7 +1076,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasDurationMillis() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -1105,8 +1100,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDurationMillis(long value) {
-      bitField0_ |= 0x00000004;
+      
       durationMillis_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1119,7 +1115,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDurationMillis() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000008);
       durationMillis_ = 0L;
       onChanged();
       return this;
@@ -1135,7 +1131,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the title field is set.
      */
     public boolean hasTitle() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -1189,11 +1185,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTitle(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
       title_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1206,8 +1200,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTitle() {
-      bitField0_ = (bitField0_ & ~0x00000008);
       title_ = getDefaultInstance().getTitle();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1222,12 +1216,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTitleBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       title_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }

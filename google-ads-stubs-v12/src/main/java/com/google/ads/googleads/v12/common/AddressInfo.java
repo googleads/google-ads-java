@@ -56,7 +56,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int POSTAL_CODE_FIELD_NUMBER = 8;
-  private volatile java.lang.Object postalCode_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object postalCode_ = "";
   /**
    * <pre>
    * Postal code.
@@ -114,7 +115,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PROVINCE_CODE_FIELD_NUMBER = 9;
-  private volatile java.lang.Object provinceCode_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object provinceCode_ = "";
   /**
    * <pre>
    * Province or state code.
@@ -172,7 +174,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int COUNTRY_CODE_FIELD_NUMBER = 10;
-  private volatile java.lang.Object countryCode_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object countryCode_ = "";
   /**
    * <pre>
    * Country code.
@@ -230,7 +233,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PROVINCE_NAME_FIELD_NUMBER = 11;
-  private volatile java.lang.Object provinceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object provinceName_ = "";
   /**
    * <pre>
    * Province or state name.
@@ -288,7 +292,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STREET_ADDRESS_FIELD_NUMBER = 12;
-  private volatile java.lang.Object streetAddress_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object streetAddress_ = "";
   /**
    * <pre>
    * Street address line 1.
@@ -346,7 +351,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STREET_ADDRESS2_FIELD_NUMBER = 13;
-  private volatile java.lang.Object streetAddress2_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object streetAddress2_ = "";
   /**
    * <pre>
    * Street address line 2. This field is write-only. It is only used for
@@ -410,7 +416,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CITY_NAME_FIELD_NUMBER = 14;
-  private volatile java.lang.Object cityName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object cityName_ = "";
   /**
    * <pre>
    * Name of the city.
@@ -753,20 +760,14 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       postalCode_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       provinceCode_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       countryCode_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       provinceName_ = "";
-      bitField0_ = (bitField0_ & ~0x00000008);
       streetAddress_ = "";
-      bitField0_ = (bitField0_ & ~0x00000010);
       streetAddress2_ = "";
-      bitField0_ = (bitField0_ & ~0x00000020);
       cityName_ = "";
-      bitField0_ = (bitField0_ & ~0x00000040);
       return this;
     }
 
@@ -793,39 +794,43 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.AddressInfo buildPartial() {
       com.google.ads.googleads.v12.common.AddressInfo result = new com.google.ads.googleads.v12.common.AddressInfo(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.AddressInfo result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.postalCode_ = postalCode_;
         to_bitField0_ |= 0x00000001;
       }
-      result.postalCode_ = postalCode_;
       if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.provinceCode_ = provinceCode_;
         to_bitField0_ |= 0x00000002;
       }
-      result.provinceCode_ = provinceCode_;
       if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.countryCode_ = countryCode_;
         to_bitField0_ |= 0x00000004;
       }
-      result.countryCode_ = countryCode_;
       if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.provinceName_ = provinceName_;
         to_bitField0_ |= 0x00000008;
       }
-      result.provinceName_ = provinceName_;
       if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.streetAddress_ = streetAddress_;
         to_bitField0_ |= 0x00000010;
       }
-      result.streetAddress_ = streetAddress_;
       if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.streetAddress2_ = streetAddress2_;
         to_bitField0_ |= 0x00000020;
       }
-      result.streetAddress2_ = streetAddress2_;
       if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.cityName_ = cityName_;
         to_bitField0_ |= 0x00000040;
       }
-      result.cityName_ = cityName_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -873,38 +878,38 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v12.common.AddressInfo other) {
       if (other == com.google.ads.googleads.v12.common.AddressInfo.getDefaultInstance()) return this;
       if (other.hasPostalCode()) {
-        bitField0_ |= 0x00000001;
         postalCode_ = other.postalCode_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasProvinceCode()) {
-        bitField0_ |= 0x00000002;
         provinceCode_ = other.provinceCode_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasCountryCode()) {
-        bitField0_ |= 0x00000004;
         countryCode_ = other.countryCode_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.hasProvinceName()) {
-        bitField0_ |= 0x00000008;
         provinceName_ = other.provinceName_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.hasStreetAddress()) {
-        bitField0_ |= 0x00000010;
         streetAddress_ = other.streetAddress_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (other.hasStreetAddress2()) {
-        bitField0_ |= 0x00000020;
         streetAddress2_ = other.streetAddress2_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (other.hasCityName()) {
-        bitField0_ |= 0x00000040;
         cityName_ = other.cityName_;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -1049,11 +1054,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPostalCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       postalCode_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1066,8 +1069,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPostalCode() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       postalCode_ = getDefaultInstance().getPostalCode();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1082,12 +1085,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPostalCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       postalCode_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1156,11 +1157,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setProvinceCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       provinceCode_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1173,8 +1172,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearProvinceCode() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       provinceCode_ = getDefaultInstance().getProvinceCode();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1189,12 +1188,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setProvinceCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       provinceCode_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1263,11 +1260,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCountryCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       countryCode_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1280,8 +1275,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCountryCode() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       countryCode_ = getDefaultInstance().getCountryCode();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1296,12 +1291,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCountryCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       countryCode_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1370,11 +1363,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setProvinceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
       provinceName_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1387,8 +1378,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearProvinceName() {
-      bitField0_ = (bitField0_ & ~0x00000008);
       provinceName_ = getDefaultInstance().getProvinceName();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1403,12 +1394,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setProvinceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       provinceName_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1477,11 +1466,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStreetAddress(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
+      if (value == null) { throw new NullPointerException(); }
       streetAddress_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1494,8 +1481,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStreetAddress() {
-      bitField0_ = (bitField0_ & ~0x00000010);
       streetAddress_ = getDefaultInstance().getStreetAddress();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1510,12 +1497,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStreetAddressBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000010;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       streetAddress_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1592,11 +1577,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStreetAddress2(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000020;
+      if (value == null) { throw new NullPointerException(); }
       streetAddress2_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1611,8 +1594,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStreetAddress2() {
-      bitField0_ = (bitField0_ & ~0x00000020);
       streetAddress2_ = getDefaultInstance().getStreetAddress2();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1629,12 +1612,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStreetAddress2Bytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000020;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       streetAddress2_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1703,11 +1684,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCityName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000040;
+      if (value == null) { throw new NullPointerException(); }
       cityName_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1720,8 +1699,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCityName() {
-      bitField0_ = (bitField0_ & ~0x00000040);
       cityName_ = getDefaultInstance().getCityName();
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -1736,12 +1715,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCityNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000040;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       cityName_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }

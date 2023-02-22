@@ -62,7 +62,8 @@ public interface FeedItemTargetOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The target type of this feed item target. This field is read-only.
+   * Output only. The target type of this feed item target. This field is
+   * read-only.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.FeedItemTargetTypeEnum.FeedItemTargetType feed_item_target_type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -71,7 +72,8 @@ public interface FeedItemTargetOrBuilder extends
   int getFeedItemTargetTypeValue();
   /**
    * <pre>
-   * Output only. The target type of this feed item target. This field is read-only.
+   * Output only. The target type of this feed item target. This field is
+   * read-only.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.FeedItemTargetTypeEnum.FeedItemTargetType feed_item_target_type = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

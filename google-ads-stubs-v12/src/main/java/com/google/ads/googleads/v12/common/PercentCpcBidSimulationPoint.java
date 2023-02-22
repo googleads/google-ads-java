@@ -50,7 +50,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int PERCENT_CPC_BID_MICROS_FIELD_NUMBER = 1;
-  private long percentCpcBidMicros_;
+  private long percentCpcBidMicros_ = 0L;
   /**
    * <pre>
    * The simulated percent CPC upon which projected metrics are based. Percent
@@ -81,7 +81,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BIDDABLE_CONVERSIONS_FIELD_NUMBER = 2;
-  private double biddableConversions_;
+  private double biddableConversions_ = 0D;
   /**
    * <pre>
    * Projected number of biddable conversions.
@@ -108,7 +108,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BIDDABLE_CONVERSIONS_VALUE_FIELD_NUMBER = 3;
-  private double biddableConversionsValue_;
+  private double biddableConversionsValue_ = 0D;
   /**
    * <pre>
    * Projected total value of biddable conversions in local currency.
@@ -135,7 +135,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CLICKS_FIELD_NUMBER = 4;
-  private long clicks_;
+  private long clicks_ = 0L;
   /**
    * <pre>
    * Projected number of clicks.
@@ -162,7 +162,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int COST_MICROS_FIELD_NUMBER = 5;
-  private long costMicros_;
+  private long costMicros_ = 0L;
   /**
    * <pre>
    * Projected cost in micros.
@@ -189,7 +189,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int IMPRESSIONS_FIELD_NUMBER = 6;
-  private long impressions_;
+  private long impressions_ = 0L;
   /**
    * <pre>
    * Projected number of impressions.
@@ -216,7 +216,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOP_SLOT_IMPRESSIONS_FIELD_NUMBER = 7;
-  private long topSlotImpressions_;
+  private long topSlotImpressions_ = 0L;
   /**
    * <pre>
    * Projected number of top slot impressions.
@@ -545,20 +545,14 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       percentCpcBidMicros_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       biddableConversions_ = 0D;
-      bitField0_ = (bitField0_ & ~0x00000002);
       biddableConversionsValue_ = 0D;
-      bitField0_ = (bitField0_ & ~0x00000004);
       clicks_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000008);
       costMicros_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000010);
       impressions_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000020);
       topSlotImpressions_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000040);
       return this;
     }
 
@@ -585,6 +579,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.PercentCpcBidSimulationPoint buildPartial() {
       com.google.ads.googleads.v12.common.PercentCpcBidSimulationPoint result = new com.google.ads.googleads.v12.common.PercentCpcBidSimulationPoint(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.PercentCpcBidSimulationPoint result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -615,9 +615,7 @@ private static final long serialVersionUID = 0L;
         result.topSlotImpressions_ = topSlotImpressions_;
         to_bitField0_ |= 0x00000040;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -804,8 +802,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPercentCpcBidMicros(long value) {
-      bitField0_ |= 0x00000001;
+      
       percentCpcBidMicros_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -861,8 +860,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBiddableConversions(double value) {
-      bitField0_ |= 0x00000002;
+      
       biddableConversions_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -916,8 +916,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBiddableConversionsValue(double value) {
-      bitField0_ |= 0x00000004;
+      
       biddableConversionsValue_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -971,8 +972,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setClicks(long value) {
-      bitField0_ |= 0x00000008;
+      
       clicks_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1026,8 +1028,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCostMicros(long value) {
-      bitField0_ |= 0x00000010;
+      
       costMicros_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1081,8 +1084,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setImpressions(long value) {
-      bitField0_ |= 0x00000020;
+      
       impressions_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1136,8 +1140,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTopSlotImpressions(long value) {
-      bitField0_ |= 0x00000040;
+      
       topSlotImpressions_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }

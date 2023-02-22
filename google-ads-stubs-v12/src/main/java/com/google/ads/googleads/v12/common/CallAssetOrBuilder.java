@@ -9,7 +9,8 @@ public interface CallAssetOrBuilder extends
 
   /**
    * <pre>
-   * Required. Two-letter country code of the phone number. Examples: 'US', 'us'.
+   * Required. Two-letter country code of the phone number. Examples: 'US',
+   * 'us'.
    * </pre>
    *
    * <code>string country_code = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -18,7 +19,8 @@ public interface CallAssetOrBuilder extends
   java.lang.String getCountryCode();
   /**
    * <pre>
-   * Required. Two-letter country code of the phone number. Examples: 'US', 'us'.
+   * Required. Two-letter country code of the phone number. Examples: 'US',
+   * 'us'.
    * </pre>
    *
    * <code>string country_code = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -29,7 +31,8 @@ public interface CallAssetOrBuilder extends
 
   /**
    * <pre>
-   * Required. The advertiser's raw phone number. Examples: '1234567890', '(123)456-7890'
+   * Required. The advertiser's raw phone number. Examples: '1234567890',
+   * '(123)456-7890'
    * </pre>
    *
    * <code>string phone_number = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -38,7 +41,8 @@ public interface CallAssetOrBuilder extends
   java.lang.String getPhoneNumber();
   /**
    * <pre>
-   * Required. The advertiser's raw phone number. Examples: '1234567890', '(123)456-7890'
+   * Required. The advertiser's raw phone number. Examples: '1234567890',
+   * '(123)456-7890'
    * </pre>
    *
    * <code>string phone_number = 2 [(.google.api.field_behavior) = REQUIRED];</code>

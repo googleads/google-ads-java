@@ -55,7 +55,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Output only. The resource name of the geographic view.
@@ -105,7 +106,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LOCATION_TYPE_FIELD_NUMBER = 3;
-  private int locationType_;
+  private int locationType_ = 0;
   /**
    * <pre>
    * Output only. Type of the geo targeting of the campaign.
@@ -126,13 +127,12 @@ private static final long serialVersionUID = 0L;
    * @return The locationType.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.GeoTargetingTypeEnum.GeoTargetingType getLocationType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.GeoTargetingTypeEnum.GeoTargetingType result = com.google.ads.googleads.v11.enums.GeoTargetingTypeEnum.GeoTargetingType.valueOf(locationType_);
+    com.google.ads.googleads.v11.enums.GeoTargetingTypeEnum.GeoTargetingType result = com.google.ads.googleads.v11.enums.GeoTargetingTypeEnum.GeoTargetingType.forNumber(locationType_);
     return result == null ? com.google.ads.googleads.v11.enums.GeoTargetingTypeEnum.GeoTargetingType.UNRECOGNIZED : result;
   }
 
   public static final int COUNTRY_CRITERION_ID_FIELD_NUMBER = 5;
-  private long countryCriterionId_;
+  private long countryCriterionId_ = 0L;
   /**
    * <pre>
    * Output only. Criterion Id for the country.
@@ -380,12 +380,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       locationType_ = 0;
-
       countryCriterionId_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -412,17 +410,25 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.GeographicView buildPartial() {
       com.google.ads.googleads.v11.resources.GeographicView result = new com.google.ads.googleads.v11.resources.GeographicView(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.GeographicView result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
-      result.locationType_ = locationType_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.locationType_ = locationType_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.countryCriterionId_ = countryCriterionId_;
         to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -471,6 +477,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.resources.GeographicView.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.locationType_ != 0) {
@@ -507,17 +514,17 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 24: {
               locationType_ = input.readEnum();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 24
             case 40: {
               countryCriterionId_ = input.readInt64();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000004;
               break;
             } // case 40
             default: {
@@ -596,11 +603,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -615,8 +620,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -633,12 +638,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -665,8 +668,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLocationTypeValue(int value) {
-      
       locationType_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -680,8 +683,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.GeoTargetingTypeEnum.GeoTargetingType getLocationType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.GeoTargetingTypeEnum.GeoTargetingType result = com.google.ads.googleads.v11.enums.GeoTargetingTypeEnum.GeoTargetingType.valueOf(locationType_);
+      com.google.ads.googleads.v11.enums.GeoTargetingTypeEnum.GeoTargetingType result = com.google.ads.googleads.v11.enums.GeoTargetingTypeEnum.GeoTargetingType.forNumber(locationType_);
       return result == null ? com.google.ads.googleads.v11.enums.GeoTargetingTypeEnum.GeoTargetingType.UNRECOGNIZED : result;
     }
     /**
@@ -697,7 +699,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000002;
       locationType_ = value.getNumber();
       onChanged();
       return this;
@@ -711,7 +713,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLocationType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       locationType_ = 0;
       onChanged();
       return this;
@@ -728,7 +730,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCountryCriterionId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -752,8 +754,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCountryCriterionId(long value) {
-      bitField0_ |= 0x00000001;
+      
       countryCriterionId_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -766,7 +769,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCountryCriterionId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000004);
       countryCriterionId_ = 0L;
       onChanged();
       return this;

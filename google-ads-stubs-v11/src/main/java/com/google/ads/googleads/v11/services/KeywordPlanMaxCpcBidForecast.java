@@ -49,7 +49,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int MAX_CPC_BID_MICROS_FIELD_NUMBER = 3;
-  private long maxCpcBidMicros_;
+  private long maxCpcBidMicros_ = 0L;
   /**
    * <pre>
    * The max cpc bid in micros.
@@ -110,7 +110,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v11.services.ForecastMetricsOrBuilder getMaxCpcBidForecastOrBuilder() {
-    return getMaxCpcBidForecast();
+    return maxCpcBidForecast_ == null ? com.google.ads.googleads.v11.services.ForecastMetrics.getDefaultInstance() : maxCpcBidForecast_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -327,12 +327,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       maxCpcBidMicros_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
-      if (maxCpcBidForecastBuilder_ == null) {
-        maxCpcBidForecast_ = null;
-      } else {
-        maxCpcBidForecast_ = null;
+      maxCpcBidForecast_ = null;
+      if (maxCpcBidForecastBuilder_ != null) {
+        maxCpcBidForecastBuilder_.dispose();
         maxCpcBidForecastBuilder_ = null;
       }
       return this;
@@ -361,20 +360,24 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.KeywordPlanMaxCpcBidForecast buildPartial() {
       com.google.ads.googleads.v11.services.KeywordPlanMaxCpcBidForecast result = new com.google.ads.googleads.v11.services.KeywordPlanMaxCpcBidForecast(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.KeywordPlanMaxCpcBidForecast result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.maxCpcBidMicros_ = maxCpcBidMicros_;
         to_bitField0_ |= 0x00000001;
       }
-      if (maxCpcBidForecastBuilder_ == null) {
-        result.maxCpcBidForecast_ = maxCpcBidForecast_;
-      } else {
-        result.maxCpcBidForecast_ = maxCpcBidForecastBuilder_.build();
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.maxCpcBidForecast_ = maxCpcBidForecastBuilder_ == null
+            ? maxCpcBidForecast_
+            : maxCpcBidForecastBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -457,7 +460,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getMaxCpcBidForecastFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 24: {
@@ -517,8 +520,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMaxCpcBidMicros(long value) {
-      bitField0_ |= 0x00000001;
+      
       maxCpcBidMicros_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -549,7 +553,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the maxCpcBidForecast field is set.
      */
     public boolean hasMaxCpcBidForecast() {
-      return maxCpcBidForecastBuilder_ != null || maxCpcBidForecast_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -579,11 +583,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         maxCpcBidForecast_ = value;
-        onChanged();
       } else {
         maxCpcBidForecastBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -597,11 +601,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.services.ForecastMetrics.Builder builderForValue) {
       if (maxCpcBidForecastBuilder_ == null) {
         maxCpcBidForecast_ = builderForValue.build();
-        onChanged();
       } else {
         maxCpcBidForecastBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -613,17 +617,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeMaxCpcBidForecast(com.google.ads.googleads.v11.services.ForecastMetrics value) {
       if (maxCpcBidForecastBuilder_ == null) {
-        if (maxCpcBidForecast_ != null) {
-          maxCpcBidForecast_ =
-            com.google.ads.googleads.v11.services.ForecastMetrics.newBuilder(maxCpcBidForecast_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          maxCpcBidForecast_ != null &&
+          maxCpcBidForecast_ != com.google.ads.googleads.v11.services.ForecastMetrics.getDefaultInstance()) {
+          getMaxCpcBidForecastBuilder().mergeFrom(value);
         } else {
           maxCpcBidForecast_ = value;
         }
-        onChanged();
       } else {
         maxCpcBidForecastBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -634,14 +639,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.services.ForecastMetrics max_cpc_bid_forecast = 2;</code>
      */
     public Builder clearMaxCpcBidForecast() {
-      if (maxCpcBidForecastBuilder_ == null) {
-        maxCpcBidForecast_ = null;
-        onChanged();
-      } else {
-        maxCpcBidForecast_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      maxCpcBidForecast_ = null;
+      if (maxCpcBidForecastBuilder_ != null) {
+        maxCpcBidForecastBuilder_.dispose();
         maxCpcBidForecastBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -652,7 +656,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.services.ForecastMetrics max_cpc_bid_forecast = 2;</code>
      */
     public com.google.ads.googleads.v11.services.ForecastMetrics.Builder getMaxCpcBidForecastBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getMaxCpcBidForecastFieldBuilder().getBuilder();
     }

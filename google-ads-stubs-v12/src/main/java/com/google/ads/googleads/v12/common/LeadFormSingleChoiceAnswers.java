@@ -50,6 +50,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ANSWERS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList answers_;
   /**
    * <pre>
@@ -303,6 +304,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       answers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       bitField0_ = (bitField0_ & ~0x00000001);
       return this;
@@ -331,14 +333,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.LeadFormSingleChoiceAnswers buildPartial() {
       com.google.ads.googleads.v12.common.LeadFormSingleChoiceAnswers result = new com.google.ads.googleads.v12.common.LeadFormSingleChoiceAnswers(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.common.LeadFormSingleChoiceAnswers result) {
       if (((bitField0_ & 0x00000001) != 0)) {
         answers_ = answers_.getUnmodifiableView();
         bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.answers_ = answers_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.LeadFormSingleChoiceAnswers result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override
@@ -516,10 +526,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAnswers(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAnswersIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureAnswersIsMutable();
       answers_.set(index, value);
       onChanged();
       return this;
@@ -536,10 +544,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addAnswers(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureAnswersIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureAnswersIsMutable();
       answers_.add(value);
       onChanged();
       return this;
@@ -589,10 +595,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addAnswersBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureAnswersIsMutable();
       answers_.add(value);
       onChanged();

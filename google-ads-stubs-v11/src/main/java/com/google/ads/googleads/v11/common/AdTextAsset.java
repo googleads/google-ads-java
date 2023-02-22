@@ -52,7 +52,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int TEXT_FIELD_NUMBER = 4;
-  private volatile java.lang.Object text_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object text_ = "";
   /**
    * <pre>
    * Asset text.
@@ -110,7 +111,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PINNED_FIELD_FIELD_NUMBER = 2;
-  private int pinnedField_;
+  private int pinnedField_ = 0;
   /**
    * <pre>
    * The pinned field of the asset. This restricts the asset to only serve
@@ -137,13 +138,12 @@ private static final long serialVersionUID = 0L;
    * @return The pinnedField.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType getPinnedField() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType result = com.google.ads.googleads.v11.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType.valueOf(pinnedField_);
+    com.google.ads.googleads.v11.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType result = com.google.ads.googleads.v11.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType.forNumber(pinnedField_);
     return result == null ? com.google.ads.googleads.v11.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType.UNRECOGNIZED : result;
   }
 
   public static final int ASSET_PERFORMANCE_LABEL_FIELD_NUMBER = 5;
-  private int assetPerformanceLabel_;
+  private int assetPerformanceLabel_ = 0;
   /**
    * <pre>
    * The performance label of this text asset.
@@ -164,8 +164,7 @@ private static final long serialVersionUID = 0L;
    * @return The assetPerformanceLabel.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel getAssetPerformanceLabel() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel result = com.google.ads.googleads.v11.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel.valueOf(assetPerformanceLabel_);
+    com.google.ads.googleads.v11.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel result = com.google.ads.googleads.v11.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel.forNumber(assetPerformanceLabel_);
     return result == null ? com.google.ads.googleads.v11.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel.UNRECOGNIZED : result;
   }
 
@@ -204,7 +203,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v11.common.AdAssetPolicySummaryOrBuilder getPolicySummaryInfoOrBuilder() {
-    return getPolicySummaryInfo();
+    return policySummaryInfo_ == null ? com.google.ads.googleads.v11.common.AdAssetPolicySummary.getDefaultInstance() : policySummaryInfo_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -439,16 +438,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       text_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       pinnedField_ = 0;
-
       assetPerformanceLabel_ = 0;
-
-      if (policySummaryInfoBuilder_ == null) {
-        policySummaryInfo_ = null;
-      } else {
-        policySummaryInfo_ = null;
+      policySummaryInfo_ = null;
+      if (policySummaryInfoBuilder_ != null) {
+        policySummaryInfoBuilder_.dispose();
         policySummaryInfoBuilder_ = null;
       }
       return this;
@@ -477,22 +473,30 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.AdTextAsset buildPartial() {
       com.google.ads.googleads.v11.common.AdTextAsset result = new com.google.ads.googleads.v11.common.AdTextAsset(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.AdTextAsset result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.text_ = text_;
         to_bitField0_ |= 0x00000001;
       }
-      result.text_ = text_;
-      result.pinnedField_ = pinnedField_;
-      result.assetPerformanceLabel_ = assetPerformanceLabel_;
-      if (policySummaryInfoBuilder_ == null) {
-        result.policySummaryInfo_ = policySummaryInfo_;
-      } else {
-        result.policySummaryInfo_ = policySummaryInfoBuilder_.build();
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.pinnedField_ = pinnedField_;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.assetPerformanceLabel_ = assetPerformanceLabel_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.policySummaryInfo_ = policySummaryInfoBuilder_ == null
+            ? policySummaryInfo_
+            : policySummaryInfoBuilder_.build();
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -540,8 +544,8 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v11.common.AdTextAsset other) {
       if (other == com.google.ads.googleads.v11.common.AdTextAsset.getDefaultInstance()) return this;
       if (other.hasText()) {
-        bitField0_ |= 0x00000001;
         text_ = other.text_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.pinnedField_ != 0) {
@@ -581,7 +585,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 16: {
               pinnedField_ = input.readEnum();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             case 34: {
@@ -591,14 +595,14 @@ private static final long serialVersionUID = 0L;
             } // case 34
             case 40: {
               assetPerformanceLabel_ = input.readEnum();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 40
             case 50: {
               input.readMessage(
                   getPolicySummaryInfoFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 50
             default: {
@@ -682,11 +686,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setText(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       text_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -699,8 +701,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearText() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       text_ = getDefaultInstance().getText();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -715,12 +717,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTextBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       text_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -753,8 +753,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPinnedFieldValue(int value) {
-      
       pinnedField_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -771,8 +771,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType getPinnedField() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType result = com.google.ads.googleads.v11.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType.valueOf(pinnedField_);
+      com.google.ads.googleads.v11.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType result = com.google.ads.googleads.v11.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType.forNumber(pinnedField_);
       return result == null ? com.google.ads.googleads.v11.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType.UNRECOGNIZED : result;
     }
     /**
@@ -791,7 +790,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000002;
       pinnedField_ = value.getNumber();
       onChanged();
       return this;
@@ -808,7 +807,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPinnedField() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       pinnedField_ = 0;
       onChanged();
       return this;
@@ -836,8 +835,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAssetPerformanceLabelValue(int value) {
-      
       assetPerformanceLabel_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -851,8 +850,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel getAssetPerformanceLabel() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel result = com.google.ads.googleads.v11.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel.valueOf(assetPerformanceLabel_);
+      com.google.ads.googleads.v11.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel result = com.google.ads.googleads.v11.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel.forNumber(assetPerformanceLabel_);
       return result == null ? com.google.ads.googleads.v11.enums.AssetPerformanceLabelEnum.AssetPerformanceLabel.UNRECOGNIZED : result;
     }
     /**
@@ -868,7 +866,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       assetPerformanceLabel_ = value.getNumber();
       onChanged();
       return this;
@@ -882,7 +880,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAssetPerformanceLabel() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       assetPerformanceLabel_ = 0;
       onChanged();
       return this;
@@ -900,7 +898,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the policySummaryInfo field is set.
      */
     public boolean hasPolicySummaryInfo() {
-      return policySummaryInfoBuilder_ != null || policySummaryInfo_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -930,11 +928,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         policySummaryInfo_ = value;
-        onChanged();
       } else {
         policySummaryInfoBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -948,11 +946,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.common.AdAssetPolicySummary.Builder builderForValue) {
       if (policySummaryInfoBuilder_ == null) {
         policySummaryInfo_ = builderForValue.build();
-        onChanged();
       } else {
         policySummaryInfoBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -964,17 +962,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergePolicySummaryInfo(com.google.ads.googleads.v11.common.AdAssetPolicySummary value) {
       if (policySummaryInfoBuilder_ == null) {
-        if (policySummaryInfo_ != null) {
-          policySummaryInfo_ =
-            com.google.ads.googleads.v11.common.AdAssetPolicySummary.newBuilder(policySummaryInfo_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000008) != 0) &&
+          policySummaryInfo_ != null &&
+          policySummaryInfo_ != com.google.ads.googleads.v11.common.AdAssetPolicySummary.getDefaultInstance()) {
+          getPolicySummaryInfoBuilder().mergeFrom(value);
         } else {
           policySummaryInfo_ = value;
         }
-        onChanged();
       } else {
         policySummaryInfoBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -985,14 +984,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.common.AdAssetPolicySummary policy_summary_info = 6;</code>
      */
     public Builder clearPolicySummaryInfo() {
-      if (policySummaryInfoBuilder_ == null) {
-        policySummaryInfo_ = null;
-        onChanged();
-      } else {
-        policySummaryInfo_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
+      policySummaryInfo_ = null;
+      if (policySummaryInfoBuilder_ != null) {
+        policySummaryInfoBuilder_.dispose();
         policySummaryInfoBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1003,7 +1001,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.common.AdAssetPolicySummary policy_summary_info = 6;</code>
      */
     public com.google.ads.googleads.v11.common.AdAssetPolicySummary.Builder getPolicySummaryInfoBuilder() {
-      
+      bitField0_ |= 0x00000008;
       onChanged();
       return getPolicySummaryInfoFieldBuilder().getBuilder();
     }

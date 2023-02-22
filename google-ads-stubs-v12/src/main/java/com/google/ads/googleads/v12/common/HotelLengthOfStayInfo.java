@@ -49,7 +49,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int MIN_NIGHTS_FIELD_NUMBER = 3;
-  private long minNights_;
+  private long minNights_ = 0L;
   /**
    * <pre>
    * Low end of the number of nights in the stay.
@@ -76,7 +76,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MAX_NIGHTS_FIELD_NUMBER = 4;
-  private long maxNights_;
+  private long maxNights_ = 0L;
   /**
    * <pre>
    * High end of the number of nights in the stay.
@@ -317,10 +317,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       minNights_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       maxNights_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -347,6 +346,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.HotelLengthOfStayInfo buildPartial() {
       com.google.ads.googleads.v12.common.HotelLengthOfStayInfo result = new com.google.ads.googleads.v12.common.HotelLengthOfStayInfo(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.HotelLengthOfStayInfo result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -357,9 +362,7 @@ private static final long serialVersionUID = 0L;
         result.maxNights_ = maxNights_;
         to_bitField0_ |= 0x00000002;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -500,8 +503,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMinNights(long value) {
-      bitField0_ |= 0x00000001;
+      
       minNights_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -555,8 +559,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMaxNights(long value) {
-      bitField0_ |= 0x00000002;
+      
       maxNights_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

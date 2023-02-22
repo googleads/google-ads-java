@@ -55,6 +55,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int COUNTRY_LOCATIONS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.LocationInfo> countryLocations_;
   /**
    * <pre>
@@ -115,6 +116,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SUB_COUNTRY_LOCATIONS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.LocationInfo> subCountryLocations_;
   /**
    * <pre>
@@ -222,10 +224,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.common.GenderInfoOrBuilder getGenderOrBuilder() {
-    return getGender();
+    return gender_ == null ? com.google.ads.googleads.v12.common.GenderInfo.getDefaultInstance() : gender_;
   }
 
   public static final int AGE_RANGES_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.AgeRangeInfo> ageRanges_;
   /**
    * <pre>
@@ -328,10 +331,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.common.ParentalStatusInfoOrBuilder getParentalStatusOrBuilder() {
-    return getParentalStatus();
+    return parentalStatus_ == null ? com.google.ads.googleads.v12.common.ParentalStatusInfo.getDefaultInstance() : parentalStatus_;
   }
 
   public static final int INCOME_RANGES_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.IncomeRangeInfo> incomeRanges_;
   /**
    * <pre>
@@ -397,6 +401,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DYNAMIC_LINEUPS_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.services.AudienceInsightsDynamicLineup> dynamicLineups_;
   /**
    * <pre>
@@ -457,6 +462,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOPIC_AUDIENCE_COMBINATIONS_FIELD_NUMBER = 8;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.services.InsightsAudienceAttributeGroup> topicAudienceCombinations_;
   /**
    * <pre>
@@ -838,6 +844,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (countryLocationsBuilder_ == null) {
         countryLocations_ = java.util.Collections.emptyList();
       } else {
@@ -852,10 +859,9 @@ private static final long serialVersionUID = 0L;
         subCountryLocationsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000002);
-      if (genderBuilder_ == null) {
-        gender_ = null;
-      } else {
-        gender_ = null;
+      gender_ = null;
+      if (genderBuilder_ != null) {
+        genderBuilder_.dispose();
         genderBuilder_ = null;
       }
       if (ageRangesBuilder_ == null) {
@@ -864,11 +870,10 @@ private static final long serialVersionUID = 0L;
         ageRanges_ = null;
         ageRangesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000004);
-      if (parentalStatusBuilder_ == null) {
-        parentalStatus_ = null;
-      } else {
-        parentalStatus_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
+      parentalStatus_ = null;
+      if (parentalStatusBuilder_ != null) {
+        parentalStatusBuilder_.dispose();
         parentalStatusBuilder_ = null;
       }
       if (incomeRangesBuilder_ == null) {
@@ -877,21 +882,21 @@ private static final long serialVersionUID = 0L;
         incomeRanges_ = null;
         incomeRangesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000020);
       if (dynamicLineupsBuilder_ == null) {
         dynamicLineups_ = java.util.Collections.emptyList();
       } else {
         dynamicLineups_ = null;
         dynamicLineupsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000040);
       if (topicAudienceCombinationsBuilder_ == null) {
         topicAudienceCombinations_ = java.util.Collections.emptyList();
       } else {
         topicAudienceCombinations_ = null;
         topicAudienceCombinationsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000080);
       return this;
     }
 
@@ -918,7 +923,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.InsightsAudience buildPartial() {
       com.google.ads.googleads.v12.services.InsightsAudience result = new com.google.ads.googleads.v12.services.InsightsAudience(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.services.InsightsAudience result) {
       if (countryLocationsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           countryLocations_ = java.util.Collections.unmodifiableList(countryLocations_);
@@ -937,54 +948,56 @@ private static final long serialVersionUID = 0L;
       } else {
         result.subCountryLocations_ = subCountryLocationsBuilder_.build();
       }
-      if (genderBuilder_ == null) {
-        result.gender_ = gender_;
-      } else {
-        result.gender_ = genderBuilder_.build();
-      }
       if (ageRangesBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           ageRanges_ = java.util.Collections.unmodifiableList(ageRanges_);
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.ageRanges_ = ageRanges_;
       } else {
         result.ageRanges_ = ageRangesBuilder_.build();
       }
-      if (parentalStatusBuilder_ == null) {
-        result.parentalStatus_ = parentalStatus_;
-      } else {
-        result.parentalStatus_ = parentalStatusBuilder_.build();
-      }
       if (incomeRangesBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0)) {
+        if (((bitField0_ & 0x00000020) != 0)) {
           incomeRanges_ = java.util.Collections.unmodifiableList(incomeRanges_);
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000020);
         }
         result.incomeRanges_ = incomeRanges_;
       } else {
         result.incomeRanges_ = incomeRangesBuilder_.build();
       }
       if (dynamicLineupsBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0)) {
+        if (((bitField0_ & 0x00000040) != 0)) {
           dynamicLineups_ = java.util.Collections.unmodifiableList(dynamicLineups_);
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000040);
         }
         result.dynamicLineups_ = dynamicLineups_;
       } else {
         result.dynamicLineups_ = dynamicLineupsBuilder_.build();
       }
       if (topicAudienceCombinationsBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0)) {
+        if (((bitField0_ & 0x00000080) != 0)) {
           topicAudienceCombinations_ = java.util.Collections.unmodifiableList(topicAudienceCombinations_);
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000080);
         }
         result.topicAudienceCombinations_ = topicAudienceCombinations_;
       } else {
         result.topicAudienceCombinations_ = topicAudienceCombinationsBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.InsightsAudience result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.gender_ = genderBuilder_ == null
+            ? gender_
+            : genderBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.parentalStatus_ = parentalStatusBuilder_ == null
+            ? parentalStatus_
+            : parentalStatusBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -1090,7 +1103,7 @@ private static final long serialVersionUID = 0L;
         if (!other.ageRanges_.isEmpty()) {
           if (ageRanges_.isEmpty()) {
             ageRanges_ = other.ageRanges_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureAgeRangesIsMutable();
             ageRanges_.addAll(other.ageRanges_);
@@ -1103,7 +1116,7 @@ private static final long serialVersionUID = 0L;
             ageRangesBuilder_.dispose();
             ageRangesBuilder_ = null;
             ageRanges_ = other.ageRanges_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
             ageRangesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getAgeRangesFieldBuilder() : null;
@@ -1119,7 +1132,7 @@ private static final long serialVersionUID = 0L;
         if (!other.incomeRanges_.isEmpty()) {
           if (incomeRanges_.isEmpty()) {
             incomeRanges_ = other.incomeRanges_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
             ensureIncomeRangesIsMutable();
             incomeRanges_.addAll(other.incomeRanges_);
@@ -1132,7 +1145,7 @@ private static final long serialVersionUID = 0L;
             incomeRangesBuilder_.dispose();
             incomeRangesBuilder_ = null;
             incomeRanges_ = other.incomeRanges_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000020);
             incomeRangesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getIncomeRangesFieldBuilder() : null;
@@ -1145,7 +1158,7 @@ private static final long serialVersionUID = 0L;
         if (!other.dynamicLineups_.isEmpty()) {
           if (dynamicLineups_.isEmpty()) {
             dynamicLineups_ = other.dynamicLineups_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000040);
           } else {
             ensureDynamicLineupsIsMutable();
             dynamicLineups_.addAll(other.dynamicLineups_);
@@ -1158,7 +1171,7 @@ private static final long serialVersionUID = 0L;
             dynamicLineupsBuilder_.dispose();
             dynamicLineupsBuilder_ = null;
             dynamicLineups_ = other.dynamicLineups_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000040);
             dynamicLineupsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getDynamicLineupsFieldBuilder() : null;
@@ -1171,7 +1184,7 @@ private static final long serialVersionUID = 0L;
         if (!other.topicAudienceCombinations_.isEmpty()) {
           if (topicAudienceCombinations_.isEmpty()) {
             topicAudienceCombinations_ = other.topicAudienceCombinations_;
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000080);
           } else {
             ensureTopicAudienceCombinationsIsMutable();
             topicAudienceCombinations_.addAll(other.topicAudienceCombinations_);
@@ -1184,7 +1197,7 @@ private static final long serialVersionUID = 0L;
             topicAudienceCombinationsBuilder_.dispose();
             topicAudienceCombinationsBuilder_ = null;
             topicAudienceCombinations_ = other.topicAudienceCombinations_;
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000080);
             topicAudienceCombinationsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getTopicAudienceCombinationsFieldBuilder() : null;
@@ -1249,7 +1262,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getGenderFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 34: {
@@ -1269,7 +1282,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getParentalStatusFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 42
             case 50: {
@@ -2001,7 +2014,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the gender field is set.
      */
     public boolean hasGender() {
-      return genderBuilder_ != null || gender_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -2033,11 +2046,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         gender_ = value;
-        onChanged();
       } else {
         genderBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -2052,11 +2065,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.GenderInfo.Builder builderForValue) {
       if (genderBuilder_ == null) {
         gender_ = builderForValue.build();
-        onChanged();
       } else {
         genderBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -2069,17 +2082,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeGender(com.google.ads.googleads.v12.common.GenderInfo value) {
       if (genderBuilder_ == null) {
-        if (gender_ != null) {
-          gender_ =
-            com.google.ads.googleads.v12.common.GenderInfo.newBuilder(gender_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000004) != 0) &&
+          gender_ != null &&
+          gender_ != com.google.ads.googleads.v12.common.GenderInfo.getDefaultInstance()) {
+          getGenderBuilder().mergeFrom(value);
         } else {
           gender_ = value;
         }
-        onChanged();
       } else {
         genderBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -2091,14 +2105,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.GenderInfo gender = 3;</code>
      */
     public Builder clearGender() {
-      if (genderBuilder_ == null) {
-        gender_ = null;
-        onChanged();
-      } else {
-        gender_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      gender_ = null;
+      if (genderBuilder_ != null) {
+        genderBuilder_.dispose();
         genderBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -2110,7 +2123,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.GenderInfo gender = 3;</code>
      */
     public com.google.ads.googleads.v12.common.GenderInfo.Builder getGenderBuilder() {
-      
+      bitField0_ |= 0x00000004;
       onChanged();
       return getGenderFieldBuilder().getBuilder();
     }
@@ -2155,9 +2168,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v12.common.AgeRangeInfo> ageRanges_ =
       java.util.Collections.emptyList();
     private void ensureAgeRangesIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         ageRanges_ = new java.util.ArrayList<com.google.ads.googleads.v12.common.AgeRangeInfo>(ageRanges_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
        }
     }
 
@@ -2362,7 +2375,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearAgeRanges() {
       if (ageRangesBuilder_ == null) {
         ageRanges_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
       } else {
         ageRangesBuilder_.clear();
@@ -2474,7 +2487,7 @@ private static final long serialVersionUID = 0L;
         ageRangesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v12.common.AgeRangeInfo, com.google.ads.googleads.v12.common.AgeRangeInfo.Builder, com.google.ads.googleads.v12.common.AgeRangeInfoOrBuilder>(
                 ageRanges_,
-                ((bitField0_ & 0x00000004) != 0),
+                ((bitField0_ & 0x00000008) != 0),
                 getParentForChildren(),
                 isClean());
         ageRanges_ = null;
@@ -2495,7 +2508,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the parentalStatus field is set.
      */
     public boolean hasParentalStatus() {
-      return parentalStatusBuilder_ != null || parentalStatus_ != null;
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -2527,11 +2540,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         parentalStatus_ = value;
-        onChanged();
       } else {
         parentalStatusBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -2546,11 +2559,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.ParentalStatusInfo.Builder builderForValue) {
       if (parentalStatusBuilder_ == null) {
         parentalStatus_ = builderForValue.build();
-        onChanged();
       } else {
         parentalStatusBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -2563,17 +2576,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeParentalStatus(com.google.ads.googleads.v12.common.ParentalStatusInfo value) {
       if (parentalStatusBuilder_ == null) {
-        if (parentalStatus_ != null) {
-          parentalStatus_ =
-            com.google.ads.googleads.v12.common.ParentalStatusInfo.newBuilder(parentalStatus_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000010) != 0) &&
+          parentalStatus_ != null &&
+          parentalStatus_ != com.google.ads.googleads.v12.common.ParentalStatusInfo.getDefaultInstance()) {
+          getParentalStatusBuilder().mergeFrom(value);
         } else {
           parentalStatus_ = value;
         }
-        onChanged();
       } else {
         parentalStatusBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -2585,14 +2599,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.ParentalStatusInfo parental_status = 5;</code>
      */
     public Builder clearParentalStatus() {
-      if (parentalStatusBuilder_ == null) {
-        parentalStatus_ = null;
-        onChanged();
-      } else {
-        parentalStatus_ = null;
+      bitField0_ = (bitField0_ & ~0x00000010);
+      parentalStatus_ = null;
+      if (parentalStatusBuilder_ != null) {
+        parentalStatusBuilder_.dispose();
         parentalStatusBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -2604,7 +2617,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.ParentalStatusInfo parental_status = 5;</code>
      */
     public com.google.ads.googleads.v12.common.ParentalStatusInfo.Builder getParentalStatusBuilder() {
-      
+      bitField0_ |= 0x00000010;
       onChanged();
       return getParentalStatusFieldBuilder().getBuilder();
     }
@@ -2649,9 +2662,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v12.common.IncomeRangeInfo> incomeRanges_ =
       java.util.Collections.emptyList();
     private void ensureIncomeRangesIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
+      if (!((bitField0_ & 0x00000020) != 0)) {
         incomeRanges_ = new java.util.ArrayList<com.google.ads.googleads.v12.common.IncomeRangeInfo>(incomeRanges_);
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000020;
        }
     }
 
@@ -2856,7 +2869,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearIncomeRanges() {
       if (incomeRangesBuilder_ == null) {
         incomeRanges_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
       } else {
         incomeRangesBuilder_.clear();
@@ -2968,7 +2981,7 @@ private static final long serialVersionUID = 0L;
         incomeRangesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v12.common.IncomeRangeInfo, com.google.ads.googleads.v12.common.IncomeRangeInfo.Builder, com.google.ads.googleads.v12.common.IncomeRangeInfoOrBuilder>(
                 incomeRanges_,
-                ((bitField0_ & 0x00000008) != 0),
+                ((bitField0_ & 0x00000020) != 0),
                 getParentForChildren(),
                 isClean());
         incomeRanges_ = null;
@@ -2979,9 +2992,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v12.services.AudienceInsightsDynamicLineup> dynamicLineups_ =
       java.util.Collections.emptyList();
     private void ensureDynamicLineupsIsMutable() {
-      if (!((bitField0_ & 0x00000010) != 0)) {
+      if (!((bitField0_ & 0x00000040) != 0)) {
         dynamicLineups_ = new java.util.ArrayList<com.google.ads.googleads.v12.services.AudienceInsightsDynamicLineup>(dynamicLineups_);
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000040;
        }
     }
 
@@ -3175,7 +3188,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearDynamicLineups() {
       if (dynamicLineupsBuilder_ == null) {
         dynamicLineups_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
       } else {
         dynamicLineupsBuilder_.clear();
@@ -3280,7 +3293,7 @@ private static final long serialVersionUID = 0L;
         dynamicLineupsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v12.services.AudienceInsightsDynamicLineup, com.google.ads.googleads.v12.services.AudienceInsightsDynamicLineup.Builder, com.google.ads.googleads.v12.services.AudienceInsightsDynamicLineupOrBuilder>(
                 dynamicLineups_,
-                ((bitField0_ & 0x00000010) != 0),
+                ((bitField0_ & 0x00000040) != 0),
                 getParentForChildren(),
                 isClean());
         dynamicLineups_ = null;
@@ -3291,9 +3304,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v12.services.InsightsAudienceAttributeGroup> topicAudienceCombinations_ =
       java.util.Collections.emptyList();
     private void ensureTopicAudienceCombinationsIsMutable() {
-      if (!((bitField0_ & 0x00000020) != 0)) {
+      if (!((bitField0_ & 0x00000080) != 0)) {
         topicAudienceCombinations_ = new java.util.ArrayList<com.google.ads.googleads.v12.services.InsightsAudienceAttributeGroup>(topicAudienceCombinations_);
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000080;
        }
     }
 
@@ -3553,7 +3566,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearTopicAudienceCombinations() {
       if (topicAudienceCombinationsBuilder_ == null) {
         topicAudienceCombinations_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
       } else {
         topicAudienceCombinationsBuilder_.clear();
@@ -3700,7 +3713,7 @@ private static final long serialVersionUID = 0L;
         topicAudienceCombinationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v12.services.InsightsAudienceAttributeGroup, com.google.ads.googleads.v12.services.InsightsAudienceAttributeGroup.Builder, com.google.ads.googleads.v12.services.InsightsAudienceAttributeGroupOrBuilder>(
                 topicAudienceCombinations_,
-                ((bitField0_ & 0x00000020) != 0),
+                ((bitField0_ & 0x00000080) != 0),
                 getParentForChildren(),
                 isClean());
         topicAudienceCombinations_ = null;

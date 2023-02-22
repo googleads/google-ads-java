@@ -5,7 +5,8 @@ package com.google.ads.googleads.v11.services;
 
 /**
  * <pre>
- * Request message for [GoogleAdsFieldService.SearchGoogleAdsFields][google.ads.googleads.v11.services.GoogleAdsFieldService.SearchGoogleAdsFields].
+ * Request message for
+ * [GoogleAdsFieldService.SearchGoogleAdsFields][google.ads.googleads.v11.services.GoogleAdsFieldService.SearchGoogleAdsFields].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v11.services.SearchGoogleAdsFieldsRequest}
@@ -50,7 +51,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int QUERY_FIELD_NUMBER = 1;
-  private volatile java.lang.Object query_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object query_ = "";
   /**
    * <pre>
    * Required. The query string.
@@ -96,7 +98,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PAGE_TOKEN_FIELD_NUMBER = 2;
-  private volatile java.lang.Object pageToken_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object pageToken_ = "";
   /**
    * <pre>
    * Token of the page to retrieve. If not specified, the first page of
@@ -146,7 +149,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PAGE_SIZE_FIELD_NUMBER = 3;
-  private int pageSize_;
+  private int pageSize_ = 0;
   /**
    * <pre>
    * Number of elements to retrieve in a single page.
@@ -339,7 +342,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Request message for [GoogleAdsFieldService.SearchGoogleAdsFields][google.ads.googleads.v11.services.GoogleAdsFieldService.SearchGoogleAdsFields].
+   * Request message for
+   * [GoogleAdsFieldService.SearchGoogleAdsFields][google.ads.googleads.v11.services.GoogleAdsFieldService.SearchGoogleAdsFields].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v11.services.SearchGoogleAdsFieldsRequest}
@@ -374,12 +378,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       query_ = "";
-
       pageToken_ = "";
-
       pageSize_ = 0;
-
       return this;
     }
 
@@ -406,11 +408,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.SearchGoogleAdsFieldsRequest buildPartial() {
       com.google.ads.googleads.v11.services.SearchGoogleAdsFieldsRequest result = new com.google.ads.googleads.v11.services.SearchGoogleAdsFieldsRequest(this);
-      result.query_ = query_;
-      result.pageToken_ = pageToken_;
-      result.pageSize_ = pageSize_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.SearchGoogleAdsFieldsRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.query_ = query_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.pageToken_ = pageToken_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.pageSize_ = pageSize_;
+      }
     }
 
     @java.lang.Override
@@ -459,10 +472,12 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.services.SearchGoogleAdsFieldsRequest.getDefaultInstance()) return this;
       if (!other.getQuery().isEmpty()) {
         query_ = other.query_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getPageToken().isEmpty()) {
         pageToken_ = other.pageToken_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.getPageSize() != 0) {
@@ -496,17 +511,17 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               query_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               pageToken_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 24: {
               pageSize_ = input.readInt32();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 24
             default: {
@@ -524,6 +539,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object query_ = "";
     /**
@@ -578,11 +594,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setQuery(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       query_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -595,8 +609,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearQuery() {
-      
       query_ = getDefaultInstance().getQuery();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -611,12 +625,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setQueryBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       query_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -680,11 +692,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPageToken(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       pageToken_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -699,8 +709,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPageToken() {
-      
       pageToken_ = getDefaultInstance().getPageToken();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -717,12 +727,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPageTokenBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       pageToken_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -756,6 +764,7 @@ private static final long serialVersionUID = 0L;
     public Builder setPageSize(int value) {
       
       pageSize_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -770,7 +779,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPageSize() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       pageSize_ = 0;
       onChanged();
       return this;

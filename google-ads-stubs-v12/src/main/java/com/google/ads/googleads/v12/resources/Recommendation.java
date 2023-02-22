@@ -190,7 +190,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.Recommendation.RecommendationMetricsOrBuilder getBaseMetricsOrBuilder() {
-      return getBaseMetrics();
+      return baseMetrics_ == null ? com.google.ads.googleads.v12.resources.Recommendation.RecommendationMetrics.getDefaultInstance() : baseMetrics_;
     }
 
     public static final int POTENTIAL_METRICS_FIELD_NUMBER = 2;
@@ -228,7 +228,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.Recommendation.RecommendationMetricsOrBuilder getPotentialMetricsOrBuilder() {
-      return getPotentialMetrics();
+      return potentialMetrics_ == null ? com.google.ads.googleads.v12.resources.Recommendation.RecommendationMetrics.getDefaultInstance() : potentialMetrics_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -445,16 +445,15 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (baseMetricsBuilder_ == null) {
-          baseMetrics_ = null;
-        } else {
-          baseMetrics_ = null;
+        bitField0_ = 0;
+        baseMetrics_ = null;
+        if (baseMetricsBuilder_ != null) {
+          baseMetricsBuilder_.dispose();
           baseMetricsBuilder_ = null;
         }
-        if (potentialMetricsBuilder_ == null) {
-          potentialMetrics_ = null;
-        } else {
-          potentialMetrics_ = null;
+        potentialMetrics_ = null;
+        if (potentialMetricsBuilder_ != null) {
+          potentialMetricsBuilder_.dispose();
           potentialMetricsBuilder_ = null;
         }
         return this;
@@ -483,18 +482,23 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact buildPartial() {
         com.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact result = new com.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact(this);
-        if (baseMetricsBuilder_ == null) {
-          result.baseMetrics_ = baseMetrics_;
-        } else {
-          result.baseMetrics_ = baseMetricsBuilder_.build();
-        }
-        if (potentialMetricsBuilder_ == null) {
-          result.potentialMetrics_ = potentialMetrics_;
-        } else {
-          result.potentialMetrics_ = potentialMetricsBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.baseMetrics_ = baseMetricsBuilder_ == null
+              ? baseMetrics_
+              : baseMetricsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.potentialMetrics_ = potentialMetricsBuilder_ == null
+              ? potentialMetrics_
+              : potentialMetricsBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -577,14 +581,14 @@ private static final long serialVersionUID = 0L;
                 input.readMessage(
                     getBaseMetricsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getPotentialMetricsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -602,6 +606,7 @@ private static final long serialVersionUID = 0L;
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private com.google.ads.googleads.v12.resources.Recommendation.RecommendationMetrics baseMetrics_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -615,7 +620,7 @@ private static final long serialVersionUID = 0L;
        * @return Whether the baseMetrics field is set.
        */
       public boolean hasBaseMetrics() {
-        return baseMetricsBuilder_ != null || baseMetrics_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <pre>
@@ -645,11 +650,11 @@ private static final long serialVersionUID = 0L;
             throw new NullPointerException();
           }
           baseMetrics_ = value;
-          onChanged();
         } else {
           baseMetricsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -663,11 +668,11 @@ private static final long serialVersionUID = 0L;
           com.google.ads.googleads.v12.resources.Recommendation.RecommendationMetrics.Builder builderForValue) {
         if (baseMetricsBuilder_ == null) {
           baseMetrics_ = builderForValue.build();
-          onChanged();
         } else {
           baseMetricsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -679,17 +684,18 @@ private static final long serialVersionUID = 0L;
        */
       public Builder mergeBaseMetrics(com.google.ads.googleads.v12.resources.Recommendation.RecommendationMetrics value) {
         if (baseMetricsBuilder_ == null) {
-          if (baseMetrics_ != null) {
-            baseMetrics_ =
-              com.google.ads.googleads.v12.resources.Recommendation.RecommendationMetrics.newBuilder(baseMetrics_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            baseMetrics_ != null &&
+            baseMetrics_ != com.google.ads.googleads.v12.resources.Recommendation.RecommendationMetrics.getDefaultInstance()) {
+            getBaseMetricsBuilder().mergeFrom(value);
           } else {
             baseMetrics_ = value;
           }
-          onChanged();
         } else {
           baseMetricsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -700,14 +706,13 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v12.resources.Recommendation.RecommendationMetrics base_metrics = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearBaseMetrics() {
-        if (baseMetricsBuilder_ == null) {
-          baseMetrics_ = null;
-          onChanged();
-        } else {
-          baseMetrics_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        baseMetrics_ = null;
+        if (baseMetricsBuilder_ != null) {
+          baseMetricsBuilder_.dispose();
           baseMetricsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -718,7 +723,7 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v12.resources.Recommendation.RecommendationMetrics base_metrics = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.ads.googleads.v12.resources.Recommendation.RecommendationMetrics.Builder getBaseMetricsBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getBaseMetricsFieldBuilder().getBuilder();
       }
@@ -770,7 +775,7 @@ private static final long serialVersionUID = 0L;
        * @return Whether the potentialMetrics field is set.
        */
       public boolean hasPotentialMetrics() {
-        return potentialMetricsBuilder_ != null || potentialMetrics_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -800,11 +805,11 @@ private static final long serialVersionUID = 0L;
             throw new NullPointerException();
           }
           potentialMetrics_ = value;
-          onChanged();
         } else {
           potentialMetricsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -818,11 +823,11 @@ private static final long serialVersionUID = 0L;
           com.google.ads.googleads.v12.resources.Recommendation.RecommendationMetrics.Builder builderForValue) {
         if (potentialMetricsBuilder_ == null) {
           potentialMetrics_ = builderForValue.build();
-          onChanged();
         } else {
           potentialMetricsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -834,17 +839,18 @@ private static final long serialVersionUID = 0L;
        */
       public Builder mergePotentialMetrics(com.google.ads.googleads.v12.resources.Recommendation.RecommendationMetrics value) {
         if (potentialMetricsBuilder_ == null) {
-          if (potentialMetrics_ != null) {
-            potentialMetrics_ =
-              com.google.ads.googleads.v12.resources.Recommendation.RecommendationMetrics.newBuilder(potentialMetrics_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            potentialMetrics_ != null &&
+            potentialMetrics_ != com.google.ads.googleads.v12.resources.Recommendation.RecommendationMetrics.getDefaultInstance()) {
+            getPotentialMetricsBuilder().mergeFrom(value);
           } else {
             potentialMetrics_ = value;
           }
-          onChanged();
         } else {
           potentialMetricsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -855,14 +861,13 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v12.resources.Recommendation.RecommendationMetrics potential_metrics = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearPotentialMetrics() {
-        if (potentialMetricsBuilder_ == null) {
-          potentialMetrics_ = null;
-          onChanged();
-        } else {
-          potentialMetrics_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        potentialMetrics_ = null;
+        if (potentialMetricsBuilder_ != null) {
+          potentialMetricsBuilder_.dispose();
           potentialMetricsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -873,7 +878,7 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v12.resources.Recommendation.RecommendationMetrics potential_metrics = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.ads.googleads.v12.resources.Recommendation.RecommendationMetrics.Builder getPotentialMetricsBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getPotentialMetricsFieldBuilder().getBuilder();
       }
@@ -1020,7 +1025,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. Cost (in micros) for advertising, in the local currency for the account.
+     * Output only. Cost (in micros) for advertising, in the local currency for
+     * the account.
      * </pre>
      *
      * <code>optional int64 cost_micros = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1029,7 +1035,8 @@ private static final long serialVersionUID = 0L;
     boolean hasCostMicros();
     /**
      * <pre>
-     * Output only. Cost (in micros) for advertising, in the local currency for the account.
+     * Output only. Cost (in micros) for advertising, in the local currency for
+     * the account.
      * </pre>
      *
      * <code>optional int64 cost_micros = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1122,7 +1129,7 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
     public static final int IMPRESSIONS_FIELD_NUMBER = 6;
-    private double impressions_;
+    private double impressions_ = 0D;
     /**
      * <pre>
      * Output only. Number of ad impressions.
@@ -1149,7 +1156,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int CLICKS_FIELD_NUMBER = 7;
-    private double clicks_;
+    private double clicks_ = 0D;
     /**
      * <pre>
      * Output only. Number of ad clicks.
@@ -1176,10 +1183,11 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int COST_MICROS_FIELD_NUMBER = 8;
-    private long costMicros_;
+    private long costMicros_ = 0L;
     /**
      * <pre>
-     * Output only. Cost (in micros) for advertising, in the local currency for the account.
+     * Output only. Cost (in micros) for advertising, in the local currency for
+     * the account.
      * </pre>
      *
      * <code>optional int64 cost_micros = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1191,7 +1199,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Cost (in micros) for advertising, in the local currency for the account.
+     * Output only. Cost (in micros) for advertising, in the local currency for
+     * the account.
      * </pre>
      *
      * <code>optional int64 cost_micros = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1203,7 +1212,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int CONVERSIONS_FIELD_NUMBER = 9;
-    private double conversions_;
+    private double conversions_ = 0D;
     /**
      * <pre>
      * Output only. Number of conversions.
@@ -1230,7 +1239,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int VIDEO_VIEWS_FIELD_NUMBER = 10;
-    private double videoViews_;
+    private double videoViews_ = 0D;
     /**
      * <pre>
      * Output only. Number of video views for a video ad campaign.
@@ -1527,16 +1536,12 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         impressions_ = 0D;
-        bitField0_ = (bitField0_ & ~0x00000001);
         clicks_ = 0D;
-        bitField0_ = (bitField0_ & ~0x00000002);
         costMicros_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000004);
         conversions_ = 0D;
-        bitField0_ = (bitField0_ & ~0x00000008);
         videoViews_ = 0D;
-        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -1563,6 +1568,12 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v12.resources.Recommendation.RecommendationMetrics buildPartial() {
         com.google.ads.googleads.v12.resources.Recommendation.RecommendationMetrics result = new com.google.ads.googleads.v12.resources.Recommendation.RecommendationMetrics(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v12.resources.Recommendation.RecommendationMetrics result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -1585,9 +1596,7 @@ private static final long serialVersionUID = 0L;
           result.videoViews_ = videoViews_;
           to_bitField0_ |= 0x00000010;
         }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1752,8 +1761,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setImpressions(double value) {
-        bitField0_ |= 0x00000001;
+        
         impressions_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1807,8 +1817,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setClicks(double value) {
-        bitField0_ |= 0x00000002;
+        
         clicks_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1830,7 +1841,8 @@ private static final long serialVersionUID = 0L;
       private long costMicros_ ;
       /**
        * <pre>
-       * Output only. Cost (in micros) for advertising, in the local currency for the account.
+       * Output only. Cost (in micros) for advertising, in the local currency for
+       * the account.
        * </pre>
        *
        * <code>optional int64 cost_micros = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1842,7 +1854,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Cost (in micros) for advertising, in the local currency for the account.
+       * Output only. Cost (in micros) for advertising, in the local currency for
+       * the account.
        * </pre>
        *
        * <code>optional int64 cost_micros = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1854,7 +1867,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Cost (in micros) for advertising, in the local currency for the account.
+       * Output only. Cost (in micros) for advertising, in the local currency for
+       * the account.
        * </pre>
        *
        * <code>optional int64 cost_micros = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1862,14 +1876,16 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setCostMicros(long value) {
-        bitField0_ |= 0x00000004;
+        
         costMicros_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. Cost (in micros) for advertising, in the local currency for the account.
+       * Output only. Cost (in micros) for advertising, in the local currency for
+       * the account.
        * </pre>
        *
        * <code>optional int64 cost_micros = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1917,8 +1933,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setConversions(double value) {
-        bitField0_ |= 0x00000008;
+        
         conversions_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1972,8 +1989,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setVideoViews(double value) {
-        bitField0_ |= 0x00000010;
+        
         videoViews_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -2099,8 +2117,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The budget amounts and associated impact estimates for some values of
-     * possible budget amounts.
+     * Output only. The budget amounts and associated impact estimates for some
+     * values of possible budget amounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption budget_options = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2109,8 +2127,8 @@ private static final long serialVersionUID = 0L;
         getBudgetOptionsList();
     /**
      * <pre>
-     * Output only. The budget amounts and associated impact estimates for some values of
-     * possible budget amounts.
+     * Output only. The budget amounts and associated impact estimates for some
+     * values of possible budget amounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption budget_options = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2118,8 +2136,8 @@ private static final long serialVersionUID = 0L;
     com.google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption getBudgetOptions(int index);
     /**
      * <pre>
-     * Output only. The budget amounts and associated impact estimates for some values of
-     * possible budget amounts.
+     * Output only. The budget amounts and associated impact estimates for some
+     * values of possible budget amounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption budget_options = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2127,8 +2145,8 @@ private static final long serialVersionUID = 0L;
     int getBudgetOptionsCount();
     /**
      * <pre>
-     * Output only. The budget amounts and associated impact estimates for some values of
-     * possible budget amounts.
+     * Output only. The budget amounts and associated impact estimates for some
+     * values of possible budget amounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption budget_options = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2137,8 +2155,8 @@ private static final long serialVersionUID = 0L;
         getBudgetOptionsOrBuilderList();
     /**
      * <pre>
-     * Output only. The budget amounts and associated impact estimates for some values of
-     * possible budget amounts.
+     * Output only. The budget amounts and associated impact estimates for some
+     * values of possible budget amounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption budget_options = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2216,8 +2234,8 @@ private static final long serialVersionUID = 0L;
 
       /**
        * <pre>
-       * Output only. The impact estimate if budget is changed to amount specified in this
-       * option.
+       * Output only. The impact estimate if budget is changed to amount
+       * specified in this option.
        * </pre>
        *
        * <code>.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact impact = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2226,8 +2244,8 @@ private static final long serialVersionUID = 0L;
       boolean hasImpact();
       /**
        * <pre>
-       * Output only. The impact estimate if budget is changed to amount specified in this
-       * option.
+       * Output only. The impact estimate if budget is changed to amount
+       * specified in this option.
        * </pre>
        *
        * <code>.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact impact = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2236,8 +2254,8 @@ private static final long serialVersionUID = 0L;
       com.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact getImpact();
       /**
        * <pre>
-       * Output only. The impact estimate if budget is changed to amount specified in this
-       * option.
+       * Output only. The impact estimate if budget is changed to amount
+       * specified in this option.
        * </pre>
        *
        * <code>.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact impact = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2290,7 +2308,7 @@ private static final long serialVersionUID = 0L;
 
       private int bitField0_;
       public static final int BUDGET_AMOUNT_MICROS_FIELD_NUMBER = 3;
-      private long budgetAmountMicros_;
+      private long budgetAmountMicros_ = 0L;
       /**
        * <pre>
        * Output only. The budget amount for this option.
@@ -2320,8 +2338,8 @@ private static final long serialVersionUID = 0L;
       private com.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact impact_;
       /**
        * <pre>
-       * Output only. The impact estimate if budget is changed to amount specified in this
-       * option.
+       * Output only. The impact estimate if budget is changed to amount
+       * specified in this option.
        * </pre>
        *
        * <code>.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact impact = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2333,8 +2351,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The impact estimate if budget is changed to amount specified in this
-       * option.
+       * Output only. The impact estimate if budget is changed to amount
+       * specified in this option.
        * </pre>
        *
        * <code>.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact impact = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2346,15 +2364,15 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The impact estimate if budget is changed to amount specified in this
-       * option.
+       * Output only. The impact estimate if budget is changed to amount
+       * specified in this option.
        * </pre>
        *
        * <code>.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact impact = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       @java.lang.Override
       public com.google.ads.googleads.v12.resources.Recommendation.RecommendationImpactOrBuilder getImpactOrBuilder() {
-        return getImpact();
+        return impact_ == null ? com.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact.getDefaultInstance() : impact_;
       }
 
       private byte memoizedIsInitialized = -1;
@@ -2571,12 +2589,11 @@ private static final long serialVersionUID = 0L;
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           budgetAmountMicros_ = 0L;
-          bitField0_ = (bitField0_ & ~0x00000001);
-          if (impactBuilder_ == null) {
-            impact_ = null;
-          } else {
-            impact_ = null;
+          impact_ = null;
+          if (impactBuilder_ != null) {
+            impactBuilder_.dispose();
             impactBuilder_ = null;
           }
           return this;
@@ -2605,20 +2622,24 @@ private static final long serialVersionUID = 0L;
         @java.lang.Override
         public com.google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption buildPartial() {
           com.google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption result = new com.google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption result) {
           int from_bitField0_ = bitField0_;
           int to_bitField0_ = 0;
           if (((from_bitField0_ & 0x00000001) != 0)) {
             result.budgetAmountMicros_ = budgetAmountMicros_;
             to_bitField0_ |= 0x00000001;
           }
-          if (impactBuilder_ == null) {
-            result.impact_ = impact_;
-          } else {
-            result.impact_ = impactBuilder_.build();
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.impact_ = impactBuilder_ == null
+                ? impact_
+                : impactBuilder_.build();
           }
-          result.bitField0_ = to_bitField0_;
-          onBuilt();
-          return result;
+          result.bitField0_ |= to_bitField0_;
         }
 
         @java.lang.Override
@@ -2701,7 +2722,7 @@ private static final long serialVersionUID = 0L;
                   input.readMessage(
                       getImpactFieldBuilder().getBuilder(),
                       extensionRegistry);
-
+                  bitField0_ |= 0x00000002;
                   break;
                 } // case 18
                 case 24: {
@@ -2761,8 +2782,9 @@ private static final long serialVersionUID = 0L;
          * @return This builder for chaining.
          */
         public Builder setBudgetAmountMicros(long value) {
-          bitField0_ |= 0x00000001;
+          
           budgetAmountMicros_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -2786,20 +2808,20 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact, com.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact.Builder, com.google.ads.googleads.v12.resources.Recommendation.RecommendationImpactOrBuilder> impactBuilder_;
         /**
          * <pre>
-         * Output only. The impact estimate if budget is changed to amount specified in this
-         * option.
+         * Output only. The impact estimate if budget is changed to amount
+         * specified in this option.
          * </pre>
          *
          * <code>.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact impact = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
          * @return Whether the impact field is set.
          */
         public boolean hasImpact() {
-          return impactBuilder_ != null || impact_ != null;
+          return ((bitField0_ & 0x00000002) != 0);
         }
         /**
          * <pre>
-         * Output only. The impact estimate if budget is changed to amount specified in this
-         * option.
+         * Output only. The impact estimate if budget is changed to amount
+         * specified in this option.
          * </pre>
          *
          * <code>.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact impact = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2814,8 +2836,8 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Output only. The impact estimate if budget is changed to amount specified in this
-         * option.
+         * Output only. The impact estimate if budget is changed to amount
+         * specified in this option.
          * </pre>
          *
          * <code>.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact impact = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2826,17 +2848,17 @@ private static final long serialVersionUID = 0L;
               throw new NullPointerException();
             }
             impact_ = value;
-            onChanged();
           } else {
             impactBuilder_.setMessage(value);
           }
-
+          bitField0_ |= 0x00000002;
+          onChanged();
           return this;
         }
         /**
          * <pre>
-         * Output only. The impact estimate if budget is changed to amount specified in this
-         * option.
+         * Output only. The impact estimate if budget is changed to amount
+         * specified in this option.
          * </pre>
          *
          * <code>.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact impact = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2845,72 +2867,72 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact.Builder builderForValue) {
           if (impactBuilder_ == null) {
             impact_ = builderForValue.build();
-            onChanged();
           } else {
             impactBuilder_.setMessage(builderForValue.build());
           }
-
+          bitField0_ |= 0x00000002;
+          onChanged();
           return this;
         }
         /**
          * <pre>
-         * Output only. The impact estimate if budget is changed to amount specified in this
-         * option.
+         * Output only. The impact estimate if budget is changed to amount
+         * specified in this option.
          * </pre>
          *
          * <code>.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact impact = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
          */
         public Builder mergeImpact(com.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact value) {
           if (impactBuilder_ == null) {
-            if (impact_ != null) {
-              impact_ =
-                com.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact.newBuilder(impact_).mergeFrom(value).buildPartial();
+            if (((bitField0_ & 0x00000002) != 0) &&
+              impact_ != null &&
+              impact_ != com.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact.getDefaultInstance()) {
+              getImpactBuilder().mergeFrom(value);
             } else {
               impact_ = value;
             }
-            onChanged();
           } else {
             impactBuilder_.mergeFrom(value);
           }
-
+          bitField0_ |= 0x00000002;
+          onChanged();
           return this;
         }
         /**
          * <pre>
-         * Output only. The impact estimate if budget is changed to amount specified in this
-         * option.
+         * Output only. The impact estimate if budget is changed to amount
+         * specified in this option.
          * </pre>
          *
          * <code>.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact impact = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
          */
         public Builder clearImpact() {
-          if (impactBuilder_ == null) {
-            impact_ = null;
-            onChanged();
-          } else {
-            impact_ = null;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          impact_ = null;
+          if (impactBuilder_ != null) {
+            impactBuilder_.dispose();
             impactBuilder_ = null;
           }
-
+          onChanged();
           return this;
         }
         /**
          * <pre>
-         * Output only. The impact estimate if budget is changed to amount specified in this
-         * option.
+         * Output only. The impact estimate if budget is changed to amount
+         * specified in this option.
          * </pre>
          *
          * <code>.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact impact = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
          */
         public com.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact.Builder getImpactBuilder() {
-          
+          bitField0_ |= 0x00000002;
           onChanged();
           return getImpactFieldBuilder().getBuilder();
         }
         /**
          * <pre>
-         * Output only. The impact estimate if budget is changed to amount specified in this
-         * option.
+         * Output only. The impact estimate if budget is changed to amount
+         * specified in this option.
          * </pre>
          *
          * <code>.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact impact = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2925,8 +2947,8 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Output only. The impact estimate if budget is changed to amount specified in this
-         * option.
+         * Output only. The impact estimate if budget is changed to amount
+         * specified in this option.
          * </pre>
          *
          * <code>.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact impact = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3010,7 +3032,7 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
     public static final int CURRENT_BUDGET_AMOUNT_MICROS_FIELD_NUMBER = 7;
-    private long currentBudgetAmountMicros_;
+    private long currentBudgetAmountMicros_ = 0L;
     /**
      * <pre>
      * Output only. The current budget amount in micros.
@@ -3037,7 +3059,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int RECOMMENDED_BUDGET_AMOUNT_MICROS_FIELD_NUMBER = 8;
-    private long recommendedBudgetAmountMicros_;
+    private long recommendedBudgetAmountMicros_ = 0L;
     /**
      * <pre>
      * Output only. The recommended budget amount in micros.
@@ -3064,11 +3086,12 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int BUDGET_OPTIONS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption> budgetOptions_;
     /**
      * <pre>
-     * Output only. The budget amounts and associated impact estimates for some values of
-     * possible budget amounts.
+     * Output only. The budget amounts and associated impact estimates for some
+     * values of possible budget amounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption budget_options = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3079,8 +3102,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The budget amounts and associated impact estimates for some values of
-     * possible budget amounts.
+     * Output only. The budget amounts and associated impact estimates for some
+     * values of possible budget amounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption budget_options = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3092,8 +3115,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The budget amounts and associated impact estimates for some values of
-     * possible budget amounts.
+     * Output only. The budget amounts and associated impact estimates for some
+     * values of possible budget amounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption budget_options = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3104,8 +3127,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The budget amounts and associated impact estimates for some values of
-     * possible budget amounts.
+     * Output only. The budget amounts and associated impact estimates for some
+     * values of possible budget amounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption budget_options = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3116,8 +3139,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The budget amounts and associated impact estimates for some values of
-     * possible budget amounts.
+     * Output only. The budget amounts and associated impact estimates for some
+     * values of possible budget amounts.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption budget_options = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3356,10 +3379,9 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         currentBudgetAmountMicros_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000001);
         recommendedBudgetAmountMicros_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000002);
         if (budgetOptionsBuilder_ == null) {
           budgetOptions_ = java.util.Collections.emptyList();
         } else {
@@ -3393,6 +3415,25 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation buildPartial() {
         com.google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation result = new com.google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation result) {
+        if (budgetOptionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            budgetOptions_ = java.util.Collections.unmodifiableList(budgetOptions_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.budgetOptions_ = budgetOptions_;
+        } else {
+          result.budgetOptions_ = budgetOptionsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -3403,18 +3444,7 @@ private static final long serialVersionUID = 0L;
           result.recommendedBudgetAmountMicros_ = recommendedBudgetAmountMicros_;
           to_bitField0_ |= 0x00000002;
         }
-        if (budgetOptionsBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
-            budgetOptions_ = java.util.Collections.unmodifiableList(budgetOptions_);
-            bitField0_ = (bitField0_ & ~0x00000004);
-          }
-          result.budgetOptions_ = budgetOptions_;
-        } else {
-          result.budgetOptions_ = budgetOptionsBuilder_.build();
-        }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3594,8 +3624,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setCurrentBudgetAmountMicros(long value) {
-        bitField0_ |= 0x00000001;
+        
         currentBudgetAmountMicros_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3649,8 +3680,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setRecommendedBudgetAmountMicros(long value) {
-        bitField0_ |= 0x00000002;
+        
         recommendedBudgetAmountMicros_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3683,8 +3715,8 @@ private static final long serialVersionUID = 0L;
 
       /**
        * <pre>
-       * Output only. The budget amounts and associated impact estimates for some values of
-       * possible budget amounts.
+       * Output only. The budget amounts and associated impact estimates for some
+       * values of possible budget amounts.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption budget_options = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3698,8 +3730,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The budget amounts and associated impact estimates for some values of
-       * possible budget amounts.
+       * Output only. The budget amounts and associated impact estimates for some
+       * values of possible budget amounts.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption budget_options = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3713,8 +3745,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The budget amounts and associated impact estimates for some values of
-       * possible budget amounts.
+       * Output only. The budget amounts and associated impact estimates for some
+       * values of possible budget amounts.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption budget_options = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3728,8 +3760,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The budget amounts and associated impact estimates for some values of
-       * possible budget amounts.
+       * Output only. The budget amounts and associated impact estimates for some
+       * values of possible budget amounts.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption budget_options = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3750,8 +3782,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The budget amounts and associated impact estimates for some values of
-       * possible budget amounts.
+       * Output only. The budget amounts and associated impact estimates for some
+       * values of possible budget amounts.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption budget_options = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3769,8 +3801,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The budget amounts and associated impact estimates for some values of
-       * possible budget amounts.
+       * Output only. The budget amounts and associated impact estimates for some
+       * values of possible budget amounts.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption budget_options = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3790,8 +3822,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The budget amounts and associated impact estimates for some values of
-       * possible budget amounts.
+       * Output only. The budget amounts and associated impact estimates for some
+       * values of possible budget amounts.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption budget_options = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3812,8 +3844,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The budget amounts and associated impact estimates for some values of
-       * possible budget amounts.
+       * Output only. The budget amounts and associated impact estimates for some
+       * values of possible budget amounts.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption budget_options = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3831,8 +3863,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The budget amounts and associated impact estimates for some values of
-       * possible budget amounts.
+       * Output only. The budget amounts and associated impact estimates for some
+       * values of possible budget amounts.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption budget_options = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3850,8 +3882,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The budget amounts and associated impact estimates for some values of
-       * possible budget amounts.
+       * Output only. The budget amounts and associated impact estimates for some
+       * values of possible budget amounts.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption budget_options = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3870,8 +3902,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The budget amounts and associated impact estimates for some values of
-       * possible budget amounts.
+       * Output only. The budget amounts and associated impact estimates for some
+       * values of possible budget amounts.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption budget_options = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3888,8 +3920,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The budget amounts and associated impact estimates for some values of
-       * possible budget amounts.
+       * Output only. The budget amounts and associated impact estimates for some
+       * values of possible budget amounts.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption budget_options = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3906,8 +3938,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The budget amounts and associated impact estimates for some values of
-       * possible budget amounts.
+       * Output only. The budget amounts and associated impact estimates for some
+       * values of possible budget amounts.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption budget_options = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3918,8 +3950,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The budget amounts and associated impact estimates for some values of
-       * possible budget amounts.
+       * Output only. The budget amounts and associated impact estimates for some
+       * values of possible budget amounts.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption budget_options = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3933,8 +3965,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The budget amounts and associated impact estimates for some values of
-       * possible budget amounts.
+       * Output only. The budget amounts and associated impact estimates for some
+       * values of possible budget amounts.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption budget_options = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3949,8 +3981,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The budget amounts and associated impact estimates for some values of
-       * possible budget amounts.
+       * Output only. The budget amounts and associated impact estimates for some
+       * values of possible budget amounts.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption budget_options = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3961,8 +3993,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The budget amounts and associated impact estimates for some values of
-       * possible budget amounts.
+       * Output only. The budget amounts and associated impact estimates for some
+       * values of possible budget amounts.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption budget_options = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3974,8 +4006,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The budget amounts and associated impact estimates for some values of
-       * possible budget amounts.
+       * Output only. The budget amounts and associated impact estimates for some
+       * values of possible budget amounts.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption budget_options = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4192,11 +4224,11 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.common.KeywordInfoOrBuilder getKeywordOrBuilder() {
-      return getKeyword();
+      return keyword_ == null ? com.google.ads.googleads.v12.common.KeywordInfo.getDefaultInstance() : keyword_;
     }
 
     public static final int RECOMMENDED_CPC_BID_MICROS_FIELD_NUMBER = 3;
-    private long recommendedCpcBidMicros_;
+    private long recommendedCpcBidMicros_ = 0L;
     /**
      * <pre>
      * Output only. The recommended CPC (cost-per-click) bid.
@@ -4436,14 +4468,13 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (keywordBuilder_ == null) {
-          keyword_ = null;
-        } else {
-          keyword_ = null;
+        bitField0_ = 0;
+        keyword_ = null;
+        if (keywordBuilder_ != null) {
+          keywordBuilder_.dispose();
           keywordBuilder_ = null;
         }
         recommendedCpcBidMicros_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -4470,20 +4501,24 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v12.resources.Recommendation.KeywordRecommendation buildPartial() {
         com.google.ads.googleads.v12.resources.Recommendation.KeywordRecommendation result = new com.google.ads.googleads.v12.resources.Recommendation.KeywordRecommendation(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v12.resources.Recommendation.KeywordRecommendation result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (keywordBuilder_ == null) {
-          result.keyword_ = keyword_;
-        } else {
-          result.keyword_ = keywordBuilder_.build();
-        }
         if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.keyword_ = keywordBuilder_ == null
+              ? keyword_
+              : keywordBuilder_.build();
+        }
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
           result.recommendedCpcBidMicros_ = recommendedCpcBidMicros_;
           to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4566,12 +4601,12 @@ private static final long serialVersionUID = 0L;
                 input.readMessage(
                     getKeywordFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 24: {
                 recommendedCpcBidMicros_ = input.readInt64();
-                bitField0_ |= 0x00000001;
+                bitField0_ |= 0x00000002;
                 break;
               } // case 24
               default: {
@@ -4603,7 +4638,7 @@ private static final long serialVersionUID = 0L;
        * @return Whether the keyword field is set.
        */
       public boolean hasKeyword() {
-        return keywordBuilder_ != null || keyword_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <pre>
@@ -4633,11 +4668,11 @@ private static final long serialVersionUID = 0L;
             throw new NullPointerException();
           }
           keyword_ = value;
-          onChanged();
         } else {
           keywordBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -4651,11 +4686,11 @@ private static final long serialVersionUID = 0L;
           com.google.ads.googleads.v12.common.KeywordInfo.Builder builderForValue) {
         if (keywordBuilder_ == null) {
           keyword_ = builderForValue.build();
-          onChanged();
         } else {
           keywordBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -4667,17 +4702,18 @@ private static final long serialVersionUID = 0L;
        */
       public Builder mergeKeyword(com.google.ads.googleads.v12.common.KeywordInfo value) {
         if (keywordBuilder_ == null) {
-          if (keyword_ != null) {
-            keyword_ =
-              com.google.ads.googleads.v12.common.KeywordInfo.newBuilder(keyword_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            keyword_ != null &&
+            keyword_ != com.google.ads.googleads.v12.common.KeywordInfo.getDefaultInstance()) {
+            getKeywordBuilder().mergeFrom(value);
           } else {
             keyword_ = value;
           }
-          onChanged();
         } else {
           keywordBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -4688,14 +4724,13 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v12.common.KeywordInfo keyword = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearKeyword() {
-        if (keywordBuilder_ == null) {
-          keyword_ = null;
-          onChanged();
-        } else {
-          keyword_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        keyword_ = null;
+        if (keywordBuilder_ != null) {
+          keywordBuilder_.dispose();
           keywordBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -4706,7 +4741,7 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v12.common.KeywordInfo keyword = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.ads.googleads.v12.common.KeywordInfo.Builder getKeywordBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getKeywordFieldBuilder().getBuilder();
       }
@@ -4757,7 +4792,7 @@ private static final long serialVersionUID = 0L;
        */
       @java.lang.Override
       public boolean hasRecommendedCpcBidMicros() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -4781,8 +4816,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setRecommendedCpcBidMicros(long value) {
-        bitField0_ |= 0x00000001;
+        
         recommendedCpcBidMicros_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -4795,7 +4831,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearRecommendedCpcBidMicros() {
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         recommendedCpcBidMicros_ = 0L;
         onChanged();
         return this;
@@ -4929,9 +4965,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. Date, if present, is the earliest when the recommendation will be auto
-     * applied.
-     * YYYY-MM-DD format, for example, 2018-04-17.
+     * Output only. Date, if present, is the earliest when the recommendation
+     * will be auto applied. YYYY-MM-DD format, for example, 2018-04-17.
      * </pre>
      *
      * <code>optional string auto_apply_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4940,9 +4975,8 @@ private static final long serialVersionUID = 0L;
     boolean hasAutoApplyDate();
     /**
      * <pre>
-     * Output only. Date, if present, is the earliest when the recommendation will be auto
-     * applied.
-     * YYYY-MM-DD format, for example, 2018-04-17.
+     * Output only. Date, if present, is the earliest when the recommendation
+     * will be auto applied. YYYY-MM-DD format, for example, 2018-04-17.
      * </pre>
      *
      * <code>optional string auto_apply_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4951,9 +4985,8 @@ private static final long serialVersionUID = 0L;
     java.lang.String getAutoApplyDate();
     /**
      * <pre>
-     * Output only. Date, if present, is the earliest when the recommendation will be auto
-     * applied.
-     * YYYY-MM-DD format, for example, 2018-04-17.
+     * Output only. Date, if present, is the earliest when the recommendation
+     * will be auto applied. YYYY-MM-DD format, for example, 2018-04-17.
      * </pre>
      *
      * <code>optional string auto_apply_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5044,11 +5077,12 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.AdOrBuilder getAdOrBuilder() {
-      return getAd();
+      return ad_ == null ? com.google.ads.googleads.v12.resources.Ad.getDefaultInstance() : ad_;
     }
 
     public static final int CREATION_DATE_FIELD_NUMBER = 4;
-    private volatile java.lang.Object creationDate_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creationDate_ = "";
     /**
      * <pre>
      * Output only. Creation date of the recommended ad.
@@ -5109,12 +5143,12 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int AUTO_APPLY_DATE_FIELD_NUMBER = 5;
-    private volatile java.lang.Object autoApplyDate_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object autoApplyDate_ = "";
     /**
      * <pre>
-     * Output only. Date, if present, is the earliest when the recommendation will be auto
-     * applied.
-     * YYYY-MM-DD format, for example, 2018-04-17.
+     * Output only. Date, if present, is the earliest when the recommendation
+     * will be auto applied. YYYY-MM-DD format, for example, 2018-04-17.
      * </pre>
      *
      * <code>optional string auto_apply_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5126,9 +5160,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Date, if present, is the earliest when the recommendation will be auto
-     * applied.
-     * YYYY-MM-DD format, for example, 2018-04-17.
+     * Output only. Date, if present, is the earliest when the recommendation
+     * will be auto applied. YYYY-MM-DD format, for example, 2018-04-17.
      * </pre>
      *
      * <code>optional string auto_apply_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5149,9 +5182,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Date, if present, is the earliest when the recommendation will be auto
-     * applied.
-     * YYYY-MM-DD format, for example, 2018-04-17.
+     * Output only. Date, if present, is the earliest when the recommendation
+     * will be auto applied. YYYY-MM-DD format, for example, 2018-04-17.
      * </pre>
      *
      * <code>optional string auto_apply_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5399,16 +5431,14 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (adBuilder_ == null) {
-          ad_ = null;
-        } else {
-          ad_ = null;
+        bitField0_ = 0;
+        ad_ = null;
+        if (adBuilder_ != null) {
+          adBuilder_.dispose();
           adBuilder_ = null;
         }
         creationDate_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
         autoApplyDate_ = "";
-        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -5435,24 +5465,28 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v12.resources.Recommendation.TextAdRecommendation buildPartial() {
         com.google.ads.googleads.v12.resources.Recommendation.TextAdRecommendation result = new com.google.ads.googleads.v12.resources.Recommendation.TextAdRecommendation(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (adBuilder_ == null) {
-          result.ad_ = ad_;
-        } else {
-          result.ad_ = adBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.creationDate_ = creationDate_;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.autoApplyDate_ = autoApplyDate_;
-        result.bitField0_ = to_bitField0_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v12.resources.Recommendation.TextAdRecommendation result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.ad_ = adBuilder_ == null
+              ? ad_
+              : adBuilder_.build();
+        }
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.creationDate_ = creationDate_;
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.autoApplyDate_ = autoApplyDate_;
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -5503,13 +5537,13 @@ private static final long serialVersionUID = 0L;
           mergeAd(other.getAd());
         }
         if (other.hasCreationDate()) {
-          bitField0_ |= 0x00000001;
           creationDate_ = other.creationDate_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.hasAutoApplyDate()) {
-          bitField0_ |= 0x00000002;
           autoApplyDate_ = other.autoApplyDate_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -5542,17 +5576,17 @@ private static final long serialVersionUID = 0L;
                 input.readMessage(
                     getAdFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 34: {
                 creationDate_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
+                bitField0_ |= 0x00000002;
                 break;
               } // case 34
               case 42: {
                 autoApplyDate_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
+                bitField0_ |= 0x00000004;
                 break;
               } // case 42
               default: {
@@ -5584,7 +5618,7 @@ private static final long serialVersionUID = 0L;
        * @return Whether the ad field is set.
        */
       public boolean hasAd() {
-        return adBuilder_ != null || ad_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <pre>
@@ -5614,11 +5648,11 @@ private static final long serialVersionUID = 0L;
             throw new NullPointerException();
           }
           ad_ = value;
-          onChanged();
         } else {
           adBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -5632,11 +5666,11 @@ private static final long serialVersionUID = 0L;
           com.google.ads.googleads.v12.resources.Ad.Builder builderForValue) {
         if (adBuilder_ == null) {
           ad_ = builderForValue.build();
-          onChanged();
         } else {
           adBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -5648,17 +5682,18 @@ private static final long serialVersionUID = 0L;
        */
       public Builder mergeAd(com.google.ads.googleads.v12.resources.Ad value) {
         if (adBuilder_ == null) {
-          if (ad_ != null) {
-            ad_ =
-              com.google.ads.googleads.v12.resources.Ad.newBuilder(ad_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            ad_ != null &&
+            ad_ != com.google.ads.googleads.v12.resources.Ad.getDefaultInstance()) {
+            getAdBuilder().mergeFrom(value);
           } else {
             ad_ = value;
           }
-          onChanged();
         } else {
           adBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -5669,14 +5704,13 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v12.resources.Ad ad = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearAd() {
-        if (adBuilder_ == null) {
-          ad_ = null;
-          onChanged();
-        } else {
-          ad_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        ad_ = null;
+        if (adBuilder_ != null) {
+          adBuilder_.dispose();
           adBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -5687,7 +5721,7 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v12.resources.Ad ad = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.ads.googleads.v12.resources.Ad.Builder getAdBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getAdFieldBuilder().getBuilder();
       }
@@ -5738,7 +5772,7 @@ private static final long serialVersionUID = 0L;
        * @return Whether the creationDate field is set.
        */
       public boolean hasCreationDate() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -5795,11 +5829,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setCreationDate(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+        if (value == null) { throw new NullPointerException(); }
         creationDate_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5813,8 +5845,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearCreationDate() {
-        bitField0_ = (bitField0_ & ~0x00000001);
         creationDate_ = getDefaultInstance().getCreationDate();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -5830,12 +5862,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setCreationDateBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        bitField0_ |= 0x00000001;
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         creationDate_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5843,22 +5873,20 @@ private static final long serialVersionUID = 0L;
       private java.lang.Object autoApplyDate_ = "";
       /**
        * <pre>
-       * Output only. Date, if present, is the earliest when the recommendation will be auto
-       * applied.
-       * YYYY-MM-DD format, for example, 2018-04-17.
+       * Output only. Date, if present, is the earliest when the recommendation
+       * will be auto applied. YYYY-MM-DD format, for example, 2018-04-17.
        * </pre>
        *
        * <code>optional string auto_apply_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return Whether the autoApplyDate field is set.
        */
       public boolean hasAutoApplyDate() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <pre>
-       * Output only. Date, if present, is the earliest when the recommendation will be auto
-       * applied.
-       * YYYY-MM-DD format, for example, 2018-04-17.
+       * Output only. Date, if present, is the earliest when the recommendation
+       * will be auto applied. YYYY-MM-DD format, for example, 2018-04-17.
        * </pre>
        *
        * <code>optional string auto_apply_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5878,9 +5906,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Date, if present, is the earliest when the recommendation will be auto
-       * applied.
-       * YYYY-MM-DD format, for example, 2018-04-17.
+       * Output only. Date, if present, is the earliest when the recommendation
+       * will be auto applied. YYYY-MM-DD format, for example, 2018-04-17.
        * </pre>
        *
        * <code>optional string auto_apply_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5901,9 +5928,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Date, if present, is the earliest when the recommendation will be auto
-       * applied.
-       * YYYY-MM-DD format, for example, 2018-04-17.
+       * Output only. Date, if present, is the earliest when the recommendation
+       * will be auto applied. YYYY-MM-DD format, for example, 2018-04-17.
        * </pre>
        *
        * <code>optional string auto_apply_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5912,35 +5938,31 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setAutoApplyDate(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+        if (value == null) { throw new NullPointerException(); }
         autoApplyDate_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. Date, if present, is the earliest when the recommendation will be auto
-       * applied.
-       * YYYY-MM-DD format, for example, 2018-04-17.
+       * Output only. Date, if present, is the earliest when the recommendation
+       * will be auto applied. YYYY-MM-DD format, for example, 2018-04-17.
        * </pre>
        *
        * <code>optional string auto_apply_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return This builder for chaining.
        */
       public Builder clearAutoApplyDate() {
-        bitField0_ = (bitField0_ & ~0x00000002);
         autoApplyDate_ = getDefaultInstance().getAutoApplyDate();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. Date, if present, is the earliest when the recommendation will be auto
-       * applied.
-       * YYYY-MM-DD format, for example, 2018-04-17.
+       * Output only. Date, if present, is the earliest when the recommendation
+       * will be auto applied. YYYY-MM-DD format, for example, 2018-04-17.
        * </pre>
        *
        * <code>optional string auto_apply_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5949,12 +5971,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setAutoApplyDateBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        bitField0_ |= 0x00000002;
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         autoApplyDate_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -6028,7 +6048,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The available goals and corresponding options for Target CPA strategy.
+     * Output only. The available goals and corresponding options for Target CPA
+     * strategy.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption options = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6037,7 +6058,8 @@ private static final long serialVersionUID = 0L;
         getOptionsList();
     /**
      * <pre>
-     * Output only. The available goals and corresponding options for Target CPA strategy.
+     * Output only. The available goals and corresponding options for Target CPA
+     * strategy.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption options = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6045,7 +6067,8 @@ private static final long serialVersionUID = 0L;
     com.google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption getOptions(int index);
     /**
      * <pre>
-     * Output only. The available goals and corresponding options for Target CPA strategy.
+     * Output only. The available goals and corresponding options for Target CPA
+     * strategy.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption options = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6053,7 +6076,8 @@ private static final long serialVersionUID = 0L;
     int getOptionsCount();
     /**
      * <pre>
-     * Output only. The available goals and corresponding options for Target CPA strategy.
+     * Output only. The available goals and corresponding options for Target CPA
+     * strategy.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption options = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6062,7 +6086,8 @@ private static final long serialVersionUID = 0L;
         getOptionsOrBuilderList();
     /**
      * <pre>
-     * Output only. The available goals and corresponding options for Target CPA strategy.
+     * Output only. The available goals and corresponding options for Target CPA
+     * strategy.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption options = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6072,8 +6097,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The recommended average CPA target. See required budget amount and impact
-     * of using this recommendation in options list.
+     * Output only. The recommended average CPA target. See required budget
+     * amount and impact of using this recommendation in options list.
      * </pre>
      *
      * <code>optional int64 recommended_target_cpa_micros = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6082,8 +6107,8 @@ private static final long serialVersionUID = 0L;
     boolean hasRecommendedTargetCpaMicros();
     /**
      * <pre>
-     * Output only. The recommended average CPA target. See required budget amount and impact
-     * of using this recommendation in options list.
+     * Output only. The recommended average CPA target. See required budget
+     * amount and impact of using this recommendation in options list.
      * </pre>
      *
      * <code>optional int64 recommended_target_cpa_micros = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6180,10 +6205,9 @@ private static final long serialVersionUID = 0L;
 
       /**
        * <pre>
-       * Output only. The minimum campaign budget, in local currency for the account,
-       * required to achieve the target CPA.
-       * Amount is specified in micros, where one million is equivalent to one
-       * currency unit.
+       * Output only. The minimum campaign budget, in local currency for the
+       * account, required to achieve the target CPA. Amount is specified in
+       * micros, where one million is equivalent to one currency unit.
        * </pre>
        *
        * <code>optional int64 required_campaign_budget_amount_micros = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6192,10 +6216,9 @@ private static final long serialVersionUID = 0L;
       boolean hasRequiredCampaignBudgetAmountMicros();
       /**
        * <pre>
-       * Output only. The minimum campaign budget, in local currency for the account,
-       * required to achieve the target CPA.
-       * Amount is specified in micros, where one million is equivalent to one
-       * currency unit.
+       * Output only. The minimum campaign budget, in local currency for the
+       * account, required to achieve the target CPA. Amount is specified in
+       * micros, where one million is equivalent to one currency unit.
        * </pre>
        *
        * <code>optional int64 required_campaign_budget_amount_micros = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6277,7 +6300,7 @@ private static final long serialVersionUID = 0L;
 
       private int bitField0_;
       public static final int GOAL_FIELD_NUMBER = 1;
-      private int goal_;
+      private int goal_ = 0;
       /**
        * <pre>
        * Output only. The goal achieved by this option.
@@ -6298,13 +6321,12 @@ private static final long serialVersionUID = 0L;
        * @return The goal.
        */
       @java.lang.Override public com.google.ads.googleads.v12.enums.TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal getGoal() {
-        @SuppressWarnings("deprecation")
-        com.google.ads.googleads.v12.enums.TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal result = com.google.ads.googleads.v12.enums.TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal.valueOf(goal_);
+        com.google.ads.googleads.v12.enums.TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal result = com.google.ads.googleads.v12.enums.TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal.forNumber(goal_);
         return result == null ? com.google.ads.googleads.v12.enums.TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal.UNRECOGNIZED : result;
       }
 
       public static final int TARGET_CPA_MICROS_FIELD_NUMBER = 5;
-      private long targetCpaMicros_;
+      private long targetCpaMicros_ = 0L;
       /**
        * <pre>
        * Output only. Average CPA target.
@@ -6331,13 +6353,12 @@ private static final long serialVersionUID = 0L;
       }
 
       public static final int REQUIRED_CAMPAIGN_BUDGET_AMOUNT_MICROS_FIELD_NUMBER = 6;
-      private long requiredCampaignBudgetAmountMicros_;
+      private long requiredCampaignBudgetAmountMicros_ = 0L;
       /**
        * <pre>
-       * Output only. The minimum campaign budget, in local currency for the account,
-       * required to achieve the target CPA.
-       * Amount is specified in micros, where one million is equivalent to one
-       * currency unit.
+       * Output only. The minimum campaign budget, in local currency for the
+       * account, required to achieve the target CPA. Amount is specified in
+       * micros, where one million is equivalent to one currency unit.
        * </pre>
        *
        * <code>optional int64 required_campaign_budget_amount_micros = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6349,10 +6370,9 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The minimum campaign budget, in local currency for the account,
-       * required to achieve the target CPA.
-       * Amount is specified in micros, where one million is equivalent to one
-       * currency unit.
+       * Output only. The minimum campaign budget, in local currency for the
+       * account, required to achieve the target CPA. Amount is specified in
+       * micros, where one million is equivalent to one currency unit.
        * </pre>
        *
        * <code>optional int64 required_campaign_budget_amount_micros = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6398,7 +6418,7 @@ private static final long serialVersionUID = 0L;
        */
       @java.lang.Override
       public com.google.ads.googleads.v12.resources.Recommendation.RecommendationImpactOrBuilder getImpactOrBuilder() {
-        return getImpact();
+        return impact_ == null ? com.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact.getDefaultInstance() : impact_;
       }
 
       private byte memoizedIsInitialized = -1;
@@ -6642,16 +6662,13 @@ private static final long serialVersionUID = 0L;
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           goal_ = 0;
-
           targetCpaMicros_ = 0L;
-          bitField0_ = (bitField0_ & ~0x00000001);
           requiredCampaignBudgetAmountMicros_ = 0L;
-          bitField0_ = (bitField0_ & ~0x00000002);
-          if (impactBuilder_ == null) {
-            impact_ = null;
-          } else {
-            impact_ = null;
+          impact_ = null;
+          if (impactBuilder_ != null) {
+            impactBuilder_.dispose();
             impactBuilder_ = null;
           }
           return this;
@@ -6680,25 +6697,31 @@ private static final long serialVersionUID = 0L;
         @java.lang.Override
         public com.google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption buildPartial() {
           com.google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption result = new com.google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption result) {
           int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
-          result.goal_ = goal_;
           if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.goal_ = goal_;
+          }
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000002) != 0)) {
             result.targetCpaMicros_ = targetCpaMicros_;
             to_bitField0_ |= 0x00000001;
           }
-          if (((from_bitField0_ & 0x00000002) != 0)) {
+          if (((from_bitField0_ & 0x00000004) != 0)) {
             result.requiredCampaignBudgetAmountMicros_ = requiredCampaignBudgetAmountMicros_;
             to_bitField0_ |= 0x00000002;
           }
-          if (impactBuilder_ == null) {
-            result.impact_ = impact_;
-          } else {
-            result.impact_ = impactBuilder_.build();
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            result.impact_ = impactBuilder_ == null
+                ? impact_
+                : impactBuilder_.build();
           }
-          result.bitField0_ = to_bitField0_;
-          onBuilt();
-          return result;
+          result.bitField0_ |= to_bitField0_;
         }
 
         @java.lang.Override
@@ -6785,24 +6808,24 @@ private static final long serialVersionUID = 0L;
                   break;
                 case 8: {
                   goal_ = input.readEnum();
-
+                  bitField0_ |= 0x00000001;
                   break;
                 } // case 8
                 case 34: {
                   input.readMessage(
                       getImpactFieldBuilder().getBuilder(),
                       extensionRegistry);
-
+                  bitField0_ |= 0x00000008;
                   break;
                 } // case 34
                 case 40: {
                   targetCpaMicros_ = input.readInt64();
-                  bitField0_ |= 0x00000001;
+                  bitField0_ |= 0x00000002;
                   break;
                 } // case 40
                 case 48: {
                   requiredCampaignBudgetAmountMicros_ = input.readInt64();
-                  bitField0_ |= 0x00000002;
+                  bitField0_ |= 0x00000004;
                   break;
                 } // case 48
                 default: {
@@ -6844,8 +6867,8 @@ private static final long serialVersionUID = 0L;
          * @return This builder for chaining.
          */
         public Builder setGoalValue(int value) {
-          
           goal_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -6859,8 +6882,7 @@ private static final long serialVersionUID = 0L;
          */
         @java.lang.Override
         public com.google.ads.googleads.v12.enums.TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal getGoal() {
-          @SuppressWarnings("deprecation")
-          com.google.ads.googleads.v12.enums.TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal result = com.google.ads.googleads.v12.enums.TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal.valueOf(goal_);
+          com.google.ads.googleads.v12.enums.TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal result = com.google.ads.googleads.v12.enums.TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal.forNumber(goal_);
           return result == null ? com.google.ads.googleads.v12.enums.TargetCpaOptInRecommendationGoalEnum.TargetCpaOptInRecommendationGoal.UNRECOGNIZED : result;
         }
         /**
@@ -6876,7 +6898,7 @@ private static final long serialVersionUID = 0L;
           if (value == null) {
             throw new NullPointerException();
           }
-          
+          bitField0_ |= 0x00000001;
           goal_ = value.getNumber();
           onChanged();
           return this;
@@ -6890,7 +6912,7 @@ private static final long serialVersionUID = 0L;
          * @return This builder for chaining.
          */
         public Builder clearGoal() {
-          
+          bitField0_ = (bitField0_ & ~0x00000001);
           goal_ = 0;
           onChanged();
           return this;
@@ -6907,7 +6929,7 @@ private static final long serialVersionUID = 0L;
          */
         @java.lang.Override
         public boolean hasTargetCpaMicros() {
-          return ((bitField0_ & 0x00000001) != 0);
+          return ((bitField0_ & 0x00000002) != 0);
         }
         /**
          * <pre>
@@ -6931,8 +6953,9 @@ private static final long serialVersionUID = 0L;
          * @return This builder for chaining.
          */
         public Builder setTargetCpaMicros(long value) {
-          bitField0_ |= 0x00000001;
+          
           targetCpaMicros_ = value;
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
@@ -6945,7 +6968,7 @@ private static final long serialVersionUID = 0L;
          * @return This builder for chaining.
          */
         public Builder clearTargetCpaMicros() {
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
           targetCpaMicros_ = 0L;
           onChanged();
           return this;
@@ -6954,10 +6977,9 @@ private static final long serialVersionUID = 0L;
         private long requiredCampaignBudgetAmountMicros_ ;
         /**
          * <pre>
-         * Output only. The minimum campaign budget, in local currency for the account,
-         * required to achieve the target CPA.
-         * Amount is specified in micros, where one million is equivalent to one
-         * currency unit.
+         * Output only. The minimum campaign budget, in local currency for the
+         * account, required to achieve the target CPA. Amount is specified in
+         * micros, where one million is equivalent to one currency unit.
          * </pre>
          *
          * <code>optional int64 required_campaign_budget_amount_micros = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6965,14 +6987,13 @@ private static final long serialVersionUID = 0L;
          */
         @java.lang.Override
         public boolean hasRequiredCampaignBudgetAmountMicros() {
-          return ((bitField0_ & 0x00000002) != 0);
+          return ((bitField0_ & 0x00000004) != 0);
         }
         /**
          * <pre>
-         * Output only. The minimum campaign budget, in local currency for the account,
-         * required to achieve the target CPA.
-         * Amount is specified in micros, where one million is equivalent to one
-         * currency unit.
+         * Output only. The minimum campaign budget, in local currency for the
+         * account, required to achieve the target CPA. Amount is specified in
+         * micros, where one million is equivalent to one currency unit.
          * </pre>
          *
          * <code>optional int64 required_campaign_budget_amount_micros = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6984,10 +7005,9 @@ private static final long serialVersionUID = 0L;
         }
         /**
          * <pre>
-         * Output only. The minimum campaign budget, in local currency for the account,
-         * required to achieve the target CPA.
-         * Amount is specified in micros, where one million is equivalent to one
-         * currency unit.
+         * Output only. The minimum campaign budget, in local currency for the
+         * account, required to achieve the target CPA. Amount is specified in
+         * micros, where one million is equivalent to one currency unit.
          * </pre>
          *
          * <code>optional int64 required_campaign_budget_amount_micros = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6995,24 +7015,24 @@ private static final long serialVersionUID = 0L;
          * @return This builder for chaining.
          */
         public Builder setRequiredCampaignBudgetAmountMicros(long value) {
-          bitField0_ |= 0x00000002;
+          
           requiredCampaignBudgetAmountMicros_ = value;
+          bitField0_ |= 0x00000004;
           onChanged();
           return this;
         }
         /**
          * <pre>
-         * Output only. The minimum campaign budget, in local currency for the account,
-         * required to achieve the target CPA.
-         * Amount is specified in micros, where one million is equivalent to one
-         * currency unit.
+         * Output only. The minimum campaign budget, in local currency for the
+         * account, required to achieve the target CPA. Amount is specified in
+         * micros, where one million is equivalent to one currency unit.
          * </pre>
          *
          * <code>optional int64 required_campaign_budget_amount_micros = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
          * @return This builder for chaining.
          */
         public Builder clearRequiredCampaignBudgetAmountMicros() {
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000004);
           requiredCampaignBudgetAmountMicros_ = 0L;
           onChanged();
           return this;
@@ -7030,7 +7050,7 @@ private static final long serialVersionUID = 0L;
          * @return Whether the impact field is set.
          */
         public boolean hasImpact() {
-          return impactBuilder_ != null || impact_ != null;
+          return ((bitField0_ & 0x00000008) != 0);
         }
         /**
          * <pre>
@@ -7060,11 +7080,11 @@ private static final long serialVersionUID = 0L;
               throw new NullPointerException();
             }
             impact_ = value;
-            onChanged();
           } else {
             impactBuilder_.setMessage(value);
           }
-
+          bitField0_ |= 0x00000008;
+          onChanged();
           return this;
         }
         /**
@@ -7078,11 +7098,11 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact.Builder builderForValue) {
           if (impactBuilder_ == null) {
             impact_ = builderForValue.build();
-            onChanged();
           } else {
             impactBuilder_.setMessage(builderForValue.build());
           }
-
+          bitField0_ |= 0x00000008;
+          onChanged();
           return this;
         }
         /**
@@ -7094,17 +7114,18 @@ private static final long serialVersionUID = 0L;
          */
         public Builder mergeImpact(com.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact value) {
           if (impactBuilder_ == null) {
-            if (impact_ != null) {
-              impact_ =
-                com.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact.newBuilder(impact_).mergeFrom(value).buildPartial();
+            if (((bitField0_ & 0x00000008) != 0) &&
+              impact_ != null &&
+              impact_ != com.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact.getDefaultInstance()) {
+              getImpactBuilder().mergeFrom(value);
             } else {
               impact_ = value;
             }
-            onChanged();
           } else {
             impactBuilder_.mergeFrom(value);
           }
-
+          bitField0_ |= 0x00000008;
+          onChanged();
           return this;
         }
         /**
@@ -7115,14 +7136,13 @@ private static final long serialVersionUID = 0L;
          * <code>.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact impact = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
          */
         public Builder clearImpact() {
-          if (impactBuilder_ == null) {
-            impact_ = null;
-            onChanged();
-          } else {
-            impact_ = null;
+          bitField0_ = (bitField0_ & ~0x00000008);
+          impact_ = null;
+          if (impactBuilder_ != null) {
+            impactBuilder_.dispose();
             impactBuilder_ = null;
           }
-
+          onChanged();
           return this;
         }
         /**
@@ -7133,7 +7153,7 @@ private static final long serialVersionUID = 0L;
          * <code>.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact impact = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
          */
         public com.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact.Builder getImpactBuilder() {
-          
+          bitField0_ |= 0x00000008;
           onChanged();
           return getImpactFieldBuilder().getBuilder();
         }
@@ -7238,10 +7258,12 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
     public static final int OPTIONS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption> options_;
     /**
      * <pre>
-     * Output only. The available goals and corresponding options for Target CPA strategy.
+     * Output only. The available goals and corresponding options for Target CPA
+     * strategy.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption options = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7252,7 +7274,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The available goals and corresponding options for Target CPA strategy.
+     * Output only. The available goals and corresponding options for Target CPA
+     * strategy.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption options = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7264,7 +7287,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The available goals and corresponding options for Target CPA strategy.
+     * Output only. The available goals and corresponding options for Target CPA
+     * strategy.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption options = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7275,7 +7299,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The available goals and corresponding options for Target CPA strategy.
+     * Output only. The available goals and corresponding options for Target CPA
+     * strategy.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption options = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7286,7 +7311,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The available goals and corresponding options for Target CPA strategy.
+     * Output only. The available goals and corresponding options for Target CPA
+     * strategy.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption options = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7298,11 +7324,11 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int RECOMMENDED_TARGET_CPA_MICROS_FIELD_NUMBER = 3;
-    private long recommendedTargetCpaMicros_;
+    private long recommendedTargetCpaMicros_ = 0L;
     /**
      * <pre>
-     * Output only. The recommended average CPA target. See required budget amount and impact
-     * of using this recommendation in options list.
+     * Output only. The recommended average CPA target. See required budget
+     * amount and impact of using this recommendation in options list.
      * </pre>
      *
      * <code>optional int64 recommended_target_cpa_micros = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7314,8 +7340,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The recommended average CPA target. See required budget amount and impact
-     * of using this recommendation in options list.
+     * Output only. The recommended average CPA target. See required budget
+     * amount and impact of using this recommendation in options list.
      * </pre>
      *
      * <code>optional int64 recommended_target_cpa_micros = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7537,6 +7563,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (optionsBuilder_ == null) {
           options_ = java.util.Collections.emptyList();
         } else {
@@ -7545,7 +7572,6 @@ private static final long serialVersionUID = 0L;
         }
         bitField0_ = (bitField0_ & ~0x00000001);
         recommendedTargetCpaMicros_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -7572,8 +7598,13 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation buildPartial() {
         com.google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation result = new com.google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation result) {
         if (optionsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             options_ = java.util.Collections.unmodifiableList(options_);
@@ -7583,13 +7614,16 @@ private static final long serialVersionUID = 0L;
         } else {
           result.options_ = optionsBuilder_.build();
         }
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.recommendedTargetCpaMicros_ = recommendedTargetCpaMicros_;
           to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -7740,7 +7774,8 @@ private static final long serialVersionUID = 0L;
 
       /**
        * <pre>
-       * Output only. The available goals and corresponding options for Target CPA strategy.
+       * Output only. The available goals and corresponding options for Target CPA
+       * strategy.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption options = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7754,7 +7789,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The available goals and corresponding options for Target CPA strategy.
+       * Output only. The available goals and corresponding options for Target CPA
+       * strategy.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption options = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7768,7 +7804,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The available goals and corresponding options for Target CPA strategy.
+       * Output only. The available goals and corresponding options for Target CPA
+       * strategy.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption options = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7782,7 +7819,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The available goals and corresponding options for Target CPA strategy.
+       * Output only. The available goals and corresponding options for Target CPA
+       * strategy.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption options = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7803,7 +7841,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The available goals and corresponding options for Target CPA strategy.
+       * Output only. The available goals and corresponding options for Target CPA
+       * strategy.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption options = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7821,7 +7860,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The available goals and corresponding options for Target CPA strategy.
+       * Output only. The available goals and corresponding options for Target CPA
+       * strategy.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption options = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7841,7 +7881,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The available goals and corresponding options for Target CPA strategy.
+       * Output only. The available goals and corresponding options for Target CPA
+       * strategy.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption options = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7862,7 +7903,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The available goals and corresponding options for Target CPA strategy.
+       * Output only. The available goals and corresponding options for Target CPA
+       * strategy.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption options = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7880,7 +7922,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The available goals and corresponding options for Target CPA strategy.
+       * Output only. The available goals and corresponding options for Target CPA
+       * strategy.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption options = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7898,7 +7941,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The available goals and corresponding options for Target CPA strategy.
+       * Output only. The available goals and corresponding options for Target CPA
+       * strategy.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption options = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7917,7 +7961,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The available goals and corresponding options for Target CPA strategy.
+       * Output only. The available goals and corresponding options for Target CPA
+       * strategy.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption options = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7934,7 +7979,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The available goals and corresponding options for Target CPA strategy.
+       * Output only. The available goals and corresponding options for Target CPA
+       * strategy.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption options = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7951,7 +7997,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The available goals and corresponding options for Target CPA strategy.
+       * Output only. The available goals and corresponding options for Target CPA
+       * strategy.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption options = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7962,7 +8009,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The available goals and corresponding options for Target CPA strategy.
+       * Output only. The available goals and corresponding options for Target CPA
+       * strategy.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption options = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7976,7 +8024,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The available goals and corresponding options for Target CPA strategy.
+       * Output only. The available goals and corresponding options for Target CPA
+       * strategy.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption options = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7991,7 +8040,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The available goals and corresponding options for Target CPA strategy.
+       * Output only. The available goals and corresponding options for Target CPA
+       * strategy.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption options = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -8002,7 +8052,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The available goals and corresponding options for Target CPA strategy.
+       * Output only. The available goals and corresponding options for Target CPA
+       * strategy.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption options = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -8014,7 +8065,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The available goals and corresponding options for Target CPA strategy.
+       * Output only. The available goals and corresponding options for Target CPA
+       * strategy.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption options = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -8041,8 +8093,8 @@ private static final long serialVersionUID = 0L;
       private long recommendedTargetCpaMicros_ ;
       /**
        * <pre>
-       * Output only. The recommended average CPA target. See required budget amount and impact
-       * of using this recommendation in options list.
+       * Output only. The recommended average CPA target. See required budget
+       * amount and impact of using this recommendation in options list.
        * </pre>
        *
        * <code>optional int64 recommended_target_cpa_micros = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -8054,8 +8106,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The recommended average CPA target. See required budget amount and impact
-       * of using this recommendation in options list.
+       * Output only. The recommended average CPA target. See required budget
+       * amount and impact of using this recommendation in options list.
        * </pre>
        *
        * <code>optional int64 recommended_target_cpa_micros = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -8067,8 +8119,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The recommended average CPA target. See required budget amount and impact
-       * of using this recommendation in options list.
+       * Output only. The recommended average CPA target. See required budget
+       * amount and impact of using this recommendation in options list.
        * </pre>
        *
        * <code>optional int64 recommended_target_cpa_micros = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -8076,15 +8128,16 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setRecommendedTargetCpaMicros(long value) {
-        bitField0_ |= 0x00000002;
+        
         recommendedTargetCpaMicros_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The recommended average CPA target. See required budget amount and impact
-       * of using this recommendation in options list.
+       * Output only. The recommended average CPA target. See required budget
+       * amount and impact of using this recommendation in options list.
        * </pre>
        *
        * <code>optional int64 recommended_target_cpa_micros = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -8229,7 +8282,7 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
     public static final int RECOMMENDED_BUDGET_AMOUNT_MICROS_FIELD_NUMBER = 2;
-    private long recommendedBudgetAmountMicros_;
+    private long recommendedBudgetAmountMicros_ = 0L;
     /**
      * <pre>
      * Output only. The recommended new budget amount.
@@ -8453,8 +8506,8 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         recommendedBudgetAmountMicros_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -8481,15 +8534,19 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v12.resources.Recommendation.MaximizeConversionsOptInRecommendation buildPartial() {
         com.google.ads.googleads.v12.resources.Recommendation.MaximizeConversionsOptInRecommendation result = new com.google.ads.googleads.v12.resources.Recommendation.MaximizeConversionsOptInRecommendation(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v12.resources.Recommendation.MaximizeConversionsOptInRecommendation result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.recommendedBudgetAmountMicros_ = recommendedBudgetAmountMicros_;
           to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -8622,8 +8679,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setRecommendedBudgetAmountMicros(long value) {
-        bitField0_ |= 0x00000001;
+        
         recommendedBudgetAmountMicros_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -9592,7 +9650,7 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
     public static final int RECOMMENDED_BUDGET_AMOUNT_MICROS_FIELD_NUMBER = 2;
-    private long recommendedBudgetAmountMicros_;
+    private long recommendedBudgetAmountMicros_ = 0L;
     /**
      * <pre>
      * Output only. The recommended new budget amount.
@@ -9818,8 +9876,8 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         recommendedBudgetAmountMicros_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -9846,15 +9904,19 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v12.resources.Recommendation.MaximizeClicksOptInRecommendation buildPartial() {
         com.google.ads.googleads.v12.resources.Recommendation.MaximizeClicksOptInRecommendation result = new com.google.ads.googleads.v12.resources.Recommendation.MaximizeClicksOptInRecommendation(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v12.resources.Recommendation.MaximizeClicksOptInRecommendation result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.recommendedBudgetAmountMicros_ = recommendedBudgetAmountMicros_;
           to_bitField0_ |= 0x00000001;
         }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -9990,8 +10052,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setRecommendedBudgetAmountMicros(long value) {
-        bitField0_ |= 0x00000001;
+        
         recommendedBudgetAmountMicros_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -10576,6 +10639,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int RECOMMENDED_EXTENSIONS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.ads.googleads.v12.common.CalloutFeedItem> recommendedExtensions_;
     /**
      * <pre>
@@ -10829,6 +10893,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (recommendedExtensionsBuilder_ == null) {
           recommendedExtensions_ = java.util.Collections.emptyList();
         } else {
@@ -10862,7 +10927,13 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v12.resources.Recommendation.CalloutExtensionRecommendation buildPartial() {
         com.google.ads.googleads.v12.resources.Recommendation.CalloutExtensionRecommendation result = new com.google.ads.googleads.v12.resources.Recommendation.CalloutExtensionRecommendation(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.google.ads.googleads.v12.resources.Recommendation.CalloutExtensionRecommendation result) {
         if (recommendedExtensionsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             recommendedExtensions_ = java.util.Collections.unmodifiableList(recommendedExtensions_);
@@ -10872,8 +10943,10 @@ private static final long serialVersionUID = 0L;
         } else {
           result.recommendedExtensions_ = recommendedExtensionsBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v12.resources.Recommendation.CalloutExtensionRecommendation result) {
+        int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override
@@ -11471,6 +11544,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int RECOMMENDED_EXTENSIONS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.ads.googleads.v12.common.SitelinkFeedItem> recommendedExtensions_;
     /**
      * <pre>
@@ -11724,6 +11798,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (recommendedExtensionsBuilder_ == null) {
           recommendedExtensions_ = java.util.Collections.emptyList();
         } else {
@@ -11757,7 +11832,13 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v12.resources.Recommendation.SitelinkExtensionRecommendation buildPartial() {
         com.google.ads.googleads.v12.resources.Recommendation.SitelinkExtensionRecommendation result = new com.google.ads.googleads.v12.resources.Recommendation.SitelinkExtensionRecommendation(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.google.ads.googleads.v12.resources.Recommendation.SitelinkExtensionRecommendation result) {
         if (recommendedExtensionsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             recommendedExtensions_ = java.util.Collections.unmodifiableList(recommendedExtensions_);
@@ -11767,8 +11848,10 @@ private static final long serialVersionUID = 0L;
         } else {
           result.recommendedExtensions_ = recommendedExtensionsBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v12.resources.Recommendation.SitelinkExtensionRecommendation result) {
+        int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override
@@ -12366,6 +12449,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int RECOMMENDED_EXTENSIONS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.ads.googleads.v12.common.CallFeedItem> recommendedExtensions_;
     /**
      * <pre>
@@ -12619,6 +12703,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (recommendedExtensionsBuilder_ == null) {
           recommendedExtensions_ = java.util.Collections.emptyList();
         } else {
@@ -12652,7 +12737,13 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v12.resources.Recommendation.CallExtensionRecommendation buildPartial() {
         com.google.ads.googleads.v12.resources.Recommendation.CallExtensionRecommendation result = new com.google.ads.googleads.v12.resources.Recommendation.CallExtensionRecommendation(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.google.ads.googleads.v12.resources.Recommendation.CallExtensionRecommendation result) {
         if (recommendedExtensionsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             recommendedExtensions_ = java.util.Collections.unmodifiableList(recommendedExtensions_);
@@ -12662,8 +12753,10 @@ private static final long serialVersionUID = 0L;
         } else {
           result.recommendedExtensions_ = recommendedExtensionsBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v12.resources.Recommendation.CallExtensionRecommendation result) {
+        int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override
@@ -13173,7 +13266,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The existing keyword where the match type should be more broad.
+     * Output only. The existing keyword where the match type should be more
+     * broad.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.KeywordInfo keyword = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -13182,7 +13276,8 @@ private static final long serialVersionUID = 0L;
     boolean hasKeyword();
     /**
      * <pre>
-     * Output only. The existing keyword where the match type should be more broad.
+     * Output only. The existing keyword where the match type should be more
+     * broad.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.KeywordInfo keyword = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -13191,7 +13286,8 @@ private static final long serialVersionUID = 0L;
     com.google.ads.googleads.v12.common.KeywordInfo getKeyword();
     /**
      * <pre>
-     * Output only. The existing keyword where the match type should be more broad.
+     * Output only. The existing keyword where the match type should be more
+     * broad.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.KeywordInfo keyword = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -13266,7 +13362,8 @@ private static final long serialVersionUID = 0L;
     private com.google.ads.googleads.v12.common.KeywordInfo keyword_;
     /**
      * <pre>
-     * Output only. The existing keyword where the match type should be more broad.
+     * Output only. The existing keyword where the match type should be more
+     * broad.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.KeywordInfo keyword = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -13278,7 +13375,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The existing keyword where the match type should be more broad.
+     * Output only. The existing keyword where the match type should be more
+     * broad.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.KeywordInfo keyword = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -13290,18 +13388,19 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The existing keyword where the match type should be more broad.
+     * Output only. The existing keyword where the match type should be more
+     * broad.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.KeywordInfo keyword = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.common.KeywordInfoOrBuilder getKeywordOrBuilder() {
-      return getKeyword();
+      return keyword_ == null ? com.google.ads.googleads.v12.common.KeywordInfo.getDefaultInstance() : keyword_;
     }
 
     public static final int RECOMMENDED_MATCH_TYPE_FIELD_NUMBER = 2;
-    private int recommendedMatchType_;
+    private int recommendedMatchType_ = 0;
     /**
      * <pre>
      * Output only. The recommended new match type.
@@ -13322,8 +13421,7 @@ private static final long serialVersionUID = 0L;
      * @return The recommendedMatchType.
      */
     @java.lang.Override public com.google.ads.googleads.v12.enums.KeywordMatchTypeEnum.KeywordMatchType getRecommendedMatchType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.KeywordMatchTypeEnum.KeywordMatchType result = com.google.ads.googleads.v12.enums.KeywordMatchTypeEnum.KeywordMatchType.valueOf(recommendedMatchType_);
+      com.google.ads.googleads.v12.enums.KeywordMatchTypeEnum.KeywordMatchType result = com.google.ads.googleads.v12.enums.KeywordMatchTypeEnum.KeywordMatchType.forNumber(recommendedMatchType_);
       return result == null ? com.google.ads.googleads.v12.enums.KeywordMatchTypeEnum.KeywordMatchType.UNRECOGNIZED : result;
     }
 
@@ -13534,14 +13632,13 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (keywordBuilder_ == null) {
-          keyword_ = null;
-        } else {
-          keyword_ = null;
+        bitField0_ = 0;
+        keyword_ = null;
+        if (keywordBuilder_ != null) {
+          keywordBuilder_.dispose();
           keywordBuilder_ = null;
         }
         recommendedMatchType_ = 0;
-
         return this;
       }
 
@@ -13568,14 +13665,21 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v12.resources.Recommendation.KeywordMatchTypeRecommendation buildPartial() {
         com.google.ads.googleads.v12.resources.Recommendation.KeywordMatchTypeRecommendation result = new com.google.ads.googleads.v12.resources.Recommendation.KeywordMatchTypeRecommendation(this);
-        if (keywordBuilder_ == null) {
-          result.keyword_ = keyword_;
-        } else {
-          result.keyword_ = keywordBuilder_.build();
-        }
-        result.recommendedMatchType_ = recommendedMatchType_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v12.resources.Recommendation.KeywordMatchTypeRecommendation result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.keyword_ = keywordBuilder_ == null
+              ? keyword_
+              : keywordBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.recommendedMatchType_ = recommendedMatchType_;
+        }
       }
 
       @java.lang.Override
@@ -13658,12 +13762,12 @@ private static final long serialVersionUID = 0L;
                 input.readMessage(
                     getKeywordFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 16: {
                 recommendedMatchType_ = input.readEnum();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               default: {
@@ -13681,24 +13785,27 @@ private static final long serialVersionUID = 0L;
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private com.google.ads.googleads.v12.common.KeywordInfo keyword_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.ads.googleads.v12.common.KeywordInfo, com.google.ads.googleads.v12.common.KeywordInfo.Builder, com.google.ads.googleads.v12.common.KeywordInfoOrBuilder> keywordBuilder_;
       /**
        * <pre>
-       * Output only. The existing keyword where the match type should be more broad.
+       * Output only. The existing keyword where the match type should be more
+       * broad.
        * </pre>
        *
        * <code>.google.ads.googleads.v12.common.KeywordInfo keyword = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return Whether the keyword field is set.
        */
       public boolean hasKeyword() {
-        return keywordBuilder_ != null || keyword_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <pre>
-       * Output only. The existing keyword where the match type should be more broad.
+       * Output only. The existing keyword where the match type should be more
+       * broad.
        * </pre>
        *
        * <code>.google.ads.googleads.v12.common.KeywordInfo keyword = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -13713,7 +13820,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The existing keyword where the match type should be more broad.
+       * Output only. The existing keyword where the match type should be more
+       * broad.
        * </pre>
        *
        * <code>.google.ads.googleads.v12.common.KeywordInfo keyword = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -13724,16 +13832,17 @@ private static final long serialVersionUID = 0L;
             throw new NullPointerException();
           }
           keyword_ = value;
-          onChanged();
         } else {
           keywordBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The existing keyword where the match type should be more broad.
+       * Output only. The existing keyword where the match type should be more
+       * broad.
        * </pre>
        *
        * <code>.google.ads.googleads.v12.common.KeywordInfo keyword = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -13742,68 +13851,72 @@ private static final long serialVersionUID = 0L;
           com.google.ads.googleads.v12.common.KeywordInfo.Builder builderForValue) {
         if (keywordBuilder_ == null) {
           keyword_ = builderForValue.build();
-          onChanged();
         } else {
           keywordBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The existing keyword where the match type should be more broad.
+       * Output only. The existing keyword where the match type should be more
+       * broad.
        * </pre>
        *
        * <code>.google.ads.googleads.v12.common.KeywordInfo keyword = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder mergeKeyword(com.google.ads.googleads.v12.common.KeywordInfo value) {
         if (keywordBuilder_ == null) {
-          if (keyword_ != null) {
-            keyword_ =
-              com.google.ads.googleads.v12.common.KeywordInfo.newBuilder(keyword_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            keyword_ != null &&
+            keyword_ != com.google.ads.googleads.v12.common.KeywordInfo.getDefaultInstance()) {
+            getKeywordBuilder().mergeFrom(value);
           } else {
             keyword_ = value;
           }
-          onChanged();
         } else {
           keywordBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The existing keyword where the match type should be more broad.
+       * Output only. The existing keyword where the match type should be more
+       * broad.
        * </pre>
        *
        * <code>.google.ads.googleads.v12.common.KeywordInfo keyword = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearKeyword() {
-        if (keywordBuilder_ == null) {
-          keyword_ = null;
-          onChanged();
-        } else {
-          keyword_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        keyword_ = null;
+        if (keywordBuilder_ != null) {
+          keywordBuilder_.dispose();
           keywordBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The existing keyword where the match type should be more broad.
+       * Output only. The existing keyword where the match type should be more
+       * broad.
        * </pre>
        *
        * <code>.google.ads.googleads.v12.common.KeywordInfo keyword = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.ads.googleads.v12.common.KeywordInfo.Builder getKeywordBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getKeywordFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * Output only. The existing keyword where the match type should be more broad.
+       * Output only. The existing keyword where the match type should be more
+       * broad.
        * </pre>
        *
        * <code>.google.ads.googleads.v12.common.KeywordInfo keyword = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -13818,7 +13931,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The existing keyword where the match type should be more broad.
+       * Output only. The existing keyword where the match type should be more
+       * broad.
        * </pre>
        *
        * <code>.google.ads.googleads.v12.common.KeywordInfo keyword = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -13859,8 +13973,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setRecommendedMatchTypeValue(int value) {
-        
         recommendedMatchType_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -13874,8 +13988,7 @@ private static final long serialVersionUID = 0L;
        */
       @java.lang.Override
       public com.google.ads.googleads.v12.enums.KeywordMatchTypeEnum.KeywordMatchType getRecommendedMatchType() {
-        @SuppressWarnings("deprecation")
-        com.google.ads.googleads.v12.enums.KeywordMatchTypeEnum.KeywordMatchType result = com.google.ads.googleads.v12.enums.KeywordMatchTypeEnum.KeywordMatchType.valueOf(recommendedMatchType_);
+        com.google.ads.googleads.v12.enums.KeywordMatchTypeEnum.KeywordMatchType result = com.google.ads.googleads.v12.enums.KeywordMatchTypeEnum.KeywordMatchType.forNumber(recommendedMatchType_);
         return result == null ? com.google.ads.googleads.v12.enums.KeywordMatchTypeEnum.KeywordMatchType.UNRECOGNIZED : result;
       }
       /**
@@ -13891,7 +14004,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000002;
         recommendedMatchType_ = value.getNumber();
         onChanged();
         return this;
@@ -13905,7 +14018,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearRecommendedMatchType() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         recommendedMatchType_ = 0;
         onChanged();
         return this;
@@ -14081,7 +14194,8 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
     public static final int EXCESS_CAMPAIGN_BUDGET_FIELD_NUMBER = 3;
-    private volatile java.lang.Object excessCampaignBudget_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object excessCampaignBudget_ = "";
     /**
      * <pre>
      * Output only. The excess budget's resource_name.
@@ -14173,7 +14287,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendationOrBuilder getBudgetRecommendationOrBuilder() {
-      return getBudgetRecommendation();
+      return budgetRecommendation_ == null ? com.google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.getDefaultInstance() : budgetRecommendation_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -14388,12 +14502,11 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         excessCampaignBudget_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
-        if (budgetRecommendationBuilder_ == null) {
-          budgetRecommendation_ = null;
-        } else {
-          budgetRecommendation_ = null;
+        budgetRecommendation_ = null;
+        if (budgetRecommendationBuilder_ != null) {
+          budgetRecommendationBuilder_.dispose();
           budgetRecommendationBuilder_ = null;
         }
         return this;
@@ -14422,20 +14535,24 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v12.resources.Recommendation.MoveUnusedBudgetRecommendation buildPartial() {
         com.google.ads.googleads.v12.resources.Recommendation.MoveUnusedBudgetRecommendation result = new com.google.ads.googleads.v12.resources.Recommendation.MoveUnusedBudgetRecommendation(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v12.resources.Recommendation.MoveUnusedBudgetRecommendation result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.excessCampaignBudget_ = excessCampaignBudget_;
           to_bitField0_ |= 0x00000001;
         }
-        result.excessCampaignBudget_ = excessCampaignBudget_;
-        if (budgetRecommendationBuilder_ == null) {
-          result.budgetRecommendation_ = budgetRecommendation_;
-        } else {
-          result.budgetRecommendation_ = budgetRecommendationBuilder_.build();
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.budgetRecommendation_ = budgetRecommendationBuilder_ == null
+              ? budgetRecommendation_
+              : budgetRecommendationBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -14483,8 +14600,8 @@ private static final long serialVersionUID = 0L;
       public Builder mergeFrom(com.google.ads.googleads.v12.resources.Recommendation.MoveUnusedBudgetRecommendation other) {
         if (other == com.google.ads.googleads.v12.resources.Recommendation.MoveUnusedBudgetRecommendation.getDefaultInstance()) return this;
         if (other.hasExcessCampaignBudget()) {
-          bitField0_ |= 0x00000001;
           excessCampaignBudget_ = other.excessCampaignBudget_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.hasBudgetRecommendation()) {
@@ -14520,7 +14637,7 @@ private static final long serialVersionUID = 0L;
                 input.readMessage(
                     getBudgetRecommendationFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
@@ -14609,11 +14726,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setExcessCampaignBudget(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+        if (value == null) { throw new NullPointerException(); }
         excessCampaignBudget_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -14626,8 +14741,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearExcessCampaignBudget() {
-        bitField0_ = (bitField0_ & ~0x00000001);
         excessCampaignBudget_ = getDefaultInstance().getExcessCampaignBudget();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -14642,12 +14757,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setExcessCampaignBudgetBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        bitField0_ |= 0x00000001;
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         excessCampaignBudget_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -14664,7 +14777,7 @@ private static final long serialVersionUID = 0L;
        * @return Whether the budgetRecommendation field is set.
        */
       public boolean hasBudgetRecommendation() {
-        return budgetRecommendationBuilder_ != null || budgetRecommendation_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -14694,11 +14807,11 @@ private static final long serialVersionUID = 0L;
             throw new NullPointerException();
           }
           budgetRecommendation_ = value;
-          onChanged();
         } else {
           budgetRecommendationBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -14712,11 +14825,11 @@ private static final long serialVersionUID = 0L;
           com.google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.Builder builderForValue) {
         if (budgetRecommendationBuilder_ == null) {
           budgetRecommendation_ = builderForValue.build();
-          onChanged();
         } else {
           budgetRecommendationBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -14728,17 +14841,18 @@ private static final long serialVersionUID = 0L;
        */
       public Builder mergeBudgetRecommendation(com.google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation value) {
         if (budgetRecommendationBuilder_ == null) {
-          if (budgetRecommendation_ != null) {
-            budgetRecommendation_ =
-              com.google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.newBuilder(budgetRecommendation_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            budgetRecommendation_ != null &&
+            budgetRecommendation_ != com.google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.getDefaultInstance()) {
+            getBudgetRecommendationBuilder().mergeFrom(value);
           } else {
             budgetRecommendation_ = value;
           }
-          onChanged();
         } else {
           budgetRecommendationBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -14749,14 +14863,13 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation budget_recommendation = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearBudgetRecommendation() {
-        if (budgetRecommendationBuilder_ == null) {
-          budgetRecommendation_ = null;
-          onChanged();
-        } else {
-          budgetRecommendation_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        budgetRecommendation_ = null;
+        if (budgetRecommendationBuilder_ != null) {
+          budgetRecommendationBuilder_.dispose();
           budgetRecommendationBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -14767,7 +14880,7 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation budget_recommendation = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.Builder getBudgetRecommendationBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getBudgetRecommendationFieldBuilder().getBuilder();
       }
@@ -14897,10 +15010,9 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The minimum campaign budget, in local currency for the account,
-     * required to achieve the target ROAS.
-     * Amount is specified in micros, where one million is equivalent to one
-     * currency unit.
+     * Output only. The minimum campaign budget, in local currency for the
+     * account, required to achieve the target ROAS. Amount is specified in
+     * micros, where one million is equivalent to one currency unit.
      * </pre>
      *
      * <code>optional int64 required_campaign_budget_amount_micros = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -14909,10 +15021,9 @@ private static final long serialVersionUID = 0L;
     boolean hasRequiredCampaignBudgetAmountMicros();
     /**
      * <pre>
-     * Output only. The minimum campaign budget, in local currency for the account,
-     * required to achieve the target ROAS.
-     * Amount is specified in micros, where one million is equivalent to one
-     * currency unit.
+     * Output only. The minimum campaign budget, in local currency for the
+     * account, required to achieve the target ROAS. Amount is specified in
+     * micros, where one million is equivalent to one currency unit.
      * </pre>
      *
      * <code>optional int64 required_campaign_budget_amount_micros = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -14966,7 +15077,7 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
     public static final int RECOMMENDED_TARGET_ROAS_FIELD_NUMBER = 1;
-    private double recommendedTargetRoas_;
+    private double recommendedTargetRoas_ = 0D;
     /**
      * <pre>
      * Output only. The recommended target ROAS (revenue per unit of spend).
@@ -14995,13 +15106,12 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int REQUIRED_CAMPAIGN_BUDGET_AMOUNT_MICROS_FIELD_NUMBER = 2;
-    private long requiredCampaignBudgetAmountMicros_;
+    private long requiredCampaignBudgetAmountMicros_ = 0L;
     /**
      * <pre>
-     * Output only. The minimum campaign budget, in local currency for the account,
-     * required to achieve the target ROAS.
-     * Amount is specified in micros, where one million is equivalent to one
-     * currency unit.
+     * Output only. The minimum campaign budget, in local currency for the
+     * account, required to achieve the target ROAS. Amount is specified in
+     * micros, where one million is equivalent to one currency unit.
      * </pre>
      *
      * <code>optional int64 required_campaign_budget_amount_micros = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -15013,10 +15123,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The minimum campaign budget, in local currency for the account,
-     * required to achieve the target ROAS.
-     * Amount is specified in micros, where one million is equivalent to one
-     * currency unit.
+     * Output only. The minimum campaign budget, in local currency for the
+     * account, required to achieve the target ROAS. Amount is specified in
+     * micros, where one million is equivalent to one currency unit.
      * </pre>
      *
      * <code>optional int64 required_campaign_budget_amount_micros = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -15243,10 +15352,9 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         recommendedTargetRoas_ = 0D;
-        bitField0_ = (bitField0_ & ~0x00000001);
         requiredCampaignBudgetAmountMicros_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -15273,6 +15381,12 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v12.resources.Recommendation.TargetRoasOptInRecommendation buildPartial() {
         com.google.ads.googleads.v12.resources.Recommendation.TargetRoasOptInRecommendation result = new com.google.ads.googleads.v12.resources.Recommendation.TargetRoasOptInRecommendation(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v12.resources.Recommendation.TargetRoasOptInRecommendation result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -15283,9 +15397,7 @@ private static final long serialVersionUID = 0L;
           result.requiredCampaignBudgetAmountMicros_ = requiredCampaignBudgetAmountMicros_;
           to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -15429,8 +15541,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setRecommendedTargetRoas(double value) {
-        bitField0_ |= 0x00000001;
+        
         recommendedTargetRoas_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -15453,10 +15566,9 @@ private static final long serialVersionUID = 0L;
       private long requiredCampaignBudgetAmountMicros_ ;
       /**
        * <pre>
-       * Output only. The minimum campaign budget, in local currency for the account,
-       * required to achieve the target ROAS.
-       * Amount is specified in micros, where one million is equivalent to one
-       * currency unit.
+       * Output only. The minimum campaign budget, in local currency for the
+       * account, required to achieve the target ROAS. Amount is specified in
+       * micros, where one million is equivalent to one currency unit.
        * </pre>
        *
        * <code>optional int64 required_campaign_budget_amount_micros = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -15468,10 +15580,9 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The minimum campaign budget, in local currency for the account,
-       * required to achieve the target ROAS.
-       * Amount is specified in micros, where one million is equivalent to one
-       * currency unit.
+       * Output only. The minimum campaign budget, in local currency for the
+       * account, required to achieve the target ROAS. Amount is specified in
+       * micros, where one million is equivalent to one currency unit.
        * </pre>
        *
        * <code>optional int64 required_campaign_budget_amount_micros = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -15483,10 +15594,9 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The minimum campaign budget, in local currency for the account,
-       * required to achieve the target ROAS.
-       * Amount is specified in micros, where one million is equivalent to one
-       * currency unit.
+       * Output only. The minimum campaign budget, in local currency for the
+       * account, required to achieve the target ROAS. Amount is specified in
+       * micros, where one million is equivalent to one currency unit.
        * </pre>
        *
        * <code>optional int64 required_campaign_budget_amount_micros = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -15494,17 +15604,17 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setRequiredCampaignBudgetAmountMicros(long value) {
-        bitField0_ |= 0x00000002;
+        
         requiredCampaignBudgetAmountMicros_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The minimum campaign budget, in local currency for the account,
-       * required to achieve the target ROAS.
-       * Amount is specified in micros, where one million is equivalent to one
-       * currency unit.
+       * Output only. The minimum campaign budget, in local currency for the
+       * account, required to achieve the target ROAS. Amount is specified in
+       * micros, where one million is equivalent to one currency unit.
        * </pre>
        *
        * <code>optional int64 required_campaign_budget_amount_micros = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -15613,8 +15723,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The recommended assets. This is populated only with the new headlines
-     * and/or descriptions, and is otherwise empty.
+     * Output only. The recommended assets. This is populated only with the new
+     * headlines and/or descriptions, and is otherwise empty.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.resources.Ad recommended_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -15623,8 +15733,8 @@ private static final long serialVersionUID = 0L;
     boolean hasRecommendedAssets();
     /**
      * <pre>
-     * Output only. The recommended assets. This is populated only with the new headlines
-     * and/or descriptions, and is otherwise empty.
+     * Output only. The recommended assets. This is populated only with the new
+     * headlines and/or descriptions, and is otherwise empty.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.resources.Ad recommended_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -15633,8 +15743,8 @@ private static final long serialVersionUID = 0L;
     com.google.ads.googleads.v12.resources.Ad getRecommendedAssets();
     /**
      * <pre>
-     * Output only. The recommended assets. This is populated only with the new headlines
-     * and/or descriptions, and is otherwise empty.
+     * Output only. The recommended assets. This is populated only with the new
+     * headlines and/or descriptions, and is otherwise empty.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.resources.Ad recommended_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -15720,15 +15830,15 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.AdOrBuilder getCurrentAdOrBuilder() {
-      return getCurrentAd();
+      return currentAd_ == null ? com.google.ads.googleads.v12.resources.Ad.getDefaultInstance() : currentAd_;
     }
 
     public static final int RECOMMENDED_ASSETS_FIELD_NUMBER = 2;
     private com.google.ads.googleads.v12.resources.Ad recommendedAssets_;
     /**
      * <pre>
-     * Output only. The recommended assets. This is populated only with the new headlines
-     * and/or descriptions, and is otherwise empty.
+     * Output only. The recommended assets. This is populated only with the new
+     * headlines and/or descriptions, and is otherwise empty.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.resources.Ad recommended_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -15740,8 +15850,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The recommended assets. This is populated only with the new headlines
-     * and/or descriptions, and is otherwise empty.
+     * Output only. The recommended assets. This is populated only with the new
+     * headlines and/or descriptions, and is otherwise empty.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.resources.Ad recommended_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -15753,15 +15863,15 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The recommended assets. This is populated only with the new headlines
-     * and/or descriptions, and is otherwise empty.
+     * Output only. The recommended assets. This is populated only with the new
+     * headlines and/or descriptions, and is otherwise empty.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.resources.Ad recommended_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.AdOrBuilder getRecommendedAssetsOrBuilder() {
-      return getRecommendedAssets();
+      return recommendedAssets_ == null ? com.google.ads.googleads.v12.resources.Ad.getDefaultInstance() : recommendedAssets_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -15977,16 +16087,15 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (currentAdBuilder_ == null) {
-          currentAd_ = null;
-        } else {
-          currentAd_ = null;
+        bitField0_ = 0;
+        currentAd_ = null;
+        if (currentAdBuilder_ != null) {
+          currentAdBuilder_.dispose();
           currentAdBuilder_ = null;
         }
-        if (recommendedAssetsBuilder_ == null) {
-          recommendedAssets_ = null;
-        } else {
-          recommendedAssets_ = null;
+        recommendedAssets_ = null;
+        if (recommendedAssetsBuilder_ != null) {
+          recommendedAssetsBuilder_.dispose();
           recommendedAssetsBuilder_ = null;
         }
         return this;
@@ -16015,18 +16124,23 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v12.resources.Recommendation.ResponsiveSearchAdAssetRecommendation buildPartial() {
         com.google.ads.googleads.v12.resources.Recommendation.ResponsiveSearchAdAssetRecommendation result = new com.google.ads.googleads.v12.resources.Recommendation.ResponsiveSearchAdAssetRecommendation(this);
-        if (currentAdBuilder_ == null) {
-          result.currentAd_ = currentAd_;
-        } else {
-          result.currentAd_ = currentAdBuilder_.build();
-        }
-        if (recommendedAssetsBuilder_ == null) {
-          result.recommendedAssets_ = recommendedAssets_;
-        } else {
-          result.recommendedAssets_ = recommendedAssetsBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v12.resources.Recommendation.ResponsiveSearchAdAssetRecommendation result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.currentAd_ = currentAdBuilder_ == null
+              ? currentAd_
+              : currentAdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.recommendedAssets_ = recommendedAssetsBuilder_ == null
+              ? recommendedAssets_
+              : recommendedAssetsBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -16109,14 +16223,14 @@ private static final long serialVersionUID = 0L;
                 input.readMessage(
                     getCurrentAdFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getRecommendedAssetsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -16134,6 +16248,7 @@ private static final long serialVersionUID = 0L;
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private com.google.ads.googleads.v12.resources.Ad currentAd_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -16147,7 +16262,7 @@ private static final long serialVersionUID = 0L;
        * @return Whether the currentAd field is set.
        */
       public boolean hasCurrentAd() {
-        return currentAdBuilder_ != null || currentAd_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <pre>
@@ -16177,11 +16292,11 @@ private static final long serialVersionUID = 0L;
             throw new NullPointerException();
           }
           currentAd_ = value;
-          onChanged();
         } else {
           currentAdBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -16195,11 +16310,11 @@ private static final long serialVersionUID = 0L;
           com.google.ads.googleads.v12.resources.Ad.Builder builderForValue) {
         if (currentAdBuilder_ == null) {
           currentAd_ = builderForValue.build();
-          onChanged();
         } else {
           currentAdBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -16211,17 +16326,18 @@ private static final long serialVersionUID = 0L;
        */
       public Builder mergeCurrentAd(com.google.ads.googleads.v12.resources.Ad value) {
         if (currentAdBuilder_ == null) {
-          if (currentAd_ != null) {
-            currentAd_ =
-              com.google.ads.googleads.v12.resources.Ad.newBuilder(currentAd_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            currentAd_ != null &&
+            currentAd_ != com.google.ads.googleads.v12.resources.Ad.getDefaultInstance()) {
+            getCurrentAdBuilder().mergeFrom(value);
           } else {
             currentAd_ = value;
           }
-          onChanged();
         } else {
           currentAdBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -16232,14 +16348,13 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v12.resources.Ad current_ad = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearCurrentAd() {
-        if (currentAdBuilder_ == null) {
-          currentAd_ = null;
-          onChanged();
-        } else {
-          currentAd_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        currentAd_ = null;
+        if (currentAdBuilder_ != null) {
+          currentAdBuilder_.dispose();
           currentAdBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -16250,7 +16365,7 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v12.resources.Ad current_ad = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.ads.googleads.v12.resources.Ad.Builder getCurrentAdBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getCurrentAdFieldBuilder().getBuilder();
       }
@@ -16295,20 +16410,20 @@ private static final long serialVersionUID = 0L;
           com.google.ads.googleads.v12.resources.Ad, com.google.ads.googleads.v12.resources.Ad.Builder, com.google.ads.googleads.v12.resources.AdOrBuilder> recommendedAssetsBuilder_;
       /**
        * <pre>
-       * Output only. The recommended assets. This is populated only with the new headlines
-       * and/or descriptions, and is otherwise empty.
+       * Output only. The recommended assets. This is populated only with the new
+       * headlines and/or descriptions, and is otherwise empty.
        * </pre>
        *
        * <code>.google.ads.googleads.v12.resources.Ad recommended_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return Whether the recommendedAssets field is set.
        */
       public boolean hasRecommendedAssets() {
-        return recommendedAssetsBuilder_ != null || recommendedAssets_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
-       * Output only. The recommended assets. This is populated only with the new headlines
-       * and/or descriptions, and is otherwise empty.
+       * Output only. The recommended assets. This is populated only with the new
+       * headlines and/or descriptions, and is otherwise empty.
        * </pre>
        *
        * <code>.google.ads.googleads.v12.resources.Ad recommended_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -16323,8 +16438,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The recommended assets. This is populated only with the new headlines
-       * and/or descriptions, and is otherwise empty.
+       * Output only. The recommended assets. This is populated only with the new
+       * headlines and/or descriptions, and is otherwise empty.
        * </pre>
        *
        * <code>.google.ads.googleads.v12.resources.Ad recommended_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -16335,17 +16450,17 @@ private static final long serialVersionUID = 0L;
             throw new NullPointerException();
           }
           recommendedAssets_ = value;
-          onChanged();
         } else {
           recommendedAssetsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The recommended assets. This is populated only with the new headlines
-       * and/or descriptions, and is otherwise empty.
+       * Output only. The recommended assets. This is populated only with the new
+       * headlines and/or descriptions, and is otherwise empty.
        * </pre>
        *
        * <code>.google.ads.googleads.v12.resources.Ad recommended_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -16354,72 +16469,72 @@ private static final long serialVersionUID = 0L;
           com.google.ads.googleads.v12.resources.Ad.Builder builderForValue) {
         if (recommendedAssetsBuilder_ == null) {
           recommendedAssets_ = builderForValue.build();
-          onChanged();
         } else {
           recommendedAssetsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The recommended assets. This is populated only with the new headlines
-       * and/or descriptions, and is otherwise empty.
+       * Output only. The recommended assets. This is populated only with the new
+       * headlines and/or descriptions, and is otherwise empty.
        * </pre>
        *
        * <code>.google.ads.googleads.v12.resources.Ad recommended_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder mergeRecommendedAssets(com.google.ads.googleads.v12.resources.Ad value) {
         if (recommendedAssetsBuilder_ == null) {
-          if (recommendedAssets_ != null) {
-            recommendedAssets_ =
-              com.google.ads.googleads.v12.resources.Ad.newBuilder(recommendedAssets_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            recommendedAssets_ != null &&
+            recommendedAssets_ != com.google.ads.googleads.v12.resources.Ad.getDefaultInstance()) {
+            getRecommendedAssetsBuilder().mergeFrom(value);
           } else {
             recommendedAssets_ = value;
           }
-          onChanged();
         } else {
           recommendedAssetsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The recommended assets. This is populated only with the new headlines
-       * and/or descriptions, and is otherwise empty.
+       * Output only. The recommended assets. This is populated only with the new
+       * headlines and/or descriptions, and is otherwise empty.
        * </pre>
        *
        * <code>.google.ads.googleads.v12.resources.Ad recommended_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearRecommendedAssets() {
-        if (recommendedAssetsBuilder_ == null) {
-          recommendedAssets_ = null;
-          onChanged();
-        } else {
-          recommendedAssets_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        recommendedAssets_ = null;
+        if (recommendedAssetsBuilder_ != null) {
+          recommendedAssetsBuilder_.dispose();
           recommendedAssetsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The recommended assets. This is populated only with the new headlines
-       * and/or descriptions, and is otherwise empty.
+       * Output only. The recommended assets. This is populated only with the new
+       * headlines and/or descriptions, and is otherwise empty.
        * </pre>
        *
        * <code>.google.ads.googleads.v12.resources.Ad recommended_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.ads.googleads.v12.resources.Ad.Builder getRecommendedAssetsBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getRecommendedAssetsFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * Output only. The recommended assets. This is populated only with the new headlines
-       * and/or descriptions, and is otherwise empty.
+       * Output only. The recommended assets. This is populated only with the new
+       * headlines and/or descriptions, and is otherwise empty.
        * </pre>
        *
        * <code>.google.ads.googleads.v12.resources.Ad recommended_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -16434,8 +16549,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The recommended assets. This is populated only with the new headlines
-       * and/or descriptions, and is otherwise empty.
+       * Output only. The recommended assets. This is populated only with the new
+       * headlines and/or descriptions, and is otherwise empty.
        * </pre>
        *
        * <code>.google.ads.googleads.v12.resources.Ad recommended_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -16654,7 +16769,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.AdOrBuilder getCurrentAdOrBuilder() {
-      return getCurrentAd();
+      return currentAd_ == null ? com.google.ads.googleads.v12.resources.Ad.getDefaultInstance() : currentAd_;
     }
 
     public static final int RECOMMENDED_AD_FIELD_NUMBER = 2;
@@ -16692,7 +16807,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.AdOrBuilder getRecommendedAdOrBuilder() {
-      return getRecommendedAd();
+      return recommendedAd_ == null ? com.google.ads.googleads.v12.resources.Ad.getDefaultInstance() : recommendedAd_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -16908,16 +17023,15 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (currentAdBuilder_ == null) {
-          currentAd_ = null;
-        } else {
-          currentAd_ = null;
+        bitField0_ = 0;
+        currentAd_ = null;
+        if (currentAdBuilder_ != null) {
+          currentAdBuilder_.dispose();
           currentAdBuilder_ = null;
         }
-        if (recommendedAdBuilder_ == null) {
-          recommendedAd_ = null;
-        } else {
-          recommendedAd_ = null;
+        recommendedAd_ = null;
+        if (recommendedAdBuilder_ != null) {
+          recommendedAdBuilder_.dispose();
           recommendedAdBuilder_ = null;
         }
         return this;
@@ -16946,18 +17060,23 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v12.resources.Recommendation.ResponsiveSearchAdImproveAdStrengthRecommendation buildPartial() {
         com.google.ads.googleads.v12.resources.Recommendation.ResponsiveSearchAdImproveAdStrengthRecommendation result = new com.google.ads.googleads.v12.resources.Recommendation.ResponsiveSearchAdImproveAdStrengthRecommendation(this);
-        if (currentAdBuilder_ == null) {
-          result.currentAd_ = currentAd_;
-        } else {
-          result.currentAd_ = currentAdBuilder_.build();
-        }
-        if (recommendedAdBuilder_ == null) {
-          result.recommendedAd_ = recommendedAd_;
-        } else {
-          result.recommendedAd_ = recommendedAdBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v12.resources.Recommendation.ResponsiveSearchAdImproveAdStrengthRecommendation result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.currentAd_ = currentAdBuilder_ == null
+              ? currentAd_
+              : currentAdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.recommendedAd_ = recommendedAdBuilder_ == null
+              ? recommendedAd_
+              : recommendedAdBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -17040,14 +17159,14 @@ private static final long serialVersionUID = 0L;
                 input.readMessage(
                     getCurrentAdFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getRecommendedAdFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -17065,6 +17184,7 @@ private static final long serialVersionUID = 0L;
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private com.google.ads.googleads.v12.resources.Ad currentAd_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -17078,7 +17198,7 @@ private static final long serialVersionUID = 0L;
        * @return Whether the currentAd field is set.
        */
       public boolean hasCurrentAd() {
-        return currentAdBuilder_ != null || currentAd_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <pre>
@@ -17108,11 +17228,11 @@ private static final long serialVersionUID = 0L;
             throw new NullPointerException();
           }
           currentAd_ = value;
-          onChanged();
         } else {
           currentAdBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -17126,11 +17246,11 @@ private static final long serialVersionUID = 0L;
           com.google.ads.googleads.v12.resources.Ad.Builder builderForValue) {
         if (currentAdBuilder_ == null) {
           currentAd_ = builderForValue.build();
-          onChanged();
         } else {
           currentAdBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -17142,17 +17262,18 @@ private static final long serialVersionUID = 0L;
        */
       public Builder mergeCurrentAd(com.google.ads.googleads.v12.resources.Ad value) {
         if (currentAdBuilder_ == null) {
-          if (currentAd_ != null) {
-            currentAd_ =
-              com.google.ads.googleads.v12.resources.Ad.newBuilder(currentAd_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            currentAd_ != null &&
+            currentAd_ != com.google.ads.googleads.v12.resources.Ad.getDefaultInstance()) {
+            getCurrentAdBuilder().mergeFrom(value);
           } else {
             currentAd_ = value;
           }
-          onChanged();
         } else {
           currentAdBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -17163,14 +17284,13 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v12.resources.Ad current_ad = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearCurrentAd() {
-        if (currentAdBuilder_ == null) {
-          currentAd_ = null;
-          onChanged();
-        } else {
-          currentAd_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        currentAd_ = null;
+        if (currentAdBuilder_ != null) {
+          currentAdBuilder_.dispose();
           currentAdBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -17181,7 +17301,7 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v12.resources.Ad current_ad = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.ads.googleads.v12.resources.Ad.Builder getCurrentAdBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getCurrentAdFieldBuilder().getBuilder();
       }
@@ -17233,7 +17353,7 @@ private static final long serialVersionUID = 0L;
        * @return Whether the recommendedAd field is set.
        */
       public boolean hasRecommendedAd() {
-        return recommendedAdBuilder_ != null || recommendedAd_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -17263,11 +17383,11 @@ private static final long serialVersionUID = 0L;
             throw new NullPointerException();
           }
           recommendedAd_ = value;
-          onChanged();
         } else {
           recommendedAdBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -17281,11 +17401,11 @@ private static final long serialVersionUID = 0L;
           com.google.ads.googleads.v12.resources.Ad.Builder builderForValue) {
         if (recommendedAdBuilder_ == null) {
           recommendedAd_ = builderForValue.build();
-          onChanged();
         } else {
           recommendedAdBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -17297,17 +17417,18 @@ private static final long serialVersionUID = 0L;
        */
       public Builder mergeRecommendedAd(com.google.ads.googleads.v12.resources.Ad value) {
         if (recommendedAdBuilder_ == null) {
-          if (recommendedAd_ != null) {
-            recommendedAd_ =
-              com.google.ads.googleads.v12.resources.Ad.newBuilder(recommendedAd_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            recommendedAd_ != null &&
+            recommendedAd_ != com.google.ads.googleads.v12.resources.Ad.getDefaultInstance()) {
+            getRecommendedAdBuilder().mergeFrom(value);
           } else {
             recommendedAd_ = value;
           }
-          onChanged();
         } else {
           recommendedAdBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -17318,14 +17439,13 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v12.resources.Ad recommended_ad = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearRecommendedAd() {
-        if (recommendedAdBuilder_ == null) {
-          recommendedAd_ = null;
-          onChanged();
-        } else {
-          recommendedAd_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        recommendedAd_ = null;
+        if (recommendedAdBuilder_ != null) {
+          recommendedAdBuilder_.dispose();
           recommendedAdBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -17336,7 +17456,7 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v12.resources.Ad recommended_ad = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.ads.googleads.v12.resources.Ad.Builder getRecommendedAdBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getRecommendedAdFieldBuilder().getBuilder();
       }
@@ -17549,7 +17669,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.AdOrBuilder getAdOrBuilder() {
-      return getAd();
+      return ad_ == null ? com.google.ads.googleads.v12.resources.Ad.getDefaultInstance() : ad_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -17749,10 +17869,10 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (adBuilder_ == null) {
-          ad_ = null;
-        } else {
-          ad_ = null;
+        bitField0_ = 0;
+        ad_ = null;
+        if (adBuilder_ != null) {
+          adBuilder_.dispose();
           adBuilder_ = null;
         }
         return this;
@@ -17781,13 +17901,18 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v12.resources.Recommendation.ResponsiveSearchAdRecommendation buildPartial() {
         com.google.ads.googleads.v12.resources.Recommendation.ResponsiveSearchAdRecommendation result = new com.google.ads.googleads.v12.resources.Recommendation.ResponsiveSearchAdRecommendation(this);
-        if (adBuilder_ == null) {
-          result.ad_ = ad_;
-        } else {
-          result.ad_ = adBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v12.resources.Recommendation.ResponsiveSearchAdRecommendation result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.ad_ = adBuilder_ == null
+              ? ad_
+              : adBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -17867,7 +17992,7 @@ private static final long serialVersionUID = 0L;
                 input.readMessage(
                     getAdFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -17885,6 +18010,7 @@ private static final long serialVersionUID = 0L;
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private com.google.ads.googleads.v12.resources.Ad ad_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -17898,7 +18024,7 @@ private static final long serialVersionUID = 0L;
        * @return Whether the ad field is set.
        */
       public boolean hasAd() {
-        return adBuilder_ != null || ad_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <pre>
@@ -17928,11 +18054,11 @@ private static final long serialVersionUID = 0L;
             throw new NullPointerException();
           }
           ad_ = value;
-          onChanged();
         } else {
           adBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -17946,11 +18072,11 @@ private static final long serialVersionUID = 0L;
           com.google.ads.googleads.v12.resources.Ad.Builder builderForValue) {
         if (adBuilder_ == null) {
           ad_ = builderForValue.build();
-          onChanged();
         } else {
           adBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -17962,17 +18088,18 @@ private static final long serialVersionUID = 0L;
        */
       public Builder mergeAd(com.google.ads.googleads.v12.resources.Ad value) {
         if (adBuilder_ == null) {
-          if (ad_ != null) {
-            ad_ =
-              com.google.ads.googleads.v12.resources.Ad.newBuilder(ad_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            ad_ != null &&
+            ad_ != com.google.ads.googleads.v12.resources.Ad.getDefaultInstance()) {
+            getAdBuilder().mergeFrom(value);
           } else {
             ad_ = value;
           }
-          onChanged();
         } else {
           adBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -17983,14 +18110,13 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v12.resources.Ad ad = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearAd() {
-        if (adBuilder_ == null) {
-          ad_ = null;
-          onChanged();
-        } else {
-          ad_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        ad_ = null;
+        if (adBuilder_ != null) {
+          adBuilder_.dispose();
           adBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -18001,7 +18127,7 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v12.resources.Ad ad = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.ads.googleads.v12.resources.Ad.Builder getAdBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getAdFieldBuilder().getBuilder();
       }
@@ -18154,7 +18280,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. Total number of keywords to be expanded to Broad Match in the campaign.
+     * Output only. Total number of keywords to be expanded to Broad Match in
+     * the campaign.
      * </pre>
      *
      * <code>int64 suggested_keywords_count = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -18184,8 +18311,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The budget recommended to avoid becoming budget constrained after
-     * applying the recommendation.
+     * Output only. The budget recommended to avoid becoming budget constrained
+     * after applying the recommendation.
      * </pre>
      *
      * <code>int64 required_campaign_budget_amount_micros = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -18239,6 +18366,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int KEYWORD_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.ads.googleads.v12.common.KeywordInfo> keyword_;
     /**
      * <pre>
@@ -18299,10 +18427,11 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int SUGGESTED_KEYWORDS_COUNT_FIELD_NUMBER = 2;
-    private long suggestedKeywordsCount_;
+    private long suggestedKeywordsCount_ = 0L;
     /**
      * <pre>
-     * Output only. Total number of keywords to be expanded to Broad Match in the campaign.
+     * Output only. Total number of keywords to be expanded to Broad Match in
+     * the campaign.
      * </pre>
      *
      * <code>int64 suggested_keywords_count = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -18314,7 +18443,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int CAMPAIGN_KEYWORDS_COUNT_FIELD_NUMBER = 3;
-    private long campaignKeywordsCount_;
+    private long campaignKeywordsCount_ = 0L;
     /**
      * <pre>
      * Output only. Total number of keywords in the campaign.
@@ -18329,7 +18458,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int CAMPAIGN_USES_SHARED_BUDGET_FIELD_NUMBER = 4;
-    private boolean campaignUsesSharedBudget_;
+    private boolean campaignUsesSharedBudget_ = false;
     /**
      * <pre>
      * Output only. Whether the associated campaign uses a shared budget.
@@ -18344,11 +18473,11 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int REQUIRED_CAMPAIGN_BUDGET_AMOUNT_MICROS_FIELD_NUMBER = 5;
-    private long requiredCampaignBudgetAmountMicros_;
+    private long requiredCampaignBudgetAmountMicros_ = 0L;
     /**
      * <pre>
-     * Output only. The budget recommended to avoid becoming budget constrained after
-     * applying the recommendation.
+     * Output only. The budget recommended to avoid becoming budget constrained
+     * after applying the recommendation.
      * </pre>
      *
      * <code>int64 required_campaign_budget_amount_micros = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -18601,6 +18730,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (keywordBuilder_ == null) {
           keyword_ = java.util.Collections.emptyList();
         } else {
@@ -18609,13 +18739,9 @@ private static final long serialVersionUID = 0L;
         }
         bitField0_ = (bitField0_ & ~0x00000001);
         suggestedKeywordsCount_ = 0L;
-
         campaignKeywordsCount_ = 0L;
-
         campaignUsesSharedBudget_ = false;
-
         requiredCampaignBudgetAmountMicros_ = 0L;
-
         return this;
       }
 
@@ -18642,7 +18768,13 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v12.resources.Recommendation.UseBroadMatchKeywordRecommendation buildPartial() {
         com.google.ads.googleads.v12.resources.Recommendation.UseBroadMatchKeywordRecommendation result = new com.google.ads.googleads.v12.resources.Recommendation.UseBroadMatchKeywordRecommendation(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.google.ads.googleads.v12.resources.Recommendation.UseBroadMatchKeywordRecommendation result) {
         if (keywordBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             keyword_ = java.util.Collections.unmodifiableList(keyword_);
@@ -18652,12 +18784,22 @@ private static final long serialVersionUID = 0L;
         } else {
           result.keyword_ = keywordBuilder_.build();
         }
-        result.suggestedKeywordsCount_ = suggestedKeywordsCount_;
-        result.campaignKeywordsCount_ = campaignKeywordsCount_;
-        result.campaignUsesSharedBudget_ = campaignUsesSharedBudget_;
-        result.requiredCampaignBudgetAmountMicros_ = requiredCampaignBudgetAmountMicros_;
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v12.resources.Recommendation.UseBroadMatchKeywordRecommendation result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.suggestedKeywordsCount_ = suggestedKeywordsCount_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.campaignKeywordsCount_ = campaignKeywordsCount_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.campaignUsesSharedBudget_ = campaignUsesSharedBudget_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.requiredCampaignBudgetAmountMicros_ = requiredCampaignBudgetAmountMicros_;
+        }
       }
 
       @java.lang.Override
@@ -18783,22 +18925,22 @@ private static final long serialVersionUID = 0L;
               } // case 10
               case 16: {
                 suggestedKeywordsCount_ = input.readInt64();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               case 24: {
                 campaignKeywordsCount_ = input.readInt64();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 24
               case 32: {
                 campaignUsesSharedBudget_ = input.readBool();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 32
               case 40: {
                 requiredCampaignBudgetAmountMicros_ = input.readInt64();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 40
               default: {
@@ -19133,7 +19275,8 @@ private static final long serialVersionUID = 0L;
       private long suggestedKeywordsCount_ ;
       /**
        * <pre>
-       * Output only. Total number of keywords to be expanded to Broad Match in the campaign.
+       * Output only. Total number of keywords to be expanded to Broad Match in
+       * the campaign.
        * </pre>
        *
        * <code>int64 suggested_keywords_count = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -19145,7 +19288,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Total number of keywords to be expanded to Broad Match in the campaign.
+       * Output only. Total number of keywords to be expanded to Broad Match in
+       * the campaign.
        * </pre>
        *
        * <code>int64 suggested_keywords_count = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -19155,19 +19299,21 @@ private static final long serialVersionUID = 0L;
       public Builder setSuggestedKeywordsCount(long value) {
         
         suggestedKeywordsCount_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. Total number of keywords to be expanded to Broad Match in the campaign.
+       * Output only. Total number of keywords to be expanded to Broad Match in
+       * the campaign.
        * </pre>
        *
        * <code>int64 suggested_keywords_count = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return This builder for chaining.
        */
       public Builder clearSuggestedKeywordsCount() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         suggestedKeywordsCount_ = 0L;
         onChanged();
         return this;
@@ -19198,6 +19344,7 @@ private static final long serialVersionUID = 0L;
       public Builder setCampaignKeywordsCount(long value) {
         
         campaignKeywordsCount_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -19210,7 +19357,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearCampaignKeywordsCount() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         campaignKeywordsCount_ = 0L;
         onChanged();
         return this;
@@ -19241,6 +19388,7 @@ private static final long serialVersionUID = 0L;
       public Builder setCampaignUsesSharedBudget(boolean value) {
         
         campaignUsesSharedBudget_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -19253,7 +19401,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearCampaignUsesSharedBudget() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         campaignUsesSharedBudget_ = false;
         onChanged();
         return this;
@@ -19262,8 +19410,8 @@ private static final long serialVersionUID = 0L;
       private long requiredCampaignBudgetAmountMicros_ ;
       /**
        * <pre>
-       * Output only. The budget recommended to avoid becoming budget constrained after
-       * applying the recommendation.
+       * Output only. The budget recommended to avoid becoming budget constrained
+       * after applying the recommendation.
        * </pre>
        *
        * <code>int64 required_campaign_budget_amount_micros = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -19275,8 +19423,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The budget recommended to avoid becoming budget constrained after
-       * applying the recommendation.
+       * Output only. The budget recommended to avoid becoming budget constrained
+       * after applying the recommendation.
        * </pre>
        *
        * <code>int64 required_campaign_budget_amount_micros = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -19286,20 +19434,21 @@ private static final long serialVersionUID = 0L;
       public Builder setRequiredCampaignBudgetAmountMicros(long value) {
         
         requiredCampaignBudgetAmountMicros_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The budget recommended to avoid becoming budget constrained after
-       * applying the recommendation.
+       * Output only. The budget recommended to avoid becoming budget constrained
+       * after applying the recommendation.
        * </pre>
        *
        * <code>int64 required_campaign_budget_amount_micros = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return This builder for chaining.
        */
       public Builder clearRequiredCampaignBudgetAmountMicros() {
-        
+        bitField0_ = (bitField0_ & ~0x00000010);
         requiredCampaignBudgetAmountMicros_ = 0L;
         onChanged();
         return this;
@@ -19384,7 +19533,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. Country whose products from merchant's inventory should be included.
+     * Output only. Country whose products from merchant's inventory should be
+     * included.
      * </pre>
      *
      * <code>string sales_country_code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -19393,7 +19543,8 @@ private static final long serialVersionUID = 0L;
     java.lang.String getSalesCountryCode();
     /**
      * <pre>
-     * Output only. Country whose products from merchant's inventory should be included.
+     * Output only. Country whose products from merchant's inventory should be
+     * included.
      * </pre>
      *
      * <code>string sales_country_code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -19449,7 +19600,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int MERCHANT_ID_FIELD_NUMBER = 1;
-    private long merchantId_;
+    private long merchantId_ = 0L;
     /**
      * <pre>
      * Output only. ID of Merchant Center account.
@@ -19464,10 +19615,12 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int SALES_COUNTRY_CODE_FIELD_NUMBER = 2;
-    private volatile java.lang.Object salesCountryCode_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object salesCountryCode_ = "";
     /**
      * <pre>
-     * Output only. Country whose products from merchant's inventory should be included.
+     * Output only. Country whose products from merchant's inventory should be
+     * included.
      * </pre>
      *
      * <code>string sales_country_code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -19488,7 +19641,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Country whose products from merchant's inventory should be included.
+     * Output only. Country whose products from merchant's inventory should be
+     * included.
      * </pre>
      *
      * <code>string sales_country_code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -19713,10 +19867,9 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         merchantId_ = 0L;
-
         salesCountryCode_ = "";
-
         return this;
       }
 
@@ -19743,10 +19896,19 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v12.resources.Recommendation.UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation buildPartial() {
         com.google.ads.googleads.v12.resources.Recommendation.UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation result = new com.google.ads.googleads.v12.resources.Recommendation.UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation(this);
-        result.merchantId_ = merchantId_;
-        result.salesCountryCode_ = salesCountryCode_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v12.resources.Recommendation.UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.merchantId_ = merchantId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.salesCountryCode_ = salesCountryCode_;
+        }
       }
 
       @java.lang.Override
@@ -19798,6 +19960,7 @@ private static final long serialVersionUID = 0L;
         }
         if (!other.getSalesCountryCode().isEmpty()) {
           salesCountryCode_ = other.salesCountryCode_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -19828,12 +19991,12 @@ private static final long serialVersionUID = 0L;
                 break;
               case 8: {
                 merchantId_ = input.readInt64();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               case 18: {
                 salesCountryCode_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -19851,6 +20014,7 @@ private static final long serialVersionUID = 0L;
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private long merchantId_ ;
       /**
@@ -19877,6 +20041,7 @@ private static final long serialVersionUID = 0L;
       public Builder setMerchantId(long value) {
         
         merchantId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -19889,7 +20054,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearMerchantId() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         merchantId_ = 0L;
         onChanged();
         return this;
@@ -19898,7 +20063,8 @@ private static final long serialVersionUID = 0L;
       private java.lang.Object salesCountryCode_ = "";
       /**
        * <pre>
-       * Output only. Country whose products from merchant's inventory should be included.
+       * Output only. Country whose products from merchant's inventory should be
+       * included.
        * </pre>
        *
        * <code>string sales_country_code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -19918,7 +20084,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Country whose products from merchant's inventory should be included.
+       * Output only. Country whose products from merchant's inventory should be
+       * included.
        * </pre>
        *
        * <code>string sales_country_code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -19939,7 +20106,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Country whose products from merchant's inventory should be included.
+       * Output only. Country whose products from merchant's inventory should be
+       * included.
        * </pre>
        *
        * <code>string sales_country_code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -19948,31 +20116,31 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setSalesCountryCode(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         salesCountryCode_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. Country whose products from merchant's inventory should be included.
+       * Output only. Country whose products from merchant's inventory should be
+       * included.
        * </pre>
        *
        * <code>string sales_country_code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return This builder for chaining.
        */
       public Builder clearSalesCountryCode() {
-        
         salesCountryCode_ = getDefaultInstance().getSalesCountryCode();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. Country whose products from merchant's inventory should be included.
+       * Output only. Country whose products from merchant's inventory should be
+       * included.
        * </pre>
        *
        * <code>string sales_country_code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -19981,12 +20149,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setSalesCountryCodeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         salesCountryCode_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -20060,8 +20226,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. A number greater than 1.0 indicating the factor by which we recommend the
-     * target CPA should be increased.
+     * Output only. A number greater than 1.0 indicating the factor by which we
+     * recommend the target CPA should be increased.
      * </pre>
      *
      * <code>optional double recommended_target_multiplier = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -20070,8 +20236,8 @@ private static final long serialVersionUID = 0L;
     boolean hasRecommendedTargetMultiplier();
     /**
      * <pre>
-     * Output only. A number greater than 1.0 indicating the factor by which we recommend the
-     * target CPA should be increased.
+     * Output only. A number greater than 1.0 indicating the factor by which we
+     * recommend the target CPA should be increased.
      * </pre>
      *
      * <code>optional double recommended_target_multiplier = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -20081,8 +20247,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The current average target CPA of the campaign, in micros of customer
-     * local currency.
+     * Output only. The current average target CPA of the campaign, in micros of
+     * customer local currency.
      * </pre>
      *
      * <code>optional int64 average_target_cpa_micros = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -20091,8 +20257,8 @@ private static final long serialVersionUID = 0L;
     boolean hasAverageTargetCpaMicros();
     /**
      * <pre>
-     * Output only. The current average target CPA of the campaign, in micros of customer
-     * local currency.
+     * Output only. The current average target CPA of the campaign, in micros of
+     * customer local currency.
      * </pre>
      *
      * <code>optional int64 average_target_cpa_micros = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -20146,11 +20312,11 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
     public static final int RECOMMENDED_TARGET_MULTIPLIER_FIELD_NUMBER = 1;
-    private double recommendedTargetMultiplier_;
+    private double recommendedTargetMultiplier_ = 0D;
     /**
      * <pre>
-     * Output only. A number greater than 1.0 indicating the factor by which we recommend the
-     * target CPA should be increased.
+     * Output only. A number greater than 1.0 indicating the factor by which we
+     * recommend the target CPA should be increased.
      * </pre>
      *
      * <code>optional double recommended_target_multiplier = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -20162,8 +20328,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A number greater than 1.0 indicating the factor by which we recommend the
-     * target CPA should be increased.
+     * Output only. A number greater than 1.0 indicating the factor by which we
+     * recommend the target CPA should be increased.
      * </pre>
      *
      * <code>optional double recommended_target_multiplier = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -20175,11 +20341,11 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int AVERAGE_TARGET_CPA_MICROS_FIELD_NUMBER = 2;
-    private long averageTargetCpaMicros_;
+    private long averageTargetCpaMicros_ = 0L;
     /**
      * <pre>
-     * Output only. The current average target CPA of the campaign, in micros of customer
-     * local currency.
+     * Output only. The current average target CPA of the campaign, in micros of
+     * customer local currency.
      * </pre>
      *
      * <code>optional int64 average_target_cpa_micros = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -20191,8 +20357,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The current average target CPA of the campaign, in micros of customer
-     * local currency.
+     * Output only. The current average target CPA of the campaign, in micros of
+     * customer local currency.
      * </pre>
      *
      * <code>optional int64 average_target_cpa_micros = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -20419,10 +20585,9 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         recommendedTargetMultiplier_ = 0D;
-        bitField0_ = (bitField0_ & ~0x00000001);
         averageTargetCpaMicros_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -20449,6 +20614,12 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v12.resources.Recommendation.RaiseTargetCpaBidTooLowRecommendation buildPartial() {
         com.google.ads.googleads.v12.resources.Recommendation.RaiseTargetCpaBidTooLowRecommendation result = new com.google.ads.googleads.v12.resources.Recommendation.RaiseTargetCpaBidTooLowRecommendation(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v12.resources.Recommendation.RaiseTargetCpaBidTooLowRecommendation result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -20459,9 +20630,7 @@ private static final long serialVersionUID = 0L;
           result.averageTargetCpaMicros_ = averageTargetCpaMicros_;
           to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -20570,8 +20739,8 @@ private static final long serialVersionUID = 0L;
       private double recommendedTargetMultiplier_ ;
       /**
        * <pre>
-       * Output only. A number greater than 1.0 indicating the factor by which we recommend the
-       * target CPA should be increased.
+       * Output only. A number greater than 1.0 indicating the factor by which we
+       * recommend the target CPA should be increased.
        * </pre>
        *
        * <code>optional double recommended_target_multiplier = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -20583,8 +20752,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. A number greater than 1.0 indicating the factor by which we recommend the
-       * target CPA should be increased.
+       * Output only. A number greater than 1.0 indicating the factor by which we
+       * recommend the target CPA should be increased.
        * </pre>
        *
        * <code>optional double recommended_target_multiplier = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -20596,8 +20765,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. A number greater than 1.0 indicating the factor by which we recommend the
-       * target CPA should be increased.
+       * Output only. A number greater than 1.0 indicating the factor by which we
+       * recommend the target CPA should be increased.
        * </pre>
        *
        * <code>optional double recommended_target_multiplier = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -20605,15 +20774,16 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setRecommendedTargetMultiplier(double value) {
-        bitField0_ |= 0x00000001;
+        
         recommendedTargetMultiplier_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. A number greater than 1.0 indicating the factor by which we recommend the
-       * target CPA should be increased.
+       * Output only. A number greater than 1.0 indicating the factor by which we
+       * recommend the target CPA should be increased.
        * </pre>
        *
        * <code>optional double recommended_target_multiplier = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -20629,8 +20799,8 @@ private static final long serialVersionUID = 0L;
       private long averageTargetCpaMicros_ ;
       /**
        * <pre>
-       * Output only. The current average target CPA of the campaign, in micros of customer
-       * local currency.
+       * Output only. The current average target CPA of the campaign, in micros of
+       * customer local currency.
        * </pre>
        *
        * <code>optional int64 average_target_cpa_micros = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -20642,8 +20812,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The current average target CPA of the campaign, in micros of customer
-       * local currency.
+       * Output only. The current average target CPA of the campaign, in micros of
+       * customer local currency.
        * </pre>
        *
        * <code>optional int64 average_target_cpa_micros = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -20655,8 +20825,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The current average target CPA of the campaign, in micros of customer
-       * local currency.
+       * Output only. The current average target CPA of the campaign, in micros of
+       * customer local currency.
        * </pre>
        *
        * <code>optional int64 average_target_cpa_micros = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -20664,15 +20834,16 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setAverageTargetCpaMicros(long value) {
-        bitField0_ |= 0x00000002;
+        
         averageTargetCpaMicros_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The current average target CPA of the campaign, in micros of customer
-       * local currency.
+       * Output only. The current average target CPA of the campaign, in micros of
+       * customer local currency.
        * </pre>
        *
        * <code>optional int64 average_target_cpa_micros = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -21651,7 +21822,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int RECOMMENDED_TARGET_ROAS_FIELD_NUMBER = 1;
-    private double recommendedTargetRoas_;
+    private double recommendedTargetRoas_ = 0D;
     /**
      * <pre>
      * Output only. The recommended target ROAS (revenue per unit of spend).
@@ -21701,7 +21872,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.Recommendation.CampaignBudgetOrBuilder getCampaignBudgetOrBuilder() {
-      return getCampaignBudget();
+      return campaignBudget_ == null ? com.google.ads.googleads.v12.resources.Recommendation.CampaignBudget.getDefaultInstance() : campaignBudget_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -21914,12 +22085,11 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         recommendedTargetRoas_ = 0D;
-
-        if (campaignBudgetBuilder_ == null) {
-          campaignBudget_ = null;
-        } else {
-          campaignBudget_ = null;
+        campaignBudget_ = null;
+        if (campaignBudgetBuilder_ != null) {
+          campaignBudgetBuilder_.dispose();
           campaignBudgetBuilder_ = null;
         }
         return this;
@@ -21948,14 +22118,21 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v12.resources.Recommendation.ForecastingSetTargetRoasRecommendation buildPartial() {
         com.google.ads.googleads.v12.resources.Recommendation.ForecastingSetTargetRoasRecommendation result = new com.google.ads.googleads.v12.resources.Recommendation.ForecastingSetTargetRoasRecommendation(this);
-        result.recommendedTargetRoas_ = recommendedTargetRoas_;
-        if (campaignBudgetBuilder_ == null) {
-          result.campaignBudget_ = campaignBudget_;
-        } else {
-          result.campaignBudget_ = campaignBudgetBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v12.resources.Recommendation.ForecastingSetTargetRoasRecommendation result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.recommendedTargetRoas_ = recommendedTargetRoas_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.campaignBudget_ = campaignBudgetBuilder_ == null
+              ? campaignBudget_
+              : campaignBudgetBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -22036,14 +22213,14 @@ private static final long serialVersionUID = 0L;
                 break;
               case 9: {
                 recommendedTargetRoas_ = input.readDouble();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 9
               case 18: {
                 input.readMessage(
                     getCampaignBudgetFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -22061,6 +22238,7 @@ private static final long serialVersionUID = 0L;
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private double recommendedTargetRoas_ ;
       /**
@@ -22089,6 +22267,7 @@ private static final long serialVersionUID = 0L;
       public Builder setRecommendedTargetRoas(double value) {
         
         recommendedTargetRoas_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -22102,7 +22281,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearRecommendedTargetRoas() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         recommendedTargetRoas_ = 0D;
         onChanged();
         return this;
@@ -22120,7 +22299,7 @@ private static final long serialVersionUID = 0L;
        * @return Whether the campaignBudget field is set.
        */
       public boolean hasCampaignBudget() {
-        return campaignBudgetBuilder_ != null || campaignBudget_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -22150,11 +22329,11 @@ private static final long serialVersionUID = 0L;
             throw new NullPointerException();
           }
           campaignBudget_ = value;
-          onChanged();
         } else {
           campaignBudgetBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -22168,11 +22347,11 @@ private static final long serialVersionUID = 0L;
           com.google.ads.googleads.v12.resources.Recommendation.CampaignBudget.Builder builderForValue) {
         if (campaignBudgetBuilder_ == null) {
           campaignBudget_ = builderForValue.build();
-          onChanged();
         } else {
           campaignBudgetBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -22184,17 +22363,18 @@ private static final long serialVersionUID = 0L;
        */
       public Builder mergeCampaignBudget(com.google.ads.googleads.v12.resources.Recommendation.CampaignBudget value) {
         if (campaignBudgetBuilder_ == null) {
-          if (campaignBudget_ != null) {
-            campaignBudget_ =
-              com.google.ads.googleads.v12.resources.Recommendation.CampaignBudget.newBuilder(campaignBudget_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            campaignBudget_ != null &&
+            campaignBudget_ != com.google.ads.googleads.v12.resources.Recommendation.CampaignBudget.getDefaultInstance()) {
+            getCampaignBudgetBuilder().mergeFrom(value);
           } else {
             campaignBudget_ = value;
           }
-          onChanged();
         } else {
           campaignBudgetBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -22205,14 +22385,13 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v12.resources.Recommendation.CampaignBudget campaign_budget = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public Builder clearCampaignBudget() {
-        if (campaignBudgetBuilder_ == null) {
-          campaignBudget_ = null;
-          onChanged();
-        } else {
-          campaignBudget_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        campaignBudget_ = null;
+        if (campaignBudgetBuilder_ != null) {
+          campaignBudgetBuilder_.dispose();
           campaignBudgetBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -22223,7 +22402,7 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v12.resources.Recommendation.CampaignBudget campaign_budget = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        */
       public com.google.ads.googleads.v12.resources.Recommendation.CampaignBudget.Builder getCampaignBudgetBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getCampaignBudgetFieldBuilder().getBuilder();
       }
@@ -22420,7 +22599,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int CURRENT_AMOUNT_MICROS_FIELD_NUMBER = 1;
-    private long currentAmountMicros_;
+    private long currentAmountMicros_ = 0L;
     /**
      * <pre>
      * Output only. Current budget amount.
@@ -22435,7 +22614,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int RECOMMENDED_NEW_AMOUNT_MICROS_FIELD_NUMBER = 2;
-    private long recommendedNewAmountMicros_;
+    private long recommendedNewAmountMicros_ = 0L;
     /**
      * <pre>
      * Output only. Recommended budget amount.
@@ -22450,7 +22629,8 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int NEW_START_DATE_FIELD_NUMBER = 3;
-    private volatile java.lang.Object newStartDate_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object newStartDate_ = "";
     /**
      * <pre>
      * Output only. The date when the new budget would start being used.
@@ -22714,12 +22894,10 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         currentAmountMicros_ = 0L;
-
         recommendedNewAmountMicros_ = 0L;
-
         newStartDate_ = "";
-
         return this;
       }
 
@@ -22746,11 +22924,22 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v12.resources.Recommendation.CampaignBudget buildPartial() {
         com.google.ads.googleads.v12.resources.Recommendation.CampaignBudget result = new com.google.ads.googleads.v12.resources.Recommendation.CampaignBudget(this);
-        result.currentAmountMicros_ = currentAmountMicros_;
-        result.recommendedNewAmountMicros_ = recommendedNewAmountMicros_;
-        result.newStartDate_ = newStartDate_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v12.resources.Recommendation.CampaignBudget result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.currentAmountMicros_ = currentAmountMicros_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.recommendedNewAmountMicros_ = recommendedNewAmountMicros_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.newStartDate_ = newStartDate_;
+        }
       }
 
       @java.lang.Override
@@ -22805,6 +22994,7 @@ private static final long serialVersionUID = 0L;
         }
         if (!other.getNewStartDate().isEmpty()) {
           newStartDate_ = other.newStartDate_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -22835,17 +23025,17 @@ private static final long serialVersionUID = 0L;
                 break;
               case 8: {
                 currentAmountMicros_ = input.readInt64();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               case 16: {
                 recommendedNewAmountMicros_ = input.readInt64();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               case 26: {
                 newStartDate_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               default: {
@@ -22863,6 +23053,7 @@ private static final long serialVersionUID = 0L;
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private long currentAmountMicros_ ;
       /**
@@ -22889,6 +23080,7 @@ private static final long serialVersionUID = 0L;
       public Builder setCurrentAmountMicros(long value) {
         
         currentAmountMicros_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -22901,7 +23093,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearCurrentAmountMicros() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         currentAmountMicros_ = 0L;
         onChanged();
         return this;
@@ -22932,6 +23124,7 @@ private static final long serialVersionUID = 0L;
       public Builder setRecommendedNewAmountMicros(long value) {
         
         recommendedNewAmountMicros_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -22944,7 +23137,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearRecommendedNewAmountMicros() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         recommendedNewAmountMicros_ = 0L;
         onChanged();
         return this;
@@ -23009,11 +23202,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setNewStartDate(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         newStartDate_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -23028,8 +23219,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearNewStartDate() {
-        
         newStartDate_ = getDefaultInstance().getNewStartDate();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -23046,12 +23237,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setNewStartDateBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         newStartDate_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -23210,7 +23399,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Immutable. The resource name of the recommendation.
@@ -23258,7 +23448,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TYPE_FIELD_NUMBER = 2;
-  private int type_;
+  private int type_ = 0;
   /**
    * <pre>
    * Output only. The type of recommendation.
@@ -23279,8 +23469,7 @@ private static final long serialVersionUID = 0L;
    * @return The type.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.RecommendationTypeEnum.RecommendationType getType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.RecommendationTypeEnum.RecommendationType result = com.google.ads.googleads.v12.enums.RecommendationTypeEnum.RecommendationType.valueOf(type_);
+    com.google.ads.googleads.v12.enums.RecommendationTypeEnum.RecommendationType result = com.google.ads.googleads.v12.enums.RecommendationTypeEnum.RecommendationType.forNumber(type_);
     return result == null ? com.google.ads.googleads.v12.enums.RecommendationTypeEnum.RecommendationType.UNRECOGNIZED : result;
   }
 
@@ -23322,15 +23511,16 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.resources.Recommendation.RecommendationImpactOrBuilder getImpactOrBuilder() {
-    return getImpact();
+    return impact_ == null ? com.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact.getDefaultInstance() : impact_;
   }
 
   public static final int CAMPAIGN_BUDGET_FIELD_NUMBER = 24;
-  private volatile java.lang.Object campaignBudget_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object campaignBudget_ = "";
   /**
    * <pre>
-   * Output only. The budget targeted by this recommendation. This will be set only when
-   * the recommendation affects a single campaign budget.
+   * Output only. The budget targeted by this recommendation. This will be set
+   * only when the recommendation affects a single campaign budget.
    * This field will be set for the following recommendation types:
    * CAMPAIGN_BUDGET, FORECASTING_CAMPAIGN_BUDGET, MARGINAL_ROI_CAMPAIGN_BUDGET,
    * MOVE_UNUSED_BUDGET
@@ -23345,8 +23535,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The budget targeted by this recommendation. This will be set only when
-   * the recommendation affects a single campaign budget.
+   * Output only. The budget targeted by this recommendation. This will be set
+   * only when the recommendation affects a single campaign budget.
    * This field will be set for the following recommendation types:
    * CAMPAIGN_BUDGET, FORECASTING_CAMPAIGN_BUDGET, MARGINAL_ROI_CAMPAIGN_BUDGET,
    * MOVE_UNUSED_BUDGET
@@ -23370,8 +23560,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The budget targeted by this recommendation. This will be set only when
-   * the recommendation affects a single campaign budget.
+   * Output only. The budget targeted by this recommendation. This will be set
+   * only when the recommendation affects a single campaign budget.
    * This field will be set for the following recommendation types:
    * CAMPAIGN_BUDGET, FORECASTING_CAMPAIGN_BUDGET, MARGINAL_ROI_CAMPAIGN_BUDGET,
    * MOVE_UNUSED_BUDGET
@@ -23396,11 +23586,11 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CAMPAIGN_FIELD_NUMBER = 25;
-  private volatile java.lang.Object campaign_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object campaign_ = "";
   /**
    * <pre>
-   * Output only. The campaign targeted by this recommendation. This will be set only when
-   * the recommendation affects a single campaign.
+   * Output only. The campaign targeted by this recommendation.
    * This field will be set for the following recommendation types:
    * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
    * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
@@ -23424,8 +23614,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The campaign targeted by this recommendation. This will be set only when
-   * the recommendation affects a single campaign.
+   * Output only. The campaign targeted by this recommendation.
    * This field will be set for the following recommendation types:
    * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
    * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
@@ -23458,8 +23647,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The campaign targeted by this recommendation. This will be set only when
-   * the recommendation affects a single campaign.
+   * Output only. The campaign targeted by this recommendation.
    * This field will be set for the following recommendation types:
    * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
    * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
@@ -23493,11 +23681,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AD_GROUP_FIELD_NUMBER = 26;
-  private volatile java.lang.Object adGroup_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object adGroup_ = "";
   /**
    * <pre>
-   * Output only. The ad group targeted by this recommendation. This will be set only when
-   * the recommendation affects a single ad group.
+   * Output only. The ad group targeted by this recommendation. This will be set
+   * only when the recommendation affects a single ad group.
    * This field will be set for the following recommendation types:
    * KEYWORD, OPTIMIZE_AD_ROTATION, RESPONSIVE_SEARCH_AD,
    * RESPONSIVE_SEARCH_AD_ASSET, TEXT_AD
@@ -23512,8 +23701,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The ad group targeted by this recommendation. This will be set only when
-   * the recommendation affects a single ad group.
+   * Output only. The ad group targeted by this recommendation. This will be set
+   * only when the recommendation affects a single ad group.
    * This field will be set for the following recommendation types:
    * KEYWORD, OPTIMIZE_AD_ROTATION, RESPONSIVE_SEARCH_AD,
    * RESPONSIVE_SEARCH_AD_ASSET, TEXT_AD
@@ -23537,8 +23726,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The ad group targeted by this recommendation. This will be set only when
-   * the recommendation affects a single ad group.
+   * Output only. The ad group targeted by this recommendation. This will be set
+   * only when the recommendation affects a single ad group.
    * This field will be set for the following recommendation types:
    * KEYWORD, OPTIMIZE_AD_ROTATION, RESPONSIVE_SEARCH_AD,
    * RESPONSIVE_SEARCH_AD_ASSET, TEXT_AD
@@ -23563,7 +23752,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DISMISSED_FIELD_NUMBER = 27;
-  private boolean dismissed_;
+  private boolean dismissed_ = false;
   /**
    * <pre>
    * Output only. Whether the recommendation is dismissed or not.
@@ -24452,8 +24641,8 @@ private static final long serialVersionUID = 0L;
   public static final int UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX_RECOMMENDATION_FIELD_NUMBER = 32;
   /**
    * <pre>
-   * Output only. The upgrade a Smart Shopping campaign to a Performance Max campaign
-   * recommendation.
+   * Output only. The upgrade a Smart Shopping campaign to a Performance Max
+   * campaign recommendation.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.Recommendation.UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation upgrade_smart_shopping_campaign_to_performance_max_recommendation = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -24465,8 +24654,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The upgrade a Smart Shopping campaign to a Performance Max campaign
-   * recommendation.
+   * Output only. The upgrade a Smart Shopping campaign to a Performance Max
+   * campaign recommendation.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.Recommendation.UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation upgrade_smart_shopping_campaign_to_performance_max_recommendation = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -24481,8 +24670,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The upgrade a Smart Shopping campaign to a Performance Max campaign
-   * recommendation.
+   * Output only. The upgrade a Smart Shopping campaign to a Performance Max
+   * campaign recommendation.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.Recommendation.UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation upgrade_smart_shopping_campaign_to_performance_max_recommendation = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -25391,24 +25580,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      bitField1_ = 0;
       resourceName_ = "";
-
       type_ = 0;
-
-      if (impactBuilder_ == null) {
-        impact_ = null;
-      } else {
-        impact_ = null;
+      impact_ = null;
+      if (impactBuilder_ != null) {
+        impactBuilder_.dispose();
         impactBuilder_ = null;
       }
       campaignBudget_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       campaign_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       adGroup_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       dismissed_ = false;
-      bitField0_ = (bitField0_ & ~0x00000008);
       if (campaignBudgetRecommendationBuilder_ != null) {
         campaignBudgetRecommendationBuilder_.clear();
       }
@@ -25515,217 +25699,157 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.Recommendation buildPartial() {
       com.google.ads.googleads.v12.resources.Recommendation result = new com.google.ads.googleads.v12.resources.Recommendation(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      if (bitField1_ != 0) { buildPartial1(result); }
+      buildPartialOneofs(result);
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.resources.Recommendation result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
-      result.type_ = type_;
-      if (impactBuilder_ == null) {
-        result.impact_ = impact_;
-      } else {
-        result.impact_ = impactBuilder_.build();
-      }
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.type_ = type_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.impact_ = impactBuilder_ == null
+            ? impact_
+            : impactBuilder_.build();
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.campaignBudget_ = campaignBudget_;
         to_bitField0_ |= 0x00000001;
       }
-      result.campaignBudget_ = campaignBudget_;
-      if (((from_bitField0_ & 0x00000002) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.campaign_ = campaign_;
         to_bitField0_ |= 0x00000002;
       }
-      result.campaign_ = campaign_;
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.adGroup_ = adGroup_;
         to_bitField0_ |= 0x00000004;
       }
-      result.adGroup_ = adGroup_;
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000040) != 0)) {
         result.dismissed_ = dismissed_;
         to_bitField0_ |= 0x00000008;
       }
-      if (recommendationCase_ == 4) {
-        if (campaignBudgetRecommendationBuilder_ == null) {
-          result.recommendation_ = recommendation_;
-        } else {
-          result.recommendation_ = campaignBudgetRecommendationBuilder_.build();
-        }
-      }
-      if (recommendationCase_ == 22) {
-        if (forecastingCampaignBudgetRecommendationBuilder_ == null) {
-          result.recommendation_ = recommendation_;
-        } else {
-          result.recommendation_ = forecastingCampaignBudgetRecommendationBuilder_.build();
-        }
-      }
-      if (recommendationCase_ == 8) {
-        if (keywordRecommendationBuilder_ == null) {
-          result.recommendation_ = recommendation_;
-        } else {
-          result.recommendation_ = keywordRecommendationBuilder_.build();
-        }
-      }
-      if (recommendationCase_ == 9) {
-        if (textAdRecommendationBuilder_ == null) {
-          result.recommendation_ = recommendation_;
-        } else {
-          result.recommendation_ = textAdRecommendationBuilder_.build();
-        }
-      }
-      if (recommendationCase_ == 10) {
-        if (targetCpaOptInRecommendationBuilder_ == null) {
-          result.recommendation_ = recommendation_;
-        } else {
-          result.recommendation_ = targetCpaOptInRecommendationBuilder_.build();
-        }
-      }
-      if (recommendationCase_ == 11) {
-        if (maximizeConversionsOptInRecommendationBuilder_ == null) {
-          result.recommendation_ = recommendation_;
-        } else {
-          result.recommendation_ = maximizeConversionsOptInRecommendationBuilder_.build();
-        }
-      }
-      if (recommendationCase_ == 12) {
-        if (enhancedCpcOptInRecommendationBuilder_ == null) {
-          result.recommendation_ = recommendation_;
-        } else {
-          result.recommendation_ = enhancedCpcOptInRecommendationBuilder_.build();
-        }
-      }
-      if (recommendationCase_ == 14) {
-        if (searchPartnersOptInRecommendationBuilder_ == null) {
-          result.recommendation_ = recommendation_;
-        } else {
-          result.recommendation_ = searchPartnersOptInRecommendationBuilder_.build();
-        }
-      }
-      if (recommendationCase_ == 15) {
-        if (maximizeClicksOptInRecommendationBuilder_ == null) {
-          result.recommendation_ = recommendation_;
-        } else {
-          result.recommendation_ = maximizeClicksOptInRecommendationBuilder_.build();
-        }
-      }
-      if (recommendationCase_ == 16) {
-        if (optimizeAdRotationRecommendationBuilder_ == null) {
-          result.recommendation_ = recommendation_;
-        } else {
-          result.recommendation_ = optimizeAdRotationRecommendationBuilder_.build();
-        }
-      }
-      if (recommendationCase_ == 17) {
-        if (calloutExtensionRecommendationBuilder_ == null) {
-          result.recommendation_ = recommendation_;
-        } else {
-          result.recommendation_ = calloutExtensionRecommendationBuilder_.build();
-        }
-      }
-      if (recommendationCase_ == 18) {
-        if (sitelinkExtensionRecommendationBuilder_ == null) {
-          result.recommendation_ = recommendation_;
-        } else {
-          result.recommendation_ = sitelinkExtensionRecommendationBuilder_.build();
-        }
-      }
-      if (recommendationCase_ == 19) {
-        if (callExtensionRecommendationBuilder_ == null) {
-          result.recommendation_ = recommendation_;
-        } else {
-          result.recommendation_ = callExtensionRecommendationBuilder_.build();
-        }
-      }
-      if (recommendationCase_ == 20) {
-        if (keywordMatchTypeRecommendationBuilder_ == null) {
-          result.recommendation_ = recommendation_;
-        } else {
-          result.recommendation_ = keywordMatchTypeRecommendationBuilder_.build();
-        }
-      }
-      if (recommendationCase_ == 21) {
-        if (moveUnusedBudgetRecommendationBuilder_ == null) {
-          result.recommendation_ = recommendation_;
-        } else {
-          result.recommendation_ = moveUnusedBudgetRecommendationBuilder_.build();
-        }
-      }
-      if (recommendationCase_ == 23) {
-        if (targetRoasOptInRecommendationBuilder_ == null) {
-          result.recommendation_ = recommendation_;
-        } else {
-          result.recommendation_ = targetRoasOptInRecommendationBuilder_.build();
-        }
-      }
-      if (recommendationCase_ == 28) {
-        if (responsiveSearchAdRecommendationBuilder_ == null) {
-          result.recommendation_ = recommendation_;
-        } else {
-          result.recommendation_ = responsiveSearchAdRecommendationBuilder_.build();
-        }
-      }
-      if (recommendationCase_ == 29) {
-        if (marginalRoiCampaignBudgetRecommendationBuilder_ == null) {
-          result.recommendation_ = recommendation_;
-        } else {
-          result.recommendation_ = marginalRoiCampaignBudgetRecommendationBuilder_.build();
-        }
-      }
-      if (recommendationCase_ == 30) {
-        if (useBroadMatchKeywordRecommendationBuilder_ == null) {
-          result.recommendation_ = recommendation_;
-        } else {
-          result.recommendation_ = useBroadMatchKeywordRecommendationBuilder_.build();
-        }
-      }
-      if (recommendationCase_ == 31) {
-        if (responsiveSearchAdAssetRecommendationBuilder_ == null) {
-          result.recommendation_ = recommendation_;
-        } else {
-          result.recommendation_ = responsiveSearchAdAssetRecommendationBuilder_.build();
-        }
-      }
-      if (recommendationCase_ == 32) {
-        if (upgradeSmartShoppingCampaignToPerformanceMaxRecommendationBuilder_ == null) {
-          result.recommendation_ = recommendation_;
-        } else {
-          result.recommendation_ = upgradeSmartShoppingCampaignToPerformanceMaxRecommendationBuilder_.build();
-        }
-      }
-      if (recommendationCase_ == 33) {
-        if (responsiveSearchAdImproveAdStrengthRecommendationBuilder_ == null) {
-          result.recommendation_ = recommendation_;
-        } else {
-          result.recommendation_ = responsiveSearchAdImproveAdStrengthRecommendationBuilder_.build();
-        }
-      }
-      if (recommendationCase_ == 34) {
-        if (displayExpansionOptInRecommendationBuilder_ == null) {
-          result.recommendation_ = recommendation_;
-        } else {
-          result.recommendation_ = displayExpansionOptInRecommendationBuilder_.build();
-        }
-      }
-      if (recommendationCase_ == 35) {
-        if (upgradeLocalCampaignToPerformanceMaxRecommendationBuilder_ == null) {
-          result.recommendation_ = recommendation_;
-        } else {
-          result.recommendation_ = upgradeLocalCampaignToPerformanceMaxRecommendationBuilder_.build();
-        }
-      }
-      if (recommendationCase_ == 36) {
-        if (raiseTargetCpaBidTooLowRecommendationBuilder_ == null) {
-          result.recommendation_ = recommendation_;
-        } else {
-          result.recommendation_ = raiseTargetCpaBidTooLowRecommendationBuilder_.build();
-        }
-      }
-      if (recommendationCase_ == 37) {
-        if (forecastingSetTargetRoasRecommendationBuilder_ == null) {
-          result.recommendation_ = recommendation_;
-        } else {
-          result.recommendation_ = forecastingSetTargetRoasRecommendationBuilder_.build();
-        }
-      }
-      result.bitField0_ = to_bitField0_;
+      result.bitField0_ |= to_bitField0_;
+    }
+
+    private void buildPartial1(com.google.ads.googleads.v12.resources.Recommendation result) {
+      int from_bitField1_ = bitField1_;
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v12.resources.Recommendation result) {
       result.recommendationCase_ = recommendationCase_;
-      onBuilt();
-      return result;
+      result.recommendation_ = this.recommendation_;
+      if (recommendationCase_ == 4 &&
+          campaignBudgetRecommendationBuilder_ != null) {
+        result.recommendation_ = campaignBudgetRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 22 &&
+          forecastingCampaignBudgetRecommendationBuilder_ != null) {
+        result.recommendation_ = forecastingCampaignBudgetRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 8 &&
+          keywordRecommendationBuilder_ != null) {
+        result.recommendation_ = keywordRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 9 &&
+          textAdRecommendationBuilder_ != null) {
+        result.recommendation_ = textAdRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 10 &&
+          targetCpaOptInRecommendationBuilder_ != null) {
+        result.recommendation_ = targetCpaOptInRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 11 &&
+          maximizeConversionsOptInRecommendationBuilder_ != null) {
+        result.recommendation_ = maximizeConversionsOptInRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 12 &&
+          enhancedCpcOptInRecommendationBuilder_ != null) {
+        result.recommendation_ = enhancedCpcOptInRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 14 &&
+          searchPartnersOptInRecommendationBuilder_ != null) {
+        result.recommendation_ = searchPartnersOptInRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 15 &&
+          maximizeClicksOptInRecommendationBuilder_ != null) {
+        result.recommendation_ = maximizeClicksOptInRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 16 &&
+          optimizeAdRotationRecommendationBuilder_ != null) {
+        result.recommendation_ = optimizeAdRotationRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 17 &&
+          calloutExtensionRecommendationBuilder_ != null) {
+        result.recommendation_ = calloutExtensionRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 18 &&
+          sitelinkExtensionRecommendationBuilder_ != null) {
+        result.recommendation_ = sitelinkExtensionRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 19 &&
+          callExtensionRecommendationBuilder_ != null) {
+        result.recommendation_ = callExtensionRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 20 &&
+          keywordMatchTypeRecommendationBuilder_ != null) {
+        result.recommendation_ = keywordMatchTypeRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 21 &&
+          moveUnusedBudgetRecommendationBuilder_ != null) {
+        result.recommendation_ = moveUnusedBudgetRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 23 &&
+          targetRoasOptInRecommendationBuilder_ != null) {
+        result.recommendation_ = targetRoasOptInRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 28 &&
+          responsiveSearchAdRecommendationBuilder_ != null) {
+        result.recommendation_ = responsiveSearchAdRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 29 &&
+          marginalRoiCampaignBudgetRecommendationBuilder_ != null) {
+        result.recommendation_ = marginalRoiCampaignBudgetRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 30 &&
+          useBroadMatchKeywordRecommendationBuilder_ != null) {
+        result.recommendation_ = useBroadMatchKeywordRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 31 &&
+          responsiveSearchAdAssetRecommendationBuilder_ != null) {
+        result.recommendation_ = responsiveSearchAdAssetRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 32 &&
+          upgradeSmartShoppingCampaignToPerformanceMaxRecommendationBuilder_ != null) {
+        result.recommendation_ = upgradeSmartShoppingCampaignToPerformanceMaxRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 33 &&
+          responsiveSearchAdImproveAdStrengthRecommendationBuilder_ != null) {
+        result.recommendation_ = responsiveSearchAdImproveAdStrengthRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 34 &&
+          displayExpansionOptInRecommendationBuilder_ != null) {
+        result.recommendation_ = displayExpansionOptInRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 35 &&
+          upgradeLocalCampaignToPerformanceMaxRecommendationBuilder_ != null) {
+        result.recommendation_ = upgradeLocalCampaignToPerformanceMaxRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 36 &&
+          raiseTargetCpaBidTooLowRecommendationBuilder_ != null) {
+        result.recommendation_ = raiseTargetCpaBidTooLowRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 37 &&
+          forecastingSetTargetRoasRecommendationBuilder_ != null) {
+        result.recommendation_ = forecastingSetTargetRoasRecommendationBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -25774,6 +25898,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.resources.Recommendation.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.type_ != 0) {
@@ -25783,18 +25908,18 @@ private static final long serialVersionUID = 0L;
         mergeImpact(other.getImpact());
       }
       if (other.hasCampaignBudget()) {
-        bitField0_ |= 0x00000001;
         campaignBudget_ = other.campaignBudget_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.hasCampaign()) {
-        bitField0_ |= 0x00000002;
         campaign_ = other.campaign_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (other.hasAdGroup()) {
-        bitField0_ |= 0x00000004;
         adGroup_ = other.adGroup_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (other.hasDismissed()) {
@@ -25937,19 +26062,19 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 16: {
               type_ = input.readEnum();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             case 26: {
               input.readMessage(
                   getImpactFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 34: {
@@ -26066,22 +26191,22 @@ private static final long serialVersionUID = 0L;
             } // case 186
             case 194: {
               campaignBudget_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000008;
               break;
             } // case 194
             case 202: {
               campaign_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000010;
               break;
             } // case 202
             case 210: {
               adGroup_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000020;
               break;
             } // case 210
             case 216: {
               dismissed_ = input.readBool();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000040;
               break;
             } // case 216
             case 226: {
@@ -26185,6 +26310,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private int bitField0_;
+    private int bitField1_;
 
     private java.lang.Object resourceName_ = "";
     /**
@@ -26242,11 +26368,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -26260,8 +26384,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -26277,12 +26401,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -26309,8 +26431,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
-      
       type_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -26324,8 +26446,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.RecommendationTypeEnum.RecommendationType getType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.RecommendationTypeEnum.RecommendationType result = com.google.ads.googleads.v12.enums.RecommendationTypeEnum.RecommendationType.valueOf(type_);
+      com.google.ads.googleads.v12.enums.RecommendationTypeEnum.RecommendationType result = com.google.ads.googleads.v12.enums.RecommendationTypeEnum.RecommendationType.forNumber(type_);
       return result == null ? com.google.ads.googleads.v12.enums.RecommendationTypeEnum.RecommendationType.UNRECOGNIZED : result;
     }
     /**
@@ -26341,7 +26462,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000002;
       type_ = value.getNumber();
       onChanged();
       return this;
@@ -26355,7 +26476,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       type_ = 0;
       onChanged();
       return this;
@@ -26374,7 +26495,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the impact field is set.
      */
     public boolean hasImpact() {
-      return impactBuilder_ != null || impact_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -26406,11 +26527,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         impact_ = value;
-        onChanged();
       } else {
         impactBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -26425,11 +26546,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact.Builder builderForValue) {
       if (impactBuilder_ == null) {
         impact_ = builderForValue.build();
-        onChanged();
       } else {
         impactBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -26442,17 +26563,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeImpact(com.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact value) {
       if (impactBuilder_ == null) {
-        if (impact_ != null) {
-          impact_ =
-            com.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact.newBuilder(impact_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000004) != 0) &&
+          impact_ != null &&
+          impact_ != com.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact.getDefaultInstance()) {
+          getImpactBuilder().mergeFrom(value);
         } else {
           impact_ = value;
         }
-        onChanged();
       } else {
         impactBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -26464,14 +26586,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact impact = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearImpact() {
-      if (impactBuilder_ == null) {
-        impact_ = null;
-        onChanged();
-      } else {
-        impact_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      impact_ = null;
+      if (impactBuilder_ != null) {
+        impactBuilder_.dispose();
         impactBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -26483,7 +26604,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact impact = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact.Builder getImpactBuilder() {
-      
+      bitField0_ |= 0x00000004;
       onChanged();
       return getImpactFieldBuilder().getBuilder();
     }
@@ -26528,8 +26649,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object campaignBudget_ = "";
     /**
      * <pre>
-     * Output only. The budget targeted by this recommendation. This will be set only when
-     * the recommendation affects a single campaign budget.
+     * Output only. The budget targeted by this recommendation. This will be set
+     * only when the recommendation affects a single campaign budget.
      * This field will be set for the following recommendation types:
      * CAMPAIGN_BUDGET, FORECASTING_CAMPAIGN_BUDGET, MARGINAL_ROI_CAMPAIGN_BUDGET,
      * MOVE_UNUSED_BUDGET
@@ -26539,12 +26660,12 @@ private static final long serialVersionUID = 0L;
      * @return Whether the campaignBudget field is set.
      */
     public boolean hasCampaignBudget() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
-     * Output only. The budget targeted by this recommendation. This will be set only when
-     * the recommendation affects a single campaign budget.
+     * Output only. The budget targeted by this recommendation. This will be set
+     * only when the recommendation affects a single campaign budget.
      * This field will be set for the following recommendation types:
      * CAMPAIGN_BUDGET, FORECASTING_CAMPAIGN_BUDGET, MARGINAL_ROI_CAMPAIGN_BUDGET,
      * MOVE_UNUSED_BUDGET
@@ -26567,8 +26688,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The budget targeted by this recommendation. This will be set only when
-     * the recommendation affects a single campaign budget.
+     * Output only. The budget targeted by this recommendation. This will be set
+     * only when the recommendation affects a single campaign budget.
      * This field will be set for the following recommendation types:
      * CAMPAIGN_BUDGET, FORECASTING_CAMPAIGN_BUDGET, MARGINAL_ROI_CAMPAIGN_BUDGET,
      * MOVE_UNUSED_BUDGET
@@ -26592,8 +26713,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The budget targeted by this recommendation. This will be set only when
-     * the recommendation affects a single campaign budget.
+     * Output only. The budget targeted by this recommendation. This will be set
+     * only when the recommendation affects a single campaign budget.
      * This field will be set for the following recommendation types:
      * CAMPAIGN_BUDGET, FORECASTING_CAMPAIGN_BUDGET, MARGINAL_ROI_CAMPAIGN_BUDGET,
      * MOVE_UNUSED_BUDGET
@@ -26605,18 +26726,16 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaignBudget(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       campaignBudget_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The budget targeted by this recommendation. This will be set only when
-     * the recommendation affects a single campaign budget.
+     * Output only. The budget targeted by this recommendation. This will be set
+     * only when the recommendation affects a single campaign budget.
      * This field will be set for the following recommendation types:
      * CAMPAIGN_BUDGET, FORECASTING_CAMPAIGN_BUDGET, MARGINAL_ROI_CAMPAIGN_BUDGET,
      * MOVE_UNUSED_BUDGET
@@ -26626,15 +26745,15 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCampaignBudget() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       campaignBudget_ = getDefaultInstance().getCampaignBudget();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The budget targeted by this recommendation. This will be set only when
-     * the recommendation affects a single campaign budget.
+     * Output only. The budget targeted by this recommendation. This will be set
+     * only when the recommendation affects a single campaign budget.
      * This field will be set for the following recommendation types:
      * CAMPAIGN_BUDGET, FORECASTING_CAMPAIGN_BUDGET, MARGINAL_ROI_CAMPAIGN_BUDGET,
      * MOVE_UNUSED_BUDGET
@@ -26646,12 +26765,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaignBudgetBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       campaignBudget_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -26659,8 +26776,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object campaign_ = "";
     /**
      * <pre>
-     * Output only. The campaign targeted by this recommendation. This will be set only when
-     * the recommendation affects a single campaign.
+     * Output only. The campaign targeted by this recommendation.
      * This field will be set for the following recommendation types:
      * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
      * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
@@ -26679,12 +26795,11 @@ private static final long serialVersionUID = 0L;
      * @return Whether the campaign field is set.
      */
     public boolean hasCampaign() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
-     * Output only. The campaign targeted by this recommendation. This will be set only when
-     * the recommendation affects a single campaign.
+     * Output only. The campaign targeted by this recommendation.
      * This field will be set for the following recommendation types:
      * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
      * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
@@ -26716,8 +26831,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The campaign targeted by this recommendation. This will be set only when
-     * the recommendation affects a single campaign.
+     * Output only. The campaign targeted by this recommendation.
      * This field will be set for the following recommendation types:
      * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
      * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
@@ -26750,8 +26864,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The campaign targeted by this recommendation. This will be set only when
-     * the recommendation affects a single campaign.
+     * Output only. The campaign targeted by this recommendation.
      * This field will be set for the following recommendation types:
      * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
      * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
@@ -26772,18 +26885,15 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaign(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       campaign_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The campaign targeted by this recommendation. This will be set only when
-     * the recommendation affects a single campaign.
+     * Output only. The campaign targeted by this recommendation.
      * This field will be set for the following recommendation types:
      * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
      * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
@@ -26802,15 +26912,14 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCampaign() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       campaign_ = getDefaultInstance().getCampaign();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The campaign targeted by this recommendation. This will be set only when
-     * the recommendation affects a single campaign.
+     * Output only. The campaign targeted by this recommendation.
      * This field will be set for the following recommendation types:
      * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
      * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
@@ -26831,12 +26940,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaignBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       campaign_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -26844,8 +26951,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object adGroup_ = "";
     /**
      * <pre>
-     * Output only. The ad group targeted by this recommendation. This will be set only when
-     * the recommendation affects a single ad group.
+     * Output only. The ad group targeted by this recommendation. This will be set
+     * only when the recommendation affects a single ad group.
      * This field will be set for the following recommendation types:
      * KEYWORD, OPTIMIZE_AD_ROTATION, RESPONSIVE_SEARCH_AD,
      * RESPONSIVE_SEARCH_AD_ASSET, TEXT_AD
@@ -26855,12 +26962,12 @@ private static final long serialVersionUID = 0L;
      * @return Whether the adGroup field is set.
      */
     public boolean hasAdGroup() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
-     * Output only. The ad group targeted by this recommendation. This will be set only when
-     * the recommendation affects a single ad group.
+     * Output only. The ad group targeted by this recommendation. This will be set
+     * only when the recommendation affects a single ad group.
      * This field will be set for the following recommendation types:
      * KEYWORD, OPTIMIZE_AD_ROTATION, RESPONSIVE_SEARCH_AD,
      * RESPONSIVE_SEARCH_AD_ASSET, TEXT_AD
@@ -26883,8 +26990,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The ad group targeted by this recommendation. This will be set only when
-     * the recommendation affects a single ad group.
+     * Output only. The ad group targeted by this recommendation. This will be set
+     * only when the recommendation affects a single ad group.
      * This field will be set for the following recommendation types:
      * KEYWORD, OPTIMIZE_AD_ROTATION, RESPONSIVE_SEARCH_AD,
      * RESPONSIVE_SEARCH_AD_ASSET, TEXT_AD
@@ -26908,8 +27015,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The ad group targeted by this recommendation. This will be set only when
-     * the recommendation affects a single ad group.
+     * Output only. The ad group targeted by this recommendation. This will be set
+     * only when the recommendation affects a single ad group.
      * This field will be set for the following recommendation types:
      * KEYWORD, OPTIMIZE_AD_ROTATION, RESPONSIVE_SEARCH_AD,
      * RESPONSIVE_SEARCH_AD_ASSET, TEXT_AD
@@ -26921,18 +27028,16 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAdGroup(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       adGroup_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The ad group targeted by this recommendation. This will be set only when
-     * the recommendation affects a single ad group.
+     * Output only. The ad group targeted by this recommendation. This will be set
+     * only when the recommendation affects a single ad group.
      * This field will be set for the following recommendation types:
      * KEYWORD, OPTIMIZE_AD_ROTATION, RESPONSIVE_SEARCH_AD,
      * RESPONSIVE_SEARCH_AD_ASSET, TEXT_AD
@@ -26942,15 +27047,15 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAdGroup() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       adGroup_ = getDefaultInstance().getAdGroup();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The ad group targeted by this recommendation. This will be set only when
-     * the recommendation affects a single ad group.
+     * Output only. The ad group targeted by this recommendation. This will be set
+     * only when the recommendation affects a single ad group.
      * This field will be set for the following recommendation types:
      * KEYWORD, OPTIMIZE_AD_ROTATION, RESPONSIVE_SEARCH_AD,
      * RESPONSIVE_SEARCH_AD_ASSET, TEXT_AD
@@ -26962,12 +27067,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAdGroupBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       adGroup_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -26983,7 +27086,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasDismissed() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -27007,8 +27110,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDismissed(boolean value) {
-      bitField0_ |= 0x00000008;
+      
       dismissed_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -27021,7 +27125,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDismissed() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000040);
       dismissed_ = false;
       onChanged();
       return this;
@@ -27201,7 +27305,7 @@ private static final long serialVersionUID = 0L;
         recommendation_ = null;
       }
       recommendationCase_ = 4;
-      onChanged();;
+      onChanged();
       return campaignBudgetRecommendationBuilder_;
     }
 
@@ -27379,7 +27483,7 @@ private static final long serialVersionUID = 0L;
         recommendation_ = null;
       }
       recommendationCase_ = 22;
-      onChanged();;
+      onChanged();
       return forecastingCampaignBudgetRecommendationBuilder_;
     }
 
@@ -27557,7 +27661,7 @@ private static final long serialVersionUID = 0L;
         recommendation_ = null;
       }
       recommendationCase_ = 8;
-      onChanged();;
+      onChanged();
       return keywordRecommendationBuilder_;
     }
 
@@ -27735,7 +27839,7 @@ private static final long serialVersionUID = 0L;
         recommendation_ = null;
       }
       recommendationCase_ = 9;
-      onChanged();;
+      onChanged();
       return textAdRecommendationBuilder_;
     }
 
@@ -27913,7 +28017,7 @@ private static final long serialVersionUID = 0L;
         recommendation_ = null;
       }
       recommendationCase_ = 10;
-      onChanged();;
+      onChanged();
       return targetCpaOptInRecommendationBuilder_;
     }
 
@@ -28091,7 +28195,7 @@ private static final long serialVersionUID = 0L;
         recommendation_ = null;
       }
       recommendationCase_ = 11;
-      onChanged();;
+      onChanged();
       return maximizeConversionsOptInRecommendationBuilder_;
     }
 
@@ -28269,7 +28373,7 @@ private static final long serialVersionUID = 0L;
         recommendation_ = null;
       }
       recommendationCase_ = 12;
-      onChanged();;
+      onChanged();
       return enhancedCpcOptInRecommendationBuilder_;
     }
 
@@ -28447,7 +28551,7 @@ private static final long serialVersionUID = 0L;
         recommendation_ = null;
       }
       recommendationCase_ = 14;
-      onChanged();;
+      onChanged();
       return searchPartnersOptInRecommendationBuilder_;
     }
 
@@ -28625,7 +28729,7 @@ private static final long serialVersionUID = 0L;
         recommendation_ = null;
       }
       recommendationCase_ = 15;
-      onChanged();;
+      onChanged();
       return maximizeClicksOptInRecommendationBuilder_;
     }
 
@@ -28803,7 +28907,7 @@ private static final long serialVersionUID = 0L;
         recommendation_ = null;
       }
       recommendationCase_ = 16;
-      onChanged();;
+      onChanged();
       return optimizeAdRotationRecommendationBuilder_;
     }
 
@@ -28981,7 +29085,7 @@ private static final long serialVersionUID = 0L;
         recommendation_ = null;
       }
       recommendationCase_ = 17;
-      onChanged();;
+      onChanged();
       return calloutExtensionRecommendationBuilder_;
     }
 
@@ -29159,7 +29263,7 @@ private static final long serialVersionUID = 0L;
         recommendation_ = null;
       }
       recommendationCase_ = 18;
-      onChanged();;
+      onChanged();
       return sitelinkExtensionRecommendationBuilder_;
     }
 
@@ -29337,7 +29441,7 @@ private static final long serialVersionUID = 0L;
         recommendation_ = null;
       }
       recommendationCase_ = 19;
-      onChanged();;
+      onChanged();
       return callExtensionRecommendationBuilder_;
     }
 
@@ -29515,7 +29619,7 @@ private static final long serialVersionUID = 0L;
         recommendation_ = null;
       }
       recommendationCase_ = 20;
-      onChanged();;
+      onChanged();
       return keywordMatchTypeRecommendationBuilder_;
     }
 
@@ -29693,7 +29797,7 @@ private static final long serialVersionUID = 0L;
         recommendation_ = null;
       }
       recommendationCase_ = 21;
-      onChanged();;
+      onChanged();
       return moveUnusedBudgetRecommendationBuilder_;
     }
 
@@ -29871,7 +29975,7 @@ private static final long serialVersionUID = 0L;
         recommendation_ = null;
       }
       recommendationCase_ = 23;
-      onChanged();;
+      onChanged();
       return targetRoasOptInRecommendationBuilder_;
     }
 
@@ -30049,7 +30153,7 @@ private static final long serialVersionUID = 0L;
         recommendation_ = null;
       }
       recommendationCase_ = 28;
-      onChanged();;
+      onChanged();
       return responsiveSearchAdRecommendationBuilder_;
     }
 
@@ -30227,7 +30331,7 @@ private static final long serialVersionUID = 0L;
         recommendation_ = null;
       }
       recommendationCase_ = 29;
-      onChanged();;
+      onChanged();
       return marginalRoiCampaignBudgetRecommendationBuilder_;
     }
 
@@ -30405,7 +30509,7 @@ private static final long serialVersionUID = 0L;
         recommendation_ = null;
       }
       recommendationCase_ = 30;
-      onChanged();;
+      onChanged();
       return useBroadMatchKeywordRecommendationBuilder_;
     }
 
@@ -30583,7 +30687,7 @@ private static final long serialVersionUID = 0L;
         recommendation_ = null;
       }
       recommendationCase_ = 31;
-      onChanged();;
+      onChanged();
       return responsiveSearchAdAssetRecommendationBuilder_;
     }
 
@@ -30591,8 +30695,8 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.resources.Recommendation.UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation, com.google.ads.googleads.v12.resources.Recommendation.UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation.Builder, com.google.ads.googleads.v12.resources.Recommendation.UpgradeSmartShoppingCampaignToPerformanceMaxRecommendationOrBuilder> upgradeSmartShoppingCampaignToPerformanceMaxRecommendationBuilder_;
     /**
      * <pre>
-     * Output only. The upgrade a Smart Shopping campaign to a Performance Max campaign
-     * recommendation.
+     * Output only. The upgrade a Smart Shopping campaign to a Performance Max
+     * campaign recommendation.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.resources.Recommendation.UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation upgrade_smart_shopping_campaign_to_performance_max_recommendation = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -30604,8 +30708,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The upgrade a Smart Shopping campaign to a Performance Max campaign
-     * recommendation.
+     * Output only. The upgrade a Smart Shopping campaign to a Performance Max
+     * campaign recommendation.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.resources.Recommendation.UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation upgrade_smart_shopping_campaign_to_performance_max_recommendation = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -30627,8 +30731,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The upgrade a Smart Shopping campaign to a Performance Max campaign
-     * recommendation.
+     * Output only. The upgrade a Smart Shopping campaign to a Performance Max
+     * campaign recommendation.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.resources.Recommendation.UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation upgrade_smart_shopping_campaign_to_performance_max_recommendation = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -30648,8 +30752,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The upgrade a Smart Shopping campaign to a Performance Max campaign
-     * recommendation.
+     * Output only. The upgrade a Smart Shopping campaign to a Performance Max
+     * campaign recommendation.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.resources.Recommendation.UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation upgrade_smart_shopping_campaign_to_performance_max_recommendation = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -30667,8 +30771,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The upgrade a Smart Shopping campaign to a Performance Max campaign
-     * recommendation.
+     * Output only. The upgrade a Smart Shopping campaign to a Performance Max
+     * campaign recommendation.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.resources.Recommendation.UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation upgrade_smart_shopping_campaign_to_performance_max_recommendation = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -30695,8 +30799,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The upgrade a Smart Shopping campaign to a Performance Max campaign
-     * recommendation.
+     * Output only. The upgrade a Smart Shopping campaign to a Performance Max
+     * campaign recommendation.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.resources.Recommendation.UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation upgrade_smart_shopping_campaign_to_performance_max_recommendation = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -30719,8 +30823,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The upgrade a Smart Shopping campaign to a Performance Max campaign
-     * recommendation.
+     * Output only. The upgrade a Smart Shopping campaign to a Performance Max
+     * campaign recommendation.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.resources.Recommendation.UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation upgrade_smart_shopping_campaign_to_performance_max_recommendation = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -30730,8 +30834,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The upgrade a Smart Shopping campaign to a Performance Max campaign
-     * recommendation.
+     * Output only. The upgrade a Smart Shopping campaign to a Performance Max
+     * campaign recommendation.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.resources.Recommendation.UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation upgrade_smart_shopping_campaign_to_performance_max_recommendation = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -30749,8 +30853,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The upgrade a Smart Shopping campaign to a Performance Max campaign
-     * recommendation.
+     * Output only. The upgrade a Smart Shopping campaign to a Performance Max
+     * campaign recommendation.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.resources.Recommendation.UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation upgrade_smart_shopping_campaign_to_performance_max_recommendation = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -30770,7 +30874,7 @@ private static final long serialVersionUID = 0L;
         recommendation_ = null;
       }
       recommendationCase_ = 32;
-      onChanged();;
+      onChanged();
       return upgradeSmartShoppingCampaignToPerformanceMaxRecommendationBuilder_;
     }
 
@@ -30948,7 +31052,7 @@ private static final long serialVersionUID = 0L;
         recommendation_ = null;
       }
       recommendationCase_ = 33;
-      onChanged();;
+      onChanged();
       return responsiveSearchAdImproveAdStrengthRecommendationBuilder_;
     }
 
@@ -31126,7 +31230,7 @@ private static final long serialVersionUID = 0L;
         recommendation_ = null;
       }
       recommendationCase_ = 34;
-      onChanged();;
+      onChanged();
       return displayExpansionOptInRecommendationBuilder_;
     }
 
@@ -31313,7 +31417,7 @@ private static final long serialVersionUID = 0L;
         recommendation_ = null;
       }
       recommendationCase_ = 35;
-      onChanged();;
+      onChanged();
       return upgradeLocalCampaignToPerformanceMaxRecommendationBuilder_;
     }
 
@@ -31491,7 +31595,7 @@ private static final long serialVersionUID = 0L;
         recommendation_ = null;
       }
       recommendationCase_ = 36;
-      onChanged();;
+      onChanged();
       return raiseTargetCpaBidTooLowRecommendationBuilder_;
     }
 
@@ -31669,7 +31773,7 @@ private static final long serialVersionUID = 0L;
         recommendation_ = null;
       }
       recommendationCase_ = 37;
-      onChanged();;
+      onChanged();
       return forecastingSetTargetRoasRecommendationBuilder_;
     }
     @java.lang.Override

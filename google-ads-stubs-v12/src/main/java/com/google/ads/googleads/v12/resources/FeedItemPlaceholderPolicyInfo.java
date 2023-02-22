@@ -59,7 +59,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int PLACEHOLDER_TYPE_ENUM_FIELD_NUMBER = 10;
-  private int placeholderTypeEnum_;
+  private int placeholderTypeEnum_ = 0;
   /**
    * <pre>
    * Output only. The placeholder type.
@@ -80,13 +80,13 @@ private static final long serialVersionUID = 0L;
    * @return The placeholderTypeEnum.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.PlaceholderTypeEnum.PlaceholderType getPlaceholderTypeEnum() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.PlaceholderTypeEnum.PlaceholderType result = com.google.ads.googleads.v12.enums.PlaceholderTypeEnum.PlaceholderType.valueOf(placeholderTypeEnum_);
+    com.google.ads.googleads.v12.enums.PlaceholderTypeEnum.PlaceholderType result = com.google.ads.googleads.v12.enums.PlaceholderTypeEnum.PlaceholderType.forNumber(placeholderTypeEnum_);
     return result == null ? com.google.ads.googleads.v12.enums.PlaceholderTypeEnum.PlaceholderType.UNRECOGNIZED : result;
   }
 
   public static final int FEED_MAPPING_RESOURCE_NAME_FIELD_NUMBER = 11;
-  private volatile java.lang.Object feedMappingResourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object feedMappingResourceName_ = "";
   /**
    * <pre>
    * Output only. The FeedMapping that contains the placeholder type.
@@ -144,7 +144,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int REVIEW_STATUS_FIELD_NUMBER = 3;
-  private int reviewStatus_;
+  private int reviewStatus_ = 0;
   /**
    * <pre>
    * Output only. Where the placeholder type is in the review process.
@@ -165,17 +165,16 @@ private static final long serialVersionUID = 0L;
    * @return The reviewStatus.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.PolicyReviewStatusEnum.PolicyReviewStatus getReviewStatus() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.PolicyReviewStatusEnum.PolicyReviewStatus result = com.google.ads.googleads.v12.enums.PolicyReviewStatusEnum.PolicyReviewStatus.valueOf(reviewStatus_);
+    com.google.ads.googleads.v12.enums.PolicyReviewStatusEnum.PolicyReviewStatus result = com.google.ads.googleads.v12.enums.PolicyReviewStatusEnum.PolicyReviewStatus.forNumber(reviewStatus_);
     return result == null ? com.google.ads.googleads.v12.enums.PolicyReviewStatusEnum.PolicyReviewStatus.UNRECOGNIZED : result;
   }
 
   public static final int APPROVAL_STATUS_FIELD_NUMBER = 4;
-  private int approvalStatus_;
+  private int approvalStatus_ = 0;
   /**
    * <pre>
-   * Output only. The overall approval status of the placeholder type, calculated based on
-   * the status of its individual policy topic entries.
+   * Output only. The overall approval status of the placeholder type,
+   * calculated based on the status of its individual policy topic entries.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -186,20 +185,20 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The overall approval status of the placeholder type, calculated based on
-   * the status of its individual policy topic entries.
+   * Output only. The overall approval status of the placeholder type,
+   * calculated based on the status of its individual policy topic entries.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The approvalStatus.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus getApprovalStatus() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus result = com.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus.valueOf(approvalStatus_);
+    com.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus result = com.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus.forNumber(approvalStatus_);
     return result == null ? com.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus.UNRECOGNIZED : result;
   }
 
   public static final int POLICY_TOPIC_ENTRIES_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.PolicyTopicEntry> policyTopicEntries_;
   /**
    * <pre>
@@ -260,7 +259,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VALIDATION_STATUS_FIELD_NUMBER = 6;
-  private int validationStatus_;
+  private int validationStatus_ = 0;
   /**
    * <pre>
    * Output only. The validation status of the palceholder type.
@@ -281,12 +280,12 @@ private static final long serialVersionUID = 0L;
    * @return The validationStatus.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus getValidationStatus() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus result = com.google.ads.googleads.v12.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus.valueOf(validationStatus_);
+    com.google.ads.googleads.v12.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus result = com.google.ads.googleads.v12.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus.forNumber(validationStatus_);
     return result == null ? com.google.ads.googleads.v12.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus.UNRECOGNIZED : result;
   }
 
   public static final int VALIDATION_ERRORS_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.resources.FeedItemValidationError> validationErrors_;
   /**
    * <pre>
@@ -347,7 +346,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int QUALITY_APPROVAL_STATUS_FIELD_NUMBER = 8;
-  private int qualityApprovalStatus_;
+  private int qualityApprovalStatus_ = 0;
   /**
    * <pre>
    * Output only. Placeholder type quality evaluation approval status.
@@ -368,26 +367,26 @@ private static final long serialVersionUID = 0L;
    * @return The qualityApprovalStatus.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus getQualityApprovalStatus() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus result = com.google.ads.googleads.v12.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus.valueOf(qualityApprovalStatus_);
+    com.google.ads.googleads.v12.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus result = com.google.ads.googleads.v12.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus.forNumber(qualityApprovalStatus_);
     return result == null ? com.google.ads.googleads.v12.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus.UNRECOGNIZED : result;
   }
 
   public static final int QUALITY_DISAPPROVAL_REASONS_FIELD_NUMBER = 9;
+  @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> qualityDisapprovalReasons_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
       java.lang.Integer, com.google.ads.googleads.v12.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason> qualityDisapprovalReasons_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, com.google.ads.googleads.v12.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason>() {
             public com.google.ads.googleads.v12.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason convert(java.lang.Integer from) {
-              @SuppressWarnings("deprecation")
-              com.google.ads.googleads.v12.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason result = com.google.ads.googleads.v12.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason.valueOf(from);
+              com.google.ads.googleads.v12.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason result = com.google.ads.googleads.v12.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason.forNumber(from);
               return result == null ? com.google.ads.googleads.v12.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason.UNRECOGNIZED : result;
             }
           };
   /**
    * <pre>
-   * Output only. List of placeholder type quality evaluation disapproval reasons.
+   * Output only. List of placeholder type quality evaluation disapproval
+   * reasons.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -400,7 +399,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. List of placeholder type quality evaluation disapproval reasons.
+   * Output only. List of placeholder type quality evaluation disapproval
+   * reasons.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -412,7 +412,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. List of placeholder type quality evaluation disapproval reasons.
+   * Output only. List of placeholder type quality evaluation disapproval
+   * reasons.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -425,7 +426,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. List of placeholder type quality evaluation disapproval reasons.
+   * Output only. List of placeholder type quality evaluation disapproval
+   * reasons.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -438,7 +440,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. List of placeholder type quality evaluation disapproval reasons.
+   * Output only. List of placeholder type quality evaluation disapproval
+   * reasons.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -749,34 +752,29 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       placeholderTypeEnum_ = 0;
-
       feedMappingResourceName_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       reviewStatus_ = 0;
-
       approvalStatus_ = 0;
-
       if (policyTopicEntriesBuilder_ == null) {
         policyTopicEntries_ = java.util.Collections.emptyList();
       } else {
         policyTopicEntries_ = null;
         policyTopicEntriesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000010);
       validationStatus_ = 0;
-
       if (validationErrorsBuilder_ == null) {
         validationErrors_ = java.util.Collections.emptyList();
       } else {
         validationErrors_ = null;
         validationErrorsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000040);
       qualityApprovalStatus_ = 0;
-
       qualityDisapprovalReasons_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000100);
       return this;
     }
 
@@ -803,43 +801,61 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.FeedItemPlaceholderPolicyInfo buildPartial() {
       com.google.ads.googleads.v12.resources.FeedItemPlaceholderPolicyInfo result = new com.google.ads.googleads.v12.resources.FeedItemPlaceholderPolicyInfo(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.placeholderTypeEnum_ = placeholderTypeEnum_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        to_bitField0_ |= 0x00000001;
-      }
-      result.feedMappingResourceName_ = feedMappingResourceName_;
-      result.reviewStatus_ = reviewStatus_;
-      result.approvalStatus_ = approvalStatus_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.resources.FeedItemPlaceholderPolicyInfo result) {
       if (policyTopicEntriesBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000010) != 0)) {
           policyTopicEntries_ = java.util.Collections.unmodifiableList(policyTopicEntries_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000010);
         }
         result.policyTopicEntries_ = policyTopicEntries_;
       } else {
         result.policyTopicEntries_ = policyTopicEntriesBuilder_.build();
       }
-      result.validationStatus_ = validationStatus_;
       if (validationErrorsBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0)) {
+        if (((bitField0_ & 0x00000040) != 0)) {
           validationErrors_ = java.util.Collections.unmodifiableList(validationErrors_);
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000040);
         }
         result.validationErrors_ = validationErrors_;
       } else {
         result.validationErrors_ = validationErrorsBuilder_.build();
       }
-      result.qualityApprovalStatus_ = qualityApprovalStatus_;
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (((bitField0_ & 0x00000100) != 0)) {
         qualityDisapprovalReasons_ = java.util.Collections.unmodifiableList(qualityDisapprovalReasons_);
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000100);
       }
       result.qualityDisapprovalReasons_ = qualityDisapprovalReasons_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.resources.FeedItemPlaceholderPolicyInfo result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.placeholderTypeEnum_ = placeholderTypeEnum_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.feedMappingResourceName_ = feedMappingResourceName_;
+        to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.reviewStatus_ = reviewStatus_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.approvalStatus_ = approvalStatus_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.validationStatus_ = validationStatus_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.qualityApprovalStatus_ = qualityApprovalStatus_;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -890,8 +906,8 @@ private static final long serialVersionUID = 0L;
         setPlaceholderTypeEnumValue(other.getPlaceholderTypeEnumValue());
       }
       if (other.hasFeedMappingResourceName()) {
-        bitField0_ |= 0x00000001;
         feedMappingResourceName_ = other.feedMappingResourceName_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.reviewStatus_ != 0) {
@@ -904,7 +920,7 @@ private static final long serialVersionUID = 0L;
         if (!other.policyTopicEntries_.isEmpty()) {
           if (policyTopicEntries_.isEmpty()) {
             policyTopicEntries_ = other.policyTopicEntries_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensurePolicyTopicEntriesIsMutable();
             policyTopicEntries_.addAll(other.policyTopicEntries_);
@@ -917,7 +933,7 @@ private static final long serialVersionUID = 0L;
             policyTopicEntriesBuilder_.dispose();
             policyTopicEntriesBuilder_ = null;
             policyTopicEntries_ = other.policyTopicEntries_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000010);
             policyTopicEntriesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getPolicyTopicEntriesFieldBuilder() : null;
@@ -933,7 +949,7 @@ private static final long serialVersionUID = 0L;
         if (!other.validationErrors_.isEmpty()) {
           if (validationErrors_.isEmpty()) {
             validationErrors_ = other.validationErrors_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000040);
           } else {
             ensureValidationErrorsIsMutable();
             validationErrors_.addAll(other.validationErrors_);
@@ -946,7 +962,7 @@ private static final long serialVersionUID = 0L;
             validationErrorsBuilder_.dispose();
             validationErrorsBuilder_ = null;
             validationErrors_ = other.validationErrors_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000040);
             validationErrorsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getValidationErrorsFieldBuilder() : null;
@@ -961,7 +977,7 @@ private static final long serialVersionUID = 0L;
       if (!other.qualityDisapprovalReasons_.isEmpty()) {
         if (qualityDisapprovalReasons_.isEmpty()) {
           qualityDisapprovalReasons_ = other.qualityDisapprovalReasons_;
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000100);
         } else {
           ensureQualityDisapprovalReasonsIsMutable();
           qualityDisapprovalReasons_.addAll(other.qualityDisapprovalReasons_);
@@ -996,12 +1012,12 @@ private static final long serialVersionUID = 0L;
               break;
             case 24: {
               reviewStatus_ = input.readEnum();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 24
             case 32: {
               approvalStatus_ = input.readEnum();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 32
             case 42: {
@@ -1019,7 +1035,7 @@ private static final long serialVersionUID = 0L;
             } // case 42
             case 48: {
               validationStatus_ = input.readEnum();
-
+              bitField0_ |= 0x00000020;
               break;
             } // case 48
             case 58: {
@@ -1037,7 +1053,7 @@ private static final long serialVersionUID = 0L;
             } // case 58
             case 64: {
               qualityApprovalStatus_ = input.readEnum();
-
+              bitField0_ |= 0x00000080;
               break;
             } // case 64
             case 72: {
@@ -1059,12 +1075,12 @@ private static final long serialVersionUID = 0L;
             } // case 74
             case 80: {
               placeholderTypeEnum_ = input.readEnum();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 80
             case 90: {
               feedMappingResourceName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 90
             default: {
@@ -1106,8 +1122,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPlaceholderTypeEnumValue(int value) {
-      
       placeholderTypeEnum_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1121,8 +1137,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.PlaceholderTypeEnum.PlaceholderType getPlaceholderTypeEnum() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.PlaceholderTypeEnum.PlaceholderType result = com.google.ads.googleads.v12.enums.PlaceholderTypeEnum.PlaceholderType.valueOf(placeholderTypeEnum_);
+      com.google.ads.googleads.v12.enums.PlaceholderTypeEnum.PlaceholderType result = com.google.ads.googleads.v12.enums.PlaceholderTypeEnum.PlaceholderType.forNumber(placeholderTypeEnum_);
       return result == null ? com.google.ads.googleads.v12.enums.PlaceholderTypeEnum.PlaceholderType.UNRECOGNIZED : result;
     }
     /**
@@ -1138,7 +1153,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       placeholderTypeEnum_ = value.getNumber();
       onChanged();
       return this;
@@ -1152,7 +1167,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPlaceholderTypeEnum() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       placeholderTypeEnum_ = 0;
       onChanged();
       return this;
@@ -1168,7 +1183,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the feedMappingResourceName field is set.
      */
     public boolean hasFeedMappingResourceName() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -1222,11 +1237,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFeedMappingResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       feedMappingResourceName_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1239,8 +1252,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFeedMappingResourceName() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       feedMappingResourceName_ = getDefaultInstance().getFeedMappingResourceName();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1255,12 +1268,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFeedMappingResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       feedMappingResourceName_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1287,8 +1298,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setReviewStatusValue(int value) {
-      
       reviewStatus_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1302,8 +1313,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.PolicyReviewStatusEnum.PolicyReviewStatus getReviewStatus() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.PolicyReviewStatusEnum.PolicyReviewStatus result = com.google.ads.googleads.v12.enums.PolicyReviewStatusEnum.PolicyReviewStatus.valueOf(reviewStatus_);
+      com.google.ads.googleads.v12.enums.PolicyReviewStatusEnum.PolicyReviewStatus result = com.google.ads.googleads.v12.enums.PolicyReviewStatusEnum.PolicyReviewStatus.forNumber(reviewStatus_);
       return result == null ? com.google.ads.googleads.v12.enums.PolicyReviewStatusEnum.PolicyReviewStatus.UNRECOGNIZED : result;
     }
     /**
@@ -1319,7 +1329,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       reviewStatus_ = value.getNumber();
       onChanged();
       return this;
@@ -1333,7 +1343,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearReviewStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       reviewStatus_ = 0;
       onChanged();
       return this;
@@ -1342,8 +1352,8 @@ private static final long serialVersionUID = 0L;
     private int approvalStatus_ = 0;
     /**
      * <pre>
-     * Output only. The overall approval status of the placeholder type, calculated based on
-     * the status of its individual policy topic entries.
+     * Output only. The overall approval status of the placeholder type,
+     * calculated based on the status of its individual policy topic entries.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1354,8 +1364,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The overall approval status of the placeholder type, calculated based on
-     * the status of its individual policy topic entries.
+     * Output only. The overall approval status of the placeholder type,
+     * calculated based on the status of its individual policy topic entries.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1363,15 +1373,15 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setApprovalStatusValue(int value) {
-      
       approvalStatus_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The overall approval status of the placeholder type, calculated based on
-     * the status of its individual policy topic entries.
+     * Output only. The overall approval status of the placeholder type,
+     * calculated based on the status of its individual policy topic entries.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1379,14 +1389,13 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus getApprovalStatus() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus result = com.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus.valueOf(approvalStatus_);
+      com.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus result = com.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus.forNumber(approvalStatus_);
       return result == null ? com.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus.UNRECOGNIZED : result;
     }
     /**
      * <pre>
-     * Output only. The overall approval status of the placeholder type, calculated based on
-     * the status of its individual policy topic entries.
+     * Output only. The overall approval status of the placeholder type,
+     * calculated based on the status of its individual policy topic entries.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1397,22 +1406,22 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000008;
       approvalStatus_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The overall approval status of the placeholder type, calculated based on
-     * the status of its individual policy topic entries.
+     * Output only. The overall approval status of the placeholder type,
+     * calculated based on the status of its individual policy topic entries.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearApprovalStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       approvalStatus_ = 0;
       onChanged();
       return this;
@@ -1421,9 +1430,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v12.common.PolicyTopicEntry> policyTopicEntries_ =
       java.util.Collections.emptyList();
     private void ensurePolicyTopicEntriesIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000010) != 0)) {
         policyTopicEntries_ = new java.util.ArrayList<com.google.ads.googleads.v12.common.PolicyTopicEntry>(policyTopicEntries_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000010;
        }
     }
 
@@ -1617,7 +1626,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearPolicyTopicEntries() {
       if (policyTopicEntriesBuilder_ == null) {
         policyTopicEntries_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
       } else {
         policyTopicEntriesBuilder_.clear();
@@ -1722,7 +1731,7 @@ private static final long serialVersionUID = 0L;
         policyTopicEntriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v12.common.PolicyTopicEntry, com.google.ads.googleads.v12.common.PolicyTopicEntry.Builder, com.google.ads.googleads.v12.common.PolicyTopicEntryOrBuilder>(
                 policyTopicEntries_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000010) != 0),
                 getParentForChildren(),
                 isClean());
         policyTopicEntries_ = null;
@@ -1752,8 +1761,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setValidationStatusValue(int value) {
-      
       validationStatus_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1767,8 +1776,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus getValidationStatus() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus result = com.google.ads.googleads.v12.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus.valueOf(validationStatus_);
+      com.google.ads.googleads.v12.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus result = com.google.ads.googleads.v12.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus.forNumber(validationStatus_);
       return result == null ? com.google.ads.googleads.v12.enums.FeedItemValidationStatusEnum.FeedItemValidationStatus.UNRECOGNIZED : result;
     }
     /**
@@ -1784,7 +1792,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000020;
       validationStatus_ = value.getNumber();
       onChanged();
       return this;
@@ -1798,7 +1806,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearValidationStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       validationStatus_ = 0;
       onChanged();
       return this;
@@ -1807,9 +1815,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v12.resources.FeedItemValidationError> validationErrors_ =
       java.util.Collections.emptyList();
     private void ensureValidationErrorsIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000040) != 0)) {
         validationErrors_ = new java.util.ArrayList<com.google.ads.googleads.v12.resources.FeedItemValidationError>(validationErrors_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000040;
        }
     }
 
@@ -2003,7 +2011,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearValidationErrors() {
       if (validationErrorsBuilder_ == null) {
         validationErrors_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
       } else {
         validationErrorsBuilder_.clear();
@@ -2108,7 +2116,7 @@ private static final long serialVersionUID = 0L;
         validationErrorsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v12.resources.FeedItemValidationError, com.google.ads.googleads.v12.resources.FeedItemValidationError.Builder, com.google.ads.googleads.v12.resources.FeedItemValidationErrorOrBuilder>(
                 validationErrors_,
-                ((bitField0_ & 0x00000004) != 0),
+                ((bitField0_ & 0x00000040) != 0),
                 getParentForChildren(),
                 isClean());
         validationErrors_ = null;
@@ -2138,8 +2146,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setQualityApprovalStatusValue(int value) {
-      
       qualityApprovalStatus_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2153,8 +2161,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus getQualityApprovalStatus() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus result = com.google.ads.googleads.v12.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus.valueOf(qualityApprovalStatus_);
+      com.google.ads.googleads.v12.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus result = com.google.ads.googleads.v12.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus.forNumber(qualityApprovalStatus_);
       return result == null ? com.google.ads.googleads.v12.enums.FeedItemQualityApprovalStatusEnum.FeedItemQualityApprovalStatus.UNRECOGNIZED : result;
     }
     /**
@@ -2170,7 +2177,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000080;
       qualityApprovalStatus_ = value.getNumber();
       onChanged();
       return this;
@@ -2184,7 +2191,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearQualityApprovalStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000080);
       qualityApprovalStatus_ = 0;
       onChanged();
       return this;
@@ -2193,14 +2200,15 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> qualityDisapprovalReasons_ =
       java.util.Collections.emptyList();
     private void ensureQualityDisapprovalReasonsIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
+      if (!((bitField0_ & 0x00000100) != 0)) {
         qualityDisapprovalReasons_ = new java.util.ArrayList<java.lang.Integer>(qualityDisapprovalReasons_);
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000100;
       }
     }
     /**
      * <pre>
-     * Output only. List of placeholder type quality evaluation disapproval reasons.
+     * Output only. List of placeholder type quality evaluation disapproval
+     * reasons.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2212,7 +2220,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. List of placeholder type quality evaluation disapproval reasons.
+     * Output only. List of placeholder type quality evaluation disapproval
+     * reasons.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2223,7 +2232,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. List of placeholder type quality evaluation disapproval reasons.
+     * Output only. List of placeholder type quality evaluation disapproval
+     * reasons.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2235,7 +2245,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. List of placeholder type quality evaluation disapproval reasons.
+     * Output only. List of placeholder type quality evaluation disapproval
+     * reasons.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2255,7 +2266,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. List of placeholder type quality evaluation disapproval reasons.
+     * Output only. List of placeholder type quality evaluation disapproval
+     * reasons.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2273,7 +2285,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. List of placeholder type quality evaluation disapproval reasons.
+     * Output only. List of placeholder type quality evaluation disapproval
+     * reasons.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2291,7 +2304,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. List of placeholder type quality evaluation disapproval reasons.
+     * Output only. List of placeholder type quality evaluation disapproval
+     * reasons.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2299,13 +2313,14 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearQualityDisapprovalReasons() {
       qualityDisapprovalReasons_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000100);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. List of placeholder type quality evaluation disapproval reasons.
+     * Output only. List of placeholder type quality evaluation disapproval
+     * reasons.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2317,7 +2332,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. List of placeholder type quality evaluation disapproval reasons.
+     * Output only. List of placeholder type quality evaluation disapproval
+     * reasons.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2329,7 +2345,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. List of placeholder type quality evaluation disapproval reasons.
+     * Output only. List of placeholder type quality evaluation disapproval
+     * reasons.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2346,7 +2363,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. List of placeholder type quality evaluation disapproval reasons.
+     * Output only. List of placeholder type quality evaluation disapproval
+     * reasons.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2361,7 +2379,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. List of placeholder type quality evaluation disapproval reasons.
+     * Output only. List of placeholder type quality evaluation disapproval
+     * reasons.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

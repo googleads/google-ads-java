@@ -70,7 +70,10 @@ import org.threeten.bp.Duration;
  * adGroupServiceSettingsBuilder
  *     .mutateAdGroupsSettings()
  *     .setRetrySettings(
- *         adGroupServiceSettingsBuilder.mutateAdGroupsSettings().getRetrySettings().toBuilder()
+ *         adGroupServiceSettingsBuilder
+ *             .mutateAdGroupsSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
  * AdGroupServiceStubSettings adGroupServiceSettings = adGroupServiceSettingsBuilder.build();

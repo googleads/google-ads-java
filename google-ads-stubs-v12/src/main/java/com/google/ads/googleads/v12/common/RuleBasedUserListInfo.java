@@ -90,7 +90,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PREPOPULATION_STATUS_FIELD_NUMBER = 1;
-  private int prepopulationStatus_;
+  private int prepopulationStatus_ = 0;
   /**
    * <pre>
    * The status of pre-population. The field is default to NONE if not set which
@@ -125,8 +125,7 @@ private static final long serialVersionUID = 0L;
    * @return The prepopulationStatus.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus getPrepopulationStatus() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus result = com.google.ads.googleads.v12.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus.valueOf(prepopulationStatus_);
+    com.google.ads.googleads.v12.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus result = com.google.ads.googleads.v12.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus.forNumber(prepopulationStatus_);
     return result == null ? com.google.ads.googleads.v12.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus.UNRECOGNIZED : result;
   }
 
@@ -165,7 +164,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.common.FlexibleRuleUserListInfoOrBuilder getFlexibleRuleUserListOrBuilder() {
-    return getFlexibleRuleUserList();
+    return flexibleRuleUserList_ == null ? com.google.ads.googleads.v12.common.FlexibleRuleUserListInfo.getDefaultInstance() : flexibleRuleUserList_;
   }
 
   public static final int COMBINED_RULE_USER_LIST_FIELD_NUMBER = 2;
@@ -509,12 +508,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       prepopulationStatus_ = 0;
-
-      if (flexibleRuleUserListBuilder_ == null) {
-        flexibleRuleUserList_ = null;
-      } else {
-        flexibleRuleUserList_ = null;
+      flexibleRuleUserList_ = null;
+      if (flexibleRuleUserListBuilder_ != null) {
+        flexibleRuleUserListBuilder_.dispose();
         flexibleRuleUserListBuilder_ = null;
       }
       if (combinedRuleUserListBuilder_ != null) {
@@ -551,29 +549,35 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.RuleBasedUserListInfo buildPartial() {
       com.google.ads.googleads.v12.common.RuleBasedUserListInfo result = new com.google.ads.googleads.v12.common.RuleBasedUserListInfo(this);
-      result.prepopulationStatus_ = prepopulationStatus_;
-      if (flexibleRuleUserListBuilder_ == null) {
-        result.flexibleRuleUserList_ = flexibleRuleUserList_;
-      } else {
-        result.flexibleRuleUserList_ = flexibleRuleUserListBuilder_.build();
-      }
-      if (ruleBasedUserListCase_ == 2) {
-        if (combinedRuleUserListBuilder_ == null) {
-          result.ruleBasedUserList_ = ruleBasedUserList_;
-        } else {
-          result.ruleBasedUserList_ = combinedRuleUserListBuilder_.build();
-        }
-      }
-      if (ruleBasedUserListCase_ == 4) {
-        if (expressionRuleUserListBuilder_ == null) {
-          result.ruleBasedUserList_ = ruleBasedUserList_;
-        } else {
-          result.ruleBasedUserList_ = expressionRuleUserListBuilder_.build();
-        }
-      }
-      result.ruleBasedUserListCase_ = ruleBasedUserListCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.RuleBasedUserListInfo result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.prepopulationStatus_ = prepopulationStatus_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.flexibleRuleUserList_ = flexibleRuleUserListBuilder_ == null
+            ? flexibleRuleUserList_
+            : flexibleRuleUserListBuilder_.build();
+      }
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v12.common.RuleBasedUserListInfo result) {
+      result.ruleBasedUserListCase_ = ruleBasedUserListCase_;
+      result.ruleBasedUserList_ = this.ruleBasedUserList_;
+      if (ruleBasedUserListCase_ == 2 &&
+          combinedRuleUserListBuilder_ != null) {
+        result.ruleBasedUserList_ = combinedRuleUserListBuilder_.build();
+      }
+      if (ruleBasedUserListCase_ == 4 &&
+          expressionRuleUserListBuilder_ != null) {
+        result.ruleBasedUserList_ = expressionRuleUserListBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -667,7 +671,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               prepopulationStatus_ = input.readEnum();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             case 18: {
@@ -688,7 +692,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getFlexibleRuleUserListFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 42
             default: {
@@ -721,6 +725,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private int prepopulationStatus_ = 0;
     /**
@@ -758,8 +763,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPrepopulationStatusValue(int value) {
-      
       prepopulationStatus_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -780,8 +785,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus getPrepopulationStatus() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus result = com.google.ads.googleads.v12.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus.valueOf(prepopulationStatus_);
+      com.google.ads.googleads.v12.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus result = com.google.ads.googleads.v12.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus.forNumber(prepopulationStatus_);
       return result == null ? com.google.ads.googleads.v12.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus.UNRECOGNIZED : result;
     }
     /**
@@ -804,7 +808,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       prepopulationStatus_ = value.getNumber();
       onChanged();
       return this;
@@ -825,7 +829,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPrepopulationStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       prepopulationStatus_ = 0;
       onChanged();
       return this;
@@ -843,7 +847,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the flexibleRuleUserList field is set.
      */
     public boolean hasFlexibleRuleUserList() {
-      return flexibleRuleUserListBuilder_ != null || flexibleRuleUserList_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -873,11 +877,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         flexibleRuleUserList_ = value;
-        onChanged();
       } else {
         flexibleRuleUserListBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -891,11 +895,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.FlexibleRuleUserListInfo.Builder builderForValue) {
       if (flexibleRuleUserListBuilder_ == null) {
         flexibleRuleUserList_ = builderForValue.build();
-        onChanged();
       } else {
         flexibleRuleUserListBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -907,17 +911,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeFlexibleRuleUserList(com.google.ads.googleads.v12.common.FlexibleRuleUserListInfo value) {
       if (flexibleRuleUserListBuilder_ == null) {
-        if (flexibleRuleUserList_ != null) {
-          flexibleRuleUserList_ =
-            com.google.ads.googleads.v12.common.FlexibleRuleUserListInfo.newBuilder(flexibleRuleUserList_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          flexibleRuleUserList_ != null &&
+          flexibleRuleUserList_ != com.google.ads.googleads.v12.common.FlexibleRuleUserListInfo.getDefaultInstance()) {
+          getFlexibleRuleUserListBuilder().mergeFrom(value);
         } else {
           flexibleRuleUserList_ = value;
         }
-        onChanged();
       } else {
         flexibleRuleUserListBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -928,14 +933,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.FlexibleRuleUserListInfo flexible_rule_user_list = 5;</code>
      */
     public Builder clearFlexibleRuleUserList() {
-      if (flexibleRuleUserListBuilder_ == null) {
-        flexibleRuleUserList_ = null;
-        onChanged();
-      } else {
-        flexibleRuleUserList_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      flexibleRuleUserList_ = null;
+      if (flexibleRuleUserListBuilder_ != null) {
+        flexibleRuleUserListBuilder_.dispose();
         flexibleRuleUserListBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -946,7 +950,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.FlexibleRuleUserListInfo flexible_rule_user_list = 5;</code>
      */
     public com.google.ads.googleads.v12.common.FlexibleRuleUserListInfo.Builder getFlexibleRuleUserListBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getFlexibleRuleUserListFieldBuilder().getBuilder();
     }
@@ -1178,7 +1182,7 @@ private static final long serialVersionUID = 0L;
         ruleBasedUserList_ = null;
       }
       ruleBasedUserListCase_ = 2;
-      onChanged();;
+      onChanged();
       return combinedRuleUserListBuilder_;
     }
 
@@ -1365,7 +1369,7 @@ private static final long serialVersionUID = 0L;
         ruleBasedUserList_ = null;
       }
       ruleBasedUserListCase_ = 4;
-      onChanged();;
+      onChanged();
       return expressionRuleUserListBuilder_;
     }
     @java.lang.Override

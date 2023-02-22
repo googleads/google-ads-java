@@ -123,8 +123,8 @@ public interface GoogleAdsFieldOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Whether the artifact can be used in a ORDER BY clause in search
-   * queries.
+   * Output only. Whether the artifact can be used in a ORDER BY clause in
+   * search queries.
    * </pre>
    *
    * <code>optional bool sortable = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -133,8 +133,8 @@ public interface GoogleAdsFieldOrBuilder extends
   boolean hasSortable();
   /**
    * <pre>
-   * Output only. Whether the artifact can be used in a ORDER BY clause in search
-   * queries.
+   * Output only. Whether the artifact can be used in a ORDER BY clause in
+   * search queries.
    * </pre>
    *
    * <code>optional bool sortable = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -144,8 +144,8 @@ public interface GoogleAdsFieldOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The names of all resources, segments, and metrics that are selectable with
-   * the described artifact.
+   * Output only. The names of all resources, segments, and metrics that are
+   * selectable with the described artifact.
    * </pre>
    *
    * <code>repeated string selectable_with = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -155,8 +155,8 @@ public interface GoogleAdsFieldOrBuilder extends
       getSelectableWithList();
   /**
    * <pre>
-   * Output only. The names of all resources, segments, and metrics that are selectable with
-   * the described artifact.
+   * Output only. The names of all resources, segments, and metrics that are
+   * selectable with the described artifact.
    * </pre>
    *
    * <code>repeated string selectable_with = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -165,8 +165,8 @@ public interface GoogleAdsFieldOrBuilder extends
   int getSelectableWithCount();
   /**
    * <pre>
-   * Output only. The names of all resources, segments, and metrics that are selectable with
-   * the described artifact.
+   * Output only. The names of all resources, segments, and metrics that are
+   * selectable with the described artifact.
    * </pre>
    *
    * <code>repeated string selectable_with = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -176,8 +176,8 @@ public interface GoogleAdsFieldOrBuilder extends
   java.lang.String getSelectableWith(int index);
   /**
    * <pre>
-   * Output only. The names of all resources, segments, and metrics that are selectable with
-   * the described artifact.
+   * Output only. The names of all resources, segments, and metrics that are
+   * selectable with the described artifact.
    * </pre>
    *
    * <code>repeated string selectable_with = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -189,9 +189,9 @@ public interface GoogleAdsFieldOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The names of all resources that are selectable with the described
-   * artifact. Fields from these resources do not segment metrics when included
-   * in search queries.
+   * Output only. The names of all resources that are selectable with the
+   * described artifact. Fields from these resources do not segment metrics when
+   * included in search queries.
    * This field is only set for artifacts whose category is RESOURCE.
    * </pre>
    *
@@ -202,9 +202,9 @@ public interface GoogleAdsFieldOrBuilder extends
       getAttributeResourcesList();
   /**
    * <pre>
-   * Output only. The names of all resources that are selectable with the described
-   * artifact. Fields from these resources do not segment metrics when included
-   * in search queries.
+   * Output only. The names of all resources that are selectable with the
+   * described artifact. Fields from these resources do not segment metrics when
+   * included in search queries.
    * This field is only set for artifacts whose category is RESOURCE.
    * </pre>
    *
@@ -214,9 +214,9 @@ public interface GoogleAdsFieldOrBuilder extends
   int getAttributeResourcesCount();
   /**
    * <pre>
-   * Output only. The names of all resources that are selectable with the described
-   * artifact. Fields from these resources do not segment metrics when included
-   * in search queries.
+   * Output only. The names of all resources that are selectable with the
+   * described artifact. Fields from these resources do not segment metrics when
+   * included in search queries.
    * This field is only set for artifacts whose category is RESOURCE.
    * </pre>
    *
@@ -227,9 +227,9 @@ public interface GoogleAdsFieldOrBuilder extends
   java.lang.String getAttributeResources(int index);
   /**
    * <pre>
-   * Output only. The names of all resources that are selectable with the described
-   * artifact. Fields from these resources do not segment metrics when included
-   * in search queries.
+   * Output only. The names of all resources that are selectable with the
+   * described artifact. Fields from these resources do not segment metrics when
+   * included in search queries.
    * This field is only set for artifacts whose category is RESOURCE.
    * </pre>
    *
@@ -242,9 +242,9 @@ public interface GoogleAdsFieldOrBuilder extends
 
   /**
    * <pre>
-   * Output only. This field lists the names of all metrics that are selectable with the
-   * described artifact when it is used in the FROM clause.
-   * It is only set for artifacts whose category is RESOURCE.
+   * Output only. This field lists the names of all metrics that are selectable
+   * with the described artifact when it is used in the FROM clause. It is only
+   * set for artifacts whose category is RESOURCE.
    * </pre>
    *
    * <code>repeated string metrics = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -254,9 +254,9 @@ public interface GoogleAdsFieldOrBuilder extends
       getMetricsList();
   /**
    * <pre>
-   * Output only. This field lists the names of all metrics that are selectable with the
-   * described artifact when it is used in the FROM clause.
-   * It is only set for artifacts whose category is RESOURCE.
+   * Output only. This field lists the names of all metrics that are selectable
+   * with the described artifact when it is used in the FROM clause. It is only
+   * set for artifacts whose category is RESOURCE.
    * </pre>
    *
    * <code>repeated string metrics = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -265,9 +265,9 @@ public interface GoogleAdsFieldOrBuilder extends
   int getMetricsCount();
   /**
    * <pre>
-   * Output only. This field lists the names of all metrics that are selectable with the
-   * described artifact when it is used in the FROM clause.
-   * It is only set for artifacts whose category is RESOURCE.
+   * Output only. This field lists the names of all metrics that are selectable
+   * with the described artifact when it is used in the FROM clause. It is only
+   * set for artifacts whose category is RESOURCE.
    * </pre>
    *
    * <code>repeated string metrics = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -277,9 +277,9 @@ public interface GoogleAdsFieldOrBuilder extends
   java.lang.String getMetrics(int index);
   /**
    * <pre>
-   * Output only. This field lists the names of all metrics that are selectable with the
-   * described artifact when it is used in the FROM clause.
-   * It is only set for artifacts whose category is RESOURCE.
+   * Output only. This field lists the names of all metrics that are selectable
+   * with the described artifact when it is used in the FROM clause. It is only
+   * set for artifacts whose category is RESOURCE.
    * </pre>
    *
    * <code>repeated string metrics = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -291,10 +291,10 @@ public interface GoogleAdsFieldOrBuilder extends
 
   /**
    * <pre>
-   * Output only. This field lists the names of all artifacts, whether a segment or another
-   * resource, that segment metrics when included in search queries and when the
-   * described artifact is used in the FROM clause. It is only set for artifacts
-   * whose category is RESOURCE.
+   * Output only. This field lists the names of all artifacts, whether a segment
+   * or another resource, that segment metrics when included in search queries
+   * and when the described artifact is used in the FROM clause. It is only set
+   * for artifacts whose category is RESOURCE.
    * </pre>
    *
    * <code>repeated string segments = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -304,10 +304,10 @@ public interface GoogleAdsFieldOrBuilder extends
       getSegmentsList();
   /**
    * <pre>
-   * Output only. This field lists the names of all artifacts, whether a segment or another
-   * resource, that segment metrics when included in search queries and when the
-   * described artifact is used in the FROM clause. It is only set for artifacts
-   * whose category is RESOURCE.
+   * Output only. This field lists the names of all artifacts, whether a segment
+   * or another resource, that segment metrics when included in search queries
+   * and when the described artifact is used in the FROM clause. It is only set
+   * for artifacts whose category is RESOURCE.
    * </pre>
    *
    * <code>repeated string segments = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -316,10 +316,10 @@ public interface GoogleAdsFieldOrBuilder extends
   int getSegmentsCount();
   /**
    * <pre>
-   * Output only. This field lists the names of all artifacts, whether a segment or another
-   * resource, that segment metrics when included in search queries and when the
-   * described artifact is used in the FROM clause. It is only set for artifacts
-   * whose category is RESOURCE.
+   * Output only. This field lists the names of all artifacts, whether a segment
+   * or another resource, that segment metrics when included in search queries
+   * and when the described artifact is used in the FROM clause. It is only set
+   * for artifacts whose category is RESOURCE.
    * </pre>
    *
    * <code>repeated string segments = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -329,10 +329,10 @@ public interface GoogleAdsFieldOrBuilder extends
   java.lang.String getSegments(int index);
   /**
    * <pre>
-   * Output only. This field lists the names of all artifacts, whether a segment or another
-   * resource, that segment metrics when included in search queries and when the
-   * described artifact is used in the FROM clause. It is only set for artifacts
-   * whose category is RESOURCE.
+   * Output only. This field lists the names of all artifacts, whether a segment
+   * or another resource, that segment metrics when included in search queries
+   * and when the described artifact is used in the FROM clause. It is only set
+   * for artifacts whose category is RESOURCE.
    * </pre>
    *
    * <code>repeated string segments = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -389,8 +389,8 @@ public interface GoogleAdsFieldOrBuilder extends
 
   /**
    * <pre>
-   * Output only. This field determines the operators that can be used with the artifact
-   * in WHERE clauses.
+   * Output only. This field determines the operators that can be used with the
+   * artifact in WHERE clauses.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType data_type = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -399,8 +399,8 @@ public interface GoogleAdsFieldOrBuilder extends
   int getDataTypeValue();
   /**
    * <pre>
-   * Output only. This field determines the operators that can be used with the artifact
-   * in WHERE clauses.
+   * Output only. This field determines the operators that can be used with the
+   * artifact in WHERE clauses.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.GoogleAdsFieldDataTypeEnum.GoogleAdsFieldDataType data_type = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

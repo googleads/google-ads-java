@@ -95,8 +95,8 @@ public interface SmartCampaignSuggestionInfoOrBuilder extends
 
   /**
    * <pre>
-   * Optional. Smart campaign keyword themes. This field may greatly improve suggestion
-   * accuracy and we recommend always setting it if possible.
+   * Optional. Smart campaign keyword themes. This field may greatly improve
+   * suggestion accuracy and we recommend always setting it if possible.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.KeywordThemeInfo keyword_themes = 7 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -105,8 +105,8 @@ public interface SmartCampaignSuggestionInfoOrBuilder extends
       getKeywordThemesList();
   /**
    * <pre>
-   * Optional. Smart campaign keyword themes. This field may greatly improve suggestion
-   * accuracy and we recommend always setting it if possible.
+   * Optional. Smart campaign keyword themes. This field may greatly improve
+   * suggestion accuracy and we recommend always setting it if possible.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.KeywordThemeInfo keyword_themes = 7 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -114,8 +114,8 @@ public interface SmartCampaignSuggestionInfoOrBuilder extends
   com.google.ads.googleads.v12.common.KeywordThemeInfo getKeywordThemes(int index);
   /**
    * <pre>
-   * Optional. Smart campaign keyword themes. This field may greatly improve suggestion
-   * accuracy and we recommend always setting it if possible.
+   * Optional. Smart campaign keyword themes. This field may greatly improve
+   * suggestion accuracy and we recommend always setting it if possible.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.KeywordThemeInfo keyword_themes = 7 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -123,8 +123,8 @@ public interface SmartCampaignSuggestionInfoOrBuilder extends
   int getKeywordThemesCount();
   /**
    * <pre>
-   * Optional. Smart campaign keyword themes. This field may greatly improve suggestion
-   * accuracy and we recommend always setting it if possible.
+   * Optional. Smart campaign keyword themes. This field may greatly improve
+   * suggestion accuracy and we recommend always setting it if possible.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.KeywordThemeInfo keyword_themes = 7 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -133,8 +133,8 @@ public interface SmartCampaignSuggestionInfoOrBuilder extends
       getKeywordThemesOrBuilderList();
   /**
    * <pre>
-   * Optional. Smart campaign keyword themes. This field may greatly improve suggestion
-   * accuracy and we recommend always setting it if possible.
+   * Optional. Smart campaign keyword themes. This field may greatly improve
+   * suggestion accuracy and we recommend always setting it if possible.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.KeywordThemeInfo keyword_themes = 7 [(.google.api.field_behavior) = OPTIONAL];</code>

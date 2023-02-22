@@ -67,7 +67,10 @@ import javax.annotation.Generated;
  * batchJobServiceSettingsBuilder
  *     .mutateBatchJobSettings()
  *     .setRetrySettings(
- *         batchJobServiceSettingsBuilder.mutateBatchJobSettings().getRetrySettings().toBuilder()
+ *         batchJobServiceSettingsBuilder
+ *             .mutateBatchJobSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
  * BatchJobServiceSettings batchJobServiceSettings = batchJobServiceSettingsBuilder.build();

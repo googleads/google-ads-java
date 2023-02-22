@@ -57,6 +57,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int MARKETING_IMAGES_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.common.AdImageAsset> marketingImages_;
   /**
    * <pre>
@@ -137,6 +138,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SQUARE_MARKETING_IMAGES_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.common.AdImageAsset> squareMarketingImages_;
   /**
    * <pre>
@@ -212,6 +214,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PORTRAIT_MARKETING_IMAGES_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.common.AdImageAsset> portraitMarketingImages_;
   /**
    * <pre>
@@ -287,6 +290,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LOGO_IMAGES_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.common.AdImageAsset> logoImages_;
   /**
    * <pre>
@@ -357,6 +361,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HEADLINES_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.common.AdTextAsset> headlines_;
   /**
    * <pre>
@@ -422,6 +427,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTIONS_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.common.AdTextAsset> descriptions_;
   /**
    * <pre>
@@ -487,7 +493,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BUSINESS_NAME_FIELD_NUMBER = 7;
-  private volatile java.lang.Object businessName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object businessName_ = "";
   /**
    * <pre>
    * The Advertiser/brand name. Maximum display width is 25. Required.
@@ -545,7 +552,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALL_TO_ACTION_TEXT_FIELD_NUMBER = 8;
-  private volatile java.lang.Object callToActionText_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object callToActionText_ = "";
   /**
    * <pre>
    * Call to action text.
@@ -603,7 +611,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LEAD_FORM_ONLY_FIELD_NUMBER = 9;
-  private boolean leadFormOnly_;
+  private boolean leadFormOnly_ = false;
   /**
    * <pre>
    * Boolean option that indicates if this ad must be served with lead form.
@@ -935,6 +943,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (marketingImagesBuilder_ == null) {
         marketingImages_ = java.util.Collections.emptyList();
       } else {
@@ -978,11 +987,8 @@ private static final long serialVersionUID = 0L;
       }
       bitField0_ = (bitField0_ & ~0x00000020);
       businessName_ = "";
-      bitField0_ = (bitField0_ & ~0x00000040);
       callToActionText_ = "";
-      bitField0_ = (bitField0_ & ~0x00000080);
       leadFormOnly_ = false;
-      bitField0_ = (bitField0_ & ~0x00000100);
       return this;
     }
 
@@ -1009,8 +1015,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.DiscoveryMultiAssetAdInfo buildPartial() {
       com.google.ads.googleads.v11.common.DiscoveryMultiAssetAdInfo result = new com.google.ads.googleads.v11.common.DiscoveryMultiAssetAdInfo(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.common.DiscoveryMultiAssetAdInfo result) {
       if (marketingImagesBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           marketingImages_ = java.util.Collections.unmodifiableList(marketingImages_);
@@ -1065,21 +1076,24 @@ private static final long serialVersionUID = 0L;
       } else {
         result.descriptions_ = descriptionsBuilder_.build();
       }
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.DiscoveryMultiAssetAdInfo result) {
+      int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.businessName_ = businessName_;
         to_bitField0_ |= 0x00000001;
       }
-      result.businessName_ = businessName_;
       if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.callToActionText_ = callToActionText_;
         to_bitField0_ |= 0x00000002;
       }
-      result.callToActionText_ = callToActionText_;
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.leadFormOnly_ = leadFormOnly_;
         to_bitField0_ |= 0x00000004;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1283,13 +1297,13 @@ private static final long serialVersionUID = 0L;
         }
       }
       if (other.hasBusinessName()) {
-        bitField0_ |= 0x00000040;
         businessName_ = other.businessName_;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (other.hasCallToActionText()) {
-        bitField0_ |= 0x00000080;
         callToActionText_ = other.callToActionText_;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       if (other.hasLeadFormOnly()) {
@@ -3619,11 +3633,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBusinessName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000040;
+      if (value == null) { throw new NullPointerException(); }
       businessName_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -3636,8 +3648,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBusinessName() {
-      bitField0_ = (bitField0_ & ~0x00000040);
       businessName_ = getDefaultInstance().getBusinessName();
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -3652,12 +3664,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBusinessNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000040;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       businessName_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -3726,11 +3736,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallToActionText(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000080;
+      if (value == null) { throw new NullPointerException(); }
       callToActionText_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -3743,8 +3751,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallToActionText() {
-      bitField0_ = (bitField0_ & ~0x00000080);
       callToActionText_ = getDefaultInstance().getCallToActionText();
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -3759,12 +3767,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallToActionTextBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000080;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       callToActionText_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -3804,8 +3810,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLeadFormOnly(boolean value) {
-      bitField0_ |= 0x00000100;
+      
       leadFormOnly_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }

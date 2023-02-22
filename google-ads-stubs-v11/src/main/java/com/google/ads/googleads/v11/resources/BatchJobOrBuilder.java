@@ -52,8 +52,8 @@ public interface BatchJobOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The next sequence token to use when adding operations. Only set when the
-   * batch job status is PENDING.
+   * Output only. The next sequence token to use when adding operations. Only
+   * set when the batch job status is PENDING.
    * </pre>
    *
    * <code>optional string next_add_sequence_token = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -62,8 +62,8 @@ public interface BatchJobOrBuilder extends
   boolean hasNextAddSequenceToken();
   /**
    * <pre>
-   * Output only. The next sequence token to use when adding operations. Only set when the
-   * batch job status is PENDING.
+   * Output only. The next sequence token to use when adding operations. Only
+   * set when the batch job status is PENDING.
    * </pre>
    *
    * <code>optional string next_add_sequence_token = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -72,8 +72,8 @@ public interface BatchJobOrBuilder extends
   java.lang.String getNextAddSequenceToken();
   /**
    * <pre>
-   * Output only. The next sequence token to use when adding operations. Only set when the
-   * batch job status is PENDING.
+   * Output only. The next sequence token to use when adding operations. Only
+   * set when the batch job status is PENDING.
    * </pre>
    *
    * <code>optional string next_add_sequence_token = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -130,8 +130,9 @@ public interface BatchJobOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The resource name of the long-running operation that can be used to poll
-   * for completion. Only set when the batch job status is RUNNING or DONE.
+   * Output only. The resource name of the long-running operation that can be
+   * used to poll for completion. Only set when the batch job status is RUNNING
+   * or DONE.
    * </pre>
    *
    * <code>optional string long_running_operation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -140,8 +141,9 @@ public interface BatchJobOrBuilder extends
   boolean hasLongRunningOperation();
   /**
    * <pre>
-   * Output only. The resource name of the long-running operation that can be used to poll
-   * for completion. Only set when the batch job status is RUNNING or DONE.
+   * Output only. The resource name of the long-running operation that can be
+   * used to poll for completion. Only set when the batch job status is RUNNING
+   * or DONE.
    * </pre>
    *
    * <code>optional string long_running_operation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -150,8 +152,9 @@ public interface BatchJobOrBuilder extends
   java.lang.String getLongRunningOperation();
   /**
    * <pre>
-   * Output only. The resource name of the long-running operation that can be used to poll
-   * for completion. Only set when the batch job status is RUNNING or DONE.
+   * Output only. The resource name of the long-running operation that can be
+   * used to poll for completion. Only set when the batch job status is RUNNING
+   * or DONE.
    * </pre>
    *
    * <code>optional string long_running_operation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

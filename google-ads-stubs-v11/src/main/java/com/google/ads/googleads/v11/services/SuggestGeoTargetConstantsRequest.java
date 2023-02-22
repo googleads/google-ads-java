@@ -141,6 +141,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int NAMES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList names_;
     /**
      * <pre>
@@ -389,6 +390,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         names_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
@@ -417,14 +419,22 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v11.services.SuggestGeoTargetConstantsRequest.LocationNames buildPartial() {
         com.google.ads.googleads.v11.services.SuggestGeoTargetConstantsRequest.LocationNames result = new com.google.ads.googleads.v11.services.SuggestGeoTargetConstantsRequest.LocationNames(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.google.ads.googleads.v11.services.SuggestGeoTargetConstantsRequest.LocationNames result) {
         if (((bitField0_ & 0x00000001) != 0)) {
           names_ = names_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.names_ = names_;
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v11.services.SuggestGeoTargetConstantsRequest.LocationNames result) {
+        int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override
@@ -597,10 +607,8 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setNames(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureNamesIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureNamesIsMutable();
         names_.set(index, value);
         onChanged();
         return this;
@@ -616,10 +624,8 @@ private static final long serialVersionUID = 0L;
        */
       public Builder addNames(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureNamesIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureNamesIsMutable();
         names_.add(value);
         onChanged();
         return this;
@@ -666,10 +672,8 @@ private static final long serialVersionUID = 0L;
        */
       public Builder addNamesBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureNamesIsMutable();
         names_.add(value);
         onChanged();
@@ -830,6 +834,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int GEO_TARGET_CONSTANTS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList geoTargetConstants_;
     /**
      * <pre>
@@ -1078,6 +1083,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         geoTargetConstants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
@@ -1106,14 +1112,22 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v11.services.SuggestGeoTargetConstantsRequest.GeoTargets buildPartial() {
         com.google.ads.googleads.v11.services.SuggestGeoTargetConstantsRequest.GeoTargets result = new com.google.ads.googleads.v11.services.SuggestGeoTargetConstantsRequest.GeoTargets(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.google.ads.googleads.v11.services.SuggestGeoTargetConstantsRequest.GeoTargets result) {
         if (((bitField0_ & 0x00000001) != 0)) {
           geoTargetConstants_ = geoTargetConstants_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.geoTargetConstants_ = geoTargetConstants_;
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v11.services.SuggestGeoTargetConstantsRequest.GeoTargets result) {
+        int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override
@@ -1286,10 +1300,8 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setGeoTargetConstants(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureGeoTargetConstantsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureGeoTargetConstantsIsMutable();
         geoTargetConstants_.set(index, value);
         onChanged();
         return this;
@@ -1305,10 +1317,8 @@ private static final long serialVersionUID = 0L;
        */
       public Builder addGeoTargetConstants(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureGeoTargetConstantsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureGeoTargetConstantsIsMutable();
         geoTargetConstants_.add(value);
         onChanged();
         return this;
@@ -1355,10 +1365,8 @@ private static final long serialVersionUID = 0L;
        */
       public Builder addGeoTargetConstantsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureGeoTargetConstantsIsMutable();
         geoTargetConstants_.add(value);
         onChanged();
@@ -1471,7 +1479,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LOCALE_FIELD_NUMBER = 6;
-  private volatile java.lang.Object locale_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object locale_ = "";
   /**
    * <pre>
    * If possible, returned geo targets are translated using this locale. If not,
@@ -1535,7 +1544,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int COUNTRY_CODE_FIELD_NUMBER = 7;
-  private volatile java.lang.Object countryCode_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object countryCode_ = "";
   /**
    * <pre>
    * Returned geo targets are restricted to this country code.
@@ -1929,10 +1939,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       locale_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       countryCode_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       if (locationNamesBuilder_ != null) {
         locationNamesBuilder_.clear();
       }
@@ -1967,34 +1976,37 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.SuggestGeoTargetConstantsRequest buildPartial() {
       com.google.ads.googleads.v11.services.SuggestGeoTargetConstantsRequest result = new com.google.ads.googleads.v11.services.SuggestGeoTargetConstantsRequest(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.SuggestGeoTargetConstantsRequest result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.locale_ = locale_;
         to_bitField0_ |= 0x00000001;
       }
-      result.locale_ = locale_;
       if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.countryCode_ = countryCode_;
         to_bitField0_ |= 0x00000002;
       }
-      result.countryCode_ = countryCode_;
-      if (queryCase_ == 1) {
-        if (locationNamesBuilder_ == null) {
-          result.query_ = query_;
-        } else {
-          result.query_ = locationNamesBuilder_.build();
-        }
-      }
-      if (queryCase_ == 2) {
-        if (geoTargetsBuilder_ == null) {
-          result.query_ = query_;
-        } else {
-          result.query_ = geoTargetsBuilder_.build();
-        }
-      }
-      result.bitField0_ = to_bitField0_;
+      result.bitField0_ |= to_bitField0_;
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v11.services.SuggestGeoTargetConstantsRequest result) {
       result.queryCase_ = queryCase_;
-      onBuilt();
-      return result;
+      result.query_ = this.query_;
+      if (queryCase_ == 1 &&
+          locationNamesBuilder_ != null) {
+        result.query_ = locationNamesBuilder_.build();
+      }
+      if (queryCase_ == 2 &&
+          geoTargetsBuilder_ != null) {
+        result.query_ = geoTargetsBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -2042,13 +2054,13 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v11.services.SuggestGeoTargetConstantsRequest other) {
       if (other == com.google.ads.googleads.v11.services.SuggestGeoTargetConstantsRequest.getDefaultInstance()) return this;
       if (other.hasLocale()) {
-        bitField0_ |= 0x00000001;
         locale_ = other.locale_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasCountryCode()) {
-        bitField0_ |= 0x00000002;
         countryCode_ = other.countryCode_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       switch (other.getQueryCase()) {
@@ -2218,11 +2230,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLocale(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       locale_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -2237,8 +2247,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLocale() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       locale_ = getDefaultInstance().getLocale();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -2255,12 +2265,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLocaleBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       locale_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -2329,11 +2337,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCountryCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       countryCode_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -2346,8 +2352,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCountryCode() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       countryCode_ = getDefaultInstance().getCountryCode();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -2362,12 +2368,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCountryCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       countryCode_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -2546,7 +2550,7 @@ private static final long serialVersionUID = 0L;
         query_ = null;
       }
       queryCase_ = 1;
-      onChanged();;
+      onChanged();
       return locationNamesBuilder_;
     }
 
@@ -2724,7 +2728,7 @@ private static final long serialVersionUID = 0L;
         query_ = null;
       }
       queryCase_ = 2;
-      onChanged();;
+      onChanged();
       return geoTargetsBuilder_;
     }
     @java.lang.Override

@@ -52,7 +52,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int POLICY_NAME_FIELD_NUMBER = 3;
-  private volatile java.lang.Object policyName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object policyName_ = "";
   /**
    * <pre>
    * Unique ID of the violated policy.
@@ -110,7 +111,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VIOLATING_TEXT_FIELD_NUMBER = 4;
-  private volatile java.lang.Object violatingText_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object violatingText_ = "";
   /**
    * <pre>
    * The text that violates the policy if specified.
@@ -391,10 +393,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       policyName_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       violatingText_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -421,19 +422,23 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.PolicyViolationKey buildPartial() {
       com.google.ads.googleads.v12.common.PolicyViolationKey result = new com.google.ads.googleads.v12.common.PolicyViolationKey(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.PolicyViolationKey result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.policyName_ = policyName_;
         to_bitField0_ |= 0x00000001;
       }
-      result.policyName_ = policyName_;
       if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.violatingText_ = violatingText_;
         to_bitField0_ |= 0x00000002;
       }
-      result.violatingText_ = violatingText_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -481,13 +486,13 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v12.common.PolicyViolationKey other) {
       if (other == com.google.ads.googleads.v12.common.PolicyViolationKey.getDefaultInstance()) return this;
       if (other.hasPolicyName()) {
-        bitField0_ |= 0x00000001;
         policyName_ = other.policyName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasViolatingText()) {
-        bitField0_ |= 0x00000002;
         violatingText_ = other.violatingText_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -607,11 +612,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPolicyName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       policyName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -624,8 +627,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPolicyName() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       policyName_ = getDefaultInstance().getPolicyName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -640,12 +643,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPolicyNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       policyName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -730,11 +731,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setViolatingText(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       violatingText_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -751,8 +750,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearViolatingText() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       violatingText_ = getDefaultInstance().getViolatingText();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -771,12 +770,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setViolatingTextBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       violatingText_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

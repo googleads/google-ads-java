@@ -52,8 +52,8 @@ public interface SharedSetOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. The type of this shared set: each shared set holds only a single kind
-   * of resource. Required. Immutable.
+   * Immutable. The type of this shared set: each shared set holds only a single
+   * kind of resource. Required. Immutable.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.SharedSetTypeEnum.SharedSetType type = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -62,8 +62,8 @@ public interface SharedSetOrBuilder extends
   int getTypeValue();
   /**
    * <pre>
-   * Immutable. The type of this shared set: each shared set holds only a single kind
-   * of resource. Required. Immutable.
+   * Immutable. The type of this shared set: each shared set holds only a single
+   * kind of resource. Required. Immutable.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.SharedSetTypeEnum.SharedSetType type = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -133,7 +133,8 @@ public interface SharedSetOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The number of shared criteria within this shared set. Read only.
+   * Output only. The number of shared criteria within this shared set. Read
+   * only.
    * </pre>
    *
    * <code>optional int64 member_count = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -142,7 +143,8 @@ public interface SharedSetOrBuilder extends
   boolean hasMemberCount();
   /**
    * <pre>
-   * Output only. The number of shared criteria within this shared set. Read only.
+   * Output only. The number of shared criteria within this shared set. Read
+   * only.
    * </pre>
    *
    * <code>optional int64 member_count = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -152,7 +154,8 @@ public interface SharedSetOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The number of campaigns associated with this shared set. Read only.
+   * Output only. The number of campaigns associated with this shared set. Read
+   * only.
    * </pre>
    *
    * <code>optional int64 reference_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -161,7 +164,8 @@ public interface SharedSetOrBuilder extends
   boolean hasReferenceCount();
   /**
    * <pre>
-   * Output only. The number of campaigns associated with this shared set. Read only.
+   * Output only. The number of campaigns associated with this shared set. Read
+   * only.
    * </pre>
    *
    * <code>optional int64 reference_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

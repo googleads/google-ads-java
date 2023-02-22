@@ -50,7 +50,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int CHANNEL_ID_FIELD_NUMBER = 2;
-  private volatile java.lang.Object channelId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object channelId_ = "";
   /**
    * <pre>
    * The YouTube uploader channel id or the channel code of a YouTube channel.
@@ -303,8 +304,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       channelId_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -331,15 +332,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.YouTubeChannelInfo buildPartial() {
       com.google.ads.googleads.v11.common.YouTubeChannelInfo result = new com.google.ads.googleads.v11.common.YouTubeChannelInfo(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.YouTubeChannelInfo result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.channelId_ = channelId_;
         to_bitField0_ |= 0x00000001;
       }
-      result.channelId_ = channelId_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -387,8 +392,8 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v11.common.YouTubeChannelInfo other) {
       if (other == com.google.ads.googleads.v11.common.YouTubeChannelInfo.getDefaultInstance()) return this;
       if (other.hasChannelId()) {
-        bitField0_ |= 0x00000001;
         channelId_ = other.channelId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -503,11 +508,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setChannelId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       channelId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -520,8 +523,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearChannelId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       channelId_ = getDefaultInstance().getChannelId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -536,12 +539,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setChannelIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       channelId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

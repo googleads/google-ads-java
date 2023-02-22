@@ -10,7 +10,8 @@ public interface TargetingOrBuilder extends
   /**
    * <pre>
    * The ID of the selected location. Plannable location IDs can be
-   * obtained from [ReachPlanService.ListPlannableLocations][google.ads.googleads.v12.services.ReachPlanService.ListPlannableLocations].
+   * obtained from
+   * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v12.services.ReachPlanService.ListPlannableLocations].
    * Requests must set either this field or `plannable_location_ids`.
    * This field is deprecated as of V12 and will be removed in a future release.
    * Use `plannable_location_ids` instead.
@@ -23,7 +24,8 @@ public interface TargetingOrBuilder extends
   /**
    * <pre>
    * The ID of the selected location. Plannable location IDs can be
-   * obtained from [ReachPlanService.ListPlannableLocations][google.ads.googleads.v12.services.ReachPlanService.ListPlannableLocations].
+   * obtained from
+   * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v12.services.ReachPlanService.ListPlannableLocations].
    * Requests must set either this field or `plannable_location_ids`.
    * This field is deprecated as of V12 and will be removed in a future release.
    * Use `plannable_location_ids` instead.
@@ -36,7 +38,8 @@ public interface TargetingOrBuilder extends
   /**
    * <pre>
    * The ID of the selected location. Plannable location IDs can be
-   * obtained from [ReachPlanService.ListPlannableLocations][google.ads.googleads.v12.services.ReachPlanService.ListPlannableLocations].
+   * obtained from
+   * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v12.services.ReachPlanService.ListPlannableLocations].
    * Requests must set either this field or `plannable_location_ids`.
    * This field is deprecated as of V12 and will be removed in a future release.
    * Use `plannable_location_ids` instead.
@@ -54,7 +57,8 @@ public interface TargetingOrBuilder extends
    * If more than one ID is provided, all IDs must have the same
    * `parent_country_id`. Planning for more than `parent_county` is not
    * supported. Plannable location IDs and their `parent_country_id` can be
-   * obtained from [ReachPlanService.ListPlannableLocations][google.ads.googleads.v12.services.ReachPlanService.ListPlannableLocations].
+   * obtained from
+   * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v12.services.ReachPlanService.ListPlannableLocations].
    * Requests must set either this field or `plannable_location_id`.
    * </pre>
    *
@@ -69,7 +73,8 @@ public interface TargetingOrBuilder extends
    * If more than one ID is provided, all IDs must have the same
    * `parent_country_id`. Planning for more than `parent_county` is not
    * supported. Plannable location IDs and their `parent_country_id` can be
-   * obtained from [ReachPlanService.ListPlannableLocations][google.ads.googleads.v12.services.ReachPlanService.ListPlannableLocations].
+   * obtained from
+   * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v12.services.ReachPlanService.ListPlannableLocations].
    * Requests must set either this field or `plannable_location_id`.
    * </pre>
    *
@@ -83,7 +88,8 @@ public interface TargetingOrBuilder extends
    * If more than one ID is provided, all IDs must have the same
    * `parent_country_id`. Planning for more than `parent_county` is not
    * supported. Plannable location IDs and their `parent_country_id` can be
-   * obtained from [ReachPlanService.ListPlannableLocations][google.ads.googleads.v12.services.ReachPlanService.ListPlannableLocations].
+   * obtained from
+   * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v12.services.ReachPlanService.ListPlannableLocations].
    * Requests must set either this field or `plannable_location_id`.
    * </pre>
    *
@@ -98,7 +104,8 @@ public interface TargetingOrBuilder extends
    * If more than one ID is provided, all IDs must have the same
    * `parent_country_id`. Planning for more than `parent_county` is not
    * supported. Plannable location IDs and their `parent_country_id` can be
-   * obtained from [ReachPlanService.ListPlannableLocations][google.ads.googleads.v12.services.ReachPlanService.ListPlannableLocations].
+   * obtained from
+   * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v12.services.ReachPlanService.ListPlannableLocations].
    * Requests must set either this field or `plannable_location_id`.
    * </pre>
    *

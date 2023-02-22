@@ -56,10 +56,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HTTP_AUTHORIZATION_TOKEN_FIELD_NUMBER = 1;
-  private volatile java.lang.Object httpAuthorizationToken_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object httpAuthorizationToken_ = "";
   /**
    * <pre>
-   * Required. Immutable. The HTTP authorization token used to obtain authorization.
+   * Required. Immutable. The HTTP authorization token used to obtain
+   * authorization.
    * </pre>
    *
    * <code>string http_authorization_token = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.field_behavior) = REQUIRED];</code>
@@ -80,7 +82,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. Immutable. The HTTP authorization token used to obtain authorization.
+   * Required. Immutable. The HTTP authorization token used to obtain
+   * authorization.
    * </pre>
    *
    * <code>string http_authorization_token = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.field_behavior) = REQUIRED];</code>
@@ -102,11 +105,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EMAIL_ADDRESS_FIELD_NUMBER = 2;
-  private volatile java.lang.Object emailAddress_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object emailAddress_ = "";
   /**
    * <pre>
-   * Required. Immutable. Email address of a Google Business Profile account or email address of a
-   * manager of the Google Business Profile account.
+   * Required. Immutable. Email address of a Google Business Profile account or
+   * email address of a manager of the Google Business Profile account.
    * </pre>
    *
    * <code>string email_address = 2 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
@@ -127,8 +131,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. Immutable. Email address of a Google Business Profile account or email address of a
-   * manager of the Google Business Profile account.
+   * Required. Immutable. Email address of a Google Business Profile account or
+   * email address of a manager of the Google Business Profile account.
    * </pre>
    *
    * <code>string email_address = 2 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
@@ -150,7 +154,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BUSINESS_NAME_FILTER_FIELD_NUMBER = 3;
-  private volatile java.lang.Object businessNameFilter_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object businessNameFilter_ = "";
   /**
    * <pre>
    * Used to filter Google Business Profile listings by business name. If
@@ -200,6 +205,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LABEL_FILTERS_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList labelFilters_;
   /**
    * <pre>
@@ -267,6 +273,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LISTING_ID_FILTERS_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
   private com.google.protobuf.Internal.LongList listingIdFilters_;
   /**
    * <pre>
@@ -319,11 +326,12 @@ private static final long serialVersionUID = 0L;
   private int listingIdFiltersMemoizedSerializedSize = -1;
 
   public static final int BUSINESS_ACCOUNT_ID_FIELD_NUMBER = 6;
-  private volatile java.lang.Object businessAccountId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object businessAccountId_ = "";
   /**
    * <pre>
-   * Immutable. The account ID of the managed business whose locations are to be used.
-   * If this field is not set, then all businesses accessible by the user
+   * Immutable. The account ID of the managed business whose locations are to be
+   * used. If this field is not set, then all businesses accessible by the user
    * (specified by the emailAddress) are used.
    * </pre>
    *
@@ -345,8 +353,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. The account ID of the managed business whose locations are to be used.
-   * If this field is not set, then all businesses accessible by the user
+   * Immutable. The account ID of the managed business whose locations are to be
+   * used. If this field is not set, then all businesses accessible by the user
    * (specified by the emailAddress) are used.
    * </pre>
    *
@@ -636,18 +644,14 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       httpAuthorizationToken_ = "";
-
       emailAddress_ = "";
-
       businessNameFilter_ = "";
-
       labelFilters_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000008);
       listingIdFilters_ = emptyLongList();
-      bitField0_ = (bitField0_ & ~0x00000002);
       businessAccountId_ = "";
-
       return this;
     }
 
@@ -674,23 +678,39 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.BusinessProfileLocationSet buildPartial() {
       com.google.ads.googleads.v12.common.BusinessProfileLocationSet result = new com.google.ads.googleads.v12.common.BusinessProfileLocationSet(this);
-      int from_bitField0_ = bitField0_;
-      result.httpAuthorizationToken_ = httpAuthorizationToken_;
-      result.emailAddress_ = emailAddress_;
-      result.businessNameFilter_ = businessNameFilter_;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        labelFilters_ = labelFilters_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.labelFilters_ = labelFilters_;
-      if (((bitField0_ & 0x00000002) != 0)) {
-        listingIdFilters_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000002);
-      }
-      result.listingIdFilters_ = listingIdFilters_;
-      result.businessAccountId_ = businessAccountId_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.common.BusinessProfileLocationSet result) {
+      if (((bitField0_ & 0x00000008) != 0)) {
+        labelFilters_ = labelFilters_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000008);
+      }
+      result.labelFilters_ = labelFilters_;
+      if (((bitField0_ & 0x00000010) != 0)) {
+        listingIdFilters_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000010);
+      }
+      result.listingIdFilters_ = listingIdFilters_;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.BusinessProfileLocationSet result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.httpAuthorizationToken_ = httpAuthorizationToken_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.emailAddress_ = emailAddress_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.businessNameFilter_ = businessNameFilter_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.businessAccountId_ = businessAccountId_;
+      }
     }
 
     @java.lang.Override
@@ -739,20 +759,23 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.common.BusinessProfileLocationSet.getDefaultInstance()) return this;
       if (!other.getHttpAuthorizationToken().isEmpty()) {
         httpAuthorizationToken_ = other.httpAuthorizationToken_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getEmailAddress().isEmpty()) {
         emailAddress_ = other.emailAddress_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getBusinessNameFilter().isEmpty()) {
         businessNameFilter_ = other.businessNameFilter_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.labelFilters_.isEmpty()) {
         if (labelFilters_.isEmpty()) {
           labelFilters_ = other.labelFilters_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
           ensureLabelFiltersIsMutable();
           labelFilters_.addAll(other.labelFilters_);
@@ -762,7 +785,7 @@ private static final long serialVersionUID = 0L;
       if (!other.listingIdFilters_.isEmpty()) {
         if (listingIdFilters_.isEmpty()) {
           listingIdFilters_ = other.listingIdFilters_;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000010);
         } else {
           ensureListingIdFiltersIsMutable();
           listingIdFilters_.addAll(other.listingIdFilters_);
@@ -771,6 +794,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getBusinessAccountId().isEmpty()) {
         businessAccountId_ = other.businessAccountId_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -801,17 +825,17 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               httpAuthorizationToken_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               emailAddress_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
               businessNameFilter_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 34: {
@@ -838,7 +862,7 @@ private static final long serialVersionUID = 0L;
             } // case 42
             case 50: {
               businessAccountId_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000020;
               break;
             } // case 50
             default: {
@@ -861,7 +885,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object httpAuthorizationToken_ = "";
     /**
      * <pre>
-     * Required. Immutable. The HTTP authorization token used to obtain authorization.
+     * Required. Immutable. The HTTP authorization token used to obtain
+     * authorization.
      * </pre>
      *
      * <code>string http_authorization_token = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.field_behavior) = REQUIRED];</code>
@@ -881,7 +906,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Immutable. The HTTP authorization token used to obtain authorization.
+     * Required. Immutable. The HTTP authorization token used to obtain
+     * authorization.
      * </pre>
      *
      * <code>string http_authorization_token = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.field_behavior) = REQUIRED];</code>
@@ -902,7 +928,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Immutable. The HTTP authorization token used to obtain authorization.
+     * Required. Immutable. The HTTP authorization token used to obtain
+     * authorization.
      * </pre>
      *
      * <code>string http_authorization_token = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.field_behavior) = REQUIRED];</code>
@@ -911,31 +938,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHttpAuthorizationToken(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       httpAuthorizationToken_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. Immutable. The HTTP authorization token used to obtain authorization.
+     * Required. Immutable. The HTTP authorization token used to obtain
+     * authorization.
      * </pre>
      *
      * <code>string http_authorization_token = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.field_behavior) = REQUIRED];</code>
      * @return This builder for chaining.
      */
     public Builder clearHttpAuthorizationToken() {
-      
       httpAuthorizationToken_ = getDefaultInstance().getHttpAuthorizationToken();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. Immutable. The HTTP authorization token used to obtain authorization.
+     * Required. Immutable. The HTTP authorization token used to obtain
+     * authorization.
      * </pre>
      *
      * <code>string http_authorization_token = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.field_behavior) = REQUIRED];</code>
@@ -944,12 +971,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHttpAuthorizationTokenBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       httpAuthorizationToken_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -957,8 +982,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object emailAddress_ = "";
     /**
      * <pre>
-     * Required. Immutable. Email address of a Google Business Profile account or email address of a
-     * manager of the Google Business Profile account.
+     * Required. Immutable. Email address of a Google Business Profile account or
+     * email address of a manager of the Google Business Profile account.
      * </pre>
      *
      * <code>string email_address = 2 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
@@ -978,8 +1003,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Immutable. Email address of a Google Business Profile account or email address of a
-     * manager of the Google Business Profile account.
+     * Required. Immutable. Email address of a Google Business Profile account or
+     * email address of a manager of the Google Business Profile account.
      * </pre>
      *
      * <code>string email_address = 2 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1000,8 +1025,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Immutable. Email address of a Google Business Profile account or email address of a
-     * manager of the Google Business Profile account.
+     * Required. Immutable. Email address of a Google Business Profile account or
+     * email address of a manager of the Google Business Profile account.
      * </pre>
      *
      * <code>string email_address = 2 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1010,33 +1035,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEmailAddress(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       emailAddress_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. Immutable. Email address of a Google Business Profile account or email address of a
-     * manager of the Google Business Profile account.
+     * Required. Immutable. Email address of a Google Business Profile account or
+     * email address of a manager of the Google Business Profile account.
      * </pre>
      *
      * <code>string email_address = 2 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
      * @return This builder for chaining.
      */
     public Builder clearEmailAddress() {
-      
       emailAddress_ = getDefaultInstance().getEmailAddress();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. Immutable. Email address of a Google Business Profile account or email address of a
-     * manager of the Google Business Profile account.
+     * Required. Immutable. Email address of a Google Business Profile account or
+     * email address of a manager of the Google Business Profile account.
      * </pre>
      *
      * <code>string email_address = 2 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1045,12 +1068,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEmailAddressBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       emailAddress_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1114,11 +1135,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBusinessNameFilter(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       businessNameFilter_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1133,8 +1152,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBusinessNameFilter() {
-      
       businessNameFilter_ = getDefaultInstance().getBusinessNameFilter();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1151,21 +1170,19 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBusinessNameFilterBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       businessNameFilter_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
 
     private com.google.protobuf.LazyStringList labelFilters_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureLabelFiltersIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         labelFilters_ = new com.google.protobuf.LazyStringArrayList(labelFilters_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000008;
        }
     }
     /**
@@ -1248,10 +1265,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLabelFilters(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureLabelFiltersIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureLabelFiltersIsMutable();
       labelFilters_.set(index, value);
       onChanged();
       return this;
@@ -1271,10 +1286,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addLabelFilters(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureLabelFiltersIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureLabelFiltersIsMutable();
       labelFilters_.add(value);
       onChanged();
       return this;
@@ -1314,7 +1327,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearLabelFilters() {
       labelFilters_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1333,10 +1346,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addLabelFiltersBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureLabelFiltersIsMutable();
       labelFilters_.add(value);
       onChanged();
@@ -1345,10 +1356,10 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.Internal.LongList listingIdFilters_ = emptyLongList();
     private void ensureListingIdFiltersIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000010) != 0)) {
         listingIdFilters_ = mutableCopy(listingIdFilters_);
-        bitField0_ |= 0x00000002;
-       }
+        bitField0_ |= 0x00000010;
+      }
     }
     /**
      * <pre>
@@ -1364,7 +1375,7 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getListingIdFiltersList() {
-      return ((bitField0_ & 0x00000002) != 0) ?
+      return ((bitField0_ & 0x00000010) != 0) ?
                java.util.Collections.unmodifiableList(listingIdFilters_) : listingIdFilters_;
     }
     /**
@@ -1414,6 +1425,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setListingIdFilters(
         int index, long value) {
+      
       ensureListingIdFiltersIsMutable();
       listingIdFilters_.setLong(index, value);
       onChanged();
@@ -1433,6 +1445,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder addListingIdFilters(long value) {
+      
       ensureListingIdFiltersIsMutable();
       listingIdFilters_.addLong(value);
       onChanged();
@@ -1473,7 +1486,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearListingIdFilters() {
       listingIdFilters_ = emptyLongList();
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1481,8 +1494,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object businessAccountId_ = "";
     /**
      * <pre>
-     * Immutable. The account ID of the managed business whose locations are to be used.
-     * If this field is not set, then all businesses accessible by the user
+     * Immutable. The account ID of the managed business whose locations are to be
+     * used. If this field is not set, then all businesses accessible by the user
      * (specified by the emailAddress) are used.
      * </pre>
      *
@@ -1503,8 +1516,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The account ID of the managed business whose locations are to be used.
-     * If this field is not set, then all businesses accessible by the user
+     * Immutable. The account ID of the managed business whose locations are to be
+     * used. If this field is not set, then all businesses accessible by the user
      * (specified by the emailAddress) are used.
      * </pre>
      *
@@ -1526,8 +1539,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The account ID of the managed business whose locations are to be used.
-     * If this field is not set, then all businesses accessible by the user
+     * Immutable. The account ID of the managed business whose locations are to be
+     * used. If this field is not set, then all businesses accessible by the user
      * (specified by the emailAddress) are used.
      * </pre>
      *
@@ -1537,18 +1550,16 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBusinessAccountId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       businessAccountId_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Immutable. The account ID of the managed business whose locations are to be used.
-     * If this field is not set, then all businesses accessible by the user
+     * Immutable. The account ID of the managed business whose locations are to be
+     * used. If this field is not set, then all businesses accessible by the user
      * (specified by the emailAddress) are used.
      * </pre>
      *
@@ -1556,15 +1567,15 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBusinessAccountId() {
-      
       businessAccountId_ = getDefaultInstance().getBusinessAccountId();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Immutable. The account ID of the managed business whose locations are to be used.
-     * If this field is not set, then all businesses accessible by the user
+     * Immutable. The account ID of the managed business whose locations are to be
+     * used. If this field is not set, then all businesses accessible by the user
      * (specified by the emailAddress) are used.
      * </pre>
      *
@@ -1574,12 +1585,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBusinessAccountIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       businessAccountId_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
