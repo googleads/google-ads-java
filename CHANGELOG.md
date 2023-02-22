@@ -1,3 +1,11 @@
+23.0.0 - 2023-01-22
+-------------------
+- Add support and examples for Google Ads API v13.0.
+- Update to version 3.1.2 of
+  `com.google.cloud:google-cloud-shared-dependencies`.
+- Automate allstar config updates.
+- Only create Sonatype staging URL during publishing when needed.
+
 22.0.0 - 2022-11-03
 -------------------
 - Add support and examples for Google Ads API v12.0.
