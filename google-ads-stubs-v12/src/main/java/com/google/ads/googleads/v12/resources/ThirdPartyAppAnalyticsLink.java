@@ -52,7 +52,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Immutable. The resource name of the third party app analytics link.
@@ -102,12 +103,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SHAREABLE_LINK_ID_FIELD_NUMBER = 3;
-  private volatile java.lang.Object shareableLinkId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object shareableLinkId_ = "";
   /**
    * <pre>
-   * Output only. The shareable link ID that should be provided to the third party when
-   * setting up app analytics. This is able to be regenerated using regenerate
-   * method in the ThirdPartyAppAnalyticsLinkService.
+   * Output only. The shareable link ID that should be provided to the third
+   * party when setting up app analytics. This is able to be regenerated using
+   * regenerate method in the ThirdPartyAppAnalyticsLinkService.
    * </pre>
    *
    * <code>optional string shareable_link_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -119,9 +121,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The shareable link ID that should be provided to the third party when
-   * setting up app analytics. This is able to be regenerated using regenerate
-   * method in the ThirdPartyAppAnalyticsLinkService.
+   * Output only. The shareable link ID that should be provided to the third
+   * party when setting up app analytics. This is able to be regenerated using
+   * regenerate method in the ThirdPartyAppAnalyticsLinkService.
    * </pre>
    *
    * <code>optional string shareable_link_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -142,9 +144,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The shareable link ID that should be provided to the third party when
-   * setting up app analytics. This is able to be regenerated using regenerate
-   * method in the ThirdPartyAppAnalyticsLinkService.
+   * Output only. The shareable link ID that should be provided to the third
+   * party when setting up app analytics. This is able to be regenerated using
+   * regenerate method in the ThirdPartyAppAnalyticsLinkService.
    * </pre>
    *
    * <code>optional string shareable_link_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -372,10 +374,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       shareableLinkId_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -402,16 +403,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.ThirdPartyAppAnalyticsLink buildPartial() {
       com.google.ads.googleads.v12.resources.ThirdPartyAppAnalyticsLink result = new com.google.ads.googleads.v12.resources.ThirdPartyAppAnalyticsLink(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        to_bitField0_ |= 0x00000001;
-      }
-      result.shareableLinkId_ = shareableLinkId_;
-      result.bitField0_ = to_bitField0_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.resources.ThirdPartyAppAnalyticsLink result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.shareableLinkId_ = shareableLinkId_;
+        to_bitField0_ |= 0x00000001;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -460,11 +467,12 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.resources.ThirdPartyAppAnalyticsLink.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasShareableLinkId()) {
-        bitField0_ |= 0x00000001;
         shareableLinkId_ = other.shareableLinkId_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -495,12 +503,12 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 26: {
               shareableLinkId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 26
             default: {
@@ -579,11 +587,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -598,8 +604,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -616,12 +622,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -629,22 +633,22 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object shareableLinkId_ = "";
     /**
      * <pre>
-     * Output only. The shareable link ID that should be provided to the third party when
-     * setting up app analytics. This is able to be regenerated using regenerate
-     * method in the ThirdPartyAppAnalyticsLinkService.
+     * Output only. The shareable link ID that should be provided to the third
+     * party when setting up app analytics. This is able to be regenerated using
+     * regenerate method in the ThirdPartyAppAnalyticsLinkService.
      * </pre>
      *
      * <code>optional string shareable_link_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the shareableLinkId field is set.
      */
     public boolean hasShareableLinkId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
-     * Output only. The shareable link ID that should be provided to the third party when
-     * setting up app analytics. This is able to be regenerated using regenerate
-     * method in the ThirdPartyAppAnalyticsLinkService.
+     * Output only. The shareable link ID that should be provided to the third
+     * party when setting up app analytics. This is able to be regenerated using
+     * regenerate method in the ThirdPartyAppAnalyticsLinkService.
      * </pre>
      *
      * <code>optional string shareable_link_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -664,9 +668,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The shareable link ID that should be provided to the third party when
-     * setting up app analytics. This is able to be regenerated using regenerate
-     * method in the ThirdPartyAppAnalyticsLinkService.
+     * Output only. The shareable link ID that should be provided to the third
+     * party when setting up app analytics. This is able to be regenerated using
+     * regenerate method in the ThirdPartyAppAnalyticsLinkService.
      * </pre>
      *
      * <code>optional string shareable_link_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -687,9 +691,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The shareable link ID that should be provided to the third party when
-     * setting up app analytics. This is able to be regenerated using regenerate
-     * method in the ThirdPartyAppAnalyticsLinkService.
+     * Output only. The shareable link ID that should be provided to the third
+     * party when setting up app analytics. This is able to be regenerated using
+     * regenerate method in the ThirdPartyAppAnalyticsLinkService.
      * </pre>
      *
      * <code>optional string shareable_link_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -698,35 +702,33 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setShareableLinkId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       shareableLinkId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The shareable link ID that should be provided to the third party when
-     * setting up app analytics. This is able to be regenerated using regenerate
-     * method in the ThirdPartyAppAnalyticsLinkService.
+     * Output only. The shareable link ID that should be provided to the third
+     * party when setting up app analytics. This is able to be regenerated using
+     * regenerate method in the ThirdPartyAppAnalyticsLinkService.
      * </pre>
      *
      * <code>optional string shareable_link_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearShareableLinkId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       shareableLinkId_ = getDefaultInstance().getShareableLinkId();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The shareable link ID that should be provided to the third party when
-     * setting up app analytics. This is able to be regenerated using regenerate
-     * method in the ThirdPartyAppAnalyticsLinkService.
+     * Output only. The shareable link ID that should be provided to the third
+     * party when setting up app analytics. This is able to be regenerated using
+     * regenerate method in the ThirdPartyAppAnalyticsLinkService.
      * </pre>
      *
      * <code>optional string shareable_link_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -735,12 +737,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setShareableLinkIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       shareableLinkId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

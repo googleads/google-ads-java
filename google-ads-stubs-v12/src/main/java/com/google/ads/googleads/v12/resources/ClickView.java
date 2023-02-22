@@ -60,7 +60,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Output only. The resource name of the click view.
@@ -110,7 +111,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int GCLID_FIELD_NUMBER = 8;
-  private volatile java.lang.Object gclid_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object gclid_ = "";
   /**
    * <pre>
    * Output only. The Google Click ID.
@@ -171,8 +173,8 @@ private static final long serialVersionUID = 0L;
   private com.google.ads.googleads.v12.common.ClickLocation areaOfInterest_;
   /**
    * <pre>
-   * Output only. The location criteria matching the area of interest associated with the
-   * impression.
+   * Output only. The location criteria matching the area of interest associated
+   * with the impression.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.ClickLocation area_of_interest = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -184,8 +186,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The location criteria matching the area of interest associated with the
-   * impression.
+   * Output only. The location criteria matching the area of interest associated
+   * with the impression.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.ClickLocation area_of_interest = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -197,23 +199,23 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The location criteria matching the area of interest associated with the
-   * impression.
+   * Output only. The location criteria matching the area of interest associated
+   * with the impression.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.ClickLocation area_of_interest = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.common.ClickLocationOrBuilder getAreaOfInterestOrBuilder() {
-    return getAreaOfInterest();
+    return areaOfInterest_ == null ? com.google.ads.googleads.v12.common.ClickLocation.getDefaultInstance() : areaOfInterest_;
   }
 
   public static final int LOCATION_OF_PRESENCE_FIELD_NUMBER = 4;
   private com.google.ads.googleads.v12.common.ClickLocation locationOfPresence_;
   /**
    * <pre>
-   * Output only. The location criteria matching the location of presence associated with the
-   * impression.
+   * Output only. The location criteria matching the location of presence
+   * associated with the impression.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.ClickLocation location_of_presence = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -225,8 +227,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The location criteria matching the location of presence associated with the
-   * impression.
+   * Output only. The location criteria matching the location of presence
+   * associated with the impression.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.ClickLocation location_of_presence = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -238,19 +240,19 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The location criteria matching the location of presence associated with the
-   * impression.
+   * Output only. The location criteria matching the location of presence
+   * associated with the impression.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.ClickLocation location_of_presence = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.common.ClickLocationOrBuilder getLocationOfPresenceOrBuilder() {
-    return getLocationOfPresence();
+    return locationOfPresence_ == null ? com.google.ads.googleads.v12.common.ClickLocation.getDefaultInstance() : locationOfPresence_;
   }
 
   public static final int PAGE_NUMBER_FIELD_NUMBER = 9;
-  private long pageNumber_;
+  private long pageNumber_ = 0L;
   /**
    * <pre>
    * Output only. Page number in search results where the ad was shown.
@@ -277,7 +279,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AD_GROUP_AD_FIELD_NUMBER = 10;
-  private volatile java.lang.Object adGroupAd_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object adGroupAd_ = "";
   /**
    * <pre>
    * Output only. The associated ad.
@@ -335,7 +338,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CAMPAIGN_LOCATION_TARGET_FIELD_NUMBER = 11;
-  private volatile java.lang.Object campaignLocationTarget_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object campaignLocationTarget_ = "";
   /**
    * <pre>
    * Output only. The associated campaign location target, if one exists.
@@ -393,7 +397,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int USER_LIST_FIELD_NUMBER = 12;
-  private volatile java.lang.Object userList_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object userList_ = "";
   /**
    * <pre>
    * Output only. The associated user list, if one exists.
@@ -451,11 +456,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int KEYWORD_FIELD_NUMBER = 13;
-  private volatile java.lang.Object keyword_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object keyword_ = "";
   /**
    * <pre>
-   * Output only. The associated keyword, if one exists and the click corresponds to the
-   * SEARCH channel.
+   * Output only. The associated keyword, if one exists and the click
+   * corresponds to the SEARCH channel.
    * </pre>
    *
    * <code>string keyword = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -476,8 +482,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The associated keyword, if one exists and the click corresponds to the
-   * SEARCH channel.
+   * Output only. The associated keyword, if one exists and the click
+   * corresponds to the SEARCH channel.
    * </pre>
    *
    * <code>string keyword = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -533,7 +539,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.common.KeywordInfoOrBuilder getKeywordInfoOrBuilder() {
-    return getKeywordInfo();
+    return keywordInfo_ == null ? com.google.ads.googleads.v12.common.KeywordInfo.getDefaultInstance() : keywordInfo_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -867,36 +873,27 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       gclid_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
-      if (areaOfInterestBuilder_ == null) {
-        areaOfInterest_ = null;
-      } else {
-        areaOfInterest_ = null;
+      areaOfInterest_ = null;
+      if (areaOfInterestBuilder_ != null) {
+        areaOfInterestBuilder_.dispose();
         areaOfInterestBuilder_ = null;
       }
-      if (locationOfPresenceBuilder_ == null) {
-        locationOfPresence_ = null;
-      } else {
-        locationOfPresence_ = null;
+      locationOfPresence_ = null;
+      if (locationOfPresenceBuilder_ != null) {
+        locationOfPresenceBuilder_.dispose();
         locationOfPresenceBuilder_ = null;
       }
       pageNumber_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000002);
       adGroupAd_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       campaignLocationTarget_ = "";
-      bitField0_ = (bitField0_ & ~0x00000008);
       userList_ = "";
-      bitField0_ = (bitField0_ & ~0x00000010);
       keyword_ = "";
-
-      if (keywordInfoBuilder_ == null) {
-        keywordInfo_ = null;
-      } else {
-        keywordInfo_ = null;
+      keywordInfo_ = null;
+      if (keywordInfoBuilder_ != null) {
+        keywordInfoBuilder_.dispose();
         keywordInfoBuilder_ = null;
       }
       return this;
@@ -925,48 +922,56 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.ClickView buildPartial() {
       com.google.ads.googleads.v12.resources.ClickView result = new com.google.ads.googleads.v12.resources.ClickView(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.resources.ClickView result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.gclid_ = gclid_;
         to_bitField0_ |= 0x00000001;
       }
-      result.gclid_ = gclid_;
-      if (areaOfInterestBuilder_ == null) {
-        result.areaOfInterest_ = areaOfInterest_;
-      } else {
-        result.areaOfInterest_ = areaOfInterestBuilder_.build();
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.areaOfInterest_ = areaOfInterestBuilder_ == null
+            ? areaOfInterest_
+            : areaOfInterestBuilder_.build();
       }
-      if (locationOfPresenceBuilder_ == null) {
-        result.locationOfPresence_ = locationOfPresence_;
-      } else {
-        result.locationOfPresence_ = locationOfPresenceBuilder_.build();
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.locationOfPresence_ = locationOfPresenceBuilder_ == null
+            ? locationOfPresence_
+            : locationOfPresenceBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.pageNumber_ = pageNumber_;
         to_bitField0_ |= 0x00000002;
       }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.adGroupAd_ = adGroupAd_;
         to_bitField0_ |= 0x00000004;
       }
-      result.adGroupAd_ = adGroupAd_;
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.campaignLocationTarget_ = campaignLocationTarget_;
         to_bitField0_ |= 0x00000008;
       }
-      result.campaignLocationTarget_ = campaignLocationTarget_;
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.userList_ = userList_;
         to_bitField0_ |= 0x00000010;
       }
-      result.userList_ = userList_;
-      result.keyword_ = keyword_;
-      if (keywordInfoBuilder_ == null) {
-        result.keywordInfo_ = keywordInfo_;
-      } else {
-        result.keywordInfo_ = keywordInfoBuilder_.build();
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.keyword_ = keyword_;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.keywordInfo_ = keywordInfoBuilder_ == null
+            ? keywordInfo_
+            : keywordInfoBuilder_.build();
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1015,11 +1020,12 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.resources.ClickView.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasGclid()) {
-        bitField0_ |= 0x00000001;
         gclid_ = other.gclid_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasAreaOfInterest()) {
@@ -1032,22 +1038,23 @@ private static final long serialVersionUID = 0L;
         setPageNumber(other.getPageNumber());
       }
       if (other.hasAdGroupAd()) {
-        bitField0_ |= 0x00000004;
         adGroupAd_ = other.adGroupAd_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (other.hasCampaignLocationTarget()) {
-        bitField0_ |= 0x00000008;
         campaignLocationTarget_ = other.campaignLocationTarget_;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (other.hasUserList()) {
-        bitField0_ |= 0x00000010;
         userList_ = other.userList_;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       if (!other.getKeyword().isEmpty()) {
         keyword_ = other.keyword_;
+        bitField0_ |= 0x00000100;
         onChanged();
       }
       if (other.hasKeywordInfo()) {
@@ -1081,58 +1088,58 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 26: {
               input.readMessage(
                   getAreaOfInterestFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 34: {
               input.readMessage(
                   getLocationOfPresenceFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 34
             case 66: {
               gclid_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 66
             case 72: {
               pageNumber_ = input.readInt64();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000010;
               break;
             } // case 72
             case 82: {
               adGroupAd_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000020;
               break;
             } // case 82
             case 90: {
               campaignLocationTarget_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000040;
               break;
             } // case 90
             case 98: {
               userList_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000080;
               break;
             } // case 98
             case 106: {
               keyword_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000100;
               break;
             } // case 106
             case 114: {
               input.readMessage(
                   getKeywordInfoFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000200;
               break;
             } // case 114
             default: {
@@ -1211,11 +1218,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1230,8 +1235,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1248,12 +1253,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1268,7 +1271,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the gclid field is set.
      */
     public boolean hasGclid() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -1322,11 +1325,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setGclid(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       gclid_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1339,8 +1340,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGclid() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       gclid_ = getDefaultInstance().getGclid();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1355,12 +1356,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setGclidBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       gclid_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1370,20 +1369,20 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.ClickLocation, com.google.ads.googleads.v12.common.ClickLocation.Builder, com.google.ads.googleads.v12.common.ClickLocationOrBuilder> areaOfInterestBuilder_;
     /**
      * <pre>
-     * Output only. The location criteria matching the area of interest associated with the
-     * impression.
+     * Output only. The location criteria matching the area of interest associated
+     * with the impression.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.ClickLocation area_of_interest = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the areaOfInterest field is set.
      */
     public boolean hasAreaOfInterest() {
-      return areaOfInterestBuilder_ != null || areaOfInterest_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
-     * Output only. The location criteria matching the area of interest associated with the
-     * impression.
+     * Output only. The location criteria matching the area of interest associated
+     * with the impression.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.ClickLocation area_of_interest = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1398,8 +1397,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The location criteria matching the area of interest associated with the
-     * impression.
+     * Output only. The location criteria matching the area of interest associated
+     * with the impression.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.ClickLocation area_of_interest = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1410,17 +1409,17 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         areaOfInterest_ = value;
-        onChanged();
       } else {
         areaOfInterestBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The location criteria matching the area of interest associated with the
-     * impression.
+     * Output only. The location criteria matching the area of interest associated
+     * with the impression.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.ClickLocation area_of_interest = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1429,72 +1428,72 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.ClickLocation.Builder builderForValue) {
       if (areaOfInterestBuilder_ == null) {
         areaOfInterest_ = builderForValue.build();
-        onChanged();
       } else {
         areaOfInterestBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The location criteria matching the area of interest associated with the
-     * impression.
+     * Output only. The location criteria matching the area of interest associated
+     * with the impression.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.ClickLocation area_of_interest = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeAreaOfInterest(com.google.ads.googleads.v12.common.ClickLocation value) {
       if (areaOfInterestBuilder_ == null) {
-        if (areaOfInterest_ != null) {
-          areaOfInterest_ =
-            com.google.ads.googleads.v12.common.ClickLocation.newBuilder(areaOfInterest_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000004) != 0) &&
+          areaOfInterest_ != null &&
+          areaOfInterest_ != com.google.ads.googleads.v12.common.ClickLocation.getDefaultInstance()) {
+          getAreaOfInterestBuilder().mergeFrom(value);
         } else {
           areaOfInterest_ = value;
         }
-        onChanged();
       } else {
         areaOfInterestBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The location criteria matching the area of interest associated with the
-     * impression.
+     * Output only. The location criteria matching the area of interest associated
+     * with the impression.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.ClickLocation area_of_interest = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearAreaOfInterest() {
-      if (areaOfInterestBuilder_ == null) {
-        areaOfInterest_ = null;
-        onChanged();
-      } else {
-        areaOfInterest_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      areaOfInterest_ = null;
+      if (areaOfInterestBuilder_ != null) {
+        areaOfInterestBuilder_.dispose();
         areaOfInterestBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The location criteria matching the area of interest associated with the
-     * impression.
+     * Output only. The location criteria matching the area of interest associated
+     * with the impression.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.ClickLocation area_of_interest = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v12.common.ClickLocation.Builder getAreaOfInterestBuilder() {
-      
+      bitField0_ |= 0x00000004;
       onChanged();
       return getAreaOfInterestFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Output only. The location criteria matching the area of interest associated with the
-     * impression.
+     * Output only. The location criteria matching the area of interest associated
+     * with the impression.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.ClickLocation area_of_interest = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1509,8 +1508,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The location criteria matching the area of interest associated with the
-     * impression.
+     * Output only. The location criteria matching the area of interest associated
+     * with the impression.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.ClickLocation area_of_interest = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1534,20 +1533,20 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.ClickLocation, com.google.ads.googleads.v12.common.ClickLocation.Builder, com.google.ads.googleads.v12.common.ClickLocationOrBuilder> locationOfPresenceBuilder_;
     /**
      * <pre>
-     * Output only. The location criteria matching the location of presence associated with the
-     * impression.
+     * Output only. The location criteria matching the location of presence
+     * associated with the impression.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.ClickLocation location_of_presence = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the locationOfPresence field is set.
      */
     public boolean hasLocationOfPresence() {
-      return locationOfPresenceBuilder_ != null || locationOfPresence_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
-     * Output only. The location criteria matching the location of presence associated with the
-     * impression.
+     * Output only. The location criteria matching the location of presence
+     * associated with the impression.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.ClickLocation location_of_presence = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1562,8 +1561,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The location criteria matching the location of presence associated with the
-     * impression.
+     * Output only. The location criteria matching the location of presence
+     * associated with the impression.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.ClickLocation location_of_presence = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1574,17 +1573,17 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         locationOfPresence_ = value;
-        onChanged();
       } else {
         locationOfPresenceBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The location criteria matching the location of presence associated with the
-     * impression.
+     * Output only. The location criteria matching the location of presence
+     * associated with the impression.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.ClickLocation location_of_presence = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1593,72 +1592,72 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.ClickLocation.Builder builderForValue) {
       if (locationOfPresenceBuilder_ == null) {
         locationOfPresence_ = builderForValue.build();
-        onChanged();
       } else {
         locationOfPresenceBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The location criteria matching the location of presence associated with the
-     * impression.
+     * Output only. The location criteria matching the location of presence
+     * associated with the impression.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.ClickLocation location_of_presence = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeLocationOfPresence(com.google.ads.googleads.v12.common.ClickLocation value) {
       if (locationOfPresenceBuilder_ == null) {
-        if (locationOfPresence_ != null) {
-          locationOfPresence_ =
-            com.google.ads.googleads.v12.common.ClickLocation.newBuilder(locationOfPresence_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000008) != 0) &&
+          locationOfPresence_ != null &&
+          locationOfPresence_ != com.google.ads.googleads.v12.common.ClickLocation.getDefaultInstance()) {
+          getLocationOfPresenceBuilder().mergeFrom(value);
         } else {
           locationOfPresence_ = value;
         }
-        onChanged();
       } else {
         locationOfPresenceBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The location criteria matching the location of presence associated with the
-     * impression.
+     * Output only. The location criteria matching the location of presence
+     * associated with the impression.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.ClickLocation location_of_presence = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearLocationOfPresence() {
-      if (locationOfPresenceBuilder_ == null) {
-        locationOfPresence_ = null;
-        onChanged();
-      } else {
-        locationOfPresence_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
+      locationOfPresence_ = null;
+      if (locationOfPresenceBuilder_ != null) {
+        locationOfPresenceBuilder_.dispose();
         locationOfPresenceBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The location criteria matching the location of presence associated with the
-     * impression.
+     * Output only. The location criteria matching the location of presence
+     * associated with the impression.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.ClickLocation location_of_presence = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v12.common.ClickLocation.Builder getLocationOfPresenceBuilder() {
-      
+      bitField0_ |= 0x00000008;
       onChanged();
       return getLocationOfPresenceFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Output only. The location criteria matching the location of presence associated with the
-     * impression.
+     * Output only. The location criteria matching the location of presence
+     * associated with the impression.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.ClickLocation location_of_presence = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1673,8 +1672,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The location criteria matching the location of presence associated with the
-     * impression.
+     * Output only. The location criteria matching the location of presence
+     * associated with the impression.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.ClickLocation location_of_presence = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1704,7 +1703,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasPageNumber() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -1728,8 +1727,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPageNumber(long value) {
-      bitField0_ |= 0x00000002;
+      
       pageNumber_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1742,7 +1742,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPageNumber() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000010);
       pageNumber_ = 0L;
       onChanged();
       return this;
@@ -1758,7 +1758,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the adGroupAd field is set.
      */
     public boolean hasAdGroupAd() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -1812,11 +1812,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAdGroupAd(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       adGroupAd_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1829,8 +1827,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAdGroupAd() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       adGroupAd_ = getDefaultInstance().getAdGroupAd();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1845,12 +1843,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAdGroupAdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       adGroupAd_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1865,7 +1861,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the campaignLocationTarget field is set.
      */
     public boolean hasCampaignLocationTarget() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -1919,11 +1915,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaignLocationTarget(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
       campaignLocationTarget_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1936,8 +1930,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCampaignLocationTarget() {
-      bitField0_ = (bitField0_ & ~0x00000008);
       campaignLocationTarget_ = getDefaultInstance().getCampaignLocationTarget();
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -1952,12 +1946,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaignLocationTargetBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       campaignLocationTarget_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1972,7 +1964,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the userList field is set.
      */
     public boolean hasUserList() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
      * <pre>
@@ -2026,11 +2018,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUserList(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
+      if (value == null) { throw new NullPointerException(); }
       userList_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2043,8 +2033,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUserList() {
-      bitField0_ = (bitField0_ & ~0x00000010);
       userList_ = getDefaultInstance().getUserList();
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -2059,12 +2049,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUserListBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000010;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       userList_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2072,8 +2060,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object keyword_ = "";
     /**
      * <pre>
-     * Output only. The associated keyword, if one exists and the click corresponds to the
-     * SEARCH channel.
+     * Output only. The associated keyword, if one exists and the click
+     * corresponds to the SEARCH channel.
      * </pre>
      *
      * <code>string keyword = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -2093,8 +2081,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The associated keyword, if one exists and the click corresponds to the
-     * SEARCH channel.
+     * Output only. The associated keyword, if one exists and the click
+     * corresponds to the SEARCH channel.
      * </pre>
      *
      * <code>string keyword = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -2115,8 +2103,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The associated keyword, if one exists and the click corresponds to the
-     * SEARCH channel.
+     * Output only. The associated keyword, if one exists and the click
+     * corresponds to the SEARCH channel.
      * </pre>
      *
      * <code>string keyword = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -2125,33 +2113,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKeyword(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       keyword_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The associated keyword, if one exists and the click corresponds to the
-     * SEARCH channel.
+     * Output only. The associated keyword, if one exists and the click
+     * corresponds to the SEARCH channel.
      * </pre>
      *
      * <code>string keyword = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearKeyword() {
-      
       keyword_ = getDefaultInstance().getKeyword();
+      bitField0_ = (bitField0_ & ~0x00000100);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The associated keyword, if one exists and the click corresponds to the
-     * SEARCH channel.
+     * Output only. The associated keyword, if one exists and the click
+     * corresponds to the SEARCH channel.
      * </pre>
      *
      * <code>string keyword = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -2160,12 +2146,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKeywordBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       keyword_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2182,7 +2166,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the keywordInfo field is set.
      */
     public boolean hasKeywordInfo() {
-      return keywordInfoBuilder_ != null || keywordInfo_ != null;
+      return ((bitField0_ & 0x00000200) != 0);
     }
     /**
      * <pre>
@@ -2212,11 +2196,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         keywordInfo_ = value;
-        onChanged();
       } else {
         keywordInfoBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000200;
+      onChanged();
       return this;
     }
     /**
@@ -2230,11 +2214,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.KeywordInfo.Builder builderForValue) {
       if (keywordInfoBuilder_ == null) {
         keywordInfo_ = builderForValue.build();
-        onChanged();
       } else {
         keywordInfoBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000200;
+      onChanged();
       return this;
     }
     /**
@@ -2246,17 +2230,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeKeywordInfo(com.google.ads.googleads.v12.common.KeywordInfo value) {
       if (keywordInfoBuilder_ == null) {
-        if (keywordInfo_ != null) {
-          keywordInfo_ =
-            com.google.ads.googleads.v12.common.KeywordInfo.newBuilder(keywordInfo_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000200) != 0) &&
+          keywordInfo_ != null &&
+          keywordInfo_ != com.google.ads.googleads.v12.common.KeywordInfo.getDefaultInstance()) {
+          getKeywordInfoBuilder().mergeFrom(value);
         } else {
           keywordInfo_ = value;
         }
-        onChanged();
       } else {
         keywordInfoBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000200;
+      onChanged();
       return this;
     }
     /**
@@ -2267,14 +2252,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.KeywordInfo keyword_info = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearKeywordInfo() {
-      if (keywordInfoBuilder_ == null) {
-        keywordInfo_ = null;
-        onChanged();
-      } else {
-        keywordInfo_ = null;
+      bitField0_ = (bitField0_ & ~0x00000200);
+      keywordInfo_ = null;
+      if (keywordInfoBuilder_ != null) {
+        keywordInfoBuilder_.dispose();
         keywordInfoBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -2285,7 +2269,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.KeywordInfo keyword_info = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v12.common.KeywordInfo.Builder getKeywordInfoBuilder() {
-      
+      bitField0_ |= 0x00000200;
       onChanged();
       return getKeywordInfoFieldBuilder().getBuilder();
     }

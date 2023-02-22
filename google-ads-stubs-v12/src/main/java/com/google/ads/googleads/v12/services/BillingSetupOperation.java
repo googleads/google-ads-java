@@ -428,6 +428,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (createBuilder_ != null) {
         createBuilder_.clear();
       }
@@ -459,19 +460,23 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.BillingSetupOperation buildPartial() {
       com.google.ads.googleads.v12.services.BillingSetupOperation result = new com.google.ads.googleads.v12.services.BillingSetupOperation(this);
-      if (operationCase_ == 2) {
-        if (createBuilder_ == null) {
-          result.operation_ = operation_;
-        } else {
-          result.operation_ = createBuilder_.build();
-        }
-      }
-      if (operationCase_ == 1) {
-        result.operation_ = operation_;
-      }
-      result.operationCase_ = operationCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.BillingSetupOperation result) {
+      int from_bitField0_ = bitField0_;
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v12.services.BillingSetupOperation result) {
+      result.operationCase_ = operationCase_;
+      result.operation_ = this.operation_;
+      if (operationCase_ == 2 &&
+          createBuilder_ != null) {
+        result.operation_ = createBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -602,6 +607,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v12.resources.BillingSetup, com.google.ads.googleads.v12.resources.BillingSetup.Builder, com.google.ads.googleads.v12.resources.BillingSetupOrBuilder> createBuilder_;
@@ -786,7 +792,7 @@ private static final long serialVersionUID = 0L;
         operation_ = null;
       }
       operationCase_ = 2;
-      onChanged();;
+      onChanged();
       return createBuilder_;
     }
 
@@ -878,10 +884,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRemove(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  operationCase_ = 1;
+      if (value == null) { throw new NullPointerException(); }
+      operationCase_ = 1;
       operation_ = value;
       onChanged();
       return this;
@@ -919,10 +923,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRemoveBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       operationCase_ = 1;
       operation_ = value;
       onChanged();

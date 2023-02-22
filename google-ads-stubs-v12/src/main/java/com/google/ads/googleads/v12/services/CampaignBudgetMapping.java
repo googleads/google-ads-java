@@ -50,7 +50,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EXPERIMENT_CAMPAIGN_FIELD_NUMBER = 1;
-  private volatile java.lang.Object experimentCampaign_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object experimentCampaign_ = "";
   /**
    * <pre>
    * Required. The experiment campaign to graduate.
@@ -96,10 +97,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CAMPAIGN_BUDGET_FIELD_NUMBER = 2;
-  private volatile java.lang.Object campaignBudget_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object campaignBudget_ = "";
   /**
    * <pre>
-   * Required. The budget that should be attached to the graduating experiment campaign.
+   * Required. The budget that should be attached to the graduating experiment
+   * campaign.
    * </pre>
    *
    * <code>string campaign_budget = 2 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
@@ -120,7 +123,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. The budget that should be attached to the graduating experiment campaign.
+   * Required. The budget that should be attached to the graduating experiment
+   * campaign.
    * </pre>
    *
    * <code>string campaign_budget = 2 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
@@ -342,10 +346,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       experimentCampaign_ = "";
-
       campaignBudget_ = "";
-
       return this;
     }
 
@@ -372,10 +375,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.CampaignBudgetMapping buildPartial() {
       com.google.ads.googleads.v12.services.CampaignBudgetMapping result = new com.google.ads.googleads.v12.services.CampaignBudgetMapping(this);
-      result.experimentCampaign_ = experimentCampaign_;
-      result.campaignBudget_ = campaignBudget_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.CampaignBudgetMapping result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.experimentCampaign_ = experimentCampaign_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.campaignBudget_ = campaignBudget_;
+      }
     }
 
     @java.lang.Override
@@ -424,10 +436,12 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.services.CampaignBudgetMapping.getDefaultInstance()) return this;
       if (!other.getExperimentCampaign().isEmpty()) {
         experimentCampaign_ = other.experimentCampaign_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getCampaignBudget().isEmpty()) {
         campaignBudget_ = other.campaignBudget_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -458,12 +472,12 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               experimentCampaign_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               campaignBudget_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             default: {
@@ -481,6 +495,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object experimentCampaign_ = "";
     /**
@@ -535,11 +550,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setExperimentCampaign(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       experimentCampaign_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -552,8 +565,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearExperimentCampaign() {
-      
       experimentCampaign_ = getDefaultInstance().getExperimentCampaign();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -568,12 +581,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setExperimentCampaignBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       experimentCampaign_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -581,7 +592,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object campaignBudget_ = "";
     /**
      * <pre>
-     * Required. The budget that should be attached to the graduating experiment campaign.
+     * Required. The budget that should be attached to the graduating experiment
+     * campaign.
      * </pre>
      *
      * <code>string campaign_budget = 2 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
@@ -601,7 +613,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The budget that should be attached to the graduating experiment campaign.
+     * Required. The budget that should be attached to the graduating experiment
+     * campaign.
      * </pre>
      *
      * <code>string campaign_budget = 2 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
@@ -622,7 +635,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The budget that should be attached to the graduating experiment campaign.
+     * Required. The budget that should be attached to the graduating experiment
+     * campaign.
      * </pre>
      *
      * <code>string campaign_budget = 2 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
@@ -631,31 +645,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaignBudget(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       campaignBudget_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. The budget that should be attached to the graduating experiment campaign.
+     * Required. The budget that should be attached to the graduating experiment
+     * campaign.
      * </pre>
      *
      * <code>string campaign_budget = 2 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearCampaignBudget() {
-      
       campaignBudget_ = getDefaultInstance().getCampaignBudget();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. The budget that should be attached to the graduating experiment campaign.
+     * Required. The budget that should be attached to the graduating experiment
+     * campaign.
      * </pre>
      *
      * <code>string campaign_budget = 2 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
@@ -664,12 +678,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaignBudgetBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       campaignBudget_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

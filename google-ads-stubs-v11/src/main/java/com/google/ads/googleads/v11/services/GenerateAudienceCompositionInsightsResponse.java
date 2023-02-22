@@ -50,6 +50,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SECTIONS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.services.AudienceCompositionSection> sections_;
   /**
    * <pre>
@@ -314,6 +315,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (sectionsBuilder_ == null) {
         sections_ = java.util.Collections.emptyList();
       } else {
@@ -347,7 +349,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.GenerateAudienceCompositionInsightsResponse buildPartial() {
       com.google.ads.googleads.v11.services.GenerateAudienceCompositionInsightsResponse result = new com.google.ads.googleads.v11.services.GenerateAudienceCompositionInsightsResponse(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.services.GenerateAudienceCompositionInsightsResponse result) {
       if (sectionsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           sections_ = java.util.Collections.unmodifiableList(sections_);
@@ -357,8 +365,10 @@ private static final long serialVersionUID = 0L;
       } else {
         result.sections_ = sectionsBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.GenerateAudienceCompositionInsightsResponse result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override

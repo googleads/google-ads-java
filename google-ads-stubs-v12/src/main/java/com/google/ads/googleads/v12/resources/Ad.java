@@ -145,7 +145,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESOURCE_NAME_FIELD_NUMBER = 37;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Immutable. The resource name of the ad.
@@ -195,7 +196,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ID_FIELD_NUMBER = 40;
-  private long id_;
+  private long id_ = 0L;
   /**
    * <pre>
    * Output only. The ID of the ad.
@@ -222,6 +223,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FINAL_URLS_FIELD_NUMBER = 41;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList finalUrls_;
   /**
    * <pre>
@@ -277,6 +279,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FINAL_APP_URLS_FIELD_NUMBER = 35;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.FinalAppUrl> finalAppUrls_;
   /**
    * <pre>
@@ -342,6 +345,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FINAL_MOBILE_URLS_FIELD_NUMBER = 42;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList finalMobileUrls_;
   /**
    * <pre>
@@ -397,7 +401,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TRACKING_URL_TEMPLATE_FIELD_NUMBER = 43;
-  private volatile java.lang.Object trackingUrlTemplate_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object trackingUrlTemplate_ = "";
   /**
    * <pre>
    * The URL template for constructing a tracking URL.
@@ -455,7 +460,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FINAL_URL_SUFFIX_FIELD_NUMBER = 44;
-  private volatile java.lang.Object finalUrlSuffix_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object finalUrlSuffix_ = "";
   /**
    * <pre>
    * The suffix to use when constructing a final URL.
@@ -513,6 +519,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int URL_CUSTOM_PARAMETERS_FIELD_NUMBER = 10;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.CustomParameter> urlCustomParameters_;
   /**
    * <pre>
@@ -583,7 +590,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DISPLAY_URL_FIELD_NUMBER = 45;
-  private volatile java.lang.Object displayUrl_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object displayUrl_ = "";
   /**
    * <pre>
    * The URL that appears in the ad description for some ad formats.
@@ -641,7 +649,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TYPE_FIELD_NUMBER = 5;
-  private int type_;
+  private int type_ = 0;
   /**
    * <pre>
    * Output only. The type of ad.
@@ -662,19 +670,18 @@ private static final long serialVersionUID = 0L;
    * @return The type.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.AdTypeEnum.AdType getType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.AdTypeEnum.AdType result = com.google.ads.googleads.v12.enums.AdTypeEnum.AdType.valueOf(type_);
+    com.google.ads.googleads.v12.enums.AdTypeEnum.AdType result = com.google.ads.googleads.v12.enums.AdTypeEnum.AdType.forNumber(type_);
     return result == null ? com.google.ads.googleads.v12.enums.AdTypeEnum.AdType.UNRECOGNIZED : result;
   }
 
   public static final int ADDED_BY_GOOGLE_ADS_FIELD_NUMBER = 46;
-  private boolean addedByGoogleAds_;
+  private boolean addedByGoogleAds_ = false;
   /**
    * <pre>
-   * Output only. Indicates if this ad was automatically added by Google Ads and not by a
-   * user. For example, this could happen when ads are automatically created as
-   * suggestions for new ads based on knowledge of how existing ads are
-   * performing.
+   * Output only. Indicates if this ad was automatically added by Google Ads and
+   * not by a user. For example, this could happen when ads are automatically
+   * created as suggestions for new ads based on knowledge of how existing ads
+   * are performing.
    * </pre>
    *
    * <code>optional bool added_by_google_ads = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -686,10 +693,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Indicates if this ad was automatically added by Google Ads and not by a
-   * user. For example, this could happen when ads are automatically created as
-   * suggestions for new ads based on knowledge of how existing ads are
-   * performing.
+   * Output only. Indicates if this ad was automatically added by Google Ads and
+   * not by a user. For example, this could happen when ads are automatically
+   * created as suggestions for new ads based on knowledge of how existing ads
+   * are performing.
    * </pre>
    *
    * <code>optional bool added_by_google_ads = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -701,7 +708,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DEVICE_PREFERENCE_FIELD_NUMBER = 20;
-  private int devicePreference_;
+  private int devicePreference_ = 0;
   /**
    * <pre>
    * The device preference for the ad. You can only specify a preference for
@@ -732,12 +739,12 @@ private static final long serialVersionUID = 0L;
    * @return The devicePreference.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.DeviceEnum.Device getDevicePreference() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.DeviceEnum.Device result = com.google.ads.googleads.v12.enums.DeviceEnum.Device.valueOf(devicePreference_);
+    com.google.ads.googleads.v12.enums.DeviceEnum.Device result = com.google.ads.googleads.v12.enums.DeviceEnum.Device.forNumber(devicePreference_);
     return result == null ? com.google.ads.googleads.v12.enums.DeviceEnum.Device.UNRECOGNIZED : result;
   }
 
   public static final int URL_COLLECTIONS_FIELD_NUMBER = 26;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.UrlCollection> urlCollections_;
   /**
    * <pre>
@@ -803,12 +810,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 47;
-  private volatile java.lang.Object name_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
   /**
    * <pre>
-   * Immutable. The name of the ad. This is only used to be able to identify the ad. It
-   * does not need to be unique and does not affect the served ad. The name
-   * field is currently only supported for DisplayUploadAd, ImageAd,
+   * Immutable. The name of the ad. This is only used to be able to identify the
+   * ad. It does not need to be unique and does not affect the served ad. The
+   * name field is currently only supported for DisplayUploadAd, ImageAd,
    * ShoppingComparisonListingAd and VideoAd.
    * </pre>
    *
@@ -821,9 +829,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. The name of the ad. This is only used to be able to identify the ad. It
-   * does not need to be unique and does not affect the served ad. The name
-   * field is currently only supported for DisplayUploadAd, ImageAd,
+   * Immutable. The name of the ad. This is only used to be able to identify the
+   * ad. It does not need to be unique and does not affect the served ad. The
+   * name field is currently only supported for DisplayUploadAd, ImageAd,
    * ShoppingComparisonListingAd and VideoAd.
    * </pre>
    *
@@ -845,9 +853,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. The name of the ad. This is only used to be able to identify the ad. It
-   * does not need to be unique and does not affect the served ad. The name
-   * field is currently only supported for DisplayUploadAd, ImageAd,
+   * Immutable. The name of the ad. This is only used to be able to identify the
+   * ad. It does not need to be unique and does not affect the served ad. The
+   * name field is currently only supported for DisplayUploadAd, ImageAd,
    * ShoppingComparisonListingAd and VideoAd.
    * </pre>
    *
@@ -870,11 +878,11 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SYSTEM_MANAGED_RESOURCE_SOURCE_FIELD_NUMBER = 27;
-  private int systemManagedResourceSource_;
+  private int systemManagedResourceSource_ = 0;
   /**
    * <pre>
-   * Output only. If this ad is system managed, then this field will indicate the source.
-   * This field is read-only.
+   * Output only. If this ad is system managed, then this field will indicate
+   * the source. This field is read-only.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -885,16 +893,15 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. If this ad is system managed, then this field will indicate the source.
-   * This field is read-only.
+   * Output only. If this ad is system managed, then this field will indicate
+   * the source. This field is read-only.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The systemManagedResourceSource.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource getSystemManagedResourceSource() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource result = com.google.ads.googleads.v12.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource.valueOf(systemManagedResourceSource_);
+    com.google.ads.googleads.v12.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource result = com.google.ads.googleads.v12.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource.forNumber(systemManagedResourceSource_);
     return result == null ? com.google.ads.googleads.v12.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource.UNRECOGNIZED : result;
   }
 
@@ -2641,51 +2648,43 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      bitField1_ = 0;
       resourceName_ = "";
-
       id_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       finalUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       if (finalAppUrlsBuilder_ == null) {
         finalAppUrls_ = java.util.Collections.emptyList();
       } else {
         finalAppUrls_ = null;
         finalAppUrlsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000004);
-      finalMobileUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       bitField0_ = (bitField0_ & ~0x00000008);
-      trackingUrlTemplate_ = "";
+      finalMobileUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       bitField0_ = (bitField0_ & ~0x00000010);
+      trackingUrlTemplate_ = "";
       finalUrlSuffix_ = "";
-      bitField0_ = (bitField0_ & ~0x00000020);
       if (urlCustomParametersBuilder_ == null) {
         urlCustomParameters_ = java.util.Collections.emptyList();
       } else {
         urlCustomParameters_ = null;
         urlCustomParametersBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000040);
-      displayUrl_ = "";
       bitField0_ = (bitField0_ & ~0x00000080);
+      displayUrl_ = "";
       type_ = 0;
-
       addedByGoogleAds_ = false;
-      bitField0_ = (bitField0_ & ~0x00000100);
       devicePreference_ = 0;
-
       if (urlCollectionsBuilder_ == null) {
         urlCollections_ = java.util.Collections.emptyList();
       } else {
         urlCollections_ = null;
         urlCollectionsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00001000);
       name_ = "";
-      bitField0_ = (bitField0_ & ~0x00000400);
       systemManagedResourceSource_ = 0;
-
       if (textAdBuilder_ != null) {
         textAdBuilder_.clear();
       }
@@ -2783,238 +2782,195 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.Ad buildPartial() {
       com.google.ads.googleads.v12.resources.Ad result = new com.google.ads.googleads.v12.resources.Ad(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.id_ = id_;
-        to_bitField0_ |= 0x00000001;
-      }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      if (bitField1_ != 0) { buildPartial1(result); }
+      buildPartialOneofs(result);
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.resources.Ad result) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         finalUrls_ = finalUrls_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
       }
       result.finalUrls_ = finalUrls_;
       if (finalAppUrlsBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           finalAppUrls_ = java.util.Collections.unmodifiableList(finalAppUrls_);
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.finalAppUrls_ = finalAppUrls_;
       } else {
         result.finalAppUrls_ = finalAppUrlsBuilder_.build();
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         finalMobileUrls_ = finalMobileUrls_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
       }
       result.finalMobileUrls_ = finalMobileUrls_;
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        to_bitField0_ |= 0x00000002;
-      }
-      result.trackingUrlTemplate_ = trackingUrlTemplate_;
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        to_bitField0_ |= 0x00000004;
-      }
-      result.finalUrlSuffix_ = finalUrlSuffix_;
       if (urlCustomParametersBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0)) {
+        if (((bitField0_ & 0x00000080) != 0)) {
           urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000080);
         }
         result.urlCustomParameters_ = urlCustomParameters_;
       } else {
         result.urlCustomParameters_ = urlCustomParametersBuilder_.build();
       }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
-        to_bitField0_ |= 0x00000008;
-      }
-      result.displayUrl_ = displayUrl_;
-      result.type_ = type_;
-      if (((from_bitField0_ & 0x00000100) != 0)) {
-        result.addedByGoogleAds_ = addedByGoogleAds_;
-        to_bitField0_ |= 0x00000010;
-      }
-      result.devicePreference_ = devicePreference_;
       if (urlCollectionsBuilder_ == null) {
-        if (((bitField0_ & 0x00000200) != 0)) {
+        if (((bitField0_ & 0x00001000) != 0)) {
           urlCollections_ = java.util.Collections.unmodifiableList(urlCollections_);
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ = (bitField0_ & ~0x00001000);
         }
         result.urlCollections_ = urlCollections_;
       } else {
         result.urlCollections_ = urlCollectionsBuilder_.build();
       }
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.resources.Ad result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.id_ = id_;
+        to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.trackingUrlTemplate_ = trackingUrlTemplate_;
+        to_bitField0_ |= 0x00000002;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.finalUrlSuffix_ = finalUrlSuffix_;
+        to_bitField0_ |= 0x00000004;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.displayUrl_ = displayUrl_;
+        to_bitField0_ |= 0x00000008;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.type_ = type_;
+      }
       if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.addedByGoogleAds_ = addedByGoogleAds_;
+        to_bitField0_ |= 0x00000010;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.devicePreference_ = devicePreference_;
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.name_ = name_;
         to_bitField0_ |= 0x00000020;
       }
-      result.name_ = name_;
-      result.systemManagedResourceSource_ = systemManagedResourceSource_;
-      if (adDataCase_ == 6) {
-        if (textAdBuilder_ == null) {
-          result.adData_ = adData_;
-        } else {
-          result.adData_ = textAdBuilder_.build();
-        }
+      if (((from_bitField0_ & 0x00004000) != 0)) {
+        result.systemManagedResourceSource_ = systemManagedResourceSource_;
       }
-      if (adDataCase_ == 7) {
-        if (expandedTextAdBuilder_ == null) {
-          result.adData_ = adData_;
-        } else {
-          result.adData_ = expandedTextAdBuilder_.build();
-        }
-      }
-      if (adDataCase_ == 49) {
-        if (callAdBuilder_ == null) {
-          result.adData_ = adData_;
-        } else {
-          result.adData_ = callAdBuilder_.build();
-        }
-      }
-      if (adDataCase_ == 14) {
-        if (expandedDynamicSearchAdBuilder_ == null) {
-          result.adData_ = adData_;
-        } else {
-          result.adData_ = expandedDynamicSearchAdBuilder_.build();
-        }
-      }
-      if (adDataCase_ == 15) {
-        if (hotelAdBuilder_ == null) {
-          result.adData_ = adData_;
-        } else {
-          result.adData_ = hotelAdBuilder_.build();
-        }
-      }
-      if (adDataCase_ == 17) {
-        if (shoppingSmartAdBuilder_ == null) {
-          result.adData_ = adData_;
-        } else {
-          result.adData_ = shoppingSmartAdBuilder_.build();
-        }
-      }
-      if (adDataCase_ == 18) {
-        if (shoppingProductAdBuilder_ == null) {
-          result.adData_ = adData_;
-        } else {
-          result.adData_ = shoppingProductAdBuilder_.build();
-        }
-      }
-      if (adDataCase_ == 22) {
-        if (imageAdBuilder_ == null) {
-          result.adData_ = adData_;
-        } else {
-          result.adData_ = imageAdBuilder_.build();
-        }
-      }
-      if (adDataCase_ == 24) {
-        if (videoAdBuilder_ == null) {
-          result.adData_ = adData_;
-        } else {
-          result.adData_ = videoAdBuilder_.build();
-        }
-      }
-      if (adDataCase_ == 39) {
-        if (videoResponsiveAdBuilder_ == null) {
-          result.adData_ = adData_;
-        } else {
-          result.adData_ = videoResponsiveAdBuilder_.build();
-        }
-      }
-      if (adDataCase_ == 25) {
-        if (responsiveSearchAdBuilder_ == null) {
-          result.adData_ = adData_;
-        } else {
-          result.adData_ = responsiveSearchAdBuilder_.build();
-        }
-      }
-      if (adDataCase_ == 28) {
-        if (legacyResponsiveDisplayAdBuilder_ == null) {
-          result.adData_ = adData_;
-        } else {
-          result.adData_ = legacyResponsiveDisplayAdBuilder_.build();
-        }
-      }
-      if (adDataCase_ == 29) {
-        if (appAdBuilder_ == null) {
-          result.adData_ = adData_;
-        } else {
-          result.adData_ = appAdBuilder_.build();
-        }
-      }
-      if (adDataCase_ == 30) {
-        if (legacyAppInstallAdBuilder_ == null) {
-          result.adData_ = adData_;
-        } else {
-          result.adData_ = legacyAppInstallAdBuilder_.build();
-        }
-      }
-      if (adDataCase_ == 31) {
-        if (responsiveDisplayAdBuilder_ == null) {
-          result.adData_ = adData_;
-        } else {
-          result.adData_ = responsiveDisplayAdBuilder_.build();
-        }
-      }
-      if (adDataCase_ == 32) {
-        if (localAdBuilder_ == null) {
-          result.adData_ = adData_;
-        } else {
-          result.adData_ = localAdBuilder_.build();
-        }
-      }
-      if (adDataCase_ == 33) {
-        if (displayUploadAdBuilder_ == null) {
-          result.adData_ = adData_;
-        } else {
-          result.adData_ = displayUploadAdBuilder_.build();
-        }
-      }
-      if (adDataCase_ == 34) {
-        if (appEngagementAdBuilder_ == null) {
-          result.adData_ = adData_;
-        } else {
-          result.adData_ = appEngagementAdBuilder_.build();
-        }
-      }
-      if (adDataCase_ == 36) {
-        if (shoppingComparisonListingAdBuilder_ == null) {
-          result.adData_ = adData_;
-        } else {
-          result.adData_ = shoppingComparisonListingAdBuilder_.build();
-        }
-      }
-      if (adDataCase_ == 48) {
-        if (smartCampaignAdBuilder_ == null) {
-          result.adData_ = adData_;
-        } else {
-          result.adData_ = smartCampaignAdBuilder_.build();
-        }
-      }
-      if (adDataCase_ == 50) {
-        if (appPreRegistrationAdBuilder_ == null) {
-          result.adData_ = adData_;
-        } else {
-          result.adData_ = appPreRegistrationAdBuilder_.build();
-        }
-      }
-      if (adDataCase_ == 51) {
-        if (discoveryMultiAssetAdBuilder_ == null) {
-          result.adData_ = adData_;
-        } else {
-          result.adData_ = discoveryMultiAssetAdBuilder_.build();
-        }
-      }
-      if (adDataCase_ == 52) {
-        if (discoveryCarouselAdBuilder_ == null) {
-          result.adData_ = adData_;
-        } else {
-          result.adData_ = discoveryCarouselAdBuilder_.build();
-        }
-      }
-      result.bitField0_ = to_bitField0_;
+      result.bitField0_ |= to_bitField0_;
+    }
+
+    private void buildPartial1(com.google.ads.googleads.v12.resources.Ad result) {
+      int from_bitField1_ = bitField1_;
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v12.resources.Ad result) {
       result.adDataCase_ = adDataCase_;
-      onBuilt();
-      return result;
+      result.adData_ = this.adData_;
+      if (adDataCase_ == 6 &&
+          textAdBuilder_ != null) {
+        result.adData_ = textAdBuilder_.build();
+      }
+      if (adDataCase_ == 7 &&
+          expandedTextAdBuilder_ != null) {
+        result.adData_ = expandedTextAdBuilder_.build();
+      }
+      if (adDataCase_ == 49 &&
+          callAdBuilder_ != null) {
+        result.adData_ = callAdBuilder_.build();
+      }
+      if (adDataCase_ == 14 &&
+          expandedDynamicSearchAdBuilder_ != null) {
+        result.adData_ = expandedDynamicSearchAdBuilder_.build();
+      }
+      if (adDataCase_ == 15 &&
+          hotelAdBuilder_ != null) {
+        result.adData_ = hotelAdBuilder_.build();
+      }
+      if (adDataCase_ == 17 &&
+          shoppingSmartAdBuilder_ != null) {
+        result.adData_ = shoppingSmartAdBuilder_.build();
+      }
+      if (adDataCase_ == 18 &&
+          shoppingProductAdBuilder_ != null) {
+        result.adData_ = shoppingProductAdBuilder_.build();
+      }
+      if (adDataCase_ == 22 &&
+          imageAdBuilder_ != null) {
+        result.adData_ = imageAdBuilder_.build();
+      }
+      if (adDataCase_ == 24 &&
+          videoAdBuilder_ != null) {
+        result.adData_ = videoAdBuilder_.build();
+      }
+      if (adDataCase_ == 39 &&
+          videoResponsiveAdBuilder_ != null) {
+        result.adData_ = videoResponsiveAdBuilder_.build();
+      }
+      if (adDataCase_ == 25 &&
+          responsiveSearchAdBuilder_ != null) {
+        result.adData_ = responsiveSearchAdBuilder_.build();
+      }
+      if (adDataCase_ == 28 &&
+          legacyResponsiveDisplayAdBuilder_ != null) {
+        result.adData_ = legacyResponsiveDisplayAdBuilder_.build();
+      }
+      if (adDataCase_ == 29 &&
+          appAdBuilder_ != null) {
+        result.adData_ = appAdBuilder_.build();
+      }
+      if (adDataCase_ == 30 &&
+          legacyAppInstallAdBuilder_ != null) {
+        result.adData_ = legacyAppInstallAdBuilder_.build();
+      }
+      if (adDataCase_ == 31 &&
+          responsiveDisplayAdBuilder_ != null) {
+        result.adData_ = responsiveDisplayAdBuilder_.build();
+      }
+      if (adDataCase_ == 32 &&
+          localAdBuilder_ != null) {
+        result.adData_ = localAdBuilder_.build();
+      }
+      if (adDataCase_ == 33 &&
+          displayUploadAdBuilder_ != null) {
+        result.adData_ = displayUploadAdBuilder_.build();
+      }
+      if (adDataCase_ == 34 &&
+          appEngagementAdBuilder_ != null) {
+        result.adData_ = appEngagementAdBuilder_.build();
+      }
+      if (adDataCase_ == 36 &&
+          shoppingComparisonListingAdBuilder_ != null) {
+        result.adData_ = shoppingComparisonListingAdBuilder_.build();
+      }
+      if (adDataCase_ == 48 &&
+          smartCampaignAdBuilder_ != null) {
+        result.adData_ = smartCampaignAdBuilder_.build();
+      }
+      if (adDataCase_ == 50 &&
+          appPreRegistrationAdBuilder_ != null) {
+        result.adData_ = appPreRegistrationAdBuilder_.build();
+      }
+      if (adDataCase_ == 51 &&
+          discoveryMultiAssetAdBuilder_ != null) {
+        result.adData_ = discoveryMultiAssetAdBuilder_.build();
+      }
+      if (adDataCase_ == 52 &&
+          discoveryCarouselAdBuilder_ != null) {
+        result.adData_ = discoveryCarouselAdBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -3063,6 +3019,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.resources.Ad.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasId()) {
@@ -3071,7 +3028,7 @@ private static final long serialVersionUID = 0L;
       if (!other.finalUrls_.isEmpty()) {
         if (finalUrls_.isEmpty()) {
           finalUrls_ = other.finalUrls_;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
           ensureFinalUrlsIsMutable();
           finalUrls_.addAll(other.finalUrls_);
@@ -3082,7 +3039,7 @@ private static final long serialVersionUID = 0L;
         if (!other.finalAppUrls_.isEmpty()) {
           if (finalAppUrls_.isEmpty()) {
             finalAppUrls_ = other.finalAppUrls_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureFinalAppUrlsIsMutable();
             finalAppUrls_.addAll(other.finalAppUrls_);
@@ -3095,7 +3052,7 @@ private static final long serialVersionUID = 0L;
             finalAppUrlsBuilder_.dispose();
             finalAppUrlsBuilder_ = null;
             finalAppUrls_ = other.finalAppUrls_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
             finalAppUrlsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getFinalAppUrlsFieldBuilder() : null;
@@ -3107,7 +3064,7 @@ private static final long serialVersionUID = 0L;
       if (!other.finalMobileUrls_.isEmpty()) {
         if (finalMobileUrls_.isEmpty()) {
           finalMobileUrls_ = other.finalMobileUrls_;
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000010);
         } else {
           ensureFinalMobileUrlsIsMutable();
           finalMobileUrls_.addAll(other.finalMobileUrls_);
@@ -3115,20 +3072,20 @@ private static final long serialVersionUID = 0L;
         onChanged();
       }
       if (other.hasTrackingUrlTemplate()) {
-        bitField0_ |= 0x00000010;
         trackingUrlTemplate_ = other.trackingUrlTemplate_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (other.hasFinalUrlSuffix()) {
-        bitField0_ |= 0x00000020;
         finalUrlSuffix_ = other.finalUrlSuffix_;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (urlCustomParametersBuilder_ == null) {
         if (!other.urlCustomParameters_.isEmpty()) {
           if (urlCustomParameters_.isEmpty()) {
             urlCustomParameters_ = other.urlCustomParameters_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000080);
           } else {
             ensureUrlCustomParametersIsMutable();
             urlCustomParameters_.addAll(other.urlCustomParameters_);
@@ -3141,7 +3098,7 @@ private static final long serialVersionUID = 0L;
             urlCustomParametersBuilder_.dispose();
             urlCustomParametersBuilder_ = null;
             urlCustomParameters_ = other.urlCustomParameters_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000080);
             urlCustomParametersBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getUrlCustomParametersFieldBuilder() : null;
@@ -3151,8 +3108,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       if (other.hasDisplayUrl()) {
-        bitField0_ |= 0x00000080;
         displayUrl_ = other.displayUrl_;
+        bitField0_ |= 0x00000100;
         onChanged();
       }
       if (other.type_ != 0) {
@@ -3168,7 +3125,7 @@ private static final long serialVersionUID = 0L;
         if (!other.urlCollections_.isEmpty()) {
           if (urlCollections_.isEmpty()) {
             urlCollections_ = other.urlCollections_;
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00001000);
           } else {
             ensureUrlCollectionsIsMutable();
             urlCollections_.addAll(other.urlCollections_);
@@ -3181,7 +3138,7 @@ private static final long serialVersionUID = 0L;
             urlCollectionsBuilder_.dispose();
             urlCollectionsBuilder_ = null;
             urlCollections_ = other.urlCollections_;
-            bitField0_ = (bitField0_ & ~0x00000200);
+            bitField0_ = (bitField0_ & ~0x00001000);
             urlCollectionsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getUrlCollectionsFieldBuilder() : null;
@@ -3191,8 +3148,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       if (other.hasName()) {
-        bitField0_ |= 0x00000400;
         name_ = other.name_;
+        bitField0_ |= 0x00002000;
         onChanged();
       }
       if (other.systemManagedResourceSource_ != 0) {
@@ -3323,7 +3280,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 40: {
               type_ = input.readEnum();
-
+              bitField0_ |= 0x00000200;
               break;
             } // case 40
             case 50: {
@@ -3383,7 +3340,7 @@ private static final long serialVersionUID = 0L;
             } // case 146
             case 160: {
               devicePreference_ = input.readEnum();
-
+              bitField0_ |= 0x00000800;
               break;
             } // case 160
             case 178: {
@@ -3422,7 +3379,7 @@ private static final long serialVersionUID = 0L;
             } // case 210
             case 216: {
               systemManagedResourceSource_ = input.readEnum();
-
+              bitField0_ |= 0x00004000;
               break;
             } // case 216
             case 226: {
@@ -3496,7 +3453,7 @@ private static final long serialVersionUID = 0L;
             } // case 290
             case 298: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 298
             case 314: {
@@ -3508,7 +3465,7 @@ private static final long serialVersionUID = 0L;
             } // case 314
             case 320: {
               id_ = input.readInt64();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 320
             case 330: {
@@ -3525,27 +3482,27 @@ private static final long serialVersionUID = 0L;
             } // case 338
             case 346: {
               trackingUrlTemplate_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000020;
               break;
             } // case 346
             case 354: {
               finalUrlSuffix_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000040;
               break;
             } // case 354
             case 362: {
               displayUrl_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000100;
               break;
             } // case 362
             case 368: {
               addedByGoogleAds_ = input.readBool();
-              bitField0_ |= 0x00000100;
+              bitField0_ |= 0x00000400;
               break;
             } // case 368
             case 378: {
               name_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000400;
+              bitField0_ |= 0x00002000;
               break;
             } // case 378
             case 386: {
@@ -3614,6 +3571,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private int bitField0_;
+    private int bitField1_;
 
     private java.lang.Object resourceName_ = "";
     /**
@@ -3674,11 +3632,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -3693,8 +3649,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -3711,12 +3667,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -3732,7 +3686,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -3756,8 +3710,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      bitField0_ |= 0x00000001;
+      
       id_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -3770,7 +3725,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       id_ = 0L;
       onChanged();
       return this;
@@ -3778,9 +3733,9 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.LazyStringList finalUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureFinalUrlsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         finalUrls_ = new com.google.protobuf.LazyStringArrayList(finalUrls_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
        }
     }
     /**
@@ -3848,10 +3803,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFinalUrls(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFinalUrlsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureFinalUrlsIsMutable();
       finalUrls_.set(index, value);
       onChanged();
       return this;
@@ -3868,10 +3821,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addFinalUrls(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFinalUrlsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureFinalUrlsIsMutable();
       finalUrls_.add(value);
       onChanged();
       return this;
@@ -3905,7 +3856,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearFinalUrls() {
       finalUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -3921,10 +3872,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addFinalUrlsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureFinalUrlsIsMutable();
       finalUrls_.add(value);
       onChanged();
@@ -3934,9 +3883,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v12.common.FinalAppUrl> finalAppUrls_ =
       java.util.Collections.emptyList();
     private void ensureFinalAppUrlsIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         finalAppUrls_ = new java.util.ArrayList<com.google.ads.googleads.v12.common.FinalAppUrl>(finalAppUrls_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
        }
     }
 
@@ -4141,7 +4090,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearFinalAppUrls() {
       if (finalAppUrlsBuilder_ == null) {
         finalAppUrls_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
       } else {
         finalAppUrlsBuilder_.clear();
@@ -4253,7 +4202,7 @@ private static final long serialVersionUID = 0L;
         finalAppUrlsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v12.common.FinalAppUrl, com.google.ads.googleads.v12.common.FinalAppUrl.Builder, com.google.ads.googleads.v12.common.FinalAppUrlOrBuilder>(
                 finalAppUrls_,
-                ((bitField0_ & 0x00000004) != 0),
+                ((bitField0_ & 0x00000008) != 0),
                 getParentForChildren(),
                 isClean());
         finalAppUrls_ = null;
@@ -4263,9 +4212,9 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.LazyStringList finalMobileUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureFinalMobileUrlsIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
+      if (!((bitField0_ & 0x00000010) != 0)) {
         finalMobileUrls_ = new com.google.protobuf.LazyStringArrayList(finalMobileUrls_);
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
        }
     }
     /**
@@ -4333,10 +4282,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFinalMobileUrls(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFinalMobileUrlsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureFinalMobileUrlsIsMutable();
       finalMobileUrls_.set(index, value);
       onChanged();
       return this;
@@ -4353,10 +4300,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addFinalMobileUrls(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFinalMobileUrlsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureFinalMobileUrlsIsMutable();
       finalMobileUrls_.add(value);
       onChanged();
       return this;
@@ -4390,7 +4335,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearFinalMobileUrls() {
       finalMobileUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -4406,10 +4351,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addFinalMobileUrlsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureFinalMobileUrlsIsMutable();
       finalMobileUrls_.add(value);
       onChanged();
@@ -4426,7 +4369,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the trackingUrlTemplate field is set.
      */
     public boolean hasTrackingUrlTemplate() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -4480,11 +4423,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTrackingUrlTemplate(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
+      if (value == null) { throw new NullPointerException(); }
       trackingUrlTemplate_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -4497,8 +4438,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTrackingUrlTemplate() {
-      bitField0_ = (bitField0_ & ~0x00000010);
       trackingUrlTemplate_ = getDefaultInstance().getTrackingUrlTemplate();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -4513,12 +4454,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTrackingUrlTemplateBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000010;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       trackingUrlTemplate_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -4533,7 +4472,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the finalUrlSuffix field is set.
      */
     public boolean hasFinalUrlSuffix() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -4587,11 +4526,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFinalUrlSuffix(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000020;
+      if (value == null) { throw new NullPointerException(); }
       finalUrlSuffix_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -4604,8 +4541,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFinalUrlSuffix() {
-      bitField0_ = (bitField0_ & ~0x00000020);
       finalUrlSuffix_ = getDefaultInstance().getFinalUrlSuffix();
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -4620,12 +4557,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFinalUrlSuffixBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000020;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       finalUrlSuffix_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -4633,9 +4568,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v12.common.CustomParameter> urlCustomParameters_ =
       java.util.Collections.emptyList();
     private void ensureUrlCustomParametersIsMutable() {
-      if (!((bitField0_ & 0x00000040) != 0)) {
+      if (!((bitField0_ & 0x00000080) != 0)) {
         urlCustomParameters_ = new java.util.ArrayList<com.google.ads.googleads.v12.common.CustomParameter>(urlCustomParameters_);
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000080;
        }
     }
 
@@ -4851,7 +4786,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearUrlCustomParameters() {
       if (urlCustomParametersBuilder_ == null) {
         urlCustomParameters_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
       } else {
         urlCustomParametersBuilder_.clear();
@@ -4970,7 +4905,7 @@ private static final long serialVersionUID = 0L;
         urlCustomParametersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v12.common.CustomParameter, com.google.ads.googleads.v12.common.CustomParameter.Builder, com.google.ads.googleads.v12.common.CustomParameterOrBuilder>(
                 urlCustomParameters_,
-                ((bitField0_ & 0x00000040) != 0),
+                ((bitField0_ & 0x00000080) != 0),
                 getParentForChildren(),
                 isClean());
         urlCustomParameters_ = null;
@@ -4988,7 +4923,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the displayUrl field is set.
      */
     public boolean hasDisplayUrl() {
-      return ((bitField0_ & 0x00000080) != 0);
+      return ((bitField0_ & 0x00000100) != 0);
     }
     /**
      * <pre>
@@ -5042,11 +4977,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDisplayUrl(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000080;
+      if (value == null) { throw new NullPointerException(); }
       displayUrl_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -5059,8 +4992,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayUrl() {
-      bitField0_ = (bitField0_ & ~0x00000080);
       displayUrl_ = getDefaultInstance().getDisplayUrl();
+      bitField0_ = (bitField0_ & ~0x00000100);
       onChanged();
       return this;
     }
@@ -5075,12 +5008,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDisplayUrlBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000080;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       displayUrl_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -5107,8 +5038,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
-      
       type_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -5122,8 +5053,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.AdTypeEnum.AdType getType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.AdTypeEnum.AdType result = com.google.ads.googleads.v12.enums.AdTypeEnum.AdType.valueOf(type_);
+      com.google.ads.googleads.v12.enums.AdTypeEnum.AdType result = com.google.ads.googleads.v12.enums.AdTypeEnum.AdType.forNumber(type_);
       return result == null ? com.google.ads.googleads.v12.enums.AdTypeEnum.AdType.UNRECOGNIZED : result;
     }
     /**
@@ -5139,7 +5069,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000200;
       type_ = value.getNumber();
       onChanged();
       return this;
@@ -5153,7 +5083,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000200);
       type_ = 0;
       onChanged();
       return this;
@@ -5162,10 +5092,10 @@ private static final long serialVersionUID = 0L;
     private boolean addedByGoogleAds_ ;
     /**
      * <pre>
-     * Output only. Indicates if this ad was automatically added by Google Ads and not by a
-     * user. For example, this could happen when ads are automatically created as
-     * suggestions for new ads based on knowledge of how existing ads are
-     * performing.
+     * Output only. Indicates if this ad was automatically added by Google Ads and
+     * not by a user. For example, this could happen when ads are automatically
+     * created as suggestions for new ads based on knowledge of how existing ads
+     * are performing.
      * </pre>
      *
      * <code>optional bool added_by_google_ads = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5173,14 +5103,14 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAddedByGoogleAds() {
-      return ((bitField0_ & 0x00000100) != 0);
+      return ((bitField0_ & 0x00000400) != 0);
     }
     /**
      * <pre>
-     * Output only. Indicates if this ad was automatically added by Google Ads and not by a
-     * user. For example, this could happen when ads are automatically created as
-     * suggestions for new ads based on knowledge of how existing ads are
-     * performing.
+     * Output only. Indicates if this ad was automatically added by Google Ads and
+     * not by a user. For example, this could happen when ads are automatically
+     * created as suggestions for new ads based on knowledge of how existing ads
+     * are performing.
      * </pre>
      *
      * <code>optional bool added_by_google_ads = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5192,10 +5122,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Indicates if this ad was automatically added by Google Ads and not by a
-     * user. For example, this could happen when ads are automatically created as
-     * suggestions for new ads based on knowledge of how existing ads are
-     * performing.
+     * Output only. Indicates if this ad was automatically added by Google Ads and
+     * not by a user. For example, this could happen when ads are automatically
+     * created as suggestions for new ads based on knowledge of how existing ads
+     * are performing.
      * </pre>
      *
      * <code>optional bool added_by_google_ads = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5203,24 +5133,25 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAddedByGoogleAds(boolean value) {
-      bitField0_ |= 0x00000100;
+      
       addedByGoogleAds_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Indicates if this ad was automatically added by Google Ads and not by a
-     * user. For example, this could happen when ads are automatically created as
-     * suggestions for new ads based on knowledge of how existing ads are
-     * performing.
+     * Output only. Indicates if this ad was automatically added by Google Ads and
+     * not by a user. For example, this could happen when ads are automatically
+     * created as suggestions for new ads based on knowledge of how existing ads
+     * are performing.
      * </pre>
      *
      * <code>optional bool added_by_google_ads = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearAddedByGoogleAds() {
-      bitField0_ = (bitField0_ & ~0x00000100);
+      bitField0_ = (bitField0_ & ~0x00000400);
       addedByGoogleAds_ = false;
       onChanged();
       return this;
@@ -5258,8 +5189,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDevicePreferenceValue(int value) {
-      
       devicePreference_ = value;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -5278,8 +5209,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.DeviceEnum.Device getDevicePreference() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.DeviceEnum.Device result = com.google.ads.googleads.v12.enums.DeviceEnum.Device.valueOf(devicePreference_);
+      com.google.ads.googleads.v12.enums.DeviceEnum.Device result = com.google.ads.googleads.v12.enums.DeviceEnum.Device.forNumber(devicePreference_);
       return result == null ? com.google.ads.googleads.v12.enums.DeviceEnum.Device.UNRECOGNIZED : result;
     }
     /**
@@ -5300,7 +5230,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000800;
       devicePreference_ = value.getNumber();
       onChanged();
       return this;
@@ -5319,7 +5249,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDevicePreference() {
-      
+      bitField0_ = (bitField0_ & ~0x00000800);
       devicePreference_ = 0;
       onChanged();
       return this;
@@ -5328,9 +5258,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v12.common.UrlCollection> urlCollections_ =
       java.util.Collections.emptyList();
     private void ensureUrlCollectionsIsMutable() {
-      if (!((bitField0_ & 0x00000200) != 0)) {
+      if (!((bitField0_ & 0x00001000) != 0)) {
         urlCollections_ = new java.util.ArrayList<com.google.ads.googleads.v12.common.UrlCollection>(urlCollections_);
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00001000;
        }
     }
 
@@ -5535,7 +5465,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearUrlCollections() {
       if (urlCollectionsBuilder_ == null) {
         urlCollections_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00001000);
         onChanged();
       } else {
         urlCollectionsBuilder_.clear();
@@ -5647,7 +5577,7 @@ private static final long serialVersionUID = 0L;
         urlCollectionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v12.common.UrlCollection, com.google.ads.googleads.v12.common.UrlCollection.Builder, com.google.ads.googleads.v12.common.UrlCollectionOrBuilder>(
                 urlCollections_,
-                ((bitField0_ & 0x00000200) != 0),
+                ((bitField0_ & 0x00001000) != 0),
                 getParentForChildren(),
                 isClean());
         urlCollections_ = null;
@@ -5658,9 +5588,9 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object name_ = "";
     /**
      * <pre>
-     * Immutable. The name of the ad. This is only used to be able to identify the ad. It
-     * does not need to be unique and does not affect the served ad. The name
-     * field is currently only supported for DisplayUploadAd, ImageAd,
+     * Immutable. The name of the ad. This is only used to be able to identify the
+     * ad. It does not need to be unique and does not affect the served ad. The
+     * name field is currently only supported for DisplayUploadAd, ImageAd,
      * ShoppingComparisonListingAd and VideoAd.
      * </pre>
      *
@@ -5668,13 +5598,13 @@ private static final long serialVersionUID = 0L;
      * @return Whether the name field is set.
      */
     public boolean hasName() {
-      return ((bitField0_ & 0x00000400) != 0);
+      return ((bitField0_ & 0x00002000) != 0);
     }
     /**
      * <pre>
-     * Immutable. The name of the ad. This is only used to be able to identify the ad. It
-     * does not need to be unique and does not affect the served ad. The name
-     * field is currently only supported for DisplayUploadAd, ImageAd,
+     * Immutable. The name of the ad. This is only used to be able to identify the
+     * ad. It does not need to be unique and does not affect the served ad. The
+     * name field is currently only supported for DisplayUploadAd, ImageAd,
      * ShoppingComparisonListingAd and VideoAd.
      * </pre>
      *
@@ -5695,9 +5625,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The name of the ad. This is only used to be able to identify the ad. It
-     * does not need to be unique and does not affect the served ad. The name
-     * field is currently only supported for DisplayUploadAd, ImageAd,
+     * Immutable. The name of the ad. This is only used to be able to identify the
+     * ad. It does not need to be unique and does not affect the served ad. The
+     * name field is currently only supported for DisplayUploadAd, ImageAd,
      * ShoppingComparisonListingAd and VideoAd.
      * </pre>
      *
@@ -5719,9 +5649,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The name of the ad. This is only used to be able to identify the ad. It
-     * does not need to be unique and does not affect the served ad. The name
-     * field is currently only supported for DisplayUploadAd, ImageAd,
+     * Immutable. The name of the ad. This is only used to be able to identify the
+     * ad. It does not need to be unique and does not affect the served ad. The
+     * name field is currently only supported for DisplayUploadAd, ImageAd,
      * ShoppingComparisonListingAd and VideoAd.
      * </pre>
      *
@@ -5731,19 +5661,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000400;
+      if (value == null) { throw new NullPointerException(); }
       name_ = value;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Immutable. The name of the ad. This is only used to be able to identify the ad. It
-     * does not need to be unique and does not affect the served ad. The name
-     * field is currently only supported for DisplayUploadAd, ImageAd,
+     * Immutable. The name of the ad. This is only used to be able to identify the
+     * ad. It does not need to be unique and does not affect the served ad. The
+     * name field is currently only supported for DisplayUploadAd, ImageAd,
      * ShoppingComparisonListingAd and VideoAd.
      * </pre>
      *
@@ -5751,16 +5679,16 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      bitField0_ = (bitField0_ & ~0x00000400);
       name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00002000);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Immutable. The name of the ad. This is only used to be able to identify the ad. It
-     * does not need to be unique and does not affect the served ad. The name
-     * field is currently only supported for DisplayUploadAd, ImageAd,
+     * Immutable. The name of the ad. This is only used to be able to identify the
+     * ad. It does not need to be unique and does not affect the served ad. The
+     * name field is currently only supported for DisplayUploadAd, ImageAd,
      * ShoppingComparisonListingAd and VideoAd.
      * </pre>
      *
@@ -5770,12 +5698,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000400;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -5783,8 +5709,8 @@ private static final long serialVersionUID = 0L;
     private int systemManagedResourceSource_ = 0;
     /**
      * <pre>
-     * Output only. If this ad is system managed, then this field will indicate the source.
-     * This field is read-only.
+     * Output only. If this ad is system managed, then this field will indicate
+     * the source. This field is read-only.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5795,8 +5721,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. If this ad is system managed, then this field will indicate the source.
-     * This field is read-only.
+     * Output only. If this ad is system managed, then this field will indicate
+     * the source. This field is read-only.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5804,15 +5730,15 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSystemManagedResourceSourceValue(int value) {
-      
       systemManagedResourceSource_ = value;
+      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. If this ad is system managed, then this field will indicate the source.
-     * This field is read-only.
+     * Output only. If this ad is system managed, then this field will indicate
+     * the source. This field is read-only.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5820,14 +5746,13 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource getSystemManagedResourceSource() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource result = com.google.ads.googleads.v12.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource.valueOf(systemManagedResourceSource_);
+      com.google.ads.googleads.v12.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource result = com.google.ads.googleads.v12.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource.forNumber(systemManagedResourceSource_);
       return result == null ? com.google.ads.googleads.v12.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource.UNRECOGNIZED : result;
     }
     /**
      * <pre>
-     * Output only. If this ad is system managed, then this field will indicate the source.
-     * This field is read-only.
+     * Output only. If this ad is system managed, then this field will indicate
+     * the source. This field is read-only.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5838,22 +5763,22 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00004000;
       systemManagedResourceSource_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. If this ad is system managed, then this field will indicate the source.
-     * This field is read-only.
+     * Output only. If this ad is system managed, then this field will indicate
+     * the source. This field is read-only.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearSystemManagedResourceSource() {
-      
+      bitField0_ = (bitField0_ & ~0x00004000);
       systemManagedResourceSource_ = 0;
       onChanged();
       return this;
@@ -6033,7 +5958,7 @@ private static final long serialVersionUID = 0L;
         adData_ = null;
       }
       adDataCase_ = 6;
-      onChanged();;
+      onChanged();
       return textAdBuilder_;
     }
 
@@ -6211,7 +6136,7 @@ private static final long serialVersionUID = 0L;
         adData_ = null;
       }
       adDataCase_ = 7;
-      onChanged();;
+      onChanged();
       return expandedTextAdBuilder_;
     }
 
@@ -6389,7 +6314,7 @@ private static final long serialVersionUID = 0L;
         adData_ = null;
       }
       adDataCase_ = 49;
-      onChanged();;
+      onChanged();
       return callAdBuilder_;
     }
 
@@ -6603,7 +6528,7 @@ private static final long serialVersionUID = 0L;
         adData_ = null;
       }
       adDataCase_ = 14;
-      onChanged();;
+      onChanged();
       return expandedDynamicSearchAdBuilder_;
     }
 
@@ -6781,7 +6706,7 @@ private static final long serialVersionUID = 0L;
         adData_ = null;
       }
       adDataCase_ = 15;
-      onChanged();;
+      onChanged();
       return hotelAdBuilder_;
     }
 
@@ -6959,7 +6884,7 @@ private static final long serialVersionUID = 0L;
         adData_ = null;
       }
       adDataCase_ = 17;
-      onChanged();;
+      onChanged();
       return shoppingSmartAdBuilder_;
     }
 
@@ -7137,7 +7062,7 @@ private static final long serialVersionUID = 0L;
         adData_ = null;
       }
       adDataCase_ = 18;
-      onChanged();;
+      onChanged();
       return shoppingProductAdBuilder_;
     }
 
@@ -7315,7 +7240,7 @@ private static final long serialVersionUID = 0L;
         adData_ = null;
       }
       adDataCase_ = 22;
-      onChanged();;
+      onChanged();
       return imageAdBuilder_;
     }
 
@@ -7493,7 +7418,7 @@ private static final long serialVersionUID = 0L;
         adData_ = null;
       }
       adDataCase_ = 24;
-      onChanged();;
+      onChanged();
       return videoAdBuilder_;
     }
 
@@ -7671,7 +7596,7 @@ private static final long serialVersionUID = 0L;
         adData_ = null;
       }
       adDataCase_ = 39;
-      onChanged();;
+      onChanged();
       return videoResponsiveAdBuilder_;
     }
 
@@ -7849,7 +7774,7 @@ private static final long serialVersionUID = 0L;
         adData_ = null;
       }
       adDataCase_ = 25;
-      onChanged();;
+      onChanged();
       return responsiveSearchAdBuilder_;
     }
 
@@ -8027,7 +7952,7 @@ private static final long serialVersionUID = 0L;
         adData_ = null;
       }
       adDataCase_ = 28;
-      onChanged();;
+      onChanged();
       return legacyResponsiveDisplayAdBuilder_;
     }
 
@@ -8205,7 +8130,7 @@ private static final long serialVersionUID = 0L;
         adData_ = null;
       }
       adDataCase_ = 29;
-      onChanged();;
+      onChanged();
       return appAdBuilder_;
     }
 
@@ -8383,7 +8308,7 @@ private static final long serialVersionUID = 0L;
         adData_ = null;
       }
       adDataCase_ = 30;
-      onChanged();;
+      onChanged();
       return legacyAppInstallAdBuilder_;
     }
 
@@ -8561,7 +8486,7 @@ private static final long serialVersionUID = 0L;
         adData_ = null;
       }
       adDataCase_ = 31;
-      onChanged();;
+      onChanged();
       return responsiveDisplayAdBuilder_;
     }
 
@@ -8739,7 +8664,7 @@ private static final long serialVersionUID = 0L;
         adData_ = null;
       }
       adDataCase_ = 32;
-      onChanged();;
+      onChanged();
       return localAdBuilder_;
     }
 
@@ -8917,7 +8842,7 @@ private static final long serialVersionUID = 0L;
         adData_ = null;
       }
       adDataCase_ = 33;
-      onChanged();;
+      onChanged();
       return displayUploadAdBuilder_;
     }
 
@@ -9095,7 +9020,7 @@ private static final long serialVersionUID = 0L;
         adData_ = null;
       }
       adDataCase_ = 34;
-      onChanged();;
+      onChanged();
       return appEngagementAdBuilder_;
     }
 
@@ -9273,7 +9198,7 @@ private static final long serialVersionUID = 0L;
         adData_ = null;
       }
       adDataCase_ = 36;
-      onChanged();;
+      onChanged();
       return shoppingComparisonListingAdBuilder_;
     }
 
@@ -9451,7 +9376,7 @@ private static final long serialVersionUID = 0L;
         adData_ = null;
       }
       adDataCase_ = 48;
-      onChanged();;
+      onChanged();
       return smartCampaignAdBuilder_;
     }
 
@@ -9629,7 +9554,7 @@ private static final long serialVersionUID = 0L;
         adData_ = null;
       }
       adDataCase_ = 50;
-      onChanged();;
+      onChanged();
       return appPreRegistrationAdBuilder_;
     }
 
@@ -9807,7 +9732,7 @@ private static final long serialVersionUID = 0L;
         adData_ = null;
       }
       adDataCase_ = 51;
-      onChanged();;
+      onChanged();
       return discoveryMultiAssetAdBuilder_;
     }
 
@@ -9985,7 +9910,7 @@ private static final long serialVersionUID = 0L;
         adData_ = null;
       }
       adDataCase_ = 52;
-      onChanged();;
+      onChanged();
       return discoveryCarouselAdBuilder_;
     }
     @java.lang.Override

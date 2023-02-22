@@ -49,7 +49,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALL_TO_ACTION_FIELD_NUMBER = 1;
-  private int callToAction_;
+  private int callToAction_ = 0;
   /**
    * <pre>
    * Call to action.
@@ -70,8 +70,7 @@ private static final long serialVersionUID = 0L;
    * @return The callToAction.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.CallToActionTypeEnum.CallToActionType getCallToAction() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.CallToActionTypeEnum.CallToActionType result = com.google.ads.googleads.v11.enums.CallToActionTypeEnum.CallToActionType.valueOf(callToAction_);
+    com.google.ads.googleads.v11.enums.CallToActionTypeEnum.CallToActionType result = com.google.ads.googleads.v11.enums.CallToActionTypeEnum.CallToActionType.forNumber(callToAction_);
     return result == null ? com.google.ads.googleads.v11.enums.CallToActionTypeEnum.CallToActionType.UNRECOGNIZED : result;
   }
 
@@ -266,8 +265,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       callToAction_ = 0;
-
       return this;
     }
 
@@ -294,9 +293,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.CallToActionAsset buildPartial() {
       com.google.ads.googleads.v11.common.CallToActionAsset result = new com.google.ads.googleads.v11.common.CallToActionAsset(this);
-      result.callToAction_ = callToAction_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.CallToActionAsset result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.callToAction_ = callToAction_;
+      }
     }
 
     @java.lang.Override
@@ -374,7 +380,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               callToAction_ = input.readEnum();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             default: {
@@ -392,6 +398,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private int callToAction_ = 0;
     /**
@@ -415,8 +422,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCallToActionValue(int value) {
-      
       callToAction_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -430,8 +437,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.CallToActionTypeEnum.CallToActionType getCallToAction() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.CallToActionTypeEnum.CallToActionType result = com.google.ads.googleads.v11.enums.CallToActionTypeEnum.CallToActionType.valueOf(callToAction_);
+      com.google.ads.googleads.v11.enums.CallToActionTypeEnum.CallToActionType result = com.google.ads.googleads.v11.enums.CallToActionTypeEnum.CallToActionType.forNumber(callToAction_);
       return result == null ? com.google.ads.googleads.v11.enums.CallToActionTypeEnum.CallToActionType.UNRECOGNIZED : result;
     }
     /**
@@ -447,7 +453,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       callToAction_ = value.getNumber();
       onChanged();
       return this;
@@ -461,7 +467,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallToAction() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       callToAction_ = 0;
       onChanged();
       return this;

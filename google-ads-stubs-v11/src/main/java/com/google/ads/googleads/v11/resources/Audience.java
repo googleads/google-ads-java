@@ -56,7 +56,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Immutable. The resource name of the audience.
@@ -106,7 +107,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ID_FIELD_NUMBER = 2;
-  private long id_;
+  private long id_ = 0L;
   /**
    * <pre>
    * Output only. ID of the audience.
@@ -121,7 +122,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STATUS_FIELD_NUMBER = 3;
-  private int status_;
+  private int status_ = 0;
   /**
    * <pre>
    * Output only. Status of this audience. Indicates whether the audience
@@ -144,13 +145,13 @@ private static final long serialVersionUID = 0L;
    * @return The status.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.AudienceStatusEnum.AudienceStatus getStatus() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.AudienceStatusEnum.AudienceStatus result = com.google.ads.googleads.v11.enums.AudienceStatusEnum.AudienceStatus.valueOf(status_);
+    com.google.ads.googleads.v11.enums.AudienceStatusEnum.AudienceStatus result = com.google.ads.googleads.v11.enums.AudienceStatusEnum.AudienceStatus.forNumber(status_);
     return result == null ? com.google.ads.googleads.v11.enums.AudienceStatusEnum.AudienceStatus.UNRECOGNIZED : result;
   }
 
   public static final int NAME_FIELD_NUMBER = 4;
-  private volatile java.lang.Object name_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
   /**
    * <pre>
    * Required. Name of the audience. It should be unique across all
@@ -200,7 +201,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTION_FIELD_NUMBER = 5;
-  private volatile java.lang.Object description_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object description_ = "";
   /**
    * <pre>
    * Description of this audience.
@@ -246,6 +248,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DIMENSIONS_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.common.AudienceDimension> dimensions_;
   /**
    * <pre>
@@ -340,7 +343,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v11.common.AudienceExclusionDimensionOrBuilder getExclusionDimensionOrBuilder() {
-    return getExclusionDimension();
+    return exclusionDimension_ == null ? com.google.ads.googleads.v11.common.AudienceExclusionDimension.getDefaultInstance() : exclusionDimension_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -608,27 +611,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       id_ = 0L;
-
       status_ = 0;
-
       name_ = "";
-
       description_ = "";
-
       if (dimensionsBuilder_ == null) {
         dimensions_ = java.util.Collections.emptyList();
       } else {
         dimensions_ = null;
         dimensionsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000001);
-      if (exclusionDimensionBuilder_ == null) {
-        exclusionDimension_ = null;
-      } else {
-        exclusionDimension_ = null;
+      bitField0_ = (bitField0_ & ~0x00000020);
+      exclusionDimension_ = null;
+      if (exclusionDimensionBuilder_ != null) {
+        exclusionDimensionBuilder_.dispose();
         exclusionDimensionBuilder_ = null;
       }
       return this;
@@ -657,28 +655,46 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.Audience buildPartial() {
       com.google.ads.googleads.v11.resources.Audience result = new com.google.ads.googleads.v11.resources.Audience(this);
-      int from_bitField0_ = bitField0_;
-      result.resourceName_ = resourceName_;
-      result.id_ = id_;
-      result.status_ = status_;
-      result.name_ = name_;
-      result.description_ = description_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.resources.Audience result) {
       if (dimensionsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000020) != 0)) {
           dimensions_ = java.util.Collections.unmodifiableList(dimensions_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000020);
         }
         result.dimensions_ = dimensions_;
       } else {
         result.dimensions_ = dimensionsBuilder_.build();
       }
-      if (exclusionDimensionBuilder_ == null) {
-        result.exclusionDimension_ = exclusionDimension_;
-      } else {
-        result.exclusionDimension_ = exclusionDimensionBuilder_.build();
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.Audience result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
       }
-      onBuilt();
-      return result;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.id_ = id_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.status_ = status_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.name_ = name_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.description_ = description_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.exclusionDimension_ = exclusionDimensionBuilder_ == null
+            ? exclusionDimension_
+            : exclusionDimensionBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -727,6 +743,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.resources.Audience.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.getId() != 0L) {
@@ -737,17 +754,19 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.getDescription().isEmpty()) {
         description_ = other.description_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (dimensionsBuilder_ == null) {
         if (!other.dimensions_.isEmpty()) {
           if (dimensions_.isEmpty()) {
             dimensions_ = other.dimensions_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
             ensureDimensionsIsMutable();
             dimensions_.addAll(other.dimensions_);
@@ -760,7 +779,7 @@ private static final long serialVersionUID = 0L;
             dimensionsBuilder_.dispose();
             dimensionsBuilder_ = null;
             dimensions_ = other.dimensions_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000020);
             dimensionsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getDimensionsFieldBuilder() : null;
@@ -800,27 +819,27 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 16: {
               id_ = input.readInt64();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             case 24: {
               status_ = input.readEnum();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 24
             case 34: {
               name_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 34
             case 42: {
               description_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 42
             case 50: {
@@ -840,7 +859,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getExclusionDimensionFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000040;
               break;
             } // case 58
             default: {
@@ -919,11 +938,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -938,8 +955,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -956,12 +973,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -991,6 +1006,7 @@ private static final long serialVersionUID = 0L;
     public Builder setId(long value) {
       
       id_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1003,7 +1019,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearId() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       id_ = 0L;
       onChanged();
       return this;
@@ -1033,8 +1049,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
-      
       status_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1049,8 +1065,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.AudienceStatusEnum.AudienceStatus getStatus() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.AudienceStatusEnum.AudienceStatus result = com.google.ads.googleads.v11.enums.AudienceStatusEnum.AudienceStatus.valueOf(status_);
+      com.google.ads.googleads.v11.enums.AudienceStatusEnum.AudienceStatus result = com.google.ads.googleads.v11.enums.AudienceStatusEnum.AudienceStatus.forNumber(status_);
       return result == null ? com.google.ads.googleads.v11.enums.AudienceStatusEnum.AudienceStatus.UNRECOGNIZED : result;
     }
     /**
@@ -1067,7 +1082,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       status_ = value.getNumber();
       onChanged();
       return this;
@@ -1082,7 +1097,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       status_ = 0;
       onChanged();
       return this;
@@ -1147,11 +1162,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       name_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1166,8 +1179,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      
       name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1184,12 +1197,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1247,11 +1258,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       description_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1264,8 +1273,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
-      
       description_ = getDefaultInstance().getDescription();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1280,12 +1289,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescriptionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       description_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1293,9 +1300,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v11.common.AudienceDimension> dimensions_ =
       java.util.Collections.emptyList();
     private void ensureDimensionsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000020) != 0)) {
         dimensions_ = new java.util.ArrayList<com.google.ads.googleads.v11.common.AudienceDimension>(dimensions_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000020;
        }
     }
 
@@ -1489,7 +1496,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearDimensions() {
       if (dimensionsBuilder_ == null) {
         dimensions_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
       } else {
         dimensionsBuilder_.clear();
@@ -1594,7 +1601,7 @@ private static final long serialVersionUID = 0L;
         dimensionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v11.common.AudienceDimension, com.google.ads.googleads.v11.common.AudienceDimension.Builder, com.google.ads.googleads.v11.common.AudienceDimensionOrBuilder>(
                 dimensions_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000020) != 0),
                 getParentForChildren(),
                 isClean());
         dimensions_ = null;
@@ -1614,7 +1621,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the exclusionDimension field is set.
      */
     public boolean hasExclusionDimension() {
-      return exclusionDimensionBuilder_ != null || exclusionDimension_ != null;
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -1644,11 +1651,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         exclusionDimension_ = value;
-        onChanged();
       } else {
         exclusionDimensionBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -1662,11 +1669,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.common.AudienceExclusionDimension.Builder builderForValue) {
       if (exclusionDimensionBuilder_ == null) {
         exclusionDimension_ = builderForValue.build();
-        onChanged();
       } else {
         exclusionDimensionBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -1678,17 +1685,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeExclusionDimension(com.google.ads.googleads.v11.common.AudienceExclusionDimension value) {
       if (exclusionDimensionBuilder_ == null) {
-        if (exclusionDimension_ != null) {
-          exclusionDimension_ =
-            com.google.ads.googleads.v11.common.AudienceExclusionDimension.newBuilder(exclusionDimension_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000040) != 0) &&
+          exclusionDimension_ != null &&
+          exclusionDimension_ != com.google.ads.googleads.v11.common.AudienceExclusionDimension.getDefaultInstance()) {
+          getExclusionDimensionBuilder().mergeFrom(value);
         } else {
           exclusionDimension_ = value;
         }
-        onChanged();
       } else {
         exclusionDimensionBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000040;
+      onChanged();
       return this;
     }
     /**
@@ -1699,14 +1707,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.common.AudienceExclusionDimension exclusion_dimension = 7;</code>
      */
     public Builder clearExclusionDimension() {
-      if (exclusionDimensionBuilder_ == null) {
-        exclusionDimension_ = null;
-        onChanged();
-      } else {
-        exclusionDimension_ = null;
+      bitField0_ = (bitField0_ & ~0x00000040);
+      exclusionDimension_ = null;
+      if (exclusionDimensionBuilder_ != null) {
+        exclusionDimensionBuilder_.dispose();
         exclusionDimensionBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1717,7 +1724,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.common.AudienceExclusionDimension exclusion_dimension = 7;</code>
      */
     public com.google.ads.googleads.v11.common.AudienceExclusionDimension.Builder getExclusionDimensionBuilder() {
-      
+      bitField0_ |= 0x00000040;
       onChanged();
       return getExclusionDimensionFieldBuilder().getBuilder();
     }

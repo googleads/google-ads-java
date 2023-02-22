@@ -5,7 +5,8 @@ package com.google.ads.googleads.v12.services;
 
 /**
  * <pre>
- * Request message for [KeywordPlanService.GenerateHistoricalMetrics][google.ads.googleads.v12.services.KeywordPlanService.GenerateHistoricalMetrics].
+ * Request message for
+ * [KeywordPlanService.GenerateHistoricalMetrics][google.ads.googleads.v12.services.KeywordPlanService.GenerateHistoricalMetrics].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v12.services.GenerateHistoricalMetricsRequest}
@@ -49,11 +50,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int KEYWORD_PLAN_FIELD_NUMBER = 1;
-  private volatile java.lang.Object keywordPlan_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object keywordPlan_ = "";
   /**
    * <pre>
-   * Required. The resource name of the keyword plan of which historical metrics are
-   * requested.
+   * Required. The resource name of the keyword plan of which historical metrics
+   * are requested.
    * </pre>
    *
    * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
@@ -74,8 +76,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. The resource name of the keyword plan of which historical metrics are
-   * requested.
+   * Required. The resource name of the keyword plan of which historical metrics
+   * are requested.
    * </pre>
    *
    * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
@@ -131,7 +133,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.common.KeywordPlanAggregateMetricsOrBuilder getAggregateMetricsOrBuilder() {
-    return getAggregateMetrics();
+    return aggregateMetrics_ == null ? com.google.ads.googleads.v12.common.KeywordPlanAggregateMetrics.getDefaultInstance() : aggregateMetrics_;
   }
 
   public static final int HISTORICAL_METRICS_OPTIONS_FIELD_NUMBER = 3;
@@ -169,7 +171,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.common.HistoricalMetricsOptionsOrBuilder getHistoricalMetricsOptionsOrBuilder() {
-    return getHistoricalMetricsOptions();
+    return historicalMetricsOptions_ == null ? com.google.ads.googleads.v12.common.HistoricalMetricsOptions.getDefaultInstance() : historicalMetricsOptions_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -360,7 +362,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Request message for [KeywordPlanService.GenerateHistoricalMetrics][google.ads.googleads.v12.services.KeywordPlanService.GenerateHistoricalMetrics].
+   * Request message for
+   * [KeywordPlanService.GenerateHistoricalMetrics][google.ads.googleads.v12.services.KeywordPlanService.GenerateHistoricalMetrics].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v12.services.GenerateHistoricalMetricsRequest}
@@ -395,18 +398,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       keywordPlan_ = "";
-
-      if (aggregateMetricsBuilder_ == null) {
-        aggregateMetrics_ = null;
-      } else {
-        aggregateMetrics_ = null;
+      aggregateMetrics_ = null;
+      if (aggregateMetricsBuilder_ != null) {
+        aggregateMetricsBuilder_.dispose();
         aggregateMetricsBuilder_ = null;
       }
-      if (historicalMetricsOptionsBuilder_ == null) {
-        historicalMetricsOptions_ = null;
-      } else {
-        historicalMetricsOptions_ = null;
+      historicalMetricsOptions_ = null;
+      if (historicalMetricsOptionsBuilder_ != null) {
+        historicalMetricsOptionsBuilder_.dispose();
         historicalMetricsOptionsBuilder_ = null;
       }
       return this;
@@ -435,19 +436,26 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.GenerateHistoricalMetricsRequest buildPartial() {
       com.google.ads.googleads.v12.services.GenerateHistoricalMetricsRequest result = new com.google.ads.googleads.v12.services.GenerateHistoricalMetricsRequest(this);
-      result.keywordPlan_ = keywordPlan_;
-      if (aggregateMetricsBuilder_ == null) {
-        result.aggregateMetrics_ = aggregateMetrics_;
-      } else {
-        result.aggregateMetrics_ = aggregateMetricsBuilder_.build();
-      }
-      if (historicalMetricsOptionsBuilder_ == null) {
-        result.historicalMetricsOptions_ = historicalMetricsOptions_;
-      } else {
-        result.historicalMetricsOptions_ = historicalMetricsOptionsBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.GenerateHistoricalMetricsRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.keywordPlan_ = keywordPlan_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.aggregateMetrics_ = aggregateMetricsBuilder_ == null
+            ? aggregateMetrics_
+            : aggregateMetricsBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.historicalMetricsOptions_ = historicalMetricsOptionsBuilder_ == null
+            ? historicalMetricsOptions_
+            : historicalMetricsOptionsBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -496,6 +504,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.services.GenerateHistoricalMetricsRequest.getDefaultInstance()) return this;
       if (!other.getKeywordPlan().isEmpty()) {
         keywordPlan_ = other.keywordPlan_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasAggregateMetrics()) {
@@ -532,21 +541,21 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               keywordPlan_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               input.readMessage(
                   getAggregateMetricsFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
               input.readMessage(
                   getHistoricalMetricsOptionsFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             default: {
@@ -564,12 +573,13 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object keywordPlan_ = "";
     /**
      * <pre>
-     * Required. The resource name of the keyword plan of which historical metrics are
-     * requested.
+     * Required. The resource name of the keyword plan of which historical metrics
+     * are requested.
      * </pre>
      *
      * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
@@ -589,8 +599,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The resource name of the keyword plan of which historical metrics are
-     * requested.
+     * Required. The resource name of the keyword plan of which historical metrics
+     * are requested.
      * </pre>
      *
      * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
@@ -611,8 +621,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The resource name of the keyword plan of which historical metrics are
-     * requested.
+     * Required. The resource name of the keyword plan of which historical metrics
+     * are requested.
      * </pre>
      *
      * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
@@ -621,33 +631,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKeywordPlan(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       keywordPlan_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. The resource name of the keyword plan of which historical metrics are
-     * requested.
+     * Required. The resource name of the keyword plan of which historical metrics
+     * are requested.
      * </pre>
      *
      * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearKeywordPlan() {
-      
       keywordPlan_ = getDefaultInstance().getKeywordPlan();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. The resource name of the keyword plan of which historical metrics are
-     * requested.
+     * Required. The resource name of the keyword plan of which historical metrics
+     * are requested.
      * </pre>
      *
      * <code>string keyword_plan = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
@@ -656,12 +664,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKeywordPlanBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       keywordPlan_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -678,7 +684,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the aggregateMetrics field is set.
      */
     public boolean hasAggregateMetrics() {
-      return aggregateMetricsBuilder_ != null || aggregateMetrics_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -708,11 +714,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         aggregateMetrics_ = value;
-        onChanged();
       } else {
         aggregateMetricsBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -726,11 +732,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.KeywordPlanAggregateMetrics.Builder builderForValue) {
       if (aggregateMetricsBuilder_ == null) {
         aggregateMetrics_ = builderForValue.build();
-        onChanged();
       } else {
         aggregateMetricsBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -742,17 +748,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAggregateMetrics(com.google.ads.googleads.v12.common.KeywordPlanAggregateMetrics value) {
       if (aggregateMetricsBuilder_ == null) {
-        if (aggregateMetrics_ != null) {
-          aggregateMetrics_ =
-            com.google.ads.googleads.v12.common.KeywordPlanAggregateMetrics.newBuilder(aggregateMetrics_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          aggregateMetrics_ != null &&
+          aggregateMetrics_ != com.google.ads.googleads.v12.common.KeywordPlanAggregateMetrics.getDefaultInstance()) {
+          getAggregateMetricsBuilder().mergeFrom(value);
         } else {
           aggregateMetrics_ = value;
         }
-        onChanged();
       } else {
         aggregateMetricsBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -763,14 +770,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.KeywordPlanAggregateMetrics aggregate_metrics = 2;</code>
      */
     public Builder clearAggregateMetrics() {
-      if (aggregateMetricsBuilder_ == null) {
-        aggregateMetrics_ = null;
-        onChanged();
-      } else {
-        aggregateMetrics_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      aggregateMetrics_ = null;
+      if (aggregateMetricsBuilder_ != null) {
+        aggregateMetricsBuilder_.dispose();
         aggregateMetricsBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -781,7 +787,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.KeywordPlanAggregateMetrics aggregate_metrics = 2;</code>
      */
     public com.google.ads.googleads.v12.common.KeywordPlanAggregateMetrics.Builder getAggregateMetricsBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getAggregateMetricsFieldBuilder().getBuilder();
     }
@@ -833,7 +839,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the historicalMetricsOptions field is set.
      */
     public boolean hasHistoricalMetricsOptions() {
-      return historicalMetricsOptionsBuilder_ != null || historicalMetricsOptions_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -863,11 +869,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         historicalMetricsOptions_ = value;
-        onChanged();
       } else {
         historicalMetricsOptionsBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -881,11 +887,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.HistoricalMetricsOptions.Builder builderForValue) {
       if (historicalMetricsOptionsBuilder_ == null) {
         historicalMetricsOptions_ = builderForValue.build();
-        onChanged();
       } else {
         historicalMetricsOptionsBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -897,17 +903,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeHistoricalMetricsOptions(com.google.ads.googleads.v12.common.HistoricalMetricsOptions value) {
       if (historicalMetricsOptionsBuilder_ == null) {
-        if (historicalMetricsOptions_ != null) {
-          historicalMetricsOptions_ =
-            com.google.ads.googleads.v12.common.HistoricalMetricsOptions.newBuilder(historicalMetricsOptions_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000004) != 0) &&
+          historicalMetricsOptions_ != null &&
+          historicalMetricsOptions_ != com.google.ads.googleads.v12.common.HistoricalMetricsOptions.getDefaultInstance()) {
+          getHistoricalMetricsOptionsBuilder().mergeFrom(value);
         } else {
           historicalMetricsOptions_ = value;
         }
-        onChanged();
       } else {
         historicalMetricsOptionsBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -918,14 +925,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.HistoricalMetricsOptions historical_metrics_options = 3;</code>
      */
     public Builder clearHistoricalMetricsOptions() {
-      if (historicalMetricsOptionsBuilder_ == null) {
-        historicalMetricsOptions_ = null;
-        onChanged();
-      } else {
-        historicalMetricsOptions_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      historicalMetricsOptions_ = null;
+      if (historicalMetricsOptionsBuilder_ != null) {
+        historicalMetricsOptionsBuilder_.dispose();
         historicalMetricsOptionsBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -936,7 +942,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.HistoricalMetricsOptions historical_metrics_options = 3;</code>
      */
     public com.google.ads.googleads.v12.common.HistoricalMetricsOptions.Builder getHistoricalMetricsOptionsBuilder() {
-      
+      bitField0_ |= 0x00000004;
       onChanged();
       return getHistoricalMetricsOptionsFieldBuilder().getBuilder();
     }

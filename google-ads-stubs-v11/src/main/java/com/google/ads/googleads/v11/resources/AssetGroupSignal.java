@@ -53,7 +53,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Immutable. The resource name of the asset group signal.
@@ -103,7 +104,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ASSET_GROUP_FIELD_NUMBER = 2;
-  private volatile java.lang.Object assetGroup_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object assetGroup_ = "";
   /**
    * <pre>
    * Immutable. The asset group which this asset group signal belongs to.
@@ -152,7 +154,8 @@ private static final long serialVersionUID = 0L;
   private com.google.ads.googleads.v11.common.AudienceInfo audience_;
   /**
    * <pre>
-   * Immutable. The signal(audience criterion) to be used by the performance max campaign.
+   * Immutable. The signal(audience criterion) to be used by the performance max
+   * campaign.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.AudienceInfo audience = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -164,7 +167,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. The signal(audience criterion) to be used by the performance max campaign.
+   * Immutable. The signal(audience criterion) to be used by the performance max
+   * campaign.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.AudienceInfo audience = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -176,14 +180,15 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. The signal(audience criterion) to be used by the performance max campaign.
+   * Immutable. The signal(audience criterion) to be used by the performance max
+   * campaign.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.AudienceInfo audience = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   @java.lang.Override
   public com.google.ads.googleads.v11.common.AudienceInfoOrBuilder getAudienceOrBuilder() {
-    return getAudience();
+    return audience_ == null ? com.google.ads.googleads.v11.common.AudienceInfo.getDefaultInstance() : audience_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -406,14 +411,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       assetGroup_ = "";
-
-      if (audienceBuilder_ == null) {
-        audience_ = null;
-      } else {
-        audience_ = null;
+      audience_ = null;
+      if (audienceBuilder_ != null) {
+        audienceBuilder_.dispose();
         audienceBuilder_ = null;
       }
       return this;
@@ -442,15 +445,24 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.AssetGroupSignal buildPartial() {
       com.google.ads.googleads.v11.resources.AssetGroupSignal result = new com.google.ads.googleads.v11.resources.AssetGroupSignal(this);
-      result.resourceName_ = resourceName_;
-      result.assetGroup_ = assetGroup_;
-      if (audienceBuilder_ == null) {
-        result.audience_ = audience_;
-      } else {
-        result.audience_ = audienceBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.AssetGroupSignal result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.assetGroup_ = assetGroup_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.audience_ = audienceBuilder_ == null
+            ? audience_
+            : audienceBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -499,10 +511,12 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.resources.AssetGroupSignal.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getAssetGroup().isEmpty()) {
         assetGroup_ = other.assetGroup_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasAudience()) {
@@ -536,19 +550,19 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               assetGroup_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
               input.readMessage(
                   getAudienceFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             default: {
@@ -566,6 +580,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object resourceName_ = "";
     /**
@@ -626,11 +641,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -645,8 +658,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -663,12 +676,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -726,11 +737,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAssetGroup(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       assetGroup_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -743,8 +752,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAssetGroup() {
-      
       assetGroup_ = getDefaultInstance().getAssetGroup();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -759,12 +768,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAssetGroupBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       assetGroup_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -774,18 +781,20 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.common.AudienceInfo, com.google.ads.googleads.v11.common.AudienceInfo.Builder, com.google.ads.googleads.v11.common.AudienceInfoOrBuilder> audienceBuilder_;
     /**
      * <pre>
-     * Immutable. The signal(audience criterion) to be used by the performance max campaign.
+     * Immutable. The signal(audience criterion) to be used by the performance max
+     * campaign.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.AudienceInfo audience = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the audience field is set.
      */
     public boolean hasAudience() {
-      return audienceBuilder_ != null || audience_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
-     * Immutable. The signal(audience criterion) to be used by the performance max campaign.
+     * Immutable. The signal(audience criterion) to be used by the performance max
+     * campaign.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.AudienceInfo audience = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -800,7 +809,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The signal(audience criterion) to be used by the performance max campaign.
+     * Immutable. The signal(audience criterion) to be used by the performance max
+     * campaign.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.AudienceInfo audience = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -811,16 +821,17 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         audience_ = value;
-        onChanged();
       } else {
         audienceBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Immutable. The signal(audience criterion) to be used by the performance max campaign.
+     * Immutable. The signal(audience criterion) to be used by the performance max
+     * campaign.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.AudienceInfo audience = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -829,68 +840,72 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.common.AudienceInfo.Builder builderForValue) {
       if (audienceBuilder_ == null) {
         audience_ = builderForValue.build();
-        onChanged();
       } else {
         audienceBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Immutable. The signal(audience criterion) to be used by the performance max campaign.
+     * Immutable. The signal(audience criterion) to be used by the performance max
+     * campaign.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.AudienceInfo audience = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergeAudience(com.google.ads.googleads.v11.common.AudienceInfo value) {
       if (audienceBuilder_ == null) {
-        if (audience_ != null) {
-          audience_ =
-            com.google.ads.googleads.v11.common.AudienceInfo.newBuilder(audience_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000004) != 0) &&
+          audience_ != null &&
+          audience_ != com.google.ads.googleads.v11.common.AudienceInfo.getDefaultInstance()) {
+          getAudienceBuilder().mergeFrom(value);
         } else {
           audience_ = value;
         }
-        onChanged();
       } else {
         audienceBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Immutable. The signal(audience criterion) to be used by the performance max campaign.
+     * Immutable. The signal(audience criterion) to be used by the performance max
+     * campaign.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.AudienceInfo audience = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearAudience() {
-      if (audienceBuilder_ == null) {
-        audience_ = null;
-        onChanged();
-      } else {
-        audience_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      audience_ = null;
+      if (audienceBuilder_ != null) {
+        audienceBuilder_.dispose();
         audienceBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Immutable. The signal(audience criterion) to be used by the performance max campaign.
+     * Immutable. The signal(audience criterion) to be used by the performance max
+     * campaign.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.AudienceInfo audience = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v11.common.AudienceInfo.Builder getAudienceBuilder() {
-      
+      bitField0_ |= 0x00000004;
       onChanged();
       return getAudienceFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Immutable. The signal(audience criterion) to be used by the performance max campaign.
+     * Immutable. The signal(audience criterion) to be used by the performance max
+     * campaign.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.AudienceInfo audience = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -905,7 +920,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The signal(audience criterion) to be used by the performance max campaign.
+     * Immutable. The signal(audience criterion) to be used by the performance max
+     * campaign.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.AudienceInfo audience = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>

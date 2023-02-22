@@ -49,7 +49,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Returned for successful operations.
@@ -132,7 +133,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.resources.CustomerOrBuilder getCustomerOrBuilder() {
-    return getCustomer();
+    return customer_ == null ? com.google.ads.googleads.v12.resources.Customer.getDefaultInstance() : customer_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -342,12 +343,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
-      if (customerBuilder_ == null) {
-        customer_ = null;
-      } else {
-        customer_ = null;
+      customer_ = null;
+      if (customerBuilder_ != null) {
+        customerBuilder_.dispose();
         customerBuilder_ = null;
       }
       return this;
@@ -376,14 +376,21 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.MutateCustomerResult buildPartial() {
       com.google.ads.googleads.v12.services.MutateCustomerResult result = new com.google.ads.googleads.v12.services.MutateCustomerResult(this);
-      result.resourceName_ = resourceName_;
-      if (customerBuilder_ == null) {
-        result.customer_ = customer_;
-      } else {
-        result.customer_ = customerBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.MutateCustomerResult result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.customer_ = customerBuilder_ == null
+            ? customer_
+            : customerBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -432,6 +439,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.services.MutateCustomerResult.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasCustomer()) {
@@ -465,14 +473,14 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               input.readMessage(
                   getCustomerFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             default: {
@@ -490,6 +498,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object resourceName_ = "";
     /**
@@ -544,11 +553,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -561,8 +568,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -577,12 +584,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -600,7 +605,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the customer field is set.
      */
     public boolean hasCustomer() {
-      return customerBuilder_ != null || customer_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -632,11 +637,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         customer_ = value;
-        onChanged();
       } else {
         customerBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -651,11 +656,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.resources.Customer.Builder builderForValue) {
       if (customerBuilder_ == null) {
         customer_ = builderForValue.build();
-        onChanged();
       } else {
         customerBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -668,17 +673,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCustomer(com.google.ads.googleads.v12.resources.Customer value) {
       if (customerBuilder_ == null) {
-        if (customer_ != null) {
-          customer_ =
-            com.google.ads.googleads.v12.resources.Customer.newBuilder(customer_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          customer_ != null &&
+          customer_ != com.google.ads.googleads.v12.resources.Customer.getDefaultInstance()) {
+          getCustomerBuilder().mergeFrom(value);
         } else {
           customer_ = value;
         }
-        onChanged();
       } else {
         customerBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -690,14 +696,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.resources.Customer customer = 2;</code>
      */
     public Builder clearCustomer() {
-      if (customerBuilder_ == null) {
-        customer_ = null;
-        onChanged();
-      } else {
-        customer_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      customer_ = null;
+      if (customerBuilder_ != null) {
+        customerBuilder_.dispose();
         customerBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -709,7 +714,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.resources.Customer customer = 2;</code>
      */
     public com.google.ads.googleads.v12.resources.Customer.Builder getCustomerBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getCustomerFieldBuilder().getBuilder();
     }

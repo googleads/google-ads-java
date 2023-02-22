@@ -394,6 +394,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (createBuilder_ != null) {
         createBuilder_.clear();
       }
@@ -428,23 +429,27 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.UserDataOperation buildPartial() {
       com.google.ads.googleads.v12.services.UserDataOperation result = new com.google.ads.googleads.v12.services.UserDataOperation(this);
-      if (operationCase_ == 1) {
-        if (createBuilder_ == null) {
-          result.operation_ = operation_;
-        } else {
-          result.operation_ = createBuilder_.build();
-        }
-      }
-      if (operationCase_ == 2) {
-        if (removeBuilder_ == null) {
-          result.operation_ = operation_;
-        } else {
-          result.operation_ = removeBuilder_.build();
-        }
-      }
-      result.operationCase_ = operationCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.UserDataOperation result) {
+      int from_bitField0_ = bitField0_;
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v12.services.UserDataOperation result) {
+      result.operationCase_ = operationCase_;
+      result.operation_ = this.operation_;
+      if (operationCase_ == 1 &&
+          createBuilder_ != null) {
+        result.operation_ = createBuilder_.build();
+      }
+      if (operationCase_ == 2 &&
+          removeBuilder_ != null) {
+        result.operation_ = removeBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -574,6 +579,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v12.common.UserData, com.google.ads.googleads.v12.common.UserData.Builder, com.google.ads.googleads.v12.common.UserDataOrBuilder> createBuilder_;
@@ -749,7 +755,7 @@ private static final long serialVersionUID = 0L;
         operation_ = null;
       }
       operationCase_ = 1;
-      onChanged();;
+      onChanged();
       return createBuilder_;
     }
 
@@ -927,7 +933,7 @@ private static final long serialVersionUID = 0L;
         operation_ = null;
       }
       operationCase_ = 2;
-      onChanged();;
+      onChanged();
       return removeBuilder_;
     }
     @java.lang.Override

@@ -96,7 +96,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PIXEL_WIDTH_FIELD_NUMBER = 15;
-  private long pixelWidth_;
+  private long pixelWidth_ = 0L;
   /**
    * <pre>
    * Width in pixels of the full size image.
@@ -123,7 +123,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PIXEL_HEIGHT_FIELD_NUMBER = 16;
-  private long pixelHeight_;
+  private long pixelHeight_ = 0L;
   /**
    * <pre>
    * Height in pixels of the full size image.
@@ -150,7 +150,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int IMAGE_URL_FIELD_NUMBER = 17;
-  private volatile java.lang.Object imageUrl_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object imageUrl_ = "";
   /**
    * <pre>
    * URL of the full size image.
@@ -208,7 +209,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PREVIEW_PIXEL_WIDTH_FIELD_NUMBER = 18;
-  private long previewPixelWidth_;
+  private long previewPixelWidth_ = 0L;
   /**
    * <pre>
    * Width in pixels of the preview size image.
@@ -235,7 +236,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PREVIEW_PIXEL_HEIGHT_FIELD_NUMBER = 19;
-  private long previewPixelHeight_;
+  private long previewPixelHeight_ = 0L;
   /**
    * <pre>
    * Height in pixels of the preview size image.
@@ -262,7 +263,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PREVIEW_IMAGE_URL_FIELD_NUMBER = 20;
-  private volatile java.lang.Object previewImageUrl_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object previewImageUrl_ = "";
   /**
    * <pre>
    * URL of the preview size image.
@@ -320,7 +322,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MIME_TYPE_FIELD_NUMBER = 10;
-  private int mimeType_;
+  private int mimeType_ = 0;
   /**
    * <pre>
    * The mime type of the image.
@@ -341,13 +343,13 @@ private static final long serialVersionUID = 0L;
    * @return The mimeType.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.MimeTypeEnum.MimeType getMimeType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.MimeTypeEnum.MimeType result = com.google.ads.googleads.v11.enums.MimeTypeEnum.MimeType.valueOf(mimeType_);
+    com.google.ads.googleads.v11.enums.MimeTypeEnum.MimeType result = com.google.ads.googleads.v11.enums.MimeTypeEnum.MimeType.forNumber(mimeType_);
     return result == null ? com.google.ads.googleads.v11.enums.MimeTypeEnum.MimeType.UNRECOGNIZED : result;
   }
 
   public static final int NAME_FIELD_NUMBER = 21;
-  private volatile java.lang.Object name_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
   /**
    * <pre>
    * The name of the image. If the image was created from a MediaFile, this is
@@ -891,22 +893,15 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       pixelWidth_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       pixelHeight_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000002);
       imageUrl_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       previewPixelWidth_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000008);
       previewPixelHeight_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000010);
       previewImageUrl_ = "";
-      bitField0_ = (bitField0_ & ~0x00000020);
       mimeType_ = 0;
-
       name_ = "";
-      bitField0_ = (bitField0_ & ~0x00000040);
       imageCase_ = 0;
       image_ = null;
       return this;
@@ -935,6 +930,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.ImageAdInfo buildPartial() {
       com.google.ads.googleads.v11.common.ImageAdInfo result = new com.google.ads.googleads.v11.common.ImageAdInfo(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.ImageAdInfo result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -946,9 +948,9 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000002;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.imageUrl_ = imageUrl_;
         to_bitField0_ |= 0x00000004;
       }
-      result.imageUrl_ = imageUrl_;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.previewPixelWidth_ = previewPixelWidth_;
         to_bitField0_ |= 0x00000008;
@@ -958,27 +960,22 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000010;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.previewImageUrl_ = previewImageUrl_;
         to_bitField0_ |= 0x00000020;
       }
-      result.previewImageUrl_ = previewImageUrl_;
-      result.mimeType_ = mimeType_;
       if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.mimeType_ = mimeType_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.name_ = name_;
         to_bitField0_ |= 0x00000040;
       }
-      result.name_ = name_;
-      if (imageCase_ == 12) {
-        result.image_ = image_;
-      }
-      if (imageCase_ == 13) {
-        result.image_ = image_;
-      }
-      if (imageCase_ == 14) {
-        result.image_ = image_;
-      }
-      result.bitField0_ = to_bitField0_;
+      result.bitField0_ |= to_bitField0_;
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v11.common.ImageAdInfo result) {
       result.imageCase_ = imageCase_;
-      onBuilt();
-      return result;
+      result.image_ = this.image_;
     }
 
     @java.lang.Override
@@ -1032,8 +1029,8 @@ private static final long serialVersionUID = 0L;
         setPixelHeight(other.getPixelHeight());
       }
       if (other.hasImageUrl()) {
-        bitField0_ |= 0x00000004;
         imageUrl_ = other.imageUrl_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.hasPreviewPixelWidth()) {
@@ -1043,16 +1040,16 @@ private static final long serialVersionUID = 0L;
         setPreviewPixelHeight(other.getPreviewPixelHeight());
       }
       if (other.hasPreviewImageUrl()) {
-        bitField0_ |= 0x00000020;
         previewImageUrl_ = other.previewImageUrl_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (other.mimeType_ != 0) {
         setMimeTypeValue(other.getMimeTypeValue());
       }
       if (other.hasName()) {
-        bitField0_ |= 0x00000040;
         name_ = other.name_;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       switch (other.getImageCase()) {
@@ -1102,7 +1099,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 80: {
               mimeType_ = input.readEnum();
-
+              bitField0_ |= 0x00000040;
               break;
             } // case 80
             case 98: {
@@ -1153,7 +1150,7 @@ private static final long serialVersionUID = 0L;
             } // case 162
             case 170: {
               name_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000080;
               break;
             } // case 170
             default: {
@@ -1223,8 +1220,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPixelWidth(long value) {
-      bitField0_ |= 0x00000001;
+      
       pixelWidth_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1278,8 +1276,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPixelHeight(long value) {
-      bitField0_ |= 0x00000002;
+      
       pixelHeight_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1362,11 +1361,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setImageUrl(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       imageUrl_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1379,8 +1376,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearImageUrl() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       imageUrl_ = getDefaultInstance().getImageUrl();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1395,12 +1392,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setImageUrlBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       imageUrl_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1440,8 +1435,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPreviewPixelWidth(long value) {
-      bitField0_ |= 0x00000008;
+      
       previewPixelWidth_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1495,8 +1491,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPreviewPixelHeight(long value) {
-      bitField0_ |= 0x00000010;
+      
       previewPixelHeight_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1579,11 +1576,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPreviewImageUrl(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000020;
+      if (value == null) { throw new NullPointerException(); }
       previewImageUrl_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1596,8 +1591,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPreviewImageUrl() {
-      bitField0_ = (bitField0_ & ~0x00000020);
       previewImageUrl_ = getDefaultInstance().getPreviewImageUrl();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1612,12 +1607,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPreviewImageUrlBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000020;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       previewImageUrl_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1644,8 +1637,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMimeTypeValue(int value) {
-      
       mimeType_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1659,8 +1652,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.MimeTypeEnum.MimeType getMimeType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.MimeTypeEnum.MimeType result = com.google.ads.googleads.v11.enums.MimeTypeEnum.MimeType.valueOf(mimeType_);
+      com.google.ads.googleads.v11.enums.MimeTypeEnum.MimeType result = com.google.ads.googleads.v11.enums.MimeTypeEnum.MimeType.forNumber(mimeType_);
       return result == null ? com.google.ads.googleads.v11.enums.MimeTypeEnum.MimeType.UNRECOGNIZED : result;
     }
     /**
@@ -1676,7 +1668,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000040;
       mimeType_ = value.getNumber();
       onChanged();
       return this;
@@ -1690,7 +1682,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMimeType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000040);
       mimeType_ = 0;
       onChanged();
       return this;
@@ -1707,7 +1699,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the name field is set.
      */
     public boolean hasName() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
      * <pre>
@@ -1764,11 +1756,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000040;
+      if (value == null) { throw new NullPointerException(); }
       name_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1782,8 +1772,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      bitField0_ = (bitField0_ & ~0x00000040);
       name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -1799,12 +1789,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000040;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1885,10 +1873,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setMediaFile(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  imageCase_ = 12;
+      if (value == null) { throw new NullPointerException(); }
+      imageCase_ = 12;
       image_ = value;
       onChanged();
       return this;
@@ -1920,10 +1906,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setMediaFileBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       imageCase_ = 12;
       image_ = value;
       onChanged();
@@ -1965,10 +1949,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setData(com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  imageCase_ = 13;
+      if (value == null) { throw new NullPointerException(); }
+      imageCase_ = 13;
       image_ = value;
       onChanged();
       return this;
@@ -2025,6 +2007,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAdIdToCopyImageFrom(long value) {
+      
       imageCase_ = 14;
       image_ = value;
       onChanged();

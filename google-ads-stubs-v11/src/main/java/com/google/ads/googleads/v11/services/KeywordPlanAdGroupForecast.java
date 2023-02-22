@@ -50,7 +50,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int KEYWORD_PLAN_AD_GROUP_FIELD_NUMBER = 3;
-  private volatile java.lang.Object keywordPlanAdGroup_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object keywordPlanAdGroup_ = "";
   /**
    * <pre>
    * The resource name of the Keyword Plan ad group related to the forecast.
@@ -145,7 +146,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v11.services.ForecastMetricsOrBuilder getAdGroupForecastOrBuilder() {
-    return getAdGroupForecast();
+    return adGroupForecast_ == null ? com.google.ads.googleads.v11.services.ForecastMetrics.getDefaultInstance() : adGroupForecast_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -360,12 +361,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       keywordPlanAdGroup_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
-      if (adGroupForecastBuilder_ == null) {
-        adGroupForecast_ = null;
-      } else {
-        adGroupForecast_ = null;
+      adGroupForecast_ = null;
+      if (adGroupForecastBuilder_ != null) {
+        adGroupForecastBuilder_.dispose();
         adGroupForecastBuilder_ = null;
       }
       return this;
@@ -394,20 +394,24 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.KeywordPlanAdGroupForecast buildPartial() {
       com.google.ads.googleads.v11.services.KeywordPlanAdGroupForecast result = new com.google.ads.googleads.v11.services.KeywordPlanAdGroupForecast(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.KeywordPlanAdGroupForecast result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.keywordPlanAdGroup_ = keywordPlanAdGroup_;
         to_bitField0_ |= 0x00000001;
       }
-      result.keywordPlanAdGroup_ = keywordPlanAdGroup_;
-      if (adGroupForecastBuilder_ == null) {
-        result.adGroupForecast_ = adGroupForecast_;
-      } else {
-        result.adGroupForecast_ = adGroupForecastBuilder_.build();
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.adGroupForecast_ = adGroupForecastBuilder_ == null
+            ? adGroupForecast_
+            : adGroupForecastBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -455,8 +459,8 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v11.services.KeywordPlanAdGroupForecast other) {
       if (other == com.google.ads.googleads.v11.services.KeywordPlanAdGroupForecast.getDefaultInstance()) return this;
       if (other.hasKeywordPlanAdGroup()) {
-        bitField0_ |= 0x00000001;
         keywordPlanAdGroup_ = other.keywordPlanAdGroup_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasAdGroupForecast()) {
@@ -492,7 +496,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getAdGroupForecastFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
@@ -585,11 +589,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKeywordPlanAdGroup(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       keywordPlanAdGroup_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -603,8 +605,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearKeywordPlanAdGroup() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       keywordPlanAdGroup_ = getDefaultInstance().getKeywordPlanAdGroup();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -620,12 +622,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKeywordPlanAdGroupBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       keywordPlanAdGroup_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -642,7 +642,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the adGroupForecast field is set.
      */
     public boolean hasAdGroupForecast() {
-      return adGroupForecastBuilder_ != null || adGroupForecast_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -672,11 +672,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         adGroupForecast_ = value;
-        onChanged();
       } else {
         adGroupForecastBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -690,11 +690,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.services.ForecastMetrics.Builder builderForValue) {
       if (adGroupForecastBuilder_ == null) {
         adGroupForecast_ = builderForValue.build();
-        onChanged();
       } else {
         adGroupForecastBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -706,17 +706,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAdGroupForecast(com.google.ads.googleads.v11.services.ForecastMetrics value) {
       if (adGroupForecastBuilder_ == null) {
-        if (adGroupForecast_ != null) {
-          adGroupForecast_ =
-            com.google.ads.googleads.v11.services.ForecastMetrics.newBuilder(adGroupForecast_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          adGroupForecast_ != null &&
+          adGroupForecast_ != com.google.ads.googleads.v11.services.ForecastMetrics.getDefaultInstance()) {
+          getAdGroupForecastBuilder().mergeFrom(value);
         } else {
           adGroupForecast_ = value;
         }
-        onChanged();
       } else {
         adGroupForecastBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -727,14 +728,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.services.ForecastMetrics ad_group_forecast = 2;</code>
      */
     public Builder clearAdGroupForecast() {
-      if (adGroupForecastBuilder_ == null) {
-        adGroupForecast_ = null;
-        onChanged();
-      } else {
-        adGroupForecast_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      adGroupForecast_ = null;
+      if (adGroupForecastBuilder_ != null) {
+        adGroupForecastBuilder_.dispose();
         adGroupForecastBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -745,7 +745,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.services.ForecastMetrics ad_group_forecast = 2;</code>
      */
     public com.google.ads.googleads.v11.services.ForecastMetrics.Builder getAdGroupForecastBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getAdGroupForecastFieldBuilder().getBuilder();
     }

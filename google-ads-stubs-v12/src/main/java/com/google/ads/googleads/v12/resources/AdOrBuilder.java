@@ -351,10 +351,10 @@ public interface AdOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Indicates if this ad was automatically added by Google Ads and not by a
-   * user. For example, this could happen when ads are automatically created as
-   * suggestions for new ads based on knowledge of how existing ads are
-   * performing.
+   * Output only. Indicates if this ad was automatically added by Google Ads and
+   * not by a user. For example, this could happen when ads are automatically
+   * created as suggestions for new ads based on knowledge of how existing ads
+   * are performing.
    * </pre>
    *
    * <code>optional bool added_by_google_ads = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -363,10 +363,10 @@ public interface AdOrBuilder extends
   boolean hasAddedByGoogleAds();
   /**
    * <pre>
-   * Output only. Indicates if this ad was automatically added by Google Ads and not by a
-   * user. For example, this could happen when ads are automatically created as
-   * suggestions for new ads based on knowledge of how existing ads are
-   * performing.
+   * Output only. Indicates if this ad was automatically added by Google Ads and
+   * not by a user. For example, this could happen when ads are automatically
+   * created as suggestions for new ads based on knowledge of how existing ads
+   * are performing.
    * </pre>
    *
    * <code>optional bool added_by_google_ads = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -454,9 +454,9 @@ public interface AdOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. The name of the ad. This is only used to be able to identify the ad. It
-   * does not need to be unique and does not affect the served ad. The name
-   * field is currently only supported for DisplayUploadAd, ImageAd,
+   * Immutable. The name of the ad. This is only used to be able to identify the
+   * ad. It does not need to be unique and does not affect the served ad. The
+   * name field is currently only supported for DisplayUploadAd, ImageAd,
    * ShoppingComparisonListingAd and VideoAd.
    * </pre>
    *
@@ -466,9 +466,9 @@ public interface AdOrBuilder extends
   boolean hasName();
   /**
    * <pre>
-   * Immutable. The name of the ad. This is only used to be able to identify the ad. It
-   * does not need to be unique and does not affect the served ad. The name
-   * field is currently only supported for DisplayUploadAd, ImageAd,
+   * Immutable. The name of the ad. This is only used to be able to identify the
+   * ad. It does not need to be unique and does not affect the served ad. The
+   * name field is currently only supported for DisplayUploadAd, ImageAd,
    * ShoppingComparisonListingAd and VideoAd.
    * </pre>
    *
@@ -478,9 +478,9 @@ public interface AdOrBuilder extends
   java.lang.String getName();
   /**
    * <pre>
-   * Immutable. The name of the ad. This is only used to be able to identify the ad. It
-   * does not need to be unique and does not affect the served ad. The name
-   * field is currently only supported for DisplayUploadAd, ImageAd,
+   * Immutable. The name of the ad. This is only used to be able to identify the
+   * ad. It does not need to be unique and does not affect the served ad. The
+   * name field is currently only supported for DisplayUploadAd, ImageAd,
    * ShoppingComparisonListingAd and VideoAd.
    * </pre>
    *
@@ -492,8 +492,8 @@ public interface AdOrBuilder extends
 
   /**
    * <pre>
-   * Output only. If this ad is system managed, then this field will indicate the source.
-   * This field is read-only.
+   * Output only. If this ad is system managed, then this field will indicate
+   * the source. This field is read-only.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -502,8 +502,8 @@ public interface AdOrBuilder extends
   int getSystemManagedResourceSourceValue();
   /**
    * <pre>
-   * Output only. If this ad is system managed, then this field will indicate the source.
-   * This field is read-only.
+   * Output only. If this ad is system managed, then this field will indicate
+   * the source. This field is read-only.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.SystemManagedResourceSourceEnum.SystemManagedResourceSource system_managed_resource_source = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

@@ -55,7 +55,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int FUNCTION_STRING_FIELD_NUMBER = 5;
-  private volatile java.lang.Object functionString_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object functionString_ = "";
   /**
    * <pre>
    * String representation of the Function.
@@ -66,7 +67,7 @@ private static final long serialVersionUID = 0L;
    * 4. CONTAINS_ANY(FeedAttribute[12345678,0],{"Mars cruise","Venus cruise"})
    * 5. AND(IN(FEED_ITEM_ID,{10001,10002}),EQUALS(CONTEXT.DEVICE,"Mobile"))
    * For more details, visit
-   * https://developers.google.com/adwords/api/docs/guides/feed-matching-functions
+   * https://developers.google.com/google-ads/api/docs/extensions/feeds/matching-functions
    * Note that because multiple strings may represent the same underlying
    * function (whitespace and single versus double quotation marks, for
    * example), the value returned may not be identical to the string sent in a
@@ -90,7 +91,7 @@ private static final long serialVersionUID = 0L;
    * 4. CONTAINS_ANY(FeedAttribute[12345678,0],{"Mars cruise","Venus cruise"})
    * 5. AND(IN(FEED_ITEM_ID,{10001,10002}),EQUALS(CONTEXT.DEVICE,"Mobile"))
    * For more details, visit
-   * https://developers.google.com/adwords/api/docs/guides/feed-matching-functions
+   * https://developers.google.com/google-ads/api/docs/extensions/feeds/matching-functions
    * Note that because multiple strings may represent the same underlying
    * function (whitespace and single versus double quotation marks, for
    * example), the value returned may not be identical to the string sent in a
@@ -123,7 +124,7 @@ private static final long serialVersionUID = 0L;
    * 4. CONTAINS_ANY(FeedAttribute[12345678,0],{"Mars cruise","Venus cruise"})
    * 5. AND(IN(FEED_ITEM_ID,{10001,10002}),EQUALS(CONTEXT.DEVICE,"Mobile"))
    * For more details, visit
-   * https://developers.google.com/adwords/api/docs/guides/feed-matching-functions
+   * https://developers.google.com/google-ads/api/docs/extensions/feeds/matching-functions
    * Note that because multiple strings may represent the same underlying
    * function (whitespace and single versus double quotation marks, for
    * example), the value returned may not be identical to the string sent in a
@@ -149,7 +150,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int OPERATOR_FIELD_NUMBER = 4;
-  private int operator_;
+  private int operator_ = 0;
   /**
    * <pre>
    * Operator for a function.
@@ -170,12 +171,12 @@ private static final long serialVersionUID = 0L;
    * @return The operator.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator getOperator() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator result = com.google.ads.googleads.v11.enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator.valueOf(operator_);
+    com.google.ads.googleads.v11.enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator result = com.google.ads.googleads.v11.enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator.forNumber(operator_);
     return result == null ? com.google.ads.googleads.v11.enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator.UNRECOGNIZED : result;
   }
 
   public static final int LEFT_OPERANDS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.common.Operand> leftOperands_;
   /**
    * <pre>
@@ -241,6 +242,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RIGHT_OPERANDS_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.common.Operand> rightOperands_;
   /**
    * <pre>
@@ -534,24 +536,23 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       functionString_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       operator_ = 0;
-
       if (leftOperandsBuilder_ == null) {
         leftOperands_ = java.util.Collections.emptyList();
       } else {
         leftOperands_ = null;
         leftOperandsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       if (rightOperandsBuilder_ == null) {
         rightOperands_ = java.util.Collections.emptyList();
       } else {
         rightOperands_ = null;
         rightOperandsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000008);
       return this;
     }
 
@@ -578,34 +579,44 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.MatchingFunction buildPartial() {
       com.google.ads.googleads.v11.common.MatchingFunction result = new com.google.ads.googleads.v11.common.MatchingFunction(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        to_bitField0_ |= 0x00000001;
-      }
-      result.functionString_ = functionString_;
-      result.operator_ = operator_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.common.MatchingFunction result) {
       if (leftOperandsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           leftOperands_ = java.util.Collections.unmodifiableList(leftOperands_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.leftOperands_ = leftOperands_;
       } else {
         result.leftOperands_ = leftOperandsBuilder_.build();
       }
       if (rightOperandsBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           rightOperands_ = java.util.Collections.unmodifiableList(rightOperands_);
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.rightOperands_ = rightOperands_;
       } else {
         result.rightOperands_ = rightOperandsBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.MatchingFunction result) {
+      int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.functionString_ = functionString_;
+        to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.operator_ = operator_;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -653,8 +664,8 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v11.common.MatchingFunction other) {
       if (other == com.google.ads.googleads.v11.common.MatchingFunction.getDefaultInstance()) return this;
       if (other.hasFunctionString()) {
-        bitField0_ |= 0x00000001;
         functionString_ = other.functionString_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.operator_ != 0) {
@@ -664,7 +675,7 @@ private static final long serialVersionUID = 0L;
         if (!other.leftOperands_.isEmpty()) {
           if (leftOperands_.isEmpty()) {
             leftOperands_ = other.leftOperands_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureLeftOperandsIsMutable();
             leftOperands_.addAll(other.leftOperands_);
@@ -677,7 +688,7 @@ private static final long serialVersionUID = 0L;
             leftOperandsBuilder_.dispose();
             leftOperandsBuilder_ = null;
             leftOperands_ = other.leftOperands_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000004);
             leftOperandsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getLeftOperandsFieldBuilder() : null;
@@ -690,7 +701,7 @@ private static final long serialVersionUID = 0L;
         if (!other.rightOperands_.isEmpty()) {
           if (rightOperands_.isEmpty()) {
             rightOperands_ = other.rightOperands_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureRightOperandsIsMutable();
             rightOperands_.addAll(other.rightOperands_);
@@ -703,7 +714,7 @@ private static final long serialVersionUID = 0L;
             rightOperandsBuilder_.dispose();
             rightOperandsBuilder_ = null;
             rightOperands_ = other.rightOperands_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
             rightOperandsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getRightOperandsFieldBuilder() : null;
@@ -766,7 +777,7 @@ private static final long serialVersionUID = 0L;
             } // case 26
             case 32: {
               operator_ = input.readEnum();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 32
             case 42: {
@@ -802,7 +813,7 @@ private static final long serialVersionUID = 0L;
      * 4. CONTAINS_ANY(FeedAttribute[12345678,0],{"Mars cruise","Venus cruise"})
      * 5. AND(IN(FEED_ITEM_ID,{10001,10002}),EQUALS(CONTEXT.DEVICE,"Mobile"))
      * For more details, visit
-     * https://developers.google.com/adwords/api/docs/guides/feed-matching-functions
+     * https://developers.google.com/google-ads/api/docs/extensions/feeds/matching-functions
      * Note that because multiple strings may represent the same underlying
      * function (whitespace and single versus double quotation marks, for
      * example), the value returned may not be identical to the string sent in a
@@ -825,7 +836,7 @@ private static final long serialVersionUID = 0L;
      * 4. CONTAINS_ANY(FeedAttribute[12345678,0],{"Mars cruise","Venus cruise"})
      * 5. AND(IN(FEED_ITEM_ID,{10001,10002}),EQUALS(CONTEXT.DEVICE,"Mobile"))
      * For more details, visit
-     * https://developers.google.com/adwords/api/docs/guides/feed-matching-functions
+     * https://developers.google.com/google-ads/api/docs/extensions/feeds/matching-functions
      * Note that because multiple strings may represent the same underlying
      * function (whitespace and single versus double quotation marks, for
      * example), the value returned may not be identical to the string sent in a
@@ -857,7 +868,7 @@ private static final long serialVersionUID = 0L;
      * 4. CONTAINS_ANY(FeedAttribute[12345678,0],{"Mars cruise","Venus cruise"})
      * 5. AND(IN(FEED_ITEM_ID,{10001,10002}),EQUALS(CONTEXT.DEVICE,"Mobile"))
      * For more details, visit
-     * https://developers.google.com/adwords/api/docs/guides/feed-matching-functions
+     * https://developers.google.com/google-ads/api/docs/extensions/feeds/matching-functions
      * Note that because multiple strings may represent the same underlying
      * function (whitespace and single versus double quotation marks, for
      * example), the value returned may not be identical to the string sent in a
@@ -890,7 +901,7 @@ private static final long serialVersionUID = 0L;
      * 4. CONTAINS_ANY(FeedAttribute[12345678,0],{"Mars cruise","Venus cruise"})
      * 5. AND(IN(FEED_ITEM_ID,{10001,10002}),EQUALS(CONTEXT.DEVICE,"Mobile"))
      * For more details, visit
-     * https://developers.google.com/adwords/api/docs/guides/feed-matching-functions
+     * https://developers.google.com/google-ads/api/docs/extensions/feeds/matching-functions
      * Note that because multiple strings may represent the same underlying
      * function (whitespace and single versus double quotation marks, for
      * example), the value returned may not be identical to the string sent in a
@@ -903,11 +914,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFunctionString(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       functionString_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -921,7 +930,7 @@ private static final long serialVersionUID = 0L;
      * 4. CONTAINS_ANY(FeedAttribute[12345678,0],{"Mars cruise","Venus cruise"})
      * 5. AND(IN(FEED_ITEM_ID,{10001,10002}),EQUALS(CONTEXT.DEVICE,"Mobile"))
      * For more details, visit
-     * https://developers.google.com/adwords/api/docs/guides/feed-matching-functions
+     * https://developers.google.com/google-ads/api/docs/extensions/feeds/matching-functions
      * Note that because multiple strings may represent the same underlying
      * function (whitespace and single versus double quotation marks, for
      * example), the value returned may not be identical to the string sent in a
@@ -932,8 +941,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFunctionString() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       functionString_ = getDefaultInstance().getFunctionString();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -947,7 +956,7 @@ private static final long serialVersionUID = 0L;
      * 4. CONTAINS_ANY(FeedAttribute[12345678,0],{"Mars cruise","Venus cruise"})
      * 5. AND(IN(FEED_ITEM_ID,{10001,10002}),EQUALS(CONTEXT.DEVICE,"Mobile"))
      * For more details, visit
-     * https://developers.google.com/adwords/api/docs/guides/feed-matching-functions
+     * https://developers.google.com/google-ads/api/docs/extensions/feeds/matching-functions
      * Note that because multiple strings may represent the same underlying
      * function (whitespace and single versus double quotation marks, for
      * example), the value returned may not be identical to the string sent in a
@@ -960,12 +969,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFunctionStringBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       functionString_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -992,8 +999,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOperatorValue(int value) {
-      
       operator_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1007,8 +1014,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator getOperator() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator result = com.google.ads.googleads.v11.enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator.valueOf(operator_);
+      com.google.ads.googleads.v11.enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator result = com.google.ads.googleads.v11.enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator.forNumber(operator_);
       return result == null ? com.google.ads.googleads.v11.enums.MatchingFunctionOperatorEnum.MatchingFunctionOperator.UNRECOGNIZED : result;
     }
     /**
@@ -1024,7 +1030,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000002;
       operator_ = value.getNumber();
       onChanged();
       return this;
@@ -1038,7 +1044,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOperator() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       operator_ = 0;
       onChanged();
       return this;
@@ -1047,9 +1053,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v11.common.Operand> leftOperands_ =
       java.util.Collections.emptyList();
     private void ensureLeftOperandsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         leftOperands_ = new java.util.ArrayList<com.google.ads.googleads.v11.common.Operand>(leftOperands_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
        }
     }
 
@@ -1254,7 +1260,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearLeftOperands() {
       if (leftOperandsBuilder_ == null) {
         leftOperands_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
       } else {
         leftOperandsBuilder_.clear();
@@ -1366,7 +1372,7 @@ private static final long serialVersionUID = 0L;
         leftOperandsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v11.common.Operand, com.google.ads.googleads.v11.common.Operand.Builder, com.google.ads.googleads.v11.common.OperandOrBuilder>(
                 leftOperands_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
         leftOperands_ = null;
@@ -1377,9 +1383,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v11.common.Operand> rightOperands_ =
       java.util.Collections.emptyList();
     private void ensureRightOperandsIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         rightOperands_ = new java.util.ArrayList<com.google.ads.googleads.v11.common.Operand>(rightOperands_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
        }
     }
 
@@ -1573,7 +1579,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearRightOperands() {
       if (rightOperandsBuilder_ == null) {
         rightOperands_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
       } else {
         rightOperandsBuilder_.clear();
@@ -1678,7 +1684,7 @@ private static final long serialVersionUID = 0L;
         rightOperandsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v11.common.Operand, com.google.ads.googleads.v11.common.Operand.Builder, com.google.ads.googleads.v11.common.OperandOrBuilder>(
                 rightOperands_,
-                ((bitField0_ & 0x00000004) != 0),
+                ((bitField0_ & 0x00000008) != 0),
                 getParentForChildren(),
                 isClean());
         rightOperands_ = null;

@@ -54,7 +54,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CUSTOMER_ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object customerId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object customerId_ = "";
   /**
    * <pre>
    * Required. The ID of the customer.
@@ -100,14 +101,14 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DIMENSIONS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> dimensions_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
       java.lang.Integer, com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension> dimensions_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension>() {
             public com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension convert(java.lang.Integer from) {
-              @SuppressWarnings("deprecation")
-              com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension result = com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension.valueOf(from);
+              com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension result = com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension.forNumber(from);
               return result == null ? com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension.UNRECOGNIZED : result;
             }
           };
@@ -178,11 +179,12 @@ private static final long serialVersionUID = 0L;
   private int dimensionsMemoizedSerializedSize;
 
   public static final int QUERY_TEXT_FIELD_NUMBER = 3;
-  private volatile java.lang.Object queryText_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object queryText_ = "";
   /**
    * <pre>
-   * Required. A free text query.  Attributes matching or related to this string will be
-   * returned.
+   * Required. A free text query.  Attributes matching or related to this string
+   * will be returned.
    * </pre>
    *
    * <code>string query_text = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -203,8 +205,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. A free text query.  Attributes matching or related to this string will be
-   * returned.
+   * Required. A free text query.  Attributes matching or related to this string
+   * will be returned.
    * </pre>
    *
    * <code>string query_text = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -226,7 +228,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CUSTOMER_INSIGHTS_GROUP_FIELD_NUMBER = 4;
-  private volatile java.lang.Object customerInsightsGroup_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object customerInsightsGroup_ = "";
   /**
    * <pre>
    * The name of the customer being planned for.  This is a user-defined value.
@@ -272,6 +275,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LOCATION_COUNTRY_FILTERS_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.LocationInfo> locationCountryFilters_;
   /**
    * <pre>
@@ -601,21 +605,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       customerId_ = "";
-
       dimensions_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       queryText_ = "";
-
       customerInsightsGroup_ = "";
-
       if (locationCountryFiltersBuilder_ == null) {
         locationCountryFilters_ = java.util.Collections.emptyList();
       } else {
         locationCountryFilters_ = null;
         locationCountryFiltersBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000010);
       return this;
     }
 
@@ -642,26 +644,40 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.ListAudienceInsightsAttributesRequest buildPartial() {
       com.google.ads.googleads.v12.services.ListAudienceInsightsAttributesRequest result = new com.google.ads.googleads.v12.services.ListAudienceInsightsAttributesRequest(this);
-      int from_bitField0_ = bitField0_;
-      result.customerId_ = customerId_;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.services.ListAudienceInsightsAttributesRequest result) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         dimensions_ = java.util.Collections.unmodifiableList(dimensions_);
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
       }
       result.dimensions_ = dimensions_;
-      result.queryText_ = queryText_;
-      result.customerInsightsGroup_ = customerInsightsGroup_;
       if (locationCountryFiltersBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000010) != 0)) {
           locationCountryFilters_ = java.util.Collections.unmodifiableList(locationCountryFilters_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000010);
         }
         result.locationCountryFilters_ = locationCountryFilters_;
       } else {
         result.locationCountryFilters_ = locationCountryFiltersBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.ListAudienceInsightsAttributesRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.customerId_ = customerId_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.queryText_ = queryText_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.customerInsightsGroup_ = customerInsightsGroup_;
+      }
     }
 
     @java.lang.Override
@@ -710,12 +726,13 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.services.ListAudienceInsightsAttributesRequest.getDefaultInstance()) return this;
       if (!other.getCustomerId().isEmpty()) {
         customerId_ = other.customerId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.dimensions_.isEmpty()) {
         if (dimensions_.isEmpty()) {
           dimensions_ = other.dimensions_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           ensureDimensionsIsMutable();
           dimensions_.addAll(other.dimensions_);
@@ -724,17 +741,19 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getQueryText().isEmpty()) {
         queryText_ = other.queryText_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getCustomerInsightsGroup().isEmpty()) {
         customerInsightsGroup_ = other.customerInsightsGroup_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (locationCountryFiltersBuilder_ == null) {
         if (!other.locationCountryFilters_.isEmpty()) {
           if (locationCountryFilters_.isEmpty()) {
             locationCountryFilters_ = other.locationCountryFilters_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureLocationCountryFiltersIsMutable();
             locationCountryFilters_.addAll(other.locationCountryFilters_);
@@ -747,7 +766,7 @@ private static final long serialVersionUID = 0L;
             locationCountryFiltersBuilder_.dispose();
             locationCountryFiltersBuilder_ = null;
             locationCountryFilters_ = other.locationCountryFilters_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000010);
             locationCountryFiltersBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getLocationCountryFiltersFieldBuilder() : null;
@@ -784,7 +803,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               customerId_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 16: {
@@ -806,12 +825,12 @@ private static final long serialVersionUID = 0L;
             } // case 18
             case 26: {
               queryText_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 34: {
               customerInsightsGroup_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 34
             case 42: {
@@ -897,11 +916,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       customerId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -914,8 +931,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCustomerId() {
-      
       customerId_ = getDefaultInstance().getCustomerId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -930,12 +947,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       customerId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -943,9 +958,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> dimensions_ =
       java.util.Collections.emptyList();
     private void ensureDimensionsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         dimensions_ = new java.util.ArrayList<java.lang.Integer>(dimensions_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
       }
     }
     /**
@@ -1049,7 +1064,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearDimensions() {
       dimensions_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1131,8 +1146,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object queryText_ = "";
     /**
      * <pre>
-     * Required. A free text query.  Attributes matching or related to this string will be
-     * returned.
+     * Required. A free text query.  Attributes matching or related to this string
+     * will be returned.
      * </pre>
      *
      * <code>string query_text = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1152,8 +1167,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A free text query.  Attributes matching or related to this string will be
-     * returned.
+     * Required. A free text query.  Attributes matching or related to this string
+     * will be returned.
      * </pre>
      *
      * <code>string query_text = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1174,8 +1189,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A free text query.  Attributes matching or related to this string will be
-     * returned.
+     * Required. A free text query.  Attributes matching or related to this string
+     * will be returned.
      * </pre>
      *
      * <code>string query_text = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1184,33 +1199,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setQueryText(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       queryText_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. A free text query.  Attributes matching or related to this string will be
-     * returned.
+     * Required. A free text query.  Attributes matching or related to this string
+     * will be returned.
      * </pre>
      *
      * <code>string query_text = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return This builder for chaining.
      */
     public Builder clearQueryText() {
-      
       queryText_ = getDefaultInstance().getQueryText();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. A free text query.  Attributes matching or related to this string will be
-     * returned.
+     * Required. A free text query.  Attributes matching or related to this string
+     * will be returned.
      * </pre>
      *
      * <code>string query_text = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1219,12 +1232,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setQueryTextBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       queryText_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1282,11 +1293,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerInsightsGroup(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       customerInsightsGroup_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1299,8 +1308,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCustomerInsightsGroup() {
-      
       customerInsightsGroup_ = getDefaultInstance().getCustomerInsightsGroup();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1315,12 +1324,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerInsightsGroupBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       customerInsightsGroup_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1328,9 +1335,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v12.common.LocationInfo> locationCountryFilters_ =
       java.util.Collections.emptyList();
     private void ensureLocationCountryFiltersIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000010) != 0)) {
         locationCountryFilters_ = new java.util.ArrayList<com.google.ads.googleads.v12.common.LocationInfo>(locationCountryFilters_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000010;
        }
     }
 
@@ -1568,7 +1575,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearLocationCountryFilters() {
       if (locationCountryFiltersBuilder_ == null) {
         locationCountryFilters_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
       } else {
         locationCountryFiltersBuilder_.clear();
@@ -1701,7 +1708,7 @@ private static final long serialVersionUID = 0L;
         locationCountryFiltersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v12.common.LocationInfo, com.google.ads.googleads.v12.common.LocationInfo.Builder, com.google.ads.googleads.v12.common.LocationInfoOrBuilder>(
                 locationCountryFilters_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000010) != 0),
                 getParentForChildren(),
                 isClean());
         locationCountryFilters_ = null;

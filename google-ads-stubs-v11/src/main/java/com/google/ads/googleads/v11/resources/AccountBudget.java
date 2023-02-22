@@ -109,8 +109,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The type of this proposal, for example, END to end the budget associated
-     * with this proposal.
+     * Output only. The type of this proposal, for example, END to end the
+     * budget associated with this proposal.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -119,8 +119,8 @@ private static final long serialVersionUID = 0L;
     int getProposalTypeValue();
     /**
      * <pre>
-     * Output only. The type of this proposal, for example, END to end the budget associated
-     * with this proposal.
+     * Output only. The type of this proposal, for example, END to end the
+     * budget associated with this proposal.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -188,8 +188,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. A purchase order number is a value that helps users reference this budget
-     * in their monthly invoices.
+     * Output only. A purchase order number is a value that helps users
+     * reference this budget in their monthly invoices.
      * </pre>
      *
      * <code>optional string purchase_order_number = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -198,8 +198,8 @@ private static final long serialVersionUID = 0L;
     boolean hasPurchaseOrderNumber();
     /**
      * <pre>
-     * Output only. A purchase order number is a value that helps users reference this budget
-     * in their monthly invoices.
+     * Output only. A purchase order number is a value that helps users
+     * reference this budget in their monthly invoices.
      * </pre>
      *
      * <code>optional string purchase_order_number = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -208,8 +208,8 @@ private static final long serialVersionUID = 0L;
     java.lang.String getPurchaseOrderNumber();
     /**
      * <pre>
-     * Output only. A purchase order number is a value that helps users reference this budget
-     * in their monthly invoices.
+     * Output only. A purchase order number is a value that helps users
+     * reference this budget in their monthly invoices.
      * </pre>
      *
      * <code>optional string purchase_order_number = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -249,8 +249,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The time when this account-level budget proposal was created.
-     * Formatted as yyyy-MM-dd HH:mm:ss.
+     * Output only. The time when this account-level budget proposal was
+     * created. Formatted as yyyy-MM-dd HH:mm:ss.
      * </pre>
      *
      * <code>optional string creation_date_time = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -259,8 +259,8 @@ private static final long serialVersionUID = 0L;
     boolean hasCreationDateTime();
     /**
      * <pre>
-     * Output only. The time when this account-level budget proposal was created.
-     * Formatted as yyyy-MM-dd HH:mm:ss.
+     * Output only. The time when this account-level budget proposal was
+     * created. Formatted as yyyy-MM-dd HH:mm:ss.
      * </pre>
      *
      * <code>optional string creation_date_time = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -269,8 +269,8 @@ private static final long serialVersionUID = 0L;
     java.lang.String getCreationDateTime();
     /**
      * <pre>
-     * Output only. The time when this account-level budget proposal was created.
-     * Formatted as yyyy-MM-dd HH:mm:ss.
+     * Output only. The time when this account-level budget proposal was
+     * created. Formatted as yyyy-MM-dd HH:mm:ss.
      * </pre>
      *
      * <code>optional string creation_date_time = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -338,8 +338,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The spending limit in micros.  One million is equivalent to
-     * one unit.
+     * Output only. The spending limit in micros.  One million is equivalent
+     * to one unit.
      * </pre>
      *
      * <code>int64 spending_limit_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -348,8 +348,8 @@ private static final long serialVersionUID = 0L;
     boolean hasSpendingLimitMicros();
     /**
      * <pre>
-     * Output only. The spending limit in micros.  One million is equivalent to
-     * one unit.
+     * Output only. The spending limit in micros.  One million is equivalent
+     * to one unit.
      * </pre>
      *
      * <code>int64 spending_limit_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -359,7 +359,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The spending limit as a well-defined type, for example, INFINITE.
+     * Output only. The spending limit as a well-defined type, for example,
+     * INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -368,7 +369,8 @@ private static final long serialVersionUID = 0L;
     boolean hasSpendingLimitType();
     /**
      * <pre>
-     * Output only. The spending limit as a well-defined type, for example, INFINITE.
+     * Output only. The spending limit as a well-defined type, for example,
+     * INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -377,7 +379,8 @@ private static final long serialVersionUID = 0L;
     int getSpendingLimitTypeValue();
     /**
      * <pre>
-     * Output only. The spending limit as a well-defined type, for example, INFINITE.
+     * Output only. The spending limit as a well-defined type, for example,
+     * INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -525,7 +528,8 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int ACCOUNT_BUDGET_PROPOSAL_FIELD_NUMBER = 12;
-    private volatile java.lang.Object accountBudgetProposal_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object accountBudgetProposal_ = "";
     /**
      * <pre>
      * Output only. The resource name of the proposal.
@@ -589,11 +593,11 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int PROPOSAL_TYPE_FIELD_NUMBER = 2;
-    private int proposalType_;
+    private int proposalType_ = 0;
     /**
      * <pre>
-     * Output only. The type of this proposal, for example, END to end the budget associated
-     * with this proposal.
+     * Output only. The type of this proposal, for example, END to end the
+     * budget associated with this proposal.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -604,21 +608,21 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The type of this proposal, for example, END to end the budget associated
-     * with this proposal.
+     * Output only. The type of this proposal, for example, END to end the
+     * budget associated with this proposal.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The proposalType.
      */
     @java.lang.Override public com.google.ads.googleads.v11.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType getProposalType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType result = com.google.ads.googleads.v11.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType.valueOf(proposalType_);
+      com.google.ads.googleads.v11.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType result = com.google.ads.googleads.v11.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType.forNumber(proposalType_);
       return result == null ? com.google.ads.googleads.v11.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType.UNRECOGNIZED : result;
     }
 
     public static final int NAME_FIELD_NUMBER = 13;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      * Output only. The name to assign to the account-level budget.
@@ -676,7 +680,8 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int START_DATE_TIME_FIELD_NUMBER = 14;
-    private volatile java.lang.Object startDateTime_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object startDateTime_ = "";
     /**
      * <pre>
      * Output only. The start time in yyyy-MM-dd HH:mm:ss format.
@@ -734,11 +739,12 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int PURCHASE_ORDER_NUMBER_FIELD_NUMBER = 17;
-    private volatile java.lang.Object purchaseOrderNumber_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object purchaseOrderNumber_ = "";
     /**
      * <pre>
-     * Output only. A purchase order number is a value that helps users reference this budget
-     * in their monthly invoices.
+     * Output only. A purchase order number is a value that helps users
+     * reference this budget in their monthly invoices.
      * </pre>
      *
      * <code>optional string purchase_order_number = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -750,8 +756,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A purchase order number is a value that helps users reference this budget
-     * in their monthly invoices.
+     * Output only. A purchase order number is a value that helps users
+     * reference this budget in their monthly invoices.
      * </pre>
      *
      * <code>optional string purchase_order_number = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -772,8 +778,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A purchase order number is a value that helps users reference this budget
-     * in their monthly invoices.
+     * Output only. A purchase order number is a value that helps users
+     * reference this budget in their monthly invoices.
      * </pre>
      *
      * <code>optional string purchase_order_number = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -795,7 +801,8 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int NOTES_FIELD_NUMBER = 18;
-    private volatile java.lang.Object notes_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object notes_ = "";
     /**
      * <pre>
      * Output only. Notes associated with this budget.
@@ -853,11 +860,12 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int CREATION_DATE_TIME_FIELD_NUMBER = 19;
-    private volatile java.lang.Object creationDateTime_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creationDateTime_ = "";
     /**
      * <pre>
-     * Output only. The time when this account-level budget proposal was created.
-     * Formatted as yyyy-MM-dd HH:mm:ss.
+     * Output only. The time when this account-level budget proposal was
+     * created. Formatted as yyyy-MM-dd HH:mm:ss.
      * </pre>
      *
      * <code>optional string creation_date_time = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -869,8 +877,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The time when this account-level budget proposal was created.
-     * Formatted as yyyy-MM-dd HH:mm:ss.
+     * Output only. The time when this account-level budget proposal was
+     * created. Formatted as yyyy-MM-dd HH:mm:ss.
      * </pre>
      *
      * <code>optional string creation_date_time = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -891,8 +899,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The time when this account-level budget proposal was created.
-     * Formatted as yyyy-MM-dd HH:mm:ss.
+     * Output only. The time when this account-level budget proposal was
+     * created. Formatted as yyyy-MM-dd HH:mm:ss.
      * </pre>
      *
      * <code>optional string creation_date_time = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1013,8 +1021,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType getEndTimeType() {
       if (endTimeCase_ == 6) {
-        @SuppressWarnings("deprecation")
-        com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType result = com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType.valueOf(
+        com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType result = com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType.forNumber(
             (java.lang.Integer) endTime_);
         return result == null ? com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType.UNRECOGNIZED : result;
       }
@@ -1024,8 +1031,8 @@ private static final long serialVersionUID = 0L;
     public static final int SPENDING_LIMIT_MICROS_FIELD_NUMBER = 16;
     /**
      * <pre>
-     * Output only. The spending limit in micros.  One million is equivalent to
-     * one unit.
+     * Output only. The spending limit in micros.  One million is equivalent
+     * to one unit.
      * </pre>
      *
      * <code>int64 spending_limit_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1037,8 +1044,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The spending limit in micros.  One million is equivalent to
-     * one unit.
+     * Output only. The spending limit in micros.  One million is equivalent
+     * to one unit.
      * </pre>
      *
      * <code>int64 spending_limit_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1055,7 +1062,8 @@ private static final long serialVersionUID = 0L;
     public static final int SPENDING_LIMIT_TYPE_FIELD_NUMBER = 8;
     /**
      * <pre>
-     * Output only. The spending limit as a well-defined type, for example, INFINITE.
+     * Output only. The spending limit as a well-defined type, for example,
+     * INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1066,7 +1074,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The spending limit as a well-defined type, for example, INFINITE.
+     * Output only. The spending limit as a well-defined type, for example,
+     * INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1080,7 +1089,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The spending limit as a well-defined type, for example, INFINITE.
+     * Output only. The spending limit as a well-defined type, for example,
+     * INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1088,8 +1098,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType getSpendingLimitType() {
       if (spendingLimitCase_ == 8) {
-        @SuppressWarnings("deprecation")
-        com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType result = com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType.valueOf(
+        com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType result = com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType.forNumber(
             (java.lang.Integer) spendingLimit_);
         return result == null ? com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType.UNRECOGNIZED : result;
       }
@@ -1458,20 +1467,14 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         accountBudgetProposal_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
         proposalType_ = 0;
-
         name_ = "";
-        bitField0_ = (bitField0_ & ~0x00000002);
         startDateTime_ = "";
-        bitField0_ = (bitField0_ & ~0x00000004);
         purchaseOrderNumber_ = "";
-        bitField0_ = (bitField0_ & ~0x00000008);
         notes_ = "";
-        bitField0_ = (bitField0_ & ~0x00000010);
         creationDateTime_ = "";
-        bitField0_ = (bitField0_ & ~0x00000020);
         endTimeCase_ = 0;
         endTime_ = null;
         spendingLimitCase_ = 0;
@@ -1502,50 +1505,50 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v11.resources.AccountBudget.PendingAccountBudgetProposal buildPartial() {
         com.google.ads.googleads.v11.resources.AccountBudget.PendingAccountBudgetProposal result = new com.google.ads.googleads.v11.resources.AccountBudget.PendingAccountBudgetProposal(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v11.resources.AccountBudget.PendingAccountBudgetProposal result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.accountBudgetProposal_ = accountBudgetProposal_;
           to_bitField0_ |= 0x00000001;
         }
-        result.accountBudgetProposal_ = accountBudgetProposal_;
-        result.proposalType_ = proposalType_;
         if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.proposalType_ = proposalType_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.name_ = name_;
           to_bitField0_ |= 0x00000002;
         }
-        result.name_ = name_;
-        if (((from_bitField0_ & 0x00000004) != 0)) {
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.startDateTime_ = startDateTime_;
           to_bitField0_ |= 0x00000004;
         }
-        result.startDateTime_ = startDateTime_;
-        if (((from_bitField0_ & 0x00000008) != 0)) {
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.purchaseOrderNumber_ = purchaseOrderNumber_;
           to_bitField0_ |= 0x00000008;
         }
-        result.purchaseOrderNumber_ = purchaseOrderNumber_;
-        if (((from_bitField0_ & 0x00000010) != 0)) {
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.notes_ = notes_;
           to_bitField0_ |= 0x00000010;
         }
-        result.notes_ = notes_;
-        if (((from_bitField0_ & 0x00000020) != 0)) {
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.creationDateTime_ = creationDateTime_;
           to_bitField0_ |= 0x00000020;
         }
-        result.creationDateTime_ = creationDateTime_;
-        if (endTimeCase_ == 15) {
-          result.endTime_ = endTime_;
-        }
-        if (endTimeCase_ == 6) {
-          result.endTime_ = endTime_;
-        }
-        if (spendingLimitCase_ == 16) {
-          result.spendingLimit_ = spendingLimit_;
-        }
-        if (spendingLimitCase_ == 8) {
-          result.spendingLimit_ = spendingLimit_;
-        }
-        result.bitField0_ = to_bitField0_;
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      private void buildPartialOneofs(com.google.ads.googleads.v11.resources.AccountBudget.PendingAccountBudgetProposal result) {
         result.endTimeCase_ = endTimeCase_;
+        result.endTime_ = this.endTime_;
         result.spendingLimitCase_ = spendingLimitCase_;
-        onBuilt();
-        return result;
+        result.spendingLimit_ = this.spendingLimit_;
       }
 
       @java.lang.Override
@@ -1593,36 +1596,36 @@ private static final long serialVersionUID = 0L;
       public Builder mergeFrom(com.google.ads.googleads.v11.resources.AccountBudget.PendingAccountBudgetProposal other) {
         if (other == com.google.ads.googleads.v11.resources.AccountBudget.PendingAccountBudgetProposal.getDefaultInstance()) return this;
         if (other.hasAccountBudgetProposal()) {
-          bitField0_ |= 0x00000001;
           accountBudgetProposal_ = other.accountBudgetProposal_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.proposalType_ != 0) {
           setProposalTypeValue(other.getProposalTypeValue());
         }
         if (other.hasName()) {
-          bitField0_ |= 0x00000002;
           name_ = other.name_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (other.hasStartDateTime()) {
-          bitField0_ |= 0x00000004;
           startDateTime_ = other.startDateTime_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (other.hasPurchaseOrderNumber()) {
-          bitField0_ |= 0x00000008;
           purchaseOrderNumber_ = other.purchaseOrderNumber_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         if (other.hasNotes()) {
-          bitField0_ |= 0x00000010;
           notes_ = other.notes_;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         if (other.hasCreationDateTime()) {
-          bitField0_ |= 0x00000020;
           creationDateTime_ = other.creationDateTime_;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
         switch (other.getEndTimeCase()) {
@@ -1681,7 +1684,7 @@ private static final long serialVersionUID = 0L;
                 break;
               case 16: {
                 proposalType_ = input.readEnum();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               case 48: {
@@ -1703,12 +1706,12 @@ private static final long serialVersionUID = 0L;
               } // case 98
               case 106: {
                 name_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
+                bitField0_ |= 0x00000004;
                 break;
               } // case 106
               case 114: {
                 startDateTime_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
+                bitField0_ |= 0x00000008;
                 break;
               } // case 114
               case 122: {
@@ -1724,17 +1727,17 @@ private static final long serialVersionUID = 0L;
               } // case 128
               case 138: {
                 purchaseOrderNumber_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000008;
+                bitField0_ |= 0x00000010;
                 break;
               } // case 138
               case 146: {
                 notes_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000010;
+                bitField0_ |= 0x00000020;
                 break;
               } // case 146
               case 154: {
                 creationDateTime_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000020;
+                bitField0_ |= 0x00000040;
                 break;
               } // case 154
               default: {
@@ -1856,11 +1859,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setAccountBudgetProposal(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+        if (value == null) { throw new NullPointerException(); }
         accountBudgetProposal_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1875,8 +1876,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearAccountBudgetProposal() {
-        bitField0_ = (bitField0_ & ~0x00000001);
         accountBudgetProposal_ = getDefaultInstance().getAccountBudgetProposal();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -1893,12 +1894,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setAccountBudgetProposalBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        bitField0_ |= 0x00000001;
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         accountBudgetProposal_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1906,8 +1905,8 @@ private static final long serialVersionUID = 0L;
       private int proposalType_ = 0;
       /**
        * <pre>
-       * Output only. The type of this proposal, for example, END to end the budget associated
-       * with this proposal.
+       * Output only. The type of this proposal, for example, END to end the
+       * budget associated with this proposal.
        * </pre>
        *
        * <code>.google.ads.googleads.v11.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1918,8 +1917,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The type of this proposal, for example, END to end the budget associated
-       * with this proposal.
+       * Output only. The type of this proposal, for example, END to end the
+       * budget associated with this proposal.
        * </pre>
        *
        * <code>.google.ads.googleads.v11.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1927,15 +1926,15 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setProposalTypeValue(int value) {
-        
         proposalType_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The type of this proposal, for example, END to end the budget associated
-       * with this proposal.
+       * Output only. The type of this proposal, for example, END to end the
+       * budget associated with this proposal.
        * </pre>
        *
        * <code>.google.ads.googleads.v11.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1943,14 +1942,13 @@ private static final long serialVersionUID = 0L;
        */
       @java.lang.Override
       public com.google.ads.googleads.v11.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType getProposalType() {
-        @SuppressWarnings("deprecation")
-        com.google.ads.googleads.v11.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType result = com.google.ads.googleads.v11.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType.valueOf(proposalType_);
+        com.google.ads.googleads.v11.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType result = com.google.ads.googleads.v11.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType.forNumber(proposalType_);
         return result == null ? com.google.ads.googleads.v11.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType.UNRECOGNIZED : result;
       }
       /**
        * <pre>
-       * Output only. The type of this proposal, for example, END to end the budget associated
-       * with this proposal.
+       * Output only. The type of this proposal, for example, END to end the
+       * budget associated with this proposal.
        * </pre>
        *
        * <code>.google.ads.googleads.v11.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1961,22 +1959,22 @@ private static final long serialVersionUID = 0L;
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000002;
         proposalType_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The type of this proposal, for example, END to end the budget associated
-       * with this proposal.
+       * Output only. The type of this proposal, for example, END to end the
+       * budget associated with this proposal.
        * </pre>
        *
        * <code>.google.ads.googleads.v11.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return This builder for chaining.
        */
       public Builder clearProposalType() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         proposalType_ = 0;
         onChanged();
         return this;
@@ -1992,7 +1990,7 @@ private static final long serialVersionUID = 0L;
        * @return Whether the name field is set.
        */
       public boolean hasName() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <pre>
@@ -2046,11 +2044,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2063,8 +2059,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        bitField0_ = (bitField0_ & ~0x00000002);
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -2079,12 +2075,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        bitField0_ |= 0x00000002;
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2099,7 +2093,7 @@ private static final long serialVersionUID = 0L;
        * @return Whether the startDateTime field is set.
        */
       public boolean hasStartDateTime() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <pre>
@@ -2153,11 +2147,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setStartDateTime(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+        if (value == null) { throw new NullPointerException(); }
         startDateTime_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -2170,8 +2162,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearStartDateTime() {
-        bitField0_ = (bitField0_ & ~0x00000004);
         startDateTime_ = getDefaultInstance().getStartDateTime();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -2186,12 +2178,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setStartDateTimeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        bitField0_ |= 0x00000004;
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         startDateTime_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -2199,20 +2189,20 @@ private static final long serialVersionUID = 0L;
       private java.lang.Object purchaseOrderNumber_ = "";
       /**
        * <pre>
-       * Output only. A purchase order number is a value that helps users reference this budget
-       * in their monthly invoices.
+       * Output only. A purchase order number is a value that helps users
+       * reference this budget in their monthly invoices.
        * </pre>
        *
        * <code>optional string purchase_order_number = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return Whether the purchaseOrderNumber field is set.
        */
       public boolean hasPurchaseOrderNumber() {
-        return ((bitField0_ & 0x00000008) != 0);
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <pre>
-       * Output only. A purchase order number is a value that helps users reference this budget
-       * in their monthly invoices.
+       * Output only. A purchase order number is a value that helps users
+       * reference this budget in their monthly invoices.
        * </pre>
        *
        * <code>optional string purchase_order_number = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2232,8 +2222,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. A purchase order number is a value that helps users reference this budget
-       * in their monthly invoices.
+       * Output only. A purchase order number is a value that helps users
+       * reference this budget in their monthly invoices.
        * </pre>
        *
        * <code>optional string purchase_order_number = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2254,8 +2244,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. A purchase order number is a value that helps users reference this budget
-       * in their monthly invoices.
+       * Output only. A purchase order number is a value that helps users
+       * reference this budget in their monthly invoices.
        * </pre>
        *
        * <code>optional string purchase_order_number = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2264,33 +2254,31 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setPurchaseOrderNumber(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
+        if (value == null) { throw new NullPointerException(); }
         purchaseOrderNumber_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. A purchase order number is a value that helps users reference this budget
-       * in their monthly invoices.
+       * Output only. A purchase order number is a value that helps users
+       * reference this budget in their monthly invoices.
        * </pre>
        *
        * <code>optional string purchase_order_number = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return This builder for chaining.
        */
       public Builder clearPurchaseOrderNumber() {
-        bitField0_ = (bitField0_ & ~0x00000008);
         purchaseOrderNumber_ = getDefaultInstance().getPurchaseOrderNumber();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. A purchase order number is a value that helps users reference this budget
-       * in their monthly invoices.
+       * Output only. A purchase order number is a value that helps users
+       * reference this budget in their monthly invoices.
        * </pre>
        *
        * <code>optional string purchase_order_number = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2299,12 +2287,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setPurchaseOrderNumberBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        bitField0_ |= 0x00000008;
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         purchaseOrderNumber_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -2319,7 +2305,7 @@ private static final long serialVersionUID = 0L;
        * @return Whether the notes field is set.
        */
       public boolean hasNotes() {
-        return ((bitField0_ & 0x00000010) != 0);
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <pre>
@@ -2373,11 +2359,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setNotes(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
+        if (value == null) { throw new NullPointerException(); }
         notes_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -2390,8 +2374,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearNotes() {
-        bitField0_ = (bitField0_ & ~0x00000010);
         notes_ = getDefaultInstance().getNotes();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -2406,12 +2390,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setNotesBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        bitField0_ |= 0x00000010;
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         notes_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -2419,20 +2401,20 @@ private static final long serialVersionUID = 0L;
       private java.lang.Object creationDateTime_ = "";
       /**
        * <pre>
-       * Output only. The time when this account-level budget proposal was created.
-       * Formatted as yyyy-MM-dd HH:mm:ss.
+       * Output only. The time when this account-level budget proposal was
+       * created. Formatted as yyyy-MM-dd HH:mm:ss.
        * </pre>
        *
        * <code>optional string creation_date_time = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return Whether the creationDateTime field is set.
        */
       public boolean hasCreationDateTime() {
-        return ((bitField0_ & 0x00000020) != 0);
+        return ((bitField0_ & 0x00000040) != 0);
       }
       /**
        * <pre>
-       * Output only. The time when this account-level budget proposal was created.
-       * Formatted as yyyy-MM-dd HH:mm:ss.
+       * Output only. The time when this account-level budget proposal was
+       * created. Formatted as yyyy-MM-dd HH:mm:ss.
        * </pre>
        *
        * <code>optional string creation_date_time = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2452,8 +2434,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The time when this account-level budget proposal was created.
-       * Formatted as yyyy-MM-dd HH:mm:ss.
+       * Output only. The time when this account-level budget proposal was
+       * created. Formatted as yyyy-MM-dd HH:mm:ss.
        * </pre>
        *
        * <code>optional string creation_date_time = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2474,8 +2456,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The time when this account-level budget proposal was created.
-       * Formatted as yyyy-MM-dd HH:mm:ss.
+       * Output only. The time when this account-level budget proposal was
+       * created. Formatted as yyyy-MM-dd HH:mm:ss.
        * </pre>
        *
        * <code>optional string creation_date_time = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2484,33 +2466,31 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setCreationDateTime(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000020;
+        if (value == null) { throw new NullPointerException(); }
         creationDateTime_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The time when this account-level budget proposal was created.
-       * Formatted as yyyy-MM-dd HH:mm:ss.
+       * Output only. The time when this account-level budget proposal was
+       * created. Formatted as yyyy-MM-dd HH:mm:ss.
        * </pre>
        *
        * <code>optional string creation_date_time = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return This builder for chaining.
        */
       public Builder clearCreationDateTime() {
-        bitField0_ = (bitField0_ & ~0x00000020);
         creationDateTime_ = getDefaultInstance().getCreationDateTime();
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The time when this account-level budget proposal was created.
-       * Formatted as yyyy-MM-dd HH:mm:ss.
+       * Output only. The time when this account-level budget proposal was
+       * created. Formatted as yyyy-MM-dd HH:mm:ss.
        * </pre>
        *
        * <code>optional string creation_date_time = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2519,12 +2499,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setCreationDateTimeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        bitField0_ |= 0x00000020;
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         creationDateTime_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -2605,10 +2583,8 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setEndDateTime(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  endTimeCase_ = 15;
+        if (value == null) { throw new NullPointerException(); }
+        endTimeCase_ = 15;
         endTime_ = value;
         onChanged();
         return this;
@@ -2640,10 +2616,8 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setEndDateTimeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         endTimeCase_ = 15;
         endTime_ = value;
         onChanged();
@@ -2703,8 +2677,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType getEndTimeType() {
         if (endTimeCase_ == 6) {
-          @SuppressWarnings("deprecation")
-          com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType result = com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType.valueOf(
+          com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType result = com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType.forNumber(
               (java.lang.Integer) endTime_);
           return result == null ? com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType.UNRECOGNIZED : result;
         }
@@ -2747,8 +2720,8 @@ private static final long serialVersionUID = 0L;
 
       /**
        * <pre>
-       * Output only. The spending limit in micros.  One million is equivalent to
-       * one unit.
+       * Output only. The spending limit in micros.  One million is equivalent
+       * to one unit.
        * </pre>
        *
        * <code>int64 spending_limit_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2759,8 +2732,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The spending limit in micros.  One million is equivalent to
-       * one unit.
+       * Output only. The spending limit in micros.  One million is equivalent
+       * to one unit.
        * </pre>
        *
        * <code>int64 spending_limit_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2774,8 +2747,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The spending limit in micros.  One million is equivalent to
-       * one unit.
+       * Output only. The spending limit in micros.  One million is equivalent
+       * to one unit.
        * </pre>
        *
        * <code>int64 spending_limit_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2783,6 +2756,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setSpendingLimitMicros(long value) {
+        
         spendingLimitCase_ = 16;
         spendingLimit_ = value;
         onChanged();
@@ -2790,8 +2764,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The spending limit in micros.  One million is equivalent to
-       * one unit.
+       * Output only. The spending limit in micros.  One million is equivalent
+       * to one unit.
        * </pre>
        *
        * <code>int64 spending_limit_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2808,7 +2782,8 @@ private static final long serialVersionUID = 0L;
 
       /**
        * <pre>
-       * Output only. The spending limit as a well-defined type, for example, INFINITE.
+       * Output only. The spending limit as a well-defined type, for example,
+       * INFINITE.
        * </pre>
        *
        * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2820,7 +2795,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The spending limit as a well-defined type, for example, INFINITE.
+       * Output only. The spending limit as a well-defined type, for example,
+       * INFINITE.
        * </pre>
        *
        * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2835,7 +2811,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The spending limit as a well-defined type, for example, INFINITE.
+       * Output only. The spending limit as a well-defined type, for example,
+       * INFINITE.
        * </pre>
        *
        * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2850,7 +2827,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The spending limit as a well-defined type, for example, INFINITE.
+       * Output only. The spending limit as a well-defined type, for example,
+       * INFINITE.
        * </pre>
        *
        * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2859,8 +2837,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType getSpendingLimitType() {
         if (spendingLimitCase_ == 8) {
-          @SuppressWarnings("deprecation")
-          com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType result = com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType.valueOf(
+          com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType result = com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType.forNumber(
               (java.lang.Integer) spendingLimit_);
           return result == null ? com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType.UNRECOGNIZED : result;
         }
@@ -2868,7 +2845,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The spending limit as a well-defined type, for example, INFINITE.
+       * Output only. The spending limit as a well-defined type, for example,
+       * INFINITE.
        * </pre>
        *
        * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2886,7 +2864,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The spending limit as a well-defined type, for example, INFINITE.
+       * Output only. The spending limit as a well-defined type, for example,
+       * INFINITE.
        * </pre>
        *
        * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3171,7 +3150,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Output only. The resource name of the account-level budget.
@@ -3221,7 +3201,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ID_FIELD_NUMBER = 23;
-  private long id_;
+  private long id_ = 0L;
   /**
    * <pre>
    * Output only. The ID of the account-level budget.
@@ -3248,11 +3228,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BILLING_SETUP_FIELD_NUMBER = 24;
-  private volatile java.lang.Object billingSetup_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object billingSetup_ = "";
   /**
    * <pre>
-   * Output only. The resource name of the billing setup associated with this account-level
-   * budget.  BillingSetup resource names have the form:
+   * Output only. The resource name of the billing setup associated with this
+   * account-level budget.  BillingSetup resource names have the form:
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
@@ -3265,8 +3246,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The resource name of the billing setup associated with this account-level
-   * budget.  BillingSetup resource names have the form:
+   * Output only. The resource name of the billing setup associated with this
+   * account-level budget.  BillingSetup resource names have the form:
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
@@ -3288,8 +3269,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The resource name of the billing setup associated with this account-level
-   * budget.  BillingSetup resource names have the form:
+   * Output only. The resource name of the billing setup associated with this
+   * account-level budget.  BillingSetup resource names have the form:
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
@@ -3312,7 +3293,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STATUS_FIELD_NUMBER = 4;
-  private int status_;
+  private int status_ = 0;
   /**
    * <pre>
    * Output only. The status of this account-level budget.
@@ -3333,13 +3314,13 @@ private static final long serialVersionUID = 0L;
    * @return The status.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.AccountBudgetStatusEnum.AccountBudgetStatus getStatus() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.AccountBudgetStatusEnum.AccountBudgetStatus result = com.google.ads.googleads.v11.enums.AccountBudgetStatusEnum.AccountBudgetStatus.valueOf(status_);
+    com.google.ads.googleads.v11.enums.AccountBudgetStatusEnum.AccountBudgetStatus result = com.google.ads.googleads.v11.enums.AccountBudgetStatusEnum.AccountBudgetStatus.forNumber(status_);
     return result == null ? com.google.ads.googleads.v11.enums.AccountBudgetStatusEnum.AccountBudgetStatus.UNRECOGNIZED : result;
   }
 
   public static final int NAME_FIELD_NUMBER = 25;
-  private volatile java.lang.Object name_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
   /**
    * <pre>
    * Output only. The name of the account-level budget.
@@ -3397,7 +3378,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PROPOSED_START_DATE_TIME_FIELD_NUMBER = 26;
-  private volatile java.lang.Object proposedStartDateTime_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object proposedStartDateTime_ = "";
   /**
    * <pre>
    * Output only. The proposed start time of the account-level budget in
@@ -3461,11 +3443,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int APPROVED_START_DATE_TIME_FIELD_NUMBER = 27;
-  private volatile java.lang.Object approvedStartDateTime_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object approvedStartDateTime_ = "";
   /**
    * <pre>
-   * Output only. The approved start time of the account-level budget in yyyy-MM-dd HH:mm:ss
-   * format.
+   * Output only. The approved start time of the account-level budget in
+   * yyyy-MM-dd HH:mm:ss format.
    * For example, if a new budget is approved after the proposed start time,
    * the approved start time is the time of approval.
    * </pre>
@@ -3479,8 +3462,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The approved start time of the account-level budget in yyyy-MM-dd HH:mm:ss
-   * format.
+   * Output only. The approved start time of the account-level budget in
+   * yyyy-MM-dd HH:mm:ss format.
    * For example, if a new budget is approved after the proposed start time,
    * the approved start time is the time of approval.
    * </pre>
@@ -3503,8 +3486,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The approved start time of the account-level budget in yyyy-MM-dd HH:mm:ss
-   * format.
+   * Output only. The approved start time of the account-level budget in
+   * yyyy-MM-dd HH:mm:ss format.
    * For example, if a new budget is approved after the proposed start time,
    * the approved start time is the time of approval.
    * </pre>
@@ -3528,7 +3511,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTAL_ADJUSTMENTS_MICROS_FIELD_NUMBER = 33;
-  private long totalAdjustmentsMicros_;
+  private long totalAdjustmentsMicros_ = 0L;
   /**
    * <pre>
    * Output only. The total adjustments amount.
@@ -3544,7 +3527,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AMOUNT_SERVED_MICROS_FIELD_NUMBER = 34;
-  private long amountServedMicros_;
+  private long amountServedMicros_ = 0L;
   /**
    * <pre>
    * Output only. The value of Ads that have been served, in micros.
@@ -3561,11 +3544,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PURCHASE_ORDER_NUMBER_FIELD_NUMBER = 35;
-  private volatile java.lang.Object purchaseOrderNumber_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object purchaseOrderNumber_ = "";
   /**
    * <pre>
-   * Output only. A purchase order number is a value that helps users reference this budget
-   * in their monthly invoices.
+   * Output only. A purchase order number is a value that helps users reference
+   * this budget in their monthly invoices.
    * </pre>
    *
    * <code>optional string purchase_order_number = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3577,8 +3561,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. A purchase order number is a value that helps users reference this budget
-   * in their monthly invoices.
+   * Output only. A purchase order number is a value that helps users reference
+   * this budget in their monthly invoices.
    * </pre>
    *
    * <code>optional string purchase_order_number = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3599,8 +3583,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. A purchase order number is a value that helps users reference this budget
-   * in their monthly invoices.
+   * Output only. A purchase order number is a value that helps users reference
+   * this budget in their monthly invoices.
    * </pre>
    *
    * <code>optional string purchase_order_number = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3622,7 +3606,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NOTES_FIELD_NUMBER = 36;
-  private volatile java.lang.Object notes_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object notes_ = "";
   /**
    * <pre>
    * Output only. Notes associated with the budget.
@@ -3714,7 +3699,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v11.resources.AccountBudget.PendingAccountBudgetProposalOrBuilder getPendingProposalOrBuilder() {
-    return getPendingProposal();
+    return pendingProposal_ == null ? com.google.ads.googleads.v11.resources.AccountBudget.PendingAccountBudgetProposal.getDefaultInstance() : pendingProposal_;
   }
 
   public static final int PROPOSED_END_DATE_TIME_FIELD_NUMBER = 28;
@@ -3784,7 +3769,8 @@ private static final long serialVersionUID = 0L;
   public static final int PROPOSED_END_TIME_TYPE_FIELD_NUMBER = 9;
   /**
    * <pre>
-   * Output only. The proposed end time as a well-defined type, for example, FOREVER.
+   * Output only. The proposed end time as a well-defined type, for example,
+   * FOREVER.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3795,7 +3781,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The proposed end time as a well-defined type, for example, FOREVER.
+   * Output only. The proposed end time as a well-defined type, for example,
+   * FOREVER.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3809,7 +3796,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The proposed end time as a well-defined type, for example, FOREVER.
+   * Output only. The proposed end time as a well-defined type, for example,
+   * FOREVER.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3817,8 +3805,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType getProposedEndTimeType() {
     if (proposedEndTimeCase_ == 9) {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType result = com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType.valueOf(
+      com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType result = com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType.forNumber(
           (java.lang.Integer) proposedEndTime_);
       return result == null ? com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType.UNRECOGNIZED : result;
     }
@@ -3892,7 +3879,8 @@ private static final long serialVersionUID = 0L;
   public static final int APPROVED_END_TIME_TYPE_FIELD_NUMBER = 11;
   /**
    * <pre>
-   * Output only. The approved end time as a well-defined type, for example, FOREVER.
+   * Output only. The approved end time as a well-defined type, for example,
+   * FOREVER.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType approved_end_time_type = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3903,7 +3891,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The approved end time as a well-defined type, for example, FOREVER.
+   * Output only. The approved end time as a well-defined type, for example,
+   * FOREVER.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType approved_end_time_type = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3917,7 +3906,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The approved end time as a well-defined type, for example, FOREVER.
+   * Output only. The approved end time as a well-defined type, for example,
+   * FOREVER.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType approved_end_time_type = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3925,8 +3915,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType getApprovedEndTimeType() {
     if (approvedEndTimeCase_ == 11) {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType result = com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType.valueOf(
+      com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType result = com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType.forNumber(
           (java.lang.Integer) approvedEndTime_);
       return result == null ? com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType.UNRECOGNIZED : result;
     }
@@ -3936,8 +3925,8 @@ private static final long serialVersionUID = 0L;
   public static final int PROPOSED_SPENDING_LIMIT_MICROS_FIELD_NUMBER = 30;
   /**
    * <pre>
-   * Output only. The proposed spending limit in micros.  One million is equivalent to
-   * one unit.
+   * Output only. The proposed spending limit in micros.  One million is
+   * equivalent to one unit.
    * </pre>
    *
    * <code>int64 proposed_spending_limit_micros = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3949,8 +3938,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The proposed spending limit in micros.  One million is equivalent to
-   * one unit.
+   * Output only. The proposed spending limit in micros.  One million is
+   * equivalent to one unit.
    * </pre>
    *
    * <code>int64 proposed_spending_limit_micros = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3967,8 +3956,8 @@ private static final long serialVersionUID = 0L;
   public static final int PROPOSED_SPENDING_LIMIT_TYPE_FIELD_NUMBER = 13;
   /**
    * <pre>
-   * Output only. The proposed spending limit as a well-defined type, for example,
-   * INFINITE.
+   * Output only. The proposed spending limit as a well-defined type, for
+   * example, INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3979,8 +3968,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The proposed spending limit as a well-defined type, for example,
-   * INFINITE.
+   * Output only. The proposed spending limit as a well-defined type, for
+   * example, INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3994,8 +3983,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The proposed spending limit as a well-defined type, for example,
-   * INFINITE.
+   * Output only. The proposed spending limit as a well-defined type, for
+   * example, INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4003,8 +3992,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType getProposedSpendingLimitType() {
     if (proposedSpendingLimitCase_ == 13) {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType result = com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType.valueOf(
+      com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType result = com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType.forNumber(
           (java.lang.Integer) proposedSpendingLimit_);
       return result == null ? com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType.UNRECOGNIZED : result;
     }
@@ -4014,9 +4002,9 @@ private static final long serialVersionUID = 0L;
   public static final int APPROVED_SPENDING_LIMIT_MICROS_FIELD_NUMBER = 31;
   /**
    * <pre>
-   * Output only. The approved spending limit in micros.  One million is equivalent to
-   * one unit.  This will only be populated if the proposed spending limit
-   * is finite, and will always be greater than or equal to the
+   * Output only. The approved spending limit in micros.  One million is
+   * equivalent to one unit.  This will only be populated if the proposed
+   * spending limit is finite, and will always be greater than or equal to the
    * proposed spending limit.
    * </pre>
    *
@@ -4029,9 +4017,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The approved spending limit in micros.  One million is equivalent to
-   * one unit.  This will only be populated if the proposed spending limit
-   * is finite, and will always be greater than or equal to the
+   * Output only. The approved spending limit in micros.  One million is
+   * equivalent to one unit.  This will only be populated if the proposed
+   * spending limit is finite, and will always be greater than or equal to the
    * proposed spending limit.
    * </pre>
    *
@@ -4049,9 +4037,9 @@ private static final long serialVersionUID = 0L;
   public static final int APPROVED_SPENDING_LIMIT_TYPE_FIELD_NUMBER = 15;
   /**
    * <pre>
-   * Output only. The approved spending limit as a well-defined type, for example,
-   * INFINITE.  This will only be populated if the approved spending limit is
-   * INFINITE.
+   * Output only. The approved spending limit as a well-defined type, for
+   * example, INFINITE.  This will only be populated if the approved spending
+   * limit is INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4062,9 +4050,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The approved spending limit as a well-defined type, for example,
-   * INFINITE.  This will only be populated if the approved spending limit is
-   * INFINITE.
+   * Output only. The approved spending limit as a well-defined type, for
+   * example, INFINITE.  This will only be populated if the approved spending
+   * limit is INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4078,9 +4066,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The approved spending limit as a well-defined type, for example,
-   * INFINITE.  This will only be populated if the approved spending limit is
-   * INFINITE.
+   * Output only. The approved spending limit as a well-defined type, for
+   * example, INFINITE.  This will only be populated if the approved spending
+   * limit is INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4088,8 +4076,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType getApprovedSpendingLimitType() {
     if (approvedSpendingLimitCase_ == 15) {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType result = com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType.valueOf(
+      com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType result = com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType.forNumber(
           (java.lang.Integer) approvedSpendingLimit_);
       return result == null ? com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType.UNRECOGNIZED : result;
     }
@@ -4099,8 +4086,8 @@ private static final long serialVersionUID = 0L;
   public static final int ADJUSTED_SPENDING_LIMIT_MICROS_FIELD_NUMBER = 32;
   /**
    * <pre>
-   * Output only. The adjusted spending limit in micros.  One million is equivalent to
-   * one unit.
+   * Output only. The adjusted spending limit in micros.  One million is
+   * equivalent to one unit.
    * If the approved spending limit is finite, the adjusted
    * spending limit may vary depending on the types of adjustments applied
    * to this budget, if applicable.
@@ -4119,8 +4106,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The adjusted spending limit in micros.  One million is equivalent to
-   * one unit.
+   * Output only. The adjusted spending limit in micros.  One million is
+   * equivalent to one unit.
    * If the approved spending limit is finite, the adjusted
    * spending limit may vary depending on the types of adjustments applied
    * to this budget, if applicable.
@@ -4144,10 +4131,10 @@ private static final long serialVersionUID = 0L;
   public static final int ADJUSTED_SPENDING_LIMIT_TYPE_FIELD_NUMBER = 17;
   /**
    * <pre>
-   * Output only. The adjusted spending limit as a well-defined type, for example,
-   * INFINITE. This will only be populated if the adjusted spending limit is
-   * INFINITE, which is guaranteed to be true if the approved spending limit
-   * is INFINITE.
+   * Output only. The adjusted spending limit as a well-defined type, for
+   * example, INFINITE. This will only be populated if the adjusted spending
+   * limit is INFINITE, which is guaranteed to be true if the approved
+   * spending limit is INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType adjusted_spending_limit_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4158,10 +4145,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The adjusted spending limit as a well-defined type, for example,
-   * INFINITE. This will only be populated if the adjusted spending limit is
-   * INFINITE, which is guaranteed to be true if the approved spending limit
-   * is INFINITE.
+   * Output only. The adjusted spending limit as a well-defined type, for
+   * example, INFINITE. This will only be populated if the adjusted spending
+   * limit is INFINITE, which is guaranteed to be true if the approved
+   * spending limit is INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType adjusted_spending_limit_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4175,10 +4162,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The adjusted spending limit as a well-defined type, for example,
-   * INFINITE. This will only be populated if the adjusted spending limit is
-   * INFINITE, which is guaranteed to be true if the approved spending limit
-   * is INFINITE.
+   * Output only. The adjusted spending limit as a well-defined type, for
+   * example, INFINITE. This will only be populated if the adjusted spending
+   * limit is INFINITE, which is guaranteed to be true if the approved
+   * spending limit is INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType adjusted_spending_limit_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4186,8 +4173,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType getAdjustedSpendingLimitType() {
     if (adjustedSpendingLimitCase_ == 17) {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType result = com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType.valueOf(
+      com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType result = com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType.forNumber(
           (java.lang.Integer) adjustedSpendingLimit_);
       return result == null ? com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType.UNRECOGNIZED : result;
     }
@@ -4757,32 +4743,21 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       id_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       billingSetup_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       status_ = 0;
-
       name_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       proposedStartDateTime_ = "";
-      bitField0_ = (bitField0_ & ~0x00000008);
       approvedStartDateTime_ = "";
-      bitField0_ = (bitField0_ & ~0x00000010);
       totalAdjustmentsMicros_ = 0L;
-
       amountServedMicros_ = 0L;
-
       purchaseOrderNumber_ = "";
-      bitField0_ = (bitField0_ & ~0x00000020);
       notes_ = "";
-      bitField0_ = (bitField0_ & ~0x00000040);
-      if (pendingProposalBuilder_ == null) {
-        pendingProposal_ = null;
-      } else {
-        pendingProposal_ = null;
+      pendingProposal_ = null;
+      if (pendingProposalBuilder_ != null) {
+        pendingProposalBuilder_.dispose();
         pendingProposalBuilder_ = null;
       }
       proposedEndTimeCase_ = 0;
@@ -4821,83 +4796,74 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.AccountBudget buildPartial() {
       com.google.ads.googleads.v11.resources.AccountBudget result = new com.google.ads.googleads.v11.resources.AccountBudget(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.AccountBudget result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.id_ = id_;
         to_bitField0_ |= 0x00000001;
       }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.billingSetup_ = billingSetup_;
         to_bitField0_ |= 0x00000002;
       }
-      result.billingSetup_ = billingSetup_;
-      result.status_ = status_;
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.status_ = status_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.name_ = name_;
         to_bitField0_ |= 0x00000004;
       }
-      result.name_ = name_;
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.proposedStartDateTime_ = proposedStartDateTime_;
         to_bitField0_ |= 0x00000008;
       }
-      result.proposedStartDateTime_ = proposedStartDateTime_;
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.approvedStartDateTime_ = approvedStartDateTime_;
         to_bitField0_ |= 0x00000010;
       }
-      result.approvedStartDateTime_ = approvedStartDateTime_;
-      result.totalAdjustmentsMicros_ = totalAdjustmentsMicros_;
-      result.amountServedMicros_ = amountServedMicros_;
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.totalAdjustmentsMicros_ = totalAdjustmentsMicros_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.amountServedMicros_ = amountServedMicros_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.purchaseOrderNumber_ = purchaseOrderNumber_;
         to_bitField0_ |= 0x00000020;
       }
-      result.purchaseOrderNumber_ = purchaseOrderNumber_;
-      if (((from_bitField0_ & 0x00000040) != 0)) {
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.notes_ = notes_;
         to_bitField0_ |= 0x00000040;
       }
-      result.notes_ = notes_;
-      if (pendingProposalBuilder_ == null) {
-        result.pendingProposal_ = pendingProposal_;
-      } else {
-        result.pendingProposal_ = pendingProposalBuilder_.build();
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.pendingProposal_ = pendingProposalBuilder_ == null
+            ? pendingProposal_
+            : pendingProposalBuilder_.build();
       }
-      if (proposedEndTimeCase_ == 28) {
-        result.proposedEndTime_ = proposedEndTime_;
-      }
-      if (proposedEndTimeCase_ == 9) {
-        result.proposedEndTime_ = proposedEndTime_;
-      }
-      if (approvedEndTimeCase_ == 29) {
-        result.approvedEndTime_ = approvedEndTime_;
-      }
-      if (approvedEndTimeCase_ == 11) {
-        result.approvedEndTime_ = approvedEndTime_;
-      }
-      if (proposedSpendingLimitCase_ == 30) {
-        result.proposedSpendingLimit_ = proposedSpendingLimit_;
-      }
-      if (proposedSpendingLimitCase_ == 13) {
-        result.proposedSpendingLimit_ = proposedSpendingLimit_;
-      }
-      if (approvedSpendingLimitCase_ == 31) {
-        result.approvedSpendingLimit_ = approvedSpendingLimit_;
-      }
-      if (approvedSpendingLimitCase_ == 15) {
-        result.approvedSpendingLimit_ = approvedSpendingLimit_;
-      }
-      if (adjustedSpendingLimitCase_ == 32) {
-        result.adjustedSpendingLimit_ = adjustedSpendingLimit_;
-      }
-      if (adjustedSpendingLimitCase_ == 17) {
-        result.adjustedSpendingLimit_ = adjustedSpendingLimit_;
-      }
-      result.bitField0_ = to_bitField0_;
+      result.bitField0_ |= to_bitField0_;
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v11.resources.AccountBudget result) {
       result.proposedEndTimeCase_ = proposedEndTimeCase_;
+      result.proposedEndTime_ = this.proposedEndTime_;
       result.approvedEndTimeCase_ = approvedEndTimeCase_;
+      result.approvedEndTime_ = this.approvedEndTime_;
       result.proposedSpendingLimitCase_ = proposedSpendingLimitCase_;
+      result.proposedSpendingLimit_ = this.proposedSpendingLimit_;
       result.approvedSpendingLimitCase_ = approvedSpendingLimitCase_;
+      result.approvedSpendingLimit_ = this.approvedSpendingLimit_;
       result.adjustedSpendingLimitCase_ = adjustedSpendingLimitCase_;
-      onBuilt();
-      return result;
+      result.adjustedSpendingLimit_ = this.adjustedSpendingLimit_;
     }
 
     @java.lang.Override
@@ -4946,32 +4912,33 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.resources.AccountBudget.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasId()) {
         setId(other.getId());
       }
       if (other.hasBillingSetup()) {
-        bitField0_ |= 0x00000002;
         billingSetup_ = other.billingSetup_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.status_ != 0) {
         setStatusValue(other.getStatusValue());
       }
       if (other.hasName()) {
-        bitField0_ |= 0x00000004;
         name_ = other.name_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (other.hasProposedStartDateTime()) {
-        bitField0_ |= 0x00000008;
         proposedStartDateTime_ = other.proposedStartDateTime_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (other.hasApprovedStartDateTime()) {
-        bitField0_ |= 0x00000010;
         approvedStartDateTime_ = other.approvedStartDateTime_;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (other.getTotalAdjustmentsMicros() != 0L) {
@@ -4981,13 +4948,13 @@ private static final long serialVersionUID = 0L;
         setAmountServedMicros(other.getAmountServedMicros());
       }
       if (other.hasPurchaseOrderNumber()) {
-        bitField0_ |= 0x00000020;
         purchaseOrderNumber_ = other.purchaseOrderNumber_;
+        bitField0_ |= 0x00000200;
         onChanged();
       }
       if (other.hasNotes()) {
-        bitField0_ |= 0x00000040;
         notes_ = other.notes_;
+        bitField0_ |= 0x00000400;
         onChanged();
       }
       if (other.hasPendingProposal()) {
@@ -5090,12 +5057,12 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 32: {
               status_ = input.readEnum();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 32
             case 72: {
@@ -5132,32 +5099,32 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getPendingProposalFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000800;
               break;
             } // case 178
             case 184: {
               id_ = input.readInt64();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 184
             case 194: {
               billingSetup_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 194
             case 202: {
               name_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000010;
               break;
             } // case 202
             case 210: {
               proposedStartDateTime_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000020;
               break;
             } // case 210
             case 218: {
               approvedStartDateTime_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000040;
               break;
             } // case 218
             case 226: {
@@ -5189,22 +5156,22 @@ private static final long serialVersionUID = 0L;
             } // case 256
             case 264: {
               totalAdjustmentsMicros_ = input.readInt64();
-
+              bitField0_ |= 0x00000080;
               break;
             } // case 264
             case 272: {
               amountServedMicros_ = input.readInt64();
-
+              bitField0_ |= 0x00000100;
               break;
             } // case 272
             case 282: {
               purchaseOrderNumber_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000200;
               break;
             } // case 282
             case 290: {
               notes_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000400;
               break;
             } // case 290
             default: {
@@ -5358,11 +5325,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -5377,8 +5342,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -5395,12 +5360,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -5416,7 +5379,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -5440,8 +5403,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      bitField0_ |= 0x00000001;
+      
       id_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -5454,7 +5418,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       id_ = 0L;
       onChanged();
       return this;
@@ -5463,8 +5427,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object billingSetup_ = "";
     /**
      * <pre>
-     * Output only. The resource name of the billing setup associated with this account-level
-     * budget.  BillingSetup resource names have the form:
+     * Output only. The resource name of the billing setup associated with this
+     * account-level budget.  BillingSetup resource names have the form:
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
@@ -5472,12 +5436,12 @@ private static final long serialVersionUID = 0L;
      * @return Whether the billingSetup field is set.
      */
     public boolean hasBillingSetup() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
-     * Output only. The resource name of the billing setup associated with this account-level
-     * budget.  BillingSetup resource names have the form:
+     * Output only. The resource name of the billing setup associated with this
+     * account-level budget.  BillingSetup resource names have the form:
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
@@ -5498,8 +5462,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource name of the billing setup associated with this account-level
-     * budget.  BillingSetup resource names have the form:
+     * Output only. The resource name of the billing setup associated with this
+     * account-level budget.  BillingSetup resource names have the form:
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
@@ -5521,8 +5485,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource name of the billing setup associated with this account-level
-     * budget.  BillingSetup resource names have the form:
+     * Output only. The resource name of the billing setup associated with this
+     * account-level budget.  BillingSetup resource names have the form:
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
@@ -5532,18 +5496,16 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBillingSetup(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       billingSetup_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The resource name of the billing setup associated with this account-level
-     * budget.  BillingSetup resource names have the form:
+     * Output only. The resource name of the billing setup associated with this
+     * account-level budget.  BillingSetup resource names have the form:
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
@@ -5551,15 +5513,15 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBillingSetup() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       billingSetup_ = getDefaultInstance().getBillingSetup();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The resource name of the billing setup associated with this account-level
-     * budget.  BillingSetup resource names have the form:
+     * Output only. The resource name of the billing setup associated with this
+     * account-level budget.  BillingSetup resource names have the form:
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
@@ -5569,12 +5531,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBillingSetupBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       billingSetup_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -5601,8 +5561,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
-      
       status_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -5616,8 +5576,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.AccountBudgetStatusEnum.AccountBudgetStatus getStatus() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.AccountBudgetStatusEnum.AccountBudgetStatus result = com.google.ads.googleads.v11.enums.AccountBudgetStatusEnum.AccountBudgetStatus.valueOf(status_);
+      com.google.ads.googleads.v11.enums.AccountBudgetStatusEnum.AccountBudgetStatus result = com.google.ads.googleads.v11.enums.AccountBudgetStatusEnum.AccountBudgetStatus.forNumber(status_);
       return result == null ? com.google.ads.googleads.v11.enums.AccountBudgetStatusEnum.AccountBudgetStatus.UNRECOGNIZED : result;
     }
     /**
@@ -5633,7 +5592,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000008;
       status_ = value.getNumber();
       onChanged();
       return this;
@@ -5647,7 +5606,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       status_ = 0;
       onChanged();
       return this;
@@ -5663,7 +5622,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the name field is set.
      */
     public boolean hasName() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -5717,11 +5676,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       name_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -5734,8 +5691,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -5750,12 +5707,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -5772,7 +5727,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the proposedStartDateTime field is set.
      */
     public boolean hasProposedStartDateTime() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -5832,11 +5787,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setProposedStartDateTime(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
       proposedStartDateTime_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -5851,8 +5804,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearProposedStartDateTime() {
-      bitField0_ = (bitField0_ & ~0x00000008);
       proposedStartDateTime_ = getDefaultInstance().getProposedStartDateTime();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -5869,12 +5822,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setProposedStartDateTimeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       proposedStartDateTime_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -5882,8 +5833,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object approvedStartDateTime_ = "";
     /**
      * <pre>
-     * Output only. The approved start time of the account-level budget in yyyy-MM-dd HH:mm:ss
-     * format.
+     * Output only. The approved start time of the account-level budget in
+     * yyyy-MM-dd HH:mm:ss format.
      * For example, if a new budget is approved after the proposed start time,
      * the approved start time is the time of approval.
      * </pre>
@@ -5892,12 +5843,12 @@ private static final long serialVersionUID = 0L;
      * @return Whether the approvedStartDateTime field is set.
      */
     public boolean hasApprovedStartDateTime() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <pre>
-     * Output only. The approved start time of the account-level budget in yyyy-MM-dd HH:mm:ss
-     * format.
+     * Output only. The approved start time of the account-level budget in
+     * yyyy-MM-dd HH:mm:ss format.
      * For example, if a new budget is approved after the proposed start time,
      * the approved start time is the time of approval.
      * </pre>
@@ -5919,8 +5870,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The approved start time of the account-level budget in yyyy-MM-dd HH:mm:ss
-     * format.
+     * Output only. The approved start time of the account-level budget in
+     * yyyy-MM-dd HH:mm:ss format.
      * For example, if a new budget is approved after the proposed start time,
      * the approved start time is the time of approval.
      * </pre>
@@ -5943,8 +5894,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The approved start time of the account-level budget in yyyy-MM-dd HH:mm:ss
-     * format.
+     * Output only. The approved start time of the account-level budget in
+     * yyyy-MM-dd HH:mm:ss format.
      * For example, if a new budget is approved after the proposed start time,
      * the approved start time is the time of approval.
      * </pre>
@@ -5955,18 +5906,16 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setApprovedStartDateTime(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
+      if (value == null) { throw new NullPointerException(); }
       approvedStartDateTime_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The approved start time of the account-level budget in yyyy-MM-dd HH:mm:ss
-     * format.
+     * Output only. The approved start time of the account-level budget in
+     * yyyy-MM-dd HH:mm:ss format.
      * For example, if a new budget is approved after the proposed start time,
      * the approved start time is the time of approval.
      * </pre>
@@ -5975,15 +5924,15 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearApprovedStartDateTime() {
-      bitField0_ = (bitField0_ & ~0x00000010);
       approvedStartDateTime_ = getDefaultInstance().getApprovedStartDateTime();
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The approved start time of the account-level budget in yyyy-MM-dd HH:mm:ss
-     * format.
+     * Output only. The approved start time of the account-level budget in
+     * yyyy-MM-dd HH:mm:ss format.
      * For example, if a new budget is approved after the proposed start time,
      * the approved start time is the time of approval.
      * </pre>
@@ -5994,12 +5943,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setApprovedStartDateTimeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000010;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       approvedStartDateTime_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -6031,6 +5978,7 @@ private static final long serialVersionUID = 0L;
     public Builder setTotalAdjustmentsMicros(long value) {
       
       totalAdjustmentsMicros_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -6044,7 +5992,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalAdjustmentsMicros() {
-      
+      bitField0_ = (bitField0_ & ~0x00000080);
       totalAdjustmentsMicros_ = 0L;
       onChanged();
       return this;
@@ -6079,6 +6027,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAmountServedMicros(long value) {
       
       amountServedMicros_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -6093,7 +6042,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAmountServedMicros() {
-      
+      bitField0_ = (bitField0_ & ~0x00000100);
       amountServedMicros_ = 0L;
       onChanged();
       return this;
@@ -6102,20 +6051,20 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object purchaseOrderNumber_ = "";
     /**
      * <pre>
-     * Output only. A purchase order number is a value that helps users reference this budget
-     * in their monthly invoices.
+     * Output only. A purchase order number is a value that helps users reference
+     * this budget in their monthly invoices.
      * </pre>
      *
      * <code>optional string purchase_order_number = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the purchaseOrderNumber field is set.
      */
     public boolean hasPurchaseOrderNumber() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000200) != 0);
     }
     /**
      * <pre>
-     * Output only. A purchase order number is a value that helps users reference this budget
-     * in their monthly invoices.
+     * Output only. A purchase order number is a value that helps users reference
+     * this budget in their monthly invoices.
      * </pre>
      *
      * <code>optional string purchase_order_number = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6135,8 +6084,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A purchase order number is a value that helps users reference this budget
-     * in their monthly invoices.
+     * Output only. A purchase order number is a value that helps users reference
+     * this budget in their monthly invoices.
      * </pre>
      *
      * <code>optional string purchase_order_number = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6157,8 +6106,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A purchase order number is a value that helps users reference this budget
-     * in their monthly invoices.
+     * Output only. A purchase order number is a value that helps users reference
+     * this budget in their monthly invoices.
      * </pre>
      *
      * <code>optional string purchase_order_number = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6167,33 +6116,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPurchaseOrderNumber(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000020;
+      if (value == null) { throw new NullPointerException(); }
       purchaseOrderNumber_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. A purchase order number is a value that helps users reference this budget
-     * in their monthly invoices.
+     * Output only. A purchase order number is a value that helps users reference
+     * this budget in their monthly invoices.
      * </pre>
      *
      * <code>optional string purchase_order_number = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearPurchaseOrderNumber() {
-      bitField0_ = (bitField0_ & ~0x00000020);
       purchaseOrderNumber_ = getDefaultInstance().getPurchaseOrderNumber();
+      bitField0_ = (bitField0_ & ~0x00000200);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. A purchase order number is a value that helps users reference this budget
-     * in their monthly invoices.
+     * Output only. A purchase order number is a value that helps users reference
+     * this budget in their monthly invoices.
      * </pre>
      *
      * <code>optional string purchase_order_number = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6202,12 +6149,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPurchaseOrderNumberBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000020;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       purchaseOrderNumber_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -6222,7 +6167,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the notes field is set.
      */
     public boolean hasNotes() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return ((bitField0_ & 0x00000400) != 0);
     }
     /**
      * <pre>
@@ -6276,11 +6221,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNotes(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000040;
+      if (value == null) { throw new NullPointerException(); }
       notes_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -6293,8 +6236,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearNotes() {
-      bitField0_ = (bitField0_ & ~0x00000040);
       notes_ = getDefaultInstance().getNotes();
+      bitField0_ = (bitField0_ & ~0x00000400);
       onChanged();
       return this;
     }
@@ -6309,12 +6252,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNotesBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000040;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       notes_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -6331,7 +6272,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the pendingProposal field is set.
      */
     public boolean hasPendingProposal() {
-      return pendingProposalBuilder_ != null || pendingProposal_ != null;
+      return ((bitField0_ & 0x00000800) != 0);
     }
     /**
      * <pre>
@@ -6361,11 +6302,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         pendingProposal_ = value;
-        onChanged();
       } else {
         pendingProposalBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000800;
+      onChanged();
       return this;
     }
     /**
@@ -6379,11 +6320,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.resources.AccountBudget.PendingAccountBudgetProposal.Builder builderForValue) {
       if (pendingProposalBuilder_ == null) {
         pendingProposal_ = builderForValue.build();
-        onChanged();
       } else {
         pendingProposalBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000800;
+      onChanged();
       return this;
     }
     /**
@@ -6395,17 +6336,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergePendingProposal(com.google.ads.googleads.v11.resources.AccountBudget.PendingAccountBudgetProposal value) {
       if (pendingProposalBuilder_ == null) {
-        if (pendingProposal_ != null) {
-          pendingProposal_ =
-            com.google.ads.googleads.v11.resources.AccountBudget.PendingAccountBudgetProposal.newBuilder(pendingProposal_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000800) != 0) &&
+          pendingProposal_ != null &&
+          pendingProposal_ != com.google.ads.googleads.v11.resources.AccountBudget.PendingAccountBudgetProposal.getDefaultInstance()) {
+          getPendingProposalBuilder().mergeFrom(value);
         } else {
           pendingProposal_ = value;
         }
-        onChanged();
       } else {
         pendingProposalBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000800;
+      onChanged();
       return this;
     }
     /**
@@ -6416,14 +6358,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.resources.AccountBudget.PendingAccountBudgetProposal pending_proposal = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearPendingProposal() {
-      if (pendingProposalBuilder_ == null) {
-        pendingProposal_ = null;
-        onChanged();
-      } else {
-        pendingProposal_ = null;
+      bitField0_ = (bitField0_ & ~0x00000800);
+      pendingProposal_ = null;
+      if (pendingProposalBuilder_ != null) {
+        pendingProposalBuilder_.dispose();
         pendingProposalBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -6434,7 +6375,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.resources.AccountBudget.PendingAccountBudgetProposal pending_proposal = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v11.resources.AccountBudget.PendingAccountBudgetProposal.Builder getPendingProposalBuilder() {
-      
+      bitField0_ |= 0x00000800;
       onChanged();
       return getPendingProposalFieldBuilder().getBuilder();
     }
@@ -6550,10 +6491,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setProposedEndDateTime(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  proposedEndTimeCase_ = 28;
+      if (value == null) { throw new NullPointerException(); }
+      proposedEndTimeCase_ = 28;
       proposedEndTime_ = value;
       onChanged();
       return this;
@@ -6585,10 +6524,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setProposedEndDateTimeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       proposedEndTimeCase_ = 28;
       proposedEndTime_ = value;
       onChanged();
@@ -6597,7 +6534,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The proposed end time as a well-defined type, for example, FOREVER.
+     * Output only. The proposed end time as a well-defined type, for example,
+     * FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6609,7 +6547,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The proposed end time as a well-defined type, for example, FOREVER.
+     * Output only. The proposed end time as a well-defined type, for example,
+     * FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6624,7 +6563,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The proposed end time as a well-defined type, for example, FOREVER.
+     * Output only. The proposed end time as a well-defined type, for example,
+     * FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6639,7 +6579,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The proposed end time as a well-defined type, for example, FOREVER.
+     * Output only. The proposed end time as a well-defined type, for example,
+     * FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6648,8 +6589,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType getProposedEndTimeType() {
       if (proposedEndTimeCase_ == 9) {
-        @SuppressWarnings("deprecation")
-        com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType result = com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType.valueOf(
+        com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType result = com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType.forNumber(
             (java.lang.Integer) proposedEndTime_);
         return result == null ? com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType.UNRECOGNIZED : result;
       }
@@ -6657,7 +6597,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The proposed end time as a well-defined type, for example, FOREVER.
+     * Output only. The proposed end time as a well-defined type, for example,
+     * FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6675,7 +6616,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The proposed end time as a well-defined type, for example, FOREVER.
+     * Output only. The proposed end time as a well-defined type, for example,
+     * FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6766,10 +6708,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setApprovedEndDateTime(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  approvedEndTimeCase_ = 29;
+      if (value == null) { throw new NullPointerException(); }
+      approvedEndTimeCase_ = 29;
       approvedEndTime_ = value;
       onChanged();
       return this;
@@ -6801,10 +6741,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setApprovedEndDateTimeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       approvedEndTimeCase_ = 29;
       approvedEndTime_ = value;
       onChanged();
@@ -6813,7 +6751,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The approved end time as a well-defined type, for example, FOREVER.
+     * Output only. The approved end time as a well-defined type, for example,
+     * FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType approved_end_time_type = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6825,7 +6764,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The approved end time as a well-defined type, for example, FOREVER.
+     * Output only. The approved end time as a well-defined type, for example,
+     * FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType approved_end_time_type = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6840,7 +6780,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The approved end time as a well-defined type, for example, FOREVER.
+     * Output only. The approved end time as a well-defined type, for example,
+     * FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType approved_end_time_type = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6855,7 +6796,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The approved end time as a well-defined type, for example, FOREVER.
+     * Output only. The approved end time as a well-defined type, for example,
+     * FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType approved_end_time_type = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6864,8 +6806,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType getApprovedEndTimeType() {
       if (approvedEndTimeCase_ == 11) {
-        @SuppressWarnings("deprecation")
-        com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType result = com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType.valueOf(
+        com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType result = com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType.forNumber(
             (java.lang.Integer) approvedEndTime_);
         return result == null ? com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType.UNRECOGNIZED : result;
       }
@@ -6873,7 +6814,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The approved end time as a well-defined type, for example, FOREVER.
+     * Output only. The approved end time as a well-defined type, for example,
+     * FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType approved_end_time_type = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6891,7 +6833,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The approved end time as a well-defined type, for example, FOREVER.
+     * Output only. The approved end time as a well-defined type, for example,
+     * FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType approved_end_time_type = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6908,8 +6851,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The proposed spending limit in micros.  One million is equivalent to
-     * one unit.
+     * Output only. The proposed spending limit in micros.  One million is
+     * equivalent to one unit.
      * </pre>
      *
      * <code>int64 proposed_spending_limit_micros = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6920,8 +6863,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The proposed spending limit in micros.  One million is equivalent to
-     * one unit.
+     * Output only. The proposed spending limit in micros.  One million is
+     * equivalent to one unit.
      * </pre>
      *
      * <code>int64 proposed_spending_limit_micros = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6935,8 +6878,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The proposed spending limit in micros.  One million is equivalent to
-     * one unit.
+     * Output only. The proposed spending limit in micros.  One million is
+     * equivalent to one unit.
      * </pre>
      *
      * <code>int64 proposed_spending_limit_micros = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6944,6 +6887,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setProposedSpendingLimitMicros(long value) {
+      
       proposedSpendingLimitCase_ = 30;
       proposedSpendingLimit_ = value;
       onChanged();
@@ -6951,8 +6895,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The proposed spending limit in micros.  One million is equivalent to
-     * one unit.
+     * Output only. The proposed spending limit in micros.  One million is
+     * equivalent to one unit.
      * </pre>
      *
      * <code>int64 proposed_spending_limit_micros = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6969,8 +6913,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The proposed spending limit as a well-defined type, for example,
-     * INFINITE.
+     * Output only. The proposed spending limit as a well-defined type, for
+     * example, INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6982,8 +6926,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The proposed spending limit as a well-defined type, for example,
-     * INFINITE.
+     * Output only. The proposed spending limit as a well-defined type, for
+     * example, INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6998,8 +6942,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The proposed spending limit as a well-defined type, for example,
-     * INFINITE.
+     * Output only. The proposed spending limit as a well-defined type, for
+     * example, INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7014,8 +6958,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The proposed spending limit as a well-defined type, for example,
-     * INFINITE.
+     * Output only. The proposed spending limit as a well-defined type, for
+     * example, INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7024,8 +6968,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType getProposedSpendingLimitType() {
       if (proposedSpendingLimitCase_ == 13) {
-        @SuppressWarnings("deprecation")
-        com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType result = com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType.valueOf(
+        com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType result = com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType.forNumber(
             (java.lang.Integer) proposedSpendingLimit_);
         return result == null ? com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType.UNRECOGNIZED : result;
       }
@@ -7033,8 +6976,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The proposed spending limit as a well-defined type, for example,
-     * INFINITE.
+     * Output only. The proposed spending limit as a well-defined type, for
+     * example, INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7052,8 +6995,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The proposed spending limit as a well-defined type, for example,
-     * INFINITE.
+     * Output only. The proposed spending limit as a well-defined type, for
+     * example, INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7070,9 +7013,9 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The approved spending limit in micros.  One million is equivalent to
-     * one unit.  This will only be populated if the proposed spending limit
-     * is finite, and will always be greater than or equal to the
+     * Output only. The approved spending limit in micros.  One million is
+     * equivalent to one unit.  This will only be populated if the proposed
+     * spending limit is finite, and will always be greater than or equal to the
      * proposed spending limit.
      * </pre>
      *
@@ -7084,9 +7027,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The approved spending limit in micros.  One million is equivalent to
-     * one unit.  This will only be populated if the proposed spending limit
-     * is finite, and will always be greater than or equal to the
+     * Output only. The approved spending limit in micros.  One million is
+     * equivalent to one unit.  This will only be populated if the proposed
+     * spending limit is finite, and will always be greater than or equal to the
      * proposed spending limit.
      * </pre>
      *
@@ -7101,9 +7044,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The approved spending limit in micros.  One million is equivalent to
-     * one unit.  This will only be populated if the proposed spending limit
-     * is finite, and will always be greater than or equal to the
+     * Output only. The approved spending limit in micros.  One million is
+     * equivalent to one unit.  This will only be populated if the proposed
+     * spending limit is finite, and will always be greater than or equal to the
      * proposed spending limit.
      * </pre>
      *
@@ -7112,6 +7055,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setApprovedSpendingLimitMicros(long value) {
+      
       approvedSpendingLimitCase_ = 31;
       approvedSpendingLimit_ = value;
       onChanged();
@@ -7119,9 +7063,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The approved spending limit in micros.  One million is equivalent to
-     * one unit.  This will only be populated if the proposed spending limit
-     * is finite, and will always be greater than or equal to the
+     * Output only. The approved spending limit in micros.  One million is
+     * equivalent to one unit.  This will only be populated if the proposed
+     * spending limit is finite, and will always be greater than or equal to the
      * proposed spending limit.
      * </pre>
      *
@@ -7139,9 +7083,9 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The approved spending limit as a well-defined type, for example,
-     * INFINITE.  This will only be populated if the approved spending limit is
-     * INFINITE.
+     * Output only. The approved spending limit as a well-defined type, for
+     * example, INFINITE.  This will only be populated if the approved spending
+     * limit is INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7153,9 +7097,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The approved spending limit as a well-defined type, for example,
-     * INFINITE.  This will only be populated if the approved spending limit is
-     * INFINITE.
+     * Output only. The approved spending limit as a well-defined type, for
+     * example, INFINITE.  This will only be populated if the approved spending
+     * limit is INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7170,9 +7114,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The approved spending limit as a well-defined type, for example,
-     * INFINITE.  This will only be populated if the approved spending limit is
-     * INFINITE.
+     * Output only. The approved spending limit as a well-defined type, for
+     * example, INFINITE.  This will only be populated if the approved spending
+     * limit is INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7187,9 +7131,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The approved spending limit as a well-defined type, for example,
-     * INFINITE.  This will only be populated if the approved spending limit is
-     * INFINITE.
+     * Output only. The approved spending limit as a well-defined type, for
+     * example, INFINITE.  This will only be populated if the approved spending
+     * limit is INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7198,8 +7142,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType getApprovedSpendingLimitType() {
       if (approvedSpendingLimitCase_ == 15) {
-        @SuppressWarnings("deprecation")
-        com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType result = com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType.valueOf(
+        com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType result = com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType.forNumber(
             (java.lang.Integer) approvedSpendingLimit_);
         return result == null ? com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType.UNRECOGNIZED : result;
       }
@@ -7207,9 +7150,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The approved spending limit as a well-defined type, for example,
-     * INFINITE.  This will only be populated if the approved spending limit is
-     * INFINITE.
+     * Output only. The approved spending limit as a well-defined type, for
+     * example, INFINITE.  This will only be populated if the approved spending
+     * limit is INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7227,9 +7170,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The approved spending limit as a well-defined type, for example,
-     * INFINITE.  This will only be populated if the approved spending limit is
-     * INFINITE.
+     * Output only. The approved spending limit as a well-defined type, for
+     * example, INFINITE.  This will only be populated if the approved spending
+     * limit is INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7246,8 +7189,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The adjusted spending limit in micros.  One million is equivalent to
-     * one unit.
+     * Output only. The adjusted spending limit in micros.  One million is
+     * equivalent to one unit.
      * If the approved spending limit is finite, the adjusted
      * spending limit may vary depending on the types of adjustments applied
      * to this budget, if applicable.
@@ -7265,8 +7208,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The adjusted spending limit in micros.  One million is equivalent to
-     * one unit.
+     * Output only. The adjusted spending limit in micros.  One million is
+     * equivalent to one unit.
      * If the approved spending limit is finite, the adjusted
      * spending limit may vary depending on the types of adjustments applied
      * to this budget, if applicable.
@@ -7287,8 +7230,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The adjusted spending limit in micros.  One million is equivalent to
-     * one unit.
+     * Output only. The adjusted spending limit in micros.  One million is
+     * equivalent to one unit.
      * If the approved spending limit is finite, the adjusted
      * spending limit may vary depending on the types of adjustments applied
      * to this budget, if applicable.
@@ -7303,6 +7246,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAdjustedSpendingLimitMicros(long value) {
+      
       adjustedSpendingLimitCase_ = 32;
       adjustedSpendingLimit_ = value;
       onChanged();
@@ -7310,8 +7254,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The adjusted spending limit in micros.  One million is equivalent to
-     * one unit.
+     * Output only. The adjusted spending limit in micros.  One million is
+     * equivalent to one unit.
      * If the approved spending limit is finite, the adjusted
      * spending limit may vary depending on the types of adjustments applied
      * to this budget, if applicable.
@@ -7335,10 +7279,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The adjusted spending limit as a well-defined type, for example,
-     * INFINITE. This will only be populated if the adjusted spending limit is
-     * INFINITE, which is guaranteed to be true if the approved spending limit
-     * is INFINITE.
+     * Output only. The adjusted spending limit as a well-defined type, for
+     * example, INFINITE. This will only be populated if the adjusted spending
+     * limit is INFINITE, which is guaranteed to be true if the approved
+     * spending limit is INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType adjusted_spending_limit_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7350,10 +7294,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The adjusted spending limit as a well-defined type, for example,
-     * INFINITE. This will only be populated if the adjusted spending limit is
-     * INFINITE, which is guaranteed to be true if the approved spending limit
-     * is INFINITE.
+     * Output only. The adjusted spending limit as a well-defined type, for
+     * example, INFINITE. This will only be populated if the adjusted spending
+     * limit is INFINITE, which is guaranteed to be true if the approved
+     * spending limit is INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType adjusted_spending_limit_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7368,10 +7312,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The adjusted spending limit as a well-defined type, for example,
-     * INFINITE. This will only be populated if the adjusted spending limit is
-     * INFINITE, which is guaranteed to be true if the approved spending limit
-     * is INFINITE.
+     * Output only. The adjusted spending limit as a well-defined type, for
+     * example, INFINITE. This will only be populated if the adjusted spending
+     * limit is INFINITE, which is guaranteed to be true if the approved
+     * spending limit is INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType adjusted_spending_limit_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7386,10 +7330,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The adjusted spending limit as a well-defined type, for example,
-     * INFINITE. This will only be populated if the adjusted spending limit is
-     * INFINITE, which is guaranteed to be true if the approved spending limit
-     * is INFINITE.
+     * Output only. The adjusted spending limit as a well-defined type, for
+     * example, INFINITE. This will only be populated if the adjusted spending
+     * limit is INFINITE, which is guaranteed to be true if the approved
+     * spending limit is INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType adjusted_spending_limit_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7398,8 +7342,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType getAdjustedSpendingLimitType() {
       if (adjustedSpendingLimitCase_ == 17) {
-        @SuppressWarnings("deprecation")
-        com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType result = com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType.valueOf(
+        com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType result = com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType.forNumber(
             (java.lang.Integer) adjustedSpendingLimit_);
         return result == null ? com.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType.UNRECOGNIZED : result;
       }
@@ -7407,10 +7350,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The adjusted spending limit as a well-defined type, for example,
-     * INFINITE. This will only be populated if the adjusted spending limit is
-     * INFINITE, which is guaranteed to be true if the approved spending limit
-     * is INFINITE.
+     * Output only. The adjusted spending limit as a well-defined type, for
+     * example, INFINITE. This will only be populated if the adjusted spending
+     * limit is INFINITE, which is guaranteed to be true if the approved
+     * spending limit is INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType adjusted_spending_limit_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7428,10 +7371,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The adjusted spending limit as a well-defined type, for example,
-     * INFINITE. This will only be populated if the adjusted spending limit is
-     * INFINITE, which is guaranteed to be true if the approved spending limit
-     * is INFINITE.
+     * Output only. The adjusted spending limit as a well-defined type, for
+     * example, INFINITE. This will only be populated if the adjusted spending
+     * limit is INFINITE, which is guaranteed to be true if the approved
+     * spending limit is INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType adjusted_spending_limit_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

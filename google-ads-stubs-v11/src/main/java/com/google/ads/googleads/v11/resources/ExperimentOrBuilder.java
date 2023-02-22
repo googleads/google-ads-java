@@ -52,8 +52,8 @@ public interface ExperimentOrBuilder extends
 
   /**
    * <pre>
-   * Required. The name of the experiment. It must have a minimum length of 1 and
-   * maximum length of 1024. It must be unique under a customer.
+   * Required. The name of the experiment. It must have a minimum length of 1
+   * and maximum length of 1024. It must be unique under a customer.
    * </pre>
    *
    * <code>string name = 10 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -62,8 +62,8 @@ public interface ExperimentOrBuilder extends
   java.lang.String getName();
   /**
    * <pre>
-   * Required. The name of the experiment. It must have a minimum length of 1 and
-   * maximum length of 1024. It must be unique under a customer.
+   * Required. The name of the experiment. It must have a minimum length of 1
+   * and maximum length of 1024. It must be unique under a customer.
    * </pre>
    *
    * <code>string name = 10 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -289,9 +289,9 @@ public interface ExperimentOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The resource name of the long-running operation that can be used to poll
-   * for completion of experiment schedule or promote. The most recent long
-   * running operation is returned.
+   * Output only. The resource name of the long-running operation that can be
+   * used to poll for completion of experiment schedule or promote. The most
+   * recent long running operation is returned.
    * </pre>
    *
    * <code>optional string long_running_operation = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -300,9 +300,9 @@ public interface ExperimentOrBuilder extends
   boolean hasLongRunningOperation();
   /**
    * <pre>
-   * Output only. The resource name of the long-running operation that can be used to poll
-   * for completion of experiment schedule or promote. The most recent long
-   * running operation is returned.
+   * Output only. The resource name of the long-running operation that can be
+   * used to poll for completion of experiment schedule or promote. The most
+   * recent long running operation is returned.
    * </pre>
    *
    * <code>optional string long_running_operation = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -311,9 +311,9 @@ public interface ExperimentOrBuilder extends
   java.lang.String getLongRunningOperation();
   /**
    * <pre>
-   * Output only. The resource name of the long-running operation that can be used to poll
-   * for completion of experiment schedule or promote. The most recent long
-   * running operation is returned.
+   * Output only. The resource name of the long-running operation that can be
+   * used to poll for completion of experiment schedule or promote. The most
+   * recent long running operation is returned.
    * </pre>
    *
    * <code>optional string long_running_operation = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

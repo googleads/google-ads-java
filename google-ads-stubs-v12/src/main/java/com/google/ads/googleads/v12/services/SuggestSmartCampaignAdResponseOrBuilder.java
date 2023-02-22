@@ -9,7 +9,8 @@ public interface SuggestSmartCampaignAdResponseOrBuilder extends
 
   /**
    * <pre>
-   * Optional. Ad info includes 3 creative headlines and 2 creative descriptions.
+   * Optional. Ad info includes 3 creative headlines and 2 creative
+   * descriptions.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.SmartCampaignAdInfo ad_info = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -18,7 +19,8 @@ public interface SuggestSmartCampaignAdResponseOrBuilder extends
   boolean hasAdInfo();
   /**
    * <pre>
-   * Optional. Ad info includes 3 creative headlines and 2 creative descriptions.
+   * Optional. Ad info includes 3 creative headlines and 2 creative
+   * descriptions.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.SmartCampaignAdInfo ad_info = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -27,7 +29,8 @@ public interface SuggestSmartCampaignAdResponseOrBuilder extends
   com.google.ads.googleads.v12.common.SmartCampaignAdInfo getAdInfo();
   /**
    * <pre>
-   * Optional. Ad info includes 3 creative headlines and 2 creative descriptions.
+   * Optional. Ad info includes 3 creative headlines and 2 creative
+   * descriptions.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.SmartCampaignAdInfo ad_info = 1 [(.google.api.field_behavior) = OPTIONAL];</code>

@@ -52,7 +52,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int GCLID_FIELD_NUMBER = 3;
-  private volatile java.lang.Object gclid_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object gclid_ = "";
   /**
    * <pre>
    * Google click ID (gclid) associated with the original conversion for this
@@ -113,7 +114,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONVERSION_DATE_TIME_FIELD_NUMBER = 4;
-  private volatile java.lang.Object conversionDateTime_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object conversionDateTime_ = "";
   /**
    * <pre>
    * The date time at which the original conversion for this adjustment
@@ -388,10 +390,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       gclid_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       conversionDateTime_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -418,19 +419,23 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.GclidDateTimePair buildPartial() {
       com.google.ads.googleads.v12.services.GclidDateTimePair result = new com.google.ads.googleads.v12.services.GclidDateTimePair(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.GclidDateTimePair result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.gclid_ = gclid_;
         to_bitField0_ |= 0x00000001;
       }
-      result.gclid_ = gclid_;
       if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.conversionDateTime_ = conversionDateTime_;
         to_bitField0_ |= 0x00000002;
       }
-      result.conversionDateTime_ = conversionDateTime_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -478,13 +483,13 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v12.services.GclidDateTimePair other) {
       if (other == com.google.ads.googleads.v12.services.GclidDateTimePair.getDefaultInstance()) return this;
       if (other.hasGclid()) {
-        bitField0_ |= 0x00000001;
         gclid_ = other.gclid_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasConversionDateTime()) {
-        bitField0_ |= 0x00000002;
         conversionDateTime_ = other.conversionDateTime_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -608,11 +613,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setGclid(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       gclid_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -626,8 +629,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGclid() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       gclid_ = getDefaultInstance().getGclid();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -643,12 +646,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setGclidBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       gclid_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -725,11 +726,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setConversionDateTime(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       conversionDateTime_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -744,8 +743,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConversionDateTime() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       conversionDateTime_ = getDefaultInstance().getConversionDateTime();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -762,12 +761,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setConversionDateTimeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       conversionDateTime_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

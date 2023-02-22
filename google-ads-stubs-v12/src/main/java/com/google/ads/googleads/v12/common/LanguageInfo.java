@@ -50,7 +50,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int LANGUAGE_CONSTANT_FIELD_NUMBER = 2;
-  private volatile java.lang.Object languageConstant_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object languageConstant_ = "";
   /**
    * <pre>
    * The language constant resource name.
@@ -303,8 +304,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       languageConstant_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -331,15 +332,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.LanguageInfo buildPartial() {
       com.google.ads.googleads.v12.common.LanguageInfo result = new com.google.ads.googleads.v12.common.LanguageInfo(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.LanguageInfo result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.languageConstant_ = languageConstant_;
         to_bitField0_ |= 0x00000001;
       }
-      result.languageConstant_ = languageConstant_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -387,8 +392,8 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v12.common.LanguageInfo other) {
       if (other == com.google.ads.googleads.v12.common.LanguageInfo.getDefaultInstance()) return this;
       if (other.hasLanguageConstant()) {
-        bitField0_ |= 0x00000001;
         languageConstant_ = other.languageConstant_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -503,11 +508,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLanguageConstant(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       languageConstant_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -520,8 +523,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLanguageConstant() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       languageConstant_ = getDefaultInstance().getLanguageConstant();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -536,12 +539,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLanguageConstantBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       languageConstant_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

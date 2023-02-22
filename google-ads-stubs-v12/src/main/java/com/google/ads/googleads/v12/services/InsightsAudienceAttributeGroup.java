@@ -49,11 +49,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ATTRIBUTES_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.services.AudienceInsightsAttribute> attributes_;
   /**
    * <pre>
-   * Required. A collection of audience attributes to be combined with logical OR.
-   * Attributes need not all be the same dimension.  Only Knowledge Graph
+   * Required. A collection of audience attributes to be combined with logical
+   * OR. Attributes need not all be the same dimension.  Only Knowledge Graph
    * entities, Product &amp; Service Categories, and Affinity and In-Market
    * audiences are supported in this context.
    * </pre>
@@ -66,8 +67,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. A collection of audience attributes to be combined with logical OR.
-   * Attributes need not all be the same dimension.  Only Knowledge Graph
+   * Required. A collection of audience attributes to be combined with logical
+   * OR. Attributes need not all be the same dimension.  Only Knowledge Graph
    * entities, Product &amp; Service Categories, and Affinity and In-Market
    * audiences are supported in this context.
    * </pre>
@@ -81,8 +82,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. A collection of audience attributes to be combined with logical OR.
-   * Attributes need not all be the same dimension.  Only Knowledge Graph
+   * Required. A collection of audience attributes to be combined with logical
+   * OR. Attributes need not all be the same dimension.  Only Knowledge Graph
    * entities, Product &amp; Service Categories, and Affinity and In-Market
    * audiences are supported in this context.
    * </pre>
@@ -95,8 +96,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. A collection of audience attributes to be combined with logical OR.
-   * Attributes need not all be the same dimension.  Only Knowledge Graph
+   * Required. A collection of audience attributes to be combined with logical
+   * OR. Attributes need not all be the same dimension.  Only Knowledge Graph
    * entities, Product &amp; Service Categories, and Affinity and In-Market
    * audiences are supported in this context.
    * </pre>
@@ -109,8 +110,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. A collection of audience attributes to be combined with logical OR.
-   * Attributes need not all be the same dimension.  Only Knowledge Graph
+   * Required. A collection of audience attributes to be combined with logical
+   * OR. Attributes need not all be the same dimension.  Only Knowledge Graph
    * entities, Product &amp; Service Categories, and Affinity and In-Market
    * audiences are supported in this context.
    * </pre>
@@ -317,6 +318,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (attributesBuilder_ == null) {
         attributes_ = java.util.Collections.emptyList();
       } else {
@@ -350,7 +352,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.InsightsAudienceAttributeGroup buildPartial() {
       com.google.ads.googleads.v12.services.InsightsAudienceAttributeGroup result = new com.google.ads.googleads.v12.services.InsightsAudienceAttributeGroup(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.services.InsightsAudienceAttributeGroup result) {
       if (attributesBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           attributes_ = java.util.Collections.unmodifiableList(attributes_);
@@ -360,8 +368,10 @@ private static final long serialVersionUID = 0L;
       } else {
         result.attributes_ = attributesBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.InsightsAudienceAttributeGroup result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override
@@ -504,8 +514,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Required. A collection of audience attributes to be combined with logical OR.
-     * Attributes need not all be the same dimension.  Only Knowledge Graph
+     * Required. A collection of audience attributes to be combined with logical
+     * OR. Attributes need not all be the same dimension.  Only Knowledge Graph
      * entities, Product &amp; Service Categories, and Affinity and In-Market
      * audiences are supported in this context.
      * </pre>
@@ -521,8 +531,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A collection of audience attributes to be combined with logical OR.
-     * Attributes need not all be the same dimension.  Only Knowledge Graph
+     * Required. A collection of audience attributes to be combined with logical
+     * OR. Attributes need not all be the same dimension.  Only Knowledge Graph
      * entities, Product &amp; Service Categories, and Affinity and In-Market
      * audiences are supported in this context.
      * </pre>
@@ -538,8 +548,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A collection of audience attributes to be combined with logical OR.
-     * Attributes need not all be the same dimension.  Only Knowledge Graph
+     * Required. A collection of audience attributes to be combined with logical
+     * OR. Attributes need not all be the same dimension.  Only Knowledge Graph
      * entities, Product &amp; Service Categories, and Affinity and In-Market
      * audiences are supported in this context.
      * </pre>
@@ -555,8 +565,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A collection of audience attributes to be combined with logical OR.
-     * Attributes need not all be the same dimension.  Only Knowledge Graph
+     * Required. A collection of audience attributes to be combined with logical
+     * OR. Attributes need not all be the same dimension.  Only Knowledge Graph
      * entities, Product &amp; Service Categories, and Affinity and In-Market
      * audiences are supported in this context.
      * </pre>
@@ -579,8 +589,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A collection of audience attributes to be combined with logical OR.
-     * Attributes need not all be the same dimension.  Only Knowledge Graph
+     * Required. A collection of audience attributes to be combined with logical
+     * OR. Attributes need not all be the same dimension.  Only Knowledge Graph
      * entities, Product &amp; Service Categories, and Affinity and In-Market
      * audiences are supported in this context.
      * </pre>
@@ -600,8 +610,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A collection of audience attributes to be combined with logical OR.
-     * Attributes need not all be the same dimension.  Only Knowledge Graph
+     * Required. A collection of audience attributes to be combined with logical
+     * OR. Attributes need not all be the same dimension.  Only Knowledge Graph
      * entities, Product &amp; Service Categories, and Affinity and In-Market
      * audiences are supported in this context.
      * </pre>
@@ -623,8 +633,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A collection of audience attributes to be combined with logical OR.
-     * Attributes need not all be the same dimension.  Only Knowledge Graph
+     * Required. A collection of audience attributes to be combined with logical
+     * OR. Attributes need not all be the same dimension.  Only Knowledge Graph
      * entities, Product &amp; Service Categories, and Affinity and In-Market
      * audiences are supported in this context.
      * </pre>
@@ -647,8 +657,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A collection of audience attributes to be combined with logical OR.
-     * Attributes need not all be the same dimension.  Only Knowledge Graph
+     * Required. A collection of audience attributes to be combined with logical
+     * OR. Attributes need not all be the same dimension.  Only Knowledge Graph
      * entities, Product &amp; Service Categories, and Affinity and In-Market
      * audiences are supported in this context.
      * </pre>
@@ -668,8 +678,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A collection of audience attributes to be combined with logical OR.
-     * Attributes need not all be the same dimension.  Only Knowledge Graph
+     * Required. A collection of audience attributes to be combined with logical
+     * OR. Attributes need not all be the same dimension.  Only Knowledge Graph
      * entities, Product &amp; Service Categories, and Affinity and In-Market
      * audiences are supported in this context.
      * </pre>
@@ -689,8 +699,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A collection of audience attributes to be combined with logical OR.
-     * Attributes need not all be the same dimension.  Only Knowledge Graph
+     * Required. A collection of audience attributes to be combined with logical
+     * OR. Attributes need not all be the same dimension.  Only Knowledge Graph
      * entities, Product &amp; Service Categories, and Affinity and In-Market
      * audiences are supported in this context.
      * </pre>
@@ -711,8 +721,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A collection of audience attributes to be combined with logical OR.
-     * Attributes need not all be the same dimension.  Only Knowledge Graph
+     * Required. A collection of audience attributes to be combined with logical
+     * OR. Attributes need not all be the same dimension.  Only Knowledge Graph
      * entities, Product &amp; Service Categories, and Affinity and In-Market
      * audiences are supported in this context.
      * </pre>
@@ -731,8 +741,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A collection of audience attributes to be combined with logical OR.
-     * Attributes need not all be the same dimension.  Only Knowledge Graph
+     * Required. A collection of audience attributes to be combined with logical
+     * OR. Attributes need not all be the same dimension.  Only Knowledge Graph
      * entities, Product &amp; Service Categories, and Affinity and In-Market
      * audiences are supported in this context.
      * </pre>
@@ -751,8 +761,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A collection of audience attributes to be combined with logical OR.
-     * Attributes need not all be the same dimension.  Only Knowledge Graph
+     * Required. A collection of audience attributes to be combined with logical
+     * OR. Attributes need not all be the same dimension.  Only Knowledge Graph
      * entities, Product &amp; Service Categories, and Affinity and In-Market
      * audiences are supported in this context.
      * </pre>
@@ -765,8 +775,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A collection of audience attributes to be combined with logical OR.
-     * Attributes need not all be the same dimension.  Only Knowledge Graph
+     * Required. A collection of audience attributes to be combined with logical
+     * OR. Attributes need not all be the same dimension.  Only Knowledge Graph
      * entities, Product &amp; Service Categories, and Affinity and In-Market
      * audiences are supported in this context.
      * </pre>
@@ -782,8 +792,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A collection of audience attributes to be combined with logical OR.
-     * Attributes need not all be the same dimension.  Only Knowledge Graph
+     * Required. A collection of audience attributes to be combined with logical
+     * OR. Attributes need not all be the same dimension.  Only Knowledge Graph
      * entities, Product &amp; Service Categories, and Affinity and In-Market
      * audiences are supported in this context.
      * </pre>
@@ -800,8 +810,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A collection of audience attributes to be combined with logical OR.
-     * Attributes need not all be the same dimension.  Only Knowledge Graph
+     * Required. A collection of audience attributes to be combined with logical
+     * OR. Attributes need not all be the same dimension.  Only Knowledge Graph
      * entities, Product &amp; Service Categories, and Affinity and In-Market
      * audiences are supported in this context.
      * </pre>
@@ -814,8 +824,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A collection of audience attributes to be combined with logical OR.
-     * Attributes need not all be the same dimension.  Only Knowledge Graph
+     * Required. A collection of audience attributes to be combined with logical
+     * OR. Attributes need not all be the same dimension.  Only Knowledge Graph
      * entities, Product &amp; Service Categories, and Affinity and In-Market
      * audiences are supported in this context.
      * </pre>
@@ -829,8 +839,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A collection of audience attributes to be combined with logical OR.
-     * Attributes need not all be the same dimension.  Only Knowledge Graph
+     * Required. A collection of audience attributes to be combined with logical
+     * OR. Attributes need not all be the same dimension.  Only Knowledge Graph
      * entities, Product &amp; Service Categories, and Affinity and In-Market
      * audiences are supported in this context.
      * </pre>

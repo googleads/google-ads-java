@@ -50,14 +50,14 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int INCOME_RANGES_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> incomeRanges_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
       java.lang.Integer, com.google.ads.googleads.v12.enums.IncomeRangeTypeEnum.IncomeRangeType> incomeRanges_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, com.google.ads.googleads.v12.enums.IncomeRangeTypeEnum.IncomeRangeType>() {
             public com.google.ads.googleads.v12.enums.IncomeRangeTypeEnum.IncomeRangeType convert(java.lang.Integer from) {
-              @SuppressWarnings("deprecation")
-              com.google.ads.googleads.v12.enums.IncomeRangeTypeEnum.IncomeRangeType result = com.google.ads.googleads.v12.enums.IncomeRangeTypeEnum.IncomeRangeType.valueOf(from);
+              com.google.ads.googleads.v12.enums.IncomeRangeTypeEnum.IncomeRangeType result = com.google.ads.googleads.v12.enums.IncomeRangeTypeEnum.IncomeRangeType.forNumber(from);
               return result == null ? com.google.ads.googleads.v12.enums.IncomeRangeTypeEnum.IncomeRangeType.UNRECOGNIZED : result;
             }
           };
@@ -128,7 +128,7 @@ private static final long serialVersionUID = 0L;
   private int incomeRangesMemoizedSerializedSize;
 
   public static final int INCLUDE_UNDETERMINED_FIELD_NUMBER = 2;
-  private boolean includeUndetermined_;
+  private boolean includeUndetermined_ = false;
   /**
    * <pre>
    * Include users whose household income is not determined.
@@ -377,10 +377,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       incomeRanges_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000001);
       includeUndetermined_ = false;
-      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -407,20 +407,28 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.HouseholdIncomeDimension buildPartial() {
       com.google.ads.googleads.v12.common.HouseholdIncomeDimension result = new com.google.ads.googleads.v12.common.HouseholdIncomeDimension(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.common.HouseholdIncomeDimension result) {
       if (((bitField0_ & 0x00000001) != 0)) {
         incomeRanges_ = java.util.Collections.unmodifiableList(incomeRanges_);
         bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.incomeRanges_ = incomeRanges_;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.HouseholdIncomeDimension result) {
+      int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.includeUndetermined_ = includeUndetermined_;
         to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -768,8 +776,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIncludeUndetermined(boolean value) {
-      bitField0_ |= 0x00000002;
+      
       includeUndetermined_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

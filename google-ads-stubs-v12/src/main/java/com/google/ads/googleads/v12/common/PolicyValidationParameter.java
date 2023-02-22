@@ -50,6 +50,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int IGNORABLE_POLICY_TOPICS_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList ignorablePolicyTopics_;
   /**
    * <pre>
@@ -125,6 +126,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EXEMPT_POLICY_VIOLATION_KEYS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.PolicyViolationKey> exemptPolicyViolationKeys_;
   /**
    * <pre>
@@ -430,6 +432,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       ignorablePolicyTopics_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       bitField0_ = (bitField0_ & ~0x00000001);
       if (exemptPolicyViolationKeysBuilder_ == null) {
@@ -465,7 +468,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.PolicyValidationParameter buildPartial() {
       com.google.ads.googleads.v12.common.PolicyValidationParameter result = new com.google.ads.googleads.v12.common.PolicyValidationParameter(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.common.PolicyValidationParameter result) {
       if (((bitField0_ & 0x00000001) != 0)) {
         ignorablePolicyTopics_ = ignorablePolicyTopics_.getUnmodifiableView();
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -480,8 +489,10 @@ private static final long serialVersionUID = 0L;
       } else {
         result.exemptPolicyViolationKeys_ = exemptPolicyViolationKeysBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.PolicyValidationParameter result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override
@@ -723,10 +734,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setIgnorablePolicyTopics(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureIgnorablePolicyTopicsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureIgnorablePolicyTopicsIsMutable();
       ignorablePolicyTopics_.set(index, value);
       onChanged();
       return this;
@@ -748,10 +757,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addIgnorablePolicyTopics(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureIgnorablePolicyTopicsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureIgnorablePolicyTopicsIsMutable();
       ignorablePolicyTopics_.add(value);
       onChanged();
       return this;
@@ -816,10 +823,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addIgnorablePolicyTopicsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureIgnorablePolicyTopicsIsMutable();
       ignorablePolicyTopics_.add(value);
       onChanged();

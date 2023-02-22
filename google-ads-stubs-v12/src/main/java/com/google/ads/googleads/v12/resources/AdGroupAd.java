@@ -55,7 +55,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Immutable. The resource name of the ad.
@@ -105,7 +106,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STATUS_FIELD_NUMBER = 3;
-  private int status_;
+  private int status_ = 0;
   /**
    * <pre>
    * The status of the ad.
@@ -126,13 +127,13 @@ private static final long serialVersionUID = 0L;
    * @return The status.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.AdGroupAdStatusEnum.AdGroupAdStatus getStatus() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.AdGroupAdStatusEnum.AdGroupAdStatus result = com.google.ads.googleads.v12.enums.AdGroupAdStatusEnum.AdGroupAdStatus.valueOf(status_);
+    com.google.ads.googleads.v12.enums.AdGroupAdStatusEnum.AdGroupAdStatus result = com.google.ads.googleads.v12.enums.AdGroupAdStatusEnum.AdGroupAdStatus.forNumber(status_);
     return result == null ? com.google.ads.googleads.v12.enums.AdGroupAdStatusEnum.AdGroupAdStatus.UNRECOGNIZED : result;
   }
 
   public static final int AD_GROUP_FIELD_NUMBER = 9;
-  private volatile java.lang.Object adGroup_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object adGroup_ = "";
   /**
    * <pre>
    * Immutable. The ad group to which the ad belongs.
@@ -224,7 +225,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.resources.AdOrBuilder getAdOrBuilder() {
-    return getAd();
+    return ad_ == null ? com.google.ads.googleads.v12.resources.Ad.getDefaultInstance() : ad_;
   }
 
   public static final int POLICY_SUMMARY_FIELD_NUMBER = 6;
@@ -262,11 +263,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.resources.AdGroupAdPolicySummaryOrBuilder getPolicySummaryOrBuilder() {
-    return getPolicySummary();
+    return policySummary_ == null ? com.google.ads.googleads.v12.resources.AdGroupAdPolicySummary.getDefaultInstance() : policySummary_;
   }
 
   public static final int AD_STRENGTH_FIELD_NUMBER = 7;
-  private int adStrength_;
+  private int adStrength_ = 0;
   /**
    * <pre>
    * Output only. Overall ad strength for this ad group ad.
@@ -287,18 +288,18 @@ private static final long serialVersionUID = 0L;
    * @return The adStrength.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.AdStrengthEnum.AdStrength getAdStrength() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.AdStrengthEnum.AdStrength result = com.google.ads.googleads.v12.enums.AdStrengthEnum.AdStrength.valueOf(adStrength_);
+    com.google.ads.googleads.v12.enums.AdStrengthEnum.AdStrength result = com.google.ads.googleads.v12.enums.AdStrengthEnum.AdStrength.forNumber(adStrength_);
     return result == null ? com.google.ads.googleads.v12.enums.AdStrengthEnum.AdStrength.UNRECOGNIZED : result;
   }
 
   public static final int ACTION_ITEMS_FIELD_NUMBER = 13;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList actionItems_;
   /**
    * <pre>
-   * Output only. A list of recommendations to improve the ad strength. For example, a
-   * recommendation could be "Your headlines are a little too similar.
-   * Try adding more distinct headlines.".
+   * Output only. A list of recommendations to improve the ad strength. For
+   * example, a recommendation could be "Your headlines are a little too
+   * similar. Try adding more distinct headlines.".
    * </pre>
    *
    * <code>repeated string action_items = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -310,9 +311,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. A list of recommendations to improve the ad strength. For example, a
-   * recommendation could be "Your headlines are a little too similar.
-   * Try adding more distinct headlines.".
+   * Output only. A list of recommendations to improve the ad strength. For
+   * example, a recommendation could be "Your headlines are a little too
+   * similar. Try adding more distinct headlines.".
    * </pre>
    *
    * <code>repeated string action_items = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -323,9 +324,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. A list of recommendations to improve the ad strength. For example, a
-   * recommendation could be "Your headlines are a little too similar.
-   * Try adding more distinct headlines.".
+   * Output only. A list of recommendations to improve the ad strength. For
+   * example, a recommendation could be "Your headlines are a little too
+   * similar. Try adding more distinct headlines.".
    * </pre>
    *
    * <code>repeated string action_items = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -337,9 +338,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. A list of recommendations to improve the ad strength. For example, a
-   * recommendation could be "Your headlines are a little too similar.
-   * Try adding more distinct headlines.".
+   * Output only. A list of recommendations to improve the ad strength. For
+   * example, a recommendation could be "Your headlines are a little too
+   * similar. Try adding more distinct headlines.".
    * </pre>
    *
    * <code>repeated string action_items = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -352,6 +353,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LABELS_FIELD_NUMBER = 10;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList labels_;
   /**
    * <pre>
@@ -694,30 +696,25 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       status_ = 0;
-
       adGroup_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
-      if (adBuilder_ == null) {
-        ad_ = null;
-      } else {
-        ad_ = null;
+      ad_ = null;
+      if (adBuilder_ != null) {
+        adBuilder_.dispose();
         adBuilder_ = null;
       }
-      if (policySummaryBuilder_ == null) {
-        policySummary_ = null;
-      } else {
-        policySummary_ = null;
+      policySummary_ = null;
+      if (policySummaryBuilder_ != null) {
+        policySummaryBuilder_.dispose();
         policySummaryBuilder_ = null;
       }
       adStrength_ = 0;
-
       actionItems_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000040);
       labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000080);
       return this;
     }
 
@@ -744,38 +741,52 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.AdGroupAd buildPartial() {
       com.google.ads.googleads.v12.resources.AdGroupAd result = new com.google.ads.googleads.v12.resources.AdGroupAd(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
-      result.status_ = status_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        to_bitField0_ |= 0x00000001;
-      }
-      result.adGroup_ = adGroup_;
-      if (adBuilder_ == null) {
-        result.ad_ = ad_;
-      } else {
-        result.ad_ = adBuilder_.build();
-      }
-      if (policySummaryBuilder_ == null) {
-        result.policySummary_ = policySummary_;
-      } else {
-        result.policySummary_ = policySummaryBuilder_.build();
-      }
-      result.adStrength_ = adStrength_;
-      if (((bitField0_ & 0x00000002) != 0)) {
-        actionItems_ = actionItems_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000002);
-      }
-      result.actionItems_ = actionItems_;
-      if (((bitField0_ & 0x00000004) != 0)) {
-        labels_ = labels_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000004);
-      }
-      result.labels_ = labels_;
-      result.bitField0_ = to_bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.resources.AdGroupAd result) {
+      if (((bitField0_ & 0x00000040) != 0)) {
+        actionItems_ = actionItems_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000040);
+      }
+      result.actionItems_ = actionItems_;
+      if (((bitField0_ & 0x00000080) != 0)) {
+        labels_ = labels_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000080);
+      }
+      result.labels_ = labels_;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.resources.AdGroupAd result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.status_ = status_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.adGroup_ = adGroup_;
+        to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.ad_ = adBuilder_ == null
+            ? ad_
+            : adBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.policySummary_ = policySummaryBuilder_ == null
+            ? policySummary_
+            : policySummaryBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.adStrength_ = adStrength_;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -824,14 +835,15 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.resources.AdGroupAd.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.status_ != 0) {
         setStatusValue(other.getStatusValue());
       }
       if (other.hasAdGroup()) {
-        bitField0_ |= 0x00000001;
         adGroup_ = other.adGroup_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.hasAd()) {
@@ -846,7 +858,7 @@ private static final long serialVersionUID = 0L;
       if (!other.actionItems_.isEmpty()) {
         if (actionItems_.isEmpty()) {
           actionItems_ = other.actionItems_;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000040);
         } else {
           ensureActionItemsIsMutable();
           actionItems_.addAll(other.actionItems_);
@@ -856,7 +868,7 @@ private static final long serialVersionUID = 0L;
       if (!other.labels_.isEmpty()) {
         if (labels_.isEmpty()) {
           labels_ = other.labels_;
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000080);
         } else {
           ensureLabelsIsMutable();
           labels_.addAll(other.labels_);
@@ -891,36 +903,36 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 24: {
               status_ = input.readEnum();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 24
             case 42: {
               input.readMessage(
                   getAdFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 42
             case 50: {
               input.readMessage(
                   getPolicySummaryFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 50
             case 56: {
               adStrength_ = input.readEnum();
-
+              bitField0_ |= 0x00000020;
               break;
             } // case 56
             case 74: {
               adGroup_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000004;
               break;
             } // case 74
             case 82: {
@@ -1011,11 +1023,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1030,8 +1040,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1048,12 +1058,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1080,8 +1088,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
-      
       status_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1095,8 +1103,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.AdGroupAdStatusEnum.AdGroupAdStatus getStatus() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.AdGroupAdStatusEnum.AdGroupAdStatus result = com.google.ads.googleads.v12.enums.AdGroupAdStatusEnum.AdGroupAdStatus.valueOf(status_);
+      com.google.ads.googleads.v12.enums.AdGroupAdStatusEnum.AdGroupAdStatus result = com.google.ads.googleads.v12.enums.AdGroupAdStatusEnum.AdGroupAdStatus.forNumber(status_);
       return result == null ? com.google.ads.googleads.v12.enums.AdGroupAdStatusEnum.AdGroupAdStatus.UNRECOGNIZED : result;
     }
     /**
@@ -1112,7 +1119,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000002;
       status_ = value.getNumber();
       onChanged();
       return this;
@@ -1126,7 +1133,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       status_ = 0;
       onChanged();
       return this;
@@ -1142,7 +1149,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the adGroup field is set.
      */
     public boolean hasAdGroup() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -1196,11 +1203,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAdGroup(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       adGroup_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1213,8 +1218,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAdGroup() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       adGroup_ = getDefaultInstance().getAdGroup();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1229,12 +1234,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAdGroupBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       adGroup_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1251,7 +1254,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the ad field is set.
      */
     public boolean hasAd() {
-      return adBuilder_ != null || ad_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -1281,11 +1284,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         ad_ = value;
-        onChanged();
       } else {
         adBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1299,11 +1302,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.resources.Ad.Builder builderForValue) {
       if (adBuilder_ == null) {
         ad_ = builderForValue.build();
-        onChanged();
       } else {
         adBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1315,17 +1318,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAd(com.google.ads.googleads.v12.resources.Ad value) {
       if (adBuilder_ == null) {
-        if (ad_ != null) {
-          ad_ =
-            com.google.ads.googleads.v12.resources.Ad.newBuilder(ad_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000008) != 0) &&
+          ad_ != null &&
+          ad_ != com.google.ads.googleads.v12.resources.Ad.getDefaultInstance()) {
+          getAdBuilder().mergeFrom(value);
         } else {
           ad_ = value;
         }
-        onChanged();
       } else {
         adBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -1336,14 +1340,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.resources.Ad ad = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearAd() {
-      if (adBuilder_ == null) {
-        ad_ = null;
-        onChanged();
-      } else {
-        ad_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
+      ad_ = null;
+      if (adBuilder_ != null) {
+        adBuilder_.dispose();
         adBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1354,7 +1357,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.resources.Ad ad = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v12.resources.Ad.Builder getAdBuilder() {
-      
+      bitField0_ |= 0x00000008;
       onChanged();
       return getAdFieldBuilder().getBuilder();
     }
@@ -1406,7 +1409,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the policySummary field is set.
      */
     public boolean hasPolicySummary() {
-      return policySummaryBuilder_ != null || policySummary_ != null;
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -1436,11 +1439,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         policySummary_ = value;
-        onChanged();
       } else {
         policySummaryBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1454,11 +1457,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.resources.AdGroupAdPolicySummary.Builder builderForValue) {
       if (policySummaryBuilder_ == null) {
         policySummary_ = builderForValue.build();
-        onChanged();
       } else {
         policySummaryBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1470,17 +1473,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergePolicySummary(com.google.ads.googleads.v12.resources.AdGroupAdPolicySummary value) {
       if (policySummaryBuilder_ == null) {
-        if (policySummary_ != null) {
-          policySummary_ =
-            com.google.ads.googleads.v12.resources.AdGroupAdPolicySummary.newBuilder(policySummary_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000010) != 0) &&
+          policySummary_ != null &&
+          policySummary_ != com.google.ads.googleads.v12.resources.AdGroupAdPolicySummary.getDefaultInstance()) {
+          getPolicySummaryBuilder().mergeFrom(value);
         } else {
           policySummary_ = value;
         }
-        onChanged();
       } else {
         policySummaryBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
@@ -1491,14 +1495,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.resources.AdGroupAdPolicySummary policy_summary = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearPolicySummary() {
-      if (policySummaryBuilder_ == null) {
-        policySummary_ = null;
-        onChanged();
-      } else {
-        policySummary_ = null;
+      bitField0_ = (bitField0_ & ~0x00000010);
+      policySummary_ = null;
+      if (policySummaryBuilder_ != null) {
+        policySummaryBuilder_.dispose();
         policySummaryBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1509,7 +1512,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.resources.AdGroupAdPolicySummary policy_summary = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v12.resources.AdGroupAdPolicySummary.Builder getPolicySummaryBuilder() {
-      
+      bitField0_ |= 0x00000010;
       onChanged();
       return getPolicySummaryFieldBuilder().getBuilder();
     }
@@ -1571,8 +1574,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAdStrengthValue(int value) {
-      
       adStrength_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1586,8 +1589,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.AdStrengthEnum.AdStrength getAdStrength() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.AdStrengthEnum.AdStrength result = com.google.ads.googleads.v12.enums.AdStrengthEnum.AdStrength.valueOf(adStrength_);
+      com.google.ads.googleads.v12.enums.AdStrengthEnum.AdStrength result = com.google.ads.googleads.v12.enums.AdStrengthEnum.AdStrength.forNumber(adStrength_);
       return result == null ? com.google.ads.googleads.v12.enums.AdStrengthEnum.AdStrength.UNRECOGNIZED : result;
     }
     /**
@@ -1603,7 +1605,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000020;
       adStrength_ = value.getNumber();
       onChanged();
       return this;
@@ -1617,7 +1619,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAdStrength() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       adStrength_ = 0;
       onChanged();
       return this;
@@ -1625,16 +1627,16 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.LazyStringList actionItems_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureActionItemsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000040) != 0)) {
         actionItems_ = new com.google.protobuf.LazyStringArrayList(actionItems_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000040;
        }
     }
     /**
      * <pre>
-     * Output only. A list of recommendations to improve the ad strength. For example, a
-     * recommendation could be "Your headlines are a little too similar.
-     * Try adding more distinct headlines.".
+     * Output only. A list of recommendations to improve the ad strength. For
+     * example, a recommendation could be "Your headlines are a little too
+     * similar. Try adding more distinct headlines.".
      * </pre>
      *
      * <code>repeated string action_items = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1646,9 +1648,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A list of recommendations to improve the ad strength. For example, a
-     * recommendation could be "Your headlines are a little too similar.
-     * Try adding more distinct headlines.".
+     * Output only. A list of recommendations to improve the ad strength. For
+     * example, a recommendation could be "Your headlines are a little too
+     * similar. Try adding more distinct headlines.".
      * </pre>
      *
      * <code>repeated string action_items = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1659,9 +1661,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A list of recommendations to improve the ad strength. For example, a
-     * recommendation could be "Your headlines are a little too similar.
-     * Try adding more distinct headlines.".
+     * Output only. A list of recommendations to improve the ad strength. For
+     * example, a recommendation could be "Your headlines are a little too
+     * similar. Try adding more distinct headlines.".
      * </pre>
      *
      * <code>repeated string action_items = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1673,9 +1675,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A list of recommendations to improve the ad strength. For example, a
-     * recommendation could be "Your headlines are a little too similar.
-     * Try adding more distinct headlines.".
+     * Output only. A list of recommendations to improve the ad strength. For
+     * example, a recommendation could be "Your headlines are a little too
+     * similar. Try adding more distinct headlines.".
      * </pre>
      *
      * <code>repeated string action_items = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1688,9 +1690,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A list of recommendations to improve the ad strength. For example, a
-     * recommendation could be "Your headlines are a little too similar.
-     * Try adding more distinct headlines.".
+     * Output only. A list of recommendations to improve the ad strength. For
+     * example, a recommendation could be "Your headlines are a little too
+     * similar. Try adding more distinct headlines.".
      * </pre>
      *
      * <code>repeated string action_items = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1700,19 +1702,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setActionItems(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureActionItemsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureActionItemsIsMutable();
       actionItems_.set(index, value);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. A list of recommendations to improve the ad strength. For example, a
-     * recommendation could be "Your headlines are a little too similar.
-     * Try adding more distinct headlines.".
+     * Output only. A list of recommendations to improve the ad strength. For
+     * example, a recommendation could be "Your headlines are a little too
+     * similar. Try adding more distinct headlines.".
      * </pre>
      *
      * <code>repeated string action_items = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1721,19 +1721,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addActionItems(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureActionItemsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureActionItemsIsMutable();
       actionItems_.add(value);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. A list of recommendations to improve the ad strength. For example, a
-     * recommendation could be "Your headlines are a little too similar.
-     * Try adding more distinct headlines.".
+     * Output only. A list of recommendations to improve the ad strength. For
+     * example, a recommendation could be "Your headlines are a little too
+     * similar. Try adding more distinct headlines.".
      * </pre>
      *
      * <code>repeated string action_items = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1750,9 +1748,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A list of recommendations to improve the ad strength. For example, a
-     * recommendation could be "Your headlines are a little too similar.
-     * Try adding more distinct headlines.".
+     * Output only. A list of recommendations to improve the ad strength. For
+     * example, a recommendation could be "Your headlines are a little too
+     * similar. Try adding more distinct headlines.".
      * </pre>
      *
      * <code>repeated string action_items = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1760,15 +1758,15 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearActionItems() {
       actionItems_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. A list of recommendations to improve the ad strength. For example, a
-     * recommendation could be "Your headlines are a little too similar.
-     * Try adding more distinct headlines.".
+     * Output only. A list of recommendations to improve the ad strength. For
+     * example, a recommendation could be "Your headlines are a little too
+     * similar. Try adding more distinct headlines.".
      * </pre>
      *
      * <code>repeated string action_items = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1777,10 +1775,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addActionItemsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureActionItemsIsMutable();
       actionItems_.add(value);
       onChanged();
@@ -1789,9 +1785,9 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.LazyStringList labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureLabelsIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000080) != 0)) {
         labels_ = new com.google.protobuf.LazyStringArrayList(labels_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000080;
        }
     }
     /**
@@ -1854,10 +1850,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLabels(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureLabelsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureLabelsIsMutable();
       labels_.set(index, value);
       onChanged();
       return this;
@@ -1873,10 +1867,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addLabels(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureLabelsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureLabelsIsMutable();
       labels_.add(value);
       onChanged();
       return this;
@@ -1908,7 +1900,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearLabels() {
       labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -1923,10 +1915,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addLabelsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureLabelsIsMutable();
       labels_.add(value);
       onChanged();

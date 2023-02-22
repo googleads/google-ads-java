@@ -53,7 +53,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int ID_FIELD_NUMBER = 4;
-  private volatile java.lang.Object id_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object id_ = "";
   /**
    * <pre>
    * The location identifier.
@@ -111,7 +112,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 5;
-  private volatile java.lang.Object name_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
   /**
    * <pre>
    * The unique location name in English.
@@ -169,14 +171,14 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PARENT_COUNTRY_ID_FIELD_NUMBER = 6;
-  private long parentCountryId_;
+  private long parentCountryId_ = 0L;
   /**
    * <pre>
    * The parent country (not present if location is a country).
    * If present, will always be a GeoTargetConstant ID. Additional information
    * such as country name is provided by
-   * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v12.services.ReachPlanService.ListPlannableLocations] or
-   * [GoogleAdsService.Search/SearchStream][].
+   * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v12.services.ReachPlanService.ListPlannableLocations]
+   * or [GoogleAdsService.Search/SearchStream][].
    * </pre>
    *
    * <code>optional int64 parent_country_id = 6;</code>
@@ -191,8 +193,8 @@ private static final long serialVersionUID = 0L;
    * The parent country (not present if location is a country).
    * If present, will always be a GeoTargetConstant ID. Additional information
    * such as country name is provided by
-   * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v12.services.ReachPlanService.ListPlannableLocations] or
-   * [GoogleAdsService.Search/SearchStream][].
+   * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v12.services.ReachPlanService.ListPlannableLocations]
+   * or [GoogleAdsService.Search/SearchStream][].
    * </pre>
    *
    * <code>optional int64 parent_country_id = 6;</code>
@@ -204,7 +206,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int COUNTRY_CODE_FIELD_NUMBER = 7;
-  private volatile java.lang.Object countryCode_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object countryCode_ = "";
   /**
    * <pre>
    * The ISO-3166-1 alpha-2 country code that is associated with the location.
@@ -262,7 +265,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LOCATION_TYPE_FIELD_NUMBER = 8;
-  private volatile java.lang.Object locationType_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object locationType_ = "";
   /**
    * <pre>
    * The location's type. Location types correspond to target_type returned by
@@ -580,16 +584,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       id_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       name_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       parentCountryId_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000004);
       countryCode_ = "";
-      bitField0_ = (bitField0_ & ~0x00000008);
       locationType_ = "";
-      bitField0_ = (bitField0_ & ~0x00000010);
       return this;
     }
 
@@ -616,31 +616,35 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.PlannableLocation buildPartial() {
       com.google.ads.googleads.v12.services.PlannableLocation result = new com.google.ads.googleads.v12.services.PlannableLocation(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.PlannableLocation result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.id_ = id_;
         to_bitField0_ |= 0x00000001;
       }
-      result.id_ = id_;
       if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.name_ = name_;
         to_bitField0_ |= 0x00000002;
       }
-      result.name_ = name_;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.parentCountryId_ = parentCountryId_;
         to_bitField0_ |= 0x00000004;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.countryCode_ = countryCode_;
         to_bitField0_ |= 0x00000008;
       }
-      result.countryCode_ = countryCode_;
       if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.locationType_ = locationType_;
         to_bitField0_ |= 0x00000010;
       }
-      result.locationType_ = locationType_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -688,26 +692,26 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v12.services.PlannableLocation other) {
       if (other == com.google.ads.googleads.v12.services.PlannableLocation.getDefaultInstance()) return this;
       if (other.hasId()) {
-        bitField0_ |= 0x00000001;
         id_ = other.id_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasName()) {
-        bitField0_ |= 0x00000002;
         name_ = other.name_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasParentCountryId()) {
         setParentCountryId(other.getParentCountryId());
       }
       if (other.hasCountryCode()) {
-        bitField0_ |= 0x00000008;
         countryCode_ = other.countryCode_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.hasLocationType()) {
-        bitField0_ |= 0x00000010;
         locationType_ = other.locationType_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -842,11 +846,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       id_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -859,8 +861,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       id_ = getDefaultInstance().getId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -875,12 +877,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       id_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -949,11 +949,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       name_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -966,8 +964,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -982,12 +980,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -998,8 +994,8 @@ private static final long serialVersionUID = 0L;
      * The parent country (not present if location is a country).
      * If present, will always be a GeoTargetConstant ID. Additional information
      * such as country name is provided by
-     * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v12.services.ReachPlanService.ListPlannableLocations] or
-     * [GoogleAdsService.Search/SearchStream][].
+     * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v12.services.ReachPlanService.ListPlannableLocations]
+     * or [GoogleAdsService.Search/SearchStream][].
      * </pre>
      *
      * <code>optional int64 parent_country_id = 6;</code>
@@ -1014,8 +1010,8 @@ private static final long serialVersionUID = 0L;
      * The parent country (not present if location is a country).
      * If present, will always be a GeoTargetConstant ID. Additional information
      * such as country name is provided by
-     * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v12.services.ReachPlanService.ListPlannableLocations] or
-     * [GoogleAdsService.Search/SearchStream][].
+     * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v12.services.ReachPlanService.ListPlannableLocations]
+     * or [GoogleAdsService.Search/SearchStream][].
      * </pre>
      *
      * <code>optional int64 parent_country_id = 6;</code>
@@ -1030,8 +1026,8 @@ private static final long serialVersionUID = 0L;
      * The parent country (not present if location is a country).
      * If present, will always be a GeoTargetConstant ID. Additional information
      * such as country name is provided by
-     * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v12.services.ReachPlanService.ListPlannableLocations] or
-     * [GoogleAdsService.Search/SearchStream][].
+     * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v12.services.ReachPlanService.ListPlannableLocations]
+     * or [GoogleAdsService.Search/SearchStream][].
      * </pre>
      *
      * <code>optional int64 parent_country_id = 6;</code>
@@ -1039,8 +1035,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setParentCountryId(long value) {
-      bitField0_ |= 0x00000004;
+      
       parentCountryId_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1049,8 +1046,8 @@ private static final long serialVersionUID = 0L;
      * The parent country (not present if location is a country).
      * If present, will always be a GeoTargetConstant ID. Additional information
      * such as country name is provided by
-     * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v12.services.ReachPlanService.ListPlannableLocations] or
-     * [GoogleAdsService.Search/SearchStream][].
+     * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v12.services.ReachPlanService.ListPlannableLocations]
+     * or [GoogleAdsService.Search/SearchStream][].
      * </pre>
      *
      * <code>optional int64 parent_country_id = 6;</code>
@@ -1127,11 +1124,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCountryCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
       countryCode_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1144,8 +1139,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCountryCode() {
-      bitField0_ = (bitField0_ & ~0x00000008);
       countryCode_ = getDefaultInstance().getCountryCode();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1160,12 +1155,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCountryCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       countryCode_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1238,11 +1231,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLocationType(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
+      if (value == null) { throw new NullPointerException(); }
       locationType_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1256,8 +1247,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLocationType() {
-      bitField0_ = (bitField0_ & ~0x00000010);
       locationType_ = getDefaultInstance().getLocationType();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1273,12 +1264,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLocationTypeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000010;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       locationType_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }

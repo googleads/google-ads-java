@@ -50,7 +50,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int CARRIER_CONSTANT_FIELD_NUMBER = 2;
-  private volatile java.lang.Object carrierConstant_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object carrierConstant_ = "";
   /**
    * <pre>
    * The Carrier constant resource name.
@@ -303,8 +304,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       carrierConstant_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -331,15 +332,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.CarrierInfo buildPartial() {
       com.google.ads.googleads.v12.common.CarrierInfo result = new com.google.ads.googleads.v12.common.CarrierInfo(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.CarrierInfo result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.carrierConstant_ = carrierConstant_;
         to_bitField0_ |= 0x00000001;
       }
-      result.carrierConstant_ = carrierConstant_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -387,8 +392,8 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v12.common.CarrierInfo other) {
       if (other == com.google.ads.googleads.v12.common.CarrierInfo.getDefaultInstance()) return this;
       if (other.hasCarrierConstant()) {
-        bitField0_ |= 0x00000001;
         carrierConstant_ = other.carrierConstant_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -503,11 +508,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCarrierConstant(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       carrierConstant_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -520,8 +523,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCarrierConstant() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       carrierConstant_ = getDefaultInstance().getCarrierConstant();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -536,12 +539,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCarrierConstantBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       carrierConstant_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

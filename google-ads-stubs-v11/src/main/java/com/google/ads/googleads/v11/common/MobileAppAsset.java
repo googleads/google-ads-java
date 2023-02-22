@@ -53,11 +53,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int APP_ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object appId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object appId_ = "";
   /**
    * <pre>
-   * Required. A string that uniquely identifies a mobile application. It should just
-   * contain the platform native id, like "com.android.ebay" for Android or
+   * Required. A string that uniquely identifies a mobile application. It should
+   * just contain the platform native id, like "com.android.ebay" for Android or
    * "12345689" for iOS.
    * </pre>
    *
@@ -79,8 +80,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. A string that uniquely identifies a mobile application. It should just
-   * contain the platform native id, like "com.android.ebay" for Android or
+   * Required. A string that uniquely identifies a mobile application. It should
+   * just contain the platform native id, like "com.android.ebay" for Android or
    * "12345689" for iOS.
    * </pre>
    *
@@ -103,7 +104,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int APP_STORE_FIELD_NUMBER = 2;
-  private int appStore_;
+  private int appStore_ = 0;
   /**
    * <pre>
    * Required. The application store that distributes this specific app.
@@ -124,13 +125,13 @@ private static final long serialVersionUID = 0L;
    * @return The appStore.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.MobileAppVendorEnum.MobileAppVendor getAppStore() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.MobileAppVendorEnum.MobileAppVendor result = com.google.ads.googleads.v11.enums.MobileAppVendorEnum.MobileAppVendor.valueOf(appStore_);
+    com.google.ads.googleads.v11.enums.MobileAppVendorEnum.MobileAppVendor result = com.google.ads.googleads.v11.enums.MobileAppVendorEnum.MobileAppVendor.forNumber(appStore_);
     return result == null ? com.google.ads.googleads.v11.enums.MobileAppVendorEnum.MobileAppVendor.UNRECOGNIZED : result;
   }
 
   public static final int LINK_TEXT_FIELD_NUMBER = 3;
-  private volatile java.lang.Object linkText_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object linkText_ = "";
   /**
    * <pre>
    * Required. The visible text displayed when the link is rendered in an ad.
@@ -178,7 +179,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int START_DATE_FIELD_NUMBER = 4;
-  private volatile java.lang.Object startDate_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object startDate_ = "";
   /**
    * <pre>
    * Start date of when this asset is effective and can begin serving, in
@@ -226,7 +228,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int END_DATE_FIELD_NUMBER = 5;
-  private volatile java.lang.Object endDate_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object endDate_ = "";
   /**
    * <pre>
    * Last date of when this asset is effective and still serving, in yyyy-MM-dd
@@ -504,16 +507,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       appId_ = "";
-
       appStore_ = 0;
-
       linkText_ = "";
-
       startDate_ = "";
-
       endDate_ = "";
-
       return this;
     }
 
@@ -540,13 +539,28 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.MobileAppAsset buildPartial() {
       com.google.ads.googleads.v11.common.MobileAppAsset result = new com.google.ads.googleads.v11.common.MobileAppAsset(this);
-      result.appId_ = appId_;
-      result.appStore_ = appStore_;
-      result.linkText_ = linkText_;
-      result.startDate_ = startDate_;
-      result.endDate_ = endDate_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.MobileAppAsset result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.appId_ = appId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.appStore_ = appStore_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.linkText_ = linkText_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.startDate_ = startDate_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.endDate_ = endDate_;
+      }
     }
 
     @java.lang.Override
@@ -595,6 +609,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.common.MobileAppAsset.getDefaultInstance()) return this;
       if (!other.getAppId().isEmpty()) {
         appId_ = other.appId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.appStore_ != 0) {
@@ -602,14 +617,17 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getLinkText().isEmpty()) {
         linkText_ = other.linkText_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getStartDate().isEmpty()) {
         startDate_ = other.startDate_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.getEndDate().isEmpty()) {
         endDate_ = other.endDate_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -640,27 +658,27 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               appId_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 16: {
               appStore_ = input.readEnum();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             case 26: {
               linkText_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 34: {
               startDate_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 34
             case 42: {
               endDate_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 42
             default: {
@@ -678,12 +696,13 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object appId_ = "";
     /**
      * <pre>
-     * Required. A string that uniquely identifies a mobile application. It should just
-     * contain the platform native id, like "com.android.ebay" for Android or
+     * Required. A string that uniquely identifies a mobile application. It should
+     * just contain the platform native id, like "com.android.ebay" for Android or
      * "12345689" for iOS.
      * </pre>
      *
@@ -704,8 +723,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A string that uniquely identifies a mobile application. It should just
-     * contain the platform native id, like "com.android.ebay" for Android or
+     * Required. A string that uniquely identifies a mobile application. It should
+     * just contain the platform native id, like "com.android.ebay" for Android or
      * "12345689" for iOS.
      * </pre>
      *
@@ -727,8 +746,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A string that uniquely identifies a mobile application. It should just
-     * contain the platform native id, like "com.android.ebay" for Android or
+     * Required. A string that uniquely identifies a mobile application. It should
+     * just contain the platform native id, like "com.android.ebay" for Android or
      * "12345689" for iOS.
      * </pre>
      *
@@ -738,18 +757,16 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAppId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       appId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. A string that uniquely identifies a mobile application. It should just
-     * contain the platform native id, like "com.android.ebay" for Android or
+     * Required. A string that uniquely identifies a mobile application. It should
+     * just contain the platform native id, like "com.android.ebay" for Android or
      * "12345689" for iOS.
      * </pre>
      *
@@ -757,15 +774,15 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAppId() {
-      
       appId_ = getDefaultInstance().getAppId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. A string that uniquely identifies a mobile application. It should just
-     * contain the platform native id, like "com.android.ebay" for Android or
+     * Required. A string that uniquely identifies a mobile application. It should
+     * just contain the platform native id, like "com.android.ebay" for Android or
      * "12345689" for iOS.
      * </pre>
      *
@@ -775,12 +792,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAppIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       appId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -807,8 +822,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAppStoreValue(int value) {
-      
       appStore_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -822,8 +837,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.MobileAppVendorEnum.MobileAppVendor getAppStore() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.MobileAppVendorEnum.MobileAppVendor result = com.google.ads.googleads.v11.enums.MobileAppVendorEnum.MobileAppVendor.valueOf(appStore_);
+      com.google.ads.googleads.v11.enums.MobileAppVendorEnum.MobileAppVendor result = com.google.ads.googleads.v11.enums.MobileAppVendorEnum.MobileAppVendor.forNumber(appStore_);
       return result == null ? com.google.ads.googleads.v11.enums.MobileAppVendorEnum.MobileAppVendor.UNRECOGNIZED : result;
     }
     /**
@@ -839,7 +853,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000002;
       appStore_ = value.getNumber();
       onChanged();
       return this;
@@ -853,7 +867,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAppStore() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       appStore_ = 0;
       onChanged();
       return this;
@@ -915,11 +929,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLinkText(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       linkText_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -933,8 +945,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLinkText() {
-      
       linkText_ = getDefaultInstance().getLinkText();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -950,12 +962,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLinkTextBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       linkText_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1016,11 +1026,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStartDate(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       startDate_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1034,8 +1042,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStartDate() {
-      
       startDate_ = getDefaultInstance().getStartDate();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1051,12 +1059,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStartDateBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       startDate_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1117,11 +1123,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEndDate(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       endDate_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1135,8 +1139,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEndDate() {
-      
       endDate_ = getDefaultInstance().getEndDate();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1152,12 +1156,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEndDateBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       endDate_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }

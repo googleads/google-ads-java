@@ -49,7 +49,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CPC_BID_CEILING_MICROS_FIELD_NUMBER = 2;
-  private long cpcBidCeilingMicros_;
+  private long cpcBidCeilingMicros_ = 0L;
   /**
    * <pre>
    * Maximum bid limit that can be set by the bid strategy.
@@ -66,7 +66,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CPC_BID_FLOOR_MICROS_FIELD_NUMBER = 3;
-  private long cpcBidFloorMicros_;
+  private long cpcBidFloorMicros_ = 0L;
   /**
    * <pre>
    * Minimum bid limit that can be set by the bid strategy.
@@ -83,7 +83,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TARGET_CPA_MICROS_FIELD_NUMBER = 4;
-  private long targetCpaMicros_;
+  private long targetCpaMicros_ = 0L;
   /**
    * <pre>
    * The target cost-per-action (CPA) option. This is the average amount that
@@ -320,12 +320,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       cpcBidCeilingMicros_ = 0L;
-
       cpcBidFloorMicros_ = 0L;
-
       targetCpaMicros_ = 0L;
-
       return this;
     }
 
@@ -352,11 +350,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.MaximizeConversions buildPartial() {
       com.google.ads.googleads.v11.common.MaximizeConversions result = new com.google.ads.googleads.v11.common.MaximizeConversions(this);
-      result.cpcBidCeilingMicros_ = cpcBidCeilingMicros_;
-      result.cpcBidFloorMicros_ = cpcBidFloorMicros_;
-      result.targetCpaMicros_ = targetCpaMicros_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.MaximizeConversions result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.cpcBidCeilingMicros_ = cpcBidCeilingMicros_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.cpcBidFloorMicros_ = cpcBidFloorMicros_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.targetCpaMicros_ = targetCpaMicros_;
+      }
     }
 
     @java.lang.Override
@@ -440,17 +449,17 @@ private static final long serialVersionUID = 0L;
               break;
             case 16: {
               cpcBidCeilingMicros_ = input.readInt64();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 16
             case 24: {
               cpcBidFloorMicros_ = input.readInt64();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 24
             case 32: {
               targetCpaMicros_ = input.readInt64();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 32
             default: {
@@ -468,6 +477,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private long cpcBidCeilingMicros_ ;
     /**
@@ -498,6 +508,7 @@ private static final long serialVersionUID = 0L;
     public Builder setCpcBidCeilingMicros(long value) {
       
       cpcBidCeilingMicros_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -512,7 +523,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCpcBidCeilingMicros() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       cpcBidCeilingMicros_ = 0L;
       onChanged();
       return this;
@@ -547,6 +558,7 @@ private static final long serialVersionUID = 0L;
     public Builder setCpcBidFloorMicros(long value) {
       
       cpcBidFloorMicros_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -561,7 +573,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCpcBidFloorMicros() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       cpcBidFloorMicros_ = 0L;
       onChanged();
       return this;
@@ -602,6 +614,7 @@ private static final long serialVersionUID = 0L;
     public Builder setTargetCpaMicros(long value) {
       
       targetCpaMicros_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -619,7 +632,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTargetCpaMicros() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       targetCpaMicros_ = 0L;
       onChanged();
       return this;

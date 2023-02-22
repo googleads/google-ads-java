@@ -56,7 +56,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Immutable. The resource name of the customizer attribute.
@@ -106,7 +107,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ID_FIELD_NUMBER = 2;
-  private long id_;
+  private long id_ = 0L;
   /**
    * <pre>
    * Output only. The ID of the customizer attribute.
@@ -121,12 +122,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 3;
-  private volatile java.lang.Object name_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
   /**
    * <pre>
-   * Required. Immutable. Name of the customizer attribute. Required. It must have a minimum length
-   * of 1 and maximum length of 40. Name of an enabled customizer attribute must
-   * be unique (case insensitive).
+   * Required. Immutable. Name of the customizer attribute. Required. It must
+   * have a minimum length of 1 and maximum length of 40. Name of an enabled
+   * customizer attribute must be unique (case insensitive).
    * </pre>
    *
    * <code>string name = 3 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
@@ -147,9 +149,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. Immutable. Name of the customizer attribute. Required. It must have a minimum length
-   * of 1 and maximum length of 40. Name of an enabled customizer attribute must
-   * be unique (case insensitive).
+   * Required. Immutable. Name of the customizer attribute. Required. It must
+   * have a minimum length of 1 and maximum length of 40. Name of an enabled
+   * customizer attribute must be unique (case insensitive).
    * </pre>
    *
    * <code>string name = 3 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
@@ -171,7 +173,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TYPE_FIELD_NUMBER = 4;
-  private int type_;
+  private int type_ = 0;
   /**
    * <pre>
    * Immutable. The type of the customizer attribute.
@@ -192,13 +194,12 @@ private static final long serialVersionUID = 0L;
    * @return The type.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.CustomizerAttributeTypeEnum.CustomizerAttributeType getType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.CustomizerAttributeTypeEnum.CustomizerAttributeType result = com.google.ads.googleads.v12.enums.CustomizerAttributeTypeEnum.CustomizerAttributeType.valueOf(type_);
+    com.google.ads.googleads.v12.enums.CustomizerAttributeTypeEnum.CustomizerAttributeType result = com.google.ads.googleads.v12.enums.CustomizerAttributeTypeEnum.CustomizerAttributeType.forNumber(type_);
     return result == null ? com.google.ads.googleads.v12.enums.CustomizerAttributeTypeEnum.CustomizerAttributeType.UNRECOGNIZED : result;
   }
 
   public static final int STATUS_FIELD_NUMBER = 5;
-  private int status_;
+  private int status_ = 0;
   /**
    * <pre>
    * Output only. The status of the customizer attribute.
@@ -219,8 +220,7 @@ private static final long serialVersionUID = 0L;
    * @return The status.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.CustomizerAttributeStatusEnum.CustomizerAttributeStatus getStatus() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.CustomizerAttributeStatusEnum.CustomizerAttributeStatus result = com.google.ads.googleads.v12.enums.CustomizerAttributeStatusEnum.CustomizerAttributeStatus.valueOf(status_);
+    com.google.ads.googleads.v12.enums.CustomizerAttributeStatusEnum.CustomizerAttributeStatus result = com.google.ads.googleads.v12.enums.CustomizerAttributeStatusEnum.CustomizerAttributeStatus.forNumber(status_);
     return result == null ? com.google.ads.googleads.v12.enums.CustomizerAttributeStatusEnum.CustomizerAttributeStatus.UNRECOGNIZED : result;
   }
 
@@ -461,16 +461,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       id_ = 0L;
-
       name_ = "";
-
       type_ = 0;
-
       status_ = 0;
-
       return this;
     }
 
@@ -497,13 +493,28 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.CustomizerAttribute buildPartial() {
       com.google.ads.googleads.v12.resources.CustomizerAttribute result = new com.google.ads.googleads.v12.resources.CustomizerAttribute(this);
-      result.resourceName_ = resourceName_;
-      result.id_ = id_;
-      result.name_ = name_;
-      result.type_ = type_;
-      result.status_ = status_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.resources.CustomizerAttribute result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.id_ = id_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.name_ = name_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.type_ = type_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.status_ = status_;
+      }
     }
 
     @java.lang.Override
@@ -552,6 +563,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.resources.CustomizerAttribute.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.getId() != 0L) {
@@ -559,6 +571,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.type_ != 0) {
@@ -595,27 +608,27 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 16: {
               id_ = input.readInt64();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             case 26: {
               name_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 32: {
               type_ = input.readEnum();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 32
             case 40: {
               status_ = input.readEnum();
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 40
             default: {
@@ -633,6 +646,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object resourceName_ = "";
     /**
@@ -693,11 +707,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -712,8 +724,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -730,12 +742,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -765,6 +775,7 @@ private static final long serialVersionUID = 0L;
     public Builder setId(long value) {
       
       id_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -777,7 +788,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearId() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       id_ = 0L;
       onChanged();
       return this;
@@ -786,9 +797,9 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object name_ = "";
     /**
      * <pre>
-     * Required. Immutable. Name of the customizer attribute. Required. It must have a minimum length
-     * of 1 and maximum length of 40. Name of an enabled customizer attribute must
-     * be unique (case insensitive).
+     * Required. Immutable. Name of the customizer attribute. Required. It must
+     * have a minimum length of 1 and maximum length of 40. Name of an enabled
+     * customizer attribute must be unique (case insensitive).
      * </pre>
      *
      * <code>string name = 3 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
@@ -808,9 +819,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Immutable. Name of the customizer attribute. Required. It must have a minimum length
-     * of 1 and maximum length of 40. Name of an enabled customizer attribute must
-     * be unique (case insensitive).
+     * Required. Immutable. Name of the customizer attribute. Required. It must
+     * have a minimum length of 1 and maximum length of 40. Name of an enabled
+     * customizer attribute must be unique (case insensitive).
      * </pre>
      *
      * <code>string name = 3 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
@@ -831,9 +842,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Immutable. Name of the customizer attribute. Required. It must have a minimum length
-     * of 1 and maximum length of 40. Name of an enabled customizer attribute must
-     * be unique (case insensitive).
+     * Required. Immutable. Name of the customizer attribute. Required. It must
+     * have a minimum length of 1 and maximum length of 40. Name of an enabled
+     * customizer attribute must be unique (case insensitive).
      * </pre>
      *
      * <code>string name = 3 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
@@ -842,35 +853,33 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       name_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. Immutable. Name of the customizer attribute. Required. It must have a minimum length
-     * of 1 and maximum length of 40. Name of an enabled customizer attribute must
-     * be unique (case insensitive).
+     * Required. Immutable. Name of the customizer attribute. Required. It must
+     * have a minimum length of 1 and maximum length of 40. Name of an enabled
+     * customizer attribute must be unique (case insensitive).
      * </pre>
      *
      * <code>string name = 3 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      
       name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. Immutable. Name of the customizer attribute. Required. It must have a minimum length
-     * of 1 and maximum length of 40. Name of an enabled customizer attribute must
-     * be unique (case insensitive).
+     * Required. Immutable. Name of the customizer attribute. Required. It must
+     * have a minimum length of 1 and maximum length of 40. Name of an enabled
+     * customizer attribute must be unique (case insensitive).
      * </pre>
      *
      * <code>string name = 3 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
@@ -879,12 +888,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -911,8 +918,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
-      
       type_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -926,8 +933,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.CustomizerAttributeTypeEnum.CustomizerAttributeType getType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.CustomizerAttributeTypeEnum.CustomizerAttributeType result = com.google.ads.googleads.v12.enums.CustomizerAttributeTypeEnum.CustomizerAttributeType.valueOf(type_);
+      com.google.ads.googleads.v12.enums.CustomizerAttributeTypeEnum.CustomizerAttributeType result = com.google.ads.googleads.v12.enums.CustomizerAttributeTypeEnum.CustomizerAttributeType.forNumber(type_);
       return result == null ? com.google.ads.googleads.v12.enums.CustomizerAttributeTypeEnum.CustomizerAttributeType.UNRECOGNIZED : result;
     }
     /**
@@ -943,7 +949,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000008;
       type_ = value.getNumber();
       onChanged();
       return this;
@@ -957,7 +963,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       type_ = 0;
       onChanged();
       return this;
@@ -985,8 +991,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
-      
       status_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1000,8 +1006,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.CustomizerAttributeStatusEnum.CustomizerAttributeStatus getStatus() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.CustomizerAttributeStatusEnum.CustomizerAttributeStatus result = com.google.ads.googleads.v12.enums.CustomizerAttributeStatusEnum.CustomizerAttributeStatus.valueOf(status_);
+      com.google.ads.googleads.v12.enums.CustomizerAttributeStatusEnum.CustomizerAttributeStatus result = com.google.ads.googleads.v12.enums.CustomizerAttributeStatusEnum.CustomizerAttributeStatus.forNumber(status_);
       return result == null ? com.google.ads.googleads.v12.enums.CustomizerAttributeStatusEnum.CustomizerAttributeStatus.UNRECOGNIZED : result;
     }
     /**
@@ -1017,7 +1022,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000010;
       status_ = value.getNumber();
       onChanged();
       return this;
@@ -1031,7 +1036,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       status_ = 0;
       onChanged();
       return this;

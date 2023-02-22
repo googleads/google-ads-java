@@ -55,7 +55,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int CALLER_ID_FIELD_NUMBER = 7;
-  private volatile java.lang.Object callerId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object callerId_ = "";
   /**
    * <pre>
    * The caller id from which this call was placed. Caller id is expected to be
@@ -116,7 +117,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALL_START_DATE_TIME_FIELD_NUMBER = 8;
-  private volatile java.lang.Object callStartDateTime_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object callStartDateTime_ = "";
   /**
    * <pre>
    * The date time at which the call occurred. The timezone must be specified.
@@ -180,7 +182,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONVERSION_ACTION_FIELD_NUMBER = 9;
-  private volatile java.lang.Object conversionAction_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object conversionAction_ = "";
   /**
    * <pre>
    * Resource name of the conversion action associated with this conversion.
@@ -247,7 +250,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONVERSION_DATE_TIME_FIELD_NUMBER = 10;
-  private volatile java.lang.Object conversionDateTime_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object conversionDateTime_ = "";
   /**
    * <pre>
    * The date time at which the conversion occurred. Must be after the call
@@ -311,7 +315,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONVERSION_VALUE_FIELD_NUMBER = 11;
-  private double conversionValue_;
+  private double conversionValue_ = 0D;
   /**
    * <pre>
    * The value of the conversion for the advertiser.
@@ -338,7 +342,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CURRENCY_CODE_FIELD_NUMBER = 12;
-  private volatile java.lang.Object currencyCode_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object currencyCode_ = "";
   /**
    * <pre>
    * Currency associated with the conversion value. This is the ISO 4217
@@ -399,6 +404,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CUSTOM_VARIABLES_FIELD_NUMBER = 13;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.services.CustomVariable> customVariables_;
   /**
    * <pre>
@@ -745,18 +751,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       callerId_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       callStartDateTime_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       conversionAction_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       conversionDateTime_ = "";
-      bitField0_ = (bitField0_ & ~0x00000008);
       conversionValue_ = 0D;
-      bitField0_ = (bitField0_ & ~0x00000010);
       currencyCode_ = "";
-      bitField0_ = (bitField0_ & ~0x00000020);
       if (customVariablesBuilder_ == null) {
         customVariables_ = java.util.Collections.emptyList();
       } else {
@@ -790,32 +791,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.CallConversion buildPartial() {
       com.google.ads.googleads.v11.services.CallConversion result = new com.google.ads.googleads.v11.services.CallConversion(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        to_bitField0_ |= 0x00000001;
-      }
-      result.callerId_ = callerId_;
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        to_bitField0_ |= 0x00000002;
-      }
-      result.callStartDateTime_ = callStartDateTime_;
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        to_bitField0_ |= 0x00000004;
-      }
-      result.conversionAction_ = conversionAction_;
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        to_bitField0_ |= 0x00000008;
-      }
-      result.conversionDateTime_ = conversionDateTime_;
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.conversionValue_ = conversionValue_;
-        to_bitField0_ |= 0x00000010;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        to_bitField0_ |= 0x00000020;
-      }
-      result.currencyCode_ = currencyCode_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.services.CallConversion result) {
       if (customVariablesBuilder_ == null) {
         if (((bitField0_ & 0x00000040) != 0)) {
           customVariables_ = java.util.Collections.unmodifiableList(customVariables_);
@@ -825,9 +807,36 @@ private static final long serialVersionUID = 0L;
       } else {
         result.customVariables_ = customVariablesBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.CallConversion result) {
+      int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.callerId_ = callerId_;
+        to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.callStartDateTime_ = callStartDateTime_;
+        to_bitField0_ |= 0x00000002;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.conversionAction_ = conversionAction_;
+        to_bitField0_ |= 0x00000004;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.conversionDateTime_ = conversionDateTime_;
+        to_bitField0_ |= 0x00000008;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.conversionValue_ = conversionValue_;
+        to_bitField0_ |= 0x00000010;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.currencyCode_ = currencyCode_;
+        to_bitField0_ |= 0x00000020;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -875,31 +884,31 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v11.services.CallConversion other) {
       if (other == com.google.ads.googleads.v11.services.CallConversion.getDefaultInstance()) return this;
       if (other.hasCallerId()) {
-        bitField0_ |= 0x00000001;
         callerId_ = other.callerId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasCallStartDateTime()) {
-        bitField0_ |= 0x00000002;
         callStartDateTime_ = other.callStartDateTime_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasConversionAction()) {
-        bitField0_ |= 0x00000004;
         conversionAction_ = other.conversionAction_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.hasConversionDateTime()) {
-        bitField0_ |= 0x00000008;
         conversionDateTime_ = other.conversionDateTime_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.hasConversionValue()) {
         setConversionValue(other.getConversionValue());
       }
       if (other.hasCurrencyCode()) {
-        bitField0_ |= 0x00000020;
         currencyCode_ = other.currencyCode_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (customVariablesBuilder_ == null) {
@@ -1082,11 +1091,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallerId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       callerId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1100,8 +1107,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallerId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       callerId_ = getDefaultInstance().getCallerId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1117,12 +1124,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallerIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       callerId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1199,11 +1204,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallStartDateTime(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       callStartDateTime_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1218,8 +1221,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallStartDateTime() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       callStartDateTime_ = getDefaultInstance().getCallStartDateTime();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1236,12 +1239,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallStartDateTimeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       callStartDateTime_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1322,11 +1323,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setConversionAction(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       conversionAction_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1342,8 +1341,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConversionAction() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       conversionAction_ = getDefaultInstance().getConversionAction();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1361,12 +1360,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setConversionActionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       conversionAction_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1443,11 +1440,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setConversionDateTime(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
       conversionDateTime_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1462,8 +1457,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConversionDateTime() {
-      bitField0_ = (bitField0_ & ~0x00000008);
       conversionDateTime_ = getDefaultInstance().getConversionDateTime();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1480,12 +1475,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setConversionDateTimeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       conversionDateTime_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1525,8 +1518,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setConversionValue(double value) {
-      bitField0_ |= 0x00000010;
+      
       conversionValue_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1613,11 +1607,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCurrencyCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000020;
+      if (value == null) { throw new NullPointerException(); }
       currencyCode_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1631,8 +1623,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCurrencyCode() {
-      bitField0_ = (bitField0_ & ~0x00000020);
       currencyCode_ = getDefaultInstance().getCurrencyCode();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1648,12 +1640,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCurrencyCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000020;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       currencyCode_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }

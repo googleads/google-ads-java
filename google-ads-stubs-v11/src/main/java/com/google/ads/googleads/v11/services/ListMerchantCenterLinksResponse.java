@@ -5,7 +5,8 @@ package com.google.ads.googleads.v11.services;
 
 /**
  * <pre>
- * Response message for [MerchantCenterLinkService.ListMerchantCenterLinks][google.ads.googleads.v11.services.MerchantCenterLinkService.ListMerchantCenterLinks].
+ * Response message for
+ * [MerchantCenterLinkService.ListMerchantCenterLinks][google.ads.googleads.v11.services.MerchantCenterLinkService.ListMerchantCenterLinks].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v11.services.ListMerchantCenterLinksResponse}
@@ -49,6 +50,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MERCHANT_CENTER_LINKS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.resources.MerchantCenterLink> merchantCenterLinks_;
   /**
    * <pre>
@@ -267,7 +269,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Response message for [MerchantCenterLinkService.ListMerchantCenterLinks][google.ads.googleads.v11.services.MerchantCenterLinkService.ListMerchantCenterLinks].
+   * Response message for
+   * [MerchantCenterLinkService.ListMerchantCenterLinks][google.ads.googleads.v11.services.MerchantCenterLinkService.ListMerchantCenterLinks].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v11.services.ListMerchantCenterLinksResponse}
@@ -302,6 +305,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (merchantCenterLinksBuilder_ == null) {
         merchantCenterLinks_ = java.util.Collections.emptyList();
       } else {
@@ -335,7 +339,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.ListMerchantCenterLinksResponse buildPartial() {
       com.google.ads.googleads.v11.services.ListMerchantCenterLinksResponse result = new com.google.ads.googleads.v11.services.ListMerchantCenterLinksResponse(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.services.ListMerchantCenterLinksResponse result) {
       if (merchantCenterLinksBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           merchantCenterLinks_ = java.util.Collections.unmodifiableList(merchantCenterLinks_);
@@ -345,8 +355,10 @@ private static final long serialVersionUID = 0L;
       } else {
         result.merchantCenterLinks_ = merchantCenterLinksBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.ListMerchantCenterLinksResponse result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override

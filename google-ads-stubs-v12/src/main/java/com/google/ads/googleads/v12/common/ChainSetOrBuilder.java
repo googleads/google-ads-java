@@ -9,7 +9,8 @@ public interface ChainSetOrBuilder extends
 
   /**
    * <pre>
-   * Required. Immutable. Relationship type the specified chains have with this advertiser.
+   * Required. Immutable. Relationship type the specified chains have with this
+   * advertiser.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.ChainRelationshipTypeEnum.ChainRelationshipType relationship_type = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
@@ -18,7 +19,8 @@ public interface ChainSetOrBuilder extends
   int getRelationshipTypeValue();
   /**
    * <pre>
-   * Required. Immutable. Relationship type the specified chains have with this advertiser.
+   * Required. Immutable. Relationship type the specified chains have with this
+   * advertiser.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.ChainRelationshipTypeEnum.ChainRelationshipType relationship_type = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>

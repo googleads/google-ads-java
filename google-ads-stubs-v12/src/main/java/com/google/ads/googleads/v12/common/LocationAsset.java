@@ -51,7 +51,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PLACE_ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object placeId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object placeId_ = "";
   /**
    * <pre>
    * Place IDs uniquely identify a place in the Google Places database and on
@@ -105,6 +106,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BUSINESS_PROFILE_LOCATIONS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.BusinessProfileLocation> businessProfileLocations_;
   /**
    * <pre>
@@ -180,7 +182,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LOCATION_OWNERSHIP_TYPE_FIELD_NUMBER = 3;
-  private int locationOwnershipType_;
+  private int locationOwnershipType_ = 0;
   /**
    * <pre>
    * The type of location ownership.
@@ -205,8 +207,7 @@ private static final long serialVersionUID = 0L;
    * @return The locationOwnershipType.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.LocationOwnershipTypeEnum.LocationOwnershipType getLocationOwnershipType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.LocationOwnershipTypeEnum.LocationOwnershipType result = com.google.ads.googleads.v12.enums.LocationOwnershipTypeEnum.LocationOwnershipType.valueOf(locationOwnershipType_);
+    com.google.ads.googleads.v12.enums.LocationOwnershipTypeEnum.LocationOwnershipType result = com.google.ads.googleads.v12.enums.LocationOwnershipTypeEnum.LocationOwnershipType.forNumber(locationOwnershipType_);
     return result == null ? com.google.ads.googleads.v12.enums.LocationOwnershipTypeEnum.LocationOwnershipType.UNRECOGNIZED : result;
   }
 
@@ -424,17 +425,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       placeId_ = "";
-
       if (businessProfileLocationsBuilder_ == null) {
         businessProfileLocations_ = java.util.Collections.emptyList();
       } else {
         businessProfileLocations_ = null;
         businessProfileLocationsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       locationOwnershipType_ = 0;
-
       return this;
     }
 
@@ -461,20 +461,32 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.LocationAsset buildPartial() {
       com.google.ads.googleads.v12.common.LocationAsset result = new com.google.ads.googleads.v12.common.LocationAsset(this);
-      int from_bitField0_ = bitField0_;
-      result.placeId_ = placeId_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.common.LocationAsset result) {
       if (businessProfileLocationsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           businessProfileLocations_ = java.util.Collections.unmodifiableList(businessProfileLocations_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.businessProfileLocations_ = businessProfileLocations_;
       } else {
         result.businessProfileLocations_ = businessProfileLocationsBuilder_.build();
       }
-      result.locationOwnershipType_ = locationOwnershipType_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.LocationAsset result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.placeId_ = placeId_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.locationOwnershipType_ = locationOwnershipType_;
+      }
     }
 
     @java.lang.Override
@@ -523,13 +535,14 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.common.LocationAsset.getDefaultInstance()) return this;
       if (!other.getPlaceId().isEmpty()) {
         placeId_ = other.placeId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (businessProfileLocationsBuilder_ == null) {
         if (!other.businessProfileLocations_.isEmpty()) {
           if (businessProfileLocations_.isEmpty()) {
             businessProfileLocations_ = other.businessProfileLocations_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureBusinessProfileLocationsIsMutable();
             businessProfileLocations_.addAll(other.businessProfileLocations_);
@@ -542,7 +555,7 @@ private static final long serialVersionUID = 0L;
             businessProfileLocationsBuilder_.dispose();
             businessProfileLocationsBuilder_ = null;
             businessProfileLocations_ = other.businessProfileLocations_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
             businessProfileLocationsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getBusinessProfileLocationsFieldBuilder() : null;
@@ -582,7 +595,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               placeId_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
@@ -600,7 +613,7 @@ private static final long serialVersionUID = 0L;
             } // case 18
             case 24: {
               locationOwnershipType_ = input.readEnum();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 24
             default: {
@@ -685,11 +698,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPlaceId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       placeId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -706,8 +717,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPlaceId() {
-      
       placeId_ = getDefaultInstance().getPlaceId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -726,12 +737,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPlaceIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       placeId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -739,9 +748,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v12.common.BusinessProfileLocation> businessProfileLocations_ =
       java.util.Collections.emptyList();
     private void ensureBusinessProfileLocationsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         businessProfileLocations_ = new java.util.ArrayList<com.google.ads.googleads.v12.common.BusinessProfileLocation>(businessProfileLocations_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -968,7 +977,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearBusinessProfileLocations() {
       if (businessProfileLocationsBuilder_ == null) {
         businessProfileLocations_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         businessProfileLocationsBuilder_.clear();
@@ -1094,7 +1103,7 @@ private static final long serialVersionUID = 0L;
         businessProfileLocationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v12.common.BusinessProfileLocation, com.google.ads.googleads.v12.common.BusinessProfileLocation.Builder, com.google.ads.googleads.v12.common.BusinessProfileLocationOrBuilder>(
                 businessProfileLocations_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         businessProfileLocations_ = null;
@@ -1128,8 +1137,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLocationOwnershipTypeValue(int value) {
-      
       locationOwnershipType_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1145,8 +1154,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.LocationOwnershipTypeEnum.LocationOwnershipType getLocationOwnershipType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.LocationOwnershipTypeEnum.LocationOwnershipType result = com.google.ads.googleads.v12.enums.LocationOwnershipTypeEnum.LocationOwnershipType.valueOf(locationOwnershipType_);
+      com.google.ads.googleads.v12.enums.LocationOwnershipTypeEnum.LocationOwnershipType result = com.google.ads.googleads.v12.enums.LocationOwnershipTypeEnum.LocationOwnershipType.forNumber(locationOwnershipType_);
       return result == null ? com.google.ads.googleads.v12.enums.LocationOwnershipTypeEnum.LocationOwnershipType.UNRECOGNIZED : result;
     }
     /**
@@ -1164,7 +1172,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       locationOwnershipType_ = value.getNumber();
       onChanged();
       return this;
@@ -1180,7 +1188,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLocationOwnershipType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       locationOwnershipType_ = 0;
       onChanged();
       return this;

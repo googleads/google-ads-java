@@ -49,7 +49,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int DURATION_IN_DAYS_FIELD_NUMBER = 2;
-  private int durationInDays_;
+  private int durationInDays_ = 0;
   /**
    * <pre>
    * The duration value in days.
@@ -124,7 +124,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.common.DateRangeOrBuilder getDateRangeOrBuilder() {
-    return getDateRange();
+    return dateRange_ == null ? com.google.ads.googleads.v12.common.DateRange.getDefaultInstance() : dateRange_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -340,12 +340,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       durationInDays_ = 0;
-      bitField0_ = (bitField0_ & ~0x00000001);
-      if (dateRangeBuilder_ == null) {
-        dateRange_ = null;
-      } else {
-        dateRange_ = null;
+      dateRange_ = null;
+      if (dateRangeBuilder_ != null) {
+        dateRangeBuilder_.dispose();
         dateRangeBuilder_ = null;
       }
       return this;
@@ -374,20 +373,24 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.CampaignDuration buildPartial() {
       com.google.ads.googleads.v12.services.CampaignDuration result = new com.google.ads.googleads.v12.services.CampaignDuration(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.CampaignDuration result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.durationInDays_ = durationInDays_;
         to_bitField0_ |= 0x00000001;
       }
-      if (dateRangeBuilder_ == null) {
-        result.dateRange_ = dateRange_;
-      } else {
-        result.dateRange_ = dateRangeBuilder_.build();
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.dateRange_ = dateRangeBuilder_ == null
+            ? dateRange_
+            : dateRangeBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -475,7 +478,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getDateRangeFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 26
             default: {
@@ -533,8 +536,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDurationInDays(int value) {
-      bitField0_ |= 0x00000001;
+      
       durationInDays_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -570,7 +574,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dateRange field is set.
      */
     public boolean hasDateRange() {
-      return dateRangeBuilder_ != null || dateRange_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -608,11 +612,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         dateRange_ = value;
-        onChanged();
       } else {
         dateRangeBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -630,11 +634,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.DateRange.Builder builderForValue) {
       if (dateRangeBuilder_ == null) {
         dateRange_ = builderForValue.build();
-        onChanged();
       } else {
         dateRangeBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -650,17 +654,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDateRange(com.google.ads.googleads.v12.common.DateRange value) {
       if (dateRangeBuilder_ == null) {
-        if (dateRange_ != null) {
-          dateRange_ =
-            com.google.ads.googleads.v12.common.DateRange.newBuilder(dateRange_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          dateRange_ != null &&
+          dateRange_ != com.google.ads.googleads.v12.common.DateRange.getDefaultInstance()) {
+          getDateRangeBuilder().mergeFrom(value);
         } else {
           dateRange_ = value;
         }
-        onChanged();
       } else {
         dateRangeBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -675,14 +680,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.DateRange date_range = 3;</code>
      */
     public Builder clearDateRange() {
-      if (dateRangeBuilder_ == null) {
-        dateRange_ = null;
-        onChanged();
-      } else {
-        dateRange_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      dateRange_ = null;
+      if (dateRangeBuilder_ != null) {
+        dateRangeBuilder_.dispose();
         dateRangeBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -697,7 +701,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.DateRange date_range = 3;</code>
      */
     public com.google.ads.googleads.v12.common.DateRange.Builder getDateRangeBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getDateRangeFieldBuilder().getBuilder();
     }

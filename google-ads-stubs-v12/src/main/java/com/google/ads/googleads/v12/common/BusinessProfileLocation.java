@@ -51,6 +51,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LABELS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList labels_;
   /**
    * <pre>
@@ -106,7 +107,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STORE_CODE_FIELD_NUMBER = 2;
-  private volatile java.lang.Object storeCode_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object storeCode_ = "";
   /**
    * <pre>
    * Business Profile store code of this location. This is synced from the
@@ -154,7 +156,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LISTING_ID_FIELD_NUMBER = 3;
-  private long listingId_;
+  private long listingId_ = 0L;
   /**
    * <pre>
    * Listing ID of this Business Profile location. This is synced from the
@@ -390,12 +392,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       bitField0_ = (bitField0_ & ~0x00000001);
       storeCode_ = "";
-
       listingId_ = 0L;
-
       return this;
     }
 
@@ -422,16 +423,28 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.BusinessProfileLocation buildPartial() {
       com.google.ads.googleads.v12.common.BusinessProfileLocation result = new com.google.ads.googleads.v12.common.BusinessProfileLocation(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.common.BusinessProfileLocation result) {
       if (((bitField0_ & 0x00000001) != 0)) {
         labels_ = labels_.getUnmodifiableView();
         bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.labels_ = labels_;
-      result.storeCode_ = storeCode_;
-      result.listingId_ = listingId_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.BusinessProfileLocation result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.storeCode_ = storeCode_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.listingId_ = listingId_;
+      }
     }
 
     @java.lang.Override
@@ -490,6 +503,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getStoreCode().isEmpty()) {
         storeCode_ = other.storeCode_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.getListingId() != 0L) {
@@ -529,12 +543,12 @@ private static final long serialVersionUID = 0L;
             } // case 10
             case 18: {
               storeCode_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 24: {
               listingId_ = input.readInt64();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 24
             default: {
@@ -626,10 +640,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLabels(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureLabelsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureLabelsIsMutable();
       labels_.set(index, value);
       onChanged();
       return this;
@@ -646,10 +658,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addLabels(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureLabelsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureLabelsIsMutable();
       labels_.add(value);
       onChanged();
       return this;
@@ -699,10 +709,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addLabelsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureLabelsIsMutable();
       labels_.add(value);
       onChanged();
@@ -765,11 +773,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStoreCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       storeCode_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -783,8 +789,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStoreCode() {
-      
       storeCode_ = getDefaultInstance().getStoreCode();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -800,12 +806,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStoreCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       storeCode_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -837,6 +841,7 @@ private static final long serialVersionUID = 0L;
     public Builder setListingId(long value) {
       
       listingId_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -850,7 +855,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearListingId() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       listingId_ = 0L;
       onChanged();
       return this;

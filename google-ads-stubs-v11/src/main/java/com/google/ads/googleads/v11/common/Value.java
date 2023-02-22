@@ -552,6 +552,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       valueCase_ = 0;
       value_ = null;
       return this;
@@ -580,24 +581,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.Value buildPartial() {
       com.google.ads.googleads.v11.common.Value result = new com.google.ads.googleads.v11.common.Value(this);
-      if (valueCase_ == 1) {
-        result.value_ = value_;
-      }
-      if (valueCase_ == 2) {
-        result.value_ = value_;
-      }
-      if (valueCase_ == 3) {
-        result.value_ = value_;
-      }
-      if (valueCase_ == 4) {
-        result.value_ = value_;
-      }
-      if (valueCase_ == 5) {
-        result.value_ = value_;
-      }
-      result.valueCase_ = valueCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.Value result) {
+      int from_bitField0_ = bitField0_;
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v11.common.Value result) {
+      result.valueCase_ = valueCase_;
+      result.value_ = this.value_;
     }
 
     @java.lang.Override
@@ -753,6 +749,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     /**
      * <pre>
@@ -789,6 +786,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBooleanValue(boolean value) {
+      
       valueCase_ = 1;
       value_ = value;
       onChanged();
@@ -846,6 +844,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setInt64Value(long value) {
+      
       valueCase_ = 2;
       value_ = value;
       onChanged();
@@ -903,6 +902,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFloatValue(float value) {
+      
       valueCase_ = 3;
       value_ = value;
       onChanged();
@@ -960,6 +960,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDoubleValue(double value) {
+      
       valueCase_ = 4;
       value_ = value;
       onChanged();
@@ -1058,10 +1059,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStringValue(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  valueCase_ = 5;
+      if (value == null) { throw new NullPointerException(); }
+      valueCase_ = 5;
       value_ = value;
       onChanged();
       return this;
@@ -1093,10 +1092,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStringValueBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       valueCase_ = 5;
       value_ = value;
       onChanged();

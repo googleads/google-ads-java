@@ -9,8 +9,8 @@ public interface DynamicRealEstateAssetOrBuilder extends
 
   /**
    * <pre>
-   * Required. Listing ID which can be any sequence of letters and digits, and must be
-   * unique and match the values of remarketing tag. Required.
+   * Required. Listing ID which can be any sequence of letters and digits, and
+   * must be unique and match the values of remarketing tag. Required.
    * </pre>
    *
    * <code>string listing_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -19,8 +19,8 @@ public interface DynamicRealEstateAssetOrBuilder extends
   java.lang.String getListingId();
   /**
    * <pre>
-   * Required. Listing ID which can be any sequence of letters and digits, and must be
-   * unique and match the values of remarketing tag. Required.
+   * Required. Listing ID which can be any sequence of letters and digits, and
+   * must be unique and match the values of remarketing tag. Required.
    * </pre>
    *
    * <code>string listing_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>

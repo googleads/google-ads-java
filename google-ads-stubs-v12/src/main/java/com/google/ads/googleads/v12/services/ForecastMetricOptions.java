@@ -48,7 +48,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INCLUDE_COVIEW_FIELD_NUMBER = 1;
-  private boolean includeCoview_;
+  private boolean includeCoview_ = false;
   /**
    * <pre>
    * Indicates whether to include co-view metrics in the response forecast.
@@ -255,8 +255,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       includeCoview_ = false;
-
       return this;
     }
 
@@ -283,9 +283,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.ForecastMetricOptions buildPartial() {
       com.google.ads.googleads.v12.services.ForecastMetricOptions result = new com.google.ads.googleads.v12.services.ForecastMetricOptions(this);
-      result.includeCoview_ = includeCoview_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.ForecastMetricOptions result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.includeCoview_ = includeCoview_;
+      }
     }
 
     @java.lang.Override
@@ -363,7 +370,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               includeCoview_ = input.readBool();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             default: {
@@ -381,6 +388,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private boolean includeCoview_ ;
     /**
@@ -407,6 +415,7 @@ private static final long serialVersionUID = 0L;
     public Builder setIncludeCoview(boolean value) {
       
       includeCoview_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -419,7 +428,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIncludeCoview() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       includeCoview_ = false;
       onChanged();
       return this;

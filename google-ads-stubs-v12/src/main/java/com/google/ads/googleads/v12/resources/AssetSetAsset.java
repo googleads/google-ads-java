@@ -53,7 +53,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Immutable. The resource name of the asset set asset.
@@ -103,7 +104,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ASSET_SET_FIELD_NUMBER = 2;
-  private volatile java.lang.Object assetSet_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object assetSet_ = "";
   /**
    * <pre>
    * Immutable. The asset set which this asset set asset is linking to.
@@ -149,7 +151,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ASSET_FIELD_NUMBER = 3;
-  private volatile java.lang.Object asset_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object asset_ = "";
   /**
    * <pre>
    * Immutable. The asset which this asset set asset is linking to.
@@ -195,7 +198,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STATUS_FIELD_NUMBER = 4;
-  private int status_;
+  private int status_ = 0;
   /**
    * <pre>
    * Output only. The status of the asset set asset. Read-only.
@@ -216,8 +219,7 @@ private static final long serialVersionUID = 0L;
    * @return The status.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.AssetSetAssetStatusEnum.AssetSetAssetStatus getStatus() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.AssetSetAssetStatusEnum.AssetSetAssetStatus result = com.google.ads.googleads.v12.enums.AssetSetAssetStatusEnum.AssetSetAssetStatus.valueOf(status_);
+    com.google.ads.googleads.v12.enums.AssetSetAssetStatusEnum.AssetSetAssetStatus result = com.google.ads.googleads.v12.enums.AssetSetAssetStatusEnum.AssetSetAssetStatus.forNumber(status_);
     return result == null ? com.google.ads.googleads.v12.enums.AssetSetAssetStatusEnum.AssetSetAssetStatus.UNRECOGNIZED : result;
   }
 
@@ -443,14 +445,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       assetSet_ = "";
-
       asset_ = "";
-
       status_ = 0;
-
       return this;
     }
 
@@ -477,12 +476,25 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.AssetSetAsset buildPartial() {
       com.google.ads.googleads.v12.resources.AssetSetAsset result = new com.google.ads.googleads.v12.resources.AssetSetAsset(this);
-      result.resourceName_ = resourceName_;
-      result.assetSet_ = assetSet_;
-      result.asset_ = asset_;
-      result.status_ = status_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.resources.AssetSetAsset result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.assetSet_ = assetSet_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.asset_ = asset_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.status_ = status_;
+      }
     }
 
     @java.lang.Override
@@ -531,14 +543,17 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.resources.AssetSetAsset.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getAssetSet().isEmpty()) {
         assetSet_ = other.assetSet_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getAsset().isEmpty()) {
         asset_ = other.asset_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.status_ != 0) {
@@ -572,22 +587,22 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               assetSet_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
               asset_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 32: {
               status_ = input.readEnum();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 32
             default: {
@@ -605,6 +620,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object resourceName_ = "";
     /**
@@ -665,11 +681,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -684,8 +698,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -702,12 +716,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -765,11 +777,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAssetSet(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       assetSet_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -782,8 +792,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAssetSet() {
-      
       assetSet_ = getDefaultInstance().getAssetSet();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -798,12 +808,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAssetSetBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       assetSet_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -861,11 +869,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAsset(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       asset_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -878,8 +884,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAsset() {
-      
       asset_ = getDefaultInstance().getAsset();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -894,12 +900,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAssetBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       asset_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -926,8 +930,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
-      
       status_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -941,8 +945,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.AssetSetAssetStatusEnum.AssetSetAssetStatus getStatus() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.AssetSetAssetStatusEnum.AssetSetAssetStatus result = com.google.ads.googleads.v12.enums.AssetSetAssetStatusEnum.AssetSetAssetStatus.valueOf(status_);
+      com.google.ads.googleads.v12.enums.AssetSetAssetStatusEnum.AssetSetAssetStatus result = com.google.ads.googleads.v12.enums.AssetSetAssetStatusEnum.AssetSetAssetStatus.forNumber(status_);
       return result == null ? com.google.ads.googleads.v12.enums.AssetSetAssetStatusEnum.AssetSetAssetStatus.UNRECOGNIZED : result;
     }
     /**
@@ -958,7 +961,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000008;
       status_ = value.getNumber();
       onChanged();
       return this;
@@ -972,7 +975,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       status_ = 0;
       onChanged();
       return this;

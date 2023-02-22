@@ -90,7 +90,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int REQUIRED_BUDGET_AMOUNT_MICROS_FIELD_NUMBER = 19;
-  private long requiredBudgetAmountMicros_;
+  private long requiredBudgetAmountMicros_ = 0L;
   /**
    * <pre>
    * Projected required daily budget that the advertiser must set in order to
@@ -106,7 +106,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BIDDABLE_CONVERSIONS_FIELD_NUMBER = 9;
-  private double biddableConversions_;
+  private double biddableConversions_ = 0D;
   /**
    * <pre>
    * Projected number of biddable conversions.
@@ -133,7 +133,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BIDDABLE_CONVERSIONS_VALUE_FIELD_NUMBER = 10;
-  private double biddableConversionsValue_;
+  private double biddableConversionsValue_ = 0D;
   /**
    * <pre>
    * Projected total value of biddable conversions.
@@ -160,7 +160,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int APP_INSTALLS_FIELD_NUMBER = 15;
-  private double appInstalls_;
+  private double appInstalls_ = 0D;
   /**
    * <pre>
    * Projected number of app installs.
@@ -175,7 +175,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int IN_APP_ACTIONS_FIELD_NUMBER = 16;
-  private double inAppActions_;
+  private double inAppActions_ = 0D;
   /**
    * <pre>
    * Projected number of in-app actions.
@@ -190,7 +190,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CLICKS_FIELD_NUMBER = 11;
-  private long clicks_;
+  private long clicks_ = 0L;
   /**
    * <pre>
    * Projected number of clicks.
@@ -217,7 +217,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int COST_MICROS_FIELD_NUMBER = 12;
-  private long costMicros_;
+  private long costMicros_ = 0L;
   /**
    * <pre>
    * Projected cost in micros.
@@ -244,7 +244,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int IMPRESSIONS_FIELD_NUMBER = 13;
-  private long impressions_;
+  private long impressions_ = 0L;
   /**
    * <pre>
    * Projected number of impressions.
@@ -271,7 +271,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOP_SLOT_IMPRESSIONS_FIELD_NUMBER = 14;
-  private long topSlotImpressions_;
+  private long topSlotImpressions_ = 0L;
   /**
    * <pre>
    * Projected number of top slot impressions.
@@ -730,24 +730,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       requiredBudgetAmountMicros_ = 0L;
-
       biddableConversions_ = 0D;
-      bitField0_ = (bitField0_ & ~0x00000001);
       biddableConversionsValue_ = 0D;
-      bitField0_ = (bitField0_ & ~0x00000002);
       appInstalls_ = 0D;
-
       inAppActions_ = 0D;
-
       clicks_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000004);
       costMicros_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000008);
       impressions_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000010);
       topSlotImpressions_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000020);
       targetCpaSimulationKeyValueCase_ = 0;
       targetCpaSimulationKeyValue_ = null;
       return this;
@@ -776,45 +768,54 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.TargetCpaSimulationPoint buildPartial() {
       com.google.ads.googleads.v12.common.TargetCpaSimulationPoint result = new com.google.ads.googleads.v12.common.TargetCpaSimulationPoint(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.TargetCpaSimulationPoint result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.requiredBudgetAmountMicros_ = requiredBudgetAmountMicros_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.requiredBudgetAmountMicros_ = requiredBudgetAmountMicros_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.biddableConversions_ = biddableConversions_;
         to_bitField0_ |= 0x00000001;
       }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.biddableConversionsValue_ = biddableConversionsValue_;
         to_bitField0_ |= 0x00000002;
       }
-      result.appInstalls_ = appInstalls_;
-      result.inAppActions_ = inAppActions_;
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.appInstalls_ = appInstalls_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.inAppActions_ = inAppActions_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
         result.clicks_ = clicks_;
         to_bitField0_ |= 0x00000004;
       }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000040) != 0)) {
         result.costMicros_ = costMicros_;
         to_bitField0_ |= 0x00000008;
       }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000080) != 0)) {
         result.impressions_ = impressions_;
         to_bitField0_ |= 0x00000010;
       }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000100) != 0)) {
         result.topSlotImpressions_ = topSlotImpressions_;
         to_bitField0_ |= 0x00000020;
       }
-      if (targetCpaSimulationKeyValueCase_ == 17) {
-        result.targetCpaSimulationKeyValue_ = targetCpaSimulationKeyValue_;
-      }
-      if (targetCpaSimulationKeyValueCase_ == 18) {
-        result.targetCpaSimulationKeyValue_ = targetCpaSimulationKeyValue_;
-      }
-      result.bitField0_ = to_bitField0_;
+      result.bitField0_ |= to_bitField0_;
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v12.common.TargetCpaSimulationPoint result) {
       result.targetCpaSimulationKeyValueCase_ = targetCpaSimulationKeyValueCase_;
-      onBuilt();
-      return result;
+      result.targetCpaSimulationKeyValue_ = this.targetCpaSimulationKeyValue_;
     }
 
     @java.lang.Override
@@ -929,42 +930,42 @@ private static final long serialVersionUID = 0L;
               break;
             case 73: {
               biddableConversions_ = input.readDouble();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 73
             case 81: {
               biddableConversionsValue_ = input.readDouble();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 81
             case 88: {
               clicks_ = input.readInt64();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000020;
               break;
             } // case 88
             case 96: {
               costMicros_ = input.readInt64();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000040;
               break;
             } // case 96
             case 104: {
               impressions_ = input.readInt64();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000080;
               break;
             } // case 104
             case 112: {
               topSlotImpressions_ = input.readInt64();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000100;
               break;
             } // case 112
             case 121: {
               appInstalls_ = input.readDouble();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 121
             case 129: {
               inAppActions_ = input.readDouble();
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 129
             case 136: {
@@ -979,7 +980,7 @@ private static final long serialVersionUID = 0L;
             } // case 145
             case 152: {
               requiredBudgetAmountMicros_ = input.readInt64();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 152
             default: {
@@ -1041,6 +1042,7 @@ private static final long serialVersionUID = 0L;
     public Builder setRequiredBudgetAmountMicros(long value) {
       
       requiredBudgetAmountMicros_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1054,7 +1056,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRequiredBudgetAmountMicros() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       requiredBudgetAmountMicros_ = 0L;
       onChanged();
       return this;
@@ -1071,7 +1073,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasBiddableConversions() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -1095,8 +1097,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBiddableConversions(double value) {
-      bitField0_ |= 0x00000001;
+      
       biddableConversions_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1109,7 +1112,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBiddableConversions() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       biddableConversions_ = 0D;
       onChanged();
       return this;
@@ -1126,7 +1129,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasBiddableConversionsValue() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -1150,8 +1153,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBiddableConversionsValue(double value) {
-      bitField0_ |= 0x00000002;
+      
       biddableConversionsValue_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1164,7 +1168,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBiddableConversionsValue() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       biddableConversionsValue_ = 0D;
       onChanged();
       return this;
@@ -1195,6 +1199,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAppInstalls(double value) {
       
       appInstalls_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1207,7 +1212,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAppInstalls() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       appInstalls_ = 0D;
       onChanged();
       return this;
@@ -1238,6 +1243,7 @@ private static final long serialVersionUID = 0L;
     public Builder setInAppActions(double value) {
       
       inAppActions_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1250,7 +1256,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearInAppActions() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       inAppActions_ = 0D;
       onChanged();
       return this;
@@ -1267,7 +1273,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasClicks() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -1291,8 +1297,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setClicks(long value) {
-      bitField0_ |= 0x00000004;
+      
       clicks_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1305,7 +1312,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearClicks() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000020);
       clicks_ = 0L;
       onChanged();
       return this;
@@ -1322,7 +1329,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCostMicros() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -1346,8 +1353,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCostMicros(long value) {
-      bitField0_ |= 0x00000008;
+      
       costMicros_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1360,7 +1368,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCostMicros() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000040);
       costMicros_ = 0L;
       onChanged();
       return this;
@@ -1377,7 +1385,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasImpressions() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
      * <pre>
@@ -1401,8 +1409,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setImpressions(long value) {
-      bitField0_ |= 0x00000010;
+      
       impressions_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1415,7 +1424,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearImpressions() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000080);
       impressions_ = 0L;
       onChanged();
       return this;
@@ -1433,7 +1442,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasTopSlotImpressions() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000100) != 0);
     }
     /**
      * <pre>
@@ -1459,8 +1468,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTopSlotImpressions(long value) {
-      bitField0_ |= 0x00000020;
+      
       topSlotImpressions_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1474,7 +1484,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTopSlotImpressions() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000100);
       topSlotImpressions_ = 0L;
       onChanged();
       return this;
@@ -1515,6 +1525,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTargetCpaMicros(long value) {
+      
       targetCpaSimulationKeyValueCase_ = 17;
       targetCpaSimulationKeyValue_ = value;
       onChanged();
@@ -1578,6 +1589,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTargetCpaScalingModifier(double value) {
+      
       targetCpaSimulationKeyValueCase_ = 18;
       targetCpaSimulationKeyValue_ = value;
       onChanged();

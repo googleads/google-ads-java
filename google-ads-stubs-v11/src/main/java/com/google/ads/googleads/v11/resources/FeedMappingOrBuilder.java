@@ -62,9 +62,9 @@ public interface FeedMappingOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. Feed attributes to field mappings. These mappings are a one-to-many
-   * relationship meaning that 1 feed attribute can be used to populate
-   * multiple placeholder fields, but 1 placeholder field can only draw
+   * Immutable. Feed attributes to field mappings. These mappings are a
+   * one-to-many relationship meaning that 1 feed attribute can be used to
+   * populate multiple placeholder fields, but 1 placeholder field can only draw
    * data from 1 feed attribute. Ad Customizer is an exception, 1 placeholder
    * field can be mapped to multiple feed attributes. Required.
    * </pre>
@@ -75,9 +75,9 @@ public interface FeedMappingOrBuilder extends
       getAttributeFieldMappingsList();
   /**
    * <pre>
-   * Immutable. Feed attributes to field mappings. These mappings are a one-to-many
-   * relationship meaning that 1 feed attribute can be used to populate
-   * multiple placeholder fields, but 1 placeholder field can only draw
+   * Immutable. Feed attributes to field mappings. These mappings are a
+   * one-to-many relationship meaning that 1 feed attribute can be used to
+   * populate multiple placeholder fields, but 1 placeholder field can only draw
    * data from 1 feed attribute. Ad Customizer is an exception, 1 placeholder
    * field can be mapped to multiple feed attributes. Required.
    * </pre>
@@ -87,9 +87,9 @@ public interface FeedMappingOrBuilder extends
   com.google.ads.googleads.v11.resources.AttributeFieldMapping getAttributeFieldMappings(int index);
   /**
    * <pre>
-   * Immutable. Feed attributes to field mappings. These mappings are a one-to-many
-   * relationship meaning that 1 feed attribute can be used to populate
-   * multiple placeholder fields, but 1 placeholder field can only draw
+   * Immutable. Feed attributes to field mappings. These mappings are a
+   * one-to-many relationship meaning that 1 feed attribute can be used to
+   * populate multiple placeholder fields, but 1 placeholder field can only draw
    * data from 1 feed attribute. Ad Customizer is an exception, 1 placeholder
    * field can be mapped to multiple feed attributes. Required.
    * </pre>
@@ -99,9 +99,9 @@ public interface FeedMappingOrBuilder extends
   int getAttributeFieldMappingsCount();
   /**
    * <pre>
-   * Immutable. Feed attributes to field mappings. These mappings are a one-to-many
-   * relationship meaning that 1 feed attribute can be used to populate
-   * multiple placeholder fields, but 1 placeholder field can only draw
+   * Immutable. Feed attributes to field mappings. These mappings are a
+   * one-to-many relationship meaning that 1 feed attribute can be used to
+   * populate multiple placeholder fields, but 1 placeholder field can only draw
    * data from 1 feed attribute. Ad Customizer is an exception, 1 placeholder
    * field can be mapped to multiple feed attributes. Required.
    * </pre>
@@ -112,9 +112,9 @@ public interface FeedMappingOrBuilder extends
       getAttributeFieldMappingsOrBuilderList();
   /**
    * <pre>
-   * Immutable. Feed attributes to field mappings. These mappings are a one-to-many
-   * relationship meaning that 1 feed attribute can be used to populate
-   * multiple placeholder fields, but 1 placeholder field can only draw
+   * Immutable. Feed attributes to field mappings. These mappings are a
+   * one-to-many relationship meaning that 1 feed attribute can be used to
+   * populate multiple placeholder fields, but 1 placeholder field can only draw
    * data from 1 feed attribute. Ad Customizer is an exception, 1 placeholder
    * field can be mapped to multiple feed attributes. Required.
    * </pre>
@@ -147,8 +147,8 @@ public interface FeedMappingOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. The placeholder type of this mapping (for example, if the mapping maps
-   * feed attributes to placeholder fields).
+   * Immutable. The placeholder type of this mapping (for example, if the
+   * mapping maps feed attributes to placeholder fields).
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -157,8 +157,8 @@ public interface FeedMappingOrBuilder extends
   boolean hasPlaceholderType();
   /**
    * <pre>
-   * Immutable. The placeholder type of this mapping (for example, if the mapping maps
-   * feed attributes to placeholder fields).
+   * Immutable. The placeholder type of this mapping (for example, if the
+   * mapping maps feed attributes to placeholder fields).
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -167,8 +167,8 @@ public interface FeedMappingOrBuilder extends
   int getPlaceholderTypeValue();
   /**
    * <pre>
-   * Immutable. The placeholder type of this mapping (for example, if the mapping maps
-   * feed attributes to placeholder fields).
+   * Immutable. The placeholder type of this mapping (for example, if the
+   * mapping maps feed attributes to placeholder fields).
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -178,8 +178,8 @@ public interface FeedMappingOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. The criterion type of this mapping (for example, if the mapping maps feed
-   * attributes to criterion fields).
+   * Immutable. The criterion type of this mapping (for example, if the
+   * mapping maps feed attributes to criterion fields).
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType criterion_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -188,8 +188,8 @@ public interface FeedMappingOrBuilder extends
   boolean hasCriterionType();
   /**
    * <pre>
-   * Immutable. The criterion type of this mapping (for example, if the mapping maps feed
-   * attributes to criterion fields).
+   * Immutable. The criterion type of this mapping (for example, if the
+   * mapping maps feed attributes to criterion fields).
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType criterion_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -198,8 +198,8 @@ public interface FeedMappingOrBuilder extends
   int getCriterionTypeValue();
   /**
    * <pre>
-   * Immutable. The criterion type of this mapping (for example, if the mapping maps feed
-   * attributes to criterion fields).
+   * Immutable. The criterion type of this mapping (for example, if the
+   * mapping maps feed attributes to criterion fields).
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType criterion_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>

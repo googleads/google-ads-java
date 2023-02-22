@@ -94,7 +94,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v11.common.UserListRuleInfoOrBuilder getRuleOrBuilder() {
-    return getRule();
+    return rule_ == null ? com.google.ads.googleads.v11.common.UserListRuleInfo.getDefaultInstance() : rule_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -294,10 +294,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (ruleBuilder_ == null) {
-        rule_ = null;
-      } else {
-        rule_ = null;
+      bitField0_ = 0;
+      rule_ = null;
+      if (ruleBuilder_ != null) {
+        ruleBuilder_.dispose();
         ruleBuilder_ = null;
       }
       return this;
@@ -326,13 +326,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.ExpressionRuleUserListInfo buildPartial() {
       com.google.ads.googleads.v11.common.ExpressionRuleUserListInfo result = new com.google.ads.googleads.v11.common.ExpressionRuleUserListInfo(this);
-      if (ruleBuilder_ == null) {
-        result.rule_ = rule_;
-      } else {
-        result.rule_ = ruleBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.ExpressionRuleUserListInfo result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.rule_ = ruleBuilder_ == null
+            ? rule_
+            : ruleBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -412,7 +417,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getRuleFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             default: {
@@ -430,6 +435,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private com.google.ads.googleads.v11.common.UserListRuleInfo rule_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -447,7 +453,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the rule field is set.
      */
     public boolean hasRule() {
-      return ruleBuilder_ != null || rule_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -485,11 +491,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         rule_ = value;
-        onChanged();
       } else {
         ruleBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -507,11 +513,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.common.UserListRuleInfo.Builder builderForValue) {
       if (ruleBuilder_ == null) {
         rule_ = builderForValue.build();
-        onChanged();
       } else {
         ruleBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -527,17 +533,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeRule(com.google.ads.googleads.v11.common.UserListRuleInfo value) {
       if (ruleBuilder_ == null) {
-        if (rule_ != null) {
-          rule_ =
-            com.google.ads.googleads.v11.common.UserListRuleInfo.newBuilder(rule_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          rule_ != null &&
+          rule_ != com.google.ads.googleads.v11.common.UserListRuleInfo.getDefaultInstance()) {
+          getRuleBuilder().mergeFrom(value);
         } else {
           rule_ = value;
         }
-        onChanged();
       } else {
         ruleBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -552,14 +559,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.common.UserListRuleInfo rule = 1;</code>
      */
     public Builder clearRule() {
-      if (ruleBuilder_ == null) {
-        rule_ = null;
-        onChanged();
-      } else {
-        rule_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      rule_ = null;
+      if (ruleBuilder_ != null) {
+        ruleBuilder_.dispose();
         ruleBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -574,7 +580,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.common.UserListRuleInfo rule = 1;</code>
      */
     public com.google.ads.googleads.v11.common.UserListRuleInfo.Builder getRuleBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getRuleFieldBuilder().getBuilder();
     }

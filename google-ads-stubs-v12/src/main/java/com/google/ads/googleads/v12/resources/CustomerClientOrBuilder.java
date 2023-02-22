@@ -88,8 +88,8 @@ public interface CustomerClientOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Distance between given customer and client. For self link, the level value
-   * will be 0. Read only.
+   * Output only. Distance between given customer and client. For self link, the
+   * level value will be 0. Read only.
    * </pre>
    *
    * <code>optional int64 level = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -98,8 +98,8 @@ public interface CustomerClientOrBuilder extends
   boolean hasLevel();
   /**
    * <pre>
-   * Output only. Distance between given customer and client. For self link, the level value
-   * will be 0. Read only.
+   * Output only. Distance between given customer and client. For self link, the
+   * level value will be 0. Read only.
    * </pre>
    *
    * <code>optional int64 level = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -109,8 +109,8 @@ public interface CustomerClientOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Common Locale Data Repository (CLDR) string representation of the
-   * time zone of the client, for example, America/Los_Angeles. Read only.
+   * Output only. Common Locale Data Repository (CLDR) string representation of
+   * the time zone of the client, for example, America/Los_Angeles. Read only.
    * </pre>
    *
    * <code>optional string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -119,8 +119,8 @@ public interface CustomerClientOrBuilder extends
   boolean hasTimeZone();
   /**
    * <pre>
-   * Output only. Common Locale Data Repository (CLDR) string representation of the
-   * time zone of the client, for example, America/Los_Angeles. Read only.
+   * Output only. Common Locale Data Repository (CLDR) string representation of
+   * the time zone of the client, for example, America/Los_Angeles. Read only.
    * </pre>
    *
    * <code>optional string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -129,8 +129,8 @@ public interface CustomerClientOrBuilder extends
   java.lang.String getTimeZone();
   /**
    * <pre>
-   * Output only. Common Locale Data Repository (CLDR) string representation of the
-   * time zone of the client, for example, America/Los_Angeles. Read only.
+   * Output only. Common Locale Data Repository (CLDR) string representation of
+   * the time zone of the client, for example, America/Los_Angeles. Read only.
    * </pre>
    *
    * <code>optional string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -208,7 +208,8 @@ public interface CustomerClientOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Currency code (for example, 'USD', 'EUR') for the client. Read only.
+   * Output only. Currency code (for example, 'USD', 'EUR') for the client. Read
+   * only.
    * </pre>
    *
    * <code>optional string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -217,7 +218,8 @@ public interface CustomerClientOrBuilder extends
   boolean hasCurrencyCode();
   /**
    * <pre>
-   * Output only. Currency code (for example, 'USD', 'EUR') for the client. Read only.
+   * Output only. Currency code (for example, 'USD', 'EUR') for the client. Read
+   * only.
    * </pre>
    *
    * <code>optional string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -226,7 +228,8 @@ public interface CustomerClientOrBuilder extends
   java.lang.String getCurrencyCode();
   /**
    * <pre>
-   * Output only. Currency code (for example, 'USD', 'EUR') for the client. Read only.
+   * Output only. Currency code (for example, 'USD', 'EUR') for the client. Read
+   * only.
    * </pre>
    *
    * <code>optional string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -256,9 +259,9 @@ public interface CustomerClientOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The resource names of the labels owned by the requesting customer that are
-   * applied to the client customer.
-   * Label resource names have the form:
+   * Output only. The resource names of the labels owned by the requesting
+   * customer that are applied to the client customer. Label resource names have
+   * the form:
    * `customers/{customer_id}/labels/{label_id}`
    * </pre>
    *
@@ -269,9 +272,9 @@ public interface CustomerClientOrBuilder extends
       getAppliedLabelsList();
   /**
    * <pre>
-   * Output only. The resource names of the labels owned by the requesting customer that are
-   * applied to the client customer.
-   * Label resource names have the form:
+   * Output only. The resource names of the labels owned by the requesting
+   * customer that are applied to the client customer. Label resource names have
+   * the form:
    * `customers/{customer_id}/labels/{label_id}`
    * </pre>
    *
@@ -281,9 +284,9 @@ public interface CustomerClientOrBuilder extends
   int getAppliedLabelsCount();
   /**
    * <pre>
-   * Output only. The resource names of the labels owned by the requesting customer that are
-   * applied to the client customer.
-   * Label resource names have the form:
+   * Output only. The resource names of the labels owned by the requesting
+   * customer that are applied to the client customer. Label resource names have
+   * the form:
    * `customers/{customer_id}/labels/{label_id}`
    * </pre>
    *
@@ -294,9 +297,9 @@ public interface CustomerClientOrBuilder extends
   java.lang.String getAppliedLabels(int index);
   /**
    * <pre>
-   * Output only. The resource names of the labels owned by the requesting customer that are
-   * applied to the client customer.
-   * Label resource names have the form:
+   * Output only. The resource names of the labels owned by the requesting
+   * customer that are applied to the client customer. Label resource names have
+   * the form:
    * `customers/{customer_id}/labels/{label_id}`
    * </pre>
    *

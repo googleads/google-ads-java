@@ -577,6 +577,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (ageBuilder_ != null) {
         ageBuilder_.clear();
       }
@@ -620,44 +621,39 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.AudienceDimension buildPartial() {
       com.google.ads.googleads.v12.common.AudienceDimension result = new com.google.ads.googleads.v12.common.AudienceDimension(this);
-      if (dimensionCase_ == 1) {
-        if (ageBuilder_ == null) {
-          result.dimension_ = dimension_;
-        } else {
-          result.dimension_ = ageBuilder_.build();
-        }
-      }
-      if (dimensionCase_ == 2) {
-        if (genderBuilder_ == null) {
-          result.dimension_ = dimension_;
-        } else {
-          result.dimension_ = genderBuilder_.build();
-        }
-      }
-      if (dimensionCase_ == 3) {
-        if (householdIncomeBuilder_ == null) {
-          result.dimension_ = dimension_;
-        } else {
-          result.dimension_ = householdIncomeBuilder_.build();
-        }
-      }
-      if (dimensionCase_ == 4) {
-        if (parentalStatusBuilder_ == null) {
-          result.dimension_ = dimension_;
-        } else {
-          result.dimension_ = parentalStatusBuilder_.build();
-        }
-      }
-      if (dimensionCase_ == 5) {
-        if (audienceSegmentsBuilder_ == null) {
-          result.dimension_ = dimension_;
-        } else {
-          result.dimension_ = audienceSegmentsBuilder_.build();
-        }
-      }
-      result.dimensionCase_ = dimensionCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.AudienceDimension result) {
+      int from_bitField0_ = bitField0_;
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v12.common.AudienceDimension result) {
+      result.dimensionCase_ = dimensionCase_;
+      result.dimension_ = this.dimension_;
+      if (dimensionCase_ == 1 &&
+          ageBuilder_ != null) {
+        result.dimension_ = ageBuilder_.build();
+      }
+      if (dimensionCase_ == 2 &&
+          genderBuilder_ != null) {
+        result.dimension_ = genderBuilder_.build();
+      }
+      if (dimensionCase_ == 3 &&
+          householdIncomeBuilder_ != null) {
+        result.dimension_ = householdIncomeBuilder_.build();
+      }
+      if (dimensionCase_ == 4 &&
+          parentalStatusBuilder_ != null) {
+        result.dimension_ = parentalStatusBuilder_.build();
+      }
+      if (dimensionCase_ == 5 &&
+          audienceSegmentsBuilder_ != null) {
+        result.dimension_ = audienceSegmentsBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -820,6 +816,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v12.common.AgeDimension, com.google.ads.googleads.v12.common.AgeDimension.Builder, com.google.ads.googleads.v12.common.AgeDimensionOrBuilder> ageBuilder_;
@@ -995,7 +992,7 @@ private static final long serialVersionUID = 0L;
         dimension_ = null;
       }
       dimensionCase_ = 1;
-      onChanged();;
+      onChanged();
       return ageBuilder_;
     }
 
@@ -1173,7 +1170,7 @@ private static final long serialVersionUID = 0L;
         dimension_ = null;
       }
       dimensionCase_ = 2;
-      onChanged();;
+      onChanged();
       return genderBuilder_;
     }
 
@@ -1351,7 +1348,7 @@ private static final long serialVersionUID = 0L;
         dimension_ = null;
       }
       dimensionCase_ = 3;
-      onChanged();;
+      onChanged();
       return householdIncomeBuilder_;
     }
 
@@ -1529,7 +1526,7 @@ private static final long serialVersionUID = 0L;
         dimension_ = null;
       }
       dimensionCase_ = 4;
-      onChanged();;
+      onChanged();
       return parentalStatusBuilder_;
     }
 
@@ -1716,7 +1713,7 @@ private static final long serialVersionUID = 0L;
         dimension_ = null;
       }
       dimensionCase_ = 5;
-      onChanged();;
+      onChanged();
       return audienceSegmentsBuilder_;
     }
     @java.lang.Override

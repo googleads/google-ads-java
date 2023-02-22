@@ -51,6 +51,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DYNAMIC_CHAIN_LOCATION_GROUP_FILTERS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.ChainFilter> dynamicChainLocationGroupFilters_;
   /**
    * <pre>
@@ -316,6 +317,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (dynamicChainLocationGroupFiltersBuilder_ == null) {
         dynamicChainLocationGroupFilters_ = java.util.Collections.emptyList();
       } else {
@@ -349,7 +351,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.ChainLocationGroup buildPartial() {
       com.google.ads.googleads.v12.common.ChainLocationGroup result = new com.google.ads.googleads.v12.common.ChainLocationGroup(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.common.ChainLocationGroup result) {
       if (dynamicChainLocationGroupFiltersBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           dynamicChainLocationGroupFilters_ = java.util.Collections.unmodifiableList(dynamicChainLocationGroupFilters_);
@@ -359,8 +367,10 @@ private static final long serialVersionUID = 0L;
       } else {
         result.dynamicChainLocationGroupFilters_ = dynamicChainLocationGroupFiltersBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.ChainLocationGroup result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override

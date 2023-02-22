@@ -33,7 +33,8 @@ public interface CustomerCustomizerOrBuilder extends
 
   /**
    * <pre>
-   * Required. Immutable. The customizer attribute which is linked to the customer.
+   * Required. Immutable. The customizer attribute which is linked to the
+   * customer.
    * </pre>
    *
    * <code>string customizer_attribute = 2 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -42,7 +43,8 @@ public interface CustomerCustomizerOrBuilder extends
   java.lang.String getCustomizerAttribute();
   /**
    * <pre>
-   * Required. Immutable. The customizer attribute which is linked to the customer.
+   * Required. Immutable. The customizer attribute which is linked to the
+   * customer.
    * </pre>
    *
    * <code>string customizer_attribute = 2 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -72,8 +74,8 @@ public interface CustomerCustomizerOrBuilder extends
 
   /**
    * <pre>
-   * Required. The value to associate with the customizer attribute at this level. The
-   * value must be of the type specified for the CustomizerAttribute.
+   * Required. The value to associate with the customizer attribute at this
+   * level. The value must be of the type specified for the CustomizerAttribute.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.CustomizerValue value = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -82,8 +84,8 @@ public interface CustomerCustomizerOrBuilder extends
   boolean hasValue();
   /**
    * <pre>
-   * Required. The value to associate with the customizer attribute at this level. The
-   * value must be of the type specified for the CustomizerAttribute.
+   * Required. The value to associate with the customizer attribute at this
+   * level. The value must be of the type specified for the CustomizerAttribute.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.CustomizerValue value = 4 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -92,8 +94,8 @@ public interface CustomerCustomizerOrBuilder extends
   com.google.ads.googleads.v12.common.CustomizerValue getValue();
   /**
    * <pre>
-   * Required. The value to associate with the customizer attribute at this level. The
-   * value must be of the type specified for the CustomizerAttribute.
+   * Required. The value to associate with the customizer attribute at this
+   * level. The value must be of the type specified for the CustomizerAttribute.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.CustomizerValue value = 4 [(.google.api.field_behavior) = REQUIRED];</code>

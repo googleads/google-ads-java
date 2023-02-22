@@ -53,7 +53,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int YOUTUBE_AUDIENCE_SIZE_FIELD_NUMBER = 3;
-  private long youtubeAudienceSize_;
+  private long youtubeAudienceSize_ = 0L;
   /**
    * <pre>
    * Reference audience size matching the considered targeting for YouTube.
@@ -80,7 +80,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CENSUS_AUDIENCE_SIZE_FIELD_NUMBER = 4;
-  private long censusAudienceSize_;
+  private long censusAudienceSize_ = 0L;
   /**
    * <pre>
    * Reference audience size matching the considered targeting for Census.
@@ -325,10 +325,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       youtubeAudienceSize_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       censusAudienceSize_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -355,6 +354,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.OnTargetAudienceMetrics buildPartial() {
       com.google.ads.googleads.v12.services.OnTargetAudienceMetrics result = new com.google.ads.googleads.v12.services.OnTargetAudienceMetrics(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.OnTargetAudienceMetrics result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -365,9 +370,7 @@ private static final long serialVersionUID = 0L;
         result.censusAudienceSize_ = censusAudienceSize_;
         to_bitField0_ |= 0x00000002;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -508,8 +511,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setYoutubeAudienceSize(long value) {
-      bitField0_ |= 0x00000001;
+      
       youtubeAudienceSize_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -563,8 +567,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCensusAudienceSize(long value) {
-      bitField0_ |= 0x00000002;
+      
       censusAudienceSize_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

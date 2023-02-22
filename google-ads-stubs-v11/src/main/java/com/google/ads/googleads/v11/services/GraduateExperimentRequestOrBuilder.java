@@ -29,8 +29,8 @@ public interface GraduateExperimentRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. List of campaign budget mappings for graduation. Each campaign that
-   * appears here will graduate, and will be assigned a new budget that is
+   * Required. List of campaign budget mappings for graduation. Each campaign
+   * that appears here will graduate, and will be assigned a new budget that is
    * paired with it in the mapping. The maximum size is one.
    * </pre>
    *
@@ -40,8 +40,8 @@ public interface GraduateExperimentRequestOrBuilder extends
       getCampaignBudgetMappingsList();
   /**
    * <pre>
-   * Required. List of campaign budget mappings for graduation. Each campaign that
-   * appears here will graduate, and will be assigned a new budget that is
+   * Required. List of campaign budget mappings for graduation. Each campaign
+   * that appears here will graduate, and will be assigned a new budget that is
    * paired with it in the mapping. The maximum size is one.
    * </pre>
    *
@@ -50,8 +50,8 @@ public interface GraduateExperimentRequestOrBuilder extends
   com.google.ads.googleads.v11.services.CampaignBudgetMapping getCampaignBudgetMappings(int index);
   /**
    * <pre>
-   * Required. List of campaign budget mappings for graduation. Each campaign that
-   * appears here will graduate, and will be assigned a new budget that is
+   * Required. List of campaign budget mappings for graduation. Each campaign
+   * that appears here will graduate, and will be assigned a new budget that is
    * paired with it in the mapping. The maximum size is one.
    * </pre>
    *
@@ -60,8 +60,8 @@ public interface GraduateExperimentRequestOrBuilder extends
   int getCampaignBudgetMappingsCount();
   /**
    * <pre>
-   * Required. List of campaign budget mappings for graduation. Each campaign that
-   * appears here will graduate, and will be assigned a new budget that is
+   * Required. List of campaign budget mappings for graduation. Each campaign
+   * that appears here will graduate, and will be assigned a new budget that is
    * paired with it in the mapping. The maximum size is one.
    * </pre>
    *
@@ -71,8 +71,8 @@ public interface GraduateExperimentRequestOrBuilder extends
       getCampaignBudgetMappingsOrBuilderList();
   /**
    * <pre>
-   * Required. List of campaign budget mappings for graduation. Each campaign that
-   * appears here will graduate, and will be assigned a new budget that is
+   * Required. List of campaign budget mappings for graduation. Each campaign
+   * that appears here will graduate, and will be assigned a new budget that is
    * paired with it in the mapping. The maximum size is one.
    * </pre>
    *

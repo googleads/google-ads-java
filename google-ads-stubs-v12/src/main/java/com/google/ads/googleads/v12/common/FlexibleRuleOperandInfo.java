@@ -86,11 +86,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.common.UserListRuleInfoOrBuilder getRuleOrBuilder() {
-    return getRule();
+    return rule_ == null ? com.google.ads.googleads.v12.common.UserListRuleInfo.getDefaultInstance() : rule_;
   }
 
   public static final int LOOKBACK_WINDOW_DAYS_FIELD_NUMBER = 2;
-  private long lookbackWindowDays_;
+  private long lookbackWindowDays_ = 0L;
   /**
    * <pre>
    * Lookback window for this rule in days. From now until X days ago.
@@ -330,14 +330,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (ruleBuilder_ == null) {
-        rule_ = null;
-      } else {
-        rule_ = null;
+      bitField0_ = 0;
+      rule_ = null;
+      if (ruleBuilder_ != null) {
+        ruleBuilder_.dispose();
         ruleBuilder_ = null;
       }
       lookbackWindowDays_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -364,20 +363,24 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.FlexibleRuleOperandInfo buildPartial() {
       com.google.ads.googleads.v12.common.FlexibleRuleOperandInfo result = new com.google.ads.googleads.v12.common.FlexibleRuleOperandInfo(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.FlexibleRuleOperandInfo result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      if (ruleBuilder_ == null) {
-        result.rule_ = rule_;
-      } else {
-        result.rule_ = ruleBuilder_.build();
-      }
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.rule_ = ruleBuilder_ == null
+            ? rule_
+            : ruleBuilder_.build();
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.lookbackWindowDays_ = lookbackWindowDays_;
         to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -460,12 +463,12 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getRuleFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 16: {
               lookbackWindowDays_ = input.readInt64();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             default: {
@@ -498,7 +501,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the rule field is set.
      */
     public boolean hasRule() {
-      return ruleBuilder_ != null || rule_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -530,11 +533,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         rule_ = value;
-        onChanged();
       } else {
         ruleBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -549,11 +552,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.UserListRuleInfo.Builder builderForValue) {
       if (ruleBuilder_ == null) {
         rule_ = builderForValue.build();
-        onChanged();
       } else {
         ruleBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -566,17 +569,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeRule(com.google.ads.googleads.v12.common.UserListRuleInfo value) {
       if (ruleBuilder_ == null) {
-        if (rule_ != null) {
-          rule_ =
-            com.google.ads.googleads.v12.common.UserListRuleInfo.newBuilder(rule_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          rule_ != null &&
+          rule_ != com.google.ads.googleads.v12.common.UserListRuleInfo.getDefaultInstance()) {
+          getRuleBuilder().mergeFrom(value);
         } else {
           rule_ = value;
         }
-        onChanged();
       } else {
         ruleBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -588,14 +592,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.UserListRuleInfo rule = 1;</code>
      */
     public Builder clearRule() {
-      if (ruleBuilder_ == null) {
-        rule_ = null;
-        onChanged();
-      } else {
-        rule_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      rule_ = null;
+      if (ruleBuilder_ != null) {
+        ruleBuilder_.dispose();
         ruleBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -607,7 +610,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.UserListRuleInfo rule = 1;</code>
      */
     public com.google.ads.googleads.v12.common.UserListRuleInfo.Builder getRuleBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getRuleFieldBuilder().getBuilder();
     }
@@ -660,7 +663,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasLookbackWindowDays() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -684,8 +687,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLookbackWindowDays(long value) {
-      bitField0_ |= 0x00000001;
+      
       lookbackWindowDays_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -698,7 +702,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLookbackWindowDays() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       lookbackWindowDays_ = 0L;
       onChanged();
       return this;

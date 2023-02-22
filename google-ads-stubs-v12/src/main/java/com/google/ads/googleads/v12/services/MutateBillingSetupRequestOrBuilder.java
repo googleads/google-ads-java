@@ -9,7 +9,8 @@ public interface MutateBillingSetupRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. Id of the customer to apply the billing setup mutate operation to.
+   * Required. Id of the customer to apply the billing setup mutate operation
+   * to.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -18,7 +19,8 @@ public interface MutateBillingSetupRequestOrBuilder extends
   java.lang.String getCustomerId();
   /**
    * <pre>
-   * Required. Id of the customer to apply the billing setup mutate operation to.
+   * Required. Id of the customer to apply the billing setup mutate operation
+   * to.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>

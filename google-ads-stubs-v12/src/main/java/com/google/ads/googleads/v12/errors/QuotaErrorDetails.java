@@ -212,7 +212,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RATE_SCOPE_FIELD_NUMBER = 1;
-  private int rateScope_;
+  private int rateScope_ = 0;
   /**
    * <pre>
    * The rate scope of the quota limit.
@@ -233,13 +233,13 @@ private static final long serialVersionUID = 0L;
    * @return The rateScope.
    */
   @java.lang.Override public com.google.ads.googleads.v12.errors.QuotaErrorDetails.QuotaRateScope getRateScope() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.errors.QuotaErrorDetails.QuotaRateScope result = com.google.ads.googleads.v12.errors.QuotaErrorDetails.QuotaRateScope.valueOf(rateScope_);
+    com.google.ads.googleads.v12.errors.QuotaErrorDetails.QuotaRateScope result = com.google.ads.googleads.v12.errors.QuotaErrorDetails.QuotaRateScope.forNumber(rateScope_);
     return result == null ? com.google.ads.googleads.v12.errors.QuotaErrorDetails.QuotaRateScope.UNRECOGNIZED : result;
   }
 
   public static final int RATE_NAME_FIELD_NUMBER = 2;
-  private volatile java.lang.Object rateName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object rateName_ = "";
   /**
    * <pre>
    * The high level description of the quota bucket.
@@ -321,7 +321,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.protobuf.DurationOrBuilder getRetryDelayOrBuilder() {
-    return getRetryDelay();
+    return retryDelay_ == null ? com.google.protobuf.Duration.getDefaultInstance() : retryDelay_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -541,14 +541,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       rateScope_ = 0;
-
       rateName_ = "";
-
-      if (retryDelayBuilder_ == null) {
-        retryDelay_ = null;
-      } else {
-        retryDelay_ = null;
+      retryDelay_ = null;
+      if (retryDelayBuilder_ != null) {
+        retryDelayBuilder_.dispose();
         retryDelayBuilder_ = null;
       }
       return this;
@@ -577,15 +575,24 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.errors.QuotaErrorDetails buildPartial() {
       com.google.ads.googleads.v12.errors.QuotaErrorDetails result = new com.google.ads.googleads.v12.errors.QuotaErrorDetails(this);
-      result.rateScope_ = rateScope_;
-      result.rateName_ = rateName_;
-      if (retryDelayBuilder_ == null) {
-        result.retryDelay_ = retryDelay_;
-      } else {
-        result.retryDelay_ = retryDelayBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.errors.QuotaErrorDetails result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.rateScope_ = rateScope_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.rateName_ = rateName_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.retryDelay_ = retryDelayBuilder_ == null
+            ? retryDelay_
+            : retryDelayBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -637,6 +644,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getRateName().isEmpty()) {
         rateName_ = other.rateName_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasRetryDelay()) {
@@ -670,19 +678,19 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               rateScope_ = input.readEnum();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             case 18: {
               rateName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
               input.readMessage(
                   getRetryDelayFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             default: {
@@ -700,6 +708,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private int rateScope_ = 0;
     /**
@@ -723,8 +732,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRateScopeValue(int value) {
-      
       rateScope_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -738,8 +747,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.errors.QuotaErrorDetails.QuotaRateScope getRateScope() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.errors.QuotaErrorDetails.QuotaRateScope result = com.google.ads.googleads.v12.errors.QuotaErrorDetails.QuotaRateScope.valueOf(rateScope_);
+      com.google.ads.googleads.v12.errors.QuotaErrorDetails.QuotaRateScope result = com.google.ads.googleads.v12.errors.QuotaErrorDetails.QuotaRateScope.forNumber(rateScope_);
       return result == null ? com.google.ads.googleads.v12.errors.QuotaErrorDetails.QuotaRateScope.UNRECOGNIZED : result;
     }
     /**
@@ -755,7 +763,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       rateScope_ = value.getNumber();
       onChanged();
       return this;
@@ -769,7 +777,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRateScope() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       rateScope_ = 0;
       onChanged();
       return this;
@@ -831,11 +839,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRateName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       rateName_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -849,8 +855,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRateName() {
-      
       rateName_ = getDefaultInstance().getRateName();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -866,12 +872,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRateNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       rateName_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -888,7 +892,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the retryDelay field is set.
      */
     public boolean hasRetryDelay() {
-      return retryDelayBuilder_ != null || retryDelay_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -918,11 +922,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         retryDelay_ = value;
-        onChanged();
       } else {
         retryDelayBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -936,11 +940,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.Duration.Builder builderForValue) {
       if (retryDelayBuilder_ == null) {
         retryDelay_ = builderForValue.build();
-        onChanged();
       } else {
         retryDelayBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -952,17 +956,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeRetryDelay(com.google.protobuf.Duration value) {
       if (retryDelayBuilder_ == null) {
-        if (retryDelay_ != null) {
-          retryDelay_ =
-            com.google.protobuf.Duration.newBuilder(retryDelay_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000004) != 0) &&
+          retryDelay_ != null &&
+          retryDelay_ != com.google.protobuf.Duration.getDefaultInstance()) {
+          getRetryDelayBuilder().mergeFrom(value);
         } else {
           retryDelay_ = value;
         }
-        onChanged();
       } else {
         retryDelayBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -973,14 +978,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Duration retry_delay = 3;</code>
      */
     public Builder clearRetryDelay() {
-      if (retryDelayBuilder_ == null) {
-        retryDelay_ = null;
-        onChanged();
-      } else {
-        retryDelay_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      retryDelay_ = null;
+      if (retryDelayBuilder_ != null) {
+        retryDelayBuilder_.dispose();
         retryDelayBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -991,7 +995,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Duration retry_delay = 3;</code>
      */
     public com.google.protobuf.Duration.Builder getRetryDelayBuilder() {
-      
+      bitField0_ |= 0x00000004;
       onChanged();
       return getRetryDelayFieldBuilder().getBuilder();
     }

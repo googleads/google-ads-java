@@ -31,7 +31,8 @@ public interface MutateExtensionFeedItemsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The list of operations to perform on individual extension feed items.
+   * Required. The list of operations to perform on individual extension feed
+   * items.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.ExtensionFeedItemOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -40,7 +41,8 @@ public interface MutateExtensionFeedItemsRequestOrBuilder extends
       getOperationsList();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual extension feed items.
+   * Required. The list of operations to perform on individual extension feed
+   * items.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.ExtensionFeedItemOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -48,7 +50,8 @@ public interface MutateExtensionFeedItemsRequestOrBuilder extends
   com.google.ads.googleads.v11.services.ExtensionFeedItemOperation getOperations(int index);
   /**
    * <pre>
-   * Required. The list of operations to perform on individual extension feed items.
+   * Required. The list of operations to perform on individual extension feed
+   * items.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.ExtensionFeedItemOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -56,7 +59,8 @@ public interface MutateExtensionFeedItemsRequestOrBuilder extends
   int getOperationsCount();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual extension feed items.
+   * Required. The list of operations to perform on individual extension feed
+   * items.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.ExtensionFeedItemOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -65,7 +69,8 @@ public interface MutateExtensionFeedItemsRequestOrBuilder extends
       getOperationsOrBuilderList();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual extension feed items.
+   * Required. The list of operations to perform on individual extension feed
+   * items.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.ExtensionFeedItemOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>

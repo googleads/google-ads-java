@@ -50,7 +50,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int IMPRESSIONS_FIELD_NUMBER = 3;
-  private int impressions_;
+  private int impressions_ = 0;
   /**
    * <pre>
    * Required. The number of impressions, inclusive.
@@ -65,7 +65,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TIME_UNIT_FIELD_NUMBER = 2;
-  private int timeUnit_;
+  private int timeUnit_ = 0;
   /**
    * <pre>
    * Required. The type of time unit.
@@ -86,8 +86,7 @@ private static final long serialVersionUID = 0L;
    * @return The timeUnit.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit getTimeUnit() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit result = com.google.ads.googleads.v12.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit.valueOf(timeUnit_);
+    com.google.ads.googleads.v12.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit result = com.google.ads.googleads.v12.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit.forNumber(timeUnit_);
     return result == null ? com.google.ads.googleads.v12.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit.UNRECOGNIZED : result;
   }
 
@@ -294,10 +293,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       impressions_ = 0;
-
       timeUnit_ = 0;
-
       return this;
     }
 
@@ -324,10 +322,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.FrequencyCap buildPartial() {
       com.google.ads.googleads.v12.services.FrequencyCap result = new com.google.ads.googleads.v12.services.FrequencyCap(this);
-      result.impressions_ = impressions_;
-      result.timeUnit_ = timeUnit_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.FrequencyCap result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.impressions_ = impressions_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.timeUnit_ = timeUnit_;
+      }
     }
 
     @java.lang.Override
@@ -408,12 +415,12 @@ private static final long serialVersionUID = 0L;
               break;
             case 16: {
               timeUnit_ = input.readEnum();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             case 24: {
               impressions_ = input.readInt32();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 24
             default: {
@@ -431,6 +438,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private int impressions_ ;
     /**
@@ -457,6 +465,7 @@ private static final long serialVersionUID = 0L;
     public Builder setImpressions(int value) {
       
       impressions_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -469,7 +478,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearImpressions() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       impressions_ = 0;
       onChanged();
       return this;
@@ -497,8 +506,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTimeUnitValue(int value) {
-      
       timeUnit_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -512,8 +521,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit getTimeUnit() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit result = com.google.ads.googleads.v12.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit.valueOf(timeUnit_);
+      com.google.ads.googleads.v12.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit result = com.google.ads.googleads.v12.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit.forNumber(timeUnit_);
       return result == null ? com.google.ads.googleads.v12.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit.UNRECOGNIZED : result;
     }
     /**
@@ -529,7 +537,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000002;
       timeUnit_ = value.getNumber();
       onChanged();
       return this;
@@ -543,7 +551,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTimeUnit() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       timeUnit_ = 0;
       onChanged();
       return this;

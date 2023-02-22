@@ -49,6 +49,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int USER_IDENTIFIERS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.UserIdentifier> userIdentifiers_;
   /**
    * <pre>
@@ -146,7 +147,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.common.TransactionAttributeOrBuilder getTransactionAttributeOrBuilder() {
-    return getTransactionAttribute();
+    return transactionAttribute_ == null ? com.google.ads.googleads.v12.common.TransactionAttribute.getDefaultInstance() : transactionAttribute_;
   }
 
   public static final int USER_ATTRIBUTE_FIELD_NUMBER = 3;
@@ -187,7 +188,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.common.UserAttributeOrBuilder getUserAttributeOrBuilder() {
-    return getUserAttribute();
+    return userAttribute_ == null ? com.google.ads.googleads.v12.common.UserAttribute.getDefaultInstance() : userAttribute_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -416,6 +417,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (userIdentifiersBuilder_ == null) {
         userIdentifiers_ = java.util.Collections.emptyList();
       } else {
@@ -423,16 +425,14 @@ private static final long serialVersionUID = 0L;
         userIdentifiersBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000001);
-      if (transactionAttributeBuilder_ == null) {
-        transactionAttribute_ = null;
-      } else {
-        transactionAttribute_ = null;
+      transactionAttribute_ = null;
+      if (transactionAttributeBuilder_ != null) {
+        transactionAttributeBuilder_.dispose();
         transactionAttributeBuilder_ = null;
       }
-      if (userAttributeBuilder_ == null) {
-        userAttribute_ = null;
-      } else {
-        userAttribute_ = null;
+      userAttribute_ = null;
+      if (userAttributeBuilder_ != null) {
+        userAttributeBuilder_.dispose();
         userAttributeBuilder_ = null;
       }
       return this;
@@ -461,7 +461,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.UserData buildPartial() {
       com.google.ads.googleads.v12.common.UserData result = new com.google.ads.googleads.v12.common.UserData(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.common.UserData result) {
       if (userIdentifiersBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           userIdentifiers_ = java.util.Collections.unmodifiableList(userIdentifiers_);
@@ -471,18 +477,20 @@ private static final long serialVersionUID = 0L;
       } else {
         result.userIdentifiers_ = userIdentifiersBuilder_.build();
       }
-      if (transactionAttributeBuilder_ == null) {
-        result.transactionAttribute_ = transactionAttribute_;
-      } else {
-        result.transactionAttribute_ = transactionAttributeBuilder_.build();
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.UserData result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.transactionAttribute_ = transactionAttributeBuilder_ == null
+            ? transactionAttribute_
+            : transactionAttributeBuilder_.build();
       }
-      if (userAttributeBuilder_ == null) {
-        result.userAttribute_ = userAttribute_;
-      } else {
-        result.userAttribute_ = userAttributeBuilder_.build();
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.userAttribute_ = userAttributeBuilder_ == null
+            ? userAttribute_
+            : userAttributeBuilder_.build();
       }
-      onBuilt();
-      return result;
     }
 
     @java.lang.Override
@@ -604,14 +612,14 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getTransactionAttributeFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
               input.readMessage(
                   getUserAttributeFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             default: {
@@ -956,7 +964,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the transactionAttribute field is set.
      */
     public boolean hasTransactionAttribute() {
-      return transactionAttributeBuilder_ != null || transactionAttribute_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -988,11 +996,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         transactionAttribute_ = value;
-        onChanged();
       } else {
         transactionAttributeBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -1007,11 +1015,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.TransactionAttribute.Builder builderForValue) {
       if (transactionAttributeBuilder_ == null) {
         transactionAttribute_ = builderForValue.build();
-        onChanged();
       } else {
         transactionAttributeBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -1024,17 +1032,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeTransactionAttribute(com.google.ads.googleads.v12.common.TransactionAttribute value) {
       if (transactionAttributeBuilder_ == null) {
-        if (transactionAttribute_ != null) {
-          transactionAttribute_ =
-            com.google.ads.googleads.v12.common.TransactionAttribute.newBuilder(transactionAttribute_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          transactionAttribute_ != null &&
+          transactionAttribute_ != com.google.ads.googleads.v12.common.TransactionAttribute.getDefaultInstance()) {
+          getTransactionAttributeBuilder().mergeFrom(value);
         } else {
           transactionAttribute_ = value;
         }
-        onChanged();
       } else {
         transactionAttributeBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -1046,14 +1055,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.TransactionAttribute transaction_attribute = 2;</code>
      */
     public Builder clearTransactionAttribute() {
-      if (transactionAttributeBuilder_ == null) {
-        transactionAttribute_ = null;
-        onChanged();
-      } else {
-        transactionAttribute_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      transactionAttribute_ = null;
+      if (transactionAttributeBuilder_ != null) {
+        transactionAttributeBuilder_.dispose();
         transactionAttributeBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1065,7 +1073,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.TransactionAttribute transaction_attribute = 2;</code>
      */
     public com.google.ads.googleads.v12.common.TransactionAttribute.Builder getTransactionAttributeBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getTransactionAttributeFieldBuilder().getBuilder();
     }
@@ -1120,7 +1128,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the userAttribute field is set.
      */
     public boolean hasUserAttribute() {
-      return userAttributeBuilder_ != null || userAttribute_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -1152,11 +1160,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         userAttribute_ = value;
-        onChanged();
       } else {
         userAttributeBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1171,11 +1179,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.UserAttribute.Builder builderForValue) {
       if (userAttributeBuilder_ == null) {
         userAttribute_ = builderForValue.build();
-        onChanged();
       } else {
         userAttributeBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1188,17 +1196,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeUserAttribute(com.google.ads.googleads.v12.common.UserAttribute value) {
       if (userAttributeBuilder_ == null) {
-        if (userAttribute_ != null) {
-          userAttribute_ =
-            com.google.ads.googleads.v12.common.UserAttribute.newBuilder(userAttribute_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000004) != 0) &&
+          userAttribute_ != null &&
+          userAttribute_ != com.google.ads.googleads.v12.common.UserAttribute.getDefaultInstance()) {
+          getUserAttributeBuilder().mergeFrom(value);
         } else {
           userAttribute_ = value;
         }
-        onChanged();
       } else {
         userAttributeBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -1210,14 +1219,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.UserAttribute user_attribute = 3;</code>
      */
     public Builder clearUserAttribute() {
-      if (userAttributeBuilder_ == null) {
-        userAttribute_ = null;
-        onChanged();
-      } else {
-        userAttribute_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      userAttribute_ = null;
+      if (userAttributeBuilder_ != null) {
+        userAttributeBuilder_.dispose();
         userAttributeBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1229,7 +1237,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.UserAttribute user_attribute = 3;</code>
      */
     public com.google.ads.googleads.v12.common.UserAttribute.Builder getUserAttributeBuilder() {
-      
+      bitField0_ |= 0x00000004;
       onChanged();
       return getUserAttributeFieldBuilder().getBuilder();
     }

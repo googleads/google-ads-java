@@ -49,7 +49,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ASSET_FIELD_NUMBER = 1;
-  private volatile java.lang.Object asset_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object asset_ = "";
   /**
    * <pre>
    * The asset resource name.
@@ -95,7 +96,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INTERACTION_ON_THIS_ASSET_FIELD_NUMBER = 2;
-  private boolean interactionOnThisAsset_;
+  private boolean interactionOnThisAsset_ = false;
   /**
    * <pre>
    * Only used with CustomerAsset, CampaignAsset and AdGroupAsset metrics.
@@ -314,10 +315,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       asset_ = "";
-
       interactionOnThisAsset_ = false;
-
       return this;
     }
 
@@ -344,10 +344,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.AssetInteractionTarget buildPartial() {
       com.google.ads.googleads.v12.common.AssetInteractionTarget result = new com.google.ads.googleads.v12.common.AssetInteractionTarget(this);
-      result.asset_ = asset_;
-      result.interactionOnThisAsset_ = interactionOnThisAsset_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.AssetInteractionTarget result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.asset_ = asset_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.interactionOnThisAsset_ = interactionOnThisAsset_;
+      }
     }
 
     @java.lang.Override
@@ -396,6 +405,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.common.AssetInteractionTarget.getDefaultInstance()) return this;
       if (!other.getAsset().isEmpty()) {
         asset_ = other.asset_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.getInteractionOnThisAsset() != false) {
@@ -429,12 +439,12 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               asset_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 16: {
               interactionOnThisAsset_ = input.readBool();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             default: {
@@ -452,6 +462,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object asset_ = "";
     /**
@@ -506,11 +517,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAsset(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       asset_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -523,8 +532,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAsset() {
-      
       asset_ = getDefaultInstance().getAsset();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -539,12 +548,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAssetBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       asset_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -578,6 +585,7 @@ private static final long serialVersionUID = 0L;
     public Builder setInteractionOnThisAsset(boolean value) {
       
       interactionOnThisAsset_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -592,7 +600,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearInteractionOnThisAsset() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       interactionOnThisAsset_ = false;
       onChanged();
       return this;

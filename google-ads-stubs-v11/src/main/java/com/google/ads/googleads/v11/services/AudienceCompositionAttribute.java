@@ -82,7 +82,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v11.services.AudienceInsightsAttributeMetadataOrBuilder getAttributeMetadataOrBuilder() {
-    return getAttributeMetadata();
+    return attributeMetadata_ == null ? com.google.ads.googleads.v11.services.AudienceInsightsAttributeMetadata.getDefaultInstance() : attributeMetadata_;
   }
 
   public static final int METRICS_FIELD_NUMBER = 2;
@@ -120,7 +120,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v11.services.AudienceCompositionMetricsOrBuilder getMetricsOrBuilder() {
-    return getMetrics();
+    return metrics_ == null ? com.google.ads.googleads.v11.services.AudienceCompositionMetrics.getDefaultInstance() : metrics_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -336,16 +336,15 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (attributeMetadataBuilder_ == null) {
-        attributeMetadata_ = null;
-      } else {
-        attributeMetadata_ = null;
+      bitField0_ = 0;
+      attributeMetadata_ = null;
+      if (attributeMetadataBuilder_ != null) {
+        attributeMetadataBuilder_.dispose();
         attributeMetadataBuilder_ = null;
       }
-      if (metricsBuilder_ == null) {
-        metrics_ = null;
-      } else {
-        metrics_ = null;
+      metrics_ = null;
+      if (metricsBuilder_ != null) {
+        metricsBuilder_.dispose();
         metricsBuilder_ = null;
       }
       return this;
@@ -374,18 +373,23 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.AudienceCompositionAttribute buildPartial() {
       com.google.ads.googleads.v11.services.AudienceCompositionAttribute result = new com.google.ads.googleads.v11.services.AudienceCompositionAttribute(this);
-      if (attributeMetadataBuilder_ == null) {
-        result.attributeMetadata_ = attributeMetadata_;
-      } else {
-        result.attributeMetadata_ = attributeMetadataBuilder_.build();
-      }
-      if (metricsBuilder_ == null) {
-        result.metrics_ = metrics_;
-      } else {
-        result.metrics_ = metricsBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.AudienceCompositionAttribute result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.attributeMetadata_ = attributeMetadataBuilder_ == null
+            ? attributeMetadata_
+            : attributeMetadataBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.metrics_ = metricsBuilder_ == null
+            ? metrics_
+            : metricsBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -468,14 +472,14 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getAttributeMetadataFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               input.readMessage(
                   getMetricsFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             default: {
@@ -493,6 +497,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private com.google.ads.googleads.v11.services.AudienceInsightsAttributeMetadata attributeMetadata_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -506,7 +511,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the attributeMetadata field is set.
      */
     public boolean hasAttributeMetadata() {
-      return attributeMetadataBuilder_ != null || attributeMetadata_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -536,11 +541,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         attributeMetadata_ = value;
-        onChanged();
       } else {
         attributeMetadataBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -554,11 +559,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.services.AudienceInsightsAttributeMetadata.Builder builderForValue) {
       if (attributeMetadataBuilder_ == null) {
         attributeMetadata_ = builderForValue.build();
-        onChanged();
       } else {
         attributeMetadataBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -570,17 +575,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAttributeMetadata(com.google.ads.googleads.v11.services.AudienceInsightsAttributeMetadata value) {
       if (attributeMetadataBuilder_ == null) {
-        if (attributeMetadata_ != null) {
-          attributeMetadata_ =
-            com.google.ads.googleads.v11.services.AudienceInsightsAttributeMetadata.newBuilder(attributeMetadata_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          attributeMetadata_ != null &&
+          attributeMetadata_ != com.google.ads.googleads.v11.services.AudienceInsightsAttributeMetadata.getDefaultInstance()) {
+          getAttributeMetadataBuilder().mergeFrom(value);
         } else {
           attributeMetadata_ = value;
         }
-        onChanged();
       } else {
         attributeMetadataBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -591,14 +597,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.services.AudienceInsightsAttributeMetadata attribute_metadata = 1;</code>
      */
     public Builder clearAttributeMetadata() {
-      if (attributeMetadataBuilder_ == null) {
-        attributeMetadata_ = null;
-        onChanged();
-      } else {
-        attributeMetadata_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      attributeMetadata_ = null;
+      if (attributeMetadataBuilder_ != null) {
+        attributeMetadataBuilder_.dispose();
         attributeMetadataBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -609,7 +614,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.services.AudienceInsightsAttributeMetadata attribute_metadata = 1;</code>
      */
     public com.google.ads.googleads.v11.services.AudienceInsightsAttributeMetadata.Builder getAttributeMetadataBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getAttributeMetadataFieldBuilder().getBuilder();
     }
@@ -661,7 +666,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the metrics field is set.
      */
     public boolean hasMetrics() {
-      return metricsBuilder_ != null || metrics_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -691,11 +696,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         metrics_ = value;
-        onChanged();
       } else {
         metricsBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -709,11 +714,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.services.AudienceCompositionMetrics.Builder builderForValue) {
       if (metricsBuilder_ == null) {
         metrics_ = builderForValue.build();
-        onChanged();
       } else {
         metricsBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -725,17 +730,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeMetrics(com.google.ads.googleads.v11.services.AudienceCompositionMetrics value) {
       if (metricsBuilder_ == null) {
-        if (metrics_ != null) {
-          metrics_ =
-            com.google.ads.googleads.v11.services.AudienceCompositionMetrics.newBuilder(metrics_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          metrics_ != null &&
+          metrics_ != com.google.ads.googleads.v11.services.AudienceCompositionMetrics.getDefaultInstance()) {
+          getMetricsBuilder().mergeFrom(value);
         } else {
           metrics_ = value;
         }
-        onChanged();
       } else {
         metricsBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -746,14 +752,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.services.AudienceCompositionMetrics metrics = 2;</code>
      */
     public Builder clearMetrics() {
-      if (metricsBuilder_ == null) {
-        metrics_ = null;
-        onChanged();
-      } else {
-        metrics_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      metrics_ = null;
+      if (metricsBuilder_ != null) {
+        metricsBuilder_.dispose();
         metricsBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -764,7 +769,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.services.AudienceCompositionMetrics metrics = 2;</code>
      */
     public com.google.ads.googleads.v11.services.AudienceCompositionMetrics.Builder getMetricsBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getMetricsFieldBuilder().getBuilder();
     }

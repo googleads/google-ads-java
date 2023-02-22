@@ -57,7 +57,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Output only. The resource name of the domain category.
@@ -107,7 +108,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CAMPAIGN_FIELD_NUMBER = 10;
-  private volatile java.lang.Object campaign_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object campaign_ = "";
   /**
    * <pre>
    * Output only. The campaign this category is recommended for.
@@ -165,11 +167,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CATEGORY_FIELD_NUMBER = 11;
-  private volatile java.lang.Object category_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object category_ = "";
   /**
    * <pre>
-   * Output only. Recommended category for the website domain, for example, if you have a
-   * website about electronics, the categories could be "cameras",
+   * Output only. Recommended category for the website domain, for example, if
+   * you have a website about electronics, the categories could be "cameras",
    * "televisions", etc.
    * </pre>
    *
@@ -182,8 +185,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Recommended category for the website domain, for example, if you have a
-   * website about electronics, the categories could be "cameras",
+   * Output only. Recommended category for the website domain, for example, if
+   * you have a website about electronics, the categories could be "cameras",
    * "televisions", etc.
    * </pre>
    *
@@ -205,8 +208,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Recommended category for the website domain, for example, if you have a
-   * website about electronics, the categories could be "cameras",
+   * Output only. Recommended category for the website domain, for example, if
+   * you have a website about electronics, the categories could be "cameras",
    * "televisions", etc.
    * </pre>
    *
@@ -229,14 +232,15 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LANGUAGE_CODE_FIELD_NUMBER = 12;
-  private volatile java.lang.Object languageCode_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object languageCode_ = "";
   /**
    * <pre>
-   * Output only. The language code specifying the language of the website, for example, "en"
-   * for English. The language can be specified in the DynamicSearchAdsSetting
-   * required for dynamic search ads. This is the language of the pages from
-   * your website that you want Google Ads to find, create ads for,
-   * and match searches with.
+   * Output only. The language code specifying the language of the website, for
+   * example, "en" for English. The language can be specified in the
+   * DynamicSearchAdsSetting required for dynamic search ads. This is the
+   * language of the pages from your website that you want Google Ads to find,
+   * create ads for, and match searches with.
    * </pre>
    *
    * <code>optional string language_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -248,11 +252,11 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The language code specifying the language of the website, for example, "en"
-   * for English. The language can be specified in the DynamicSearchAdsSetting
-   * required for dynamic search ads. This is the language of the pages from
-   * your website that you want Google Ads to find, create ads for,
-   * and match searches with.
+   * Output only. The language code specifying the language of the website, for
+   * example, "en" for English. The language can be specified in the
+   * DynamicSearchAdsSetting required for dynamic search ads. This is the
+   * language of the pages from your website that you want Google Ads to find,
+   * create ads for, and match searches with.
    * </pre>
    *
    * <code>optional string language_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -273,11 +277,11 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The language code specifying the language of the website, for example, "en"
-   * for English. The language can be specified in the DynamicSearchAdsSetting
-   * required for dynamic search ads. This is the language of the pages from
-   * your website that you want Google Ads to find, create ads for,
-   * and match searches with.
+   * Output only. The language code specifying the language of the website, for
+   * example, "en" for English. The language can be specified in the
+   * DynamicSearchAdsSetting required for dynamic search ads. This is the
+   * language of the pages from your website that you want Google Ads to find,
+   * create ads for, and match searches with.
    * </pre>
    *
    * <code>optional string language_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -299,7 +303,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DOMAIN_FIELD_NUMBER = 13;
-  private volatile java.lang.Object domain_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object domain_ = "";
   /**
    * <pre>
    * Output only. The domain for the website. The domain can be specified in the
@@ -360,7 +365,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int COVERAGE_FRACTION_FIELD_NUMBER = 14;
-  private double coverageFraction_;
+  private double coverageFraction_ = 0D;
   /**
    * <pre>
    * Output only. Fraction of pages on your site that this category matches.
@@ -387,11 +392,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CATEGORY_RANK_FIELD_NUMBER = 15;
-  private long categoryRank_;
+  private long categoryRank_ = 0L;
   /**
    * <pre>
-   * Output only. The position of this category in the set of categories. Lower numbers
-   * indicate a better match for the domain. null indicates not recommended.
+   * Output only. The position of this category in the set of categories. Lower
+   * numbers indicate a better match for the domain. null indicates not
+   * recommended.
    * </pre>
    *
    * <code>optional int64 category_rank = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -403,8 +409,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The position of this category in the set of categories. Lower numbers
-   * indicate a better match for the domain. null indicates not recommended.
+   * Output only. The position of this category in the set of categories. Lower
+   * numbers indicate a better match for the domain. null indicates not
+   * recommended.
    * </pre>
    *
    * <code>optional int64 category_rank = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -416,7 +423,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HAS_CHILDREN_FIELD_NUMBER = 16;
-  private boolean hasChildren_;
+  private boolean hasChildren_ = false;
   /**
    * <pre>
    * Output only. Indicates whether this category has sub-categories.
@@ -443,7 +450,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RECOMMENDED_CPC_BID_MICROS_FIELD_NUMBER = 17;
-  private long recommendedCpcBidMicros_;
+  private long recommendedCpcBidMicros_ = 0L;
   /**
    * <pre>
    * Output only. The recommended cost per click for the category.
@@ -792,24 +799,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       campaign_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       category_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       languageCode_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       domain_ = "";
-      bitField0_ = (bitField0_ & ~0x00000008);
       coverageFraction_ = 0D;
-      bitField0_ = (bitField0_ & ~0x00000010);
       categoryRank_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000020);
       hasChildren_ = false;
-      bitField0_ = (bitField0_ & ~0x00000040);
       recommendedCpcBidMicros_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000080);
       return this;
     }
 
@@ -836,44 +835,50 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.DomainCategory buildPartial() {
       com.google.ads.googleads.v12.resources.DomainCategory result = new com.google.ads.googleads.v12.resources.DomainCategory(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.resources.DomainCategory result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.campaign_ = campaign_;
         to_bitField0_ |= 0x00000001;
       }
-      result.campaign_ = campaign_;
-      if (((from_bitField0_ & 0x00000002) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.category_ = category_;
         to_bitField0_ |= 0x00000002;
       }
-      result.category_ = category_;
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.languageCode_ = languageCode_;
         to_bitField0_ |= 0x00000004;
       }
-      result.languageCode_ = languageCode_;
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.domain_ = domain_;
         to_bitField0_ |= 0x00000008;
       }
-      result.domain_ = domain_;
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000020) != 0)) {
         result.coverageFraction_ = coverageFraction_;
         to_bitField0_ |= 0x00000010;
       }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000040) != 0)) {
         result.categoryRank_ = categoryRank_;
         to_bitField0_ |= 0x00000020;
       }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
+      if (((from_bitField0_ & 0x00000080) != 0)) {
         result.hasChildren_ = hasChildren_;
         to_bitField0_ |= 0x00000040;
       }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
+      if (((from_bitField0_ & 0x00000100) != 0)) {
         result.recommendedCpcBidMicros_ = recommendedCpcBidMicros_;
         to_bitField0_ |= 0x00000080;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -922,26 +927,27 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.resources.DomainCategory.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasCampaign()) {
-        bitField0_ |= 0x00000001;
         campaign_ = other.campaign_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasCategory()) {
-        bitField0_ |= 0x00000002;
         category_ = other.category_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.hasLanguageCode()) {
-        bitField0_ |= 0x00000004;
         languageCode_ = other.languageCode_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.hasDomain()) {
-        bitField0_ |= 0x00000008;
         domain_ = other.domain_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (other.hasCoverageFraction()) {
@@ -984,47 +990,47 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 82: {
               campaign_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 82
             case 90: {
               category_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 90
             case 98: {
               languageCode_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               break;
             } // case 98
             case 106: {
               domain_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000010;
               break;
             } // case 106
             case 113: {
               coverageFraction_ = input.readDouble();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000020;
               break;
             } // case 113
             case 120: {
               categoryRank_ = input.readInt64();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000040;
               break;
             } // case 120
             case 128: {
               hasChildren_ = input.readBool();
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000080;
               break;
             } // case 128
             case 136: {
               recommendedCpcBidMicros_ = input.readInt64();
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000100;
               break;
             } // case 136
             default: {
@@ -1103,11 +1109,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1122,8 +1126,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1140,12 +1144,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1160,7 +1162,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the campaign field is set.
      */
     public boolean hasCampaign() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -1214,11 +1216,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaign(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       campaign_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1231,8 +1231,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCampaign() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       campaign_ = getDefaultInstance().getCampaign();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1247,12 +1247,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaignBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       campaign_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1260,8 +1258,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object category_ = "";
     /**
      * <pre>
-     * Output only. Recommended category for the website domain, for example, if you have a
-     * website about electronics, the categories could be "cameras",
+     * Output only. Recommended category for the website domain, for example, if
+     * you have a website about electronics, the categories could be "cameras",
      * "televisions", etc.
      * </pre>
      *
@@ -1269,12 +1267,12 @@ private static final long serialVersionUID = 0L;
      * @return Whether the category field is set.
      */
     public boolean hasCategory() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
-     * Output only. Recommended category for the website domain, for example, if you have a
-     * website about electronics, the categories could be "cameras",
+     * Output only. Recommended category for the website domain, for example, if
+     * you have a website about electronics, the categories could be "cameras",
      * "televisions", etc.
      * </pre>
      *
@@ -1295,8 +1293,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Recommended category for the website domain, for example, if you have a
-     * website about electronics, the categories could be "cameras",
+     * Output only. Recommended category for the website domain, for example, if
+     * you have a website about electronics, the categories could be "cameras",
      * "televisions", etc.
      * </pre>
      *
@@ -1318,8 +1316,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Recommended category for the website domain, for example, if you have a
-     * website about electronics, the categories could be "cameras",
+     * Output only. Recommended category for the website domain, for example, if
+     * you have a website about electronics, the categories could be "cameras",
      * "televisions", etc.
      * </pre>
      *
@@ -1329,18 +1327,16 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCategory(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       category_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Recommended category for the website domain, for example, if you have a
-     * website about electronics, the categories could be "cameras",
+     * Output only. Recommended category for the website domain, for example, if
+     * you have a website about electronics, the categories could be "cameras",
      * "televisions", etc.
      * </pre>
      *
@@ -1348,15 +1344,15 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCategory() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       category_ = getDefaultInstance().getCategory();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Recommended category for the website domain, for example, if you have a
-     * website about electronics, the categories could be "cameras",
+     * Output only. Recommended category for the website domain, for example, if
+     * you have a website about electronics, the categories could be "cameras",
      * "televisions", etc.
      * </pre>
      *
@@ -1366,12 +1362,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCategoryBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       category_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1379,26 +1373,26 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object languageCode_ = "";
     /**
      * <pre>
-     * Output only. The language code specifying the language of the website, for example, "en"
-     * for English. The language can be specified in the DynamicSearchAdsSetting
-     * required for dynamic search ads. This is the language of the pages from
-     * your website that you want Google Ads to find, create ads for,
-     * and match searches with.
+     * Output only. The language code specifying the language of the website, for
+     * example, "en" for English. The language can be specified in the
+     * DynamicSearchAdsSetting required for dynamic search ads. This is the
+     * language of the pages from your website that you want Google Ads to find,
+     * create ads for, and match searches with.
      * </pre>
      *
      * <code>optional string language_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the languageCode field is set.
      */
     public boolean hasLanguageCode() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
-     * Output only. The language code specifying the language of the website, for example, "en"
-     * for English. The language can be specified in the DynamicSearchAdsSetting
-     * required for dynamic search ads. This is the language of the pages from
-     * your website that you want Google Ads to find, create ads for,
-     * and match searches with.
+     * Output only. The language code specifying the language of the website, for
+     * example, "en" for English. The language can be specified in the
+     * DynamicSearchAdsSetting required for dynamic search ads. This is the
+     * language of the pages from your website that you want Google Ads to find,
+     * create ads for, and match searches with.
      * </pre>
      *
      * <code>optional string language_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1418,11 +1412,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The language code specifying the language of the website, for example, "en"
-     * for English. The language can be specified in the DynamicSearchAdsSetting
-     * required for dynamic search ads. This is the language of the pages from
-     * your website that you want Google Ads to find, create ads for,
-     * and match searches with.
+     * Output only. The language code specifying the language of the website, for
+     * example, "en" for English. The language can be specified in the
+     * DynamicSearchAdsSetting required for dynamic search ads. This is the
+     * language of the pages from your website that you want Google Ads to find,
+     * create ads for, and match searches with.
      * </pre>
      *
      * <code>optional string language_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1443,11 +1437,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The language code specifying the language of the website, for example, "en"
-     * for English. The language can be specified in the DynamicSearchAdsSetting
-     * required for dynamic search ads. This is the language of the pages from
-     * your website that you want Google Ads to find, create ads for,
-     * and match searches with.
+     * Output only. The language code specifying the language of the website, for
+     * example, "en" for English. The language can be specified in the
+     * DynamicSearchAdsSetting required for dynamic search ads. This is the
+     * language of the pages from your website that you want Google Ads to find,
+     * create ads for, and match searches with.
      * </pre>
      *
      * <code>optional string language_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1456,39 +1450,37 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLanguageCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       languageCode_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The language code specifying the language of the website, for example, "en"
-     * for English. The language can be specified in the DynamicSearchAdsSetting
-     * required for dynamic search ads. This is the language of the pages from
-     * your website that you want Google Ads to find, create ads for,
-     * and match searches with.
+     * Output only. The language code specifying the language of the website, for
+     * example, "en" for English. The language can be specified in the
+     * DynamicSearchAdsSetting required for dynamic search ads. This is the
+     * language of the pages from your website that you want Google Ads to find,
+     * create ads for, and match searches with.
      * </pre>
      *
      * <code>optional string language_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearLanguageCode() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       languageCode_ = getDefaultInstance().getLanguageCode();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The language code specifying the language of the website, for example, "en"
-     * for English. The language can be specified in the DynamicSearchAdsSetting
-     * required for dynamic search ads. This is the language of the pages from
-     * your website that you want Google Ads to find, create ads for,
-     * and match searches with.
+     * Output only. The language code specifying the language of the website, for
+     * example, "en" for English. The language can be specified in the
+     * DynamicSearchAdsSetting required for dynamic search ads. This is the
+     * language of the pages from your website that you want Google Ads to find,
+     * create ads for, and match searches with.
      * </pre>
      *
      * <code>optional string language_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1497,12 +1489,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLanguageCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       languageCode_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1518,7 +1508,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the domain field is set.
      */
     public boolean hasDomain() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -1575,11 +1565,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDomain(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
       domain_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1593,8 +1581,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDomain() {
-      bitField0_ = (bitField0_ & ~0x00000008);
       domain_ = getDefaultInstance().getDomain();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1610,12 +1598,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDomainBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       domain_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1631,7 +1617,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCoverageFraction() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -1655,8 +1641,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCoverageFraction(double value) {
-      bitField0_ |= 0x00000010;
+      
       coverageFraction_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1669,7 +1656,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCoverageFraction() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000020);
       coverageFraction_ = 0D;
       onChanged();
       return this;
@@ -1678,8 +1665,9 @@ private static final long serialVersionUID = 0L;
     private long categoryRank_ ;
     /**
      * <pre>
-     * Output only. The position of this category in the set of categories. Lower numbers
-     * indicate a better match for the domain. null indicates not recommended.
+     * Output only. The position of this category in the set of categories. Lower
+     * numbers indicate a better match for the domain. null indicates not
+     * recommended.
      * </pre>
      *
      * <code>optional int64 category_rank = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1687,12 +1675,13 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCategoryRank() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <pre>
-     * Output only. The position of this category in the set of categories. Lower numbers
-     * indicate a better match for the domain. null indicates not recommended.
+     * Output only. The position of this category in the set of categories. Lower
+     * numbers indicate a better match for the domain. null indicates not
+     * recommended.
      * </pre>
      *
      * <code>optional int64 category_rank = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1704,8 +1693,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The position of this category in the set of categories. Lower numbers
-     * indicate a better match for the domain. null indicates not recommended.
+     * Output only. The position of this category in the set of categories. Lower
+     * numbers indicate a better match for the domain. null indicates not
+     * recommended.
      * </pre>
      *
      * <code>optional int64 category_rank = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1713,22 +1703,24 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCategoryRank(long value) {
-      bitField0_ |= 0x00000020;
+      
       categoryRank_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The position of this category in the set of categories. Lower numbers
-     * indicate a better match for the domain. null indicates not recommended.
+     * Output only. The position of this category in the set of categories. Lower
+     * numbers indicate a better match for the domain. null indicates not
+     * recommended.
      * </pre>
      *
      * <code>optional int64 category_rank = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearCategoryRank() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000040);
       categoryRank_ = 0L;
       onChanged();
       return this;
@@ -1745,7 +1737,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasHasChildren() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
      * <pre>
@@ -1769,8 +1761,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHasChildren(boolean value) {
-      bitField0_ |= 0x00000040;
+      
       hasChildren_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1783,7 +1776,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHasChildren() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000080);
       hasChildren_ = false;
       onChanged();
       return this;
@@ -1800,7 +1793,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasRecommendedCpcBidMicros() {
-      return ((bitField0_ & 0x00000080) != 0);
+      return ((bitField0_ & 0x00000100) != 0);
     }
     /**
      * <pre>
@@ -1824,8 +1817,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRecommendedCpcBidMicros(long value) {
-      bitField0_ |= 0x00000080;
+      
       recommendedCpcBidMicros_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1838,7 +1832,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRecommendedCpcBidMicros() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000100);
       recommendedCpcBidMicros_ = 0L;
       onChanged();
       return this;

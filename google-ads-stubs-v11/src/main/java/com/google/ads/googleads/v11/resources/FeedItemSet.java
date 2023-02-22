@@ -95,7 +95,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Immutable. The resource name of the feed item set.
@@ -145,11 +146,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FEED_FIELD_NUMBER = 2;
-  private volatile java.lang.Object feed_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object feed_ = "";
   /**
    * <pre>
-   * Immutable. The resource name of the feed containing the feed items in the set.
-   * Immutable. Required.
+   * Immutable. The resource name of the feed containing the feed items in the
+   * set. Immutable. Required.
    * </pre>
    *
    * <code>string feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -170,8 +172,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. The resource name of the feed containing the feed items in the set.
-   * Immutable. Required.
+   * Immutable. The resource name of the feed containing the feed items in the
+   * set. Immutable. Required.
    * </pre>
    *
    * <code>string feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -193,7 +195,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FEED_ITEM_SET_ID_FIELD_NUMBER = 3;
-  private long feedItemSetId_;
+  private long feedItemSetId_ = 0L;
   /**
    * <pre>
    * Output only. ID of the set.
@@ -208,7 +210,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DISPLAY_NAME_FIELD_NUMBER = 4;
-  private volatile java.lang.Object displayName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object displayName_ = "";
   /**
    * <pre>
    * Name of the set. Must be unique within the account.
@@ -254,7 +257,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STATUS_FIELD_NUMBER = 8;
-  private int status_;
+  private int status_ = 0;
   /**
    * <pre>
    * Output only. Status of the feed item set.
@@ -277,8 +280,7 @@ private static final long serialVersionUID = 0L;
    * @return The status.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.FeedItemSetStatusEnum.FeedItemSetStatus getStatus() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.FeedItemSetStatusEnum.FeedItemSetStatus result = com.google.ads.googleads.v11.enums.FeedItemSetStatusEnum.FeedItemSetStatus.valueOf(status_);
+    com.google.ads.googleads.v11.enums.FeedItemSetStatusEnum.FeedItemSetStatus result = com.google.ads.googleads.v11.enums.FeedItemSetStatusEnum.FeedItemSetStatus.forNumber(status_);
     return result == null ? com.google.ads.googleads.v11.enums.FeedItemSetStatusEnum.FeedItemSetStatus.UNRECOGNIZED : result;
   }
 
@@ -651,16 +653,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       feed_ = "";
-
       feedItemSetId_ = 0L;
-
       displayName_ = "";
-
       status_ = 0;
-
       if (dynamicLocationSetFilterBuilder_ != null) {
         dynamicLocationSetFilterBuilder_.clear();
       }
@@ -695,28 +693,42 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.FeedItemSet buildPartial() {
       com.google.ads.googleads.v11.resources.FeedItemSet result = new com.google.ads.googleads.v11.resources.FeedItemSet(this);
-      result.resourceName_ = resourceName_;
-      result.feed_ = feed_;
-      result.feedItemSetId_ = feedItemSetId_;
-      result.displayName_ = displayName_;
-      result.status_ = status_;
-      if (dynamicSetFilterCase_ == 5) {
-        if (dynamicLocationSetFilterBuilder_ == null) {
-          result.dynamicSetFilter_ = dynamicSetFilter_;
-        } else {
-          result.dynamicSetFilter_ = dynamicLocationSetFilterBuilder_.build();
-        }
-      }
-      if (dynamicSetFilterCase_ == 6) {
-        if (dynamicAffiliateLocationSetFilterBuilder_ == null) {
-          result.dynamicSetFilter_ = dynamicSetFilter_;
-        } else {
-          result.dynamicSetFilter_ = dynamicAffiliateLocationSetFilterBuilder_.build();
-        }
-      }
-      result.dynamicSetFilterCase_ = dynamicSetFilterCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.FeedItemSet result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.feed_ = feed_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.feedItemSetId_ = feedItemSetId_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.displayName_ = displayName_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.status_ = status_;
+      }
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v11.resources.FeedItemSet result) {
+      result.dynamicSetFilterCase_ = dynamicSetFilterCase_;
+      result.dynamicSetFilter_ = this.dynamicSetFilter_;
+      if (dynamicSetFilterCase_ == 5 &&
+          dynamicLocationSetFilterBuilder_ != null) {
+        result.dynamicSetFilter_ = dynamicLocationSetFilterBuilder_.build();
+      }
+      if (dynamicSetFilterCase_ == 6 &&
+          dynamicAffiliateLocationSetFilterBuilder_ != null) {
+        result.dynamicSetFilter_ = dynamicAffiliateLocationSetFilterBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -765,10 +777,12 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.resources.FeedItemSet.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getFeed().isEmpty()) {
         feed_ = other.feed_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.getFeedItemSetId() != 0L) {
@@ -776,6 +790,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getDisplayName().isEmpty()) {
         displayName_ = other.displayName_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.status_ != 0) {
@@ -822,22 +837,22 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               feed_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 24: {
               feedItemSetId_ = input.readInt64();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 24
             case 34: {
               displayName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 34
             case 42: {
@@ -856,7 +871,7 @@ private static final long serialVersionUID = 0L;
             } // case 50
             case 64: {
               status_ = input.readEnum();
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 64
             default: {
@@ -889,6 +904,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private java.lang.Object resourceName_ = "";
     /**
@@ -949,11 +965,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -968,8 +982,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -986,12 +1000,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -999,8 +1011,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object feed_ = "";
     /**
      * <pre>
-     * Immutable. The resource name of the feed containing the feed items in the set.
-     * Immutable. Required.
+     * Immutable. The resource name of the feed containing the feed items in the
+     * set. Immutable. Required.
      * </pre>
      *
      * <code>string feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -1020,8 +1032,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The resource name of the feed containing the feed items in the set.
-     * Immutable. Required.
+     * Immutable. The resource name of the feed containing the feed items in the
+     * set. Immutable. Required.
      * </pre>
      *
      * <code>string feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -1042,8 +1054,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The resource name of the feed containing the feed items in the set.
-     * Immutable. Required.
+     * Immutable. The resource name of the feed containing the feed items in the
+     * set. Immutable. Required.
      * </pre>
      *
      * <code>string feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -1052,33 +1064,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFeed(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       feed_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Immutable. The resource name of the feed containing the feed items in the set.
-     * Immutable. Required.
+     * Immutable. The resource name of the feed containing the feed items in the
+     * set. Immutable. Required.
      * </pre>
      *
      * <code>string feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearFeed() {
-      
       feed_ = getDefaultInstance().getFeed();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Immutable. The resource name of the feed containing the feed items in the set.
-     * Immutable. Required.
+     * Immutable. The resource name of the feed containing the feed items in the
+     * set. Immutable. Required.
      * </pre>
      *
      * <code>string feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -1087,12 +1097,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFeedBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       feed_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1122,6 +1130,7 @@ private static final long serialVersionUID = 0L;
     public Builder setFeedItemSetId(long value) {
       
       feedItemSetId_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1134,7 +1143,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFeedItemSetId() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       feedItemSetId_ = 0L;
       onChanged();
       return this;
@@ -1193,11 +1202,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDisplayName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       displayName_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1210,8 +1217,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayName() {
-      
       displayName_ = getDefaultInstance().getDisplayName();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1226,12 +1233,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDisplayNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       displayName_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1260,8 +1265,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
-      
       status_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1276,8 +1281,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.FeedItemSetStatusEnum.FeedItemSetStatus getStatus() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.FeedItemSetStatusEnum.FeedItemSetStatus result = com.google.ads.googleads.v11.enums.FeedItemSetStatusEnum.FeedItemSetStatus.valueOf(status_);
+      com.google.ads.googleads.v11.enums.FeedItemSetStatusEnum.FeedItemSetStatus result = com.google.ads.googleads.v11.enums.FeedItemSetStatusEnum.FeedItemSetStatus.forNumber(status_);
       return result == null ? com.google.ads.googleads.v11.enums.FeedItemSetStatusEnum.FeedItemSetStatus.UNRECOGNIZED : result;
     }
     /**
@@ -1294,7 +1298,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000010;
       status_ = value.getNumber();
       onChanged();
       return this;
@@ -1309,7 +1313,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       status_ = 0;
       onChanged();
       return this;
@@ -1498,7 +1502,7 @@ private static final long serialVersionUID = 0L;
         dynamicSetFilter_ = null;
       }
       dynamicSetFilterCase_ = 5;
-      onChanged();;
+      onChanged();
       return dynamicLocationSetFilterBuilder_;
     }
 
@@ -1694,7 +1698,7 @@ private static final long serialVersionUID = 0L;
         dynamicSetFilter_ = null;
       }
       dynamicSetFilterCase_ = 6;
-      onChanged();;
+      onChanged();
       return dynamicAffiliateLocationSetFilterBuilder_;
     }
     @java.lang.Override

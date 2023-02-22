@@ -60,7 +60,10 @@ import javax.annotation.Generated;
  * campaignServiceSettingsBuilder
  *     .mutateCampaignsSettings()
  *     .setRetrySettings(
- *         campaignServiceSettingsBuilder.mutateCampaignsSettings().getRetrySettings().toBuilder()
+ *         campaignServiceSettingsBuilder
+ *             .mutateCampaignsSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
  * CampaignServiceSettings campaignServiceSettings = campaignServiceSettingsBuilder.build();

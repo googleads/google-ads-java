@@ -124,8 +124,8 @@ public interface CampaignDraftOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Resource name of the Campaign that results from overlaying the draft
-   * changes onto the base campaign.
+   * Output only. Resource name of the Campaign that results from overlaying the
+   * draft changes onto the base campaign.
    * This field is read-only.
    * </pre>
    *
@@ -135,8 +135,8 @@ public interface CampaignDraftOrBuilder extends
   boolean hasDraftCampaign();
   /**
    * <pre>
-   * Output only. Resource name of the Campaign that results from overlaying the draft
-   * changes onto the base campaign.
+   * Output only. Resource name of the Campaign that results from overlaying the
+   * draft changes onto the base campaign.
    * This field is read-only.
    * </pre>
    *
@@ -146,8 +146,8 @@ public interface CampaignDraftOrBuilder extends
   java.lang.String getDraftCampaign();
   /**
    * <pre>
-   * Output only. Resource name of the Campaign that results from overlaying the draft
-   * changes onto the base campaign.
+   * Output only. Resource name of the Campaign that results from overlaying the
+   * draft changes onto the base campaign.
    * This field is read-only.
    * </pre>
    *
@@ -180,7 +180,8 @@ public interface CampaignDraftOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Whether there is an experiment based on this draft currently serving.
+   * Output only. Whether there is an experiment based on this draft currently
+   * serving.
    * </pre>
    *
    * <code>optional bool has_experiment_running = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -189,7 +190,8 @@ public interface CampaignDraftOrBuilder extends
   boolean hasHasExperimentRunning();
   /**
    * <pre>
-   * Output only. Whether there is an experiment based on this draft currently serving.
+   * Output only. Whether there is an experiment based on this draft currently
+   * serving.
    * </pre>
    *
    * <code>optional bool has_experiment_running = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -199,9 +201,9 @@ public interface CampaignDraftOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The resource name of the long-running operation that can be used to poll
-   * for completion of draft promotion. This is only set if the draft promotion
-   * is in progress or finished.
+   * Output only. The resource name of the long-running operation that can be
+   * used to poll for completion of draft promotion. This is only set if the
+   * draft promotion is in progress or finished.
    * </pre>
    *
    * <code>optional string long_running_operation = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -210,9 +212,9 @@ public interface CampaignDraftOrBuilder extends
   boolean hasLongRunningOperation();
   /**
    * <pre>
-   * Output only. The resource name of the long-running operation that can be used to poll
-   * for completion of draft promotion. This is only set if the draft promotion
-   * is in progress or finished.
+   * Output only. The resource name of the long-running operation that can be
+   * used to poll for completion of draft promotion. This is only set if the
+   * draft promotion is in progress or finished.
    * </pre>
    *
    * <code>optional string long_running_operation = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -221,9 +223,9 @@ public interface CampaignDraftOrBuilder extends
   java.lang.String getLongRunningOperation();
   /**
    * <pre>
-   * Output only. The resource name of the long-running operation that can be used to poll
-   * for completion of draft promotion. This is only set if the draft promotion
-   * is in progress or finished.
+   * Output only. The resource name of the long-running operation that can be
+   * used to poll for completion of draft promotion. This is only set if the
+   * draft promotion is in progress or finished.
    * </pre>
    *
    * <code>optional string long_running_operation = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

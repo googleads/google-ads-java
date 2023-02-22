@@ -53,7 +53,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Output only. The resource name of the keyword theme constant.
@@ -103,7 +104,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int COUNTRY_CODE_FIELD_NUMBER = 2;
-  private volatile java.lang.Object countryCode_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object countryCode_ = "";
   /**
    * <pre>
    * Output only. The ISO-3166 Alpha-2 country code of the constant, eg. "US".
@@ -167,12 +169,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LANGUAGE_CODE_FIELD_NUMBER = 3;
-  private volatile java.lang.Object languageCode_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object languageCode_ = "";
   /**
    * <pre>
-   * Output only. The ISO-639-1 language code with 2 letters of the constant, eg. "en".
-   * To display and query matching purpose, the keyword theme needs to be
-   * localized.
+   * Output only. The ISO-639-1 language code with 2 letters of the constant,
+   * eg. "en". To display and query matching purpose, the keyword theme needs to
+   * be localized.
    * </pre>
    *
    * <code>optional string language_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -184,9 +187,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The ISO-639-1 language code with 2 letters of the constant, eg. "en".
-   * To display and query matching purpose, the keyword theme needs to be
-   * localized.
+   * Output only. The ISO-639-1 language code with 2 letters of the constant,
+   * eg. "en". To display and query matching purpose, the keyword theme needs to
+   * be localized.
    * </pre>
    *
    * <code>optional string language_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -207,9 +210,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The ISO-639-1 language code with 2 letters of the constant, eg. "en".
-   * To display and query matching purpose, the keyword theme needs to be
-   * localized.
+   * Output only. The ISO-639-1 language code with 2 letters of the constant,
+   * eg. "en". To display and query matching purpose, the keyword theme needs to
+   * be localized.
    * </pre>
    *
    * <code>optional string language_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -231,7 +234,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DISPLAY_NAME_FIELD_NUMBER = 4;
-  private volatile java.lang.Object displayName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object displayName_ = "";
   /**
    * <pre>
    * Output only. The display name of the keyword theme or sub keyword theme.
@@ -524,14 +528,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       countryCode_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       languageCode_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       displayName_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -558,24 +559,30 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.KeywordThemeConstant buildPartial() {
       com.google.ads.googleads.v11.resources.KeywordThemeConstant result = new com.google.ads.googleads.v11.resources.KeywordThemeConstant(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        to_bitField0_ |= 0x00000001;
-      }
-      result.countryCode_ = countryCode_;
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        to_bitField0_ |= 0x00000002;
-      }
-      result.languageCode_ = languageCode_;
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        to_bitField0_ |= 0x00000004;
-      }
-      result.displayName_ = displayName_;
-      result.bitField0_ = to_bitField0_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.KeywordThemeConstant result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.countryCode_ = countryCode_;
+        to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.languageCode_ = languageCode_;
+        to_bitField0_ |= 0x00000002;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.displayName_ = displayName_;
+        to_bitField0_ |= 0x00000004;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -624,21 +631,22 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.resources.KeywordThemeConstant.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasCountryCode()) {
-        bitField0_ |= 0x00000001;
         countryCode_ = other.countryCode_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasLanguageCode()) {
-        bitField0_ |= 0x00000002;
         languageCode_ = other.languageCode_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.hasDisplayName()) {
-        bitField0_ |= 0x00000004;
         displayName_ = other.displayName_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -669,22 +677,22 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               countryCode_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
               languageCode_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 34: {
               displayName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               break;
             } // case 34
             default: {
@@ -763,11 +771,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -782,8 +788,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -800,12 +806,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -822,7 +826,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the countryCode field is set.
      */
     public boolean hasCountryCode() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -882,11 +886,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCountryCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       countryCode_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -901,8 +903,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCountryCode() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       countryCode_ = getDefaultInstance().getCountryCode();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -919,12 +921,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCountryCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       countryCode_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -932,22 +932,22 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object languageCode_ = "";
     /**
      * <pre>
-     * Output only. The ISO-639-1 language code with 2 letters of the constant, eg. "en".
-     * To display and query matching purpose, the keyword theme needs to be
-     * localized.
+     * Output only. The ISO-639-1 language code with 2 letters of the constant,
+     * eg. "en". To display and query matching purpose, the keyword theme needs to
+     * be localized.
      * </pre>
      *
      * <code>optional string language_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the languageCode field is set.
      */
     public boolean hasLanguageCode() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
-     * Output only. The ISO-639-1 language code with 2 letters of the constant, eg. "en".
-     * To display and query matching purpose, the keyword theme needs to be
-     * localized.
+     * Output only. The ISO-639-1 language code with 2 letters of the constant,
+     * eg. "en". To display and query matching purpose, the keyword theme needs to
+     * be localized.
      * </pre>
      *
      * <code>optional string language_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -967,9 +967,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The ISO-639-1 language code with 2 letters of the constant, eg. "en".
-     * To display and query matching purpose, the keyword theme needs to be
-     * localized.
+     * Output only. The ISO-639-1 language code with 2 letters of the constant,
+     * eg. "en". To display and query matching purpose, the keyword theme needs to
+     * be localized.
      * </pre>
      *
      * <code>optional string language_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -990,9 +990,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The ISO-639-1 language code with 2 letters of the constant, eg. "en".
-     * To display and query matching purpose, the keyword theme needs to be
-     * localized.
+     * Output only. The ISO-639-1 language code with 2 letters of the constant,
+     * eg. "en". To display and query matching purpose, the keyword theme needs to
+     * be localized.
      * </pre>
      *
      * <code>optional string language_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1001,35 +1001,33 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLanguageCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       languageCode_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The ISO-639-1 language code with 2 letters of the constant, eg. "en".
-     * To display and query matching purpose, the keyword theme needs to be
-     * localized.
+     * Output only. The ISO-639-1 language code with 2 letters of the constant,
+     * eg. "en". To display and query matching purpose, the keyword theme needs to
+     * be localized.
      * </pre>
      *
      * <code>optional string language_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearLanguageCode() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       languageCode_ = getDefaultInstance().getLanguageCode();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The ISO-639-1 language code with 2 letters of the constant, eg. "en".
-     * To display and query matching purpose, the keyword theme needs to be
-     * localized.
+     * Output only. The ISO-639-1 language code with 2 letters of the constant,
+     * eg. "en". To display and query matching purpose, the keyword theme needs to
+     * be localized.
      * </pre>
      *
      * <code>optional string language_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1038,12 +1036,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLanguageCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       languageCode_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1058,7 +1054,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the displayName field is set.
      */
     public boolean hasDisplayName() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -1112,11 +1108,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDisplayName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       displayName_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1129,8 +1123,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisplayName() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       displayName_ = getDefaultInstance().getDisplayName();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1145,12 +1139,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDisplayNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       displayName_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }

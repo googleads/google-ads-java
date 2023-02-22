@@ -5,7 +5,8 @@ package com.google.ads.googleads.v12.services;
 
 /**
  * <pre>
- * Response message for [KeywordPlanService.GenerateForecastTimeSeries][google.ads.googleads.v12.services.KeywordPlanService.GenerateForecastTimeSeries].
+ * Response message for
+ * [KeywordPlanService.GenerateForecastTimeSeries][google.ads.googleads.v12.services.KeywordPlanService.GenerateForecastTimeSeries].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v12.services.GenerateForecastTimeSeriesResponse}
@@ -49,6 +50,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WEEKLY_TIME_SERIES_FORECASTS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.services.KeywordPlanWeeklyTimeSeriesForecast> weeklyTimeSeriesForecasts_;
   /**
    * <pre>
@@ -272,7 +274,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Response message for [KeywordPlanService.GenerateForecastTimeSeries][google.ads.googleads.v12.services.KeywordPlanService.GenerateForecastTimeSeries].
+   * Response message for
+   * [KeywordPlanService.GenerateForecastTimeSeries][google.ads.googleads.v12.services.KeywordPlanService.GenerateForecastTimeSeries].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v12.services.GenerateForecastTimeSeriesResponse}
@@ -307,6 +310,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (weeklyTimeSeriesForecastsBuilder_ == null) {
         weeklyTimeSeriesForecasts_ = java.util.Collections.emptyList();
       } else {
@@ -340,7 +344,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.GenerateForecastTimeSeriesResponse buildPartial() {
       com.google.ads.googleads.v12.services.GenerateForecastTimeSeriesResponse result = new com.google.ads.googleads.v12.services.GenerateForecastTimeSeriesResponse(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.services.GenerateForecastTimeSeriesResponse result) {
       if (weeklyTimeSeriesForecastsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           weeklyTimeSeriesForecasts_ = java.util.Collections.unmodifiableList(weeklyTimeSeriesForecasts_);
@@ -350,8 +360,10 @@ private static final long serialVersionUID = 0L;
       } else {
         result.weeklyTimeSeriesForecasts_ = weeklyTimeSeriesForecastsBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.GenerateForecastTimeSeriesResponse result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override

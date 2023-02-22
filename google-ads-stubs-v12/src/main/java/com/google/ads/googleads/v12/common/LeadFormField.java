@@ -88,7 +88,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INPUT_TYPE_FIELD_NUMBER = 1;
-  private int inputType_;
+  private int inputType_ = 0;
   /**
    * <pre>
    * Describes the input type, which may be a predefined type such as "full
@@ -111,8 +111,7 @@ private static final long serialVersionUID = 0L;
    * @return The inputType.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType getInputType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType result = com.google.ads.googleads.v12.enums.LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType.valueOf(inputType_);
+    com.google.ads.googleads.v12.enums.LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType result = com.google.ads.googleads.v12.enums.LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType.forNumber(inputType_);
     return result == null ? com.google.ads.googleads.v12.enums.LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType.UNRECOGNIZED : result;
   }
 
@@ -380,8 +379,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       inputType_ = 0;
-
       if (singleChoiceAnswersBuilder_ != null) {
         singleChoiceAnswersBuilder_.clear();
       }
@@ -413,17 +412,26 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.LeadFormField buildPartial() {
       com.google.ads.googleads.v12.common.LeadFormField result = new com.google.ads.googleads.v12.common.LeadFormField(this);
-      result.inputType_ = inputType_;
-      if (answersCase_ == 2) {
-        if (singleChoiceAnswersBuilder_ == null) {
-          result.answers_ = answers_;
-        } else {
-          result.answers_ = singleChoiceAnswersBuilder_.build();
-        }
-      }
-      result.answersCase_ = answersCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.LeadFormField result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.inputType_ = inputType_;
+      }
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v12.common.LeadFormField result) {
+      result.answersCase_ = answersCase_;
+      result.answers_ = this.answers_;
+      if (answersCase_ == 2 &&
+          singleChoiceAnswersBuilder_ != null) {
+        result.answers_ = singleChoiceAnswersBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -510,7 +518,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               inputType_ = input.readEnum();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             case 18: {
@@ -550,6 +558,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private int inputType_ = 0;
     /**
@@ -575,8 +584,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setInputTypeValue(int value) {
-      
       inputType_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -591,8 +600,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType getInputType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType result = com.google.ads.googleads.v12.enums.LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType.valueOf(inputType_);
+      com.google.ads.googleads.v12.enums.LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType result = com.google.ads.googleads.v12.enums.LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType.forNumber(inputType_);
       return result == null ? com.google.ads.googleads.v12.enums.LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType.UNRECOGNIZED : result;
     }
     /**
@@ -609,7 +617,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       inputType_ = value.getNumber();
       onChanged();
       return this;
@@ -624,7 +632,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearInputType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       inputType_ = 0;
       onChanged();
       return this;
@@ -822,7 +830,7 @@ private static final long serialVersionUID = 0L;
         answers_ = null;
       }
       answersCase_ = 2;
-      onChanged();;
+      onChanged();
       return singleChoiceAnswersBuilder_;
     }
     @java.lang.Override

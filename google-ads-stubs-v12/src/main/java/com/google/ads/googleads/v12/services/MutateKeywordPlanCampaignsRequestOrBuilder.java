@@ -9,7 +9,8 @@ public interface MutateKeywordPlanCampaignsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The ID of the customer whose Keyword Plan campaigns are being modified.
+   * Required. The ID of the customer whose Keyword Plan campaigns are being
+   * modified.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -18,7 +19,8 @@ public interface MutateKeywordPlanCampaignsRequestOrBuilder extends
   java.lang.String getCustomerId();
   /**
    * <pre>
-   * Required. The ID of the customer whose Keyword Plan campaigns are being modified.
+   * Required. The ID of the customer whose Keyword Plan campaigns are being
+   * modified.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -29,7 +31,8 @@ public interface MutateKeywordPlanCampaignsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The list of operations to perform on individual Keyword Plan campaigns.
+   * Required. The list of operations to perform on individual Keyword Plan
+   * campaigns.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.services.KeywordPlanCampaignOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -38,7 +41,8 @@ public interface MutateKeywordPlanCampaignsRequestOrBuilder extends
       getOperationsList();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual Keyword Plan campaigns.
+   * Required. The list of operations to perform on individual Keyword Plan
+   * campaigns.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.services.KeywordPlanCampaignOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -46,7 +50,8 @@ public interface MutateKeywordPlanCampaignsRequestOrBuilder extends
   com.google.ads.googleads.v12.services.KeywordPlanCampaignOperation getOperations(int index);
   /**
    * <pre>
-   * Required. The list of operations to perform on individual Keyword Plan campaigns.
+   * Required. The list of operations to perform on individual Keyword Plan
+   * campaigns.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.services.KeywordPlanCampaignOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -54,7 +59,8 @@ public interface MutateKeywordPlanCampaignsRequestOrBuilder extends
   int getOperationsCount();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual Keyword Plan campaigns.
+   * Required. The list of operations to perform on individual Keyword Plan
+   * campaigns.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.services.KeywordPlanCampaignOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -63,7 +69,8 @@ public interface MutateKeywordPlanCampaignsRequestOrBuilder extends
       getOperationsOrBuilderList();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual Keyword Plan campaigns.
+   * Required. The list of operations to perform on individual Keyword Plan
+   * campaigns.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.services.KeywordPlanCampaignOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>

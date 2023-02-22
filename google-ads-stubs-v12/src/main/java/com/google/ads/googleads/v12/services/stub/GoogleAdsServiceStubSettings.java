@@ -85,7 +85,10 @@ import org.threeten.bp.Duration;
  * googleAdsServiceSettingsBuilder
  *     .mutateSettings()
  *     .setRetrySettings(
- *         googleAdsServiceSettingsBuilder.mutateSettings().getRetrySettings().toBuilder()
+ *         googleAdsServiceSettingsBuilder
+ *             .mutateSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
  * GoogleAdsServiceStubSettings googleAdsServiceSettings = googleAdsServiceSettingsBuilder.build();

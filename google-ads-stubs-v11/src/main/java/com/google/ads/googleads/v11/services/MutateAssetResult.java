@@ -49,7 +49,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * The resource name returned for successful operations.
@@ -132,7 +133,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v11.resources.AssetOrBuilder getAssetOrBuilder() {
-    return getAsset();
+    return asset_ == null ? com.google.ads.googleads.v11.resources.Asset.getDefaultInstance() : asset_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -342,12 +343,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
-      if (assetBuilder_ == null) {
-        asset_ = null;
-      } else {
-        asset_ = null;
+      asset_ = null;
+      if (assetBuilder_ != null) {
+        assetBuilder_.dispose();
         assetBuilder_ = null;
       }
       return this;
@@ -376,14 +376,21 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.MutateAssetResult buildPartial() {
       com.google.ads.googleads.v11.services.MutateAssetResult result = new com.google.ads.googleads.v11.services.MutateAssetResult(this);
-      result.resourceName_ = resourceName_;
-      if (assetBuilder_ == null) {
-        result.asset_ = asset_;
-      } else {
-        result.asset_ = assetBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.MutateAssetResult result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.asset_ = assetBuilder_ == null
+            ? asset_
+            : assetBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -432,6 +439,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.services.MutateAssetResult.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasAsset()) {
@@ -465,14 +473,14 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               input.readMessage(
                   getAssetFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             default: {
@@ -490,6 +498,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object resourceName_ = "";
     /**
@@ -544,11 +553,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -561,8 +568,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -577,12 +584,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -600,7 +605,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the asset field is set.
      */
     public boolean hasAsset() {
-      return assetBuilder_ != null || asset_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -632,11 +637,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         asset_ = value;
-        onChanged();
       } else {
         assetBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -651,11 +656,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.resources.Asset.Builder builderForValue) {
       if (assetBuilder_ == null) {
         asset_ = builderForValue.build();
-        onChanged();
       } else {
         assetBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -668,17 +673,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAsset(com.google.ads.googleads.v11.resources.Asset value) {
       if (assetBuilder_ == null) {
-        if (asset_ != null) {
-          asset_ =
-            com.google.ads.googleads.v11.resources.Asset.newBuilder(asset_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          asset_ != null &&
+          asset_ != com.google.ads.googleads.v11.resources.Asset.getDefaultInstance()) {
+          getAssetBuilder().mergeFrom(value);
         } else {
           asset_ = value;
         }
-        onChanged();
       } else {
         assetBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -690,14 +696,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.resources.Asset asset = 2;</code>
      */
     public Builder clearAsset() {
-      if (assetBuilder_ == null) {
-        asset_ = null;
-        onChanged();
-      } else {
-        asset_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      asset_ = null;
+      if (assetBuilder_ != null) {
+        assetBuilder_.dispose();
         assetBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -709,7 +714,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.resources.Asset asset = 2;</code>
      */
     public com.google.ads.googleads.v11.resources.Asset.Builder getAssetBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getAssetFieldBuilder().getBuilder();
     }

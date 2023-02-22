@@ -60,7 +60,10 @@ import javax.annotation.Generated;
  * invoiceServiceSettingsBuilder
  *     .listInvoicesSettings()
  *     .setRetrySettings(
- *         invoiceServiceSettingsBuilder.listInvoicesSettings().getRetrySettings().toBuilder()
+ *         invoiceServiceSettingsBuilder
+ *             .listInvoicesSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
  * InvoiceServiceSettings invoiceServiceSettings = invoiceServiceSettingsBuilder.build();

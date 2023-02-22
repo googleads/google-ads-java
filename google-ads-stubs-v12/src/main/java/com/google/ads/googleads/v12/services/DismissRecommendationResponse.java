@@ -5,7 +5,8 @@ package com.google.ads.googleads.v12.services;
 
 /**
  * <pre>
- * Response message for [RecommendationService.DismissRecommendation][google.ads.googleads.v12.services.RecommendationService.DismissRecommendation].
+ * Response message for
+ * [RecommendationService.DismissRecommendation][google.ads.googleads.v12.services.RecommendationService.DismissRecommendation].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v12.services.DismissRecommendationResponse}
@@ -118,7 +119,8 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object resourceName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object resourceName_ = "";
     /**
      * <pre>
      * Returned for successful dismissals.
@@ -354,8 +356,8 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         resourceName_ = "";
-
         return this;
       }
 
@@ -382,9 +384,16 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v12.services.DismissRecommendationResponse.DismissRecommendationResult buildPartial() {
         com.google.ads.googleads.v12.services.DismissRecommendationResponse.DismissRecommendationResult result = new com.google.ads.googleads.v12.services.DismissRecommendationResponse.DismissRecommendationResult(this);
-        result.resourceName_ = resourceName_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v12.services.DismissRecommendationResponse.DismissRecommendationResult result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.resourceName_ = resourceName_;
+        }
       }
 
       @java.lang.Override
@@ -433,6 +442,7 @@ private static final long serialVersionUID = 0L;
         if (other == com.google.ads.googleads.v12.services.DismissRecommendationResponse.DismissRecommendationResult.getDefaultInstance()) return this;
         if (!other.getResourceName().isEmpty()) {
           resourceName_ = other.resourceName_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -463,7 +473,7 @@ private static final long serialVersionUID = 0L;
                 break;
               case 10: {
                 resourceName_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -481,6 +491,7 @@ private static final long serialVersionUID = 0L;
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object resourceName_ = "";
       /**
@@ -535,11 +546,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setResourceName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         resourceName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -552,8 +561,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearResourceName() {
-        
         resourceName_ = getDefaultInstance().getResourceName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -568,12 +577,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setResourceNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         resourceName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -642,6 +649,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESULTS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.services.DismissRecommendationResponse.DismissRecommendationResult> results_;
   /**
    * <pre>
@@ -745,7 +753,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.rpc.StatusOrBuilder getPartialFailureErrorOrBuilder() {
-    return getPartialFailureError();
+    return partialFailureError_ == null ? com.google.rpc.Status.getDefaultInstance() : partialFailureError_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -923,7 +931,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Response message for [RecommendationService.DismissRecommendation][google.ads.googleads.v12.services.RecommendationService.DismissRecommendation].
+   * Response message for
+   * [RecommendationService.DismissRecommendation][google.ads.googleads.v12.services.RecommendationService.DismissRecommendation].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v12.services.DismissRecommendationResponse}
@@ -958,6 +967,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (resultsBuilder_ == null) {
         results_ = java.util.Collections.emptyList();
       } else {
@@ -965,10 +975,9 @@ private static final long serialVersionUID = 0L;
         resultsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000001);
-      if (partialFailureErrorBuilder_ == null) {
-        partialFailureError_ = null;
-      } else {
-        partialFailureError_ = null;
+      partialFailureError_ = null;
+      if (partialFailureErrorBuilder_ != null) {
+        partialFailureErrorBuilder_.dispose();
         partialFailureErrorBuilder_ = null;
       }
       return this;
@@ -997,7 +1006,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.DismissRecommendationResponse buildPartial() {
       com.google.ads.googleads.v12.services.DismissRecommendationResponse result = new com.google.ads.googleads.v12.services.DismissRecommendationResponse(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.services.DismissRecommendationResponse result) {
       if (resultsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           results_ = java.util.Collections.unmodifiableList(results_);
@@ -1007,13 +1022,15 @@ private static final long serialVersionUID = 0L;
       } else {
         result.results_ = resultsBuilder_.build();
       }
-      if (partialFailureErrorBuilder_ == null) {
-        result.partialFailureError_ = partialFailureError_;
-      } else {
-        result.partialFailureError_ = partialFailureErrorBuilder_.build();
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.DismissRecommendationResponse result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.partialFailureError_ = partialFailureErrorBuilder_ == null
+            ? partialFailureError_
+            : partialFailureErrorBuilder_.build();
       }
-      onBuilt();
-      return result;
     }
 
     @java.lang.Override
@@ -1132,7 +1149,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getPartialFailureErrorFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             default: {
@@ -1479,7 +1496,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the partialFailureError field is set.
      */
     public boolean hasPartialFailureError() {
-      return partialFailureErrorBuilder_ != null || partialFailureError_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -1515,11 +1532,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         partialFailureError_ = value;
-        onChanged();
       } else {
         partialFailureErrorBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -1536,11 +1553,11 @@ private static final long serialVersionUID = 0L;
         com.google.rpc.Status.Builder builderForValue) {
       if (partialFailureErrorBuilder_ == null) {
         partialFailureError_ = builderForValue.build();
-        onChanged();
       } else {
         partialFailureErrorBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -1555,17 +1572,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergePartialFailureError(com.google.rpc.Status value) {
       if (partialFailureErrorBuilder_ == null) {
-        if (partialFailureError_ != null) {
-          partialFailureError_ =
-            com.google.rpc.Status.newBuilder(partialFailureError_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          partialFailureError_ != null &&
+          partialFailureError_ != com.google.rpc.Status.getDefaultInstance()) {
+          getPartialFailureErrorBuilder().mergeFrom(value);
         } else {
           partialFailureError_ = value;
         }
-        onChanged();
       } else {
         partialFailureErrorBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -1579,14 +1597,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.rpc.Status partial_failure_error = 2;</code>
      */
     public Builder clearPartialFailureError() {
-      if (partialFailureErrorBuilder_ == null) {
-        partialFailureError_ = null;
-        onChanged();
-      } else {
-        partialFailureError_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      partialFailureError_ = null;
+      if (partialFailureErrorBuilder_ != null) {
+        partialFailureErrorBuilder_.dispose();
         partialFailureErrorBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1600,7 +1617,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.rpc.Status partial_failure_error = 2;</code>
      */
     public com.google.rpc.Status.Builder getPartialFailureErrorBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getPartialFailureErrorFieldBuilder().getBuilder();
     }

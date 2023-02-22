@@ -52,7 +52,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Immutable. Name of the resource.
@@ -102,7 +103,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CLIENT_CUSTOMER_FIELD_NUMBER = 7;
-  private volatile java.lang.Object clientCustomer_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object clientCustomer_ = "";
   /**
    * <pre>
    * Immutable. The client customer linked to this customer.
@@ -160,7 +162,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MANAGER_LINK_ID_FIELD_NUMBER = 8;
-  private long managerLinkId_;
+  private long managerLinkId_ = 0L;
   /**
    * <pre>
    * Output only. This is uniquely identifies a customer client link. Read only.
@@ -187,7 +189,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STATUS_FIELD_NUMBER = 5;
-  private int status_;
+  private int status_ = 0;
   /**
    * <pre>
    * This is the status of the link between client and manager.
@@ -208,13 +210,12 @@ private static final long serialVersionUID = 0L;
    * @return The status.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.ManagerLinkStatusEnum.ManagerLinkStatus getStatus() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.ManagerLinkStatusEnum.ManagerLinkStatus result = com.google.ads.googleads.v11.enums.ManagerLinkStatusEnum.ManagerLinkStatus.valueOf(status_);
+    com.google.ads.googleads.v11.enums.ManagerLinkStatusEnum.ManagerLinkStatus result = com.google.ads.googleads.v11.enums.ManagerLinkStatusEnum.ManagerLinkStatus.forNumber(status_);
     return result == null ? com.google.ads.googleads.v11.enums.ManagerLinkStatusEnum.ManagerLinkStatus.UNRECOGNIZED : result;
   }
 
   public static final int HIDDEN_FIELD_NUMBER = 9;
-  private boolean hidden_;
+  private boolean hidden_ = false;
   /**
    * <pre>
    * The visibility of the link. Users can choose whether or not to see hidden
@@ -494,16 +495,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       clientCustomer_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       managerLinkId_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000002);
       status_ = 0;
-
       hidden_ = false;
-      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -530,25 +527,33 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.CustomerClientLink buildPartial() {
       com.google.ads.googleads.v11.resources.CustomerClientLink result = new com.google.ads.googleads.v11.resources.CustomerClientLink(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.CustomerClientLink result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.clientCustomer_ = clientCustomer_;
         to_bitField0_ |= 0x00000001;
       }
-      result.clientCustomer_ = clientCustomer_;
-      if (((from_bitField0_ & 0x00000002) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.managerLinkId_ = managerLinkId_;
         to_bitField0_ |= 0x00000002;
       }
-      result.status_ = status_;
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.status_ = status_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.hidden_ = hidden_;
         to_bitField0_ |= 0x00000004;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -597,11 +602,12 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.resources.CustomerClientLink.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasClientCustomer()) {
-        bitField0_ |= 0x00000001;
         clientCustomer_ = other.clientCustomer_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasManagerLinkId()) {
@@ -641,27 +647,27 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 40: {
               status_ = input.readEnum();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 40
             case 58: {
               clientCustomer_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 58
             case 64: {
               managerLinkId_ = input.readInt64();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 64
             case 72: {
               hidden_ = input.readBool();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000010;
               break;
             } // case 72
             default: {
@@ -740,11 +746,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -759,8 +763,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -777,12 +781,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -797,7 +799,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the clientCustomer field is set.
      */
     public boolean hasClientCustomer() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -851,11 +853,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setClientCustomer(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       clientCustomer_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -868,8 +868,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearClientCustomer() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       clientCustomer_ = getDefaultInstance().getClientCustomer();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -884,12 +884,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setClientCustomerBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       clientCustomer_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -905,7 +903,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasManagerLinkId() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -929,8 +927,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setManagerLinkId(long value) {
-      bitField0_ |= 0x00000002;
+      
       managerLinkId_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -943,7 +942,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearManagerLinkId() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       managerLinkId_ = 0L;
       onChanged();
       return this;
@@ -971,8 +970,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
-      
       status_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -986,8 +985,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.ManagerLinkStatusEnum.ManagerLinkStatus getStatus() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.ManagerLinkStatusEnum.ManagerLinkStatus result = com.google.ads.googleads.v11.enums.ManagerLinkStatusEnum.ManagerLinkStatus.valueOf(status_);
+      com.google.ads.googleads.v11.enums.ManagerLinkStatusEnum.ManagerLinkStatus result = com.google.ads.googleads.v11.enums.ManagerLinkStatusEnum.ManagerLinkStatus.forNumber(status_);
       return result == null ? com.google.ads.googleads.v11.enums.ManagerLinkStatusEnum.ManagerLinkStatus.UNRECOGNIZED : result;
     }
     /**
@@ -1003,7 +1001,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000008;
       status_ = value.getNumber();
       onChanged();
       return this;
@@ -1017,7 +1015,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       status_ = 0;
       onChanged();
       return this;
@@ -1036,7 +1034,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasHidden() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -1064,8 +1062,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHidden(boolean value) {
-      bitField0_ |= 0x00000004;
+      
       hidden_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1080,7 +1079,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHidden() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000010);
       hidden_ = false;
       onChanged();
       return this;

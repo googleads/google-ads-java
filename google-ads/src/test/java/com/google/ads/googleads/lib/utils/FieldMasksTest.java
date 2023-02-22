@@ -17,14 +17,14 @@ package com.google.ads.googleads.lib.utils;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 
-import com.google.ads.googleads.v12.common.ManualCpc;
-import com.google.ads.googleads.v12.common.ManualCpm;
-import com.google.ads.googleads.v12.common.MaximizeConversions;
-import com.google.ads.googleads.v12.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v12.resources.Campaign;
-import com.google.ads.googleads.v12.resources.Campaign.DynamicSearchAdsSetting;
-import com.google.ads.googleads.v12.resources.Campaign.SelectiveOptimization;
-import com.google.ads.googleads.v12.resources.Campaign.TrackingSetting;
+import com.google.ads.googleads.v13.common.ManualCpc;
+import com.google.ads.googleads.v13.common.ManualCpm;
+import com.google.ads.googleads.v13.common.MaximizeConversions;
+import com.google.ads.googleads.v13.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v13.resources.Campaign;
+import com.google.ads.googleads.v13.resources.Campaign.DynamicSearchAdsSetting;
+import com.google.ads.googleads.v13.resources.Campaign.SelectiveOptimization;
+import com.google.ads.googleads.v13.resources.Campaign.TrackingSetting;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.Descriptors.EnumValueDescriptor;
 import java.util.Arrays;
@@ -147,7 +147,7 @@ public class FieldMasksTest {
               FieldMasks.getFieldValue("status.paused", campaign);
             });
     assertEquals(
-        "Unable to access subfield of google.ads.googleads.v12.resources.Campaign.status which is"
+        "Unable to access subfield of google.ads.googleads.v13.resources.Campaign.status which is"
             + " not a Message",
         exception.getMessage());
   }

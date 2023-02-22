@@ -49,7 +49,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int DATA_PARTNER_ID_FIELD_NUMBER = 1;
-  private long dataPartnerId_;
+  private long dataPartnerId_ = 0L;
   /**
    * <pre>
    * Immutable. The customer ID of the Data partner account.
@@ -279,8 +279,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       dataPartnerId_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -307,15 +307,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.DataPartnerLinkIdentifier buildPartial() {
       com.google.ads.googleads.v12.resources.DataPartnerLinkIdentifier result = new com.google.ads.googleads.v12.resources.DataPartnerLinkIdentifier(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.resources.DataPartnerLinkIdentifier result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.dataPartnerId_ = dataPartnerId_;
         to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -457,8 +461,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDataPartnerId(long value) {
-      bitField0_ |= 0x00000001;
+      
       dataPartnerId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

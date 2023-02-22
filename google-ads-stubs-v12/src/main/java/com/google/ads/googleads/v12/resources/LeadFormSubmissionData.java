@@ -58,7 +58,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Output only. The resource name of the lead form submission data.
@@ -108,7 +109,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ID_FIELD_NUMBER = 2;
-  private volatile java.lang.Object id_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object id_ = "";
   /**
    * <pre>
    * Output only. ID of this lead form submission.
@@ -154,7 +156,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ASSET_FIELD_NUMBER = 3;
-  private volatile java.lang.Object asset_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object asset_ = "";
   /**
    * <pre>
    * Output only. Asset associated with the submitted lead form.
@@ -200,7 +203,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CAMPAIGN_FIELD_NUMBER = 4;
-  private volatile java.lang.Object campaign_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object campaign_ = "";
   /**
    * <pre>
    * Output only. Campaign associated with the submitted lead form.
@@ -246,6 +250,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LEAD_FORM_SUBMISSION_FIELDS_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.resources.LeadFormSubmissionField> leadFormSubmissionFields_;
   /**
    * <pre>
@@ -306,6 +311,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CUSTOM_LEAD_FORM_SUBMISSION_FIELDS_FIELD_NUMBER = 10;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.resources.CustomLeadFormSubmissionField> customLeadFormSubmissionFields_;
   /**
    * <pre>
@@ -366,7 +372,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AD_GROUP_FIELD_NUMBER = 6;
-  private volatile java.lang.Object adGroup_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object adGroup_ = "";
   /**
    * <pre>
    * Output only. AdGroup associated with the submitted lead form.
@@ -412,7 +419,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AD_GROUP_AD_FIELD_NUMBER = 7;
-  private volatile java.lang.Object adGroupAd_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object adGroupAd_ = "";
   /**
    * <pre>
    * Output only. AdGroupAd associated with the submitted lead form.
@@ -458,7 +466,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int GCLID_FIELD_NUMBER = 8;
-  private volatile java.lang.Object gclid_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object gclid_ = "";
   /**
    * <pre>
    * Output only. Google Click Id associated with the submissed lead form.
@@ -504,11 +513,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SUBMISSION_DATE_TIME_FIELD_NUMBER = 9;
-  private volatile java.lang.Object submissionDateTime_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object submissionDateTime_ = "";
   /**
    * <pre>
-   * Output only. The date and time at which the lead form was submitted. The format is
-   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
+   * Output only. The date and time at which the lead form was submitted. The
+   * format is "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01
+   * 12:32:45-08:00".
    * </pre>
    *
    * <code>string submission_date_time = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -529,8 +540,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The date and time at which the lead form was submitted. The format is
-   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
+   * Output only. The date and time at which the lead form was submitted. The
+   * format is "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01
+   * 12:32:45-08:00".
    * </pre>
    *
    * <code>string submission_date_time = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -838,36 +850,29 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       id_ = "";
-
       asset_ = "";
-
       campaign_ = "";
-
       if (leadFormSubmissionFieldsBuilder_ == null) {
         leadFormSubmissionFields_ = java.util.Collections.emptyList();
       } else {
         leadFormSubmissionFields_ = null;
         leadFormSubmissionFieldsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000010);
       if (customLeadFormSubmissionFieldsBuilder_ == null) {
         customLeadFormSubmissionFields_ = java.util.Collections.emptyList();
       } else {
         customLeadFormSubmissionFields_ = null;
         customLeadFormSubmissionFieldsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000020);
       adGroup_ = "";
-
       adGroupAd_ = "";
-
       gclid_ = "";
-
       submissionDateTime_ = "";
-
       return this;
     }
 
@@ -894,35 +899,59 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.LeadFormSubmissionData buildPartial() {
       com.google.ads.googleads.v12.resources.LeadFormSubmissionData result = new com.google.ads.googleads.v12.resources.LeadFormSubmissionData(this);
-      int from_bitField0_ = bitField0_;
-      result.resourceName_ = resourceName_;
-      result.id_ = id_;
-      result.asset_ = asset_;
-      result.campaign_ = campaign_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.resources.LeadFormSubmissionData result) {
       if (leadFormSubmissionFieldsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000010) != 0)) {
           leadFormSubmissionFields_ = java.util.Collections.unmodifiableList(leadFormSubmissionFields_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000010);
         }
         result.leadFormSubmissionFields_ = leadFormSubmissionFields_;
       } else {
         result.leadFormSubmissionFields_ = leadFormSubmissionFieldsBuilder_.build();
       }
       if (customLeadFormSubmissionFieldsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000020) != 0)) {
           customLeadFormSubmissionFields_ = java.util.Collections.unmodifiableList(customLeadFormSubmissionFields_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000020);
         }
         result.customLeadFormSubmissionFields_ = customLeadFormSubmissionFields_;
       } else {
         result.customLeadFormSubmissionFields_ = customLeadFormSubmissionFieldsBuilder_.build();
       }
-      result.adGroup_ = adGroup_;
-      result.adGroupAd_ = adGroupAd_;
-      result.gclid_ = gclid_;
-      result.submissionDateTime_ = submissionDateTime_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.resources.LeadFormSubmissionData result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.id_ = id_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.asset_ = asset_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.campaign_ = campaign_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.adGroup_ = adGroup_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.adGroupAd_ = adGroupAd_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.gclid_ = gclid_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.submissionDateTime_ = submissionDateTime_;
+      }
     }
 
     @java.lang.Override
@@ -971,25 +1000,29 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.resources.LeadFormSubmissionData.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getId().isEmpty()) {
         id_ = other.id_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getAsset().isEmpty()) {
         asset_ = other.asset_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getCampaign().isEmpty()) {
         campaign_ = other.campaign_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (leadFormSubmissionFieldsBuilder_ == null) {
         if (!other.leadFormSubmissionFields_.isEmpty()) {
           if (leadFormSubmissionFields_.isEmpty()) {
             leadFormSubmissionFields_ = other.leadFormSubmissionFields_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureLeadFormSubmissionFieldsIsMutable();
             leadFormSubmissionFields_.addAll(other.leadFormSubmissionFields_);
@@ -1002,7 +1035,7 @@ private static final long serialVersionUID = 0L;
             leadFormSubmissionFieldsBuilder_.dispose();
             leadFormSubmissionFieldsBuilder_ = null;
             leadFormSubmissionFields_ = other.leadFormSubmissionFields_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000010);
             leadFormSubmissionFieldsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getLeadFormSubmissionFieldsFieldBuilder() : null;
@@ -1015,7 +1048,7 @@ private static final long serialVersionUID = 0L;
         if (!other.customLeadFormSubmissionFields_.isEmpty()) {
           if (customLeadFormSubmissionFields_.isEmpty()) {
             customLeadFormSubmissionFields_ = other.customLeadFormSubmissionFields_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
             ensureCustomLeadFormSubmissionFieldsIsMutable();
             customLeadFormSubmissionFields_.addAll(other.customLeadFormSubmissionFields_);
@@ -1028,7 +1061,7 @@ private static final long serialVersionUID = 0L;
             customLeadFormSubmissionFieldsBuilder_.dispose();
             customLeadFormSubmissionFieldsBuilder_ = null;
             customLeadFormSubmissionFields_ = other.customLeadFormSubmissionFields_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000020);
             customLeadFormSubmissionFieldsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getCustomLeadFormSubmissionFieldsFieldBuilder() : null;
@@ -1039,18 +1072,22 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getAdGroup().isEmpty()) {
         adGroup_ = other.adGroup_;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (!other.getAdGroupAd().isEmpty()) {
         adGroupAd_ = other.adGroupAd_;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       if (!other.getGclid().isEmpty()) {
         gclid_ = other.gclid_;
+        bitField0_ |= 0x00000100;
         onChanged();
       }
       if (!other.getSubmissionDateTime().isEmpty()) {
         submissionDateTime_ = other.submissionDateTime_;
+        bitField0_ |= 0x00000200;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -1081,22 +1118,22 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               id_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
               asset_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 34: {
               campaign_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 34
             case 42: {
@@ -1114,22 +1151,22 @@ private static final long serialVersionUID = 0L;
             } // case 42
             case 50: {
               adGroup_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000040;
               break;
             } // case 50
             case 58: {
               adGroupAd_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000080;
               break;
             } // case 58
             case 66: {
               gclid_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000100;
               break;
             } // case 66
             case 74: {
               submissionDateTime_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000200;
               break;
             } // case 74
             case 82: {
@@ -1221,11 +1258,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1240,8 +1275,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1258,12 +1293,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1321,11 +1354,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       id_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1338,8 +1369,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearId() {
-      
       id_ = getDefaultInstance().getId();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1354,12 +1385,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       id_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1417,11 +1446,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAsset(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       asset_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1434,8 +1461,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAsset() {
-      
       asset_ = getDefaultInstance().getAsset();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1450,12 +1477,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAssetBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       asset_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1513,11 +1538,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaign(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       campaign_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1530,8 +1553,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCampaign() {
-      
       campaign_ = getDefaultInstance().getCampaign();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1546,12 +1569,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaignBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       campaign_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1559,9 +1580,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v12.resources.LeadFormSubmissionField> leadFormSubmissionFields_ =
       java.util.Collections.emptyList();
     private void ensureLeadFormSubmissionFieldsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000010) != 0)) {
         leadFormSubmissionFields_ = new java.util.ArrayList<com.google.ads.googleads.v12.resources.LeadFormSubmissionField>(leadFormSubmissionFields_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000010;
        }
     }
 
@@ -1755,7 +1776,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearLeadFormSubmissionFields() {
       if (leadFormSubmissionFieldsBuilder_ == null) {
         leadFormSubmissionFields_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
       } else {
         leadFormSubmissionFieldsBuilder_.clear();
@@ -1860,7 +1881,7 @@ private static final long serialVersionUID = 0L;
         leadFormSubmissionFieldsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v12.resources.LeadFormSubmissionField, com.google.ads.googleads.v12.resources.LeadFormSubmissionField.Builder, com.google.ads.googleads.v12.resources.LeadFormSubmissionFieldOrBuilder>(
                 leadFormSubmissionFields_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000010) != 0),
                 getParentForChildren(),
                 isClean());
         leadFormSubmissionFields_ = null;
@@ -1871,9 +1892,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v12.resources.CustomLeadFormSubmissionField> customLeadFormSubmissionFields_ =
       java.util.Collections.emptyList();
     private void ensureCustomLeadFormSubmissionFieldsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000020) != 0)) {
         customLeadFormSubmissionFields_ = new java.util.ArrayList<com.google.ads.googleads.v12.resources.CustomLeadFormSubmissionField>(customLeadFormSubmissionFields_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000020;
        }
     }
 
@@ -2067,7 +2088,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearCustomLeadFormSubmissionFields() {
       if (customLeadFormSubmissionFieldsBuilder_ == null) {
         customLeadFormSubmissionFields_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
       } else {
         customLeadFormSubmissionFieldsBuilder_.clear();
@@ -2172,7 +2193,7 @@ private static final long serialVersionUID = 0L;
         customLeadFormSubmissionFieldsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v12.resources.CustomLeadFormSubmissionField, com.google.ads.googleads.v12.resources.CustomLeadFormSubmissionField.Builder, com.google.ads.googleads.v12.resources.CustomLeadFormSubmissionFieldOrBuilder>(
                 customLeadFormSubmissionFields_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000020) != 0),
                 getParentForChildren(),
                 isClean());
         customLeadFormSubmissionFields_ = null;
@@ -2233,11 +2254,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAdGroup(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       adGroup_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2250,8 +2269,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAdGroup() {
-      
       adGroup_ = getDefaultInstance().getAdGroup();
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -2266,12 +2285,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAdGroupBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       adGroup_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2329,11 +2346,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAdGroupAd(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       adGroupAd_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2346,8 +2361,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAdGroupAd() {
-      
       adGroupAd_ = getDefaultInstance().getAdGroupAd();
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -2362,12 +2377,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAdGroupAdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       adGroupAd_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2425,11 +2438,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setGclid(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       gclid_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2442,8 +2453,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGclid() {
-      
       gclid_ = getDefaultInstance().getGclid();
+      bitField0_ = (bitField0_ & ~0x00000100);
       onChanged();
       return this;
     }
@@ -2458,12 +2469,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setGclidBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       gclid_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2471,8 +2480,9 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object submissionDateTime_ = "";
     /**
      * <pre>
-     * Output only. The date and time at which the lead form was submitted. The format is
-     * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
+     * Output only. The date and time at which the lead form was submitted. The
+     * format is "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01
+     * 12:32:45-08:00".
      * </pre>
      *
      * <code>string submission_date_time = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2492,8 +2502,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The date and time at which the lead form was submitted. The format is
-     * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
+     * Output only. The date and time at which the lead form was submitted. The
+     * format is "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01
+     * 12:32:45-08:00".
      * </pre>
      *
      * <code>string submission_date_time = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2514,8 +2525,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The date and time at which the lead form was submitted. The format is
-     * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
+     * Output only. The date and time at which the lead form was submitted. The
+     * format is "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01
+     * 12:32:45-08:00".
      * </pre>
      *
      * <code>string submission_date_time = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2524,33 +2536,33 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSubmissionDateTime(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       submissionDateTime_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The date and time at which the lead form was submitted. The format is
-     * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
+     * Output only. The date and time at which the lead form was submitted. The
+     * format is "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01
+     * 12:32:45-08:00".
      * </pre>
      *
      * <code>string submission_date_time = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearSubmissionDateTime() {
-      
       submissionDateTime_ = getDefaultInstance().getSubmissionDateTime();
+      bitField0_ = (bitField0_ & ~0x00000200);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The date and time at which the lead form was submitted. The format is
-     * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
+     * Output only. The date and time at which the lead form was submitted. The
+     * format is "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01
+     * 12:32:45-08:00".
      * </pre>
      *
      * <code>string submission_date_time = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2559,12 +2571,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSubmissionDateTimeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       submissionDateTime_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }

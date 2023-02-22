@@ -51,6 +51,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int POLICY_TOPIC_ENTRIES_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.common.PolicyTopicEntry> policyTopicEntries_;
   /**
    * <pre>
@@ -316,6 +317,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (policyTopicEntriesBuilder_ == null) {
         policyTopicEntries_ = java.util.Collections.emptyList();
       } else {
@@ -349,7 +351,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.errors.PolicyFindingDetails buildPartial() {
       com.google.ads.googleads.v11.errors.PolicyFindingDetails result = new com.google.ads.googleads.v11.errors.PolicyFindingDetails(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.errors.PolicyFindingDetails result) {
       if (policyTopicEntriesBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           policyTopicEntries_ = java.util.Collections.unmodifiableList(policyTopicEntries_);
@@ -359,8 +367,10 @@ private static final long serialVersionUID = 0L;
       } else {
         result.policyTopicEntries_ = policyTopicEntriesBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.errors.PolicyFindingDetails result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override

@@ -52,6 +52,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TARGET_RESTRICTIONS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.TargetRestriction> targetRestrictions_;
   /**
    * <pre>
@@ -117,6 +118,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TARGET_RESTRICTION_OPERATIONS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.TargetRestrictionOperation> targetRestrictionOperations_;
   /**
    * <pre>
@@ -395,6 +397,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (targetRestrictionsBuilder_ == null) {
         targetRestrictions_ = java.util.Collections.emptyList();
       } else {
@@ -435,7 +438,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.TargetingSetting buildPartial() {
       com.google.ads.googleads.v12.common.TargetingSetting result = new com.google.ads.googleads.v12.common.TargetingSetting(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.common.TargetingSetting result) {
       if (targetRestrictionsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           targetRestrictions_ = java.util.Collections.unmodifiableList(targetRestrictions_);
@@ -454,8 +463,10 @@ private static final long serialVersionUID = 0L;
       } else {
         result.targetRestrictionOperations_ = targetRestrictionOperationsBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.TargetingSetting result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override

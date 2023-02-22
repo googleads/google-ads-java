@@ -63,11 +63,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PROPERTY_ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object propertyId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object propertyId_ = "";
   /**
    * <pre>
-   * Required. Property ID which can be any sequence of letters and digits, and must be
-   * unique and match the values of remarketing tag. Required.
+   * Required. Property ID which can be any sequence of letters and digits, and
+   * must be unique and match the values of remarketing tag. Required.
    * </pre>
    *
    * <code>string property_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -88,8 +89,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. Property ID which can be any sequence of letters and digits, and must be
-   * unique and match the values of remarketing tag. Required.
+   * Required. Property ID which can be any sequence of letters and digits, and
+   * must be unique and match the values of remarketing tag. Required.
    * </pre>
    *
    * <code>string property_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -111,7 +112,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PROPERTY_NAME_FIELD_NUMBER = 2;
-  private volatile java.lang.Object propertyName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object propertyName_ = "";
   /**
    * <pre>
    * Required. Property name, for example, Mountain View Hotel. Required.
@@ -157,7 +159,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int IMAGE_URL_FIELD_NUMBER = 3;
-  private volatile java.lang.Object imageUrl_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object imageUrl_ = "";
   /**
    * <pre>
    * Image URL, for example, http://www.example.com/image.png. The image will
@@ -205,7 +208,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESTINATION_NAME_FIELD_NUMBER = 4;
-  private volatile java.lang.Object destinationName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object destinationName_ = "";
   /**
    * <pre>
    * Destination name, for example, Downtown Mountain View.
@@ -251,7 +255,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTION_FIELD_NUMBER = 5;
-  private volatile java.lang.Object description_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object description_ = "";
   /**
    * <pre>
    * Description, for example, Close to SJC Airport.
@@ -297,7 +302,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PRICE_FIELD_NUMBER = 6;
-  private volatile java.lang.Object price_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object price_ = "";
   /**
    * <pre>
    * Price which can be number followed by the alphabetic currency code,
@@ -345,7 +351,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SALE_PRICE_FIELD_NUMBER = 7;
-  private volatile java.lang.Object salePrice_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object salePrice_ = "";
   /**
    * <pre>
    * ISO 4217 standard. Use '.' as the decimal mark, for example, 80.00 USD.
@@ -393,7 +400,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STAR_RATING_FIELD_NUMBER = 8;
-  private long starRating_;
+  private long starRating_ = 0L;
   /**
    * <pre>
    * Star rating. Must be a number between 1 to 5, inclusive.
@@ -408,7 +415,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CATEGORY_FIELD_NUMBER = 9;
-  private volatile java.lang.Object category_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object category_ = "";
   /**
    * <pre>
    * Category, for example, Hotel suite.
@@ -454,6 +462,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONTEXTUAL_KEYWORDS_FIELD_NUMBER = 10;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList contextualKeywords_;
   /**
    * <pre>
@@ -505,7 +514,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ADDRESS_FIELD_NUMBER = 11;
-  private volatile java.lang.Object address_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object address_ = "";
   /**
    * <pre>
    * Address which can be specified in one of the following formats.
@@ -557,7 +567,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ANDROID_APP_LINK_FIELD_NUMBER = 12;
-  private volatile java.lang.Object androidAppLink_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object androidAppLink_ = "";
   /**
    * <pre>
    * Android deep link, for example,
@@ -605,7 +616,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int IOS_APP_LINK_FIELD_NUMBER = 13;
-  private volatile java.lang.Object iosAppLink_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object iosAppLink_ = "";
   /**
    * <pre>
    * iOS deep link, for example, exampleApp://content/page.
@@ -651,7 +663,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int IOS_APP_STORE_ID_FIELD_NUMBER = 14;
-  private long iosAppStoreId_;
+  private long iosAppStoreId_ = 0L;
   /**
    * <pre>
    * iOS app store ID. This is used to check if the user has the app installed
@@ -668,7 +680,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FORMATTED_PRICE_FIELD_NUMBER = 15;
-  private volatile java.lang.Object formattedPrice_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object formattedPrice_ = "";
   /**
    * <pre>
    * Formatted price which can be any characters. If set, this attribute will be
@@ -716,7 +729,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FORMATTED_SALE_PRICE_FIELD_NUMBER = 16;
-  private volatile java.lang.Object formattedSalePrice_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object formattedSalePrice_ = "";
   /**
    * <pre>
    * Formatted sale price which can be any characters. If set, this attribute
@@ -764,6 +778,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SIMILAR_PROPERTY_IDS_FIELD_NUMBER = 17;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList similarPropertyIds_;
   /**
    * <pre>
@@ -1183,40 +1198,26 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       propertyId_ = "";
-
       propertyName_ = "";
-
       imageUrl_ = "";
-
       destinationName_ = "";
-
       description_ = "";
-
       price_ = "";
-
       salePrice_ = "";
-
       starRating_ = 0L;
-
       category_ = "";
-
       contextualKeywords_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000200);
       address_ = "";
-
       androidAppLink_ = "";
-
       iosAppLink_ = "";
-
       iosAppStoreId_ = 0L;
-
       formattedPrice_ = "";
-
       formattedSalePrice_ = "";
-
       similarPropertyIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00010000);
       return this;
     }
 
@@ -1243,34 +1244,72 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.DynamicHotelsAndRentalsAsset buildPartial() {
       com.google.ads.googleads.v11.common.DynamicHotelsAndRentalsAsset result = new com.google.ads.googleads.v11.common.DynamicHotelsAndRentalsAsset(this);
-      int from_bitField0_ = bitField0_;
-      result.propertyId_ = propertyId_;
-      result.propertyName_ = propertyName_;
-      result.imageUrl_ = imageUrl_;
-      result.destinationName_ = destinationName_;
-      result.description_ = description_;
-      result.price_ = price_;
-      result.salePrice_ = salePrice_;
-      result.starRating_ = starRating_;
-      result.category_ = category_;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        contextualKeywords_ = contextualKeywords_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.contextualKeywords_ = contextualKeywords_;
-      result.address_ = address_;
-      result.androidAppLink_ = androidAppLink_;
-      result.iosAppLink_ = iosAppLink_;
-      result.iosAppStoreId_ = iosAppStoreId_;
-      result.formattedPrice_ = formattedPrice_;
-      result.formattedSalePrice_ = formattedSalePrice_;
-      if (((bitField0_ & 0x00000002) != 0)) {
-        similarPropertyIds_ = similarPropertyIds_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000002);
-      }
-      result.similarPropertyIds_ = similarPropertyIds_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.common.DynamicHotelsAndRentalsAsset result) {
+      if (((bitField0_ & 0x00000200) != 0)) {
+        contextualKeywords_ = contextualKeywords_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000200);
+      }
+      result.contextualKeywords_ = contextualKeywords_;
+      if (((bitField0_ & 0x00010000) != 0)) {
+        similarPropertyIds_ = similarPropertyIds_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00010000);
+      }
+      result.similarPropertyIds_ = similarPropertyIds_;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.DynamicHotelsAndRentalsAsset result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.propertyId_ = propertyId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.propertyName_ = propertyName_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.imageUrl_ = imageUrl_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.destinationName_ = destinationName_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.description_ = description_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.price_ = price_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.salePrice_ = salePrice_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.starRating_ = starRating_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.category_ = category_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.address_ = address_;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.androidAppLink_ = androidAppLink_;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.iosAppLink_ = iosAppLink_;
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.iosAppStoreId_ = iosAppStoreId_;
+      }
+      if (((from_bitField0_ & 0x00004000) != 0)) {
+        result.formattedPrice_ = formattedPrice_;
+      }
+      if (((from_bitField0_ & 0x00008000) != 0)) {
+        result.formattedSalePrice_ = formattedSalePrice_;
+      }
     }
 
     @java.lang.Override
@@ -1319,30 +1358,37 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.common.DynamicHotelsAndRentalsAsset.getDefaultInstance()) return this;
       if (!other.getPropertyId().isEmpty()) {
         propertyId_ = other.propertyId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getPropertyName().isEmpty()) {
         propertyName_ = other.propertyName_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getImageUrl().isEmpty()) {
         imageUrl_ = other.imageUrl_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getDestinationName().isEmpty()) {
         destinationName_ = other.destinationName_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.getDescription().isEmpty()) {
         description_ = other.description_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (!other.getPrice().isEmpty()) {
         price_ = other.price_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (!other.getSalePrice().isEmpty()) {
         salePrice_ = other.salePrice_;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (other.getStarRating() != 0L) {
@@ -1350,12 +1396,13 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getCategory().isEmpty()) {
         category_ = other.category_;
+        bitField0_ |= 0x00000100;
         onChanged();
       }
       if (!other.contextualKeywords_.isEmpty()) {
         if (contextualKeywords_.isEmpty()) {
           contextualKeywords_ = other.contextualKeywords_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000200);
         } else {
           ensureContextualKeywordsIsMutable();
           contextualKeywords_.addAll(other.contextualKeywords_);
@@ -1364,14 +1411,17 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getAddress().isEmpty()) {
         address_ = other.address_;
+        bitField0_ |= 0x00000400;
         onChanged();
       }
       if (!other.getAndroidAppLink().isEmpty()) {
         androidAppLink_ = other.androidAppLink_;
+        bitField0_ |= 0x00000800;
         onChanged();
       }
       if (!other.getIosAppLink().isEmpty()) {
         iosAppLink_ = other.iosAppLink_;
+        bitField0_ |= 0x00001000;
         onChanged();
       }
       if (other.getIosAppStoreId() != 0L) {
@@ -1379,16 +1429,18 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getFormattedPrice().isEmpty()) {
         formattedPrice_ = other.formattedPrice_;
+        bitField0_ |= 0x00004000;
         onChanged();
       }
       if (!other.getFormattedSalePrice().isEmpty()) {
         formattedSalePrice_ = other.formattedSalePrice_;
+        bitField0_ |= 0x00008000;
         onChanged();
       }
       if (!other.similarPropertyIds_.isEmpty()) {
         if (similarPropertyIds_.isEmpty()) {
           similarPropertyIds_ = other.similarPropertyIds_;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00010000);
         } else {
           ensureSimilarPropertyIdsIsMutable();
           similarPropertyIds_.addAll(other.similarPropertyIds_);
@@ -1423,47 +1475,47 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               propertyId_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               propertyName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
               imageUrl_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 34: {
               destinationName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 34
             case 42: {
               description_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 42
             case 50: {
               price_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000020;
               break;
             } // case 50
             case 58: {
               salePrice_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000040;
               break;
             } // case 58
             case 64: {
               starRating_ = input.readInt64();
-
+              bitField0_ |= 0x00000080;
               break;
             } // case 64
             case 74: {
               category_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000100;
               break;
             } // case 74
             case 82: {
@@ -1474,32 +1526,32 @@ private static final long serialVersionUID = 0L;
             } // case 82
             case 90: {
               address_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000400;
               break;
             } // case 90
             case 98: {
               androidAppLink_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000800;
               break;
             } // case 98
             case 106: {
               iosAppLink_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00001000;
               break;
             } // case 106
             case 112: {
               iosAppStoreId_ = input.readInt64();
-
+              bitField0_ |= 0x00002000;
               break;
             } // case 112
             case 122: {
               formattedPrice_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00004000;
               break;
             } // case 122
             case 130: {
               formattedSalePrice_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00008000;
               break;
             } // case 130
             case 138: {
@@ -1528,8 +1580,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object propertyId_ = "";
     /**
      * <pre>
-     * Required. Property ID which can be any sequence of letters and digits, and must be
-     * unique and match the values of remarketing tag. Required.
+     * Required. Property ID which can be any sequence of letters and digits, and
+     * must be unique and match the values of remarketing tag. Required.
      * </pre>
      *
      * <code>string property_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1549,8 +1601,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Property ID which can be any sequence of letters and digits, and must be
-     * unique and match the values of remarketing tag. Required.
+     * Required. Property ID which can be any sequence of letters and digits, and
+     * must be unique and match the values of remarketing tag. Required.
      * </pre>
      *
      * <code>string property_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1571,8 +1623,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Property ID which can be any sequence of letters and digits, and must be
-     * unique and match the values of remarketing tag. Required.
+     * Required. Property ID which can be any sequence of letters and digits, and
+     * must be unique and match the values of remarketing tag. Required.
      * </pre>
      *
      * <code>string property_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1581,33 +1633,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPropertyId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       propertyId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. Property ID which can be any sequence of letters and digits, and must be
-     * unique and match the values of remarketing tag. Required.
+     * Required. Property ID which can be any sequence of letters and digits, and
+     * must be unique and match the values of remarketing tag. Required.
      * </pre>
      *
      * <code>string property_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return This builder for chaining.
      */
     public Builder clearPropertyId() {
-      
       propertyId_ = getDefaultInstance().getPropertyId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. Property ID which can be any sequence of letters and digits, and must be
-     * unique and match the values of remarketing tag. Required.
+     * Required. Property ID which can be any sequence of letters and digits, and
+     * must be unique and match the values of remarketing tag. Required.
      * </pre>
      *
      * <code>string property_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1616,12 +1666,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPropertyIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       propertyId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1679,11 +1727,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPropertyName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       propertyName_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1696,8 +1742,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPropertyName() {
-      
       propertyName_ = getDefaultInstance().getPropertyName();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1712,12 +1758,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPropertyNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       propertyName_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1778,11 +1822,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setImageUrl(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       imageUrl_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1796,8 +1838,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearImageUrl() {
-      
       imageUrl_ = getDefaultInstance().getImageUrl();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1813,12 +1855,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setImageUrlBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       imageUrl_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1876,11 +1916,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDestinationName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       destinationName_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1893,8 +1931,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDestinationName() {
-      
       destinationName_ = getDefaultInstance().getDestinationName();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1909,12 +1947,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDestinationNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       destinationName_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1972,11 +2008,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       description_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1989,8 +2023,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
-      
       description_ = getDefaultInstance().getDescription();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -2005,12 +2039,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescriptionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       description_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -2071,11 +2103,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPrice(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       price_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -2089,8 +2119,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPrice() {
-      
       price_ = getDefaultInstance().getPrice();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -2106,12 +2136,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPriceBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       price_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -2172,11 +2200,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSalePrice(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       salePrice_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2190,8 +2216,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSalePrice() {
-      
       salePrice_ = getDefaultInstance().getSalePrice();
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -2207,12 +2233,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSalePriceBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       salePrice_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2242,6 +2266,7 @@ private static final long serialVersionUID = 0L;
     public Builder setStarRating(long value) {
       
       starRating_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2254,7 +2279,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStarRating() {
-      
+      bitField0_ = (bitField0_ & ~0x00000080);
       starRating_ = 0L;
       onChanged();
       return this;
@@ -2313,11 +2338,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCategory(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       category_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2330,8 +2353,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCategory() {
-      
       category_ = getDefaultInstance().getCategory();
+      bitField0_ = (bitField0_ & ~0x00000100);
       onChanged();
       return this;
     }
@@ -2346,21 +2369,19 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCategoryBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       category_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
 
     private com.google.protobuf.LazyStringList contextualKeywords_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureContextualKeywordsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000200) != 0)) {
         contextualKeywords_ = new com.google.protobuf.LazyStringArrayList(contextualKeywords_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000200;
        }
     }
     /**
@@ -2423,10 +2444,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setContextualKeywords(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureContextualKeywordsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureContextualKeywordsIsMutable();
       contextualKeywords_.set(index, value);
       onChanged();
       return this;
@@ -2442,10 +2461,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addContextualKeywords(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureContextualKeywordsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureContextualKeywordsIsMutable();
       contextualKeywords_.add(value);
       onChanged();
       return this;
@@ -2477,7 +2494,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearContextualKeywords() {
       contextualKeywords_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000200);
       onChanged();
       return this;
     }
@@ -2492,10 +2509,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addContextualKeywordsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureContextualKeywordsIsMutable();
       contextualKeywords_.add(value);
       onChanged();
@@ -2564,11 +2579,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAddress(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       address_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2584,8 +2597,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAddress() {
-      
       address_ = getDefaultInstance().getAddress();
+      bitField0_ = (bitField0_ & ~0x00000400);
       onChanged();
       return this;
     }
@@ -2603,12 +2616,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAddressBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       address_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2669,11 +2680,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAndroidAppLink(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       androidAppLink_ = value;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -2687,8 +2696,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAndroidAppLink() {
-      
       androidAppLink_ = getDefaultInstance().getAndroidAppLink();
+      bitField0_ = (bitField0_ & ~0x00000800);
       onChanged();
       return this;
     }
@@ -2704,12 +2713,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAndroidAppLinkBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       androidAppLink_ = value;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -2767,11 +2774,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setIosAppLink(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       iosAppLink_ = value;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -2784,8 +2789,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIosAppLink() {
-      
       iosAppLink_ = getDefaultInstance().getIosAppLink();
+      bitField0_ = (bitField0_ & ~0x00001000);
       onChanged();
       return this;
     }
@@ -2800,12 +2805,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setIosAppLinkBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       iosAppLink_ = value;
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -2839,6 +2842,7 @@ private static final long serialVersionUID = 0L;
     public Builder setIosAppStoreId(long value) {
       
       iosAppStoreId_ = value;
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -2853,7 +2857,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIosAppStoreId() {
-      
+      bitField0_ = (bitField0_ & ~0x00002000);
       iosAppStoreId_ = 0L;
       onChanged();
       return this;
@@ -2915,11 +2919,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFormattedPrice(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       formattedPrice_ = value;
+      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -2933,8 +2935,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFormattedPrice() {
-      
       formattedPrice_ = getDefaultInstance().getFormattedPrice();
+      bitField0_ = (bitField0_ & ~0x00004000);
       onChanged();
       return this;
     }
@@ -2950,12 +2952,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFormattedPriceBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       formattedPrice_ = value;
+      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -3016,11 +3016,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFormattedSalePrice(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       formattedSalePrice_ = value;
+      bitField0_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -3034,8 +3032,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFormattedSalePrice() {
-      
       formattedSalePrice_ = getDefaultInstance().getFormattedSalePrice();
+      bitField0_ = (bitField0_ & ~0x00008000);
       onChanged();
       return this;
     }
@@ -3051,21 +3049,19 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFormattedSalePriceBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       formattedSalePrice_ = value;
+      bitField0_ |= 0x00008000;
       onChanged();
       return this;
     }
 
     private com.google.protobuf.LazyStringList similarPropertyIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureSimilarPropertyIdsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00010000) != 0)) {
         similarPropertyIds_ = new com.google.protobuf.LazyStringArrayList(similarPropertyIds_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00010000;
        }
     }
     /**
@@ -3128,10 +3124,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSimilarPropertyIds(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSimilarPropertyIdsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureSimilarPropertyIdsIsMutable();
       similarPropertyIds_.set(index, value);
       onChanged();
       return this;
@@ -3147,10 +3141,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addSimilarPropertyIds(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSimilarPropertyIdsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureSimilarPropertyIdsIsMutable();
       similarPropertyIds_.add(value);
       onChanged();
       return this;
@@ -3182,7 +3174,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearSimilarPropertyIds() {
       similarPropertyIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00010000);
       onChanged();
       return this;
     }
@@ -3197,10 +3189,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addSimilarPropertyIdsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureSimilarPropertyIdsIsMutable();
       similarPropertyIds_.add(value);
       onChanged();

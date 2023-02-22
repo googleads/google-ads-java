@@ -515,8 +515,8 @@ public interface ExtensionFeedItemOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Location extension. Locations are synced from a Business Profile into a
-   * feed. This field is read-only.
+   * Output only. Location extension. Locations are synced from a Business
+   * Profile into a feed. This field is read-only.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -525,8 +525,8 @@ public interface ExtensionFeedItemOrBuilder extends
   boolean hasLocationFeedItem();
   /**
    * <pre>
-   * Output only. Location extension. Locations are synced from a Business Profile into a
-   * feed. This field is read-only.
+   * Output only. Location extension. Locations are synced from a Business
+   * Profile into a feed. This field is read-only.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -535,8 +535,8 @@ public interface ExtensionFeedItemOrBuilder extends
   com.google.ads.googleads.v12.common.LocationFeedItem getLocationFeedItem();
   /**
    * <pre>
-   * Output only. Location extension. Locations are synced from a Business Profile into a
-   * feed. This field is read-only.
+   * Output only. Location extension. Locations are synced from a Business
+   * Profile into a feed. This field is read-only.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -545,9 +545,8 @@ public interface ExtensionFeedItemOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Affiliate location extension. Feed locations are populated by Google Ads
-   * based on a chain ID.
-   * This field is read-only.
+   * Output only. Affiliate location extension. Feed locations are populated
+   * by Google Ads based on a chain ID. This field is read-only.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -556,9 +555,8 @@ public interface ExtensionFeedItemOrBuilder extends
   boolean hasAffiliateLocationFeedItem();
   /**
    * <pre>
-   * Output only. Affiliate location extension. Feed locations are populated by Google Ads
-   * based on a chain ID.
-   * This field is read-only.
+   * Output only. Affiliate location extension. Feed locations are populated
+   * by Google Ads based on a chain ID. This field is read-only.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -567,9 +565,8 @@ public interface ExtensionFeedItemOrBuilder extends
   com.google.ads.googleads.v12.common.AffiliateLocationFeedItem getAffiliateLocationFeedItem();
   /**
    * <pre>
-   * Output only. Affiliate location extension. Feed locations are populated by Google Ads
-   * based on a chain ID.
-   * This field is read-only.
+   * Output only. Affiliate location extension. Feed locations are populated
+   * by Google Ads based on a chain ID. This field is read-only.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

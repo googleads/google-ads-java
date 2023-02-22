@@ -9,10 +9,10 @@ public interface OfflineUserDataJobMetadataOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Match rate of the Customer Match user list upload. Describes the estimated
-   * match rate when the status of the job is "RUNNING" and final match rate
-   * when the final match rate is available after the status of the job is
-   * "SUCCESS/FAILED".
+   * Output only. Match rate of the Customer Match user list upload. Describes
+   * the estimated match rate when the status of the job is "RUNNING" and final
+   * match rate when the final match rate is available after the status of the
+   * job is "SUCCESS/FAILED".
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.OfflineUserDataJobMatchRateRangeEnum.OfflineUserDataJobMatchRateRange match_rate_range = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -21,10 +21,10 @@ public interface OfflineUserDataJobMetadataOrBuilder extends
   int getMatchRateRangeValue();
   /**
    * <pre>
-   * Output only. Match rate of the Customer Match user list upload. Describes the estimated
-   * match rate when the status of the job is "RUNNING" and final match rate
-   * when the final match rate is available after the status of the job is
-   * "SUCCESS/FAILED".
+   * Output only. Match rate of the Customer Match user list upload. Describes
+   * the estimated match rate when the status of the job is "RUNNING" and final
+   * match rate when the final match rate is available after the status of the
+   * job is "SUCCESS/FAILED".
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.OfflineUserDataJobMatchRateRangeEnum.OfflineUserDataJobMatchRateRange match_rate_range = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

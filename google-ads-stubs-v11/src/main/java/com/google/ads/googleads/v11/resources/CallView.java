@@ -57,7 +57,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Output only. The resource name of the call view.
@@ -107,7 +108,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALLER_COUNTRY_CODE_FIELD_NUMBER = 2;
-  private volatile java.lang.Object callerCountryCode_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object callerCountryCode_ = "";
   /**
    * <pre>
    * Output only. Country code of the caller.
@@ -153,11 +155,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALLER_AREA_CODE_FIELD_NUMBER = 3;
-  private volatile java.lang.Object callerAreaCode_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object callerAreaCode_ = "";
   /**
    * <pre>
-   * Output only. Area code of the caller. Null if the call duration is shorter than 15
-   * seconds.
+   * Output only. Area code of the caller. Null if the call duration is shorter
+   * than 15 seconds.
    * </pre>
    *
    * <code>string caller_area_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -178,8 +181,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Area code of the caller. Null if the call duration is shorter than 15
-   * seconds.
+   * Output only. Area code of the caller. Null if the call duration is shorter
+   * than 15 seconds.
    * </pre>
    *
    * <code>string caller_area_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -201,7 +204,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALL_DURATION_SECONDS_FIELD_NUMBER = 4;
-  private long callDurationSeconds_;
+  private long callDurationSeconds_ = 0L;
   /**
    * <pre>
    * Output only. The advertiser-provided call duration in seconds.
@@ -216,7 +219,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int START_CALL_DATE_TIME_FIELD_NUMBER = 5;
-  private volatile java.lang.Object startCallDateTime_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object startCallDateTime_ = "";
   /**
    * <pre>
    * Output only. The advertiser-provided call start date time.
@@ -262,7 +266,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int END_CALL_DATE_TIME_FIELD_NUMBER = 6;
-  private volatile java.lang.Object endCallDateTime_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object endCallDateTime_ = "";
   /**
    * <pre>
    * Output only. The advertiser-provided call end date time.
@@ -308,7 +313,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALL_TRACKING_DISPLAY_LOCATION_FIELD_NUMBER = 7;
-  private int callTrackingDisplayLocation_;
+  private int callTrackingDisplayLocation_ = 0;
   /**
    * <pre>
    * Output only. The call tracking display location.
@@ -329,13 +334,12 @@ private static final long serialVersionUID = 0L;
    * @return The callTrackingDisplayLocation.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.CallTrackingDisplayLocationEnum.CallTrackingDisplayLocation getCallTrackingDisplayLocation() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.CallTrackingDisplayLocationEnum.CallTrackingDisplayLocation result = com.google.ads.googleads.v11.enums.CallTrackingDisplayLocationEnum.CallTrackingDisplayLocation.valueOf(callTrackingDisplayLocation_);
+    com.google.ads.googleads.v11.enums.CallTrackingDisplayLocationEnum.CallTrackingDisplayLocation result = com.google.ads.googleads.v11.enums.CallTrackingDisplayLocationEnum.CallTrackingDisplayLocation.forNumber(callTrackingDisplayLocation_);
     return result == null ? com.google.ads.googleads.v11.enums.CallTrackingDisplayLocationEnum.CallTrackingDisplayLocation.UNRECOGNIZED : result;
   }
 
   public static final int TYPE_FIELD_NUMBER = 8;
-  private int type_;
+  private int type_ = 0;
   /**
    * <pre>
    * Output only. The type of the call.
@@ -356,13 +360,12 @@ private static final long serialVersionUID = 0L;
    * @return The type.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.CallTypeEnum.CallType getType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.CallTypeEnum.CallType result = com.google.ads.googleads.v11.enums.CallTypeEnum.CallType.valueOf(type_);
+    com.google.ads.googleads.v11.enums.CallTypeEnum.CallType result = com.google.ads.googleads.v11.enums.CallTypeEnum.CallType.forNumber(type_);
     return result == null ? com.google.ads.googleads.v11.enums.CallTypeEnum.CallType.UNRECOGNIZED : result;
   }
 
   public static final int CALL_STATUS_FIELD_NUMBER = 9;
-  private int callStatus_;
+  private int callStatus_ = 0;
   /**
    * <pre>
    * Output only. The status of the call.
@@ -383,8 +386,7 @@ private static final long serialVersionUID = 0L;
    * @return The callStatus.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.GoogleVoiceCallStatusEnum.GoogleVoiceCallStatus getCallStatus() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.GoogleVoiceCallStatusEnum.GoogleVoiceCallStatus result = com.google.ads.googleads.v11.enums.GoogleVoiceCallStatusEnum.GoogleVoiceCallStatus.valueOf(callStatus_);
+    com.google.ads.googleads.v11.enums.GoogleVoiceCallStatusEnum.GoogleVoiceCallStatus result = com.google.ads.googleads.v11.enums.GoogleVoiceCallStatusEnum.GoogleVoiceCallStatus.forNumber(callStatus_);
     return result == null ? com.google.ads.googleads.v11.enums.GoogleVoiceCallStatusEnum.GoogleVoiceCallStatus.UNRECOGNIZED : result;
   }
 
@@ -662,24 +664,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       callerCountryCode_ = "";
-
       callerAreaCode_ = "";
-
       callDurationSeconds_ = 0L;
-
       startCallDateTime_ = "";
-
       endCallDateTime_ = "";
-
       callTrackingDisplayLocation_ = 0;
-
       type_ = 0;
-
       callStatus_ = 0;
-
       return this;
     }
 
@@ -706,17 +700,40 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.CallView buildPartial() {
       com.google.ads.googleads.v11.resources.CallView result = new com.google.ads.googleads.v11.resources.CallView(this);
-      result.resourceName_ = resourceName_;
-      result.callerCountryCode_ = callerCountryCode_;
-      result.callerAreaCode_ = callerAreaCode_;
-      result.callDurationSeconds_ = callDurationSeconds_;
-      result.startCallDateTime_ = startCallDateTime_;
-      result.endCallDateTime_ = endCallDateTime_;
-      result.callTrackingDisplayLocation_ = callTrackingDisplayLocation_;
-      result.type_ = type_;
-      result.callStatus_ = callStatus_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.CallView result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.callerCountryCode_ = callerCountryCode_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.callerAreaCode_ = callerAreaCode_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.callDurationSeconds_ = callDurationSeconds_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.startCallDateTime_ = startCallDateTime_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.endCallDateTime_ = endCallDateTime_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.callTrackingDisplayLocation_ = callTrackingDisplayLocation_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.type_ = type_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.callStatus_ = callStatus_;
+      }
     }
 
     @java.lang.Override
@@ -765,14 +782,17 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.resources.CallView.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getCallerCountryCode().isEmpty()) {
         callerCountryCode_ = other.callerCountryCode_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getCallerAreaCode().isEmpty()) {
         callerAreaCode_ = other.callerAreaCode_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.getCallDurationSeconds() != 0L) {
@@ -780,10 +800,12 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getStartCallDateTime().isEmpty()) {
         startCallDateTime_ = other.startCallDateTime_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (!other.getEndCallDateTime().isEmpty()) {
         endCallDateTime_ = other.endCallDateTime_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (other.callTrackingDisplayLocation_ != 0) {
@@ -823,47 +845,47 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               callerCountryCode_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
               callerAreaCode_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 32: {
               callDurationSeconds_ = input.readInt64();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 32
             case 42: {
               startCallDateTime_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 42
             case 50: {
               endCallDateTime_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000020;
               break;
             } // case 50
             case 56: {
               callTrackingDisplayLocation_ = input.readEnum();
-
+              bitField0_ |= 0x00000040;
               break;
             } // case 56
             case 64: {
               type_ = input.readEnum();
-
+              bitField0_ |= 0x00000080;
               break;
             } // case 64
             case 72: {
               callStatus_ = input.readEnum();
-
+              bitField0_ |= 0x00000100;
               break;
             } // case 72
             default: {
@@ -881,6 +903,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object resourceName_ = "";
     /**
@@ -941,11 +964,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -960,8 +981,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -978,12 +999,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1041,11 +1060,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallerCountryCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       callerCountryCode_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1058,8 +1075,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallerCountryCode() {
-      
       callerCountryCode_ = getDefaultInstance().getCallerCountryCode();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1074,12 +1091,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallerCountryCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       callerCountryCode_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1087,8 +1102,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object callerAreaCode_ = "";
     /**
      * <pre>
-     * Output only. Area code of the caller. Null if the call duration is shorter than 15
-     * seconds.
+     * Output only. Area code of the caller. Null if the call duration is shorter
+     * than 15 seconds.
      * </pre>
      *
      * <code>string caller_area_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1108,8 +1123,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Area code of the caller. Null if the call duration is shorter than 15
-     * seconds.
+     * Output only. Area code of the caller. Null if the call duration is shorter
+     * than 15 seconds.
      * </pre>
      *
      * <code>string caller_area_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1130,8 +1145,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Area code of the caller. Null if the call duration is shorter than 15
-     * seconds.
+     * Output only. Area code of the caller. Null if the call duration is shorter
+     * than 15 seconds.
      * </pre>
      *
      * <code>string caller_area_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1140,33 +1155,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallerAreaCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       callerAreaCode_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Area code of the caller. Null if the call duration is shorter than 15
-     * seconds.
+     * Output only. Area code of the caller. Null if the call duration is shorter
+     * than 15 seconds.
      * </pre>
      *
      * <code>string caller_area_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearCallerAreaCode() {
-      
       callerAreaCode_ = getDefaultInstance().getCallerAreaCode();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Area code of the caller. Null if the call duration is shorter than 15
-     * seconds.
+     * Output only. Area code of the caller. Null if the call duration is shorter
+     * than 15 seconds.
      * </pre>
      *
      * <code>string caller_area_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1175,12 +1188,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCallerAreaCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       callerAreaCode_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1210,6 +1221,7 @@ private static final long serialVersionUID = 0L;
     public Builder setCallDurationSeconds(long value) {
       
       callDurationSeconds_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1222,7 +1234,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallDurationSeconds() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       callDurationSeconds_ = 0L;
       onChanged();
       return this;
@@ -1281,11 +1293,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStartCallDateTime(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       startCallDateTime_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1298,8 +1308,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStartCallDateTime() {
-      
       startCallDateTime_ = getDefaultInstance().getStartCallDateTime();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1314,12 +1324,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStartCallDateTimeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       startCallDateTime_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1377,11 +1385,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEndCallDateTime(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       endCallDateTime_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1394,8 +1400,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEndCallDateTime() {
-      
       endCallDateTime_ = getDefaultInstance().getEndCallDateTime();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1410,12 +1416,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEndCallDateTimeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       endCallDateTime_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1442,8 +1446,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCallTrackingDisplayLocationValue(int value) {
-      
       callTrackingDisplayLocation_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1457,8 +1461,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.CallTrackingDisplayLocationEnum.CallTrackingDisplayLocation getCallTrackingDisplayLocation() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.CallTrackingDisplayLocationEnum.CallTrackingDisplayLocation result = com.google.ads.googleads.v11.enums.CallTrackingDisplayLocationEnum.CallTrackingDisplayLocation.valueOf(callTrackingDisplayLocation_);
+      com.google.ads.googleads.v11.enums.CallTrackingDisplayLocationEnum.CallTrackingDisplayLocation result = com.google.ads.googleads.v11.enums.CallTrackingDisplayLocationEnum.CallTrackingDisplayLocation.forNumber(callTrackingDisplayLocation_);
       return result == null ? com.google.ads.googleads.v11.enums.CallTrackingDisplayLocationEnum.CallTrackingDisplayLocation.UNRECOGNIZED : result;
     }
     /**
@@ -1474,7 +1477,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000040;
       callTrackingDisplayLocation_ = value.getNumber();
       onChanged();
       return this;
@@ -1488,7 +1491,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallTrackingDisplayLocation() {
-      
+      bitField0_ = (bitField0_ & ~0x00000040);
       callTrackingDisplayLocation_ = 0;
       onChanged();
       return this;
@@ -1516,8 +1519,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
-      
       type_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1531,8 +1534,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.CallTypeEnum.CallType getType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.CallTypeEnum.CallType result = com.google.ads.googleads.v11.enums.CallTypeEnum.CallType.valueOf(type_);
+      com.google.ads.googleads.v11.enums.CallTypeEnum.CallType result = com.google.ads.googleads.v11.enums.CallTypeEnum.CallType.forNumber(type_);
       return result == null ? com.google.ads.googleads.v11.enums.CallTypeEnum.CallType.UNRECOGNIZED : result;
     }
     /**
@@ -1548,7 +1550,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000080;
       type_ = value.getNumber();
       onChanged();
       return this;
@@ -1562,7 +1564,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000080);
       type_ = 0;
       onChanged();
       return this;
@@ -1590,8 +1592,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCallStatusValue(int value) {
-      
       callStatus_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1605,8 +1607,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.GoogleVoiceCallStatusEnum.GoogleVoiceCallStatus getCallStatus() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.GoogleVoiceCallStatusEnum.GoogleVoiceCallStatus result = com.google.ads.googleads.v11.enums.GoogleVoiceCallStatusEnum.GoogleVoiceCallStatus.valueOf(callStatus_);
+      com.google.ads.googleads.v11.enums.GoogleVoiceCallStatusEnum.GoogleVoiceCallStatus result = com.google.ads.googleads.v11.enums.GoogleVoiceCallStatusEnum.GoogleVoiceCallStatus.forNumber(callStatus_);
       return result == null ? com.google.ads.googleads.v11.enums.GoogleVoiceCallStatusEnum.GoogleVoiceCallStatus.UNRECOGNIZED : result;
     }
     /**
@@ -1622,7 +1623,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000100;
       callStatus_ = value.getNumber();
       onChanged();
       return this;
@@ -1636,7 +1637,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCallStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000100);
       callStatus_ = 0;
       onChanged();
       return this;

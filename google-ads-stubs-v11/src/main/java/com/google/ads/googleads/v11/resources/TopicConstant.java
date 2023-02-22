@@ -54,7 +54,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Output only. The resource name of the topic constant.
@@ -104,7 +105,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ID_FIELD_NUMBER = 5;
-  private long id_;
+  private long id_ = 0L;
   /**
    * <pre>
    * Output only. The ID of the topic.
@@ -131,7 +132,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOPIC_CONSTANT_PARENT_FIELD_NUMBER = 6;
-  private volatile java.lang.Object topicConstantParent_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object topicConstantParent_ = "";
   /**
    * <pre>
    * Output only. Resource name of parent of the topic constant.
@@ -189,14 +191,15 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PATH_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList path_;
   /**
    * <pre>
-   * Output only. The category to target or exclude. Each subsequent element in the array
-   * describes a more specific sub-category. For example,
+   * Output only. The category to target or exclude. Each subsequent element in
+   * the array describes a more specific sub-category. For example,
    * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
    * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
-   * https://developers.google.com/adwords/api/docs/appendix/verticals
+   * https://developers.google.com/google-ads/api/reference/data/verticals
    * </pre>
    *
    * <code>repeated string path = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -208,11 +211,11 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The category to target or exclude. Each subsequent element in the array
-   * describes a more specific sub-category. For example,
+   * Output only. The category to target or exclude. Each subsequent element in
+   * the array describes a more specific sub-category. For example,
    * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
    * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
-   * https://developers.google.com/adwords/api/docs/appendix/verticals
+   * https://developers.google.com/google-ads/api/reference/data/verticals
    * </pre>
    *
    * <code>repeated string path = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -223,11 +226,11 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The category to target or exclude. Each subsequent element in the array
-   * describes a more specific sub-category. For example,
+   * Output only. The category to target or exclude. Each subsequent element in
+   * the array describes a more specific sub-category. For example,
    * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
    * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
-   * https://developers.google.com/adwords/api/docs/appendix/verticals
+   * https://developers.google.com/google-ads/api/reference/data/verticals
    * </pre>
    *
    * <code>repeated string path = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -239,11 +242,11 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The category to target or exclude. Each subsequent element in the array
-   * describes a more specific sub-category. For example,
+   * Output only. The category to target or exclude. Each subsequent element in
+   * the array describes a more specific sub-category. For example,
    * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
    * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
-   * https://developers.google.com/adwords/api/docs/appendix/verticals
+   * https://developers.google.com/google-ads/api/reference/data/verticals
    * </pre>
    *
    * <code>repeated string path = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -497,14 +500,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       id_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       topicConstantParent_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       path_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000008);
       return this;
     }
 
@@ -531,25 +532,35 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.TopicConstant buildPartial() {
       com.google.ads.googleads.v11.resources.TopicConstant result = new com.google.ads.googleads.v11.resources.TopicConstant(this);
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.resources.TopicConstant result) {
+      if (((bitField0_ & 0x00000008) != 0)) {
+        path_ = path_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000008);
+      }
+      result.path_ = path_;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.TopicConstant result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.id_ = id_;
         to_bitField0_ |= 0x00000001;
       }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.topicConstantParent_ = topicConstantParent_;
         to_bitField0_ |= 0x00000002;
       }
-      result.topicConstantParent_ = topicConstantParent_;
-      if (((bitField0_ & 0x00000004) != 0)) {
-        path_ = path_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000004);
-      }
-      result.path_ = path_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -598,20 +609,21 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.resources.TopicConstant.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasId()) {
         setId(other.getId());
       }
       if (other.hasTopicConstantParent()) {
-        bitField0_ |= 0x00000002;
         topicConstantParent_ = other.topicConstantParent_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.path_.isEmpty()) {
         if (path_.isEmpty()) {
           path_ = other.path_;
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
           ensurePathIsMutable();
           path_.addAll(other.path_);
@@ -646,17 +658,17 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 40: {
               id_ = input.readInt64();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 40
             case 50: {
               topicConstantParent_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 50
             case 58: {
@@ -741,11 +753,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -760,8 +770,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -778,12 +788,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -799,7 +807,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -823,8 +831,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      bitField0_ |= 0x00000001;
+      
       id_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -837,7 +846,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       id_ = 0L;
       onChanged();
       return this;
@@ -853,7 +862,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the topicConstantParent field is set.
      */
     public boolean hasTopicConstantParent() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -907,11 +916,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTopicConstantParent(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       topicConstantParent_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -924,8 +931,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTopicConstantParent() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       topicConstantParent_ = getDefaultInstance().getTopicConstantParent();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -940,30 +947,28 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTopicConstantParentBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       topicConstantParent_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
 
     private com.google.protobuf.LazyStringList path_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensurePathIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         path_ = new com.google.protobuf.LazyStringArrayList(path_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
        }
     }
     /**
      * <pre>
-     * Output only. The category to target or exclude. Each subsequent element in the array
-     * describes a more specific sub-category. For example,
+     * Output only. The category to target or exclude. Each subsequent element in
+     * the array describes a more specific sub-category. For example,
      * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
      * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
-     * https://developers.google.com/adwords/api/docs/appendix/verticals
+     * https://developers.google.com/google-ads/api/reference/data/verticals
      * </pre>
      *
      * <code>repeated string path = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -975,11 +980,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The category to target or exclude. Each subsequent element in the array
-     * describes a more specific sub-category. For example,
+     * Output only. The category to target or exclude. Each subsequent element in
+     * the array describes a more specific sub-category. For example,
      * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
      * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
-     * https://developers.google.com/adwords/api/docs/appendix/verticals
+     * https://developers.google.com/google-ads/api/reference/data/verticals
      * </pre>
      *
      * <code>repeated string path = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -990,11 +995,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The category to target or exclude. Each subsequent element in the array
-     * describes a more specific sub-category. For example,
+     * Output only. The category to target or exclude. Each subsequent element in
+     * the array describes a more specific sub-category. For example,
      * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
      * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
-     * https://developers.google.com/adwords/api/docs/appendix/verticals
+     * https://developers.google.com/google-ads/api/reference/data/verticals
      * </pre>
      *
      * <code>repeated string path = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1006,11 +1011,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The category to target or exclude. Each subsequent element in the array
-     * describes a more specific sub-category. For example,
+     * Output only. The category to target or exclude. Each subsequent element in
+     * the array describes a more specific sub-category. For example,
      * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
      * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
-     * https://developers.google.com/adwords/api/docs/appendix/verticals
+     * https://developers.google.com/google-ads/api/reference/data/verticals
      * </pre>
      *
      * <code>repeated string path = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1023,11 +1028,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The category to target or exclude. Each subsequent element in the array
-     * describes a more specific sub-category. For example,
+     * Output only. The category to target or exclude. Each subsequent element in
+     * the array describes a more specific sub-category. For example,
      * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
      * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
-     * https://developers.google.com/adwords/api/docs/appendix/verticals
+     * https://developers.google.com/google-ads/api/reference/data/verticals
      * </pre>
      *
      * <code>repeated string path = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1037,21 +1042,19 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPath(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensurePathIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensurePathIsMutable();
       path_.set(index, value);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The category to target or exclude. Each subsequent element in the array
-     * describes a more specific sub-category. For example,
+     * Output only. The category to target or exclude. Each subsequent element in
+     * the array describes a more specific sub-category. For example,
      * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
      * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
-     * https://developers.google.com/adwords/api/docs/appendix/verticals
+     * https://developers.google.com/google-ads/api/reference/data/verticals
      * </pre>
      *
      * <code>repeated string path = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1060,21 +1063,19 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addPath(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensurePathIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensurePathIsMutable();
       path_.add(value);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The category to target or exclude. Each subsequent element in the array
-     * describes a more specific sub-category. For example,
+     * Output only. The category to target or exclude. Each subsequent element in
+     * the array describes a more specific sub-category. For example,
      * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
      * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
-     * https://developers.google.com/adwords/api/docs/appendix/verticals
+     * https://developers.google.com/google-ads/api/reference/data/verticals
      * </pre>
      *
      * <code>repeated string path = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1091,11 +1092,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The category to target or exclude. Each subsequent element in the array
-     * describes a more specific sub-category. For example,
+     * Output only. The category to target or exclude. Each subsequent element in
+     * the array describes a more specific sub-category. For example,
      * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
      * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
-     * https://developers.google.com/adwords/api/docs/appendix/verticals
+     * https://developers.google.com/google-ads/api/reference/data/verticals
      * </pre>
      *
      * <code>repeated string path = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1103,17 +1104,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearPath() {
       path_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The category to target or exclude. Each subsequent element in the array
-     * describes a more specific sub-category. For example,
+     * Output only. The category to target or exclude. Each subsequent element in
+     * the array describes a more specific sub-category. For example,
      * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
      * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
-     * https://developers.google.com/adwords/api/docs/appendix/verticals
+     * https://developers.google.com/google-ads/api/reference/data/verticals
      * </pre>
      *
      * <code>repeated string path = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1122,10 +1123,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addPathBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensurePathIsMutable();
       path_.add(value);
       onChanged();

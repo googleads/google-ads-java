@@ -51,12 +51,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TYPE_FIELD_NUMBER = 1;
-  private int type_;
+  private int type_ = 0;
   /**
    * <pre>
-   * Required. The data type for the customizer value. It must match the attribute type.
-   * The string_value content must match the constraints associated with the
-   * type.
+   * Required. The data type for the customizer value. It must match the
+   * attribute type. The string_value content must match the constraints
+   * associated with the type.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.CustomizerAttributeTypeEnum.CustomizerAttributeType type = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -67,26 +67,26 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. The data type for the customizer value. It must match the attribute type.
-   * The string_value content must match the constraints associated with the
-   * type.
+   * Required. The data type for the customizer value. It must match the
+   * attribute type. The string_value content must match the constraints
+   * associated with the type.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.CustomizerAttributeTypeEnum.CustomizerAttributeType type = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The type.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.CustomizerAttributeTypeEnum.CustomizerAttributeType getType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.CustomizerAttributeTypeEnum.CustomizerAttributeType result = com.google.ads.googleads.v12.enums.CustomizerAttributeTypeEnum.CustomizerAttributeType.valueOf(type_);
+    com.google.ads.googleads.v12.enums.CustomizerAttributeTypeEnum.CustomizerAttributeType result = com.google.ads.googleads.v12.enums.CustomizerAttributeTypeEnum.CustomizerAttributeType.forNumber(type_);
     return result == null ? com.google.ads.googleads.v12.enums.CustomizerAttributeTypeEnum.CustomizerAttributeType.UNRECOGNIZED : result;
   }
 
   public static final int STRING_VALUE_FIELD_NUMBER = 2;
-  private volatile java.lang.Object stringValue_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object stringValue_ = "";
   /**
    * <pre>
-   * Required. Value to insert in creative text. Customizer values of all types are stored
-   * as string to make formatting unambiguous.
+   * Required. Value to insert in creative text. Customizer values of all types
+   * are stored as string to make formatting unambiguous.
    * </pre>
    *
    * <code>string string_value = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -107,8 +107,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. Value to insert in creative text. Customizer values of all types are stored
-   * as string to make formatting unambiguous.
+   * Required. Value to insert in creative text. Customizer values of all types
+   * are stored as string to make formatting unambiguous.
    * </pre>
    *
    * <code>string string_value = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -331,10 +331,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       type_ = 0;
-
       stringValue_ = "";
-
       return this;
     }
 
@@ -361,10 +360,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.CustomizerValue buildPartial() {
       com.google.ads.googleads.v12.common.CustomizerValue result = new com.google.ads.googleads.v12.common.CustomizerValue(this);
-      result.type_ = type_;
-      result.stringValue_ = stringValue_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.CustomizerValue result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.type_ = type_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.stringValue_ = stringValue_;
+      }
     }
 
     @java.lang.Override
@@ -416,6 +424,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getStringValue().isEmpty()) {
         stringValue_ = other.stringValue_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -446,12 +455,12 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               type_ = input.readEnum();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             case 18: {
               stringValue_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             default: {
@@ -469,13 +478,14 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private int type_ = 0;
     /**
      * <pre>
-     * Required. The data type for the customizer value. It must match the attribute type.
-     * The string_value content must match the constraints associated with the
-     * type.
+     * Required. The data type for the customizer value. It must match the
+     * attribute type. The string_value content must match the constraints
+     * associated with the type.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.CustomizerAttributeTypeEnum.CustomizerAttributeType type = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -486,9 +496,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The data type for the customizer value. It must match the attribute type.
-     * The string_value content must match the constraints associated with the
-     * type.
+     * Required. The data type for the customizer value. It must match the
+     * attribute type. The string_value content must match the constraints
+     * associated with the type.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.CustomizerAttributeTypeEnum.CustomizerAttributeType type = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -496,16 +506,16 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
-      
       type_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. The data type for the customizer value. It must match the attribute type.
-     * The string_value content must match the constraints associated with the
-     * type.
+     * Required. The data type for the customizer value. It must match the
+     * attribute type. The string_value content must match the constraints
+     * associated with the type.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.CustomizerAttributeTypeEnum.CustomizerAttributeType type = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -513,15 +523,14 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.CustomizerAttributeTypeEnum.CustomizerAttributeType getType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.CustomizerAttributeTypeEnum.CustomizerAttributeType result = com.google.ads.googleads.v12.enums.CustomizerAttributeTypeEnum.CustomizerAttributeType.valueOf(type_);
+      com.google.ads.googleads.v12.enums.CustomizerAttributeTypeEnum.CustomizerAttributeType result = com.google.ads.googleads.v12.enums.CustomizerAttributeTypeEnum.CustomizerAttributeType.forNumber(type_);
       return result == null ? com.google.ads.googleads.v12.enums.CustomizerAttributeTypeEnum.CustomizerAttributeType.UNRECOGNIZED : result;
     }
     /**
      * <pre>
-     * Required. The data type for the customizer value. It must match the attribute type.
-     * The string_value content must match the constraints associated with the
-     * type.
+     * Required. The data type for the customizer value. It must match the
+     * attribute type. The string_value content must match the constraints
+     * associated with the type.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.CustomizerAttributeTypeEnum.CustomizerAttributeType type = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -532,23 +541,23 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       type_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. The data type for the customizer value. It must match the attribute type.
-     * The string_value content must match the constraints associated with the
-     * type.
+     * Required. The data type for the customizer value. It must match the
+     * attribute type. The string_value content must match the constraints
+     * associated with the type.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.CustomizerAttributeTypeEnum.CustomizerAttributeType type = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return This builder for chaining.
      */
     public Builder clearType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       type_ = 0;
       onChanged();
       return this;
@@ -557,8 +566,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object stringValue_ = "";
     /**
      * <pre>
-     * Required. Value to insert in creative text. Customizer values of all types are stored
-     * as string to make formatting unambiguous.
+     * Required. Value to insert in creative text. Customizer values of all types
+     * are stored as string to make formatting unambiguous.
      * </pre>
      *
      * <code>string string_value = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -578,8 +587,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Value to insert in creative text. Customizer values of all types are stored
-     * as string to make formatting unambiguous.
+     * Required. Value to insert in creative text. Customizer values of all types
+     * are stored as string to make formatting unambiguous.
      * </pre>
      *
      * <code>string string_value = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -600,8 +609,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Value to insert in creative text. Customizer values of all types are stored
-     * as string to make formatting unambiguous.
+     * Required. Value to insert in creative text. Customizer values of all types
+     * are stored as string to make formatting unambiguous.
      * </pre>
      *
      * <code>string string_value = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -610,33 +619,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStringValue(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       stringValue_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. Value to insert in creative text. Customizer values of all types are stored
-     * as string to make formatting unambiguous.
+     * Required. Value to insert in creative text. Customizer values of all types
+     * are stored as string to make formatting unambiguous.
      * </pre>
      *
      * <code>string string_value = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return This builder for chaining.
      */
     public Builder clearStringValue() {
-      
       stringValue_ = getDefaultInstance().getStringValue();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. Value to insert in creative text. Customizer values of all types are stored
-     * as string to make formatting unambiguous.
+     * Required. Value to insert in creative text. Customizer values of all types
+     * are stored as string to make formatting unambiguous.
      * </pre>
      *
      * <code>string string_value = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -645,12 +652,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStringValueBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       stringValue_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

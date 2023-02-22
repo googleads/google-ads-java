@@ -99,7 +99,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INCLUDE_AVERAGE_CPC_FIELD_NUMBER = 2;
-  private boolean includeAverageCpc_;
+  private boolean includeAverageCpc_ = false;
   /**
    * <pre>
    * Indicates whether to include average cost per click value.
@@ -332,14 +332,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (yearMonthRangeBuilder_ == null) {
-        yearMonthRange_ = null;
-      } else {
-        yearMonthRangeBuilder_.clear();
+      bitField0_ = 0;
+      yearMonthRange_ = null;
+      if (yearMonthRangeBuilder_ != null) {
+        yearMonthRangeBuilder_.dispose();
+        yearMonthRangeBuilder_ = null;
       }
-      bitField0_ = (bitField0_ & ~0x00000001);
       includeAverageCpc_ = false;
-
       return this;
     }
 
@@ -366,20 +365,24 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.HistoricalMetricsOptions buildPartial() {
       com.google.ads.googleads.v12.common.HistoricalMetricsOptions result = new com.google.ads.googleads.v12.common.HistoricalMetricsOptions(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.HistoricalMetricsOptions result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        if (yearMonthRangeBuilder_ == null) {
-          result.yearMonthRange_ = yearMonthRange_;
-        } else {
-          result.yearMonthRange_ = yearMonthRangeBuilder_.build();
-        }
+        result.yearMonthRange_ = yearMonthRangeBuilder_ == null
+            ? yearMonthRange_
+            : yearMonthRangeBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
-      result.includeAverageCpc_ = includeAverageCpc_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.includeAverageCpc_ = includeAverageCpc_;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -467,7 +470,7 @@ private static final long serialVersionUID = 0L;
             } // case 10
             case 16: {
               includeAverageCpc_ = input.readBool();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             default: {
@@ -541,11 +544,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         yearMonthRange_ = value;
-        onChanged();
       } else {
         yearMonthRangeBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -563,11 +566,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.YearMonthRange.Builder builderForValue) {
       if (yearMonthRangeBuilder_ == null) {
         yearMonthRange_ = builderForValue.build();
-        onChanged();
       } else {
         yearMonthRangeBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -584,18 +587,17 @@ private static final long serialVersionUID = 0L;
     public Builder mergeYearMonthRange(com.google.ads.googleads.v12.common.YearMonthRange value) {
       if (yearMonthRangeBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0) &&
-            yearMonthRange_ != null &&
-            yearMonthRange_ != com.google.ads.googleads.v12.common.YearMonthRange.getDefaultInstance()) {
-          yearMonthRange_ =
-            com.google.ads.googleads.v12.common.YearMonthRange.newBuilder(yearMonthRange_).mergeFrom(value).buildPartial();
+          yearMonthRange_ != null &&
+          yearMonthRange_ != com.google.ads.googleads.v12.common.YearMonthRange.getDefaultInstance()) {
+          getYearMonthRangeBuilder().mergeFrom(value);
         } else {
           yearMonthRange_ = value;
         }
-        onChanged();
       } else {
         yearMonthRangeBuilder_.mergeFrom(value);
       }
       bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -610,13 +612,13 @@ private static final long serialVersionUID = 0L;
      * <code>optional .google.ads.googleads.v12.common.YearMonthRange year_month_range = 1;</code>
      */
     public Builder clearYearMonthRange() {
-      if (yearMonthRangeBuilder_ == null) {
-        yearMonthRange_ = null;
-        onChanged();
-      } else {
-        yearMonthRangeBuilder_.clear();
-      }
       bitField0_ = (bitField0_ & ~0x00000001);
+      yearMonthRange_ = null;
+      if (yearMonthRangeBuilder_ != null) {
+        yearMonthRangeBuilder_.dispose();
+        yearMonthRangeBuilder_ = null;
+      }
+      onChanged();
       return this;
     }
     /**
@@ -712,6 +714,7 @@ private static final long serialVersionUID = 0L;
     public Builder setIncludeAverageCpc(boolean value) {
       
       includeAverageCpc_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -728,7 +731,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIncludeAverageCpc() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       includeAverageCpc_ = false;
       onChanged();
       return this;

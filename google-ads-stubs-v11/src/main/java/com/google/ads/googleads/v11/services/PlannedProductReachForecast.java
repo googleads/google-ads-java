@@ -50,7 +50,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PLANNABLE_PRODUCT_CODE_FIELD_NUMBER = 1;
-  private volatile java.lang.Object plannableProductCode_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object plannableProductCode_ = "";
   /**
    * <pre>
    * Selected product for planning. The product codes returned are within the
@@ -100,7 +101,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int COST_MICROS_FIELD_NUMBER = 2;
-  private long costMicros_;
+  private long costMicros_ = 0L;
   /**
    * <pre>
    * The cost in micros. This may differ from the product's input allocation
@@ -151,7 +152,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v11.services.PlannedProductForecastOrBuilder getPlannedProductForecastOrBuilder() {
-    return getPlannedProductForecast();
+    return plannedProductForecast_ == null ? com.google.ads.googleads.v11.services.PlannedProductForecast.getDefaultInstance() : plannedProductForecast_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -374,14 +375,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       plannableProductCode_ = "";
-
       costMicros_ = 0L;
-
-      if (plannedProductForecastBuilder_ == null) {
-        plannedProductForecast_ = null;
-      } else {
-        plannedProductForecast_ = null;
+      plannedProductForecast_ = null;
+      if (plannedProductForecastBuilder_ != null) {
+        plannedProductForecastBuilder_.dispose();
         plannedProductForecastBuilder_ = null;
       }
       return this;
@@ -410,15 +409,24 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.PlannedProductReachForecast buildPartial() {
       com.google.ads.googleads.v11.services.PlannedProductReachForecast result = new com.google.ads.googleads.v11.services.PlannedProductReachForecast(this);
-      result.plannableProductCode_ = plannableProductCode_;
-      result.costMicros_ = costMicros_;
-      if (plannedProductForecastBuilder_ == null) {
-        result.plannedProductForecast_ = plannedProductForecast_;
-      } else {
-        result.plannedProductForecast_ = plannedProductForecastBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.PlannedProductReachForecast result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.plannableProductCode_ = plannableProductCode_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.costMicros_ = costMicros_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.plannedProductForecast_ = plannedProductForecastBuilder_ == null
+            ? plannedProductForecast_
+            : plannedProductForecastBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -467,6 +475,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.services.PlannedProductReachForecast.getDefaultInstance()) return this;
       if (!other.getPlannableProductCode().isEmpty()) {
         plannableProductCode_ = other.plannableProductCode_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.getCostMicros() != 0L) {
@@ -503,19 +512,19 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               plannableProductCode_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 16: {
               costMicros_ = input.readInt64();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             case 26: {
               input.readMessage(
                   getPlannedProductForecastFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             default: {
@@ -533,6 +542,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object plannableProductCode_ = "";
     /**
@@ -593,11 +603,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPlannableProductCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       plannableProductCode_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -612,8 +620,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPlannableProductCode() {
-      
       plannableProductCode_ = getDefaultInstance().getPlannableProductCode();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -630,12 +638,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPlannableProductCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       plannableProductCode_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -669,6 +675,7 @@ private static final long serialVersionUID = 0L;
     public Builder setCostMicros(long value) {
       
       costMicros_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -683,7 +690,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCostMicros() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       costMicros_ = 0L;
       onChanged();
       return this;
@@ -701,7 +708,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the plannedProductForecast field is set.
      */
     public boolean hasPlannedProductForecast() {
-      return plannedProductForecastBuilder_ != null || plannedProductForecast_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -731,11 +738,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         plannedProductForecast_ = value;
-        onChanged();
       } else {
         plannedProductForecastBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -749,11 +756,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.services.PlannedProductForecast.Builder builderForValue) {
       if (plannedProductForecastBuilder_ == null) {
         plannedProductForecast_ = builderForValue.build();
-        onChanged();
       } else {
         plannedProductForecastBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -765,17 +772,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergePlannedProductForecast(com.google.ads.googleads.v11.services.PlannedProductForecast value) {
       if (plannedProductForecastBuilder_ == null) {
-        if (plannedProductForecast_ != null) {
-          plannedProductForecast_ =
-            com.google.ads.googleads.v11.services.PlannedProductForecast.newBuilder(plannedProductForecast_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000004) != 0) &&
+          plannedProductForecast_ != null &&
+          plannedProductForecast_ != com.google.ads.googleads.v11.services.PlannedProductForecast.getDefaultInstance()) {
+          getPlannedProductForecastBuilder().mergeFrom(value);
         } else {
           plannedProductForecast_ = value;
         }
-        onChanged();
       } else {
         plannedProductForecastBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -786,14 +794,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.services.PlannedProductForecast planned_product_forecast = 3;</code>
      */
     public Builder clearPlannedProductForecast() {
-      if (plannedProductForecastBuilder_ == null) {
-        plannedProductForecast_ = null;
-        onChanged();
-      } else {
-        plannedProductForecast_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      plannedProductForecast_ = null;
+      if (plannedProductForecastBuilder_ != null) {
+        plannedProductForecastBuilder_.dispose();
         plannedProductForecastBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -804,7 +811,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.services.PlannedProductForecast planned_product_forecast = 3;</code>
      */
     public com.google.ads.googleads.v11.services.PlannedProductForecast.Builder getPlannedProductForecastBuilder() {
-      
+      bitField0_ |= 0x00000004;
       onChanged();
       return getPlannedProductForecastFieldBuilder().getBuilder();
     }

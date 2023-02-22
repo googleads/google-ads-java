@@ -50,7 +50,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int CUSTOM_AUDIENCE_FIELD_NUMBER = 1;
-  private volatile java.lang.Object customAudience_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object customAudience_ = "";
   /**
    * <pre>
    * The custom audience resource.
@@ -303,8 +304,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       customAudience_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -331,15 +332,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.CustomAudienceSegment buildPartial() {
       com.google.ads.googleads.v12.common.CustomAudienceSegment result = new com.google.ads.googleads.v12.common.CustomAudienceSegment(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.CustomAudienceSegment result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.customAudience_ = customAudience_;
         to_bitField0_ |= 0x00000001;
       }
-      result.customAudience_ = customAudience_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -387,8 +392,8 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v12.common.CustomAudienceSegment other) {
       if (other == com.google.ads.googleads.v12.common.CustomAudienceSegment.getDefaultInstance()) return this;
       if (other.hasCustomAudience()) {
-        bitField0_ |= 0x00000001;
         customAudience_ = other.customAudience_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -503,11 +508,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomAudience(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       customAudience_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -520,8 +523,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCustomAudience() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       customAudience_ = getDefaultInstance().getCustomAudience();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -536,12 +539,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomAudienceBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       customAudience_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

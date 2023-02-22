@@ -52,7 +52,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int DATA_FIELD_NUMBER = 4;
-  private com.google.protobuf.ByteString data_;
+  private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
   /**
    * <pre>
    * Immutable. Raw image data.
@@ -79,7 +79,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FULL_SIZE_IMAGE_URL_FIELD_NUMBER = 2;
-  private volatile java.lang.Object fullSizeImageUrl_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object fullSizeImageUrl_ = "";
   /**
    * <pre>
    * Output only. The url to the full size version of the image.
@@ -137,7 +138,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PREVIEW_SIZE_IMAGE_URL_FIELD_NUMBER = 3;
-  private volatile java.lang.Object previewSizeImageUrl_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object previewSizeImageUrl_ = "";
   /**
    * <pre>
    * Output only. The url to the preview size version of the image.
@@ -421,12 +423,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       data_ = com.google.protobuf.ByteString.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
       fullSizeImageUrl_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       previewSizeImageUrl_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -453,23 +453,27 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.MediaImage buildPartial() {
       com.google.ads.googleads.v12.resources.MediaImage result = new com.google.ads.googleads.v12.resources.MediaImage(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.resources.MediaImage result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.data_ = data_;
         to_bitField0_ |= 0x00000001;
       }
-      result.data_ = data_;
       if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.fullSizeImageUrl_ = fullSizeImageUrl_;
         to_bitField0_ |= 0x00000002;
       }
-      result.fullSizeImageUrl_ = fullSizeImageUrl_;
       if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.previewSizeImageUrl_ = previewSizeImageUrl_;
         to_bitField0_ |= 0x00000004;
       }
-      result.previewSizeImageUrl_ = previewSizeImageUrl_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -520,13 +524,13 @@ private static final long serialVersionUID = 0L;
         setData(other.getData());
       }
       if (other.hasFullSizeImageUrl()) {
-        bitField0_ |= 0x00000002;
         fullSizeImageUrl_ = other.fullSizeImageUrl_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasPreviewSizeImageUrl()) {
-        bitField0_ |= 0x00000004;
         previewSizeImageUrl_ = other.previewSizeImageUrl_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -622,11 +626,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setData(com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       data_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -709,11 +711,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFullSizeImageUrl(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       fullSizeImageUrl_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -726,8 +726,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFullSizeImageUrl() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       fullSizeImageUrl_ = getDefaultInstance().getFullSizeImageUrl();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -742,12 +742,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFullSizeImageUrlBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       fullSizeImageUrl_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -816,11 +814,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPreviewSizeImageUrl(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       previewSizeImageUrl_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -833,8 +829,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPreviewSizeImageUrl() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       previewSizeImageUrl_ = getDefaultInstance().getPreviewSizeImageUrl();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -849,12 +845,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPreviewSizeImageUrlBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       previewSizeImageUrl_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }

@@ -48,7 +48,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EFFECTIVE_FREQUENCY_BREAKDOWN_LIMIT_FIELD_NUMBER = 1;
-  private int effectiveFrequencyBreakdownLimit_;
+  private int effectiveFrequencyBreakdownLimit_ = 0;
   /**
    * <pre>
    * The highest effective frequency value to include in
@@ -256,8 +256,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       effectiveFrequencyBreakdownLimit_ = 0;
-
       return this;
     }
 
@@ -284,9 +284,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.EffectiveFrequencyLimit buildPartial() {
       com.google.ads.googleads.v12.services.EffectiveFrequencyLimit result = new com.google.ads.googleads.v12.services.EffectiveFrequencyLimit(this);
-      result.effectiveFrequencyBreakdownLimit_ = effectiveFrequencyBreakdownLimit_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.EffectiveFrequencyLimit result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.effectiveFrequencyBreakdownLimit_ = effectiveFrequencyBreakdownLimit_;
+      }
     }
 
     @java.lang.Override
@@ -364,7 +371,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               effectiveFrequencyBreakdownLimit_ = input.readInt32();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             default: {
@@ -382,6 +389,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private int effectiveFrequencyBreakdownLimit_ ;
     /**
@@ -412,6 +420,7 @@ private static final long serialVersionUID = 0L;
     public Builder setEffectiveFrequencyBreakdownLimit(int value) {
       
       effectiveFrequencyBreakdownLimit_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -426,7 +435,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEffectiveFrequencyBreakdownLimit() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       effectiveFrequencyBreakdownLimit_ = 0;
       onChanged();
       return this;

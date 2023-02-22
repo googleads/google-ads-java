@@ -91,7 +91,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CUSTOMER_ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object customerId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object customerId_ = "";
   /**
    * <pre>
    * Required. The ID of the customer whose budget options are to be suggested.
@@ -473,8 +474,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       customerId_ = "";
-
       if (suggestionInfoBuilder_ != null) {
         suggestionInfoBuilder_.clear();
       }
@@ -506,20 +507,26 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.SuggestSmartCampaignBudgetOptionsRequest buildPartial() {
       com.google.ads.googleads.v11.services.SuggestSmartCampaignBudgetOptionsRequest result = new com.google.ads.googleads.v11.services.SuggestSmartCampaignBudgetOptionsRequest(this);
-      result.customerId_ = customerId_;
-      if (suggestionDataCase_ == 2) {
-        result.suggestionData_ = suggestionData_;
-      }
-      if (suggestionDataCase_ == 3) {
-        if (suggestionInfoBuilder_ == null) {
-          result.suggestionData_ = suggestionData_;
-        } else {
-          result.suggestionData_ = suggestionInfoBuilder_.build();
-        }
-      }
-      result.suggestionDataCase_ = suggestionDataCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.SuggestSmartCampaignBudgetOptionsRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.customerId_ = customerId_;
+      }
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v11.services.SuggestSmartCampaignBudgetOptionsRequest result) {
+      result.suggestionDataCase_ = suggestionDataCase_;
+      result.suggestionData_ = this.suggestionData_;
+      if (suggestionDataCase_ == 3 &&
+          suggestionInfoBuilder_ != null) {
+        result.suggestionData_ = suggestionInfoBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -568,6 +575,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.services.SuggestSmartCampaignBudgetOptionsRequest.getDefaultInstance()) return this;
       if (!other.getCustomerId().isEmpty()) {
         customerId_ = other.customerId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       switch (other.getSuggestionDataCase()) {
@@ -613,7 +621,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               customerId_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
@@ -659,6 +667,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private java.lang.Object customerId_ = "";
     /**
@@ -713,11 +722,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       customerId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -730,8 +737,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCustomerId() {
-      
       customerId_ = getDefaultInstance().getCustomerId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -746,12 +753,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       customerId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -832,10 +837,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaign(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  suggestionDataCase_ = 2;
+      if (value == null) { throw new NullPointerException(); }
+      suggestionDataCase_ = 2;
       suggestionData_ = value;
       onChanged();
       return this;
@@ -867,10 +870,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaignBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       suggestionDataCase_ = 2;
       suggestionData_ = value;
       onChanged();
@@ -1051,7 +1052,7 @@ private static final long serialVersionUID = 0L;
         suggestionData_ = null;
       }
       suggestionDataCase_ = 3;
-      onChanged();;
+      onChanged();
       return suggestionInfoBuilder_;
     }
     @java.lang.Override

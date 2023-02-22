@@ -52,7 +52,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HEADLINE_FIELD_NUMBER = 1;
-  private volatile java.lang.Object headline_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object headline_ = "";
   /**
    * <pre>
    * The headline of the ad.
@@ -98,7 +99,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTION1_FIELD_NUMBER = 2;
-  private volatile java.lang.Object description1_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object description1_ = "";
   /**
    * <pre>
    * First text line for the ad.
@@ -144,7 +146,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTION2_FIELD_NUMBER = 3;
-  private volatile java.lang.Object description2_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object description2_ = "";
   /**
    * <pre>
    * Second text line for the ad.
@@ -190,7 +193,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int THUMBNAIL_FIELD_NUMBER = 4;
-  private int thumbnail_;
+  private int thumbnail_ = 0;
   /**
    * <pre>
    * Video thumbnail image to use.
@@ -211,8 +214,7 @@ private static final long serialVersionUID = 0L;
    * @return The thumbnail.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.VideoThumbnailEnum.VideoThumbnail getThumbnail() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.VideoThumbnailEnum.VideoThumbnail result = com.google.ads.googleads.v11.enums.VideoThumbnailEnum.VideoThumbnail.valueOf(thumbnail_);
+    com.google.ads.googleads.v11.enums.VideoThumbnailEnum.VideoThumbnail result = com.google.ads.googleads.v11.enums.VideoThumbnailEnum.VideoThumbnail.forNumber(thumbnail_);
     return result == null ? com.google.ads.googleads.v11.enums.VideoThumbnailEnum.VideoThumbnail.UNRECOGNIZED : result;
   }
 
@@ -437,14 +439,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       headline_ = "";
-
       description1_ = "";
-
       description2_ = "";
-
       thumbnail_ = 0;
-
       return this;
     }
 
@@ -471,12 +470,25 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.InFeedVideoAdInfo buildPartial() {
       com.google.ads.googleads.v11.common.InFeedVideoAdInfo result = new com.google.ads.googleads.v11.common.InFeedVideoAdInfo(this);
-      result.headline_ = headline_;
-      result.description1_ = description1_;
-      result.description2_ = description2_;
-      result.thumbnail_ = thumbnail_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.InFeedVideoAdInfo result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.headline_ = headline_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.description1_ = description1_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.description2_ = description2_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.thumbnail_ = thumbnail_;
+      }
     }
 
     @java.lang.Override
@@ -525,14 +537,17 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.common.InFeedVideoAdInfo.getDefaultInstance()) return this;
       if (!other.getHeadline().isEmpty()) {
         headline_ = other.headline_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getDescription1().isEmpty()) {
         description1_ = other.description1_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getDescription2().isEmpty()) {
         description2_ = other.description2_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.thumbnail_ != 0) {
@@ -566,22 +581,22 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               headline_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               description1_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
               description2_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 32: {
               thumbnail_ = input.readEnum();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 32
             default: {
@@ -599,6 +614,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object headline_ = "";
     /**
@@ -653,11 +669,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHeadline(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       headline_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -670,8 +684,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHeadline() {
-      
       headline_ = getDefaultInstance().getHeadline();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -686,12 +700,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHeadlineBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       headline_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -749,11 +761,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription1(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       description1_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -766,8 +776,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDescription1() {
-      
       description1_ = getDefaultInstance().getDescription1();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -782,12 +792,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription1Bytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       description1_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -845,11 +853,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription2(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       description2_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -862,8 +868,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDescription2() {
-      
       description2_ = getDefaultInstance().getDescription2();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -878,12 +884,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription2Bytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       description2_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -910,8 +914,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setThumbnailValue(int value) {
-      
       thumbnail_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -925,8 +929,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.VideoThumbnailEnum.VideoThumbnail getThumbnail() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.VideoThumbnailEnum.VideoThumbnail result = com.google.ads.googleads.v11.enums.VideoThumbnailEnum.VideoThumbnail.valueOf(thumbnail_);
+      com.google.ads.googleads.v11.enums.VideoThumbnailEnum.VideoThumbnail result = com.google.ads.googleads.v11.enums.VideoThumbnailEnum.VideoThumbnail.forNumber(thumbnail_);
       return result == null ? com.google.ads.googleads.v11.enums.VideoThumbnailEnum.VideoThumbnail.UNRECOGNIZED : result;
     }
     /**
@@ -942,7 +945,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000008;
       thumbnail_ = value.getNumber();
       onChanged();
       return this;
@@ -956,7 +959,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearThumbnail() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       thumbnail_ = 0;
       onChanged();
       return this;

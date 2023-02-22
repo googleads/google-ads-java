@@ -53,7 +53,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Output only. The resource name of the detailed demographic.
@@ -103,7 +104,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ID_FIELD_NUMBER = 2;
-  private long id_;
+  private long id_ = 0L;
   /**
    * <pre>
    * Output only. The ID of the detailed demographic.
@@ -118,11 +119,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 3;
-  private volatile java.lang.Object name_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
   /**
    * <pre>
-   * Output only. The name of the detailed demographic. For example,"Highest Level of
-   * Educational Attainment"
+   * Output only. The name of the detailed demographic. For example,"Highest
+   * Level of Educational Attainment"
    * </pre>
    *
    * <code>string name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -143,8 +145,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The name of the detailed demographic. For example,"Highest Level of
-   * Educational Attainment"
+   * Output only. The name of the detailed demographic. For example,"Highest
+   * Level of Educational Attainment"
    * </pre>
    *
    * <code>string name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -166,7 +168,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PARENT_FIELD_NUMBER = 4;
-  private volatile java.lang.Object parent_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object parent_ = "";
   /**
    * <pre>
    * Output only. The parent of the detailed_demographic.
@@ -212,10 +215,11 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LAUNCHED_TO_ALL_FIELD_NUMBER = 5;
-  private boolean launchedToAll_;
+  private boolean launchedToAll_ = false;
   /**
    * <pre>
-   * Output only. True if the detailed demographic is launched to all channels and locales.
+   * Output only. True if the detailed demographic is launched to all channels
+   * and locales.
    * </pre>
    *
    * <code>bool launched_to_all = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -227,6 +231,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AVAILABILITIES_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.common.CriterionCategoryAvailability> availabilities_;
   /**
    * <pre>
@@ -535,23 +540,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       id_ = 0L;
-
       name_ = "";
-
       parent_ = "";
-
       launchedToAll_ = false;
-
       if (availabilitiesBuilder_ == null) {
         availabilities_ = java.util.Collections.emptyList();
       } else {
         availabilities_ = null;
         availabilitiesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000020);
       return this;
     }
 
@@ -578,23 +579,41 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.DetailedDemographic buildPartial() {
       com.google.ads.googleads.v11.resources.DetailedDemographic result = new com.google.ads.googleads.v11.resources.DetailedDemographic(this);
-      int from_bitField0_ = bitField0_;
-      result.resourceName_ = resourceName_;
-      result.id_ = id_;
-      result.name_ = name_;
-      result.parent_ = parent_;
-      result.launchedToAll_ = launchedToAll_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.resources.DetailedDemographic result) {
       if (availabilitiesBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000020) != 0)) {
           availabilities_ = java.util.Collections.unmodifiableList(availabilities_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000020);
         }
         result.availabilities_ = availabilities_;
       } else {
         result.availabilities_ = availabilitiesBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.DetailedDemographic result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.id_ = id_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.name_ = name_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.parent_ = parent_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.launchedToAll_ = launchedToAll_;
+      }
     }
 
     @java.lang.Override
@@ -643,6 +662,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.resources.DetailedDemographic.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.getId() != 0L) {
@@ -650,10 +670,12 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getParent().isEmpty()) {
         parent_ = other.parent_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.getLaunchedToAll() != false) {
@@ -663,7 +685,7 @@ private static final long serialVersionUID = 0L;
         if (!other.availabilities_.isEmpty()) {
           if (availabilities_.isEmpty()) {
             availabilities_ = other.availabilities_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
             ensureAvailabilitiesIsMutable();
             availabilities_.addAll(other.availabilities_);
@@ -676,7 +698,7 @@ private static final long serialVersionUID = 0L;
             availabilitiesBuilder_.dispose();
             availabilitiesBuilder_ = null;
             availabilities_ = other.availabilities_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000020);
             availabilitiesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getAvailabilitiesFieldBuilder() : null;
@@ -713,27 +735,27 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 16: {
               id_ = input.readInt64();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             case 26: {
               name_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 34: {
               parent_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 34
             case 40: {
               launchedToAll_ = input.readBool();
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 40
             case 50: {
@@ -825,11 +847,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -844,8 +864,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -862,12 +882,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -897,6 +915,7 @@ private static final long serialVersionUID = 0L;
     public Builder setId(long value) {
       
       id_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -909,7 +928,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearId() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       id_ = 0L;
       onChanged();
       return this;
@@ -918,8 +937,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object name_ = "";
     /**
      * <pre>
-     * Output only. The name of the detailed demographic. For example,"Highest Level of
-     * Educational Attainment"
+     * Output only. The name of the detailed demographic. For example,"Highest
+     * Level of Educational Attainment"
      * </pre>
      *
      * <code>string name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -939,8 +958,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The name of the detailed demographic. For example,"Highest Level of
-     * Educational Attainment"
+     * Output only. The name of the detailed demographic. For example,"Highest
+     * Level of Educational Attainment"
      * </pre>
      *
      * <code>string name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -961,8 +980,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The name of the detailed demographic. For example,"Highest Level of
-     * Educational Attainment"
+     * Output only. The name of the detailed demographic. For example,"Highest
+     * Level of Educational Attainment"
      * </pre>
      *
      * <code>string name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -971,33 +990,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       name_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The name of the detailed demographic. For example,"Highest Level of
-     * Educational Attainment"
+     * Output only. The name of the detailed demographic. For example,"Highest
+     * Level of Educational Attainment"
      * </pre>
      *
      * <code>string name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      
       name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The name of the detailed demographic. For example,"Highest Level of
-     * Educational Attainment"
+     * Output only. The name of the detailed demographic. For example,"Highest
+     * Level of Educational Attainment"
      * </pre>
      *
      * <code>string name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1006,12 +1023,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1069,11 +1084,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setParent(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       parent_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1086,8 +1099,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearParent() {
-      
       parent_ = getDefaultInstance().getParent();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1102,12 +1115,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setParentBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       parent_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1115,7 +1126,8 @@ private static final long serialVersionUID = 0L;
     private boolean launchedToAll_ ;
     /**
      * <pre>
-     * Output only. True if the detailed demographic is launched to all channels and locales.
+     * Output only. True if the detailed demographic is launched to all channels
+     * and locales.
      * </pre>
      *
      * <code>bool launched_to_all = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1127,7 +1139,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. True if the detailed demographic is launched to all channels and locales.
+     * Output only. True if the detailed demographic is launched to all channels
+     * and locales.
      * </pre>
      *
      * <code>bool launched_to_all = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1137,19 +1150,21 @@ private static final long serialVersionUID = 0L;
     public Builder setLaunchedToAll(boolean value) {
       
       launchedToAll_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. True if the detailed demographic is launched to all channels and locales.
+     * Output only. True if the detailed demographic is launched to all channels
+     * and locales.
      * </pre>
      *
      * <code>bool launched_to_all = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearLaunchedToAll() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       launchedToAll_ = false;
       onChanged();
       return this;
@@ -1158,9 +1173,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v11.common.CriterionCategoryAvailability> availabilities_ =
       java.util.Collections.emptyList();
     private void ensureAvailabilitiesIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000020) != 0)) {
         availabilities_ = new java.util.ArrayList<com.google.ads.googleads.v11.common.CriterionCategoryAvailability>(availabilities_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000020;
        }
     }
 
@@ -1354,7 +1369,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearAvailabilities() {
       if (availabilitiesBuilder_ == null) {
         availabilities_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
       } else {
         availabilitiesBuilder_.clear();
@@ -1459,7 +1474,7 @@ private static final long serialVersionUID = 0L;
         availabilitiesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v11.common.CriterionCategoryAvailability, com.google.ads.googleads.v11.common.CriterionCategoryAvailability.Builder, com.google.ads.googleads.v11.common.CriterionCategoryAvailabilityOrBuilder>(
                 availabilities_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000020) != 0),
                 getParentForChildren(),
                 isClean());
         availabilities_ = null;

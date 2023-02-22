@@ -71,7 +71,10 @@ import org.threeten.bp.Duration;
  * adServiceSettingsBuilder
  *     .getAdSettings()
  *     .setRetrySettings(
- *         adServiceSettingsBuilder.getAdSettings().getRetrySettings().toBuilder()
+ *         adServiceSettingsBuilder
+ *             .getAdSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
  * AdServiceStubSettings adServiceSettings = adServiceSettingsBuilder.build();

@@ -88,7 +88,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CUSTOM_QUESTION_TEXT_FIELD_NUMBER = 1;
-  private volatile java.lang.Object customQuestionText_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object customQuestionText_ = "";
   /**
    * <pre>
    * The exact custom question field text (for example, "What kind of vehicle
@@ -396,8 +397,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       customQuestionText_ = "";
-
       if (singleChoiceAnswersBuilder_ != null) {
         singleChoiceAnswersBuilder_.clear();
       }
@@ -429,17 +430,26 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.LeadFormCustomQuestionField buildPartial() {
       com.google.ads.googleads.v12.common.LeadFormCustomQuestionField result = new com.google.ads.googleads.v12.common.LeadFormCustomQuestionField(this);
-      result.customQuestionText_ = customQuestionText_;
-      if (answersCase_ == 2) {
-        if (singleChoiceAnswersBuilder_ == null) {
-          result.answers_ = answers_;
-        } else {
-          result.answers_ = singleChoiceAnswersBuilder_.build();
-        }
-      }
-      result.answersCase_ = answersCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.LeadFormCustomQuestionField result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.customQuestionText_ = customQuestionText_;
+      }
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v12.common.LeadFormCustomQuestionField result) {
+      result.answersCase_ = answersCase_;
+      result.answers_ = this.answers_;
+      if (answersCase_ == 2 &&
+          singleChoiceAnswersBuilder_ != null) {
+        result.answers_ = singleChoiceAnswersBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -488,6 +498,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.common.LeadFormCustomQuestionField.getDefaultInstance()) return this;
       if (!other.getCustomQuestionText().isEmpty()) {
         customQuestionText_ = other.customQuestionText_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       switch (other.getAnswersCase()) {
@@ -527,7 +538,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               customQuestionText_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
@@ -567,6 +578,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private java.lang.Object customQuestionText_ = "";
     /**
@@ -624,11 +636,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomQuestionText(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       customQuestionText_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -642,8 +652,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCustomQuestionText() {
-      
       customQuestionText_ = getDefaultInstance().getCustomQuestionText();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -659,12 +669,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomQuestionTextBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       customQuestionText_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -852,7 +860,7 @@ private static final long serialVersionUID = 0L;
         answers_ = null;
       }
       answersCase_ = 2;
-      onChanged();;
+      onChanged();
       return singleChoiceAnswersBuilder_;
     }
     @java.lang.Override

@@ -9,8 +9,8 @@ public interface ListCampaignExperimentAsyncErrorsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The name of the campaign experiment from which to retrieve the async
-   * errors.
+   * Required. The name of the campaign experiment from which to retrieve the
+   * async errors.
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
@@ -19,8 +19,8 @@ public interface ListCampaignExperimentAsyncErrorsRequestOrBuilder extends
   java.lang.String getResourceName();
   /**
    * <pre>
-   * Required. The name of the campaign experiment from which to retrieve the async
-   * errors.
+   * Required. The name of the campaign experiment from which to retrieve the
+   * async errors.
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>

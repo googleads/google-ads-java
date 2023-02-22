@@ -50,6 +50,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LABELS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList labels_;
   /**
    * <pre>
@@ -139,7 +140,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v11.common.BusinessNameFilterOrBuilder getBusinessNameFilterOrBuilder() {
-    return getBusinessNameFilter();
+    return businessNameFilter_ == null ? com.google.ads.googleads.v11.common.BusinessNameFilter.getDefaultInstance() : businessNameFilter_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -357,12 +358,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       bitField0_ = (bitField0_ & ~0x00000001);
-      if (businessNameFilterBuilder_ == null) {
-        businessNameFilter_ = null;
-      } else {
-        businessNameFilter_ = null;
+      businessNameFilter_ = null;
+      if (businessNameFilterBuilder_ != null) {
+        businessNameFilterBuilder_.dispose();
         businessNameFilterBuilder_ = null;
       }
       return this;
@@ -391,19 +392,27 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.DynamicLocationSetFilter buildPartial() {
       com.google.ads.googleads.v11.common.DynamicLocationSetFilter result = new com.google.ads.googleads.v11.common.DynamicLocationSetFilter(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.common.DynamicLocationSetFilter result) {
       if (((bitField0_ & 0x00000001) != 0)) {
         labels_ = labels_.getUnmodifiableView();
         bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.labels_ = labels_;
-      if (businessNameFilterBuilder_ == null) {
-        result.businessNameFilter_ = businessNameFilter_;
-      } else {
-        result.businessNameFilter_ = businessNameFilterBuilder_.build();
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.DynamicLocationSetFilter result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.businessNameFilter_ = businessNameFilterBuilder_ == null
+            ? businessNameFilter_
+            : businessNameFilterBuilder_.build();
       }
-      onBuilt();
-      return result;
     }
 
     @java.lang.Override
@@ -499,7 +508,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getBusinessNameFilterFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             default: {
@@ -591,10 +600,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLabels(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureLabelsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureLabelsIsMutable();
       labels_.set(index, value);
       onChanged();
       return this;
@@ -611,10 +618,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addLabels(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureLabelsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureLabelsIsMutable();
       labels_.add(value);
       onChanged();
       return this;
@@ -664,10 +669,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addLabelsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureLabelsIsMutable();
       labels_.add(value);
       onChanged();
@@ -686,7 +689,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the businessNameFilter field is set.
      */
     public boolean hasBusinessNameFilter() {
-      return businessNameFilterBuilder_ != null || businessNameFilter_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -716,11 +719,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         businessNameFilter_ = value;
-        onChanged();
       } else {
         businessNameFilterBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -734,11 +737,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.common.BusinessNameFilter.Builder builderForValue) {
       if (businessNameFilterBuilder_ == null) {
         businessNameFilter_ = builderForValue.build();
-        onChanged();
       } else {
         businessNameFilterBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -750,17 +753,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeBusinessNameFilter(com.google.ads.googleads.v11.common.BusinessNameFilter value) {
       if (businessNameFilterBuilder_ == null) {
-        if (businessNameFilter_ != null) {
-          businessNameFilter_ =
-            com.google.ads.googleads.v11.common.BusinessNameFilter.newBuilder(businessNameFilter_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          businessNameFilter_ != null &&
+          businessNameFilter_ != com.google.ads.googleads.v11.common.BusinessNameFilter.getDefaultInstance()) {
+          getBusinessNameFilterBuilder().mergeFrom(value);
         } else {
           businessNameFilter_ = value;
         }
-        onChanged();
       } else {
         businessNameFilterBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -771,14 +775,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.common.BusinessNameFilter business_name_filter = 2;</code>
      */
     public Builder clearBusinessNameFilter() {
-      if (businessNameFilterBuilder_ == null) {
-        businessNameFilter_ = null;
-        onChanged();
-      } else {
-        businessNameFilter_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      businessNameFilter_ = null;
+      if (businessNameFilterBuilder_ != null) {
+        businessNameFilterBuilder_.dispose();
         businessNameFilterBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -789,7 +792,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.common.BusinessNameFilter business_name_filter = 2;</code>
      */
     public com.google.ads.googleads.v11.common.BusinessNameFilter.Builder getBusinessNameFilterBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getBusinessNameFilterFieldBuilder().getBuilder();
     }

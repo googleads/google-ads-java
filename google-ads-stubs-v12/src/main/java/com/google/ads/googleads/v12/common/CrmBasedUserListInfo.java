@@ -52,7 +52,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int APP_ID_FIELD_NUMBER = 4;
-  private volatile java.lang.Object appId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object appId_ = "";
   /**
    * <pre>
    * A string that uniquely identifies a mobile application from which the data
@@ -137,7 +138,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int UPLOAD_KEY_TYPE_FIELD_NUMBER = 2;
-  private int uploadKeyType_;
+  private int uploadKeyType_ = 0;
   /**
    * <pre>
    * Matching key type of the list.
@@ -162,13 +163,12 @@ private static final long serialVersionUID = 0L;
    * @return The uploadKeyType.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType getUploadKeyType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType result = com.google.ads.googleads.v12.enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType.valueOf(uploadKeyType_);
+    com.google.ads.googleads.v12.enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType result = com.google.ads.googleads.v12.enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType.forNumber(uploadKeyType_);
     return result == null ? com.google.ads.googleads.v12.enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType.UNRECOGNIZED : result;
   }
 
   public static final int DATA_SOURCE_TYPE_FIELD_NUMBER = 3;
-  private int dataSourceType_;
+  private int dataSourceType_ = 0;
   /**
    * <pre>
    * Data source of the list. Default value is FIRST_PARTY.
@@ -191,8 +191,7 @@ private static final long serialVersionUID = 0L;
    * @return The dataSourceType.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType getDataSourceType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType result = com.google.ads.googleads.v12.enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType.valueOf(dataSourceType_);
+    com.google.ads.googleads.v12.enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType result = com.google.ads.googleads.v12.enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType.forNumber(dataSourceType_);
     return result == null ? com.google.ads.googleads.v12.enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType.UNRECOGNIZED : result;
   }
 
@@ -412,12 +411,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       appId_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       uploadKeyType_ = 0;
-
       dataSourceType_ = 0;
-
       return this;
     }
 
@@ -444,17 +441,25 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.CrmBasedUserListInfo buildPartial() {
       com.google.ads.googleads.v12.common.CrmBasedUserListInfo result = new com.google.ads.googleads.v12.common.CrmBasedUserListInfo(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.CrmBasedUserListInfo result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.appId_ = appId_;
         to_bitField0_ |= 0x00000001;
       }
-      result.appId_ = appId_;
-      result.uploadKeyType_ = uploadKeyType_;
-      result.dataSourceType_ = dataSourceType_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.uploadKeyType_ = uploadKeyType_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.dataSourceType_ = dataSourceType_;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -502,8 +507,8 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v12.common.CrmBasedUserListInfo other) {
       if (other == com.google.ads.googleads.v12.common.CrmBasedUserListInfo.getDefaultInstance()) return this;
       if (other.hasAppId()) {
-        bitField0_ |= 0x00000001;
         appId_ = other.appId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.uploadKeyType_ != 0) {
@@ -540,12 +545,12 @@ private static final long serialVersionUID = 0L;
               break;
             case 16: {
               uploadKeyType_ = input.readEnum();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             case 24: {
               dataSourceType_ = input.readEnum();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 24
             case 34: {
@@ -670,11 +675,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAppId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       appId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -696,8 +699,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAppId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       appId_ = getDefaultInstance().getAppId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -721,12 +724,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAppIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       appId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -757,8 +758,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setUploadKeyTypeValue(int value) {
-      
       uploadKeyType_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -774,8 +775,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType getUploadKeyType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType result = com.google.ads.googleads.v12.enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType.valueOf(uploadKeyType_);
+      com.google.ads.googleads.v12.enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType result = com.google.ads.googleads.v12.enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType.forNumber(uploadKeyType_);
       return result == null ? com.google.ads.googleads.v12.enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType.UNRECOGNIZED : result;
     }
     /**
@@ -793,7 +793,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000002;
       uploadKeyType_ = value.getNumber();
       onChanged();
       return this;
@@ -809,7 +809,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUploadKeyType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       uploadKeyType_ = 0;
       onChanged();
       return this;
@@ -839,8 +839,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDataSourceTypeValue(int value) {
-      
       dataSourceType_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -855,8 +855,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType getDataSourceType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType result = com.google.ads.googleads.v12.enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType.valueOf(dataSourceType_);
+      com.google.ads.googleads.v12.enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType result = com.google.ads.googleads.v12.enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType.forNumber(dataSourceType_);
       return result == null ? com.google.ads.googleads.v12.enums.UserListCrmDataSourceTypeEnum.UserListCrmDataSourceType.UNRECOGNIZED : result;
     }
     /**
@@ -873,7 +872,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       dataSourceType_ = value.getNumber();
       onChanged();
       return this;
@@ -888,7 +887,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDataSourceType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       dataSourceType_ = 0;
       onChanged();
       return this;

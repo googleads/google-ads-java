@@ -54,7 +54,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Immutable. The resource name of the Keyword Plan ad group keyword.
@@ -104,7 +105,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int KEYWORD_PLAN_AD_GROUP_FIELD_NUMBER = 8;
-  private volatile java.lang.Object keywordPlanAdGroup_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object keywordPlanAdGroup_ = "";
   /**
    * <pre>
    * The Keyword Plan ad group to which this keyword belongs.
@@ -162,7 +164,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ID_FIELD_NUMBER = 9;
-  private long id_;
+  private long id_ = 0L;
   /**
    * <pre>
    * Output only. The ID of the Keyword Plan keyword.
@@ -189,7 +191,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TEXT_FIELD_NUMBER = 10;
-  private volatile java.lang.Object text_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object text_ = "";
   /**
    * <pre>
    * The keyword text.
@@ -247,7 +250,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MATCH_TYPE_FIELD_NUMBER = 5;
-  private int matchType_;
+  private int matchType_ = 0;
   /**
    * <pre>
    * The keyword match type.
@@ -268,13 +271,12 @@ private static final long serialVersionUID = 0L;
    * @return The matchType.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.KeywordMatchTypeEnum.KeywordMatchType getMatchType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.KeywordMatchTypeEnum.KeywordMatchType result = com.google.ads.googleads.v11.enums.KeywordMatchTypeEnum.KeywordMatchType.valueOf(matchType_);
+    com.google.ads.googleads.v11.enums.KeywordMatchTypeEnum.KeywordMatchType result = com.google.ads.googleads.v11.enums.KeywordMatchTypeEnum.KeywordMatchType.forNumber(matchType_);
     return result == null ? com.google.ads.googleads.v11.enums.KeywordMatchTypeEnum.KeywordMatchType.UNRECOGNIZED : result;
   }
 
   public static final int CPC_BID_MICROS_FIELD_NUMBER = 11;
-  private long cpcBidMicros_;
+  private long cpcBidMicros_ = 0L;
   /**
    * <pre>
    * A keyword level max cpc bid in micros (for example, $1 = 1mm). The currency
@@ -307,7 +309,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NEGATIVE_FIELD_NUMBER = 12;
-  private boolean negative_;
+  private boolean negative_ = false;
   /**
    * <pre>
    * Immutable. If true, the keyword is negative.
@@ -616,20 +618,14 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       keywordPlanAdGroup_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       id_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000002);
       text_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       matchType_ = 0;
-
       cpcBidMicros_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000008);
       negative_ = false;
-      bitField0_ = (bitField0_ & ~0x00000010);
       return this;
     }
 
@@ -656,33 +652,41 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.KeywordPlanAdGroupKeyword buildPartial() {
       com.google.ads.googleads.v11.resources.KeywordPlanAdGroupKeyword result = new com.google.ads.googleads.v11.resources.KeywordPlanAdGroupKeyword(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.KeywordPlanAdGroupKeyword result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.keywordPlanAdGroup_ = keywordPlanAdGroup_;
         to_bitField0_ |= 0x00000001;
       }
-      result.keywordPlanAdGroup_ = keywordPlanAdGroup_;
-      if (((from_bitField0_ & 0x00000002) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.id_ = id_;
         to_bitField0_ |= 0x00000002;
       }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.text_ = text_;
         to_bitField0_ |= 0x00000004;
       }
-      result.text_ = text_;
-      result.matchType_ = matchType_;
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.matchType_ = matchType_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
         result.cpcBidMicros_ = cpcBidMicros_;
         to_bitField0_ |= 0x00000008;
       }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000040) != 0)) {
         result.negative_ = negative_;
         to_bitField0_ |= 0x00000010;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -731,19 +735,20 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.resources.KeywordPlanAdGroupKeyword.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasKeywordPlanAdGroup()) {
-        bitField0_ |= 0x00000001;
         keywordPlanAdGroup_ = other.keywordPlanAdGroup_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasId()) {
         setId(other.getId());
       }
       if (other.hasText()) {
-        bitField0_ |= 0x00000004;
         text_ = other.text_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.matchType_ != 0) {
@@ -783,37 +788,37 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 40: {
               matchType_ = input.readEnum();
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 40
             case 66: {
               keywordPlanAdGroup_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 66
             case 72: {
               id_ = input.readInt64();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 72
             case 82: {
               text_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               break;
             } // case 82
             case 88: {
               cpcBidMicros_ = input.readInt64();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000020;
               break;
             } // case 88
             case 96: {
               negative_ = input.readBool();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000040;
               break;
             } // case 96
             default: {
@@ -892,11 +897,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -911,8 +914,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -929,12 +932,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -949,7 +950,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the keywordPlanAdGroup field is set.
      */
     public boolean hasKeywordPlanAdGroup() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -1003,11 +1004,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKeywordPlanAdGroup(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       keywordPlanAdGroup_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1020,8 +1019,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearKeywordPlanAdGroup() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       keywordPlanAdGroup_ = getDefaultInstance().getKeywordPlanAdGroup();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1036,12 +1035,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKeywordPlanAdGroupBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       keywordPlanAdGroup_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1057,7 +1054,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasId() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -1081,8 +1078,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      bitField0_ |= 0x00000002;
+      
       id_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1095,7 +1093,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearId() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       id_ = 0L;
       onChanged();
       return this;
@@ -1111,7 +1109,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the text field is set.
      */
     public boolean hasText() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -1165,11 +1163,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setText(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       text_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1182,8 +1178,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearText() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       text_ = getDefaultInstance().getText();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1198,12 +1194,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTextBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       text_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1230,8 +1224,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMatchTypeValue(int value) {
-      
       matchType_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1245,8 +1239,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.KeywordMatchTypeEnum.KeywordMatchType getMatchType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.KeywordMatchTypeEnum.KeywordMatchType result = com.google.ads.googleads.v11.enums.KeywordMatchTypeEnum.KeywordMatchType.valueOf(matchType_);
+      com.google.ads.googleads.v11.enums.KeywordMatchTypeEnum.KeywordMatchType result = com.google.ads.googleads.v11.enums.KeywordMatchTypeEnum.KeywordMatchType.forNumber(matchType_);
       return result == null ? com.google.ads.googleads.v11.enums.KeywordMatchTypeEnum.KeywordMatchType.UNRECOGNIZED : result;
     }
     /**
@@ -1262,7 +1255,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000010;
       matchType_ = value.getNumber();
       onChanged();
       return this;
@@ -1276,7 +1269,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMatchType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       matchType_ = 0;
       onChanged();
       return this;
@@ -1296,7 +1289,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCpcBidMicros() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -1326,8 +1319,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCpcBidMicros(long value) {
-      bitField0_ |= 0x00000008;
+      
       cpcBidMicros_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1343,7 +1337,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCpcBidMicros() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000020);
       cpcBidMicros_ = 0L;
       onChanged();
       return this;
@@ -1360,7 +1354,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasNegative() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -1384,8 +1378,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setNegative(boolean value) {
-      bitField0_ |= 0x00000010;
+      
       negative_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1398,7 +1393,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearNegative() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000040);
       negative_ = false;
       onChanged();
       return this;

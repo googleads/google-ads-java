@@ -52,7 +52,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int LOCATION_FIELD_NUMBER = 1;
-  private int location_;
+  private int location_ = 0;
   /**
    * <pre>
    * The targeted location on the search results page.
@@ -73,13 +73,12 @@ private static final long serialVersionUID = 0L;
    * @return The location.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation getLocation() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation result = com.google.ads.googleads.v12.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation.valueOf(location_);
+    com.google.ads.googleads.v12.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation result = com.google.ads.googleads.v12.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation.forNumber(location_);
     return result == null ? com.google.ads.googleads.v12.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation.UNRECOGNIZED : result;
   }
 
   public static final int LOCATION_FRACTION_MICROS_FIELD_NUMBER = 4;
-  private long locationFractionMicros_;
+  private long locationFractionMicros_ = 0L;
   /**
    * <pre>
    * The chosen fraction of ads to be shown in the targeted location in micros.
@@ -108,7 +107,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CPC_BID_CEILING_MICROS_FIELD_NUMBER = 5;
-  private long cpcBidCeilingMicros_;
+  private long cpcBidCeilingMicros_ = 0L;
   /**
    * <pre>
    * The highest CPC bid the automated bidding system is permitted to specify.
@@ -365,12 +364,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       location_ = 0;
-
       locationFractionMicros_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       cpcBidCeilingMicros_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -397,20 +394,26 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.TargetImpressionShare buildPartial() {
       com.google.ads.googleads.v12.common.TargetImpressionShare result = new com.google.ads.googleads.v12.common.TargetImpressionShare(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.TargetImpressionShare result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.location_ = location_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.location_ = location_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.locationFractionMicros_ = locationFractionMicros_;
         to_bitField0_ |= 0x00000001;
       }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.cpcBidCeilingMicros_ = cpcBidCeilingMicros_;
         to_bitField0_ |= 0x00000002;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -494,17 +497,17 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               location_ = input.readEnum();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             case 32: {
               locationFractionMicros_ = input.readInt64();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 32
             case 40: {
               cpcBidCeilingMicros_ = input.readInt64();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 40
             default: {
@@ -546,8 +549,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLocationValue(int value) {
-      
       location_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -561,8 +564,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation getLocation() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation result = com.google.ads.googleads.v12.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation.valueOf(location_);
+      com.google.ads.googleads.v12.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation result = com.google.ads.googleads.v12.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation.forNumber(location_);
       return result == null ? com.google.ads.googleads.v12.enums.TargetImpressionShareLocationEnum.TargetImpressionShareLocation.UNRECOGNIZED : result;
     }
     /**
@@ -578,7 +580,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       location_ = value.getNumber();
       onChanged();
       return this;
@@ -592,7 +594,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLocation() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       location_ = 0;
       onChanged();
       return this;
@@ -610,7 +612,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasLocationFractionMicros() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -636,8 +638,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLocationFractionMicros(long value) {
-      bitField0_ |= 0x00000001;
+      
       locationFractionMicros_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -651,7 +654,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLocationFractionMicros() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       locationFractionMicros_ = 0L;
       onChanged();
       return this;
@@ -670,7 +673,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCpcBidCeilingMicros() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -698,8 +701,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCpcBidCeilingMicros(long value) {
-      bitField0_ |= 0x00000002;
+      
       cpcBidCeilingMicros_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -714,7 +718,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCpcBidCeilingMicros() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       cpcBidCeilingMicros_ = 0L;
       onChanged();
       return this;

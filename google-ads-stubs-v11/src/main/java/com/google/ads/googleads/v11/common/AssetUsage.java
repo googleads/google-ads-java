@@ -50,7 +50,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ASSET_FIELD_NUMBER = 1;
-  private volatile java.lang.Object asset_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object asset_ = "";
   /**
    * <pre>
    * Resource name of the asset.
@@ -96,7 +97,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SERVED_ASSET_FIELD_TYPE_FIELD_NUMBER = 2;
-  private int servedAssetFieldType_;
+  private int servedAssetFieldType_ = 0;
   /**
    * <pre>
    * The served field type of the asset.
@@ -117,8 +118,7 @@ private static final long serialVersionUID = 0L;
    * @return The servedAssetFieldType.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType getServedAssetFieldType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType result = com.google.ads.googleads.v11.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType.valueOf(servedAssetFieldType_);
+    com.google.ads.googleads.v11.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType result = com.google.ads.googleads.v11.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType.forNumber(servedAssetFieldType_);
     return result == null ? com.google.ads.googleads.v11.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType.UNRECOGNIZED : result;
   }
 
@@ -323,10 +323,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       asset_ = "";
-
       servedAssetFieldType_ = 0;
-
       return this;
     }
 
@@ -353,10 +352,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.AssetUsage buildPartial() {
       com.google.ads.googleads.v11.common.AssetUsage result = new com.google.ads.googleads.v11.common.AssetUsage(this);
-      result.asset_ = asset_;
-      result.servedAssetFieldType_ = servedAssetFieldType_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.AssetUsage result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.asset_ = asset_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.servedAssetFieldType_ = servedAssetFieldType_;
+      }
     }
 
     @java.lang.Override
@@ -405,6 +413,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.common.AssetUsage.getDefaultInstance()) return this;
       if (!other.getAsset().isEmpty()) {
         asset_ = other.asset_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.servedAssetFieldType_ != 0) {
@@ -438,12 +447,12 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               asset_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 16: {
               servedAssetFieldType_ = input.readEnum();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             default: {
@@ -461,6 +470,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object asset_ = "";
     /**
@@ -515,11 +525,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAsset(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       asset_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -532,8 +540,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAsset() {
-      
       asset_ = getDefaultInstance().getAsset();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -548,12 +556,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAssetBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       asset_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -580,8 +586,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setServedAssetFieldTypeValue(int value) {
-      
       servedAssetFieldType_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -595,8 +601,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType getServedAssetFieldType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType result = com.google.ads.googleads.v11.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType.valueOf(servedAssetFieldType_);
+      com.google.ads.googleads.v11.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType result = com.google.ads.googleads.v11.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType.forNumber(servedAssetFieldType_);
       return result == null ? com.google.ads.googleads.v11.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType.UNRECOGNIZED : result;
     }
     /**
@@ -612,7 +617,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000002;
       servedAssetFieldType_ = value.getNumber();
       onChanged();
       return this;
@@ -626,7 +631,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearServedAssetFieldType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       servedAssetFieldType_ = 0;
       onChanged();
       return this;

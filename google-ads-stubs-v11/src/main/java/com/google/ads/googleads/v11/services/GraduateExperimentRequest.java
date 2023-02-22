@@ -5,7 +5,8 @@ package com.google.ads.googleads.v11.services;
 
 /**
  * <pre>
- * Request message for [ExperimentService.GraduateExperiment][google.ads.googleads.v11.services.ExperimentService.GraduateExperiment].
+ * Request message for
+ * [ExperimentService.GraduateExperiment][google.ads.googleads.v11.services.ExperimentService.GraduateExperiment].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v11.services.GraduateExperimentRequest}
@@ -50,7 +51,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EXPERIMENT_FIELD_NUMBER = 1;
-  private volatile java.lang.Object experiment_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object experiment_ = "";
   /**
    * <pre>
    * Required. The experiment to be graduated.
@@ -96,11 +98,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CAMPAIGN_BUDGET_MAPPINGS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.services.CampaignBudgetMapping> campaignBudgetMappings_;
   /**
    * <pre>
-   * Required. List of campaign budget mappings for graduation. Each campaign that
-   * appears here will graduate, and will be assigned a new budget that is
+   * Required. List of campaign budget mappings for graduation. Each campaign
+   * that appears here will graduate, and will be assigned a new budget that is
    * paired with it in the mapping. The maximum size is one.
    * </pre>
    *
@@ -112,8 +115,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. List of campaign budget mappings for graduation. Each campaign that
-   * appears here will graduate, and will be assigned a new budget that is
+   * Required. List of campaign budget mappings for graduation. Each campaign
+   * that appears here will graduate, and will be assigned a new budget that is
    * paired with it in the mapping. The maximum size is one.
    * </pre>
    *
@@ -126,8 +129,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. List of campaign budget mappings for graduation. Each campaign that
-   * appears here will graduate, and will be assigned a new budget that is
+   * Required. List of campaign budget mappings for graduation. Each campaign
+   * that appears here will graduate, and will be assigned a new budget that is
    * paired with it in the mapping. The maximum size is one.
    * </pre>
    *
@@ -139,8 +142,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. List of campaign budget mappings for graduation. Each campaign that
-   * appears here will graduate, and will be assigned a new budget that is
+   * Required. List of campaign budget mappings for graduation. Each campaign
+   * that appears here will graduate, and will be assigned a new budget that is
    * paired with it in the mapping. The maximum size is one.
    * </pre>
    *
@@ -152,8 +155,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. List of campaign budget mappings for graduation. Each campaign that
-   * appears here will graduate, and will be assigned a new budget that is
+   * Required. List of campaign budget mappings for graduation. Each campaign
+   * that appears here will graduate, and will be assigned a new budget that is
    * paired with it in the mapping. The maximum size is one.
    * </pre>
    *
@@ -166,7 +169,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VALIDATE_ONLY_FIELD_NUMBER = 3;
-  private boolean validateOnly_;
+  private boolean validateOnly_ = false;
   /**
    * <pre>
    * If true, the request is validated but not executed. Only errors are
@@ -362,7 +365,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Request message for [ExperimentService.GraduateExperiment][google.ads.googleads.v11.services.ExperimentService.GraduateExperiment].
+   * Request message for
+   * [ExperimentService.GraduateExperiment][google.ads.googleads.v11.services.ExperimentService.GraduateExperiment].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v11.services.GraduateExperimentRequest}
@@ -397,17 +401,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       experiment_ = "";
-
       if (campaignBudgetMappingsBuilder_ == null) {
         campaignBudgetMappings_ = java.util.Collections.emptyList();
       } else {
         campaignBudgetMappings_ = null;
         campaignBudgetMappingsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       validateOnly_ = false;
-
       return this;
     }
 
@@ -434,20 +437,32 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.GraduateExperimentRequest buildPartial() {
       com.google.ads.googleads.v11.services.GraduateExperimentRequest result = new com.google.ads.googleads.v11.services.GraduateExperimentRequest(this);
-      int from_bitField0_ = bitField0_;
-      result.experiment_ = experiment_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.services.GraduateExperimentRequest result) {
       if (campaignBudgetMappingsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           campaignBudgetMappings_ = java.util.Collections.unmodifiableList(campaignBudgetMappings_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.campaignBudgetMappings_ = campaignBudgetMappings_;
       } else {
         result.campaignBudgetMappings_ = campaignBudgetMappingsBuilder_.build();
       }
-      result.validateOnly_ = validateOnly_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.GraduateExperimentRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.experiment_ = experiment_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.validateOnly_ = validateOnly_;
+      }
     }
 
     @java.lang.Override
@@ -496,13 +511,14 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.services.GraduateExperimentRequest.getDefaultInstance()) return this;
       if (!other.getExperiment().isEmpty()) {
         experiment_ = other.experiment_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (campaignBudgetMappingsBuilder_ == null) {
         if (!other.campaignBudgetMappings_.isEmpty()) {
           if (campaignBudgetMappings_.isEmpty()) {
             campaignBudgetMappings_ = other.campaignBudgetMappings_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureCampaignBudgetMappingsIsMutable();
             campaignBudgetMappings_.addAll(other.campaignBudgetMappings_);
@@ -515,7 +531,7 @@ private static final long serialVersionUID = 0L;
             campaignBudgetMappingsBuilder_.dispose();
             campaignBudgetMappingsBuilder_ = null;
             campaignBudgetMappings_ = other.campaignBudgetMappings_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
             campaignBudgetMappingsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getCampaignBudgetMappingsFieldBuilder() : null;
@@ -555,7 +571,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               experiment_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
@@ -573,7 +589,7 @@ private static final long serialVersionUID = 0L;
             } // case 18
             case 24: {
               validateOnly_ = input.readBool();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 24
             default: {
@@ -646,11 +662,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setExperiment(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       experiment_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -663,8 +677,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearExperiment() {
-      
       experiment_ = getDefaultInstance().getExperiment();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -679,12 +693,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setExperimentBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       experiment_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -692,9 +704,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v11.services.CampaignBudgetMapping> campaignBudgetMappings_ =
       java.util.Collections.emptyList();
     private void ensureCampaignBudgetMappingsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         campaignBudgetMappings_ = new java.util.ArrayList<com.google.ads.googleads.v11.services.CampaignBudgetMapping>(campaignBudgetMappings_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -703,8 +715,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Required. List of campaign budget mappings for graduation. Each campaign that
-     * appears here will graduate, and will be assigned a new budget that is
+     * Required. List of campaign budget mappings for graduation. Each campaign
+     * that appears here will graduate, and will be assigned a new budget that is
      * paired with it in the mapping. The maximum size is one.
      * </pre>
      *
@@ -719,8 +731,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. List of campaign budget mappings for graduation. Each campaign that
-     * appears here will graduate, and will be assigned a new budget that is
+     * Required. List of campaign budget mappings for graduation. Each campaign
+     * that appears here will graduate, and will be assigned a new budget that is
      * paired with it in the mapping. The maximum size is one.
      * </pre>
      *
@@ -735,8 +747,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. List of campaign budget mappings for graduation. Each campaign that
-     * appears here will graduate, and will be assigned a new budget that is
+     * Required. List of campaign budget mappings for graduation. Each campaign
+     * that appears here will graduate, and will be assigned a new budget that is
      * paired with it in the mapping. The maximum size is one.
      * </pre>
      *
@@ -751,8 +763,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. List of campaign budget mappings for graduation. Each campaign that
-     * appears here will graduate, and will be assigned a new budget that is
+     * Required. List of campaign budget mappings for graduation. Each campaign
+     * that appears here will graduate, and will be assigned a new budget that is
      * paired with it in the mapping. The maximum size is one.
      * </pre>
      *
@@ -774,8 +786,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. List of campaign budget mappings for graduation. Each campaign that
-     * appears here will graduate, and will be assigned a new budget that is
+     * Required. List of campaign budget mappings for graduation. Each campaign
+     * that appears here will graduate, and will be assigned a new budget that is
      * paired with it in the mapping. The maximum size is one.
      * </pre>
      *
@@ -794,8 +806,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. List of campaign budget mappings for graduation. Each campaign that
-     * appears here will graduate, and will be assigned a new budget that is
+     * Required. List of campaign budget mappings for graduation. Each campaign
+     * that appears here will graduate, and will be assigned a new budget that is
      * paired with it in the mapping. The maximum size is one.
      * </pre>
      *
@@ -816,8 +828,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. List of campaign budget mappings for graduation. Each campaign that
-     * appears here will graduate, and will be assigned a new budget that is
+     * Required. List of campaign budget mappings for graduation. Each campaign
+     * that appears here will graduate, and will be assigned a new budget that is
      * paired with it in the mapping. The maximum size is one.
      * </pre>
      *
@@ -839,8 +851,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. List of campaign budget mappings for graduation. Each campaign that
-     * appears here will graduate, and will be assigned a new budget that is
+     * Required. List of campaign budget mappings for graduation. Each campaign
+     * that appears here will graduate, and will be assigned a new budget that is
      * paired with it in the mapping. The maximum size is one.
      * </pre>
      *
@@ -859,8 +871,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. List of campaign budget mappings for graduation. Each campaign that
-     * appears here will graduate, and will be assigned a new budget that is
+     * Required. List of campaign budget mappings for graduation. Each campaign
+     * that appears here will graduate, and will be assigned a new budget that is
      * paired with it in the mapping. The maximum size is one.
      * </pre>
      *
@@ -879,8 +891,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. List of campaign budget mappings for graduation. Each campaign that
-     * appears here will graduate, and will be assigned a new budget that is
+     * Required. List of campaign budget mappings for graduation. Each campaign
+     * that appears here will graduate, and will be assigned a new budget that is
      * paired with it in the mapping. The maximum size is one.
      * </pre>
      *
@@ -900,8 +912,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. List of campaign budget mappings for graduation. Each campaign that
-     * appears here will graduate, and will be assigned a new budget that is
+     * Required. List of campaign budget mappings for graduation. Each campaign
+     * that appears here will graduate, and will be assigned a new budget that is
      * paired with it in the mapping. The maximum size is one.
      * </pre>
      *
@@ -910,7 +922,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearCampaignBudgetMappings() {
       if (campaignBudgetMappingsBuilder_ == null) {
         campaignBudgetMappings_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         campaignBudgetMappingsBuilder_.clear();
@@ -919,8 +931,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. List of campaign budget mappings for graduation. Each campaign that
-     * appears here will graduate, and will be assigned a new budget that is
+     * Required. List of campaign budget mappings for graduation. Each campaign
+     * that appears here will graduate, and will be assigned a new budget that is
      * paired with it in the mapping. The maximum size is one.
      * </pre>
      *
@@ -938,8 +950,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. List of campaign budget mappings for graduation. Each campaign that
-     * appears here will graduate, and will be assigned a new budget that is
+     * Required. List of campaign budget mappings for graduation. Each campaign
+     * that appears here will graduate, and will be assigned a new budget that is
      * paired with it in the mapping. The maximum size is one.
      * </pre>
      *
@@ -951,8 +963,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. List of campaign budget mappings for graduation. Each campaign that
-     * appears here will graduate, and will be assigned a new budget that is
+     * Required. List of campaign budget mappings for graduation. Each campaign
+     * that appears here will graduate, and will be assigned a new budget that is
      * paired with it in the mapping. The maximum size is one.
      * </pre>
      *
@@ -967,8 +979,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. List of campaign budget mappings for graduation. Each campaign that
-     * appears here will graduate, and will be assigned a new budget that is
+     * Required. List of campaign budget mappings for graduation. Each campaign
+     * that appears here will graduate, and will be assigned a new budget that is
      * paired with it in the mapping. The maximum size is one.
      * </pre>
      *
@@ -984,8 +996,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. List of campaign budget mappings for graduation. Each campaign that
-     * appears here will graduate, and will be assigned a new budget that is
+     * Required. List of campaign budget mappings for graduation. Each campaign
+     * that appears here will graduate, and will be assigned a new budget that is
      * paired with it in the mapping. The maximum size is one.
      * </pre>
      *
@@ -997,8 +1009,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. List of campaign budget mappings for graduation. Each campaign that
-     * appears here will graduate, and will be assigned a new budget that is
+     * Required. List of campaign budget mappings for graduation. Each campaign
+     * that appears here will graduate, and will be assigned a new budget that is
      * paired with it in the mapping. The maximum size is one.
      * </pre>
      *
@@ -1011,8 +1023,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. List of campaign budget mappings for graduation. Each campaign that
-     * appears here will graduate, and will be assigned a new budget that is
+     * Required. List of campaign budget mappings for graduation. Each campaign
+     * that appears here will graduate, and will be assigned a new budget that is
      * paired with it in the mapping. The maximum size is one.
      * </pre>
      *
@@ -1029,7 +1041,7 @@ private static final long serialVersionUID = 0L;
         campaignBudgetMappingsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v11.services.CampaignBudgetMapping, com.google.ads.googleads.v11.services.CampaignBudgetMapping.Builder, com.google.ads.googleads.v11.services.CampaignBudgetMappingOrBuilder>(
                 campaignBudgetMappings_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         campaignBudgetMappings_ = null;
@@ -1064,6 +1076,7 @@ private static final long serialVersionUID = 0L;
     public Builder setValidateOnly(boolean value) {
       
       validateOnly_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1077,7 +1090,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearValidateOnly() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       validateOnly_ = false;
       onChanged();
       return this;

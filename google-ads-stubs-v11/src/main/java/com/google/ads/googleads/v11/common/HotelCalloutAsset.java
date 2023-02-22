@@ -50,7 +50,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TEXT_FIELD_NUMBER = 1;
-  private volatile java.lang.Object text_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object text_ = "";
   /**
    * <pre>
    * Required. The text of the hotel callout asset.
@@ -98,7 +99,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LANGUAGE_CODE_FIELD_NUMBER = 2;
-  private volatile java.lang.Object languageCode_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object languageCode_ = "";
   /**
    * <pre>
    * Required. The language of the hotel callout.
@@ -346,10 +348,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       text_ = "";
-
       languageCode_ = "";
-
       return this;
     }
 
@@ -376,10 +377,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.HotelCalloutAsset buildPartial() {
       com.google.ads.googleads.v11.common.HotelCalloutAsset result = new com.google.ads.googleads.v11.common.HotelCalloutAsset(this);
-      result.text_ = text_;
-      result.languageCode_ = languageCode_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.HotelCalloutAsset result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.text_ = text_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.languageCode_ = languageCode_;
+      }
     }
 
     @java.lang.Override
@@ -428,10 +438,12 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.common.HotelCalloutAsset.getDefaultInstance()) return this;
       if (!other.getText().isEmpty()) {
         text_ = other.text_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getLanguageCode().isEmpty()) {
         languageCode_ = other.languageCode_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -462,12 +474,12 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               text_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               languageCode_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             default: {
@@ -485,6 +497,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object text_ = "";
     /**
@@ -542,11 +555,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setText(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       text_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -560,8 +571,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearText() {
-      
       text_ = getDefaultInstance().getText();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -577,12 +588,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTextBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       text_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -643,11 +652,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLanguageCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       languageCode_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -661,8 +668,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLanguageCode() {
-      
       languageCode_ = getDefaultInstance().getLanguageCode();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -678,12 +685,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLanguageCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       languageCode_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

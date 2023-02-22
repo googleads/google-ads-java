@@ -50,10 +50,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CUSTOMER_ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object customerId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object customerId_ = "";
   /**
    * <pre>
-   * Required. The ID of the customer for which to create an offline user data job.
+   * Required. The ID of the customer for which to create an offline user data
+   * job.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -74,7 +76,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. The ID of the customer for which to create an offline user data job.
+   * Required. The ID of the customer for which to create an offline user data
+   * job.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -130,11 +133,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.resources.OfflineUserDataJobOrBuilder getJobOrBuilder() {
-    return getJob();
+    return job_ == null ? com.google.ads.googleads.v12.resources.OfflineUserDataJob.getDefaultInstance() : job_;
   }
 
   public static final int VALIDATE_ONLY_FIELD_NUMBER = 3;
-  private boolean validateOnly_;
+  private boolean validateOnly_ = false;
   /**
    * <pre>
    * If true, the request is validated but not executed. Only errors are
@@ -150,7 +153,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ENABLE_MATCH_RATE_RANGE_PREVIEW_FIELD_NUMBER = 5;
-  private boolean enableMatchRateRangePreview_;
+  private boolean enableMatchRateRangePreview_ = false;
   /**
    * <pre>
    * If true, match rate range for the offline user data job is calculated and
@@ -397,18 +400,15 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       customerId_ = "";
-
-      if (jobBuilder_ == null) {
-        job_ = null;
-      } else {
-        job_ = null;
+      job_ = null;
+      if (jobBuilder_ != null) {
+        jobBuilder_.dispose();
         jobBuilder_ = null;
       }
       validateOnly_ = false;
-
       enableMatchRateRangePreview_ = false;
-
       return this;
     }
 
@@ -435,16 +435,27 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.CreateOfflineUserDataJobRequest buildPartial() {
       com.google.ads.googleads.v12.services.CreateOfflineUserDataJobRequest result = new com.google.ads.googleads.v12.services.CreateOfflineUserDataJobRequest(this);
-      result.customerId_ = customerId_;
-      if (jobBuilder_ == null) {
-        result.job_ = job_;
-      } else {
-        result.job_ = jobBuilder_.build();
-      }
-      result.validateOnly_ = validateOnly_;
-      result.enableMatchRateRangePreview_ = enableMatchRateRangePreview_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.CreateOfflineUserDataJobRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.customerId_ = customerId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.job_ = jobBuilder_ == null
+            ? job_
+            : jobBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.validateOnly_ = validateOnly_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.enableMatchRateRangePreview_ = enableMatchRateRangePreview_;
+      }
     }
 
     @java.lang.Override
@@ -493,6 +504,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.services.CreateOfflineUserDataJobRequest.getDefaultInstance()) return this;
       if (!other.getCustomerId().isEmpty()) {
         customerId_ = other.customerId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasJob()) {
@@ -532,24 +544,24 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               customerId_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               input.readMessage(
                   getJobFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 24: {
               validateOnly_ = input.readBool();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 24
             case 40: {
               enableMatchRateRangePreview_ = input.readBool();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 40
             default: {
@@ -567,11 +579,13 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object customerId_ = "";
     /**
      * <pre>
-     * Required. The ID of the customer for which to create an offline user data job.
+     * Required. The ID of the customer for which to create an offline user data
+     * job.
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -591,7 +605,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The ID of the customer for which to create an offline user data job.
+     * Required. The ID of the customer for which to create an offline user data
+     * job.
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -612,7 +627,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The ID of the customer for which to create an offline user data job.
+     * Required. The ID of the customer for which to create an offline user data
+     * job.
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -621,31 +637,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       customerId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. The ID of the customer for which to create an offline user data job.
+     * Required. The ID of the customer for which to create an offline user data
+     * job.
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return This builder for chaining.
      */
     public Builder clearCustomerId() {
-      
       customerId_ = getDefaultInstance().getCustomerId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. The ID of the customer for which to create an offline user data job.
+     * Required. The ID of the customer for which to create an offline user data
+     * job.
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -654,12 +670,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       customerId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -676,7 +690,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the job field is set.
      */
     public boolean hasJob() {
-      return jobBuilder_ != null || job_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -706,11 +720,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         job_ = value;
-        onChanged();
       } else {
         jobBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -724,11 +738,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.resources.OfflineUserDataJob.Builder builderForValue) {
       if (jobBuilder_ == null) {
         job_ = builderForValue.build();
-        onChanged();
       } else {
         jobBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -740,17 +754,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeJob(com.google.ads.googleads.v12.resources.OfflineUserDataJob value) {
       if (jobBuilder_ == null) {
-        if (job_ != null) {
-          job_ =
-            com.google.ads.googleads.v12.resources.OfflineUserDataJob.newBuilder(job_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          job_ != null &&
+          job_ != com.google.ads.googleads.v12.resources.OfflineUserDataJob.getDefaultInstance()) {
+          getJobBuilder().mergeFrom(value);
         } else {
           job_ = value;
         }
-        onChanged();
       } else {
         jobBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -761,14 +776,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.resources.OfflineUserDataJob job = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder clearJob() {
-      if (jobBuilder_ == null) {
-        job_ = null;
-        onChanged();
-      } else {
-        job_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      job_ = null;
+      if (jobBuilder_ != null) {
+        jobBuilder_.dispose();
         jobBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -779,7 +793,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.resources.OfflineUserDataJob job = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.google.ads.googleads.v12.resources.OfflineUserDataJob.Builder getJobBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getJobFieldBuilder().getBuilder();
     }
@@ -846,6 +860,7 @@ private static final long serialVersionUID = 0L;
     public Builder setValidateOnly(boolean value) {
       
       validateOnly_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -859,7 +874,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearValidateOnly() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       validateOnly_ = false;
       onChanged();
       return this;
@@ -892,6 +907,7 @@ private static final long serialVersionUID = 0L;
     public Builder setEnableMatchRateRangePreview(boolean value) {
       
       enableMatchRateRangePreview_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -905,7 +921,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnableMatchRateRangePreview() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       enableMatchRateRangePreview_ = false;
       onChanged();
       return this;

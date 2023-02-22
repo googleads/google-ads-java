@@ -50,7 +50,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int KEYWORD_PLAN_AD_GROUP_KEYWORD_FIELD_NUMBER = 3;
-  private volatile java.lang.Object keywordPlanAdGroupKeyword_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object keywordPlanAdGroupKeyword_ = "";
   /**
    * <pre>
    * The resource name of the Keyword Plan keyword related to the forecast.
@@ -145,7 +146,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.services.ForecastMetricsOrBuilder getKeywordForecastOrBuilder() {
-    return getKeywordForecast();
+    return keywordForecast_ == null ? com.google.ads.googleads.v12.services.ForecastMetrics.getDefaultInstance() : keywordForecast_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -360,12 +361,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       keywordPlanAdGroupKeyword_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
-      if (keywordForecastBuilder_ == null) {
-        keywordForecast_ = null;
-      } else {
-        keywordForecast_ = null;
+      keywordForecast_ = null;
+      if (keywordForecastBuilder_ != null) {
+        keywordForecastBuilder_.dispose();
         keywordForecastBuilder_ = null;
       }
       return this;
@@ -394,20 +394,24 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.KeywordPlanKeywordForecast buildPartial() {
       com.google.ads.googleads.v12.services.KeywordPlanKeywordForecast result = new com.google.ads.googleads.v12.services.KeywordPlanKeywordForecast(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.KeywordPlanKeywordForecast result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.keywordPlanAdGroupKeyword_ = keywordPlanAdGroupKeyword_;
         to_bitField0_ |= 0x00000001;
       }
-      result.keywordPlanAdGroupKeyword_ = keywordPlanAdGroupKeyword_;
-      if (keywordForecastBuilder_ == null) {
-        result.keywordForecast_ = keywordForecast_;
-      } else {
-        result.keywordForecast_ = keywordForecastBuilder_.build();
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.keywordForecast_ = keywordForecastBuilder_ == null
+            ? keywordForecast_
+            : keywordForecastBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -455,8 +459,8 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v12.services.KeywordPlanKeywordForecast other) {
       if (other == com.google.ads.googleads.v12.services.KeywordPlanKeywordForecast.getDefaultInstance()) return this;
       if (other.hasKeywordPlanAdGroupKeyword()) {
-        bitField0_ |= 0x00000001;
         keywordPlanAdGroupKeyword_ = other.keywordPlanAdGroupKeyword_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasKeywordForecast()) {
@@ -492,7 +496,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getKeywordForecastFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
@@ -585,11 +589,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKeywordPlanAdGroupKeyword(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       keywordPlanAdGroupKeyword_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -603,8 +605,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearKeywordPlanAdGroupKeyword() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       keywordPlanAdGroupKeyword_ = getDefaultInstance().getKeywordPlanAdGroupKeyword();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -620,12 +622,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKeywordPlanAdGroupKeywordBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       keywordPlanAdGroupKeyword_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -642,7 +642,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the keywordForecast field is set.
      */
     public boolean hasKeywordForecast() {
-      return keywordForecastBuilder_ != null || keywordForecast_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -672,11 +672,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         keywordForecast_ = value;
-        onChanged();
       } else {
         keywordForecastBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -690,11 +690,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.services.ForecastMetrics.Builder builderForValue) {
       if (keywordForecastBuilder_ == null) {
         keywordForecast_ = builderForValue.build();
-        onChanged();
       } else {
         keywordForecastBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -706,17 +706,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeKeywordForecast(com.google.ads.googleads.v12.services.ForecastMetrics value) {
       if (keywordForecastBuilder_ == null) {
-        if (keywordForecast_ != null) {
-          keywordForecast_ =
-            com.google.ads.googleads.v12.services.ForecastMetrics.newBuilder(keywordForecast_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          keywordForecast_ != null &&
+          keywordForecast_ != com.google.ads.googleads.v12.services.ForecastMetrics.getDefaultInstance()) {
+          getKeywordForecastBuilder().mergeFrom(value);
         } else {
           keywordForecast_ = value;
         }
-        onChanged();
       } else {
         keywordForecastBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -727,14 +728,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.services.ForecastMetrics keyword_forecast = 2;</code>
      */
     public Builder clearKeywordForecast() {
-      if (keywordForecastBuilder_ == null) {
-        keywordForecast_ = null;
-        onChanged();
-      } else {
-        keywordForecast_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      keywordForecast_ = null;
+      if (keywordForecastBuilder_ != null) {
+        keywordForecastBuilder_.dispose();
         keywordForecastBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -745,7 +745,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.services.ForecastMetrics keyword_forecast = 2;</code>
      */
     public com.google.ads.googleads.v12.services.ForecastMetrics.Builder getKeywordForecastBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getKeywordForecastFieldBuilder().getBuilder();
     }

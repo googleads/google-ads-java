@@ -56,6 +56,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HEADLINES_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.AdTextAsset> headlines_;
   /**
    * <pre>
@@ -126,6 +127,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LONG_HEADLINES_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.AdTextAsset> longHeadlines_;
   /**
    * <pre>
@@ -191,6 +193,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTIONS_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.AdTextAsset> descriptions_;
   /**
    * <pre>
@@ -256,6 +259,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALL_TO_ACTIONS_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.AdTextAsset> callToActions_;
   /**
    * <pre>
@@ -321,6 +325,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VIDEOS_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.AdVideoAsset> videos_;
   /**
    * <pre>
@@ -386,6 +391,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int COMPANION_BANNERS_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.AdImageAsset> companionBanners_;
   /**
    * <pre>
@@ -451,7 +457,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BREADCRUMB1_FIELD_NUMBER = 7;
-  private volatile java.lang.Object breadcrumb1_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object breadcrumb1_ = "";
   /**
    * <pre>
    * First part of text that appears in the ad with the displayed URL.
@@ -497,7 +504,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BREADCRUMB2_FIELD_NUMBER = 8;
-  private volatile java.lang.Object breadcrumb2_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object breadcrumb2_ = "";
   /**
    * <pre>
    * Second part of text that appears in the ad with the displayed URL.
@@ -821,6 +829,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (headlinesBuilder_ == null) {
         headlines_ = java.util.Collections.emptyList();
       } else {
@@ -864,9 +873,7 @@ private static final long serialVersionUID = 0L;
       }
       bitField0_ = (bitField0_ & ~0x00000020);
       breadcrumb1_ = "";
-
       breadcrumb2_ = "";
-
       return this;
     }
 
@@ -893,7 +900,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.VideoResponsiveAdInfo buildPartial() {
       com.google.ads.googleads.v12.common.VideoResponsiveAdInfo result = new com.google.ads.googleads.v12.common.VideoResponsiveAdInfo(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.common.VideoResponsiveAdInfo result) {
       if (headlinesBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           headlines_ = java.util.Collections.unmodifiableList(headlines_);
@@ -948,10 +961,16 @@ private static final long serialVersionUID = 0L;
       } else {
         result.companionBanners_ = companionBannersBuilder_.build();
       }
-      result.breadcrumb1_ = breadcrumb1_;
-      result.breadcrumb2_ = breadcrumb2_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.VideoResponsiveAdInfo result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.breadcrumb1_ = breadcrumb1_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.breadcrumb2_ = breadcrumb2_;
+      }
     }
 
     @java.lang.Override
@@ -1156,10 +1175,12 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getBreadcrumb1().isEmpty()) {
         breadcrumb1_ = other.breadcrumb1_;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (!other.getBreadcrumb2().isEmpty()) {
         breadcrumb2_ = other.breadcrumb2_;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -1268,12 +1289,12 @@ private static final long serialVersionUID = 0L;
             } // case 50
             case 58: {
               breadcrumb1_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000040;
               break;
             } // case 58
             case 66: {
               breadcrumb2_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000080;
               break;
             } // case 66
             default: {
@@ -3344,11 +3365,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBreadcrumb1(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       breadcrumb1_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -3361,8 +3380,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBreadcrumb1() {
-      
       breadcrumb1_ = getDefaultInstance().getBreadcrumb1();
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -3377,12 +3396,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBreadcrumb1Bytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       breadcrumb1_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -3440,11 +3457,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBreadcrumb2(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       breadcrumb2_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -3457,8 +3472,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBreadcrumb2() {
-      
       breadcrumb2_ = getDefaultInstance().getBreadcrumb2();
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -3473,12 +3488,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBreadcrumb2Bytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       breadcrumb2_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }

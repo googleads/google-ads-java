@@ -52,9 +52,9 @@ public interface UserListOrBuilder extends
 
   /**
    * <pre>
-   * Output only. An option that indicates if a user may edit a list. Depends on the list
-   * ownership and list type. For example, external remarketing user lists are
-   * not editable.
+   * Output only. An option that indicates if a user may edit a list. Depends on
+   * the list ownership and list type. For example, external remarketing user
+   * lists are not editable.
    * This field is read-only.
    * </pre>
    *
@@ -64,9 +64,9 @@ public interface UserListOrBuilder extends
   boolean hasReadOnly();
   /**
    * <pre>
-   * Output only. An option that indicates if a user may edit a list. Depends on the list
-   * ownership and list type. For example, external remarketing user lists are
-   * not editable.
+   * Output only. An option that indicates if a user may edit a list. Depends on
+   * the list ownership and list type. For example, external remarketing user
+   * lists are not editable.
    * This field is read-only.
    * </pre>
    *
@@ -220,8 +220,9 @@ public interface UserListOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Estimated number of users in this user list, on the Google Display Network.
-   * This value is null if the number of users has not yet been determined.
+   * Output only. Estimated number of users in this user list, on the Google
+   * Display Network. This value is null if the number of users has not yet been
+   * determined.
    * This field is read-only.
    * </pre>
    *
@@ -231,8 +232,9 @@ public interface UserListOrBuilder extends
   boolean hasSizeForDisplay();
   /**
    * <pre>
-   * Output only. Estimated number of users in this user list, on the Google Display Network.
-   * This value is null if the number of users has not yet been determined.
+   * Output only. Estimated number of users in this user list, on the Google
+   * Display Network. This value is null if the number of users has not yet been
+   * determined.
    * This field is read-only.
    * </pre>
    *
@@ -243,8 +245,8 @@ public interface UserListOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Size range in terms of number of users of the UserList, on the Google
-   * Display Network.
+   * Output only. Size range in terms of number of users of the UserList, on the
+   * Google Display Network.
    * This field is read-only.
    * </pre>
    *
@@ -254,8 +256,8 @@ public interface UserListOrBuilder extends
   int getSizeRangeForDisplayValue();
   /**
    * <pre>
-   * Output only. Size range in terms of number of users of the UserList, on the Google
-   * Display Network.
+   * Output only. Size range in terms of number of users of the UserList, on the
+   * Google Display Network.
    * This field is read-only.
    * </pre>
    *
@@ -266,8 +268,8 @@ public interface UserListOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Estimated number of users in this user list in the google.com domain.
-   * These are the users available for targeting in Search campaigns.
+   * Output only. Estimated number of users in this user list in the google.com
+   * domain. These are the users available for targeting in Search campaigns.
    * This value is null if the number of users has not yet been determined.
    * This field is read-only.
    * </pre>
@@ -278,8 +280,8 @@ public interface UserListOrBuilder extends
   boolean hasSizeForSearch();
   /**
    * <pre>
-   * Output only. Estimated number of users in this user list in the google.com domain.
-   * These are the users available for targeting in Search campaigns.
+   * Output only. Estimated number of users in this user list in the google.com
+   * domain. These are the users available for targeting in Search campaigns.
    * This value is null if the number of users has not yet been determined.
    * This field is read-only.
    * </pre>
@@ -291,7 +293,8 @@ public interface UserListOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Size range in terms of number of users of the UserList, for Search ads.
+   * Output only. Size range in terms of number of users of the UserList, for
+   * Search ads.
    * This field is read-only.
    * </pre>
    *
@@ -301,7 +304,8 @@ public interface UserListOrBuilder extends
   int getSizeRangeForSearchValue();
   /**
    * <pre>
-   * Output only. Size range in terms of number of users of the UserList, for Search ads.
+   * Output only. Size range in terms of number of users of the UserList, for
+   * Search ads.
    * This field is read-only.
    * </pre>
    *
@@ -356,8 +360,8 @@ public interface UserListOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Indicates the reason this account has been granted access to the list.
-   * The reason can be SHARED, OWNED, LICENSED or SUBSCRIBED.
+   * Output only. Indicates the reason this account has been granted access to
+   * the list. The reason can be SHARED, OWNED, LICENSED or SUBSCRIBED.
    * This field is read-only.
    * </pre>
    *
@@ -367,8 +371,8 @@ public interface UserListOrBuilder extends
   int getAccessReasonValue();
   /**
    * <pre>
-   * Output only. Indicates the reason this account has been granted access to the list.
-   * The reason can be SHARED, OWNED, LICENSED or SUBSCRIBED.
+   * Output only. Indicates the reason this account has been granted access to
+   * the list. The reason can be SHARED, OWNED, LICENSED or SUBSCRIBED.
    * This field is read-only.
    * </pre>
    *
@@ -423,7 +427,8 @@ public interface UserListOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Indicates this user list is eligible for Google Display Network.
+   * Output only. Indicates this user list is eligible for Google Display
+   * Network.
    * This field is read-only.
    * </pre>
    *
@@ -433,7 +438,8 @@ public interface UserListOrBuilder extends
   boolean hasEligibleForDisplay();
   /**
    * <pre>
-   * Output only. Indicates this user list is eligible for Google Display Network.
+   * Output only. Indicates this user list is eligible for Google Display
+   * Network.
    * This field is read-only.
    * </pre>
    *
@@ -444,9 +450,9 @@ public interface UserListOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Indicates match rate for Customer Match lists. The range of this field is
-   * [0-100]. This will be null for other list types or when it's not possible
-   * to calculate the match rate.
+   * Output only. Indicates match rate for Customer Match lists. The range of
+   * this field is [0-100]. This will be null for other list types or when it's
+   * not possible to calculate the match rate.
    * This field is read-only.
    * </pre>
    *
@@ -456,9 +462,9 @@ public interface UserListOrBuilder extends
   boolean hasMatchRatePercentage();
   /**
    * <pre>
-   * Output only. Indicates match rate for Customer Match lists. The range of this field is
-   * [0-100]. This will be null for other list types or when it's not possible
-   * to calculate the match rate.
+   * Output only. Indicates match rate for Customer Match lists. The range of
+   * this field is [0-100]. This will be null for other list types or when it's
+   * not possible to calculate the match rate.
    * This field is read-only.
    * </pre>
    *

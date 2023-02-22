@@ -157,8 +157,8 @@ public interface UserAttributeOrBuilder extends
 
   /**
    * <pre>
-   * Optional. Advertiser defined lifecycle stage for the user. The accepted values are
-   * "Lead", "Active" and "Churned".
+   * Optional. Advertiser defined lifecycle stage for the user. The accepted
+   * values are "Lead", "Active" and "Churned".
    * </pre>
    *
    * <code>string lifecycle_stage = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -167,8 +167,8 @@ public interface UserAttributeOrBuilder extends
   java.lang.String getLifecycleStage();
   /**
    * <pre>
-   * Optional. Advertiser defined lifecycle stage for the user. The accepted values are
-   * "Lead", "Active" and "Churned".
+   * Optional. Advertiser defined lifecycle stage for the user. The accepted
+   * values are "Lead", "Active" and "Churned".
    * </pre>
    *
    * <code>string lifecycle_stage = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -205,8 +205,8 @@ public interface UserAttributeOrBuilder extends
 
   /**
    * <pre>
-   * Optional. Advertiser defined events and their attributes. All the values in the
-   * nested fields are required. Currently this field is in beta.
+   * Optional. Advertiser defined events and their attributes. All the values in
+   * the nested fields are required. Currently this field is in beta.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -215,8 +215,8 @@ public interface UserAttributeOrBuilder extends
       getEventAttributeList();
   /**
    * <pre>
-   * Optional. Advertiser defined events and their attributes. All the values in the
-   * nested fields are required. Currently this field is in beta.
+   * Optional. Advertiser defined events and their attributes. All the values in
+   * the nested fields are required. Currently this field is in beta.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -224,8 +224,8 @@ public interface UserAttributeOrBuilder extends
   com.google.ads.googleads.v12.common.EventAttribute getEventAttribute(int index);
   /**
    * <pre>
-   * Optional. Advertiser defined events and their attributes. All the values in the
-   * nested fields are required. Currently this field is in beta.
+   * Optional. Advertiser defined events and their attributes. All the values in
+   * the nested fields are required. Currently this field is in beta.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -233,8 +233,8 @@ public interface UserAttributeOrBuilder extends
   int getEventAttributeCount();
   /**
    * <pre>
-   * Optional. Advertiser defined events and their attributes. All the values in the
-   * nested fields are required. Currently this field is in beta.
+   * Optional. Advertiser defined events and their attributes. All the values in
+   * the nested fields are required. Currently this field is in beta.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -243,8 +243,8 @@ public interface UserAttributeOrBuilder extends
       getEventAttributeOrBuilderList();
   /**
    * <pre>
-   * Optional. Advertiser defined events and their attributes. All the values in the
-   * nested fields are required. Currently this field is in beta.
+   * Optional. Advertiser defined events and their attributes. All the values in
+   * the nested fields are required. Currently this field is in beta.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>

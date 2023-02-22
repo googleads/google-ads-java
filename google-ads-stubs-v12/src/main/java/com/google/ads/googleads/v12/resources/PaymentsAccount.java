@@ -56,7 +56,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Output only. The resource name of the payments account.
@@ -106,7 +107,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PAYMENTS_ACCOUNT_ID_FIELD_NUMBER = 8;
-  private volatile java.lang.Object paymentsAccountId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object paymentsAccountId_ = "";
   /**
    * <pre>
    * Output only. A 16 digit ID used to identify a payments account.
@@ -164,7 +166,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 9;
-  private volatile java.lang.Object name_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
   /**
    * <pre>
    * Output only. The name of the payments account.
@@ -222,7 +225,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CURRENCY_CODE_FIELD_NUMBER = 10;
-  private volatile java.lang.Object currencyCode_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object currencyCode_ = "";
   /**
    * <pre>
    * Output only. The currency code of the payments account.
@@ -286,11 +290,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PAYMENTS_PROFILE_ID_FIELD_NUMBER = 11;
-  private volatile java.lang.Object paymentsProfileId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object paymentsProfileId_ = "";
   /**
    * <pre>
-   * Output only. A 12 digit ID used to identify the payments profile associated with the
-   * payments account.
+   * Output only. A 12 digit ID used to identify the payments profile associated
+   * with the payments account.
    * </pre>
    *
    * <code>optional string payments_profile_id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -302,8 +307,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. A 12 digit ID used to identify the payments profile associated with the
-   * payments account.
+   * Output only. A 12 digit ID used to identify the payments profile associated
+   * with the payments account.
    * </pre>
    *
    * <code>optional string payments_profile_id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -324,8 +329,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. A 12 digit ID used to identify the payments profile associated with the
-   * payments account.
+   * Output only. A 12 digit ID used to identify the payments profile associated
+   * with the payments account.
    * </pre>
    *
    * <code>optional string payments_profile_id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -347,11 +352,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SECONDARY_PAYMENTS_PROFILE_ID_FIELD_NUMBER = 12;
-  private volatile java.lang.Object secondaryPaymentsProfileId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object secondaryPaymentsProfileId_ = "";
   /**
    * <pre>
-   * Output only. A secondary payments profile ID present in uncommon situations, for
-   * example, when a sequential liability agreement has been arranged.
+   * Output only. A secondary payments profile ID present in uncommon
+   * situations, for example, when a sequential liability agreement has been
+   * arranged.
    * </pre>
    *
    * <code>optional string secondary_payments_profile_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -363,8 +370,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. A secondary payments profile ID present in uncommon situations, for
-   * example, when a sequential liability agreement has been arranged.
+   * Output only. A secondary payments profile ID present in uncommon
+   * situations, for example, when a sequential liability agreement has been
+   * arranged.
    * </pre>
    *
    * <code>optional string secondary_payments_profile_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -385,8 +393,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. A secondary payments profile ID present in uncommon situations, for
-   * example, when a sequential liability agreement has been arranged.
+   * Output only. A secondary payments profile ID present in uncommon
+   * situations, for example, when a sequential liability agreement has been
+   * arranged.
    * </pre>
    *
    * <code>optional string secondary_payments_profile_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -408,7 +417,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PAYING_MANAGER_CUSTOMER_FIELD_NUMBER = 13;
-  private volatile java.lang.Object payingManagerCustomer_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object payingManagerCustomer_ = "";
   /**
    * <pre>
    * Output only. Paying manager of this payment account.
@@ -746,20 +756,14 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       paymentsAccountId_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       name_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       currencyCode_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       paymentsProfileId_ = "";
-      bitField0_ = (bitField0_ & ~0x00000008);
       secondaryPaymentsProfileId_ = "";
-      bitField0_ = (bitField0_ & ~0x00000010);
       payingManagerCustomer_ = "";
-      bitField0_ = (bitField0_ & ~0x00000020);
       return this;
     }
 
@@ -786,36 +790,42 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.PaymentsAccount buildPartial() {
       com.google.ads.googleads.v12.resources.PaymentsAccount result = new com.google.ads.googleads.v12.resources.PaymentsAccount(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        to_bitField0_ |= 0x00000001;
-      }
-      result.paymentsAccountId_ = paymentsAccountId_;
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        to_bitField0_ |= 0x00000002;
-      }
-      result.name_ = name_;
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        to_bitField0_ |= 0x00000004;
-      }
-      result.currencyCode_ = currencyCode_;
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        to_bitField0_ |= 0x00000008;
-      }
-      result.paymentsProfileId_ = paymentsProfileId_;
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        to_bitField0_ |= 0x00000010;
-      }
-      result.secondaryPaymentsProfileId_ = secondaryPaymentsProfileId_;
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        to_bitField0_ |= 0x00000020;
-      }
-      result.payingManagerCustomer_ = payingManagerCustomer_;
-      result.bitField0_ = to_bitField0_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.resources.PaymentsAccount result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.paymentsAccountId_ = paymentsAccountId_;
+        to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.name_ = name_;
+        to_bitField0_ |= 0x00000002;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.currencyCode_ = currencyCode_;
+        to_bitField0_ |= 0x00000004;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.paymentsProfileId_ = paymentsProfileId_;
+        to_bitField0_ |= 0x00000008;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.secondaryPaymentsProfileId_ = secondaryPaymentsProfileId_;
+        to_bitField0_ |= 0x00000010;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.payingManagerCustomer_ = payingManagerCustomer_;
+        to_bitField0_ |= 0x00000020;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -864,36 +874,37 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.resources.PaymentsAccount.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasPaymentsAccountId()) {
-        bitField0_ |= 0x00000001;
         paymentsAccountId_ = other.paymentsAccountId_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasName()) {
-        bitField0_ |= 0x00000002;
         name_ = other.name_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.hasCurrencyCode()) {
-        bitField0_ |= 0x00000004;
         currencyCode_ = other.currencyCode_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.hasPaymentsProfileId()) {
-        bitField0_ |= 0x00000008;
         paymentsProfileId_ = other.paymentsProfileId_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (other.hasSecondaryPaymentsProfileId()) {
-        bitField0_ |= 0x00000010;
         secondaryPaymentsProfileId_ = other.secondaryPaymentsProfileId_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (other.hasPayingManagerCustomer()) {
-        bitField0_ |= 0x00000020;
         payingManagerCustomer_ = other.payingManagerCustomer_;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -924,37 +935,37 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 66: {
               paymentsAccountId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 66
             case 74: {
               name_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 74
             case 82: {
               currencyCode_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               break;
             } // case 82
             case 90: {
               paymentsProfileId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000010;
               break;
             } // case 90
             case 98: {
               secondaryPaymentsProfileId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000020;
               break;
             } // case 98
             case 106: {
               payingManagerCustomer_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000040;
               break;
             } // case 106
             default: {
@@ -1033,11 +1044,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1052,8 +1061,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1070,12 +1079,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1090,7 +1097,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the paymentsAccountId field is set.
      */
     public boolean hasPaymentsAccountId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -1144,11 +1151,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPaymentsAccountId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       paymentsAccountId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1161,8 +1166,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPaymentsAccountId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       paymentsAccountId_ = getDefaultInstance().getPaymentsAccountId();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1177,12 +1182,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPaymentsAccountIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       paymentsAccountId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1197,7 +1200,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the name field is set.
      */
     public boolean hasName() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -1251,11 +1254,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       name_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1268,8 +1269,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1284,12 +1285,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1306,7 +1305,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the currencyCode field is set.
      */
     public boolean hasCurrencyCode() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -1366,11 +1365,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCurrencyCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       currencyCode_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1385,8 +1382,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCurrencyCode() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       currencyCode_ = getDefaultInstance().getCurrencyCode();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1403,12 +1400,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCurrencyCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       currencyCode_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1416,20 +1411,20 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object paymentsProfileId_ = "";
     /**
      * <pre>
-     * Output only. A 12 digit ID used to identify the payments profile associated with the
-     * payments account.
+     * Output only. A 12 digit ID used to identify the payments profile associated
+     * with the payments account.
      * </pre>
      *
      * <code>optional string payments_profile_id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the paymentsProfileId field is set.
      */
     public boolean hasPaymentsProfileId() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
-     * Output only. A 12 digit ID used to identify the payments profile associated with the
-     * payments account.
+     * Output only. A 12 digit ID used to identify the payments profile associated
+     * with the payments account.
      * </pre>
      *
      * <code>optional string payments_profile_id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1449,8 +1444,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A 12 digit ID used to identify the payments profile associated with the
-     * payments account.
+     * Output only. A 12 digit ID used to identify the payments profile associated
+     * with the payments account.
      * </pre>
      *
      * <code>optional string payments_profile_id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1471,8 +1466,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A 12 digit ID used to identify the payments profile associated with the
-     * payments account.
+     * Output only. A 12 digit ID used to identify the payments profile associated
+     * with the payments account.
      * </pre>
      *
      * <code>optional string payments_profile_id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1481,33 +1476,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPaymentsProfileId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
       paymentsProfileId_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. A 12 digit ID used to identify the payments profile associated with the
-     * payments account.
+     * Output only. A 12 digit ID used to identify the payments profile associated
+     * with the payments account.
      * </pre>
      *
      * <code>optional string payments_profile_id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearPaymentsProfileId() {
-      bitField0_ = (bitField0_ & ~0x00000008);
       paymentsProfileId_ = getDefaultInstance().getPaymentsProfileId();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. A 12 digit ID used to identify the payments profile associated with the
-     * payments account.
+     * Output only. A 12 digit ID used to identify the payments profile associated
+     * with the payments account.
      * </pre>
      *
      * <code>optional string payments_profile_id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1516,12 +1509,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPaymentsProfileIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       paymentsProfileId_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1529,20 +1520,22 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object secondaryPaymentsProfileId_ = "";
     /**
      * <pre>
-     * Output only. A secondary payments profile ID present in uncommon situations, for
-     * example, when a sequential liability agreement has been arranged.
+     * Output only. A secondary payments profile ID present in uncommon
+     * situations, for example, when a sequential liability agreement has been
+     * arranged.
      * </pre>
      *
      * <code>optional string secondary_payments_profile_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the secondaryPaymentsProfileId field is set.
      */
     public boolean hasSecondaryPaymentsProfileId() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
-     * Output only. A secondary payments profile ID present in uncommon situations, for
-     * example, when a sequential liability agreement has been arranged.
+     * Output only. A secondary payments profile ID present in uncommon
+     * situations, for example, when a sequential liability agreement has been
+     * arranged.
      * </pre>
      *
      * <code>optional string secondary_payments_profile_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1562,8 +1555,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A secondary payments profile ID present in uncommon situations, for
-     * example, when a sequential liability agreement has been arranged.
+     * Output only. A secondary payments profile ID present in uncommon
+     * situations, for example, when a sequential liability agreement has been
+     * arranged.
      * </pre>
      *
      * <code>optional string secondary_payments_profile_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1584,8 +1578,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A secondary payments profile ID present in uncommon situations, for
-     * example, when a sequential liability agreement has been arranged.
+     * Output only. A secondary payments profile ID present in uncommon
+     * situations, for example, when a sequential liability agreement has been
+     * arranged.
      * </pre>
      *
      * <code>optional string secondary_payments_profile_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1594,33 +1589,33 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSecondaryPaymentsProfileId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
+      if (value == null) { throw new NullPointerException(); }
       secondaryPaymentsProfileId_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. A secondary payments profile ID present in uncommon situations, for
-     * example, when a sequential liability agreement has been arranged.
+     * Output only. A secondary payments profile ID present in uncommon
+     * situations, for example, when a sequential liability agreement has been
+     * arranged.
      * </pre>
      *
      * <code>optional string secondary_payments_profile_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearSecondaryPaymentsProfileId() {
-      bitField0_ = (bitField0_ & ~0x00000010);
       secondaryPaymentsProfileId_ = getDefaultInstance().getSecondaryPaymentsProfileId();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. A secondary payments profile ID present in uncommon situations, for
-     * example, when a sequential liability agreement has been arranged.
+     * Output only. A secondary payments profile ID present in uncommon
+     * situations, for example, when a sequential liability agreement has been
+     * arranged.
      * </pre>
      *
      * <code>optional string secondary_payments_profile_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1629,12 +1624,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSecondaryPaymentsProfileIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000010;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       secondaryPaymentsProfileId_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1649,7 +1642,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the payingManagerCustomer field is set.
      */
     public boolean hasPayingManagerCustomer() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -1703,11 +1696,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPayingManagerCustomer(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000020;
+      if (value == null) { throw new NullPointerException(); }
       payingManagerCustomer_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1720,8 +1711,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPayingManagerCustomer() {
-      bitField0_ = (bitField0_ & ~0x00000020);
       payingManagerCustomer_ = getDefaultInstance().getPayingManagerCustomer();
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -1736,12 +1727,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPayingManagerCustomerBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000020;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       payingManagerCustomer_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }

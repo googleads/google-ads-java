@@ -33,9 +33,9 @@ public interface ThirdPartyAppAnalyticsLinkOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The shareable link ID that should be provided to the third party when
-   * setting up app analytics. This is able to be regenerated using regenerate
-   * method in the ThirdPartyAppAnalyticsLinkService.
+   * Output only. The shareable link ID that should be provided to the third
+   * party when setting up app analytics. This is able to be regenerated using
+   * regenerate method in the ThirdPartyAppAnalyticsLinkService.
    * </pre>
    *
    * <code>optional string shareable_link_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -44,9 +44,9 @@ public interface ThirdPartyAppAnalyticsLinkOrBuilder extends
   boolean hasShareableLinkId();
   /**
    * <pre>
-   * Output only. The shareable link ID that should be provided to the third party when
-   * setting up app analytics. This is able to be regenerated using regenerate
-   * method in the ThirdPartyAppAnalyticsLinkService.
+   * Output only. The shareable link ID that should be provided to the third
+   * party when setting up app analytics. This is able to be regenerated using
+   * regenerate method in the ThirdPartyAppAnalyticsLinkService.
    * </pre>
    *
    * <code>optional string shareable_link_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -55,9 +55,9 @@ public interface ThirdPartyAppAnalyticsLinkOrBuilder extends
   java.lang.String getShareableLinkId();
   /**
    * <pre>
-   * Output only. The shareable link ID that should be provided to the third party when
-   * setting up app analytics. This is able to be regenerated using regenerate
-   * method in the ThirdPartyAppAnalyticsLinkService.
+   * Output only. The shareable link ID that should be provided to the third
+   * party when setting up app analytics. This is able to be regenerated using
+   * regenerate method in the ThirdPartyAppAnalyticsLinkService.
    * </pre>
    *
    * <code>optional string shareable_link_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

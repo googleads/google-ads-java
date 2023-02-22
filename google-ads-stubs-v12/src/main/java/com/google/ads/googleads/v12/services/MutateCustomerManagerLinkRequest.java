@@ -5,7 +5,8 @@ package com.google.ads.googleads.v12.services;
 
 /**
  * <pre>
- * Request message for [CustomerManagerLinkService.MutateCustomerManagerLink][google.ads.googleads.v12.services.CustomerManagerLinkService.MutateCustomerManagerLink].
+ * Request message for
+ * [CustomerManagerLinkService.MutateCustomerManagerLink][google.ads.googleads.v12.services.CustomerManagerLinkService.MutateCustomerManagerLink].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v12.services.MutateCustomerManagerLinkRequest}
@@ -50,10 +51,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CUSTOMER_ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object customerId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object customerId_ = "";
   /**
    * <pre>
-   * Required. The ID of the customer whose customer manager links are being modified.
+   * Required. The ID of the customer whose customer manager links are being
+   * modified.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -74,7 +77,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. The ID of the customer whose customer manager links are being modified.
+   * Required. The ID of the customer whose customer manager links are being
+   * modified.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -96,10 +100,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int OPERATIONS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.services.CustomerManagerLinkOperation> operations_;
   /**
    * <pre>
-   * Required. The list of operations to perform on individual customer manager links.
+   * Required. The list of operations to perform on individual customer manager
+   * links.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.services.CustomerManagerLinkOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -110,7 +116,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. The list of operations to perform on individual customer manager links.
+   * Required. The list of operations to perform on individual customer manager
+   * links.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.services.CustomerManagerLinkOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -122,7 +129,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. The list of operations to perform on individual customer manager links.
+   * Required. The list of operations to perform on individual customer manager
+   * links.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.services.CustomerManagerLinkOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -133,7 +141,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. The list of operations to perform on individual customer manager links.
+   * Required. The list of operations to perform on individual customer manager
+   * links.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.services.CustomerManagerLinkOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -144,7 +153,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. The list of operations to perform on individual customer manager links.
+   * Required. The list of operations to perform on individual customer manager
+   * links.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.services.CustomerManagerLinkOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -156,7 +166,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VALIDATE_ONLY_FIELD_NUMBER = 3;
-  private boolean validateOnly_;
+  private boolean validateOnly_ = false;
   /**
    * <pre>
    * If true, the request is validated but not executed. Only errors are
@@ -352,7 +362,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Request message for [CustomerManagerLinkService.MutateCustomerManagerLink][google.ads.googleads.v12.services.CustomerManagerLinkService.MutateCustomerManagerLink].
+   * Request message for
+   * [CustomerManagerLinkService.MutateCustomerManagerLink][google.ads.googleads.v12.services.CustomerManagerLinkService.MutateCustomerManagerLink].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v12.services.MutateCustomerManagerLinkRequest}
@@ -387,17 +398,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       customerId_ = "";
-
       if (operationsBuilder_ == null) {
         operations_ = java.util.Collections.emptyList();
       } else {
         operations_ = null;
         operationsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       validateOnly_ = false;
-
       return this;
     }
 
@@ -424,20 +434,32 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.MutateCustomerManagerLinkRequest buildPartial() {
       com.google.ads.googleads.v12.services.MutateCustomerManagerLinkRequest result = new com.google.ads.googleads.v12.services.MutateCustomerManagerLinkRequest(this);
-      int from_bitField0_ = bitField0_;
-      result.customerId_ = customerId_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.services.MutateCustomerManagerLinkRequest result) {
       if (operationsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           operations_ = java.util.Collections.unmodifiableList(operations_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.operations_ = operations_;
       } else {
         result.operations_ = operationsBuilder_.build();
       }
-      result.validateOnly_ = validateOnly_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.MutateCustomerManagerLinkRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.customerId_ = customerId_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.validateOnly_ = validateOnly_;
+      }
     }
 
     @java.lang.Override
@@ -486,13 +508,14 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.services.MutateCustomerManagerLinkRequest.getDefaultInstance()) return this;
       if (!other.getCustomerId().isEmpty()) {
         customerId_ = other.customerId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (operationsBuilder_ == null) {
         if (!other.operations_.isEmpty()) {
           if (operations_.isEmpty()) {
             operations_ = other.operations_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureOperationsIsMutable();
             operations_.addAll(other.operations_);
@@ -505,7 +528,7 @@ private static final long serialVersionUID = 0L;
             operationsBuilder_.dispose();
             operationsBuilder_ = null;
             operations_ = other.operations_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
             operationsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getOperationsFieldBuilder() : null;
@@ -545,7 +568,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               customerId_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
@@ -563,7 +586,7 @@ private static final long serialVersionUID = 0L;
             } // case 18
             case 24: {
               validateOnly_ = input.readBool();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 24
             default: {
@@ -586,7 +609,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object customerId_ = "";
     /**
      * <pre>
-     * Required. The ID of the customer whose customer manager links are being modified.
+     * Required. The ID of the customer whose customer manager links are being
+     * modified.
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -606,7 +630,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The ID of the customer whose customer manager links are being modified.
+     * Required. The ID of the customer whose customer manager links are being
+     * modified.
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -627,7 +652,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The ID of the customer whose customer manager links are being modified.
+     * Required. The ID of the customer whose customer manager links are being
+     * modified.
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -636,31 +662,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       customerId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. The ID of the customer whose customer manager links are being modified.
+     * Required. The ID of the customer whose customer manager links are being
+     * modified.
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return This builder for chaining.
      */
     public Builder clearCustomerId() {
-      
       customerId_ = getDefaultInstance().getCustomerId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. The ID of the customer whose customer manager links are being modified.
+     * Required. The ID of the customer whose customer manager links are being
+     * modified.
      * </pre>
      *
      * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -669,12 +695,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       customerId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -682,9 +706,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v12.services.CustomerManagerLinkOperation> operations_ =
       java.util.Collections.emptyList();
     private void ensureOperationsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         operations_ = new java.util.ArrayList<com.google.ads.googleads.v12.services.CustomerManagerLinkOperation>(operations_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -693,7 +717,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Required. The list of operations to perform on individual customer manager links.
+     * Required. The list of operations to perform on individual customer manager
+     * links.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.services.CustomerManagerLinkOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -707,7 +732,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The list of operations to perform on individual customer manager links.
+     * Required. The list of operations to perform on individual customer manager
+     * links.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.services.CustomerManagerLinkOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -721,7 +747,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The list of operations to perform on individual customer manager links.
+     * Required. The list of operations to perform on individual customer manager
+     * links.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.services.CustomerManagerLinkOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -735,7 +762,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The list of operations to perform on individual customer manager links.
+     * Required. The list of operations to perform on individual customer manager
+     * links.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.services.CustomerManagerLinkOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -756,7 +784,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The list of operations to perform on individual customer manager links.
+     * Required. The list of operations to perform on individual customer manager
+     * links.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.services.CustomerManagerLinkOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -774,7 +803,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The list of operations to perform on individual customer manager links.
+     * Required. The list of operations to perform on individual customer manager
+     * links.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.services.CustomerManagerLinkOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -794,7 +824,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The list of operations to perform on individual customer manager links.
+     * Required. The list of operations to perform on individual customer manager
+     * links.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.services.CustomerManagerLinkOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -815,7 +846,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The list of operations to perform on individual customer manager links.
+     * Required. The list of operations to perform on individual customer manager
+     * links.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.services.CustomerManagerLinkOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -833,7 +865,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The list of operations to perform on individual customer manager links.
+     * Required. The list of operations to perform on individual customer manager
+     * links.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.services.CustomerManagerLinkOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -851,7 +884,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The list of operations to perform on individual customer manager links.
+     * Required. The list of operations to perform on individual customer manager
+     * links.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.services.CustomerManagerLinkOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -870,7 +904,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The list of operations to perform on individual customer manager links.
+     * Required. The list of operations to perform on individual customer manager
+     * links.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.services.CustomerManagerLinkOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -878,7 +913,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearOperations() {
       if (operationsBuilder_ == null) {
         operations_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         operationsBuilder_.clear();
@@ -887,7 +922,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The list of operations to perform on individual customer manager links.
+     * Required. The list of operations to perform on individual customer manager
+     * links.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.services.CustomerManagerLinkOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -904,7 +940,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The list of operations to perform on individual customer manager links.
+     * Required. The list of operations to perform on individual customer manager
+     * links.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.services.CustomerManagerLinkOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -915,7 +952,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The list of operations to perform on individual customer manager links.
+     * Required. The list of operations to perform on individual customer manager
+     * links.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.services.CustomerManagerLinkOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -929,7 +967,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The list of operations to perform on individual customer manager links.
+     * Required. The list of operations to perform on individual customer manager
+     * links.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.services.CustomerManagerLinkOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -944,7 +983,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The list of operations to perform on individual customer manager links.
+     * Required. The list of operations to perform on individual customer manager
+     * links.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.services.CustomerManagerLinkOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -955,7 +995,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The list of operations to perform on individual customer manager links.
+     * Required. The list of operations to perform on individual customer manager
+     * links.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.services.CustomerManagerLinkOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -967,7 +1008,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The list of operations to perform on individual customer manager links.
+     * Required. The list of operations to perform on individual customer manager
+     * links.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.services.CustomerManagerLinkOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -983,7 +1025,7 @@ private static final long serialVersionUID = 0L;
         operationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v12.services.CustomerManagerLinkOperation, com.google.ads.googleads.v12.services.CustomerManagerLinkOperation.Builder, com.google.ads.googleads.v12.services.CustomerManagerLinkOperationOrBuilder>(
                 operations_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         operations_ = null;
@@ -1018,6 +1060,7 @@ private static final long serialVersionUID = 0L;
     public Builder setValidateOnly(boolean value) {
       
       validateOnly_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1031,7 +1074,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearValidateOnly() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       validateOnly_ = false;
       onChanged();
       return this;

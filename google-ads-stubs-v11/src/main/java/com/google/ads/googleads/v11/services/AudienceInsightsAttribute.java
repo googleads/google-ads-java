@@ -882,6 +882,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (ageRangeBuilder_ != null) {
         ageRangeBuilder_.clear();
       }
@@ -940,79 +941,59 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.AudienceInsightsAttribute buildPartial() {
       com.google.ads.googleads.v11.services.AudienceInsightsAttribute result = new com.google.ads.googleads.v11.services.AudienceInsightsAttribute(this);
-      if (attributeCase_ == 1) {
-        if (ageRangeBuilder_ == null) {
-          result.attribute_ = attribute_;
-        } else {
-          result.attribute_ = ageRangeBuilder_.build();
-        }
-      }
-      if (attributeCase_ == 2) {
-        if (genderBuilder_ == null) {
-          result.attribute_ = attribute_;
-        } else {
-          result.attribute_ = genderBuilder_.build();
-        }
-      }
-      if (attributeCase_ == 3) {
-        if (locationBuilder_ == null) {
-          result.attribute_ = attribute_;
-        } else {
-          result.attribute_ = locationBuilder_.build();
-        }
-      }
-      if (attributeCase_ == 4) {
-        if (userInterestBuilder_ == null) {
-          result.attribute_ = attribute_;
-        } else {
-          result.attribute_ = userInterestBuilder_.build();
-        }
-      }
-      if (attributeCase_ == 5) {
-        if (entityBuilder_ == null) {
-          result.attribute_ = attribute_;
-        } else {
-          result.attribute_ = entityBuilder_.build();
-        }
-      }
-      if (attributeCase_ == 6) {
-        if (categoryBuilder_ == null) {
-          result.attribute_ = attribute_;
-        } else {
-          result.attribute_ = categoryBuilder_.build();
-        }
-      }
-      if (attributeCase_ == 7) {
-        if (dynamicLineupBuilder_ == null) {
-          result.attribute_ = attribute_;
-        } else {
-          result.attribute_ = dynamicLineupBuilder_.build();
-        }
-      }
-      if (attributeCase_ == 8) {
-        if (parentalStatusBuilder_ == null) {
-          result.attribute_ = attribute_;
-        } else {
-          result.attribute_ = parentalStatusBuilder_.build();
-        }
-      }
-      if (attributeCase_ == 9) {
-        if (incomeRangeBuilder_ == null) {
-          result.attribute_ = attribute_;
-        } else {
-          result.attribute_ = incomeRangeBuilder_.build();
-        }
-      }
-      if (attributeCase_ == 10) {
-        if (youtubeChannelBuilder_ == null) {
-          result.attribute_ = attribute_;
-        } else {
-          result.attribute_ = youtubeChannelBuilder_.build();
-        }
-      }
-      result.attributeCase_ = attributeCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.AudienceInsightsAttribute result) {
+      int from_bitField0_ = bitField0_;
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v11.services.AudienceInsightsAttribute result) {
+      result.attributeCase_ = attributeCase_;
+      result.attribute_ = this.attribute_;
+      if (attributeCase_ == 1 &&
+          ageRangeBuilder_ != null) {
+        result.attribute_ = ageRangeBuilder_.build();
+      }
+      if (attributeCase_ == 2 &&
+          genderBuilder_ != null) {
+        result.attribute_ = genderBuilder_.build();
+      }
+      if (attributeCase_ == 3 &&
+          locationBuilder_ != null) {
+        result.attribute_ = locationBuilder_.build();
+      }
+      if (attributeCase_ == 4 &&
+          userInterestBuilder_ != null) {
+        result.attribute_ = userInterestBuilder_.build();
+      }
+      if (attributeCase_ == 5 &&
+          entityBuilder_ != null) {
+        result.attribute_ = entityBuilder_.build();
+      }
+      if (attributeCase_ == 6 &&
+          categoryBuilder_ != null) {
+        result.attribute_ = categoryBuilder_.build();
+      }
+      if (attributeCase_ == 7 &&
+          dynamicLineupBuilder_ != null) {
+        result.attribute_ = dynamicLineupBuilder_.build();
+      }
+      if (attributeCase_ == 8 &&
+          parentalStatusBuilder_ != null) {
+        result.attribute_ = parentalStatusBuilder_.build();
+      }
+      if (attributeCase_ == 9 &&
+          incomeRangeBuilder_ != null) {
+        result.attribute_ = incomeRangeBuilder_.build();
+      }
+      if (attributeCase_ == 10 &&
+          youtubeChannelBuilder_ != null) {
+        result.attribute_ = youtubeChannelBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -1230,6 +1211,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v11.common.AgeRangeInfo, com.google.ads.googleads.v11.common.AgeRangeInfo.Builder, com.google.ads.googleads.v11.common.AgeRangeInfoOrBuilder> ageRangeBuilder_;
@@ -1405,7 +1387,7 @@ private static final long serialVersionUID = 0L;
         attribute_ = null;
       }
       attributeCase_ = 1;
-      onChanged();;
+      onChanged();
       return ageRangeBuilder_;
     }
 
@@ -1583,7 +1565,7 @@ private static final long serialVersionUID = 0L;
         attribute_ = null;
       }
       attributeCase_ = 2;
-      onChanged();;
+      onChanged();
       return genderBuilder_;
     }
 
@@ -1761,7 +1743,7 @@ private static final long serialVersionUID = 0L;
         attribute_ = null;
       }
       attributeCase_ = 3;
-      onChanged();;
+      onChanged();
       return locationBuilder_;
     }
 
@@ -1939,7 +1921,7 @@ private static final long serialVersionUID = 0L;
         attribute_ = null;
       }
       attributeCase_ = 4;
-      onChanged();;
+      onChanged();
       return userInterestBuilder_;
     }
 
@@ -2126,7 +2108,7 @@ private static final long serialVersionUID = 0L;
         attribute_ = null;
       }
       attributeCase_ = 5;
-      onChanged();;
+      onChanged();
       return entityBuilder_;
     }
 
@@ -2313,7 +2295,7 @@ private static final long serialVersionUID = 0L;
         attribute_ = null;
       }
       attributeCase_ = 6;
-      onChanged();;
+      onChanged();
       return categoryBuilder_;
     }
 
@@ -2491,7 +2473,7 @@ private static final long serialVersionUID = 0L;
         attribute_ = null;
       }
       attributeCase_ = 7;
-      onChanged();;
+      onChanged();
       return dynamicLineupBuilder_;
     }
 
@@ -2669,7 +2651,7 @@ private static final long serialVersionUID = 0L;
         attribute_ = null;
       }
       attributeCase_ = 8;
-      onChanged();;
+      onChanged();
       return parentalStatusBuilder_;
     }
 
@@ -2847,7 +2829,7 @@ private static final long serialVersionUID = 0L;
         attribute_ = null;
       }
       attributeCase_ = 9;
-      onChanged();;
+      onChanged();
       return incomeRangeBuilder_;
     }
 
@@ -3025,7 +3007,7 @@ private static final long serialVersionUID = 0L;
         attribute_ = null;
       }
       attributeCase_ = 10;
-      onChanged();;
+      onChanged();
       return youtubeChannelBuilder_;
     }
     @java.lang.Override

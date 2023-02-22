@@ -74,7 +74,7 @@ private static final long serialVersionUID = 0L;
     UNKNOWN(1),
     /**
      * <pre>
-     * Campaign is currently serving ads depending on budget information.
+     * Campaign is active and can show ads.
      * </pre>
      *
      * <code>ENABLED = 2;</code>
@@ -117,7 +117,7 @@ private static final long serialVersionUID = 0L;
     public static final int UNKNOWN_VALUE = 1;
     /**
      * <pre>
-     * Campaign is currently serving ads depending on budget information.
+     * Campaign is active and can show ads.
      * </pre>
      *
      * <code>ENABLED = 2;</code>

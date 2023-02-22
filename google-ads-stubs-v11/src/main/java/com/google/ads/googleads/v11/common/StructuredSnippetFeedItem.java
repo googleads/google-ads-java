@@ -51,7 +51,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int HEADER_FIELD_NUMBER = 3;
-  private volatile java.lang.Object header_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object header_ = "";
   /**
    * <pre>
    * The header of the snippet.
@@ -112,6 +113,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VALUES_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList values_;
   /**
    * <pre>
@@ -379,8 +381,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       header_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       values_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       bitField0_ = (bitField0_ & ~0x00000002);
       return this;
@@ -409,20 +411,28 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.StructuredSnippetFeedItem buildPartial() {
       com.google.ads.googleads.v11.common.StructuredSnippetFeedItem result = new com.google.ads.googleads.v11.common.StructuredSnippetFeedItem(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        to_bitField0_ |= 0x00000001;
-      }
-      result.header_ = header_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.common.StructuredSnippetFeedItem result) {
       if (((bitField0_ & 0x00000002) != 0)) {
         values_ = values_.getUnmodifiableView();
         bitField0_ = (bitField0_ & ~0x00000002);
       }
       result.values_ = values_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.StructuredSnippetFeedItem result) {
+      int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.header_ = header_;
+        to_bitField0_ |= 0x00000001;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -470,8 +480,8 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v11.common.StructuredSnippetFeedItem other) {
       if (other == com.google.ads.googleads.v11.common.StructuredSnippetFeedItem.getDefaultInstance()) return this;
       if (other.hasHeader()) {
-        bitField0_ |= 0x00000001;
         header_ = other.header_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.values_.isEmpty()) {
@@ -606,11 +616,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHeader(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       header_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -624,8 +632,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHeader() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       header_ = getDefaultInstance().getHeader();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -641,12 +649,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHeaderBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       header_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -723,10 +729,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setValues(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureValuesIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureValuesIsMutable();
       values_.set(index, value);
       onChanged();
       return this;
@@ -743,10 +747,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addValues(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureValuesIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureValuesIsMutable();
       values_.add(value);
       onChanged();
       return this;
@@ -796,10 +798,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addValuesBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureValuesIsMutable();
       values_.add(value);
       onChanged();

@@ -146,15 +146,14 @@ if (project.properties.containsKey("release")) {
 dependencies {
   api 'com.google.api:gax'
   api 'com.google.api:gax-grpc'
-  // Generated code requires at least 3.19.6 of protobuf-java.
-  api 'com.google.protobuf:protobuf-java:3.19.6'
-  api 'com.google.protobuf:protobuf-java-util:3.19.6'
+  api 'com.google.protobuf:protobuf-java'
+  implementation 'com.google.protobuf:protobuf-java-util'
   api 'io.grpc:grpc-stub'
   api 'io.grpc:grpc-protobuf'
-  api 'com.google.auth:google-auth-library-oauth2-http:1.5.3'
-  api 'com.google.auth:google-auth-library-credentials:1.5.3'
-  api platform('com.google.cloud:google-cloud-shared-dependencies:2.8.0')
-  implementation 'com.google.guava:guava:31.0.1-android'
+  api 'com.google.auth:google-auth-library-oauth2-http:1.14.0'
+  api 'com.google.auth:google-auth-library-credentials:1.14.0'
+  api platform('com.google.cloud:google-cloud-shared-dependencies:3.1.2')
+  implementation 'com.google.guava:guava:31.1-android'
   implementation 'com.google.auto.service:auto-service:1.0.1'
   implementation 'javax.annotation:javax.annotation-api'
   annotationProcessor 'com.google.auto.service:auto-service:1.0.1'

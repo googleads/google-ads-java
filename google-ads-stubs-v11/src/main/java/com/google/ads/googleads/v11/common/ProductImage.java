@@ -51,7 +51,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int PRODUCT_IMAGE_FIELD_NUMBER = 4;
-  private volatile java.lang.Object productImage_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object productImage_ = "";
   /**
    * <pre>
    * The MediaFile resource name of the product image. Valid image types are
@@ -115,7 +116,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTION_FIELD_NUMBER = 5;
-  private volatile java.lang.Object description_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object description_ = "";
   /**
    * <pre>
    * Description of the product.
@@ -207,7 +209,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v11.common.DisplayCallToActionOrBuilder getDisplayCallToActionOrBuilder() {
-    return getDisplayCallToAction();
+    return displayCallToAction_ == null ? com.google.ads.googleads.v11.common.DisplayCallToAction.getDefaultInstance() : displayCallToAction_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -437,14 +439,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       productImage_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       description_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
-      if (displayCallToActionBuilder_ == null) {
-        displayCallToAction_ = null;
-      } else {
-        displayCallToAction_ = null;
+      displayCallToAction_ = null;
+      if (displayCallToActionBuilder_ != null) {
+        displayCallToActionBuilder_.dispose();
         displayCallToActionBuilder_ = null;
       }
       return this;
@@ -473,24 +473,28 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.ProductImage buildPartial() {
       com.google.ads.googleads.v11.common.ProductImage result = new com.google.ads.googleads.v11.common.ProductImage(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.ProductImage result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.productImage_ = productImage_;
         to_bitField0_ |= 0x00000001;
       }
-      result.productImage_ = productImage_;
       if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.description_ = description_;
         to_bitField0_ |= 0x00000002;
       }
-      result.description_ = description_;
-      if (displayCallToActionBuilder_ == null) {
-        result.displayCallToAction_ = displayCallToAction_;
-      } else {
-        result.displayCallToAction_ = displayCallToActionBuilder_.build();
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.displayCallToAction_ = displayCallToActionBuilder_ == null
+            ? displayCallToAction_
+            : displayCallToActionBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -538,13 +542,13 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v11.common.ProductImage other) {
       if (other == com.google.ads.googleads.v11.common.ProductImage.getDefaultInstance()) return this;
       if (other.hasProductImage()) {
-        bitField0_ |= 0x00000001;
         productImage_ = other.productImage_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasDescription()) {
-        bitField0_ |= 0x00000002;
         description_ = other.description_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasDisplayCallToAction()) {
@@ -580,7 +584,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getDisplayCallToActionFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 34: {
@@ -682,11 +686,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setProductImage(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       productImage_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -701,8 +703,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearProductImage() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       productImage_ = getDefaultInstance().getProductImage();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -719,12 +721,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setProductImageBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       productImage_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -793,11 +793,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       description_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -810,8 +808,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       description_ = getDefaultInstance().getDescription();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -826,12 +824,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescriptionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       description_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -848,7 +844,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the displayCallToAction field is set.
      */
     public boolean hasDisplayCallToAction() {
-      return displayCallToActionBuilder_ != null || displayCallToAction_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -878,11 +874,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         displayCallToAction_ = value;
-        onChanged();
       } else {
         displayCallToActionBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -896,11 +892,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.common.DisplayCallToAction.Builder builderForValue) {
       if (displayCallToActionBuilder_ == null) {
         displayCallToAction_ = builderForValue.build();
-        onChanged();
       } else {
         displayCallToActionBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -912,17 +908,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDisplayCallToAction(com.google.ads.googleads.v11.common.DisplayCallToAction value) {
       if (displayCallToActionBuilder_ == null) {
-        if (displayCallToAction_ != null) {
-          displayCallToAction_ =
-            com.google.ads.googleads.v11.common.DisplayCallToAction.newBuilder(displayCallToAction_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000004) != 0) &&
+          displayCallToAction_ != null &&
+          displayCallToAction_ != com.google.ads.googleads.v11.common.DisplayCallToAction.getDefaultInstance()) {
+          getDisplayCallToActionBuilder().mergeFrom(value);
         } else {
           displayCallToAction_ = value;
         }
-        onChanged();
       } else {
         displayCallToActionBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
@@ -933,14 +930,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.common.DisplayCallToAction display_call_to_action = 3;</code>
      */
     public Builder clearDisplayCallToAction() {
-      if (displayCallToActionBuilder_ == null) {
-        displayCallToAction_ = null;
-        onChanged();
-      } else {
-        displayCallToAction_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      displayCallToAction_ = null;
+      if (displayCallToActionBuilder_ != null) {
+        displayCallToActionBuilder_.dispose();
         displayCallToActionBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -951,7 +947,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.common.DisplayCallToAction display_call_to_action = 3;</code>
      */
     public com.google.ads.googleads.v11.common.DisplayCallToAction.Builder getDisplayCallToActionBuilder() {
-      
+      bitField0_ |= 0x00000004;
       onChanged();
       return getDisplayCallToActionFieldBuilder().getBuilder();
     }

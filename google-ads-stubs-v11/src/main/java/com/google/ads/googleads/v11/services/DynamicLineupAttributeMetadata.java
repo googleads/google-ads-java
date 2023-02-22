@@ -83,11 +83,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v11.common.LocationInfoOrBuilder getInventoryCountryOrBuilder() {
-    return getInventoryCountry();
+    return inventoryCountry_ == null ? com.google.ads.googleads.v11.common.LocationInfo.getDefaultInstance() : inventoryCountry_;
   }
 
   public static final int MEDIAN_MONTHLY_INVENTORY_FIELD_NUMBER = 2;
-  private long medianMonthlyInventory_;
+  private long medianMonthlyInventory_ = 0L;
   /**
    * <pre>
    * The median number of impressions per month on this lineup.
@@ -114,7 +114,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CHANNEL_COUNT_LOWER_BOUND_FIELD_NUMBER = 3;
-  private long channelCountLowerBound_;
+  private long channelCountLowerBound_ = 0L;
   /**
    * <pre>
    * The lower end of a range containing the number of channels in the lineup.
@@ -141,7 +141,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CHANNEL_COUNT_UPPER_BOUND_FIELD_NUMBER = 4;
-  private long channelCountUpperBound_;
+  private long channelCountUpperBound_ = 0L;
   /**
    * <pre>
    * The upper end of a range containing the number of channels in the lineup.
@@ -415,18 +415,15 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (inventoryCountryBuilder_ == null) {
-        inventoryCountry_ = null;
-      } else {
-        inventoryCountry_ = null;
+      bitField0_ = 0;
+      inventoryCountry_ = null;
+      if (inventoryCountryBuilder_ != null) {
+        inventoryCountryBuilder_.dispose();
         inventoryCountryBuilder_ = null;
       }
       medianMonthlyInventory_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       channelCountLowerBound_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000002);
       channelCountUpperBound_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -453,28 +450,32 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.DynamicLineupAttributeMetadata buildPartial() {
       com.google.ads.googleads.v11.services.DynamicLineupAttributeMetadata result = new com.google.ads.googleads.v11.services.DynamicLineupAttributeMetadata(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.DynamicLineupAttributeMetadata result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      if (inventoryCountryBuilder_ == null) {
-        result.inventoryCountry_ = inventoryCountry_;
-      } else {
-        result.inventoryCountry_ = inventoryCountryBuilder_.build();
-      }
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.inventoryCountry_ = inventoryCountryBuilder_ == null
+            ? inventoryCountry_
+            : inventoryCountryBuilder_.build();
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.medianMonthlyInventory_ = medianMonthlyInventory_;
         to_bitField0_ |= 0x00000001;
       }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.channelCountLowerBound_ = channelCountLowerBound_;
         to_bitField0_ |= 0x00000002;
       }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.channelCountUpperBound_ = channelCountUpperBound_;
         to_bitField0_ |= 0x00000004;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -563,22 +564,22 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getInventoryCountryFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 16: {
               medianMonthlyInventory_ = input.readInt64();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             case 24: {
               channelCountLowerBound_ = input.readInt64();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 24
             case 32: {
               channelCountUpperBound_ = input.readInt64();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               break;
             } // case 32
             default: {
@@ -610,7 +611,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the inventoryCountry field is set.
      */
     public boolean hasInventoryCountry() {
-      return inventoryCountryBuilder_ != null || inventoryCountry_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -640,11 +641,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         inventoryCountry_ = value;
-        onChanged();
       } else {
         inventoryCountryBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -658,11 +659,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.common.LocationInfo.Builder builderForValue) {
       if (inventoryCountryBuilder_ == null) {
         inventoryCountry_ = builderForValue.build();
-        onChanged();
       } else {
         inventoryCountryBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -674,17 +675,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeInventoryCountry(com.google.ads.googleads.v11.common.LocationInfo value) {
       if (inventoryCountryBuilder_ == null) {
-        if (inventoryCountry_ != null) {
-          inventoryCountry_ =
-            com.google.ads.googleads.v11.common.LocationInfo.newBuilder(inventoryCountry_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          inventoryCountry_ != null &&
+          inventoryCountry_ != com.google.ads.googleads.v11.common.LocationInfo.getDefaultInstance()) {
+          getInventoryCountryBuilder().mergeFrom(value);
         } else {
           inventoryCountry_ = value;
         }
-        onChanged();
       } else {
         inventoryCountryBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -695,14 +697,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.common.LocationInfo inventory_country = 1;</code>
      */
     public Builder clearInventoryCountry() {
-      if (inventoryCountryBuilder_ == null) {
-        inventoryCountry_ = null;
-        onChanged();
-      } else {
-        inventoryCountry_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      inventoryCountry_ = null;
+      if (inventoryCountryBuilder_ != null) {
+        inventoryCountryBuilder_.dispose();
         inventoryCountryBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -713,7 +714,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.common.LocationInfo inventory_country = 1;</code>
      */
     public com.google.ads.googleads.v11.common.LocationInfo.Builder getInventoryCountryBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getInventoryCountryFieldBuilder().getBuilder();
     }
@@ -764,7 +765,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasMedianMonthlyInventory() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -788,8 +789,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMedianMonthlyInventory(long value) {
-      bitField0_ |= 0x00000001;
+      
       medianMonthlyInventory_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -802,7 +804,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMedianMonthlyInventory() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       medianMonthlyInventory_ = 0L;
       onChanged();
       return this;
@@ -819,7 +821,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasChannelCountLowerBound() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -843,8 +845,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setChannelCountLowerBound(long value) {
-      bitField0_ |= 0x00000002;
+      
       channelCountLowerBound_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -857,7 +860,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearChannelCountLowerBound() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       channelCountLowerBound_ = 0L;
       onChanged();
       return this;
@@ -874,7 +877,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasChannelCountUpperBound() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -898,8 +901,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setChannelCountUpperBound(long value) {
-      bitField0_ |= 0x00000004;
+      
       channelCountUpperBound_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -912,7 +916,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearChannelCountUpperBound() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000008);
       channelCountUpperBound_ = 0L;
       onChanged();
       return this;

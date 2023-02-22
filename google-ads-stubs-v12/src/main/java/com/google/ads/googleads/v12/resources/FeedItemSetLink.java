@@ -51,7 +51,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Immutable. The resource name of the feed item set link.
@@ -101,7 +102,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FEED_ITEM_FIELD_NUMBER = 2;
-  private volatile java.lang.Object feedItem_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object feedItem_ = "";
   /**
    * <pre>
    * Immutable. The linked FeedItem.
@@ -147,7 +149,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FEED_ITEM_SET_FIELD_NUMBER = 3;
-  private volatile java.lang.Object feedItemSet_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object feedItemSet_ = "";
   /**
    * <pre>
    * Immutable. The linked FeedItemSet.
@@ -403,12 +406,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       feedItem_ = "";
-
       feedItemSet_ = "";
-
       return this;
     }
 
@@ -435,11 +436,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.FeedItemSetLink buildPartial() {
       com.google.ads.googleads.v12.resources.FeedItemSetLink result = new com.google.ads.googleads.v12.resources.FeedItemSetLink(this);
-      result.resourceName_ = resourceName_;
-      result.feedItem_ = feedItem_;
-      result.feedItemSet_ = feedItemSet_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.resources.FeedItemSetLink result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.feedItem_ = feedItem_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.feedItemSet_ = feedItemSet_;
+      }
     }
 
     @java.lang.Override
@@ -488,14 +500,17 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.resources.FeedItemSetLink.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getFeedItem().isEmpty()) {
         feedItem_ = other.feedItem_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getFeedItemSet().isEmpty()) {
         feedItemSet_ = other.feedItemSet_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -526,17 +541,17 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               feedItem_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
               feedItemSet_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             default: {
@@ -554,6 +569,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object resourceName_ = "";
     /**
@@ -614,11 +630,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -633,8 +647,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -651,12 +665,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -714,11 +726,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFeedItem(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       feedItem_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -731,8 +741,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFeedItem() {
-      
       feedItem_ = getDefaultInstance().getFeedItem();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -747,12 +757,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFeedItemBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       feedItem_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -810,11 +818,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFeedItemSet(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       feedItemSet_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -827,8 +833,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFeedItemSet() {
-      
       feedItemSet_ = getDefaultInstance().getFeedItemSet();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -843,12 +849,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFeedItemSetBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       feedItemSet_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }

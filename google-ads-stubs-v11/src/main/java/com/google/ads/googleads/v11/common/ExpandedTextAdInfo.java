@@ -56,7 +56,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int HEADLINE_PART1_FIELD_NUMBER = 8;
-  private volatile java.lang.Object headlinePart1_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object headlinePart1_ = "";
   /**
    * <pre>
    * The first part of the ad's headline.
@@ -114,7 +115,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HEADLINE_PART2_FIELD_NUMBER = 9;
-  private volatile java.lang.Object headlinePart2_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object headlinePart2_ = "";
   /**
    * <pre>
    * The second part of the ad's headline.
@@ -172,7 +174,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HEADLINE_PART3_FIELD_NUMBER = 10;
-  private volatile java.lang.Object headlinePart3_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object headlinePart3_ = "";
   /**
    * <pre>
    * The third part of the ad's headline.
@@ -230,7 +233,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTION_FIELD_NUMBER = 11;
-  private volatile java.lang.Object description_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object description_ = "";
   /**
    * <pre>
    * The description of the ad.
@@ -288,7 +292,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTION2_FIELD_NUMBER = 12;
-  private volatile java.lang.Object description2_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object description2_ = "";
   /**
    * <pre>
    * The second description of the ad.
@@ -346,7 +351,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PATH1_FIELD_NUMBER = 13;
-  private volatile java.lang.Object path1_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object path1_ = "";
   /**
    * <pre>
    * The text that can appear alongside the ad's displayed URL.
@@ -404,7 +410,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PATH2_FIELD_NUMBER = 14;
-  private volatile java.lang.Object path2_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object path2_ = "";
   /**
    * <pre>
    * Additional text that can appear alongside the ad's displayed URL.
@@ -747,20 +754,14 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       headlinePart1_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       headlinePart2_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       headlinePart3_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       description_ = "";
-      bitField0_ = (bitField0_ & ~0x00000008);
       description2_ = "";
-      bitField0_ = (bitField0_ & ~0x00000010);
       path1_ = "";
-      bitField0_ = (bitField0_ & ~0x00000020);
       path2_ = "";
-      bitField0_ = (bitField0_ & ~0x00000040);
       return this;
     }
 
@@ -787,39 +788,43 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.ExpandedTextAdInfo buildPartial() {
       com.google.ads.googleads.v11.common.ExpandedTextAdInfo result = new com.google.ads.googleads.v11.common.ExpandedTextAdInfo(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.ExpandedTextAdInfo result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.headlinePart1_ = headlinePart1_;
         to_bitField0_ |= 0x00000001;
       }
-      result.headlinePart1_ = headlinePart1_;
       if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.headlinePart2_ = headlinePart2_;
         to_bitField0_ |= 0x00000002;
       }
-      result.headlinePart2_ = headlinePart2_;
       if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.headlinePart3_ = headlinePart3_;
         to_bitField0_ |= 0x00000004;
       }
-      result.headlinePart3_ = headlinePart3_;
       if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.description_ = description_;
         to_bitField0_ |= 0x00000008;
       }
-      result.description_ = description_;
       if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.description2_ = description2_;
         to_bitField0_ |= 0x00000010;
       }
-      result.description2_ = description2_;
       if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.path1_ = path1_;
         to_bitField0_ |= 0x00000020;
       }
-      result.path1_ = path1_;
       if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.path2_ = path2_;
         to_bitField0_ |= 0x00000040;
       }
-      result.path2_ = path2_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -867,38 +872,38 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v11.common.ExpandedTextAdInfo other) {
       if (other == com.google.ads.googleads.v11.common.ExpandedTextAdInfo.getDefaultInstance()) return this;
       if (other.hasHeadlinePart1()) {
-        bitField0_ |= 0x00000001;
         headlinePart1_ = other.headlinePart1_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasHeadlinePart2()) {
-        bitField0_ |= 0x00000002;
         headlinePart2_ = other.headlinePart2_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasHeadlinePart3()) {
-        bitField0_ |= 0x00000004;
         headlinePart3_ = other.headlinePart3_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.hasDescription()) {
-        bitField0_ |= 0x00000008;
         description_ = other.description_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.hasDescription2()) {
-        bitField0_ |= 0x00000010;
         description2_ = other.description2_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (other.hasPath1()) {
-        bitField0_ |= 0x00000020;
         path1_ = other.path1_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (other.hasPath2()) {
-        bitField0_ |= 0x00000040;
         path2_ = other.path2_;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -1043,11 +1048,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHeadlinePart1(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       headlinePart1_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1060,8 +1063,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHeadlinePart1() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       headlinePart1_ = getDefaultInstance().getHeadlinePart1();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1076,12 +1079,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHeadlinePart1Bytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       headlinePart1_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1150,11 +1151,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHeadlinePart2(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       headlinePart2_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1167,8 +1166,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHeadlinePart2() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       headlinePart2_ = getDefaultInstance().getHeadlinePart2();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1183,12 +1182,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHeadlinePart2Bytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       headlinePart2_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1257,11 +1254,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHeadlinePart3(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       headlinePart3_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1274,8 +1269,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHeadlinePart3() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       headlinePart3_ = getDefaultInstance().getHeadlinePart3();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1290,12 +1285,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHeadlinePart3Bytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       headlinePart3_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1364,11 +1357,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
       description_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1381,8 +1372,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
-      bitField0_ = (bitField0_ & ~0x00000008);
       description_ = getDefaultInstance().getDescription();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1397,12 +1388,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescriptionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       description_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1471,11 +1460,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription2(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
+      if (value == null) { throw new NullPointerException(); }
       description2_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1488,8 +1475,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDescription2() {
-      bitField0_ = (bitField0_ & ~0x00000010);
       description2_ = getDefaultInstance().getDescription2();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1504,12 +1491,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription2Bytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000010;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       description2_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1578,11 +1563,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPath1(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000020;
+      if (value == null) { throw new NullPointerException(); }
       path1_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1595,8 +1578,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPath1() {
-      bitField0_ = (bitField0_ & ~0x00000020);
       path1_ = getDefaultInstance().getPath1();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1611,12 +1594,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPath1Bytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000020;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       path1_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1685,11 +1666,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPath2(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000040;
+      if (value == null) { throw new NullPointerException(); }
       path2_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1702,8 +1681,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPath2() {
-      bitField0_ = (bitField0_ & ~0x00000040);
       path2_ = getDefaultInstance().getPath2();
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -1718,12 +1697,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPath2Bytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000040;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       path2_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }

@@ -4774,6 +4774,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
+      bitField1_ = 0;
+      bitField2_ = 0;
       if (adGroupAdLabelResultBuilder_ != null) {
         adGroupAdLabelResultBuilder_.clear();
       }
@@ -5027,534 +5030,329 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.MutateOperationResponse buildPartial() {
       com.google.ads.googleads.v12.services.MutateOperationResponse result = new com.google.ads.googleads.v12.services.MutateOperationResponse(this);
-      if (responseCase_ == 17) {
-        if (adGroupAdLabelResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = adGroupAdLabelResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 1) {
-        if (adGroupAdResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = adGroupAdResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 56) {
-        if (adGroupAssetResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = adGroupAssetResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 2) {
-        if (adGroupBidModifierResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = adGroupBidModifierResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 77) {
-        if (adGroupCriterionCustomizerResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = adGroupCriterionCustomizerResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 18) {
-        if (adGroupCriterionLabelResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = adGroupCriterionLabelResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 3) {
-        if (adGroupCriterionResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = adGroupCriterionResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 75) {
-        if (adGroupCustomizerResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = adGroupCustomizerResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 19) {
-        if (adGroupExtensionSettingResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = adGroupExtensionSettingResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 20) {
-        if (adGroupFeedResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = adGroupFeedResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 21) {
-        if (adGroupLabelResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = adGroupLabelResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 5) {
-        if (adGroupResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = adGroupResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 22) {
-        if (adParameterResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = adParameterResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 49) {
-        if (adResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = adResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 23) {
-        if (assetResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = assetResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 65) {
-        if (assetGroupAssetResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = assetGroupAssetResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 78) {
-        if (assetGroupListingGroupFilterResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = assetGroupListingGroupFilterResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 79) {
-        if (assetGroupSignalResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = assetGroupSignalResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 62) {
-        if (assetGroupResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = assetGroupResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 71) {
-        if (assetSetAssetResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = assetSetAssetResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 72) {
-        if (assetSetResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = assetSetResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 80) {
-        if (audienceResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = audienceResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 58) {
-        if (biddingDataExclusionResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = biddingDataExclusionResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 59) {
-        if (biddingSeasonalityAdjustmentResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = biddingSeasonalityAdjustmentResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 6) {
-        if (biddingStrategyResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = biddingStrategyResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 52) {
-        if (campaignAssetResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = campaignAssetResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 73) {
-        if (campaignAssetSetResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = campaignAssetSetResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 7) {
-        if (campaignBidModifierResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = campaignBidModifierResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 8) {
-        if (campaignBudgetResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = campaignBudgetResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 67) {
-        if (campaignConversionGoalResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = campaignConversionGoalResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 13) {
-        if (campaignCriterionResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = campaignCriterionResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 76) {
-        if (campaignCustomizerResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = campaignCustomizerResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 24) {
-        if (campaignDraftResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = campaignDraftResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 26) {
-        if (campaignExtensionSettingResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = campaignExtensionSettingResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 27) {
-        if (campaignFeedResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = campaignFeedResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 9) {
-        if (campaignGroupResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = campaignGroupResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 28) {
-        if (campaignLabelResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = campaignLabelResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 10) {
-        if (campaignResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = campaignResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 11) {
-        if (campaignSharedSetResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = campaignSharedSetResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 12) {
-        if (conversionActionResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = conversionActionResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 55) {
-        if (conversionCustomVariableResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = conversionCustomVariableResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 69) {
-        if (conversionGoalCampaignConfigResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = conversionGoalCampaignConfigResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 63) {
-        if (conversionValueRuleResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = conversionValueRuleResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 64) {
-        if (conversionValueRuleSetResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = conversionValueRuleSetResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 68) {
-        if (customConversionGoalResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = customConversionGoalResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 57) {
-        if (customerAssetResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = customerAssetResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 66) {
-        if (customerConversionGoalResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = customerConversionGoalResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 74) {
-        if (customerCustomizerResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = customerCustomizerResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 30) {
-        if (customerExtensionSettingResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = customerExtensionSettingResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 31) {
-        if (customerFeedResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = customerFeedResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 32) {
-        if (customerLabelResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = customerLabelResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 34) {
-        if (customerNegativeCriterionResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = customerNegativeCriterionResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 35) {
-        if (customerResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = customerResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 70) {
-        if (customizerAttributeResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = customizerAttributeResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 81) {
-        if (experimentResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = experimentResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 82) {
-        if (experimentArmResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = experimentArmResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 36) {
-        if (extensionFeedItemResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = extensionFeedItemResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 37) {
-        if (feedItemResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = feedItemResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 53) {
-        if (feedItemSetResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = feedItemSetResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 54) {
-        if (feedItemSetLinkResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = feedItemSetLinkResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 38) {
-        if (feedItemTargetResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = feedItemTargetResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 39) {
-        if (feedMappingResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = feedMappingResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 40) {
-        if (feedResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = feedResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 44) {
-        if (keywordPlanAdGroupResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = keywordPlanAdGroupResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 45) {
-        if (keywordPlanCampaignResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = keywordPlanCampaignResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 50) {
-        if (keywordPlanAdGroupKeywordResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = keywordPlanAdGroupKeywordResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 51) {
-        if (keywordPlanCampaignKeywordResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = keywordPlanCampaignKeywordResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 48) {
-        if (keywordPlanResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = keywordPlanResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 41) {
-        if (labelResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = labelResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 42) {
-        if (mediaFileResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = mediaFileResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 43) {
-        if (remarketingActionResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = remarketingActionResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 14) {
-        if (sharedCriterionResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = sharedCriterionResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 15) {
-        if (sharedSetResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = sharedSetResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 61) {
-        if (smartCampaignSettingResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = smartCampaignSettingResultBuilder_.build();
-        }
-      }
-      if (responseCase_ == 16) {
-        if (userListResultBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = userListResultBuilder_.build();
-        }
-      }
-      result.responseCase_ = responseCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      if (bitField1_ != 0) { buildPartial1(result); }
+      if (bitField2_ != 0) { buildPartial2(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.MutateOperationResponse result) {
+      int from_bitField0_ = bitField0_;
+    }
+
+    private void buildPartial1(com.google.ads.googleads.v12.services.MutateOperationResponse result) {
+      int from_bitField1_ = bitField1_;
+    }
+
+    private void buildPartial2(com.google.ads.googleads.v12.services.MutateOperationResponse result) {
+      int from_bitField2_ = bitField2_;
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v12.services.MutateOperationResponse result) {
+      result.responseCase_ = responseCase_;
+      result.response_ = this.response_;
+      if (responseCase_ == 17 &&
+          adGroupAdLabelResultBuilder_ != null) {
+        result.response_ = adGroupAdLabelResultBuilder_.build();
+      }
+      if (responseCase_ == 1 &&
+          adGroupAdResultBuilder_ != null) {
+        result.response_ = adGroupAdResultBuilder_.build();
+      }
+      if (responseCase_ == 56 &&
+          adGroupAssetResultBuilder_ != null) {
+        result.response_ = adGroupAssetResultBuilder_.build();
+      }
+      if (responseCase_ == 2 &&
+          adGroupBidModifierResultBuilder_ != null) {
+        result.response_ = adGroupBidModifierResultBuilder_.build();
+      }
+      if (responseCase_ == 77 &&
+          adGroupCriterionCustomizerResultBuilder_ != null) {
+        result.response_ = adGroupCriterionCustomizerResultBuilder_.build();
+      }
+      if (responseCase_ == 18 &&
+          adGroupCriterionLabelResultBuilder_ != null) {
+        result.response_ = adGroupCriterionLabelResultBuilder_.build();
+      }
+      if (responseCase_ == 3 &&
+          adGroupCriterionResultBuilder_ != null) {
+        result.response_ = adGroupCriterionResultBuilder_.build();
+      }
+      if (responseCase_ == 75 &&
+          adGroupCustomizerResultBuilder_ != null) {
+        result.response_ = adGroupCustomizerResultBuilder_.build();
+      }
+      if (responseCase_ == 19 &&
+          adGroupExtensionSettingResultBuilder_ != null) {
+        result.response_ = adGroupExtensionSettingResultBuilder_.build();
+      }
+      if (responseCase_ == 20 &&
+          adGroupFeedResultBuilder_ != null) {
+        result.response_ = adGroupFeedResultBuilder_.build();
+      }
+      if (responseCase_ == 21 &&
+          adGroupLabelResultBuilder_ != null) {
+        result.response_ = adGroupLabelResultBuilder_.build();
+      }
+      if (responseCase_ == 5 &&
+          adGroupResultBuilder_ != null) {
+        result.response_ = adGroupResultBuilder_.build();
+      }
+      if (responseCase_ == 22 &&
+          adParameterResultBuilder_ != null) {
+        result.response_ = adParameterResultBuilder_.build();
+      }
+      if (responseCase_ == 49 &&
+          adResultBuilder_ != null) {
+        result.response_ = adResultBuilder_.build();
+      }
+      if (responseCase_ == 23 &&
+          assetResultBuilder_ != null) {
+        result.response_ = assetResultBuilder_.build();
+      }
+      if (responseCase_ == 65 &&
+          assetGroupAssetResultBuilder_ != null) {
+        result.response_ = assetGroupAssetResultBuilder_.build();
+      }
+      if (responseCase_ == 78 &&
+          assetGroupListingGroupFilterResultBuilder_ != null) {
+        result.response_ = assetGroupListingGroupFilterResultBuilder_.build();
+      }
+      if (responseCase_ == 79 &&
+          assetGroupSignalResultBuilder_ != null) {
+        result.response_ = assetGroupSignalResultBuilder_.build();
+      }
+      if (responseCase_ == 62 &&
+          assetGroupResultBuilder_ != null) {
+        result.response_ = assetGroupResultBuilder_.build();
+      }
+      if (responseCase_ == 71 &&
+          assetSetAssetResultBuilder_ != null) {
+        result.response_ = assetSetAssetResultBuilder_.build();
+      }
+      if (responseCase_ == 72 &&
+          assetSetResultBuilder_ != null) {
+        result.response_ = assetSetResultBuilder_.build();
+      }
+      if (responseCase_ == 80 &&
+          audienceResultBuilder_ != null) {
+        result.response_ = audienceResultBuilder_.build();
+      }
+      if (responseCase_ == 58 &&
+          biddingDataExclusionResultBuilder_ != null) {
+        result.response_ = biddingDataExclusionResultBuilder_.build();
+      }
+      if (responseCase_ == 59 &&
+          biddingSeasonalityAdjustmentResultBuilder_ != null) {
+        result.response_ = biddingSeasonalityAdjustmentResultBuilder_.build();
+      }
+      if (responseCase_ == 6 &&
+          biddingStrategyResultBuilder_ != null) {
+        result.response_ = biddingStrategyResultBuilder_.build();
+      }
+      if (responseCase_ == 52 &&
+          campaignAssetResultBuilder_ != null) {
+        result.response_ = campaignAssetResultBuilder_.build();
+      }
+      if (responseCase_ == 73 &&
+          campaignAssetSetResultBuilder_ != null) {
+        result.response_ = campaignAssetSetResultBuilder_.build();
+      }
+      if (responseCase_ == 7 &&
+          campaignBidModifierResultBuilder_ != null) {
+        result.response_ = campaignBidModifierResultBuilder_.build();
+      }
+      if (responseCase_ == 8 &&
+          campaignBudgetResultBuilder_ != null) {
+        result.response_ = campaignBudgetResultBuilder_.build();
+      }
+      if (responseCase_ == 67 &&
+          campaignConversionGoalResultBuilder_ != null) {
+        result.response_ = campaignConversionGoalResultBuilder_.build();
+      }
+      if (responseCase_ == 13 &&
+          campaignCriterionResultBuilder_ != null) {
+        result.response_ = campaignCriterionResultBuilder_.build();
+      }
+      if (responseCase_ == 76 &&
+          campaignCustomizerResultBuilder_ != null) {
+        result.response_ = campaignCustomizerResultBuilder_.build();
+      }
+      if (responseCase_ == 24 &&
+          campaignDraftResultBuilder_ != null) {
+        result.response_ = campaignDraftResultBuilder_.build();
+      }
+      if (responseCase_ == 26 &&
+          campaignExtensionSettingResultBuilder_ != null) {
+        result.response_ = campaignExtensionSettingResultBuilder_.build();
+      }
+      if (responseCase_ == 27 &&
+          campaignFeedResultBuilder_ != null) {
+        result.response_ = campaignFeedResultBuilder_.build();
+      }
+      if (responseCase_ == 9 &&
+          campaignGroupResultBuilder_ != null) {
+        result.response_ = campaignGroupResultBuilder_.build();
+      }
+      if (responseCase_ == 28 &&
+          campaignLabelResultBuilder_ != null) {
+        result.response_ = campaignLabelResultBuilder_.build();
+      }
+      if (responseCase_ == 10 &&
+          campaignResultBuilder_ != null) {
+        result.response_ = campaignResultBuilder_.build();
+      }
+      if (responseCase_ == 11 &&
+          campaignSharedSetResultBuilder_ != null) {
+        result.response_ = campaignSharedSetResultBuilder_.build();
+      }
+      if (responseCase_ == 12 &&
+          conversionActionResultBuilder_ != null) {
+        result.response_ = conversionActionResultBuilder_.build();
+      }
+      if (responseCase_ == 55 &&
+          conversionCustomVariableResultBuilder_ != null) {
+        result.response_ = conversionCustomVariableResultBuilder_.build();
+      }
+      if (responseCase_ == 69 &&
+          conversionGoalCampaignConfigResultBuilder_ != null) {
+        result.response_ = conversionGoalCampaignConfigResultBuilder_.build();
+      }
+      if (responseCase_ == 63 &&
+          conversionValueRuleResultBuilder_ != null) {
+        result.response_ = conversionValueRuleResultBuilder_.build();
+      }
+      if (responseCase_ == 64 &&
+          conversionValueRuleSetResultBuilder_ != null) {
+        result.response_ = conversionValueRuleSetResultBuilder_.build();
+      }
+      if (responseCase_ == 68 &&
+          customConversionGoalResultBuilder_ != null) {
+        result.response_ = customConversionGoalResultBuilder_.build();
+      }
+      if (responseCase_ == 57 &&
+          customerAssetResultBuilder_ != null) {
+        result.response_ = customerAssetResultBuilder_.build();
+      }
+      if (responseCase_ == 66 &&
+          customerConversionGoalResultBuilder_ != null) {
+        result.response_ = customerConversionGoalResultBuilder_.build();
+      }
+      if (responseCase_ == 74 &&
+          customerCustomizerResultBuilder_ != null) {
+        result.response_ = customerCustomizerResultBuilder_.build();
+      }
+      if (responseCase_ == 30 &&
+          customerExtensionSettingResultBuilder_ != null) {
+        result.response_ = customerExtensionSettingResultBuilder_.build();
+      }
+      if (responseCase_ == 31 &&
+          customerFeedResultBuilder_ != null) {
+        result.response_ = customerFeedResultBuilder_.build();
+      }
+      if (responseCase_ == 32 &&
+          customerLabelResultBuilder_ != null) {
+        result.response_ = customerLabelResultBuilder_.build();
+      }
+      if (responseCase_ == 34 &&
+          customerNegativeCriterionResultBuilder_ != null) {
+        result.response_ = customerNegativeCriterionResultBuilder_.build();
+      }
+      if (responseCase_ == 35 &&
+          customerResultBuilder_ != null) {
+        result.response_ = customerResultBuilder_.build();
+      }
+      if (responseCase_ == 70 &&
+          customizerAttributeResultBuilder_ != null) {
+        result.response_ = customizerAttributeResultBuilder_.build();
+      }
+      if (responseCase_ == 81 &&
+          experimentResultBuilder_ != null) {
+        result.response_ = experimentResultBuilder_.build();
+      }
+      if (responseCase_ == 82 &&
+          experimentArmResultBuilder_ != null) {
+        result.response_ = experimentArmResultBuilder_.build();
+      }
+      if (responseCase_ == 36 &&
+          extensionFeedItemResultBuilder_ != null) {
+        result.response_ = extensionFeedItemResultBuilder_.build();
+      }
+      if (responseCase_ == 37 &&
+          feedItemResultBuilder_ != null) {
+        result.response_ = feedItemResultBuilder_.build();
+      }
+      if (responseCase_ == 53 &&
+          feedItemSetResultBuilder_ != null) {
+        result.response_ = feedItemSetResultBuilder_.build();
+      }
+      if (responseCase_ == 54 &&
+          feedItemSetLinkResultBuilder_ != null) {
+        result.response_ = feedItemSetLinkResultBuilder_.build();
+      }
+      if (responseCase_ == 38 &&
+          feedItemTargetResultBuilder_ != null) {
+        result.response_ = feedItemTargetResultBuilder_.build();
+      }
+      if (responseCase_ == 39 &&
+          feedMappingResultBuilder_ != null) {
+        result.response_ = feedMappingResultBuilder_.build();
+      }
+      if (responseCase_ == 40 &&
+          feedResultBuilder_ != null) {
+        result.response_ = feedResultBuilder_.build();
+      }
+      if (responseCase_ == 44 &&
+          keywordPlanAdGroupResultBuilder_ != null) {
+        result.response_ = keywordPlanAdGroupResultBuilder_.build();
+      }
+      if (responseCase_ == 45 &&
+          keywordPlanCampaignResultBuilder_ != null) {
+        result.response_ = keywordPlanCampaignResultBuilder_.build();
+      }
+      if (responseCase_ == 50 &&
+          keywordPlanAdGroupKeywordResultBuilder_ != null) {
+        result.response_ = keywordPlanAdGroupKeywordResultBuilder_.build();
+      }
+      if (responseCase_ == 51 &&
+          keywordPlanCampaignKeywordResultBuilder_ != null) {
+        result.response_ = keywordPlanCampaignKeywordResultBuilder_.build();
+      }
+      if (responseCase_ == 48 &&
+          keywordPlanResultBuilder_ != null) {
+        result.response_ = keywordPlanResultBuilder_.build();
+      }
+      if (responseCase_ == 41 &&
+          labelResultBuilder_ != null) {
+        result.response_ = labelResultBuilder_.build();
+      }
+      if (responseCase_ == 42 &&
+          mediaFileResultBuilder_ != null) {
+        result.response_ = mediaFileResultBuilder_.build();
+      }
+      if (responseCase_ == 43 &&
+          remarketingActionResultBuilder_ != null) {
+        result.response_ = remarketingActionResultBuilder_.build();
+      }
+      if (responseCase_ == 14 &&
+          sharedCriterionResultBuilder_ != null) {
+        result.response_ = sharedCriterionResultBuilder_.build();
+      }
+      if (responseCase_ == 15 &&
+          sharedSetResultBuilder_ != null) {
+        result.response_ = sharedSetResultBuilder_.build();
+      }
+      if (responseCase_ == 61 &&
+          smartCampaignSettingResultBuilder_ != null) {
+        result.response_ = smartCampaignSettingResultBuilder_.build();
+      }
+      if (responseCase_ == 16 &&
+          userListResultBuilder_ != null) {
+        result.response_ = userListResultBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -6487,6 +6285,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
+    private int bitField1_;
+    private int bitField2_;
 
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v12.services.MutateAdGroupAdLabelResult, com.google.ads.googleads.v12.services.MutateAdGroupAdLabelResult.Builder, com.google.ads.googleads.v12.services.MutateAdGroupAdLabelResultOrBuilder> adGroupAdLabelResultBuilder_;
@@ -6662,7 +6463,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 17;
-      onChanged();;
+      onChanged();
       return adGroupAdLabelResultBuilder_;
     }
 
@@ -6840,7 +6641,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 1;
-      onChanged();;
+      onChanged();
       return adGroupAdResultBuilder_;
     }
 
@@ -7018,7 +6819,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 56;
-      onChanged();;
+      onChanged();
       return adGroupAssetResultBuilder_;
     }
 
@@ -7196,7 +6997,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 2;
-      onChanged();;
+      onChanged();
       return adGroupBidModifierResultBuilder_;
     }
 
@@ -7374,7 +7175,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 77;
-      onChanged();;
+      onChanged();
       return adGroupCriterionCustomizerResultBuilder_;
     }
 
@@ -7552,7 +7353,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 18;
-      onChanged();;
+      onChanged();
       return adGroupCriterionLabelResultBuilder_;
     }
 
@@ -7730,7 +7531,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 3;
-      onChanged();;
+      onChanged();
       return adGroupCriterionResultBuilder_;
     }
 
@@ -7908,7 +7709,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 75;
-      onChanged();;
+      onChanged();
       return adGroupCustomizerResultBuilder_;
     }
 
@@ -8086,7 +7887,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 19;
-      onChanged();;
+      onChanged();
       return adGroupExtensionSettingResultBuilder_;
     }
 
@@ -8264,7 +8065,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 20;
-      onChanged();;
+      onChanged();
       return adGroupFeedResultBuilder_;
     }
 
@@ -8442,7 +8243,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 21;
-      onChanged();;
+      onChanged();
       return adGroupLabelResultBuilder_;
     }
 
@@ -8620,7 +8421,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 5;
-      onChanged();;
+      onChanged();
       return adGroupResultBuilder_;
     }
 
@@ -8798,7 +8599,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 22;
-      onChanged();;
+      onChanged();
       return adParameterResultBuilder_;
     }
 
@@ -8976,7 +8777,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 49;
-      onChanged();;
+      onChanged();
       return adResultBuilder_;
     }
 
@@ -9154,7 +8955,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 23;
-      onChanged();;
+      onChanged();
       return assetResultBuilder_;
     }
 
@@ -9332,7 +9133,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 65;
-      onChanged();;
+      onChanged();
       return assetGroupAssetResultBuilder_;
     }
 
@@ -9510,7 +9311,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 78;
-      onChanged();;
+      onChanged();
       return assetGroupListingGroupFilterResultBuilder_;
     }
 
@@ -9688,7 +9489,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 79;
-      onChanged();;
+      onChanged();
       return assetGroupSignalResultBuilder_;
     }
 
@@ -9866,7 +9667,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 62;
-      onChanged();;
+      onChanged();
       return assetGroupResultBuilder_;
     }
 
@@ -10044,7 +9845,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 71;
-      onChanged();;
+      onChanged();
       return assetSetAssetResultBuilder_;
     }
 
@@ -10222,7 +10023,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 72;
-      onChanged();;
+      onChanged();
       return assetSetResultBuilder_;
     }
 
@@ -10400,7 +10201,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 80;
-      onChanged();;
+      onChanged();
       return audienceResultBuilder_;
     }
 
@@ -10578,7 +10379,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 58;
-      onChanged();;
+      onChanged();
       return biddingDataExclusionResultBuilder_;
     }
 
@@ -10756,7 +10557,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 59;
-      onChanged();;
+      onChanged();
       return biddingSeasonalityAdjustmentResultBuilder_;
     }
 
@@ -10934,7 +10735,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 6;
-      onChanged();;
+      onChanged();
       return biddingStrategyResultBuilder_;
     }
 
@@ -11112,7 +10913,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 52;
-      onChanged();;
+      onChanged();
       return campaignAssetResultBuilder_;
     }
 
@@ -11290,7 +11091,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 73;
-      onChanged();;
+      onChanged();
       return campaignAssetSetResultBuilder_;
     }
 
@@ -11468,7 +11269,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 7;
-      onChanged();;
+      onChanged();
       return campaignBidModifierResultBuilder_;
     }
 
@@ -11646,7 +11447,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 8;
-      onChanged();;
+      onChanged();
       return campaignBudgetResultBuilder_;
     }
 
@@ -11824,7 +11625,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 67;
-      onChanged();;
+      onChanged();
       return campaignConversionGoalResultBuilder_;
     }
 
@@ -12002,7 +11803,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 13;
-      onChanged();;
+      onChanged();
       return campaignCriterionResultBuilder_;
     }
 
@@ -12180,7 +11981,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 76;
-      onChanged();;
+      onChanged();
       return campaignCustomizerResultBuilder_;
     }
 
@@ -12358,7 +12159,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 24;
-      onChanged();;
+      onChanged();
       return campaignDraftResultBuilder_;
     }
 
@@ -12536,7 +12337,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 26;
-      onChanged();;
+      onChanged();
       return campaignExtensionSettingResultBuilder_;
     }
 
@@ -12714,7 +12515,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 27;
-      onChanged();;
+      onChanged();
       return campaignFeedResultBuilder_;
     }
 
@@ -12892,7 +12693,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 9;
-      onChanged();;
+      onChanged();
       return campaignGroupResultBuilder_;
     }
 
@@ -13070,7 +12871,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 28;
-      onChanged();;
+      onChanged();
       return campaignLabelResultBuilder_;
     }
 
@@ -13248,7 +13049,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 10;
-      onChanged();;
+      onChanged();
       return campaignResultBuilder_;
     }
 
@@ -13426,7 +13227,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 11;
-      onChanged();;
+      onChanged();
       return campaignSharedSetResultBuilder_;
     }
 
@@ -13604,7 +13405,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 12;
-      onChanged();;
+      onChanged();
       return conversionActionResultBuilder_;
     }
 
@@ -13782,7 +13583,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 55;
-      onChanged();;
+      onChanged();
       return conversionCustomVariableResultBuilder_;
     }
 
@@ -13960,7 +13761,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 69;
-      onChanged();;
+      onChanged();
       return conversionGoalCampaignConfigResultBuilder_;
     }
 
@@ -14138,7 +13939,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 63;
-      onChanged();;
+      onChanged();
       return conversionValueRuleResultBuilder_;
     }
 
@@ -14316,7 +14117,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 64;
-      onChanged();;
+      onChanged();
       return conversionValueRuleSetResultBuilder_;
     }
 
@@ -14494,7 +14295,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 68;
-      onChanged();;
+      onChanged();
       return customConversionGoalResultBuilder_;
     }
 
@@ -14672,7 +14473,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 57;
-      onChanged();;
+      onChanged();
       return customerAssetResultBuilder_;
     }
 
@@ -14850,7 +14651,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 66;
-      onChanged();;
+      onChanged();
       return customerConversionGoalResultBuilder_;
     }
 
@@ -15028,7 +14829,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 74;
-      onChanged();;
+      onChanged();
       return customerCustomizerResultBuilder_;
     }
 
@@ -15206,7 +15007,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 30;
-      onChanged();;
+      onChanged();
       return customerExtensionSettingResultBuilder_;
     }
 
@@ -15384,7 +15185,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 31;
-      onChanged();;
+      onChanged();
       return customerFeedResultBuilder_;
     }
 
@@ -15562,7 +15363,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 32;
-      onChanged();;
+      onChanged();
       return customerLabelResultBuilder_;
     }
 
@@ -15740,7 +15541,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 34;
-      onChanged();;
+      onChanged();
       return customerNegativeCriterionResultBuilder_;
     }
 
@@ -15918,7 +15719,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 35;
-      onChanged();;
+      onChanged();
       return customerResultBuilder_;
     }
 
@@ -16096,7 +15897,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 70;
-      onChanged();;
+      onChanged();
       return customizerAttributeResultBuilder_;
     }
 
@@ -16274,7 +16075,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 81;
-      onChanged();;
+      onChanged();
       return experimentResultBuilder_;
     }
 
@@ -16452,7 +16253,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 82;
-      onChanged();;
+      onChanged();
       return experimentArmResultBuilder_;
     }
 
@@ -16630,7 +16431,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 36;
-      onChanged();;
+      onChanged();
       return extensionFeedItemResultBuilder_;
     }
 
@@ -16808,7 +16609,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 37;
-      onChanged();;
+      onChanged();
       return feedItemResultBuilder_;
     }
 
@@ -16986,7 +16787,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 53;
-      onChanged();;
+      onChanged();
       return feedItemSetResultBuilder_;
     }
 
@@ -17164,7 +16965,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 54;
-      onChanged();;
+      onChanged();
       return feedItemSetLinkResultBuilder_;
     }
 
@@ -17342,7 +17143,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 38;
-      onChanged();;
+      onChanged();
       return feedItemTargetResultBuilder_;
     }
 
@@ -17520,7 +17321,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 39;
-      onChanged();;
+      onChanged();
       return feedMappingResultBuilder_;
     }
 
@@ -17698,7 +17499,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 40;
-      onChanged();;
+      onChanged();
       return feedResultBuilder_;
     }
 
@@ -17876,7 +17677,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 44;
-      onChanged();;
+      onChanged();
       return keywordPlanAdGroupResultBuilder_;
     }
 
@@ -18054,7 +17855,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 45;
-      onChanged();;
+      onChanged();
       return keywordPlanCampaignResultBuilder_;
     }
 
@@ -18232,7 +18033,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 50;
-      onChanged();;
+      onChanged();
       return keywordPlanAdGroupKeywordResultBuilder_;
     }
 
@@ -18410,7 +18211,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 51;
-      onChanged();;
+      onChanged();
       return keywordPlanCampaignKeywordResultBuilder_;
     }
 
@@ -18588,7 +18389,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 48;
-      onChanged();;
+      onChanged();
       return keywordPlanResultBuilder_;
     }
 
@@ -18766,7 +18567,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 41;
-      onChanged();;
+      onChanged();
       return labelResultBuilder_;
     }
 
@@ -18944,7 +18745,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 42;
-      onChanged();;
+      onChanged();
       return mediaFileResultBuilder_;
     }
 
@@ -19122,7 +18923,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 43;
-      onChanged();;
+      onChanged();
       return remarketingActionResultBuilder_;
     }
 
@@ -19300,7 +19101,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 14;
-      onChanged();;
+      onChanged();
       return sharedCriterionResultBuilder_;
     }
 
@@ -19478,7 +19279,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 15;
-      onChanged();;
+      onChanged();
       return sharedSetResultBuilder_;
     }
 
@@ -19656,7 +19457,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 61;
-      onChanged();;
+      onChanged();
       return smartCampaignSettingResultBuilder_;
     }
 
@@ -19834,7 +19635,7 @@ private static final long serialVersionUID = 0L;
         response_ = null;
       }
       responseCase_ = 16;
-      onChanged();;
+      onChanged();
       return userListResultBuilder_;
     }
     @java.lang.Override

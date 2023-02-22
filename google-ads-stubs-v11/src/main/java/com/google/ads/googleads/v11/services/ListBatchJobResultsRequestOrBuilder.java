@@ -9,7 +9,8 @@ public interface ListBatchJobResultsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The resource name of the batch job whose results are being listed.
+   * Required. The resource name of the batch job whose results are being
+   * listed.
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
@@ -18,7 +19,8 @@ public interface ListBatchJobResultsRequestOrBuilder extends
   java.lang.String getResourceName();
   /**
    * <pre>
-   * Required. The resource name of the batch job whose results are being listed.
+   * Required. The resource name of the batch job whose results are being
+   * listed.
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>

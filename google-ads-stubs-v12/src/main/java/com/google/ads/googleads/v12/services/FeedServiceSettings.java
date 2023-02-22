@@ -59,7 +59,10 @@ import javax.annotation.Generated;
  * feedServiceSettingsBuilder
  *     .mutateFeedsSettings()
  *     .setRetrySettings(
- *         feedServiceSettingsBuilder.mutateFeedsSettings().getRetrySettings().toBuilder()
+ *         feedServiceSettingsBuilder
+ *             .mutateFeedsSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
  * FeedServiceSettings feedServiceSettings = feedServiceSettingsBuilder.build();

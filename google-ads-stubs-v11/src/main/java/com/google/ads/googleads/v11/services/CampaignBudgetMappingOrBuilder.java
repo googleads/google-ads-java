@@ -29,7 +29,8 @@ public interface CampaignBudgetMappingOrBuilder extends
 
   /**
    * <pre>
-   * Required. The budget that should be attached to the graduating experiment campaign.
+   * Required. The budget that should be attached to the graduating experiment
+   * campaign.
    * </pre>
    *
    * <code>string campaign_budget = 2 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
@@ -38,7 +39,8 @@ public interface CampaignBudgetMappingOrBuilder extends
   java.lang.String getCampaignBudget();
   /**
    * <pre>
-   * Required. The budget that should be attached to the graduating experiment campaign.
+   * Required. The budget that should be attached to the graduating experiment
+   * campaign.
    * </pre>
    *
    * <code>string campaign_budget = 2 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>

@@ -9,8 +9,8 @@ public interface EventItemAttributeOrBuilder extends
 
   /**
    * <pre>
-   * Optional. A unique identifier of a product. It can be either the Merchant Center Item
-   * ID or GTIN (Global Trade Item Number).
+   * Optional. A unique identifier of a product. It can be either the Merchant
+   * Center Item ID or GTIN (Global Trade Item Number).
    * </pre>
    *
    * <code>string item_id = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -19,8 +19,8 @@ public interface EventItemAttributeOrBuilder extends
   java.lang.String getItemId();
   /**
    * <pre>
-   * Optional. A unique identifier of a product. It can be either the Merchant Center Item
-   * ID or GTIN (Global Trade Item Number).
+   * Optional. A unique identifier of a product. It can be either the Merchant
+   * Center Item ID or GTIN (Global Trade Item Number).
    * </pre>
    *
    * <code>string item_id = 1 [(.google.api.field_behavior) = OPTIONAL];</code>

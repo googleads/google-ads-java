@@ -50,10 +50,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int QUESTION_TEXT_FIELD_NUMBER = 1;
-  private volatile java.lang.Object questionText_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object questionText_ = "";
   /**
    * <pre>
-   * Output only. Question text for custom question, maximum number of characters is 300.
+   * Output only. Question text for custom question, maximum number of
+   * characters is 300.
    * </pre>
    *
    * <code>string question_text = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -74,7 +76,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Question text for custom question, maximum number of characters is 300.
+   * Output only. Question text for custom question, maximum number of
+   * characters is 300.
    * </pre>
    *
    * <code>string question_text = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -96,11 +99,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FIELD_VALUE_FIELD_NUMBER = 2;
-  private volatile java.lang.Object fieldValue_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object fieldValue_ = "";
   /**
    * <pre>
-   * Output only. Field value for custom question response, maximum number of characters
-   * is 70.
+   * Output only. Field value for custom question response, maximum number of
+   * characters is 70.
    * </pre>
    *
    * <code>string field_value = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -121,8 +125,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Field value for custom question response, maximum number of characters
-   * is 70.
+   * Output only. Field value for custom question response, maximum number of
+   * characters is 70.
    * </pre>
    *
    * <code>string field_value = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -344,10 +348,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       questionText_ = "";
-
       fieldValue_ = "";
-
       return this;
     }
 
@@ -374,10 +377,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.CustomLeadFormSubmissionField buildPartial() {
       com.google.ads.googleads.v12.resources.CustomLeadFormSubmissionField result = new com.google.ads.googleads.v12.resources.CustomLeadFormSubmissionField(this);
-      result.questionText_ = questionText_;
-      result.fieldValue_ = fieldValue_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.resources.CustomLeadFormSubmissionField result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.questionText_ = questionText_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.fieldValue_ = fieldValue_;
+      }
     }
 
     @java.lang.Override
@@ -426,10 +438,12 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.resources.CustomLeadFormSubmissionField.getDefaultInstance()) return this;
       if (!other.getQuestionText().isEmpty()) {
         questionText_ = other.questionText_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getFieldValue().isEmpty()) {
         fieldValue_ = other.fieldValue_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -460,12 +474,12 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               questionText_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               fieldValue_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             default: {
@@ -483,11 +497,13 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object questionText_ = "";
     /**
      * <pre>
-     * Output only. Question text for custom question, maximum number of characters is 300.
+     * Output only. Question text for custom question, maximum number of
+     * characters is 300.
      * </pre>
      *
      * <code>string question_text = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -507,7 +523,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Question text for custom question, maximum number of characters is 300.
+     * Output only. Question text for custom question, maximum number of
+     * characters is 300.
      * </pre>
      *
      * <code>string question_text = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -528,7 +545,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Question text for custom question, maximum number of characters is 300.
+     * Output only. Question text for custom question, maximum number of
+     * characters is 300.
      * </pre>
      *
      * <code>string question_text = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -537,31 +555,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setQuestionText(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       questionText_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Question text for custom question, maximum number of characters is 300.
+     * Output only. Question text for custom question, maximum number of
+     * characters is 300.
      * </pre>
      *
      * <code>string question_text = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearQuestionText() {
-      
       questionText_ = getDefaultInstance().getQuestionText();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Question text for custom question, maximum number of characters is 300.
+     * Output only. Question text for custom question, maximum number of
+     * characters is 300.
      * </pre>
      *
      * <code>string question_text = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -570,12 +588,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setQuestionTextBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       questionText_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -583,8 +599,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object fieldValue_ = "";
     /**
      * <pre>
-     * Output only. Field value for custom question response, maximum number of characters
-     * is 70.
+     * Output only. Field value for custom question response, maximum number of
+     * characters is 70.
      * </pre>
      *
      * <code>string field_value = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -604,8 +620,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Field value for custom question response, maximum number of characters
-     * is 70.
+     * Output only. Field value for custom question response, maximum number of
+     * characters is 70.
      * </pre>
      *
      * <code>string field_value = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -626,8 +642,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Field value for custom question response, maximum number of characters
-     * is 70.
+     * Output only. Field value for custom question response, maximum number of
+     * characters is 70.
      * </pre>
      *
      * <code>string field_value = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -636,33 +652,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFieldValue(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       fieldValue_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Field value for custom question response, maximum number of characters
-     * is 70.
+     * Output only. Field value for custom question response, maximum number of
+     * characters is 70.
      * </pre>
      *
      * <code>string field_value = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearFieldValue() {
-      
       fieldValue_ = getDefaultInstance().getFieldValue();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Field value for custom question response, maximum number of characters
-     * is 70.
+     * Output only. Field value for custom question response, maximum number of
+     * characters is 70.
      * </pre>
      *
      * <code>string field_value = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -671,12 +685,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFieldValueBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       fieldValue_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

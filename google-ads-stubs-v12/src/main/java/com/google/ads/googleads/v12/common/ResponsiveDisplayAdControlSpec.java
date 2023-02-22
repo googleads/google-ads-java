@@ -48,7 +48,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ENABLE_ASSET_ENHANCEMENTS_FIELD_NUMBER = 1;
-  private boolean enableAssetEnhancements_;
+  private boolean enableAssetEnhancements_ = false;
   /**
    * <pre>
    * Whether the advertiser has opted into the asset enhancements feature.
@@ -63,7 +63,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ENABLE_AUTOGEN_VIDEO_FIELD_NUMBER = 2;
-  private boolean enableAutogenVideo_;
+  private boolean enableAutogenVideo_ = false;
   /**
    * <pre>
    * Whether the advertiser has opted into auto-gen video feature.
@@ -282,10 +282,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       enableAssetEnhancements_ = false;
-
       enableAutogenVideo_ = false;
-
       return this;
     }
 
@@ -312,10 +311,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.ResponsiveDisplayAdControlSpec buildPartial() {
       com.google.ads.googleads.v12.common.ResponsiveDisplayAdControlSpec result = new com.google.ads.googleads.v12.common.ResponsiveDisplayAdControlSpec(this);
-      result.enableAssetEnhancements_ = enableAssetEnhancements_;
-      result.enableAutogenVideo_ = enableAutogenVideo_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.ResponsiveDisplayAdControlSpec result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.enableAssetEnhancements_ = enableAssetEnhancements_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.enableAutogenVideo_ = enableAutogenVideo_;
+      }
     }
 
     @java.lang.Override
@@ -396,12 +404,12 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               enableAssetEnhancements_ = input.readBool();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             case 16: {
               enableAutogenVideo_ = input.readBool();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             default: {
@@ -419,6 +427,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private boolean enableAssetEnhancements_ ;
     /**
@@ -445,6 +454,7 @@ private static final long serialVersionUID = 0L;
     public Builder setEnableAssetEnhancements(boolean value) {
       
       enableAssetEnhancements_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -457,7 +467,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnableAssetEnhancements() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       enableAssetEnhancements_ = false;
       onChanged();
       return this;
@@ -488,6 +498,7 @@ private static final long serialVersionUID = 0L;
     public Builder setEnableAutogenVideo(boolean value) {
       
       enableAutogenVideo_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -500,7 +511,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnableAutogenVideo() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       enableAutogenVideo_ = false;
       onChanged();
       return this;

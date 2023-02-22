@@ -72,8 +72,8 @@ public interface AdGroupAdPolicySummaryOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The overall approval status of this ad, calculated based on the status of
-   * its individual policy topic entries.
+   * Output only. The overall approval status of this ad, calculated based on
+   * the status of its individual policy topic entries.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -82,8 +82,8 @@ public interface AdGroupAdPolicySummaryOrBuilder extends
   int getApprovalStatusValue();
   /**
    * <pre>
-   * Output only. The overall approval status of this ad, calculated based on the status of
-   * its individual policy topic entries.
+   * Output only. The overall approval status of this ad, calculated based on
+   * the status of its individual policy topic entries.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

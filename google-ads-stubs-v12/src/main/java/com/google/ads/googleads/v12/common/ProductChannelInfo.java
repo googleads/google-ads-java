@@ -49,7 +49,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CHANNEL_FIELD_NUMBER = 1;
-  private int channel_;
+  private int channel_ = 0;
   /**
    * <pre>
    * Value of the locality.
@@ -70,8 +70,7 @@ private static final long serialVersionUID = 0L;
    * @return The channel.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.ProductChannelEnum.ProductChannel getChannel() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.ProductChannelEnum.ProductChannel result = com.google.ads.googleads.v12.enums.ProductChannelEnum.ProductChannel.valueOf(channel_);
+    com.google.ads.googleads.v12.enums.ProductChannelEnum.ProductChannel result = com.google.ads.googleads.v12.enums.ProductChannelEnum.ProductChannel.forNumber(channel_);
     return result == null ? com.google.ads.googleads.v12.enums.ProductChannelEnum.ProductChannel.UNRECOGNIZED : result;
   }
 
@@ -266,8 +265,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       channel_ = 0;
-
       return this;
     }
 
@@ -294,9 +293,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.ProductChannelInfo buildPartial() {
       com.google.ads.googleads.v12.common.ProductChannelInfo result = new com.google.ads.googleads.v12.common.ProductChannelInfo(this);
-      result.channel_ = channel_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.ProductChannelInfo result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.channel_ = channel_;
+      }
     }
 
     @java.lang.Override
@@ -374,7 +380,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               channel_ = input.readEnum();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             default: {
@@ -392,6 +398,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private int channel_ = 0;
     /**
@@ -415,8 +422,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setChannelValue(int value) {
-      
       channel_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -430,8 +437,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.ProductChannelEnum.ProductChannel getChannel() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.ProductChannelEnum.ProductChannel result = com.google.ads.googleads.v12.enums.ProductChannelEnum.ProductChannel.valueOf(channel_);
+      com.google.ads.googleads.v12.enums.ProductChannelEnum.ProductChannel result = com.google.ads.googleads.v12.enums.ProductChannelEnum.ProductChannel.forNumber(channel_);
       return result == null ? com.google.ads.googleads.v12.enums.ProductChannelEnum.ProductChannel.UNRECOGNIZED : result;
     }
     /**
@@ -447,7 +453,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       channel_ = value.getNumber();
       onChanged();
       return this;
@@ -461,7 +467,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearChannel() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       channel_ = 0;
       onChanged();
       return this;

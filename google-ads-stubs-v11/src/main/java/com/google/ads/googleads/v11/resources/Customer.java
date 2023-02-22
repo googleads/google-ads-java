@@ -57,7 +57,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Immutable. The resource name of the customer.
@@ -107,7 +108,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ID_FIELD_NUMBER = 19;
-  private long id_;
+  private long id_ = 0L;
   /**
    * <pre>
    * Output only. The ID of the customer.
@@ -134,7 +135,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTIVE_NAME_FIELD_NUMBER = 20;
-  private volatile java.lang.Object descriptiveName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object descriptiveName_ = "";
   /**
    * <pre>
    * Optional, non-unique descriptive name of the customer.
@@ -192,7 +194,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CURRENCY_CODE_FIELD_NUMBER = 21;
-  private volatile java.lang.Object currencyCode_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object currencyCode_ = "";
   /**
    * <pre>
    * Immutable. The currency in which the account operates.
@@ -256,7 +259,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TIME_ZONE_FIELD_NUMBER = 22;
-  private volatile java.lang.Object timeZone_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object timeZone_ = "";
   /**
    * <pre>
    * Immutable. The local timezone ID of the customer.
@@ -314,10 +318,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TRACKING_URL_TEMPLATE_FIELD_NUMBER = 23;
-  private volatile java.lang.Object trackingUrlTemplate_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object trackingUrlTemplate_ = "";
   /**
    * <pre>
    * The URL template for constructing a tracking URL out of parameters.
+   * Only mutable in an `update` operation.
    * </pre>
    *
    * <code>optional string tracking_url_template = 23;</code>
@@ -330,6 +336,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The URL template for constructing a tracking URL out of parameters.
+   * Only mutable in an `update` operation.
    * </pre>
    *
    * <code>optional string tracking_url_template = 23;</code>
@@ -351,6 +358,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The URL template for constructing a tracking URL out of parameters.
+   * Only mutable in an `update` operation.
    * </pre>
    *
    * <code>optional string tracking_url_template = 23;</code>
@@ -372,10 +380,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FINAL_URL_SUFFIX_FIELD_NUMBER = 24;
-  private volatile java.lang.Object finalUrlSuffix_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object finalUrlSuffix_ = "";
   /**
    * <pre>
-   * The URL template for appending params to the final URL
+   * The URL template for appending params to the final URL.
+   * Only mutable in an `update` operation.
    * </pre>
    *
    * <code>optional string final_url_suffix = 24;</code>
@@ -387,7 +397,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The URL template for appending params to the final URL
+   * The URL template for appending params to the final URL.
+   * Only mutable in an `update` operation.
    * </pre>
    *
    * <code>optional string final_url_suffix = 24;</code>
@@ -408,7 +419,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The URL template for appending params to the final URL
+   * The URL template for appending params to the final URL.
+   * Only mutable in an `update` operation.
    * </pre>
    *
    * <code>optional string final_url_suffix = 24;</code>
@@ -430,7 +442,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AUTO_TAGGING_ENABLED_FIELD_NUMBER = 25;
-  private boolean autoTaggingEnabled_;
+  private boolean autoTaggingEnabled_ = false;
   /**
    * <pre>
    * Whether auto-tagging is enabled for the customer.
@@ -457,12 +469,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HAS_PARTNERS_BADGE_FIELD_NUMBER = 26;
-  private boolean hasPartnersBadge_;
+  private boolean hasPartnersBadge_ = false;
   /**
    * <pre>
-   * Output only. Whether the Customer has a Partners program badge. If the Customer is not
-   * associated with the Partners program, this will be false. For more
-   * information, see https://support.google.com/partners/answer/3125774.
+   * Output only. Whether the Customer has a Partners program badge. If the
+   * Customer is not associated with the Partners program, this will be false.
+   * For more information, see
+   * https://support.google.com/partners/answer/3125774.
    * </pre>
    *
    * <code>optional bool has_partners_badge = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -474,9 +487,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Whether the Customer has a Partners program badge. If the Customer is not
-   * associated with the Partners program, this will be false. For more
-   * information, see https://support.google.com/partners/answer/3125774.
+   * Output only. Whether the Customer has a Partners program badge. If the
+   * Customer is not associated with the Partners program, this will be false.
+   * For more information, see
+   * https://support.google.com/partners/answer/3125774.
    * </pre>
    *
    * <code>optional bool has_partners_badge = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -488,7 +502,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MANAGER_FIELD_NUMBER = 27;
-  private boolean manager_;
+  private boolean manager_ = false;
   /**
    * <pre>
    * Output only. Whether the customer is a manager.
@@ -515,7 +529,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TEST_ACCOUNT_FIELD_NUMBER = 28;
-  private boolean testAccount_;
+  private boolean testAccount_ = false;
   /**
    * <pre>
    * Output only. Whether the customer is a test account.
@@ -579,7 +593,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v11.resources.CallReportingSettingOrBuilder getCallReportingSettingOrBuilder() {
-    return getCallReportingSetting();
+    return callReportingSetting_ == null ? com.google.ads.googleads.v11.resources.CallReportingSetting.getDefaultInstance() : callReportingSetting_;
   }
 
   public static final int CONVERSION_TRACKING_SETTING_FIELD_NUMBER = 14;
@@ -617,7 +631,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v11.resources.ConversionTrackingSettingOrBuilder getConversionTrackingSettingOrBuilder() {
-    return getConversionTrackingSetting();
+    return conversionTrackingSetting_ == null ? com.google.ads.googleads.v11.resources.ConversionTrackingSetting.getDefaultInstance() : conversionTrackingSetting_;
   }
 
   public static final int REMARKETING_SETTING_FIELD_NUMBER = 15;
@@ -655,25 +669,26 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v11.resources.RemarketingSettingOrBuilder getRemarketingSettingOrBuilder() {
-    return getRemarketingSetting();
+    return remarketingSetting_ == null ? com.google.ads.googleads.v11.resources.RemarketingSetting.getDefaultInstance() : remarketingSetting_;
   }
 
   public static final int PAY_PER_CONVERSION_ELIGIBILITY_FAILURE_REASONS_FIELD_NUMBER = 16;
+  @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> payPerConversionEligibilityFailureReasons_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
       java.lang.Integer, com.google.ads.googleads.v11.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason> payPerConversionEligibilityFailureReasons_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, com.google.ads.googleads.v11.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason>() {
             public com.google.ads.googleads.v11.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason convert(java.lang.Integer from) {
-              @SuppressWarnings("deprecation")
-              com.google.ads.googleads.v11.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason result = com.google.ads.googleads.v11.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason.valueOf(from);
+              com.google.ads.googleads.v11.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason result = com.google.ads.googleads.v11.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason.forNumber(from);
               return result == null ? com.google.ads.googleads.v11.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason.UNRECOGNIZED : result;
             }
           };
   /**
    * <pre>
-   * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
-   * the list is empty, the customer is eligible. This field is read-only.
+   * Output only. Reasons why the customer is not eligible to use
+   * PaymentMode.CONVERSIONS. If the list is empty, the customer is eligible.
+   * This field is read-only.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -686,8 +701,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
-   * the list is empty, the customer is eligible. This field is read-only.
+   * Output only. Reasons why the customer is not eligible to use
+   * PaymentMode.CONVERSIONS. If the list is empty, the customer is eligible.
+   * This field is read-only.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -699,8 +715,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
-   * the list is empty, the customer is eligible. This field is read-only.
+   * Output only. Reasons why the customer is not eligible to use
+   * PaymentMode.CONVERSIONS. If the list is empty, the customer is eligible.
+   * This field is read-only.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -713,8 +730,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
-   * the list is empty, the customer is eligible. This field is read-only.
+   * Output only. Reasons why the customer is not eligible to use
+   * PaymentMode.CONVERSIONS. If the list is empty, the customer is eligible.
+   * This field is read-only.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -727,8 +745,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
-   * the list is empty, the customer is eligible. This field is read-only.
+   * Output only. Reasons why the customer is not eligible to use
+   * PaymentMode.CONVERSIONS. If the list is empty, the customer is eligible.
+   * This field is read-only.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -742,7 +761,7 @@ private static final long serialVersionUID = 0L;
   private int payPerConversionEligibilityFailureReasonsMemoizedSerializedSize;
 
   public static final int OPTIMIZATION_SCORE_FIELD_NUMBER = 29;
-  private double optimizationScore_;
+  private double optimizationScore_ = 0D;
   /**
    * <pre>
    * Output only. Optimization score of the customer.
@@ -781,7 +800,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int OPTIMIZATION_SCORE_WEIGHT_FIELD_NUMBER = 30;
-  private double optimizationScoreWeight_;
+  private double optimizationScoreWeight_ = 0D;
   /**
    * <pre>
    * Output only. Optimization score weight of the customer.
@@ -803,7 +822,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STATUS_FIELD_NUMBER = 36;
-  private int status_;
+  private int status_ = 0;
   /**
    * <pre>
    * Output only. The status of the customer.
@@ -824,8 +843,7 @@ private static final long serialVersionUID = 0L;
    * @return The status.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.CustomerStatusEnum.CustomerStatus getStatus() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.CustomerStatusEnum.CustomerStatus result = com.google.ads.googleads.v11.enums.CustomerStatusEnum.CustomerStatus.valueOf(status_);
+    com.google.ads.googleads.v11.enums.CustomerStatusEnum.CustomerStatus result = com.google.ads.googleads.v11.enums.CustomerStatusEnum.CustomerStatus.forNumber(status_);
     return result == null ? com.google.ads.googleads.v11.enums.CustomerStatusEnum.CustomerStatus.UNRECOGNIZED : result;
   }
 
@@ -1294,54 +1312,38 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       id_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       descriptiveName_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       currencyCode_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       timeZone_ = "";
-      bitField0_ = (bitField0_ & ~0x00000008);
       trackingUrlTemplate_ = "";
-      bitField0_ = (bitField0_ & ~0x00000010);
       finalUrlSuffix_ = "";
-      bitField0_ = (bitField0_ & ~0x00000020);
       autoTaggingEnabled_ = false;
-      bitField0_ = (bitField0_ & ~0x00000040);
       hasPartnersBadge_ = false;
-      bitField0_ = (bitField0_ & ~0x00000080);
       manager_ = false;
-      bitField0_ = (bitField0_ & ~0x00000100);
       testAccount_ = false;
-      bitField0_ = (bitField0_ & ~0x00000200);
-      if (callReportingSettingBuilder_ == null) {
-        callReportingSetting_ = null;
-      } else {
-        callReportingSetting_ = null;
+      callReportingSetting_ = null;
+      if (callReportingSettingBuilder_ != null) {
+        callReportingSettingBuilder_.dispose();
         callReportingSettingBuilder_ = null;
       }
-      if (conversionTrackingSettingBuilder_ == null) {
-        conversionTrackingSetting_ = null;
-      } else {
-        conversionTrackingSetting_ = null;
+      conversionTrackingSetting_ = null;
+      if (conversionTrackingSettingBuilder_ != null) {
+        conversionTrackingSettingBuilder_.dispose();
         conversionTrackingSettingBuilder_ = null;
       }
-      if (remarketingSettingBuilder_ == null) {
-        remarketingSetting_ = null;
-      } else {
-        remarketingSetting_ = null;
+      remarketingSetting_ = null;
+      if (remarketingSettingBuilder_ != null) {
+        remarketingSettingBuilder_.dispose();
         remarketingSettingBuilder_ = null;
       }
       payPerConversionEligibilityFailureReasons_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000400);
+      bitField0_ = (bitField0_ & ~0x00004000);
       optimizationScore_ = 0D;
-      bitField0_ = (bitField0_ & ~0x00000800);
       optimizationScoreWeight_ = 0D;
-
       status_ = 0;
-
       return this;
     }
 
@@ -1368,78 +1370,92 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.Customer buildPartial() {
       com.google.ads.googleads.v11.resources.Customer result = new com.google.ads.googleads.v11.resources.Customer(this);
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.resources.Customer result) {
+      if (((bitField0_ & 0x00004000) != 0)) {
+        payPerConversionEligibilityFailureReasons_ = java.util.Collections.unmodifiableList(payPerConversionEligibilityFailureReasons_);
+        bitField0_ = (bitField0_ & ~0x00004000);
+      }
+      result.payPerConversionEligibilityFailureReasons_ = payPerConversionEligibilityFailureReasons_;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.Customer result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.id_ = id_;
         to_bitField0_ |= 0x00000001;
       }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.descriptiveName_ = descriptiveName_;
         to_bitField0_ |= 0x00000002;
       }
-      result.descriptiveName_ = descriptiveName_;
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.currencyCode_ = currencyCode_;
         to_bitField0_ |= 0x00000004;
       }
-      result.currencyCode_ = currencyCode_;
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.timeZone_ = timeZone_;
         to_bitField0_ |= 0x00000008;
       }
-      result.timeZone_ = timeZone_;
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.trackingUrlTemplate_ = trackingUrlTemplate_;
         to_bitField0_ |= 0x00000010;
       }
-      result.trackingUrlTemplate_ = trackingUrlTemplate_;
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.finalUrlSuffix_ = finalUrlSuffix_;
         to_bitField0_ |= 0x00000020;
       }
-      result.finalUrlSuffix_ = finalUrlSuffix_;
-      if (((from_bitField0_ & 0x00000040) != 0)) {
+      if (((from_bitField0_ & 0x00000080) != 0)) {
         result.autoTaggingEnabled_ = autoTaggingEnabled_;
         to_bitField0_ |= 0x00000040;
       }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
+      if (((from_bitField0_ & 0x00000100) != 0)) {
         result.hasPartnersBadge_ = hasPartnersBadge_;
         to_bitField0_ |= 0x00000080;
       }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
+      if (((from_bitField0_ & 0x00000200) != 0)) {
         result.manager_ = manager_;
         to_bitField0_ |= 0x00000100;
       }
-      if (((from_bitField0_ & 0x00000200) != 0)) {
+      if (((from_bitField0_ & 0x00000400) != 0)) {
         result.testAccount_ = testAccount_;
         to_bitField0_ |= 0x00000200;
       }
-      if (callReportingSettingBuilder_ == null) {
-        result.callReportingSetting_ = callReportingSetting_;
-      } else {
-        result.callReportingSetting_ = callReportingSettingBuilder_.build();
-      }
-      if (conversionTrackingSettingBuilder_ == null) {
-        result.conversionTrackingSetting_ = conversionTrackingSetting_;
-      } else {
-        result.conversionTrackingSetting_ = conversionTrackingSettingBuilder_.build();
-      }
-      if (remarketingSettingBuilder_ == null) {
-        result.remarketingSetting_ = remarketingSetting_;
-      } else {
-        result.remarketingSetting_ = remarketingSettingBuilder_.build();
-      }
-      if (((bitField0_ & 0x00000400) != 0)) {
-        payPerConversionEligibilityFailureReasons_ = java.util.Collections.unmodifiableList(payPerConversionEligibilityFailureReasons_);
-        bitField0_ = (bitField0_ & ~0x00000400);
-      }
-      result.payPerConversionEligibilityFailureReasons_ = payPerConversionEligibilityFailureReasons_;
       if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.callReportingSetting_ = callReportingSettingBuilder_ == null
+            ? callReportingSetting_
+            : callReportingSettingBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.conversionTrackingSetting_ = conversionTrackingSettingBuilder_ == null
+            ? conversionTrackingSetting_
+            : conversionTrackingSettingBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        result.remarketingSetting_ = remarketingSettingBuilder_ == null
+            ? remarketingSetting_
+            : remarketingSettingBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00008000) != 0)) {
         result.optimizationScore_ = optimizationScore_;
         to_bitField0_ |= 0x00000400;
       }
-      result.optimizationScoreWeight_ = optimizationScoreWeight_;
-      result.status_ = status_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      if (((from_bitField0_ & 0x00010000) != 0)) {
+        result.optimizationScoreWeight_ = optimizationScoreWeight_;
+      }
+      if (((from_bitField0_ & 0x00020000) != 0)) {
+        result.status_ = status_;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1488,34 +1504,35 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.resources.Customer.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasId()) {
         setId(other.getId());
       }
       if (other.hasDescriptiveName()) {
-        bitField0_ |= 0x00000002;
         descriptiveName_ = other.descriptiveName_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.hasCurrencyCode()) {
-        bitField0_ |= 0x00000004;
         currencyCode_ = other.currencyCode_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.hasTimeZone()) {
-        bitField0_ |= 0x00000008;
         timeZone_ = other.timeZone_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (other.hasTrackingUrlTemplate()) {
-        bitField0_ |= 0x00000010;
         trackingUrlTemplate_ = other.trackingUrlTemplate_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (other.hasFinalUrlSuffix()) {
-        bitField0_ |= 0x00000020;
         finalUrlSuffix_ = other.finalUrlSuffix_;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (other.hasAutoTaggingEnabled()) {
@@ -1542,7 +1559,7 @@ private static final long serialVersionUID = 0L;
       if (!other.payPerConversionEligibilityFailureReasons_.isEmpty()) {
         if (payPerConversionEligibilityFailureReasons_.isEmpty()) {
           payPerConversionEligibilityFailureReasons_ = other.payPerConversionEligibilityFailureReasons_;
-          bitField0_ = (bitField0_ & ~0x00000400);
+          bitField0_ = (bitField0_ & ~0x00004000);
         } else {
           ensurePayPerConversionEligibilityFailureReasonsIsMutable();
           payPerConversionEligibilityFailureReasons_.addAll(other.payPerConversionEligibilityFailureReasons_);
@@ -1586,28 +1603,28 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 82: {
               input.readMessage(
                   getCallReportingSettingFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000800;
               break;
             } // case 82
             case 114: {
               input.readMessage(
                   getConversionTrackingSettingFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00001000;
               break;
             } // case 114
             case 122: {
               input.readMessage(
                   getRemarketingSettingFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00002000;
               break;
             } // case 122
             case 128: {
@@ -1629,67 +1646,67 @@ private static final long serialVersionUID = 0L;
             } // case 130
             case 152: {
               id_ = input.readInt64();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 152
             case 162: {
               descriptiveName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 162
             case 170: {
               currencyCode_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               break;
             } // case 170
             case 178: {
               timeZone_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000010;
               break;
             } // case 178
             case 186: {
               trackingUrlTemplate_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000020;
               break;
             } // case 186
             case 194: {
               finalUrlSuffix_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000040;
               break;
             } // case 194
             case 200: {
               autoTaggingEnabled_ = input.readBool();
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000080;
               break;
             } // case 200
             case 208: {
               hasPartnersBadge_ = input.readBool();
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000100;
               break;
             } // case 208
             case 216: {
               manager_ = input.readBool();
-              bitField0_ |= 0x00000100;
+              bitField0_ |= 0x00000200;
               break;
             } // case 216
             case 224: {
               testAccount_ = input.readBool();
-              bitField0_ |= 0x00000200;
+              bitField0_ |= 0x00000400;
               break;
             } // case 224
             case 233: {
               optimizationScore_ = input.readDouble();
-              bitField0_ |= 0x00000800;
+              bitField0_ |= 0x00008000;
               break;
             } // case 233
             case 241: {
               optimizationScoreWeight_ = input.readDouble();
-
+              bitField0_ |= 0x00010000;
               break;
             } // case 241
             case 288: {
               status_ = input.readEnum();
-
+              bitField0_ |= 0x00020000;
               break;
             } // case 288
             default: {
@@ -1768,11 +1785,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1787,8 +1802,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1805,12 +1820,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1826,7 +1839,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -1850,8 +1863,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      bitField0_ |= 0x00000001;
+      
       id_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1864,7 +1878,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       id_ = 0L;
       onChanged();
       return this;
@@ -1880,7 +1894,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the descriptiveName field is set.
      */
     public boolean hasDescriptiveName() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -1934,11 +1948,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescriptiveName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       descriptiveName_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1951,8 +1963,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDescriptiveName() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       descriptiveName_ = getDefaultInstance().getDescriptiveName();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1967,12 +1979,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescriptiveNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       descriptiveName_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1989,7 +1999,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the currencyCode field is set.
      */
     public boolean hasCurrencyCode() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -2049,11 +2059,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCurrencyCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       currencyCode_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -2068,8 +2076,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCurrencyCode() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       currencyCode_ = getDefaultInstance().getCurrencyCode();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -2086,12 +2094,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCurrencyCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       currencyCode_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -2106,7 +2112,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the timeZone field is set.
      */
     public boolean hasTimeZone() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -2160,11 +2166,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTimeZone(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
       timeZone_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -2177,8 +2181,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTimeZone() {
-      bitField0_ = (bitField0_ & ~0x00000008);
       timeZone_ = getDefaultInstance().getTimeZone();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -2193,12 +2197,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTimeZoneBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       timeZone_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -2207,17 +2209,19 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The URL template for constructing a tracking URL out of parameters.
+     * Only mutable in an `update` operation.
      * </pre>
      *
      * <code>optional string tracking_url_template = 23;</code>
      * @return Whether the trackingUrlTemplate field is set.
      */
     public boolean hasTrackingUrlTemplate() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
      * The URL template for constructing a tracking URL out of parameters.
+     * Only mutable in an `update` operation.
      * </pre>
      *
      * <code>optional string tracking_url_template = 23;</code>
@@ -2238,6 +2242,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The URL template for constructing a tracking URL out of parameters.
+     * Only mutable in an `update` operation.
      * </pre>
      *
      * <code>optional string tracking_url_template = 23;</code>
@@ -2259,6 +2264,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The URL template for constructing a tracking URL out of parameters.
+     * Only mutable in an `update` operation.
      * </pre>
      *
      * <code>optional string tracking_url_template = 23;</code>
@@ -2267,31 +2273,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTrackingUrlTemplate(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
+      if (value == null) { throw new NullPointerException(); }
       trackingUrlTemplate_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
     /**
      * <pre>
      * The URL template for constructing a tracking URL out of parameters.
+     * Only mutable in an `update` operation.
      * </pre>
      *
      * <code>optional string tracking_url_template = 23;</code>
      * @return This builder for chaining.
      */
     public Builder clearTrackingUrlTemplate() {
-      bitField0_ = (bitField0_ & ~0x00000010);
       trackingUrlTemplate_ = getDefaultInstance().getTrackingUrlTemplate();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
     /**
      * <pre>
      * The URL template for constructing a tracking URL out of parameters.
+     * Only mutable in an `update` operation.
      * </pre>
      *
      * <code>optional string tracking_url_template = 23;</code>
@@ -2300,12 +2306,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTrackingUrlTemplateBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000010;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       trackingUrlTemplate_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -2313,18 +2317,20 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object finalUrlSuffix_ = "";
     /**
      * <pre>
-     * The URL template for appending params to the final URL
+     * The URL template for appending params to the final URL.
+     * Only mutable in an `update` operation.
      * </pre>
      *
      * <code>optional string final_url_suffix = 24;</code>
      * @return Whether the finalUrlSuffix field is set.
      */
     public boolean hasFinalUrlSuffix() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <pre>
-     * The URL template for appending params to the final URL
+     * The URL template for appending params to the final URL.
+     * Only mutable in an `update` operation.
      * </pre>
      *
      * <code>optional string final_url_suffix = 24;</code>
@@ -2344,7 +2350,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The URL template for appending params to the final URL
+     * The URL template for appending params to the final URL.
+     * Only mutable in an `update` operation.
      * </pre>
      *
      * <code>optional string final_url_suffix = 24;</code>
@@ -2365,7 +2372,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The URL template for appending params to the final URL
+     * The URL template for appending params to the final URL.
+     * Only mutable in an `update` operation.
      * </pre>
      *
      * <code>optional string final_url_suffix = 24;</code>
@@ -2374,31 +2382,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFinalUrlSuffix(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000020;
+      if (value == null) { throw new NullPointerException(); }
       finalUrlSuffix_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The URL template for appending params to the final URL
+     * The URL template for appending params to the final URL.
+     * Only mutable in an `update` operation.
      * </pre>
      *
      * <code>optional string final_url_suffix = 24;</code>
      * @return This builder for chaining.
      */
     public Builder clearFinalUrlSuffix() {
-      bitField0_ = (bitField0_ & ~0x00000020);
       finalUrlSuffix_ = getDefaultInstance().getFinalUrlSuffix();
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * The URL template for appending params to the final URL
+     * The URL template for appending params to the final URL.
+     * Only mutable in an `update` operation.
      * </pre>
      *
      * <code>optional string final_url_suffix = 24;</code>
@@ -2407,12 +2415,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFinalUrlSuffixBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000020;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       finalUrlSuffix_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2428,7 +2434,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAutoTaggingEnabled() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
      * <pre>
@@ -2452,8 +2458,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAutoTaggingEnabled(boolean value) {
-      bitField0_ |= 0x00000040;
+      
       autoTaggingEnabled_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2466,7 +2473,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAutoTaggingEnabled() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000080);
       autoTaggingEnabled_ = false;
       onChanged();
       return this;
@@ -2475,9 +2482,10 @@ private static final long serialVersionUID = 0L;
     private boolean hasPartnersBadge_ ;
     /**
      * <pre>
-     * Output only. Whether the Customer has a Partners program badge. If the Customer is not
-     * associated with the Partners program, this will be false. For more
-     * information, see https://support.google.com/partners/answer/3125774.
+     * Output only. Whether the Customer has a Partners program badge. If the
+     * Customer is not associated with the Partners program, this will be false.
+     * For more information, see
+     * https://support.google.com/partners/answer/3125774.
      * </pre>
      *
      * <code>optional bool has_partners_badge = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2485,13 +2493,14 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasHasPartnersBadge() {
-      return ((bitField0_ & 0x00000080) != 0);
+      return ((bitField0_ & 0x00000100) != 0);
     }
     /**
      * <pre>
-     * Output only. Whether the Customer has a Partners program badge. If the Customer is not
-     * associated with the Partners program, this will be false. For more
-     * information, see https://support.google.com/partners/answer/3125774.
+     * Output only. Whether the Customer has a Partners program badge. If the
+     * Customer is not associated with the Partners program, this will be false.
+     * For more information, see
+     * https://support.google.com/partners/answer/3125774.
      * </pre>
      *
      * <code>optional bool has_partners_badge = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2503,9 +2512,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Whether the Customer has a Partners program badge. If the Customer is not
-     * associated with the Partners program, this will be false. For more
-     * information, see https://support.google.com/partners/answer/3125774.
+     * Output only. Whether the Customer has a Partners program badge. If the
+     * Customer is not associated with the Partners program, this will be false.
+     * For more information, see
+     * https://support.google.com/partners/answer/3125774.
      * </pre>
      *
      * <code>optional bool has_partners_badge = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2513,23 +2523,25 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHasPartnersBadge(boolean value) {
-      bitField0_ |= 0x00000080;
+      
       hasPartnersBadge_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Whether the Customer has a Partners program badge. If the Customer is not
-     * associated with the Partners program, this will be false. For more
-     * information, see https://support.google.com/partners/answer/3125774.
+     * Output only. Whether the Customer has a Partners program badge. If the
+     * Customer is not associated with the Partners program, this will be false.
+     * For more information, see
+     * https://support.google.com/partners/answer/3125774.
      * </pre>
      *
      * <code>optional bool has_partners_badge = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearHasPartnersBadge() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000100);
       hasPartnersBadge_ = false;
       onChanged();
       return this;
@@ -2546,7 +2558,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasManager() {
-      return ((bitField0_ & 0x00000100) != 0);
+      return ((bitField0_ & 0x00000200) != 0);
     }
     /**
      * <pre>
@@ -2570,8 +2582,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setManager(boolean value) {
-      bitField0_ |= 0x00000100;
+      
       manager_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2584,7 +2597,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearManager() {
-      bitField0_ = (bitField0_ & ~0x00000100);
+      bitField0_ = (bitField0_ & ~0x00000200);
       manager_ = false;
       onChanged();
       return this;
@@ -2601,7 +2614,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasTestAccount() {
-      return ((bitField0_ & 0x00000200) != 0);
+      return ((bitField0_ & 0x00000400) != 0);
     }
     /**
      * <pre>
@@ -2625,8 +2638,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTestAccount(boolean value) {
-      bitField0_ |= 0x00000200;
+      
       testAccount_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2639,7 +2653,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTestAccount() {
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00000400);
       testAccount_ = false;
       onChanged();
       return this;
@@ -2658,7 +2672,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the callReportingSetting field is set.
      */
     public boolean hasCallReportingSetting() {
-      return callReportingSettingBuilder_ != null || callReportingSetting_ != null;
+      return ((bitField0_ & 0x00000800) != 0);
     }
     /**
      * <pre>
@@ -2690,11 +2704,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         callReportingSetting_ = value;
-        onChanged();
       } else {
         callReportingSettingBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000800;
+      onChanged();
       return this;
     }
     /**
@@ -2709,11 +2723,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.resources.CallReportingSetting.Builder builderForValue) {
       if (callReportingSettingBuilder_ == null) {
         callReportingSetting_ = builderForValue.build();
-        onChanged();
       } else {
         callReportingSettingBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000800;
+      onChanged();
       return this;
     }
     /**
@@ -2726,17 +2740,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCallReportingSetting(com.google.ads.googleads.v11.resources.CallReportingSetting value) {
       if (callReportingSettingBuilder_ == null) {
-        if (callReportingSetting_ != null) {
-          callReportingSetting_ =
-            com.google.ads.googleads.v11.resources.CallReportingSetting.newBuilder(callReportingSetting_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000800) != 0) &&
+          callReportingSetting_ != null &&
+          callReportingSetting_ != com.google.ads.googleads.v11.resources.CallReportingSetting.getDefaultInstance()) {
+          getCallReportingSettingBuilder().mergeFrom(value);
         } else {
           callReportingSetting_ = value;
         }
-        onChanged();
       } else {
         callReportingSettingBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000800;
+      onChanged();
       return this;
     }
     /**
@@ -2748,14 +2763,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.resources.CallReportingSetting call_reporting_setting = 10;</code>
      */
     public Builder clearCallReportingSetting() {
-      if (callReportingSettingBuilder_ == null) {
-        callReportingSetting_ = null;
-        onChanged();
-      } else {
-        callReportingSetting_ = null;
+      bitField0_ = (bitField0_ & ~0x00000800);
+      callReportingSetting_ = null;
+      if (callReportingSettingBuilder_ != null) {
+        callReportingSettingBuilder_.dispose();
         callReportingSettingBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -2767,7 +2781,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.resources.CallReportingSetting call_reporting_setting = 10;</code>
      */
     public com.google.ads.googleads.v11.resources.CallReportingSetting.Builder getCallReportingSettingBuilder() {
-      
+      bitField0_ |= 0x00000800;
       onChanged();
       return getCallReportingSettingFieldBuilder().getBuilder();
     }
@@ -2821,7 +2835,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the conversionTrackingSetting field is set.
      */
     public boolean hasConversionTrackingSetting() {
-      return conversionTrackingSettingBuilder_ != null || conversionTrackingSetting_ != null;
+      return ((bitField0_ & 0x00001000) != 0);
     }
     /**
      * <pre>
@@ -2851,11 +2865,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         conversionTrackingSetting_ = value;
-        onChanged();
       } else {
         conversionTrackingSettingBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00001000;
+      onChanged();
       return this;
     }
     /**
@@ -2869,11 +2883,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.resources.ConversionTrackingSetting.Builder builderForValue) {
       if (conversionTrackingSettingBuilder_ == null) {
         conversionTrackingSetting_ = builderForValue.build();
-        onChanged();
       } else {
         conversionTrackingSettingBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00001000;
+      onChanged();
       return this;
     }
     /**
@@ -2885,17 +2899,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeConversionTrackingSetting(com.google.ads.googleads.v11.resources.ConversionTrackingSetting value) {
       if (conversionTrackingSettingBuilder_ == null) {
-        if (conversionTrackingSetting_ != null) {
-          conversionTrackingSetting_ =
-            com.google.ads.googleads.v11.resources.ConversionTrackingSetting.newBuilder(conversionTrackingSetting_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00001000) != 0) &&
+          conversionTrackingSetting_ != null &&
+          conversionTrackingSetting_ != com.google.ads.googleads.v11.resources.ConversionTrackingSetting.getDefaultInstance()) {
+          getConversionTrackingSettingBuilder().mergeFrom(value);
         } else {
           conversionTrackingSetting_ = value;
         }
-        onChanged();
       } else {
         conversionTrackingSettingBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00001000;
+      onChanged();
       return this;
     }
     /**
@@ -2906,14 +2921,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearConversionTrackingSetting() {
-      if (conversionTrackingSettingBuilder_ == null) {
-        conversionTrackingSetting_ = null;
-        onChanged();
-      } else {
-        conversionTrackingSetting_ = null;
+      bitField0_ = (bitField0_ & ~0x00001000);
+      conversionTrackingSetting_ = null;
+      if (conversionTrackingSettingBuilder_ != null) {
+        conversionTrackingSettingBuilder_.dispose();
         conversionTrackingSettingBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -2924,7 +2938,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.resources.ConversionTrackingSetting conversion_tracking_setting = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v11.resources.ConversionTrackingSetting.Builder getConversionTrackingSettingBuilder() {
-      
+      bitField0_ |= 0x00001000;
       onChanged();
       return getConversionTrackingSettingFieldBuilder().getBuilder();
     }
@@ -2976,7 +2990,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the remarketingSetting field is set.
      */
     public boolean hasRemarketingSetting() {
-      return remarketingSettingBuilder_ != null || remarketingSetting_ != null;
+      return ((bitField0_ & 0x00002000) != 0);
     }
     /**
      * <pre>
@@ -3006,11 +3020,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         remarketingSetting_ = value;
-        onChanged();
       } else {
         remarketingSettingBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00002000;
+      onChanged();
       return this;
     }
     /**
@@ -3024,11 +3038,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.resources.RemarketingSetting.Builder builderForValue) {
       if (remarketingSettingBuilder_ == null) {
         remarketingSetting_ = builderForValue.build();
-        onChanged();
       } else {
         remarketingSettingBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00002000;
+      onChanged();
       return this;
     }
     /**
@@ -3040,17 +3054,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeRemarketingSetting(com.google.ads.googleads.v11.resources.RemarketingSetting value) {
       if (remarketingSettingBuilder_ == null) {
-        if (remarketingSetting_ != null) {
-          remarketingSetting_ =
-            com.google.ads.googleads.v11.resources.RemarketingSetting.newBuilder(remarketingSetting_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00002000) != 0) &&
+          remarketingSetting_ != null &&
+          remarketingSetting_ != com.google.ads.googleads.v11.resources.RemarketingSetting.getDefaultInstance()) {
+          getRemarketingSettingBuilder().mergeFrom(value);
         } else {
           remarketingSetting_ = value;
         }
-        onChanged();
       } else {
         remarketingSettingBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00002000;
+      onChanged();
       return this;
     }
     /**
@@ -3061,14 +3076,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.resources.RemarketingSetting remarketing_setting = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearRemarketingSetting() {
-      if (remarketingSettingBuilder_ == null) {
-        remarketingSetting_ = null;
-        onChanged();
-      } else {
-        remarketingSetting_ = null;
+      bitField0_ = (bitField0_ & ~0x00002000);
+      remarketingSetting_ = null;
+      if (remarketingSettingBuilder_ != null) {
+        remarketingSettingBuilder_.dispose();
         remarketingSettingBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -3079,7 +3093,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.resources.RemarketingSetting remarketing_setting = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v11.resources.RemarketingSetting.Builder getRemarketingSettingBuilder() {
-      
+      bitField0_ |= 0x00002000;
       onChanged();
       return getRemarketingSettingFieldBuilder().getBuilder();
     }
@@ -3122,15 +3136,16 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> payPerConversionEligibilityFailureReasons_ =
       java.util.Collections.emptyList();
     private void ensurePayPerConversionEligibilityFailureReasonsIsMutable() {
-      if (!((bitField0_ & 0x00000400) != 0)) {
+      if (!((bitField0_ & 0x00004000) != 0)) {
         payPerConversionEligibilityFailureReasons_ = new java.util.ArrayList<java.lang.Integer>(payPerConversionEligibilityFailureReasons_);
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00004000;
       }
     }
     /**
      * <pre>
-     * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
-     * the list is empty, the customer is eligible. This field is read-only.
+     * Output only. Reasons why the customer is not eligible to use
+     * PaymentMode.CONVERSIONS. If the list is empty, the customer is eligible.
+     * This field is read-only.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3142,8 +3157,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
-     * the list is empty, the customer is eligible. This field is read-only.
+     * Output only. Reasons why the customer is not eligible to use
+     * PaymentMode.CONVERSIONS. If the list is empty, the customer is eligible.
+     * This field is read-only.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3154,8 +3170,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
-     * the list is empty, the customer is eligible. This field is read-only.
+     * Output only. Reasons why the customer is not eligible to use
+     * PaymentMode.CONVERSIONS. If the list is empty, the customer is eligible.
+     * This field is read-only.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3167,8 +3184,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
-     * the list is empty, the customer is eligible. This field is read-only.
+     * Output only. Reasons why the customer is not eligible to use
+     * PaymentMode.CONVERSIONS. If the list is empty, the customer is eligible.
+     * This field is read-only.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3188,8 +3206,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
-     * the list is empty, the customer is eligible. This field is read-only.
+     * Output only. Reasons why the customer is not eligible to use
+     * PaymentMode.CONVERSIONS. If the list is empty, the customer is eligible.
+     * This field is read-only.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3207,8 +3226,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
-     * the list is empty, the customer is eligible. This field is read-only.
+     * Output only. Reasons why the customer is not eligible to use
+     * PaymentMode.CONVERSIONS. If the list is empty, the customer is eligible.
+     * This field is read-only.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3226,8 +3246,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
-     * the list is empty, the customer is eligible. This field is read-only.
+     * Output only. Reasons why the customer is not eligible to use
+     * PaymentMode.CONVERSIONS. If the list is empty, the customer is eligible.
+     * This field is read-only.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3235,14 +3256,15 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearPayPerConversionEligibilityFailureReasons() {
       payPerConversionEligibilityFailureReasons_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000400);
+      bitField0_ = (bitField0_ & ~0x00004000);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
-     * the list is empty, the customer is eligible. This field is read-only.
+     * Output only. Reasons why the customer is not eligible to use
+     * PaymentMode.CONVERSIONS. If the list is empty, the customer is eligible.
+     * This field is read-only.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3254,8 +3276,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
-     * the list is empty, the customer is eligible. This field is read-only.
+     * Output only. Reasons why the customer is not eligible to use
+     * PaymentMode.CONVERSIONS. If the list is empty, the customer is eligible.
+     * This field is read-only.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3267,8 +3290,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
-     * the list is empty, the customer is eligible. This field is read-only.
+     * Output only. Reasons why the customer is not eligible to use
+     * PaymentMode.CONVERSIONS. If the list is empty, the customer is eligible.
+     * This field is read-only.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3285,8 +3309,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
-     * the list is empty, the customer is eligible. This field is read-only.
+     * Output only. Reasons why the customer is not eligible to use
+     * PaymentMode.CONVERSIONS. If the list is empty, the customer is eligible.
+     * This field is read-only.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3301,8 +3326,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Reasons why the customer is not eligible to use PaymentMode.CONVERSIONS. If
-     * the list is empty, the customer is eligible. This field is read-only.
+     * Output only. Reasons why the customer is not eligible to use
+     * PaymentMode.CONVERSIONS. If the list is empty, the customer is eligible.
+     * This field is read-only.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3336,7 +3362,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasOptimizationScore() {
-      return ((bitField0_ & 0x00000800) != 0);
+      return ((bitField0_ & 0x00008000) != 0);
     }
     /**
      * <pre>
@@ -3372,8 +3398,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOptimizationScore(double value) {
-      bitField0_ |= 0x00000800;
+      
       optimizationScore_ = value;
+      bitField0_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -3392,7 +3419,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOptimizationScore() {
-      bitField0_ = (bitField0_ & ~0x00000800);
+      bitField0_ = (bitField0_ & ~0x00008000);
       optimizationScore_ = 0D;
       onChanged();
       return this;
@@ -3437,6 +3464,7 @@ private static final long serialVersionUID = 0L;
     public Builder setOptimizationScoreWeight(double value) {
       
       optimizationScoreWeight_ = value;
+      bitField0_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -3456,7 +3484,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOptimizationScoreWeight() {
-      
+      bitField0_ = (bitField0_ & ~0x00010000);
       optimizationScoreWeight_ = 0D;
       onChanged();
       return this;
@@ -3484,8 +3512,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
-      
       status_ = value;
+      bitField0_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -3499,8 +3527,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.CustomerStatusEnum.CustomerStatus getStatus() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.CustomerStatusEnum.CustomerStatus result = com.google.ads.googleads.v11.enums.CustomerStatusEnum.CustomerStatus.valueOf(status_);
+      com.google.ads.googleads.v11.enums.CustomerStatusEnum.CustomerStatus result = com.google.ads.googleads.v11.enums.CustomerStatusEnum.CustomerStatus.forNumber(status_);
       return result == null ? com.google.ads.googleads.v11.enums.CustomerStatusEnum.CustomerStatus.UNRECOGNIZED : result;
     }
     /**
@@ -3516,7 +3543,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00020000;
       status_ = value.getNumber();
       onChanged();
       return this;
@@ -3530,7 +3557,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00020000);
       status_ = 0;
       onChanged();
       return this;

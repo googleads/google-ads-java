@@ -90,7 +90,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Immutable. The resource name of the campaign bid modifier.
@@ -140,7 +141,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CAMPAIGN_FIELD_NUMBER = 6;
-  private volatile java.lang.Object campaign_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object campaign_ = "";
   /**
    * <pre>
    * Output only. The campaign to which this criterion belongs.
@@ -198,7 +200,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CRITERION_ID_FIELD_NUMBER = 7;
-  private long criterionId_;
+  private long criterionId_ = 0L;
   /**
    * <pre>
    * Output only. The ID of the criterion to bid modify.
@@ -227,7 +229,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BID_MODIFIER_FIELD_NUMBER = 8;
-  private double bidModifier_;
+  private double bidModifier_ = 0D;
   /**
    * <pre>
    * The modifier for the bid when the criterion matches.
@@ -256,7 +258,8 @@ private static final long serialVersionUID = 0L;
   public static final int INTERACTION_TYPE_FIELD_NUMBER = 5;
   /**
    * <pre>
-   * Immutable. Criterion for interaction type. Only supported for search campaigns.
+   * Immutable. Criterion for interaction type. Only supported for search
+   * campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.InteractionTypeInfo interaction_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -268,7 +271,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. Criterion for interaction type. Only supported for search campaigns.
+   * Immutable. Criterion for interaction type. Only supported for search
+   * campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.InteractionTypeInfo interaction_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -283,7 +287,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. Criterion for interaction type. Only supported for search campaigns.
+   * Immutable. Criterion for interaction type. Only supported for search
+   * campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.InteractionTypeInfo interaction_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -561,14 +566,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       campaign_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       criterionId_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000002);
       bidModifier_ = 0D;
-      bitField0_ = (bitField0_ & ~0x00000004);
       if (interactionTypeBuilder_ != null) {
         interactionTypeBuilder_.clear();
       }
@@ -600,32 +602,40 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.CampaignBidModifier buildPartial() {
       com.google.ads.googleads.v11.resources.CampaignBidModifier result = new com.google.ads.googleads.v11.resources.CampaignBidModifier(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.CampaignBidModifier result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.campaign_ = campaign_;
         to_bitField0_ |= 0x00000001;
       }
-      result.campaign_ = campaign_;
-      if (((from_bitField0_ & 0x00000002) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.criterionId_ = criterionId_;
         to_bitField0_ |= 0x00000002;
       }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.bidModifier_ = bidModifier_;
         to_bitField0_ |= 0x00000004;
       }
-      if (criterionCase_ == 5) {
-        if (interactionTypeBuilder_ == null) {
-          result.criterion_ = criterion_;
-        } else {
-          result.criterion_ = interactionTypeBuilder_.build();
-        }
-      }
-      result.bitField0_ = to_bitField0_;
+      result.bitField0_ |= to_bitField0_;
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v11.resources.CampaignBidModifier result) {
       result.criterionCase_ = criterionCase_;
-      onBuilt();
-      return result;
+      result.criterion_ = this.criterion_;
+      if (criterionCase_ == 5 &&
+          interactionTypeBuilder_ != null) {
+        result.criterion_ = interactionTypeBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -674,11 +684,12 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.resources.CampaignBidModifier.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasCampaign()) {
-        bitField0_ |= 0x00000001;
         campaign_ = other.campaign_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasCriterionId()) {
@@ -724,7 +735,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 42: {
@@ -736,17 +747,17 @@ private static final long serialVersionUID = 0L;
             } // case 42
             case 50: {
               campaign_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 50
             case 56: {
               criterionId_ = input.readInt64();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 56
             case 65: {
               bidModifier_ = input.readDouble();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               break;
             } // case 65
             default: {
@@ -840,11 +851,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -859,8 +868,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -877,12 +886,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -897,7 +904,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the campaign field is set.
      */
     public boolean hasCampaign() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -951,11 +958,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaign(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       campaign_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -968,8 +973,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCampaign() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       campaign_ = getDefaultInstance().getCampaign();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -984,12 +989,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaignBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       campaign_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1006,7 +1009,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasCriterionId() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -1032,8 +1035,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCriterionId(long value) {
-      bitField0_ |= 0x00000002;
+      
       criterionId_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1047,7 +1051,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCriterionId() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       criterionId_ = 0L;
       onChanged();
       return this;
@@ -1064,7 +1068,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasBidModifier() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -1088,8 +1092,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBidModifier(double value) {
-      bitField0_ |= 0x00000004;
+      
       bidModifier_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1102,7 +1107,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBidModifier() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000008);
       bidModifier_ = 0D;
       onChanged();
       return this;
@@ -1112,7 +1117,8 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.common.InteractionTypeInfo, com.google.ads.googleads.v11.common.InteractionTypeInfo.Builder, com.google.ads.googleads.v11.common.InteractionTypeInfoOrBuilder> interactionTypeBuilder_;
     /**
      * <pre>
-     * Immutable. Criterion for interaction type. Only supported for search campaigns.
+     * Immutable. Criterion for interaction type. Only supported for search
+     * campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.InteractionTypeInfo interaction_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1124,7 +1130,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. Criterion for interaction type. Only supported for search campaigns.
+     * Immutable. Criterion for interaction type. Only supported for search
+     * campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.InteractionTypeInfo interaction_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1146,7 +1153,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. Criterion for interaction type. Only supported for search campaigns.
+     * Immutable. Criterion for interaction type. Only supported for search
+     * campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.InteractionTypeInfo interaction_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1166,7 +1174,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. Criterion for interaction type. Only supported for search campaigns.
+     * Immutable. Criterion for interaction type. Only supported for search
+     * campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.InteractionTypeInfo interaction_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1184,7 +1193,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. Criterion for interaction type. Only supported for search campaigns.
+     * Immutable. Criterion for interaction type. Only supported for search
+     * campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.InteractionTypeInfo interaction_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1211,7 +1221,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. Criterion for interaction type. Only supported for search campaigns.
+     * Immutable. Criterion for interaction type. Only supported for search
+     * campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.InteractionTypeInfo interaction_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1234,7 +1245,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. Criterion for interaction type. Only supported for search campaigns.
+     * Immutable. Criterion for interaction type. Only supported for search
+     * campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.InteractionTypeInfo interaction_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1244,7 +1256,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. Criterion for interaction type. Only supported for search campaigns.
+     * Immutable. Criterion for interaction type. Only supported for search
+     * campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.InteractionTypeInfo interaction_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1262,7 +1275,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. Criterion for interaction type. Only supported for search campaigns.
+     * Immutable. Criterion for interaction type. Only supported for search
+     * campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.InteractionTypeInfo interaction_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1282,7 +1296,7 @@ private static final long serialVersionUID = 0L;
         criterion_ = null;
       }
       criterionCase_ = 5;
-      onChanged();;
+      onChanged();
       return interactionTypeBuilder_;
     }
     @java.lang.Override

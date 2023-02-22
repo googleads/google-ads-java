@@ -82,7 +82,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.common.LocationInfoOrBuilder getCountryLocationOrBuilder() {
-    return getCountryLocation();
+    return countryLocation_ == null ? com.google.ads.googleads.v12.common.LocationInfo.getDefaultInstance() : countryLocation_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -282,10 +282,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (countryLocationBuilder_ == null) {
-        countryLocation_ = null;
-      } else {
-        countryLocation_ = null;
+      bitField0_ = 0;
+      countryLocation_ = null;
+      if (countryLocationBuilder_ != null) {
+        countryLocationBuilder_.dispose();
         countryLocationBuilder_ = null;
       }
       return this;
@@ -314,13 +314,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.LocationAttributeMetadata buildPartial() {
       com.google.ads.googleads.v12.services.LocationAttributeMetadata result = new com.google.ads.googleads.v12.services.LocationAttributeMetadata(this);
-      if (countryLocationBuilder_ == null) {
-        result.countryLocation_ = countryLocation_;
-      } else {
-        result.countryLocation_ = countryLocationBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.LocationAttributeMetadata result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.countryLocation_ = countryLocationBuilder_ == null
+            ? countryLocation_
+            : countryLocationBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -400,7 +405,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getCountryLocationFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             default: {
@@ -418,6 +423,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private com.google.ads.googleads.v12.common.LocationInfo countryLocation_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -431,7 +437,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the countryLocation field is set.
      */
     public boolean hasCountryLocation() {
-      return countryLocationBuilder_ != null || countryLocation_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -461,11 +467,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         countryLocation_ = value;
-        onChanged();
       } else {
         countryLocationBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -479,11 +485,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.LocationInfo.Builder builderForValue) {
       if (countryLocationBuilder_ == null) {
         countryLocation_ = builderForValue.build();
-        onChanged();
       } else {
         countryLocationBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -495,17 +501,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCountryLocation(com.google.ads.googleads.v12.common.LocationInfo value) {
       if (countryLocationBuilder_ == null) {
-        if (countryLocation_ != null) {
-          countryLocation_ =
-            com.google.ads.googleads.v12.common.LocationInfo.newBuilder(countryLocation_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          countryLocation_ != null &&
+          countryLocation_ != com.google.ads.googleads.v12.common.LocationInfo.getDefaultInstance()) {
+          getCountryLocationBuilder().mergeFrom(value);
         } else {
           countryLocation_ = value;
         }
-        onChanged();
       } else {
         countryLocationBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -516,14 +523,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.LocationInfo country_location = 1;</code>
      */
     public Builder clearCountryLocation() {
-      if (countryLocationBuilder_ == null) {
-        countryLocation_ = null;
-        onChanged();
-      } else {
-        countryLocation_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      countryLocation_ = null;
+      if (countryLocationBuilder_ != null) {
+        countryLocationBuilder_.dispose();
         countryLocationBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -534,7 +540,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.LocationInfo country_location = 1;</code>
      */
     public com.google.ads.googleads.v12.common.LocationInfo.Builder getCountryLocationBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getCountryLocationFieldBuilder().getBuilder();
     }

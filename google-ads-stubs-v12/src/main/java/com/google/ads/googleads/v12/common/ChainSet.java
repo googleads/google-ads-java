@@ -50,10 +50,11 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RELATIONSHIP_TYPE_FIELD_NUMBER = 1;
-  private int relationshipType_;
+  private int relationshipType_ = 0;
   /**
    * <pre>
-   * Required. Immutable. Relationship type the specified chains have with this advertiser.
+   * Required. Immutable. Relationship type the specified chains have with this
+   * advertiser.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.ChainRelationshipTypeEnum.ChainRelationshipType relationship_type = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
@@ -64,19 +65,20 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. Immutable. Relationship type the specified chains have with this advertiser.
+   * Required. Immutable. Relationship type the specified chains have with this
+   * advertiser.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.ChainRelationshipTypeEnum.ChainRelationshipType relationship_type = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The relationshipType.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.ChainRelationshipTypeEnum.ChainRelationshipType getRelationshipType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.ChainRelationshipTypeEnum.ChainRelationshipType result = com.google.ads.googleads.v12.enums.ChainRelationshipTypeEnum.ChainRelationshipType.valueOf(relationshipType_);
+    com.google.ads.googleads.v12.enums.ChainRelationshipTypeEnum.ChainRelationshipType result = com.google.ads.googleads.v12.enums.ChainRelationshipTypeEnum.ChainRelationshipType.forNumber(relationshipType_);
     return result == null ? com.google.ads.googleads.v12.enums.ChainRelationshipTypeEnum.ChainRelationshipType.UNRECOGNIZED : result;
   }
 
   public static final int CHAINS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.ChainFilter> chains_;
   /**
    * <pre>
@@ -340,15 +342,15 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       relationshipType_ = 0;
-
       if (chainsBuilder_ == null) {
         chains_ = java.util.Collections.emptyList();
       } else {
         chains_ = null;
         chainsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -375,19 +377,29 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.ChainSet buildPartial() {
       com.google.ads.googleads.v12.common.ChainSet result = new com.google.ads.googleads.v12.common.ChainSet(this);
-      int from_bitField0_ = bitField0_;
-      result.relationshipType_ = relationshipType_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.common.ChainSet result) {
       if (chainsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           chains_ = java.util.Collections.unmodifiableList(chains_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.chains_ = chains_;
       } else {
         result.chains_ = chainsBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.ChainSet result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.relationshipType_ = relationshipType_;
+      }
     }
 
     @java.lang.Override
@@ -441,7 +453,7 @@ private static final long serialVersionUID = 0L;
         if (!other.chains_.isEmpty()) {
           if (chains_.isEmpty()) {
             chains_ = other.chains_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureChainsIsMutable();
             chains_.addAll(other.chains_);
@@ -454,7 +466,7 @@ private static final long serialVersionUID = 0L;
             chainsBuilder_.dispose();
             chainsBuilder_ = null;
             chains_ = other.chains_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
             chainsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getChainsFieldBuilder() : null;
@@ -491,7 +503,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               relationshipType_ = input.readEnum();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             case 18: {
@@ -527,7 +539,8 @@ private static final long serialVersionUID = 0L;
     private int relationshipType_ = 0;
     /**
      * <pre>
-     * Required. Immutable. Relationship type the specified chains have with this advertiser.
+     * Required. Immutable. Relationship type the specified chains have with this
+     * advertiser.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.ChainRelationshipTypeEnum.ChainRelationshipType relationship_type = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
@@ -538,7 +551,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Immutable. Relationship type the specified chains have with this advertiser.
+     * Required. Immutable. Relationship type the specified chains have with this
+     * advertiser.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.ChainRelationshipTypeEnum.ChainRelationshipType relationship_type = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
@@ -546,14 +560,15 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRelationshipTypeValue(int value) {
-      
       relationshipType_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. Immutable. Relationship type the specified chains have with this advertiser.
+     * Required. Immutable. Relationship type the specified chains have with this
+     * advertiser.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.ChainRelationshipTypeEnum.ChainRelationshipType relationship_type = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
@@ -561,13 +576,13 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.ChainRelationshipTypeEnum.ChainRelationshipType getRelationshipType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.ChainRelationshipTypeEnum.ChainRelationshipType result = com.google.ads.googleads.v12.enums.ChainRelationshipTypeEnum.ChainRelationshipType.valueOf(relationshipType_);
+      com.google.ads.googleads.v12.enums.ChainRelationshipTypeEnum.ChainRelationshipType result = com.google.ads.googleads.v12.enums.ChainRelationshipTypeEnum.ChainRelationshipType.forNumber(relationshipType_);
       return result == null ? com.google.ads.googleads.v12.enums.ChainRelationshipTypeEnum.ChainRelationshipType.UNRECOGNIZED : result;
     }
     /**
      * <pre>
-     * Required. Immutable. Relationship type the specified chains have with this advertiser.
+     * Required. Immutable. Relationship type the specified chains have with this
+     * advertiser.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.ChainRelationshipTypeEnum.ChainRelationshipType relationship_type = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
@@ -578,21 +593,22 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       relationshipType_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. Immutable. Relationship type the specified chains have with this advertiser.
+     * Required. Immutable. Relationship type the specified chains have with this
+     * advertiser.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.ChainRelationshipTypeEnum.ChainRelationshipType relationship_type = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
      * @return This builder for chaining.
      */
     public Builder clearRelationshipType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       relationshipType_ = 0;
       onChanged();
       return this;
@@ -601,9 +617,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v12.common.ChainFilter> chains_ =
       java.util.Collections.emptyList();
     private void ensureChainsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         chains_ = new java.util.ArrayList<com.google.ads.googleads.v12.common.ChainFilter>(chains_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -797,7 +813,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearChains() {
       if (chainsBuilder_ == null) {
         chains_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         chainsBuilder_.clear();
@@ -902,7 +918,7 @@ private static final long serialVersionUID = 0L;
         chainsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v12.common.ChainFilter, com.google.ads.googleads.v12.common.ChainFilter.Builder, com.google.ads.googleads.v12.common.ChainFilterOrBuilder>(
                 chains_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         chains_ = null;

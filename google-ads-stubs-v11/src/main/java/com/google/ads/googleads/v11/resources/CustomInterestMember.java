@@ -52,7 +52,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int MEMBER_TYPE_FIELD_NUMBER = 1;
-  private int memberType_;
+  private int memberType_ = 0;
   /**
    * <pre>
    * The type of custom interest member, KEYWORD or URL.
@@ -73,13 +73,13 @@ private static final long serialVersionUID = 0L;
    * @return The memberType.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.CustomInterestMemberTypeEnum.CustomInterestMemberType getMemberType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.CustomInterestMemberTypeEnum.CustomInterestMemberType result = com.google.ads.googleads.v11.enums.CustomInterestMemberTypeEnum.CustomInterestMemberType.valueOf(memberType_);
+    com.google.ads.googleads.v11.enums.CustomInterestMemberTypeEnum.CustomInterestMemberType result = com.google.ads.googleads.v11.enums.CustomInterestMemberTypeEnum.CustomInterestMemberType.forNumber(memberType_);
     return result == null ? com.google.ads.googleads.v11.enums.CustomInterestMemberTypeEnum.CustomInterestMemberType.UNRECOGNIZED : result;
   }
 
   public static final int PARAMETER_FIELD_NUMBER = 3;
-  private volatile java.lang.Object parameter_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object parameter_ = "";
   /**
    * <pre>
    * Keyword text when member_type is KEYWORD or URL string when
@@ -346,10 +346,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       memberType_ = 0;
-
       parameter_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -376,16 +375,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.CustomInterestMember buildPartial() {
       com.google.ads.googleads.v11.resources.CustomInterestMember result = new com.google.ads.googleads.v11.resources.CustomInterestMember(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.memberType_ = memberType_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        to_bitField0_ |= 0x00000001;
-      }
-      result.parameter_ = parameter_;
-      result.bitField0_ = to_bitField0_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.CustomInterestMember result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.memberType_ = memberType_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.parameter_ = parameter_;
+        to_bitField0_ |= 0x00000001;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -436,8 +441,8 @@ private static final long serialVersionUID = 0L;
         setMemberTypeValue(other.getMemberTypeValue());
       }
       if (other.hasParameter()) {
-        bitField0_ |= 0x00000001;
         parameter_ = other.parameter_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -468,12 +473,12 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               memberType_ = input.readEnum();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             case 26: {
               parameter_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 26
             default: {
@@ -515,8 +520,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMemberTypeValue(int value) {
-      
       memberType_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -530,8 +535,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.CustomInterestMemberTypeEnum.CustomInterestMemberType getMemberType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.CustomInterestMemberTypeEnum.CustomInterestMemberType result = com.google.ads.googleads.v11.enums.CustomInterestMemberTypeEnum.CustomInterestMemberType.valueOf(memberType_);
+      com.google.ads.googleads.v11.enums.CustomInterestMemberTypeEnum.CustomInterestMemberType result = com.google.ads.googleads.v11.enums.CustomInterestMemberTypeEnum.CustomInterestMemberType.forNumber(memberType_);
       return result == null ? com.google.ads.googleads.v11.enums.CustomInterestMemberTypeEnum.CustomInterestMemberType.UNRECOGNIZED : result;
     }
     /**
@@ -547,7 +551,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       memberType_ = value.getNumber();
       onChanged();
       return this;
@@ -561,7 +565,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMemberType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       memberType_ = 0;
       onChanged();
       return this;
@@ -578,7 +582,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the parameter field is set.
      */
     public boolean hasParameter() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -635,11 +639,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setParameter(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       parameter_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -653,8 +655,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearParameter() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       parameter_ = getDefaultInstance().getParameter();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -670,12 +672,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setParameterBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       parameter_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

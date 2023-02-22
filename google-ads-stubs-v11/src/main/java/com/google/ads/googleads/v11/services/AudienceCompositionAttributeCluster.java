@@ -51,7 +51,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CLUSTER_DISPLAY_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object clusterDisplayName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object clusterDisplayName_ = "";
   /**
    * <pre>
    * The name of this cluster of attributes
@@ -137,10 +138,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v11.services.AudienceCompositionMetricsOrBuilder getClusterMetricsOrBuilder() {
-    return getClusterMetrics();
+    return clusterMetrics_ == null ? com.google.ads.googleads.v11.services.AudienceCompositionMetrics.getDefaultInstance() : clusterMetrics_;
   }
 
   public static final int ATTRIBUTES_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.services.AudienceCompositionAttribute> attributes_;
   /**
    * <pre>
@@ -426,12 +428,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       clusterDisplayName_ = "";
-
-      if (clusterMetricsBuilder_ == null) {
-        clusterMetrics_ = null;
-      } else {
-        clusterMetrics_ = null;
+      clusterMetrics_ = null;
+      if (clusterMetricsBuilder_ != null) {
+        clusterMetricsBuilder_.dispose();
         clusterMetricsBuilder_ = null;
       }
       if (attributesBuilder_ == null) {
@@ -440,7 +441,7 @@ private static final long serialVersionUID = 0L;
         attributes_ = null;
         attributesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -467,24 +468,34 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.AudienceCompositionAttributeCluster buildPartial() {
       com.google.ads.googleads.v11.services.AudienceCompositionAttributeCluster result = new com.google.ads.googleads.v11.services.AudienceCompositionAttributeCluster(this);
-      int from_bitField0_ = bitField0_;
-      result.clusterDisplayName_ = clusterDisplayName_;
-      if (clusterMetricsBuilder_ == null) {
-        result.clusterMetrics_ = clusterMetrics_;
-      } else {
-        result.clusterMetrics_ = clusterMetricsBuilder_.build();
-      }
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.services.AudienceCompositionAttributeCluster result) {
       if (attributesBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           attributes_ = java.util.Collections.unmodifiableList(attributes_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.attributes_ = attributes_;
       } else {
         result.attributes_ = attributesBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.AudienceCompositionAttributeCluster result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.clusterDisplayName_ = clusterDisplayName_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.clusterMetrics_ = clusterMetricsBuilder_ == null
+            ? clusterMetrics_
+            : clusterMetricsBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -533,6 +544,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.services.AudienceCompositionAttributeCluster.getDefaultInstance()) return this;
       if (!other.getClusterDisplayName().isEmpty()) {
         clusterDisplayName_ = other.clusterDisplayName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasClusterMetrics()) {
@@ -542,7 +554,7 @@ private static final long serialVersionUID = 0L;
         if (!other.attributes_.isEmpty()) {
           if (attributes_.isEmpty()) {
             attributes_ = other.attributes_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureAttributesIsMutable();
             attributes_.addAll(other.attributes_);
@@ -555,7 +567,7 @@ private static final long serialVersionUID = 0L;
             attributesBuilder_.dispose();
             attributesBuilder_ = null;
             attributes_ = other.attributes_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
             attributesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getAttributesFieldBuilder() : null;
@@ -592,14 +604,14 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               clusterDisplayName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 26: {
               input.readMessage(
                   getClusterMetricsFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 26
             case 34: {
@@ -685,11 +697,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setClusterDisplayName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       clusterDisplayName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -702,8 +712,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearClusterDisplayName() {
-      
       clusterDisplayName_ = getDefaultInstance().getClusterDisplayName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -718,12 +728,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setClusterDisplayNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       clusterDisplayName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -742,7 +750,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the clusterMetrics field is set.
      */
     public boolean hasClusterMetrics() {
-      return clusterMetricsBuilder_ != null || clusterMetrics_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -776,11 +784,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         clusterMetrics_ = value;
-        onChanged();
       } else {
         clusterMetricsBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -796,11 +804,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.services.AudienceCompositionMetrics.Builder builderForValue) {
       if (clusterMetricsBuilder_ == null) {
         clusterMetrics_ = builderForValue.build();
-        onChanged();
       } else {
         clusterMetricsBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -814,17 +822,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeClusterMetrics(com.google.ads.googleads.v11.services.AudienceCompositionMetrics value) {
       if (clusterMetricsBuilder_ == null) {
-        if (clusterMetrics_ != null) {
-          clusterMetrics_ =
-            com.google.ads.googleads.v11.services.AudienceCompositionMetrics.newBuilder(clusterMetrics_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          clusterMetrics_ != null &&
+          clusterMetrics_ != com.google.ads.googleads.v11.services.AudienceCompositionMetrics.getDefaultInstance()) {
+          getClusterMetricsBuilder().mergeFrom(value);
         } else {
           clusterMetrics_ = value;
         }
-        onChanged();
       } else {
         clusterMetricsBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -837,14 +846,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.services.AudienceCompositionMetrics cluster_metrics = 3;</code>
      */
     public Builder clearClusterMetrics() {
-      if (clusterMetricsBuilder_ == null) {
-        clusterMetrics_ = null;
-        onChanged();
-      } else {
-        clusterMetrics_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      clusterMetrics_ = null;
+      if (clusterMetricsBuilder_ != null) {
+        clusterMetricsBuilder_.dispose();
         clusterMetricsBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -857,7 +865,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.services.AudienceCompositionMetrics cluster_metrics = 3;</code>
      */
     public com.google.ads.googleads.v11.services.AudienceCompositionMetrics.Builder getClusterMetricsBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getClusterMetricsFieldBuilder().getBuilder();
     }
@@ -904,9 +912,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v11.services.AudienceCompositionAttribute> attributes_ =
       java.util.Collections.emptyList();
     private void ensureAttributesIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         attributes_ = new java.util.ArrayList<com.google.ads.googleads.v11.services.AudienceCompositionAttribute>(attributes_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000004;
        }
     }
 
@@ -1111,7 +1119,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearAttributes() {
       if (attributesBuilder_ == null) {
         attributes_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
       } else {
         attributesBuilder_.clear();
@@ -1223,7 +1231,7 @@ private static final long serialVersionUID = 0L;
         attributesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v11.services.AudienceCompositionAttribute, com.google.ads.googleads.v11.services.AudienceCompositionAttribute.Builder, com.google.ads.googleads.v11.services.AudienceCompositionAttributeOrBuilder>(
                 attributes_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
         attributes_ = null;

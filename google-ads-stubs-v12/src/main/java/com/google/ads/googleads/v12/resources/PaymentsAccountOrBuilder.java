@@ -126,8 +126,8 @@ public interface PaymentsAccountOrBuilder extends
 
   /**
    * <pre>
-   * Output only. A 12 digit ID used to identify the payments profile associated with the
-   * payments account.
+   * Output only. A 12 digit ID used to identify the payments profile associated
+   * with the payments account.
    * </pre>
    *
    * <code>optional string payments_profile_id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -136,8 +136,8 @@ public interface PaymentsAccountOrBuilder extends
   boolean hasPaymentsProfileId();
   /**
    * <pre>
-   * Output only. A 12 digit ID used to identify the payments profile associated with the
-   * payments account.
+   * Output only. A 12 digit ID used to identify the payments profile associated
+   * with the payments account.
    * </pre>
    *
    * <code>optional string payments_profile_id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -146,8 +146,8 @@ public interface PaymentsAccountOrBuilder extends
   java.lang.String getPaymentsProfileId();
   /**
    * <pre>
-   * Output only. A 12 digit ID used to identify the payments profile associated with the
-   * payments account.
+   * Output only. A 12 digit ID used to identify the payments profile associated
+   * with the payments account.
    * </pre>
    *
    * <code>optional string payments_profile_id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -158,8 +158,9 @@ public interface PaymentsAccountOrBuilder extends
 
   /**
    * <pre>
-   * Output only. A secondary payments profile ID present in uncommon situations, for
-   * example, when a sequential liability agreement has been arranged.
+   * Output only. A secondary payments profile ID present in uncommon
+   * situations, for example, when a sequential liability agreement has been
+   * arranged.
    * </pre>
    *
    * <code>optional string secondary_payments_profile_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -168,8 +169,9 @@ public interface PaymentsAccountOrBuilder extends
   boolean hasSecondaryPaymentsProfileId();
   /**
    * <pre>
-   * Output only. A secondary payments profile ID present in uncommon situations, for
-   * example, when a sequential liability agreement has been arranged.
+   * Output only. A secondary payments profile ID present in uncommon
+   * situations, for example, when a sequential liability agreement has been
+   * arranged.
    * </pre>
    *
    * <code>optional string secondary_payments_profile_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -178,8 +180,9 @@ public interface PaymentsAccountOrBuilder extends
   java.lang.String getSecondaryPaymentsProfileId();
   /**
    * <pre>
-   * Output only. A secondary payments profile ID present in uncommon situations, for
-   * example, when a sequential liability agreement has been arranged.
+   * Output only. A secondary payments profile ID present in uncommon
+   * situations, for example, when a sequential liability agreement has been
+   * arranged.
    * </pre>
    *
    * <code>optional string secondary_payments_profile_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

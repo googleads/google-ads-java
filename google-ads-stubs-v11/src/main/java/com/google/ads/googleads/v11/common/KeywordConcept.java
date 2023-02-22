@@ -49,7 +49,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object name_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
   /**
    * <pre>
    * The concept name for the keyword in the concept_group.
@@ -129,7 +130,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v11.common.ConceptGroupOrBuilder getConceptGroupOrBuilder() {
-    return getConceptGroup();
+    return conceptGroup_ == null ? com.google.ads.googleads.v11.common.ConceptGroup.getDefaultInstance() : conceptGroup_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -339,12 +340,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       name_ = "";
-
-      if (conceptGroupBuilder_ == null) {
-        conceptGroup_ = null;
-      } else {
-        conceptGroup_ = null;
+      conceptGroup_ = null;
+      if (conceptGroupBuilder_ != null) {
+        conceptGroupBuilder_.dispose();
         conceptGroupBuilder_ = null;
       }
       return this;
@@ -373,14 +373,21 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.KeywordConcept buildPartial() {
       com.google.ads.googleads.v11.common.KeywordConcept result = new com.google.ads.googleads.v11.common.KeywordConcept(this);
-      result.name_ = name_;
-      if (conceptGroupBuilder_ == null) {
-        result.conceptGroup_ = conceptGroup_;
-      } else {
-        result.conceptGroup_ = conceptGroupBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.KeywordConcept result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.name_ = name_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.conceptGroup_ = conceptGroupBuilder_ == null
+            ? conceptGroup_
+            : conceptGroupBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -429,6 +436,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.common.KeywordConcept.getDefaultInstance()) return this;
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasConceptGroup()) {
@@ -462,14 +470,14 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               name_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               input.readMessage(
                   getConceptGroupFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             default: {
@@ -487,6 +495,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object name_ = "";
     /**
@@ -541,11 +550,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       name_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -558,8 +565,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      
       name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -574,12 +581,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -596,7 +601,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the conceptGroup field is set.
      */
     public boolean hasConceptGroup() {
-      return conceptGroupBuilder_ != null || conceptGroup_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -626,11 +631,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         conceptGroup_ = value;
-        onChanged();
       } else {
         conceptGroupBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -644,11 +649,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.common.ConceptGroup.Builder builderForValue) {
       if (conceptGroupBuilder_ == null) {
         conceptGroup_ = builderForValue.build();
-        onChanged();
       } else {
         conceptGroupBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -660,17 +665,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeConceptGroup(com.google.ads.googleads.v11.common.ConceptGroup value) {
       if (conceptGroupBuilder_ == null) {
-        if (conceptGroup_ != null) {
-          conceptGroup_ =
-            com.google.ads.googleads.v11.common.ConceptGroup.newBuilder(conceptGroup_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          conceptGroup_ != null &&
+          conceptGroup_ != com.google.ads.googleads.v11.common.ConceptGroup.getDefaultInstance()) {
+          getConceptGroupBuilder().mergeFrom(value);
         } else {
           conceptGroup_ = value;
         }
-        onChanged();
       } else {
         conceptGroupBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -681,14 +687,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.common.ConceptGroup concept_group = 2;</code>
      */
     public Builder clearConceptGroup() {
-      if (conceptGroupBuilder_ == null) {
-        conceptGroup_ = null;
-        onChanged();
-      } else {
-        conceptGroup_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      conceptGroup_ = null;
+      if (conceptGroupBuilder_ != null) {
+        conceptGroupBuilder_.dispose();
         conceptGroupBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -699,7 +704,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.common.ConceptGroup concept_group = 2;</code>
      */
     public com.google.ads.googleads.v11.common.ConceptGroup.Builder getConceptGroupBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getConceptGroupFieldBuilder().getBuilder();
     }

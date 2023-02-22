@@ -90,8 +90,8 @@ public interface MediaFileOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. The URL of where the original media file was downloaded from (or a file
-   * name). Only used for media of type AUDIO and IMAGE.
+   * Immutable. The URL of where the original media file was downloaded from (or
+   * a file name). Only used for media of type AUDIO and IMAGE.
    * </pre>
    *
    * <code>optional string source_url = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -100,8 +100,8 @@ public interface MediaFileOrBuilder extends
   boolean hasSourceUrl();
   /**
    * <pre>
-   * Immutable. The URL of where the original media file was downloaded from (or a file
-   * name). Only used for media of type AUDIO and IMAGE.
+   * Immutable. The URL of where the original media file was downloaded from (or
+   * a file name). Only used for media of type AUDIO and IMAGE.
    * </pre>
    *
    * <code>optional string source_url = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -110,8 +110,8 @@ public interface MediaFileOrBuilder extends
   java.lang.String getSourceUrl();
   /**
    * <pre>
-   * Immutable. The URL of where the original media file was downloaded from (or a file
-   * name). Only used for media of type AUDIO and IMAGE.
+   * Immutable. The URL of where the original media file was downloaded from (or
+   * a file name). Only used for media of type AUDIO and IMAGE.
    * </pre>
    *
    * <code>optional string source_url = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -122,8 +122,8 @@ public interface MediaFileOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. The name of the media file. The name can be used by clients to help
-   * identify previously uploaded media.
+   * Immutable. The name of the media file. The name can be used by clients to
+   * help identify previously uploaded media.
    * </pre>
    *
    * <code>optional string name = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -132,8 +132,8 @@ public interface MediaFileOrBuilder extends
   boolean hasName();
   /**
    * <pre>
-   * Immutable. The name of the media file. The name can be used by clients to help
-   * identify previously uploaded media.
+   * Immutable. The name of the media file. The name can be used by clients to
+   * help identify previously uploaded media.
    * </pre>
    *
    * <code>optional string name = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -142,8 +142,8 @@ public interface MediaFileOrBuilder extends
   java.lang.String getName();
   /**
    * <pre>
-   * Immutable. The name of the media file. The name can be used by clients to help
-   * identify previously uploaded media.
+   * Immutable. The name of the media file. The name can be used by clients to
+   * help identify previously uploaded media.
    * </pre>
    *
    * <code>optional string name = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -200,7 +200,8 @@ public interface MediaFileOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. A ZIP archive media the content of which contains HTML5 assets.
+   * Immutable. A ZIP archive media the content of which contains HTML5
+   * assets.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.MediaBundle media_bundle = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -209,7 +210,8 @@ public interface MediaFileOrBuilder extends
   boolean hasMediaBundle();
   /**
    * <pre>
-   * Immutable. A ZIP archive media the content of which contains HTML5 assets.
+   * Immutable. A ZIP archive media the content of which contains HTML5
+   * assets.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.MediaBundle media_bundle = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -218,7 +220,8 @@ public interface MediaFileOrBuilder extends
   com.google.ads.googleads.v12.resources.MediaBundle getMediaBundle();
   /**
    * <pre>
-   * Immutable. A ZIP archive media the content of which contains HTML5 assets.
+   * Immutable. A ZIP archive media the content of which contains HTML5
+   * assets.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.MediaBundle media_bundle = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>

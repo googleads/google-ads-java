@@ -51,7 +51,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int ID_FIELD_NUMBER = 4;
-  private long id_;
+  private long id_ = 0L;
   /**
    * <pre>
    * ID of the product bidding category.
@@ -82,7 +82,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int COUNTRY_CODE_FIELD_NUMBER = 5;
-  private volatile java.lang.Object countryCode_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object countryCode_ = "";
   /**
    * <pre>
    * Two-letter upper-case country code of the product bidding category. It must
@@ -143,7 +144,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LEVEL_FIELD_NUMBER = 3;
-  private int level_;
+  private int level_ = 0;
   /**
    * <pre>
    * Level of the product bidding category.
@@ -164,8 +165,7 @@ private static final long serialVersionUID = 0L;
    * @return The level.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel getLevel() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel result = com.google.ads.googleads.v12.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel.valueOf(level_);
+    com.google.ads.googleads.v12.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel result = com.google.ads.googleads.v12.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel.forNumber(level_);
     return result == null ? com.google.ads.googleads.v12.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel.UNRECOGNIZED : result;
   }
 
@@ -392,12 +392,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       id_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       countryCode_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       level_ = 0;
-
       return this;
     }
 
@@ -424,6 +422,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.ProductBiddingCategoryInfo buildPartial() {
       com.google.ads.googleads.v12.common.ProductBiddingCategoryInfo result = new com.google.ads.googleads.v12.common.ProductBiddingCategoryInfo(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.ProductBiddingCategoryInfo result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -431,13 +435,13 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.countryCode_ = countryCode_;
         to_bitField0_ |= 0x00000002;
       }
-      result.countryCode_ = countryCode_;
-      result.level_ = level_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.level_ = level_;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -488,8 +492,8 @@ private static final long serialVersionUID = 0L;
         setId(other.getId());
       }
       if (other.hasCountryCode()) {
-        bitField0_ |= 0x00000002;
         countryCode_ = other.countryCode_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.level_ != 0) {
@@ -523,7 +527,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 24: {
               level_ = input.readEnum();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 24
             case 32: {
@@ -594,8 +598,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      bitField0_ |= 0x00000001;
+      
       id_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -684,11 +689,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCountryCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       countryCode_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -702,8 +705,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCountryCode() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       countryCode_ = getDefaultInstance().getCountryCode();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -719,12 +722,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCountryCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       countryCode_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -751,8 +752,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLevelValue(int value) {
-      
       level_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -766,8 +767,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel getLevel() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel result = com.google.ads.googleads.v12.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel.valueOf(level_);
+      com.google.ads.googleads.v12.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel result = com.google.ads.googleads.v12.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel.forNumber(level_);
       return result == null ? com.google.ads.googleads.v12.enums.ProductBiddingCategoryLevelEnum.ProductBiddingCategoryLevel.UNRECOGNIZED : result;
     }
     /**
@@ -783,7 +783,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       level_ = value.getNumber();
       onChanged();
       return this;
@@ -797,7 +797,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLevel() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       level_ = 0;
       onChanged();
       return this;

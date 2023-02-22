@@ -49,7 +49,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int IMPRESSIONS_FIELD_NUMBER = 7;
-  private double impressions_;
+  private double impressions_ = 0D;
   /**
    * <pre>
    * Impressions
@@ -76,7 +76,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CTR_FIELD_NUMBER = 8;
-  private double ctr_;
+  private double ctr_ = 0D;
   /**
    * <pre>
    * Ctr
@@ -103,7 +103,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AVERAGE_CPC_FIELD_NUMBER = 9;
-  private long averageCpc_;
+  private long averageCpc_ = 0L;
   /**
    * <pre>
    * AVG cpc
@@ -130,7 +130,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CLICKS_FIELD_NUMBER = 10;
-  private double clicks_;
+  private double clicks_ = 0D;
   /**
    * <pre>
    * Clicks
@@ -157,7 +157,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int COST_MICROS_FIELD_NUMBER = 11;
-  private long costMicros_;
+  private long costMicros_ = 0L;
   /**
    * <pre>
    * Cost
@@ -452,16 +452,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       impressions_ = 0D;
-      bitField0_ = (bitField0_ & ~0x00000001);
       ctr_ = 0D;
-      bitField0_ = (bitField0_ & ~0x00000002);
       averageCpc_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000004);
       clicks_ = 0D;
-      bitField0_ = (bitField0_ & ~0x00000008);
       costMicros_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000010);
       return this;
     }
 
@@ -488,6 +484,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.ForecastMetrics buildPartial() {
       com.google.ads.googleads.v12.services.ForecastMetrics result = new com.google.ads.googleads.v12.services.ForecastMetrics(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.ForecastMetrics result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -510,9 +512,7 @@ private static final long serialVersionUID = 0L;
         result.costMicros_ = costMicros_;
         to_bitField0_ |= 0x00000010;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -677,8 +677,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setImpressions(double value) {
-      bitField0_ |= 0x00000001;
+      
       impressions_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -732,8 +733,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCtr(double value) {
-      bitField0_ |= 0x00000002;
+      
       ctr_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -787,8 +789,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAverageCpc(long value) {
-      bitField0_ |= 0x00000004;
+      
       averageCpc_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -842,8 +845,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setClicks(double value) {
-      bitField0_ |= 0x00000008;
+      
       clicks_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -897,8 +901,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCostMicros(long value) {
-      bitField0_ |= 0x00000010;
+      
       costMicros_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }

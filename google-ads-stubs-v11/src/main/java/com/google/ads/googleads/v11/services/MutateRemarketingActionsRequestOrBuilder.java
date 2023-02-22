@@ -9,7 +9,8 @@ public interface MutateRemarketingActionsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The ID of the customer whose remarketing actions are being modified.
+   * Required. The ID of the customer whose remarketing actions are being
+   * modified.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -18,7 +19,8 @@ public interface MutateRemarketingActionsRequestOrBuilder extends
   java.lang.String getCustomerId();
   /**
    * <pre>
-   * Required. The ID of the customer whose remarketing actions are being modified.
+   * Required. The ID of the customer whose remarketing actions are being
+   * modified.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -29,7 +31,8 @@ public interface MutateRemarketingActionsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The list of operations to perform on individual remarketing actions.
+   * Required. The list of operations to perform on individual remarketing
+   * actions.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.RemarketingActionOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -38,7 +41,8 @@ public interface MutateRemarketingActionsRequestOrBuilder extends
       getOperationsList();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual remarketing actions.
+   * Required. The list of operations to perform on individual remarketing
+   * actions.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.RemarketingActionOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -46,7 +50,8 @@ public interface MutateRemarketingActionsRequestOrBuilder extends
   com.google.ads.googleads.v11.services.RemarketingActionOperation getOperations(int index);
   /**
    * <pre>
-   * Required. The list of operations to perform on individual remarketing actions.
+   * Required. The list of operations to perform on individual remarketing
+   * actions.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.RemarketingActionOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -54,7 +59,8 @@ public interface MutateRemarketingActionsRequestOrBuilder extends
   int getOperationsCount();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual remarketing actions.
+   * Required. The list of operations to perform on individual remarketing
+   * actions.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.RemarketingActionOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -63,7 +69,8 @@ public interface MutateRemarketingActionsRequestOrBuilder extends
       getOperationsOrBuilderList();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual remarketing actions.
+   * Required. The list of operations to perform on individual remarketing
+   * actions.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.RemarketingActionOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>

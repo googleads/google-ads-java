@@ -50,7 +50,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int STORE_CODE_FIELD_NUMBER = 2;
-  private volatile java.lang.Object storeCode_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object storeCode_ = "";
   /**
    * <pre>
    * Store code from
@@ -306,8 +307,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       storeCode_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -334,15 +335,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.StoreAttribute buildPartial() {
       com.google.ads.googleads.v12.common.StoreAttribute result = new com.google.ads.googleads.v12.common.StoreAttribute(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.StoreAttribute result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.storeCode_ = storeCode_;
         to_bitField0_ |= 0x00000001;
       }
-      result.storeCode_ = storeCode_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -390,8 +395,8 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v12.common.StoreAttribute other) {
       if (other == com.google.ads.googleads.v12.common.StoreAttribute.getDefaultInstance()) return this;
       if (other.hasStoreCode()) {
-        bitField0_ |= 0x00000001;
         storeCode_ = other.storeCode_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -510,11 +515,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStoreCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       storeCode_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -528,8 +531,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStoreCode() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       storeCode_ = getDefaultInstance().getStoreCode();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -545,12 +548,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStoreCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       storeCode_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

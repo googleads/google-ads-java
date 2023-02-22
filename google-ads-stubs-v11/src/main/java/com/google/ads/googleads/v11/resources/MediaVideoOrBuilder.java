@@ -63,9 +63,9 @@ public interface MediaVideoOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The Advertising Digital Identification code for this video, as defined by
-   * the American Association of Advertising Agencies, used mainly for
-   * television commercials.
+   * Output only. The Advertising Digital Identification code for this video, as
+   * defined by the American Association of Advertising Agencies, used mainly
+   * for television commercials.
    * </pre>
    *
    * <code>optional string advertising_id_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -74,9 +74,9 @@ public interface MediaVideoOrBuilder extends
   boolean hasAdvertisingIdCode();
   /**
    * <pre>
-   * Output only. The Advertising Digital Identification code for this video, as defined by
-   * the American Association of Advertising Agencies, used mainly for
-   * television commercials.
+   * Output only. The Advertising Digital Identification code for this video, as
+   * defined by the American Association of Advertising Agencies, used mainly
+   * for television commercials.
    * </pre>
    *
    * <code>optional string advertising_id_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -85,9 +85,9 @@ public interface MediaVideoOrBuilder extends
   java.lang.String getAdvertisingIdCode();
   /**
    * <pre>
-   * Output only. The Advertising Digital Identification code for this video, as defined by
-   * the American Association of Advertising Agencies, used mainly for
-   * television commercials.
+   * Output only. The Advertising Digital Identification code for this video, as
+   * defined by the American Association of Advertising Agencies, used mainly
+   * for television commercials.
    * </pre>
    *
    * <code>optional string advertising_id_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -98,8 +98,8 @@ public interface MediaVideoOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The Industry Standard Commercial Identifier code for this video, used
-   * mainly for television commercials.
+   * Output only. The Industry Standard Commercial Identifier code for this
+   * video, used mainly for television commercials.
    * </pre>
    *
    * <code>optional string isci_code = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -108,8 +108,8 @@ public interface MediaVideoOrBuilder extends
   boolean hasIsciCode();
   /**
    * <pre>
-   * Output only. The Industry Standard Commercial Identifier code for this video, used
-   * mainly for television commercials.
+   * Output only. The Industry Standard Commercial Identifier code for this
+   * video, used mainly for television commercials.
    * </pre>
    *
    * <code>optional string isci_code = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -118,8 +118,8 @@ public interface MediaVideoOrBuilder extends
   java.lang.String getIsciCode();
   /**
    * <pre>
-   * Output only. The Industry Standard Commercial Identifier code for this video, used
-   * mainly for television commercials.
+   * Output only. The Industry Standard Commercial Identifier code for this
+   * video, used mainly for television commercials.
    * </pre>
    *
    * <code>optional string isci_code = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

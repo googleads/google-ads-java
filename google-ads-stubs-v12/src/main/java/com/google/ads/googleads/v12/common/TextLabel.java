@@ -51,7 +51,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int BACKGROUND_COLOR_FIELD_NUMBER = 3;
-  private volatile java.lang.Object backgroundColor_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object backgroundColor_ = "";
   /**
    * <pre>
    * Background color of the label in RGB format. This string must match the
@@ -115,7 +116,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTION_FIELD_NUMBER = 4;
-  private volatile java.lang.Object description_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object description_ = "";
   /**
    * <pre>
    * A short description of the label. The length must be no more than 200
@@ -386,10 +388,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       backgroundColor_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       description_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -416,19 +417,23 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.TextLabel buildPartial() {
       com.google.ads.googleads.v12.common.TextLabel result = new com.google.ads.googleads.v12.common.TextLabel(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.TextLabel result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.backgroundColor_ = backgroundColor_;
         to_bitField0_ |= 0x00000001;
       }
-      result.backgroundColor_ = backgroundColor_;
       if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.description_ = description_;
         to_bitField0_ |= 0x00000002;
       }
-      result.description_ = description_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -476,13 +481,13 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v12.common.TextLabel other) {
       if (other == com.google.ads.googleads.v12.common.TextLabel.getDefaultInstance()) return this;
       if (other.hasBackgroundColor()) {
-        bitField0_ |= 0x00000001;
         backgroundColor_ = other.backgroundColor_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasDescription()) {
-        bitField0_ |= 0x00000002;
         description_ = other.description_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -610,11 +615,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBackgroundColor(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       backgroundColor_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -629,8 +632,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBackgroundColor() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       backgroundColor_ = getDefaultInstance().getBackgroundColor();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -647,12 +650,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBackgroundColorBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       backgroundColor_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -725,11 +726,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       description_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -743,8 +742,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       description_ = getDefaultInstance().getDescription();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -760,12 +759,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescriptionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       description_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

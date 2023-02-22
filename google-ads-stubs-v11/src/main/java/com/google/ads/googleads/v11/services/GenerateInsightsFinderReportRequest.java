@@ -5,7 +5,8 @@ package com.google.ads.googleads.v11.services;
 
 /**
  * <pre>
- * Request message for [AudienceInsightsService.GenerateInsightsFinderReport][google.ads.googleads.v11.services.AudienceInsightsService.GenerateInsightsFinderReport].
+ * Request message for
+ * [AudienceInsightsService.GenerateInsightsFinderReport][google.ads.googleads.v11.services.AudienceInsightsService.GenerateInsightsFinderReport].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v11.services.GenerateInsightsFinderReportRequest}
@@ -50,7 +51,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CUSTOMER_ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object customerId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object customerId_ = "";
   /**
    * <pre>
    * Required. The ID of the customer.
@@ -99,7 +101,8 @@ private static final long serialVersionUID = 0L;
   private com.google.ads.googleads.v11.services.BasicInsightsAudience baselineAudience_;
   /**
    * <pre>
-   * Required. A baseline audience for this report, typically all people in a region.
+   * Required. A baseline audience for this report, typically all people in a
+   * region.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.BasicInsightsAudience baseline_audience = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -111,7 +114,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. A baseline audience for this report, typically all people in a region.
+   * Required. A baseline audience for this report, typically all people in a
+   * region.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.BasicInsightsAudience baseline_audience = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -123,23 +127,24 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. A baseline audience for this report, typically all people in a region.
+   * Required. A baseline audience for this report, typically all people in a
+   * region.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.BasicInsightsAudience baseline_audience = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   @java.lang.Override
   public com.google.ads.googleads.v11.services.BasicInsightsAudienceOrBuilder getBaselineAudienceOrBuilder() {
-    return getBaselineAudience();
+    return baselineAudience_ == null ? com.google.ads.googleads.v11.services.BasicInsightsAudience.getDefaultInstance() : baselineAudience_;
   }
 
   public static final int SPECIFIC_AUDIENCE_FIELD_NUMBER = 3;
   private com.google.ads.googleads.v11.services.BasicInsightsAudience specificAudience_;
   /**
    * <pre>
-   * Required. The specific audience of interest for this report.  The insights in the
-   * report will be based on attributes more prevalent in this audience than
-   * in the report's baseline audience.
+   * Required. The specific audience of interest for this report.  The insights
+   * in the report will be based on attributes more prevalent in this audience
+   * than in the report's baseline audience.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.BasicInsightsAudience specific_audience = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -151,9 +156,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. The specific audience of interest for this report.  The insights in the
-   * report will be based on attributes more prevalent in this audience than
-   * in the report's baseline audience.
+   * Required. The specific audience of interest for this report.  The insights
+   * in the report will be based on attributes more prevalent in this audience
+   * than in the report's baseline audience.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.BasicInsightsAudience specific_audience = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -165,20 +170,21 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. The specific audience of interest for this report.  The insights in the
-   * report will be based on attributes more prevalent in this audience than
-   * in the report's baseline audience.
+   * Required. The specific audience of interest for this report.  The insights
+   * in the report will be based on attributes more prevalent in this audience
+   * than in the report's baseline audience.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.BasicInsightsAudience specific_audience = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   @java.lang.Override
   public com.google.ads.googleads.v11.services.BasicInsightsAudienceOrBuilder getSpecificAudienceOrBuilder() {
-    return getSpecificAudience();
+    return specificAudience_ == null ? com.google.ads.googleads.v11.services.BasicInsightsAudience.getDefaultInstance() : specificAudience_;
   }
 
   public static final int CUSTOMER_INSIGHTS_GROUP_FIELD_NUMBER = 4;
-  private volatile java.lang.Object customerInsightsGroup_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object customerInsightsGroup_ = "";
   /**
    * <pre>
    * The name of the customer being planned for.  This is a user-defined value.
@@ -421,7 +427,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Request message for [AudienceInsightsService.GenerateInsightsFinderReport][google.ads.googleads.v11.services.AudienceInsightsService.GenerateInsightsFinderReport].
+   * Request message for
+   * [AudienceInsightsService.GenerateInsightsFinderReport][google.ads.googleads.v11.services.AudienceInsightsService.GenerateInsightsFinderReport].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v11.services.GenerateInsightsFinderReportRequest}
@@ -456,22 +463,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       customerId_ = "";
-
-      if (baselineAudienceBuilder_ == null) {
-        baselineAudience_ = null;
-      } else {
-        baselineAudience_ = null;
+      baselineAudience_ = null;
+      if (baselineAudienceBuilder_ != null) {
+        baselineAudienceBuilder_.dispose();
         baselineAudienceBuilder_ = null;
       }
-      if (specificAudienceBuilder_ == null) {
-        specificAudience_ = null;
-      } else {
-        specificAudience_ = null;
+      specificAudience_ = null;
+      if (specificAudienceBuilder_ != null) {
+        specificAudienceBuilder_.dispose();
         specificAudienceBuilder_ = null;
       }
       customerInsightsGroup_ = "";
-
       return this;
     }
 
@@ -498,20 +502,29 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.GenerateInsightsFinderReportRequest buildPartial() {
       com.google.ads.googleads.v11.services.GenerateInsightsFinderReportRequest result = new com.google.ads.googleads.v11.services.GenerateInsightsFinderReportRequest(this);
-      result.customerId_ = customerId_;
-      if (baselineAudienceBuilder_ == null) {
-        result.baselineAudience_ = baselineAudience_;
-      } else {
-        result.baselineAudience_ = baselineAudienceBuilder_.build();
-      }
-      if (specificAudienceBuilder_ == null) {
-        result.specificAudience_ = specificAudience_;
-      } else {
-        result.specificAudience_ = specificAudienceBuilder_.build();
-      }
-      result.customerInsightsGroup_ = customerInsightsGroup_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.GenerateInsightsFinderReportRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.customerId_ = customerId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.baselineAudience_ = baselineAudienceBuilder_ == null
+            ? baselineAudience_
+            : baselineAudienceBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.specificAudience_ = specificAudienceBuilder_ == null
+            ? specificAudience_
+            : specificAudienceBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.customerInsightsGroup_ = customerInsightsGroup_;
+      }
     }
 
     @java.lang.Override
@@ -560,6 +573,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.services.GenerateInsightsFinderReportRequest.getDefaultInstance()) return this;
       if (!other.getCustomerId().isEmpty()) {
         customerId_ = other.customerId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasBaselineAudience()) {
@@ -570,6 +584,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getCustomerInsightsGroup().isEmpty()) {
         customerInsightsGroup_ = other.customerInsightsGroup_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -600,26 +615,26 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               customerId_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               input.readMessage(
                   getBaselineAudienceFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
               input.readMessage(
                   getSpecificAudienceFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 34: {
               customerInsightsGroup_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 34
             default: {
@@ -637,6 +652,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object customerId_ = "";
     /**
@@ -691,11 +707,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       customerId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -708,8 +722,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCustomerId() {
-      
       customerId_ = getDefaultInstance().getCustomerId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -724,12 +738,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       customerId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -739,18 +751,20 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.services.BasicInsightsAudience, com.google.ads.googleads.v11.services.BasicInsightsAudience.Builder, com.google.ads.googleads.v11.services.BasicInsightsAudienceOrBuilder> baselineAudienceBuilder_;
     /**
      * <pre>
-     * Required. A baseline audience for this report, typically all people in a region.
+     * Required. A baseline audience for this report, typically all people in a
+     * region.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.BasicInsightsAudience baseline_audience = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return Whether the baselineAudience field is set.
      */
     public boolean hasBaselineAudience() {
-      return baselineAudienceBuilder_ != null || baselineAudience_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
-     * Required. A baseline audience for this report, typically all people in a region.
+     * Required. A baseline audience for this report, typically all people in a
+     * region.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.BasicInsightsAudience baseline_audience = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -765,7 +779,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A baseline audience for this report, typically all people in a region.
+     * Required. A baseline audience for this report, typically all people in a
+     * region.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.BasicInsightsAudience baseline_audience = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -776,16 +791,17 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         baselineAudience_ = value;
-        onChanged();
       } else {
         baselineAudienceBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. A baseline audience for this report, typically all people in a region.
+     * Required. A baseline audience for this report, typically all people in a
+     * region.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.BasicInsightsAudience baseline_audience = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -794,68 +810,72 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.services.BasicInsightsAudience.Builder builderForValue) {
       if (baselineAudienceBuilder_ == null) {
         baselineAudience_ = builderForValue.build();
-        onChanged();
       } else {
         baselineAudienceBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. A baseline audience for this report, typically all people in a region.
+     * Required. A baseline audience for this report, typically all people in a
+     * region.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.BasicInsightsAudience baseline_audience = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder mergeBaselineAudience(com.google.ads.googleads.v11.services.BasicInsightsAudience value) {
       if (baselineAudienceBuilder_ == null) {
-        if (baselineAudience_ != null) {
-          baselineAudience_ =
-            com.google.ads.googleads.v11.services.BasicInsightsAudience.newBuilder(baselineAudience_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          baselineAudience_ != null &&
+          baselineAudience_ != com.google.ads.googleads.v11.services.BasicInsightsAudience.getDefaultInstance()) {
+          getBaselineAudienceBuilder().mergeFrom(value);
         } else {
           baselineAudience_ = value;
         }
-        onChanged();
       } else {
         baselineAudienceBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. A baseline audience for this report, typically all people in a region.
+     * Required. A baseline audience for this report, typically all people in a
+     * region.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.BasicInsightsAudience baseline_audience = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder clearBaselineAudience() {
-      if (baselineAudienceBuilder_ == null) {
-        baselineAudience_ = null;
-        onChanged();
-      } else {
-        baselineAudience_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      baselineAudience_ = null;
+      if (baselineAudienceBuilder_ != null) {
+        baselineAudienceBuilder_.dispose();
         baselineAudienceBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. A baseline audience for this report, typically all people in a region.
+     * Required. A baseline audience for this report, typically all people in a
+     * region.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.BasicInsightsAudience baseline_audience = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.google.ads.googleads.v11.services.BasicInsightsAudience.Builder getBaselineAudienceBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getBaselineAudienceFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Required. A baseline audience for this report, typically all people in a region.
+     * Required. A baseline audience for this report, typically all people in a
+     * region.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.BasicInsightsAudience baseline_audience = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -870,7 +890,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A baseline audience for this report, typically all people in a region.
+     * Required. A baseline audience for this report, typically all people in a
+     * region.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.BasicInsightsAudience baseline_audience = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -894,22 +915,22 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.services.BasicInsightsAudience, com.google.ads.googleads.v11.services.BasicInsightsAudience.Builder, com.google.ads.googleads.v11.services.BasicInsightsAudienceOrBuilder> specificAudienceBuilder_;
     /**
      * <pre>
-     * Required. The specific audience of interest for this report.  The insights in the
-     * report will be based on attributes more prevalent in this audience than
-     * in the report's baseline audience.
+     * Required. The specific audience of interest for this report.  The insights
+     * in the report will be based on attributes more prevalent in this audience
+     * than in the report's baseline audience.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.BasicInsightsAudience specific_audience = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return Whether the specificAudience field is set.
      */
     public boolean hasSpecificAudience() {
-      return specificAudienceBuilder_ != null || specificAudience_ != null;
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
-     * Required. The specific audience of interest for this report.  The insights in the
-     * report will be based on attributes more prevalent in this audience than
-     * in the report's baseline audience.
+     * Required. The specific audience of interest for this report.  The insights
+     * in the report will be based on attributes more prevalent in this audience
+     * than in the report's baseline audience.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.BasicInsightsAudience specific_audience = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -924,9 +945,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The specific audience of interest for this report.  The insights in the
-     * report will be based on attributes more prevalent in this audience than
-     * in the report's baseline audience.
+     * Required. The specific audience of interest for this report.  The insights
+     * in the report will be based on attributes more prevalent in this audience
+     * than in the report's baseline audience.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.BasicInsightsAudience specific_audience = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -937,18 +958,18 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         specificAudience_ = value;
-        onChanged();
       } else {
         specificAudienceBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. The specific audience of interest for this report.  The insights in the
-     * report will be based on attributes more prevalent in this audience than
-     * in the report's baseline audience.
+     * Required. The specific audience of interest for this report.  The insights
+     * in the report will be based on attributes more prevalent in this audience
+     * than in the report's baseline audience.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.BasicInsightsAudience specific_audience = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -957,76 +978,76 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.services.BasicInsightsAudience.Builder builderForValue) {
       if (specificAudienceBuilder_ == null) {
         specificAudience_ = builderForValue.build();
-        onChanged();
       } else {
         specificAudienceBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. The specific audience of interest for this report.  The insights in the
-     * report will be based on attributes more prevalent in this audience than
-     * in the report's baseline audience.
+     * Required. The specific audience of interest for this report.  The insights
+     * in the report will be based on attributes more prevalent in this audience
+     * than in the report's baseline audience.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.BasicInsightsAudience specific_audience = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder mergeSpecificAudience(com.google.ads.googleads.v11.services.BasicInsightsAudience value) {
       if (specificAudienceBuilder_ == null) {
-        if (specificAudience_ != null) {
-          specificAudience_ =
-            com.google.ads.googleads.v11.services.BasicInsightsAudience.newBuilder(specificAudience_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000004) != 0) &&
+          specificAudience_ != null &&
+          specificAudience_ != com.google.ads.googleads.v11.services.BasicInsightsAudience.getDefaultInstance()) {
+          getSpecificAudienceBuilder().mergeFrom(value);
         } else {
           specificAudience_ = value;
         }
-        onChanged();
       } else {
         specificAudienceBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000004;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. The specific audience of interest for this report.  The insights in the
-     * report will be based on attributes more prevalent in this audience than
-     * in the report's baseline audience.
+     * Required. The specific audience of interest for this report.  The insights
+     * in the report will be based on attributes more prevalent in this audience
+     * than in the report's baseline audience.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.BasicInsightsAudience specific_audience = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder clearSpecificAudience() {
-      if (specificAudienceBuilder_ == null) {
-        specificAudience_ = null;
-        onChanged();
-      } else {
-        specificAudience_ = null;
+      bitField0_ = (bitField0_ & ~0x00000004);
+      specificAudience_ = null;
+      if (specificAudienceBuilder_ != null) {
+        specificAudienceBuilder_.dispose();
         specificAudienceBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. The specific audience of interest for this report.  The insights in the
-     * report will be based on attributes more prevalent in this audience than
-     * in the report's baseline audience.
+     * Required. The specific audience of interest for this report.  The insights
+     * in the report will be based on attributes more prevalent in this audience
+     * than in the report's baseline audience.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.BasicInsightsAudience specific_audience = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.google.ads.googleads.v11.services.BasicInsightsAudience.Builder getSpecificAudienceBuilder() {
-      
+      bitField0_ |= 0x00000004;
       onChanged();
       return getSpecificAudienceFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Required. The specific audience of interest for this report.  The insights in the
-     * report will be based on attributes more prevalent in this audience than
-     * in the report's baseline audience.
+     * Required. The specific audience of interest for this report.  The insights
+     * in the report will be based on attributes more prevalent in this audience
+     * than in the report's baseline audience.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.BasicInsightsAudience specific_audience = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1041,9 +1062,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The specific audience of interest for this report.  The insights in the
-     * report will be based on attributes more prevalent in this audience than
-     * in the report's baseline audience.
+     * Required. The specific audience of interest for this report.  The insights
+     * in the report will be based on attributes more prevalent in this audience
+     * than in the report's baseline audience.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.BasicInsightsAudience specific_audience = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1115,11 +1136,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerInsightsGroup(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       customerInsightsGroup_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1132,8 +1151,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCustomerInsightsGroup() {
-      
       customerInsightsGroup_ = getDefaultInstance().getCustomerInsightsGroup();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1148,12 +1167,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerInsightsGroupBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       customerInsightsGroup_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }

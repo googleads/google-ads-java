@@ -50,14 +50,14 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int PARENTAL_STATUSES_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> parentalStatuses_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
       java.lang.Integer, com.google.ads.googleads.v11.enums.ParentalStatusTypeEnum.ParentalStatusType> parentalStatuses_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, com.google.ads.googleads.v11.enums.ParentalStatusTypeEnum.ParentalStatusType>() {
             public com.google.ads.googleads.v11.enums.ParentalStatusTypeEnum.ParentalStatusType convert(java.lang.Integer from) {
-              @SuppressWarnings("deprecation")
-              com.google.ads.googleads.v11.enums.ParentalStatusTypeEnum.ParentalStatusType result = com.google.ads.googleads.v11.enums.ParentalStatusTypeEnum.ParentalStatusType.valueOf(from);
+              com.google.ads.googleads.v11.enums.ParentalStatusTypeEnum.ParentalStatusType result = com.google.ads.googleads.v11.enums.ParentalStatusTypeEnum.ParentalStatusType.forNumber(from);
               return result == null ? com.google.ads.googleads.v11.enums.ParentalStatusTypeEnum.ParentalStatusType.UNRECOGNIZED : result;
             }
           };
@@ -128,7 +128,7 @@ private static final long serialVersionUID = 0L;
   private int parentalStatusesMemoizedSerializedSize;
 
   public static final int INCLUDE_UNDETERMINED_FIELD_NUMBER = 2;
-  private boolean includeUndetermined_;
+  private boolean includeUndetermined_ = false;
   /**
    * <pre>
    * Include users whose parental status is undetermined.
@@ -377,10 +377,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       parentalStatuses_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000001);
       includeUndetermined_ = false;
-      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -407,20 +407,28 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.ParentalStatusDimension buildPartial() {
       com.google.ads.googleads.v11.common.ParentalStatusDimension result = new com.google.ads.googleads.v11.common.ParentalStatusDimension(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.common.ParentalStatusDimension result) {
       if (((bitField0_ & 0x00000001) != 0)) {
         parentalStatuses_ = java.util.Collections.unmodifiableList(parentalStatuses_);
         bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.parentalStatuses_ = parentalStatuses_;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.ParentalStatusDimension result) {
+      int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.includeUndetermined_ = includeUndetermined_;
         to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -768,8 +776,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIncludeUndetermined(boolean value) {
-      bitField0_ |= 0x00000002;
+      
       includeUndetermined_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

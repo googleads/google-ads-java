@@ -55,7 +55,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int START_MINUTE_FIELD_NUMBER = 1;
-  private int startMinute_;
+  private int startMinute_ = 0;
   /**
    * <pre>
    * Minutes after the start hour at which this schedule starts.
@@ -80,13 +80,12 @@ private static final long serialVersionUID = 0L;
    * @return The startMinute.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.MinuteOfHourEnum.MinuteOfHour getStartMinute() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.MinuteOfHourEnum.MinuteOfHour result = com.google.ads.googleads.v12.enums.MinuteOfHourEnum.MinuteOfHour.valueOf(startMinute_);
+    com.google.ads.googleads.v12.enums.MinuteOfHourEnum.MinuteOfHour result = com.google.ads.googleads.v12.enums.MinuteOfHourEnum.MinuteOfHour.forNumber(startMinute_);
     return result == null ? com.google.ads.googleads.v12.enums.MinuteOfHourEnum.MinuteOfHour.UNRECOGNIZED : result;
   }
 
   public static final int END_MINUTE_FIELD_NUMBER = 2;
-  private int endMinute_;
+  private int endMinute_ = 0;
   /**
    * <pre>
    * Minutes after the end hour at which this schedule ends. The schedule is
@@ -113,13 +112,12 @@ private static final long serialVersionUID = 0L;
    * @return The endMinute.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.MinuteOfHourEnum.MinuteOfHour getEndMinute() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.MinuteOfHourEnum.MinuteOfHour result = com.google.ads.googleads.v12.enums.MinuteOfHourEnum.MinuteOfHour.valueOf(endMinute_);
+    com.google.ads.googleads.v12.enums.MinuteOfHourEnum.MinuteOfHour result = com.google.ads.googleads.v12.enums.MinuteOfHourEnum.MinuteOfHour.forNumber(endMinute_);
     return result == null ? com.google.ads.googleads.v12.enums.MinuteOfHourEnum.MinuteOfHour.UNRECOGNIZED : result;
   }
 
   public static final int START_HOUR_FIELD_NUMBER = 6;
-  private int startHour_;
+  private int startHour_ = 0;
   /**
    * <pre>
    * Starting hour in 24 hour time.
@@ -152,7 +150,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int END_HOUR_FIELD_NUMBER = 7;
-  private int endHour_;
+  private int endHour_ = 0;
   /**
    * <pre>
    * Ending hour in 24 hour time; 24 signifies end of the day.
@@ -185,7 +183,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DAY_OF_WEEK_FIELD_NUMBER = 5;
-  private int dayOfWeek_;
+  private int dayOfWeek_ = 0;
   /**
    * <pre>
    * Day of the week the schedule applies to.
@@ -210,8 +208,7 @@ private static final long serialVersionUID = 0L;
    * @return The dayOfWeek.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.DayOfWeekEnum.DayOfWeek getDayOfWeek() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.DayOfWeekEnum.DayOfWeek result = com.google.ads.googleads.v12.enums.DayOfWeekEnum.DayOfWeek.valueOf(dayOfWeek_);
+    com.google.ads.googleads.v12.enums.DayOfWeekEnum.DayOfWeek result = com.google.ads.googleads.v12.enums.DayOfWeekEnum.DayOfWeek.forNumber(dayOfWeek_);
     return result == null ? com.google.ads.googleads.v12.enums.DayOfWeekEnum.DayOfWeek.UNRECOGNIZED : result;
   }
 
@@ -461,16 +458,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       startMinute_ = 0;
-
       endMinute_ = 0;
-
       startHour_ = 0;
-      bitField0_ = (bitField0_ & ~0x00000001);
       endHour_ = 0;
-      bitField0_ = (bitField0_ & ~0x00000002);
       dayOfWeek_ = 0;
-
       return this;
     }
 
@@ -497,22 +490,32 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.AdScheduleInfo buildPartial() {
       com.google.ads.googleads.v12.common.AdScheduleInfo result = new com.google.ads.googleads.v12.common.AdScheduleInfo(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.AdScheduleInfo result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.startMinute_ = startMinute_;
-      result.endMinute_ = endMinute_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.startMinute_ = startMinute_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.endMinute_ = endMinute_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.startHour_ = startHour_;
         to_bitField0_ |= 0x00000001;
       }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.endHour_ = endHour_;
         to_bitField0_ |= 0x00000002;
       }
-      result.dayOfWeek_ = dayOfWeek_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.dayOfWeek_ = dayOfWeek_;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -602,27 +605,27 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               startMinute_ = input.readEnum();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             case 16: {
               endMinute_ = input.readEnum();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             case 40: {
               dayOfWeek_ = input.readEnum();
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 40
             case 48: {
               startHour_ = input.readInt32();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000004;
               break;
             } // case 48
             case 56: {
               endHour_ = input.readInt32();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000008;
               break;
             } // case 56
             default: {
@@ -668,8 +671,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStartMinuteValue(int value) {
-      
       startMinute_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -685,8 +688,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.MinuteOfHourEnum.MinuteOfHour getStartMinute() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.MinuteOfHourEnum.MinuteOfHour result = com.google.ads.googleads.v12.enums.MinuteOfHourEnum.MinuteOfHour.valueOf(startMinute_);
+      com.google.ads.googleads.v12.enums.MinuteOfHourEnum.MinuteOfHour result = com.google.ads.googleads.v12.enums.MinuteOfHourEnum.MinuteOfHour.forNumber(startMinute_);
       return result == null ? com.google.ads.googleads.v12.enums.MinuteOfHourEnum.MinuteOfHour.UNRECOGNIZED : result;
     }
     /**
@@ -704,7 +706,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       startMinute_ = value.getNumber();
       onChanged();
       return this;
@@ -720,7 +722,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStartMinute() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       startMinute_ = 0;
       onChanged();
       return this;
@@ -754,8 +756,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEndMinuteValue(int value) {
-      
       endMinute_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -772,8 +774,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.MinuteOfHourEnum.MinuteOfHour getEndMinute() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.MinuteOfHourEnum.MinuteOfHour result = com.google.ads.googleads.v12.enums.MinuteOfHourEnum.MinuteOfHour.valueOf(endMinute_);
+      com.google.ads.googleads.v12.enums.MinuteOfHourEnum.MinuteOfHour result = com.google.ads.googleads.v12.enums.MinuteOfHourEnum.MinuteOfHour.forNumber(endMinute_);
       return result == null ? com.google.ads.googleads.v12.enums.MinuteOfHourEnum.MinuteOfHour.UNRECOGNIZED : result;
     }
     /**
@@ -792,7 +793,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000002;
       endMinute_ = value.getNumber();
       onChanged();
       return this;
@@ -809,7 +810,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEndMinute() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       endMinute_ = 0;
       onChanged();
       return this;
@@ -829,7 +830,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasStartHour() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -859,8 +860,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStartHour(int value) {
-      bitField0_ |= 0x00000001;
+      
       startHour_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -876,7 +878,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStartHour() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000004);
       startHour_ = 0;
       onChanged();
       return this;
@@ -896,7 +898,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasEndHour() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -926,8 +928,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEndHour(int value) {
-      bitField0_ |= 0x00000002;
+      
       endHour_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -943,7 +946,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEndHour() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000008);
       endHour_ = 0;
       onChanged();
       return this;
@@ -975,8 +978,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDayOfWeekValue(int value) {
-      
       dayOfWeek_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -992,8 +995,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.DayOfWeekEnum.DayOfWeek getDayOfWeek() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.DayOfWeekEnum.DayOfWeek result = com.google.ads.googleads.v12.enums.DayOfWeekEnum.DayOfWeek.valueOf(dayOfWeek_);
+      com.google.ads.googleads.v12.enums.DayOfWeekEnum.DayOfWeek result = com.google.ads.googleads.v12.enums.DayOfWeekEnum.DayOfWeek.forNumber(dayOfWeek_);
       return result == null ? com.google.ads.googleads.v12.enums.DayOfWeekEnum.DayOfWeek.UNRECOGNIZED : result;
     }
     /**
@@ -1011,7 +1013,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000010;
       dayOfWeek_ = value.getNumber();
       onChanged();
       return this;
@@ -1027,7 +1029,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDayOfWeek() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       dayOfWeek_ = 0;
       onChanged();
       return this;

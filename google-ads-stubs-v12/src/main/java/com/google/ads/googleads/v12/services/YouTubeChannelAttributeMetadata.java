@@ -48,7 +48,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SUBSCRIBER_COUNT_FIELD_NUMBER = 1;
-  private long subscriberCount_;
+  private long subscriberCount_ = 0L;
   /**
    * <pre>
    * The approximate number of subscribers to the YouTube channel.
@@ -255,8 +255,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       subscriberCount_ = 0L;
-
       return this;
     }
 
@@ -283,9 +283,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.YouTubeChannelAttributeMetadata buildPartial() {
       com.google.ads.googleads.v12.services.YouTubeChannelAttributeMetadata result = new com.google.ads.googleads.v12.services.YouTubeChannelAttributeMetadata(this);
-      result.subscriberCount_ = subscriberCount_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.YouTubeChannelAttributeMetadata result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.subscriberCount_ = subscriberCount_;
+      }
     }
 
     @java.lang.Override
@@ -363,7 +370,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               subscriberCount_ = input.readInt64();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             default: {
@@ -381,6 +388,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private long subscriberCount_ ;
     /**
@@ -407,6 +415,7 @@ private static final long serialVersionUID = 0L;
     public Builder setSubscriberCount(long value) {
       
       subscriberCount_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -419,7 +428,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSubscriberCount() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       subscriberCount_ = 0L;
       onChanged();
       return this;

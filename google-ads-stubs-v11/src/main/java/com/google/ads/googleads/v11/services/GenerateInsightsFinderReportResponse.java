@@ -6,8 +6,8 @@ package com.google.ads.googleads.v11.services;
 /**
  * <pre>
  * The response message for
- * [AudienceInsightsService.GenerateInsightsFinderReport][google.ads.googleads.v11.services.AudienceInsightsService.GenerateInsightsFinderReport], containing the
- * shareable URL for the report.
+ * [AudienceInsightsService.GenerateInsightsFinderReport][google.ads.googleads.v11.services.AudienceInsightsService.GenerateInsightsFinderReport],
+ * containing the shareable URL for the report.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v11.services.GenerateInsightsFinderReportResponse}
@@ -51,7 +51,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SAVED_REPORT_URL_FIELD_NUMBER = 1;
-  private volatile java.lang.Object savedReportUrl_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object savedReportUrl_ = "";
   /**
    * <pre>
    * An HTTPS URL providing a deep link into the Insights Finder UI with the
@@ -255,8 +256,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The response message for
-   * [AudienceInsightsService.GenerateInsightsFinderReport][google.ads.googleads.v11.services.AudienceInsightsService.GenerateInsightsFinderReport], containing the
-   * shareable URL for the report.
+   * [AudienceInsightsService.GenerateInsightsFinderReport][google.ads.googleads.v11.services.AudienceInsightsService.GenerateInsightsFinderReport],
+   * containing the shareable URL for the report.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v11.services.GenerateInsightsFinderReportResponse}
@@ -291,8 +292,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       savedReportUrl_ = "";
-
       return this;
     }
 
@@ -319,9 +320,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.GenerateInsightsFinderReportResponse buildPartial() {
       com.google.ads.googleads.v11.services.GenerateInsightsFinderReportResponse result = new com.google.ads.googleads.v11.services.GenerateInsightsFinderReportResponse(this);
-      result.savedReportUrl_ = savedReportUrl_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.GenerateInsightsFinderReportResponse result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.savedReportUrl_ = savedReportUrl_;
+      }
     }
 
     @java.lang.Override
@@ -370,6 +378,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.services.GenerateInsightsFinderReportResponse.getDefaultInstance()) return this;
       if (!other.getSavedReportUrl().isEmpty()) {
         savedReportUrl_ = other.savedReportUrl_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -400,7 +409,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               savedReportUrl_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             default: {
@@ -418,6 +427,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object savedReportUrl_ = "";
     /**
@@ -475,11 +485,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSavedReportUrl(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       savedReportUrl_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -493,8 +501,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSavedReportUrl() {
-      
       savedReportUrl_ = getDefaultInstance().getSavedReportUrl();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -510,12 +518,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSavedReportUrlBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       savedReportUrl_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

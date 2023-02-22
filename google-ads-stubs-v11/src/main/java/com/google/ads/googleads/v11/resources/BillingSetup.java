@@ -57,8 +57,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. A 16 digit id used to identify the payments account associated with the
-     * billing setup.
+     * Output only. A 16 digit id used to identify the payments account
+     * associated with the billing setup.
      * This must be passed as a string with dashes, for example,
      * "1234-5678-9012-3456".
      * </pre>
@@ -69,8 +69,8 @@ private static final long serialVersionUID = 0L;
     boolean hasPaymentsAccountId();
     /**
      * <pre>
-     * Output only. A 16 digit id used to identify the payments account associated with the
-     * billing setup.
+     * Output only. A 16 digit id used to identify the payments account
+     * associated with the billing setup.
      * This must be passed as a string with dashes, for example,
      * "1234-5678-9012-3456".
      * </pre>
@@ -81,8 +81,8 @@ private static final long serialVersionUID = 0L;
     java.lang.String getPaymentsAccountId();
     /**
      * <pre>
-     * Output only. A 16 digit id used to identify the payments account associated with the
-     * billing setup.
+     * Output only. A 16 digit id used to identify the payments account
+     * associated with the billing setup.
      * This must be passed as a string with dashes, for example,
      * "1234-5678-9012-3456".
      * </pre>
@@ -95,7 +95,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Immutable. The name of the payments account associated with the billing setup.
+     * Immutable. The name of the payments account associated with the billing
+     * setup.
      * This enables the user to specify a meaningful name for a payments account
      * to aid in reconciling monthly invoices.
      * This name will be printed in the monthly invoices.
@@ -107,7 +108,8 @@ private static final long serialVersionUID = 0L;
     boolean hasPaymentsAccountName();
     /**
      * <pre>
-     * Immutable. The name of the payments account associated with the billing setup.
+     * Immutable. The name of the payments account associated with the billing
+     * setup.
      * This enables the user to specify a meaningful name for a payments account
      * to aid in reconciling monthly invoices.
      * This name will be printed in the monthly invoices.
@@ -119,7 +121,8 @@ private static final long serialVersionUID = 0L;
     java.lang.String getPaymentsAccountName();
     /**
      * <pre>
-     * Immutable. The name of the payments account associated with the billing setup.
+     * Immutable. The name of the payments account associated with the billing
+     * setup.
      * This enables the user to specify a meaningful name for a payments account
      * to aid in reconciling monthly invoices.
      * This name will be printed in the monthly invoices.
@@ -133,8 +136,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Immutable. A 12 digit id used to identify the payments profile associated with the
-     * billing setup.
+     * Immutable. A 12 digit id used to identify the payments profile associated
+     * with the billing setup.
      * This must be passed in as a string with dashes, for example,
      * "1234-5678-9012".
      * </pre>
@@ -145,8 +148,8 @@ private static final long serialVersionUID = 0L;
     boolean hasPaymentsProfileId();
     /**
      * <pre>
-     * Immutable. A 12 digit id used to identify the payments profile associated with the
-     * billing setup.
+     * Immutable. A 12 digit id used to identify the payments profile associated
+     * with the billing setup.
      * This must be passed in as a string with dashes, for example,
      * "1234-5678-9012".
      * </pre>
@@ -157,8 +160,8 @@ private static final long serialVersionUID = 0L;
     java.lang.String getPaymentsProfileId();
     /**
      * <pre>
-     * Immutable. A 12 digit id used to identify the payments profile associated with the
-     * billing setup.
+     * Immutable. A 12 digit id used to identify the payments profile associated
+     * with the billing setup.
      * This must be passed in as a string with dashes, for example,
      * "1234-5678-9012".
      * </pre>
@@ -171,7 +174,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The name of the payments profile associated with the billing setup.
+     * Output only. The name of the payments profile associated with the billing
+     * setup.
      * </pre>
      *
      * <code>optional string payments_profile_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -180,7 +184,8 @@ private static final long serialVersionUID = 0L;
     boolean hasPaymentsProfileName();
     /**
      * <pre>
-     * Output only. The name of the payments profile associated with the billing setup.
+     * Output only. The name of the payments profile associated with the billing
+     * setup.
      * </pre>
      *
      * <code>optional string payments_profile_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -189,7 +194,8 @@ private static final long serialVersionUID = 0L;
     java.lang.String getPaymentsProfileName();
     /**
      * <pre>
-     * Output only. The name of the payments profile associated with the billing setup.
+     * Output only. The name of the payments profile associated with the billing
+     * setup.
      * </pre>
      *
      * <code>optional string payments_profile_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -200,8 +206,9 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. A secondary payments profile id present in uncommon situations, for
-     * example, when a sequential liability agreement has been arranged.
+     * Output only. A secondary payments profile id present in uncommon
+     * situations, for example, when a sequential liability agreement has been
+     * arranged.
      * </pre>
      *
      * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -210,8 +217,9 @@ private static final long serialVersionUID = 0L;
     boolean hasSecondaryPaymentsProfileId();
     /**
      * <pre>
-     * Output only. A secondary payments profile id present in uncommon situations, for
-     * example, when a sequential liability agreement has been arranged.
+     * Output only. A secondary payments profile id present in uncommon
+     * situations, for example, when a sequential liability agreement has been
+     * arranged.
      * </pre>
      *
      * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -220,8 +228,9 @@ private static final long serialVersionUID = 0L;
     java.lang.String getSecondaryPaymentsProfileId();
     /**
      * <pre>
-     * Output only. A secondary payments profile id present in uncommon situations, for
-     * example, when a sequential liability agreement has been arranged.
+     * Output only. A secondary payments profile id present in uncommon
+     * situations, for example, when a sequential liability agreement has been
+     * arranged.
      * </pre>
      *
      * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -281,11 +290,12 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
     public static final int PAYMENTS_ACCOUNT_ID_FIELD_NUMBER = 6;
-    private volatile java.lang.Object paymentsAccountId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object paymentsAccountId_ = "";
     /**
      * <pre>
-     * Output only. A 16 digit id used to identify the payments account associated with the
-     * billing setup.
+     * Output only. A 16 digit id used to identify the payments account
+     * associated with the billing setup.
      * This must be passed as a string with dashes, for example,
      * "1234-5678-9012-3456".
      * </pre>
@@ -299,8 +309,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A 16 digit id used to identify the payments account associated with the
-     * billing setup.
+     * Output only. A 16 digit id used to identify the payments account
+     * associated with the billing setup.
      * This must be passed as a string with dashes, for example,
      * "1234-5678-9012-3456".
      * </pre>
@@ -323,8 +333,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A 16 digit id used to identify the payments account associated with the
-     * billing setup.
+     * Output only. A 16 digit id used to identify the payments account
+     * associated with the billing setup.
      * This must be passed as a string with dashes, for example,
      * "1234-5678-9012-3456".
      * </pre>
@@ -348,10 +358,12 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int PAYMENTS_ACCOUNT_NAME_FIELD_NUMBER = 7;
-    private volatile java.lang.Object paymentsAccountName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object paymentsAccountName_ = "";
     /**
      * <pre>
-     * Immutable. The name of the payments account associated with the billing setup.
+     * Immutable. The name of the payments account associated with the billing
+     * setup.
      * This enables the user to specify a meaningful name for a payments account
      * to aid in reconciling monthly invoices.
      * This name will be printed in the monthly invoices.
@@ -366,7 +378,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The name of the payments account associated with the billing setup.
+     * Immutable. The name of the payments account associated with the billing
+     * setup.
      * This enables the user to specify a meaningful name for a payments account
      * to aid in reconciling monthly invoices.
      * This name will be printed in the monthly invoices.
@@ -390,7 +403,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The name of the payments account associated with the billing setup.
+     * Immutable. The name of the payments account associated with the billing
+     * setup.
      * This enables the user to specify a meaningful name for a payments account
      * to aid in reconciling monthly invoices.
      * This name will be printed in the monthly invoices.
@@ -415,11 +429,12 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int PAYMENTS_PROFILE_ID_FIELD_NUMBER = 8;
-    private volatile java.lang.Object paymentsProfileId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object paymentsProfileId_ = "";
     /**
      * <pre>
-     * Immutable. A 12 digit id used to identify the payments profile associated with the
-     * billing setup.
+     * Immutable. A 12 digit id used to identify the payments profile associated
+     * with the billing setup.
      * This must be passed in as a string with dashes, for example,
      * "1234-5678-9012".
      * </pre>
@@ -433,8 +448,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. A 12 digit id used to identify the payments profile associated with the
-     * billing setup.
+     * Immutable. A 12 digit id used to identify the payments profile associated
+     * with the billing setup.
      * This must be passed in as a string with dashes, for example,
      * "1234-5678-9012".
      * </pre>
@@ -457,8 +472,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. A 12 digit id used to identify the payments profile associated with the
-     * billing setup.
+     * Immutable. A 12 digit id used to identify the payments profile associated
+     * with the billing setup.
      * This must be passed in as a string with dashes, for example,
      * "1234-5678-9012".
      * </pre>
@@ -482,10 +497,12 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int PAYMENTS_PROFILE_NAME_FIELD_NUMBER = 9;
-    private volatile java.lang.Object paymentsProfileName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object paymentsProfileName_ = "";
     /**
      * <pre>
-     * Output only. The name of the payments profile associated with the billing setup.
+     * Output only. The name of the payments profile associated with the billing
+     * setup.
      * </pre>
      *
      * <code>optional string payments_profile_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -497,7 +514,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The name of the payments profile associated with the billing setup.
+     * Output only. The name of the payments profile associated with the billing
+     * setup.
      * </pre>
      *
      * <code>optional string payments_profile_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -518,7 +536,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The name of the payments profile associated with the billing setup.
+     * Output only. The name of the payments profile associated with the billing
+     * setup.
      * </pre>
      *
      * <code>optional string payments_profile_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -540,11 +559,13 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int SECONDARY_PAYMENTS_PROFILE_ID_FIELD_NUMBER = 10;
-    private volatile java.lang.Object secondaryPaymentsProfileId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object secondaryPaymentsProfileId_ = "";
     /**
      * <pre>
-     * Output only. A secondary payments profile id present in uncommon situations, for
-     * example, when a sequential liability agreement has been arranged.
+     * Output only. A secondary payments profile id present in uncommon
+     * situations, for example, when a sequential liability agreement has been
+     * arranged.
      * </pre>
      *
      * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -556,8 +577,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A secondary payments profile id present in uncommon situations, for
-     * example, when a sequential liability agreement has been arranged.
+     * Output only. A secondary payments profile id present in uncommon
+     * situations, for example, when a sequential liability agreement has been
+     * arranged.
      * </pre>
      *
      * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -578,8 +600,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A secondary payments profile id present in uncommon situations, for
-     * example, when a sequential liability agreement has been arranged.
+     * Output only. A secondary payments profile id present in uncommon
+     * situations, for example, when a sequential liability agreement has been
+     * arranged.
      * </pre>
      *
      * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -856,16 +879,12 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         paymentsAccountId_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
         paymentsAccountName_ = "";
-        bitField0_ = (bitField0_ & ~0x00000002);
         paymentsProfileId_ = "";
-        bitField0_ = (bitField0_ & ~0x00000004);
         paymentsProfileName_ = "";
-        bitField0_ = (bitField0_ & ~0x00000008);
         secondaryPaymentsProfileId_ = "";
-        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -892,31 +911,35 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v11.resources.BillingSetup.PaymentsAccountInfo buildPartial() {
         com.google.ads.googleads.v11.resources.BillingSetup.PaymentsAccountInfo result = new com.google.ads.googleads.v11.resources.BillingSetup.PaymentsAccountInfo(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v11.resources.BillingSetup.PaymentsAccountInfo result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.paymentsAccountId_ = paymentsAccountId_;
           to_bitField0_ |= 0x00000001;
         }
-        result.paymentsAccountId_ = paymentsAccountId_;
         if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.paymentsAccountName_ = paymentsAccountName_;
           to_bitField0_ |= 0x00000002;
         }
-        result.paymentsAccountName_ = paymentsAccountName_;
         if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.paymentsProfileId_ = paymentsProfileId_;
           to_bitField0_ |= 0x00000004;
         }
-        result.paymentsProfileId_ = paymentsProfileId_;
         if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.paymentsProfileName_ = paymentsProfileName_;
           to_bitField0_ |= 0x00000008;
         }
-        result.paymentsProfileName_ = paymentsProfileName_;
         if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.secondaryPaymentsProfileId_ = secondaryPaymentsProfileId_;
           to_bitField0_ |= 0x00000010;
         }
-        result.secondaryPaymentsProfileId_ = secondaryPaymentsProfileId_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -964,28 +987,28 @@ private static final long serialVersionUID = 0L;
       public Builder mergeFrom(com.google.ads.googleads.v11.resources.BillingSetup.PaymentsAccountInfo other) {
         if (other == com.google.ads.googleads.v11.resources.BillingSetup.PaymentsAccountInfo.getDefaultInstance()) return this;
         if (other.hasPaymentsAccountId()) {
-          bitField0_ |= 0x00000001;
           paymentsAccountId_ = other.paymentsAccountId_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.hasPaymentsAccountName()) {
-          bitField0_ |= 0x00000002;
           paymentsAccountName_ = other.paymentsAccountName_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.hasPaymentsProfileId()) {
-          bitField0_ |= 0x00000004;
           paymentsProfileId_ = other.paymentsProfileId_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (other.hasPaymentsProfileName()) {
-          bitField0_ |= 0x00000008;
           paymentsProfileName_ = other.paymentsProfileName_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (other.hasSecondaryPaymentsProfileId()) {
-          bitField0_ |= 0x00000010;
           secondaryPaymentsProfileId_ = other.secondaryPaymentsProfileId_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -1059,8 +1082,8 @@ private static final long serialVersionUID = 0L;
       private java.lang.Object paymentsAccountId_ = "";
       /**
        * <pre>
-       * Output only. A 16 digit id used to identify the payments account associated with the
-       * billing setup.
+       * Output only. A 16 digit id used to identify the payments account
+       * associated with the billing setup.
        * This must be passed as a string with dashes, for example,
        * "1234-5678-9012-3456".
        * </pre>
@@ -1073,8 +1096,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. A 16 digit id used to identify the payments account associated with the
-       * billing setup.
+       * Output only. A 16 digit id used to identify the payments account
+       * associated with the billing setup.
        * This must be passed as a string with dashes, for example,
        * "1234-5678-9012-3456".
        * </pre>
@@ -1096,8 +1119,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. A 16 digit id used to identify the payments account associated with the
-       * billing setup.
+       * Output only. A 16 digit id used to identify the payments account
+       * associated with the billing setup.
        * This must be passed as a string with dashes, for example,
        * "1234-5678-9012-3456".
        * </pre>
@@ -1120,8 +1143,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. A 16 digit id used to identify the payments account associated with the
-       * billing setup.
+       * Output only. A 16 digit id used to identify the payments account
+       * associated with the billing setup.
        * This must be passed as a string with dashes, for example,
        * "1234-5678-9012-3456".
        * </pre>
@@ -1132,18 +1155,16 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setPaymentsAccountId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+        if (value == null) { throw new NullPointerException(); }
         paymentsAccountId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. A 16 digit id used to identify the payments account associated with the
-       * billing setup.
+       * Output only. A 16 digit id used to identify the payments account
+       * associated with the billing setup.
        * This must be passed as a string with dashes, for example,
        * "1234-5678-9012-3456".
        * </pre>
@@ -1152,15 +1173,15 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearPaymentsAccountId() {
-        bitField0_ = (bitField0_ & ~0x00000001);
         paymentsAccountId_ = getDefaultInstance().getPaymentsAccountId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. A 16 digit id used to identify the payments account associated with the
-       * billing setup.
+       * Output only. A 16 digit id used to identify the payments account
+       * associated with the billing setup.
        * This must be passed as a string with dashes, for example,
        * "1234-5678-9012-3456".
        * </pre>
@@ -1171,12 +1192,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setPaymentsAccountIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        bitField0_ |= 0x00000001;
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         paymentsAccountId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1184,7 +1203,8 @@ private static final long serialVersionUID = 0L;
       private java.lang.Object paymentsAccountName_ = "";
       /**
        * <pre>
-       * Immutable. The name of the payments account associated with the billing setup.
+       * Immutable. The name of the payments account associated with the billing
+       * setup.
        * This enables the user to specify a meaningful name for a payments account
        * to aid in reconciling monthly invoices.
        * This name will be printed in the monthly invoices.
@@ -1198,7 +1218,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Immutable. The name of the payments account associated with the billing setup.
+       * Immutable. The name of the payments account associated with the billing
+       * setup.
        * This enables the user to specify a meaningful name for a payments account
        * to aid in reconciling monthly invoices.
        * This name will be printed in the monthly invoices.
@@ -1221,7 +1242,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Immutable. The name of the payments account associated with the billing setup.
+       * Immutable. The name of the payments account associated with the billing
+       * setup.
        * This enables the user to specify a meaningful name for a payments account
        * to aid in reconciling monthly invoices.
        * This name will be printed in the monthly invoices.
@@ -1245,7 +1267,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Immutable. The name of the payments account associated with the billing setup.
+       * Immutable. The name of the payments account associated with the billing
+       * setup.
        * This enables the user to specify a meaningful name for a payments account
        * to aid in reconciling monthly invoices.
        * This name will be printed in the monthly invoices.
@@ -1257,17 +1280,16 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setPaymentsAccountName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+        if (value == null) { throw new NullPointerException(); }
         paymentsAccountName_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Immutable. The name of the payments account associated with the billing setup.
+       * Immutable. The name of the payments account associated with the billing
+       * setup.
        * This enables the user to specify a meaningful name for a payments account
        * to aid in reconciling monthly invoices.
        * This name will be printed in the monthly invoices.
@@ -1277,14 +1299,15 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearPaymentsAccountName() {
-        bitField0_ = (bitField0_ & ~0x00000002);
         paymentsAccountName_ = getDefaultInstance().getPaymentsAccountName();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Immutable. The name of the payments account associated with the billing setup.
+       * Immutable. The name of the payments account associated with the billing
+       * setup.
        * This enables the user to specify a meaningful name for a payments account
        * to aid in reconciling monthly invoices.
        * This name will be printed in the monthly invoices.
@@ -1296,12 +1319,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setPaymentsAccountNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        bitField0_ |= 0x00000002;
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         paymentsAccountName_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1309,8 +1330,8 @@ private static final long serialVersionUID = 0L;
       private java.lang.Object paymentsProfileId_ = "";
       /**
        * <pre>
-       * Immutable. A 12 digit id used to identify the payments profile associated with the
-       * billing setup.
+       * Immutable. A 12 digit id used to identify the payments profile associated
+       * with the billing setup.
        * This must be passed in as a string with dashes, for example,
        * "1234-5678-9012".
        * </pre>
@@ -1323,8 +1344,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Immutable. A 12 digit id used to identify the payments profile associated with the
-       * billing setup.
+       * Immutable. A 12 digit id used to identify the payments profile associated
+       * with the billing setup.
        * This must be passed in as a string with dashes, for example,
        * "1234-5678-9012".
        * </pre>
@@ -1346,8 +1367,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Immutable. A 12 digit id used to identify the payments profile associated with the
-       * billing setup.
+       * Immutable. A 12 digit id used to identify the payments profile associated
+       * with the billing setup.
        * This must be passed in as a string with dashes, for example,
        * "1234-5678-9012".
        * </pre>
@@ -1370,8 +1391,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Immutable. A 12 digit id used to identify the payments profile associated with the
-       * billing setup.
+       * Immutable. A 12 digit id used to identify the payments profile associated
+       * with the billing setup.
        * This must be passed in as a string with dashes, for example,
        * "1234-5678-9012".
        * </pre>
@@ -1382,18 +1403,16 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setPaymentsProfileId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+        if (value == null) { throw new NullPointerException(); }
         paymentsProfileId_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Immutable. A 12 digit id used to identify the payments profile associated with the
-       * billing setup.
+       * Immutable. A 12 digit id used to identify the payments profile associated
+       * with the billing setup.
        * This must be passed in as a string with dashes, for example,
        * "1234-5678-9012".
        * </pre>
@@ -1402,15 +1421,15 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearPaymentsProfileId() {
-        bitField0_ = (bitField0_ & ~0x00000004);
         paymentsProfileId_ = getDefaultInstance().getPaymentsProfileId();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Immutable. A 12 digit id used to identify the payments profile associated with the
-       * billing setup.
+       * Immutable. A 12 digit id used to identify the payments profile associated
+       * with the billing setup.
        * This must be passed in as a string with dashes, for example,
        * "1234-5678-9012".
        * </pre>
@@ -1421,12 +1440,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setPaymentsProfileIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        bitField0_ |= 0x00000004;
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         paymentsProfileId_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1434,7 +1451,8 @@ private static final long serialVersionUID = 0L;
       private java.lang.Object paymentsProfileName_ = "";
       /**
        * <pre>
-       * Output only. The name of the payments profile associated with the billing setup.
+       * Output only. The name of the payments profile associated with the billing
+       * setup.
        * </pre>
        *
        * <code>optional string payments_profile_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1445,7 +1463,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The name of the payments profile associated with the billing setup.
+       * Output only. The name of the payments profile associated with the billing
+       * setup.
        * </pre>
        *
        * <code>optional string payments_profile_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1465,7 +1484,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The name of the payments profile associated with the billing setup.
+       * Output only. The name of the payments profile associated with the billing
+       * setup.
        * </pre>
        *
        * <code>optional string payments_profile_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1486,7 +1506,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The name of the payments profile associated with the billing setup.
+       * Output only. The name of the payments profile associated with the billing
+       * setup.
        * </pre>
        *
        * <code>optional string payments_profile_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1495,31 +1516,31 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setPaymentsProfileName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
+        if (value == null) { throw new NullPointerException(); }
         paymentsProfileName_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The name of the payments profile associated with the billing setup.
+       * Output only. The name of the payments profile associated with the billing
+       * setup.
        * </pre>
        *
        * <code>optional string payments_profile_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return This builder for chaining.
        */
       public Builder clearPaymentsProfileName() {
-        bitField0_ = (bitField0_ & ~0x00000008);
         paymentsProfileName_ = getDefaultInstance().getPaymentsProfileName();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The name of the payments profile associated with the billing setup.
+       * Output only. The name of the payments profile associated with the billing
+       * setup.
        * </pre>
        *
        * <code>optional string payments_profile_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1528,12 +1549,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setPaymentsProfileNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        bitField0_ |= 0x00000008;
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         paymentsProfileName_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1541,8 +1560,9 @@ private static final long serialVersionUID = 0L;
       private java.lang.Object secondaryPaymentsProfileId_ = "";
       /**
        * <pre>
-       * Output only. A secondary payments profile id present in uncommon situations, for
-       * example, when a sequential liability agreement has been arranged.
+       * Output only. A secondary payments profile id present in uncommon
+       * situations, for example, when a sequential liability agreement has been
+       * arranged.
        * </pre>
        *
        * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1553,8 +1573,9 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. A secondary payments profile id present in uncommon situations, for
-       * example, when a sequential liability agreement has been arranged.
+       * Output only. A secondary payments profile id present in uncommon
+       * situations, for example, when a sequential liability agreement has been
+       * arranged.
        * </pre>
        *
        * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1574,8 +1595,9 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. A secondary payments profile id present in uncommon situations, for
-       * example, when a sequential liability agreement has been arranged.
+       * Output only. A secondary payments profile id present in uncommon
+       * situations, for example, when a sequential liability agreement has been
+       * arranged.
        * </pre>
        *
        * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1596,8 +1618,9 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. A secondary payments profile id present in uncommon situations, for
-       * example, when a sequential liability agreement has been arranged.
+       * Output only. A secondary payments profile id present in uncommon
+       * situations, for example, when a sequential liability agreement has been
+       * arranged.
        * </pre>
        *
        * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1606,33 +1629,33 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setSecondaryPaymentsProfileId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
+        if (value == null) { throw new NullPointerException(); }
         secondaryPaymentsProfileId_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. A secondary payments profile id present in uncommon situations, for
-       * example, when a sequential liability agreement has been arranged.
+       * Output only. A secondary payments profile id present in uncommon
+       * situations, for example, when a sequential liability agreement has been
+       * arranged.
        * </pre>
        *
        * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return This builder for chaining.
        */
       public Builder clearSecondaryPaymentsProfileId() {
-        bitField0_ = (bitField0_ & ~0x00000010);
         secondaryPaymentsProfileId_ = getDefaultInstance().getSecondaryPaymentsProfileId();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. A secondary payments profile id present in uncommon situations, for
-       * example, when a sequential liability agreement has been arranged.
+       * Output only. A secondary payments profile id present in uncommon
+       * situations, for example, when a sequential liability agreement has been
+       * arranged.
        * </pre>
        *
        * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1641,12 +1664,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setSecondaryPaymentsProfileIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        bitField0_ |= 0x00000010;
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         secondaryPaymentsProfileId_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1798,7 +1819,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Immutable. The resource name of the billing setup.
@@ -1848,7 +1870,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ID_FIELD_NUMBER = 15;
-  private long id_;
+  private long id_ = 0L;
   /**
    * <pre>
    * Output only. The ID of the billing setup.
@@ -1875,7 +1897,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STATUS_FIELD_NUMBER = 3;
-  private int status_;
+  private int status_ = 0;
   /**
    * <pre>
    * Output only. The status of the billing setup.
@@ -1896,17 +1918,17 @@ private static final long serialVersionUID = 0L;
    * @return The status.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.BillingSetupStatusEnum.BillingSetupStatus getStatus() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.BillingSetupStatusEnum.BillingSetupStatus result = com.google.ads.googleads.v11.enums.BillingSetupStatusEnum.BillingSetupStatus.valueOf(status_);
+    com.google.ads.googleads.v11.enums.BillingSetupStatusEnum.BillingSetupStatus result = com.google.ads.googleads.v11.enums.BillingSetupStatusEnum.BillingSetupStatus.forNumber(status_);
     return result == null ? com.google.ads.googleads.v11.enums.BillingSetupStatusEnum.BillingSetupStatus.UNRECOGNIZED : result;
   }
 
   public static final int PAYMENTS_ACCOUNT_FIELD_NUMBER = 18;
-  private volatile java.lang.Object paymentsAccount_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object paymentsAccount_ = "";
   /**
    * <pre>
-   * Immutable. The resource name of the payments account associated with this billing
-   * setup. Payments resource names have the form:
+   * Immutable. The resource name of the payments account associated with this
+   * billing setup. Payments resource names have the form:
    * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
    * When setting up billing, this is used to signup with an existing payments
    * account (and then payments_account_info should not be set).
@@ -1923,8 +1945,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. The resource name of the payments account associated with this billing
-   * setup. Payments resource names have the form:
+   * Immutable. The resource name of the payments account associated with this
+   * billing setup. Payments resource names have the form:
    * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
    * When setting up billing, this is used to signup with an existing payments
    * account (and then payments_account_info should not be set).
@@ -1950,8 +1972,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. The resource name of the payments account associated with this billing
-   * setup. Payments resource names have the form:
+   * Immutable. The resource name of the payments account associated with this
+   * billing setup. Payments resource names have the form:
    * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
    * When setting up billing, this is used to signup with an existing payments
    * account (and then payments_account_info should not be set).
@@ -1981,11 +2003,10 @@ private static final long serialVersionUID = 0L;
   private com.google.ads.googleads.v11.resources.BillingSetup.PaymentsAccountInfo paymentsAccountInfo_;
   /**
    * <pre>
-   * Immutable. The payments account information associated with this billing setup.
-   * When setting up billing, this is used to signup with a new payments account
-   * (and then payments_account should not be set).
-   * When getting a billing setup, this and payments_account will be
-   * populated.
+   * Immutable. The payments account information associated with this billing
+   * setup. When setting up billing, this is used to signup with a new payments
+   * account (and then payments_account should not be set). When getting a
+   * billing setup, this and payments_account will be populated.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1997,11 +2018,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. The payments account information associated with this billing setup.
-   * When setting up billing, this is used to signup with a new payments account
-   * (and then payments_account should not be set).
-   * When getting a billing setup, this and payments_account will be
-   * populated.
+   * Immutable. The payments account information associated with this billing
+   * setup. When setting up billing, this is used to signup with a new payments
+   * account (and then payments_account should not be set). When getting a
+   * billing setup, this and payments_account will be populated.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2013,25 +2033,24 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. The payments account information associated with this billing setup.
-   * When setting up billing, this is used to signup with a new payments account
-   * (and then payments_account should not be set).
-   * When getting a billing setup, this and payments_account will be
-   * populated.
+   * Immutable. The payments account information associated with this billing
+   * setup. When setting up billing, this is used to signup with a new payments
+   * account (and then payments_account should not be set). When getting a
+   * billing setup, this and payments_account will be populated.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    */
   @java.lang.Override
   public com.google.ads.googleads.v11.resources.BillingSetup.PaymentsAccountInfoOrBuilder getPaymentsAccountInfoOrBuilder() {
-    return getPaymentsAccountInfo();
+    return paymentsAccountInfo_ == null ? com.google.ads.googleads.v11.resources.BillingSetup.PaymentsAccountInfo.getDefaultInstance() : paymentsAccountInfo_;
   }
 
   public static final int START_DATE_TIME_FIELD_NUMBER = 16;
   /**
    * <pre>
-   * Immutable. The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
-   * future time is allowed.
+   * Immutable. The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss
+   * format. Only a future time is allowed.
    * </pre>
    *
    * <code>string start_date_time = 16 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2042,8 +2061,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
-   * future time is allowed.
+   * Immutable. The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss
+   * format. Only a future time is allowed.
    * </pre>
    *
    * <code>string start_date_time = 16 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2068,8 +2087,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
-   * future time is allowed.
+   * Immutable. The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss
+   * format. Only a future time is allowed.
    * </pre>
    *
    * <code>string start_date_time = 16 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2130,8 +2149,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType getStartTimeType() {
     if (startTimeCase_ == 10) {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType result = com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType.valueOf(
+      com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType result = com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType.forNumber(
           (java.lang.Integer) startTime_);
       return result == null ? com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType.UNRECOGNIZED : result;
     }
@@ -2141,7 +2159,8 @@ private static final long serialVersionUID = 0L;
   public static final int END_DATE_TIME_FIELD_NUMBER = 17;
   /**
    * <pre>
-   * Output only. The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+   * Output only. The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss
+   * format.
    * </pre>
    *
    * <code>string end_date_time = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2152,7 +2171,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+   * Output only. The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss
+   * format.
    * </pre>
    *
    * <code>string end_date_time = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2177,7 +2197,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+   * Output only. The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss
+   * format.
    * </pre>
    *
    * <code>string end_date_time = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2238,8 +2259,7 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType getEndTimeType() {
     if (endTimeCase_ == 14) {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType result = com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType.valueOf(
+      com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType result = com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType.forNumber(
           (java.lang.Integer) endTime_);
       return result == null ? com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType.UNRECOGNIZED : result;
     }
@@ -2572,18 +2592,14 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       id_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       status_ = 0;
-
       paymentsAccount_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
-      if (paymentsAccountInfoBuilder_ == null) {
-        paymentsAccountInfo_ = null;
-      } else {
-        paymentsAccountInfo_ = null;
+      paymentsAccountInfo_ = null;
+      if (paymentsAccountInfoBuilder_ != null) {
+        paymentsAccountInfoBuilder_.dispose();
         paymentsAccountInfoBuilder_ = null;
       }
       startTimeCase_ = 0;
@@ -2616,40 +2632,42 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.BillingSetup buildPartial() {
       com.google.ads.googleads.v11.resources.BillingSetup result = new com.google.ads.googleads.v11.resources.BillingSetup(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.BillingSetup result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.id_ = id_;
         to_bitField0_ |= 0x00000001;
       }
-      result.status_ = status_;
-      if (((from_bitField0_ & 0x00000002) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.status_ = status_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.paymentsAccount_ = paymentsAccount_;
         to_bitField0_ |= 0x00000002;
       }
-      result.paymentsAccount_ = paymentsAccount_;
-      if (paymentsAccountInfoBuilder_ == null) {
-        result.paymentsAccountInfo_ = paymentsAccountInfo_;
-      } else {
-        result.paymentsAccountInfo_ = paymentsAccountInfoBuilder_.build();
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.paymentsAccountInfo_ = paymentsAccountInfoBuilder_ == null
+            ? paymentsAccountInfo_
+            : paymentsAccountInfoBuilder_.build();
       }
-      if (startTimeCase_ == 16) {
-        result.startTime_ = startTime_;
-      }
-      if (startTimeCase_ == 10) {
-        result.startTime_ = startTime_;
-      }
-      if (endTimeCase_ == 17) {
-        result.endTime_ = endTime_;
-      }
-      if (endTimeCase_ == 14) {
-        result.endTime_ = endTime_;
-      }
-      result.bitField0_ = to_bitField0_;
+      result.bitField0_ |= to_bitField0_;
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v11.resources.BillingSetup result) {
       result.startTimeCase_ = startTimeCase_;
+      result.startTime_ = this.startTime_;
       result.endTimeCase_ = endTimeCase_;
-      onBuilt();
-      return result;
+      result.endTime_ = this.endTime_;
     }
 
     @java.lang.Override
@@ -2698,6 +2716,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.resources.BillingSetup.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasId()) {
@@ -2707,8 +2726,8 @@ private static final long serialVersionUID = 0L;
         setStatusValue(other.getStatusValue());
       }
       if (other.hasPaymentsAccount()) {
-        bitField0_ |= 0x00000002;
         paymentsAccount_ = other.paymentsAccount_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.hasPaymentsAccountInfo()) {
@@ -2772,12 +2791,12 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 24: {
               status_ = input.readEnum();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 24
             case 80: {
@@ -2790,7 +2809,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getPaymentsAccountInfoFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 98
             case 112: {
@@ -2801,7 +2820,7 @@ private static final long serialVersionUID = 0L;
             } // case 112
             case 120: {
               id_ = input.readInt64();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 120
             case 130: {
@@ -2818,7 +2837,7 @@ private static final long serialVersionUID = 0L;
             } // case 138
             case 146: {
               paymentsAccount_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000008;
               break;
             } // case 146
             default: {
@@ -2927,11 +2946,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -2946,8 +2963,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -2964,12 +2981,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -2985,7 +3000,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -3009,8 +3024,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      bitField0_ |= 0x00000001;
+      
       id_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -3023,7 +3039,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       id_ = 0L;
       onChanged();
       return this;
@@ -3051,8 +3067,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
-      
       status_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -3066,8 +3082,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.BillingSetupStatusEnum.BillingSetupStatus getStatus() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.BillingSetupStatusEnum.BillingSetupStatus result = com.google.ads.googleads.v11.enums.BillingSetupStatusEnum.BillingSetupStatus.valueOf(status_);
+      com.google.ads.googleads.v11.enums.BillingSetupStatusEnum.BillingSetupStatus result = com.google.ads.googleads.v11.enums.BillingSetupStatusEnum.BillingSetupStatus.forNumber(status_);
       return result == null ? com.google.ads.googleads.v11.enums.BillingSetupStatusEnum.BillingSetupStatus.UNRECOGNIZED : result;
     }
     /**
@@ -3083,7 +3098,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       status_ = value.getNumber();
       onChanged();
       return this;
@@ -3097,7 +3112,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       status_ = 0;
       onChanged();
       return this;
@@ -3106,8 +3121,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object paymentsAccount_ = "";
     /**
      * <pre>
-     * Immutable. The resource name of the payments account associated with this billing
-     * setup. Payments resource names have the form:
+     * Immutable. The resource name of the payments account associated with this
+     * billing setup. Payments resource names have the form:
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
      * When setting up billing, this is used to signup with an existing payments
      * account (and then payments_account_info should not be set).
@@ -3119,12 +3134,12 @@ private static final long serialVersionUID = 0L;
      * @return Whether the paymentsAccount field is set.
      */
     public boolean hasPaymentsAccount() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
-     * Immutable. The resource name of the payments account associated with this billing
-     * setup. Payments resource names have the form:
+     * Immutable. The resource name of the payments account associated with this
+     * billing setup. Payments resource names have the form:
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
      * When setting up billing, this is used to signup with an existing payments
      * account (and then payments_account_info should not be set).
@@ -3149,8 +3164,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The resource name of the payments account associated with this billing
-     * setup. Payments resource names have the form:
+     * Immutable. The resource name of the payments account associated with this
+     * billing setup. Payments resource names have the form:
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
      * When setting up billing, this is used to signup with an existing payments
      * account (and then payments_account_info should not be set).
@@ -3176,8 +3191,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The resource name of the payments account associated with this billing
-     * setup. Payments resource names have the form:
+     * Immutable. The resource name of the payments account associated with this
+     * billing setup. Payments resource names have the form:
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
      * When setting up billing, this is used to signup with an existing payments
      * account (and then payments_account_info should not be set).
@@ -3191,18 +3206,16 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPaymentsAccount(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       paymentsAccount_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Immutable. The resource name of the payments account associated with this billing
-     * setup. Payments resource names have the form:
+     * Immutable. The resource name of the payments account associated with this
+     * billing setup. Payments resource names have the form:
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
      * When setting up billing, this is used to signup with an existing payments
      * account (and then payments_account_info should not be set).
@@ -3214,15 +3227,15 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPaymentsAccount() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       paymentsAccount_ = getDefaultInstance().getPaymentsAccount();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Immutable. The resource name of the payments account associated with this billing
-     * setup. Payments resource names have the form:
+     * Immutable. The resource name of the payments account associated with this
+     * billing setup. Payments resource names have the form:
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
      * When setting up billing, this is used to signup with an existing payments
      * account (and then payments_account_info should not be set).
@@ -3236,12 +3249,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPaymentsAccountBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       paymentsAccount_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -3251,26 +3262,24 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.resources.BillingSetup.PaymentsAccountInfo, com.google.ads.googleads.v11.resources.BillingSetup.PaymentsAccountInfo.Builder, com.google.ads.googleads.v11.resources.BillingSetup.PaymentsAccountInfoOrBuilder> paymentsAccountInfoBuilder_;
     /**
      * <pre>
-     * Immutable. The payments account information associated with this billing setup.
-     * When setting up billing, this is used to signup with a new payments account
-     * (and then payments_account should not be set).
-     * When getting a billing setup, this and payments_account will be
-     * populated.
+     * Immutable. The payments account information associated with this billing
+     * setup. When setting up billing, this is used to signup with a new payments
+     * account (and then payments_account should not be set). When getting a
+     * billing setup, this and payments_account will be populated.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the paymentsAccountInfo field is set.
      */
     public boolean hasPaymentsAccountInfo() {
-      return paymentsAccountInfoBuilder_ != null || paymentsAccountInfo_ != null;
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
-     * Immutable. The payments account information associated with this billing setup.
-     * When setting up billing, this is used to signup with a new payments account
-     * (and then payments_account should not be set).
-     * When getting a billing setup, this and payments_account will be
-     * populated.
+     * Immutable. The payments account information associated with this billing
+     * setup. When setting up billing, this is used to signup with a new payments
+     * account (and then payments_account should not be set). When getting a
+     * billing setup, this and payments_account will be populated.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -3285,11 +3294,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The payments account information associated with this billing setup.
-     * When setting up billing, this is used to signup with a new payments account
-     * (and then payments_account should not be set).
-     * When getting a billing setup, this and payments_account will be
-     * populated.
+     * Immutable. The payments account information associated with this billing
+     * setup. When setting up billing, this is used to signup with a new payments
+     * account (and then payments_account should not be set). When getting a
+     * billing setup, this and payments_account will be populated.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -3300,20 +3308,19 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         paymentsAccountInfo_ = value;
-        onChanged();
       } else {
         paymentsAccountInfoBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Immutable. The payments account information associated with this billing setup.
-     * When setting up billing, this is used to signup with a new payments account
-     * (and then payments_account should not be set).
-     * When getting a billing setup, this and payments_account will be
-     * populated.
+     * Immutable. The payments account information associated with this billing
+     * setup. When setting up billing, this is used to signup with a new payments
+     * account (and then payments_account should not be set). When getting a
+     * billing setup, this and payments_account will be populated.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -3322,84 +3329,80 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.resources.BillingSetup.PaymentsAccountInfo.Builder builderForValue) {
       if (paymentsAccountInfoBuilder_ == null) {
         paymentsAccountInfo_ = builderForValue.build();
-        onChanged();
       } else {
         paymentsAccountInfoBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Immutable. The payments account information associated with this billing setup.
-     * When setting up billing, this is used to signup with a new payments account
-     * (and then payments_account should not be set).
-     * When getting a billing setup, this and payments_account will be
-     * populated.
+     * Immutable. The payments account information associated with this billing
+     * setup. When setting up billing, this is used to signup with a new payments
+     * account (and then payments_account should not be set). When getting a
+     * billing setup, this and payments_account will be populated.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder mergePaymentsAccountInfo(com.google.ads.googleads.v11.resources.BillingSetup.PaymentsAccountInfo value) {
       if (paymentsAccountInfoBuilder_ == null) {
-        if (paymentsAccountInfo_ != null) {
-          paymentsAccountInfo_ =
-            com.google.ads.googleads.v11.resources.BillingSetup.PaymentsAccountInfo.newBuilder(paymentsAccountInfo_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000010) != 0) &&
+          paymentsAccountInfo_ != null &&
+          paymentsAccountInfo_ != com.google.ads.googleads.v11.resources.BillingSetup.PaymentsAccountInfo.getDefaultInstance()) {
+          getPaymentsAccountInfoBuilder().mergeFrom(value);
         } else {
           paymentsAccountInfo_ = value;
         }
-        onChanged();
       } else {
         paymentsAccountInfoBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Immutable. The payments account information associated with this billing setup.
-     * When setting up billing, this is used to signup with a new payments account
-     * (and then payments_account should not be set).
-     * When getting a billing setup, this and payments_account will be
-     * populated.
+     * Immutable. The payments account information associated with this billing
+     * setup. When setting up billing, this is used to signup with a new payments
+     * account (and then payments_account should not be set). When getting a
+     * billing setup, this and payments_account will be populated.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public Builder clearPaymentsAccountInfo() {
-      if (paymentsAccountInfoBuilder_ == null) {
-        paymentsAccountInfo_ = null;
-        onChanged();
-      } else {
-        paymentsAccountInfo_ = null;
+      bitField0_ = (bitField0_ & ~0x00000010);
+      paymentsAccountInfo_ = null;
+      if (paymentsAccountInfoBuilder_ != null) {
+        paymentsAccountInfoBuilder_.dispose();
         paymentsAccountInfoBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <pre>
-     * Immutable. The payments account information associated with this billing setup.
-     * When setting up billing, this is used to signup with a new payments account
-     * (and then payments_account should not be set).
-     * When getting a billing setup, this and payments_account will be
-     * populated.
+     * Immutable. The payments account information associated with this billing
+     * setup. When setting up billing, this is used to signup with a new payments
+     * account (and then payments_account should not be set). When getting a
+     * billing setup, this and payments_account will be populated.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
     public com.google.ads.googleads.v11.resources.BillingSetup.PaymentsAccountInfo.Builder getPaymentsAccountInfoBuilder() {
-      
+      bitField0_ |= 0x00000010;
       onChanged();
       return getPaymentsAccountInfoFieldBuilder().getBuilder();
     }
     /**
      * <pre>
-     * Immutable. The payments account information associated with this billing setup.
-     * When setting up billing, this is used to signup with a new payments account
-     * (and then payments_account should not be set).
-     * When getting a billing setup, this and payments_account will be
-     * populated.
+     * Immutable. The payments account information associated with this billing
+     * setup. When setting up billing, this is used to signup with a new payments
+     * account (and then payments_account should not be set). When getting a
+     * billing setup, this and payments_account will be populated.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -3414,11 +3417,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The payments account information associated with this billing setup.
-     * When setting up billing, this is used to signup with a new payments account
-     * (and then payments_account should not be set).
-     * When getting a billing setup, this and payments_account will be
-     * populated.
+     * Immutable. The payments account information associated with this billing
+     * setup. When setting up billing, this is used to signup with a new payments
+     * account (and then payments_account should not be set). When getting a
+     * billing setup, this and payments_account will be populated.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.resources.BillingSetup.PaymentsAccountInfo payments_account_info = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -3439,8 +3441,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Immutable. The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
-     * future time is allowed.
+     * Immutable. The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss
+     * format. Only a future time is allowed.
      * </pre>
      *
      * <code>string start_date_time = 16 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -3452,8 +3454,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
-     * future time is allowed.
+     * Immutable. The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss
+     * format. Only a future time is allowed.
      * </pre>
      *
      * <code>string start_date_time = 16 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -3479,8 +3481,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
-     * future time is allowed.
+     * Immutable. The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss
+     * format. Only a future time is allowed.
      * </pre>
      *
      * <code>string start_date_time = 16 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -3507,8 +3509,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
-     * future time is allowed.
+     * Immutable. The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss
+     * format. Only a future time is allowed.
      * </pre>
      *
      * <code>string start_date_time = 16 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -3517,18 +3519,16 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStartDateTime(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  startTimeCase_ = 16;
+      if (value == null) { throw new NullPointerException(); }
+      startTimeCase_ = 16;
       startTime_ = value;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Immutable. The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
-     * future time is allowed.
+     * Immutable. The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss
+     * format. Only a future time is allowed.
      * </pre>
      *
      * <code>string start_date_time = 16 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -3544,8 +3544,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format. Only a
-     * future time is allowed.
+     * Immutable. The start date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss
+     * format. Only a future time is allowed.
      * </pre>
      *
      * <code>string start_date_time = 16 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -3554,10 +3554,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStartDateTimeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       startTimeCase_ = 16;
       startTime_ = value;
       onChanged();
@@ -3617,8 +3615,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType getStartTimeType() {
       if (startTimeCase_ == 10) {
-        @SuppressWarnings("deprecation")
-        com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType result = com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType.valueOf(
+        com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType result = com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType.forNumber(
             (java.lang.Integer) startTime_);
         return result == null ? com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType.UNRECOGNIZED : result;
       }
@@ -3661,7 +3658,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+     * Output only. The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss
+     * format.
      * </pre>
      *
      * <code>string end_date_time = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3673,7 +3671,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+     * Output only. The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss
+     * format.
      * </pre>
      *
      * <code>string end_date_time = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3699,7 +3698,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+     * Output only. The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss
+     * format.
      * </pre>
      *
      * <code>string end_date_time = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3726,7 +3726,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+     * Output only. The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss
+     * format.
      * </pre>
      *
      * <code>string end_date_time = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3735,17 +3736,16 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEndDateTime(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  endTimeCase_ = 17;
+      if (value == null) { throw new NullPointerException(); }
+      endTimeCase_ = 17;
       endTime_ = value;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+     * Output only. The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss
+     * format.
      * </pre>
      *
      * <code>string end_date_time = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3761,7 +3761,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss format.
+     * Output only. The end date time in yyyy-MM-dd or yyyy-MM-dd HH:mm:ss
+     * format.
      * </pre>
      *
      * <code>string end_date_time = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3770,10 +3771,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEndDateTimeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       endTimeCase_ = 17;
       endTime_ = value;
       onChanged();
@@ -3833,8 +3832,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType getEndTimeType() {
       if (endTimeCase_ == 14) {
-        @SuppressWarnings("deprecation")
-        com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType result = com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType.valueOf(
+        com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType result = com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType.forNumber(
             (java.lang.Integer) endTime_);
         return result == null ? com.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType.UNRECOGNIZED : result;
       }

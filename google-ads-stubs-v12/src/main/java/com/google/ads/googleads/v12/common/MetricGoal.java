@@ -50,7 +50,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int METRIC_FIELD_NUMBER = 1;
-  private int metric_;
+  private int metric_ = 0;
   /**
    * <pre>
    * The metric of the goal. For example, clicks, impressions, cost,
@@ -73,13 +73,12 @@ private static final long serialVersionUID = 0L;
    * @return The metric.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.ExperimentMetricEnum.ExperimentMetric getMetric() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.ExperimentMetricEnum.ExperimentMetric result = com.google.ads.googleads.v12.enums.ExperimentMetricEnum.ExperimentMetric.valueOf(metric_);
+    com.google.ads.googleads.v12.enums.ExperimentMetricEnum.ExperimentMetric result = com.google.ads.googleads.v12.enums.ExperimentMetricEnum.ExperimentMetric.forNumber(metric_);
     return result == null ? com.google.ads.googleads.v12.enums.ExperimentMetricEnum.ExperimentMetric.UNRECOGNIZED : result;
   }
 
   public static final int DIRECTION_FIELD_NUMBER = 2;
-  private int direction_;
+  private int direction_ = 0;
   /**
    * <pre>
    * The metric direction of the goal. For example, increase, decrease, no
@@ -102,8 +101,7 @@ private static final long serialVersionUID = 0L;
    * @return The direction.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.ExperimentMetricDirectionEnum.ExperimentMetricDirection getDirection() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.ExperimentMetricDirectionEnum.ExperimentMetricDirection result = com.google.ads.googleads.v12.enums.ExperimentMetricDirectionEnum.ExperimentMetricDirection.valueOf(direction_);
+    com.google.ads.googleads.v12.enums.ExperimentMetricDirectionEnum.ExperimentMetricDirection result = com.google.ads.googleads.v12.enums.ExperimentMetricDirectionEnum.ExperimentMetricDirection.forNumber(direction_);
     return result == null ? com.google.ads.googleads.v12.enums.ExperimentMetricDirectionEnum.ExperimentMetricDirection.UNRECOGNIZED : result;
   }
 
@@ -308,10 +306,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       metric_ = 0;
-
       direction_ = 0;
-
       return this;
     }
 
@@ -338,10 +335,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.MetricGoal buildPartial() {
       com.google.ads.googleads.v12.common.MetricGoal result = new com.google.ads.googleads.v12.common.MetricGoal(this);
-      result.metric_ = metric_;
-      result.direction_ = direction_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.MetricGoal result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.metric_ = metric_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.direction_ = direction_;
+      }
     }
 
     @java.lang.Override
@@ -422,12 +428,12 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               metric_ = input.readEnum();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             case 16: {
               direction_ = input.readEnum();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             default: {
@@ -445,6 +451,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private int metric_ = 0;
     /**
@@ -470,8 +477,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMetricValue(int value) {
-      
       metric_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -486,8 +493,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.ExperimentMetricEnum.ExperimentMetric getMetric() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.ExperimentMetricEnum.ExperimentMetric result = com.google.ads.googleads.v12.enums.ExperimentMetricEnum.ExperimentMetric.valueOf(metric_);
+      com.google.ads.googleads.v12.enums.ExperimentMetricEnum.ExperimentMetric result = com.google.ads.googleads.v12.enums.ExperimentMetricEnum.ExperimentMetric.forNumber(metric_);
       return result == null ? com.google.ads.googleads.v12.enums.ExperimentMetricEnum.ExperimentMetric.UNRECOGNIZED : result;
     }
     /**
@@ -504,7 +510,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       metric_ = value.getNumber();
       onChanged();
       return this;
@@ -519,7 +525,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMetric() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       metric_ = 0;
       onChanged();
       return this;
@@ -549,8 +555,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDirectionValue(int value) {
-      
       direction_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -565,8 +571,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.ExperimentMetricDirectionEnum.ExperimentMetricDirection getDirection() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.ExperimentMetricDirectionEnum.ExperimentMetricDirection result = com.google.ads.googleads.v12.enums.ExperimentMetricDirectionEnum.ExperimentMetricDirection.valueOf(direction_);
+      com.google.ads.googleads.v12.enums.ExperimentMetricDirectionEnum.ExperimentMetricDirection result = com.google.ads.googleads.v12.enums.ExperimentMetricDirectionEnum.ExperimentMetricDirection.forNumber(direction_);
       return result == null ? com.google.ads.googleads.v12.enums.ExperimentMetricDirectionEnum.ExperimentMetricDirection.UNRECOGNIZED : result;
     }
     /**
@@ -583,7 +588,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000002;
       direction_ = value.getNumber();
       onChanged();
       return this;
@@ -598,7 +603,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDirection() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       direction_ = 0;
       onChanged();
       return this;

@@ -50,7 +50,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int COMMISSION_RATE_MICROS_FIELD_NUMBER = 2;
-  private long commissionRateMicros_;
+  private long commissionRateMicros_ = 0L;
   /**
    * <pre>
    * Commission rate defines the portion of the conversion value that the
@@ -281,8 +281,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       commissionRateMicros_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -309,15 +309,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.Commission buildPartial() {
       com.google.ads.googleads.v12.common.Commission result = new com.google.ads.googleads.v12.common.Commission(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.Commission result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.commissionRateMicros_ = commissionRateMicros_;
         to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -459,8 +463,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCommissionRateMicros(long value) {
-      bitField0_ |= 0x00000001;
+      
       commissionRateMicros_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

@@ -9,7 +9,8 @@ public interface MutateCustomerManagerLinkRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The ID of the customer whose customer manager links are being modified.
+   * Required. The ID of the customer whose customer manager links are being
+   * modified.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -18,7 +19,8 @@ public interface MutateCustomerManagerLinkRequestOrBuilder extends
   java.lang.String getCustomerId();
   /**
    * <pre>
-   * Required. The ID of the customer whose customer manager links are being modified.
+   * Required. The ID of the customer whose customer manager links are being
+   * modified.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -29,7 +31,8 @@ public interface MutateCustomerManagerLinkRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The list of operations to perform on individual customer manager links.
+   * Required. The list of operations to perform on individual customer manager
+   * links.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.CustomerManagerLinkOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -38,7 +41,8 @@ public interface MutateCustomerManagerLinkRequestOrBuilder extends
       getOperationsList();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual customer manager links.
+   * Required. The list of operations to perform on individual customer manager
+   * links.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.CustomerManagerLinkOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -46,7 +50,8 @@ public interface MutateCustomerManagerLinkRequestOrBuilder extends
   com.google.ads.googleads.v11.services.CustomerManagerLinkOperation getOperations(int index);
   /**
    * <pre>
-   * Required. The list of operations to perform on individual customer manager links.
+   * Required. The list of operations to perform on individual customer manager
+   * links.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.CustomerManagerLinkOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -54,7 +59,8 @@ public interface MutateCustomerManagerLinkRequestOrBuilder extends
   int getOperationsCount();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual customer manager links.
+   * Required. The list of operations to perform on individual customer manager
+   * links.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.CustomerManagerLinkOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -63,7 +69,8 @@ public interface MutateCustomerManagerLinkRequestOrBuilder extends
       getOperationsOrBuilderList();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual customer manager links.
+   * Required. The list of operations to perform on individual customer manager
+   * links.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.CustomerManagerLinkOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>

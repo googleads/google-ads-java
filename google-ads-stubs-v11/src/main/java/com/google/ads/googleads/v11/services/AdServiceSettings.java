@@ -60,7 +60,10 @@ import javax.annotation.Generated;
  * adServiceSettingsBuilder
  *     .getAdSettings()
  *     .setRetrySettings(
- *         adServiceSettingsBuilder.getAdSettings().getRetrySettings().toBuilder()
+ *         adServiceSettingsBuilder
+ *             .getAdSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
  * AdServiceSettings adServiceSettings = adServiceSettingsBuilder.build();

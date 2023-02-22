@@ -5,7 +5,8 @@ package com.google.ads.googleads.v11.services;
 
 /**
  * <pre>
- * Request message for [GoogleAdsService.SearchStream][google.ads.googleads.v11.services.GoogleAdsService.SearchStream].
+ * Request message for
+ * [GoogleAdsService.SearchStream][google.ads.googleads.v11.services.GoogleAdsService.SearchStream].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v11.services.SearchGoogleAdsStreamRequest}
@@ -51,7 +52,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CUSTOMER_ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object customerId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object customerId_ = "";
   /**
    * <pre>
    * Required. The ID of the customer being queried.
@@ -97,7 +99,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int QUERY_FIELD_NUMBER = 2;
-  private volatile java.lang.Object query_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object query_ = "";
   /**
    * <pre>
    * Required. The query string.
@@ -143,7 +146,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SUMMARY_ROW_SETTING_FIELD_NUMBER = 3;
-  private int summaryRowSetting_;
+  private int summaryRowSetting_ = 0;
   /**
    * <pre>
    * Determines whether a summary row will be returned. By default, summary row
@@ -168,8 +171,7 @@ private static final long serialVersionUID = 0L;
    * @return The summaryRowSetting.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.SummaryRowSettingEnum.SummaryRowSetting getSummaryRowSetting() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.SummaryRowSettingEnum.SummaryRowSetting result = com.google.ads.googleads.v11.enums.SummaryRowSettingEnum.SummaryRowSetting.valueOf(summaryRowSetting_);
+    com.google.ads.googleads.v11.enums.SummaryRowSettingEnum.SummaryRowSetting result = com.google.ads.googleads.v11.enums.SummaryRowSettingEnum.SummaryRowSetting.forNumber(summaryRowSetting_);
     return result == null ? com.google.ads.googleads.v11.enums.SummaryRowSettingEnum.SummaryRowSetting.UNRECOGNIZED : result;
   }
 
@@ -349,7 +351,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Request message for [GoogleAdsService.SearchStream][google.ads.googleads.v11.services.GoogleAdsService.SearchStream].
+   * Request message for
+   * [GoogleAdsService.SearchStream][google.ads.googleads.v11.services.GoogleAdsService.SearchStream].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v11.services.SearchGoogleAdsStreamRequest}
@@ -384,12 +387,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       customerId_ = "";
-
       query_ = "";
-
       summaryRowSetting_ = 0;
-
       return this;
     }
 
@@ -416,11 +417,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.SearchGoogleAdsStreamRequest buildPartial() {
       com.google.ads.googleads.v11.services.SearchGoogleAdsStreamRequest result = new com.google.ads.googleads.v11.services.SearchGoogleAdsStreamRequest(this);
-      result.customerId_ = customerId_;
-      result.query_ = query_;
-      result.summaryRowSetting_ = summaryRowSetting_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.SearchGoogleAdsStreamRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.customerId_ = customerId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.query_ = query_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.summaryRowSetting_ = summaryRowSetting_;
+      }
     }
 
     @java.lang.Override
@@ -469,10 +481,12 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.services.SearchGoogleAdsStreamRequest.getDefaultInstance()) return this;
       if (!other.getCustomerId().isEmpty()) {
         customerId_ = other.customerId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getQuery().isEmpty()) {
         query_ = other.query_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.summaryRowSetting_ != 0) {
@@ -506,17 +520,17 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               customerId_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               query_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 24: {
               summaryRowSetting_ = input.readEnum();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 24
             default: {
@@ -534,6 +548,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object customerId_ = "";
     /**
@@ -588,11 +603,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       customerId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -605,8 +618,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCustomerId() {
-      
       customerId_ = getDefaultInstance().getCustomerId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -621,12 +634,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       customerId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -684,11 +695,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setQuery(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       query_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -701,8 +710,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearQuery() {
-      
       query_ = getDefaultInstance().getQuery();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -717,12 +726,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setQueryBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       query_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -753,8 +760,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSummaryRowSettingValue(int value) {
-      
       summaryRowSetting_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -770,8 +777,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.SummaryRowSettingEnum.SummaryRowSetting getSummaryRowSetting() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.SummaryRowSettingEnum.SummaryRowSetting result = com.google.ads.googleads.v11.enums.SummaryRowSettingEnum.SummaryRowSetting.valueOf(summaryRowSetting_);
+      com.google.ads.googleads.v11.enums.SummaryRowSettingEnum.SummaryRowSetting result = com.google.ads.googleads.v11.enums.SummaryRowSettingEnum.SummaryRowSetting.forNumber(summaryRowSetting_);
       return result == null ? com.google.ads.googleads.v11.enums.SummaryRowSettingEnum.SummaryRowSetting.UNRECOGNIZED : result;
     }
     /**
@@ -789,7 +795,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       summaryRowSetting_ = value.getNumber();
       onChanged();
       return this;
@@ -805,7 +811,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSummaryRowSetting() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       summaryRowSetting_ = 0;
       onChanged();
       return this;

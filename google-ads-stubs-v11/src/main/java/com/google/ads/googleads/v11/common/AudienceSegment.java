@@ -574,6 +574,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (userListBuilder_ != null) {
         userListBuilder_.clear();
       }
@@ -617,44 +618,39 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.AudienceSegment buildPartial() {
       com.google.ads.googleads.v11.common.AudienceSegment result = new com.google.ads.googleads.v11.common.AudienceSegment(this);
-      if (segmentCase_ == 1) {
-        if (userListBuilder_ == null) {
-          result.segment_ = segment_;
-        } else {
-          result.segment_ = userListBuilder_.build();
-        }
-      }
-      if (segmentCase_ == 2) {
-        if (userInterestBuilder_ == null) {
-          result.segment_ = segment_;
-        } else {
-          result.segment_ = userInterestBuilder_.build();
-        }
-      }
-      if (segmentCase_ == 3) {
-        if (lifeEventBuilder_ == null) {
-          result.segment_ = segment_;
-        } else {
-          result.segment_ = lifeEventBuilder_.build();
-        }
-      }
-      if (segmentCase_ == 4) {
-        if (detailedDemographicBuilder_ == null) {
-          result.segment_ = segment_;
-        } else {
-          result.segment_ = detailedDemographicBuilder_.build();
-        }
-      }
-      if (segmentCase_ == 5) {
-        if (customAudienceBuilder_ == null) {
-          result.segment_ = segment_;
-        } else {
-          result.segment_ = customAudienceBuilder_.build();
-        }
-      }
-      result.segmentCase_ = segmentCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.AudienceSegment result) {
+      int from_bitField0_ = bitField0_;
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v11.common.AudienceSegment result) {
+      result.segmentCase_ = segmentCase_;
+      result.segment_ = this.segment_;
+      if (segmentCase_ == 1 &&
+          userListBuilder_ != null) {
+        result.segment_ = userListBuilder_.build();
+      }
+      if (segmentCase_ == 2 &&
+          userInterestBuilder_ != null) {
+        result.segment_ = userInterestBuilder_.build();
+      }
+      if (segmentCase_ == 3 &&
+          lifeEventBuilder_ != null) {
+        result.segment_ = lifeEventBuilder_.build();
+      }
+      if (segmentCase_ == 4 &&
+          detailedDemographicBuilder_ != null) {
+        result.segment_ = detailedDemographicBuilder_.build();
+      }
+      if (segmentCase_ == 5 &&
+          customAudienceBuilder_ != null) {
+        result.segment_ = customAudienceBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -817,6 +813,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v11.common.UserListSegment, com.google.ads.googleads.v11.common.UserListSegment.Builder, com.google.ads.googleads.v11.common.UserListSegmentOrBuilder> userListBuilder_;
@@ -992,7 +989,7 @@ private static final long serialVersionUID = 0L;
         segment_ = null;
       }
       segmentCase_ = 1;
-      onChanged();;
+      onChanged();
       return userListBuilder_;
     }
 
@@ -1170,7 +1167,7 @@ private static final long serialVersionUID = 0L;
         segment_ = null;
       }
       segmentCase_ = 2;
-      onChanged();;
+      onChanged();
       return userInterestBuilder_;
     }
 
@@ -1348,7 +1345,7 @@ private static final long serialVersionUID = 0L;
         segment_ = null;
       }
       segmentCase_ = 3;
-      onChanged();;
+      onChanged();
       return lifeEventBuilder_;
     }
 
@@ -1526,7 +1523,7 @@ private static final long serialVersionUID = 0L;
         segment_ = null;
       }
       segmentCase_ = 4;
-      onChanged();;
+      onChanged();
       return detailedDemographicBuilder_;
     }
 
@@ -1704,7 +1701,7 @@ private static final long serialVersionUID = 0L;
         segment_ = null;
       }
       segmentCase_ = 5;
-      onChanged();;
+      onChanged();
       return customAudienceBuilder_;
     }
     @java.lang.Override

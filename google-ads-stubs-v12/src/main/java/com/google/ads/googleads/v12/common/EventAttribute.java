@@ -52,11 +52,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EVENT_FIELD_NUMBER = 1;
-  private volatile java.lang.Object event_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object event_ = "";
   /**
    * <pre>
-   * Required. Advertiser defined event to be used for remarketing. The accepted values
-   * are "Viewed", "Cart", "Purchased" and "Recommended".
+   * Required. Advertiser defined event to be used for remarketing. The accepted
+   * values are "Viewed", "Cart", "Purchased" and "Recommended".
    * </pre>
    *
    * <code>string event = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -77,8 +78,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. Advertiser defined event to be used for remarketing. The accepted values
-   * are "Viewed", "Cart", "Purchased" and "Recommended".
+   * Required. Advertiser defined event to be used for remarketing. The accepted
+   * values are "Viewed", "Cart", "Purchased" and "Recommended".
    * </pre>
    *
    * <code>string event = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -100,7 +101,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EVENT_DATE_TIME_FIELD_NUMBER = 2;
-  private volatile java.lang.Object eventDateTime_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object eventDateTime_ = "";
   /**
    * <pre>
    * Required. Timestamp at which the event happened.
@@ -152,6 +154,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ITEM_ATTRIBUTE_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.EventItemAttribute> itemAttribute_;
   /**
    * <pre>
@@ -426,17 +429,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       event_ = "";
-
       eventDateTime_ = "";
-
       if (itemAttributeBuilder_ == null) {
         itemAttribute_ = java.util.Collections.emptyList();
       } else {
         itemAttribute_ = null;
         itemAttributeBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -463,20 +465,32 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.EventAttribute buildPartial() {
       com.google.ads.googleads.v12.common.EventAttribute result = new com.google.ads.googleads.v12.common.EventAttribute(this);
-      int from_bitField0_ = bitField0_;
-      result.event_ = event_;
-      result.eventDateTime_ = eventDateTime_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.common.EventAttribute result) {
       if (itemAttributeBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           itemAttribute_ = java.util.Collections.unmodifiableList(itemAttribute_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.itemAttribute_ = itemAttribute_;
       } else {
         result.itemAttribute_ = itemAttributeBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.EventAttribute result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.event_ = event_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.eventDateTime_ = eventDateTime_;
+      }
     }
 
     @java.lang.Override
@@ -525,17 +539,19 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.common.EventAttribute.getDefaultInstance()) return this;
       if (!other.getEvent().isEmpty()) {
         event_ = other.event_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getEventDateTime().isEmpty()) {
         eventDateTime_ = other.eventDateTime_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (itemAttributeBuilder_ == null) {
         if (!other.itemAttribute_.isEmpty()) {
           if (itemAttribute_.isEmpty()) {
             itemAttribute_ = other.itemAttribute_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureItemAttributeIsMutable();
             itemAttribute_.addAll(other.itemAttribute_);
@@ -548,7 +564,7 @@ private static final long serialVersionUID = 0L;
             itemAttributeBuilder_.dispose();
             itemAttributeBuilder_ = null;
             itemAttribute_ = other.itemAttribute_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
             itemAttributeBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getItemAttributeFieldBuilder() : null;
@@ -585,12 +601,12 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               event_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               eventDateTime_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
@@ -626,8 +642,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object event_ = "";
     /**
      * <pre>
-     * Required. Advertiser defined event to be used for remarketing. The accepted values
-     * are "Viewed", "Cart", "Purchased" and "Recommended".
+     * Required. Advertiser defined event to be used for remarketing. The accepted
+     * values are "Viewed", "Cart", "Purchased" and "Recommended".
      * </pre>
      *
      * <code>string event = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -647,8 +663,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Advertiser defined event to be used for remarketing. The accepted values
-     * are "Viewed", "Cart", "Purchased" and "Recommended".
+     * Required. Advertiser defined event to be used for remarketing. The accepted
+     * values are "Viewed", "Cart", "Purchased" and "Recommended".
      * </pre>
      *
      * <code>string event = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -669,8 +685,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Advertiser defined event to be used for remarketing. The accepted values
-     * are "Viewed", "Cart", "Purchased" and "Recommended".
+     * Required. Advertiser defined event to be used for remarketing. The accepted
+     * values are "Viewed", "Cart", "Purchased" and "Recommended".
      * </pre>
      *
      * <code>string event = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -679,33 +695,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEvent(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       event_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. Advertiser defined event to be used for remarketing. The accepted values
-     * are "Viewed", "Cart", "Purchased" and "Recommended".
+     * Required. Advertiser defined event to be used for remarketing. The accepted
+     * values are "Viewed", "Cart", "Purchased" and "Recommended".
      * </pre>
      *
      * <code>string event = 1 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return This builder for chaining.
      */
     public Builder clearEvent() {
-      
       event_ = getDefaultInstance().getEvent();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. Advertiser defined event to be used for remarketing. The accepted values
-     * are "Viewed", "Cart", "Purchased" and "Recommended".
+     * Required. Advertiser defined event to be used for remarketing. The accepted
+     * values are "Viewed", "Cart", "Purchased" and "Recommended".
      * </pre>
      *
      * <code>string event = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -714,12 +728,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEventBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       event_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -786,11 +798,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEventDateTime(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       eventDateTime_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -806,8 +816,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEventDateTime() {
-      
       eventDateTime_ = getDefaultInstance().getEventDateTime();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -825,12 +835,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEventDateTimeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       eventDateTime_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -838,9 +846,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v12.common.EventItemAttribute> itemAttribute_ =
       java.util.Collections.emptyList();
     private void ensureItemAttributeIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         itemAttribute_ = new java.util.ArrayList<com.google.ads.googleads.v12.common.EventItemAttribute>(itemAttribute_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000004;
        }
     }
 
@@ -1034,7 +1042,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearItemAttribute() {
       if (itemAttributeBuilder_ == null) {
         itemAttribute_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
       } else {
         itemAttributeBuilder_.clear();
@@ -1139,7 +1147,7 @@ private static final long serialVersionUID = 0L;
         itemAttributeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v12.common.EventItemAttribute, com.google.ads.googleads.v12.common.EventItemAttribute.Builder, com.google.ads.googleads.v12.common.EventItemAttributeOrBuilder>(
                 itemAttribute_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
         itemAttribute_ = null;

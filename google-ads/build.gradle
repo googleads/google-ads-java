@@ -55,21 +55,21 @@ sourceSets.test.java.srcDir new File(buildDir, 'generated/source/proto/test')
 
 protobuf {
     protoc {
-        artifact = 'com.google.protobuf:protoc:3.15.0-rc-1'
+        artifact = 'com.google.protobuf:protoc:3.21.12'
     }
 }
 
 dependencies {
     api project(':google-ads-codegen')
     implementation 'org.slf4j:slf4j-api:1.7.25'
-    annotationProcessor 'com.google.auto.value:auto-value:1.7.3'
+    annotationProcessor 'com.google.auto.value:auto-value:1.10.1'
     testImplementation 'org.hamcrest:java-hamcrest:2.0.0.0'
     testImplementation 'org.mockito:mockito-all:1.9.5'
     testImplementation 'com.google.api:gax-grpc::testlib'
-    testImplementation 'io.grpc:grpc-context:1.30.0'
+    testImplementation 'io.grpc:grpc-context:1.52.1'
     testImplementation 'com.google.truth:truth:0.27'
-    implementation 'com.google.auto.value:auto-value-annotations:1.7.3'
-    testImplementation 'com.google.auto.value:auto-value-annotations:1.7.3'
+    implementation 'com.google.auto.value:auto-value-annotations:1.10.1'
+    testImplementation 'com.google.auto.value:auto-value-annotations:1.10.1'
     testImplementation testFixtures(project(':google-ads-codegen'))
 }
 
@@ -91,6 +91,7 @@ task generateThirdPartyDirectory() {
     dependsOn 'copyThirdPartySources'
     dependsOn 'copyThirdPartyBinaries'
     dependsOn 'copyLicenses'
+    dependsOn 'updateAllstarConfigFile'
 }
 
 task createThirdPartyDirectory() {
@@ -141,7 +142,10 @@ task generateLicenses(type: nl.javadude.gradle.plugins.license.DownloadLicenses)
                                                       'Apache 2.0',
                                                       'Apache-2.0',
                                                       'Apache 2'],
-            (ext.allowedLicenses['bsdThreeClause']): ['BSD 3-clause', 'BSD', 'BSD New license'],
+            (ext.allowedLicenses['bsdThreeClause']): ['BSD 3-clause',
+                                                      'BSD-3-Clause',
+                                                      'BSD',
+                                                      'BSD New license'],
             (ext.allowedLicenses['mit'])           : ['The MIT License', 'MIT license'],
     ]
 }
@@ -287,6 +291,52 @@ task copyThirdPartyBinaries(type: Copy) {
         )
     }
     into tasks.generateThirdPartyDirectory.thirdPartyDir
+}
+
+// Updates the Allstar configuration file to contain the current list of .jar
+// files in the third_party directory.
+task updateAllstarConfigFile {
+
+    dependsOn 'copyThirdPartySources'
+    dependsOn 'copyThirdPartyBinaries'
+
+    // Registers this task's output file.
+    outputs.file(
+            new File(rootProject.rootDir, ".allstar/binary_artifacts.yaml"))
+
+    doLast {
+        File thirdPartyDir = tasks.generateThirdPartyDirectory.thirdPartyDir
+        // Collects all .jar files in the third party directory into a sorted
+        // set.
+        Set<String> thirdPartyFiles = Arrays.stream(thirdPartyDir.listFiles())
+                .filter { it.getPath().endsWith(".jar") }
+                .map { it.getName() }
+                .sorted()
+                .collect(Collectors.toCollection { new TreeSet<String>() })
+        // Gets the third party directory name, relative to the root project's
+        // directory.
+        String thirdPartyDirName = rootProject.rootDir.toPath()
+                .relativize(thirdPartyDir.toPath())
+                .toString()
+
+        // Constructs the updated contents of the YAML file.
+        StringBuilder allstarConfigBuilder = new StringBuilder()
+
+        // Adds the header section with the ignore reason.
+        allstarConfigBuilder.append(
+'''# Ignore reason: These artifacts are required per the approved approach
+# for publishing shaded libraries. See go/non-google-third-party-locations
+# and launch 4072458 for more information.
+ignorePaths:
+''')
+        // Adds an entry for each .jar file.
+        thirdPartyFiles.stream().forEachOrdered {
+            allstarConfigBuilder.append(
+                    String.format("- %s/%s%n", thirdPartyDirName, it))
+        }
+        // Updates the contents of the Allstar configuration file.
+        outputs.files.singleFile.text = allstarConfigBuilder.toString()
+    }
 }
 
 publishing {

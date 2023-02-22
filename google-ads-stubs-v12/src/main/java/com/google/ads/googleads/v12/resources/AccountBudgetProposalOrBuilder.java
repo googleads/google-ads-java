@@ -52,7 +52,8 @@ public interface AccountBudgetProposalOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. The resource name of the billing setup associated with this proposal.
+   * Immutable. The resource name of the billing setup associated with this
+   * proposal.
    * </pre>
    *
    * <code>optional string billing_setup = 26 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -61,7 +62,8 @@ public interface AccountBudgetProposalOrBuilder extends
   boolean hasBillingSetup();
   /**
    * <pre>
-   * Immutable. The resource name of the billing setup associated with this proposal.
+   * Immutable. The resource name of the billing setup associated with this
+   * proposal.
    * </pre>
    *
    * <code>optional string billing_setup = 26 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -70,7 +72,8 @@ public interface AccountBudgetProposalOrBuilder extends
   java.lang.String getBillingSetup();
   /**
    * <pre>
-   * Immutable. The resource name of the billing setup associated with this proposal.
+   * Immutable. The resource name of the billing setup associated with this
+   * proposal.
    * </pre>
    *
    * <code>optional string billing_setup = 26 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -81,8 +84,8 @@ public interface AccountBudgetProposalOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. The resource name of the account-level budget associated with this
-   * proposal.
+   * Immutable. The resource name of the account-level budget associated with
+   * this proposal.
    * </pre>
    *
    * <code>optional string account_budget = 27 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -91,8 +94,8 @@ public interface AccountBudgetProposalOrBuilder extends
   boolean hasAccountBudget();
   /**
    * <pre>
-   * Immutable. The resource name of the account-level budget associated with this
-   * proposal.
+   * Immutable. The resource name of the account-level budget associated with
+   * this proposal.
    * </pre>
    *
    * <code>optional string account_budget = 27 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -101,8 +104,8 @@ public interface AccountBudgetProposalOrBuilder extends
   java.lang.String getAccountBudget();
   /**
    * <pre>
-   * Immutable. The resource name of the account-level budget associated with this
-   * proposal.
+   * Immutable. The resource name of the account-level budget associated with
+   * this proposal.
    * </pre>
    *
    * <code>optional string account_budget = 27 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -113,8 +116,8 @@ public interface AccountBudgetProposalOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. The type of this proposal, for example, END to end the budget associated
-   * with this proposal.
+   * Immutable. The type of this proposal, for example, END to end the budget
+   * associated with this proposal.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -123,8 +126,8 @@ public interface AccountBudgetProposalOrBuilder extends
   int getProposalTypeValue();
   /**
    * <pre>
-   * Immutable. The type of this proposal, for example, END to end the budget associated
-   * with this proposal.
+   * Immutable. The type of this proposal, for example, END to end the budget
+   * associated with this proposal.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -213,8 +216,8 @@ public interface AccountBudgetProposalOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. A purchase order number is a value that enables the user to help them
-   * reference this budget in their monthly invoices.
+   * Immutable. A purchase order number is a value that enables the user to help
+   * them reference this budget in their monthly invoices.
    * </pre>
    *
    * <code>optional string proposed_purchase_order_number = 35 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -223,8 +226,8 @@ public interface AccountBudgetProposalOrBuilder extends
   boolean hasProposedPurchaseOrderNumber();
   /**
    * <pre>
-   * Immutable. A purchase order number is a value that enables the user to help them
-   * reference this budget in their monthly invoices.
+   * Immutable. A purchase order number is a value that enables the user to help
+   * them reference this budget in their monthly invoices.
    * </pre>
    *
    * <code>optional string proposed_purchase_order_number = 35 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -233,8 +236,8 @@ public interface AccountBudgetProposalOrBuilder extends
   java.lang.String getProposedPurchaseOrderNumber();
   /**
    * <pre>
-   * Immutable. A purchase order number is a value that enables the user to help them
-   * reference this budget in their monthly invoices.
+   * Immutable. A purchase order number is a value that enables the user to help
+   * them reference this budget in their monthly invoices.
    * </pre>
    *
    * <code>optional string proposed_purchase_order_number = 35 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -274,8 +277,8 @@ public interface AccountBudgetProposalOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The date time when this account-level budget proposal was created, which is
-   * not the same as its approval date time, if applicable.
+   * Output only. The date time when this account-level budget proposal was
+   * created, which is not the same as its approval date time, if applicable.
    * </pre>
    *
    * <code>optional string creation_date_time = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -284,8 +287,8 @@ public interface AccountBudgetProposalOrBuilder extends
   boolean hasCreationDateTime();
   /**
    * <pre>
-   * Output only. The date time when this account-level budget proposal was created, which is
-   * not the same as its approval date time, if applicable.
+   * Output only. The date time when this account-level budget proposal was
+   * created, which is not the same as its approval date time, if applicable.
    * </pre>
    *
    * <code>optional string creation_date_time = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -294,8 +297,8 @@ public interface AccountBudgetProposalOrBuilder extends
   java.lang.String getCreationDateTime();
   /**
    * <pre>
-   * Output only. The date time when this account-level budget proposal was created, which is
-   * not the same as its approval date time, if applicable.
+   * Output only. The date time when this account-level budget proposal was
+   * created, which is not the same as its approval date time, if applicable.
    * </pre>
    *
    * <code>optional string creation_date_time = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -306,7 +309,8 @@ public interface AccountBudgetProposalOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The date time when this account-level budget was approved, if applicable.
+   * Output only. The date time when this account-level budget was approved, if
+   * applicable.
    * </pre>
    *
    * <code>optional string approval_date_time = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -315,7 +319,8 @@ public interface AccountBudgetProposalOrBuilder extends
   boolean hasApprovalDateTime();
   /**
    * <pre>
-   * Output only. The date time when this account-level budget was approved, if applicable.
+   * Output only. The date time when this account-level budget was approved, if
+   * applicable.
    * </pre>
    *
    * <code>optional string approval_date_time = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -324,7 +329,8 @@ public interface AccountBudgetProposalOrBuilder extends
   java.lang.String getApprovalDateTime();
   /**
    * <pre>
-   * Output only. The date time when this account-level budget was approved, if applicable.
+   * Output only. The date time when this account-level budget was approved, if
+   * applicable.
    * </pre>
    *
    * <code>optional string approval_date_time = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -364,7 +370,8 @@ public interface AccountBudgetProposalOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. The proposed start date time as a well-defined type, for example, NOW.
+   * Immutable. The proposed start date time as a well-defined type, for
+   * example, NOW.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.TimeTypeEnum.TimeType proposed_start_time_type = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -373,7 +380,8 @@ public interface AccountBudgetProposalOrBuilder extends
   boolean hasProposedStartTimeType();
   /**
    * <pre>
-   * Immutable. The proposed start date time as a well-defined type, for example, NOW.
+   * Immutable. The proposed start date time as a well-defined type, for
+   * example, NOW.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.TimeTypeEnum.TimeType proposed_start_time_type = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -382,7 +390,8 @@ public interface AccountBudgetProposalOrBuilder extends
   int getProposedStartTimeTypeValue();
   /**
    * <pre>
-   * Immutable. The proposed start date time as a well-defined type, for example, NOW.
+   * Immutable. The proposed start date time as a well-defined type, for
+   * example, NOW.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.TimeTypeEnum.TimeType proposed_start_time_type = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -421,7 +430,8 @@ public interface AccountBudgetProposalOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. The proposed end date time as a well-defined type, for example, FOREVER.
+   * Immutable. The proposed end date time as a well-defined type, for
+   * example, FOREVER.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -430,7 +440,8 @@ public interface AccountBudgetProposalOrBuilder extends
   boolean hasProposedEndTimeType();
   /**
    * <pre>
-   * Immutable. The proposed end date time as a well-defined type, for example, FOREVER.
+   * Immutable. The proposed end date time as a well-defined type, for
+   * example, FOREVER.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -439,7 +450,8 @@ public interface AccountBudgetProposalOrBuilder extends
   int getProposedEndTimeTypeValue();
   /**
    * <pre>
-   * Immutable. The proposed end date time as a well-defined type, for example, FOREVER.
+   * Immutable. The proposed end date time as a well-defined type, for
+   * example, FOREVER.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -478,7 +490,8 @@ public interface AccountBudgetProposalOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The approved end date time as a well-defined type, for example, FOREVER.
+   * Output only. The approved end date time as a well-defined type, for
+   * example, FOREVER.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.TimeTypeEnum.TimeType approved_end_time_type = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -487,7 +500,8 @@ public interface AccountBudgetProposalOrBuilder extends
   boolean hasApprovedEndTimeType();
   /**
    * <pre>
-   * Output only. The approved end date time as a well-defined type, for example, FOREVER.
+   * Output only. The approved end date time as a well-defined type, for
+   * example, FOREVER.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.TimeTypeEnum.TimeType approved_end_time_type = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -496,7 +510,8 @@ public interface AccountBudgetProposalOrBuilder extends
   int getApprovedEndTimeTypeValue();
   /**
    * <pre>
-   * Output only. The approved end date time as a well-defined type, for example, FOREVER.
+   * Output only. The approved end date time as a well-defined type, for
+   * example, FOREVER.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.TimeTypeEnum.TimeType approved_end_time_type = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -506,8 +521,8 @@ public interface AccountBudgetProposalOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. The proposed spending limit in micros.  One million is equivalent to
-   * one unit.
+   * Immutable. The proposed spending limit in micros.  One million is
+   * equivalent to one unit.
    * </pre>
    *
    * <code>int64 proposed_spending_limit_micros = 33 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -516,8 +531,8 @@ public interface AccountBudgetProposalOrBuilder extends
   boolean hasProposedSpendingLimitMicros();
   /**
    * <pre>
-   * Immutable. The proposed spending limit in micros.  One million is equivalent to
-   * one unit.
+   * Immutable. The proposed spending limit in micros.  One million is
+   * equivalent to one unit.
    * </pre>
    *
    * <code>int64 proposed_spending_limit_micros = 33 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -527,8 +542,8 @@ public interface AccountBudgetProposalOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. The proposed spending limit as a well-defined type, for example,
-   * INFINITE.
+   * Immutable. The proposed spending limit as a well-defined type, for
+   * example, INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -537,8 +552,8 @@ public interface AccountBudgetProposalOrBuilder extends
   boolean hasProposedSpendingLimitType();
   /**
    * <pre>
-   * Immutable. The proposed spending limit as a well-defined type, for example,
-   * INFINITE.
+   * Immutable. The proposed spending limit as a well-defined type, for
+   * example, INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -547,8 +562,8 @@ public interface AccountBudgetProposalOrBuilder extends
   int getProposedSpendingLimitTypeValue();
   /**
    * <pre>
-   * Immutable. The proposed spending limit as a well-defined type, for example,
-   * INFINITE.
+   * Immutable. The proposed spending limit as a well-defined type, for
+   * example, INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -558,8 +573,8 @@ public interface AccountBudgetProposalOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The approved spending limit in micros.  One million is equivalent to
-   * one unit.
+   * Output only. The approved spending limit in micros.  One million is
+   * equivalent to one unit.
    * </pre>
    *
    * <code>int64 approved_spending_limit_micros = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -568,8 +583,8 @@ public interface AccountBudgetProposalOrBuilder extends
   boolean hasApprovedSpendingLimitMicros();
   /**
    * <pre>
-   * Output only. The approved spending limit in micros.  One million is equivalent to
-   * one unit.
+   * Output only. The approved spending limit in micros.  One million is
+   * equivalent to one unit.
    * </pre>
    *
    * <code>int64 approved_spending_limit_micros = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -579,8 +594,8 @@ public interface AccountBudgetProposalOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The approved spending limit as a well-defined type, for example,
-   * INFINITE.
+   * Output only. The approved spending limit as a well-defined type, for
+   * example, INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -589,8 +604,8 @@ public interface AccountBudgetProposalOrBuilder extends
   boolean hasApprovedSpendingLimitType();
   /**
    * <pre>
-   * Output only. The approved spending limit as a well-defined type, for example,
-   * INFINITE.
+   * Output only. The approved spending limit as a well-defined type, for
+   * example, INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -599,8 +614,8 @@ public interface AccountBudgetProposalOrBuilder extends
   int getApprovedSpendingLimitTypeValue();
   /**
    * <pre>
-   * Output only. The approved spending limit as a well-defined type, for example,
-   * INFINITE.
+   * Output only. The approved spending limit as a well-defined type, for
+   * example, INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

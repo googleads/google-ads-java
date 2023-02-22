@@ -80,7 +80,9 @@ public interface SmartCampaignSettingOrBuilder extends
 
   /**
    * <pre>
-   * The ISO-639-1 language code to advertise in.
+   * The language code to advertise in from the set of
+   * [supported language codes]
+   * (https://developers.google.com/google-ads/api/reference/data/codes-formats#languages).
    * </pre>
    *
    * <code>string advertising_language_code = 7;</code>
@@ -89,7 +91,9 @@ public interface SmartCampaignSettingOrBuilder extends
   java.lang.String getAdvertisingLanguageCode();
   /**
    * <pre>
-   * The ISO-639-1 language code to advertise in.
+   * The language code to advertise in from the set of
+   * [supported language codes]
+   * (https://developers.google.com/google-ads/api/reference/data/codes-formats#languages).
    * </pre>
    *
    * <code>string advertising_language_code = 7;</code>

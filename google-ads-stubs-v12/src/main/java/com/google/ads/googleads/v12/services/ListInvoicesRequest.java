@@ -53,7 +53,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CUSTOMER_ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object customerId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object customerId_ = "";
   /**
    * <pre>
    * Required. The ID of the customer to fetch invoices for.
@@ -99,7 +100,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BILLING_SETUP_FIELD_NUMBER = 2;
-  private volatile java.lang.Object billingSetup_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object billingSetup_ = "";
   /**
    * <pre>
    * Required. The billing setup resource name of the requested invoices.
@@ -147,7 +149,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ISSUE_YEAR_FIELD_NUMBER = 3;
-  private volatile java.lang.Object issueYear_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object issueYear_ = "";
   /**
    * <pre>
    * Required. The issue year to retrieve invoices, in yyyy format. Only
@@ -195,7 +198,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ISSUE_MONTH_FIELD_NUMBER = 4;
-  private int issueMonth_;
+  private int issueMonth_ = 0;
   /**
    * <pre>
    * Required. The issue month to retrieve invoices.
@@ -216,8 +219,7 @@ private static final long serialVersionUID = 0L;
    * @return The issueMonth.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.MonthOfYearEnum.MonthOfYear getIssueMonth() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.MonthOfYearEnum.MonthOfYear result = com.google.ads.googleads.v12.enums.MonthOfYearEnum.MonthOfYear.valueOf(issueMonth_);
+    com.google.ads.googleads.v12.enums.MonthOfYearEnum.MonthOfYear result = com.google.ads.googleads.v12.enums.MonthOfYearEnum.MonthOfYear.forNumber(issueMonth_);
     return result == null ? com.google.ads.googleads.v12.enums.MonthOfYearEnum.MonthOfYear.UNRECOGNIZED : result;
   }
 
@@ -443,14 +445,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       customerId_ = "";
-
       billingSetup_ = "";
-
       issueYear_ = "";
-
       issueMonth_ = 0;
-
       return this;
     }
 
@@ -477,12 +476,25 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.ListInvoicesRequest buildPartial() {
       com.google.ads.googleads.v12.services.ListInvoicesRequest result = new com.google.ads.googleads.v12.services.ListInvoicesRequest(this);
-      result.customerId_ = customerId_;
-      result.billingSetup_ = billingSetup_;
-      result.issueYear_ = issueYear_;
-      result.issueMonth_ = issueMonth_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.ListInvoicesRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.customerId_ = customerId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.billingSetup_ = billingSetup_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.issueYear_ = issueYear_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.issueMonth_ = issueMonth_;
+      }
     }
 
     @java.lang.Override
@@ -531,14 +543,17 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.services.ListInvoicesRequest.getDefaultInstance()) return this;
       if (!other.getCustomerId().isEmpty()) {
         customerId_ = other.customerId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getBillingSetup().isEmpty()) {
         billingSetup_ = other.billingSetup_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getIssueYear().isEmpty()) {
         issueYear_ = other.issueYear_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.issueMonth_ != 0) {
@@ -572,22 +587,22 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               customerId_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               billingSetup_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
               issueYear_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 32: {
               issueMonth_ = input.readEnum();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 32
             default: {
@@ -605,6 +620,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object customerId_ = "";
     /**
@@ -659,11 +675,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       customerId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -676,8 +690,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCustomerId() {
-      
       customerId_ = getDefaultInstance().getCustomerId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -692,12 +706,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       customerId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -758,11 +770,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBillingSetup(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       billingSetup_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -776,8 +786,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBillingSetup() {
-      
       billingSetup_ = getDefaultInstance().getBillingSetup();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -793,12 +803,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBillingSetupBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       billingSetup_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -859,11 +867,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setIssueYear(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       issueYear_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -877,8 +883,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIssueYear() {
-      
       issueYear_ = getDefaultInstance().getIssueYear();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -894,12 +900,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setIssueYearBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       issueYear_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -926,8 +930,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIssueMonthValue(int value) {
-      
       issueMonth_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -941,8 +945,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.MonthOfYearEnum.MonthOfYear getIssueMonth() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.MonthOfYearEnum.MonthOfYear result = com.google.ads.googleads.v12.enums.MonthOfYearEnum.MonthOfYear.valueOf(issueMonth_);
+      com.google.ads.googleads.v12.enums.MonthOfYearEnum.MonthOfYear result = com.google.ads.googleads.v12.enums.MonthOfYearEnum.MonthOfYear.forNumber(issueMonth_);
       return result == null ? com.google.ads.googleads.v12.enums.MonthOfYearEnum.MonthOfYear.UNRECOGNIZED : result;
     }
     /**
@@ -958,7 +961,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000008;
       issueMonth_ = value.getNumber();
       onChanged();
       return this;
@@ -972,7 +975,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIssueMonth() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       issueMonth_ = 0;
       onChanged();
       return this;

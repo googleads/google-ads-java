@@ -50,7 +50,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FIELD_TYPE_FIELD_NUMBER = 1;
-  private int fieldType_;
+  private int fieldType_ = 0;
   /**
    * <pre>
    * Output only. Field type for lead form fields.
@@ -71,13 +71,13 @@ private static final long serialVersionUID = 0L;
    * @return The fieldType.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType getFieldType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType result = com.google.ads.googleads.v11.enums.LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType.valueOf(fieldType_);
+    com.google.ads.googleads.v11.enums.LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType result = com.google.ads.googleads.v11.enums.LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType.forNumber(fieldType_);
     return result == null ? com.google.ads.googleads.v11.enums.LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType.UNRECOGNIZED : result;
   }
 
   public static final int FIELD_VALUE_FIELD_NUMBER = 2;
-  private volatile java.lang.Object fieldValue_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object fieldValue_ = "";
   /**
    * <pre>
    * Output only. Field value for lead form fields.
@@ -323,10 +323,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       fieldType_ = 0;
-
       fieldValue_ = "";
-
       return this;
     }
 
@@ -353,10 +352,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.LeadFormSubmissionField buildPartial() {
       com.google.ads.googleads.v11.resources.LeadFormSubmissionField result = new com.google.ads.googleads.v11.resources.LeadFormSubmissionField(this);
-      result.fieldType_ = fieldType_;
-      result.fieldValue_ = fieldValue_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.LeadFormSubmissionField result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.fieldType_ = fieldType_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.fieldValue_ = fieldValue_;
+      }
     }
 
     @java.lang.Override
@@ -408,6 +416,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getFieldValue().isEmpty()) {
         fieldValue_ = other.fieldValue_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -438,12 +447,12 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               fieldType_ = input.readEnum();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             case 18: {
               fieldValue_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             default: {
@@ -461,6 +470,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private int fieldType_ = 0;
     /**
@@ -484,8 +494,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFieldTypeValue(int value) {
-      
       fieldType_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -499,8 +509,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType getFieldType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType result = com.google.ads.googleads.v11.enums.LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType.valueOf(fieldType_);
+      com.google.ads.googleads.v11.enums.LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType result = com.google.ads.googleads.v11.enums.LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType.forNumber(fieldType_);
       return result == null ? com.google.ads.googleads.v11.enums.LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType.UNRECOGNIZED : result;
     }
     /**
@@ -516,7 +525,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       fieldType_ = value.getNumber();
       onChanged();
       return this;
@@ -530,7 +539,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFieldType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       fieldType_ = 0;
       onChanged();
       return this;
@@ -589,11 +598,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFieldValue(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       fieldValue_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -606,8 +613,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFieldValue() {
-      
       fieldValue_ = getDefaultInstance().getFieldValue();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -622,12 +629,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFieldValueBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       fieldValue_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

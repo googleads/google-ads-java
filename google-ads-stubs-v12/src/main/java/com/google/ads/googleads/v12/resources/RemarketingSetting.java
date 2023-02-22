@@ -50,7 +50,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int GOOGLE_GLOBAL_SITE_TAG_FIELD_NUMBER = 2;
-  private volatile java.lang.Object googleGlobalSiteTag_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object googleGlobalSiteTag_ = "";
   /**
    * <pre>
    * Output only. The Google tag.
@@ -303,8 +304,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       googleGlobalSiteTag_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -331,15 +332,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.RemarketingSetting buildPartial() {
       com.google.ads.googleads.v12.resources.RemarketingSetting result = new com.google.ads.googleads.v12.resources.RemarketingSetting(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.resources.RemarketingSetting result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.googleGlobalSiteTag_ = googleGlobalSiteTag_;
         to_bitField0_ |= 0x00000001;
       }
-      result.googleGlobalSiteTag_ = googleGlobalSiteTag_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -387,8 +392,8 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v12.resources.RemarketingSetting other) {
       if (other == com.google.ads.googleads.v12.resources.RemarketingSetting.getDefaultInstance()) return this;
       if (other.hasGoogleGlobalSiteTag()) {
-        bitField0_ |= 0x00000001;
         googleGlobalSiteTag_ = other.googleGlobalSiteTag_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -503,11 +508,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setGoogleGlobalSiteTag(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       googleGlobalSiteTag_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -520,8 +523,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGoogleGlobalSiteTag() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       googleGlobalSiteTag_ = getDefaultInstance().getGoogleGlobalSiteTag();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -536,12 +539,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setGoogleGlobalSiteTagBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       googleGlobalSiteTag_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

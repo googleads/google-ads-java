@@ -70,7 +70,10 @@ import org.threeten.bp.Duration;
  * audienceServiceSettingsBuilder
  *     .mutateAudiencesSettings()
  *     .setRetrySettings(
- *         audienceServiceSettingsBuilder.mutateAudiencesSettings().getRetrySettings().toBuilder()
+ *         audienceServiceSettingsBuilder
+ *             .mutateAudiencesSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
  * AudienceServiceStubSettings audienceServiceSettings = audienceServiceSettingsBuilder.build();

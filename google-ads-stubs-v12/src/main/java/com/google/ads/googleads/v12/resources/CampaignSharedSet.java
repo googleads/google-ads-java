@@ -54,7 +54,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Immutable. The resource name of the campaign shared set.
@@ -104,7 +105,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CAMPAIGN_FIELD_NUMBER = 5;
-  private volatile java.lang.Object campaign_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object campaign_ = "";
   /**
    * <pre>
    * Immutable. The campaign to which the campaign shared set belongs.
@@ -162,15 +164,16 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int SHARED_SET_FIELD_NUMBER = 6;
-  private volatile java.lang.Object sharedSet_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object sharedSet_ = "";
   /**
    * <pre>
-   * Immutable. The shared set associated with the campaign. This may be a negative keyword
-   * shared set of another customer. This customer should be a manager of the
-   * other customer, otherwise the campaign shared set will exist but have no
-   * serving effect. Only negative keyword shared sets can be associated with
-   * Shopping campaigns. Only negative placement shared sets can be associated
-   * with Display mobile app campaigns.
+   * Immutable. The shared set associated with the campaign. This may be a
+   * negative keyword shared set of another customer. This customer should be a
+   * manager of the other customer, otherwise the campaign shared set will exist
+   * but have no serving effect. Only negative keyword shared sets can be
+   * associated with Shopping campaigns. Only negative placement shared sets can
+   * be associated with Display mobile app campaigns.
    * </pre>
    *
    * <code>optional string shared_set = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -182,12 +185,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. The shared set associated with the campaign. This may be a negative keyword
-   * shared set of another customer. This customer should be a manager of the
-   * other customer, otherwise the campaign shared set will exist but have no
-   * serving effect. Only negative keyword shared sets can be associated with
-   * Shopping campaigns. Only negative placement shared sets can be associated
-   * with Display mobile app campaigns.
+   * Immutable. The shared set associated with the campaign. This may be a
+   * negative keyword shared set of another customer. This customer should be a
+   * manager of the other customer, otherwise the campaign shared set will exist
+   * but have no serving effect. Only negative keyword shared sets can be
+   * associated with Shopping campaigns. Only negative placement shared sets can
+   * be associated with Display mobile app campaigns.
    * </pre>
    *
    * <code>optional string shared_set = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -208,12 +211,12 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. The shared set associated with the campaign. This may be a negative keyword
-   * shared set of another customer. This customer should be a manager of the
-   * other customer, otherwise the campaign shared set will exist but have no
-   * serving effect. Only negative keyword shared sets can be associated with
-   * Shopping campaigns. Only negative placement shared sets can be associated
-   * with Display mobile app campaigns.
+   * Immutable. The shared set associated with the campaign. This may be a
+   * negative keyword shared set of another customer. This customer should be a
+   * manager of the other customer, otherwise the campaign shared set will exist
+   * but have no serving effect. Only negative keyword shared sets can be
+   * associated with Shopping campaigns. Only negative placement shared sets can
+   * be associated with Display mobile app campaigns.
    * </pre>
    *
    * <code>optional string shared_set = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -235,7 +238,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STATUS_FIELD_NUMBER = 2;
-  private int status_;
+  private int status_ = 0;
   /**
    * <pre>
    * Output only. The status of this campaign shared set. Read only.
@@ -256,8 +259,7 @@ private static final long serialVersionUID = 0L;
    * @return The status.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus getStatus() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus result = com.google.ads.googleads.v12.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus.valueOf(status_);
+    com.google.ads.googleads.v12.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus result = com.google.ads.googleads.v12.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus.forNumber(status_);
     return result == null ? com.google.ads.googleads.v12.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus.UNRECOGNIZED : result;
   }
 
@@ -493,14 +495,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       campaign_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       sharedSet_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       status_ = 0;
-
       return this;
     }
 
@@ -527,21 +526,29 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.CampaignSharedSet buildPartial() {
       com.google.ads.googleads.v12.resources.CampaignSharedSet result = new com.google.ads.googleads.v12.resources.CampaignSharedSet(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        to_bitField0_ |= 0x00000001;
-      }
-      result.campaign_ = campaign_;
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        to_bitField0_ |= 0x00000002;
-      }
-      result.sharedSet_ = sharedSet_;
-      result.status_ = status_;
-      result.bitField0_ = to_bitField0_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.resources.CampaignSharedSet result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.campaign_ = campaign_;
+        to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.sharedSet_ = sharedSet_;
+        to_bitField0_ |= 0x00000002;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.status_ = status_;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -590,16 +597,17 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.resources.CampaignSharedSet.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasCampaign()) {
-        bitField0_ |= 0x00000001;
         campaign_ = other.campaign_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasSharedSet()) {
-        bitField0_ |= 0x00000002;
         sharedSet_ = other.sharedSet_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.status_ != 0) {
@@ -633,22 +641,22 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 16: {
               status_ = input.readEnum();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 16
             case 42: {
               campaign_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 42
             case 50: {
               sharedSet_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 50
             default: {
@@ -727,11 +735,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -746,8 +752,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -764,12 +770,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -784,7 +788,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the campaign field is set.
      */
     public boolean hasCampaign() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -838,11 +842,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaign(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       campaign_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -855,8 +857,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCampaign() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       campaign_ = getDefaultInstance().getCampaign();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -871,12 +873,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaignBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       campaign_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -884,28 +884,28 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object sharedSet_ = "";
     /**
      * <pre>
-     * Immutable. The shared set associated with the campaign. This may be a negative keyword
-     * shared set of another customer. This customer should be a manager of the
-     * other customer, otherwise the campaign shared set will exist but have no
-     * serving effect. Only negative keyword shared sets can be associated with
-     * Shopping campaigns. Only negative placement shared sets can be associated
-     * with Display mobile app campaigns.
+     * Immutable. The shared set associated with the campaign. This may be a
+     * negative keyword shared set of another customer. This customer should be a
+     * manager of the other customer, otherwise the campaign shared set will exist
+     * but have no serving effect. Only negative keyword shared sets can be
+     * associated with Shopping campaigns. Only negative placement shared sets can
+     * be associated with Display mobile app campaigns.
      * </pre>
      *
      * <code>optional string shared_set = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the sharedSet field is set.
      */
     public boolean hasSharedSet() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
-     * Immutable. The shared set associated with the campaign. This may be a negative keyword
-     * shared set of another customer. This customer should be a manager of the
-     * other customer, otherwise the campaign shared set will exist but have no
-     * serving effect. Only negative keyword shared sets can be associated with
-     * Shopping campaigns. Only negative placement shared sets can be associated
-     * with Display mobile app campaigns.
+     * Immutable. The shared set associated with the campaign. This may be a
+     * negative keyword shared set of another customer. This customer should be a
+     * manager of the other customer, otherwise the campaign shared set will exist
+     * but have no serving effect. Only negative keyword shared sets can be
+     * associated with Shopping campaigns. Only negative placement shared sets can
+     * be associated with Display mobile app campaigns.
      * </pre>
      *
      * <code>optional string shared_set = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -925,12 +925,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The shared set associated with the campaign. This may be a negative keyword
-     * shared set of another customer. This customer should be a manager of the
-     * other customer, otherwise the campaign shared set will exist but have no
-     * serving effect. Only negative keyword shared sets can be associated with
-     * Shopping campaigns. Only negative placement shared sets can be associated
-     * with Display mobile app campaigns.
+     * Immutable. The shared set associated with the campaign. This may be a
+     * negative keyword shared set of another customer. This customer should be a
+     * manager of the other customer, otherwise the campaign shared set will exist
+     * but have no serving effect. Only negative keyword shared sets can be
+     * associated with Shopping campaigns. Only negative placement shared sets can
+     * be associated with Display mobile app campaigns.
      * </pre>
      *
      * <code>optional string shared_set = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -951,12 +951,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The shared set associated with the campaign. This may be a negative keyword
-     * shared set of another customer. This customer should be a manager of the
-     * other customer, otherwise the campaign shared set will exist but have no
-     * serving effect. Only negative keyword shared sets can be associated with
-     * Shopping campaigns. Only negative placement shared sets can be associated
-     * with Display mobile app campaigns.
+     * Immutable. The shared set associated with the campaign. This may be a
+     * negative keyword shared set of another customer. This customer should be a
+     * manager of the other customer, otherwise the campaign shared set will exist
+     * but have no serving effect. Only negative keyword shared sets can be
+     * associated with Shopping campaigns. Only negative placement shared sets can
+     * be associated with Display mobile app campaigns.
      * </pre>
      *
      * <code>optional string shared_set = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -965,41 +965,39 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSharedSet(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       sharedSet_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Immutable. The shared set associated with the campaign. This may be a negative keyword
-     * shared set of another customer. This customer should be a manager of the
-     * other customer, otherwise the campaign shared set will exist but have no
-     * serving effect. Only negative keyword shared sets can be associated with
-     * Shopping campaigns. Only negative placement shared sets can be associated
-     * with Display mobile app campaigns.
+     * Immutable. The shared set associated with the campaign. This may be a
+     * negative keyword shared set of another customer. This customer should be a
+     * manager of the other customer, otherwise the campaign shared set will exist
+     * but have no serving effect. Only negative keyword shared sets can be
+     * associated with Shopping campaigns. Only negative placement shared sets can
+     * be associated with Display mobile app campaigns.
      * </pre>
      *
      * <code>optional string shared_set = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearSharedSet() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       sharedSet_ = getDefaultInstance().getSharedSet();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Immutable. The shared set associated with the campaign. This may be a negative keyword
-     * shared set of another customer. This customer should be a manager of the
-     * other customer, otherwise the campaign shared set will exist but have no
-     * serving effect. Only negative keyword shared sets can be associated with
-     * Shopping campaigns. Only negative placement shared sets can be associated
-     * with Display mobile app campaigns.
+     * Immutable. The shared set associated with the campaign. This may be a
+     * negative keyword shared set of another customer. This customer should be a
+     * manager of the other customer, otherwise the campaign shared set will exist
+     * but have no serving effect. Only negative keyword shared sets can be
+     * associated with Shopping campaigns. Only negative placement shared sets can
+     * be associated with Display mobile app campaigns.
      * </pre>
      *
      * <code>optional string shared_set = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -1008,12 +1006,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSharedSetBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       sharedSet_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1040,8 +1036,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
-      
       status_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1055,8 +1051,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus getStatus() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus result = com.google.ads.googleads.v12.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus.valueOf(status_);
+      com.google.ads.googleads.v12.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus result = com.google.ads.googleads.v12.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus.forNumber(status_);
       return result == null ? com.google.ads.googleads.v12.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus.UNRECOGNIZED : result;
     }
     /**
@@ -1072,7 +1067,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000008;
       status_ = value.getNumber();
       onChanged();
       return this;
@@ -1086,7 +1081,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       status_ = 0;
       onChanged();
       return this;

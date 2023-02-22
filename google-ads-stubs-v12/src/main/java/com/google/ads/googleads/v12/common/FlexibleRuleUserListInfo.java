@@ -51,7 +51,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int INCLUSIVE_RULE_OPERATOR_FIELD_NUMBER = 1;
-  private int inclusiveRuleOperator_;
+  private int inclusiveRuleOperator_ = 0;
   /**
    * <pre>
    * Operator that defines how the inclusive operands are combined.
@@ -72,12 +72,12 @@ private static final long serialVersionUID = 0L;
    * @return The inclusiveRuleOperator.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.UserListFlexibleRuleOperatorEnum.UserListFlexibleRuleOperator getInclusiveRuleOperator() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.UserListFlexibleRuleOperatorEnum.UserListFlexibleRuleOperator result = com.google.ads.googleads.v12.enums.UserListFlexibleRuleOperatorEnum.UserListFlexibleRuleOperator.valueOf(inclusiveRuleOperator_);
+    com.google.ads.googleads.v12.enums.UserListFlexibleRuleOperatorEnum.UserListFlexibleRuleOperator result = com.google.ads.googleads.v12.enums.UserListFlexibleRuleOperatorEnum.UserListFlexibleRuleOperator.forNumber(inclusiveRuleOperator_);
     return result == null ? com.google.ads.googleads.v12.enums.UserListFlexibleRuleOperatorEnum.UserListFlexibleRuleOperator.UNRECOGNIZED : result;
   }
 
   public static final int INCLUSIVE_OPERANDS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.FlexibleRuleOperandInfo> inclusiveOperands_;
   /**
    * <pre>
@@ -148,6 +148,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EXCLUSIVE_OPERANDS_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.FlexibleRuleOperandInfo> exclusiveOperands_;
   /**
    * <pre>
@@ -429,22 +430,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       inclusiveRuleOperator_ = 0;
-
       if (inclusiveOperandsBuilder_ == null) {
         inclusiveOperands_ = java.util.Collections.emptyList();
       } else {
         inclusiveOperands_ = null;
         inclusiveOperandsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       if (exclusiveOperandsBuilder_ == null) {
         exclusiveOperands_ = java.util.Collections.emptyList();
       } else {
         exclusiveOperands_ = null;
         exclusiveOperandsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -471,28 +472,38 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.FlexibleRuleUserListInfo buildPartial() {
       com.google.ads.googleads.v12.common.FlexibleRuleUserListInfo result = new com.google.ads.googleads.v12.common.FlexibleRuleUserListInfo(this);
-      int from_bitField0_ = bitField0_;
-      result.inclusiveRuleOperator_ = inclusiveRuleOperator_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.common.FlexibleRuleUserListInfo result) {
       if (inclusiveOperandsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           inclusiveOperands_ = java.util.Collections.unmodifiableList(inclusiveOperands_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.inclusiveOperands_ = inclusiveOperands_;
       } else {
         result.inclusiveOperands_ = inclusiveOperandsBuilder_.build();
       }
       if (exclusiveOperandsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           exclusiveOperands_ = java.util.Collections.unmodifiableList(exclusiveOperands_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.exclusiveOperands_ = exclusiveOperands_;
       } else {
         result.exclusiveOperands_ = exclusiveOperandsBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.FlexibleRuleUserListInfo result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.inclusiveRuleOperator_ = inclusiveRuleOperator_;
+      }
     }
 
     @java.lang.Override
@@ -546,7 +557,7 @@ private static final long serialVersionUID = 0L;
         if (!other.inclusiveOperands_.isEmpty()) {
           if (inclusiveOperands_.isEmpty()) {
             inclusiveOperands_ = other.inclusiveOperands_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureInclusiveOperandsIsMutable();
             inclusiveOperands_.addAll(other.inclusiveOperands_);
@@ -559,7 +570,7 @@ private static final long serialVersionUID = 0L;
             inclusiveOperandsBuilder_.dispose();
             inclusiveOperandsBuilder_ = null;
             inclusiveOperands_ = other.inclusiveOperands_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
             inclusiveOperandsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getInclusiveOperandsFieldBuilder() : null;
@@ -572,7 +583,7 @@ private static final long serialVersionUID = 0L;
         if (!other.exclusiveOperands_.isEmpty()) {
           if (exclusiveOperands_.isEmpty()) {
             exclusiveOperands_ = other.exclusiveOperands_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureExclusiveOperandsIsMutable();
             exclusiveOperands_.addAll(other.exclusiveOperands_);
@@ -585,7 +596,7 @@ private static final long serialVersionUID = 0L;
             exclusiveOperandsBuilder_.dispose();
             exclusiveOperandsBuilder_ = null;
             exclusiveOperands_ = other.exclusiveOperands_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000004);
             exclusiveOperandsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getExclusiveOperandsFieldBuilder() : null;
@@ -622,7 +633,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               inclusiveRuleOperator_ = input.readEnum();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             case 18: {
@@ -690,8 +701,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setInclusiveRuleOperatorValue(int value) {
-      
       inclusiveRuleOperator_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -705,8 +716,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.UserListFlexibleRuleOperatorEnum.UserListFlexibleRuleOperator getInclusiveRuleOperator() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.UserListFlexibleRuleOperatorEnum.UserListFlexibleRuleOperator result = com.google.ads.googleads.v12.enums.UserListFlexibleRuleOperatorEnum.UserListFlexibleRuleOperator.valueOf(inclusiveRuleOperator_);
+      com.google.ads.googleads.v12.enums.UserListFlexibleRuleOperatorEnum.UserListFlexibleRuleOperator result = com.google.ads.googleads.v12.enums.UserListFlexibleRuleOperatorEnum.UserListFlexibleRuleOperator.forNumber(inclusiveRuleOperator_);
       return result == null ? com.google.ads.googleads.v12.enums.UserListFlexibleRuleOperatorEnum.UserListFlexibleRuleOperator.UNRECOGNIZED : result;
     }
     /**
@@ -722,7 +732,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       inclusiveRuleOperator_ = value.getNumber();
       onChanged();
       return this;
@@ -736,7 +746,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearInclusiveRuleOperator() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       inclusiveRuleOperator_ = 0;
       onChanged();
       return this;
@@ -745,9 +755,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v12.common.FlexibleRuleOperandInfo> inclusiveOperands_ =
       java.util.Collections.emptyList();
     private void ensureInclusiveOperandsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         inclusiveOperands_ = new java.util.ArrayList<com.google.ads.googleads.v12.common.FlexibleRuleOperandInfo>(inclusiveOperands_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -963,7 +973,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearInclusiveOperands() {
       if (inclusiveOperandsBuilder_ == null) {
         inclusiveOperands_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         inclusiveOperandsBuilder_.clear();
@@ -1082,7 +1092,7 @@ private static final long serialVersionUID = 0L;
         inclusiveOperandsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v12.common.FlexibleRuleOperandInfo, com.google.ads.googleads.v12.common.FlexibleRuleOperandInfo.Builder, com.google.ads.googleads.v12.common.FlexibleRuleOperandInfoOrBuilder>(
                 inclusiveOperands_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         inclusiveOperands_ = null;
@@ -1093,9 +1103,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v12.common.FlexibleRuleOperandInfo> exclusiveOperands_ =
       java.util.Collections.emptyList();
     private void ensureExclusiveOperandsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         exclusiveOperands_ = new java.util.ArrayList<com.google.ads.googleads.v12.common.FlexibleRuleOperandInfo>(exclusiveOperands_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
        }
     }
 
@@ -1300,7 +1310,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearExclusiveOperands() {
       if (exclusiveOperandsBuilder_ == null) {
         exclusiveOperands_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
       } else {
         exclusiveOperandsBuilder_.clear();
@@ -1412,7 +1422,7 @@ private static final long serialVersionUID = 0L;
         exclusiveOperandsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v12.common.FlexibleRuleOperandInfo, com.google.ads.googleads.v12.common.FlexibleRuleOperandInfo.Builder, com.google.ads.googleads.v12.common.FlexibleRuleOperandInfoOrBuilder>(
                 exclusiveOperands_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
         exclusiveOperands_ = null;

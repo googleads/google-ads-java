@@ -50,7 +50,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CAMPAIGN_EXPERIMENT_FIELD_NUMBER = 1;
-  private volatile java.lang.Object campaignExperiment_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object campaignExperiment_ = "";
   /**
    * <pre>
    * Resource name of campaign experiment created.
@@ -287,8 +288,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       campaignExperiment_ = "";
-
       return this;
     }
 
@@ -315,9 +316,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.CreateCampaignExperimentMetadata buildPartial() {
       com.google.ads.googleads.v11.services.CreateCampaignExperimentMetadata result = new com.google.ads.googleads.v11.services.CreateCampaignExperimentMetadata(this);
-      result.campaignExperiment_ = campaignExperiment_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.CreateCampaignExperimentMetadata result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.campaignExperiment_ = campaignExperiment_;
+      }
     }
 
     @java.lang.Override
@@ -366,6 +374,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.services.CreateCampaignExperimentMetadata.getDefaultInstance()) return this;
       if (!other.getCampaignExperiment().isEmpty()) {
         campaignExperiment_ = other.campaignExperiment_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -396,7 +405,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               campaignExperiment_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             default: {
@@ -414,6 +423,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object campaignExperiment_ = "";
     /**
@@ -468,11 +478,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaignExperiment(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       campaignExperiment_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -485,8 +493,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCampaignExperiment() {
-      
       campaignExperiment_ = getDefaultInstance().getCampaignExperiment();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -501,12 +509,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaignExperimentBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       campaignExperiment_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

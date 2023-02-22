@@ -50,7 +50,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int START_DATE_FIELD_NUMBER = 1;
-  private volatile java.lang.Object startDate_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object startDate_ = "";
   /**
    * <pre>
    * The start date, in yyyy-mm-dd format. This date is inclusive.
@@ -142,7 +143,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.services.ForecastMetricsOrBuilder getForecastOrBuilder() {
-    return getForecast();
+    return forecast_ == null ? com.google.ads.googleads.v12.services.ForecastMetrics.getDefaultInstance() : forecast_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -357,12 +358,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       startDate_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
-      if (forecastBuilder_ == null) {
-        forecast_ = null;
-      } else {
-        forecast_ = null;
+      forecast_ = null;
+      if (forecastBuilder_ != null) {
+        forecastBuilder_.dispose();
         forecastBuilder_ = null;
       }
       return this;
@@ -391,20 +391,24 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.KeywordPlanWeeklyForecast buildPartial() {
       com.google.ads.googleads.v12.services.KeywordPlanWeeklyForecast result = new com.google.ads.googleads.v12.services.KeywordPlanWeeklyForecast(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.KeywordPlanWeeklyForecast result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.startDate_ = startDate_;
         to_bitField0_ |= 0x00000001;
       }
-      result.startDate_ = startDate_;
-      if (forecastBuilder_ == null) {
-        result.forecast_ = forecast_;
-      } else {
-        result.forecast_ = forecastBuilder_.build();
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.forecast_ = forecastBuilder_ == null
+            ? forecast_
+            : forecastBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -452,8 +456,8 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v12.services.KeywordPlanWeeklyForecast other) {
       if (other == com.google.ads.googleads.v12.services.KeywordPlanWeeklyForecast.getDefaultInstance()) return this;
       if (other.hasStartDate()) {
-        bitField0_ |= 0x00000001;
         startDate_ = other.startDate_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasForecast()) {
@@ -494,7 +498,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getForecastFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             default: {
@@ -578,11 +582,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStartDate(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       startDate_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -595,8 +597,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStartDate() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       startDate_ = getDefaultInstance().getStartDate();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -611,12 +613,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStartDateBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       startDate_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -633,7 +633,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the forecast field is set.
      */
     public boolean hasForecast() {
-      return forecastBuilder_ != null || forecast_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -663,11 +663,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         forecast_ = value;
-        onChanged();
       } else {
         forecastBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -681,11 +681,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.services.ForecastMetrics.Builder builderForValue) {
       if (forecastBuilder_ == null) {
         forecast_ = builderForValue.build();
-        onChanged();
       } else {
         forecastBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -697,17 +697,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeForecast(com.google.ads.googleads.v12.services.ForecastMetrics value) {
       if (forecastBuilder_ == null) {
-        if (forecast_ != null) {
-          forecast_ =
-            com.google.ads.googleads.v12.services.ForecastMetrics.newBuilder(forecast_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          forecast_ != null &&
+          forecast_ != com.google.ads.googleads.v12.services.ForecastMetrics.getDefaultInstance()) {
+          getForecastBuilder().mergeFrom(value);
         } else {
           forecast_ = value;
         }
-        onChanged();
       } else {
         forecastBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -718,14 +719,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.services.ForecastMetrics forecast = 2;</code>
      */
     public Builder clearForecast() {
-      if (forecastBuilder_ == null) {
-        forecast_ = null;
-        onChanged();
-      } else {
-        forecast_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      forecast_ = null;
+      if (forecastBuilder_ != null) {
+        forecastBuilder_.dispose();
         forecastBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -736,7 +736,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.services.ForecastMetrics forecast = 2;</code>
      */
     public com.google.ads.googleads.v12.services.ForecastMetrics.Builder getForecastBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getForecastFieldBuilder().getBuilder();
     }

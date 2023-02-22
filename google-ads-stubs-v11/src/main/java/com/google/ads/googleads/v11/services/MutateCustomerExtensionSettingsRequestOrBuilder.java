@@ -9,8 +9,8 @@ public interface MutateCustomerExtensionSettingsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The ID of the customer whose customer extension settings are being
-   * modified.
+   * Required. The ID of the customer whose customer extension settings are
+   * being modified.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -19,8 +19,8 @@ public interface MutateCustomerExtensionSettingsRequestOrBuilder extends
   java.lang.String getCustomerId();
   /**
    * <pre>
-   * Required. The ID of the customer whose customer extension settings are being
-   * modified.
+   * Required. The ID of the customer whose customer extension settings are
+   * being modified.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -31,8 +31,8 @@ public interface MutateCustomerExtensionSettingsRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The list of operations to perform on individual customer extension
-   * settings.
+   * Required. The list of operations to perform on individual customer
+   * extension settings.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.CustomerExtensionSettingOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -41,8 +41,8 @@ public interface MutateCustomerExtensionSettingsRequestOrBuilder extends
       getOperationsList();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual customer extension
-   * settings.
+   * Required. The list of operations to perform on individual customer
+   * extension settings.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.CustomerExtensionSettingOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -50,8 +50,8 @@ public interface MutateCustomerExtensionSettingsRequestOrBuilder extends
   com.google.ads.googleads.v11.services.CustomerExtensionSettingOperation getOperations(int index);
   /**
    * <pre>
-   * Required. The list of operations to perform on individual customer extension
-   * settings.
+   * Required. The list of operations to perform on individual customer
+   * extension settings.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.CustomerExtensionSettingOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -59,8 +59,8 @@ public interface MutateCustomerExtensionSettingsRequestOrBuilder extends
   int getOperationsCount();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual customer extension
-   * settings.
+   * Required. The list of operations to perform on individual customer
+   * extension settings.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.CustomerExtensionSettingOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -69,8 +69,8 @@ public interface MutateCustomerExtensionSettingsRequestOrBuilder extends
       getOperationsOrBuilderList();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual customer extension
-   * settings.
+   * Required. The list of operations to perform on individual customer
+   * extension settings.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.services.CustomerExtensionSettingOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>

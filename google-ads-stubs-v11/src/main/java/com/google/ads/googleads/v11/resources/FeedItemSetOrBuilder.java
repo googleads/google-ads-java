@@ -33,8 +33,8 @@ public interface FeedItemSetOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. The resource name of the feed containing the feed items in the set.
-   * Immutable. Required.
+   * Immutable. The resource name of the feed containing the feed items in the
+   * set. Immutable. Required.
    * </pre>
    *
    * <code>string feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -43,8 +43,8 @@ public interface FeedItemSetOrBuilder extends
   java.lang.String getFeed();
   /**
    * <pre>
-   * Immutable. The resource name of the feed containing the feed items in the set.
-   * Immutable. Required.
+   * Immutable. The resource name of the feed containing the feed items in the
+   * set. Immutable. Required.
    * </pre>
    *
    * <code>string feed = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>

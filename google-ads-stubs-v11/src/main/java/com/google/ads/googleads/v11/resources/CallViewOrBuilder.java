@@ -53,8 +53,8 @@ public interface CallViewOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Area code of the caller. Null if the call duration is shorter than 15
-   * seconds.
+   * Output only. Area code of the caller. Null if the call duration is shorter
+   * than 15 seconds.
    * </pre>
    *
    * <code>string caller_area_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -63,8 +63,8 @@ public interface CallViewOrBuilder extends
   java.lang.String getCallerAreaCode();
   /**
    * <pre>
-   * Output only. Area code of the caller. Null if the call duration is shorter than 15
-   * seconds.
+   * Output only. Area code of the caller. Null if the call duration is shorter
+   * than 15 seconds.
    * </pre>
    *
    * <code>string caller_area_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

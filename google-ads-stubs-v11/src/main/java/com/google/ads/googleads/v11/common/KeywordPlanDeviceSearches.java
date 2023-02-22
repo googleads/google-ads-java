@@ -50,7 +50,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int DEVICE_FIELD_NUMBER = 1;
-  private int device_;
+  private int device_ = 0;
   /**
    * <pre>
    * The device type.
@@ -71,13 +71,12 @@ private static final long serialVersionUID = 0L;
    * @return The device.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.DeviceEnum.Device getDevice() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.DeviceEnum.Device result = com.google.ads.googleads.v11.enums.DeviceEnum.Device.valueOf(device_);
+    com.google.ads.googleads.v11.enums.DeviceEnum.Device result = com.google.ads.googleads.v11.enums.DeviceEnum.Device.forNumber(device_);
     return result == null ? com.google.ads.googleads.v11.enums.DeviceEnum.Device.UNRECOGNIZED : result;
   }
 
   public static final int SEARCH_COUNT_FIELD_NUMBER = 2;
-  private long searchCount_;
+  private long searchCount_ = 0L;
   /**
    * <pre>
    * The total searches for the device.
@@ -311,10 +310,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       device_ = 0;
-
       searchCount_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -341,16 +339,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.KeywordPlanDeviceSearches buildPartial() {
       com.google.ads.googleads.v11.common.KeywordPlanDeviceSearches result = new com.google.ads.googleads.v11.common.KeywordPlanDeviceSearches(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.KeywordPlanDeviceSearches result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.device_ = device_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.device_ = device_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.searchCount_ = searchCount_;
         to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -431,12 +435,12 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               device_ = input.readEnum();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             case 16: {
               searchCount_ = input.readInt64();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             default: {
@@ -478,8 +482,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDeviceValue(int value) {
-      
       device_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -493,8 +497,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.DeviceEnum.Device getDevice() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.DeviceEnum.Device result = com.google.ads.googleads.v11.enums.DeviceEnum.Device.valueOf(device_);
+      com.google.ads.googleads.v11.enums.DeviceEnum.Device result = com.google.ads.googleads.v11.enums.DeviceEnum.Device.forNumber(device_);
       return result == null ? com.google.ads.googleads.v11.enums.DeviceEnum.Device.UNRECOGNIZED : result;
     }
     /**
@@ -510,7 +513,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       device_ = value.getNumber();
       onChanged();
       return this;
@@ -524,7 +527,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDevice() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       device_ = 0;
       onChanged();
       return this;
@@ -541,7 +544,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasSearchCount() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -565,8 +568,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSearchCount(long value) {
-      bitField0_ |= 0x00000001;
+      
       searchCount_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -579,7 +583,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSearchCount() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       searchCount_ = 0L;
       onChanged();
       return this;

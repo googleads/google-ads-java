@@ -56,6 +56,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HEADLINES_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.common.AdTextAsset> headlines_;
   /**
    * <pre>
@@ -121,6 +122,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTIONS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.common.AdTextAsset> descriptions_;
   /**
    * <pre>
@@ -186,6 +188,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int IMAGES_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.common.AdImageAsset> images_;
   /**
    * <pre>
@@ -246,6 +249,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int YOUTUBE_VIDEOS_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.common.AdVideoAsset> youtubeVideos_;
   /**
    * <pre>
@@ -542,6 +546,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (headlinesBuilder_ == null) {
         headlines_ = java.util.Collections.emptyList();
       } else {
@@ -596,7 +601,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.AppPreRegistrationAdInfo buildPartial() {
       com.google.ads.googleads.v11.common.AppPreRegistrationAdInfo result = new com.google.ads.googleads.v11.common.AppPreRegistrationAdInfo(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.common.AppPreRegistrationAdInfo result) {
       if (headlinesBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           headlines_ = java.util.Collections.unmodifiableList(headlines_);
@@ -633,8 +644,10 @@ private static final long serialVersionUID = 0L;
       } else {
         result.youtubeVideos_ = youtubeVideosBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.AppPreRegistrationAdInfo result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override

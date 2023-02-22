@@ -52,7 +52,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int OPERAND_FIELD_NUMBER = 1;
-  private int operand_;
+  private int operand_ = 0;
   /**
    * <pre>
    * Operand of webpage targeting condition.
@@ -73,13 +73,12 @@ private static final long serialVersionUID = 0L;
    * @return The operand.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.WebpageConditionOperandEnum.WebpageConditionOperand getOperand() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.WebpageConditionOperandEnum.WebpageConditionOperand result = com.google.ads.googleads.v12.enums.WebpageConditionOperandEnum.WebpageConditionOperand.valueOf(operand_);
+    com.google.ads.googleads.v12.enums.WebpageConditionOperandEnum.WebpageConditionOperand result = com.google.ads.googleads.v12.enums.WebpageConditionOperandEnum.WebpageConditionOperand.forNumber(operand_);
     return result == null ? com.google.ads.googleads.v12.enums.WebpageConditionOperandEnum.WebpageConditionOperand.UNRECOGNIZED : result;
   }
 
   public static final int OPERATOR_FIELD_NUMBER = 2;
-  private int operator_;
+  private int operator_ = 0;
   /**
    * <pre>
    * Operator of webpage targeting condition.
@@ -100,13 +99,13 @@ private static final long serialVersionUID = 0L;
    * @return The operator.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.WebpageConditionOperatorEnum.WebpageConditionOperator getOperator() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.WebpageConditionOperatorEnum.WebpageConditionOperator result = com.google.ads.googleads.v12.enums.WebpageConditionOperatorEnum.WebpageConditionOperator.valueOf(operator_);
+    com.google.ads.googleads.v12.enums.WebpageConditionOperatorEnum.WebpageConditionOperator result = com.google.ads.googleads.v12.enums.WebpageConditionOperatorEnum.WebpageConditionOperator.forNumber(operator_);
     return result == null ? com.google.ads.googleads.v12.enums.WebpageConditionOperatorEnum.WebpageConditionOperator.UNRECOGNIZED : result;
   }
 
   public static final int ARGUMENT_FIELD_NUMBER = 4;
-  private volatile java.lang.Object argument_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object argument_ = "";
   /**
    * <pre>
    * Argument of webpage targeting condition.
@@ -379,12 +378,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       operand_ = 0;
-
       operator_ = 0;
-
       argument_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -411,17 +408,25 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.WebpageConditionInfo buildPartial() {
       com.google.ads.googleads.v12.common.WebpageConditionInfo result = new com.google.ads.googleads.v12.common.WebpageConditionInfo(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.operand_ = operand_;
-      result.operator_ = operator_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        to_bitField0_ |= 0x00000001;
-      }
-      result.argument_ = argument_;
-      result.bitField0_ = to_bitField0_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.WebpageConditionInfo result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.operand_ = operand_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.operator_ = operator_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.argument_ = argument_;
+        to_bitField0_ |= 0x00000001;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -475,8 +480,8 @@ private static final long serialVersionUID = 0L;
         setOperatorValue(other.getOperatorValue());
       }
       if (other.hasArgument()) {
-        bitField0_ |= 0x00000001;
         argument_ = other.argument_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -507,17 +512,17 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               operand_ = input.readEnum();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             case 16: {
               operator_ = input.readEnum();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             case 34: {
               argument_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000004;
               break;
             } // case 34
             default: {
@@ -559,8 +564,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOperandValue(int value) {
-      
       operand_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -574,8 +579,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.WebpageConditionOperandEnum.WebpageConditionOperand getOperand() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.WebpageConditionOperandEnum.WebpageConditionOperand result = com.google.ads.googleads.v12.enums.WebpageConditionOperandEnum.WebpageConditionOperand.valueOf(operand_);
+      com.google.ads.googleads.v12.enums.WebpageConditionOperandEnum.WebpageConditionOperand result = com.google.ads.googleads.v12.enums.WebpageConditionOperandEnum.WebpageConditionOperand.forNumber(operand_);
       return result == null ? com.google.ads.googleads.v12.enums.WebpageConditionOperandEnum.WebpageConditionOperand.UNRECOGNIZED : result;
     }
     /**
@@ -591,7 +595,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       operand_ = value.getNumber();
       onChanged();
       return this;
@@ -605,7 +609,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOperand() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       operand_ = 0;
       onChanged();
       return this;
@@ -633,8 +637,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOperatorValue(int value) {
-      
       operator_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -648,8 +652,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.WebpageConditionOperatorEnum.WebpageConditionOperator getOperator() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.WebpageConditionOperatorEnum.WebpageConditionOperator result = com.google.ads.googleads.v12.enums.WebpageConditionOperatorEnum.WebpageConditionOperator.valueOf(operator_);
+      com.google.ads.googleads.v12.enums.WebpageConditionOperatorEnum.WebpageConditionOperator result = com.google.ads.googleads.v12.enums.WebpageConditionOperatorEnum.WebpageConditionOperator.forNumber(operator_);
       return result == null ? com.google.ads.googleads.v12.enums.WebpageConditionOperatorEnum.WebpageConditionOperator.UNRECOGNIZED : result;
     }
     /**
@@ -665,7 +668,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000002;
       operator_ = value.getNumber();
       onChanged();
       return this;
@@ -679,7 +682,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOperator() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       operator_ = 0;
       onChanged();
       return this;
@@ -695,7 +698,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the argument field is set.
      */
     public boolean hasArgument() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -749,11 +752,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setArgument(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       argument_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -766,8 +767,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearArgument() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       argument_ = getDefaultInstance().getArgument();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -782,12 +783,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setArgumentBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       argument_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }

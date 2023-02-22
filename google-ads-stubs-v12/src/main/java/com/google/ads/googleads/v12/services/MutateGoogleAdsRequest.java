@@ -5,7 +5,8 @@ package com.google.ads.googleads.v12.services;
 
 /**
  * <pre>
- * Request message for [GoogleAdsService.Mutate][google.ads.googleads.v12.services.GoogleAdsService.Mutate].
+ * Request message for
+ * [GoogleAdsService.Mutate][google.ads.googleads.v12.services.GoogleAdsService.Mutate].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v12.services.MutateGoogleAdsRequest}
@@ -51,7 +52,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CUSTOMER_ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object customerId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object customerId_ = "";
   /**
    * <pre>
    * Required. The ID of the customer whose resources are being modified.
@@ -97,6 +99,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MUTATE_OPERATIONS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.services.MutateOperation> mutateOperations_;
   /**
    * <pre>
@@ -157,7 +160,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PARTIAL_FAILURE_FIELD_NUMBER = 3;
-  private boolean partialFailure_;
+  private boolean partialFailure_ = false;
   /**
    * <pre>
    * If true, successful operations will be carried out and invalid
@@ -175,7 +178,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VALIDATE_ONLY_FIELD_NUMBER = 4;
-  private boolean validateOnly_;
+  private boolean validateOnly_ = false;
   /**
    * <pre>
    * If true, the request is validated but not executed. Only errors are
@@ -191,7 +194,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESPONSE_CONTENT_TYPE_FIELD_NUMBER = 5;
-  private int responseContentType_;
+  private int responseContentType_ = 0;
   /**
    * <pre>
    * The response content type setting. Determines whether the mutable resource
@@ -218,8 +221,7 @@ private static final long serialVersionUID = 0L;
    * @return The responseContentType.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.ResponseContentTypeEnum.ResponseContentType getResponseContentType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.ResponseContentTypeEnum.ResponseContentType result = com.google.ads.googleads.v12.enums.ResponseContentTypeEnum.ResponseContentType.valueOf(responseContentType_);
+    com.google.ads.googleads.v12.enums.ResponseContentTypeEnum.ResponseContentType result = com.google.ads.googleads.v12.enums.ResponseContentTypeEnum.ResponseContentType.forNumber(responseContentType_);
     return result == null ? com.google.ads.googleads.v12.enums.ResponseContentTypeEnum.ResponseContentType.UNRECOGNIZED : result;
   }
 
@@ -426,7 +428,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Request message for [GoogleAdsService.Mutate][google.ads.googleads.v12.services.GoogleAdsService.Mutate].
+   * Request message for
+   * [GoogleAdsService.Mutate][google.ads.googleads.v12.services.GoogleAdsService.Mutate].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v12.services.MutateGoogleAdsRequest}
@@ -461,21 +464,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       customerId_ = "";
-
       if (mutateOperationsBuilder_ == null) {
         mutateOperations_ = java.util.Collections.emptyList();
       } else {
         mutateOperations_ = null;
         mutateOperationsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       partialFailure_ = false;
-
       validateOnly_ = false;
-
       responseContentType_ = 0;
-
       return this;
     }
 
@@ -502,22 +502,38 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.MutateGoogleAdsRequest buildPartial() {
       com.google.ads.googleads.v12.services.MutateGoogleAdsRequest result = new com.google.ads.googleads.v12.services.MutateGoogleAdsRequest(this);
-      int from_bitField0_ = bitField0_;
-      result.customerId_ = customerId_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.services.MutateGoogleAdsRequest result) {
       if (mutateOperationsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           mutateOperations_ = java.util.Collections.unmodifiableList(mutateOperations_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.mutateOperations_ = mutateOperations_;
       } else {
         result.mutateOperations_ = mutateOperationsBuilder_.build();
       }
-      result.partialFailure_ = partialFailure_;
-      result.validateOnly_ = validateOnly_;
-      result.responseContentType_ = responseContentType_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.MutateGoogleAdsRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.customerId_ = customerId_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.partialFailure_ = partialFailure_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.validateOnly_ = validateOnly_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.responseContentType_ = responseContentType_;
+      }
     }
 
     @java.lang.Override
@@ -566,13 +582,14 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.services.MutateGoogleAdsRequest.getDefaultInstance()) return this;
       if (!other.getCustomerId().isEmpty()) {
         customerId_ = other.customerId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (mutateOperationsBuilder_ == null) {
         if (!other.mutateOperations_.isEmpty()) {
           if (mutateOperations_.isEmpty()) {
             mutateOperations_ = other.mutateOperations_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureMutateOperationsIsMutable();
             mutateOperations_.addAll(other.mutateOperations_);
@@ -585,7 +602,7 @@ private static final long serialVersionUID = 0L;
             mutateOperationsBuilder_.dispose();
             mutateOperationsBuilder_ = null;
             mutateOperations_ = other.mutateOperations_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
             mutateOperationsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getMutateOperationsFieldBuilder() : null;
@@ -631,7 +648,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               customerId_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
@@ -649,17 +666,17 @@ private static final long serialVersionUID = 0L;
             } // case 18
             case 24: {
               partialFailure_ = input.readBool();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 24
             case 32: {
               validateOnly_ = input.readBool();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 32
             case 40: {
               responseContentType_ = input.readEnum();
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 40
             default: {
@@ -732,11 +749,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       customerId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -749,8 +764,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCustomerId() {
-      
       customerId_ = getDefaultInstance().getCustomerId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -765,12 +780,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       customerId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -778,9 +791,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v12.services.MutateOperation> mutateOperations_ =
       java.util.Collections.emptyList();
     private void ensureMutateOperationsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         mutateOperations_ = new java.util.ArrayList<com.google.ads.googleads.v12.services.MutateOperation>(mutateOperations_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -974,7 +987,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearMutateOperations() {
       if (mutateOperationsBuilder_ == null) {
         mutateOperations_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         mutateOperationsBuilder_.clear();
@@ -1079,7 +1092,7 @@ private static final long serialVersionUID = 0L;
         mutateOperationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v12.services.MutateOperation, com.google.ads.googleads.v12.services.MutateOperation.Builder, com.google.ads.googleads.v12.services.MutateOperationOrBuilder>(
                 mutateOperations_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         mutateOperations_ = null;
@@ -1118,6 +1131,7 @@ private static final long serialVersionUID = 0L;
     public Builder setPartialFailure(boolean value) {
       
       partialFailure_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1133,7 +1147,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPartialFailure() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       partialFailure_ = false;
       onChanged();
       return this;
@@ -1166,6 +1180,7 @@ private static final long serialVersionUID = 0L;
     public Builder setValidateOnly(boolean value) {
       
       validateOnly_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1179,7 +1194,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearValidateOnly() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       validateOnly_ = false;
       onChanged();
       return this;
@@ -1213,8 +1228,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setResponseContentTypeValue(int value) {
-      
       responseContentType_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1231,8 +1246,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.ResponseContentTypeEnum.ResponseContentType getResponseContentType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.ResponseContentTypeEnum.ResponseContentType result = com.google.ads.googleads.v12.enums.ResponseContentTypeEnum.ResponseContentType.valueOf(responseContentType_);
+      com.google.ads.googleads.v12.enums.ResponseContentTypeEnum.ResponseContentType result = com.google.ads.googleads.v12.enums.ResponseContentTypeEnum.ResponseContentType.forNumber(responseContentType_);
       return result == null ? com.google.ads.googleads.v12.enums.ResponseContentTypeEnum.ResponseContentType.UNRECOGNIZED : result;
     }
     /**
@@ -1251,7 +1265,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000010;
       responseContentType_ = value.getNumber();
       onChanged();
       return this;
@@ -1268,7 +1282,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResponseContentType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       responseContentType_ = 0;
       onChanged();
       return this;

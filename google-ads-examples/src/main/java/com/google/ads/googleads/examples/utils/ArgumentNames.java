@@ -99,6 +99,7 @@ public final class ArgumentNames {
   public static final String OAUTH_CLIENT_FILE = "--oAuthClientFile";
   public static final String OAUTH_SCOPES = "--oAuthScopes";
   public static final String OFFLINE_USER_DATA_JOB_TYPE = "--offlineUserDataJobType";
+  public static final String OFFLINE_USER_DATA_JOB_ID = "--offlineUserDataJobId";
   public static final String OMIT_UNSELECTED_RESOURCE_NAMES = "--omitUnselectedResourceNames";
   public static final String ORDER_ID = "--orderId";
   public static final String PAGE_URL = "--pageUrl";
@@ -112,6 +113,7 @@ public final class ArgumentNames {
   public static final String RECOMMENDATION_ID = "--recommendationId";
   public static final String REPLACE_EXISTING_TREE = "--replaceExistingTree";
   public static final String RESTATEMENT_VALUE = "--restatementValue";
+  public static final String RUN_JOB = "--runJob";
   public static final String SALES_COUNTRY = "--salesCountry";
   public static final String SITELINK_TEXT = "--sitelinkText";
   public static final String SQUARE_MARKETING_IMAGE_ID = "--squareMarketingImageAssetId";

@@ -9,8 +9,8 @@ public interface DynamicFlightsAssetOrBuilder extends
 
   /**
    * <pre>
-   * Required. Destination ID which can be any sequence of letters and digits, and must be
-   * unique and match the values of remarketing tag. Required.
+   * Required. Destination ID which can be any sequence of letters and digits,
+   * and must be unique and match the values of remarketing tag. Required.
    * </pre>
    *
    * <code>string destination_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -19,8 +19,8 @@ public interface DynamicFlightsAssetOrBuilder extends
   java.lang.String getDestinationId();
   /**
    * <pre>
-   * Required. Destination ID which can be any sequence of letters and digits, and must be
-   * unique and match the values of remarketing tag. Required.
+   * Required. Destination ID which can be any sequence of letters and digits,
+   * and must be unique and match the values of remarketing tag. Required.
    * </pre>
    *
    * <code>string destination_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>

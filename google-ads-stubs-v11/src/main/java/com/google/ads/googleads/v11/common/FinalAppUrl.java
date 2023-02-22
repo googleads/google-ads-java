@@ -51,7 +51,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int OS_TYPE_FIELD_NUMBER = 1;
-  private int osType_;
+  private int osType_ = 0;
   /**
    * <pre>
    * The operating system targeted by this URL. Required.
@@ -72,13 +72,13 @@ private static final long serialVersionUID = 0L;
    * @return The osType.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType getOsType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType result = com.google.ads.googleads.v11.enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType.valueOf(osType_);
+    com.google.ads.googleads.v11.enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType result = com.google.ads.googleads.v11.enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType.forNumber(osType_);
     return result == null ? com.google.ads.googleads.v11.enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType.UNRECOGNIZED : result;
   }
 
   public static final int URL_FIELD_NUMBER = 3;
-  private volatile java.lang.Object url_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object url_ = "";
   /**
    * <pre>
    * The app deep link URL. Deep links specify a location in an app that
@@ -359,10 +359,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       osType_ = 0;
-
       url_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -389,16 +388,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.FinalAppUrl buildPartial() {
       com.google.ads.googleads.v11.common.FinalAppUrl result = new com.google.ads.googleads.v11.common.FinalAppUrl(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.osType_ = osType_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        to_bitField0_ |= 0x00000001;
-      }
-      result.url_ = url_;
-      result.bitField0_ = to_bitField0_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.FinalAppUrl result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.osType_ = osType_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.url_ = url_;
+        to_bitField0_ |= 0x00000001;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -449,8 +454,8 @@ private static final long serialVersionUID = 0L;
         setOsTypeValue(other.getOsTypeValue());
       }
       if (other.hasUrl()) {
-        bitField0_ |= 0x00000001;
         url_ = other.url_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -481,12 +486,12 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               osType_ = input.readEnum();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             case 26: {
               url_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 26
             default: {
@@ -528,8 +533,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOsTypeValue(int value) {
-      
       osType_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -543,8 +548,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType getOsType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType result = com.google.ads.googleads.v11.enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType.valueOf(osType_);
+      com.google.ads.googleads.v11.enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType result = com.google.ads.googleads.v11.enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType.forNumber(osType_);
       return result == null ? com.google.ads.googleads.v11.enums.AppUrlOperatingSystemTypeEnum.AppUrlOperatingSystemType.UNRECOGNIZED : result;
     }
     /**
@@ -560,7 +564,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       osType_ = value.getNumber();
       onChanged();
       return this;
@@ -574,7 +578,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOsType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       osType_ = 0;
       onChanged();
       return this;
@@ -596,7 +600,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the url field is set.
      */
     public boolean hasUrl() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -668,11 +672,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUrl(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       url_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -691,8 +693,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUrl() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       url_ = getDefaultInstance().getUrl();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -713,12 +715,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUrlBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       url_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

@@ -50,7 +50,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int YEAR_FIELD_NUMBER = 4;
-  private long year_;
+  private long year_ = 0L;
   /**
    * <pre>
    * The year of the search volume (for example, 2020).
@@ -77,7 +77,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MONTH_FIELD_NUMBER = 2;
-  private int month_;
+  private int month_ = 0;
   /**
    * <pre>
    * The month of the search volume.
@@ -98,13 +98,12 @@ private static final long serialVersionUID = 0L;
    * @return The month.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.MonthOfYearEnum.MonthOfYear getMonth() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.MonthOfYearEnum.MonthOfYear result = com.google.ads.googleads.v11.enums.MonthOfYearEnum.MonthOfYear.valueOf(month_);
+    com.google.ads.googleads.v11.enums.MonthOfYearEnum.MonthOfYear result = com.google.ads.googleads.v11.enums.MonthOfYearEnum.MonthOfYear.forNumber(month_);
     return result == null ? com.google.ads.googleads.v11.enums.MonthOfYearEnum.MonthOfYear.UNRECOGNIZED : result;
   }
 
   public static final int MONTHLY_SEARCHES_FIELD_NUMBER = 5;
-  private long monthlySearches_;
+  private long monthlySearches_ = 0L;
   /**
    * <pre>
    * Approximate number of searches for the month.
@@ -359,12 +358,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       year_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       month_ = 0;
-
       monthlySearches_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -391,20 +388,26 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.MonthlySearchVolume buildPartial() {
       com.google.ads.googleads.v11.common.MonthlySearchVolume result = new com.google.ads.googleads.v11.common.MonthlySearchVolume(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.MonthlySearchVolume result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.year_ = year_;
         to_bitField0_ |= 0x00000001;
       }
-      result.month_ = month_;
       if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.month_ = month_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.monthlySearches_ = monthlySearches_;
         to_bitField0_ |= 0x00000002;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -488,7 +491,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 16: {
               month_ = input.readEnum();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             case 32: {
@@ -498,7 +501,7 @@ private static final long serialVersionUID = 0L;
             } // case 32
             case 40: {
               monthlySearches_ = input.readInt64();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 40
             default: {
@@ -553,8 +556,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setYear(long value) {
-      bitField0_ |= 0x00000001;
+      
       year_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -595,8 +599,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMonthValue(int value) {
-      
       month_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -610,8 +614,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.MonthOfYearEnum.MonthOfYear getMonth() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.MonthOfYearEnum.MonthOfYear result = com.google.ads.googleads.v11.enums.MonthOfYearEnum.MonthOfYear.valueOf(month_);
+      com.google.ads.googleads.v11.enums.MonthOfYearEnum.MonthOfYear result = com.google.ads.googleads.v11.enums.MonthOfYearEnum.MonthOfYear.forNumber(month_);
       return result == null ? com.google.ads.googleads.v11.enums.MonthOfYearEnum.MonthOfYear.UNRECOGNIZED : result;
     }
     /**
@@ -627,7 +630,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000002;
       month_ = value.getNumber();
       onChanged();
       return this;
@@ -641,7 +644,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMonth() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       month_ = 0;
       onChanged();
       return this;
@@ -660,7 +663,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasMonthlySearches() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -688,8 +691,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMonthlySearches(long value) {
-      bitField0_ |= 0x00000002;
+      
       monthlySearches_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -704,7 +708,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMonthlySearches() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       monthlySearches_ = 0L;
       onChanged();
       return this;

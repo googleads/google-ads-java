@@ -43,8 +43,8 @@ public interface CombinedAudienceOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Status of this combined audience. Indicates whether the combined audience
-   * is enabled or removed.
+   * Output only. Status of this combined audience. Indicates whether the
+   * combined audience is enabled or removed.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.CombinedAudienceStatusEnum.CombinedAudienceStatus status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -53,8 +53,8 @@ public interface CombinedAudienceOrBuilder extends
   int getStatusValue();
   /**
    * <pre>
-   * Output only. Status of this combined audience. Indicates whether the combined audience
-   * is enabled or removed.
+   * Output only. Status of this combined audience. Indicates whether the
+   * combined audience is enabled or removed.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.CombinedAudienceStatusEnum.CombinedAudienceStatus status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -64,8 +64,8 @@ public interface CombinedAudienceOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Name of the combined audience. It should be unique across all combined
-   * audiences.
+   * Output only. Name of the combined audience. It should be unique across all
+   * combined audiences.
    * </pre>
    *
    * <code>string name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -74,8 +74,8 @@ public interface CombinedAudienceOrBuilder extends
   java.lang.String getName();
   /**
    * <pre>
-   * Output only. Name of the combined audience. It should be unique across all combined
-   * audiences.
+   * Output only. Name of the combined audience. It should be unique across all
+   * combined audiences.
    * </pre>
    *
    * <code>string name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

@@ -53,7 +53,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int TYPE_FIELD_NUMBER = 1;
-  private int type_;
+  private int type_ = 0;
   /**
    * <pre>
    * The type of the generated tag snippets for tracking conversions.
@@ -74,13 +74,12 @@ private static final long serialVersionUID = 0L;
    * @return The type.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.TrackingCodeTypeEnum.TrackingCodeType getType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.TrackingCodeTypeEnum.TrackingCodeType result = com.google.ads.googleads.v12.enums.TrackingCodeTypeEnum.TrackingCodeType.valueOf(type_);
+    com.google.ads.googleads.v12.enums.TrackingCodeTypeEnum.TrackingCodeType result = com.google.ads.googleads.v12.enums.TrackingCodeTypeEnum.TrackingCodeType.forNumber(type_);
     return result == null ? com.google.ads.googleads.v12.enums.TrackingCodeTypeEnum.TrackingCodeType.UNRECOGNIZED : result;
   }
 
   public static final int PAGE_FORMAT_FIELD_NUMBER = 2;
-  private int pageFormat_;
+  private int pageFormat_ = 0;
   /**
    * <pre>
    * The format of the web page where the tracking tag and snippet will be
@@ -103,13 +102,13 @@ private static final long serialVersionUID = 0L;
    * @return The pageFormat.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.TrackingCodePageFormatEnum.TrackingCodePageFormat getPageFormat() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.TrackingCodePageFormatEnum.TrackingCodePageFormat result = com.google.ads.googleads.v12.enums.TrackingCodePageFormatEnum.TrackingCodePageFormat.valueOf(pageFormat_);
+    com.google.ads.googleads.v12.enums.TrackingCodePageFormatEnum.TrackingCodePageFormat result = com.google.ads.googleads.v12.enums.TrackingCodePageFormatEnum.TrackingCodePageFormat.forNumber(pageFormat_);
     return result == null ? com.google.ads.googleads.v12.enums.TrackingCodePageFormatEnum.TrackingCodePageFormat.UNRECOGNIZED : result;
   }
 
   public static final int GLOBAL_SITE_TAG_FIELD_NUMBER = 5;
-  private volatile java.lang.Object globalSiteTag_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object globalSiteTag_ = "";
   /**
    * <pre>
    * The site tag that adds visitors to your basic remarketing lists and sets
@@ -170,7 +169,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EVENT_SNIPPET_FIELD_NUMBER = 6;
-  private volatile java.lang.Object eventSnippet_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object eventSnippet_ = "";
   /**
    * <pre>
    * The event snippet that works with the site tag to track actions that
@@ -461,14 +461,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       type_ = 0;
-
       pageFormat_ = 0;
-
       globalSiteTag_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       eventSnippet_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -495,21 +492,29 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.TagSnippet buildPartial() {
       com.google.ads.googleads.v12.common.TagSnippet result = new com.google.ads.googleads.v12.common.TagSnippet(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.type_ = type_;
-      result.pageFormat_ = pageFormat_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        to_bitField0_ |= 0x00000001;
-      }
-      result.globalSiteTag_ = globalSiteTag_;
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        to_bitField0_ |= 0x00000002;
-      }
-      result.eventSnippet_ = eventSnippet_;
-      result.bitField0_ = to_bitField0_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.TagSnippet result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.type_ = type_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.pageFormat_ = pageFormat_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.globalSiteTag_ = globalSiteTag_;
+        to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.eventSnippet_ = eventSnippet_;
+        to_bitField0_ |= 0x00000002;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -563,13 +568,13 @@ private static final long serialVersionUID = 0L;
         setPageFormatValue(other.getPageFormatValue());
       }
       if (other.hasGlobalSiteTag()) {
-        bitField0_ |= 0x00000001;
         globalSiteTag_ = other.globalSiteTag_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.hasEventSnippet()) {
-        bitField0_ |= 0x00000002;
         eventSnippet_ = other.eventSnippet_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -600,22 +605,22 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               type_ = input.readEnum();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             case 16: {
               pageFormat_ = input.readEnum();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             case 42: {
               globalSiteTag_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000004;
               break;
             } // case 42
             case 50: {
               eventSnippet_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000008;
               break;
             } // case 50
             default: {
@@ -657,8 +662,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
-      
       type_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -672,8 +677,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.TrackingCodeTypeEnum.TrackingCodeType getType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.TrackingCodeTypeEnum.TrackingCodeType result = com.google.ads.googleads.v12.enums.TrackingCodeTypeEnum.TrackingCodeType.valueOf(type_);
+      com.google.ads.googleads.v12.enums.TrackingCodeTypeEnum.TrackingCodeType result = com.google.ads.googleads.v12.enums.TrackingCodeTypeEnum.TrackingCodeType.forNumber(type_);
       return result == null ? com.google.ads.googleads.v12.enums.TrackingCodeTypeEnum.TrackingCodeType.UNRECOGNIZED : result;
     }
     /**
@@ -689,7 +693,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       type_ = value.getNumber();
       onChanged();
       return this;
@@ -703,7 +707,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       type_ = 0;
       onChanged();
       return this;
@@ -733,8 +737,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPageFormatValue(int value) {
-      
       pageFormat_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -749,8 +753,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.TrackingCodePageFormatEnum.TrackingCodePageFormat getPageFormat() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.TrackingCodePageFormatEnum.TrackingCodePageFormat result = com.google.ads.googleads.v12.enums.TrackingCodePageFormatEnum.TrackingCodePageFormat.valueOf(pageFormat_);
+      com.google.ads.googleads.v12.enums.TrackingCodePageFormatEnum.TrackingCodePageFormat result = com.google.ads.googleads.v12.enums.TrackingCodePageFormatEnum.TrackingCodePageFormat.forNumber(pageFormat_);
       return result == null ? com.google.ads.googleads.v12.enums.TrackingCodePageFormatEnum.TrackingCodePageFormat.UNRECOGNIZED : result;
     }
     /**
@@ -767,7 +770,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000002;
       pageFormat_ = value.getNumber();
       onChanged();
       return this;
@@ -782,7 +785,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPageFormat() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       pageFormat_ = 0;
       onChanged();
       return this;
@@ -799,7 +802,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the globalSiteTag field is set.
      */
     public boolean hasGlobalSiteTag() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -856,11 +859,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setGlobalSiteTag(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       globalSiteTag_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -874,8 +875,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGlobalSiteTag() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       globalSiteTag_ = getDefaultInstance().getGlobalSiteTag();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -891,12 +892,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setGlobalSiteTagBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       globalSiteTag_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -912,7 +911,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the eventSnippet field is set.
      */
     public boolean hasEventSnippet() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -969,11 +968,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEventSnippet(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       eventSnippet_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -987,8 +984,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEventSnippet() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       eventSnippet_ = getDefaultInstance().getEventSnippet();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1004,12 +1001,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEventSnippetBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       eventSnippet_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }

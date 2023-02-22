@@ -52,7 +52,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Required. The resource name of the OfflineUserDataJob.
@@ -98,7 +99,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ENABLE_PARTIAL_FAILURE_FIELD_NUMBER = 4;
-  private boolean enablePartialFailure_;
+  private boolean enablePartialFailure_ = false;
   /**
    * <pre>
    * True to enable partial failure for the offline user data job.
@@ -125,7 +126,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ENABLE_WARNINGS_FIELD_NUMBER = 6;
-  private boolean enableWarnings_;
+  private boolean enableWarnings_ = false;
   /**
    * <pre>
    * True to enable warnings for the offline user data job. When enabled, a
@@ -156,6 +157,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int OPERATIONS_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.services.OfflineUserDataJobOperation> operations_;
   /**
    * <pre>
@@ -216,7 +218,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VALIDATE_ONLY_FIELD_NUMBER = 5;
-  private boolean validateOnly_;
+  private boolean validateOnly_ = false;
   /**
    * <pre>
    * If true, the request is validated but not executed. Only errors are
@@ -482,21 +484,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       enablePartialFailure_ = false;
-      bitField0_ = (bitField0_ & ~0x00000001);
       enableWarnings_ = false;
-      bitField0_ = (bitField0_ & ~0x00000002);
       if (operationsBuilder_ == null) {
         operations_ = java.util.Collections.emptyList();
       } else {
         operations_ = null;
         operationsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000008);
       validateOnly_ = false;
-
       return this;
     }
 
@@ -523,30 +522,42 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.AddOfflineUserDataJobOperationsRequest buildPartial() {
       com.google.ads.googleads.v12.services.AddOfflineUserDataJobOperationsRequest result = new com.google.ads.googleads.v12.services.AddOfflineUserDataJobOperationsRequest(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.enablePartialFailure_ = enablePartialFailure_;
-        to_bitField0_ |= 0x00000001;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.enableWarnings_ = enableWarnings_;
-        to_bitField0_ |= 0x00000002;
-      }
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.services.AddOfflineUserDataJobOperationsRequest result) {
       if (operationsBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           operations_ = java.util.Collections.unmodifiableList(operations_);
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.operations_ = operations_;
       } else {
         result.operations_ = operationsBuilder_.build();
       }
-      result.validateOnly_ = validateOnly_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.AddOfflineUserDataJobOperationsRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.enablePartialFailure_ = enablePartialFailure_;
+        to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.enableWarnings_ = enableWarnings_;
+        to_bitField0_ |= 0x00000002;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.validateOnly_ = validateOnly_;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -595,6 +606,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.services.AddOfflineUserDataJobOperationsRequest.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasEnablePartialFailure()) {
@@ -607,7 +619,7 @@ private static final long serialVersionUID = 0L;
         if (!other.operations_.isEmpty()) {
           if (operations_.isEmpty()) {
             operations_ = other.operations_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureOperationsIsMutable();
             operations_.addAll(other.operations_);
@@ -620,7 +632,7 @@ private static final long serialVersionUID = 0L;
             operationsBuilder_.dispose();
             operationsBuilder_ = null;
             operations_ = other.operations_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
             operationsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getOperationsFieldBuilder() : null;
@@ -660,7 +672,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 26: {
@@ -678,17 +690,17 @@ private static final long serialVersionUID = 0L;
             } // case 26
             case 32: {
               enablePartialFailure_ = input.readBool();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 32
             case 40: {
               validateOnly_ = input.readBool();
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 40
             case 48: {
               enableWarnings_ = input.readBool();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 48
             default: {
@@ -761,11 +773,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -778,8 +788,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -794,12 +804,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -815,7 +823,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasEnablePartialFailure() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -839,8 +847,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEnablePartialFailure(boolean value) {
-      bitField0_ |= 0x00000001;
+      
       enablePartialFailure_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -853,7 +862,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnablePartialFailure() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       enablePartialFailure_ = false;
       onChanged();
       return this;
@@ -872,7 +881,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasEnableWarnings() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -900,8 +909,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEnableWarnings(boolean value) {
-      bitField0_ |= 0x00000002;
+      
       enableWarnings_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -916,7 +926,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnableWarnings() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       enableWarnings_ = false;
       onChanged();
       return this;
@@ -925,9 +935,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v12.services.OfflineUserDataJobOperation> operations_ =
       java.util.Collections.emptyList();
     private void ensureOperationsIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         operations_ = new java.util.ArrayList<com.google.ads.googleads.v12.services.OfflineUserDataJobOperation>(operations_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
        }
     }
 
@@ -1121,7 +1131,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearOperations() {
       if (operationsBuilder_ == null) {
         operations_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
       } else {
         operationsBuilder_.clear();
@@ -1226,7 +1236,7 @@ private static final long serialVersionUID = 0L;
         operationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v12.services.OfflineUserDataJobOperation, com.google.ads.googleads.v12.services.OfflineUserDataJobOperation.Builder, com.google.ads.googleads.v12.services.OfflineUserDataJobOperationOrBuilder>(
                 operations_,
-                ((bitField0_ & 0x00000004) != 0),
+                ((bitField0_ & 0x00000008) != 0),
                 getParentForChildren(),
                 isClean());
         operations_ = null;
@@ -1261,6 +1271,7 @@ private static final long serialVersionUID = 0L;
     public Builder setValidateOnly(boolean value) {
       
       validateOnly_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1274,7 +1285,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearValidateOnly() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       validateOnly_ = false;
       onChanged();
       return this;

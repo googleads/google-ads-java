@@ -53,7 +53,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Immutable. The resource name of the campaign conversion goal.
@@ -103,10 +104,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CAMPAIGN_FIELD_NUMBER = 2;
-  private volatile java.lang.Object campaign_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object campaign_ = "";
   /**
    * <pre>
-   * Immutable. The campaign with which this campaign conversion goal is associated.
+   * Immutable. The campaign with which this campaign conversion goal is
+   * associated.
    * </pre>
    *
    * <code>string campaign = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -127,7 +130,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. The campaign with which this campaign conversion goal is associated.
+   * Immutable. The campaign with which this campaign conversion goal is
+   * associated.
    * </pre>
    *
    * <code>string campaign = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -149,7 +153,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CATEGORY_FIELD_NUMBER = 3;
-  private int category_;
+  private int category_ = 0;
   /**
    * <pre>
    * The conversion category of this campaign conversion goal.
@@ -170,13 +174,12 @@ private static final long serialVersionUID = 0L;
    * @return The category.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.ConversionActionCategoryEnum.ConversionActionCategory getCategory() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.ConversionActionCategoryEnum.ConversionActionCategory result = com.google.ads.googleads.v11.enums.ConversionActionCategoryEnum.ConversionActionCategory.valueOf(category_);
+    com.google.ads.googleads.v11.enums.ConversionActionCategoryEnum.ConversionActionCategory result = com.google.ads.googleads.v11.enums.ConversionActionCategoryEnum.ConversionActionCategory.forNumber(category_);
     return result == null ? com.google.ads.googleads.v11.enums.ConversionActionCategoryEnum.ConversionActionCategory.UNRECOGNIZED : result;
   }
 
   public static final int ORIGIN_FIELD_NUMBER = 4;
-  private int origin_;
+  private int origin_ = 0;
   /**
    * <pre>
    * The conversion origin of this campaign conversion goal.
@@ -197,13 +200,12 @@ private static final long serialVersionUID = 0L;
    * @return The origin.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.ConversionOriginEnum.ConversionOrigin getOrigin() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.ConversionOriginEnum.ConversionOrigin result = com.google.ads.googleads.v11.enums.ConversionOriginEnum.ConversionOrigin.valueOf(origin_);
+    com.google.ads.googleads.v11.enums.ConversionOriginEnum.ConversionOrigin result = com.google.ads.googleads.v11.enums.ConversionOriginEnum.ConversionOrigin.forNumber(origin_);
     return result == null ? com.google.ads.googleads.v11.enums.ConversionOriginEnum.ConversionOrigin.UNRECOGNIZED : result;
   }
 
   public static final int BIDDABLE_FIELD_NUMBER = 5;
-  private boolean biddable_;
+  private boolean biddable_ = false;
   /**
    * <pre>
    * The biddability of the campaign conversion goal.
@@ -451,16 +453,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       campaign_ = "";
-
       category_ = 0;
-
       origin_ = 0;
-
       biddable_ = false;
-
       return this;
     }
 
@@ -487,13 +485,28 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.CampaignConversionGoal buildPartial() {
       com.google.ads.googleads.v11.resources.CampaignConversionGoal result = new com.google.ads.googleads.v11.resources.CampaignConversionGoal(this);
-      result.resourceName_ = resourceName_;
-      result.campaign_ = campaign_;
-      result.category_ = category_;
-      result.origin_ = origin_;
-      result.biddable_ = biddable_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.CampaignConversionGoal result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.campaign_ = campaign_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.category_ = category_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.origin_ = origin_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.biddable_ = biddable_;
+      }
     }
 
     @java.lang.Override
@@ -542,10 +555,12 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.resources.CampaignConversionGoal.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getCampaign().isEmpty()) {
         campaign_ = other.campaign_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.category_ != 0) {
@@ -585,27 +600,27 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               campaign_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 24: {
               category_ = input.readEnum();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 24
             case 32: {
               origin_ = input.readEnum();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 32
             case 40: {
               biddable_ = input.readBool();
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 40
             default: {
@@ -623,6 +638,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object resourceName_ = "";
     /**
@@ -683,11 +699,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -702,8 +716,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -720,12 +734,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -733,7 +745,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object campaign_ = "";
     /**
      * <pre>
-     * Immutable. The campaign with which this campaign conversion goal is associated.
+     * Immutable. The campaign with which this campaign conversion goal is
+     * associated.
      * </pre>
      *
      * <code>string campaign = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -753,7 +766,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The campaign with which this campaign conversion goal is associated.
+     * Immutable. The campaign with which this campaign conversion goal is
+     * associated.
      * </pre>
      *
      * <code>string campaign = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -774,7 +788,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The campaign with which this campaign conversion goal is associated.
+     * Immutable. The campaign with which this campaign conversion goal is
+     * associated.
      * </pre>
      *
      * <code>string campaign = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -783,31 +798,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaign(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       campaign_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Immutable. The campaign with which this campaign conversion goal is associated.
+     * Immutable. The campaign with which this campaign conversion goal is
+     * associated.
      * </pre>
      *
      * <code>string campaign = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearCampaign() {
-      
       campaign_ = getDefaultInstance().getCampaign();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Immutable. The campaign with which this campaign conversion goal is associated.
+     * Immutable. The campaign with which this campaign conversion goal is
+     * associated.
      * </pre>
      *
      * <code>string campaign = 2 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
@@ -816,12 +831,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCampaignBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       campaign_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -848,8 +861,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCategoryValue(int value) {
-      
       category_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -863,8 +876,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.ConversionActionCategoryEnum.ConversionActionCategory getCategory() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.ConversionActionCategoryEnum.ConversionActionCategory result = com.google.ads.googleads.v11.enums.ConversionActionCategoryEnum.ConversionActionCategory.valueOf(category_);
+      com.google.ads.googleads.v11.enums.ConversionActionCategoryEnum.ConversionActionCategory result = com.google.ads.googleads.v11.enums.ConversionActionCategoryEnum.ConversionActionCategory.forNumber(category_);
       return result == null ? com.google.ads.googleads.v11.enums.ConversionActionCategoryEnum.ConversionActionCategory.UNRECOGNIZED : result;
     }
     /**
@@ -880,7 +892,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       category_ = value.getNumber();
       onChanged();
       return this;
@@ -894,7 +906,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCategory() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       category_ = 0;
       onChanged();
       return this;
@@ -922,8 +934,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOriginValue(int value) {
-      
       origin_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -937,8 +949,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.ConversionOriginEnum.ConversionOrigin getOrigin() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.ConversionOriginEnum.ConversionOrigin result = com.google.ads.googleads.v11.enums.ConversionOriginEnum.ConversionOrigin.valueOf(origin_);
+      com.google.ads.googleads.v11.enums.ConversionOriginEnum.ConversionOrigin result = com.google.ads.googleads.v11.enums.ConversionOriginEnum.ConversionOrigin.forNumber(origin_);
       return result == null ? com.google.ads.googleads.v11.enums.ConversionOriginEnum.ConversionOrigin.UNRECOGNIZED : result;
     }
     /**
@@ -954,7 +965,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000008;
       origin_ = value.getNumber();
       onChanged();
       return this;
@@ -968,7 +979,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOrigin() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       origin_ = 0;
       onChanged();
       return this;
@@ -999,6 +1010,7 @@ private static final long serialVersionUID = 0L;
     public Builder setBiddable(boolean value) {
       
       biddable_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1011,7 +1023,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBiddable() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       biddable_ = false;
       onChanged();
       return this;

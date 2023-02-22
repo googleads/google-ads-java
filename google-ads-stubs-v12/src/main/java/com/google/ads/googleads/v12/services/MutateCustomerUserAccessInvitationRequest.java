@@ -50,7 +50,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CUSTOMER_ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object customerId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object customerId_ = "";
   /**
    * <pre>
    * Required. The ID of the customer whose access invitation is being modified.
@@ -130,7 +131,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.services.CustomerUserAccessInvitationOperationOrBuilder getOperationOrBuilder() {
-    return getOperation();
+    return operation_ == null ? com.google.ads.googleads.v12.services.CustomerUserAccessInvitationOperation.getDefaultInstance() : operation_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -341,12 +342,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       customerId_ = "";
-
-      if (operationBuilder_ == null) {
-        operation_ = null;
-      } else {
-        operation_ = null;
+      operation_ = null;
+      if (operationBuilder_ != null) {
+        operationBuilder_.dispose();
         operationBuilder_ = null;
       }
       return this;
@@ -375,14 +375,21 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.MutateCustomerUserAccessInvitationRequest buildPartial() {
       com.google.ads.googleads.v12.services.MutateCustomerUserAccessInvitationRequest result = new com.google.ads.googleads.v12.services.MutateCustomerUserAccessInvitationRequest(this);
-      result.customerId_ = customerId_;
-      if (operationBuilder_ == null) {
-        result.operation_ = operation_;
-      } else {
-        result.operation_ = operationBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.MutateCustomerUserAccessInvitationRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.customerId_ = customerId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.operation_ = operationBuilder_ == null
+            ? operation_
+            : operationBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -431,6 +438,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.services.MutateCustomerUserAccessInvitationRequest.getDefaultInstance()) return this;
       if (!other.getCustomerId().isEmpty()) {
         customerId_ = other.customerId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasOperation()) {
@@ -464,14 +472,14 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               customerId_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               input.readMessage(
                   getOperationFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             default: {
@@ -489,6 +497,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object customerId_ = "";
     /**
@@ -543,11 +552,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       customerId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -560,8 +567,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCustomerId() {
-      
       customerId_ = getDefaultInstance().getCustomerId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -576,12 +583,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCustomerIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       customerId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -598,7 +603,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the operation field is set.
      */
     public boolean hasOperation() {
-      return operationBuilder_ != null || operation_ != null;
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -628,11 +633,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         operation_ = value;
-        onChanged();
       } else {
         operationBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -646,11 +651,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.services.CustomerUserAccessInvitationOperation.Builder builderForValue) {
       if (operationBuilder_ == null) {
         operation_ = builderForValue.build();
-        onChanged();
       } else {
         operationBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -662,17 +667,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeOperation(com.google.ads.googleads.v12.services.CustomerUserAccessInvitationOperation value) {
       if (operationBuilder_ == null) {
-        if (operation_ != null) {
-          operation_ =
-            com.google.ads.googleads.v12.services.CustomerUserAccessInvitationOperation.newBuilder(operation_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000002) != 0) &&
+          operation_ != null &&
+          operation_ != com.google.ads.googleads.v12.services.CustomerUserAccessInvitationOperation.getDefaultInstance()) {
+          getOperationBuilder().mergeFrom(value);
         } else {
           operation_ = value;
         }
-        onChanged();
       } else {
         operationBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000002;
+      onChanged();
       return this;
     }
     /**
@@ -683,14 +689,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.services.CustomerUserAccessInvitationOperation operation = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder clearOperation() {
-      if (operationBuilder_ == null) {
-        operation_ = null;
-        onChanged();
-      } else {
-        operation_ = null;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      operation_ = null;
+      if (operationBuilder_ != null) {
+        operationBuilder_.dispose();
         operationBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -701,7 +706,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.services.CustomerUserAccessInvitationOperation operation = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.google.ads.googleads.v12.services.CustomerUserAccessInvitationOperation.Builder getOperationBuilder() {
-      
+      bitField0_ |= 0x00000002;
       onChanged();
       return getOperationFieldBuilder().getBuilder();
     }

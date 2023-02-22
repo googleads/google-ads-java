@@ -43,8 +43,8 @@ public interface CustomAudienceOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Status of this custom audience. Indicates whether the custom audience is
-   * enabled or removed.
+   * Output only. Status of this custom audience. Indicates whether the custom
+   * audience is enabled or removed.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.CustomAudienceStatusEnum.CustomAudienceStatus status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -53,8 +53,8 @@ public interface CustomAudienceOrBuilder extends
   int getStatusValue();
   /**
    * <pre>
-   * Output only. Status of this custom audience. Indicates whether the custom audience is
-   * enabled or removed.
+   * Output only. Status of this custom audience. Indicates whether the custom
+   * audience is enabled or removed.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.CustomAudienceStatusEnum.CustomAudienceStatus status = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

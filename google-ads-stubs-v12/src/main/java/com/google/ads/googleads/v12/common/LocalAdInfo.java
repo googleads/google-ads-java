@@ -57,6 +57,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int HEADLINES_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.AdTextAsset> headlines_;
   /**
    * <pre>
@@ -127,6 +128,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTIONS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.AdTextAsset> descriptions_;
   /**
    * <pre>
@@ -197,6 +199,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CALL_TO_ACTIONS_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.AdTextAsset> callToActions_;
   /**
    * <pre>
@@ -267,6 +270,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MARKETING_IMAGES_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.AdImageAsset> marketingImages_;
   /**
    * <pre>
@@ -337,6 +341,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LOGO_IMAGES_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.AdImageAsset> logoImages_;
   /**
    * <pre>
@@ -407,6 +412,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VIDEOS_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.AdVideoAsset> videos_;
   /**
    * <pre>
@@ -472,7 +478,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PATH1_FIELD_NUMBER = 9;
-  private volatile java.lang.Object path1_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object path1_ = "";
   /**
    * <pre>
    * First part of optional text that can be appended to the URL in the ad.
@@ -530,7 +537,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PATH2_FIELD_NUMBER = 10;
-  private volatile java.lang.Object path2_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object path2_ = "";
   /**
    * <pre>
    * Second part of optional text that can be appended to the URL in the ad.
@@ -879,6 +887,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (headlinesBuilder_ == null) {
         headlines_ = java.util.Collections.emptyList();
       } else {
@@ -922,9 +931,7 @@ private static final long serialVersionUID = 0L;
       }
       bitField0_ = (bitField0_ & ~0x00000020);
       path1_ = "";
-      bitField0_ = (bitField0_ & ~0x00000040);
       path2_ = "";
-      bitField0_ = (bitField0_ & ~0x00000080);
       return this;
     }
 
@@ -951,8 +958,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.LocalAdInfo buildPartial() {
       com.google.ads.googleads.v12.common.LocalAdInfo result = new com.google.ads.googleads.v12.common.LocalAdInfo(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.common.LocalAdInfo result) {
       if (headlinesBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           headlines_ = java.util.Collections.unmodifiableList(headlines_);
@@ -1007,17 +1019,20 @@ private static final long serialVersionUID = 0L;
       } else {
         result.videos_ = videosBuilder_.build();
       }
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.LocalAdInfo result) {
+      int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.path1_ = path1_;
         to_bitField0_ |= 0x00000001;
       }
-      result.path1_ = path1_;
       if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.path2_ = path2_;
         to_bitField0_ |= 0x00000002;
       }
-      result.path2_ = path2_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1221,13 +1236,13 @@ private static final long serialVersionUID = 0L;
         }
       }
       if (other.hasPath1()) {
-        bitField0_ |= 0x00000040;
         path1_ = other.path1_;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (other.hasPath2()) {
-        bitField0_ |= 0x00000080;
         path2_ = other.path2_;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -3495,11 +3510,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPath1(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000040;
+      if (value == null) { throw new NullPointerException(); }
       path1_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -3512,8 +3525,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPath1() {
-      bitField0_ = (bitField0_ & ~0x00000040);
       path1_ = getDefaultInstance().getPath1();
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -3528,12 +3541,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPath1Bytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000040;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       path1_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -3606,11 +3617,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPath2(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000080;
+      if (value == null) { throw new NullPointerException(); }
       path2_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -3624,8 +3633,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPath2() {
-      bitField0_ = (bitField0_ & ~0x00000080);
       path2_ = getDefaultInstance().getPath2();
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -3641,12 +3650,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPath2Bytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000080;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       path2_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }

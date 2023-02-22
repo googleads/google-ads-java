@@ -51,7 +51,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int KEYWORD_PLAN_CAMPAIGN_FIELD_NUMBER = 1;
-  private volatile java.lang.Object keywordPlanCampaign_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object keywordPlanCampaign_ = "";
   /**
    * <pre>
    * The resource name of the Keyword Plan campaign related to the forecast.
@@ -112,6 +113,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int WEEKLY_FORECASTS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.services.KeywordPlanWeeklyForecast> weeklyForecasts_;
   /**
    * <pre>
@@ -380,8 +382,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       keywordPlanCampaign_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       if (weeklyForecastsBuilder_ == null) {
         weeklyForecasts_ = java.util.Collections.emptyList();
       } else {
@@ -415,12 +417,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.KeywordPlanWeeklyTimeSeriesForecast buildPartial() {
       com.google.ads.googleads.v12.services.KeywordPlanWeeklyTimeSeriesForecast result = new com.google.ads.googleads.v12.services.KeywordPlanWeeklyTimeSeriesForecast(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        to_bitField0_ |= 0x00000001;
-      }
-      result.keywordPlanCampaign_ = keywordPlanCampaign_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.services.KeywordPlanWeeklyTimeSeriesForecast result) {
       if (weeklyForecastsBuilder_ == null) {
         if (((bitField0_ & 0x00000002) != 0)) {
           weeklyForecasts_ = java.util.Collections.unmodifiableList(weeklyForecasts_);
@@ -430,9 +433,16 @@ private static final long serialVersionUID = 0L;
       } else {
         result.weeklyForecasts_ = weeklyForecastsBuilder_.build();
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.KeywordPlanWeeklyTimeSeriesForecast result) {
+      int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.keywordPlanCampaign_ = keywordPlanCampaign_;
+        to_bitField0_ |= 0x00000001;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -480,8 +490,8 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v12.services.KeywordPlanWeeklyTimeSeriesForecast other) {
       if (other == com.google.ads.googleads.v12.services.KeywordPlanWeeklyTimeSeriesForecast.getDefaultInstance()) return this;
       if (other.hasKeywordPlanCampaign()) {
-        bitField0_ |= 0x00000001;
         keywordPlanCampaign_ = other.keywordPlanCampaign_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (weeklyForecastsBuilder_ == null) {
@@ -639,11 +649,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKeywordPlanCampaign(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       keywordPlanCampaign_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -657,8 +665,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearKeywordPlanCampaign() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       keywordPlanCampaign_ = getDefaultInstance().getKeywordPlanCampaign();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -674,12 +682,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKeywordPlanCampaignBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       keywordPlanCampaign_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

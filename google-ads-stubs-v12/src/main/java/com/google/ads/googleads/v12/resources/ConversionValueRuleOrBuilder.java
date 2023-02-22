@@ -157,11 +157,10 @@ public interface ConversionValueRuleOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The resource name of the conversion value rule's owner customer.
-   * When the value rule is inherited from a manager
-   * customer, owner_customer will be the resource name of the manager whereas
-   * the customer in the resource_name will be of the requesting serving
-   * customer.
+   * Output only. The resource name of the conversion value rule's owner
+   * customer. When the value rule is inherited from a manager customer,
+   * owner_customer will be the resource name of the manager whereas the
+   * customer in the resource_name will be of the requesting serving customer.
    * ** Read-only **
    * </pre>
    *
@@ -171,11 +170,10 @@ public interface ConversionValueRuleOrBuilder extends
   java.lang.String getOwnerCustomer();
   /**
    * <pre>
-   * Output only. The resource name of the conversion value rule's owner customer.
-   * When the value rule is inherited from a manager
-   * customer, owner_customer will be the resource name of the manager whereas
-   * the customer in the resource_name will be of the requesting serving
-   * customer.
+   * Output only. The resource name of the conversion value rule's owner
+   * customer. When the value rule is inherited from a manager customer,
+   * owner_customer will be the resource name of the manager whereas the
+   * customer in the resource_name will be of the requesting serving customer.
    * ** Read-only **
    * </pre>
    *

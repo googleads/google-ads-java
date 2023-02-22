@@ -53,7 +53,8 @@ public interface AssetGroupSignalOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. The signal(audience criterion) to be used by the performance max campaign.
+   * Immutable. The signal(audience criterion) to be used by the performance max
+   * campaign.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.AudienceInfo audience = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -62,7 +63,8 @@ public interface AssetGroupSignalOrBuilder extends
   boolean hasAudience();
   /**
    * <pre>
-   * Immutable. The signal(audience criterion) to be used by the performance max campaign.
+   * Immutable. The signal(audience criterion) to be used by the performance max
+   * campaign.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.AudienceInfo audience = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -71,7 +73,8 @@ public interface AssetGroupSignalOrBuilder extends
   com.google.ads.googleads.v11.common.AudienceInfo getAudience();
   /**
    * <pre>
-   * Immutable. The signal(audience criterion) to be used by the performance max campaign.
+   * Immutable. The signal(audience criterion) to be used by the performance max
+   * campaign.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.AudienceInfo audience = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>

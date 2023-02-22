@@ -53,7 +53,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Immutable. The resource name of the merchant center link.
@@ -103,7 +104,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ID_FIELD_NUMBER = 6;
-  private long id_;
+  private long id_ = 0L;
   /**
    * <pre>
    * Output only. The ID of the Merchant Center account.
@@ -132,7 +133,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MERCHANT_CENTER_ACCOUNT_NAME_FIELD_NUMBER = 7;
-  private volatile java.lang.Object merchantCenterAccountName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object merchantCenterAccountName_ = "";
   /**
    * <pre>
    * Output only. The name of the Merchant Center account.
@@ -193,7 +195,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STATUS_FIELD_NUMBER = 5;
-  private int status_;
+  private int status_ = 0;
   /**
    * <pre>
    * The status of the link.
@@ -214,8 +216,7 @@ private static final long serialVersionUID = 0L;
    * @return The status.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.MerchantCenterLinkStatusEnum.MerchantCenterLinkStatus getStatus() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.MerchantCenterLinkStatusEnum.MerchantCenterLinkStatus result = com.google.ads.googleads.v11.enums.MerchantCenterLinkStatusEnum.MerchantCenterLinkStatus.valueOf(status_);
+    com.google.ads.googleads.v11.enums.MerchantCenterLinkStatusEnum.MerchantCenterLinkStatus result = com.google.ads.googleads.v11.enums.MerchantCenterLinkStatusEnum.MerchantCenterLinkStatus.forNumber(status_);
     return result == null ? com.google.ads.googleads.v11.enums.MerchantCenterLinkStatusEnum.MerchantCenterLinkStatus.UNRECOGNIZED : result;
   }
 
@@ -453,14 +454,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       id_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       merchantCenterAccountName_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       status_ = 0;
-
       return this;
     }
 
@@ -487,21 +485,29 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.MerchantCenterLink buildPartial() {
       com.google.ads.googleads.v11.resources.MerchantCenterLink result = new com.google.ads.googleads.v11.resources.MerchantCenterLink(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.MerchantCenterLink result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.id_ = id_;
         to_bitField0_ |= 0x00000001;
       }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.merchantCenterAccountName_ = merchantCenterAccountName_;
         to_bitField0_ |= 0x00000002;
       }
-      result.merchantCenterAccountName_ = merchantCenterAccountName_;
-      result.status_ = status_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.status_ = status_;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -550,14 +556,15 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.resources.MerchantCenterLink.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasId()) {
         setId(other.getId());
       }
       if (other.hasMerchantCenterAccountName()) {
-        bitField0_ |= 0x00000002;
         merchantCenterAccountName_ = other.merchantCenterAccountName_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.status_ != 0) {
@@ -591,22 +598,22 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 40: {
               status_ = input.readEnum();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 40
             case 48: {
               id_ = input.readInt64();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 48
             case 58: {
               merchantCenterAccountName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 58
             default: {
@@ -685,11 +692,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -704,8 +709,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -722,12 +727,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -744,7 +747,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -770,8 +773,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      bitField0_ |= 0x00000001;
+      
       id_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -785,7 +789,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       id_ = 0L;
       onChanged();
       return this;
@@ -802,7 +806,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the merchantCenterAccountName field is set.
      */
     public boolean hasMerchantCenterAccountName() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -859,11 +863,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setMerchantCenterAccountName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       merchantCenterAccountName_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -877,8 +879,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMerchantCenterAccountName() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       merchantCenterAccountName_ = getDefaultInstance().getMerchantCenterAccountName();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -894,12 +896,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setMerchantCenterAccountNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       merchantCenterAccountName_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -926,8 +926,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
-      
       status_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -941,8 +941,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.MerchantCenterLinkStatusEnum.MerchantCenterLinkStatus getStatus() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.MerchantCenterLinkStatusEnum.MerchantCenterLinkStatus result = com.google.ads.googleads.v11.enums.MerchantCenterLinkStatusEnum.MerchantCenterLinkStatus.valueOf(status_);
+      com.google.ads.googleads.v11.enums.MerchantCenterLinkStatusEnum.MerchantCenterLinkStatus result = com.google.ads.googleads.v11.enums.MerchantCenterLinkStatusEnum.MerchantCenterLinkStatus.forNumber(status_);
       return result == null ? com.google.ads.googleads.v11.enums.MerchantCenterLinkStatusEnum.MerchantCenterLinkStatus.UNRECOGNIZED : result;
     }
     /**
@@ -958,7 +957,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000008;
       status_ = value.getNumber();
       onChanged();
       return this;
@@ -972,7 +971,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       status_ = 0;
       onChanged();
       return this;

@@ -54,11 +54,11 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int VALIDATION_ERROR_FIELD_NUMBER = 1;
-  private int validationError_;
+  private int validationError_ = 0;
   /**
    * <pre>
-   * Output only. Error code indicating what validation error was triggered. The description
-   * of the error can be found in the 'description' field.
+   * Output only. Error code indicating what validation error was triggered. The
+   * description of the error can be found in the 'description' field.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.errors.FeedItemValidationErrorEnum.FeedItemValidationError validation_error = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -69,21 +69,21 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Error code indicating what validation error was triggered. The description
-   * of the error can be found in the 'description' field.
+   * Output only. Error code indicating what validation error was triggered. The
+   * description of the error can be found in the 'description' field.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.errors.FeedItemValidationErrorEnum.FeedItemValidationError validation_error = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The validationError.
    */
   @java.lang.Override public com.google.ads.googleads.v12.errors.FeedItemValidationErrorEnum.FeedItemValidationError getValidationError() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.errors.FeedItemValidationErrorEnum.FeedItemValidationError result = com.google.ads.googleads.v12.errors.FeedItemValidationErrorEnum.FeedItemValidationError.valueOf(validationError_);
+    com.google.ads.googleads.v12.errors.FeedItemValidationErrorEnum.FeedItemValidationError result = com.google.ads.googleads.v12.errors.FeedItemValidationErrorEnum.FeedItemValidationError.forNumber(validationError_);
     return result == null ? com.google.ads.googleads.v12.errors.FeedItemValidationErrorEnum.FeedItemValidationError.UNRECOGNIZED : result;
   }
 
   public static final int DESCRIPTION_FIELD_NUMBER = 6;
-  private volatile java.lang.Object description_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object description_ = "";
   /**
    * <pre>
    * Output only. The description of the validation error.
@@ -141,12 +141,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FEED_ATTRIBUTE_IDS_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
   private com.google.protobuf.Internal.LongList feedAttributeIds_;
   /**
    * <pre>
-   * Output only. Set of feed attributes in the feed item flagged during validation. If
-   * empty, no specific feed attributes can be associated with the error
-   * (for example, error across the entire feed item).
+   * Output only. Set of feed attributes in the feed item flagged during
+   * validation. If empty, no specific feed attributes can be associated with
+   * the error (for example, error across the entire feed item).
    * </pre>
    *
    * <code>repeated int64 feed_attribute_ids = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -159,9 +160,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Set of feed attributes in the feed item flagged during validation. If
-   * empty, no specific feed attributes can be associated with the error
-   * (for example, error across the entire feed item).
+   * Output only. Set of feed attributes in the feed item flagged during
+   * validation. If empty, no specific feed attributes can be associated with
+   * the error (for example, error across the entire feed item).
    * </pre>
    *
    * <code>repeated int64 feed_attribute_ids = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -172,9 +173,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Set of feed attributes in the feed item flagged during validation. If
-   * empty, no specific feed attributes can be associated with the error
-   * (for example, error across the entire feed item).
+   * Output only. Set of feed attributes in the feed item flagged during
+   * validation. If empty, no specific feed attributes can be associated with
+   * the error (for example, error across the entire feed item).
    * </pre>
    *
    * <code>repeated int64 feed_attribute_ids = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -187,13 +188,14 @@ private static final long serialVersionUID = 0L;
   private int feedAttributeIdsMemoizedSerializedSize = -1;
 
   public static final int EXTRA_INFO_FIELD_NUMBER = 8;
-  private volatile java.lang.Object extraInfo_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object extraInfo_ = "";
   /**
    * <pre>
-   * Output only. Any extra information related to this error which is not captured by
-   * validation_error and feed_attribute_id (for example, placeholder field IDs
-   * when feed_attribute_id is not mapped). Note that extra_info is not
-   * localized.
+   * Output only. Any extra information related to this error which is not
+   * captured by validation_error and feed_attribute_id (for example,
+   * placeholder field IDs when feed_attribute_id is not mapped). Note that
+   * extra_info is not localized.
    * </pre>
    *
    * <code>optional string extra_info = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -205,10 +207,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Any extra information related to this error which is not captured by
-   * validation_error and feed_attribute_id (for example, placeholder field IDs
-   * when feed_attribute_id is not mapped). Note that extra_info is not
-   * localized.
+   * Output only. Any extra information related to this error which is not
+   * captured by validation_error and feed_attribute_id (for example,
+   * placeholder field IDs when feed_attribute_id is not mapped). Note that
+   * extra_info is not localized.
    * </pre>
    *
    * <code>optional string extra_info = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -229,10 +231,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Any extra information related to this error which is not captured by
-   * validation_error and feed_attribute_id (for example, placeholder field IDs
-   * when feed_attribute_id is not mapped). Note that extra_info is not
-   * localized.
+   * Output only. Any extra information related to this error which is not
+   * captured by validation_error and feed_attribute_id (for example,
+   * placeholder field IDs when feed_attribute_id is not mapped). Note that
+   * extra_info is not localized.
    * </pre>
    *
    * <code>optional string extra_info = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -503,14 +505,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       validationError_ = 0;
-
       description_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       feedAttributeIds_ = emptyLongList();
-      bitField0_ = (bitField0_ & ~0x00000002);
       extraInfo_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -537,25 +536,35 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.FeedItemValidationError buildPartial() {
       com.google.ads.googleads.v12.resources.FeedItemValidationError result = new com.google.ads.googleads.v12.resources.FeedItemValidationError(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.validationError_ = validationError_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        to_bitField0_ |= 0x00000001;
-      }
-      result.description_ = description_;
-      if (((bitField0_ & 0x00000002) != 0)) {
-        feedAttributeIds_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000002);
-      }
-      result.feedAttributeIds_ = feedAttributeIds_;
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        to_bitField0_ |= 0x00000002;
-      }
-      result.extraInfo_ = extraInfo_;
-      result.bitField0_ = to_bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.resources.FeedItemValidationError result) {
+      if (((bitField0_ & 0x00000004) != 0)) {
+        feedAttributeIds_.makeImmutable();
+        bitField0_ = (bitField0_ & ~0x00000004);
+      }
+      result.feedAttributeIds_ = feedAttributeIds_;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.resources.FeedItemValidationError result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.validationError_ = validationError_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.description_ = description_;
+        to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.extraInfo_ = extraInfo_;
+        to_bitField0_ |= 0x00000002;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -606,14 +615,14 @@ private static final long serialVersionUID = 0L;
         setValidationErrorValue(other.getValidationErrorValue());
       }
       if (other.hasDescription()) {
-        bitField0_ |= 0x00000001;
         description_ = other.description_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.feedAttributeIds_.isEmpty()) {
         if (feedAttributeIds_.isEmpty()) {
           feedAttributeIds_ = other.feedAttributeIds_;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
           ensureFeedAttributeIdsIsMutable();
           feedAttributeIds_.addAll(other.feedAttributeIds_);
@@ -621,8 +630,8 @@ private static final long serialVersionUID = 0L;
         onChanged();
       }
       if (other.hasExtraInfo()) {
-        bitField0_ |= 0x00000004;
         extraInfo_ = other.extraInfo_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -653,12 +662,12 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               validationError_ = input.readEnum();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             case 50: {
               description_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 50
             case 56: {
@@ -679,7 +688,7 @@ private static final long serialVersionUID = 0L;
             } // case 58
             case 66: {
               extraInfo_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               break;
             } // case 66
             default: {
@@ -702,8 +711,8 @@ private static final long serialVersionUID = 0L;
     private int validationError_ = 0;
     /**
      * <pre>
-     * Output only. Error code indicating what validation error was triggered. The description
-     * of the error can be found in the 'description' field.
+     * Output only. Error code indicating what validation error was triggered. The
+     * description of the error can be found in the 'description' field.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.errors.FeedItemValidationErrorEnum.FeedItemValidationError validation_error = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -714,8 +723,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Error code indicating what validation error was triggered. The description
-     * of the error can be found in the 'description' field.
+     * Output only. Error code indicating what validation error was triggered. The
+     * description of the error can be found in the 'description' field.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.errors.FeedItemValidationErrorEnum.FeedItemValidationError validation_error = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -723,15 +732,15 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setValidationErrorValue(int value) {
-      
       validationError_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Error code indicating what validation error was triggered. The description
-     * of the error can be found in the 'description' field.
+     * Output only. Error code indicating what validation error was triggered. The
+     * description of the error can be found in the 'description' field.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.errors.FeedItemValidationErrorEnum.FeedItemValidationError validation_error = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -739,14 +748,13 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.errors.FeedItemValidationErrorEnum.FeedItemValidationError getValidationError() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.errors.FeedItemValidationErrorEnum.FeedItemValidationError result = com.google.ads.googleads.v12.errors.FeedItemValidationErrorEnum.FeedItemValidationError.valueOf(validationError_);
+      com.google.ads.googleads.v12.errors.FeedItemValidationErrorEnum.FeedItemValidationError result = com.google.ads.googleads.v12.errors.FeedItemValidationErrorEnum.FeedItemValidationError.forNumber(validationError_);
       return result == null ? com.google.ads.googleads.v12.errors.FeedItemValidationErrorEnum.FeedItemValidationError.UNRECOGNIZED : result;
     }
     /**
      * <pre>
-     * Output only. Error code indicating what validation error was triggered. The description
-     * of the error can be found in the 'description' field.
+     * Output only. Error code indicating what validation error was triggered. The
+     * description of the error can be found in the 'description' field.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.errors.FeedItemValidationErrorEnum.FeedItemValidationError validation_error = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -757,22 +765,22 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       validationError_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Error code indicating what validation error was triggered. The description
-     * of the error can be found in the 'description' field.
+     * Output only. Error code indicating what validation error was triggered. The
+     * description of the error can be found in the 'description' field.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.errors.FeedItemValidationErrorEnum.FeedItemValidationError validation_error = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearValidationError() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       validationError_ = 0;
       onChanged();
       return this;
@@ -788,7 +796,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the description field is set.
      */
     public boolean hasDescription() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -842,11 +850,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       description_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -859,8 +865,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       description_ = getDefaultInstance().getDescription();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -875,28 +881,26 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescriptionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       description_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
 
     private com.google.protobuf.Internal.LongList feedAttributeIds_ = emptyLongList();
     private void ensureFeedAttributeIdsIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         feedAttributeIds_ = mutableCopy(feedAttributeIds_);
-        bitField0_ |= 0x00000002;
-       }
+        bitField0_ |= 0x00000004;
+      }
     }
     /**
      * <pre>
-     * Output only. Set of feed attributes in the feed item flagged during validation. If
-     * empty, no specific feed attributes can be associated with the error
-     * (for example, error across the entire feed item).
+     * Output only. Set of feed attributes in the feed item flagged during
+     * validation. If empty, no specific feed attributes can be associated with
+     * the error (for example, error across the entire feed item).
      * </pre>
      *
      * <code>repeated int64 feed_attribute_ids = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -904,14 +908,14 @@ private static final long serialVersionUID = 0L;
      */
     public java.util.List<java.lang.Long>
         getFeedAttributeIdsList() {
-      return ((bitField0_ & 0x00000002) != 0) ?
+      return ((bitField0_ & 0x00000004) != 0) ?
                java.util.Collections.unmodifiableList(feedAttributeIds_) : feedAttributeIds_;
     }
     /**
      * <pre>
-     * Output only. Set of feed attributes in the feed item flagged during validation. If
-     * empty, no specific feed attributes can be associated with the error
-     * (for example, error across the entire feed item).
+     * Output only. Set of feed attributes in the feed item flagged during
+     * validation. If empty, no specific feed attributes can be associated with
+     * the error (for example, error across the entire feed item).
      * </pre>
      *
      * <code>repeated int64 feed_attribute_ids = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -922,9 +926,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Set of feed attributes in the feed item flagged during validation. If
-     * empty, no specific feed attributes can be associated with the error
-     * (for example, error across the entire feed item).
+     * Output only. Set of feed attributes in the feed item flagged during
+     * validation. If empty, no specific feed attributes can be associated with
+     * the error (for example, error across the entire feed item).
      * </pre>
      *
      * <code>repeated int64 feed_attribute_ids = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -936,9 +940,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Set of feed attributes in the feed item flagged during validation. If
-     * empty, no specific feed attributes can be associated with the error
-     * (for example, error across the entire feed item).
+     * Output only. Set of feed attributes in the feed item flagged during
+     * validation. If empty, no specific feed attributes can be associated with
+     * the error (for example, error across the entire feed item).
      * </pre>
      *
      * <code>repeated int64 feed_attribute_ids = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -948,6 +952,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFeedAttributeIds(
         int index, long value) {
+      
       ensureFeedAttributeIdsIsMutable();
       feedAttributeIds_.setLong(index, value);
       onChanged();
@@ -955,9 +960,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Set of feed attributes in the feed item flagged during validation. If
-     * empty, no specific feed attributes can be associated with the error
-     * (for example, error across the entire feed item).
+     * Output only. Set of feed attributes in the feed item flagged during
+     * validation. If empty, no specific feed attributes can be associated with
+     * the error (for example, error across the entire feed item).
      * </pre>
      *
      * <code>repeated int64 feed_attribute_ids = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -965,6 +970,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder addFeedAttributeIds(long value) {
+      
       ensureFeedAttributeIdsIsMutable();
       feedAttributeIds_.addLong(value);
       onChanged();
@@ -972,9 +978,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Set of feed attributes in the feed item flagged during validation. If
-     * empty, no specific feed attributes can be associated with the error
-     * (for example, error across the entire feed item).
+     * Output only. Set of feed attributes in the feed item flagged during
+     * validation. If empty, no specific feed attributes can be associated with
+     * the error (for example, error across the entire feed item).
      * </pre>
      *
      * <code>repeated int64 feed_attribute_ids = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -991,9 +997,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Set of feed attributes in the feed item flagged during validation. If
-     * empty, no specific feed attributes can be associated with the error
-     * (for example, error across the entire feed item).
+     * Output only. Set of feed attributes in the feed item flagged during
+     * validation. If empty, no specific feed attributes can be associated with
+     * the error (for example, error across the entire feed item).
      * </pre>
      *
      * <code>repeated int64 feed_attribute_ids = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1001,7 +1007,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearFeedAttributeIds() {
       feedAttributeIds_ = emptyLongList();
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1009,24 +1015,24 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object extraInfo_ = "";
     /**
      * <pre>
-     * Output only. Any extra information related to this error which is not captured by
-     * validation_error and feed_attribute_id (for example, placeholder field IDs
-     * when feed_attribute_id is not mapped). Note that extra_info is not
-     * localized.
+     * Output only. Any extra information related to this error which is not
+     * captured by validation_error and feed_attribute_id (for example,
+     * placeholder field IDs when feed_attribute_id is not mapped). Note that
+     * extra_info is not localized.
      * </pre>
      *
      * <code>optional string extra_info = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the extraInfo field is set.
      */
     public boolean hasExtraInfo() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
-     * Output only. Any extra information related to this error which is not captured by
-     * validation_error and feed_attribute_id (for example, placeholder field IDs
-     * when feed_attribute_id is not mapped). Note that extra_info is not
-     * localized.
+     * Output only. Any extra information related to this error which is not
+     * captured by validation_error and feed_attribute_id (for example,
+     * placeholder field IDs when feed_attribute_id is not mapped). Note that
+     * extra_info is not localized.
      * </pre>
      *
      * <code>optional string extra_info = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1046,10 +1052,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Any extra information related to this error which is not captured by
-     * validation_error and feed_attribute_id (for example, placeholder field IDs
-     * when feed_attribute_id is not mapped). Note that extra_info is not
-     * localized.
+     * Output only. Any extra information related to this error which is not
+     * captured by validation_error and feed_attribute_id (for example,
+     * placeholder field IDs when feed_attribute_id is not mapped). Note that
+     * extra_info is not localized.
      * </pre>
      *
      * <code>optional string extra_info = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1070,10 +1076,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Any extra information related to this error which is not captured by
-     * validation_error and feed_attribute_id (for example, placeholder field IDs
-     * when feed_attribute_id is not mapped). Note that extra_info is not
-     * localized.
+     * Output only. Any extra information related to this error which is not
+     * captured by validation_error and feed_attribute_id (for example,
+     * placeholder field IDs when feed_attribute_id is not mapped). Note that
+     * extra_info is not localized.
      * </pre>
      *
      * <code>optional string extra_info = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1082,37 +1088,35 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setExtraInfo(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       extraInfo_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Any extra information related to this error which is not captured by
-     * validation_error and feed_attribute_id (for example, placeholder field IDs
-     * when feed_attribute_id is not mapped). Note that extra_info is not
-     * localized.
+     * Output only. Any extra information related to this error which is not
+     * captured by validation_error and feed_attribute_id (for example,
+     * placeholder field IDs when feed_attribute_id is not mapped). Note that
+     * extra_info is not localized.
      * </pre>
      *
      * <code>optional string extra_info = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearExtraInfo() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       extraInfo_ = getDefaultInstance().getExtraInfo();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Any extra information related to this error which is not captured by
-     * validation_error and feed_attribute_id (for example, placeholder field IDs
-     * when feed_attribute_id is not mapped). Note that extra_info is not
-     * localized.
+     * Output only. Any extra information related to this error which is not
+     * captured by validation_error and feed_attribute_id (for example,
+     * placeholder field IDs when feed_attribute_id is not mapped). Note that
+     * extra_info is not localized.
      * </pre>
      *
      * <code>optional string extra_info = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1121,12 +1125,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setExtraInfoBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       extraInfo_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }

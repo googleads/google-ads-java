@@ -67,12 +67,11 @@ public interface ConversionCustomVariableOrBuilder extends
 
   /**
    * <pre>
-   * Required. Immutable. The tag of the conversion custom variable. It is used in the event snippet
-   * and sent to Google Ads along with conversion pings. For conversion uploads
-   * in Google Ads API, the resource name of the conversion custom variable is
-   * used.
-   * Tag should be unique. The maximum size of tag is 100 bytes.
-   * There should not be any extra spaces before and after.
+   * Required. Immutable. The tag of the conversion custom variable. It is used
+   * in the event snippet and sent to Google Ads along with conversion pings.
+   * For conversion uploads in Google Ads API, the resource name of the
+   * conversion custom variable is used. Tag should be unique. The maximum size
+   * of tag is 100 bytes. There should not be any extra spaces before and after.
    * Currently only lowercase letters, numbers and underscores are allowed in
    * the tag.
    * </pre>
@@ -83,12 +82,11 @@ public interface ConversionCustomVariableOrBuilder extends
   java.lang.String getTag();
   /**
    * <pre>
-   * Required. Immutable. The tag of the conversion custom variable. It is used in the event snippet
-   * and sent to Google Ads along with conversion pings. For conversion uploads
-   * in Google Ads API, the resource name of the conversion custom variable is
-   * used.
-   * Tag should be unique. The maximum size of tag is 100 bytes.
-   * There should not be any extra spaces before and after.
+   * Required. Immutable. The tag of the conversion custom variable. It is used
+   * in the event snippet and sent to Google Ads along with conversion pings.
+   * For conversion uploads in Google Ads API, the resource name of the
+   * conversion custom variable is used. Tag should be unique. The maximum size
+   * of tag is 100 bytes. There should not be any extra spaces before and after.
    * Currently only lowercase letters, numbers and underscores are allowed in
    * the tag.
    * </pre>
@@ -120,7 +118,8 @@ public interface ConversionCustomVariableOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The resource name of the customer that owns the conversion custom variable.
+   * Output only. The resource name of the customer that owns the conversion
+   * custom variable.
    * </pre>
    *
    * <code>string owner_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -129,7 +128,8 @@ public interface ConversionCustomVariableOrBuilder extends
   java.lang.String getOwnerCustomer();
   /**
    * <pre>
-   * Output only. The resource name of the customer that owns the conversion custom variable.
+   * Output only. The resource name of the customer that owns the conversion
+   * custom variable.
    * </pre>
    *
    * <code>string owner_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>

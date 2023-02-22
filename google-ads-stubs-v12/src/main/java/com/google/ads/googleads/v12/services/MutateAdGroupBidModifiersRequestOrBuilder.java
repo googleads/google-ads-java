@@ -9,7 +9,8 @@ public interface MutateAdGroupBidModifiersRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. ID of the customer whose ad group bid modifiers are being modified.
+   * Required. ID of the customer whose ad group bid modifiers are being
+   * modified.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -18,7 +19,8 @@ public interface MutateAdGroupBidModifiersRequestOrBuilder extends
   java.lang.String getCustomerId();
   /**
    * <pre>
-   * Required. ID of the customer whose ad group bid modifiers are being modified.
+   * Required. ID of the customer whose ad group bid modifiers are being
+   * modified.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -29,7 +31,8 @@ public interface MutateAdGroupBidModifiersRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The list of operations to perform on individual ad group bid modifiers.
+   * Required. The list of operations to perform on individual ad group bid
+   * modifiers.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.services.AdGroupBidModifierOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -38,7 +41,8 @@ public interface MutateAdGroupBidModifiersRequestOrBuilder extends
       getOperationsList();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual ad group bid modifiers.
+   * Required. The list of operations to perform on individual ad group bid
+   * modifiers.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.services.AdGroupBidModifierOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -46,7 +50,8 @@ public interface MutateAdGroupBidModifiersRequestOrBuilder extends
   com.google.ads.googleads.v12.services.AdGroupBidModifierOperation getOperations(int index);
   /**
    * <pre>
-   * Required. The list of operations to perform on individual ad group bid modifiers.
+   * Required. The list of operations to perform on individual ad group bid
+   * modifiers.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.services.AdGroupBidModifierOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -54,7 +59,8 @@ public interface MutateAdGroupBidModifiersRequestOrBuilder extends
   int getOperationsCount();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual ad group bid modifiers.
+   * Required. The list of operations to perform on individual ad group bid
+   * modifiers.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.services.AdGroupBidModifierOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -63,7 +69,8 @@ public interface MutateAdGroupBidModifiersRequestOrBuilder extends
       getOperationsOrBuilderList();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual ad group bid modifiers.
+   * Required. The list of operations to perform on individual ad group bid
+   * modifiers.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.services.AdGroupBidModifierOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>

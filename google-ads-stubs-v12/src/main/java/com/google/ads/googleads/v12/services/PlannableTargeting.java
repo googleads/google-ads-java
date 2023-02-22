@@ -53,14 +53,14 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AGE_RANGES_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> ageRanges_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
       java.lang.Integer, com.google.ads.googleads.v12.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange> ageRanges_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, com.google.ads.googleads.v12.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange>() {
             public com.google.ads.googleads.v12.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange convert(java.lang.Integer from) {
-              @SuppressWarnings("deprecation")
-              com.google.ads.googleads.v12.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange result = com.google.ads.googleads.v12.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange.valueOf(from);
+              com.google.ads.googleads.v12.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange result = com.google.ads.googleads.v12.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange.forNumber(from);
               return result == null ? com.google.ads.googleads.v12.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange.UNRECOGNIZED : result;
             }
           };
@@ -141,6 +141,7 @@ private static final long serialVersionUID = 0L;
   private int ageRangesMemoizedSerializedSize;
 
   public static final int GENDERS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.GenderInfo> genders_;
   /**
    * <pre>
@@ -201,6 +202,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DEVICES_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.DeviceInfo> devices_;
   /**
    * <pre>
@@ -276,14 +278,14 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NETWORKS_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
   private java.util.List<java.lang.Integer> networks_;
   private static final com.google.protobuf.Internal.ListAdapter.Converter<
       java.lang.Integer, com.google.ads.googleads.v12.enums.ReachPlanNetworkEnum.ReachPlanNetwork> networks_converter_ =
           new com.google.protobuf.Internal.ListAdapter.Converter<
               java.lang.Integer, com.google.ads.googleads.v12.enums.ReachPlanNetworkEnum.ReachPlanNetwork>() {
             public com.google.ads.googleads.v12.enums.ReachPlanNetworkEnum.ReachPlanNetwork convert(java.lang.Integer from) {
-              @SuppressWarnings("deprecation")
-              com.google.ads.googleads.v12.enums.ReachPlanNetworkEnum.ReachPlanNetwork result = com.google.ads.googleads.v12.enums.ReachPlanNetworkEnum.ReachPlanNetwork.valueOf(from);
+              com.google.ads.googleads.v12.enums.ReachPlanNetworkEnum.ReachPlanNetwork result = com.google.ads.googleads.v12.enums.ReachPlanNetworkEnum.ReachPlanNetwork.forNumber(from);
               return result == null ? com.google.ads.googleads.v12.enums.ReachPlanNetworkEnum.ReachPlanNetwork.UNRECOGNIZED : result;
             }
           };
@@ -354,6 +356,7 @@ private static final long serialVersionUID = 0L;
   private int networksMemoizedSerializedSize;
 
   public static final int YOUTUBE_SELECT_LINEUPS_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.services.YouTubeSelectLineUp> youtubeSelectLineups_;
   /**
    * <pre>
@@ -682,6 +685,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       ageRanges_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000001);
       if (gendersBuilder_ == null) {
@@ -733,7 +737,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.PlannableTargeting buildPartial() {
       com.google.ads.googleads.v12.services.PlannableTargeting result = new com.google.ads.googleads.v12.services.PlannableTargeting(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.services.PlannableTargeting result) {
       if (((bitField0_ & 0x00000001) != 0)) {
         ageRanges_ = java.util.Collections.unmodifiableList(ageRanges_);
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -771,8 +781,10 @@ private static final long serialVersionUID = 0L;
       } else {
         result.youtubeSelectLineups_ = youtubeSelectLineupsBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.PlannableTargeting result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override

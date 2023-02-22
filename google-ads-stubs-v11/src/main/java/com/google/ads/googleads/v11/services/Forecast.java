@@ -50,7 +50,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int ON_TARGET_REACH_FIELD_NUMBER = 5;
-  private long onTargetReach_;
+  private long onTargetReach_ = 0L;
   /**
    * <pre>
    * Number of unique people reached at least
@@ -89,7 +89,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTAL_REACH_FIELD_NUMBER = 6;
-  private long totalReach_;
+  private long totalReach_ = 0L;
   /**
    * <pre>
    * Total number of unique people reached at least
@@ -128,7 +128,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ON_TARGET_IMPRESSIONS_FIELD_NUMBER = 7;
-  private long onTargetImpressions_;
+  private long onTargetImpressions_ = 0L;
   /**
    * <pre>
    * Number of ad impressions that exactly matches the Targeting.
@@ -155,7 +155,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTAL_IMPRESSIONS_FIELD_NUMBER = 8;
-  private long totalImpressions_;
+  private long totalImpressions_ = 0L;
   /**
    * <pre>
    * Total number of ad impressions. This includes impressions that may fall
@@ -186,7 +186,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VIEWABLE_IMPRESSIONS_FIELD_NUMBER = 9;
-  private long viewableImpressions_;
+  private long viewableImpressions_ = 0L;
   /**
    * <pre>
    * Number of times the ad's impressions were considered viewable.
@@ -219,6 +219,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int EFFECTIVE_FREQUENCY_BREAKDOWNS_FIELD_NUMBER = 10;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.services.EffectiveFrequencyBreakdown> effectiveFrequencyBreakdowns_;
   /**
    * <pre>
@@ -294,7 +295,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ON_TARGET_COVIEW_REACH_FIELD_NUMBER = 11;
-  private long onTargetCoviewReach_;
+  private long onTargetCoviewReach_ = 0L;
   /**
    * <pre>
    * Number of unique people reached that exactly matches the Targeting
@@ -323,7 +324,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTAL_COVIEW_REACH_FIELD_NUMBER = 12;
-  private long totalCoviewReach_;
+  private long totalCoviewReach_ = 0L;
   /**
    * <pre>
    * Number of unique people reached including co-viewers. This includes
@@ -352,7 +353,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ON_TARGET_COVIEW_IMPRESSIONS_FIELD_NUMBER = 13;
-  private long onTargetCoviewImpressions_;
+  private long onTargetCoviewImpressions_ = 0L;
   /**
    * <pre>
    * Number of ad impressions that exactly matches the Targeting including
@@ -381,7 +382,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTAL_COVIEW_IMPRESSIONS_FIELD_NUMBER = 14;
-  private long totalCoviewImpressions_;
+  private long totalCoviewImpressions_ = 0L;
   /**
    * <pre>
    * Total number of ad impressions including co-viewers. This includes
@@ -758,16 +759,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       onTargetReach_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       totalReach_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000002);
       onTargetImpressions_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000004);
       totalImpressions_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000008);
       viewableImpressions_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000010);
       if (effectiveFrequencyBreakdownsBuilder_ == null) {
         effectiveFrequencyBreakdowns_ = java.util.Collections.emptyList();
       } else {
@@ -776,13 +773,9 @@ private static final long serialVersionUID = 0L;
       }
       bitField0_ = (bitField0_ & ~0x00000020);
       onTargetCoviewReach_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000040);
       totalCoviewReach_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000080);
       onTargetCoviewImpressions_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000100);
       totalCoviewImpressions_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000200);
       return this;
     }
 
@@ -809,6 +802,25 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.Forecast buildPartial() {
       com.google.ads.googleads.v11.services.Forecast result = new com.google.ads.googleads.v11.services.Forecast(this);
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.services.Forecast result) {
+      if (effectiveFrequencyBreakdownsBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0)) {
+          effectiveFrequencyBreakdowns_ = java.util.Collections.unmodifiableList(effectiveFrequencyBreakdowns_);
+          bitField0_ = (bitField0_ & ~0x00000020);
+        }
+        result.effectiveFrequencyBreakdowns_ = effectiveFrequencyBreakdowns_;
+      } else {
+        result.effectiveFrequencyBreakdowns_ = effectiveFrequencyBreakdownsBuilder_.build();
+      }
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.Forecast result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -831,15 +843,6 @@ private static final long serialVersionUID = 0L;
         result.viewableImpressions_ = viewableImpressions_;
         to_bitField0_ |= 0x00000010;
       }
-      if (effectiveFrequencyBreakdownsBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0)) {
-          effectiveFrequencyBreakdowns_ = java.util.Collections.unmodifiableList(effectiveFrequencyBreakdowns_);
-          bitField0_ = (bitField0_ & ~0x00000020);
-        }
-        result.effectiveFrequencyBreakdowns_ = effectiveFrequencyBreakdowns_;
-      } else {
-        result.effectiveFrequencyBreakdowns_ = effectiveFrequencyBreakdownsBuilder_.build();
-      }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.onTargetCoviewReach_ = onTargetCoviewReach_;
         to_bitField0_ |= 0x00000020;
@@ -856,9 +859,7 @@ private static final long serialVersionUID = 0L;
         result.totalCoviewImpressions_ = totalCoviewImpressions_;
         to_bitField0_ |= 0x00000100;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1112,8 +1113,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOnTargetReach(long value) {
-      bitField0_ |= 0x00000001;
+      
       onTargetReach_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1191,8 +1193,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalReach(long value) {
-      bitField0_ |= 0x00000002;
+      
       totalReach_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1252,8 +1255,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOnTargetImpressions(long value) {
-      bitField0_ |= 0x00000004;
+      
       onTargetImpressions_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1313,8 +1317,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalImpressions(long value) {
-      bitField0_ |= 0x00000008;
+      
       totalImpressions_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1379,8 +1384,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setViewableImpressions(long value) {
-      bitField0_ |= 0x00000010;
+      
       viewableImpressions_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1806,8 +1812,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOnTargetCoviewReach(long value) {
-      bitField0_ |= 0x00000040;
+      
       onTargetCoviewReach_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1865,8 +1872,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalCoviewReach(long value) {
-      bitField0_ |= 0x00000080;
+      
       totalCoviewReach_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1924,8 +1932,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOnTargetCoviewImpressions(long value) {
-      bitField0_ |= 0x00000100;
+      
       onTargetCoviewImpressions_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1986,8 +1995,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalCoviewImpressions(long value) {
-      bitField0_ |= 0x00000200;
+      
       totalCoviewImpressions_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }

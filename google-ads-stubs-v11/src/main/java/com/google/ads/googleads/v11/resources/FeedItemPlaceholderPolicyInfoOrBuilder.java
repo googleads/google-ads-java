@@ -76,8 +76,8 @@ public interface FeedItemPlaceholderPolicyInfoOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The overall approval status of the placeholder type, calculated based on
-   * the status of its individual policy topic entries.
+   * Output only. The overall approval status of the placeholder type,
+   * calculated based on the status of its individual policy topic entries.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -86,8 +86,8 @@ public interface FeedItemPlaceholderPolicyInfoOrBuilder extends
   int getApprovalStatusValue();
   /**
    * <pre>
-   * Output only. The overall approval status of the placeholder type, calculated based on
-   * the status of its individual policy topic entries.
+   * Output only. The overall approval status of the placeholder type,
+   * calculated based on the status of its individual policy topic entries.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.PolicyApprovalStatusEnum.PolicyApprovalStatus approval_status = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -223,7 +223,8 @@ public interface FeedItemPlaceholderPolicyInfoOrBuilder extends
 
   /**
    * <pre>
-   * Output only. List of placeholder type quality evaluation disapproval reasons.
+   * Output only. List of placeholder type quality evaluation disapproval
+   * reasons.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -232,7 +233,8 @@ public interface FeedItemPlaceholderPolicyInfoOrBuilder extends
   java.util.List<com.google.ads.googleads.v11.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason> getQualityDisapprovalReasonsList();
   /**
    * <pre>
-   * Output only. List of placeholder type quality evaluation disapproval reasons.
+   * Output only. List of placeholder type quality evaluation disapproval
+   * reasons.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -241,7 +243,8 @@ public interface FeedItemPlaceholderPolicyInfoOrBuilder extends
   int getQualityDisapprovalReasonsCount();
   /**
    * <pre>
-   * Output only. List of placeholder type quality evaluation disapproval reasons.
+   * Output only. List of placeholder type quality evaluation disapproval
+   * reasons.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -251,7 +254,8 @@ public interface FeedItemPlaceholderPolicyInfoOrBuilder extends
   com.google.ads.googleads.v11.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason getQualityDisapprovalReasons(int index);
   /**
    * <pre>
-   * Output only. List of placeholder type quality evaluation disapproval reasons.
+   * Output only. List of placeholder type quality evaluation disapproval
+   * reasons.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -261,7 +265,8 @@ public interface FeedItemPlaceholderPolicyInfoOrBuilder extends
   getQualityDisapprovalReasonsValueList();
   /**
    * <pre>
-   * Output only. List of placeholder type quality evaluation disapproval reasons.
+   * Output only. List of placeholder type quality evaluation disapproval
+   * reasons.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.enums.FeedItemQualityDisapprovalReasonEnum.FeedItemQualityDisapprovalReason quality_disapproval_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

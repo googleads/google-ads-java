@@ -95,11 +95,12 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.services.GclidDateTimePairOrBuilder getGclidDateTimePairOrBuilder() {
-    return getGclidDateTimePair();
+    return gclidDateTimePair_ == null ? com.google.ads.googleads.v12.services.GclidDateTimePair.getDefaultInstance() : gclidDateTimePair_;
   }
 
   public static final int ORDER_ID_FIELD_NUMBER = 13;
-  private volatile java.lang.Object orderId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object orderId_ = "";
   /**
    * <pre>
    * The order ID of the conversion to be adjusted. If the conversion was
@@ -163,7 +164,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONVERSION_ACTION_FIELD_NUMBER = 8;
-  private volatile java.lang.Object conversionAction_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object conversionAction_ = "";
   /**
    * <pre>
    * Resource name of the conversion action associated with this conversion
@@ -230,7 +232,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ADJUSTMENT_DATE_TIME_FIELD_NUMBER = 9;
-  private volatile java.lang.Object adjustmentDateTime_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object adjustmentDateTime_ = "";
   /**
    * <pre>
    * The date time at which the adjustment occurred. Must be after the
@@ -294,7 +297,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ADJUSTMENT_TYPE_FIELD_NUMBER = 5;
-  private int adjustmentType_;
+  private int adjustmentType_ = 0;
   /**
    * <pre>
    * The adjustment type.
@@ -315,8 +318,7 @@ private static final long serialVersionUID = 0L;
    * @return The adjustmentType.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType getAdjustmentType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType result = com.google.ads.googleads.v12.enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType.valueOf(adjustmentType_);
+    com.google.ads.googleads.v12.enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType result = com.google.ads.googleads.v12.enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType.forNumber(adjustmentType_);
     return result == null ? com.google.ads.googleads.v12.enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType.UNRECOGNIZED : result;
   }
 
@@ -373,10 +375,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.services.RestatementValueOrBuilder getRestatementValueOrBuilder() {
-    return getRestatementValue();
+    return restatementValue_ == null ? com.google.ads.googleads.v12.services.RestatementValue.getDefaultInstance() : restatementValue_;
   }
 
   public static final int USER_IDENTIFIERS_FIELD_NUMBER = 10;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.UserIdentifier> userIdentifiers_;
   /**
    * <pre>
@@ -452,7 +455,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int USER_AGENT_FIELD_NUMBER = 11;
-  private volatile java.lang.Object userAgent_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object userAgent_ = "";
   /**
    * <pre>
    * The user agent to enhance the original conversion. This can be found in
@@ -823,24 +827,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (gclidDateTimePairBuilder_ == null) {
-        gclidDateTimePair_ = null;
-      } else {
-        gclidDateTimePair_ = null;
+      bitField0_ = 0;
+      gclidDateTimePair_ = null;
+      if (gclidDateTimePairBuilder_ != null) {
+        gclidDateTimePairBuilder_.dispose();
         gclidDateTimePairBuilder_ = null;
       }
       orderId_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       conversionAction_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       adjustmentDateTime_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       adjustmentType_ = 0;
-
-      if (restatementValueBuilder_ == null) {
-        restatementValue_ = null;
-      } else {
-        restatementValue_ = null;
+      restatementValue_ = null;
+      if (restatementValueBuilder_ != null) {
+        restatementValueBuilder_.dispose();
         restatementValueBuilder_ = null;
       }
       if (userIdentifiersBuilder_ == null) {
@@ -849,9 +848,8 @@ private static final long serialVersionUID = 0L;
         userIdentifiers_ = null;
         userIdentifiersBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000040);
       userAgent_ = "";
-      bitField0_ = (bitField0_ & ~0x00000010);
       return this;
     }
 
@@ -878,47 +876,57 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.ConversionAdjustment buildPartial() {
       com.google.ads.googleads.v12.services.ConversionAdjustment result = new com.google.ads.googleads.v12.services.ConversionAdjustment(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      if (gclidDateTimePairBuilder_ == null) {
-        result.gclidDateTimePair_ = gclidDateTimePair_;
-      } else {
-        result.gclidDateTimePair_ = gclidDateTimePairBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        to_bitField0_ |= 0x00000001;
-      }
-      result.orderId_ = orderId_;
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        to_bitField0_ |= 0x00000002;
-      }
-      result.conversionAction_ = conversionAction_;
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        to_bitField0_ |= 0x00000004;
-      }
-      result.adjustmentDateTime_ = adjustmentDateTime_;
-      result.adjustmentType_ = adjustmentType_;
-      if (restatementValueBuilder_ == null) {
-        result.restatementValue_ = restatementValue_;
-      } else {
-        result.restatementValue_ = restatementValueBuilder_.build();
-      }
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.services.ConversionAdjustment result) {
       if (userIdentifiersBuilder_ == null) {
-        if (((bitField0_ & 0x00000008) != 0)) {
+        if (((bitField0_ & 0x00000040) != 0)) {
           userIdentifiers_ = java.util.Collections.unmodifiableList(userIdentifiers_);
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000040);
         }
         result.userIdentifiers_ = userIdentifiers_;
       } else {
         result.userIdentifiers_ = userIdentifiersBuilder_.build();
       }
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.ConversionAdjustment result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.gclidDateTimePair_ = gclidDateTimePairBuilder_ == null
+            ? gclidDateTimePair_
+            : gclidDateTimePairBuilder_.build();
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.orderId_ = orderId_;
+        to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.conversionAction_ = conversionAction_;
+        to_bitField0_ |= 0x00000002;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.adjustmentDateTime_ = adjustmentDateTime_;
+        to_bitField0_ |= 0x00000004;
+      }
       if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.adjustmentType_ = adjustmentType_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.restatementValue_ = restatementValueBuilder_ == null
+            ? restatementValue_
+            : restatementValueBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.userAgent_ = userAgent_;
         to_bitField0_ |= 0x00000008;
       }
-      result.userAgent_ = userAgent_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -969,18 +977,18 @@ private static final long serialVersionUID = 0L;
         mergeGclidDateTimePair(other.getGclidDateTimePair());
       }
       if (other.hasOrderId()) {
-        bitField0_ |= 0x00000001;
         orderId_ = other.orderId_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasConversionAction()) {
-        bitField0_ |= 0x00000002;
         conversionAction_ = other.conversionAction_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.hasAdjustmentDateTime()) {
-        bitField0_ |= 0x00000004;
         adjustmentDateTime_ = other.adjustmentDateTime_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.adjustmentType_ != 0) {
@@ -993,7 +1001,7 @@ private static final long serialVersionUID = 0L;
         if (!other.userIdentifiers_.isEmpty()) {
           if (userIdentifiers_.isEmpty()) {
             userIdentifiers_ = other.userIdentifiers_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000040);
           } else {
             ensureUserIdentifiersIsMutable();
             userIdentifiers_.addAll(other.userIdentifiers_);
@@ -1006,7 +1014,7 @@ private static final long serialVersionUID = 0L;
             userIdentifiersBuilder_.dispose();
             userIdentifiersBuilder_ = null;
             userIdentifiers_ = other.userIdentifiers_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000040);
             userIdentifiersBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getUserIdentifiersFieldBuilder() : null;
@@ -1016,8 +1024,8 @@ private static final long serialVersionUID = 0L;
         }
       }
       if (other.hasUserAgent()) {
-        bitField0_ |= 0x00000010;
         userAgent_ = other.userAgent_;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -1048,24 +1056,24 @@ private static final long serialVersionUID = 0L;
               break;
             case 40: {
               adjustmentType_ = input.readEnum();
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 40
             case 50: {
               input.readMessage(
                   getRestatementValueFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000020;
               break;
             } // case 50
             case 66: {
               conversionAction_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 66
             case 74: {
               adjustmentDateTime_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               break;
             } // case 74
             case 82: {
@@ -1083,19 +1091,19 @@ private static final long serialVersionUID = 0L;
             } // case 82
             case 90: {
               userAgent_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000080;
               break;
             } // case 90
             case 98: {
               input.readMessage(
                   getGclidDateTimePairFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 98
             case 106: {
               orderId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 106
             default: {
@@ -1129,7 +1137,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the gclidDateTimePair field is set.
      */
     public boolean hasGclidDateTimePair() {
-      return gclidDateTimePairBuilder_ != null || gclidDateTimePair_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -1163,11 +1171,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         gclidDateTimePair_ = value;
-        onChanged();
       } else {
         gclidDateTimePairBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -1183,11 +1191,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.services.GclidDateTimePair.Builder builderForValue) {
       if (gclidDateTimePairBuilder_ == null) {
         gclidDateTimePair_ = builderForValue.build();
-        onChanged();
       } else {
         gclidDateTimePairBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -1201,17 +1209,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeGclidDateTimePair(com.google.ads.googleads.v12.services.GclidDateTimePair value) {
       if (gclidDateTimePairBuilder_ == null) {
-        if (gclidDateTimePair_ != null) {
-          gclidDateTimePair_ =
-            com.google.ads.googleads.v12.services.GclidDateTimePair.newBuilder(gclidDateTimePair_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          gclidDateTimePair_ != null &&
+          gclidDateTimePair_ != com.google.ads.googleads.v12.services.GclidDateTimePair.getDefaultInstance()) {
+          getGclidDateTimePairBuilder().mergeFrom(value);
         } else {
           gclidDateTimePair_ = value;
         }
-        onChanged();
       } else {
         gclidDateTimePairBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -1224,14 +1233,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.services.GclidDateTimePair gclid_date_time_pair = 12;</code>
      */
     public Builder clearGclidDateTimePair() {
-      if (gclidDateTimePairBuilder_ == null) {
-        gclidDateTimePair_ = null;
-        onChanged();
-      } else {
-        gclidDateTimePair_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      gclidDateTimePair_ = null;
+      if (gclidDateTimePairBuilder_ != null) {
+        gclidDateTimePairBuilder_.dispose();
         gclidDateTimePairBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1244,7 +1252,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.services.GclidDateTimePair gclid_date_time_pair = 12;</code>
      */
     public com.google.ads.googleads.v12.services.GclidDateTimePair.Builder getGclidDateTimePairBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getGclidDateTimePairFieldBuilder().getBuilder();
     }
@@ -1300,7 +1308,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the orderId field is set.
      */
     public boolean hasOrderId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -1360,11 +1368,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOrderId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       orderId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1379,8 +1385,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOrderId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       orderId_ = getDefaultInstance().getOrderId();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1397,12 +1403,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOrderIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       orderId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1420,7 +1424,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the conversionAction field is set.
      */
     public boolean hasConversionAction() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -1483,11 +1487,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setConversionAction(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       conversionAction_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1503,8 +1505,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConversionAction() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       conversionAction_ = getDefaultInstance().getConversionAction();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1522,12 +1524,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setConversionActionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       conversionAction_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1544,7 +1544,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the adjustmentDateTime field is set.
      */
     public boolean hasAdjustmentDateTime() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -1604,11 +1604,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAdjustmentDateTime(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       adjustmentDateTime_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1623,8 +1621,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAdjustmentDateTime() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       adjustmentDateTime_ = getDefaultInstance().getAdjustmentDateTime();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1641,12 +1639,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAdjustmentDateTimeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       adjustmentDateTime_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1673,8 +1669,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAdjustmentTypeValue(int value) {
-      
       adjustmentType_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1688,8 +1684,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType getAdjustmentType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType result = com.google.ads.googleads.v12.enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType.valueOf(adjustmentType_);
+      com.google.ads.googleads.v12.enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType result = com.google.ads.googleads.v12.enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType.forNumber(adjustmentType_);
       return result == null ? com.google.ads.googleads.v12.enums.ConversionAdjustmentTypeEnum.ConversionAdjustmentType.UNRECOGNIZED : result;
     }
     /**
@@ -1705,7 +1700,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000010;
       adjustmentType_ = value.getNumber();
       onChanged();
       return this;
@@ -1719,7 +1714,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAdjustmentType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       adjustmentType_ = 0;
       onChanged();
       return this;
@@ -1743,7 +1738,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the restatementValue field is set.
      */
     public boolean hasRestatementValue() {
-      return restatementValueBuilder_ != null || restatementValue_ != null;
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -1785,11 +1780,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         restatementValue_ = value;
-        onChanged();
       } else {
         restatementValueBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -1809,11 +1804,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.services.RestatementValue.Builder builderForValue) {
       if (restatementValueBuilder_ == null) {
         restatementValue_ = builderForValue.build();
-        onChanged();
       } else {
         restatementValueBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -1831,17 +1826,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeRestatementValue(com.google.ads.googleads.v12.services.RestatementValue value) {
       if (restatementValueBuilder_ == null) {
-        if (restatementValue_ != null) {
-          restatementValue_ =
-            com.google.ads.googleads.v12.services.RestatementValue.newBuilder(restatementValue_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000020) != 0) &&
+          restatementValue_ != null &&
+          restatementValue_ != com.google.ads.googleads.v12.services.RestatementValue.getDefaultInstance()) {
+          getRestatementValueBuilder().mergeFrom(value);
         } else {
           restatementValue_ = value;
         }
-        onChanged();
       } else {
         restatementValueBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -1858,14 +1854,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.services.RestatementValue restatement_value = 6;</code>
      */
     public Builder clearRestatementValue() {
-      if (restatementValueBuilder_ == null) {
-        restatementValue_ = null;
-        onChanged();
-      } else {
-        restatementValue_ = null;
+      bitField0_ = (bitField0_ & ~0x00000020);
+      restatementValue_ = null;
+      if (restatementValueBuilder_ != null) {
+        restatementValueBuilder_.dispose();
         restatementValueBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1882,7 +1877,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.services.RestatementValue restatement_value = 6;</code>
      */
     public com.google.ads.googleads.v12.services.RestatementValue.Builder getRestatementValueBuilder() {
-      
+      bitField0_ |= 0x00000020;
       onChanged();
       return getRestatementValueFieldBuilder().getBuilder();
     }
@@ -1937,9 +1932,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v12.common.UserIdentifier> userIdentifiers_ =
       java.util.Collections.emptyList();
     private void ensureUserIdentifiersIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
+      if (!((bitField0_ & 0x00000040) != 0)) {
         userIdentifiers_ = new java.util.ArrayList<com.google.ads.googleads.v12.common.UserIdentifier>(userIdentifiers_);
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000040;
        }
     }
 
@@ -2166,7 +2161,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearUserIdentifiers() {
       if (userIdentifiersBuilder_ == null) {
         userIdentifiers_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
       } else {
         userIdentifiersBuilder_.clear();
@@ -2292,7 +2287,7 @@ private static final long serialVersionUID = 0L;
         userIdentifiersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v12.common.UserIdentifier, com.google.ads.googleads.v12.common.UserIdentifier.Builder, com.google.ads.googleads.v12.common.UserIdentifierOrBuilder>(
                 userIdentifiers_,
-                ((bitField0_ & 0x00000008) != 0),
+                ((bitField0_ & 0x00000040) != 0),
                 getParentForChildren(),
                 isClean());
         userIdentifiers_ = null;
@@ -2316,7 +2311,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the userAgent field is set.
      */
     public boolean hasUserAgent() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
      * <pre>
@@ -2388,11 +2383,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUserAgent(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
+      if (value == null) { throw new NullPointerException(); }
       userAgent_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2411,8 +2404,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUserAgent() {
-      bitField0_ = (bitField0_ & ~0x00000010);
       userAgent_ = getDefaultInstance().getUserAgent();
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -2433,12 +2426,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUserAgentBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000010;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       userAgent_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }

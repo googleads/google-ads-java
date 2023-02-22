@@ -83,7 +83,8 @@ public interface LifeEventOrBuilder extends
 
   /**
    * <pre>
-   * Output only. True if the life event is launched to all channels and locales.
+   * Output only. True if the life event is launched to all channels and
+   * locales.
    * </pre>
    *
    * <code>bool launched_to_all = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

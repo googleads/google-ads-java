@@ -638,6 +638,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         constantOperandValueCase_ = 0;
         constantOperandValue_ = null;
         return this;
@@ -666,21 +667,19 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v11.common.Operand.ConstantOperand buildPartial() {
         com.google.ads.googleads.v11.common.Operand.ConstantOperand result = new com.google.ads.googleads.v11.common.Operand.ConstantOperand(this);
-        if (constantOperandValueCase_ == 5) {
-          result.constantOperandValue_ = constantOperandValue_;
-        }
-        if (constantOperandValueCase_ == 6) {
-          result.constantOperandValue_ = constantOperandValue_;
-        }
-        if (constantOperandValueCase_ == 7) {
-          result.constantOperandValue_ = constantOperandValue_;
-        }
-        if (constantOperandValueCase_ == 8) {
-          result.constantOperandValue_ = constantOperandValue_;
-        }
-        result.constantOperandValueCase_ = constantOperandValueCase_;
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v11.common.Operand.ConstantOperand result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      private void buildPartialOneofs(com.google.ads.googleads.v11.common.Operand.ConstantOperand result) {
+        result.constantOperandValueCase_ = constantOperandValueCase_;
+        result.constantOperandValue_ = this.constantOperandValue_;
       }
 
       @java.lang.Override
@@ -827,6 +826,7 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      private int bitField0_;
 
       /**
        * <pre>
@@ -904,10 +904,8 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setStringValue(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  constantOperandValueCase_ = 5;
+        if (value == null) { throw new NullPointerException(); }
+        constantOperandValueCase_ = 5;
         constantOperandValue_ = value;
         onChanged();
         return this;
@@ -939,10 +937,8 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setStringValueBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         constantOperandValueCase_ = 5;
         constantOperandValue_ = value;
         onChanged();
@@ -984,6 +980,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setLongValue(long value) {
+        
         constantOperandValueCase_ = 6;
         constantOperandValue_ = value;
         onChanged();
@@ -1041,6 +1038,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setBooleanValue(boolean value) {
+        
         constantOperandValueCase_ = 7;
         constantOperandValue_ = value;
         onChanged();
@@ -1098,6 +1096,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setDoubleValue(double value) {
+        
         constantOperandValueCase_ = 8;
         constantOperandValue_ = value;
         onChanged();
@@ -1272,7 +1271,7 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
     public static final int FEED_ID_FIELD_NUMBER = 3;
-    private long feedId_;
+    private long feedId_ = 0L;
     /**
      * <pre>
      * The associated feed. Required.
@@ -1299,7 +1298,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int FEED_ATTRIBUTE_ID_FIELD_NUMBER = 4;
-    private long feedAttributeId_;
+    private long feedAttributeId_ = 0L;
     /**
      * <pre>
      * Id of the referenced feed attribute. Required.
@@ -1541,10 +1540,9 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         feedId_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000001);
         feedAttributeId_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -1571,6 +1569,12 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v11.common.Operand.FeedAttributeOperand buildPartial() {
         com.google.ads.googleads.v11.common.Operand.FeedAttributeOperand result = new com.google.ads.googleads.v11.common.Operand.FeedAttributeOperand(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v11.common.Operand.FeedAttributeOperand result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -1581,9 +1585,7 @@ private static final long serialVersionUID = 0L;
           result.feedAttributeId_ = feedAttributeId_;
           to_bitField0_ |= 0x00000002;
         }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1724,8 +1726,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setFeedId(long value) {
-        bitField0_ |= 0x00000001;
+        
         feedId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1779,8 +1782,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setFeedAttributeId(long value) {
-        bitField0_ |= 0x00000002;
+        
         feedAttributeId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1973,7 +1977,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.common.MatchingFunctionOrBuilder getMatchingFunctionOrBuilder() {
-      return getMatchingFunction();
+      return matchingFunction_ == null ? com.google.ads.googleads.v11.common.MatchingFunction.getDefaultInstance() : matchingFunction_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2174,10 +2178,10 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (matchingFunctionBuilder_ == null) {
-          matchingFunction_ = null;
-        } else {
-          matchingFunction_ = null;
+        bitField0_ = 0;
+        matchingFunction_ = null;
+        if (matchingFunctionBuilder_ != null) {
+          matchingFunctionBuilder_.dispose();
           matchingFunctionBuilder_ = null;
         }
         return this;
@@ -2206,13 +2210,18 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v11.common.Operand.FunctionOperand buildPartial() {
         com.google.ads.googleads.v11.common.Operand.FunctionOperand result = new com.google.ads.googleads.v11.common.Operand.FunctionOperand(this);
-        if (matchingFunctionBuilder_ == null) {
-          result.matchingFunction_ = matchingFunction_;
-        } else {
-          result.matchingFunction_ = matchingFunctionBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v11.common.Operand.FunctionOperand result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.matchingFunction_ = matchingFunctionBuilder_ == null
+              ? matchingFunction_
+              : matchingFunctionBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -2292,7 +2301,7 @@ private static final long serialVersionUID = 0L;
                 input.readMessage(
                     getMatchingFunctionFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -2310,6 +2319,7 @@ private static final long serialVersionUID = 0L;
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private com.google.ads.googleads.v11.common.MatchingFunction matchingFunction_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2323,7 +2333,7 @@ private static final long serialVersionUID = 0L;
        * @return Whether the matchingFunction field is set.
        */
       public boolean hasMatchingFunction() {
-        return matchingFunctionBuilder_ != null || matchingFunction_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <pre>
@@ -2353,11 +2363,11 @@ private static final long serialVersionUID = 0L;
             throw new NullPointerException();
           }
           matchingFunction_ = value;
-          onChanged();
         } else {
           matchingFunctionBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2371,11 +2381,11 @@ private static final long serialVersionUID = 0L;
           com.google.ads.googleads.v11.common.MatchingFunction.Builder builderForValue) {
         if (matchingFunctionBuilder_ == null) {
           matchingFunction_ = builderForValue.build();
-          onChanged();
         } else {
           matchingFunctionBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2387,17 +2397,18 @@ private static final long serialVersionUID = 0L;
        */
       public Builder mergeMatchingFunction(com.google.ads.googleads.v11.common.MatchingFunction value) {
         if (matchingFunctionBuilder_ == null) {
-          if (matchingFunction_ != null) {
-            matchingFunction_ =
-              com.google.ads.googleads.v11.common.MatchingFunction.newBuilder(matchingFunction_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            matchingFunction_ != null &&
+            matchingFunction_ != com.google.ads.googleads.v11.common.MatchingFunction.getDefaultInstance()) {
+            getMatchingFunctionBuilder().mergeFrom(value);
           } else {
             matchingFunction_ = value;
           }
-          onChanged();
         } else {
           matchingFunctionBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2408,14 +2419,13 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v11.common.MatchingFunction matching_function = 1;</code>
        */
       public Builder clearMatchingFunction() {
-        if (matchingFunctionBuilder_ == null) {
-          matchingFunction_ = null;
-          onChanged();
-        } else {
-          matchingFunction_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        matchingFunction_ = null;
+        if (matchingFunctionBuilder_ != null) {
+          matchingFunctionBuilder_.dispose();
           matchingFunctionBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -2426,7 +2436,7 @@ private static final long serialVersionUID = 0L;
        * <code>.google.ads.googleads.v11.common.MatchingFunction matching_function = 1;</code>
        */
       public com.google.ads.googleads.v11.common.MatchingFunction.Builder getMatchingFunctionBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getMatchingFunctionFieldBuilder().getBuilder();
       }
@@ -2598,7 +2608,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int CONTEXT_TYPE_FIELD_NUMBER = 1;
-    private int contextType_;
+    private int contextType_ = 0;
     /**
      * <pre>
      * Type of value to be referred in the request context.
@@ -2619,8 +2629,7 @@ private static final long serialVersionUID = 0L;
      * @return The contextType.
      */
     @java.lang.Override public com.google.ads.googleads.v11.enums.MatchingFunctionContextTypeEnum.MatchingFunctionContextType getContextType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.MatchingFunctionContextTypeEnum.MatchingFunctionContextType result = com.google.ads.googleads.v11.enums.MatchingFunctionContextTypeEnum.MatchingFunctionContextType.valueOf(contextType_);
+      com.google.ads.googleads.v11.enums.MatchingFunctionContextTypeEnum.MatchingFunctionContextType result = com.google.ads.googleads.v11.enums.MatchingFunctionContextTypeEnum.MatchingFunctionContextType.forNumber(contextType_);
       return result == null ? com.google.ads.googleads.v11.enums.MatchingFunctionContextTypeEnum.MatchingFunctionContextType.UNRECOGNIZED : result;
     }
 
@@ -2815,8 +2824,8 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         contextType_ = 0;
-
         return this;
       }
 
@@ -2843,9 +2852,16 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v11.common.Operand.RequestContextOperand buildPartial() {
         com.google.ads.googleads.v11.common.Operand.RequestContextOperand result = new com.google.ads.googleads.v11.common.Operand.RequestContextOperand(this);
-        result.contextType_ = contextType_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v11.common.Operand.RequestContextOperand result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.contextType_ = contextType_;
+        }
       }
 
       @java.lang.Override
@@ -2923,7 +2939,7 @@ private static final long serialVersionUID = 0L;
                 break;
               case 8: {
                 contextType_ = input.readEnum();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               default: {
@@ -2941,6 +2957,7 @@ private static final long serialVersionUID = 0L;
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private int contextType_ = 0;
       /**
@@ -2964,8 +2981,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setContextTypeValue(int value) {
-        
         contextType_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2979,8 +2996,7 @@ private static final long serialVersionUID = 0L;
        */
       @java.lang.Override
       public com.google.ads.googleads.v11.enums.MatchingFunctionContextTypeEnum.MatchingFunctionContextType getContextType() {
-        @SuppressWarnings("deprecation")
-        com.google.ads.googleads.v11.enums.MatchingFunctionContextTypeEnum.MatchingFunctionContextType result = com.google.ads.googleads.v11.enums.MatchingFunctionContextTypeEnum.MatchingFunctionContextType.valueOf(contextType_);
+        com.google.ads.googleads.v11.enums.MatchingFunctionContextTypeEnum.MatchingFunctionContextType result = com.google.ads.googleads.v11.enums.MatchingFunctionContextTypeEnum.MatchingFunctionContextType.forNumber(contextType_);
         return result == null ? com.google.ads.googleads.v11.enums.MatchingFunctionContextTypeEnum.MatchingFunctionContextType.UNRECOGNIZED : result;
       }
       /**
@@ -2996,7 +3012,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000001;
         contextType_ = value.getNumber();
         onChanged();
         return this;
@@ -3010,7 +3026,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearContextType() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         contextType_ = 0;
         onChanged();
         return this;
@@ -3549,6 +3565,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (constantOperandBuilder_ != null) {
         constantOperandBuilder_.clear();
       }
@@ -3589,37 +3606,35 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.Operand buildPartial() {
       com.google.ads.googleads.v11.common.Operand result = new com.google.ads.googleads.v11.common.Operand(this);
-      if (functionArgumentOperandCase_ == 1) {
-        if (constantOperandBuilder_ == null) {
-          result.functionArgumentOperand_ = functionArgumentOperand_;
-        } else {
-          result.functionArgumentOperand_ = constantOperandBuilder_.build();
-        }
-      }
-      if (functionArgumentOperandCase_ == 2) {
-        if (feedAttributeOperandBuilder_ == null) {
-          result.functionArgumentOperand_ = functionArgumentOperand_;
-        } else {
-          result.functionArgumentOperand_ = feedAttributeOperandBuilder_.build();
-        }
-      }
-      if (functionArgumentOperandCase_ == 3) {
-        if (functionOperandBuilder_ == null) {
-          result.functionArgumentOperand_ = functionArgumentOperand_;
-        } else {
-          result.functionArgumentOperand_ = functionOperandBuilder_.build();
-        }
-      }
-      if (functionArgumentOperandCase_ == 4) {
-        if (requestContextOperandBuilder_ == null) {
-          result.functionArgumentOperand_ = functionArgumentOperand_;
-        } else {
-          result.functionArgumentOperand_ = requestContextOperandBuilder_.build();
-        }
-      }
-      result.functionArgumentOperandCase_ = functionArgumentOperandCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.Operand result) {
+      int from_bitField0_ = bitField0_;
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v11.common.Operand result) {
+      result.functionArgumentOperandCase_ = functionArgumentOperandCase_;
+      result.functionArgumentOperand_ = this.functionArgumentOperand_;
+      if (functionArgumentOperandCase_ == 1 &&
+          constantOperandBuilder_ != null) {
+        result.functionArgumentOperand_ = constantOperandBuilder_.build();
+      }
+      if (functionArgumentOperandCase_ == 2 &&
+          feedAttributeOperandBuilder_ != null) {
+        result.functionArgumentOperand_ = feedAttributeOperandBuilder_.build();
+      }
+      if (functionArgumentOperandCase_ == 3 &&
+          functionOperandBuilder_ != null) {
+        result.functionArgumentOperand_ = functionOperandBuilder_.build();
+      }
+      if (functionArgumentOperandCase_ == 4 &&
+          requestContextOperandBuilder_ != null) {
+        result.functionArgumentOperand_ = requestContextOperandBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -3771,6 +3786,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v11.common.Operand.ConstantOperand, com.google.ads.googleads.v11.common.Operand.ConstantOperand.Builder, com.google.ads.googleads.v11.common.Operand.ConstantOperandOrBuilder> constantOperandBuilder_;
@@ -3946,7 +3962,7 @@ private static final long serialVersionUID = 0L;
         functionArgumentOperand_ = null;
       }
       functionArgumentOperandCase_ = 1;
-      onChanged();;
+      onChanged();
       return constantOperandBuilder_;
     }
 
@@ -4124,7 +4140,7 @@ private static final long serialVersionUID = 0L;
         functionArgumentOperand_ = null;
       }
       functionArgumentOperandCase_ = 2;
-      onChanged();;
+      onChanged();
       return feedAttributeOperandBuilder_;
     }
 
@@ -4311,7 +4327,7 @@ private static final long serialVersionUID = 0L;
         functionArgumentOperand_ = null;
       }
       functionArgumentOperandCase_ = 3;
-      onChanged();;
+      onChanged();
       return functionOperandBuilder_;
     }
 
@@ -4489,7 +4505,7 @@ private static final long serialVersionUID = 0L;
         functionArgumentOperand_ = null;
       }
       functionArgumentOperandCase_ = 4;
-      onChanged();;
+      onChanged();
       return requestContextOperandBuilder_;
     }
     @java.lang.Override

@@ -54,11 +54,13 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int PLANNABLE_LOCATION_ID_FIELD_NUMBER = 6;
-  private volatile java.lang.Object plannableLocationId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object plannableLocationId_ = "";
   /**
    * <pre>
    * The ID of the selected location. Plannable location IDs can be
-   * obtained from [ReachPlanService.ListPlannableLocations][google.ads.googleads.v11.services.ReachPlanService.ListPlannableLocations].
+   * obtained from
+   * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v11.services.ReachPlanService.ListPlannableLocations].
    * Requests must set either this field or `plannable_location_ids`.
    * This field is deprecated as of V12 and will be removed in a future release.
    * Use `plannable_location_ids` instead.
@@ -74,7 +76,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The ID of the selected location. Plannable location IDs can be
-   * obtained from [ReachPlanService.ListPlannableLocations][google.ads.googleads.v11.services.ReachPlanService.ListPlannableLocations].
+   * obtained from
+   * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v11.services.ReachPlanService.ListPlannableLocations].
    * Requests must set either this field or `plannable_location_ids`.
    * This field is deprecated as of V12 and will be removed in a future release.
    * Use `plannable_location_ids` instead.
@@ -99,7 +102,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The ID of the selected location. Plannable location IDs can be
-   * obtained from [ReachPlanService.ListPlannableLocations][google.ads.googleads.v11.services.ReachPlanService.ListPlannableLocations].
+   * obtained from
+   * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v11.services.ReachPlanService.ListPlannableLocations].
    * Requests must set either this field or `plannable_location_ids`.
    * This field is deprecated as of V12 and will be removed in a future release.
    * Use `plannable_location_ids` instead.
@@ -124,7 +128,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AGE_RANGE_FIELD_NUMBER = 2;
-  private int ageRange_;
+  private int ageRange_ = 0;
   /**
    * <pre>
    * Targeted age range.
@@ -147,12 +151,12 @@ private static final long serialVersionUID = 0L;
    * @return The ageRange.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange getAgeRange() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange result = com.google.ads.googleads.v11.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange.valueOf(ageRange_);
+    com.google.ads.googleads.v11.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange result = com.google.ads.googleads.v11.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange.forNumber(ageRange_);
     return result == null ? com.google.ads.googleads.v11.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange.UNRECOGNIZED : result;
   }
 
   public static final int GENDERS_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.common.GenderInfo> genders_;
   /**
    * <pre>
@@ -218,6 +222,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DEVICES_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v11.common.DeviceInfo> devices_;
   /**
    * <pre>
@@ -293,7 +298,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NETWORK_FIELD_NUMBER = 5;
-  private int network_;
+  private int network_ = 0;
   /**
    * <pre>
    * Targetable network for the ad product.
@@ -320,8 +325,7 @@ private static final long serialVersionUID = 0L;
    * @return The network.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.ReachPlanNetworkEnum.ReachPlanNetwork getNetwork() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.ReachPlanNetworkEnum.ReachPlanNetwork result = com.google.ads.googleads.v11.enums.ReachPlanNetworkEnum.ReachPlanNetwork.valueOf(network_);
+    com.google.ads.googleads.v11.enums.ReachPlanNetworkEnum.ReachPlanNetwork result = com.google.ads.googleads.v11.enums.ReachPlanNetworkEnum.ReachPlanNetwork.forNumber(network_);
     return result == null ? com.google.ads.googleads.v11.enums.ReachPlanNetworkEnum.ReachPlanNetwork.UNRECOGNIZED : result;
   }
 
@@ -363,7 +367,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v11.services.AudienceTargetingOrBuilder getAudienceTargetingOrBuilder() {
-    return getAudienceTargeting();
+    return audienceTargeting_ == null ? com.google.ads.googleads.v11.services.AudienceTargeting.getDefaultInstance() : audienceTargeting_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -624,30 +628,27 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       plannableLocationId_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       ageRange_ = 0;
-
       if (gendersBuilder_ == null) {
         genders_ = java.util.Collections.emptyList();
       } else {
         genders_ = null;
         gendersBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       if (devicesBuilder_ == null) {
         devices_ = java.util.Collections.emptyList();
       } else {
         devices_ = null;
         devicesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000008);
       network_ = 0;
-
-      if (audienceTargetingBuilder_ == null) {
-        audienceTargeting_ = null;
-      } else {
-        audienceTargeting_ = null;
+      audienceTargeting_ = null;
+      if (audienceTargetingBuilder_ != null) {
+        audienceTargetingBuilder_.dispose();
         audienceTargetingBuilder_ = null;
       }
       return this;
@@ -676,40 +677,52 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.Targeting buildPartial() {
       com.google.ads.googleads.v11.services.Targeting result = new com.google.ads.googleads.v11.services.Targeting(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        to_bitField0_ |= 0x00000001;
-      }
-      result.plannableLocationId_ = plannableLocationId_;
-      result.ageRange_ = ageRange_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.services.Targeting result) {
       if (gendersBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           genders_ = java.util.Collections.unmodifiableList(genders_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.genders_ = genders_;
       } else {
         result.genders_ = gendersBuilder_.build();
       }
       if (devicesBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           devices_ = java.util.Collections.unmodifiableList(devices_);
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.devices_ = devices_;
       } else {
         result.devices_ = devicesBuilder_.build();
       }
-      result.network_ = network_;
-      if (audienceTargetingBuilder_ == null) {
-        result.audienceTargeting_ = audienceTargeting_;
-      } else {
-        result.audienceTargeting_ = audienceTargetingBuilder_.build();
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.Targeting result) {
+      int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.plannableLocationId_ = plannableLocationId_;
+        to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.ageRange_ = ageRange_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.network_ = network_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.audienceTargeting_ = audienceTargetingBuilder_ == null
+            ? audienceTargeting_
+            : audienceTargetingBuilder_.build();
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -757,8 +770,8 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v11.services.Targeting other) {
       if (other == com.google.ads.googleads.v11.services.Targeting.getDefaultInstance()) return this;
       if (other.hasPlannableLocationId()) {
-        bitField0_ |= 0x00000001;
         plannableLocationId_ = other.plannableLocationId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.ageRange_ != 0) {
@@ -768,7 +781,7 @@ private static final long serialVersionUID = 0L;
         if (!other.genders_.isEmpty()) {
           if (genders_.isEmpty()) {
             genders_ = other.genders_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureGendersIsMutable();
             genders_.addAll(other.genders_);
@@ -781,7 +794,7 @@ private static final long serialVersionUID = 0L;
             gendersBuilder_.dispose();
             gendersBuilder_ = null;
             genders_ = other.genders_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000004);
             gendersBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getGendersFieldBuilder() : null;
@@ -794,7 +807,7 @@ private static final long serialVersionUID = 0L;
         if (!other.devices_.isEmpty()) {
           if (devices_.isEmpty()) {
             devices_ = other.devices_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureDevicesIsMutable();
             devices_.addAll(other.devices_);
@@ -807,7 +820,7 @@ private static final long serialVersionUID = 0L;
             devicesBuilder_.dispose();
             devicesBuilder_ = null;
             devices_ = other.devices_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
             devicesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getDevicesFieldBuilder() : null;
@@ -850,7 +863,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 16: {
               ageRange_ = input.readEnum();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             case 26: {
@@ -881,7 +894,7 @@ private static final long serialVersionUID = 0L;
             } // case 34
             case 40: {
               network_ = input.readEnum();
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 40
             case 50: {
@@ -893,7 +906,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getAudienceTargetingFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000020;
               break;
             } // case 58
             default: {
@@ -917,7 +930,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The ID of the selected location. Plannable location IDs can be
-     * obtained from [ReachPlanService.ListPlannableLocations][google.ads.googleads.v11.services.ReachPlanService.ListPlannableLocations].
+     * obtained from
+     * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v11.services.ReachPlanService.ListPlannableLocations].
      * Requests must set either this field or `plannable_location_ids`.
      * This field is deprecated as of V12 and will be removed in a future release.
      * Use `plannable_location_ids` instead.
@@ -932,7 +946,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The ID of the selected location. Plannable location IDs can be
-     * obtained from [ReachPlanService.ListPlannableLocations][google.ads.googleads.v11.services.ReachPlanService.ListPlannableLocations].
+     * obtained from
+     * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v11.services.ReachPlanService.ListPlannableLocations].
      * Requests must set either this field or `plannable_location_ids`.
      * This field is deprecated as of V12 and will be removed in a future release.
      * Use `plannable_location_ids` instead.
@@ -956,7 +971,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The ID of the selected location. Plannable location IDs can be
-     * obtained from [ReachPlanService.ListPlannableLocations][google.ads.googleads.v11.services.ReachPlanService.ListPlannableLocations].
+     * obtained from
+     * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v11.services.ReachPlanService.ListPlannableLocations].
      * Requests must set either this field or `plannable_location_ids`.
      * This field is deprecated as of V12 and will be removed in a future release.
      * Use `plannable_location_ids` instead.
@@ -981,7 +997,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The ID of the selected location. Plannable location IDs can be
-     * obtained from [ReachPlanService.ListPlannableLocations][google.ads.googleads.v11.services.ReachPlanService.ListPlannableLocations].
+     * obtained from
+     * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v11.services.ReachPlanService.ListPlannableLocations].
      * Requests must set either this field or `plannable_location_ids`.
      * This field is deprecated as of V12 and will be removed in a future release.
      * Use `plannable_location_ids` instead.
@@ -993,18 +1010,17 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPlannableLocationId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       plannableLocationId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
      * The ID of the selected location. Plannable location IDs can be
-     * obtained from [ReachPlanService.ListPlannableLocations][google.ads.googleads.v11.services.ReachPlanService.ListPlannableLocations].
+     * obtained from
+     * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v11.services.ReachPlanService.ListPlannableLocations].
      * Requests must set either this field or `plannable_location_ids`.
      * This field is deprecated as of V12 and will be removed in a future release.
      * Use `plannable_location_ids` instead.
@@ -1014,15 +1030,16 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPlannableLocationId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       plannableLocationId_ = getDefaultInstance().getPlannableLocationId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
      * <pre>
      * The ID of the selected location. Plannable location IDs can be
-     * obtained from [ReachPlanService.ListPlannableLocations][google.ads.googleads.v11.services.ReachPlanService.ListPlannableLocations].
+     * obtained from
+     * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v11.services.ReachPlanService.ListPlannableLocations].
      * Requests must set either this field or `plannable_location_ids`.
      * This field is deprecated as of V12 and will be removed in a future release.
      * Use `plannable_location_ids` instead.
@@ -1034,12 +1051,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPlannableLocationIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       plannableLocationId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1068,8 +1083,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAgeRangeValue(int value) {
-      
       ageRange_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1084,8 +1099,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange getAgeRange() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange result = com.google.ads.googleads.v11.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange.valueOf(ageRange_);
+      com.google.ads.googleads.v11.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange result = com.google.ads.googleads.v11.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange.forNumber(ageRange_);
       return result == null ? com.google.ads.googleads.v11.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange.UNRECOGNIZED : result;
     }
     /**
@@ -1102,7 +1116,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000002;
       ageRange_ = value.getNumber();
       onChanged();
       return this;
@@ -1117,7 +1131,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAgeRange() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       ageRange_ = 0;
       onChanged();
       return this;
@@ -1126,9 +1140,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v11.common.GenderInfo> genders_ =
       java.util.Collections.emptyList();
     private void ensureGendersIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         genders_ = new java.util.ArrayList<com.google.ads.googleads.v11.common.GenderInfo>(genders_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
        }
     }
 
@@ -1333,7 +1347,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearGenders() {
       if (gendersBuilder_ == null) {
         genders_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
       } else {
         gendersBuilder_.clear();
@@ -1445,7 +1459,7 @@ private static final long serialVersionUID = 0L;
         gendersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v11.common.GenderInfo, com.google.ads.googleads.v11.common.GenderInfo.Builder, com.google.ads.googleads.v11.common.GenderInfoOrBuilder>(
                 genders_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
         genders_ = null;
@@ -1456,9 +1470,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v11.common.DeviceInfo> devices_ =
       java.util.Collections.emptyList();
     private void ensureDevicesIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         devices_ = new java.util.ArrayList<com.google.ads.googleads.v11.common.DeviceInfo>(devices_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
        }
     }
 
@@ -1685,7 +1699,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearDevices() {
       if (devicesBuilder_ == null) {
         devices_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
       } else {
         devicesBuilder_.clear();
@@ -1811,7 +1825,7 @@ private static final long serialVersionUID = 0L;
         devicesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v11.common.DeviceInfo, com.google.ads.googleads.v11.common.DeviceInfo.Builder, com.google.ads.googleads.v11.common.DeviceInfoOrBuilder>(
                 devices_,
-                ((bitField0_ & 0x00000004) != 0),
+                ((bitField0_ & 0x00000008) != 0),
                 getParentForChildren(),
                 isClean());
         devices_ = null;
@@ -1847,8 +1861,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setNetworkValue(int value) {
-      
       network_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1865,8 +1879,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.ReachPlanNetworkEnum.ReachPlanNetwork getNetwork() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.ReachPlanNetworkEnum.ReachPlanNetwork result = com.google.ads.googleads.v11.enums.ReachPlanNetworkEnum.ReachPlanNetwork.valueOf(network_);
+      com.google.ads.googleads.v11.enums.ReachPlanNetworkEnum.ReachPlanNetwork result = com.google.ads.googleads.v11.enums.ReachPlanNetworkEnum.ReachPlanNetwork.forNumber(network_);
       return result == null ? com.google.ads.googleads.v11.enums.ReachPlanNetworkEnum.ReachPlanNetwork.UNRECOGNIZED : result;
     }
     /**
@@ -1885,7 +1898,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000010;
       network_ = value.getNumber();
       onChanged();
       return this;
@@ -1902,7 +1915,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearNetwork() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       network_ = 0;
       onChanged();
       return this;
@@ -1921,7 +1934,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the audienceTargeting field is set.
      */
     public boolean hasAudienceTargeting() {
-      return audienceTargetingBuilder_ != null || audienceTargeting_ != null;
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -1953,11 +1966,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         audienceTargeting_ = value;
-        onChanged();
       } else {
         audienceTargetingBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -1972,11 +1985,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.services.AudienceTargeting.Builder builderForValue) {
       if (audienceTargetingBuilder_ == null) {
         audienceTargeting_ = builderForValue.build();
-        onChanged();
       } else {
         audienceTargetingBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -1989,17 +2002,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAudienceTargeting(com.google.ads.googleads.v11.services.AudienceTargeting value) {
       if (audienceTargetingBuilder_ == null) {
-        if (audienceTargeting_ != null) {
-          audienceTargeting_ =
-            com.google.ads.googleads.v11.services.AudienceTargeting.newBuilder(audienceTargeting_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000020) != 0) &&
+          audienceTargeting_ != null &&
+          audienceTargeting_ != com.google.ads.googleads.v11.services.AudienceTargeting.getDefaultInstance()) {
+          getAudienceTargetingBuilder().mergeFrom(value);
         } else {
           audienceTargeting_ = value;
         }
-        onChanged();
       } else {
         audienceTargetingBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000020;
+      onChanged();
       return this;
     }
     /**
@@ -2011,14 +2025,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.services.AudienceTargeting audience_targeting = 7;</code>
      */
     public Builder clearAudienceTargeting() {
-      if (audienceTargetingBuilder_ == null) {
-        audienceTargeting_ = null;
-        onChanged();
-      } else {
-        audienceTargeting_ = null;
+      bitField0_ = (bitField0_ & ~0x00000020);
+      audienceTargeting_ = null;
+      if (audienceTargetingBuilder_ != null) {
+        audienceTargetingBuilder_.dispose();
         audienceTargetingBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -2030,7 +2043,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.services.AudienceTargeting audience_targeting = 7;</code>
      */
     public com.google.ads.googleads.v11.services.AudienceTargeting.Builder getAudienceTargetingBuilder() {
-      
+      bitField0_ |= 0x00000020;
       onChanged();
       return getAudienceTargetingFieldBuilder().getBuilder();
     }

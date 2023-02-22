@@ -9,8 +9,8 @@ public interface MutateAssetGroupListingGroupFiltersRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The ID of the customer whose asset group listing group filters are being
-   * modified.
+   * Required. The ID of the customer whose asset group listing group filters
+   * are being modified.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -19,8 +19,8 @@ public interface MutateAssetGroupListingGroupFiltersRequestOrBuilder extends
   java.lang.String getCustomerId();
   /**
    * <pre>
-   * Required. The ID of the customer whose asset group listing group filters are being
-   * modified.
+   * Required. The ID of the customer whose asset group listing group filters
+   * are being modified.
    * </pre>
    *
    * <code>string customer_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -31,8 +31,8 @@ public interface MutateAssetGroupListingGroupFiltersRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The list of operations to perform on individual asset group listing group
-   * filters.
+   * Required. The list of operations to perform on individual asset group
+   * listing group filters.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.services.AssetGroupListingGroupFilterOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -41,8 +41,8 @@ public interface MutateAssetGroupListingGroupFiltersRequestOrBuilder extends
       getOperationsList();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual asset group listing group
-   * filters.
+   * Required. The list of operations to perform on individual asset group
+   * listing group filters.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.services.AssetGroupListingGroupFilterOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -50,8 +50,8 @@ public interface MutateAssetGroupListingGroupFiltersRequestOrBuilder extends
   com.google.ads.googleads.v12.services.AssetGroupListingGroupFilterOperation getOperations(int index);
   /**
    * <pre>
-   * Required. The list of operations to perform on individual asset group listing group
-   * filters.
+   * Required. The list of operations to perform on individual asset group
+   * listing group filters.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.services.AssetGroupListingGroupFilterOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -59,8 +59,8 @@ public interface MutateAssetGroupListingGroupFiltersRequestOrBuilder extends
   int getOperationsCount();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual asset group listing group
-   * filters.
+   * Required. The list of operations to perform on individual asset group
+   * listing group filters.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.services.AssetGroupListingGroupFilterOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -69,8 +69,8 @@ public interface MutateAssetGroupListingGroupFiltersRequestOrBuilder extends
       getOperationsOrBuilderList();
   /**
    * <pre>
-   * Required. The list of operations to perform on individual asset group listing group
-   * filters.
+   * Required. The list of operations to perform on individual asset group
+   * listing group filters.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.services.AssetGroupListingGroupFilterOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>

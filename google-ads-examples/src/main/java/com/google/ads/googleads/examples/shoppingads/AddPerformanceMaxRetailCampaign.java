@@ -21,47 +21,47 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.utils.FieldMasks;
-import com.google.ads.googleads.v12.common.ImageAsset;
-import com.google.ads.googleads.v12.common.LanguageInfo;
-import com.google.ads.googleads.v12.common.LocationInfo;
-import com.google.ads.googleads.v12.common.MaximizeConversionValue;
-import com.google.ads.googleads.v12.common.TextAsset;
-import com.google.ads.googleads.v12.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
-import com.google.ads.googleads.v12.enums.AssetFieldTypeEnum.AssetFieldType;
-import com.google.ads.googleads.v12.enums.AssetGroupStatusEnum.AssetGroupStatus;
-import com.google.ads.googleads.v12.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
-import com.google.ads.googleads.v12.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v12.enums.ConversionActionCategoryEnum.ConversionActionCategory;
-import com.google.ads.googleads.v12.enums.ConversionOriginEnum.ConversionOrigin;
-import com.google.ads.googleads.v12.enums.ListingGroupFilterTypeEnum.ListingGroupFilterType;
-import com.google.ads.googleads.v12.enums.ListingGroupFilterVerticalEnum.ListingGroupFilterVertical;
-import com.google.ads.googleads.v12.errors.GoogleAdsError;
-import com.google.ads.googleads.v12.errors.GoogleAdsException;
-import com.google.ads.googleads.v12.resources.Asset;
-import com.google.ads.googleads.v12.resources.AssetGroup;
-import com.google.ads.googleads.v12.resources.AssetGroupAsset;
-import com.google.ads.googleads.v12.resources.AssetGroupListingGroupFilter;
-import com.google.ads.googleads.v12.resources.Campaign;
-import com.google.ads.googleads.v12.resources.Campaign.ShoppingSetting;
-import com.google.ads.googleads.v12.resources.CampaignBudget;
-import com.google.ads.googleads.v12.resources.CampaignConversionGoal;
-import com.google.ads.googleads.v12.resources.CampaignCriterion;
-import com.google.ads.googleads.v12.resources.CustomerConversionGoal;
-import com.google.ads.googleads.v12.services.AssetGroupAssetOperation;
-import com.google.ads.googleads.v12.services.AssetGroupListingGroupFilterOperation;
-import com.google.ads.googleads.v12.services.AssetGroupOperation;
-import com.google.ads.googleads.v12.services.AssetOperation;
-import com.google.ads.googleads.v12.services.CampaignBudgetOperation;
-import com.google.ads.googleads.v12.services.CampaignConversionGoalOperation;
-import com.google.ads.googleads.v12.services.CampaignCriterionOperation;
-import com.google.ads.googleads.v12.services.CampaignOperation;
-import com.google.ads.googleads.v12.services.GoogleAdsRow;
-import com.google.ads.googleads.v12.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v12.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v12.services.MutateGoogleAdsResponse;
-import com.google.ads.googleads.v12.services.MutateOperation;
-import com.google.ads.googleads.v12.services.MutateOperationResponse;
-import com.google.ads.googleads.v12.utils.ResourceNames;
+import com.google.ads.googleads.v13.common.ImageAsset;
+import com.google.ads.googleads.v13.common.LanguageInfo;
+import com.google.ads.googleads.v13.common.LocationInfo;
+import com.google.ads.googleads.v13.common.MaximizeConversionValue;
+import com.google.ads.googleads.v13.common.TextAsset;
+import com.google.ads.googleads.v13.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
+import com.google.ads.googleads.v13.enums.AssetFieldTypeEnum.AssetFieldType;
+import com.google.ads.googleads.v13.enums.AssetGroupStatusEnum.AssetGroupStatus;
+import com.google.ads.googleads.v13.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
+import com.google.ads.googleads.v13.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v13.enums.ConversionActionCategoryEnum.ConversionActionCategory;
+import com.google.ads.googleads.v13.enums.ConversionOriginEnum.ConversionOrigin;
+import com.google.ads.googleads.v13.enums.ListingGroupFilterTypeEnum.ListingGroupFilterType;
+import com.google.ads.googleads.v13.enums.ListingGroupFilterVerticalEnum.ListingGroupFilterVertical;
+import com.google.ads.googleads.v13.errors.GoogleAdsError;
+import com.google.ads.googleads.v13.errors.GoogleAdsException;
+import com.google.ads.googleads.v13.resources.Asset;
+import com.google.ads.googleads.v13.resources.AssetGroup;
+import com.google.ads.googleads.v13.resources.AssetGroupAsset;
+import com.google.ads.googleads.v13.resources.AssetGroupListingGroupFilter;
+import com.google.ads.googleads.v13.resources.Campaign;
+import com.google.ads.googleads.v13.resources.Campaign.ShoppingSetting;
+import com.google.ads.googleads.v13.resources.CampaignBudget;
+import com.google.ads.googleads.v13.resources.CampaignConversionGoal;
+import com.google.ads.googleads.v13.resources.CampaignCriterion;
+import com.google.ads.googleads.v13.resources.CustomerConversionGoal;
+import com.google.ads.googleads.v13.services.AssetGroupAssetOperation;
+import com.google.ads.googleads.v13.services.AssetGroupListingGroupFilterOperation;
+import com.google.ads.googleads.v13.services.AssetGroupOperation;
+import com.google.ads.googleads.v13.services.AssetOperation;
+import com.google.ads.googleads.v13.services.CampaignBudgetOperation;
+import com.google.ads.googleads.v13.services.CampaignConversionGoalOperation;
+import com.google.ads.googleads.v13.services.CampaignCriterionOperation;
+import com.google.ads.googleads.v13.services.CampaignOperation;
+import com.google.ads.googleads.v13.services.GoogleAdsRow;
+import com.google.ads.googleads.v13.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v13.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v13.services.MutateGoogleAdsResponse;
+import com.google.ads.googleads.v13.services.MutateOperation;
+import com.google.ads.googleads.v13.services.MutateOperationResponse;
+import com.google.ads.googleads.v13.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import com.google.common.io.ByteStreams;
 import com.google.protobuf.ByteString;
@@ -303,8 +303,20 @@ public class AddPerformanceMaxRetailCampaign {
             // For more information on Maximize Conversion Value, see the support
             // article: http://support.google.com/google-ads/answer/7684216.
             // A targetRoas of 3.5 corresponds to a 350% return on ad spend.
+            // For first time users, it's recommended not to set a target ROAS value. Although
+            // the target ROAS value is optional, you still need to define the enclosing
+            // maximize_conversion_value.
             .setMaximizeConversionValue(
-                MaximizeConversionValue.newBuilder().setTargetRoas(3.5).build())
+                MaximizeConversionValue.newBuilder()
+                    // .setTargetRoas(3.5)
+                    .build())
+            // Below is what you would use if you want to maximize conversions:
+            // .setMaximizeConversions(
+            //     MaximizeConversions.newBuilder()
+            //         // The target CPA is optional. This is the average amount that you would like
+            //         // to spend per conversion action.
+            //         // .setTargetCpaMicros(1_000_000)
+            //         .build())
             // Sets the shopping settings.
             .setShoppingSetting(
                 ShoppingSetting.newBuilder()

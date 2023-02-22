@@ -52,7 +52,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TYPE_FIELD_NUMBER = 1;
-  private int type_;
+  private int type_ = 0;
   /**
    * <pre>
    * Required. The type of the price asset.
@@ -73,13 +73,12 @@ private static final long serialVersionUID = 0L;
    * @return The type.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.PriceExtensionTypeEnum.PriceExtensionType getType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.PriceExtensionTypeEnum.PriceExtensionType result = com.google.ads.googleads.v12.enums.PriceExtensionTypeEnum.PriceExtensionType.valueOf(type_);
+    com.google.ads.googleads.v12.enums.PriceExtensionTypeEnum.PriceExtensionType result = com.google.ads.googleads.v12.enums.PriceExtensionTypeEnum.PriceExtensionType.forNumber(type_);
     return result == null ? com.google.ads.googleads.v12.enums.PriceExtensionTypeEnum.PriceExtensionType.UNRECOGNIZED : result;
   }
 
   public static final int PRICE_QUALIFIER_FIELD_NUMBER = 2;
-  private int priceQualifier_;
+  private int priceQualifier_ = 0;
   /**
    * <pre>
    * The price qualifier of the price asset.
@@ -100,13 +99,13 @@ private static final long serialVersionUID = 0L;
    * @return The priceQualifier.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier getPriceQualifier() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier result = com.google.ads.googleads.v12.enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier.valueOf(priceQualifier_);
+    com.google.ads.googleads.v12.enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier result = com.google.ads.googleads.v12.enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier.forNumber(priceQualifier_);
     return result == null ? com.google.ads.googleads.v12.enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier.UNRECOGNIZED : result;
   }
 
   public static final int LANGUAGE_CODE_FIELD_NUMBER = 3;
-  private volatile java.lang.Object languageCode_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object languageCode_ = "";
   /**
    * <pre>
    * Required. The language of the price asset.
@@ -154,6 +153,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PRICE_OFFERINGS_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.PriceOffering> priceOfferings_;
   /**
    * <pre>
@@ -442,19 +442,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       type_ = 0;
-
       priceQualifier_ = 0;
-
       languageCode_ = "";
-
       if (priceOfferingsBuilder_ == null) {
         priceOfferings_ = java.util.Collections.emptyList();
       } else {
         priceOfferings_ = null;
         priceOfferingsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000008);
       return this;
     }
 
@@ -481,21 +479,35 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.PriceAsset buildPartial() {
       com.google.ads.googleads.v12.common.PriceAsset result = new com.google.ads.googleads.v12.common.PriceAsset(this);
-      int from_bitField0_ = bitField0_;
-      result.type_ = type_;
-      result.priceQualifier_ = priceQualifier_;
-      result.languageCode_ = languageCode_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.common.PriceAsset result) {
       if (priceOfferingsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           priceOfferings_ = java.util.Collections.unmodifiableList(priceOfferings_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.priceOfferings_ = priceOfferings_;
       } else {
         result.priceOfferings_ = priceOfferingsBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.PriceAsset result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.type_ = type_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.priceQualifier_ = priceQualifier_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.languageCode_ = languageCode_;
+      }
     }
 
     @java.lang.Override
@@ -550,13 +562,14 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getLanguageCode().isEmpty()) {
         languageCode_ = other.languageCode_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (priceOfferingsBuilder_ == null) {
         if (!other.priceOfferings_.isEmpty()) {
           if (priceOfferings_.isEmpty()) {
             priceOfferings_ = other.priceOfferings_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensurePriceOfferingsIsMutable();
             priceOfferings_.addAll(other.priceOfferings_);
@@ -569,7 +582,7 @@ private static final long serialVersionUID = 0L;
             priceOfferingsBuilder_.dispose();
             priceOfferingsBuilder_ = null;
             priceOfferings_ = other.priceOfferings_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000008);
             priceOfferingsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getPriceOfferingsFieldBuilder() : null;
@@ -606,17 +619,17 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               type_ = input.readEnum();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             case 16: {
               priceQualifier_ = input.readEnum();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             case 26: {
               languageCode_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 34: {
@@ -671,8 +684,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTypeValue(int value) {
-      
       type_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -686,8 +699,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.PriceExtensionTypeEnum.PriceExtensionType getType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.PriceExtensionTypeEnum.PriceExtensionType result = com.google.ads.googleads.v12.enums.PriceExtensionTypeEnum.PriceExtensionType.valueOf(type_);
+      com.google.ads.googleads.v12.enums.PriceExtensionTypeEnum.PriceExtensionType result = com.google.ads.googleads.v12.enums.PriceExtensionTypeEnum.PriceExtensionType.forNumber(type_);
       return result == null ? com.google.ads.googleads.v12.enums.PriceExtensionTypeEnum.PriceExtensionType.UNRECOGNIZED : result;
     }
     /**
@@ -703,7 +715,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       type_ = value.getNumber();
       onChanged();
       return this;
@@ -717,7 +729,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       type_ = 0;
       onChanged();
       return this;
@@ -745,8 +757,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPriceQualifierValue(int value) {
-      
       priceQualifier_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -760,8 +772,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier getPriceQualifier() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier result = com.google.ads.googleads.v12.enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier.valueOf(priceQualifier_);
+      com.google.ads.googleads.v12.enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier result = com.google.ads.googleads.v12.enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier.forNumber(priceQualifier_);
       return result == null ? com.google.ads.googleads.v12.enums.PriceExtensionPriceQualifierEnum.PriceExtensionPriceQualifier.UNRECOGNIZED : result;
     }
     /**
@@ -777,7 +788,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000002;
       priceQualifier_ = value.getNumber();
       onChanged();
       return this;
@@ -791,7 +802,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPriceQualifier() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       priceQualifier_ = 0;
       onChanged();
       return this;
@@ -853,11 +864,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLanguageCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       languageCode_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -871,8 +880,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLanguageCode() {
-      
       languageCode_ = getDefaultInstance().getLanguageCode();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -888,12 +897,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLanguageCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       languageCode_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -901,9 +908,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v12.common.PriceOffering> priceOfferings_ =
       java.util.Collections.emptyList();
     private void ensurePriceOfferingsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         priceOfferings_ = new java.util.ArrayList<com.google.ads.googleads.v12.common.PriceOffering>(priceOfferings_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000008;
        }
     }
 
@@ -1108,7 +1115,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearPriceOfferings() {
       if (priceOfferingsBuilder_ == null) {
         priceOfferings_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
       } else {
         priceOfferingsBuilder_.clear();
@@ -1220,7 +1227,7 @@ private static final long serialVersionUID = 0L;
         priceOfferingsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v12.common.PriceOffering, com.google.ads.googleads.v12.common.PriceOffering.Builder, com.google.ads.googleads.v12.common.PriceOfferingOrBuilder>(
                 priceOfferings_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000008) != 0),
                 getParentForChildren(),
                 isClean());
         priceOfferings_ = null;

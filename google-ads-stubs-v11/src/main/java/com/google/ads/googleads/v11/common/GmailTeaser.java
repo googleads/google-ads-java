@@ -54,7 +54,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int HEADLINE_FIELD_NUMBER = 5;
-  private volatile java.lang.Object headline_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object headline_ = "";
   /**
    * <pre>
    * Headline of the teaser.
@@ -112,7 +113,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTION_FIELD_NUMBER = 6;
-  private volatile java.lang.Object description_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object description_ = "";
   /**
    * <pre>
    * Description of the teaser.
@@ -170,7 +172,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BUSINESS_NAME_FIELD_NUMBER = 7;
-  private volatile java.lang.Object businessName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object businessName_ = "";
   /**
    * <pre>
    * Business name of the advertiser.
@@ -228,7 +231,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LOGO_IMAGE_FIELD_NUMBER = 8;
-  private volatile java.lang.Object logoImage_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object logoImage_ = "";
   /**
    * <pre>
    * The MediaFile resource name of the logo image. Valid image types are GIF,
@@ -533,14 +537,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       headline_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       description_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       businessName_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       logoImage_ = "";
-      bitField0_ = (bitField0_ & ~0x00000008);
       return this;
     }
 
@@ -567,27 +568,31 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.GmailTeaser buildPartial() {
       com.google.ads.googleads.v11.common.GmailTeaser result = new com.google.ads.googleads.v11.common.GmailTeaser(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.GmailTeaser result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.headline_ = headline_;
         to_bitField0_ |= 0x00000001;
       }
-      result.headline_ = headline_;
       if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.description_ = description_;
         to_bitField0_ |= 0x00000002;
       }
-      result.description_ = description_;
       if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.businessName_ = businessName_;
         to_bitField0_ |= 0x00000004;
       }
-      result.businessName_ = businessName_;
       if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.logoImage_ = logoImage_;
         to_bitField0_ |= 0x00000008;
       }
-      result.logoImage_ = logoImage_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -635,23 +640,23 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v11.common.GmailTeaser other) {
       if (other == com.google.ads.googleads.v11.common.GmailTeaser.getDefaultInstance()) return this;
       if (other.hasHeadline()) {
-        bitField0_ |= 0x00000001;
         headline_ = other.headline_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasDescription()) {
-        bitField0_ |= 0x00000002;
         description_ = other.description_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasBusinessName()) {
-        bitField0_ |= 0x00000004;
         businessName_ = other.businessName_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.hasLogoImage()) {
-        bitField0_ |= 0x00000008;
         logoImage_ = other.logoImage_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -781,11 +786,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHeadline(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       headline_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -798,8 +801,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearHeadline() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       headline_ = getDefaultInstance().getHeadline();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -814,12 +817,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setHeadlineBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       headline_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -888,11 +889,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       description_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -905,8 +904,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       description_ = getDefaultInstance().getDescription();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -921,12 +920,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescriptionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       description_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -995,11 +992,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBusinessName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       businessName_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1012,8 +1007,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBusinessName() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       businessName_ = getDefaultInstance().getBusinessName();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1028,12 +1023,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBusinessNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       businessName_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1110,11 +1103,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLogoImage(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
       logoImage_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1129,8 +1120,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLogoImage() {
-      bitField0_ = (bitField0_ & ~0x00000008);
       logoImage_ = getDefaultInstance().getLogoImage();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1147,12 +1138,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLogoImageBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       logoImage_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }

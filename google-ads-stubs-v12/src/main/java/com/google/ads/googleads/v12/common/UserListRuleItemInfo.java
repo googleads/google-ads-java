@@ -93,7 +93,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 5;
-  private volatile java.lang.Object name_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
   /**
    * <pre>
    * Rule variable name. It should match the corresponding key name fired
@@ -550,8 +551,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       name_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       if (numberRuleItemBuilder_ != null) {
         numberRuleItemBuilder_.clear();
       }
@@ -589,37 +590,37 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.UserListRuleItemInfo buildPartial() {
       com.google.ads.googleads.v12.common.UserListRuleItemInfo result = new com.google.ads.googleads.v12.common.UserListRuleItemInfo(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.UserListRuleItemInfo result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.name_ = name_;
         to_bitField0_ |= 0x00000001;
       }
-      result.name_ = name_;
-      if (ruleItemCase_ == 2) {
-        if (numberRuleItemBuilder_ == null) {
-          result.ruleItem_ = ruleItem_;
-        } else {
-          result.ruleItem_ = numberRuleItemBuilder_.build();
-        }
-      }
-      if (ruleItemCase_ == 3) {
-        if (stringRuleItemBuilder_ == null) {
-          result.ruleItem_ = ruleItem_;
-        } else {
-          result.ruleItem_ = stringRuleItemBuilder_.build();
-        }
-      }
-      if (ruleItemCase_ == 4) {
-        if (dateRuleItemBuilder_ == null) {
-          result.ruleItem_ = ruleItem_;
-        } else {
-          result.ruleItem_ = dateRuleItemBuilder_.build();
-        }
-      }
-      result.bitField0_ = to_bitField0_;
+      result.bitField0_ |= to_bitField0_;
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v12.common.UserListRuleItemInfo result) {
       result.ruleItemCase_ = ruleItemCase_;
-      onBuilt();
-      return result;
+      result.ruleItem_ = this.ruleItem_;
+      if (ruleItemCase_ == 2 &&
+          numberRuleItemBuilder_ != null) {
+        result.ruleItem_ = numberRuleItemBuilder_.build();
+      }
+      if (ruleItemCase_ == 3 &&
+          stringRuleItemBuilder_ != null) {
+        result.ruleItem_ = stringRuleItemBuilder_.build();
+      }
+      if (ruleItemCase_ == 4 &&
+          dateRuleItemBuilder_ != null) {
+        result.ruleItem_ = dateRuleItemBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -667,8 +668,8 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v12.common.UserListRuleItemInfo other) {
       if (other == com.google.ads.googleads.v12.common.UserListRuleItemInfo.getDefaultInstance()) return this;
       if (other.hasName()) {
-        bitField0_ |= 0x00000001;
         name_ = other.name_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       switch (other.getRuleItemCase()) {
@@ -864,11 +865,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       name_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -888,8 +887,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -911,12 +910,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1095,7 +1092,7 @@ private static final long serialVersionUID = 0L;
         ruleItem_ = null;
       }
       ruleItemCase_ = 2;
-      onChanged();;
+      onChanged();
       return numberRuleItemBuilder_;
     }
 
@@ -1273,7 +1270,7 @@ private static final long serialVersionUID = 0L;
         ruleItem_ = null;
       }
       ruleItemCase_ = 3;
-      onChanged();;
+      onChanged();
       return stringRuleItemBuilder_;
     }
 
@@ -1451,7 +1448,7 @@ private static final long serialVersionUID = 0L;
         ruleItem_ = null;
       }
       ruleItemCase_ = 4;
-      onChanged();;
+      onChanged();
       return dateRuleItemBuilder_;
     }
     @java.lang.Override

@@ -52,7 +52,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DIMENSION_FIELD_NUMBER = 1;
-  private int dimension_;
+  private int dimension_ = 0;
   /**
    * <pre>
    * The type of the attributes in this section.
@@ -73,12 +73,12 @@ private static final long serialVersionUID = 0L;
    * @return The dimension.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension getDimension() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension result = com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension.valueOf(dimension_);
+    com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension result = com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension.forNumber(dimension_);
     return result == null ? com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension.UNRECOGNIZED : result;
   }
 
   public static final int TOP_ATTRIBUTES_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.services.AudienceCompositionAttribute> topAttributes_;
   /**
    * <pre>
@@ -144,6 +144,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CLUSTERED_ATTRIBUTES_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.services.AudienceCompositionAttributeCluster> clusteredAttributes_;
   /**
    * <pre>
@@ -426,22 +427,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       dimension_ = 0;
-
       if (topAttributesBuilder_ == null) {
         topAttributes_ = java.util.Collections.emptyList();
       } else {
         topAttributes_ = null;
         topAttributesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       if (clusteredAttributesBuilder_ == null) {
         clusteredAttributes_ = java.util.Collections.emptyList();
       } else {
         clusteredAttributes_ = null;
         clusteredAttributesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -468,28 +469,38 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.AudienceCompositionSection buildPartial() {
       com.google.ads.googleads.v12.services.AudienceCompositionSection result = new com.google.ads.googleads.v12.services.AudienceCompositionSection(this);
-      int from_bitField0_ = bitField0_;
-      result.dimension_ = dimension_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.services.AudienceCompositionSection result) {
       if (topAttributesBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           topAttributes_ = java.util.Collections.unmodifiableList(topAttributes_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.topAttributes_ = topAttributes_;
       } else {
         result.topAttributes_ = topAttributesBuilder_.build();
       }
       if (clusteredAttributesBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           clusteredAttributes_ = java.util.Collections.unmodifiableList(clusteredAttributes_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.clusteredAttributes_ = clusteredAttributes_;
       } else {
         result.clusteredAttributes_ = clusteredAttributesBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.AudienceCompositionSection result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.dimension_ = dimension_;
+      }
     }
 
     @java.lang.Override
@@ -543,7 +554,7 @@ private static final long serialVersionUID = 0L;
         if (!other.topAttributes_.isEmpty()) {
           if (topAttributes_.isEmpty()) {
             topAttributes_ = other.topAttributes_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureTopAttributesIsMutable();
             topAttributes_.addAll(other.topAttributes_);
@@ -556,7 +567,7 @@ private static final long serialVersionUID = 0L;
             topAttributesBuilder_.dispose();
             topAttributesBuilder_ = null;
             topAttributes_ = other.topAttributes_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
             topAttributesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getTopAttributesFieldBuilder() : null;
@@ -569,7 +580,7 @@ private static final long serialVersionUID = 0L;
         if (!other.clusteredAttributes_.isEmpty()) {
           if (clusteredAttributes_.isEmpty()) {
             clusteredAttributes_ = other.clusteredAttributes_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureClusteredAttributesIsMutable();
             clusteredAttributes_.addAll(other.clusteredAttributes_);
@@ -582,7 +593,7 @@ private static final long serialVersionUID = 0L;
             clusteredAttributesBuilder_.dispose();
             clusteredAttributesBuilder_ = null;
             clusteredAttributes_ = other.clusteredAttributes_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000004);
             clusteredAttributesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getClusteredAttributesFieldBuilder() : null;
@@ -619,7 +630,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               dimension_ = input.readEnum();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             case 26: {
@@ -687,8 +698,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDimensionValue(int value) {
-      
       dimension_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -702,8 +713,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension getDimension() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension result = com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension.valueOf(dimension_);
+      com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension result = com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension.forNumber(dimension_);
       return result == null ? com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension.UNRECOGNIZED : result;
     }
     /**
@@ -719,7 +729,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       dimension_ = value.getNumber();
       onChanged();
       return this;
@@ -733,7 +743,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDimension() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       dimension_ = 0;
       onChanged();
       return this;
@@ -742,9 +752,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v12.services.AudienceCompositionAttribute> topAttributes_ =
       java.util.Collections.emptyList();
     private void ensureTopAttributesIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         topAttributes_ = new java.util.ArrayList<com.google.ads.googleads.v12.services.AudienceCompositionAttribute>(topAttributes_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -949,7 +959,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearTopAttributes() {
       if (topAttributesBuilder_ == null) {
         topAttributes_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         topAttributesBuilder_.clear();
@@ -1061,7 +1071,7 @@ private static final long serialVersionUID = 0L;
         topAttributesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v12.services.AudienceCompositionAttribute, com.google.ads.googleads.v12.services.AudienceCompositionAttribute.Builder, com.google.ads.googleads.v12.services.AudienceCompositionAttributeOrBuilder>(
                 topAttributes_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         topAttributes_ = null;
@@ -1072,9 +1082,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v12.services.AudienceCompositionAttributeCluster> clusteredAttributes_ =
       java.util.Collections.emptyList();
     private void ensureClusteredAttributesIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!((bitField0_ & 0x00000004) != 0)) {
         clusteredAttributes_ = new java.util.ArrayList<com.google.ads.googleads.v12.services.AudienceCompositionAttributeCluster>(clusteredAttributes_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
        }
     }
 
@@ -1279,7 +1289,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearClusteredAttributes() {
       if (clusteredAttributesBuilder_ == null) {
         clusteredAttributes_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
       } else {
         clusteredAttributesBuilder_.clear();
@@ -1391,7 +1401,7 @@ private static final long serialVersionUID = 0L;
         clusteredAttributesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v12.services.AudienceCompositionAttributeCluster, com.google.ads.googleads.v12.services.AudienceCompositionAttributeCluster.Builder, com.google.ads.googleads.v12.services.AudienceCompositionAttributeClusterOrBuilder>(
                 clusteredAttributes_,
-                ((bitField0_ & 0x00000002) != 0),
+                ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
         clusteredAttributes_ = null;

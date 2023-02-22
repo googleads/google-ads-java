@@ -133,7 +133,8 @@ public interface ChangeEventOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The old resource before the change. Only changed fields will be populated.
+   * Output only. The old resource before the change. Only changed fields will
+   * be populated.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.ChangeEvent.ChangedResource old_resource = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -142,7 +143,8 @@ public interface ChangeEventOrBuilder extends
   boolean hasOldResource();
   /**
    * <pre>
-   * Output only. The old resource before the change. Only changed fields will be populated.
+   * Output only. The old resource before the change. Only changed fields will
+   * be populated.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.ChangeEvent.ChangedResource old_resource = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -151,7 +153,8 @@ public interface ChangeEventOrBuilder extends
   com.google.ads.googleads.v12.resources.ChangeEvent.ChangedResource getOldResource();
   /**
    * <pre>
-   * Output only. The old resource before the change. Only changed fields will be populated.
+   * Output only. The old resource before the change. Only changed fields will
+   * be populated.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.ChangeEvent.ChangedResource old_resource = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -160,7 +163,8 @@ public interface ChangeEventOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The new resource after the change. Only changed fields will be populated.
+   * Output only. The new resource after the change. Only changed fields will be
+   * populated.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.ChangeEvent.ChangedResource new_resource = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -169,7 +173,8 @@ public interface ChangeEventOrBuilder extends
   boolean hasNewResource();
   /**
    * <pre>
-   * Output only. The new resource after the change. Only changed fields will be populated.
+   * Output only. The new resource after the change. Only changed fields will be
+   * populated.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.ChangeEvent.ChangedResource new_resource = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -178,7 +183,8 @@ public interface ChangeEventOrBuilder extends
   com.google.ads.googleads.v12.resources.ChangeEvent.ChangedResource getNewResource();
   /**
    * <pre>
-   * Output only. The new resource after the change. Only changed fields will be populated.
+   * Output only. The new resource after the change. Only changed fields will be
+   * populated.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.ChangeEvent.ChangedResource new_resource = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

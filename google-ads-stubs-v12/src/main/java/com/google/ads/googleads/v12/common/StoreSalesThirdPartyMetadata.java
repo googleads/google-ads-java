@@ -54,7 +54,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int ADVERTISER_UPLOAD_DATE_TIME_FIELD_NUMBER = 7;
-  private volatile java.lang.Object advertiserUploadDateTime_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object advertiserUploadDateTime_ = "";
   /**
    * <pre>
    * Time the advertiser uploaded the data to the partner. Required.
@@ -118,7 +119,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VALID_TRANSACTION_FRACTION_FIELD_NUMBER = 8;
-  private double validTransactionFraction_;
+  private double validTransactionFraction_ = 0D;
   /**
    * <pre>
    * The fraction of transactions that are valid. Invalid transactions may
@@ -151,7 +152,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PARTNER_MATCH_FRACTION_FIELD_NUMBER = 9;
-  private double partnerMatchFraction_;
+  private double partnerMatchFraction_ = 0D;
   /**
    * <pre>
    * The fraction of valid transactions that are matched to a third party
@@ -184,7 +185,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PARTNER_UPLOAD_FRACTION_FIELD_NUMBER = 10;
-  private double partnerUploadFraction_;
+  private double partnerUploadFraction_ = 0D;
   /**
    * <pre>
    * The fraction of valid transactions that are uploaded by the partner to
@@ -217,7 +218,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int BRIDGE_MAP_VERSION_ID_FIELD_NUMBER = 11;
-  private volatile java.lang.Object bridgeMapVersionId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object bridgeMapVersionId_ = "";
   /**
    * <pre>
    * Version of partner IDs to be used for uploads. Required.
@@ -275,7 +277,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PARTNER_ID_FIELD_NUMBER = 12;
-  private long partnerId_;
+  private long partnerId_ = 0L;
   /**
    * <pre>
    * ID of the third party partner updating the transaction feed.
@@ -586,18 +588,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       advertiserUploadDateTime_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       validTransactionFraction_ = 0D;
-      bitField0_ = (bitField0_ & ~0x00000002);
       partnerMatchFraction_ = 0D;
-      bitField0_ = (bitField0_ & ~0x00000004);
       partnerUploadFraction_ = 0D;
-      bitField0_ = (bitField0_ & ~0x00000008);
       bridgeMapVersionId_ = "";
-      bitField0_ = (bitField0_ & ~0x00000010);
       partnerId_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000020);
       return this;
     }
 
@@ -624,12 +621,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.StoreSalesThirdPartyMetadata buildPartial() {
       com.google.ads.googleads.v12.common.StoreSalesThirdPartyMetadata result = new com.google.ads.googleads.v12.common.StoreSalesThirdPartyMetadata(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.StoreSalesThirdPartyMetadata result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.advertiserUploadDateTime_ = advertiserUploadDateTime_;
         to_bitField0_ |= 0x00000001;
       }
-      result.advertiserUploadDateTime_ = advertiserUploadDateTime_;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.validTransactionFraction_ = validTransactionFraction_;
         to_bitField0_ |= 0x00000002;
@@ -643,16 +646,14 @@ private static final long serialVersionUID = 0L;
         to_bitField0_ |= 0x00000008;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.bridgeMapVersionId_ = bridgeMapVersionId_;
         to_bitField0_ |= 0x00000010;
       }
-      result.bridgeMapVersionId_ = bridgeMapVersionId_;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.partnerId_ = partnerId_;
         to_bitField0_ |= 0x00000020;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -700,8 +701,8 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v12.common.StoreSalesThirdPartyMetadata other) {
       if (other == com.google.ads.googleads.v12.common.StoreSalesThirdPartyMetadata.getDefaultInstance()) return this;
       if (other.hasAdvertiserUploadDateTime()) {
-        bitField0_ |= 0x00000001;
         advertiserUploadDateTime_ = other.advertiserUploadDateTime_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasValidTransactionFraction()) {
@@ -714,8 +715,8 @@ private static final long serialVersionUID = 0L;
         setPartnerUploadFraction(other.getPartnerUploadFraction());
       }
       if (other.hasBridgeMapVersionId()) {
-        bitField0_ |= 0x00000010;
         bridgeMapVersionId_ = other.bridgeMapVersionId_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (other.hasPartnerId()) {
@@ -866,11 +867,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAdvertiserUploadDateTime(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       advertiserUploadDateTime_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -885,8 +884,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAdvertiserUploadDateTime() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       advertiserUploadDateTime_ = getDefaultInstance().getAdvertiserUploadDateTime();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -903,12 +902,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAdvertiserUploadDateTimeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       advertiserUploadDateTime_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -957,8 +954,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setValidTransactionFraction(double value) {
-      bitField0_ |= 0x00000002;
+      
       validTransactionFraction_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1024,8 +1022,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPartnerMatchFraction(double value) {
-      bitField0_ |= 0x00000004;
+      
       partnerMatchFraction_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1091,8 +1090,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPartnerUploadFraction(double value) {
-      bitField0_ |= 0x00000008;
+      
       partnerUploadFraction_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1178,11 +1178,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBridgeMapVersionId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
+      if (value == null) { throw new NullPointerException(); }
       bridgeMapVersionId_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1195,8 +1193,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBridgeMapVersionId() {
-      bitField0_ = (bitField0_ & ~0x00000010);
       bridgeMapVersionId_ = getDefaultInstance().getBridgeMapVersionId();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1211,12 +1209,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBridgeMapVersionIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000010;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       bridgeMapVersionId_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1256,8 +1252,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPartnerId(long value) {
-      bitField0_ |= 0x00000020;
+      
       partnerId_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }

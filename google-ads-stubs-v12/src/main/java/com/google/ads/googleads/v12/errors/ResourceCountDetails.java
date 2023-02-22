@@ -51,7 +51,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ENCLOSING_ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object enclosingId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object enclosingId_ = "";
   /**
    * <pre>
    * The ID of the resource whose limit was exceeded.
@@ -99,7 +100,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ENCLOSING_RESOURCE_FIELD_NUMBER = 5;
-  private volatile java.lang.Object enclosingResource_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object enclosingResource_ = "";
   /**
    * <pre>
    * The name of the resource (Customer, Campaign etc.) whose limit was
@@ -147,7 +149,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LIMIT_FIELD_NUMBER = 2;
-  private int limit_;
+  private int limit_ = 0;
   /**
    * <pre>
    * The limit which was exceeded.
@@ -162,7 +164,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LIMIT_TYPE_FIELD_NUMBER = 3;
-  private int limitType_;
+  private int limitType_ = 0;
   /**
    * <pre>
    * The resource limit type which was exceeded.
@@ -183,13 +185,12 @@ private static final long serialVersionUID = 0L;
    * @return The limitType.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.ResourceLimitTypeEnum.ResourceLimitType getLimitType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.ResourceLimitTypeEnum.ResourceLimitType result = com.google.ads.googleads.v12.enums.ResourceLimitTypeEnum.ResourceLimitType.valueOf(limitType_);
+    com.google.ads.googleads.v12.enums.ResourceLimitTypeEnum.ResourceLimitType result = com.google.ads.googleads.v12.enums.ResourceLimitTypeEnum.ResourceLimitType.forNumber(limitType_);
     return result == null ? com.google.ads.googleads.v12.enums.ResourceLimitTypeEnum.ResourceLimitType.UNRECOGNIZED : result;
   }
 
   public static final int EXISTING_COUNT_FIELD_NUMBER = 4;
-  private int existingCount_;
+  private int existingCount_ = 0;
   /**
    * <pre>
    * The count of existing entities.
@@ -436,16 +437,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       enclosingId_ = "";
-
       enclosingResource_ = "";
-
       limit_ = 0;
-
       limitType_ = 0;
-
       existingCount_ = 0;
-
       return this;
     }
 
@@ -472,13 +469,28 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.errors.ResourceCountDetails buildPartial() {
       com.google.ads.googleads.v12.errors.ResourceCountDetails result = new com.google.ads.googleads.v12.errors.ResourceCountDetails(this);
-      result.enclosingId_ = enclosingId_;
-      result.enclosingResource_ = enclosingResource_;
-      result.limit_ = limit_;
-      result.limitType_ = limitType_;
-      result.existingCount_ = existingCount_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.errors.ResourceCountDetails result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.enclosingId_ = enclosingId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.enclosingResource_ = enclosingResource_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.limit_ = limit_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.limitType_ = limitType_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.existingCount_ = existingCount_;
+      }
     }
 
     @java.lang.Override
@@ -527,10 +539,12 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.errors.ResourceCountDetails.getDefaultInstance()) return this;
       if (!other.getEnclosingId().isEmpty()) {
         enclosingId_ = other.enclosingId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getEnclosingResource().isEmpty()) {
         enclosingResource_ = other.enclosingResource_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.getLimit() != 0) {
@@ -570,27 +584,27 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               enclosingId_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 16: {
               limit_ = input.readInt32();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 16
             case 24: {
               limitType_ = input.readEnum();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 24
             case 32: {
               existingCount_ = input.readInt32();
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 32
             case 42: {
               enclosingResource_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 42
             default: {
@@ -608,6 +622,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object enclosingId_ = "";
     /**
@@ -665,11 +680,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEnclosingId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       enclosingId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -683,8 +696,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnclosingId() {
-      
       enclosingId_ = getDefaultInstance().getEnclosingId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -700,12 +713,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEnclosingIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       enclosingId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -766,11 +777,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEnclosingResource(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       enclosingResource_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -784,8 +793,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnclosingResource() {
-      
       enclosingResource_ = getDefaultInstance().getEnclosingResource();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -801,12 +810,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEnclosingResourceBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       enclosingResource_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -836,6 +843,7 @@ private static final long serialVersionUID = 0L;
     public Builder setLimit(int value) {
       
       limit_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -848,7 +856,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLimit() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       limit_ = 0;
       onChanged();
       return this;
@@ -876,8 +884,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLimitTypeValue(int value) {
-      
       limitType_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -891,8 +899,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.ResourceLimitTypeEnum.ResourceLimitType getLimitType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.ResourceLimitTypeEnum.ResourceLimitType result = com.google.ads.googleads.v12.enums.ResourceLimitTypeEnum.ResourceLimitType.valueOf(limitType_);
+      com.google.ads.googleads.v12.enums.ResourceLimitTypeEnum.ResourceLimitType result = com.google.ads.googleads.v12.enums.ResourceLimitTypeEnum.ResourceLimitType.forNumber(limitType_);
       return result == null ? com.google.ads.googleads.v12.enums.ResourceLimitTypeEnum.ResourceLimitType.UNRECOGNIZED : result;
     }
     /**
@@ -908,7 +915,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000008;
       limitType_ = value.getNumber();
       onChanged();
       return this;
@@ -922,7 +929,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLimitType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       limitType_ = 0;
       onChanged();
       return this;
@@ -953,6 +960,7 @@ private static final long serialVersionUID = 0L;
     public Builder setExistingCount(int value) {
       
       existingCount_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -965,7 +973,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearExistingCount() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       existingCount_ = 0;
       onChanged();
       return this;

@@ -119,8 +119,8 @@ public interface OperatingSystemVersionConstantOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Determines whether this constant represents a single version or a range of
-   * versions.
+   * Output only. Determines whether this constant represents a single version
+   * or a range of versions.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType operator_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -129,8 +129,8 @@ public interface OperatingSystemVersionConstantOrBuilder extends
   int getOperatorTypeValue();
   /**
    * <pre>
-   * Output only. Determines whether this constant represents a single version or a range of
-   * versions.
+   * Output only. Determines whether this constant represents a single version
+   * or a range of versions.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.OperatingSystemVersionOperatorTypeEnum.OperatingSystemVersionOperatorType operator_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

@@ -142,7 +142,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PROMOTION_TARGET_FIELD_NUMBER = 16;
-  private volatile java.lang.Object promotionTarget_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object promotionTarget_ = "";
   /**
    * <pre>
    * A freeform description of what the promotion is targeting.
@@ -203,7 +204,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DISCOUNT_MODIFIER_FIELD_NUMBER = 2;
-  private int discountModifier_;
+  private int discountModifier_ = 0;
   /**
    * <pre>
    * Enum that modifies the qualification of the discount.
@@ -224,13 +225,13 @@ private static final long serialVersionUID = 0L;
    * @return The discountModifier.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier getDiscountModifier() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier result = com.google.ads.googleads.v12.enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier.valueOf(discountModifier_);
+    com.google.ads.googleads.v12.enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier result = com.google.ads.googleads.v12.enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier.forNumber(discountModifier_);
     return result == null ? com.google.ads.googleads.v12.enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier.UNRECOGNIZED : result;
   }
 
   public static final int PROMOTION_START_DATE_FIELD_NUMBER = 19;
-  private volatile java.lang.Object promotionStartDate_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object promotionStartDate_ = "";
   /**
    * <pre>
    * Start date of when the promotion is eligible to be redeemed.
@@ -288,7 +289,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PROMOTION_END_DATE_FIELD_NUMBER = 20;
-  private volatile java.lang.Object promotionEndDate_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object promotionEndDate_ = "";
   /**
    * <pre>
    * Last date when the promotion is eligible to be redeemed.
@@ -346,7 +348,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int OCCASION_FIELD_NUMBER = 9;
-  private int occasion_;
+  private int occasion_ = 0;
   /**
    * <pre>
    * The occasion the promotion was intended for.
@@ -371,12 +373,12 @@ private static final long serialVersionUID = 0L;
    * @return The occasion.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion getOccasion() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion result = com.google.ads.googleads.v12.enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion.valueOf(occasion_);
+    com.google.ads.googleads.v12.enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion result = com.google.ads.googleads.v12.enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion.forNumber(occasion_);
     return result == null ? com.google.ads.googleads.v12.enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion.UNRECOGNIZED : result;
   }
 
   public static final int FINAL_URLS_FIELD_NUMBER = 21;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList finalUrls_;
   /**
    * <pre>
@@ -432,6 +434,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FINAL_MOBILE_URLS_FIELD_NUMBER = 22;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList finalMobileUrls_;
   /**
    * <pre>
@@ -483,7 +486,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TRACKING_URL_TEMPLATE_FIELD_NUMBER = 23;
-  private volatile java.lang.Object trackingUrlTemplate_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object trackingUrlTemplate_ = "";
   /**
    * <pre>
    * URL template for constructing a tracking URL.
@@ -541,6 +545,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int URL_CUSTOM_PARAMETERS_FIELD_NUMBER = 13;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.CustomParameter> urlCustomParameters_;
   /**
    * <pre>
@@ -606,7 +611,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FINAL_URL_SUFFIX_FIELD_NUMBER = 24;
-  private volatile java.lang.Object finalUrlSuffix_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object finalUrlSuffix_ = "";
   /**
    * <pre>
    * URL template for appending params to landing page URLs served with parallel
@@ -667,7 +673,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LANGUAGE_CODE_FIELD_NUMBER = 25;
-  private volatile java.lang.Object languageCode_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object languageCode_ = "";
   /**
    * <pre>
    * The language of the promotion.
@@ -1334,33 +1341,26 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       promotionTarget_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       discountModifier_ = 0;
-
       promotionStartDate_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       promotionEndDate_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       occasion_ = 0;
-
       finalUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000008);
-      finalMobileUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000010);
-      trackingUrlTemplate_ = "";
       bitField0_ = (bitField0_ & ~0x00000020);
+      finalMobileUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000040);
+      trackingUrlTemplate_ = "";
       if (urlCustomParametersBuilder_ == null) {
         urlCustomParameters_ = java.util.Collections.emptyList();
       } else {
         urlCustomParameters_ = null;
         urlCustomParametersBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000040);
-      finalUrlSuffix_ = "";
-      bitField0_ = (bitField0_ & ~0x00000080);
-      languageCode_ = "";
       bitField0_ = (bitField0_ & ~0x00000100);
+      finalUrlSuffix_ = "";
+      languageCode_ = "";
       if (moneyAmountOffBuilder_ != null) {
         moneyAmountOffBuilder_.clear();
       }
@@ -1397,78 +1397,84 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.PromotionFeedItem buildPartial() {
       com.google.ads.googleads.v12.common.PromotionFeedItem result = new com.google.ads.googleads.v12.common.PromotionFeedItem(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        to_bitField0_ |= 0x00000001;
-      }
-      result.promotionTarget_ = promotionTarget_;
-      result.discountModifier_ = discountModifier_;
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        to_bitField0_ |= 0x00000002;
-      }
-      result.promotionStartDate_ = promotionStartDate_;
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        to_bitField0_ |= 0x00000004;
-      }
-      result.promotionEndDate_ = promotionEndDate_;
-      result.occasion_ = occasion_;
-      if (((bitField0_ & 0x00000008) != 0)) {
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.common.PromotionFeedItem result) {
+      if (((bitField0_ & 0x00000020) != 0)) {
         finalUrls_ = finalUrls_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000020);
       }
       result.finalUrls_ = finalUrls_;
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (((bitField0_ & 0x00000040) != 0)) {
         finalMobileUrls_ = finalMobileUrls_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000040);
       }
       result.finalMobileUrls_ = finalMobileUrls_;
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        to_bitField0_ |= 0x00000008;
-      }
-      result.trackingUrlTemplate_ = trackingUrlTemplate_;
       if (urlCustomParametersBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0)) {
+        if (((bitField0_ & 0x00000100) != 0)) {
           urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ = (bitField0_ & ~0x00000100);
         }
         result.urlCustomParameters_ = urlCustomParameters_;
       } else {
         result.urlCustomParameters_ = urlCustomParametersBuilder_.build();
       }
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.PromotionFeedItem result) {
+      int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.promotionTarget_ = promotionTarget_;
+        to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.discountModifier_ = discountModifier_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.promotionStartDate_ = promotionStartDate_;
+        to_bitField0_ |= 0x00000002;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.promotionEndDate_ = promotionEndDate_;
+        to_bitField0_ |= 0x00000004;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.occasion_ = occasion_;
+      }
       if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.trackingUrlTemplate_ = trackingUrlTemplate_;
+        to_bitField0_ |= 0x00000008;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.finalUrlSuffix_ = finalUrlSuffix_;
         to_bitField0_ |= 0x00000010;
       }
-      result.finalUrlSuffix_ = finalUrlSuffix_;
-      if (((from_bitField0_ & 0x00000100) != 0)) {
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.languageCode_ = languageCode_;
         to_bitField0_ |= 0x00000020;
       }
-      result.languageCode_ = languageCode_;
-      if (discountTypeCase_ == 17) {
-        result.discountType_ = discountType_;
-      }
-      if (discountTypeCase_ == 4) {
-        if (moneyAmountOffBuilder_ == null) {
-          result.discountType_ = discountType_;
-        } else {
-          result.discountType_ = moneyAmountOffBuilder_.build();
-        }
-      }
-      if (promotionTriggerCase_ == 18) {
-        result.promotionTrigger_ = promotionTrigger_;
-      }
-      if (promotionTriggerCase_ == 6) {
-        if (ordersOverAmountBuilder_ == null) {
-          result.promotionTrigger_ = promotionTrigger_;
-        } else {
-          result.promotionTrigger_ = ordersOverAmountBuilder_.build();
-        }
-      }
-      result.bitField0_ = to_bitField0_;
+      result.bitField0_ |= to_bitField0_;
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v12.common.PromotionFeedItem result) {
       result.discountTypeCase_ = discountTypeCase_;
+      result.discountType_ = this.discountType_;
+      if (discountTypeCase_ == 4 &&
+          moneyAmountOffBuilder_ != null) {
+        result.discountType_ = moneyAmountOffBuilder_.build();
+      }
       result.promotionTriggerCase_ = promotionTriggerCase_;
-      onBuilt();
-      return result;
+      result.promotionTrigger_ = this.promotionTrigger_;
+      if (promotionTriggerCase_ == 6 &&
+          ordersOverAmountBuilder_ != null) {
+        result.promotionTrigger_ = ordersOverAmountBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -1516,21 +1522,21 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v12.common.PromotionFeedItem other) {
       if (other == com.google.ads.googleads.v12.common.PromotionFeedItem.getDefaultInstance()) return this;
       if (other.hasPromotionTarget()) {
-        bitField0_ |= 0x00000001;
         promotionTarget_ = other.promotionTarget_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.discountModifier_ != 0) {
         setDiscountModifierValue(other.getDiscountModifierValue());
       }
       if (other.hasPromotionStartDate()) {
-        bitField0_ |= 0x00000002;
         promotionStartDate_ = other.promotionStartDate_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.hasPromotionEndDate()) {
-        bitField0_ |= 0x00000004;
         promotionEndDate_ = other.promotionEndDate_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.occasion_ != 0) {
@@ -1539,7 +1545,7 @@ private static final long serialVersionUID = 0L;
       if (!other.finalUrls_.isEmpty()) {
         if (finalUrls_.isEmpty()) {
           finalUrls_ = other.finalUrls_;
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000020);
         } else {
           ensureFinalUrlsIsMutable();
           finalUrls_.addAll(other.finalUrls_);
@@ -1549,7 +1555,7 @@ private static final long serialVersionUID = 0L;
       if (!other.finalMobileUrls_.isEmpty()) {
         if (finalMobileUrls_.isEmpty()) {
           finalMobileUrls_ = other.finalMobileUrls_;
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000040);
         } else {
           ensureFinalMobileUrlsIsMutable();
           finalMobileUrls_.addAll(other.finalMobileUrls_);
@@ -1557,15 +1563,15 @@ private static final long serialVersionUID = 0L;
         onChanged();
       }
       if (other.hasTrackingUrlTemplate()) {
-        bitField0_ |= 0x00000020;
         trackingUrlTemplate_ = other.trackingUrlTemplate_;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       if (urlCustomParametersBuilder_ == null) {
         if (!other.urlCustomParameters_.isEmpty()) {
           if (urlCustomParameters_.isEmpty()) {
             urlCustomParameters_ = other.urlCustomParameters_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000100);
           } else {
             ensureUrlCustomParametersIsMutable();
             urlCustomParameters_.addAll(other.urlCustomParameters_);
@@ -1578,7 +1584,7 @@ private static final long serialVersionUID = 0L;
             urlCustomParametersBuilder_.dispose();
             urlCustomParametersBuilder_ = null;
             urlCustomParameters_ = other.urlCustomParameters_;
-            bitField0_ = (bitField0_ & ~0x00000040);
+            bitField0_ = (bitField0_ & ~0x00000100);
             urlCustomParametersBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getUrlCustomParametersFieldBuilder() : null;
@@ -1588,13 +1594,13 @@ private static final long serialVersionUID = 0L;
         }
       }
       if (other.hasFinalUrlSuffix()) {
-        bitField0_ |= 0x00000080;
         finalUrlSuffix_ = other.finalUrlSuffix_;
+        bitField0_ |= 0x00000200;
         onChanged();
       }
       if (other.hasLanguageCode()) {
-        bitField0_ |= 0x00000100;
         languageCode_ = other.languageCode_;
+        bitField0_ |= 0x00000400;
         onChanged();
       }
       switch (other.getDiscountTypeCase()) {
@@ -1653,7 +1659,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 16: {
               discountModifier_ = input.readEnum();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             case 34: {
@@ -1672,7 +1678,7 @@ private static final long serialVersionUID = 0L;
             } // case 50
             case 72: {
               occasion_ = input.readEnum();
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 72
             case 106: {
@@ -1706,12 +1712,12 @@ private static final long serialVersionUID = 0L;
             } // case 146
             case 154: {
               promotionStartDate_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 154
             case 162: {
               promotionEndDate_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               break;
             } // case 162
             case 170: {
@@ -1728,17 +1734,17 @@ private static final long serialVersionUID = 0L;
             } // case 178
             case 186: {
               trackingUrlTemplate_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000080;
               break;
             } // case 186
             case 194: {
               finalUrlSuffix_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000200;
               break;
             } // case 194
             case 202: {
               languageCode_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000100;
+              bitField0_ |= 0x00000400;
               break;
             } // case 202
             default: {
@@ -1856,11 +1862,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPromotionTarget(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       promotionTarget_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1874,8 +1878,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPromotionTarget() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       promotionTarget_ = getDefaultInstance().getPromotionTarget();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1891,12 +1895,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPromotionTargetBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       promotionTarget_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1923,8 +1925,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDiscountModifierValue(int value) {
-      
       discountModifier_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1938,8 +1940,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier getDiscountModifier() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier result = com.google.ads.googleads.v12.enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier.valueOf(discountModifier_);
+      com.google.ads.googleads.v12.enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier result = com.google.ads.googleads.v12.enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier.forNumber(discountModifier_);
       return result == null ? com.google.ads.googleads.v12.enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier.UNRECOGNIZED : result;
     }
     /**
@@ -1955,7 +1956,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000002;
       discountModifier_ = value.getNumber();
       onChanged();
       return this;
@@ -1969,7 +1970,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDiscountModifier() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       discountModifier_ = 0;
       onChanged();
       return this;
@@ -1985,7 +1986,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the promotionStartDate field is set.
      */
     public boolean hasPromotionStartDate() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -2039,11 +2040,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPromotionStartDate(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       promotionStartDate_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -2056,8 +2055,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPromotionStartDate() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       promotionStartDate_ = getDefaultInstance().getPromotionStartDate();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -2072,12 +2071,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPromotionStartDateBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       promotionStartDate_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -2092,7 +2089,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the promotionEndDate field is set.
      */
     public boolean hasPromotionEndDate() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -2146,11 +2143,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPromotionEndDate(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       promotionEndDate_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -2163,8 +2158,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPromotionEndDate() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       promotionEndDate_ = getDefaultInstance().getPromotionEndDate();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -2179,12 +2174,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPromotionEndDateBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       promotionEndDate_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -2215,8 +2208,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOccasionValue(int value) {
-      
       occasion_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -2232,8 +2225,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion getOccasion() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion result = com.google.ads.googleads.v12.enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion.valueOf(occasion_);
+      com.google.ads.googleads.v12.enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion result = com.google.ads.googleads.v12.enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion.forNumber(occasion_);
       return result == null ? com.google.ads.googleads.v12.enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion.UNRECOGNIZED : result;
     }
     /**
@@ -2251,7 +2243,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000010;
       occasion_ = value.getNumber();
       onChanged();
       return this;
@@ -2267,7 +2259,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOccasion() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       occasion_ = 0;
       onChanged();
       return this;
@@ -2275,9 +2267,9 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.LazyStringList finalUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureFinalUrlsIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
+      if (!((bitField0_ & 0x00000020) != 0)) {
         finalUrls_ = new com.google.protobuf.LazyStringArrayList(finalUrls_);
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000020;
        }
     }
     /**
@@ -2345,10 +2337,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFinalUrls(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFinalUrlsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureFinalUrlsIsMutable();
       finalUrls_.set(index, value);
       onChanged();
       return this;
@@ -2365,10 +2355,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addFinalUrls(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFinalUrlsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureFinalUrlsIsMutable();
       finalUrls_.add(value);
       onChanged();
       return this;
@@ -2402,7 +2390,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearFinalUrls() {
       finalUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -2418,10 +2406,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addFinalUrlsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureFinalUrlsIsMutable();
       finalUrls_.add(value);
       onChanged();
@@ -2430,9 +2416,9 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.LazyStringList finalMobileUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureFinalMobileUrlsIsMutable() {
-      if (!((bitField0_ & 0x00000010) != 0)) {
+      if (!((bitField0_ & 0x00000040) != 0)) {
         finalMobileUrls_ = new com.google.protobuf.LazyStringArrayList(finalMobileUrls_);
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000040;
        }
     }
     /**
@@ -2495,10 +2481,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFinalMobileUrls(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFinalMobileUrlsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureFinalMobileUrlsIsMutable();
       finalMobileUrls_.set(index, value);
       onChanged();
       return this;
@@ -2514,10 +2498,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addFinalMobileUrls(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFinalMobileUrlsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureFinalMobileUrlsIsMutable();
       finalMobileUrls_.add(value);
       onChanged();
       return this;
@@ -2549,7 +2531,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearFinalMobileUrls() {
       finalMobileUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -2564,10 +2546,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addFinalMobileUrlsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureFinalMobileUrlsIsMutable();
       finalMobileUrls_.add(value);
       onChanged();
@@ -2584,7 +2564,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the trackingUrlTemplate field is set.
      */
     public boolean hasTrackingUrlTemplate() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
      * <pre>
@@ -2638,11 +2618,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTrackingUrlTemplate(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000020;
+      if (value == null) { throw new NullPointerException(); }
       trackingUrlTemplate_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2655,8 +2633,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTrackingUrlTemplate() {
-      bitField0_ = (bitField0_ & ~0x00000020);
       trackingUrlTemplate_ = getDefaultInstance().getTrackingUrlTemplate();
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -2671,12 +2649,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTrackingUrlTemplateBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000020;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       trackingUrlTemplate_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2684,9 +2660,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v12.common.CustomParameter> urlCustomParameters_ =
       java.util.Collections.emptyList();
     private void ensureUrlCustomParametersIsMutable() {
-      if (!((bitField0_ & 0x00000040) != 0)) {
+      if (!((bitField0_ & 0x00000100) != 0)) {
         urlCustomParameters_ = new java.util.ArrayList<com.google.ads.googleads.v12.common.CustomParameter>(urlCustomParameters_);
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000100;
        }
     }
 
@@ -2891,7 +2867,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearUrlCustomParameters() {
       if (urlCustomParametersBuilder_ == null) {
         urlCustomParameters_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000040);
+        bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
       } else {
         urlCustomParametersBuilder_.clear();
@@ -3003,7 +2979,7 @@ private static final long serialVersionUID = 0L;
         urlCustomParametersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v12.common.CustomParameter, com.google.ads.googleads.v12.common.CustomParameter.Builder, com.google.ads.googleads.v12.common.CustomParameterOrBuilder>(
                 urlCustomParameters_,
-                ((bitField0_ & 0x00000040) != 0),
+                ((bitField0_ & 0x00000100) != 0),
                 getParentForChildren(),
                 isClean());
         urlCustomParameters_ = null;
@@ -3022,7 +2998,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the finalUrlSuffix field is set.
      */
     public boolean hasFinalUrlSuffix() {
-      return ((bitField0_ & 0x00000080) != 0);
+      return ((bitField0_ & 0x00000200) != 0);
     }
     /**
      * <pre>
@@ -3079,11 +3055,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFinalUrlSuffix(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000080;
+      if (value == null) { throw new NullPointerException(); }
       finalUrlSuffix_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -3097,8 +3071,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFinalUrlSuffix() {
-      bitField0_ = (bitField0_ & ~0x00000080);
       finalUrlSuffix_ = getDefaultInstance().getFinalUrlSuffix();
+      bitField0_ = (bitField0_ & ~0x00000200);
       onChanged();
       return this;
     }
@@ -3114,12 +3088,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFinalUrlSuffixBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000080;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       finalUrlSuffix_ = value;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -3135,7 +3107,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the languageCode field is set.
      */
     public boolean hasLanguageCode() {
-      return ((bitField0_ & 0x00000100) != 0);
+      return ((bitField0_ & 0x00000400) != 0);
     }
     /**
      * <pre>
@@ -3192,11 +3164,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLanguageCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000100;
+      if (value == null) { throw new NullPointerException(); }
       languageCode_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -3210,8 +3180,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLanguageCode() {
-      bitField0_ = (bitField0_ & ~0x00000100);
       languageCode_ = getDefaultInstance().getLanguageCode();
+      bitField0_ = (bitField0_ & ~0x00000400);
       onChanged();
       return this;
     }
@@ -3227,12 +3197,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLanguageCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000100;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       languageCode_ = value;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -3278,6 +3246,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPercentOff(long value) {
+      
       discountTypeCase_ = 17;
       discountType_ = value;
       onChanged();
@@ -3485,7 +3454,7 @@ private static final long serialVersionUID = 0L;
         discountType_ = null;
       }
       discountTypeCase_ = 4;
-      onChanged();;
+      onChanged();
       return moneyAmountOffBuilder_;
     }
 
@@ -3565,10 +3534,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPromotionCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  promotionTriggerCase_ = 18;
+      if (value == null) { throw new NullPointerException(); }
+      promotionTriggerCase_ = 18;
       promotionTrigger_ = value;
       onChanged();
       return this;
@@ -3600,10 +3567,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPromotionCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       promotionTriggerCase_ = 18;
       promotionTrigger_ = value;
       onChanged();
@@ -3793,7 +3758,7 @@ private static final long serialVersionUID = 0L;
         promotionTrigger_ = null;
       }
       promotionTriggerCase_ = 6;
-      onChanged();;
+      onChanged();
       return ordersOverAmountBuilder_;
     }
     @java.lang.Override

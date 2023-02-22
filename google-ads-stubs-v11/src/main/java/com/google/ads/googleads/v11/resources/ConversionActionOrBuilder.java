@@ -200,8 +200,8 @@ public interface ConversionActionOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The resource name of the conversion action owner customer, or null if this
-   * is a system-defined conversion action.
+   * Output only. The resource name of the conversion action owner customer, or
+   * null if this is a system-defined conversion action.
    * </pre>
    *
    * <code>optional string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -210,8 +210,8 @@ public interface ConversionActionOrBuilder extends
   boolean hasOwnerCustomer();
   /**
    * <pre>
-   * Output only. The resource name of the conversion action owner customer, or null if this
-   * is a system-defined conversion action.
+   * Output only. The resource name of the conversion action owner customer, or
+   * null if this is a system-defined conversion action.
    * </pre>
    *
    * <code>optional string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -220,8 +220,8 @@ public interface ConversionActionOrBuilder extends
   java.lang.String getOwnerCustomer();
   /**
    * <pre>
-   * Output only. The resource name of the conversion action owner customer, or null if this
-   * is a system-defined conversion action.
+   * Output only. The resource name of the conversion action owner customer, or
+   * null if this is a system-defined conversion action.
    * </pre>
    *
    * <code>optional string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -513,7 +513,8 @@ public interface ConversionActionOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Third Party App Analytics settings for third party conversion types.
+   * Output only. Third Party App Analytics settings for third party conversion
+   * types.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.resources.ConversionAction.ThirdPartyAppAnalyticsSettings third_party_app_analytics_settings = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -522,7 +523,8 @@ public interface ConversionActionOrBuilder extends
   boolean hasThirdPartyAppAnalyticsSettings();
   /**
    * <pre>
-   * Output only. Third Party App Analytics settings for third party conversion types.
+   * Output only. Third Party App Analytics settings for third party conversion
+   * types.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.resources.ConversionAction.ThirdPartyAppAnalyticsSettings third_party_app_analytics_settings = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -531,7 +533,8 @@ public interface ConversionActionOrBuilder extends
   com.google.ads.googleads.v11.resources.ConversionAction.ThirdPartyAppAnalyticsSettings getThirdPartyAppAnalyticsSettings();
   /**
    * <pre>
-   * Output only. Third Party App Analytics settings for third party conversion types.
+   * Output only. Third Party App Analytics settings for third party conversion
+   * types.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.resources.ConversionAction.ThirdPartyAppAnalyticsSettings third_party_app_analytics_settings = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

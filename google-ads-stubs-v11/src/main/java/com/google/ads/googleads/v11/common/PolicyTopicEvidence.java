@@ -138,6 +138,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int TEXTS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList texts_;
     /**
      * <pre>
@@ -386,6 +387,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         texts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
@@ -414,14 +416,22 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v11.common.PolicyTopicEvidence.TextList buildPartial() {
         com.google.ads.googleads.v11.common.PolicyTopicEvidence.TextList result = new com.google.ads.googleads.v11.common.PolicyTopicEvidence.TextList(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.google.ads.googleads.v11.common.PolicyTopicEvidence.TextList result) {
         if (((bitField0_ & 0x00000001) != 0)) {
           texts_ = texts_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.texts_ = texts_;
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v11.common.PolicyTopicEvidence.TextList result) {
+        int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override
@@ -594,10 +604,8 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setTexts(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTextsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTextsIsMutable();
         texts_.set(index, value);
         onChanged();
         return this;
@@ -613,10 +621,8 @@ private static final long serialVersionUID = 0L;
        */
       public Builder addTexts(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTextsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTextsIsMutable();
         texts_.add(value);
         onChanged();
         return this;
@@ -663,10 +669,8 @@ private static final long serialVersionUID = 0L;
        */
       public Builder addTextsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureTextsIsMutable();
         texts_.add(value);
         onChanged();
@@ -830,6 +834,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int WEBSITES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList websites_;
     /**
      * <pre>
@@ -1081,6 +1086,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         websites_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
@@ -1109,14 +1115,22 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v11.common.PolicyTopicEvidence.WebsiteList buildPartial() {
         com.google.ads.googleads.v11.common.PolicyTopicEvidence.WebsiteList result = new com.google.ads.googleads.v11.common.PolicyTopicEvidence.WebsiteList(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.google.ads.googleads.v11.common.PolicyTopicEvidence.WebsiteList result) {
         if (((bitField0_ & 0x00000001) != 0)) {
           websites_ = websites_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.websites_ = websites_;
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v11.common.PolicyTopicEvidence.WebsiteList result) {
+        int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override
@@ -1289,10 +1303,8 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setWebsites(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureWebsitesIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureWebsitesIsMutable();
         websites_.set(index, value);
         onChanged();
         return this;
@@ -1308,10 +1320,8 @@ private static final long serialVersionUID = 0L;
        */
       public Builder addWebsites(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureWebsitesIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureWebsitesIsMutable();
         websites_.add(value);
         onChanged();
         return this;
@@ -1358,10 +1368,8 @@ private static final long serialVersionUID = 0L;
        */
       public Builder addWebsitesBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureWebsitesIsMutable();
         websites_.add(value);
         onChanged();
@@ -1523,6 +1531,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int DESTINATION_TEXTS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList destinationTexts_;
     /**
      * <pre>
@@ -1772,6 +1781,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         destinationTexts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
@@ -1800,14 +1810,22 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v11.common.PolicyTopicEvidence.DestinationTextList buildPartial() {
         com.google.ads.googleads.v11.common.PolicyTopicEvidence.DestinationTextList result = new com.google.ads.googleads.v11.common.PolicyTopicEvidence.DestinationTextList(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.google.ads.googleads.v11.common.PolicyTopicEvidence.DestinationTextList result) {
         if (((bitField0_ & 0x00000001) != 0)) {
           destinationTexts_ = destinationTexts_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.destinationTexts_ = destinationTexts_;
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v11.common.PolicyTopicEvidence.DestinationTextList result) {
+        int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override
@@ -1980,10 +1998,8 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setDestinationTexts(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureDestinationTextsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureDestinationTextsIsMutable();
         destinationTexts_.set(index, value);
         onChanged();
         return this;
@@ -1999,10 +2015,8 @@ private static final long serialVersionUID = 0L;
        */
       public Builder addDestinationTexts(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureDestinationTextsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureDestinationTextsIsMutable();
         destinationTexts_.add(value);
         onChanged();
         return this;
@@ -2049,10 +2063,8 @@ private static final long serialVersionUID = 0L;
        */
       public Builder addDestinationTextsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureDestinationTextsIsMutable();
         destinationTexts_.add(value);
         onChanged();
@@ -2221,14 +2233,14 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int URL_TYPES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private java.util.List<java.lang.Integer> urlTypes_;
     private static final com.google.protobuf.Internal.ListAdapter.Converter<
         java.lang.Integer, com.google.ads.googleads.v11.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType> urlTypes_converter_ =
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, com.google.ads.googleads.v11.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType>() {
               public com.google.ads.googleads.v11.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType convert(java.lang.Integer from) {
-                @SuppressWarnings("deprecation")
-                com.google.ads.googleads.v11.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType result = com.google.ads.googleads.v11.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType.valueOf(from);
+                com.google.ads.googleads.v11.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType result = com.google.ads.googleads.v11.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType.forNumber(from);
                 return result == null ? com.google.ads.googleads.v11.enums.PolicyTopicEvidenceDestinationMismatchUrlTypeEnum.PolicyTopicEvidenceDestinationMismatchUrlType.UNRECOGNIZED : result;
               }
             };
@@ -2504,6 +2516,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         urlTypes_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
@@ -2532,14 +2545,22 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v11.common.PolicyTopicEvidence.DestinationMismatch buildPartial() {
         com.google.ads.googleads.v11.common.PolicyTopicEvidence.DestinationMismatch result = new com.google.ads.googleads.v11.common.PolicyTopicEvidence.DestinationMismatch(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.google.ads.googleads.v11.common.PolicyTopicEvidence.DestinationMismatch result) {
         if (((bitField0_ & 0x00000001) != 0)) {
           urlTypes_ = java.util.Collections.unmodifiableList(urlTypes_);
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.urlTypes_ = urlTypes_;
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v11.common.PolicyTopicEvidence.DestinationMismatch result) {
+        int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override
@@ -3134,7 +3155,8 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int EXPANDED_URL_FIELD_NUMBER = 7;
-    private volatile java.lang.Object expandedUrl_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object expandedUrl_ = "";
     /**
      * <pre>
      * The full URL that didn't work.
@@ -3192,7 +3214,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int DEVICE_FIELD_NUMBER = 4;
-    private int device_;
+    private int device_ = 0;
     /**
      * <pre>
      * The type of device that failed to load the URL.
@@ -3213,13 +3235,13 @@ private static final long serialVersionUID = 0L;
      * @return The device.
      */
     @java.lang.Override public com.google.ads.googleads.v11.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice getDevice() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice result = com.google.ads.googleads.v11.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice.valueOf(device_);
+      com.google.ads.googleads.v11.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice result = com.google.ads.googleads.v11.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice.forNumber(device_);
       return result == null ? com.google.ads.googleads.v11.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice.UNRECOGNIZED : result;
     }
 
     public static final int LAST_CHECKED_DATE_TIME_FIELD_NUMBER = 8;
-    private volatile java.lang.Object lastCheckedDateTime_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object lastCheckedDateTime_ = "";
     /**
      * <pre>
      * The time the URL was last checked.
@@ -3318,8 +3340,7 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.ads.googleads.v11.enums.PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType getDnsErrorType() {
       if (reasonCase_ == 1) {
-        @SuppressWarnings("deprecation")
-        com.google.ads.googleads.v11.enums.PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType result = com.google.ads.googleads.v11.enums.PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType.valueOf(
+        com.google.ads.googleads.v11.enums.PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType result = com.google.ads.googleads.v11.enums.PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType.forNumber(
             (java.lang.Integer) reason_);
         return result == null ? com.google.ads.googleads.v11.enums.PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType.UNRECOGNIZED : result;
       }
@@ -3619,12 +3640,10 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         expandedUrl_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
         device_ = 0;
-
         lastCheckedDateTime_ = "";
-        bitField0_ = (bitField0_ & ~0x00000002);
         reasonCase_ = 0;
         reason_ = null;
         return this;
@@ -3653,27 +3672,32 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v11.common.PolicyTopicEvidence.DestinationNotWorking buildPartial() {
         com.google.ads.googleads.v11.common.PolicyTopicEvidence.DestinationNotWorking result = new com.google.ads.googleads.v11.common.PolicyTopicEvidence.DestinationNotWorking(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v11.common.PolicyTopicEvidence.DestinationNotWorking result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.expandedUrl_ = expandedUrl_;
           to_bitField0_ |= 0x00000001;
         }
-        result.expandedUrl_ = expandedUrl_;
-        result.device_ = device_;
         if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.device_ = device_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.lastCheckedDateTime_ = lastCheckedDateTime_;
           to_bitField0_ |= 0x00000002;
         }
-        result.lastCheckedDateTime_ = lastCheckedDateTime_;
-        if (reasonCase_ == 1) {
-          result.reason_ = reason_;
-        }
-        if (reasonCase_ == 6) {
-          result.reason_ = reason_;
-        }
-        result.bitField0_ = to_bitField0_;
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      private void buildPartialOneofs(com.google.ads.googleads.v11.common.PolicyTopicEvidence.DestinationNotWorking result) {
         result.reasonCase_ = reasonCase_;
-        onBuilt();
-        return result;
+        result.reason_ = this.reason_;
       }
 
       @java.lang.Override
@@ -3721,16 +3745,16 @@ private static final long serialVersionUID = 0L;
       public Builder mergeFrom(com.google.ads.googleads.v11.common.PolicyTopicEvidence.DestinationNotWorking other) {
         if (other == com.google.ads.googleads.v11.common.PolicyTopicEvidence.DestinationNotWorking.getDefaultInstance()) return this;
         if (other.hasExpandedUrl()) {
-          bitField0_ |= 0x00000001;
           expandedUrl_ = other.expandedUrl_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.device_ != 0) {
           setDeviceValue(other.getDeviceValue());
         }
         if (other.hasLastCheckedDateTime()) {
-          bitField0_ |= 0x00000002;
           lastCheckedDateTime_ = other.lastCheckedDateTime_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         switch (other.getReasonCase()) {
@@ -3780,7 +3804,7 @@ private static final long serialVersionUID = 0L;
               } // case 8
               case 32: {
                 device_ = input.readEnum();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 32
               case 48: {
@@ -3795,7 +3819,7 @@ private static final long serialVersionUID = 0L;
               } // case 58
               case 66: {
                 lastCheckedDateTime_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
+                bitField0_ |= 0x00000004;
                 break;
               } // case 66
               default: {
@@ -3894,11 +3918,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setExpandedUrl(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+        if (value == null) { throw new NullPointerException(); }
         expandedUrl_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3911,8 +3933,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearExpandedUrl() {
-        bitField0_ = (bitField0_ & ~0x00000001);
         expandedUrl_ = getDefaultInstance().getExpandedUrl();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -3927,12 +3949,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setExpandedUrlBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        bitField0_ |= 0x00000001;
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         expandedUrl_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3959,8 +3979,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setDeviceValue(int value) {
-        
         device_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3974,8 +3994,7 @@ private static final long serialVersionUID = 0L;
        */
       @java.lang.Override
       public com.google.ads.googleads.v11.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice getDevice() {
-        @SuppressWarnings("deprecation")
-        com.google.ads.googleads.v11.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice result = com.google.ads.googleads.v11.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice.valueOf(device_);
+        com.google.ads.googleads.v11.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice result = com.google.ads.googleads.v11.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice.forNumber(device_);
         return result == null ? com.google.ads.googleads.v11.enums.PolicyTopicEvidenceDestinationNotWorkingDeviceEnum.PolicyTopicEvidenceDestinationNotWorkingDevice.UNRECOGNIZED : result;
       }
       /**
@@ -3991,7 +4010,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000002;
         device_ = value.getNumber();
         onChanged();
         return this;
@@ -4005,7 +4024,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearDevice() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         device_ = 0;
         onChanged();
         return this;
@@ -4023,7 +4042,7 @@ private static final long serialVersionUID = 0L;
        * @return Whether the lastCheckedDateTime field is set.
        */
       public boolean hasLastCheckedDateTime() {
-        return ((bitField0_ & 0x00000002) != 0);
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <pre>
@@ -4083,11 +4102,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setLastCheckedDateTime(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+        if (value == null) { throw new NullPointerException(); }
         lastCheckedDateTime_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -4102,8 +4119,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearLastCheckedDateTime() {
-        bitField0_ = (bitField0_ & ~0x00000002);
         lastCheckedDateTime_ = getDefaultInstance().getLastCheckedDateTime();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -4120,12 +4137,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setLastCheckedDateTimeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        bitField0_ |= 0x00000002;
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         lastCheckedDateTime_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -4183,8 +4198,7 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v11.enums.PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType getDnsErrorType() {
         if (reasonCase_ == 1) {
-          @SuppressWarnings("deprecation")
-          com.google.ads.googleads.v11.enums.PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType result = com.google.ads.googleads.v11.enums.PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType.valueOf(
+          com.google.ads.googleads.v11.enums.PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType result = com.google.ads.googleads.v11.enums.PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType.forNumber(
               (java.lang.Integer) reason_);
           return result == null ? com.google.ads.googleads.v11.enums.PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum.PolicyTopicEvidenceDestinationNotWorkingDnsErrorType.UNRECOGNIZED : result;
         }
@@ -4260,6 +4274,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setHttpErrorCode(long value) {
+        
         reasonCase_ = 6;
         reason_ = value;
         onChanged();
@@ -4961,6 +4976,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (websiteListBuilder_ != null) {
         websiteListBuilder_.clear();
       }
@@ -5004,47 +5020,39 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.PolicyTopicEvidence buildPartial() {
       com.google.ads.googleads.v11.common.PolicyTopicEvidence result = new com.google.ads.googleads.v11.common.PolicyTopicEvidence(this);
-      if (valueCase_ == 3) {
-        if (websiteListBuilder_ == null) {
-          result.value_ = value_;
-        } else {
-          result.value_ = websiteListBuilder_.build();
-        }
-      }
-      if (valueCase_ == 4) {
-        if (textListBuilder_ == null) {
-          result.value_ = value_;
-        } else {
-          result.value_ = textListBuilder_.build();
-        }
-      }
-      if (valueCase_ == 9) {
-        result.value_ = value_;
-      }
-      if (valueCase_ == 6) {
-        if (destinationTextListBuilder_ == null) {
-          result.value_ = value_;
-        } else {
-          result.value_ = destinationTextListBuilder_.build();
-        }
-      }
-      if (valueCase_ == 7) {
-        if (destinationMismatchBuilder_ == null) {
-          result.value_ = value_;
-        } else {
-          result.value_ = destinationMismatchBuilder_.build();
-        }
-      }
-      if (valueCase_ == 8) {
-        if (destinationNotWorkingBuilder_ == null) {
-          result.value_ = value_;
-        } else {
-          result.value_ = destinationNotWorkingBuilder_.build();
-        }
-      }
-      result.valueCase_ = valueCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.PolicyTopicEvidence result) {
+      int from_bitField0_ = bitField0_;
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v11.common.PolicyTopicEvidence result) {
+      result.valueCase_ = valueCase_;
+      result.value_ = this.value_;
+      if (valueCase_ == 3 &&
+          websiteListBuilder_ != null) {
+        result.value_ = websiteListBuilder_.build();
+      }
+      if (valueCase_ == 4 &&
+          textListBuilder_ != null) {
+        result.value_ = textListBuilder_.build();
+      }
+      if (valueCase_ == 6 &&
+          destinationTextListBuilder_ != null) {
+        result.value_ = destinationTextListBuilder_.build();
+      }
+      if (valueCase_ == 7 &&
+          destinationMismatchBuilder_ != null) {
+        result.value_ = destinationMismatchBuilder_.build();
+      }
+      if (valueCase_ == 8 &&
+          destinationNotWorkingBuilder_ != null) {
+        result.value_ = destinationNotWorkingBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -5219,6 +5227,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v11.common.PolicyTopicEvidence.WebsiteList, com.google.ads.googleads.v11.common.PolicyTopicEvidence.WebsiteList.Builder, com.google.ads.googleads.v11.common.PolicyTopicEvidence.WebsiteListOrBuilder> websiteListBuilder_;
@@ -5394,7 +5403,7 @@ private static final long serialVersionUID = 0L;
         value_ = null;
       }
       valueCase_ = 3;
-      onChanged();;
+      onChanged();
       return websiteListBuilder_;
     }
 
@@ -5572,7 +5581,7 @@ private static final long serialVersionUID = 0L;
         value_ = null;
       }
       valueCase_ = 4;
-      onChanged();;
+      onChanged();
       return textListBuilder_;
     }
 
@@ -5656,10 +5665,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLanguageCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  valueCase_ = 9;
+      if (value == null) { throw new NullPointerException(); }
+      valueCase_ = 9;
       value_ = value;
       onChanged();
       return this;
@@ -5693,10 +5700,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLanguageCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       valueCase_ = 9;
       value_ = value;
       onChanged();
@@ -5886,7 +5891,7 @@ private static final long serialVersionUID = 0L;
         value_ = null;
       }
       valueCase_ = 6;
-      onChanged();;
+      onChanged();
       return destinationTextListBuilder_;
     }
 
@@ -6064,7 +6069,7 @@ private static final long serialVersionUID = 0L;
         value_ = null;
       }
       valueCase_ = 7;
-      onChanged();;
+      onChanged();
       return destinationMismatchBuilder_;
     }
 
@@ -6251,7 +6256,7 @@ private static final long serialVersionUID = 0L;
         value_ = null;
       }
       valueCase_ = 8;
-      onChanged();;
+      onChanged();
       return destinationNotWorkingBuilder_;
     }
     @java.lang.Override

@@ -54,7 +54,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int CITY_FIELD_NUMBER = 6;
-  private volatile java.lang.Object city_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object city_ = "";
   /**
    * <pre>
    * The city location criterion associated with the impression.
@@ -112,7 +113,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int COUNTRY_FIELD_NUMBER = 7;
-  private volatile java.lang.Object country_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object country_ = "";
   /**
    * <pre>
    * The country location criterion associated with the impression.
@@ -170,7 +172,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int METRO_FIELD_NUMBER = 8;
-  private volatile java.lang.Object metro_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object metro_ = "";
   /**
    * <pre>
    * The metro location criterion associated with the impression.
@@ -228,7 +231,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MOST_SPECIFIC_FIELD_NUMBER = 9;
-  private volatile java.lang.Object mostSpecific_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object mostSpecific_ = "";
   /**
    * <pre>
    * The most specific location criterion associated with the impression.
@@ -286,7 +290,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int REGION_FIELD_NUMBER = 10;
-  private volatile java.lang.Object region_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object region_ = "";
   /**
    * <pre>
    * The region location criterion associated with the impression.
@@ -599,16 +604,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       city_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       country_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       metro_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       mostSpecific_ = "";
-      bitField0_ = (bitField0_ & ~0x00000008);
       region_ = "";
-      bitField0_ = (bitField0_ & ~0x00000010);
       return this;
     }
 
@@ -635,31 +636,35 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.ClickLocation buildPartial() {
       com.google.ads.googleads.v11.common.ClickLocation result = new com.google.ads.googleads.v11.common.ClickLocation(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.ClickLocation result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.city_ = city_;
         to_bitField0_ |= 0x00000001;
       }
-      result.city_ = city_;
       if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.country_ = country_;
         to_bitField0_ |= 0x00000002;
       }
-      result.country_ = country_;
       if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.metro_ = metro_;
         to_bitField0_ |= 0x00000004;
       }
-      result.metro_ = metro_;
       if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.mostSpecific_ = mostSpecific_;
         to_bitField0_ |= 0x00000008;
       }
-      result.mostSpecific_ = mostSpecific_;
       if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.region_ = region_;
         to_bitField0_ |= 0x00000010;
       }
-      result.region_ = region_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -707,28 +712,28 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v11.common.ClickLocation other) {
       if (other == com.google.ads.googleads.v11.common.ClickLocation.getDefaultInstance()) return this;
       if (other.hasCity()) {
-        bitField0_ |= 0x00000001;
         city_ = other.city_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasCountry()) {
-        bitField0_ |= 0x00000002;
         country_ = other.country_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasMetro()) {
-        bitField0_ |= 0x00000004;
         metro_ = other.metro_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.hasMostSpecific()) {
-        bitField0_ |= 0x00000008;
         mostSpecific_ = other.mostSpecific_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.hasRegion()) {
-        bitField0_ |= 0x00000010;
         region_ = other.region_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -863,11 +868,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCity(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       city_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -880,8 +883,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCity() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       city_ = getDefaultInstance().getCity();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -896,12 +899,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCityBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       city_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -970,11 +971,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCountry(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       country_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -987,8 +986,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCountry() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       country_ = getDefaultInstance().getCountry();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1003,12 +1002,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCountryBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       country_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1077,11 +1074,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setMetro(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       metro_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1094,8 +1089,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMetro() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       metro_ = getDefaultInstance().getMetro();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1110,12 +1105,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setMetroBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       metro_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1184,11 +1177,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setMostSpecific(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
       mostSpecific_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1201,8 +1192,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMostSpecific() {
-      bitField0_ = (bitField0_ & ~0x00000008);
       mostSpecific_ = getDefaultInstance().getMostSpecific();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1217,12 +1208,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setMostSpecificBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       mostSpecific_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1291,11 +1280,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRegion(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
+      if (value == null) { throw new NullPointerException(); }
       region_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1308,8 +1295,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRegion() {
-      bitField0_ = (bitField0_ & ~0x00000010);
       region_ = getDefaultInstance().getRegion();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1324,12 +1311,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setRegionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000010;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       region_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }

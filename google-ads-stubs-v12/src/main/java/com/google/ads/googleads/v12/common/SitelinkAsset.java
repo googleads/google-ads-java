@@ -54,7 +54,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LINK_TEXT_FIELD_NUMBER = 1;
-  private volatile java.lang.Object linkText_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object linkText_ = "";
   /**
    * <pre>
    * Required. URL display text for the sitelink.
@@ -102,7 +103,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTION1_FIELD_NUMBER = 2;
-  private volatile java.lang.Object description1_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object description1_ = "";
   /**
    * <pre>
    * First line of the description for the sitelink.
@@ -152,7 +154,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTION2_FIELD_NUMBER = 3;
-  private volatile java.lang.Object description2_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object description2_ = "";
   /**
    * <pre>
    * Second line of the description for the sitelink.
@@ -202,7 +205,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int START_DATE_FIELD_NUMBER = 4;
-  private volatile java.lang.Object startDate_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object startDate_ = "";
   /**
    * <pre>
    * Start date of when this asset is effective and can begin serving, in
@@ -250,7 +254,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int END_DATE_FIELD_NUMBER = 5;
-  private volatile java.lang.Object endDate_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object endDate_ = "";
   /**
    * <pre>
    * Last date of when this asset is effective and still serving, in yyyy-MM-dd
@@ -298,6 +303,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int AD_SCHEDULE_TARGETS_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.AdScheduleInfo> adScheduleTargets_;
   /**
    * <pre>
@@ -611,23 +617,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       linkText_ = "";
-
       description1_ = "";
-
       description2_ = "";
-
       startDate_ = "";
-
       endDate_ = "";
-
       if (adScheduleTargetsBuilder_ == null) {
         adScheduleTargets_ = java.util.Collections.emptyList();
       } else {
         adScheduleTargets_ = null;
         adScheduleTargetsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000020);
       return this;
     }
 
@@ -654,23 +656,41 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.SitelinkAsset buildPartial() {
       com.google.ads.googleads.v12.common.SitelinkAsset result = new com.google.ads.googleads.v12.common.SitelinkAsset(this);
-      int from_bitField0_ = bitField0_;
-      result.linkText_ = linkText_;
-      result.description1_ = description1_;
-      result.description2_ = description2_;
-      result.startDate_ = startDate_;
-      result.endDate_ = endDate_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.common.SitelinkAsset result) {
       if (adScheduleTargetsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000020) != 0)) {
           adScheduleTargets_ = java.util.Collections.unmodifiableList(adScheduleTargets_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000020);
         }
         result.adScheduleTargets_ = adScheduleTargets_;
       } else {
         result.adScheduleTargets_ = adScheduleTargetsBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.SitelinkAsset result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.linkText_ = linkText_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.description1_ = description1_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.description2_ = description2_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.startDate_ = startDate_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.endDate_ = endDate_;
+      }
     }
 
     @java.lang.Override
@@ -719,29 +739,34 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.common.SitelinkAsset.getDefaultInstance()) return this;
       if (!other.getLinkText().isEmpty()) {
         linkText_ = other.linkText_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.getDescription1().isEmpty()) {
         description1_ = other.description1_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getDescription2().isEmpty()) {
         description2_ = other.description2_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (!other.getStartDate().isEmpty()) {
         startDate_ = other.startDate_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.getEndDate().isEmpty()) {
         endDate_ = other.endDate_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (adScheduleTargetsBuilder_ == null) {
         if (!other.adScheduleTargets_.isEmpty()) {
           if (adScheduleTargets_.isEmpty()) {
             adScheduleTargets_ = other.adScheduleTargets_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
             ensureAdScheduleTargetsIsMutable();
             adScheduleTargets_.addAll(other.adScheduleTargets_);
@@ -754,7 +779,7 @@ private static final long serialVersionUID = 0L;
             adScheduleTargetsBuilder_.dispose();
             adScheduleTargetsBuilder_ = null;
             adScheduleTargets_ = other.adScheduleTargets_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000020);
             adScheduleTargetsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getAdScheduleTargetsFieldBuilder() : null;
@@ -791,27 +816,27 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               linkText_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
               description1_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
               description2_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 26
             case 34: {
               startDate_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 34
             case 42: {
               endDate_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 42
             case 50: {
@@ -900,11 +925,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLinkText(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       linkText_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -918,8 +941,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLinkText() {
-      
       linkText_ = getDefaultInstance().getLinkText();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -935,12 +958,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLinkTextBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       linkText_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1004,11 +1025,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription1(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       description1_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1023,8 +1042,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDescription1() {
-      
       description1_ = getDefaultInstance().getDescription1();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1041,12 +1060,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription1Bytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       description1_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1110,11 +1127,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription2(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       description2_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1129,8 +1144,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDescription2() {
-      
       description2_ = getDefaultInstance().getDescription2();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1147,12 +1162,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription2Bytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       description2_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1213,11 +1226,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStartDate(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       startDate_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1231,8 +1242,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStartDate() {
-      
       startDate_ = getDefaultInstance().getStartDate();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1248,12 +1259,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStartDateBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       startDate_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1314,11 +1323,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEndDate(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       endDate_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1332,8 +1339,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEndDate() {
-      
       endDate_ = getDefaultInstance().getEndDate();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1349,12 +1356,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setEndDateBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       endDate_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1362,9 +1367,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v12.common.AdScheduleInfo> adScheduleTargets_ =
       java.util.Collections.emptyList();
     private void ensureAdScheduleTargetsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000020) != 0)) {
         adScheduleTargets_ = new java.util.ArrayList<com.google.ads.googleads.v12.common.AdScheduleInfo>(adScheduleTargets_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000020;
        }
     }
 
@@ -1580,7 +1585,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearAdScheduleTargets() {
       if (adScheduleTargetsBuilder_ == null) {
         adScheduleTargets_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
       } else {
         adScheduleTargetsBuilder_.clear();
@@ -1699,7 +1704,7 @@ private static final long serialVersionUID = 0L;
         adScheduleTargetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v12.common.AdScheduleInfo, com.google.ads.googleads.v12.common.AdScheduleInfo.Builder, com.google.ads.googleads.v12.common.AdScheduleInfoOrBuilder>(
                 adScheduleTargets_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000020) != 0),
                 getParentForChildren(),
                 isClean());
         adScheduleTargets_ = null;

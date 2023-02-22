@@ -49,7 +49,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int ON_TARGET_REACH_FIELD_NUMBER = 1;
-  private long onTargetReach_;
+  private long onTargetReach_ = 0L;
   /**
    * <pre>
    * Number of unique people reached that exactly matches the Targeting.
@@ -67,7 +67,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTAL_REACH_FIELD_NUMBER = 2;
-  private long totalReach_;
+  private long totalReach_ = 0L;
   /**
    * <pre>
    * Number of unique people reached. This includes people that may fall
@@ -86,7 +86,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ON_TARGET_IMPRESSIONS_FIELD_NUMBER = 3;
-  private long onTargetImpressions_;
+  private long onTargetImpressions_ = 0L;
   /**
    * <pre>
    * Number of ad impressions that exactly matches the Targeting.
@@ -101,7 +101,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTAL_IMPRESSIONS_FIELD_NUMBER = 4;
-  private long totalImpressions_;
+  private long totalImpressions_ = 0L;
   /**
    * <pre>
    * Total number of ad impressions. This includes impressions that may fall
@@ -118,7 +118,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VIEWABLE_IMPRESSIONS_FIELD_NUMBER = 5;
-  private long viewableImpressions_;
+  private long viewableImpressions_ = 0L;
   /**
    * <pre>
    * Number of times the ad's impressions were considered viewable.
@@ -151,7 +151,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ON_TARGET_COVIEW_REACH_FIELD_NUMBER = 6;
-  private long onTargetCoviewReach_;
+  private long onTargetCoviewReach_ = 0L;
   /**
    * <pre>
    * Number of unique people reached that exactly matches the Targeting
@@ -180,7 +180,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTAL_COVIEW_REACH_FIELD_NUMBER = 7;
-  private long totalCoviewReach_;
+  private long totalCoviewReach_ = 0L;
   /**
    * <pre>
    * Number of unique people reached including co-viewers. This includes
@@ -209,7 +209,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ON_TARGET_COVIEW_IMPRESSIONS_FIELD_NUMBER = 8;
-  private long onTargetCoviewImpressions_;
+  private long onTargetCoviewImpressions_ = 0L;
   /**
    * <pre>
    * Number of ad impressions that exactly matches the Targeting including
@@ -238,7 +238,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TOTAL_COVIEW_IMPRESSIONS_FIELD_NUMBER = 9;
-  private long totalCoviewImpressions_;
+  private long totalCoviewImpressions_ = 0L;
   /**
    * <pre>
    * Total number of ad impressions including co-viewers. This includes
@@ -582,24 +582,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       onTargetReach_ = 0L;
-
       totalReach_ = 0L;
-
       onTargetImpressions_ = 0L;
-
       totalImpressions_ = 0L;
-
       viewableImpressions_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       onTargetCoviewReach_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000002);
       totalCoviewReach_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000004);
       onTargetCoviewImpressions_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000008);
       totalCoviewImpressions_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000010);
       return this;
     }
 
@@ -626,35 +618,47 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.PlannedProductForecast buildPartial() {
       com.google.ads.googleads.v12.services.PlannedProductForecast result = new com.google.ads.googleads.v12.services.PlannedProductForecast(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.PlannedProductForecast result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.onTargetReach_ = onTargetReach_;
-      result.totalReach_ = totalReach_;
-      result.onTargetImpressions_ = onTargetImpressions_;
-      result.totalImpressions_ = totalImpressions_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.onTargetReach_ = onTargetReach_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.totalReach_ = totalReach_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.onTargetImpressions_ = onTargetImpressions_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.totalImpressions_ = totalImpressions_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.viewableImpressions_ = viewableImpressions_;
         to_bitField0_ |= 0x00000001;
       }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
+      if (((from_bitField0_ & 0x00000020) != 0)) {
         result.onTargetCoviewReach_ = onTargetCoviewReach_;
         to_bitField0_ |= 0x00000002;
       }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000040) != 0)) {
         result.totalCoviewReach_ = totalCoviewReach_;
         to_bitField0_ |= 0x00000004;
       }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000080) != 0)) {
         result.onTargetCoviewImpressions_ = onTargetCoviewImpressions_;
         to_bitField0_ |= 0x00000008;
       }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000100) != 0)) {
         result.totalCoviewImpressions_ = totalCoviewImpressions_;
         to_bitField0_ |= 0x00000010;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -756,47 +760,47 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               onTargetReach_ = input.readInt64();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             case 16: {
               totalReach_ = input.readInt64();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             case 24: {
               onTargetImpressions_ = input.readInt64();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 24
             case 32: {
               totalImpressions_ = input.readInt64();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 32
             case 40: {
               viewableImpressions_ = input.readInt64();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000010;
               break;
             } // case 40
             case 48: {
               onTargetCoviewReach_ = input.readInt64();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000020;
               break;
             } // case 48
             case 56: {
               totalCoviewReach_ = input.readInt64();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000040;
               break;
             } // case 56
             case 64: {
               onTargetCoviewImpressions_ = input.readInt64();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000080;
               break;
             } // case 64
             case 72: {
               totalCoviewImpressions_ = input.readInt64();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000100;
               break;
             } // case 72
             default: {
@@ -847,6 +851,7 @@ private static final long serialVersionUID = 0L;
     public Builder setOnTargetReach(long value) {
       
       onTargetReach_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -862,7 +867,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOnTargetReach() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       onTargetReach_ = 0L;
       onChanged();
       return this;
@@ -901,6 +906,7 @@ private static final long serialVersionUID = 0L;
     public Builder setTotalReach(long value) {
       
       totalReach_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -917,7 +923,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalReach() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       totalReach_ = 0L;
       onChanged();
       return this;
@@ -948,6 +954,7 @@ private static final long serialVersionUID = 0L;
     public Builder setOnTargetImpressions(long value) {
       
       onTargetImpressions_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -960,7 +967,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOnTargetImpressions() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       onTargetImpressions_ = 0L;
       onChanged();
       return this;
@@ -995,6 +1002,7 @@ private static final long serialVersionUID = 0L;
     public Builder setTotalImpressions(long value) {
       
       totalImpressions_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1009,7 +1017,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalImpressions() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       totalImpressions_ = 0L;
       onChanged();
       return this;
@@ -1029,7 +1037,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasViewableImpressions() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -1059,8 +1067,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setViewableImpressions(long value) {
-      bitField0_ |= 0x00000001;
+      
       viewableImpressions_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1076,7 +1085,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearViewableImpressions() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000010);
       viewableImpressions_ = 0L;
       onChanged();
       return this;
@@ -1094,7 +1103,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasOnTargetCoviewReach() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -1120,8 +1129,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOnTargetCoviewReach(long value) {
-      bitField0_ |= 0x00000002;
+      
       onTargetCoviewReach_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1135,7 +1145,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOnTargetCoviewReach() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000020);
       onTargetCoviewReach_ = 0L;
       onChanged();
       return this;
@@ -1153,7 +1163,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasTotalCoviewReach() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -1179,8 +1189,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalCoviewReach(long value) {
-      bitField0_ |= 0x00000004;
+      
       totalCoviewReach_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1194,7 +1205,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalCoviewReach() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000040);
       totalCoviewReach_ = 0L;
       onChanged();
       return this;
@@ -1212,7 +1223,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasOnTargetCoviewImpressions() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
      * <pre>
@@ -1238,8 +1249,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOnTargetCoviewImpressions(long value) {
-      bitField0_ |= 0x00000008;
+      
       onTargetCoviewImpressions_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1253,7 +1265,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOnTargetCoviewImpressions() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000080);
       onTargetCoviewImpressions_ = 0L;
       onChanged();
       return this;
@@ -1272,7 +1284,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasTotalCoviewImpressions() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000100) != 0);
     }
     /**
      * <pre>
@@ -1300,8 +1312,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalCoviewImpressions(long value) {
-      bitField0_ |= 0x00000010;
+      
       totalCoviewImpressions_ = value;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1316,7 +1329,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTotalCoviewImpressions() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000100);
       totalCoviewImpressions_ = 0L;
       onChanged();
       return this;

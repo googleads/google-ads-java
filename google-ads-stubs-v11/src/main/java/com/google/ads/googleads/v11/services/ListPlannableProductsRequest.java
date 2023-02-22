@@ -49,11 +49,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PLANNABLE_LOCATION_ID_FIELD_NUMBER = 2;
-  private volatile java.lang.Object plannableLocationId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object plannableLocationId_ = "";
   /**
    * <pre>
-   * Required. The ID of the selected location for planning. To list the available
-   * plannable location IDs use [ReachPlanService.ListPlannableLocations][google.ads.googleads.v11.services.ReachPlanService.ListPlannableLocations].
+   * Required. The ID of the selected location for planning. To list the
+   * available plannable location IDs use
+   * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v11.services.ReachPlanService.ListPlannableLocations].
    * </pre>
    *
    * <code>string plannable_location_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -74,8 +76,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. The ID of the selected location for planning. To list the available
-   * plannable location IDs use [ReachPlanService.ListPlannableLocations][google.ads.googleads.v11.services.ReachPlanService.ListPlannableLocations].
+   * Required. The ID of the selected location for planning. To list the
+   * available plannable location IDs use
+   * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v11.services.ReachPlanService.ListPlannableLocations].
    * </pre>
    *
    * <code>string plannable_location_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -287,8 +290,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       plannableLocationId_ = "";
-
       return this;
     }
 
@@ -315,9 +318,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.ListPlannableProductsRequest buildPartial() {
       com.google.ads.googleads.v11.services.ListPlannableProductsRequest result = new com.google.ads.googleads.v11.services.ListPlannableProductsRequest(this);
-      result.plannableLocationId_ = plannableLocationId_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.ListPlannableProductsRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.plannableLocationId_ = plannableLocationId_;
+      }
     }
 
     @java.lang.Override
@@ -366,6 +376,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.services.ListPlannableProductsRequest.getDefaultInstance()) return this;
       if (!other.getPlannableLocationId().isEmpty()) {
         plannableLocationId_ = other.plannableLocationId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -396,7 +407,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 18: {
               plannableLocationId_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 18
             default: {
@@ -414,12 +425,14 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object plannableLocationId_ = "";
     /**
      * <pre>
-     * Required. The ID of the selected location for planning. To list the available
-     * plannable location IDs use [ReachPlanService.ListPlannableLocations][google.ads.googleads.v11.services.ReachPlanService.ListPlannableLocations].
+     * Required. The ID of the selected location for planning. To list the
+     * available plannable location IDs use
+     * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v11.services.ReachPlanService.ListPlannableLocations].
      * </pre>
      *
      * <code>string plannable_location_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -439,8 +452,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The ID of the selected location for planning. To list the available
-     * plannable location IDs use [ReachPlanService.ListPlannableLocations][google.ads.googleads.v11.services.ReachPlanService.ListPlannableLocations].
+     * Required. The ID of the selected location for planning. To list the
+     * available plannable location IDs use
+     * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v11.services.ReachPlanService.ListPlannableLocations].
      * </pre>
      *
      * <code>string plannable_location_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -461,8 +475,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The ID of the selected location for planning. To list the available
-     * plannable location IDs use [ReachPlanService.ListPlannableLocations][google.ads.googleads.v11.services.ReachPlanService.ListPlannableLocations].
+     * Required. The ID of the selected location for planning. To list the
+     * available plannable location IDs use
+     * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v11.services.ReachPlanService.ListPlannableLocations].
      * </pre>
      *
      * <code>string plannable_location_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -471,33 +486,33 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPlannableLocationId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       plannableLocationId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. The ID of the selected location for planning. To list the available
-     * plannable location IDs use [ReachPlanService.ListPlannableLocations][google.ads.googleads.v11.services.ReachPlanService.ListPlannableLocations].
+     * Required. The ID of the selected location for planning. To list the
+     * available plannable location IDs use
+     * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v11.services.ReachPlanService.ListPlannableLocations].
      * </pre>
      *
      * <code>string plannable_location_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return This builder for chaining.
      */
     public Builder clearPlannableLocationId() {
-      
       plannableLocationId_ = getDefaultInstance().getPlannableLocationId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Required. The ID of the selected location for planning. To list the available
-     * plannable location IDs use [ReachPlanService.ListPlannableLocations][google.ads.googleads.v11.services.ReachPlanService.ListPlannableLocations].
+     * Required. The ID of the selected location for planning. To list the
+     * available plannable location IDs use
+     * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v11.services.ReachPlanService.ListPlannableLocations].
      * </pre>
      *
      * <code>string plannable_location_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -506,12 +521,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPlannableLocationIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       plannableLocationId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

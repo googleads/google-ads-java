@@ -70,7 +70,10 @@ import org.threeten.bp.Duration;
  * labelServiceSettingsBuilder
  *     .mutateLabelsSettings()
  *     .setRetrySettings(
- *         labelServiceSettingsBuilder.mutateLabelsSettings().getRetrySettings().toBuilder()
+ *         labelServiceSettingsBuilder
+ *             .mutateLabelsSettings()
+ *             .getRetrySettings()
+ *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
  * LabelServiceStubSettings labelServiceSettings = labelServiceSettingsBuilder.build();

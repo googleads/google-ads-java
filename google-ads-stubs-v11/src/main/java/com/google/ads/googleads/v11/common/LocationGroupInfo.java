@@ -53,7 +53,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int FEED_FIELD_NUMBER = 5;
-  private volatile java.lang.Object feed_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object feed_ = "";
   /**
    * <pre>
    * Feed specifying locations for targeting.
@@ -114,6 +115,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int GEO_TARGET_CONSTANTS_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList geoTargetConstants_;
   /**
    * <pre>
@@ -169,7 +171,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RADIUS_FIELD_NUMBER = 7;
-  private long radius_;
+  private long radius_ = 0L;
   /**
    * <pre>
    * Distance in units specifying the radius around targeted locations.
@@ -198,7 +200,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int RADIUS_UNITS_FIELD_NUMBER = 4;
-  private int radiusUnits_;
+  private int radiusUnits_ = 0;
   /**
    * <pre>
    * Unit of the radius. Miles and meters are supported for geo target
@@ -223,12 +225,12 @@ private static final long serialVersionUID = 0L;
    * @return The radiusUnits.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits getRadiusUnits() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits result = com.google.ads.googleads.v11.enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits.valueOf(radiusUnits_);
+    com.google.ads.googleads.v11.enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits result = com.google.ads.googleads.v11.enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits.forNumber(radiusUnits_);
     return result == null ? com.google.ads.googleads.v11.enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits.UNRECOGNIZED : result;
   }
 
   public static final int FEED_ITEM_SETS_FIELD_NUMBER = 8;
+  @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringList feedItemSets_;
   /**
    * <pre>
@@ -548,16 +550,14 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       feed_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       geoTargetConstants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       bitField0_ = (bitField0_ & ~0x00000002);
       radius_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000004);
       radiusUnits_ = 0;
-
       feedItemSets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000010);
       return this;
     }
 
@@ -584,30 +584,40 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.LocationGroupInfo buildPartial() {
       com.google.ads.googleads.v11.common.LocationGroupInfo result = new com.google.ads.googleads.v11.common.LocationGroupInfo(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        to_bitField0_ |= 0x00000001;
-      }
-      result.feed_ = feed_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v11.common.LocationGroupInfo result) {
       if (((bitField0_ & 0x00000002) != 0)) {
         geoTargetConstants_ = geoTargetConstants_.getUnmodifiableView();
         bitField0_ = (bitField0_ & ~0x00000002);
       }
       result.geoTargetConstants_ = geoTargetConstants_;
+      if (((bitField0_ & 0x00000010) != 0)) {
+        feedItemSets_ = feedItemSets_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000010);
+      }
+      result.feedItemSets_ = feedItemSets_;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.LocationGroupInfo result) {
+      int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.feed_ = feed_;
+        to_bitField0_ |= 0x00000001;
+      }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.radius_ = radius_;
         to_bitField0_ |= 0x00000002;
       }
-      result.radiusUnits_ = radiusUnits_;
-      if (((bitField0_ & 0x00000008) != 0)) {
-        feedItemSets_ = feedItemSets_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000008);
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.radiusUnits_ = radiusUnits_;
       }
-      result.feedItemSets_ = feedItemSets_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -655,8 +665,8 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v11.common.LocationGroupInfo other) {
       if (other == com.google.ads.googleads.v11.common.LocationGroupInfo.getDefaultInstance()) return this;
       if (other.hasFeed()) {
-        bitField0_ |= 0x00000001;
         feed_ = other.feed_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.geoTargetConstants_.isEmpty()) {
@@ -678,7 +688,7 @@ private static final long serialVersionUID = 0L;
       if (!other.feedItemSets_.isEmpty()) {
         if (feedItemSets_.isEmpty()) {
           feedItemSets_ = other.feedItemSets_;
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000010);
         } else {
           ensureFeedItemSetsIsMutable();
           feedItemSets_.addAll(other.feedItemSets_);
@@ -713,7 +723,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 32: {
               radiusUnits_ = input.readEnum();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 32
             case 42: {
@@ -823,11 +833,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFeed(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       feed_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -841,8 +849,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFeed() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       feed_ = getDefaultInstance().getFeed();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -858,12 +866,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFeedBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       feed_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -940,10 +946,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setGeoTargetConstants(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureGeoTargetConstantsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureGeoTargetConstantsIsMutable();
       geoTargetConstants_.set(index, value);
       onChanged();
       return this;
@@ -960,10 +964,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addGeoTargetConstants(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureGeoTargetConstantsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureGeoTargetConstantsIsMutable();
       geoTargetConstants_.add(value);
       onChanged();
       return this;
@@ -1013,10 +1015,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addGeoTargetConstantsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureGeoTargetConstantsIsMutable();
       geoTargetConstants_.add(value);
       onChanged();
@@ -1061,8 +1061,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRadius(long value) {
-      bitField0_ |= 0x00000004;
+      
       radius_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1108,8 +1109,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRadiusUnitsValue(int value) {
-      
       radiusUnits_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1125,8 +1126,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits getRadiusUnits() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits result = com.google.ads.googleads.v11.enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits.valueOf(radiusUnits_);
+      com.google.ads.googleads.v11.enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits result = com.google.ads.googleads.v11.enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits.forNumber(radiusUnits_);
       return result == null ? com.google.ads.googleads.v11.enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits.UNRECOGNIZED : result;
     }
     /**
@@ -1144,7 +1144,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000008;
       radiusUnits_ = value.getNumber();
       onChanged();
       return this;
@@ -1160,7 +1160,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearRadiusUnits() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       radiusUnits_ = 0;
       onChanged();
       return this;
@@ -1168,9 +1168,9 @@ private static final long serialVersionUID = 0L;
 
     private com.google.protobuf.LazyStringList feedItemSets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureFeedItemSetsIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
+      if (!((bitField0_ & 0x00000010) != 0)) {
         feedItemSets_ = new com.google.protobuf.LazyStringArrayList(feedItemSets_);
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
        }
     }
     /**
@@ -1248,10 +1248,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setFeedItemSets(
         int index, java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFeedItemSetsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureFeedItemSetsIsMutable();
       feedItemSets_.set(index, value);
       onChanged();
       return this;
@@ -1270,10 +1268,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addFeedItemSets(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFeedItemSetsIsMutable();
+      if (value == null) { throw new NullPointerException(); }
+      ensureFeedItemSetsIsMutable();
       feedItemSets_.add(value);
       onChanged();
       return this;
@@ -1311,7 +1307,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearFeedItemSets() {
       feedItemSets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1329,10 +1325,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder addFeedItemSetsBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       ensureFeedItemSetsIsMutable();
       feedItemSets_.add(value);
       onChanged();

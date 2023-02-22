@@ -9,9 +9,9 @@ public interface CustomizerValueOrBuilder extends
 
   /**
    * <pre>
-   * Required. The data type for the customizer value. It must match the attribute type.
-   * The string_value content must match the constraints associated with the
-   * type.
+   * Required. The data type for the customizer value. It must match the
+   * attribute type. The string_value content must match the constraints
+   * associated with the type.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.CustomizerAttributeTypeEnum.CustomizerAttributeType type = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -20,9 +20,9 @@ public interface CustomizerValueOrBuilder extends
   int getTypeValue();
   /**
    * <pre>
-   * Required. The data type for the customizer value. It must match the attribute type.
-   * The string_value content must match the constraints associated with the
-   * type.
+   * Required. The data type for the customizer value. It must match the
+   * attribute type. The string_value content must match the constraints
+   * associated with the type.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.CustomizerAttributeTypeEnum.CustomizerAttributeType type = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -32,8 +32,8 @@ public interface CustomizerValueOrBuilder extends
 
   /**
    * <pre>
-   * Required. Value to insert in creative text. Customizer values of all types are stored
-   * as string to make formatting unambiguous.
+   * Required. Value to insert in creative text. Customizer values of all types
+   * are stored as string to make formatting unambiguous.
    * </pre>
    *
    * <code>string string_value = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -42,8 +42,8 @@ public interface CustomizerValueOrBuilder extends
   java.lang.String getStringValue();
   /**
    * <pre>
-   * Required. Value to insert in creative text. Customizer values of all types are stored
-   * as string to make formatting unambiguous.
+   * Required. Value to insert in creative text. Customizer values of all types
+   * are stored as string to make formatting unambiguous.
    * </pre>
    *
    * <code>string string_value = 2 [(.google.api.field_behavior) = REQUIRED];</code>

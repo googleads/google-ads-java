@@ -81,11 +81,11 @@ public interface TopicConstantOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The category to target or exclude. Each subsequent element in the array
-   * describes a more specific sub-category. For example,
+   * Output only. The category to target or exclude. Each subsequent element in
+   * the array describes a more specific sub-category. For example,
    * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
    * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
-   * https://developers.google.com/adwords/api/docs/appendix/verticals
+   * https://developers.google.com/google-ads/api/reference/data/verticals
    * </pre>
    *
    * <code>repeated string path = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -95,11 +95,11 @@ public interface TopicConstantOrBuilder extends
       getPathList();
   /**
    * <pre>
-   * Output only. The category to target or exclude. Each subsequent element in the array
-   * describes a more specific sub-category. For example,
+   * Output only. The category to target or exclude. Each subsequent element in
+   * the array describes a more specific sub-category. For example,
    * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
    * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
-   * https://developers.google.com/adwords/api/docs/appendix/verticals
+   * https://developers.google.com/google-ads/api/reference/data/verticals
    * </pre>
    *
    * <code>repeated string path = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -108,11 +108,11 @@ public interface TopicConstantOrBuilder extends
   int getPathCount();
   /**
    * <pre>
-   * Output only. The category to target or exclude. Each subsequent element in the array
-   * describes a more specific sub-category. For example,
+   * Output only. The category to target or exclude. Each subsequent element in
+   * the array describes a more specific sub-category. For example,
    * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
    * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
-   * https://developers.google.com/adwords/api/docs/appendix/verticals
+   * https://developers.google.com/google-ads/api/reference/data/verticals
    * </pre>
    *
    * <code>repeated string path = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -122,11 +122,11 @@ public interface TopicConstantOrBuilder extends
   java.lang.String getPath(int index);
   /**
    * <pre>
-   * Output only. The category to target or exclude. Each subsequent element in the array
-   * describes a more specific sub-category. For example,
+   * Output only. The category to target or exclude. Each subsequent element in
+   * the array describes a more specific sub-category. For example,
    * {"Pets &amp; Animals", "Pets", "Dogs"} represents the
    * "Pets &amp; Animals/Pets/Dogs" category. List of available topic categories at
-   * https://developers.google.com/adwords/api/docs/appendix/verticals
+   * https://developers.google.com/google-ads/api/reference/data/verticals
    * </pre>
    *
    * <code>repeated string path = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

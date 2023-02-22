@@ -81,8 +81,8 @@ public interface CarrierConstantOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The country code of the country where the carrier is located, for example,
-   * "AR", "FR", etc.
+   * Output only. The country code of the country where the carrier is located,
+   * for example, "AR", "FR", etc.
    * </pre>
    *
    * <code>optional string country_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -91,8 +91,8 @@ public interface CarrierConstantOrBuilder extends
   boolean hasCountryCode();
   /**
    * <pre>
-   * Output only. The country code of the country where the carrier is located, for example,
-   * "AR", "FR", etc.
+   * Output only. The country code of the country where the carrier is located,
+   * for example, "AR", "FR", etc.
    * </pre>
    *
    * <code>optional string country_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -101,8 +101,8 @@ public interface CarrierConstantOrBuilder extends
   java.lang.String getCountryCode();
   /**
    * <pre>
-   * Output only. The country code of the country where the carrier is located, for example,
-   * "AR", "FR", etc.
+   * Output only. The country code of the country where the carrier is located,
+   * for example, "AR", "FR", etc.
    * </pre>
    *
    * <code>optional string country_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

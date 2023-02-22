@@ -50,7 +50,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int SK_AD_NETWORK_SOURCE_APP_ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object skAdNetworkSourceAppId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object skAdNetworkSourceAppId_ = "";
   /**
    * <pre>
    * App id where the ad that drove the iOS Store Kit Ad Network install was
@@ -306,8 +307,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       skAdNetworkSourceAppId_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -334,15 +335,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.SkAdNetworkSourceApp buildPartial() {
       com.google.ads.googleads.v11.common.SkAdNetworkSourceApp result = new com.google.ads.googleads.v11.common.SkAdNetworkSourceApp(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.SkAdNetworkSourceApp result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.skAdNetworkSourceAppId_ = skAdNetworkSourceAppId_;
         to_bitField0_ |= 0x00000001;
       }
-      result.skAdNetworkSourceAppId_ = skAdNetworkSourceAppId_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -390,8 +395,8 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v11.common.SkAdNetworkSourceApp other) {
       if (other == com.google.ads.googleads.v11.common.SkAdNetworkSourceApp.getDefaultInstance()) return this;
       if (other.hasSkAdNetworkSourceAppId()) {
-        bitField0_ |= 0x00000001;
         skAdNetworkSourceAppId_ = other.skAdNetworkSourceAppId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -510,11 +515,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSkAdNetworkSourceAppId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       skAdNetworkSourceAppId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -528,8 +531,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSkAdNetworkSourceAppId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       skAdNetworkSourceAppId_ = getDefaultInstance().getSkAdNetworkSourceAppId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -545,12 +548,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setSkAdNetworkSourceAppIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       skAdNetworkSourceAppId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

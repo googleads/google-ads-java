@@ -360,7 +360,8 @@ public interface ListingDimensionInfoOrBuilder extends
 
   /**
    * <pre>
-   * Grouping of a product offer.
+   * Grouping of a product offer. This listing dimension is deprecated and it
+   * is supported only in Display campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.ProductGroupingInfo product_grouping = 17;</code>
@@ -369,7 +370,8 @@ public interface ListingDimensionInfoOrBuilder extends
   boolean hasProductGrouping();
   /**
    * <pre>
-   * Grouping of a product offer.
+   * Grouping of a product offer. This listing dimension is deprecated and it
+   * is supported only in Display campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.ProductGroupingInfo product_grouping = 17;</code>
@@ -378,7 +380,8 @@ public interface ListingDimensionInfoOrBuilder extends
   com.google.ads.googleads.v11.common.ProductGroupingInfo getProductGrouping();
   /**
    * <pre>
-   * Grouping of a product offer.
+   * Grouping of a product offer. This listing dimension is deprecated and it
+   * is supported only in Display campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.ProductGroupingInfo product_grouping = 17;</code>
@@ -387,7 +390,8 @@ public interface ListingDimensionInfoOrBuilder extends
 
   /**
    * <pre>
-   * Labels of a product offer.
+   * Labels of a product offer. This listing dimension is deprecated and it is
+   * supported only in Display campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.ProductLabelsInfo product_labels = 18;</code>
@@ -396,7 +400,8 @@ public interface ListingDimensionInfoOrBuilder extends
   boolean hasProductLabels();
   /**
    * <pre>
-   * Labels of a product offer.
+   * Labels of a product offer. This listing dimension is deprecated and it is
+   * supported only in Display campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.ProductLabelsInfo product_labels = 18;</code>
@@ -405,7 +410,8 @@ public interface ListingDimensionInfoOrBuilder extends
   com.google.ads.googleads.v11.common.ProductLabelsInfo getProductLabels();
   /**
    * <pre>
-   * Labels of a product offer.
+   * Labels of a product offer. This listing dimension is deprecated and it is
+   * supported only in Display campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.ProductLabelsInfo product_labels = 18;</code>
@@ -414,7 +420,8 @@ public interface ListingDimensionInfoOrBuilder extends
 
   /**
    * <pre>
-   * Legacy condition of a product offer.
+   * Legacy condition of a product offer. This listing dimension is deprecated
+   * and it is supported only in Display campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.ProductLegacyConditionInfo product_legacy_condition = 19;</code>
@@ -423,7 +430,8 @@ public interface ListingDimensionInfoOrBuilder extends
   boolean hasProductLegacyCondition();
   /**
    * <pre>
-   * Legacy condition of a product offer.
+   * Legacy condition of a product offer. This listing dimension is deprecated
+   * and it is supported only in Display campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.ProductLegacyConditionInfo product_legacy_condition = 19;</code>
@@ -432,7 +440,8 @@ public interface ListingDimensionInfoOrBuilder extends
   com.google.ads.googleads.v11.common.ProductLegacyConditionInfo getProductLegacyCondition();
   /**
    * <pre>
-   * Legacy condition of a product offer.
+   * Legacy condition of a product offer. This listing dimension is deprecated
+   * and it is supported only in Display campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.ProductLegacyConditionInfo product_legacy_condition = 19;</code>
@@ -441,7 +450,8 @@ public interface ListingDimensionInfoOrBuilder extends
 
   /**
    * <pre>
-   * Full type of a product offer.
+   * Full type of a product offer. This listing dimension is deprecated and it
+   * is supported only in Display campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.ProductTypeFullInfo product_type_full = 20;</code>
@@ -450,7 +460,8 @@ public interface ListingDimensionInfoOrBuilder extends
   boolean hasProductTypeFull();
   /**
    * <pre>
-   * Full type of a product offer.
+   * Full type of a product offer. This listing dimension is deprecated and it
+   * is supported only in Display campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.ProductTypeFullInfo product_type_full = 20;</code>
@@ -459,7 +470,8 @@ public interface ListingDimensionInfoOrBuilder extends
   com.google.ads.googleads.v11.common.ProductTypeFullInfo getProductTypeFull();
   /**
    * <pre>
-   * Full type of a product offer.
+   * Full type of a product offer. This listing dimension is deprecated and it
+   * is supported only in Display campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.ProductTypeFullInfo product_type_full = 20;</code>

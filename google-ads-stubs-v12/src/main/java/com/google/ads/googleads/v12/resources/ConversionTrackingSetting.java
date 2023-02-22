@@ -52,12 +52,12 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int CONVERSION_TRACKING_ID_FIELD_NUMBER = 3;
-  private long conversionTrackingId_;
+  private long conversionTrackingId_ = 0L;
   /**
    * <pre>
-   * Output only. The conversion tracking id used for this account. This id doesn't indicate
-   * whether the customer uses conversion tracking (conversion_tracking_status
-   * does). This field is read-only.
+   * Output only. The conversion tracking id used for this account. This id
+   * doesn't indicate whether the customer uses conversion tracking
+   * (conversion_tracking_status does). This field is read-only.
    * </pre>
    *
    * <code>optional int64 conversion_tracking_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -69,9 +69,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The conversion tracking id used for this account. This id doesn't indicate
-   * whether the customer uses conversion tracking (conversion_tracking_status
-   * does). This field is read-only.
+   * Output only. The conversion tracking id used for this account. This id
+   * doesn't indicate whether the customer uses conversion tracking
+   * (conversion_tracking_status does). This field is read-only.
    * </pre>
    *
    * <code>optional int64 conversion_tracking_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -83,13 +83,13 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CROSS_ACCOUNT_CONVERSION_TRACKING_ID_FIELD_NUMBER = 4;
-  private long crossAccountConversionTrackingId_;
+  private long crossAccountConversionTrackingId_ = 0L;
   /**
    * <pre>
-   * Output only. The conversion tracking id of the customer's manager. This is set when the
-   * customer is opted into cross account conversion tracking, and it overrides
-   * conversion_tracking_id. This field can only be managed through the Google
-   * Ads UI. This field is read-only.
+   * Output only. The conversion tracking id of the customer's manager. This is
+   * set when the customer is opted into cross account conversion tracking, and
+   * it overrides conversion_tracking_id. This field can only be managed through
+   * the Google Ads UI. This field is read-only.
    * </pre>
    *
    * <code>optional int64 cross_account_conversion_tracking_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -101,10 +101,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The conversion tracking id of the customer's manager. This is set when the
-   * customer is opted into cross account conversion tracking, and it overrides
-   * conversion_tracking_id. This field can only be managed through the Google
-   * Ads UI. This field is read-only.
+   * Output only. The conversion tracking id of the customer's manager. This is
+   * set when the customer is opted into cross account conversion tracking, and
+   * it overrides conversion_tracking_id. This field can only be managed through
+   * the Google Ads UI. This field is read-only.
    * </pre>
    *
    * <code>optional int64 cross_account_conversion_tracking_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -116,11 +116,11 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ACCEPTED_CUSTOMER_DATA_TERMS_FIELD_NUMBER = 5;
-  private boolean acceptedCustomerDataTerms_;
+  private boolean acceptedCustomerDataTerms_ = false;
   /**
    * <pre>
-   * Output only. Whether the customer has accepted customer data terms. If using
-   * cross-account conversion tracking, this value is inherited from the
+   * Output only. Whether the customer has accepted customer data terms. If
+   * using cross-account conversion tracking, this value is inherited from the
    * manager. This field is read-only. For more
    * information, see https://support.google.com/adspolicy/answer/7475709.
    * </pre>
@@ -134,12 +134,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int CONVERSION_TRACKING_STATUS_FIELD_NUMBER = 6;
-  private int conversionTrackingStatus_;
+  private int conversionTrackingStatus_ = 0;
   /**
    * <pre>
-   * Output only. Conversion tracking status. It indicates whether the customer is using
-   * conversion tracking, and who is the conversion tracking owner of this
-   * customer. If this customer is using cross-account conversion tracking,
+   * Output only. Conversion tracking status. It indicates whether the customer
+   * is using conversion tracking, and who is the conversion tracking owner of
+   * this customer. If this customer is using cross-account conversion tracking,
    * the value returned will differ based on the `login-customer-id` of the
    * request.
    * </pre>
@@ -152,9 +152,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Conversion tracking status. It indicates whether the customer is using
-   * conversion tracking, and who is the conversion tracking owner of this
-   * customer. If this customer is using cross-account conversion tracking,
+   * Output only. Conversion tracking status. It indicates whether the customer
+   * is using conversion tracking, and who is the conversion tracking owner of
+   * this customer. If this customer is using cross-account conversion tracking,
    * the value returned will differ based on the `login-customer-id` of the
    * request.
    * </pre>
@@ -163,13 +163,12 @@ private static final long serialVersionUID = 0L;
    * @return The conversionTrackingStatus.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.ConversionTrackingStatusEnum.ConversionTrackingStatus getConversionTrackingStatus() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.ConversionTrackingStatusEnum.ConversionTrackingStatus result = com.google.ads.googleads.v12.enums.ConversionTrackingStatusEnum.ConversionTrackingStatus.valueOf(conversionTrackingStatus_);
+    com.google.ads.googleads.v12.enums.ConversionTrackingStatusEnum.ConversionTrackingStatus result = com.google.ads.googleads.v12.enums.ConversionTrackingStatusEnum.ConversionTrackingStatus.forNumber(conversionTrackingStatus_);
     return result == null ? com.google.ads.googleads.v12.enums.ConversionTrackingStatusEnum.ConversionTrackingStatus.UNRECOGNIZED : result;
   }
 
   public static final int ENHANCED_CONVERSIONS_FOR_LEADS_ENABLED_FIELD_NUMBER = 7;
-  private boolean enhancedConversionsForLeadsEnabled_;
+  private boolean enhancedConversionsForLeadsEnabled_ = false;
   /**
    * <pre>
    * Output only. Whether the customer is opted-in for enhanced conversions
@@ -186,11 +185,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int GOOGLE_ADS_CONVERSION_CUSTOMER_FIELD_NUMBER = 8;
-  private volatile java.lang.Object googleAdsConversionCustomer_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object googleAdsConversionCustomer_ = "";
   /**
    * <pre>
-   * Output only. The resource name of the customer where conversions are created and
-   * managed. This field is read-only.
+   * Output only. The resource name of the customer where conversions are
+   * created and managed. This field is read-only.
    * </pre>
    *
    * <code>string google_ads_conversion_customer = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -211,8 +211,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The resource name of the customer where conversions are created and
-   * managed. This field is read-only.
+   * Output only. The resource name of the customer where conversions are
+   * created and managed. This field is read-only.
    * </pre>
    *
    * <code>string google_ads_conversion_customer = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -493,18 +493,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       conversionTrackingId_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       crossAccountConversionTrackingId_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000002);
       acceptedCustomerDataTerms_ = false;
-
       conversionTrackingStatus_ = 0;
-
       enhancedConversionsForLeadsEnabled_ = false;
-
       googleAdsConversionCustomer_ = "";
-
       return this;
     }
 
@@ -531,6 +526,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.ConversionTrackingSetting buildPartial() {
       com.google.ads.googleads.v12.resources.ConversionTrackingSetting result = new com.google.ads.googleads.v12.resources.ConversionTrackingSetting(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.resources.ConversionTrackingSetting result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -541,13 +542,19 @@ private static final long serialVersionUID = 0L;
         result.crossAccountConversionTrackingId_ = crossAccountConversionTrackingId_;
         to_bitField0_ |= 0x00000002;
       }
-      result.acceptedCustomerDataTerms_ = acceptedCustomerDataTerms_;
-      result.conversionTrackingStatus_ = conversionTrackingStatus_;
-      result.enhancedConversionsForLeadsEnabled_ = enhancedConversionsForLeadsEnabled_;
-      result.googleAdsConversionCustomer_ = googleAdsConversionCustomer_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.acceptedCustomerDataTerms_ = acceptedCustomerDataTerms_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.conversionTrackingStatus_ = conversionTrackingStatus_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.enhancedConversionsForLeadsEnabled_ = enhancedConversionsForLeadsEnabled_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.googleAdsConversionCustomer_ = googleAdsConversionCustomer_;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -611,6 +618,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getGoogleAdsConversionCustomer().isEmpty()) {
         googleAdsConversionCustomer_ = other.googleAdsConversionCustomer_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -651,22 +659,22 @@ private static final long serialVersionUID = 0L;
             } // case 32
             case 40: {
               acceptedCustomerDataTerms_ = input.readBool();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 40
             case 48: {
               conversionTrackingStatus_ = input.readEnum();
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 48
             case 56: {
               enhancedConversionsForLeadsEnabled_ = input.readBool();
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 56
             case 66: {
               googleAdsConversionCustomer_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000020;
               break;
             } // case 66
             default: {
@@ -689,9 +697,9 @@ private static final long serialVersionUID = 0L;
     private long conversionTrackingId_ ;
     /**
      * <pre>
-     * Output only. The conversion tracking id used for this account. This id doesn't indicate
-     * whether the customer uses conversion tracking (conversion_tracking_status
-     * does). This field is read-only.
+     * Output only. The conversion tracking id used for this account. This id
+     * doesn't indicate whether the customer uses conversion tracking
+     * (conversion_tracking_status does). This field is read-only.
      * </pre>
      *
      * <code>optional int64 conversion_tracking_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -703,9 +711,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The conversion tracking id used for this account. This id doesn't indicate
-     * whether the customer uses conversion tracking (conversion_tracking_status
-     * does). This field is read-only.
+     * Output only. The conversion tracking id used for this account. This id
+     * doesn't indicate whether the customer uses conversion tracking
+     * (conversion_tracking_status does). This field is read-only.
      * </pre>
      *
      * <code>optional int64 conversion_tracking_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -717,9 +725,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The conversion tracking id used for this account. This id doesn't indicate
-     * whether the customer uses conversion tracking (conversion_tracking_status
-     * does). This field is read-only.
+     * Output only. The conversion tracking id used for this account. This id
+     * doesn't indicate whether the customer uses conversion tracking
+     * (conversion_tracking_status does). This field is read-only.
      * </pre>
      *
      * <code>optional int64 conversion_tracking_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -727,16 +735,17 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setConversionTrackingId(long value) {
-      bitField0_ |= 0x00000001;
+      
       conversionTrackingId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The conversion tracking id used for this account. This id doesn't indicate
-     * whether the customer uses conversion tracking (conversion_tracking_status
-     * does). This field is read-only.
+     * Output only. The conversion tracking id used for this account. This id
+     * doesn't indicate whether the customer uses conversion tracking
+     * (conversion_tracking_status does). This field is read-only.
      * </pre>
      *
      * <code>optional int64 conversion_tracking_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -752,10 +761,10 @@ private static final long serialVersionUID = 0L;
     private long crossAccountConversionTrackingId_ ;
     /**
      * <pre>
-     * Output only. The conversion tracking id of the customer's manager. This is set when the
-     * customer is opted into cross account conversion tracking, and it overrides
-     * conversion_tracking_id. This field can only be managed through the Google
-     * Ads UI. This field is read-only.
+     * Output only. The conversion tracking id of the customer's manager. This is
+     * set when the customer is opted into cross account conversion tracking, and
+     * it overrides conversion_tracking_id. This field can only be managed through
+     * the Google Ads UI. This field is read-only.
      * </pre>
      *
      * <code>optional int64 cross_account_conversion_tracking_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -767,10 +776,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The conversion tracking id of the customer's manager. This is set when the
-     * customer is opted into cross account conversion tracking, and it overrides
-     * conversion_tracking_id. This field can only be managed through the Google
-     * Ads UI. This field is read-only.
+     * Output only. The conversion tracking id of the customer's manager. This is
+     * set when the customer is opted into cross account conversion tracking, and
+     * it overrides conversion_tracking_id. This field can only be managed through
+     * the Google Ads UI. This field is read-only.
      * </pre>
      *
      * <code>optional int64 cross_account_conversion_tracking_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -782,10 +791,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The conversion tracking id of the customer's manager. This is set when the
-     * customer is opted into cross account conversion tracking, and it overrides
-     * conversion_tracking_id. This field can only be managed through the Google
-     * Ads UI. This field is read-only.
+     * Output only. The conversion tracking id of the customer's manager. This is
+     * set when the customer is opted into cross account conversion tracking, and
+     * it overrides conversion_tracking_id. This field can only be managed through
+     * the Google Ads UI. This field is read-only.
      * </pre>
      *
      * <code>optional int64 cross_account_conversion_tracking_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -793,17 +802,18 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCrossAccountConversionTrackingId(long value) {
-      bitField0_ |= 0x00000002;
+      
       crossAccountConversionTrackingId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The conversion tracking id of the customer's manager. This is set when the
-     * customer is opted into cross account conversion tracking, and it overrides
-     * conversion_tracking_id. This field can only be managed through the Google
-     * Ads UI. This field is read-only.
+     * Output only. The conversion tracking id of the customer's manager. This is
+     * set when the customer is opted into cross account conversion tracking, and
+     * it overrides conversion_tracking_id. This field can only be managed through
+     * the Google Ads UI. This field is read-only.
      * </pre>
      *
      * <code>optional int64 cross_account_conversion_tracking_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -819,8 +829,8 @@ private static final long serialVersionUID = 0L;
     private boolean acceptedCustomerDataTerms_ ;
     /**
      * <pre>
-     * Output only. Whether the customer has accepted customer data terms. If using
-     * cross-account conversion tracking, this value is inherited from the
+     * Output only. Whether the customer has accepted customer data terms. If
+     * using cross-account conversion tracking, this value is inherited from the
      * manager. This field is read-only. For more
      * information, see https://support.google.com/adspolicy/answer/7475709.
      * </pre>
@@ -834,8 +844,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Whether the customer has accepted customer data terms. If using
-     * cross-account conversion tracking, this value is inherited from the
+     * Output only. Whether the customer has accepted customer data terms. If
+     * using cross-account conversion tracking, this value is inherited from the
      * manager. This field is read-only. For more
      * information, see https://support.google.com/adspolicy/answer/7475709.
      * </pre>
@@ -847,13 +857,14 @@ private static final long serialVersionUID = 0L;
     public Builder setAcceptedCustomerDataTerms(boolean value) {
       
       acceptedCustomerDataTerms_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Whether the customer has accepted customer data terms. If using
-     * cross-account conversion tracking, this value is inherited from the
+     * Output only. Whether the customer has accepted customer data terms. If
+     * using cross-account conversion tracking, this value is inherited from the
      * manager. This field is read-only. For more
      * information, see https://support.google.com/adspolicy/answer/7475709.
      * </pre>
@@ -862,7 +873,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAcceptedCustomerDataTerms() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       acceptedCustomerDataTerms_ = false;
       onChanged();
       return this;
@@ -871,9 +882,9 @@ private static final long serialVersionUID = 0L;
     private int conversionTrackingStatus_ = 0;
     /**
      * <pre>
-     * Output only. Conversion tracking status. It indicates whether the customer is using
-     * conversion tracking, and who is the conversion tracking owner of this
-     * customer. If this customer is using cross-account conversion tracking,
+     * Output only. Conversion tracking status. It indicates whether the customer
+     * is using conversion tracking, and who is the conversion tracking owner of
+     * this customer. If this customer is using cross-account conversion tracking,
      * the value returned will differ based on the `login-customer-id` of the
      * request.
      * </pre>
@@ -886,9 +897,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Conversion tracking status. It indicates whether the customer is using
-     * conversion tracking, and who is the conversion tracking owner of this
-     * customer. If this customer is using cross-account conversion tracking,
+     * Output only. Conversion tracking status. It indicates whether the customer
+     * is using conversion tracking, and who is the conversion tracking owner of
+     * this customer. If this customer is using cross-account conversion tracking,
      * the value returned will differ based on the `login-customer-id` of the
      * request.
      * </pre>
@@ -898,16 +909,16 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setConversionTrackingStatusValue(int value) {
-      
       conversionTrackingStatus_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Conversion tracking status. It indicates whether the customer is using
-     * conversion tracking, and who is the conversion tracking owner of this
-     * customer. If this customer is using cross-account conversion tracking,
+     * Output only. Conversion tracking status. It indicates whether the customer
+     * is using conversion tracking, and who is the conversion tracking owner of
+     * this customer. If this customer is using cross-account conversion tracking,
      * the value returned will differ based on the `login-customer-id` of the
      * request.
      * </pre>
@@ -917,15 +928,14 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.ConversionTrackingStatusEnum.ConversionTrackingStatus getConversionTrackingStatus() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.ConversionTrackingStatusEnum.ConversionTrackingStatus result = com.google.ads.googleads.v12.enums.ConversionTrackingStatusEnum.ConversionTrackingStatus.valueOf(conversionTrackingStatus_);
+      com.google.ads.googleads.v12.enums.ConversionTrackingStatusEnum.ConversionTrackingStatus result = com.google.ads.googleads.v12.enums.ConversionTrackingStatusEnum.ConversionTrackingStatus.forNumber(conversionTrackingStatus_);
       return result == null ? com.google.ads.googleads.v12.enums.ConversionTrackingStatusEnum.ConversionTrackingStatus.UNRECOGNIZED : result;
     }
     /**
      * <pre>
-     * Output only. Conversion tracking status. It indicates whether the customer is using
-     * conversion tracking, and who is the conversion tracking owner of this
-     * customer. If this customer is using cross-account conversion tracking,
+     * Output only. Conversion tracking status. It indicates whether the customer
+     * is using conversion tracking, and who is the conversion tracking owner of
+     * this customer. If this customer is using cross-account conversion tracking,
      * the value returned will differ based on the `login-customer-id` of the
      * request.
      * </pre>
@@ -938,16 +948,16 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000008;
       conversionTrackingStatus_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Conversion tracking status. It indicates whether the customer is using
-     * conversion tracking, and who is the conversion tracking owner of this
-     * customer. If this customer is using cross-account conversion tracking,
+     * Output only. Conversion tracking status. It indicates whether the customer
+     * is using conversion tracking, and who is the conversion tracking owner of
+     * this customer. If this customer is using cross-account conversion tracking,
      * the value returned will differ based on the `login-customer-id` of the
      * request.
      * </pre>
@@ -956,7 +966,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConversionTrackingStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000008);
       conversionTrackingStatus_ = 0;
       onChanged();
       return this;
@@ -991,6 +1001,7 @@ private static final long serialVersionUID = 0L;
     public Builder setEnhancedConversionsForLeadsEnabled(boolean value) {
       
       enhancedConversionsForLeadsEnabled_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1005,7 +1016,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnhancedConversionsForLeadsEnabled() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       enhancedConversionsForLeadsEnabled_ = false;
       onChanged();
       return this;
@@ -1014,8 +1025,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object googleAdsConversionCustomer_ = "";
     /**
      * <pre>
-     * Output only. The resource name of the customer where conversions are created and
-     * managed. This field is read-only.
+     * Output only. The resource name of the customer where conversions are
+     * created and managed. This field is read-only.
      * </pre>
      *
      * <code>string google_ads_conversion_customer = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1035,8 +1046,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource name of the customer where conversions are created and
-     * managed. This field is read-only.
+     * Output only. The resource name of the customer where conversions are
+     * created and managed. This field is read-only.
      * </pre>
      *
      * <code>string google_ads_conversion_customer = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1057,8 +1068,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource name of the customer where conversions are created and
-     * managed. This field is read-only.
+     * Output only. The resource name of the customer where conversions are
+     * created and managed. This field is read-only.
      * </pre>
      *
      * <code>string google_ads_conversion_customer = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1067,33 +1078,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setGoogleAdsConversionCustomer(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       googleAdsConversionCustomer_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The resource name of the customer where conversions are created and
-     * managed. This field is read-only.
+     * Output only. The resource name of the customer where conversions are
+     * created and managed. This field is read-only.
      * </pre>
      *
      * <code>string google_ads_conversion_customer = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearGoogleAdsConversionCustomer() {
-      
       googleAdsConversionCustomer_ = getDefaultInstance().getGoogleAdsConversionCustomer();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The resource name of the customer where conversions are created and
-     * managed. This field is read-only.
+     * Output only. The resource name of the customer where conversions are
+     * created and managed. This field is read-only.
      * </pre>
      *
      * <code>string google_ads_conversion_customer = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1102,12 +1111,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setGoogleAdsConversionCustomerBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       googleAdsConversionCustomer_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }

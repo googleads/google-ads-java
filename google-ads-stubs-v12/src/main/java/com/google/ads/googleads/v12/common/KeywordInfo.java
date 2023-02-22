@@ -51,7 +51,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int TEXT_FIELD_NUMBER = 3;
-  private volatile java.lang.Object text_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object text_ = "";
   /**
    * <pre>
    * The text of the keyword (at most 80 characters and 10 words).
@@ -109,7 +110,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MATCH_TYPE_FIELD_NUMBER = 2;
-  private int matchType_;
+  private int matchType_ = 0;
   /**
    * <pre>
    * The match type of the keyword.
@@ -130,8 +131,7 @@ private static final long serialVersionUID = 0L;
    * @return The matchType.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.KeywordMatchTypeEnum.KeywordMatchType getMatchType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.KeywordMatchTypeEnum.KeywordMatchType result = com.google.ads.googleads.v12.enums.KeywordMatchTypeEnum.KeywordMatchType.valueOf(matchType_);
+    com.google.ads.googleads.v12.enums.KeywordMatchTypeEnum.KeywordMatchType result = com.google.ads.googleads.v12.enums.KeywordMatchTypeEnum.KeywordMatchType.forNumber(matchType_);
     return result == null ? com.google.ads.googleads.v12.enums.KeywordMatchTypeEnum.KeywordMatchType.UNRECOGNIZED : result;
   }
 
@@ -341,10 +341,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       text_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       matchType_ = 0;
-
       return this;
     }
 
@@ -371,16 +370,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.KeywordInfo buildPartial() {
       com.google.ads.googleads.v12.common.KeywordInfo result = new com.google.ads.googleads.v12.common.KeywordInfo(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.KeywordInfo result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.text_ = text_;
         to_bitField0_ |= 0x00000001;
       }
-      result.text_ = text_;
-      result.matchType_ = matchType_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.matchType_ = matchType_;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -428,8 +433,8 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v12.common.KeywordInfo other) {
       if (other == com.google.ads.googleads.v12.common.KeywordInfo.getDefaultInstance()) return this;
       if (other.hasText()) {
-        bitField0_ |= 0x00000001;
         text_ = other.text_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.matchType_ != 0) {
@@ -463,7 +468,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 16: {
               matchType_ = input.readEnum();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             case 26: {
@@ -552,11 +557,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setText(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       text_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -569,8 +572,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearText() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       text_ = getDefaultInstance().getText();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -585,12 +588,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTextBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       text_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -617,8 +618,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMatchTypeValue(int value) {
-      
       matchType_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -632,8 +633,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.KeywordMatchTypeEnum.KeywordMatchType getMatchType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.KeywordMatchTypeEnum.KeywordMatchType result = com.google.ads.googleads.v12.enums.KeywordMatchTypeEnum.KeywordMatchType.valueOf(matchType_);
+      com.google.ads.googleads.v12.enums.KeywordMatchTypeEnum.KeywordMatchType result = com.google.ads.googleads.v12.enums.KeywordMatchTypeEnum.KeywordMatchType.forNumber(matchType_);
       return result == null ? com.google.ads.googleads.v12.enums.KeywordMatchTypeEnum.KeywordMatchType.UNRECOGNIZED : result;
     }
     /**
@@ -649,7 +649,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000002;
       matchType_ = value.getNumber();
       onChanged();
       return this;
@@ -663,7 +663,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMatchType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       matchType_ = 0;
       onChanged();
       return this;

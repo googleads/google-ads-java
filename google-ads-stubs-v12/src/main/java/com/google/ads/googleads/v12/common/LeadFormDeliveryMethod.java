@@ -334,6 +334,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (webhookBuilder_ != null) {
         webhookBuilder_.clear();
       }
@@ -365,16 +366,23 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.LeadFormDeliveryMethod buildPartial() {
       com.google.ads.googleads.v12.common.LeadFormDeliveryMethod result = new com.google.ads.googleads.v12.common.LeadFormDeliveryMethod(this);
-      if (deliveryDetailsCase_ == 1) {
-        if (webhookBuilder_ == null) {
-          result.deliveryDetails_ = deliveryDetails_;
-        } else {
-          result.deliveryDetails_ = webhookBuilder_.build();
-        }
-      }
-      result.deliveryDetailsCase_ = deliveryDetailsCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.LeadFormDeliveryMethod result) {
+      int from_bitField0_ = bitField0_;
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v12.common.LeadFormDeliveryMethod result) {
+      result.deliveryDetailsCase_ = deliveryDetailsCase_;
+      result.deliveryDetails_ = this.deliveryDetails_;
+      if (deliveryDetailsCase_ == 1 &&
+          webhookBuilder_ != null) {
+        result.deliveryDetails_ = webhookBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -493,6 +501,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v12.common.WebhookDelivery, com.google.ads.googleads.v12.common.WebhookDelivery.Builder, com.google.ads.googleads.v12.common.WebhookDeliveryOrBuilder> webhookBuilder_;
@@ -668,7 +677,7 @@ private static final long serialVersionUID = 0L;
         deliveryDetails_ = null;
       }
       deliveryDetailsCase_ = 1;
-      onChanged();;
+      onChanged();
       return webhookBuilder_;
     }
     @java.lang.Override

@@ -9,8 +9,8 @@ public interface ChainFilterOrBuilder extends
 
   /**
    * <pre>
-   * Required. Used to filter chain locations by chain id. Only chain locations that
-   * belong to the specified chain will be in the asset set.
+   * Required. Used to filter chain locations by chain id. Only chain locations
+   * that belong to the specified chain will be in the asset set.
    * </pre>
    *
    * <code>int64 chain_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>

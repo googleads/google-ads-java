@@ -5,7 +5,8 @@ package com.google.ads.googleads.v11.services;
 
 /**
  * <pre>
- * Request message for [KeywordPlanService.GenerateForecastTimeSeries][google.ads.googleads.v11.services.KeywordPlanService.GenerateForecastTimeSeries].
+ * Request message for
+ * [KeywordPlanService.GenerateForecastTimeSeries][google.ads.googleads.v11.services.KeywordPlanService.GenerateForecastTimeSeries].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v11.services.GenerateForecastTimeSeriesRequest}
@@ -49,7 +50,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int KEYWORD_PLAN_FIELD_NUMBER = 1;
-  private volatile java.lang.Object keywordPlan_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object keywordPlan_ = "";
   /**
    * <pre>
    * Required. The resource name of the keyword plan to be forecasted.
@@ -250,7 +252,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Request message for [KeywordPlanService.GenerateForecastTimeSeries][google.ads.googleads.v11.services.KeywordPlanService.GenerateForecastTimeSeries].
+   * Request message for
+   * [KeywordPlanService.GenerateForecastTimeSeries][google.ads.googleads.v11.services.KeywordPlanService.GenerateForecastTimeSeries].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v11.services.GenerateForecastTimeSeriesRequest}
@@ -285,8 +288,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       keywordPlan_ = "";
-
       return this;
     }
 
@@ -313,9 +316,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.GenerateForecastTimeSeriesRequest buildPartial() {
       com.google.ads.googleads.v11.services.GenerateForecastTimeSeriesRequest result = new com.google.ads.googleads.v11.services.GenerateForecastTimeSeriesRequest(this);
-      result.keywordPlan_ = keywordPlan_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.GenerateForecastTimeSeriesRequest result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.keywordPlan_ = keywordPlan_;
+      }
     }
 
     @java.lang.Override
@@ -364,6 +374,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.services.GenerateForecastTimeSeriesRequest.getDefaultInstance()) return this;
       if (!other.getKeywordPlan().isEmpty()) {
         keywordPlan_ = other.keywordPlan_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -394,7 +405,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               keywordPlan_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             default: {
@@ -412,6 +423,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object keywordPlan_ = "";
     /**
@@ -466,11 +478,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKeywordPlan(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       keywordPlan_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -483,8 +493,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearKeywordPlan() {
-      
       keywordPlan_ = getDefaultInstance().getKeywordPlan();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -499,12 +509,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKeywordPlanBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       keywordPlan_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

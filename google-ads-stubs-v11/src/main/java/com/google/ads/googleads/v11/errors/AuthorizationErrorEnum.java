@@ -135,7 +135,8 @@ private static final long serialVersionUID = 0L;
     INCOMPLETE_SIGNUP(8),
     /**
      * <pre>
-     * The customer can't be used because it isn't enabled.
+     * The customer account can't be accessed because it is not yet enabled or
+     * has been deactivated.
      * </pre>
      *
      * <code>CUSTOMER_NOT_ENABLED = 24;</code>
@@ -275,7 +276,8 @@ private static final long serialVersionUID = 0L;
     public static final int INCOMPLETE_SIGNUP_VALUE = 8;
     /**
      * <pre>
-     * The customer can't be used because it isn't enabled.
+     * The customer account can't be accessed because it is not yet enabled or
+     * has been deactivated.
      * </pre>
      *
      * <code>CUSTOMER_NOT_ENABLED = 24;</code>

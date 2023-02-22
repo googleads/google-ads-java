@@ -51,7 +51,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int DATA_FIELD_NUMBER = 5;
-  private com.google.protobuf.ByteString data_;
+  private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
   /**
    * <pre>
    * The raw bytes data of an image. This field is mutate only.
@@ -78,7 +78,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int FILE_SIZE_FIELD_NUMBER = 6;
-  private long fileSize_;
+  private long fileSize_ = 0L;
   /**
    * <pre>
    * File size of the image asset in bytes.
@@ -105,7 +105,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MIME_TYPE_FIELD_NUMBER = 3;
-  private int mimeType_;
+  private int mimeType_ = 0;
   /**
    * <pre>
    * MIME type of the image asset.
@@ -126,8 +126,7 @@ private static final long serialVersionUID = 0L;
    * @return The mimeType.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.MimeTypeEnum.MimeType getMimeType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.MimeTypeEnum.MimeType result = com.google.ads.googleads.v12.enums.MimeTypeEnum.MimeType.valueOf(mimeType_);
+    com.google.ads.googleads.v12.enums.MimeTypeEnum.MimeType result = com.google.ads.googleads.v12.enums.MimeTypeEnum.MimeType.forNumber(mimeType_);
     return result == null ? com.google.ads.googleads.v12.enums.MimeTypeEnum.MimeType.UNRECOGNIZED : result;
   }
 
@@ -166,7 +165,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v12.common.ImageDimensionOrBuilder getFullSizeOrBuilder() {
-    return getFullSize();
+    return fullSize_ == null ? com.google.ads.googleads.v12.common.ImageDimension.getDefaultInstance() : fullSize_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -409,16 +408,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       data_ = com.google.protobuf.ByteString.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
       fileSize_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000002);
       mimeType_ = 0;
-
-      if (fullSizeBuilder_ == null) {
-        fullSize_ = null;
-      } else {
-        fullSize_ = null;
+      fullSize_ = null;
+      if (fullSizeBuilder_ != null) {
+        fullSizeBuilder_.dispose();
         fullSizeBuilder_ = null;
       }
       return this;
@@ -447,25 +443,31 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.ImageAsset buildPartial() {
       com.google.ads.googleads.v12.common.ImageAsset result = new com.google.ads.googleads.v12.common.ImageAsset(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.ImageAsset result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.data_ = data_;
         to_bitField0_ |= 0x00000001;
       }
-      result.data_ = data_;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.fileSize_ = fileSize_;
         to_bitField0_ |= 0x00000002;
       }
-      result.mimeType_ = mimeType_;
-      if (fullSizeBuilder_ == null) {
-        result.fullSize_ = fullSize_;
-      } else {
-        result.fullSize_ = fullSizeBuilder_.build();
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.mimeType_ = mimeType_;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.fullSize_ = fullSizeBuilder_ == null
+            ? fullSize_
+            : fullSizeBuilder_.build();
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -552,14 +554,14 @@ private static final long serialVersionUID = 0L;
               break;
             case 24: {
               mimeType_ = input.readEnum();
-
+              bitField0_ |= 0x00000004;
               break;
             } // case 24
             case 34: {
               input.readMessage(
                   getFullSizeFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 34
             case 42: {
@@ -624,11 +626,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setData(com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       data_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -682,8 +682,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFileSize(long value) {
-      bitField0_ |= 0x00000002;
+      
       fileSize_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -724,8 +725,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMimeTypeValue(int value) {
-      
       mimeType_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -739,8 +740,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.MimeTypeEnum.MimeType getMimeType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.MimeTypeEnum.MimeType result = com.google.ads.googleads.v12.enums.MimeTypeEnum.MimeType.valueOf(mimeType_);
+      com.google.ads.googleads.v12.enums.MimeTypeEnum.MimeType result = com.google.ads.googleads.v12.enums.MimeTypeEnum.MimeType.forNumber(mimeType_);
       return result == null ? com.google.ads.googleads.v12.enums.MimeTypeEnum.MimeType.UNRECOGNIZED : result;
     }
     /**
@@ -756,7 +756,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000004;
       mimeType_ = value.getNumber();
       onChanged();
       return this;
@@ -770,7 +770,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMimeType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000004);
       mimeType_ = 0;
       onChanged();
       return this;
@@ -788,7 +788,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the fullSize field is set.
      */
     public boolean hasFullSize() {
-      return fullSizeBuilder_ != null || fullSize_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -818,11 +818,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         fullSize_ = value;
-        onChanged();
       } else {
         fullSizeBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -836,11 +836,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.ImageDimension.Builder builderForValue) {
       if (fullSizeBuilder_ == null) {
         fullSize_ = builderForValue.build();
-        onChanged();
       } else {
         fullSizeBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -852,17 +852,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeFullSize(com.google.ads.googleads.v12.common.ImageDimension value) {
       if (fullSizeBuilder_ == null) {
-        if (fullSize_ != null) {
-          fullSize_ =
-            com.google.ads.googleads.v12.common.ImageDimension.newBuilder(fullSize_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000008) != 0) &&
+          fullSize_ != null &&
+          fullSize_ != com.google.ads.googleads.v12.common.ImageDimension.getDefaultInstance()) {
+          getFullSizeBuilder().mergeFrom(value);
         } else {
           fullSize_ = value;
         }
-        onChanged();
       } else {
         fullSizeBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -873,14 +874,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.ImageDimension full_size = 4;</code>
      */
     public Builder clearFullSize() {
-      if (fullSizeBuilder_ == null) {
-        fullSize_ = null;
-        onChanged();
-      } else {
-        fullSize_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
+      fullSize_ = null;
+      if (fullSizeBuilder_ != null) {
+        fullSizeBuilder_.dispose();
         fullSizeBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -891,7 +891,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v12.common.ImageDimension full_size = 4;</code>
      */
     public com.google.ads.googleads.v12.common.ImageDimension.Builder getFullSizeBuilder() {
-      
+      bitField0_ |= 0x00000008;
       onChanged();
       return getFullSizeFieldBuilder().getBuilder();
     }

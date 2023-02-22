@@ -49,7 +49,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int LONGITUDE_IN_MICRO_DEGREES_FIELD_NUMBER = 3;
-  private int longitudeInMicroDegrees_;
+  private int longitudeInMicroDegrees_ = 0;
   /**
    * <pre>
    * Micro degrees for the longitude.
@@ -76,7 +76,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int LATITUDE_IN_MICRO_DEGREES_FIELD_NUMBER = 4;
-  private int latitudeInMicroDegrees_;
+  private int latitudeInMicroDegrees_ = 0;
   /**
    * <pre>
    * Micro degrees for the latitude.
@@ -315,10 +315,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       longitudeInMicroDegrees_ = 0;
-      bitField0_ = (bitField0_ & ~0x00000001);
       latitudeInMicroDegrees_ = 0;
-      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -345,6 +344,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.GeoPointInfo buildPartial() {
       com.google.ads.googleads.v12.common.GeoPointInfo result = new com.google.ads.googleads.v12.common.GeoPointInfo(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.GeoPointInfo result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -355,9 +360,7 @@ private static final long serialVersionUID = 0L;
         result.latitudeInMicroDegrees_ = latitudeInMicroDegrees_;
         to_bitField0_ |= 0x00000002;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -498,8 +501,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLongitudeInMicroDegrees(int value) {
-      bitField0_ |= 0x00000001;
+      
       longitudeInMicroDegrees_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -553,8 +557,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLatitudeInMicroDegrees(int value) {
-      bitField0_ |= 0x00000002;
+      
       latitudeInMicroDegrees_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

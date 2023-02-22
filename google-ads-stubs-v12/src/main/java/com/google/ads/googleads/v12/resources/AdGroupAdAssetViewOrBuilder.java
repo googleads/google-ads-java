@@ -114,10 +114,10 @@ public interface AdGroupAdAssetViewOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The status between the asset and the latest version of the ad. If true, the
-   * asset is linked to the latest version of the ad. If false, it means the
-   * link once existed but has been removed and is no longer present in the
-   * latest version of the ad.
+   * Output only. The status between the asset and the latest version of the ad.
+   * If true, the asset is linked to the latest version of the ad. If false, it
+   * means the link once existed but has been removed and is no longer present
+   * in the latest version of the ad.
    * </pre>
    *
    * <code>optional bool enabled = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -126,10 +126,10 @@ public interface AdGroupAdAssetViewOrBuilder extends
   boolean hasEnabled();
   /**
    * <pre>
-   * Output only. The status between the asset and the latest version of the ad. If true, the
-   * asset is linked to the latest version of the ad. If false, it means the
-   * link once existed but has been removed and is no longer present in the
-   * latest version of the ad.
+   * Output only. The status between the asset and the latest version of the ad.
+   * If true, the asset is linked to the latest version of the ad. If false, it
+   * means the link once existed but has been removed and is no longer present
+   * in the latest version of the ad.
    * </pre>
    *
    * <code>optional bool enabled = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

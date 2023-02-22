@@ -129,7 +129,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v11.common.AdVideoAssetOrBuilder getVideoOrBuilder() {
-    return getVideo();
+    return video_ == null ? com.google.ads.googleads.v11.common.AdVideoAsset.getDefaultInstance() : video_;
   }
 
   public static final int IN_STREAM_FIELD_NUMBER = 2;
@@ -628,10 +628,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (videoBuilder_ == null) {
-        video_ = null;
-      } else {
-        video_ = null;
+      bitField0_ = 0;
+      video_ = null;
+      if (videoBuilder_ != null) {
+        videoBuilder_.dispose();
         videoBuilder_ = null;
       }
       if (inStreamBuilder_ != null) {
@@ -677,49 +677,44 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.VideoAdInfo buildPartial() {
       com.google.ads.googleads.v11.common.VideoAdInfo result = new com.google.ads.googleads.v11.common.VideoAdInfo(this);
-      if (videoBuilder_ == null) {
-        result.video_ = video_;
-      } else {
-        result.video_ = videoBuilder_.build();
-      }
-      if (formatCase_ == 2) {
-        if (inStreamBuilder_ == null) {
-          result.format_ = format_;
-        } else {
-          result.format_ = inStreamBuilder_.build();
-        }
-      }
-      if (formatCase_ == 3) {
-        if (bumperBuilder_ == null) {
-          result.format_ = format_;
-        } else {
-          result.format_ = bumperBuilder_.build();
-        }
-      }
-      if (formatCase_ == 4) {
-        if (outStreamBuilder_ == null) {
-          result.format_ = format_;
-        } else {
-          result.format_ = outStreamBuilder_.build();
-        }
-      }
-      if (formatCase_ == 5) {
-        if (nonSkippableBuilder_ == null) {
-          result.format_ = format_;
-        } else {
-          result.format_ = nonSkippableBuilder_.build();
-        }
-      }
-      if (formatCase_ == 9) {
-        if (inFeedBuilder_ == null) {
-          result.format_ = format_;
-        } else {
-          result.format_ = inFeedBuilder_.build();
-        }
-      }
-      result.formatCase_ = formatCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.VideoAdInfo result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.video_ = videoBuilder_ == null
+            ? video_
+            : videoBuilder_.build();
+      }
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v11.common.VideoAdInfo result) {
+      result.formatCase_ = formatCase_;
+      result.format_ = this.format_;
+      if (formatCase_ == 2 &&
+          inStreamBuilder_ != null) {
+        result.format_ = inStreamBuilder_.build();
+      }
+      if (formatCase_ == 3 &&
+          bumperBuilder_ != null) {
+        result.format_ = bumperBuilder_.build();
+      }
+      if (formatCase_ == 4 &&
+          outStreamBuilder_ != null) {
+        result.format_ = outStreamBuilder_.build();
+      }
+      if (formatCase_ == 5 &&
+          nonSkippableBuilder_ != null) {
+        result.format_ = nonSkippableBuilder_.build();
+      }
+      if (formatCase_ == 9 &&
+          inFeedBuilder_ != null) {
+        result.format_ = inFeedBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -852,7 +847,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getVideoFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 66
             case 74: {
@@ -892,6 +887,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private com.google.ads.googleads.v11.common.AdVideoAsset video_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -905,7 +901,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the video field is set.
      */
     public boolean hasVideo() {
-      return videoBuilder_ != null || video_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -935,11 +931,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         video_ = value;
-        onChanged();
       } else {
         videoBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -953,11 +949,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.common.AdVideoAsset.Builder builderForValue) {
       if (videoBuilder_ == null) {
         video_ = builderForValue.build();
-        onChanged();
       } else {
         videoBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -969,17 +965,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeVideo(com.google.ads.googleads.v11.common.AdVideoAsset value) {
       if (videoBuilder_ == null) {
-        if (video_ != null) {
-          video_ =
-            com.google.ads.googleads.v11.common.AdVideoAsset.newBuilder(video_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          video_ != null &&
+          video_ != com.google.ads.googleads.v11.common.AdVideoAsset.getDefaultInstance()) {
+          getVideoBuilder().mergeFrom(value);
         } else {
           video_ = value;
         }
-        onChanged();
       } else {
         videoBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -990,14 +987,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.common.AdVideoAsset video = 8;</code>
      */
     public Builder clearVideo() {
-      if (videoBuilder_ == null) {
-        video_ = null;
-        onChanged();
-      } else {
-        video_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      video_ = null;
+      if (videoBuilder_ != null) {
+        videoBuilder_.dispose();
         videoBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -1008,7 +1004,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.common.AdVideoAsset video = 8;</code>
      */
     public com.google.ads.googleads.v11.common.AdVideoAsset.Builder getVideoBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getVideoFieldBuilder().getBuilder();
     }
@@ -1222,7 +1218,7 @@ private static final long serialVersionUID = 0L;
         format_ = null;
       }
       formatCase_ = 2;
-      onChanged();;
+      onChanged();
       return inStreamBuilder_;
     }
 
@@ -1400,7 +1396,7 @@ private static final long serialVersionUID = 0L;
         format_ = null;
       }
       formatCase_ = 3;
-      onChanged();;
+      onChanged();
       return bumperBuilder_;
     }
 
@@ -1578,7 +1574,7 @@ private static final long serialVersionUID = 0L;
         format_ = null;
       }
       formatCase_ = 4;
-      onChanged();;
+      onChanged();
       return outStreamBuilder_;
     }
 
@@ -1756,7 +1752,7 @@ private static final long serialVersionUID = 0L;
         format_ = null;
       }
       formatCase_ = 5;
-      onChanged();;
+      onChanged();
       return nonSkippableBuilder_;
     }
 
@@ -1934,7 +1930,7 @@ private static final long serialVersionUID = 0L;
         format_ = null;
       }
       formatCase_ = 9;
-      onChanged();;
+      onChanged();
       return inFeedBuilder_;
     }
     @java.lang.Override

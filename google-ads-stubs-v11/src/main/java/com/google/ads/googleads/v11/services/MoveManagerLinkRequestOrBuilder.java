@@ -53,8 +53,9 @@ public interface MoveManagerLinkRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The resource name of the new manager customer that the client wants to move
-   * to. Customer resource names have the format: "customers/{customer_id}"
+   * Required. The resource name of the new manager customer that the client
+   * wants to move to. Customer resource names have the format:
+   * "customers/{customer_id}"
    * </pre>
    *
    * <code>string new_manager = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -63,8 +64,9 @@ public interface MoveManagerLinkRequestOrBuilder extends
   java.lang.String getNewManager();
   /**
    * <pre>
-   * Required. The resource name of the new manager customer that the client wants to move
-   * to. Customer resource names have the format: "customers/{customer_id}"
+   * Required. The resource name of the new manager customer that the client
+   * wants to move to. Customer resource names have the format:
+   * "customers/{customer_id}"
    * </pre>
    *
    * <code>string new_manager = 3 [(.google.api.field_behavior) = REQUIRED];</code>

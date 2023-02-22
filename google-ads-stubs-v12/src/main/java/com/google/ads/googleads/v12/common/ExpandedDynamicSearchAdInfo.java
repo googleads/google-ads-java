@@ -51,7 +51,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int DESCRIPTION_FIELD_NUMBER = 3;
-  private volatile java.lang.Object description_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object description_ = "";
   /**
    * <pre>
    * The description of the ad.
@@ -109,7 +110,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTION2_FIELD_NUMBER = 4;
-  private volatile java.lang.Object description2_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object description2_ = "";
   /**
    * <pre>
    * The second description of the ad.
@@ -377,10 +379,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       description_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       description2_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -407,19 +408,23 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.ExpandedDynamicSearchAdInfo buildPartial() {
       com.google.ads.googleads.v12.common.ExpandedDynamicSearchAdInfo result = new com.google.ads.googleads.v12.common.ExpandedDynamicSearchAdInfo(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.ExpandedDynamicSearchAdInfo result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.description_ = description_;
         to_bitField0_ |= 0x00000001;
       }
-      result.description_ = description_;
       if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.description2_ = description2_;
         to_bitField0_ |= 0x00000002;
       }
-      result.description2_ = description2_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -467,13 +472,13 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v12.common.ExpandedDynamicSearchAdInfo other) {
       if (other == com.google.ads.googleads.v12.common.ExpandedDynamicSearchAdInfo.getDefaultInstance()) return this;
       if (other.hasDescription()) {
-        bitField0_ |= 0x00000001;
         description_ = other.description_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasDescription2()) {
-        bitField0_ |= 0x00000002;
         description2_ = other.description2_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -593,11 +598,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       description_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -610,8 +613,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       description_ = getDefaultInstance().getDescription();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -626,12 +629,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescriptionBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       description_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -700,11 +701,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription2(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       description2_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -717,8 +716,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDescription2() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       description2_ = getDefaultInstance().getDescription2();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -733,12 +732,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDescription2Bytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       description2_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

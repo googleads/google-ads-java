@@ -9,7 +9,8 @@ public interface BusinessProfileLocationSetOrBuilder extends
 
   /**
    * <pre>
-   * Required. Immutable. The HTTP authorization token used to obtain authorization.
+   * Required. Immutable. The HTTP authorization token used to obtain
+   * authorization.
    * </pre>
    *
    * <code>string http_authorization_token = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.field_behavior) = REQUIRED];</code>
@@ -18,7 +19,8 @@ public interface BusinessProfileLocationSetOrBuilder extends
   java.lang.String getHttpAuthorizationToken();
   /**
    * <pre>
-   * Required. Immutable. The HTTP authorization token used to obtain authorization.
+   * Required. Immutable. The HTTP authorization token used to obtain
+   * authorization.
    * </pre>
    *
    * <code>string http_authorization_token = 1 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.field_behavior) = REQUIRED];</code>
@@ -29,8 +31,8 @@ public interface BusinessProfileLocationSetOrBuilder extends
 
   /**
    * <pre>
-   * Required. Immutable. Email address of a Google Business Profile account or email address of a
-   * manager of the Google Business Profile account.
+   * Required. Immutable. Email address of a Google Business Profile account or
+   * email address of a manager of the Google Business Profile account.
    * </pre>
    *
    * <code>string email_address = 2 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
@@ -39,8 +41,8 @@ public interface BusinessProfileLocationSetOrBuilder extends
   java.lang.String getEmailAddress();
   /**
    * <pre>
-   * Required. Immutable. Email address of a Google Business Profile account or email address of a
-   * manager of the Google Business Profile account.
+   * Required. Immutable. Email address of a Google Business Profile account or
+   * email address of a manager of the Google Business Profile account.
    * </pre>
    *
    * <code>string email_address = 2 [(.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
@@ -173,8 +175,8 @@ public interface BusinessProfileLocationSetOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. The account ID of the managed business whose locations are to be used.
-   * If this field is not set, then all businesses accessible by the user
+   * Immutable. The account ID of the managed business whose locations are to be
+   * used. If this field is not set, then all businesses accessible by the user
    * (specified by the emailAddress) are used.
    * </pre>
    *
@@ -184,8 +186,8 @@ public interface BusinessProfileLocationSetOrBuilder extends
   java.lang.String getBusinessAccountId();
   /**
    * <pre>
-   * Immutable. The account ID of the managed business whose locations are to be used.
-   * If this field is not set, then all businesses accessible by the user
+   * Immutable. The account ID of the managed business whose locations are to be
+   * used. If this field is not set, then all businesses accessible by the user
    * (specified by the emailAddress) are used.
    * </pre>
    *

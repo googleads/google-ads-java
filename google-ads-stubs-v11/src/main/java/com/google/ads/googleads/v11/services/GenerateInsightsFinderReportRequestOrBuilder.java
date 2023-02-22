@@ -29,7 +29,8 @@ public interface GenerateInsightsFinderReportRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. A baseline audience for this report, typically all people in a region.
+   * Required. A baseline audience for this report, typically all people in a
+   * region.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.BasicInsightsAudience baseline_audience = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -38,7 +39,8 @@ public interface GenerateInsightsFinderReportRequestOrBuilder extends
   boolean hasBaselineAudience();
   /**
    * <pre>
-   * Required. A baseline audience for this report, typically all people in a region.
+   * Required. A baseline audience for this report, typically all people in a
+   * region.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.BasicInsightsAudience baseline_audience = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -47,7 +49,8 @@ public interface GenerateInsightsFinderReportRequestOrBuilder extends
   com.google.ads.googleads.v11.services.BasicInsightsAudience getBaselineAudience();
   /**
    * <pre>
-   * Required. A baseline audience for this report, typically all people in a region.
+   * Required. A baseline audience for this report, typically all people in a
+   * region.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.BasicInsightsAudience baseline_audience = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -56,9 +59,9 @@ public interface GenerateInsightsFinderReportRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. The specific audience of interest for this report.  The insights in the
-   * report will be based on attributes more prevalent in this audience than
-   * in the report's baseline audience.
+   * Required. The specific audience of interest for this report.  The insights
+   * in the report will be based on attributes more prevalent in this audience
+   * than in the report's baseline audience.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.BasicInsightsAudience specific_audience = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -67,9 +70,9 @@ public interface GenerateInsightsFinderReportRequestOrBuilder extends
   boolean hasSpecificAudience();
   /**
    * <pre>
-   * Required. The specific audience of interest for this report.  The insights in the
-   * report will be based on attributes more prevalent in this audience than
-   * in the report's baseline audience.
+   * Required. The specific audience of interest for this report.  The insights
+   * in the report will be based on attributes more prevalent in this audience
+   * than in the report's baseline audience.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.BasicInsightsAudience specific_audience = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -78,9 +81,9 @@ public interface GenerateInsightsFinderReportRequestOrBuilder extends
   com.google.ads.googleads.v11.services.BasicInsightsAudience getSpecificAudience();
   /**
    * <pre>
-   * Required. The specific audience of interest for this report.  The insights in the
-   * report will be based on attributes more prevalent in this audience than
-   * in the report's baseline audience.
+   * Required. The specific audience of interest for this report.  The insights
+   * in the report will be based on attributes more prevalent in this audience
+   * than in the report's baseline audience.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.BasicInsightsAudience specific_audience = 3 [(.google.api.field_behavior) = REQUIRED];</code>

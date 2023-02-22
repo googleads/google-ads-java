@@ -155,8 +155,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The fraction (between 0.0 and 1.0) of mutates that have been processed.
-     * This is empty if the job hasn't started running yet.
+     * Output only. The fraction (between 0.0 and 1.0) of mutates that have been
+     * processed. This is empty if the job hasn't started running yet.
      * </pre>
      *
      * <code>optional double estimated_completion_ratio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -165,8 +165,8 @@ private static final long serialVersionUID = 0L;
     boolean hasEstimatedCompletionRatio();
     /**
      * <pre>
-     * Output only. The fraction (between 0.0 and 1.0) of mutates that have been processed.
-     * This is empty if the job hasn't started running yet.
+     * Output only. The fraction (between 0.0 and 1.0) of mutates that have been
+     * processed. This is empty if the job hasn't started running yet.
      * </pre>
      *
      * <code>optional double estimated_completion_ratio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -264,7 +264,8 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
     public static final int CREATION_DATE_TIME_FIELD_NUMBER = 8;
-    private volatile java.lang.Object creationDateTime_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creationDateTime_ = "";
     /**
      * <pre>
      * Output only. The time when this batch job was created.
@@ -325,7 +326,8 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int START_DATE_TIME_FIELD_NUMBER = 7;
-    private volatile java.lang.Object startDateTime_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object startDateTime_ = "";
     /**
      * <pre>
      * Output only. The time when this batch job started running.
@@ -386,7 +388,8 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int COMPLETION_DATE_TIME_FIELD_NUMBER = 9;
-    private volatile java.lang.Object completionDateTime_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object completionDateTime_ = "";
     /**
      * <pre>
      * Output only. The time when this batch job was completed.
@@ -447,11 +450,11 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int ESTIMATED_COMPLETION_RATIO_FIELD_NUMBER = 10;
-    private double estimatedCompletionRatio_;
+    private double estimatedCompletionRatio_ = 0D;
     /**
      * <pre>
-     * Output only. The fraction (between 0.0 and 1.0) of mutates that have been processed.
-     * This is empty if the job hasn't started running yet.
+     * Output only. The fraction (between 0.0 and 1.0) of mutates that have been
+     * processed. This is empty if the job hasn't started running yet.
      * </pre>
      *
      * <code>optional double estimated_completion_ratio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -463,8 +466,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The fraction (between 0.0 and 1.0) of mutates that have been processed.
-     * This is empty if the job hasn't started running yet.
+     * Output only. The fraction (between 0.0 and 1.0) of mutates that have been
+     * processed. This is empty if the job hasn't started running yet.
      * </pre>
      *
      * <code>optional double estimated_completion_ratio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -476,7 +479,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int OPERATION_COUNT_FIELD_NUMBER = 11;
-    private long operationCount_;
+    private long operationCount_ = 0L;
     /**
      * <pre>
      * Output only. The number of mutate operations in the batch job.
@@ -503,7 +506,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int EXECUTED_OPERATION_COUNT_FIELD_NUMBER = 12;
-    private long executedOperationCount_;
+    private long executedOperationCount_ = 0L;
     /**
      * <pre>
      * Output only. The number of mutate operations executed by the batch job.
@@ -810,18 +813,13 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         creationDateTime_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
         startDateTime_ = "";
-        bitField0_ = (bitField0_ & ~0x00000002);
         completionDateTime_ = "";
-        bitField0_ = (bitField0_ & ~0x00000004);
         estimatedCompletionRatio_ = 0D;
-        bitField0_ = (bitField0_ & ~0x00000008);
         operationCount_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000010);
         executedOperationCount_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -848,20 +846,26 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v11.resources.BatchJob.BatchJobMetadata buildPartial() {
         com.google.ads.googleads.v11.resources.BatchJob.BatchJobMetadata result = new com.google.ads.googleads.v11.resources.BatchJob.BatchJobMetadata(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v11.resources.BatchJob.BatchJobMetadata result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.creationDateTime_ = creationDateTime_;
           to_bitField0_ |= 0x00000001;
         }
-        result.creationDateTime_ = creationDateTime_;
         if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.startDateTime_ = startDateTime_;
           to_bitField0_ |= 0x00000002;
         }
-        result.startDateTime_ = startDateTime_;
         if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.completionDateTime_ = completionDateTime_;
           to_bitField0_ |= 0x00000004;
         }
-        result.completionDateTime_ = completionDateTime_;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.estimatedCompletionRatio_ = estimatedCompletionRatio_;
           to_bitField0_ |= 0x00000008;
@@ -874,9 +878,7 @@ private static final long serialVersionUID = 0L;
           result.executedOperationCount_ = executedOperationCount_;
           to_bitField0_ |= 0x00000020;
         }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -924,18 +926,18 @@ private static final long serialVersionUID = 0L;
       public Builder mergeFrom(com.google.ads.googleads.v11.resources.BatchJob.BatchJobMetadata other) {
         if (other == com.google.ads.googleads.v11.resources.BatchJob.BatchJobMetadata.getDefaultInstance()) return this;
         if (other.hasCreationDateTime()) {
-          bitField0_ |= 0x00000001;
           creationDateTime_ = other.creationDateTime_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.hasStartDateTime()) {
-          bitField0_ |= 0x00000002;
           startDateTime_ = other.startDateTime_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.hasCompletionDateTime()) {
-          bitField0_ |= 0x00000004;
           completionDateTime_ = other.completionDateTime_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (other.hasEstimatedCompletionRatio()) {
@@ -1088,11 +1090,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setCreationDateTime(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+        if (value == null) { throw new NullPointerException(); }
         creationDateTime_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1106,8 +1106,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearCreationDateTime() {
-        bitField0_ = (bitField0_ & ~0x00000001);
         creationDateTime_ = getDefaultInstance().getCreationDateTime();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -1123,12 +1123,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setCreationDateTimeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        bitField0_ |= 0x00000001;
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         creationDateTime_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1201,11 +1199,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setStartDateTime(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+        if (value == null) { throw new NullPointerException(); }
         startDateTime_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1219,8 +1215,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearStartDateTime() {
-        bitField0_ = (bitField0_ & ~0x00000002);
         startDateTime_ = getDefaultInstance().getStartDateTime();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -1236,12 +1232,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setStartDateTimeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        bitField0_ |= 0x00000002;
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         startDateTime_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1314,11 +1308,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setCompletionDateTime(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+        if (value == null) { throw new NullPointerException(); }
         completionDateTime_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1332,8 +1324,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearCompletionDateTime() {
-        bitField0_ = (bitField0_ & ~0x00000004);
         completionDateTime_ = getDefaultInstance().getCompletionDateTime();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -1349,12 +1341,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setCompletionDateTimeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        bitField0_ |= 0x00000004;
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         completionDateTime_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1362,8 +1352,8 @@ private static final long serialVersionUID = 0L;
       private double estimatedCompletionRatio_ ;
       /**
        * <pre>
-       * Output only. The fraction (between 0.0 and 1.0) of mutates that have been processed.
-       * This is empty if the job hasn't started running yet.
+       * Output only. The fraction (between 0.0 and 1.0) of mutates that have been
+       * processed. This is empty if the job hasn't started running yet.
        * </pre>
        *
        * <code>optional double estimated_completion_ratio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1375,8 +1365,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The fraction (between 0.0 and 1.0) of mutates that have been processed.
-       * This is empty if the job hasn't started running yet.
+       * Output only. The fraction (between 0.0 and 1.0) of mutates that have been
+       * processed. This is empty if the job hasn't started running yet.
        * </pre>
        *
        * <code>optional double estimated_completion_ratio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1388,8 +1378,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The fraction (between 0.0 and 1.0) of mutates that have been processed.
-       * This is empty if the job hasn't started running yet.
+       * Output only. The fraction (between 0.0 and 1.0) of mutates that have been
+       * processed. This is empty if the job hasn't started running yet.
        * </pre>
        *
        * <code>optional double estimated_completion_ratio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1397,15 +1387,16 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setEstimatedCompletionRatio(double value) {
-        bitField0_ |= 0x00000008;
+        
         estimatedCompletionRatio_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Output only. The fraction (between 0.0 and 1.0) of mutates that have been processed.
-       * This is empty if the job hasn't started running yet.
+       * Output only. The fraction (between 0.0 and 1.0) of mutates that have been
+       * processed. This is empty if the job hasn't started running yet.
        * </pre>
        *
        * <code>optional double estimated_completion_ratio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1453,8 +1444,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setOperationCount(long value) {
-        bitField0_ |= 0x00000010;
+        
         operationCount_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1511,8 +1503,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setExecutedOperationCount(long value) {
-        bitField0_ |= 0x00000020;
+        
         executedOperationCount_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -1597,7 +1590,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Immutable. The resource name of the batch job.
@@ -1647,7 +1641,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ID_FIELD_NUMBER = 7;
-  private long id_;
+  private long id_ = 0L;
   /**
    * <pre>
    * Output only. ID of this batch job.
@@ -1674,11 +1668,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NEXT_ADD_SEQUENCE_TOKEN_FIELD_NUMBER = 8;
-  private volatile java.lang.Object nextAddSequenceToken_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object nextAddSequenceToken_ = "";
   /**
    * <pre>
-   * Output only. The next sequence token to use when adding operations. Only set when the
-   * batch job status is PENDING.
+   * Output only. The next sequence token to use when adding operations. Only
+   * set when the batch job status is PENDING.
    * </pre>
    *
    * <code>optional string next_add_sequence_token = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1690,8 +1685,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The next sequence token to use when adding operations. Only set when the
-   * batch job status is PENDING.
+   * Output only. The next sequence token to use when adding operations. Only
+   * set when the batch job status is PENDING.
    * </pre>
    *
    * <code>optional string next_add_sequence_token = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1712,8 +1707,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The next sequence token to use when adding operations. Only set when the
-   * batch job status is PENDING.
+   * Output only. The next sequence token to use when adding operations. Only
+   * set when the batch job status is PENDING.
    * </pre>
    *
    * <code>optional string next_add_sequence_token = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1769,11 +1764,11 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public com.google.ads.googleads.v11.resources.BatchJob.BatchJobMetadataOrBuilder getMetadataOrBuilder() {
-    return getMetadata();
+    return metadata_ == null ? com.google.ads.googleads.v11.resources.BatchJob.BatchJobMetadata.getDefaultInstance() : metadata_;
   }
 
   public static final int STATUS_FIELD_NUMBER = 5;
-  private int status_;
+  private int status_ = 0;
   /**
    * <pre>
    * Output only. Status of this batch job.
@@ -1794,17 +1789,18 @@ private static final long serialVersionUID = 0L;
    * @return The status.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.BatchJobStatusEnum.BatchJobStatus getStatus() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.BatchJobStatusEnum.BatchJobStatus result = com.google.ads.googleads.v11.enums.BatchJobStatusEnum.BatchJobStatus.valueOf(status_);
+    com.google.ads.googleads.v11.enums.BatchJobStatusEnum.BatchJobStatus result = com.google.ads.googleads.v11.enums.BatchJobStatusEnum.BatchJobStatus.forNumber(status_);
     return result == null ? com.google.ads.googleads.v11.enums.BatchJobStatusEnum.BatchJobStatus.UNRECOGNIZED : result;
   }
 
   public static final int LONG_RUNNING_OPERATION_FIELD_NUMBER = 9;
-  private volatile java.lang.Object longRunningOperation_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object longRunningOperation_ = "";
   /**
    * <pre>
-   * Output only. The resource name of the long-running operation that can be used to poll
-   * for completion. Only set when the batch job status is RUNNING or DONE.
+   * Output only. The resource name of the long-running operation that can be
+   * used to poll for completion. Only set when the batch job status is RUNNING
+   * or DONE.
    * </pre>
    *
    * <code>optional string long_running_operation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1816,8 +1812,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The resource name of the long-running operation that can be used to poll
-   * for completion. Only set when the batch job status is RUNNING or DONE.
+   * Output only. The resource name of the long-running operation that can be
+   * used to poll for completion. Only set when the batch job status is RUNNING
+   * or DONE.
    * </pre>
    *
    * <code>optional string long_running_operation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1838,8 +1835,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The resource name of the long-running operation that can be used to poll
-   * for completion. Only set when the batch job status is RUNNING or DONE.
+   * Output only. The resource name of the long-running operation that can be
+   * used to poll for completion. Only set when the batch job status is RUNNING
+   * or DONE.
    * </pre>
    *
    * <code>optional string long_running_operation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2126,22 +2124,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       id_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       nextAddSequenceToken_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
-      if (metadataBuilder_ == null) {
-        metadata_ = null;
-      } else {
-        metadata_ = null;
+      metadata_ = null;
+      if (metadataBuilder_ != null) {
+        metadataBuilder_.dispose();
         metadataBuilder_ = null;
       }
       status_ = 0;
-
       longRunningOperation_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -2168,30 +2161,38 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.BatchJob buildPartial() {
       com.google.ads.googleads.v11.resources.BatchJob result = new com.google.ads.googleads.v11.resources.BatchJob(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.BatchJob result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.id_ = id_;
         to_bitField0_ |= 0x00000001;
       }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.nextAddSequenceToken_ = nextAddSequenceToken_;
         to_bitField0_ |= 0x00000002;
       }
-      result.nextAddSequenceToken_ = nextAddSequenceToken_;
-      if (metadataBuilder_ == null) {
-        result.metadata_ = metadata_;
-      } else {
-        result.metadata_ = metadataBuilder_.build();
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.metadata_ = metadataBuilder_ == null
+            ? metadata_
+            : metadataBuilder_.build();
       }
-      result.status_ = status_;
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.status_ = status_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.longRunningOperation_ = longRunningOperation_;
         to_bitField0_ |= 0x00000004;
       }
-      result.longRunningOperation_ = longRunningOperation_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -2240,14 +2241,15 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.resources.BatchJob.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasId()) {
         setId(other.getId());
       }
       if (other.hasNextAddSequenceToken()) {
-        bitField0_ |= 0x00000002;
         nextAddSequenceToken_ = other.nextAddSequenceToken_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.hasMetadata()) {
@@ -2257,8 +2259,8 @@ private static final long serialVersionUID = 0L;
         setStatusValue(other.getStatusValue());
       }
       if (other.hasLongRunningOperation()) {
-        bitField0_ |= 0x00000004;
         longRunningOperation_ = other.longRunningOperation_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -2289,34 +2291,34 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 34: {
               input.readMessage(
                   getMetadataFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000008;
               break;
             } // case 34
             case 40: {
               status_ = input.readEnum();
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 40
             case 56: {
               id_ = input.readInt64();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 56
             case 66: {
               nextAddSequenceToken_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 66
             case 74: {
               longRunningOperation_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000020;
               break;
             } // case 74
             default: {
@@ -2395,11 +2397,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -2414,8 +2414,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -2432,12 +2432,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -2453,7 +2451,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -2477,8 +2475,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      bitField0_ |= 0x00000001;
+      
       id_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -2491,7 +2490,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       id_ = 0L;
       onChanged();
       return this;
@@ -2500,20 +2499,20 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object nextAddSequenceToken_ = "";
     /**
      * <pre>
-     * Output only. The next sequence token to use when adding operations. Only set when the
-     * batch job status is PENDING.
+     * Output only. The next sequence token to use when adding operations. Only
+     * set when the batch job status is PENDING.
      * </pre>
      *
      * <code>optional string next_add_sequence_token = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the nextAddSequenceToken field is set.
      */
     public boolean hasNextAddSequenceToken() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
-     * Output only. The next sequence token to use when adding operations. Only set when the
-     * batch job status is PENDING.
+     * Output only. The next sequence token to use when adding operations. Only
+     * set when the batch job status is PENDING.
      * </pre>
      *
      * <code>optional string next_add_sequence_token = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2533,8 +2532,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The next sequence token to use when adding operations. Only set when the
-     * batch job status is PENDING.
+     * Output only. The next sequence token to use when adding operations. Only
+     * set when the batch job status is PENDING.
      * </pre>
      *
      * <code>optional string next_add_sequence_token = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2555,8 +2554,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The next sequence token to use when adding operations. Only set when the
-     * batch job status is PENDING.
+     * Output only. The next sequence token to use when adding operations. Only
+     * set when the batch job status is PENDING.
      * </pre>
      *
      * <code>optional string next_add_sequence_token = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2565,33 +2564,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNextAddSequenceToken(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       nextAddSequenceToken_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The next sequence token to use when adding operations. Only set when the
-     * batch job status is PENDING.
+     * Output only. The next sequence token to use when adding operations. Only
+     * set when the batch job status is PENDING.
      * </pre>
      *
      * <code>optional string next_add_sequence_token = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearNextAddSequenceToken() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       nextAddSequenceToken_ = getDefaultInstance().getNextAddSequenceToken();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The next sequence token to use when adding operations. Only set when the
-     * batch job status is PENDING.
+     * Output only. The next sequence token to use when adding operations. Only
+     * set when the batch job status is PENDING.
      * </pre>
      *
      * <code>optional string next_add_sequence_token = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2600,12 +2597,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNextAddSequenceTokenBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       nextAddSequenceToken_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -2622,7 +2617,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the metadata field is set.
      */
     public boolean hasMetadata() {
-      return metadataBuilder_ != null || metadata_ != null;
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -2652,11 +2647,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         metadata_ = value;
-        onChanged();
       } else {
         metadataBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -2670,11 +2665,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.resources.BatchJob.BatchJobMetadata.Builder builderForValue) {
       if (metadataBuilder_ == null) {
         metadata_ = builderForValue.build();
-        onChanged();
       } else {
         metadataBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -2686,17 +2681,18 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeMetadata(com.google.ads.googleads.v11.resources.BatchJob.BatchJobMetadata value) {
       if (metadataBuilder_ == null) {
-        if (metadata_ != null) {
-          metadata_ =
-            com.google.ads.googleads.v11.resources.BatchJob.BatchJobMetadata.newBuilder(metadata_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000008) != 0) &&
+          metadata_ != null &&
+          metadata_ != com.google.ads.googleads.v11.resources.BatchJob.BatchJobMetadata.getDefaultInstance()) {
+          getMetadataBuilder().mergeFrom(value);
         } else {
           metadata_ = value;
         }
-        onChanged();
       } else {
         metadataBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000008;
+      onChanged();
       return this;
     }
     /**
@@ -2707,14 +2703,13 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.resources.BatchJob.BatchJobMetadata metadata = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearMetadata() {
-      if (metadataBuilder_ == null) {
-        metadata_ = null;
-        onChanged();
-      } else {
-        metadata_ = null;
+      bitField0_ = (bitField0_ & ~0x00000008);
+      metadata_ = null;
+      if (metadataBuilder_ != null) {
+        metadataBuilder_.dispose();
         metadataBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
@@ -2725,7 +2720,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v11.resources.BatchJob.BatchJobMetadata metadata = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v11.resources.BatchJob.BatchJobMetadata.Builder getMetadataBuilder() {
-      
+      bitField0_ |= 0x00000008;
       onChanged();
       return getMetadataFieldBuilder().getBuilder();
     }
@@ -2787,8 +2782,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
-      
       status_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -2802,8 +2797,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.BatchJobStatusEnum.BatchJobStatus getStatus() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.BatchJobStatusEnum.BatchJobStatus result = com.google.ads.googleads.v11.enums.BatchJobStatusEnum.BatchJobStatus.valueOf(status_);
+      com.google.ads.googleads.v11.enums.BatchJobStatusEnum.BatchJobStatus result = com.google.ads.googleads.v11.enums.BatchJobStatusEnum.BatchJobStatus.forNumber(status_);
       return result == null ? com.google.ads.googleads.v11.enums.BatchJobStatusEnum.BatchJobStatus.UNRECOGNIZED : result;
     }
     /**
@@ -2819,7 +2813,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000010;
       status_ = value.getNumber();
       onChanged();
       return this;
@@ -2833,7 +2827,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       status_ = 0;
       onChanged();
       return this;
@@ -2842,20 +2836,22 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object longRunningOperation_ = "";
     /**
      * <pre>
-     * Output only. The resource name of the long-running operation that can be used to poll
-     * for completion. Only set when the batch job status is RUNNING or DONE.
+     * Output only. The resource name of the long-running operation that can be
+     * used to poll for completion. Only set when the batch job status is RUNNING
+     * or DONE.
      * </pre>
      *
      * <code>optional string long_running_operation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the longRunningOperation field is set.
      */
     public boolean hasLongRunningOperation() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
-     * Output only. The resource name of the long-running operation that can be used to poll
-     * for completion. Only set when the batch job status is RUNNING or DONE.
+     * Output only. The resource name of the long-running operation that can be
+     * used to poll for completion. Only set when the batch job status is RUNNING
+     * or DONE.
      * </pre>
      *
      * <code>optional string long_running_operation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2875,8 +2871,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource name of the long-running operation that can be used to poll
-     * for completion. Only set when the batch job status is RUNNING or DONE.
+     * Output only. The resource name of the long-running operation that can be
+     * used to poll for completion. Only set when the batch job status is RUNNING
+     * or DONE.
      * </pre>
      *
      * <code>optional string long_running_operation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2897,8 +2894,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The resource name of the long-running operation that can be used to poll
-     * for completion. Only set when the batch job status is RUNNING or DONE.
+     * Output only. The resource name of the long-running operation that can be
+     * used to poll for completion. Only set when the batch job status is RUNNING
+     * or DONE.
      * </pre>
      *
      * <code>optional string long_running_operation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2907,33 +2905,33 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLongRunningOperation(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       longRunningOperation_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The resource name of the long-running operation that can be used to poll
-     * for completion. Only set when the batch job status is RUNNING or DONE.
+     * Output only. The resource name of the long-running operation that can be
+     * used to poll for completion. Only set when the batch job status is RUNNING
+     * or DONE.
      * </pre>
      *
      * <code>optional string long_running_operation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearLongRunningOperation() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       longRunningOperation_ = getDefaultInstance().getLongRunningOperation();
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The resource name of the long-running operation that can be used to poll
-     * for completion. Only set when the batch job status is RUNNING or DONE.
+     * Output only. The resource name of the long-running operation that can be
+     * used to poll for completion. Only set when the batch job status is RUNNING
+     * or DONE.
      * </pre>
      *
      * <code>optional string long_running_operation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2942,12 +2940,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setLongRunningOperationBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       longRunningOperation_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }

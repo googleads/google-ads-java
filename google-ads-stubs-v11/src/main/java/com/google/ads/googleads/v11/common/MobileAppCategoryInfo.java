@@ -50,7 +50,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int MOBILE_APP_CATEGORY_CONSTANT_FIELD_NUMBER = 2;
-  private volatile java.lang.Object mobileAppCategoryConstant_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object mobileAppCategoryConstant_ = "";
   /**
    * <pre>
    * The mobile app category constant resource name.
@@ -303,8 +304,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       mobileAppCategoryConstant_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -331,15 +332,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.MobileAppCategoryInfo buildPartial() {
       com.google.ads.googleads.v11.common.MobileAppCategoryInfo result = new com.google.ads.googleads.v11.common.MobileAppCategoryInfo(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.MobileAppCategoryInfo result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.mobileAppCategoryConstant_ = mobileAppCategoryConstant_;
         to_bitField0_ |= 0x00000001;
       }
-      result.mobileAppCategoryConstant_ = mobileAppCategoryConstant_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -387,8 +392,8 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v11.common.MobileAppCategoryInfo other) {
       if (other == com.google.ads.googleads.v11.common.MobileAppCategoryInfo.getDefaultInstance()) return this;
       if (other.hasMobileAppCategoryConstant()) {
-        bitField0_ |= 0x00000001;
         mobileAppCategoryConstant_ = other.mobileAppCategoryConstant_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -503,11 +508,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setMobileAppCategoryConstant(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       mobileAppCategoryConstant_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -520,8 +523,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMobileAppCategoryConstant() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       mobileAppCategoryConstant_ = getDefaultInstance().getMobileAppCategoryConstant();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -536,12 +539,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setMobileAppCategoryConstantBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       mobileAppCategoryConstant_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

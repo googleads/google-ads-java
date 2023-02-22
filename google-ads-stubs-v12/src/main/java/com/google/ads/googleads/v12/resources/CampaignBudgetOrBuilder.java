@@ -255,7 +255,8 @@ public interface CampaignBudgetOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Indicates whether there is a recommended budget for this campaign budget.
+   * Output only. Indicates whether there is a recommended budget for this
+   * campaign budget.
    * This field is read-only.
    * </pre>
    *
@@ -265,7 +266,8 @@ public interface CampaignBudgetOrBuilder extends
   boolean hasHasRecommendedBudget();
   /**
    * <pre>
-   * Output only. Indicates whether there is a recommended budget for this campaign budget.
+   * Output only. Indicates whether there is a recommended budget for this
+   * campaign budget.
    * This field is read-only.
    * </pre>
    *
@@ -276,10 +278,9 @@ public interface CampaignBudgetOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The recommended budget amount. If no recommendation is available, this will
-   * be set to the budget amount.
-   * Amount is specified in micros, where one million is equivalent to one
-   * currency unit.
+   * Output only. The recommended budget amount. If no recommendation is
+   * available, this will be set to the budget amount. Amount is specified in
+   * micros, where one million is equivalent to one currency unit.
    * This field is read-only.
    * </pre>
    *
@@ -289,10 +290,9 @@ public interface CampaignBudgetOrBuilder extends
   boolean hasRecommendedBudgetAmountMicros();
   /**
    * <pre>
-   * Output only. The recommended budget amount. If no recommendation is available, this will
-   * be set to the budget amount.
-   * Amount is specified in micros, where one million is equivalent to one
-   * currency unit.
+   * Output only. The recommended budget amount. If no recommendation is
+   * available, this will be set to the budget amount. Amount is specified in
+   * micros, where one million is equivalent to one currency unit.
    * This field is read-only.
    * </pre>
    *
@@ -303,7 +303,8 @@ public interface CampaignBudgetOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. Period over which to spend the budget. Defaults to DAILY if not specified.
+   * Immutable. Period over which to spend the budget. Defaults to DAILY if not
+   * specified.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.BudgetPeriodEnum.BudgetPeriod period = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -312,7 +313,8 @@ public interface CampaignBudgetOrBuilder extends
   int getPeriodValue();
   /**
    * <pre>
-   * Immutable. Period over which to spend the budget. Defaults to DAILY if not specified.
+   * Immutable. Period over which to spend the budget. Defaults to DAILY if not
+   * specified.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.BudgetPeriodEnum.BudgetPeriod period = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -322,7 +324,8 @@ public interface CampaignBudgetOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The estimated change in weekly clicks if the recommended budget is applied.
+   * Output only. The estimated change in weekly clicks if the recommended
+   * budget is applied.
    * This field is read-only.
    * </pre>
    *
@@ -332,7 +335,8 @@ public interface CampaignBudgetOrBuilder extends
   boolean hasRecommendedBudgetEstimatedChangeWeeklyClicks();
   /**
    * <pre>
-   * Output only. The estimated change in weekly clicks if the recommended budget is applied.
+   * Output only. The estimated change in weekly clicks if the recommended
+   * budget is applied.
    * This field is read-only.
    * </pre>
    *
@@ -343,8 +347,9 @@ public interface CampaignBudgetOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The estimated change in weekly cost in micros if the recommended budget is
-   * applied. One million is equivalent to one currency unit.
+   * Output only. The estimated change in weekly cost in micros if the
+   * recommended budget is applied. One million is equivalent to one currency
+   * unit.
    * This field is read-only.
    * </pre>
    *
@@ -354,8 +359,9 @@ public interface CampaignBudgetOrBuilder extends
   boolean hasRecommendedBudgetEstimatedChangeWeeklyCostMicros();
   /**
    * <pre>
-   * Output only. The estimated change in weekly cost in micros if the recommended budget is
-   * applied. One million is equivalent to one currency unit.
+   * Output only. The estimated change in weekly cost in micros if the
+   * recommended budget is applied. One million is equivalent to one currency
+   * unit.
    * This field is read-only.
    * </pre>
    *
@@ -366,8 +372,8 @@ public interface CampaignBudgetOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The estimated change in weekly interactions if the recommended budget is
-   * applied.
+   * Output only. The estimated change in weekly interactions if the recommended
+   * budget is applied.
    * This field is read-only.
    * </pre>
    *
@@ -377,8 +383,8 @@ public interface CampaignBudgetOrBuilder extends
   boolean hasRecommendedBudgetEstimatedChangeWeeklyInteractions();
   /**
    * <pre>
-   * Output only. The estimated change in weekly interactions if the recommended budget is
-   * applied.
+   * Output only. The estimated change in weekly interactions if the recommended
+   * budget is applied.
    * This field is read-only.
    * </pre>
    *
@@ -389,7 +395,8 @@ public interface CampaignBudgetOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The estimated change in weekly views if the recommended budget is applied.
+   * Output only. The estimated change in weekly views if the recommended budget
+   * is applied.
    * This field is read-only.
    * </pre>
    *
@@ -399,7 +406,8 @@ public interface CampaignBudgetOrBuilder extends
   boolean hasRecommendedBudgetEstimatedChangeWeeklyViews();
   /**
    * <pre>
-   * Output only. The estimated change in weekly views if the recommended budget is applied.
+   * Output only. The estimated change in weekly views if the recommended budget
+   * is applied.
    * This field is read-only.
    * </pre>
    *

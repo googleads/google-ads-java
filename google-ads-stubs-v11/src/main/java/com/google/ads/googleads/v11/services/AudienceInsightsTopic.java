@@ -394,6 +394,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (entityBuilder_ != null) {
         entityBuilder_.clear();
       }
@@ -428,23 +429,27 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.services.AudienceInsightsTopic buildPartial() {
       com.google.ads.googleads.v11.services.AudienceInsightsTopic result = new com.google.ads.googleads.v11.services.AudienceInsightsTopic(this);
-      if (topicCase_ == 1) {
-        if (entityBuilder_ == null) {
-          result.topic_ = topic_;
-        } else {
-          result.topic_ = entityBuilder_.build();
-        }
-      }
-      if (topicCase_ == 2) {
-        if (categoryBuilder_ == null) {
-          result.topic_ = topic_;
-        } else {
-          result.topic_ = categoryBuilder_.build();
-        }
-      }
-      result.topicCase_ = topicCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.services.AudienceInsightsTopic result) {
+      int from_bitField0_ = bitField0_;
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v11.services.AudienceInsightsTopic result) {
+      result.topicCase_ = topicCase_;
+      result.topic_ = this.topic_;
+      if (topicCase_ == 1 &&
+          entityBuilder_ != null) {
+        result.topic_ = entityBuilder_.build();
+      }
+      if (topicCase_ == 2 &&
+          categoryBuilder_ != null) {
+        result.topic_ = categoryBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -574,6 +579,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v11.services.AudienceInsightsEntity, com.google.ads.googleads.v11.services.AudienceInsightsEntity.Builder, com.google.ads.googleads.v11.services.AudienceInsightsEntityOrBuilder> entityBuilder_;
@@ -749,7 +755,7 @@ private static final long serialVersionUID = 0L;
         topic_ = null;
       }
       topicCase_ = 1;
-      onChanged();;
+      onChanged();
       return entityBuilder_;
     }
 
@@ -927,7 +933,7 @@ private static final long serialVersionUID = 0L;
         topic_ = null;
       }
       topicCase_ = 2;
-      onChanged();;
+      onChanged();
       return categoryBuilder_;
     }
     @java.lang.Override

@@ -144,7 +144,7 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
-    private long id_;
+    private long id_ = 0L;
     /**
      * <pre>
      * ID of the product bidding category.
@@ -175,7 +175,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int LEVEL_FIELD_NUMBER = 2;
-    private int level_;
+    private int level_ = 0;
     /**
      * <pre>
      * Indicates the level of the category in the taxonomy.
@@ -196,8 +196,7 @@ private static final long serialVersionUID = 0L;
      * @return The level.
      */
     @java.lang.Override public com.google.ads.googleads.v12.enums.ListingGroupFilterBiddingCategoryLevelEnum.ListingGroupFilterBiddingCategoryLevel getLevel() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.ListingGroupFilterBiddingCategoryLevelEnum.ListingGroupFilterBiddingCategoryLevel result = com.google.ads.googleads.v12.enums.ListingGroupFilterBiddingCategoryLevelEnum.ListingGroupFilterBiddingCategoryLevel.valueOf(level_);
+      com.google.ads.googleads.v12.enums.ListingGroupFilterBiddingCategoryLevelEnum.ListingGroupFilterBiddingCategoryLevel result = com.google.ads.googleads.v12.enums.ListingGroupFilterBiddingCategoryLevelEnum.ListingGroupFilterBiddingCategoryLevel.forNumber(level_);
       return result == null ? com.google.ads.googleads.v12.enums.ListingGroupFilterBiddingCategoryLevelEnum.ListingGroupFilterBiddingCategoryLevel.UNRECOGNIZED : result;
     }
 
@@ -413,10 +412,9 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = 0L;
-        bitField0_ = (bitField0_ & ~0x00000001);
         level_ = 0;
-
         return this;
       }
 
@@ -443,16 +441,22 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductBiddingCategory buildPartial() {
         com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductBiddingCategory result = new com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductBiddingCategory(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductBiddingCategory result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.id_ = id_;
           to_bitField0_ |= 0x00000001;
         }
-        result.level_ = level_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.level_ = level_;
+        }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -538,7 +542,7 @@ private static final long serialVersionUID = 0L;
               } // case 8
               case 16: {
                 level_ = input.readEnum();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               default: {
@@ -599,8 +603,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setId(long value) {
-        bitField0_ |= 0x00000001;
+        
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -643,8 +648,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setLevelValue(int value) {
-        
         level_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -658,8 +663,7 @@ private static final long serialVersionUID = 0L;
        */
       @java.lang.Override
       public com.google.ads.googleads.v12.enums.ListingGroupFilterBiddingCategoryLevelEnum.ListingGroupFilterBiddingCategoryLevel getLevel() {
-        @SuppressWarnings("deprecation")
-        com.google.ads.googleads.v12.enums.ListingGroupFilterBiddingCategoryLevelEnum.ListingGroupFilterBiddingCategoryLevel result = com.google.ads.googleads.v12.enums.ListingGroupFilterBiddingCategoryLevelEnum.ListingGroupFilterBiddingCategoryLevel.valueOf(level_);
+        com.google.ads.googleads.v12.enums.ListingGroupFilterBiddingCategoryLevelEnum.ListingGroupFilterBiddingCategoryLevel result = com.google.ads.googleads.v12.enums.ListingGroupFilterBiddingCategoryLevelEnum.ListingGroupFilterBiddingCategoryLevel.forNumber(level_);
         return result == null ? com.google.ads.googleads.v12.enums.ListingGroupFilterBiddingCategoryLevelEnum.ListingGroupFilterBiddingCategoryLevel.UNRECOGNIZED : result;
       }
       /**
@@ -675,7 +679,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000002;
         level_ = value.getNumber();
         onChanged();
         return this;
@@ -689,7 +693,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearLevel() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         level_ = 0;
         onChanged();
         return this;
@@ -838,7 +842,8 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
     public static final int VALUE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object value_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object value_ = "";
     /**
      * <pre>
      * String value of the product brand.
@@ -1091,8 +1096,8 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         value_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -1119,15 +1124,19 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductBrand buildPartial() {
         com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductBrand result = new com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductBrand(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductBrand result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.value_ = value_;
           to_bitField0_ |= 0x00000001;
         }
-        result.value_ = value_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1175,8 +1184,8 @@ private static final long serialVersionUID = 0L;
       public Builder mergeFrom(com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductBrand other) {
         if (other == com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductBrand.getDefaultInstance()) return this;
         if (other.hasValue()) {
-          bitField0_ |= 0x00000001;
           value_ = other.value_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -1291,11 +1300,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setValue(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+        if (value == null) { throw new NullPointerException(); }
         value_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1308,8 +1315,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearValue() {
-        bitField0_ = (bitField0_ & ~0x00000001);
         value_ = getDefaultInstance().getValue();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -1324,12 +1331,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setValueBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        bitField0_ |= 0x00000001;
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         value_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1466,7 +1471,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int CHANNEL_FIELD_NUMBER = 1;
-    private int channel_;
+    private int channel_ = 0;
     /**
      * <pre>
      * Value of the locality.
@@ -1487,8 +1492,7 @@ private static final long serialVersionUID = 0L;
      * @return The channel.
      */
     @java.lang.Override public com.google.ads.googleads.v12.enums.ListingGroupFilterProductChannelEnum.ListingGroupFilterProductChannel getChannel() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.ListingGroupFilterProductChannelEnum.ListingGroupFilterProductChannel result = com.google.ads.googleads.v12.enums.ListingGroupFilterProductChannelEnum.ListingGroupFilterProductChannel.valueOf(channel_);
+      com.google.ads.googleads.v12.enums.ListingGroupFilterProductChannelEnum.ListingGroupFilterProductChannel result = com.google.ads.googleads.v12.enums.ListingGroupFilterProductChannelEnum.ListingGroupFilterProductChannel.forNumber(channel_);
       return result == null ? com.google.ads.googleads.v12.enums.ListingGroupFilterProductChannelEnum.ListingGroupFilterProductChannel.UNRECOGNIZED : result;
     }
 
@@ -1683,8 +1687,8 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         channel_ = 0;
-
         return this;
       }
 
@@ -1711,9 +1715,16 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductChannel buildPartial() {
         com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductChannel result = new com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductChannel(this);
-        result.channel_ = channel_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductChannel result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.channel_ = channel_;
+        }
       }
 
       @java.lang.Override
@@ -1791,7 +1802,7 @@ private static final long serialVersionUID = 0L;
                 break;
               case 8: {
                 channel_ = input.readEnum();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               default: {
@@ -1809,6 +1820,7 @@ private static final long serialVersionUID = 0L;
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private int channel_ = 0;
       /**
@@ -1832,8 +1844,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setChannelValue(int value) {
-        
         channel_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1847,8 +1859,7 @@ private static final long serialVersionUID = 0L;
        */
       @java.lang.Override
       public com.google.ads.googleads.v12.enums.ListingGroupFilterProductChannelEnum.ListingGroupFilterProductChannel getChannel() {
-        @SuppressWarnings("deprecation")
-        com.google.ads.googleads.v12.enums.ListingGroupFilterProductChannelEnum.ListingGroupFilterProductChannel result = com.google.ads.googleads.v12.enums.ListingGroupFilterProductChannelEnum.ListingGroupFilterProductChannel.valueOf(channel_);
+        com.google.ads.googleads.v12.enums.ListingGroupFilterProductChannelEnum.ListingGroupFilterProductChannel result = com.google.ads.googleads.v12.enums.ListingGroupFilterProductChannelEnum.ListingGroupFilterProductChannel.forNumber(channel_);
         return result == null ? com.google.ads.googleads.v12.enums.ListingGroupFilterProductChannelEnum.ListingGroupFilterProductChannel.UNRECOGNIZED : result;
       }
       /**
@@ -1864,7 +1875,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000001;
         channel_ = value.getNumber();
         onChanged();
         return this;
@@ -1878,7 +1889,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearChannel() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         channel_ = 0;
         onChanged();
         return this;
@@ -2016,7 +2027,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int CONDITION_FIELD_NUMBER = 1;
-    private int condition_;
+    private int condition_ = 0;
     /**
      * <pre>
      * Value of the condition.
@@ -2037,8 +2048,7 @@ private static final long serialVersionUID = 0L;
      * @return The condition.
      */
     @java.lang.Override public com.google.ads.googleads.v12.enums.ListingGroupFilterProductConditionEnum.ListingGroupFilterProductCondition getCondition() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.ListingGroupFilterProductConditionEnum.ListingGroupFilterProductCondition result = com.google.ads.googleads.v12.enums.ListingGroupFilterProductConditionEnum.ListingGroupFilterProductCondition.valueOf(condition_);
+      com.google.ads.googleads.v12.enums.ListingGroupFilterProductConditionEnum.ListingGroupFilterProductCondition result = com.google.ads.googleads.v12.enums.ListingGroupFilterProductConditionEnum.ListingGroupFilterProductCondition.forNumber(condition_);
       return result == null ? com.google.ads.googleads.v12.enums.ListingGroupFilterProductConditionEnum.ListingGroupFilterProductCondition.UNRECOGNIZED : result;
     }
 
@@ -2233,8 +2243,8 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         condition_ = 0;
-
         return this;
       }
 
@@ -2261,9 +2271,16 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductCondition buildPartial() {
         com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductCondition result = new com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductCondition(this);
-        result.condition_ = condition_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductCondition result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.condition_ = condition_;
+        }
       }
 
       @java.lang.Override
@@ -2341,7 +2358,7 @@ private static final long serialVersionUID = 0L;
                 break;
               case 8: {
                 condition_ = input.readEnum();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               default: {
@@ -2359,6 +2376,7 @@ private static final long serialVersionUID = 0L;
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private int condition_ = 0;
       /**
@@ -2382,8 +2400,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setConditionValue(int value) {
-        
         condition_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2397,8 +2415,7 @@ private static final long serialVersionUID = 0L;
        */
       @java.lang.Override
       public com.google.ads.googleads.v12.enums.ListingGroupFilterProductConditionEnum.ListingGroupFilterProductCondition getCondition() {
-        @SuppressWarnings("deprecation")
-        com.google.ads.googleads.v12.enums.ListingGroupFilterProductConditionEnum.ListingGroupFilterProductCondition result = com.google.ads.googleads.v12.enums.ListingGroupFilterProductConditionEnum.ListingGroupFilterProductCondition.valueOf(condition_);
+        com.google.ads.googleads.v12.enums.ListingGroupFilterProductConditionEnum.ListingGroupFilterProductCondition result = com.google.ads.googleads.v12.enums.ListingGroupFilterProductConditionEnum.ListingGroupFilterProductCondition.forNumber(condition_);
         return result == null ? com.google.ads.googleads.v12.enums.ListingGroupFilterProductConditionEnum.ListingGroupFilterProductCondition.UNRECOGNIZED : result;
       }
       /**
@@ -2414,7 +2431,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000001;
         condition_ = value.getNumber();
         onChanged();
         return this;
@@ -2428,7 +2445,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearCondition() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         condition_ = 0;
         onChanged();
         return this;
@@ -2597,7 +2614,8 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
     public static final int VALUE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object value_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object value_ = "";
     /**
      * <pre>
      * String value of the product custom attribute.
@@ -2655,7 +2673,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int INDEX_FIELD_NUMBER = 2;
-    private int index_;
+    private int index_ = 0;
     /**
      * <pre>
      * Indicates the index of the custom attribute.
@@ -2676,8 +2694,7 @@ private static final long serialVersionUID = 0L;
      * @return The index.
      */
     @java.lang.Override public com.google.ads.googleads.v12.enums.ListingGroupFilterCustomAttributeIndexEnum.ListingGroupFilterCustomAttributeIndex getIndex() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.ListingGroupFilterCustomAttributeIndexEnum.ListingGroupFilterCustomAttributeIndex result = com.google.ads.googleads.v12.enums.ListingGroupFilterCustomAttributeIndexEnum.ListingGroupFilterCustomAttributeIndex.valueOf(index_);
+      com.google.ads.googleads.v12.enums.ListingGroupFilterCustomAttributeIndexEnum.ListingGroupFilterCustomAttributeIndex result = com.google.ads.googleads.v12.enums.ListingGroupFilterCustomAttributeIndexEnum.ListingGroupFilterCustomAttributeIndex.forNumber(index_);
       return result == null ? com.google.ads.googleads.v12.enums.ListingGroupFilterCustomAttributeIndexEnum.ListingGroupFilterCustomAttributeIndex.UNRECOGNIZED : result;
     }
 
@@ -2887,10 +2904,9 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         value_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
         index_ = 0;
-
         return this;
       }
 
@@ -2917,16 +2933,22 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductCustomAttribute buildPartial() {
         com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductCustomAttribute result = new com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductCustomAttribute(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductCustomAttribute result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.value_ = value_;
           to_bitField0_ |= 0x00000001;
         }
-        result.value_ = value_;
-        result.index_ = index_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.index_ = index_;
+        }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2974,8 +2996,8 @@ private static final long serialVersionUID = 0L;
       public Builder mergeFrom(com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductCustomAttribute other) {
         if (other == com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductCustomAttribute.getDefaultInstance()) return this;
         if (other.hasValue()) {
-          bitField0_ |= 0x00000001;
           value_ = other.value_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.index_ != 0) {
@@ -3014,7 +3036,7 @@ private static final long serialVersionUID = 0L;
               } // case 10
               case 16: {
                 index_ = input.readEnum();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               default: {
@@ -3098,11 +3120,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setValue(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+        if (value == null) { throw new NullPointerException(); }
         value_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3115,8 +3135,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearValue() {
-        bitField0_ = (bitField0_ & ~0x00000001);
         value_ = getDefaultInstance().getValue();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -3131,12 +3151,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setValueBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        bitField0_ |= 0x00000001;
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         value_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3163,8 +3181,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setIndexValue(int value) {
-        
         index_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3178,8 +3196,7 @@ private static final long serialVersionUID = 0L;
        */
       @java.lang.Override
       public com.google.ads.googleads.v12.enums.ListingGroupFilterCustomAttributeIndexEnum.ListingGroupFilterCustomAttributeIndex getIndex() {
-        @SuppressWarnings("deprecation")
-        com.google.ads.googleads.v12.enums.ListingGroupFilterCustomAttributeIndexEnum.ListingGroupFilterCustomAttributeIndex result = com.google.ads.googleads.v12.enums.ListingGroupFilterCustomAttributeIndexEnum.ListingGroupFilterCustomAttributeIndex.valueOf(index_);
+        com.google.ads.googleads.v12.enums.ListingGroupFilterCustomAttributeIndexEnum.ListingGroupFilterCustomAttributeIndex result = com.google.ads.googleads.v12.enums.ListingGroupFilterCustomAttributeIndexEnum.ListingGroupFilterCustomAttributeIndex.forNumber(index_);
         return result == null ? com.google.ads.googleads.v12.enums.ListingGroupFilterCustomAttributeIndexEnum.ListingGroupFilterCustomAttributeIndex.UNRECOGNIZED : result;
       }
       /**
@@ -3195,7 +3212,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000002;
         index_ = value.getNumber();
         onChanged();
         return this;
@@ -3209,7 +3226,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearIndex() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         index_ = 0;
         onChanged();
         return this;
@@ -3358,7 +3375,8 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
     public static final int VALUE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object value_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object value_ = "";
     /**
      * <pre>
      * Value of the id.
@@ -3611,8 +3629,8 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         value_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -3639,15 +3657,19 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductItemId buildPartial() {
         com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductItemId result = new com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductItemId(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductItemId result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.value_ = value_;
           to_bitField0_ |= 0x00000001;
         }
-        result.value_ = value_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3695,8 +3717,8 @@ private static final long serialVersionUID = 0L;
       public Builder mergeFrom(com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductItemId other) {
         if (other == com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductItemId.getDefaultInstance()) return this;
         if (other.hasValue()) {
-          bitField0_ |= 0x00000001;
           value_ = other.value_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -3811,11 +3833,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setValue(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+        if (value == null) { throw new NullPointerException(); }
         value_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3828,8 +3848,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearValue() {
-        bitField0_ = (bitField0_ & ~0x00000001);
         value_ = getDefaultInstance().getValue();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -3844,12 +3864,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setValueBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        bitField0_ |= 0x00000001;
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         value_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4017,7 +4035,8 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
     public static final int VALUE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object value_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object value_ = "";
     /**
      * <pre>
      * Value of the type.
@@ -4075,7 +4094,7 @@ private static final long serialVersionUID = 0L;
     }
 
     public static final int LEVEL_FIELD_NUMBER = 2;
-    private int level_;
+    private int level_ = 0;
     /**
      * <pre>
      * Level of the type.
@@ -4096,8 +4115,7 @@ private static final long serialVersionUID = 0L;
      * @return The level.
      */
     @java.lang.Override public com.google.ads.googleads.v12.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel getLevel() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel result = com.google.ads.googleads.v12.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel.valueOf(level_);
+      com.google.ads.googleads.v12.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel result = com.google.ads.googleads.v12.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel.forNumber(level_);
       return result == null ? com.google.ads.googleads.v12.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel.UNRECOGNIZED : result;
     }
 
@@ -4307,10 +4325,9 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         value_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
         level_ = 0;
-
         return this;
       }
 
@@ -4337,16 +4354,22 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductType buildPartial() {
         com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductType result = new com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductType(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductType result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.value_ = value_;
           to_bitField0_ |= 0x00000001;
         }
-        result.value_ = value_;
-        result.level_ = level_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.level_ = level_;
+        }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -4394,8 +4417,8 @@ private static final long serialVersionUID = 0L;
       public Builder mergeFrom(com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductType other) {
         if (other == com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductType.getDefaultInstance()) return this;
         if (other.hasValue()) {
-          bitField0_ |= 0x00000001;
           value_ = other.value_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.level_ != 0) {
@@ -4434,7 +4457,7 @@ private static final long serialVersionUID = 0L;
               } // case 10
               case 16: {
                 level_ = input.readEnum();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               default: {
@@ -4518,11 +4541,9 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setValue(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+        if (value == null) { throw new NullPointerException(); }
         value_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4535,8 +4556,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearValue() {
-        bitField0_ = (bitField0_ & ~0x00000001);
         value_ = getDefaultInstance().getValue();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -4551,12 +4572,10 @@ private static final long serialVersionUID = 0L;
        */
       public Builder setValueBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        bitField0_ |= 0x00000001;
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         value_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4583,8 +4602,8 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setLevelValue(int value) {
-        
         level_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -4598,8 +4617,7 @@ private static final long serialVersionUID = 0L;
        */
       @java.lang.Override
       public com.google.ads.googleads.v12.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel getLevel() {
-        @SuppressWarnings("deprecation")
-        com.google.ads.googleads.v12.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel result = com.google.ads.googleads.v12.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel.valueOf(level_);
+        com.google.ads.googleads.v12.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel result = com.google.ads.googleads.v12.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel.forNumber(level_);
         return result == null ? com.google.ads.googleads.v12.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel.UNRECOGNIZED : result;
       }
       /**
@@ -4615,7 +4633,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000002;
         level_ = value.getNumber();
         onChanged();
         return this;
@@ -4629,7 +4647,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearLevel() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         level_ = 0;
         onChanged();
         return this;
@@ -5345,6 +5363,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (productBiddingCategoryBuilder_ != null) {
         productBiddingCategoryBuilder_.clear();
       }
@@ -5394,58 +5413,47 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.ListingGroupFilterDimension buildPartial() {
       com.google.ads.googleads.v12.resources.ListingGroupFilterDimension result = new com.google.ads.googleads.v12.resources.ListingGroupFilterDimension(this);
-      if (dimensionCase_ == 1) {
-        if (productBiddingCategoryBuilder_ == null) {
-          result.dimension_ = dimension_;
-        } else {
-          result.dimension_ = productBiddingCategoryBuilder_.build();
-        }
-      }
-      if (dimensionCase_ == 2) {
-        if (productBrandBuilder_ == null) {
-          result.dimension_ = dimension_;
-        } else {
-          result.dimension_ = productBrandBuilder_.build();
-        }
-      }
-      if (dimensionCase_ == 3) {
-        if (productChannelBuilder_ == null) {
-          result.dimension_ = dimension_;
-        } else {
-          result.dimension_ = productChannelBuilder_.build();
-        }
-      }
-      if (dimensionCase_ == 4) {
-        if (productConditionBuilder_ == null) {
-          result.dimension_ = dimension_;
-        } else {
-          result.dimension_ = productConditionBuilder_.build();
-        }
-      }
-      if (dimensionCase_ == 5) {
-        if (productCustomAttributeBuilder_ == null) {
-          result.dimension_ = dimension_;
-        } else {
-          result.dimension_ = productCustomAttributeBuilder_.build();
-        }
-      }
-      if (dimensionCase_ == 6) {
-        if (productItemIdBuilder_ == null) {
-          result.dimension_ = dimension_;
-        } else {
-          result.dimension_ = productItemIdBuilder_.build();
-        }
-      }
-      if (dimensionCase_ == 7) {
-        if (productTypeBuilder_ == null) {
-          result.dimension_ = dimension_;
-        } else {
-          result.dimension_ = productTypeBuilder_.build();
-        }
-      }
-      result.dimensionCase_ = dimensionCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.resources.ListingGroupFilterDimension result) {
+      int from_bitField0_ = bitField0_;
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v12.resources.ListingGroupFilterDimension result) {
+      result.dimensionCase_ = dimensionCase_;
+      result.dimension_ = this.dimension_;
+      if (dimensionCase_ == 1 &&
+          productBiddingCategoryBuilder_ != null) {
+        result.dimension_ = productBiddingCategoryBuilder_.build();
+      }
+      if (dimensionCase_ == 2 &&
+          productBrandBuilder_ != null) {
+        result.dimension_ = productBrandBuilder_.build();
+      }
+      if (dimensionCase_ == 3 &&
+          productChannelBuilder_ != null) {
+        result.dimension_ = productChannelBuilder_.build();
+      }
+      if (dimensionCase_ == 4 &&
+          productConditionBuilder_ != null) {
+        result.dimension_ = productConditionBuilder_.build();
+      }
+      if (dimensionCase_ == 5 &&
+          productCustomAttributeBuilder_ != null) {
+        result.dimension_ = productCustomAttributeBuilder_.build();
+      }
+      if (dimensionCase_ == 6 &&
+          productItemIdBuilder_ != null) {
+        result.dimension_ = productItemIdBuilder_.build();
+      }
+      if (dimensionCase_ == 7 &&
+          productTypeBuilder_ != null) {
+        result.dimension_ = productTypeBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -5630,6 +5638,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductBiddingCategory, com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductBiddingCategory.Builder, com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductBiddingCategoryOrBuilder> productBiddingCategoryBuilder_;
@@ -5805,7 +5814,7 @@ private static final long serialVersionUID = 0L;
         dimension_ = null;
       }
       dimensionCase_ = 1;
-      onChanged();;
+      onChanged();
       return productBiddingCategoryBuilder_;
     }
 
@@ -5983,7 +5992,7 @@ private static final long serialVersionUID = 0L;
         dimension_ = null;
       }
       dimensionCase_ = 2;
-      onChanged();;
+      onChanged();
       return productBrandBuilder_;
     }
 
@@ -6161,7 +6170,7 @@ private static final long serialVersionUID = 0L;
         dimension_ = null;
       }
       dimensionCase_ = 3;
-      onChanged();;
+      onChanged();
       return productChannelBuilder_;
     }
 
@@ -6339,7 +6348,7 @@ private static final long serialVersionUID = 0L;
         dimension_ = null;
       }
       dimensionCase_ = 4;
-      onChanged();;
+      onChanged();
       return productConditionBuilder_;
     }
 
@@ -6517,7 +6526,7 @@ private static final long serialVersionUID = 0L;
         dimension_ = null;
       }
       dimensionCase_ = 5;
-      onChanged();;
+      onChanged();
       return productCustomAttributeBuilder_;
     }
 
@@ -6695,7 +6704,7 @@ private static final long serialVersionUID = 0L;
         dimension_ = null;
       }
       dimensionCase_ = 6;
-      onChanged();;
+      onChanged();
       return productItemIdBuilder_;
     }
 
@@ -6873,7 +6882,7 @@ private static final long serialVersionUID = 0L;
         dimension_ = null;
       }
       dimensionCase_ = 7;
-      onChanged();;
+      onChanged();
       return productTypeBuilder_;
     }
     @java.lang.Override

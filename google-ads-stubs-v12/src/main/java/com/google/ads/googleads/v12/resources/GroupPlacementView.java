@@ -54,7 +54,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Output only. The resource name of the group placement view.
@@ -104,11 +105,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PLACEMENT_FIELD_NUMBER = 6;
-  private volatile java.lang.Object placement_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object placement_ = "";
   /**
    * <pre>
-   * Output only. The automatic placement string at group level, e. g. web domain, mobile
-   * app ID, or a YouTube channel ID.
+   * Output only. The automatic placement string at group level, e. g. web
+   * domain, mobile app ID, or a YouTube channel ID.
    * </pre>
    *
    * <code>optional string placement = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -120,8 +122,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The automatic placement string at group level, e. g. web domain, mobile
-   * app ID, or a YouTube channel ID.
+   * Output only. The automatic placement string at group level, e. g. web
+   * domain, mobile app ID, or a YouTube channel ID.
    * </pre>
    *
    * <code>optional string placement = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -142,8 +144,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The automatic placement string at group level, e. g. web domain, mobile
-   * app ID, or a YouTube channel ID.
+   * Output only. The automatic placement string at group level, e. g. web
+   * domain, mobile app ID, or a YouTube channel ID.
    * </pre>
    *
    * <code>optional string placement = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -165,10 +167,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DISPLAY_NAME_FIELD_NUMBER = 7;
-  private volatile java.lang.Object displayName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object displayName_ = "";
   /**
    * <pre>
-   * Output only. Domain name for websites and YouTube channel name for YouTube channels.
+   * Output only. Domain name for websites and YouTube channel name for YouTube
+   * channels.
    * </pre>
    *
    * <code>optional string display_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -180,7 +184,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Domain name for websites and YouTube channel name for YouTube channels.
+   * Output only. Domain name for websites and YouTube channel name for YouTube
+   * channels.
    * </pre>
    *
    * <code>optional string display_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -201,7 +206,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Domain name for websites and YouTube channel name for YouTube channels.
+   * Output only. Domain name for websites and YouTube channel name for YouTube
+   * channels.
    * </pre>
    *
    * <code>optional string display_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -223,11 +229,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TARGET_URL_FIELD_NUMBER = 8;
-  private volatile java.lang.Object targetUrl_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object targetUrl_ = "";
   /**
    * <pre>
-   * Output only. URL of the group placement, for example, domain, link to the mobile
-   * application in app store, or a YouTube channel URL.
+   * Output only. URL of the group placement, for example, domain, link to the
+   * mobile application in app store, or a YouTube channel URL.
    * </pre>
    *
    * <code>optional string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -239,8 +246,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. URL of the group placement, for example, domain, link to the mobile
-   * application in app store, or a YouTube channel URL.
+   * Output only. URL of the group placement, for example, domain, link to the
+   * mobile application in app store, or a YouTube channel URL.
    * </pre>
    *
    * <code>optional string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -261,8 +268,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. URL of the group placement, for example, domain, link to the mobile
-   * application in app store, or a YouTube channel URL.
+   * Output only. URL of the group placement, for example, domain, link to the
+   * mobile application in app store, or a YouTube channel URL.
    * </pre>
    *
    * <code>optional string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -284,11 +291,11 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PLACEMENT_TYPE_FIELD_NUMBER = 5;
-  private int placementType_;
+  private int placementType_ = 0;
   /**
    * <pre>
-   * Output only. Type of the placement, for example, Website, YouTube Channel, Mobile
-   * Application.
+   * Output only. Type of the placement, for example, Website, YouTube Channel,
+   * Mobile Application.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.PlacementTypeEnum.PlacementType placement_type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -299,16 +306,15 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Type of the placement, for example, Website, YouTube Channel, Mobile
-   * Application.
+   * Output only. Type of the placement, for example, Website, YouTube Channel,
+   * Mobile Application.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.PlacementTypeEnum.PlacementType placement_type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The placementType.
    */
   @java.lang.Override public com.google.ads.googleads.v12.enums.PlacementTypeEnum.PlacementType getPlacementType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v12.enums.PlacementTypeEnum.PlacementType result = com.google.ads.googleads.v12.enums.PlacementTypeEnum.PlacementType.valueOf(placementType_);
+    com.google.ads.googleads.v12.enums.PlacementTypeEnum.PlacementType result = com.google.ads.googleads.v12.enums.PlacementTypeEnum.PlacementType.forNumber(placementType_);
     return result == null ? com.google.ads.googleads.v12.enums.PlacementTypeEnum.PlacementType.UNRECOGNIZED : result;
   }
 
@@ -558,16 +564,12 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       placement_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       displayName_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       targetUrl_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       placementType_ = 0;
-
       return this;
     }
 
@@ -594,25 +596,33 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.GroupPlacementView buildPartial() {
       com.google.ads.googleads.v12.resources.GroupPlacementView result = new com.google.ads.googleads.v12.resources.GroupPlacementView(this);
-      int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        to_bitField0_ |= 0x00000001;
-      }
-      result.placement_ = placement_;
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        to_bitField0_ |= 0x00000002;
-      }
-      result.displayName_ = displayName_;
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        to_bitField0_ |= 0x00000004;
-      }
-      result.targetUrl_ = targetUrl_;
-      result.placementType_ = placementType_;
-      result.bitField0_ = to_bitField0_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.resources.GroupPlacementView result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.placement_ = placement_;
+        to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.displayName_ = displayName_;
+        to_bitField0_ |= 0x00000002;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.targetUrl_ = targetUrl_;
+        to_bitField0_ |= 0x00000004;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.placementType_ = placementType_;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -661,21 +671,22 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.resources.GroupPlacementView.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasPlacement()) {
-        bitField0_ |= 0x00000001;
         placement_ = other.placement_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasDisplayName()) {
-        bitField0_ |= 0x00000002;
         displayName_ = other.displayName_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.hasTargetUrl()) {
-        bitField0_ |= 0x00000004;
         targetUrl_ = other.targetUrl_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.placementType_ != 0) {
@@ -709,27 +720,27 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 40: {
               placementType_ = input.readEnum();
-
+              bitField0_ |= 0x00000010;
               break;
             } // case 40
             case 50: {
               placement_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 50
             case 58: {
               displayName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 58
             case 66: {
               targetUrl_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               break;
             } // case 66
             default: {
@@ -808,11 +819,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -827,8 +836,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -845,12 +854,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -858,20 +865,20 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object placement_ = "";
     /**
      * <pre>
-     * Output only. The automatic placement string at group level, e. g. web domain, mobile
-     * app ID, or a YouTube channel ID.
+     * Output only. The automatic placement string at group level, e. g. web
+     * domain, mobile app ID, or a YouTube channel ID.
      * </pre>
      *
      * <code>optional string placement = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the placement field is set.
      */
     public boolean hasPlacement() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
-     * Output only. The automatic placement string at group level, e. g. web domain, mobile
-     * app ID, or a YouTube channel ID.
+     * Output only. The automatic placement string at group level, e. g. web
+     * domain, mobile app ID, or a YouTube channel ID.
      * </pre>
      *
      * <code>optional string placement = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -891,8 +898,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The automatic placement string at group level, e. g. web domain, mobile
-     * app ID, or a YouTube channel ID.
+     * Output only. The automatic placement string at group level, e. g. web
+     * domain, mobile app ID, or a YouTube channel ID.
      * </pre>
      *
      * <code>optional string placement = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -913,8 +920,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The automatic placement string at group level, e. g. web domain, mobile
-     * app ID, or a YouTube channel ID.
+     * Output only. The automatic placement string at group level, e. g. web
+     * domain, mobile app ID, or a YouTube channel ID.
      * </pre>
      *
      * <code>optional string placement = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -923,33 +930,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPlacement(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       placement_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The automatic placement string at group level, e. g. web domain, mobile
-     * app ID, or a YouTube channel ID.
+     * Output only. The automatic placement string at group level, e. g. web
+     * domain, mobile app ID, or a YouTube channel ID.
      * </pre>
      *
      * <code>optional string placement = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearPlacement() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       placement_ = getDefaultInstance().getPlacement();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The automatic placement string at group level, e. g. web domain, mobile
-     * app ID, or a YouTube channel ID.
+     * Output only. The automatic placement string at group level, e. g. web
+     * domain, mobile app ID, or a YouTube channel ID.
      * </pre>
      *
      * <code>optional string placement = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -958,12 +963,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPlacementBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       placement_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -971,18 +974,20 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object displayName_ = "";
     /**
      * <pre>
-     * Output only. Domain name for websites and YouTube channel name for YouTube channels.
+     * Output only. Domain name for websites and YouTube channel name for YouTube
+     * channels.
      * </pre>
      *
      * <code>optional string display_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the displayName field is set.
      */
     public boolean hasDisplayName() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
-     * Output only. Domain name for websites and YouTube channel name for YouTube channels.
+     * Output only. Domain name for websites and YouTube channel name for YouTube
+     * channels.
      * </pre>
      *
      * <code>optional string display_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1002,7 +1007,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Domain name for websites and YouTube channel name for YouTube channels.
+     * Output only. Domain name for websites and YouTube channel name for YouTube
+     * channels.
      * </pre>
      *
      * <code>optional string display_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1023,7 +1029,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Domain name for websites and YouTube channel name for YouTube channels.
+     * Output only. Domain name for websites and YouTube channel name for YouTube
+     * channels.
      * </pre>
      *
      * <code>optional string display_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1032,31 +1039,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDisplayName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       displayName_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Domain name for websites and YouTube channel name for YouTube channels.
+     * Output only. Domain name for websites and YouTube channel name for YouTube
+     * channels.
      * </pre>
      *
      * <code>optional string display_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearDisplayName() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       displayName_ = getDefaultInstance().getDisplayName();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Domain name for websites and YouTube channel name for YouTube channels.
+     * Output only. Domain name for websites and YouTube channel name for YouTube
+     * channels.
      * </pre>
      *
      * <code>optional string display_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1065,12 +1072,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDisplayNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       displayName_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1078,20 +1083,20 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object targetUrl_ = "";
     /**
      * <pre>
-     * Output only. URL of the group placement, for example, domain, link to the mobile
-     * application in app store, or a YouTube channel URL.
+     * Output only. URL of the group placement, for example, domain, link to the
+     * mobile application in app store, or a YouTube channel URL.
      * </pre>
      *
      * <code>optional string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the targetUrl field is set.
      */
     public boolean hasTargetUrl() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
-     * Output only. URL of the group placement, for example, domain, link to the mobile
-     * application in app store, or a YouTube channel URL.
+     * Output only. URL of the group placement, for example, domain, link to the
+     * mobile application in app store, or a YouTube channel URL.
      * </pre>
      *
      * <code>optional string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1111,8 +1116,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. URL of the group placement, for example, domain, link to the mobile
-     * application in app store, or a YouTube channel URL.
+     * Output only. URL of the group placement, for example, domain, link to the
+     * mobile application in app store, or a YouTube channel URL.
      * </pre>
      *
      * <code>optional string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1133,8 +1138,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. URL of the group placement, for example, domain, link to the mobile
-     * application in app store, or a YouTube channel URL.
+     * Output only. URL of the group placement, for example, domain, link to the
+     * mobile application in app store, or a YouTube channel URL.
      * </pre>
      *
      * <code>optional string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1143,33 +1148,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTargetUrl(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       targetUrl_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. URL of the group placement, for example, domain, link to the mobile
-     * application in app store, or a YouTube channel URL.
+     * Output only. URL of the group placement, for example, domain, link to the
+     * mobile application in app store, or a YouTube channel URL.
      * </pre>
      *
      * <code>optional string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearTargetUrl() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       targetUrl_ = getDefaultInstance().getTargetUrl();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. URL of the group placement, for example, domain, link to the mobile
-     * application in app store, or a YouTube channel URL.
+     * Output only. URL of the group placement, for example, domain, link to the
+     * mobile application in app store, or a YouTube channel URL.
      * </pre>
      *
      * <code>optional string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1178,12 +1181,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTargetUrlBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       targetUrl_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1191,8 +1192,8 @@ private static final long serialVersionUID = 0L;
     private int placementType_ = 0;
     /**
      * <pre>
-     * Output only. Type of the placement, for example, Website, YouTube Channel, Mobile
-     * Application.
+     * Output only. Type of the placement, for example, Website, YouTube Channel,
+     * Mobile Application.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.PlacementTypeEnum.PlacementType placement_type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1203,8 +1204,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Type of the placement, for example, Website, YouTube Channel, Mobile
-     * Application.
+     * Output only. Type of the placement, for example, Website, YouTube Channel,
+     * Mobile Application.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.PlacementTypeEnum.PlacementType placement_type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1212,15 +1213,15 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPlacementTypeValue(int value) {
-      
       placementType_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Type of the placement, for example, Website, YouTube Channel, Mobile
-     * Application.
+     * Output only. Type of the placement, for example, Website, YouTube Channel,
+     * Mobile Application.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.PlacementTypeEnum.PlacementType placement_type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1228,14 +1229,13 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v12.enums.PlacementTypeEnum.PlacementType getPlacementType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v12.enums.PlacementTypeEnum.PlacementType result = com.google.ads.googleads.v12.enums.PlacementTypeEnum.PlacementType.valueOf(placementType_);
+      com.google.ads.googleads.v12.enums.PlacementTypeEnum.PlacementType result = com.google.ads.googleads.v12.enums.PlacementTypeEnum.PlacementType.forNumber(placementType_);
       return result == null ? com.google.ads.googleads.v12.enums.PlacementTypeEnum.PlacementType.UNRECOGNIZED : result;
     }
     /**
      * <pre>
-     * Output only. Type of the placement, for example, Website, YouTube Channel, Mobile
-     * Application.
+     * Output only. Type of the placement, for example, Website, YouTube Channel,
+     * Mobile Application.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.PlacementTypeEnum.PlacementType placement_type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1246,22 +1246,22 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000010;
       placementType_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. Type of the placement, for example, Website, YouTube Channel, Mobile
-     * Application.
+     * Output only. Type of the placement, for example, Website, YouTube Channel,
+     * Mobile Application.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.enums.PlacementTypeEnum.PlacementType placement_type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearPlacementType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000010);
       placementType_ = 0;
       onChanged();
       return this;

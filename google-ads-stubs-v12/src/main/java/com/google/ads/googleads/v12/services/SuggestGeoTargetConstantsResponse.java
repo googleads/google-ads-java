@@ -5,7 +5,8 @@ package com.google.ads.googleads.v12.services;
 
 /**
  * <pre>
- * Response message for [GeoTargetConstantService.SuggestGeoTargetConstants][google.ads.googleads.v12.services.GeoTargetConstantService.SuggestGeoTargetConstants].
+ * Response message for
+ * [GeoTargetConstantService.SuggestGeoTargetConstants][google.ads.googleads.v12.services.GeoTargetConstantService.SuggestGeoTargetConstants].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v12.services.SuggestGeoTargetConstantsResponse}
@@ -49,6 +50,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int GEO_TARGET_CONSTANT_SUGGESTIONS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.services.GeoTargetConstantSuggestion> geoTargetConstantSuggestions_;
   /**
    * <pre>
@@ -267,7 +269,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Response message for [GeoTargetConstantService.SuggestGeoTargetConstants][google.ads.googleads.v12.services.GeoTargetConstantService.SuggestGeoTargetConstants].
+   * Response message for
+   * [GeoTargetConstantService.SuggestGeoTargetConstants][google.ads.googleads.v12.services.GeoTargetConstantService.SuggestGeoTargetConstants].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v12.services.SuggestGeoTargetConstantsResponse}
@@ -302,6 +305,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (geoTargetConstantSuggestionsBuilder_ == null) {
         geoTargetConstantSuggestions_ = java.util.Collections.emptyList();
       } else {
@@ -335,7 +339,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.SuggestGeoTargetConstantsResponse buildPartial() {
       com.google.ads.googleads.v12.services.SuggestGeoTargetConstantsResponse result = new com.google.ads.googleads.v12.services.SuggestGeoTargetConstantsResponse(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.services.SuggestGeoTargetConstantsResponse result) {
       if (geoTargetConstantSuggestionsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           geoTargetConstantSuggestions_ = java.util.Collections.unmodifiableList(geoTargetConstantSuggestions_);
@@ -345,8 +355,10 @@ private static final long serialVersionUID = 0L;
       } else {
         result.geoTargetConstantSuggestions_ = geoTargetConstantSuggestionsBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.services.SuggestGeoTargetConstantsResponse result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override

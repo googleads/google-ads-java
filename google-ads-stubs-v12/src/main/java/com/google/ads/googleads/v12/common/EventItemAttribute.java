@@ -49,11 +49,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ITEM_ID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object itemId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object itemId_ = "";
   /**
    * <pre>
-   * Optional. A unique identifier of a product. It can be either the Merchant Center Item
-   * ID or GTIN (Global Trade Item Number).
+   * Optional. A unique identifier of a product. It can be either the Merchant
+   * Center Item ID or GTIN (Global Trade Item Number).
    * </pre>
    *
    * <code>string item_id = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -74,8 +75,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. A unique identifier of a product. It can be either the Merchant Center Item
-   * ID or GTIN (Global Trade Item Number).
+   * Optional. A unique identifier of a product. It can be either the Merchant
+   * Center Item ID or GTIN (Global Trade Item Number).
    * </pre>
    *
    * <code>string item_id = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -287,8 +288,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       itemId_ = "";
-
       return this;
     }
 
@@ -315,9 +316,16 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.EventItemAttribute buildPartial() {
       com.google.ads.googleads.v12.common.EventItemAttribute result = new com.google.ads.googleads.v12.common.EventItemAttribute(this);
-      result.itemId_ = itemId_;
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.EventItemAttribute result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.itemId_ = itemId_;
+      }
     }
 
     @java.lang.Override
@@ -366,6 +374,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v12.common.EventItemAttribute.getDefaultInstance()) return this;
       if (!other.getItemId().isEmpty()) {
         itemId_ = other.itemId_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -396,7 +405,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               itemId_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             default: {
@@ -414,12 +423,13 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private java.lang.Object itemId_ = "";
     /**
      * <pre>
-     * Optional. A unique identifier of a product. It can be either the Merchant Center Item
-     * ID or GTIN (Global Trade Item Number).
+     * Optional. A unique identifier of a product. It can be either the Merchant
+     * Center Item ID or GTIN (Global Trade Item Number).
      * </pre>
      *
      * <code>string item_id = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -439,8 +449,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. A unique identifier of a product. It can be either the Merchant Center Item
-     * ID or GTIN (Global Trade Item Number).
+     * Optional. A unique identifier of a product. It can be either the Merchant
+     * Center Item ID or GTIN (Global Trade Item Number).
      * </pre>
      *
      * <code>string item_id = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -461,8 +471,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. A unique identifier of a product. It can be either the Merchant Center Item
-     * ID or GTIN (Global Trade Item Number).
+     * Optional. A unique identifier of a product. It can be either the Merchant
+     * Center Item ID or GTIN (Global Trade Item Number).
      * </pre>
      *
      * <code>string item_id = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -471,33 +481,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setItemId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       itemId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Optional. A unique identifier of a product. It can be either the Merchant Center Item
-     * ID or GTIN (Global Trade Item Number).
+     * Optional. A unique identifier of a product. It can be either the Merchant
+     * Center Item ID or GTIN (Global Trade Item Number).
      * </pre>
      *
      * <code>string item_id = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
      * @return This builder for chaining.
      */
     public Builder clearItemId() {
-      
       itemId_ = getDefaultInstance().getItemId();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Optional. A unique identifier of a product. It can be either the Merchant Center Item
-     * ID or GTIN (Global Trade Item Number).
+     * Optional. A unique identifier of a product. It can be either the Merchant
+     * Center Item ID or GTIN (Global Trade Item Number).
      * </pre>
      *
      * <code>string item_id = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -506,12 +514,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setItemIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       itemId_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

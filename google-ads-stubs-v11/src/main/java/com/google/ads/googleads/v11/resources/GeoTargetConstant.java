@@ -56,7 +56,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Output only. The resource name of the geo target constant.
@@ -106,7 +107,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ID_FIELD_NUMBER = 10;
-  private long id_;
+  private long id_ = 0L;
   /**
    * <pre>
    * Output only. The ID of the geo target constant.
@@ -133,7 +134,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int NAME_FIELD_NUMBER = 11;
-  private volatile java.lang.Object name_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
   /**
    * <pre>
    * Output only. Geo target constant English name.
@@ -191,10 +193,12 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int COUNTRY_CODE_FIELD_NUMBER = 12;
-  private volatile java.lang.Object countryCode_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object countryCode_ = "";
   /**
    * <pre>
-   * Output only. The ISO-3166-1 alpha-2 country code that is associated with the target.
+   * Output only. The ISO-3166-1 alpha-2 country code that is associated with
+   * the target.
    * </pre>
    *
    * <code>optional string country_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -206,7 +210,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The ISO-3166-1 alpha-2 country code that is associated with the target.
+   * Output only. The ISO-3166-1 alpha-2 country code that is associated with
+   * the target.
    * </pre>
    *
    * <code>optional string country_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -227,7 +232,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The ISO-3166-1 alpha-2 country code that is associated with the target.
+   * Output only. The ISO-3166-1 alpha-2 country code that is associated with
+   * the target.
    * </pre>
    *
    * <code>optional string country_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -249,7 +255,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TARGET_TYPE_FIELD_NUMBER = 13;
-  private volatile java.lang.Object targetType_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object targetType_ = "";
   /**
    * <pre>
    * Output only. Geo target constant target type.
@@ -307,7 +314,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int STATUS_FIELD_NUMBER = 7;
-  private int status_;
+  private int status_ = 0;
   /**
    * <pre>
    * Output only. Geo target constant status.
@@ -328,17 +335,17 @@ private static final long serialVersionUID = 0L;
    * @return The status.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus getStatus() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus result = com.google.ads.googleads.v11.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus.valueOf(status_);
+    com.google.ads.googleads.v11.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus result = com.google.ads.googleads.v11.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus.forNumber(status_);
     return result == null ? com.google.ads.googleads.v11.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus.UNRECOGNIZED : result;
   }
 
   public static final int CANONICAL_NAME_FIELD_NUMBER = 14;
-  private volatile java.lang.Object canonicalName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object canonicalName_ = "";
   /**
    * <pre>
-   * Output only. The fully qualified English name, consisting of the target's name and that
-   * of its parent and country.
+   * Output only. The fully qualified English name, consisting of the target's
+   * name and that of its parent and country.
    * </pre>
    *
    * <code>optional string canonical_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -350,8 +357,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The fully qualified English name, consisting of the target's name and that
-   * of its parent and country.
+   * Output only. The fully qualified English name, consisting of the target's
+   * name and that of its parent and country.
    * </pre>
    *
    * <code>optional string canonical_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -372,8 +379,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The fully qualified English name, consisting of the target's name and that
-   * of its parent and country.
+   * Output only. The fully qualified English name, consisting of the target's
+   * name and that of its parent and country.
    * </pre>
    *
    * <code>optional string canonical_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -395,7 +402,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PARENT_GEO_TARGET_FIELD_NUMBER = 9;
-  private volatile java.lang.Object parentGeoTarget_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object parentGeoTarget_ = "";
   /**
    * <pre>
    * Output only. The resource name of the parent geo target constant.
@@ -751,22 +759,15 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       id_ = 0L;
-      bitField0_ = (bitField0_ & ~0x00000001);
       name_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       countryCode_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       targetType_ = "";
-      bitField0_ = (bitField0_ & ~0x00000008);
       status_ = 0;
-
       canonicalName_ = "";
-      bitField0_ = (bitField0_ & ~0x00000010);
       parentGeoTarget_ = "";
-      bitField0_ = (bitField0_ & ~0x00000020);
       return this;
     }
 
@@ -793,37 +794,45 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.GeoTargetConstant buildPartial() {
       com.google.ads.googleads.v11.resources.GeoTargetConstant result = new com.google.ads.googleads.v11.resources.GeoTargetConstant(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.GeoTargetConstant result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.id_ = id_;
         to_bitField0_ |= 0x00000001;
       }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.name_ = name_;
         to_bitField0_ |= 0x00000002;
       }
-      result.name_ = name_;
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.countryCode_ = countryCode_;
         to_bitField0_ |= 0x00000004;
       }
-      result.countryCode_ = countryCode_;
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.targetType_ = targetType_;
         to_bitField0_ |= 0x00000008;
       }
-      result.targetType_ = targetType_;
-      result.status_ = status_;
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.status_ = status_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.canonicalName_ = canonicalName_;
         to_bitField0_ |= 0x00000010;
       }
-      result.canonicalName_ = canonicalName_;
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.parentGeoTarget_ = parentGeoTarget_;
         to_bitField0_ |= 0x00000020;
       }
-      result.parentGeoTarget_ = parentGeoTarget_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -872,37 +881,38 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.resources.GeoTargetConstant.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasId()) {
         setId(other.getId());
       }
       if (other.hasName()) {
-        bitField0_ |= 0x00000002;
         name_ = other.name_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (other.hasCountryCode()) {
-        bitField0_ |= 0x00000004;
         countryCode_ = other.countryCode_;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (other.hasTargetType()) {
-        bitField0_ |= 0x00000008;
         targetType_ = other.targetType_;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (other.status_ != 0) {
         setStatusValue(other.getStatusValue());
       }
       if (other.hasCanonicalName()) {
-        bitField0_ |= 0x00000010;
         canonicalName_ = other.canonicalName_;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (other.hasParentGeoTarget()) {
-        bitField0_ |= 0x00000020;
         parentGeoTarget_ = other.parentGeoTarget_;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -933,42 +943,42 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 56: {
               status_ = input.readEnum();
-
+              bitField0_ |= 0x00000020;
               break;
             } // case 56
             case 74: {
               parentGeoTarget_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000080;
               break;
             } // case 74
             case 80: {
               id_ = input.readInt64();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               break;
             } // case 80
             case 90: {
               name_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000004;
               break;
             } // case 90
             case 98: {
               countryCode_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               break;
             } // case 98
             case 106: {
               targetType_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000010;
               break;
             } // case 106
             case 114: {
               canonicalName_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000040;
               break;
             } // case 114
             default: {
@@ -1047,11 +1057,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1066,8 +1074,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -1084,12 +1092,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1105,7 +1111,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasId() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -1129,8 +1135,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      bitField0_ |= 0x00000001;
+      
       id_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -1143,7 +1150,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       id_ = 0L;
       onChanged();
       return this;
@@ -1159,7 +1166,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the name field is set.
      */
     public boolean hasName() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -1213,11 +1220,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       name_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1230,8 +1235,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearName() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -1246,12 +1251,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       name_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1259,18 +1262,20 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object countryCode_ = "";
     /**
      * <pre>
-     * Output only. The ISO-3166-1 alpha-2 country code that is associated with the target.
+     * Output only. The ISO-3166-1 alpha-2 country code that is associated with
+     * the target.
      * </pre>
      *
      * <code>optional string country_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the countryCode field is set.
      */
     public boolean hasCountryCode() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
-     * Output only. The ISO-3166-1 alpha-2 country code that is associated with the target.
+     * Output only. The ISO-3166-1 alpha-2 country code that is associated with
+     * the target.
      * </pre>
      *
      * <code>optional string country_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1290,7 +1295,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The ISO-3166-1 alpha-2 country code that is associated with the target.
+     * Output only. The ISO-3166-1 alpha-2 country code that is associated with
+     * the target.
      * </pre>
      *
      * <code>optional string country_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1311,7 +1317,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The ISO-3166-1 alpha-2 country code that is associated with the target.
+     * Output only. The ISO-3166-1 alpha-2 country code that is associated with
+     * the target.
      * </pre>
      *
      * <code>optional string country_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1320,31 +1327,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCountryCode(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       countryCode_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The ISO-3166-1 alpha-2 country code that is associated with the target.
+     * Output only. The ISO-3166-1 alpha-2 country code that is associated with
+     * the target.
      * </pre>
      *
      * <code>optional string country_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearCountryCode() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       countryCode_ = getDefaultInstance().getCountryCode();
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The ISO-3166-1 alpha-2 country code that is associated with the target.
+     * Output only. The ISO-3166-1 alpha-2 country code that is associated with
+     * the target.
      * </pre>
      *
      * <code>optional string country_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1353,12 +1360,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCountryCodeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       countryCode_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1373,7 +1378,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the targetType field is set.
      */
     public boolean hasTargetType() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -1427,11 +1432,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTargetType(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
       targetType_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1444,8 +1447,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTargetType() {
-      bitField0_ = (bitField0_ & ~0x00000008);
       targetType_ = getDefaultInstance().getTargetType();
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1460,12 +1463,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTargetTypeBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000008;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       targetType_ = value;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1492,8 +1493,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStatusValue(int value) {
-      
       status_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1507,8 +1508,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus getStatus() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus result = com.google.ads.googleads.v11.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus.valueOf(status_);
+      com.google.ads.googleads.v11.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus result = com.google.ads.googleads.v11.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus.forNumber(status_);
       return result == null ? com.google.ads.googleads.v11.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus.UNRECOGNIZED : result;
     }
     /**
@@ -1524,7 +1524,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000020;
       status_ = value.getNumber();
       onChanged();
       return this;
@@ -1538,7 +1538,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStatus() {
-      
+      bitField0_ = (bitField0_ & ~0x00000020);
       status_ = 0;
       onChanged();
       return this;
@@ -1547,20 +1547,20 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object canonicalName_ = "";
     /**
      * <pre>
-     * Output only. The fully qualified English name, consisting of the target's name and that
-     * of its parent and country.
+     * Output only. The fully qualified English name, consisting of the target's
+     * name and that of its parent and country.
      * </pre>
      *
      * <code>optional string canonical_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the canonicalName field is set.
      */
     public boolean hasCanonicalName() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <pre>
-     * Output only. The fully qualified English name, consisting of the target's name and that
-     * of its parent and country.
+     * Output only. The fully qualified English name, consisting of the target's
+     * name and that of its parent and country.
      * </pre>
      *
      * <code>optional string canonical_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1580,8 +1580,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The fully qualified English name, consisting of the target's name and that
-     * of its parent and country.
+     * Output only. The fully qualified English name, consisting of the target's
+     * name and that of its parent and country.
      * </pre>
      *
      * <code>optional string canonical_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1602,8 +1602,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The fully qualified English name, consisting of the target's name and that
-     * of its parent and country.
+     * Output only. The fully qualified English name, consisting of the target's
+     * name and that of its parent and country.
      * </pre>
      *
      * <code>optional string canonical_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1612,33 +1612,31 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCanonicalName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
+      if (value == null) { throw new NullPointerException(); }
       canonicalName_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The fully qualified English name, consisting of the target's name and that
-     * of its parent and country.
+     * Output only. The fully qualified English name, consisting of the target's
+     * name and that of its parent and country.
      * </pre>
      *
      * <code>optional string canonical_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearCanonicalName() {
-      bitField0_ = (bitField0_ & ~0x00000010);
       canonicalName_ = getDefaultInstance().getCanonicalName();
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The fully qualified English name, consisting of the target's name and that
-     * of its parent and country.
+     * Output only. The fully qualified English name, consisting of the target's
+     * name and that of its parent and country.
      * </pre>
      *
      * <code>optional string canonical_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1647,12 +1645,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setCanonicalNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000010;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       canonicalName_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1669,7 +1665,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the parentGeoTarget field is set.
      */
     public boolean hasParentGeoTarget() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000080) != 0);
     }
     /**
      * <pre>
@@ -1729,11 +1725,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setParentGeoTarget(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000020;
+      if (value == null) { throw new NullPointerException(); }
       parentGeoTarget_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1748,8 +1742,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearParentGeoTarget() {
-      bitField0_ = (bitField0_ & ~0x00000020);
       parentGeoTarget_ = getDefaultInstance().getParentGeoTarget();
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -1766,12 +1760,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setParentGeoTargetBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000020;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       parentGeoTarget_ = value;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }

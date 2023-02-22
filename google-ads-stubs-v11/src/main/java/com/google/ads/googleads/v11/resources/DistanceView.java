@@ -55,7 +55,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
-  private volatile java.lang.Object resourceName_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object resourceName_ = "";
   /**
    * <pre>
    * Output only. The resource name of the distance view.
@@ -105,7 +106,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DISTANCE_BUCKET_FIELD_NUMBER = 2;
-  private int distanceBucket_;
+  private int distanceBucket_ = 0;
   /**
    * <pre>
    * Output only. Grouping of user distance from location extensions.
@@ -126,16 +127,16 @@ private static final long serialVersionUID = 0L;
    * @return The distanceBucket.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.DistanceBucketEnum.DistanceBucket getDistanceBucket() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.DistanceBucketEnum.DistanceBucket result = com.google.ads.googleads.v11.enums.DistanceBucketEnum.DistanceBucket.valueOf(distanceBucket_);
+    com.google.ads.googleads.v11.enums.DistanceBucketEnum.DistanceBucket result = com.google.ads.googleads.v11.enums.DistanceBucketEnum.DistanceBucket.forNumber(distanceBucket_);
     return result == null ? com.google.ads.googleads.v11.enums.DistanceBucketEnum.DistanceBucket.UNRECOGNIZED : result;
   }
 
   public static final int METRIC_SYSTEM_FIELD_NUMBER = 4;
-  private boolean metricSystem_;
+  private boolean metricSystem_ = false;
   /**
    * <pre>
-   * Output only. True if the DistanceBucket is using the metric system, false otherwise.
+   * Output only. True if the DistanceBucket is using the metric system, false
+   * otherwise.
    * </pre>
    *
    * <code>optional bool metric_system = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -147,7 +148,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. True if the DistanceBucket is using the metric system, false otherwise.
+   * Output only. True if the DistanceBucket is using the metric system, false
+   * otherwise.
    * </pre>
    *
    * <code>optional bool metric_system = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -380,12 +382,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       resourceName_ = "";
-
       distanceBucket_ = 0;
-
       metricSystem_ = false;
-      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -412,17 +412,25 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.DistanceView buildPartial() {
       com.google.ads.googleads.v11.resources.DistanceView result = new com.google.ads.googleads.v11.resources.DistanceView(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.DistanceView result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      result.resourceName_ = resourceName_;
-      result.distanceBucket_ = distanceBucket_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.resourceName_ = resourceName_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.distanceBucket_ = distanceBucket_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.metricSystem_ = metricSystem_;
         to_bitField0_ |= 0x00000001;
       }
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -471,6 +479,7 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.resources.DistanceView.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.distanceBucket_ != 0) {
@@ -507,17 +516,17 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               resourceName_ = input.readStringRequireUtf8();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 16: {
               distanceBucket_ = input.readEnum();
-
+              bitField0_ |= 0x00000002;
               break;
             } // case 16
             case 32: {
               metricSystem_ = input.readBool();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000004;
               break;
             } // case 32
             default: {
@@ -596,11 +605,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceName(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      if (value == null) { throw new NullPointerException(); }
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -615,8 +622,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceName() {
-      
       resourceName_ = getDefaultInstance().getResourceName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -633,12 +640,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setResourceNameBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       resourceName_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -665,8 +670,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDistanceBucketValue(int value) {
-      
       distanceBucket_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -680,8 +685,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.DistanceBucketEnum.DistanceBucket getDistanceBucket() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.DistanceBucketEnum.DistanceBucket result = com.google.ads.googleads.v11.enums.DistanceBucketEnum.DistanceBucket.valueOf(distanceBucket_);
+      com.google.ads.googleads.v11.enums.DistanceBucketEnum.DistanceBucket result = com.google.ads.googleads.v11.enums.DistanceBucketEnum.DistanceBucket.forNumber(distanceBucket_);
       return result == null ? com.google.ads.googleads.v11.enums.DistanceBucketEnum.DistanceBucket.UNRECOGNIZED : result;
     }
     /**
@@ -697,7 +701,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000002;
       distanceBucket_ = value.getNumber();
       onChanged();
       return this;
@@ -711,7 +715,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDistanceBucket() {
-      
+      bitField0_ = (bitField0_ & ~0x00000002);
       distanceBucket_ = 0;
       onChanged();
       return this;
@@ -720,7 +724,8 @@ private static final long serialVersionUID = 0L;
     private boolean metricSystem_ ;
     /**
      * <pre>
-     * Output only. True if the DistanceBucket is using the metric system, false otherwise.
+     * Output only. True if the DistanceBucket is using the metric system, false
+     * otherwise.
      * </pre>
      *
      * <code>optional bool metric_system = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -728,11 +733,12 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasMetricSystem() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
-     * Output only. True if the DistanceBucket is using the metric system, false otherwise.
+     * Output only. True if the DistanceBucket is using the metric system, false
+     * otherwise.
      * </pre>
      *
      * <code>optional bool metric_system = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -744,7 +750,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. True if the DistanceBucket is using the metric system, false otherwise.
+     * Output only. True if the DistanceBucket is using the metric system, false
+     * otherwise.
      * </pre>
      *
      * <code>optional bool metric_system = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -752,21 +759,23 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMetricSystem(boolean value) {
-      bitField0_ |= 0x00000001;
+      
       metricSystem_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. True if the DistanceBucket is using the metric system, false otherwise.
+     * Output only. True if the DistanceBucket is using the metric system, false
+     * otherwise.
      * </pre>
      *
      * <code>optional bool metric_system = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearMetricSystem() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000004);
       metricSystem_ = false;
       onChanged();
       return this;

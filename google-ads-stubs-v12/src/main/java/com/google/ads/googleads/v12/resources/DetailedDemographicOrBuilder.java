@@ -43,8 +43,8 @@ public interface DetailedDemographicOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The name of the detailed demographic. For example,"Highest Level of
-   * Educational Attainment"
+   * Output only. The name of the detailed demographic. For example,"Highest
+   * Level of Educational Attainment"
    * </pre>
    *
    * <code>string name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -53,8 +53,8 @@ public interface DetailedDemographicOrBuilder extends
   java.lang.String getName();
   /**
    * <pre>
-   * Output only. The name of the detailed demographic. For example,"Highest Level of
-   * Educational Attainment"
+   * Output only. The name of the detailed demographic. For example,"Highest
+   * Level of Educational Attainment"
    * </pre>
    *
    * <code>string name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -85,7 +85,8 @@ public interface DetailedDemographicOrBuilder extends
 
   /**
    * <pre>
-   * Output only. True if the detailed demographic is launched to all channels and locales.
+   * Output only. True if the detailed demographic is launched to all channels
+   * and locales.
    * </pre>
    *
    * <code>bool launched_to_all = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

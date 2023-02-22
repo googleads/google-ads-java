@@ -5,7 +5,8 @@ package com.google.ads.googleads.v12.services;
 
 /**
  * <pre>
- * Request message for [ReachPlanService.ListPlannableLocations][google.ads.googleads.v12.services.ReachPlanService.ListPlannableLocations].
+ * Request message for
+ * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v12.services.ReachPlanService.ListPlannableLocations].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v12.services.ListPlannableLocationsRequest}
@@ -193,7 +194,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Request message for [ReachPlanService.ListPlannableLocations][google.ads.googleads.v12.services.ReachPlanService.ListPlannableLocations].
+   * Request message for
+   * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v12.services.ReachPlanService.ListPlannableLocations].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v12.services.ListPlannableLocationsRequest}

@@ -241,8 +241,9 @@ public interface LeadFormSubmissionDataOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The date and time at which the lead form was submitted. The format is
-   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
+   * Output only. The date and time at which the lead form was submitted. The
+   * format is "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01
+   * 12:32:45-08:00".
    * </pre>
    *
    * <code>string submission_date_time = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -251,8 +252,9 @@ public interface LeadFormSubmissionDataOrBuilder extends
   java.lang.String getSubmissionDateTime();
   /**
    * <pre>
-   * Output only. The date and time at which the lead form was submitted. The format is
-   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
+   * Output only. The date and time at which the lead form was submitted. The
+   * format is "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01
+   * 12:32:45-08:00".
    * </pre>
    *
    * <code>string submission_date_time = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

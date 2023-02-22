@@ -54,7 +54,8 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   public static final int TEXT_FIELD_NUMBER = 5;
-  private volatile java.lang.Object text_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object text_ = "";
   /**
    * <pre>
    * Text for the display-call-to-action.
@@ -112,7 +113,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int TEXT_COLOR_FIELD_NUMBER = 6;
-  private volatile java.lang.Object textColor_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object textColor_ = "";
   /**
    * <pre>
    * Text color for the display-call-to-action in hexadecimal, for example,
@@ -173,7 +175,8 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int URL_COLLECTION_ID_FIELD_NUMBER = 7;
-  private volatile java.lang.Object urlCollectionId_;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object urlCollectionId_ = "";
   /**
    * <pre>
    * Identifies the URL collection in the `ad.url_collections` field. If not
@@ -461,12 +464,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       text_ = "";
-      bitField0_ = (bitField0_ & ~0x00000001);
       textColor_ = "";
-      bitField0_ = (bitField0_ & ~0x00000002);
       urlCollectionId_ = "";
-      bitField0_ = (bitField0_ & ~0x00000004);
       return this;
     }
 
@@ -493,23 +494,27 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.common.DisplayCallToAction buildPartial() {
       com.google.ads.googleads.v11.common.DisplayCallToAction result = new com.google.ads.googleads.v11.common.DisplayCallToAction(this);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.common.DisplayCallToAction result) {
       int from_bitField0_ = bitField0_;
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.text_ = text_;
         to_bitField0_ |= 0x00000001;
       }
-      result.text_ = text_;
       if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.textColor_ = textColor_;
         to_bitField0_ |= 0x00000002;
       }
-      result.textColor_ = textColor_;
       if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.urlCollectionId_ = urlCollectionId_;
         to_bitField0_ |= 0x00000004;
       }
-      result.urlCollectionId_ = urlCollectionId_;
-      result.bitField0_ = to_bitField0_;
-      onBuilt();
-      return result;
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -557,18 +562,18 @@ private static final long serialVersionUID = 0L;
     public Builder mergeFrom(com.google.ads.googleads.v11.common.DisplayCallToAction other) {
       if (other == com.google.ads.googleads.v11.common.DisplayCallToAction.getDefaultInstance()) return this;
       if (other.hasText()) {
-        bitField0_ |= 0x00000001;
         text_ = other.text_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.hasTextColor()) {
-        bitField0_ |= 0x00000002;
         textColor_ = other.textColor_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (other.hasUrlCollectionId()) {
-        bitField0_ |= 0x00000004;
         urlCollectionId_ = other.urlCollectionId_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -693,11 +698,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setText(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
       text_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -710,8 +713,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearText() {
-      bitField0_ = (bitField0_ & ~0x00000001);
       text_ = getDefaultInstance().getText();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
@@ -726,12 +729,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTextBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000001;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       text_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -804,11 +805,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTextColor(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
       textColor_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -822,8 +821,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTextColor() {
-      bitField0_ = (bitField0_ & ~0x00000002);
       textColor_ = getDefaultInstance().getTextColor();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -839,12 +838,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setTextColorBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000002;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       textColor_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -917,11 +914,9 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUrlCollectionId(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
       urlCollectionId_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -935,8 +930,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUrlCollectionId() {
-      bitField0_ = (bitField0_ & ~0x00000004);
       urlCollectionId_ = getDefaultInstance().getUrlCollectionId();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -952,12 +947,10 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUrlCollectionIdBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000004;
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       urlCollectionId_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }

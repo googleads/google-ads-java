@@ -95,7 +95,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int MEMBER_TYPE_FIELD_NUMBER = 1;
-  private int memberType_;
+  private int memberType_ = 0;
   /**
    * <pre>
    * The type of custom audience member, KEYWORD, URL, PLACE_CATEGORY or APP.
@@ -116,8 +116,7 @@ private static final long serialVersionUID = 0L;
    * @return The memberType.
    */
   @java.lang.Override public com.google.ads.googleads.v11.enums.CustomAudienceMemberTypeEnum.CustomAudienceMemberType getMemberType() {
-    @SuppressWarnings("deprecation")
-    com.google.ads.googleads.v11.enums.CustomAudienceMemberTypeEnum.CustomAudienceMemberType result = com.google.ads.googleads.v11.enums.CustomAudienceMemberTypeEnum.CustomAudienceMemberType.valueOf(memberType_);
+    com.google.ads.googleads.v11.enums.CustomAudienceMemberTypeEnum.CustomAudienceMemberType result = com.google.ads.googleads.v11.enums.CustomAudienceMemberTypeEnum.CustomAudienceMemberType.forNumber(memberType_);
     return result == null ? com.google.ads.googleads.v11.enums.CustomAudienceMemberTypeEnum.CustomAudienceMemberType.UNRECOGNIZED : result;
   }
 
@@ -618,8 +617,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       memberType_ = 0;
-
       valueCase_ = 0;
       value_ = null;
       return this;
@@ -648,22 +647,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v11.resources.CustomAudienceMember buildPartial() {
       com.google.ads.googleads.v11.resources.CustomAudienceMember result = new com.google.ads.googleads.v11.resources.CustomAudienceMember(this);
-      result.memberType_ = memberType_;
-      if (valueCase_ == 2) {
-        result.value_ = value_;
-      }
-      if (valueCase_ == 3) {
-        result.value_ = value_;
-      }
-      if (valueCase_ == 4) {
-        result.value_ = value_;
-      }
-      if (valueCase_ == 5) {
-        result.value_ = value_;
-      }
-      result.valueCase_ = valueCase_;
+      if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v11.resources.CustomAudienceMember result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.memberType_ = memberType_;
+      }
+    }
+
+    private void buildPartialOneofs(com.google.ads.googleads.v11.resources.CustomAudienceMember result) {
+      result.valueCase_ = valueCase_;
+      result.value_ = this.value_;
     }
 
     @java.lang.Override
@@ -768,7 +767,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 8: {
               memberType_ = input.readEnum();
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 8
             case 18: {
@@ -824,6 +823,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int bitField0_;
 
     private int memberType_ = 0;
     /**
@@ -847,8 +847,8 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMemberTypeValue(int value) {
-      
       memberType_ = value;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -862,8 +862,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public com.google.ads.googleads.v11.enums.CustomAudienceMemberTypeEnum.CustomAudienceMemberType getMemberType() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v11.enums.CustomAudienceMemberTypeEnum.CustomAudienceMemberType result = com.google.ads.googleads.v11.enums.CustomAudienceMemberTypeEnum.CustomAudienceMemberType.valueOf(memberType_);
+      com.google.ads.googleads.v11.enums.CustomAudienceMemberTypeEnum.CustomAudienceMemberType result = com.google.ads.googleads.v11.enums.CustomAudienceMemberTypeEnum.CustomAudienceMemberType.forNumber(memberType_);
       return result == null ? com.google.ads.googleads.v11.enums.CustomAudienceMemberTypeEnum.CustomAudienceMemberType.UNRECOGNIZED : result;
     }
     /**
@@ -879,7 +878,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      
+      bitField0_ |= 0x00000001;
       memberType_ = value.getNumber();
       onChanged();
       return this;
@@ -893,7 +892,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMemberType() {
-      
+      bitField0_ = (bitField0_ & ~0x00000001);
       memberType_ = 0;
       onChanged();
       return this;
@@ -987,10 +986,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKeyword(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  valueCase_ = 2;
+      if (value == null) { throw new NullPointerException(); }
+      valueCase_ = 2;
       value_ = value;
       onChanged();
       return this;
@@ -1028,10 +1025,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setKeywordBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       valueCase_ = 2;
       value_ = value;
       onChanged();
@@ -1118,10 +1113,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUrl(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  valueCase_ = 3;
+      if (value == null) { throw new NullPointerException(); }
+      valueCase_ = 3;
       value_ = value;
       onChanged();
       return this;
@@ -1155,10 +1148,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setUrlBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       valueCase_ = 3;
       value_ = value;
       onChanged();
@@ -1200,6 +1191,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPlaceCategory(long value) {
+      
       valueCase_ = 4;
       value_ = value;
       onChanged();
@@ -1302,10 +1294,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setApp(
         java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  valueCase_ = 5;
+      if (value == null) { throw new NullPointerException(); }
+      valueCase_ = 5;
       value_ = value;
       onChanged();
       return this;
@@ -1339,10 +1329,8 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAppBytes(
         com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
       valueCase_ = 5;
       value_ = value;
       onChanged();

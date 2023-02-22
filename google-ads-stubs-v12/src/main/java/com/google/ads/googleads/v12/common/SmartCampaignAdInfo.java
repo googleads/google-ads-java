@@ -50,6 +50,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int HEADLINES_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.AdTextAsset> headlines_;
   /**
    * <pre>
@@ -115,6 +116,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int DESCRIPTIONS_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
   private java.util.List<com.google.ads.googleads.v12.common.AdTextAsset> descriptions_;
   /**
    * <pre>
@@ -386,6 +388,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       if (headlinesBuilder_ == null) {
         headlines_ = java.util.Collections.emptyList();
       } else {
@@ -426,7 +429,13 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.SmartCampaignAdInfo buildPartial() {
       com.google.ads.googleads.v12.common.SmartCampaignAdInfo result = new com.google.ads.googleads.v12.common.SmartCampaignAdInfo(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.common.SmartCampaignAdInfo result) {
       if (headlinesBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           headlines_ = java.util.Collections.unmodifiableList(headlines_);
@@ -445,8 +454,10 @@ private static final long serialVersionUID = 0L;
       } else {
         result.descriptions_ = descriptionsBuilder_.build();
       }
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(com.google.ads.googleads.v12.common.SmartCampaignAdInfo result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override
