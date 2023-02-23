@@ -24,7 +24,7 @@ import java.util.regex.Matcher
 
 plugins {
   id 'java-library'
-  id 'com.google.api-ads.nexus-publish'
+  id 'maven-publish'
   id 'java-test-fixtures'
   id 'signing'
 }
@@ -71,6 +71,26 @@ javadoc {
 
 tasks.withType(JavaCompile) {
   options.encoding = 'UTF-8'
+}
+
+publishing {
+  publications {
+    maven(MavenPublication) {
+      from(components.java)
+    }
+  }
+  repositories {
+    maven {
+      url 'https://oss.sonatype.org/service/local/staging/deploy/maven2'
+      name = "sonatype"
+      credentials {
+        // Avoids storing Sonatype credentials in plain-text. Specify these on
+        // the command line: -PsonatypeUser=foo
+        username project.properties.get("sonatypeUser")
+        password project.properties.get("sonatypePassword")
+      }
+    }
+  }
 }
 
 components.java.withVariantsFromConfiguration(configurations.testFixturesApiElements) { skip() }
