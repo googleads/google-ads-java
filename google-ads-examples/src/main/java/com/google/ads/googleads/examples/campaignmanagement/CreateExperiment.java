@@ -23,6 +23,7 @@ import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.utils.FieldMasks;
 import com.google.ads.googleads.v13.enums.ExperimentStatusEnum.ExperimentStatus;
 import com.google.ads.googleads.v13.enums.ExperimentTypeEnum.ExperimentType;
+import com.google.ads.googleads.v13.enums.ResponseContentTypeEnum.ResponseContentType;
 import com.google.ads.googleads.v13.errors.GoogleAdsError;
 import com.google.ads.googleads.v13.errors.GoogleAdsException;
 import com.google.ads.googleads.v13.resources.Campaign;
@@ -34,8 +35,8 @@ import com.google.ads.googleads.v13.services.ExperimentArmOperation;
 import com.google.ads.googleads.v13.services.ExperimentArmServiceClient;
 import com.google.ads.googleads.v13.services.ExperimentOperation;
 import com.google.ads.googleads.v13.services.ExperimentServiceClient;
-import com.google.ads.googleads.v13.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v13.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v13.services.MutateExperimentArmResult;
+import com.google.ads.googleads.v13.services.MutateExperimentArmsRequest;
 import com.google.ads.googleads.v13.services.MutateExperimentArmsResponse;
 import com.google.ads.googleads.v13.services.MutateExperimentsResponse;
 import com.google.ads.googleads.v13.utils.ResourceNames;
@@ -105,9 +106,8 @@ public class CreateExperiment {
    */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long baseCampaignId) {
     String experiment = createExperimentResource(googleAdsClient, customerId);
-    String treatmentArm =
+    String draftCampaign =
         createExperimentArms(googleAdsClient, customerId, baseCampaignId, experiment);
-    String draftCampaign = fetchDraftCampaign(googleAdsClient, customerId, treatmentArm);
 
     modifyDraftCampaign(googleAdsClient, customerId, draftCampaign);
 
@@ -119,7 +119,9 @@ public class CreateExperiment {
     }
   }
 
-  /** Creates a campaign experiment. */
+  /**
+   * Creates a campaign experiment.
+   */
   // [START create_experiment_1]
   private String createExperimentResource(GoogleAdsClient googleAdsClient, long customerId) {
     ExperimentOperation operation =
@@ -146,7 +148,9 @@ public class CreateExperiment {
   }
   // [END create_experiment_1]
 
-  /** Creates control and experiment arms for the experiment. */
+  /**
+   * Creates control and experiment arms for the experiment.
+   */
   // [START create_experiment_2]
   private String createExperimentArms(
       GoogleAdsClient googleAdsClient, long customerId, long campaignId, String experiment) {
@@ -178,53 +182,40 @@ public class CreateExperiment {
 
     try (ExperimentArmServiceClient experimentArmServiceClient =
         googleAdsClient.getLatestVersion().createExperimentArmServiceClient()) {
+      // Constructs the mutate request.
+      MutateExperimentArmsRequest mutateRequest = MutateExperimentArmsRequest.newBuilder()
+          .setCustomerId(Long.toString(customerId))
+          .addAllOperations(operations)
+          // We want to fetch the draft campaign IDs from the treatment arm, so the easiest way to do
+          // that is to have the response return the newly created entities.
+          .setResponseContentType(ResponseContentType.MUTABLE_RESOURCE)
+          .build();
+
+      // Sends the mutate request.
       MutateExperimentArmsResponse response =
-          experimentArmServiceClient.mutateExperimentArms(Long.toString(customerId), operations);
+          experimentArmServiceClient.mutateExperimentArms(mutateRequest);
 
       // Results always return in the order that you specify them in the request. Since we created
       // the treatment arm last, it will be the last result.  If you don't remember which arm is the
       // treatment arm, you can always filter the query in the next section with
       // `experiment_arm.control = false`.
-      String controlArm = response.getResults(0).getResourceName();
-      String treatmentArm = response.getResults(response.getResultsCount() - 1).getResourceName();
+      MutateExperimentArmResult controlArmResult = response.getResults(0);
+      MutateExperimentArmResult treatmentArmResult = response.getResults(
+          response.getResultsCount() - 1);
 
-      System.out.printf("Created control arm with resource name '%s'%n", controlArm);
-      System.out.printf("Created treatment arm with resource name '%s'%n", treatmentArm);
+      System.out.printf("Created control arm with resource name '%s'%n",
+          controlArmResult.getResourceName());
+      System.out.printf("Created treatment arm with resource name '%s'%n",
+          treatmentArmResult.getResourceName());
 
-      return treatmentArm;
+      return treatmentArmResult.getExperimentArm().getInDesignCampaigns(0);
     }
   }
   // [END create_experiment_2]
 
-  /** Retrieves the draft campaign. */
-  // [START create_experiment_3]
-  private String fetchDraftCampaign(
-      GoogleAdsClient googleAdsClient, long customerId, String treatmentArm) {
-    // The `in_design_campaigns` represent campaign drafts, which you can modify before starting the
-    // experiment.
-    String query =
-        String.format(
-            "SELECT experiment_arm.in_design_campaigns "
-                + "FROM experiment_arm "
-                + "WHERE experiment_arm.resource_name = '%s'",
-            treatmentArm);
-
-    try (GoogleAdsServiceClient googleAdsServiceClient =
-        googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
-      SearchPagedResponse response =
-          googleAdsServiceClient.search(Long.toString(customerId), query);
-
-      // In design campaigns returns as an array, but for now it can only ever contain a single ID,
-      // so we just grab the first one.
-      String draftCampaign =
-          response.iterateAll().iterator().next().getExperimentArm().getInDesignCampaigns(0);
-      System.out.printf("Found draft campaign with resource name '%s'%n", draftCampaign);
-      return draftCampaign;
-    }
-  }
-  // [END create_experiment_3]
-
-  /** Modifies the draft campaign. */
+  /**
+   * Modifies the draft campaign.
+   */
   // [START create_experiment_4]
   private void modifyDraftCampaign(
       GoogleAdsClient googleAdsClient, long customerId, String draftCampaign) {
