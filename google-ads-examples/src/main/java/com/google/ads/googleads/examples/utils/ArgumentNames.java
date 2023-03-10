@@ -79,6 +79,7 @@ public final class ArgumentNames {
   public static final String BUSINESS_PROFILE_EMAIL_ADDRESS = "--businessProfileEmailAddress";
   public static final String HOTEL_CENTER_ACCOUNT_ID = "--hotelCenterAccountId";
   public static final String IMAGE_ASSET_ID = "--imageAssetId";
+  public static final String INCLUDE_IMAGE_EXTENSIONS = "--includeImageExtensions";
   public static final String ITEM_ID = "--itemId";
   public static final String KEYWORD_PLAN_ID = "--keywordPlanId";
   public static final String KEYWORD_TEXT = "--keywordText";
