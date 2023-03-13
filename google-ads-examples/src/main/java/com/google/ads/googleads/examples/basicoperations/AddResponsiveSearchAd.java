@@ -120,7 +120,7 @@ public class AddResponsiveSearchAd {
         required = false,
         arity = 1,
         description = "Whether to include image extensions in the created campaign.")
-    private Boolean includeImageExtensions = true;
+    private Boolean includeImageExtensions = false;
   }
 
   public static void main(String[] args) {
