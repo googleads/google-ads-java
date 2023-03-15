@@ -746,6 +746,7 @@ public class AddPerformanceMaxForTravelGoalsCampaign {
     Map<AssetFieldType, List<String>> textByFieldType = new HashMap<>();
 
     if (HotelAssetSuggestionStatus.SUCCESS.equals(hotelAssetSuggestion.getStatus())) {
+      // Adds text values of suggested text assets.
       for (HotelTextAsset hotelTextAsset : hotelAssetSuggestion.getTextAssetsList()) {
         AssetFieldType assetFieldType = hotelTextAsset.getAssetFieldType();
         if (AssetFieldType.HEADLINE.equals(assetFieldType)
@@ -762,6 +763,7 @@ public class AddPerformanceMaxForTravelGoalsCampaign {
             .add(hotelTextAsset.getText());
       }
     }
+
     // Collects more text values by field type to fulfill the requirements.
     for (Entry<AssetFieldType, Integer> requiredEntry : MIN_REQUIRED_TEXT_ASSET_COUNTS.entrySet()) {
       AssetFieldType assetFieldType = requiredEntry.getKey();
@@ -836,6 +838,7 @@ public class AddPerformanceMaxForTravelGoalsCampaign {
     Map<AssetFieldType, List<String>> imageUrlsByFieldType = new HashMap<>();
 
     if (HotelAssetSuggestionStatus.SUCCESS.equals(hotelAssetSuggestion.getStatus())) {
+      // Adds URLs of suggested image assets.
       for (HotelImageAsset hotelImageAsset : hotelAssetSuggestion.getImageAssetsList()) {
         AssetFieldType assetFieldType = hotelImageAsset.getAssetFieldType();
         System.out.printf(
@@ -847,7 +850,8 @@ public class AddPerformanceMaxForTravelGoalsCampaign {
             .add(hotelImageAsset.getUri());
       }
     }
-    // Collects more text values by field type to fulfill the requirements.
+
+    // Collects more image URLs by field type to fulfill the requirements.
     for (Entry<AssetFieldType, Integer> requiredEntry :
         MIN_REQUIRED_IMAGE_ASSET_COUNTS.entrySet()) {
       AssetFieldType assetFieldType = requiredEntry.getKey();
