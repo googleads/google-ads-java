@@ -159,12 +159,19 @@ public class AddPerformanceMaxForTravelGoalsCampaign {
   // need to be fixed temporary IDs because they are referenced only once.
   private static long temporaryId = ASSET_GROUP_TEMPORARY_ID - 1;
 
+  /** Parameters for the example. */
   private static class AddPerformanceMaxForTravelGoalsCampaignParams extends CodeSampleParams {
 
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
     private Long customerId;
 
-    @Parameter(names = ArgumentNames.PLACE_ID, required = true)
+    @Parameter(
+        names = ArgumentNames.PLACE_ID,
+        required = true,
+        description =
+            "The place ID of a hotel property. A place ID uniquely identifies a place in the Google"
+                + " Places database. See https://developers.google.com/places/web-service/place-id"
+                + " to learn more.")
     private String placeId;
   }
 
