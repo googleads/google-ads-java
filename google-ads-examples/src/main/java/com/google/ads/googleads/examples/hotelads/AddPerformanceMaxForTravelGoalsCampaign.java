@@ -99,7 +99,8 @@ import org.joda.time.DateTime;
  *
  * <ul>
  *   <li>This example uses the default customer conversion goals. For an example of setting
- *       campaign-specific conversion goals, see ShoppingAds/AddPerformanceMaxRetailCampaign.php.
+ *       campaign-specific conversion goals, see {@link
+ *       com.google.ads.googleads.examples.shoppingads.AddPerformanceMaxRetailCampaign}.
  *   <li>To learn how to create asset group signals, see {@link
  *       com.google.ads.googleads.examples.advancedoperations.AddPerformanceMaxCampaign}.
  * </ul>
@@ -346,19 +347,21 @@ public class AddPerformanceMaxForTravelGoalsCampaign {
     // Filters to only the specified asset field type.
     // Constructs a mutate operation to create the asset.
     // Adds the operation to the list.
-    for (HotelTextAsset asset : hotelAssetSuggestion.getTextAssetsList()) {
-      if (asset.getAssetFieldType().equals(assetFieldType)) {
-        MutateOperation build =
-            MutateOperation.newBuilder()
-                .setAssetOperation(
-                    AssetOperation.newBuilder()
-                        .setCreate(
-                            Asset.newBuilder()
-                                .setTextAsset(
-                                    TextAsset.newBuilder().setText(asset.getText()).build())
-                                .build()))
-                .build();
-        mutateOperations.add(build);
+    if (HotelAssetSuggestionStatus.SUCCESS.equals(hotelAssetSuggestion.getStatus())) {
+      for (HotelTextAsset asset : hotelAssetSuggestion.getTextAssetsList()) {
+        if (asset.getAssetFieldType().equals(assetFieldType)) {
+          MutateOperation build =
+              MutateOperation.newBuilder()
+                  .setAssetOperation(
+                      AssetOperation.newBuilder()
+                          .setCreate(
+                              Asset.newBuilder()
+                                  .setTextAsset(
+                                      TextAsset.newBuilder().setText(asset.getText()).build())
+                                  .build()))
+                  .build();
+          mutateOperations.add(build);
+        }
       }
     }
 
