@@ -424,7 +424,7 @@ public class AddPerformanceMaxForTravelGoalsCampaign {
           assetSetServiceClient.mutateAssetSets(
               Long.toString(customerId), ImmutableList.of(assetSetOperation));
       String assetSetResourceName = mutateAssetSetsResponse.getResults(0).getResourceName();
-      System.out.printf("Created an asset set with resource name: %s%n", assetSetResourceName);
+      System.out.printf("Created an asset set with resource name: '%s'%n", assetSetResourceName);
       return assetSetResourceName;
     }
   }
@@ -954,7 +954,7 @@ public class AddPerformanceMaxForTravelGoalsCampaign {
         default:
           throw new IllegalArgumentException("Unexpected response case: " + responseCase);
       }
-      System.out.printf("Created a(n) %s with resource name: %s%n", responseCase, resourceName);
+      System.out.printf("Created a(n) %s with resource name: '%s'%n", responseCase, resourceName);
     }
   }
 }
