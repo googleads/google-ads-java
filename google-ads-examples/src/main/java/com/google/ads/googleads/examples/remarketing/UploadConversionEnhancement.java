@@ -28,7 +28,6 @@ import com.google.ads.googleads.v13.services.ConversionAdjustment;
 import com.google.ads.googleads.v13.services.ConversionAdjustmentResult;
 import com.google.ads.googleads.v13.services.ConversionAdjustmentUploadServiceClient;
 import com.google.ads.googleads.v13.services.GclidDateTimePair;
-import com.google.ads.googleads.v13.services.RestatementValue;
 import com.google.ads.googleads.v13.services.UploadConversionAdjustmentsRequest;
 import com.google.ads.googleads.v13.services.UploadConversionAdjustmentsResponse;
 import com.google.ads.googleads.v13.utils.ResourceNames;
@@ -66,15 +65,6 @@ public class UploadConversionEnhancement {
 
     @Parameter(names = ArgumentNames.USER_AGENT, required = false)
     private String userAgent;
-
-    @Parameter(names = ArgumentNames.RESTATEMENT_VALUE, required = false)
-    private Double restatementValue;
-
-    @Parameter(
-        names = ArgumentNames.CURRENCY_CODE,
-        required = false,
-        description = "The currency of the restatement value.")
-    private String currencyCode;
   }
 
   public static void main(String[] args)
@@ -88,12 +78,9 @@ public class UploadConversionEnhancement {
       params.conversionActionId = Long.parseLong("INSERT_CONVERSION_ACTION_ID_HERE");
       params.orderId = "INSERT_ORDER_ID_HERE";
 
-      // Optional: Specify the conversion date/time, user agent, restatement value, and restatement
-      // currency code.
+      // Optional: Specify the conversion date/time and user agent.
       params.conversionDateTime = null;
       params.userAgent = null;
-      params.restatementValue = null;
-      params.currencyCode = null;
     }
 
     GoogleAdsClient googleAdsClient = null;
@@ -116,9 +103,7 @@ public class UploadConversionEnhancement {
               params.conversionActionId,
               params.orderId,
               params.conversionDateTime,
-              params.userAgent,
-              params.restatementValue,
-              params.currencyCode);
+              params.userAgent);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -144,8 +129,6 @@ public class UploadConversionEnhancement {
    * @param orderId unique order ID (transaction ID) of the conversion.
    * @param conversionDateTime
    * @param userAgent the HTTP user agent of the conversion.
-   * @param restatementValue the enhancement value.
-   * @param restatementCurrencyCode the currency of the enhancement value.
    */
   // [START upload_conversion_enhancement]
   private void runExample(
@@ -154,9 +137,7 @@ public class UploadConversionEnhancement {
       long conversionActionId,
       String orderId,
       String conversionDateTime,
-      String userAgent,
-      Double restatementValue,
-      String restatementCurrencyCode)
+      String userAgent)
       throws NoSuchAlgorithmException, UnsupportedEncodingException {
     // [START create_adjustment]
     // Creates a builder for constructing the enhancement adjustment.
@@ -215,18 +196,6 @@ public class UploadConversionEnhancement {
       // conversion so the conversion and its enhancement are either both attributed as same-device
       // or both attributed as cross-device.
       enhancementBuilder.setUserAgent(userAgent);
-    }
-
-    if (restatementValue != null) {
-      // Creates a builder to construct the restated conversion value.
-      RestatementValue.Builder valueBuilder = enhancementBuilder.getRestatementValueBuilder();
-      // Sets the new value of the conversion.
-      valueBuilder.setAdjustedValue(restatementValue);
-      // Sets the currency of the new value, if provided. Otherwise, the default currency from
-      // the conversion action is used, and if that is not set then the account currency is used.
-      if (restatementCurrencyCode != null) {
-        valueBuilder.setCurrencyCode(restatementCurrencyCode);
-      }
     }
     // [END create_adjustment]
 
