@@ -1,6 +1,16 @@
+24.0.0 - 2023-03-17
+-------------------
+- Remove support for v11 of Google Ads API.
+- Add AddPerformanceMaxForTravelGoalsCampaign example.
+- Remove custom Sonatype client in favor of using `--no-parallel`.
+- Modify CreateExperiment example to demonstrate updated best practices
+- Remove restatement currency code and value from UploadConversionEnhancement
+  example.
+
 23.0.0 - 2023-01-22
 -------------------
 - Add support and examples for Google Ads API v13.0.
+- Remove support for v10 of Google Ads API.
 - Update to version 3.1.2 of
   `com.google.cloud:google-cloud-shared-dependencies`.
 - Automate allstar config updates.
