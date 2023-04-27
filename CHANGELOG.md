@@ -1,3 +1,11 @@
+25.0.0 - 2023-04-27
+-------------------
+- Add support and examples for Google Ads API v13.1.
+- Remove sitelinks example that uses legacy feed features. Use
+  `AddSitelinksUsingAssets` instead. See
+  https://developers.google.com/google-ads/api/docs/extensions/assets/migrating-extensions
+  for details.
+
 24.0.0 - 2023-03-17
 -------------------
 - Remove support for v11 of Google Ads API.
