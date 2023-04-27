@@ -5,7 +5,7 @@ package com.google.ads.googleads.v13.common;
 
 /**
  * <pre>
- * Represents a sitelink extension.
+ * Represents a sitelink.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v13.common.SitelinkFeedItem}
@@ -807,7 +807,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Represents a sitelink extension.
+   * Represents a sitelink.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v13.common.SitelinkFeedItem}

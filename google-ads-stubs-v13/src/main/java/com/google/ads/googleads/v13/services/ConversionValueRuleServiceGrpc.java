@@ -98,7 +98,7 @@ public final class ConversionValueRuleServiceGrpc {
    * Service to manage conversion value rules.
    * </pre>
    */
-  public static abstract class ConversionValueRuleServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -106,30 +106,34 @@ public final class ConversionValueRuleServiceGrpc {
      * returned.
      * </pre>
      */
-    public void mutateConversionValueRules(com.google.ads.googleads.v13.services.MutateConversionValueRulesRequest request,
+    default void mutateConversionValueRules(com.google.ads.googleads.v13.services.MutateConversionValueRulesRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.MutateConversionValueRulesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateConversionValueRulesMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateConversionValueRulesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.MutateConversionValueRulesRequest,
-                com.google.ads.googleads.v13.services.MutateConversionValueRulesResponse>(
-                  this, METHODID_MUTATE_CONVERSION_VALUE_RULES)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service ConversionValueRuleService.
    * <pre>
    * Service to manage conversion value rules.
    * </pre>
    */
-  public static final class ConversionValueRuleServiceStub extends io.grpc.stub.AbstractAsyncStub<ConversionValueRuleServiceStub> {
+  public static abstract class ConversionValueRuleServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return ConversionValueRuleServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service ConversionValueRuleService.
+   * <pre>
+   * Service to manage conversion value rules.
+   * </pre>
+   */
+  public static final class ConversionValueRuleServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<ConversionValueRuleServiceStub> {
     private ConversionValueRuleServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -155,11 +159,13 @@ public final class ConversionValueRuleServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service ConversionValueRuleService.
    * <pre>
    * Service to manage conversion value rules.
    * </pre>
    */
-  public static final class ConversionValueRuleServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ConversionValueRuleServiceBlockingStub> {
+  public static final class ConversionValueRuleServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<ConversionValueRuleServiceBlockingStub> {
     private ConversionValueRuleServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -184,11 +190,13 @@ public final class ConversionValueRuleServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service ConversionValueRuleService.
    * <pre>
    * Service to manage conversion value rules.
    * </pre>
    */
-  public static final class ConversionValueRuleServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ConversionValueRuleServiceFutureStub> {
+  public static final class ConversionValueRuleServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<ConversionValueRuleServiceFutureStub> {
     private ConversionValueRuleServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -220,10 +228,10 @@ public final class ConversionValueRuleServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final ConversionValueRuleServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(ConversionValueRuleServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -250,6 +258,18 @@ public final class ConversionValueRuleServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateConversionValueRulesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.MutateConversionValueRulesRequest,
+              com.google.ads.googleads.v13.services.MutateConversionValueRulesResponse>(
+                service, METHODID_MUTATE_CONVERSION_VALUE_RULES)))
+        .build();
   }
 
   private static abstract class ConversionValueRuleServiceBaseDescriptorSupplier

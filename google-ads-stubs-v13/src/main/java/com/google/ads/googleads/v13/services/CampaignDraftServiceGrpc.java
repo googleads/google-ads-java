@@ -160,7 +160,7 @@ public final class CampaignDraftServiceGrpc {
    * Service to manage campaign drafts.
    * </pre>
    */
-  public static abstract class CampaignDraftServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -179,7 +179,7 @@ public final class CampaignDraftServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void mutateCampaignDrafts(com.google.ads.googleads.v13.services.MutateCampaignDraftsRequest request,
+    default void mutateCampaignDrafts(com.google.ads.googleads.v13.services.MutateCampaignDraftsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.MutateCampaignDraftsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateCampaignDraftsMethod(), responseObserver);
     }
@@ -204,7 +204,7 @@ public final class CampaignDraftServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void promoteCampaignDraft(com.google.ads.googleads.v13.services.PromoteCampaignDraftRequest request,
+    default void promoteCampaignDraft(com.google.ads.googleads.v13.services.PromoteCampaignDraftRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPromoteCampaignDraftMethod(), responseObserver);
     }
@@ -223,44 +223,34 @@ public final class CampaignDraftServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void listCampaignDraftAsyncErrors(com.google.ads.googleads.v13.services.ListCampaignDraftAsyncErrorsRequest request,
+    default void listCampaignDraftAsyncErrors(com.google.ads.googleads.v13.services.ListCampaignDraftAsyncErrorsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.ListCampaignDraftAsyncErrorsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCampaignDraftAsyncErrorsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateCampaignDraftsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.MutateCampaignDraftsRequest,
-                com.google.ads.googleads.v13.services.MutateCampaignDraftsResponse>(
-                  this, METHODID_MUTATE_CAMPAIGN_DRAFTS)))
-          .addMethod(
-            getPromoteCampaignDraftMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.PromoteCampaignDraftRequest,
-                com.google.longrunning.Operation>(
-                  this, METHODID_PROMOTE_CAMPAIGN_DRAFT)))
-          .addMethod(
-            getListCampaignDraftAsyncErrorsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.ListCampaignDraftAsyncErrorsRequest,
-                com.google.ads.googleads.v13.services.ListCampaignDraftAsyncErrorsResponse>(
-                  this, METHODID_LIST_CAMPAIGN_DRAFT_ASYNC_ERRORS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service CampaignDraftService.
    * <pre>
    * Service to manage campaign drafts.
    * </pre>
    */
-  public static final class CampaignDraftServiceStub extends io.grpc.stub.AbstractAsyncStub<CampaignDraftServiceStub> {
+  public static abstract class CampaignDraftServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return CampaignDraftServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service CampaignDraftService.
+   * <pre>
+   * Service to manage campaign drafts.
+   * </pre>
+   */
+  public static final class CampaignDraftServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<CampaignDraftServiceStub> {
     private CampaignDraftServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -343,11 +333,13 @@ public final class CampaignDraftServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service CampaignDraftService.
    * <pre>
    * Service to manage campaign drafts.
    * </pre>
    */
-  public static final class CampaignDraftServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CampaignDraftServiceBlockingStub> {
+  public static final class CampaignDraftServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<CampaignDraftServiceBlockingStub> {
     private CampaignDraftServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -427,11 +419,13 @@ public final class CampaignDraftServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service CampaignDraftService.
    * <pre>
    * Service to manage campaign drafts.
    * </pre>
    */
-  public static final class CampaignDraftServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CampaignDraftServiceFutureStub> {
+  public static final class CampaignDraftServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<CampaignDraftServiceFutureStub> {
     private CampaignDraftServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -522,10 +516,10 @@ public final class CampaignDraftServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final CampaignDraftServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(CampaignDraftServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -560,6 +554,32 @@ public final class CampaignDraftServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateCampaignDraftsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.MutateCampaignDraftsRequest,
+              com.google.ads.googleads.v13.services.MutateCampaignDraftsResponse>(
+                service, METHODID_MUTATE_CAMPAIGN_DRAFTS)))
+        .addMethod(
+          getPromoteCampaignDraftMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.PromoteCampaignDraftRequest,
+              com.google.longrunning.Operation>(
+                service, METHODID_PROMOTE_CAMPAIGN_DRAFT)))
+        .addMethod(
+          getListCampaignDraftAsyncErrorsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.ListCampaignDraftAsyncErrorsRequest,
+              com.google.ads.googleads.v13.services.ListCampaignDraftAsyncErrorsResponse>(
+                service, METHODID_LIST_CAMPAIGN_DRAFT_ASYNC_ERRORS)))
+        .build();
   }
 
   private static abstract class CampaignDraftServiceBaseDescriptorSupplier

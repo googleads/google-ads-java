@@ -30,7 +30,7 @@ public final class UserListErrorProto {
     java.lang.String[] descriptorData = {
       "\n5google/ads/googleads/v13/errors/user_l" +
       "ist_error.proto\022\037google.ads.googleads.v1" +
-      "3.errors\"\355\007\n\021UserListErrorEnum\"\327\007\n\rUserL" +
+      "3.errors\"\301\010\n\021UserListErrorEnum\"\253\010\n\rUserL" +
       "istError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\0227" +
       "\n3EXTERNAL_REMARKETING_USER_LIST_MUTATE_" +
       "NOT_SUPPORTED\020\002\022\032\n\026CONCRETE_TYPE_REQUIRE" +
@@ -55,13 +55,15 @@ public final class UserListErrorProto {
       "_NOT_SUPPORTED\020\"\022:\n6CAN_NOT_ADD_A_SIMILA" +
       "R_USERLIST_AS_LOGICAL_LIST_OPERAND\020#\022:\n6" +
       "CAN_NOT_MIX_CRM_BASED_IN_LOGICAL_LIST_WI" +
-      "TH_OTHER_LISTS\020$B\362\001\n#com.google.ads.goog" +
-      "leads.v13.errorsB\022UserListErrorProtoP\001ZE" +
-      "google.golang.org/genproto/googleapis/ad" +
-      "s/googleads/v13/errors;errors\242\002\003GAA\252\002\037Go" +
-      "ogle.Ads.GoogleAds.V13.Errors\312\002\037Google\\A" +
-      "ds\\GoogleAds\\V13\\Errors\352\002#Google::Ads::G" +
-      "oogleAds::V13::Errorsb\006proto3"
+      "TH_OTHER_LISTS\020$\022\026\n\022APP_ID_NOT_ALLOWED\020\'" +
+      "\022\035\n\031CANNOT_MUTATE_SYSTEM_LIST\020(\022\033\n\027MOBIL" +
+      "E_APP_IS_SENSITIVE\020)B\362\001\n#com.google.ads." +
+      "googleads.v13.errorsB\022UserListErrorProto" +
+      "P\001ZEgoogle.golang.org/genproto/googleapi" +
+      "s/ads/googleads/v13/errors;errors\242\002\003GAA\252" +
+      "\002\037Google.Ads.GoogleAds.V13.Errors\312\002\037Goog" +
+      "le\\Ads\\GoogleAds\\V13\\Errors\352\002#Google::Ad" +
+      "s::GoogleAds::V13::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

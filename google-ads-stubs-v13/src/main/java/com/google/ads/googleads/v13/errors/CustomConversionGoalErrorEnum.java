@@ -114,6 +114,15 @@ private static final long serialVersionUID = 0L;
      * <code>DUPLICATE_CONVERSION_ACTION_LIST = 6;</code>
      */
     DUPLICATE_CONVERSION_ACTION_LIST(6),
+    /**
+     * <pre>
+     * Conversion types that cannot be biddable should not be included in custom
+     * goal.
+     * </pre>
+     *
+     * <code>NON_BIDDABLE_CONVERSION_ACTION_NOT_ELIGIBLE_FOR_CUSTOM_GOAL = 7;</code>
+     */
+    NON_BIDDABLE_CONVERSION_ACTION_NOT_ELIGIBLE_FOR_CUSTOM_GOAL(7),
     UNRECOGNIZED(-1),
     ;
 
@@ -175,6 +184,15 @@ private static final long serialVersionUID = 0L;
      * <code>DUPLICATE_CONVERSION_ACTION_LIST = 6;</code>
      */
     public static final int DUPLICATE_CONVERSION_ACTION_LIST_VALUE = 6;
+    /**
+     * <pre>
+     * Conversion types that cannot be biddable should not be included in custom
+     * goal.
+     * </pre>
+     *
+     * <code>NON_BIDDABLE_CONVERSION_ACTION_NOT_ELIGIBLE_FOR_CUSTOM_GOAL = 7;</code>
+     */
+    public static final int NON_BIDDABLE_CONVERSION_ACTION_NOT_ELIGIBLE_FOR_CUSTOM_GOAL_VALUE = 7;
 
 
     public final int getNumber() {
@@ -208,6 +226,7 @@ private static final long serialVersionUID = 0L;
         case 4: return CANNOT_REMOVE_LINKED_CUSTOM_CONVERSION_GOAL;
         case 5: return CUSTOM_GOAL_DUPLICATE_NAME;
         case 6: return DUPLICATE_CONVERSION_ACTION_LIST;
+        case 7: return NON_BIDDABLE_CONVERSION_ACTION_NOT_ELIGIBLE_FOR_CUSTOM_GOAL;
         default: return null;
       }
     }

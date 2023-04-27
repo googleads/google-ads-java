@@ -98,7 +98,7 @@ public final class AssetGroupListingGroupFilterServiceGrpc {
    * Service to manage asset group listing group filter.
    * </pre>
    */
-  public static abstract class AssetGroupListingGroupFilterServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -106,30 +106,34 @@ public final class AssetGroupListingGroupFilterServiceGrpc {
      * statuses are returned.
      * </pre>
      */
-    public void mutateAssetGroupListingGroupFilters(com.google.ads.googleads.v13.services.MutateAssetGroupListingGroupFiltersRequest request,
+    default void mutateAssetGroupListingGroupFilters(com.google.ads.googleads.v13.services.MutateAssetGroupListingGroupFiltersRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.MutateAssetGroupListingGroupFiltersResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateAssetGroupListingGroupFiltersMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateAssetGroupListingGroupFiltersMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.MutateAssetGroupListingGroupFiltersRequest,
-                com.google.ads.googleads.v13.services.MutateAssetGroupListingGroupFiltersResponse>(
-                  this, METHODID_MUTATE_ASSET_GROUP_LISTING_GROUP_FILTERS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service AssetGroupListingGroupFilterService.
    * <pre>
    * Service to manage asset group listing group filter.
    * </pre>
    */
-  public static final class AssetGroupListingGroupFilterServiceStub extends io.grpc.stub.AbstractAsyncStub<AssetGroupListingGroupFilterServiceStub> {
+  public static abstract class AssetGroupListingGroupFilterServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return AssetGroupListingGroupFilterServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service AssetGroupListingGroupFilterService.
+   * <pre>
+   * Service to manage asset group listing group filter.
+   * </pre>
+   */
+  public static final class AssetGroupListingGroupFilterServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<AssetGroupListingGroupFilterServiceStub> {
     private AssetGroupListingGroupFilterServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -155,11 +159,13 @@ public final class AssetGroupListingGroupFilterServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service AssetGroupListingGroupFilterService.
    * <pre>
    * Service to manage asset group listing group filter.
    * </pre>
    */
-  public static final class AssetGroupListingGroupFilterServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<AssetGroupListingGroupFilterServiceBlockingStub> {
+  public static final class AssetGroupListingGroupFilterServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<AssetGroupListingGroupFilterServiceBlockingStub> {
     private AssetGroupListingGroupFilterServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -184,11 +190,13 @@ public final class AssetGroupListingGroupFilterServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service AssetGroupListingGroupFilterService.
    * <pre>
    * Service to manage asset group listing group filter.
    * </pre>
    */
-  public static final class AssetGroupListingGroupFilterServiceFutureStub extends io.grpc.stub.AbstractFutureStub<AssetGroupListingGroupFilterServiceFutureStub> {
+  public static final class AssetGroupListingGroupFilterServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<AssetGroupListingGroupFilterServiceFutureStub> {
     private AssetGroupListingGroupFilterServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -220,10 +228,10 @@ public final class AssetGroupListingGroupFilterServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AssetGroupListingGroupFilterServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AssetGroupListingGroupFilterServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -250,6 +258,18 @@ public final class AssetGroupListingGroupFilterServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateAssetGroupListingGroupFiltersMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.MutateAssetGroupListingGroupFiltersRequest,
+              com.google.ads.googleads.v13.services.MutateAssetGroupListingGroupFiltersResponse>(
+                service, METHODID_MUTATE_ASSET_GROUP_LISTING_GROUP_FILTERS)))
+        .build();
   }
 
   private static abstract class AssetGroupListingGroupFilterServiceBaseDescriptorSupplier

@@ -30,7 +30,7 @@ public final class RecommendationTypeProto {
     java.lang.String[] descriptorData = {
       "\n8google/ads/googleads/v13/enums/recomme" +
       "ndation_type.proto\022\036google.ads.googleads" +
-      ".v13.enums\"\256\006\n\026RecommendationTypeEnum\"\223\006" +
+      ".v13.enums\"\365\t\n\026RecommendationTypeEnum\"\332\t" +
       "\n\022RecommendationType\022\017\n\013UNSPECIFIED\020\000\022\013\n" +
       "\007UNKNOWN\020\001\022\023\n\017CAMPAIGN_BUDGET\020\002\022\013\n\007KEYWO" +
       "RD\020\003\022\013\n\007TEXT_AD\020\004\022\025\n\021TARGET_CPA_OPT_IN\020\005" +
@@ -50,13 +50,25 @@ public final class RecommendationTypeProto {
       "AIGN_TO_PERFORMANCE_MAX\020\031\022 \n\034RAISE_TARGE" +
       "T_CPA_BID_TOO_LOW\020\032\022\037\n\033FORECASTING_SET_T" +
       "ARGET_ROAS\020\033\022\021\n\rCALLOUT_ASSET\020\034\022\022\n\016SITEL" +
-      "INK_ASSET\020\035\022\016\n\nCALL_ASSET\020\036B\361\001\n\"com.goog" +
-      "le.ads.googleads.v13.enumsB\027Recommendati" +
-      "onTypeProtoP\001ZCgoogle.golang.org/genprot" +
-      "o/googleapis/ads/googleads/v13/enums;enu" +
-      "ms\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V13.Enum" +
-      "s\312\002\036Google\\Ads\\GoogleAds\\V13\\Enums\352\002\"Goo" +
-      "gle::Ads::GoogleAds::V13::Enumsb\006proto3"
+      "INK_ASSET\020\035\022\016\n\nCALL_ASSET\020\036\022\032\n\026SHOPPING_" +
+      "ADD_AGE_GROUP\020\037\022\026\n\022SHOPPING_ADD_COLOR\020 \022" +
+      "\027\n\023SHOPPING_ADD_GENDER\020!\022\025\n\021SHOPPING_ADD" +
+      "_GTIN\020\"\022!\n\035SHOPPING_ADD_MORE_IDENTIFIERS" +
+      "\020#\022\025\n\021SHOPPING_ADD_SIZE\020$\022%\n!SHOPPING_AD" +
+      "D_PRODUCTS_TO_CAMPAIGN\020%\022%\n!SHOPPING_FIX" +
+      "_DISAPPROVED_PRODUCTS\020&\022\036\n\032SHOPPING_TARG" +
+      "ET_ALL_OFFERS\020\'\0222\n.SHOPPING_FIX_SUSPENDE" +
+      "D_MERCHANT_CENTER_ACCOUNT\020(\022;\n7SHOPPING_" +
+      "FIX_MERCHANT_CENTER_ACCOUNT_SUSPENSION_W" +
+      "ARNING\020)\022H\nDSHOPPING_MIGRATE_REGULAR_SHO" +
+      "PPING_CAMPAIGN_OFFERS_TO_PERFORMANCE_MAX" +
+      "\020*B\361\001\n\"com.google.ads.googleads.v13.enum" +
+      "sB\027RecommendationTypeProtoP\001ZCgoogle.gol" +
+      "ang.org/genproto/googleapis/ads/googlead" +
+      "s/v13/enums;enums\242\002\003GAA\252\002\036Google.Ads.Goo" +
+      "gleAds.V13.Enums\312\002\036Google\\Ads\\GoogleAds\\" +
+      "V13\\Enums\352\002\"Google::Ads::GoogleAds::V13:" +
+      ":Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

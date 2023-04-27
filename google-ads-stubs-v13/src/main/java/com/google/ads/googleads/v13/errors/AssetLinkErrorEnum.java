@@ -242,13 +242,22 @@ private static final long serialVersionUID = 0L;
     CANNOT_LINK_TO_AUTOMATICALLY_CREATED_ASSET(20),
     /**
      * <pre>
-     * Automatically created links cannot be changed into adveritser links or
+     * Automatically created links cannot be changed into advertiser links or
      * the reverse.
      * </pre>
      *
      * <code>CANNOT_MODIFY_ASSET_LINK_SOURCE = 21;</code>
      */
     CANNOT_MODIFY_ASSET_LINK_SOURCE(21),
+    /**
+     * <pre>
+     * Lead Form asset with Location answer type can't be linked to the
+     * Customer/Campaign because there are no Location assets.
+     * </pre>
+     *
+     * <code>CANNOT_LINK_LOCATION_LEAD_FORM_WITHOUT_LOCATION_ASSET = 22;</code>
+     */
+    CANNOT_LINK_LOCATION_LEAD_FORM_WITHOUT_LOCATION_ASSET(22),
     UNRECOGNIZED(-1),
     ;
 
@@ -438,13 +447,22 @@ private static final long serialVersionUID = 0L;
     public static final int CANNOT_LINK_TO_AUTOMATICALLY_CREATED_ASSET_VALUE = 20;
     /**
      * <pre>
-     * Automatically created links cannot be changed into adveritser links or
+     * Automatically created links cannot be changed into advertiser links or
      * the reverse.
      * </pre>
      *
      * <code>CANNOT_MODIFY_ASSET_LINK_SOURCE = 21;</code>
      */
     public static final int CANNOT_MODIFY_ASSET_LINK_SOURCE_VALUE = 21;
+    /**
+     * <pre>
+     * Lead Form asset with Location answer type can't be linked to the
+     * Customer/Campaign because there are no Location assets.
+     * </pre>
+     *
+     * <code>CANNOT_LINK_LOCATION_LEAD_FORM_WITHOUT_LOCATION_ASSET = 22;</code>
+     */
+    public static final int CANNOT_LINK_LOCATION_LEAD_FORM_WITHOUT_LOCATION_ASSET_VALUE = 22;
 
 
     public final int getNumber() {
@@ -493,6 +511,7 @@ private static final long serialVersionUID = 0L;
         case 19: return CANNOT_CREATE_AUTOMATICALLY_CREATED_LINKS;
         case 20: return CANNOT_LINK_TO_AUTOMATICALLY_CREATED_ASSET;
         case 21: return CANNOT_MODIFY_ASSET_LINK_SOURCE;
+        case 22: return CANNOT_LINK_LOCATION_LEAD_FORM_WITHOUT_LOCATION_ASSET;
         default: return null;
       }
     }

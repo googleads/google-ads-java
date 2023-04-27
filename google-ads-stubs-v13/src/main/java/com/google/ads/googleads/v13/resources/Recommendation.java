@@ -53,6 +53,796 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v13.resources.Recommendation.class, com.google.ads.googleads.v13.resources.Recommendation.Builder.class);
   }
 
+  public interface MerchantInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v13.resources.Recommendation.MerchantInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Output only. The Merchant Center account ID.
+     * </pre>
+     *
+     * <code>int64 id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The id.
+     */
+    long getId();
+
+    /**
+     * <pre>
+     * Output only. The name of the Merchant Center account.
+     * </pre>
+     *
+     * <code>string name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Output only. The name of the Merchant Center account.
+     * </pre>
+     *
+     * <code>string name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Output only. Whether the Merchant Center account is a Multi-Client
+     * account (MCA).
+     * </pre>
+     *
+     * <code>bool multi_client = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The multiClient.
+     */
+    boolean getMultiClient();
+  }
+  /**
+   * <pre>
+   * The Merchant Center account details.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v13.resources.Recommendation.MerchantInfo}
+   */
+  public static final class MerchantInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v13.resources.Recommendation.MerchantInfo)
+      MerchantInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MerchantInfo.newBuilder() to construct.
+    private MerchantInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MerchantInfo() {
+      name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MerchantInfo();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v13.resources.RecommendationProto.internal_static_google_ads_googleads_v13_resources_Recommendation_MerchantInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v13.resources.RecommendationProto.internal_static_google_ads_googleads_v13_resources_Recommendation_MerchantInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.class, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <pre>
+     * Output only. The Merchant Center account ID.
+     * </pre>
+     *
+     * <code>int64 id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * Output only. The name of the Merchant Center account.
+     * </pre>
+     *
+     * <code>string name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The name of the Merchant Center account.
+     * </pre>
+     *
+     * <code>string name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MULTI_CLIENT_FIELD_NUMBER = 3;
+    private boolean multiClient_ = false;
+    /**
+     * <pre>
+     * Output only. Whether the Merchant Center account is a Multi-Client
+     * account (MCA).
+     * </pre>
+     *
+     * <code>bool multi_client = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The multiClient.
+     */
+    @java.lang.Override
+    public boolean getMultiClient() {
+      return multiClient_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeInt64(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (multiClient_ != false) {
+        output.writeBool(3, multiClient_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (multiClient_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, multiClient_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo other = (com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (getMultiClient()
+          != other.getMultiClient()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + MULTI_CLIENT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getMultiClient());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * The Merchant Center account details.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v13.resources.Recommendation.MerchantInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v13.resources.Recommendation.MerchantInfo)
+        com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v13.resources.RecommendationProto.internal_static_google_ads_googleads_v13_resources_Recommendation_MerchantInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v13.resources.RecommendationProto.internal_static_google_ads_googleads_v13_resources_Recommendation_MerchantInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.class, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0L;
+        name_ = "";
+        multiClient_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v13.resources.RecommendationProto.internal_static_google_ads_googleads_v13_resources_Recommendation_MerchantInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo getDefaultInstanceForType() {
+        return com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo build() {
+        com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo buildPartial() {
+        com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo result = new com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.multiClient_ = multiClient_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo) {
+          return mergeFrom((com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo other) {
+        if (other == com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getMultiClient() != false) {
+          setMultiClient(other.getMultiClient());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                multiClient_ = input.readBool();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <pre>
+       * Output only. The Merchant Center account ID.
+       * </pre>
+       *
+       * <code>int64 id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <pre>
+       * Output only. The Merchant Center account ID.
+       * </pre>
+       *
+       * <code>int64 id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+        
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The Merchant Center account ID.
+       * </pre>
+       *
+       * <code>int64 id = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Output only. The name of the Merchant Center account.
+       * </pre>
+       *
+       * <code>string name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. The name of the Merchant Center account.
+       * </pre>
+       *
+       * <code>string name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. The name of the Merchant Center account.
+       * </pre>
+       *
+       * <code>string name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The name of the Merchant Center account.
+       * </pre>
+       *
+       * <code>string name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The name of the Merchant Center account.
+       * </pre>
+       *
+       * <code>string name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private boolean multiClient_ ;
+      /**
+       * <pre>
+       * Output only. Whether the Merchant Center account is a Multi-Client
+       * account (MCA).
+       * </pre>
+       *
+       * <code>bool multi_client = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The multiClient.
+       */
+      @java.lang.Override
+      public boolean getMultiClient() {
+        return multiClient_;
+      }
+      /**
+       * <pre>
+       * Output only. Whether the Merchant Center account is a Multi-Client
+       * account (MCA).
+       * </pre>
+       *
+       * <code>bool multi_client = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The multiClient to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMultiClient(boolean value) {
+        
+        multiClient_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Whether the Merchant Center account is a Multi-Client
+       * account (MCA).
+       * </pre>
+       *
+       * <code>bool multi_client = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMultiClient() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        multiClient_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v13.resources.Recommendation.MerchantInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v13.resources.Recommendation.MerchantInfo)
+    private static final com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo();
+    }
+
+    public static com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MerchantInfo>
+        PARSER = new com.google.protobuf.AbstractParser<MerchantInfo>() {
+      @java.lang.Override
+      public MerchantInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MerchantInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MerchantInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface RecommendationImpactOrBuilder extends
       // @@protoc_insertion_point(interface_extends:google.ads.googleads.v13.resources.Recommendation.RecommendationImpact)
       com.google.protobuf.MessageOrBuilder {
@@ -11999,8 +12789,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. New sitelink extension assets recommended at the campaign
-     * level.
+     * Output only. New sitelink assets recommended at the campaign level.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_campaign_sitelink_assets = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12009,8 +12798,7 @@ private static final long serialVersionUID = 0L;
         getRecommendedCampaignSitelinkAssetsList();
     /**
      * <pre>
-     * Output only. New sitelink extension assets recommended at the campaign
-     * level.
+     * Output only. New sitelink assets recommended at the campaign level.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_campaign_sitelink_assets = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12018,8 +12806,7 @@ private static final long serialVersionUID = 0L;
     com.google.ads.googleads.v13.resources.Asset getRecommendedCampaignSitelinkAssets(int index);
     /**
      * <pre>
-     * Output only. New sitelink extension assets recommended at the campaign
-     * level.
+     * Output only. New sitelink assets recommended at the campaign level.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_campaign_sitelink_assets = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12027,8 +12814,7 @@ private static final long serialVersionUID = 0L;
     int getRecommendedCampaignSitelinkAssetsCount();
     /**
      * <pre>
-     * Output only. New sitelink extension assets recommended at the campaign
-     * level.
+     * Output only. New sitelink assets recommended at the campaign level.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_campaign_sitelink_assets = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12037,8 +12823,7 @@ private static final long serialVersionUID = 0L;
         getRecommendedCampaignSitelinkAssetsOrBuilderList();
     /**
      * <pre>
-     * Output only. New sitelink extension assets recommended at the campaign
-     * level.
+     * Output only. New sitelink assets recommended at the campaign level.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_campaign_sitelink_assets = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12048,8 +12833,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. New sitelink extension assets recommended at the customer
-     * level.
+     * Output only. New sitelink assets recommended at the customer level.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_customer_sitelink_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12058,8 +12842,7 @@ private static final long serialVersionUID = 0L;
         getRecommendedCustomerSitelinkAssetsList();
     /**
      * <pre>
-     * Output only. New sitelink extension assets recommended at the customer
-     * level.
+     * Output only. New sitelink assets recommended at the customer level.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_customer_sitelink_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12067,8 +12850,7 @@ private static final long serialVersionUID = 0L;
     com.google.ads.googleads.v13.resources.Asset getRecommendedCustomerSitelinkAssets(int index);
     /**
      * <pre>
-     * Output only. New sitelink extension assets recommended at the customer
-     * level.
+     * Output only. New sitelink assets recommended at the customer level.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_customer_sitelink_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12076,8 +12858,7 @@ private static final long serialVersionUID = 0L;
     int getRecommendedCustomerSitelinkAssetsCount();
     /**
      * <pre>
-     * Output only. New sitelink extension assets recommended at the customer
-     * level.
+     * Output only. New sitelink assets recommended at the customer level.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_customer_sitelink_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12086,8 +12867,7 @@ private static final long serialVersionUID = 0L;
         getRecommendedCustomerSitelinkAssetsOrBuilderList();
     /**
      * <pre>
-     * Output only. New sitelink extension assets recommended at the customer
-     * level.
+     * Output only. New sitelink assets recommended at the customer level.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_customer_sitelink_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12146,8 +12926,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v13.resources.Asset> recommendedCampaignSitelinkAssets_;
     /**
      * <pre>
-     * Output only. New sitelink extension assets recommended at the campaign
-     * level.
+     * Output only. New sitelink assets recommended at the campaign level.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_campaign_sitelink_assets = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12158,8 +12937,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. New sitelink extension assets recommended at the campaign
-     * level.
+     * Output only. New sitelink assets recommended at the campaign level.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_campaign_sitelink_assets = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12171,8 +12949,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. New sitelink extension assets recommended at the campaign
-     * level.
+     * Output only. New sitelink assets recommended at the campaign level.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_campaign_sitelink_assets = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12183,8 +12960,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. New sitelink extension assets recommended at the campaign
-     * level.
+     * Output only. New sitelink assets recommended at the campaign level.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_campaign_sitelink_assets = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12195,8 +12971,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. New sitelink extension assets recommended at the campaign
-     * level.
+     * Output only. New sitelink assets recommended at the campaign level.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_campaign_sitelink_assets = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12212,8 +12987,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v13.resources.Asset> recommendedCustomerSitelinkAssets_;
     /**
      * <pre>
-     * Output only. New sitelink extension assets recommended at the customer
-     * level.
+     * Output only. New sitelink assets recommended at the customer level.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_customer_sitelink_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12224,8 +12998,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. New sitelink extension assets recommended at the customer
-     * level.
+     * Output only. New sitelink assets recommended at the customer level.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_customer_sitelink_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12237,8 +13010,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. New sitelink extension assets recommended at the customer
-     * level.
+     * Output only. New sitelink assets recommended at the customer level.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_customer_sitelink_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12249,8 +13021,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. New sitelink extension assets recommended at the customer
-     * level.
+     * Output only. New sitelink assets recommended at the customer level.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_customer_sitelink_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12261,8 +13032,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. New sitelink extension assets recommended at the customer
-     * level.
+     * Output only. New sitelink assets recommended at the customer level.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_customer_sitelink_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12731,8 +13501,7 @@ private static final long serialVersionUID = 0L;
 
       /**
        * <pre>
-       * Output only. New sitelink extension assets recommended at the campaign
-       * level.
+       * Output only. New sitelink assets recommended at the campaign level.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_campaign_sitelink_assets = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12746,8 +13515,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. New sitelink extension assets recommended at the campaign
-       * level.
+       * Output only. New sitelink assets recommended at the campaign level.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_campaign_sitelink_assets = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12761,8 +13529,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. New sitelink extension assets recommended at the campaign
-       * level.
+       * Output only. New sitelink assets recommended at the campaign level.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_campaign_sitelink_assets = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12776,8 +13543,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. New sitelink extension assets recommended at the campaign
-       * level.
+       * Output only. New sitelink assets recommended at the campaign level.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_campaign_sitelink_assets = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12798,8 +13564,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. New sitelink extension assets recommended at the campaign
-       * level.
+       * Output only. New sitelink assets recommended at the campaign level.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_campaign_sitelink_assets = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12817,8 +13582,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. New sitelink extension assets recommended at the campaign
-       * level.
+       * Output only. New sitelink assets recommended at the campaign level.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_campaign_sitelink_assets = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12838,8 +13602,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. New sitelink extension assets recommended at the campaign
-       * level.
+       * Output only. New sitelink assets recommended at the campaign level.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_campaign_sitelink_assets = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12860,8 +13623,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. New sitelink extension assets recommended at the campaign
-       * level.
+       * Output only. New sitelink assets recommended at the campaign level.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_campaign_sitelink_assets = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12879,8 +13641,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. New sitelink extension assets recommended at the campaign
-       * level.
+       * Output only. New sitelink assets recommended at the campaign level.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_campaign_sitelink_assets = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12898,8 +13659,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. New sitelink extension assets recommended at the campaign
-       * level.
+       * Output only. New sitelink assets recommended at the campaign level.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_campaign_sitelink_assets = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12918,8 +13678,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. New sitelink extension assets recommended at the campaign
-       * level.
+       * Output only. New sitelink assets recommended at the campaign level.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_campaign_sitelink_assets = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12936,8 +13695,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. New sitelink extension assets recommended at the campaign
-       * level.
+       * Output only. New sitelink assets recommended at the campaign level.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_campaign_sitelink_assets = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12954,8 +13712,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. New sitelink extension assets recommended at the campaign
-       * level.
+       * Output only. New sitelink assets recommended at the campaign level.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_campaign_sitelink_assets = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12966,8 +13723,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. New sitelink extension assets recommended at the campaign
-       * level.
+       * Output only. New sitelink assets recommended at the campaign level.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_campaign_sitelink_assets = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12981,8 +13737,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. New sitelink extension assets recommended at the campaign
-       * level.
+       * Output only. New sitelink assets recommended at the campaign level.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_campaign_sitelink_assets = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12997,8 +13752,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. New sitelink extension assets recommended at the campaign
-       * level.
+       * Output only. New sitelink assets recommended at the campaign level.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_campaign_sitelink_assets = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -13009,8 +13763,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. New sitelink extension assets recommended at the campaign
-       * level.
+       * Output only. New sitelink assets recommended at the campaign level.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_campaign_sitelink_assets = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -13022,8 +13775,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. New sitelink extension assets recommended at the campaign
-       * level.
+       * Output only. New sitelink assets recommended at the campaign level.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_campaign_sitelink_assets = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -13061,8 +13813,7 @@ private static final long serialVersionUID = 0L;
 
       /**
        * <pre>
-       * Output only. New sitelink extension assets recommended at the customer
-       * level.
+       * Output only. New sitelink assets recommended at the customer level.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_customer_sitelink_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -13076,8 +13827,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. New sitelink extension assets recommended at the customer
-       * level.
+       * Output only. New sitelink assets recommended at the customer level.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_customer_sitelink_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -13091,8 +13841,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. New sitelink extension assets recommended at the customer
-       * level.
+       * Output only. New sitelink assets recommended at the customer level.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_customer_sitelink_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -13106,8 +13855,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. New sitelink extension assets recommended at the customer
-       * level.
+       * Output only. New sitelink assets recommended at the customer level.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_customer_sitelink_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -13128,8 +13876,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. New sitelink extension assets recommended at the customer
-       * level.
+       * Output only. New sitelink assets recommended at the customer level.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_customer_sitelink_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -13147,8 +13894,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. New sitelink extension assets recommended at the customer
-       * level.
+       * Output only. New sitelink assets recommended at the customer level.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_customer_sitelink_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -13168,8 +13914,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. New sitelink extension assets recommended at the customer
-       * level.
+       * Output only. New sitelink assets recommended at the customer level.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_customer_sitelink_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -13190,8 +13935,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. New sitelink extension assets recommended at the customer
-       * level.
+       * Output only. New sitelink assets recommended at the customer level.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_customer_sitelink_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -13209,8 +13953,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. New sitelink extension assets recommended at the customer
-       * level.
+       * Output only. New sitelink assets recommended at the customer level.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_customer_sitelink_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -13228,8 +13971,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. New sitelink extension assets recommended at the customer
-       * level.
+       * Output only. New sitelink assets recommended at the customer level.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_customer_sitelink_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -13248,8 +13990,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. New sitelink extension assets recommended at the customer
-       * level.
+       * Output only. New sitelink assets recommended at the customer level.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_customer_sitelink_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -13266,8 +14007,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. New sitelink extension assets recommended at the customer
-       * level.
+       * Output only. New sitelink assets recommended at the customer level.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_customer_sitelink_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -13284,8 +14024,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. New sitelink extension assets recommended at the customer
-       * level.
+       * Output only. New sitelink assets recommended at the customer level.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_customer_sitelink_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -13296,8 +14035,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. New sitelink extension assets recommended at the customer
-       * level.
+       * Output only. New sitelink assets recommended at the customer level.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_customer_sitelink_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -13311,8 +14049,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. New sitelink extension assets recommended at the customer
-       * level.
+       * Output only. New sitelink assets recommended at the customer level.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_customer_sitelink_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -13327,8 +14064,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. New sitelink extension assets recommended at the customer
-       * level.
+       * Output only. New sitelink assets recommended at the customer level.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_customer_sitelink_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -13339,8 +14075,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. New sitelink extension assets recommended at the customer
-       * level.
+       * Output only. New sitelink assets recommended at the customer level.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_customer_sitelink_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -13352,8 +14087,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. New sitelink extension assets recommended at the customer
-       * level.
+       * Output only. New sitelink assets recommended at the customer level.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.resources.Asset recommended_customer_sitelink_assets = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -22837,6 +23571,5782 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface ShoppingOfferAttributeRecommendationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Output only. The details of the Merchant Center account.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the merchant field is set.
+     */
+    boolean hasMerchant();
+    /**
+     * <pre>
+     * Output only. The details of the Merchant Center account.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The merchant.
+     */
+    com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo getMerchant();
+    /**
+     * <pre>
+     * Output only. The details of the Merchant Center account.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder getMerchantOrBuilder();
+
+    /**
+     * <pre>
+     * Output only. The campaign feed label.
+     * </pre>
+     *
+     * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The feedLabel.
+     */
+    java.lang.String getFeedLabel();
+    /**
+     * <pre>
+     * Output only. The campaign feed label.
+     * </pre>
+     *
+     * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The bytes for feedLabel.
+     */
+    com.google.protobuf.ByteString
+        getFeedLabelBytes();
+
+    /**
+     * <pre>
+     * Output only. The number of online, servable offers.
+     * </pre>
+     *
+     * <code>int64 offers_count = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The offersCount.
+     */
+    long getOffersCount();
+
+    /**
+     * <pre>
+     * Output only. The number of online, servable offers that are demoted for
+     * missing attributes. Visit the Merchant Center for more details.
+     * </pre>
+     *
+     * <code>int64 demoted_offers_count = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The demotedOffersCount.
+     */
+    long getDemotedOffersCount();
+  }
+  /**
+   * <pre>
+   * The shopping recommendation to add an attribute to offers that are demoted
+   * because it is missing.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation}
+   */
+  public static final class ShoppingOfferAttributeRecommendation extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation)
+      ShoppingOfferAttributeRecommendationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ShoppingOfferAttributeRecommendation.newBuilder() to construct.
+    private ShoppingOfferAttributeRecommendation(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ShoppingOfferAttributeRecommendation() {
+      feedLabel_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ShoppingOfferAttributeRecommendation();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v13.resources.RecommendationProto.internal_static_google_ads_googleads_v13_resources_Recommendation_ShoppingOfferAttributeRecommendation_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v13.resources.RecommendationProto.internal_static_google_ads_googleads_v13_resources_Recommendation_ShoppingOfferAttributeRecommendation_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.class, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.Builder.class);
+    }
+
+    public static final int MERCHANT_FIELD_NUMBER = 1;
+    private com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant_;
+    /**
+     * <pre>
+     * Output only. The details of the Merchant Center account.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the merchant field is set.
+     */
+    @java.lang.Override
+    public boolean hasMerchant() {
+      return merchant_ != null;
+    }
+    /**
+     * <pre>
+     * Output only. The details of the Merchant Center account.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The merchant.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo getMerchant() {
+      return merchant_ == null ? com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.getDefaultInstance() : merchant_;
+    }
+    /**
+     * <pre>
+     * Output only. The details of the Merchant Center account.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder getMerchantOrBuilder() {
+      return merchant_ == null ? com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.getDefaultInstance() : merchant_;
+    }
+
+    public static final int FEED_LABEL_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object feedLabel_ = "";
+    /**
+     * <pre>
+     * Output only. The campaign feed label.
+     * </pre>
+     *
+     * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The feedLabel.
+     */
+    @java.lang.Override
+    public java.lang.String getFeedLabel() {
+      java.lang.Object ref = feedLabel_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        feedLabel_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The campaign feed label.
+     * </pre>
+     *
+     * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The bytes for feedLabel.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFeedLabelBytes() {
+      java.lang.Object ref = feedLabel_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        feedLabel_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OFFERS_COUNT_FIELD_NUMBER = 3;
+    private long offersCount_ = 0L;
+    /**
+     * <pre>
+     * Output only. The number of online, servable offers.
+     * </pre>
+     *
+     * <code>int64 offers_count = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The offersCount.
+     */
+    @java.lang.Override
+    public long getOffersCount() {
+      return offersCount_;
+    }
+
+    public static final int DEMOTED_OFFERS_COUNT_FIELD_NUMBER = 4;
+    private long demotedOffersCount_ = 0L;
+    /**
+     * <pre>
+     * Output only. The number of online, servable offers that are demoted for
+     * missing attributes. Visit the Merchant Center for more details.
+     * </pre>
+     *
+     * <code>int64 demoted_offers_count = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The demotedOffersCount.
+     */
+    @java.lang.Override
+    public long getDemotedOffersCount() {
+      return demotedOffersCount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (merchant_ != null) {
+        output.writeMessage(1, getMerchant());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedLabel_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, feedLabel_);
+      }
+      if (offersCount_ != 0L) {
+        output.writeInt64(3, offersCount_);
+      }
+      if (demotedOffersCount_ != 0L) {
+        output.writeInt64(4, demotedOffersCount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (merchant_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMerchant());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedLabel_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, feedLabel_);
+      }
+      if (offersCount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, offersCount_);
+      }
+      if (demotedOffersCount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, demotedOffersCount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation other = (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) obj;
+
+      if (hasMerchant() != other.hasMerchant()) return false;
+      if (hasMerchant()) {
+        if (!getMerchant()
+            .equals(other.getMerchant())) return false;
+      }
+      if (!getFeedLabel()
+          .equals(other.getFeedLabel())) return false;
+      if (getOffersCount()
+          != other.getOffersCount()) return false;
+      if (getDemotedOffersCount()
+          != other.getDemotedOffersCount()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMerchant()) {
+        hash = (37 * hash) + MERCHANT_FIELD_NUMBER;
+        hash = (53 * hash) + getMerchant().hashCode();
+      }
+      hash = (37 * hash) + FEED_LABEL_FIELD_NUMBER;
+      hash = (53 * hash) + getFeedLabel().hashCode();
+      hash = (37 * hash) + OFFERS_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getOffersCount());
+      hash = (37 * hash) + DEMOTED_OFFERS_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDemotedOffersCount());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * The shopping recommendation to add an attribute to offers that are demoted
+     * because it is missing.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation)
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v13.resources.RecommendationProto.internal_static_google_ads_googleads_v13_resources_Recommendation_ShoppingOfferAttributeRecommendation_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v13.resources.RecommendationProto.internal_static_google_ads_googleads_v13_resources_Recommendation_ShoppingOfferAttributeRecommendation_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.class, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        merchant_ = null;
+        if (merchantBuilder_ != null) {
+          merchantBuilder_.dispose();
+          merchantBuilder_ = null;
+        }
+        feedLabel_ = "";
+        offersCount_ = 0L;
+        demotedOffersCount_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v13.resources.RecommendationProto.internal_static_google_ads_googleads_v13_resources_Recommendation_ShoppingOfferAttributeRecommendation_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation getDefaultInstanceForType() {
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation build() {
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation buildPartial() {
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation result = new com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.merchant_ = merchantBuilder_ == null
+              ? merchant_
+              : merchantBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.feedLabel_ = feedLabel_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.offersCount_ = offersCount_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.demotedOffersCount_ = demotedOffersCount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) {
+          return mergeFrom((com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation other) {
+        if (other == com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance()) return this;
+        if (other.hasMerchant()) {
+          mergeMerchant(other.getMerchant());
+        }
+        if (!other.getFeedLabel().isEmpty()) {
+          feedLabel_ = other.feedLabel_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getOffersCount() != 0L) {
+          setOffersCount(other.getOffersCount());
+        }
+        if (other.getDemotedOffersCount() != 0L) {
+          setDemotedOffersCount(other.getDemotedOffersCount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getMerchantFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                feedLabel_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                offersCount_ = input.readInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                demotedOffersCount_ = input.readInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.Builder, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder> merchantBuilder_;
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the merchant field is set.
+       */
+      public boolean hasMerchant() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The merchant.
+       */
+      public com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo getMerchant() {
+        if (merchantBuilder_ == null) {
+          return merchant_ == null ? com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.getDefaultInstance() : merchant_;
+        } else {
+          return merchantBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setMerchant(com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo value) {
+        if (merchantBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          merchant_ = value;
+        } else {
+          merchantBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setMerchant(
+          com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.Builder builderForValue) {
+        if (merchantBuilder_ == null) {
+          merchant_ = builderForValue.build();
+        } else {
+          merchantBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder mergeMerchant(com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo value) {
+        if (merchantBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            merchant_ != null &&
+            merchant_ != com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.getDefaultInstance()) {
+            getMerchantBuilder().mergeFrom(value);
+          } else {
+            merchant_ = value;
+          }
+        } else {
+          merchantBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder clearMerchant() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        merchant_ = null;
+        if (merchantBuilder_ != null) {
+          merchantBuilder_.dispose();
+          merchantBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.Builder getMerchantBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getMerchantFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder getMerchantOrBuilder() {
+        if (merchantBuilder_ != null) {
+          return merchantBuilder_.getMessageOrBuilder();
+        } else {
+          return merchant_ == null ?
+              com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.getDefaultInstance() : merchant_;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.Builder, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder> 
+          getMerchantFieldBuilder() {
+        if (merchantBuilder_ == null) {
+          merchantBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.Builder, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder>(
+                  getMerchant(),
+                  getParentForChildren(),
+                  isClean());
+          merchant_ = null;
+        }
+        return merchantBuilder_;
+      }
+
+      private java.lang.Object feedLabel_ = "";
+      /**
+       * <pre>
+       * Output only. The campaign feed label.
+       * </pre>
+       *
+       * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The feedLabel.
+       */
+      public java.lang.String getFeedLabel() {
+        java.lang.Object ref = feedLabel_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          feedLabel_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. The campaign feed label.
+       * </pre>
+       *
+       * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The bytes for feedLabel.
+       */
+      public com.google.protobuf.ByteString
+          getFeedLabelBytes() {
+        java.lang.Object ref = feedLabel_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          feedLabel_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. The campaign feed label.
+       * </pre>
+       *
+       * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The feedLabel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeedLabel(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        feedLabel_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The campaign feed label.
+       * </pre>
+       *
+       * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFeedLabel() {
+        feedLabel_ = getDefaultInstance().getFeedLabel();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The campaign feed label.
+       * </pre>
+       *
+       * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The bytes for feedLabel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeedLabelBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        feedLabel_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private long offersCount_ ;
+      /**
+       * <pre>
+       * Output only. The number of online, servable offers.
+       * </pre>
+       *
+       * <code>int64 offers_count = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The offersCount.
+       */
+      @java.lang.Override
+      public long getOffersCount() {
+        return offersCount_;
+      }
+      /**
+       * <pre>
+       * Output only. The number of online, servable offers.
+       * </pre>
+       *
+       * <code>int64 offers_count = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The offersCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOffersCount(long value) {
+        
+        offersCount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The number of online, servable offers.
+       * </pre>
+       *
+       * <code>int64 offers_count = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOffersCount() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        offersCount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long demotedOffersCount_ ;
+      /**
+       * <pre>
+       * Output only. The number of online, servable offers that are demoted for
+       * missing attributes. Visit the Merchant Center for more details.
+       * </pre>
+       *
+       * <code>int64 demoted_offers_count = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The demotedOffersCount.
+       */
+      @java.lang.Override
+      public long getDemotedOffersCount() {
+        return demotedOffersCount_;
+      }
+      /**
+       * <pre>
+       * Output only. The number of online, servable offers that are demoted for
+       * missing attributes. Visit the Merchant Center for more details.
+       * </pre>
+       *
+       * <code>int64 demoted_offers_count = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The demotedOffersCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDemotedOffersCount(long value) {
+        
+        demotedOffersCount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The number of online, servable offers that are demoted for
+       * missing attributes. Visit the Merchant Center for more details.
+       * </pre>
+       *
+       * <code>int64 demoted_offers_count = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDemotedOffersCount() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        demotedOffersCount_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation)
+    private static final com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation();
+    }
+
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ShoppingOfferAttributeRecommendation>
+        PARSER = new com.google.protobuf.AbstractParser<ShoppingOfferAttributeRecommendation>() {
+      @java.lang.Override
+      public ShoppingOfferAttributeRecommendation parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ShoppingOfferAttributeRecommendation> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ShoppingOfferAttributeRecommendation> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ShoppingFixDisapprovedProductsRecommendationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Output only. The details of the Merchant Center account.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the merchant field is set.
+     */
+    boolean hasMerchant();
+    /**
+     * <pre>
+     * Output only. The details of the Merchant Center account.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The merchant.
+     */
+    com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo getMerchant();
+    /**
+     * <pre>
+     * Output only. The details of the Merchant Center account.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder getMerchantOrBuilder();
+
+    /**
+     * <pre>
+     * Output only. The feed label for the campaign.
+     * </pre>
+     *
+     * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The feedLabel.
+     */
+    java.lang.String getFeedLabel();
+    /**
+     * <pre>
+     * Output only. The feed label for the campaign.
+     * </pre>
+     *
+     * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The bytes for feedLabel.
+     */
+    com.google.protobuf.ByteString
+        getFeedLabelBytes();
+
+    /**
+     * <pre>
+     * Output only. The number of products of the campaign.
+     * </pre>
+     *
+     * <code>int64 products_count = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The productsCount.
+     */
+    long getProductsCount();
+
+    /**
+     * <pre>
+     * Output only. The numbers of products of the campaign that are
+     * disapproved.
+     * </pre>
+     *
+     * <code>int64 disapproved_products_count = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The disapprovedProductsCount.
+     */
+    long getDisapprovedProductsCount();
+  }
+  /**
+   * <pre>
+   * The shopping recommendation to fix disapproved products in a Shopping
+   * Campaign Inventory.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation}
+   */
+  public static final class ShoppingFixDisapprovedProductsRecommendation extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation)
+      ShoppingFixDisapprovedProductsRecommendationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ShoppingFixDisapprovedProductsRecommendation.newBuilder() to construct.
+    private ShoppingFixDisapprovedProductsRecommendation(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ShoppingFixDisapprovedProductsRecommendation() {
+      feedLabel_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ShoppingFixDisapprovedProductsRecommendation();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v13.resources.RecommendationProto.internal_static_google_ads_googleads_v13_resources_Recommendation_ShoppingFixDisapprovedProductsRecommendation_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v13.resources.RecommendationProto.internal_static_google_ads_googleads_v13_resources_Recommendation_ShoppingFixDisapprovedProductsRecommendation_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation.class, com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation.Builder.class);
+    }
+
+    public static final int MERCHANT_FIELD_NUMBER = 1;
+    private com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant_;
+    /**
+     * <pre>
+     * Output only. The details of the Merchant Center account.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the merchant field is set.
+     */
+    @java.lang.Override
+    public boolean hasMerchant() {
+      return merchant_ != null;
+    }
+    /**
+     * <pre>
+     * Output only. The details of the Merchant Center account.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The merchant.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo getMerchant() {
+      return merchant_ == null ? com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.getDefaultInstance() : merchant_;
+    }
+    /**
+     * <pre>
+     * Output only. The details of the Merchant Center account.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder getMerchantOrBuilder() {
+      return merchant_ == null ? com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.getDefaultInstance() : merchant_;
+    }
+
+    public static final int FEED_LABEL_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object feedLabel_ = "";
+    /**
+     * <pre>
+     * Output only. The feed label for the campaign.
+     * </pre>
+     *
+     * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The feedLabel.
+     */
+    @java.lang.Override
+    public java.lang.String getFeedLabel() {
+      java.lang.Object ref = feedLabel_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        feedLabel_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The feed label for the campaign.
+     * </pre>
+     *
+     * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The bytes for feedLabel.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFeedLabelBytes() {
+      java.lang.Object ref = feedLabel_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        feedLabel_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PRODUCTS_COUNT_FIELD_NUMBER = 3;
+    private long productsCount_ = 0L;
+    /**
+     * <pre>
+     * Output only. The number of products of the campaign.
+     * </pre>
+     *
+     * <code>int64 products_count = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The productsCount.
+     */
+    @java.lang.Override
+    public long getProductsCount() {
+      return productsCount_;
+    }
+
+    public static final int DISAPPROVED_PRODUCTS_COUNT_FIELD_NUMBER = 4;
+    private long disapprovedProductsCount_ = 0L;
+    /**
+     * <pre>
+     * Output only. The numbers of products of the campaign that are
+     * disapproved.
+     * </pre>
+     *
+     * <code>int64 disapproved_products_count = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The disapprovedProductsCount.
+     */
+    @java.lang.Override
+    public long getDisapprovedProductsCount() {
+      return disapprovedProductsCount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (merchant_ != null) {
+        output.writeMessage(1, getMerchant());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedLabel_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, feedLabel_);
+      }
+      if (productsCount_ != 0L) {
+        output.writeInt64(3, productsCount_);
+      }
+      if (disapprovedProductsCount_ != 0L) {
+        output.writeInt64(4, disapprovedProductsCount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (merchant_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMerchant());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedLabel_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, feedLabel_);
+      }
+      if (productsCount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, productsCount_);
+      }
+      if (disapprovedProductsCount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, disapprovedProductsCount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation other = (com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation) obj;
+
+      if (hasMerchant() != other.hasMerchant()) return false;
+      if (hasMerchant()) {
+        if (!getMerchant()
+            .equals(other.getMerchant())) return false;
+      }
+      if (!getFeedLabel()
+          .equals(other.getFeedLabel())) return false;
+      if (getProductsCount()
+          != other.getProductsCount()) return false;
+      if (getDisapprovedProductsCount()
+          != other.getDisapprovedProductsCount()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMerchant()) {
+        hash = (37 * hash) + MERCHANT_FIELD_NUMBER;
+        hash = (53 * hash) + getMerchant().hashCode();
+      }
+      hash = (37 * hash) + FEED_LABEL_FIELD_NUMBER;
+      hash = (53 * hash) + getFeedLabel().hashCode();
+      hash = (37 * hash) + PRODUCTS_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getProductsCount());
+      hash = (37 * hash) + DISAPPROVED_PRODUCTS_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDisapprovedProductsCount());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * The shopping recommendation to fix disapproved products in a Shopping
+     * Campaign Inventory.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation)
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v13.resources.RecommendationProto.internal_static_google_ads_googleads_v13_resources_Recommendation_ShoppingFixDisapprovedProductsRecommendation_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v13.resources.RecommendationProto.internal_static_google_ads_googleads_v13_resources_Recommendation_ShoppingFixDisapprovedProductsRecommendation_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation.class, com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        merchant_ = null;
+        if (merchantBuilder_ != null) {
+          merchantBuilder_.dispose();
+          merchantBuilder_ = null;
+        }
+        feedLabel_ = "";
+        productsCount_ = 0L;
+        disapprovedProductsCount_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v13.resources.RecommendationProto.internal_static_google_ads_googleads_v13_resources_Recommendation_ShoppingFixDisapprovedProductsRecommendation_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation getDefaultInstanceForType() {
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation build() {
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation buildPartial() {
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation result = new com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.merchant_ = merchantBuilder_ == null
+              ? merchant_
+              : merchantBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.feedLabel_ = feedLabel_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.productsCount_ = productsCount_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.disapprovedProductsCount_ = disapprovedProductsCount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation) {
+          return mergeFrom((com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation other) {
+        if (other == com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation.getDefaultInstance()) return this;
+        if (other.hasMerchant()) {
+          mergeMerchant(other.getMerchant());
+        }
+        if (!other.getFeedLabel().isEmpty()) {
+          feedLabel_ = other.feedLabel_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getProductsCount() != 0L) {
+          setProductsCount(other.getProductsCount());
+        }
+        if (other.getDisapprovedProductsCount() != 0L) {
+          setDisapprovedProductsCount(other.getDisapprovedProductsCount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getMerchantFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                feedLabel_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                productsCount_ = input.readInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                disapprovedProductsCount_ = input.readInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.Builder, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder> merchantBuilder_;
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the merchant field is set.
+       */
+      public boolean hasMerchant() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The merchant.
+       */
+      public com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo getMerchant() {
+        if (merchantBuilder_ == null) {
+          return merchant_ == null ? com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.getDefaultInstance() : merchant_;
+        } else {
+          return merchantBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setMerchant(com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo value) {
+        if (merchantBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          merchant_ = value;
+        } else {
+          merchantBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setMerchant(
+          com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.Builder builderForValue) {
+        if (merchantBuilder_ == null) {
+          merchant_ = builderForValue.build();
+        } else {
+          merchantBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder mergeMerchant(com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo value) {
+        if (merchantBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            merchant_ != null &&
+            merchant_ != com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.getDefaultInstance()) {
+            getMerchantBuilder().mergeFrom(value);
+          } else {
+            merchant_ = value;
+          }
+        } else {
+          merchantBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder clearMerchant() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        merchant_ = null;
+        if (merchantBuilder_ != null) {
+          merchantBuilder_.dispose();
+          merchantBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.Builder getMerchantBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getMerchantFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder getMerchantOrBuilder() {
+        if (merchantBuilder_ != null) {
+          return merchantBuilder_.getMessageOrBuilder();
+        } else {
+          return merchant_ == null ?
+              com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.getDefaultInstance() : merchant_;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.Builder, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder> 
+          getMerchantFieldBuilder() {
+        if (merchantBuilder_ == null) {
+          merchantBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.Builder, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder>(
+                  getMerchant(),
+                  getParentForChildren(),
+                  isClean());
+          merchant_ = null;
+        }
+        return merchantBuilder_;
+      }
+
+      private java.lang.Object feedLabel_ = "";
+      /**
+       * <pre>
+       * Output only. The feed label for the campaign.
+       * </pre>
+       *
+       * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The feedLabel.
+       */
+      public java.lang.String getFeedLabel() {
+        java.lang.Object ref = feedLabel_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          feedLabel_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. The feed label for the campaign.
+       * </pre>
+       *
+       * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The bytes for feedLabel.
+       */
+      public com.google.protobuf.ByteString
+          getFeedLabelBytes() {
+        java.lang.Object ref = feedLabel_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          feedLabel_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. The feed label for the campaign.
+       * </pre>
+       *
+       * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The feedLabel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeedLabel(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        feedLabel_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The feed label for the campaign.
+       * </pre>
+       *
+       * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFeedLabel() {
+        feedLabel_ = getDefaultInstance().getFeedLabel();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The feed label for the campaign.
+       * </pre>
+       *
+       * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The bytes for feedLabel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeedLabelBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        feedLabel_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private long productsCount_ ;
+      /**
+       * <pre>
+       * Output only. The number of products of the campaign.
+       * </pre>
+       *
+       * <code>int64 products_count = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The productsCount.
+       */
+      @java.lang.Override
+      public long getProductsCount() {
+        return productsCount_;
+      }
+      /**
+       * <pre>
+       * Output only. The number of products of the campaign.
+       * </pre>
+       *
+       * <code>int64 products_count = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The productsCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProductsCount(long value) {
+        
+        productsCount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The number of products of the campaign.
+       * </pre>
+       *
+       * <code>int64 products_count = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProductsCount() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        productsCount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long disapprovedProductsCount_ ;
+      /**
+       * <pre>
+       * Output only. The numbers of products of the campaign that are
+       * disapproved.
+       * </pre>
+       *
+       * <code>int64 disapproved_products_count = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The disapprovedProductsCount.
+       */
+      @java.lang.Override
+      public long getDisapprovedProductsCount() {
+        return disapprovedProductsCount_;
+      }
+      /**
+       * <pre>
+       * Output only. The numbers of products of the campaign that are
+       * disapproved.
+       * </pre>
+       *
+       * <code>int64 disapproved_products_count = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The disapprovedProductsCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDisapprovedProductsCount(long value) {
+        
+        disapprovedProductsCount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The numbers of products of the campaign that are
+       * disapproved.
+       * </pre>
+       *
+       * <code>int64 disapproved_products_count = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDisapprovedProductsCount() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        disapprovedProductsCount_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation)
+    private static final com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation();
+    }
+
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ShoppingFixDisapprovedProductsRecommendation>
+        PARSER = new com.google.protobuf.AbstractParser<ShoppingFixDisapprovedProductsRecommendation>() {
+      @java.lang.Override
+      public ShoppingFixDisapprovedProductsRecommendation parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ShoppingFixDisapprovedProductsRecommendation> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ShoppingFixDisapprovedProductsRecommendation> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ShoppingTargetAllOffersRecommendationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Output only. The details of the Merchant Center account.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the merchant field is set.
+     */
+    boolean hasMerchant();
+    /**
+     * <pre>
+     * Output only. The details of the Merchant Center account.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The merchant.
+     */
+    com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo getMerchant();
+    /**
+     * <pre>
+     * Output only. The details of the Merchant Center account.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder getMerchantOrBuilder();
+
+    /**
+     * <pre>
+     * Output only. The number of untargeted offers.
+     * </pre>
+     *
+     * <code>int64 untargeted_offers_count = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The untargetedOffersCount.
+     */
+    long getUntargetedOffersCount();
+
+    /**
+     * <pre>
+     * Output only. The offer feed label.
+     * </pre>
+     *
+     * <code>string feed_label = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The feedLabel.
+     */
+    java.lang.String getFeedLabel();
+    /**
+     * <pre>
+     * Output only. The offer feed label.
+     * </pre>
+     *
+     * <code>string feed_label = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The bytes for feedLabel.
+     */
+    com.google.protobuf.ByteString
+        getFeedLabelBytes();
+  }
+  /**
+   * <pre>
+   * The shopping recommendation to create a catch-all campaign that targets all
+   * offers.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation}
+   */
+  public static final class ShoppingTargetAllOffersRecommendation extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation)
+      ShoppingTargetAllOffersRecommendationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ShoppingTargetAllOffersRecommendation.newBuilder() to construct.
+    private ShoppingTargetAllOffersRecommendation(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ShoppingTargetAllOffersRecommendation() {
+      feedLabel_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ShoppingTargetAllOffersRecommendation();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v13.resources.RecommendationProto.internal_static_google_ads_googleads_v13_resources_Recommendation_ShoppingTargetAllOffersRecommendation_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v13.resources.RecommendationProto.internal_static_google_ads_googleads_v13_resources_Recommendation_ShoppingTargetAllOffersRecommendation_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation.class, com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation.Builder.class);
+    }
+
+    public static final int MERCHANT_FIELD_NUMBER = 1;
+    private com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant_;
+    /**
+     * <pre>
+     * Output only. The details of the Merchant Center account.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the merchant field is set.
+     */
+    @java.lang.Override
+    public boolean hasMerchant() {
+      return merchant_ != null;
+    }
+    /**
+     * <pre>
+     * Output only. The details of the Merchant Center account.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The merchant.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo getMerchant() {
+      return merchant_ == null ? com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.getDefaultInstance() : merchant_;
+    }
+    /**
+     * <pre>
+     * Output only. The details of the Merchant Center account.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder getMerchantOrBuilder() {
+      return merchant_ == null ? com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.getDefaultInstance() : merchant_;
+    }
+
+    public static final int UNTARGETED_OFFERS_COUNT_FIELD_NUMBER = 2;
+    private long untargetedOffersCount_ = 0L;
+    /**
+     * <pre>
+     * Output only. The number of untargeted offers.
+     * </pre>
+     *
+     * <code>int64 untargeted_offers_count = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The untargetedOffersCount.
+     */
+    @java.lang.Override
+    public long getUntargetedOffersCount() {
+      return untargetedOffersCount_;
+    }
+
+    public static final int FEED_LABEL_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object feedLabel_ = "";
+    /**
+     * <pre>
+     * Output only. The offer feed label.
+     * </pre>
+     *
+     * <code>string feed_label = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The feedLabel.
+     */
+    @java.lang.Override
+    public java.lang.String getFeedLabel() {
+      java.lang.Object ref = feedLabel_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        feedLabel_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The offer feed label.
+     * </pre>
+     *
+     * <code>string feed_label = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The bytes for feedLabel.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFeedLabelBytes() {
+      java.lang.Object ref = feedLabel_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        feedLabel_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (merchant_ != null) {
+        output.writeMessage(1, getMerchant());
+      }
+      if (untargetedOffersCount_ != 0L) {
+        output.writeInt64(2, untargetedOffersCount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedLabel_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, feedLabel_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (merchant_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMerchant());
+      }
+      if (untargetedOffersCount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, untargetedOffersCount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedLabel_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, feedLabel_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation other = (com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation) obj;
+
+      if (hasMerchant() != other.hasMerchant()) return false;
+      if (hasMerchant()) {
+        if (!getMerchant()
+            .equals(other.getMerchant())) return false;
+      }
+      if (getUntargetedOffersCount()
+          != other.getUntargetedOffersCount()) return false;
+      if (!getFeedLabel()
+          .equals(other.getFeedLabel())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMerchant()) {
+        hash = (37 * hash) + MERCHANT_FIELD_NUMBER;
+        hash = (53 * hash) + getMerchant().hashCode();
+      }
+      hash = (37 * hash) + UNTARGETED_OFFERS_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getUntargetedOffersCount());
+      hash = (37 * hash) + FEED_LABEL_FIELD_NUMBER;
+      hash = (53 * hash) + getFeedLabel().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * The shopping recommendation to create a catch-all campaign that targets all
+     * offers.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation)
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v13.resources.RecommendationProto.internal_static_google_ads_googleads_v13_resources_Recommendation_ShoppingTargetAllOffersRecommendation_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v13.resources.RecommendationProto.internal_static_google_ads_googleads_v13_resources_Recommendation_ShoppingTargetAllOffersRecommendation_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation.class, com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        merchant_ = null;
+        if (merchantBuilder_ != null) {
+          merchantBuilder_.dispose();
+          merchantBuilder_ = null;
+        }
+        untargetedOffersCount_ = 0L;
+        feedLabel_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v13.resources.RecommendationProto.internal_static_google_ads_googleads_v13_resources_Recommendation_ShoppingTargetAllOffersRecommendation_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation getDefaultInstanceForType() {
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation build() {
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation buildPartial() {
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation result = new com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.merchant_ = merchantBuilder_ == null
+              ? merchant_
+              : merchantBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.untargetedOffersCount_ = untargetedOffersCount_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.feedLabel_ = feedLabel_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation) {
+          return mergeFrom((com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation other) {
+        if (other == com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation.getDefaultInstance()) return this;
+        if (other.hasMerchant()) {
+          mergeMerchant(other.getMerchant());
+        }
+        if (other.getUntargetedOffersCount() != 0L) {
+          setUntargetedOffersCount(other.getUntargetedOffersCount());
+        }
+        if (!other.getFeedLabel().isEmpty()) {
+          feedLabel_ = other.feedLabel_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getMerchantFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                untargetedOffersCount_ = input.readInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                feedLabel_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.Builder, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder> merchantBuilder_;
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the merchant field is set.
+       */
+      public boolean hasMerchant() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The merchant.
+       */
+      public com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo getMerchant() {
+        if (merchantBuilder_ == null) {
+          return merchant_ == null ? com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.getDefaultInstance() : merchant_;
+        } else {
+          return merchantBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setMerchant(com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo value) {
+        if (merchantBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          merchant_ = value;
+        } else {
+          merchantBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setMerchant(
+          com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.Builder builderForValue) {
+        if (merchantBuilder_ == null) {
+          merchant_ = builderForValue.build();
+        } else {
+          merchantBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder mergeMerchant(com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo value) {
+        if (merchantBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            merchant_ != null &&
+            merchant_ != com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.getDefaultInstance()) {
+            getMerchantBuilder().mergeFrom(value);
+          } else {
+            merchant_ = value;
+          }
+        } else {
+          merchantBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder clearMerchant() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        merchant_ = null;
+        if (merchantBuilder_ != null) {
+          merchantBuilder_.dispose();
+          merchantBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.Builder getMerchantBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getMerchantFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder getMerchantOrBuilder() {
+        if (merchantBuilder_ != null) {
+          return merchantBuilder_.getMessageOrBuilder();
+        } else {
+          return merchant_ == null ?
+              com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.getDefaultInstance() : merchant_;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.Builder, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder> 
+          getMerchantFieldBuilder() {
+        if (merchantBuilder_ == null) {
+          merchantBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.Builder, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder>(
+                  getMerchant(),
+                  getParentForChildren(),
+                  isClean());
+          merchant_ = null;
+        }
+        return merchantBuilder_;
+      }
+
+      private long untargetedOffersCount_ ;
+      /**
+       * <pre>
+       * Output only. The number of untargeted offers.
+       * </pre>
+       *
+       * <code>int64 untargeted_offers_count = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The untargetedOffersCount.
+       */
+      @java.lang.Override
+      public long getUntargetedOffersCount() {
+        return untargetedOffersCount_;
+      }
+      /**
+       * <pre>
+       * Output only. The number of untargeted offers.
+       * </pre>
+       *
+       * <code>int64 untargeted_offers_count = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The untargetedOffersCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUntargetedOffersCount(long value) {
+        
+        untargetedOffersCount_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The number of untargeted offers.
+       * </pre>
+       *
+       * <code>int64 untargeted_offers_count = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUntargetedOffersCount() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        untargetedOffersCount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object feedLabel_ = "";
+      /**
+       * <pre>
+       * Output only. The offer feed label.
+       * </pre>
+       *
+       * <code>string feed_label = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The feedLabel.
+       */
+      public java.lang.String getFeedLabel() {
+        java.lang.Object ref = feedLabel_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          feedLabel_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. The offer feed label.
+       * </pre>
+       *
+       * <code>string feed_label = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The bytes for feedLabel.
+       */
+      public com.google.protobuf.ByteString
+          getFeedLabelBytes() {
+        java.lang.Object ref = feedLabel_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          feedLabel_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. The offer feed label.
+       * </pre>
+       *
+       * <code>string feed_label = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The feedLabel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeedLabel(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        feedLabel_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The offer feed label.
+       * </pre>
+       *
+       * <code>string feed_label = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFeedLabel() {
+        feedLabel_ = getDefaultInstance().getFeedLabel();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The offer feed label.
+       * </pre>
+       *
+       * <code>string feed_label = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The bytes for feedLabel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeedLabelBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        feedLabel_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation)
+    private static final com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation();
+    }
+
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ShoppingTargetAllOffersRecommendation>
+        PARSER = new com.google.protobuf.AbstractParser<ShoppingTargetAllOffersRecommendation>() {
+      @java.lang.Override
+      public ShoppingTargetAllOffersRecommendation parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ShoppingTargetAllOffersRecommendation> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ShoppingTargetAllOffersRecommendation> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ShoppingAddProductsToCampaignRecommendationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Output only. The details of the Merchant Center account.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the merchant field is set.
+     */
+    boolean hasMerchant();
+    /**
+     * <pre>
+     * Output only. The details of the Merchant Center account.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The merchant.
+     */
+    com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo getMerchant();
+    /**
+     * <pre>
+     * Output only. The details of the Merchant Center account.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder getMerchantOrBuilder();
+
+    /**
+     * <pre>
+     * Output only. The feed label for the campaign.
+     * </pre>
+     *
+     * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The feedLabel.
+     */
+    java.lang.String getFeedLabel();
+    /**
+     * <pre>
+     * Output only. The feed label for the campaign.
+     * </pre>
+     *
+     * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The bytes for feedLabel.
+     */
+    com.google.protobuf.ByteString
+        getFeedLabelBytes();
+
+    /**
+     * <pre>
+     * Output only. The reason why no products are attached to the campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.enums.ShoppingAddProductsToCampaignRecommendationEnum.Reason reason = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for reason.
+     */
+    int getReasonValue();
+    /**
+     * <pre>
+     * Output only. The reason why no products are attached to the campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.enums.ShoppingAddProductsToCampaignRecommendationEnum.Reason reason = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The reason.
+     */
+    com.google.ads.googleads.v13.enums.ShoppingAddProductsToCampaignRecommendationEnum.Reason getReason();
+  }
+  /**
+   * <pre>
+   * The shopping recommendation to add products to a Shopping Campaign
+   * Inventory.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation}
+   */
+  public static final class ShoppingAddProductsToCampaignRecommendation extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation)
+      ShoppingAddProductsToCampaignRecommendationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ShoppingAddProductsToCampaignRecommendation.newBuilder() to construct.
+    private ShoppingAddProductsToCampaignRecommendation(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ShoppingAddProductsToCampaignRecommendation() {
+      feedLabel_ = "";
+      reason_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ShoppingAddProductsToCampaignRecommendation();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v13.resources.RecommendationProto.internal_static_google_ads_googleads_v13_resources_Recommendation_ShoppingAddProductsToCampaignRecommendation_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v13.resources.RecommendationProto.internal_static_google_ads_googleads_v13_resources_Recommendation_ShoppingAddProductsToCampaignRecommendation_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation.class, com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation.Builder.class);
+    }
+
+    public static final int MERCHANT_FIELD_NUMBER = 1;
+    private com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant_;
+    /**
+     * <pre>
+     * Output only. The details of the Merchant Center account.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the merchant field is set.
+     */
+    @java.lang.Override
+    public boolean hasMerchant() {
+      return merchant_ != null;
+    }
+    /**
+     * <pre>
+     * Output only. The details of the Merchant Center account.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The merchant.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo getMerchant() {
+      return merchant_ == null ? com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.getDefaultInstance() : merchant_;
+    }
+    /**
+     * <pre>
+     * Output only. The details of the Merchant Center account.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder getMerchantOrBuilder() {
+      return merchant_ == null ? com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.getDefaultInstance() : merchant_;
+    }
+
+    public static final int FEED_LABEL_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object feedLabel_ = "";
+    /**
+     * <pre>
+     * Output only. The feed label for the campaign.
+     * </pre>
+     *
+     * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The feedLabel.
+     */
+    @java.lang.Override
+    public java.lang.String getFeedLabel() {
+      java.lang.Object ref = feedLabel_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        feedLabel_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The feed label for the campaign.
+     * </pre>
+     *
+     * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The bytes for feedLabel.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFeedLabelBytes() {
+      java.lang.Object ref = feedLabel_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        feedLabel_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REASON_FIELD_NUMBER = 3;
+    private int reason_ = 0;
+    /**
+     * <pre>
+     * Output only. The reason why no products are attached to the campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.enums.ShoppingAddProductsToCampaignRecommendationEnum.Reason reason = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for reason.
+     */
+    @java.lang.Override public int getReasonValue() {
+      return reason_;
+    }
+    /**
+     * <pre>
+     * Output only. The reason why no products are attached to the campaign.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.enums.ShoppingAddProductsToCampaignRecommendationEnum.Reason reason = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The reason.
+     */
+    @java.lang.Override public com.google.ads.googleads.v13.enums.ShoppingAddProductsToCampaignRecommendationEnum.Reason getReason() {
+      com.google.ads.googleads.v13.enums.ShoppingAddProductsToCampaignRecommendationEnum.Reason result = com.google.ads.googleads.v13.enums.ShoppingAddProductsToCampaignRecommendationEnum.Reason.forNumber(reason_);
+      return result == null ? com.google.ads.googleads.v13.enums.ShoppingAddProductsToCampaignRecommendationEnum.Reason.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (merchant_ != null) {
+        output.writeMessage(1, getMerchant());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedLabel_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, feedLabel_);
+      }
+      if (reason_ != com.google.ads.googleads.v13.enums.ShoppingAddProductsToCampaignRecommendationEnum.Reason.UNSPECIFIED.getNumber()) {
+        output.writeEnum(3, reason_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (merchant_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMerchant());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedLabel_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, feedLabel_);
+      }
+      if (reason_ != com.google.ads.googleads.v13.enums.ShoppingAddProductsToCampaignRecommendationEnum.Reason.UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, reason_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation other = (com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation) obj;
+
+      if (hasMerchant() != other.hasMerchant()) return false;
+      if (hasMerchant()) {
+        if (!getMerchant()
+            .equals(other.getMerchant())) return false;
+      }
+      if (!getFeedLabel()
+          .equals(other.getFeedLabel())) return false;
+      if (reason_ != other.reason_) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMerchant()) {
+        hash = (37 * hash) + MERCHANT_FIELD_NUMBER;
+        hash = (53 * hash) + getMerchant().hashCode();
+      }
+      hash = (37 * hash) + FEED_LABEL_FIELD_NUMBER;
+      hash = (53 * hash) + getFeedLabel().hashCode();
+      hash = (37 * hash) + REASON_FIELD_NUMBER;
+      hash = (53 * hash) + reason_;
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * The shopping recommendation to add products to a Shopping Campaign
+     * Inventory.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation)
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v13.resources.RecommendationProto.internal_static_google_ads_googleads_v13_resources_Recommendation_ShoppingAddProductsToCampaignRecommendation_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v13.resources.RecommendationProto.internal_static_google_ads_googleads_v13_resources_Recommendation_ShoppingAddProductsToCampaignRecommendation_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation.class, com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        merchant_ = null;
+        if (merchantBuilder_ != null) {
+          merchantBuilder_.dispose();
+          merchantBuilder_ = null;
+        }
+        feedLabel_ = "";
+        reason_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v13.resources.RecommendationProto.internal_static_google_ads_googleads_v13_resources_Recommendation_ShoppingAddProductsToCampaignRecommendation_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation getDefaultInstanceForType() {
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation build() {
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation buildPartial() {
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation result = new com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.merchant_ = merchantBuilder_ == null
+              ? merchant_
+              : merchantBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.feedLabel_ = feedLabel_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.reason_ = reason_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation) {
+          return mergeFrom((com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation other) {
+        if (other == com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation.getDefaultInstance()) return this;
+        if (other.hasMerchant()) {
+          mergeMerchant(other.getMerchant());
+        }
+        if (!other.getFeedLabel().isEmpty()) {
+          feedLabel_ = other.feedLabel_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.reason_ != 0) {
+          setReasonValue(other.getReasonValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getMerchantFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                feedLabel_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                reason_ = input.readEnum();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.Builder, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder> merchantBuilder_;
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the merchant field is set.
+       */
+      public boolean hasMerchant() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The merchant.
+       */
+      public com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo getMerchant() {
+        if (merchantBuilder_ == null) {
+          return merchant_ == null ? com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.getDefaultInstance() : merchant_;
+        } else {
+          return merchantBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setMerchant(com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo value) {
+        if (merchantBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          merchant_ = value;
+        } else {
+          merchantBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setMerchant(
+          com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.Builder builderForValue) {
+        if (merchantBuilder_ == null) {
+          merchant_ = builderForValue.build();
+        } else {
+          merchantBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder mergeMerchant(com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo value) {
+        if (merchantBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            merchant_ != null &&
+            merchant_ != com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.getDefaultInstance()) {
+            getMerchantBuilder().mergeFrom(value);
+          } else {
+            merchant_ = value;
+          }
+        } else {
+          merchantBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder clearMerchant() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        merchant_ = null;
+        if (merchantBuilder_ != null) {
+          merchantBuilder_.dispose();
+          merchantBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.Builder getMerchantBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getMerchantFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder getMerchantOrBuilder() {
+        if (merchantBuilder_ != null) {
+          return merchantBuilder_.getMessageOrBuilder();
+        } else {
+          return merchant_ == null ?
+              com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.getDefaultInstance() : merchant_;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.Builder, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder> 
+          getMerchantFieldBuilder() {
+        if (merchantBuilder_ == null) {
+          merchantBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.Builder, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder>(
+                  getMerchant(),
+                  getParentForChildren(),
+                  isClean());
+          merchant_ = null;
+        }
+        return merchantBuilder_;
+      }
+
+      private java.lang.Object feedLabel_ = "";
+      /**
+       * <pre>
+       * Output only. The feed label for the campaign.
+       * </pre>
+       *
+       * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The feedLabel.
+       */
+      public java.lang.String getFeedLabel() {
+        java.lang.Object ref = feedLabel_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          feedLabel_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. The feed label for the campaign.
+       * </pre>
+       *
+       * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The bytes for feedLabel.
+       */
+      public com.google.protobuf.ByteString
+          getFeedLabelBytes() {
+        java.lang.Object ref = feedLabel_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          feedLabel_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. The feed label for the campaign.
+       * </pre>
+       *
+       * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The feedLabel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeedLabel(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        feedLabel_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The feed label for the campaign.
+       * </pre>
+       *
+       * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFeedLabel() {
+        feedLabel_ = getDefaultInstance().getFeedLabel();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The feed label for the campaign.
+       * </pre>
+       *
+       * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The bytes for feedLabel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeedLabelBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        feedLabel_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private int reason_ = 0;
+      /**
+       * <pre>
+       * Output only. The reason why no products are attached to the campaign.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.enums.ShoppingAddProductsToCampaignRecommendationEnum.Reason reason = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The enum numeric value on the wire for reason.
+       */
+      @java.lang.Override public int getReasonValue() {
+        return reason_;
+      }
+      /**
+       * <pre>
+       * Output only. The reason why no products are attached to the campaign.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.enums.ShoppingAddProductsToCampaignRecommendationEnum.Reason reason = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The enum numeric value on the wire for reason to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReasonValue(int value) {
+        reason_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The reason why no products are attached to the campaign.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.enums.ShoppingAddProductsToCampaignRecommendationEnum.Reason reason = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The reason.
+       */
+      @java.lang.Override
+      public com.google.ads.googleads.v13.enums.ShoppingAddProductsToCampaignRecommendationEnum.Reason getReason() {
+        com.google.ads.googleads.v13.enums.ShoppingAddProductsToCampaignRecommendationEnum.Reason result = com.google.ads.googleads.v13.enums.ShoppingAddProductsToCampaignRecommendationEnum.Reason.forNumber(reason_);
+        return result == null ? com.google.ads.googleads.v13.enums.ShoppingAddProductsToCampaignRecommendationEnum.Reason.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Output only. The reason why no products are attached to the campaign.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.enums.ShoppingAddProductsToCampaignRecommendationEnum.Reason reason = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The reason to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReason(com.google.ads.googleads.v13.enums.ShoppingAddProductsToCampaignRecommendationEnum.Reason value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        reason_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The reason why no products are attached to the campaign.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.enums.ShoppingAddProductsToCampaignRecommendationEnum.Reason reason = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReason() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        reason_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation)
+    private static final com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation();
+    }
+
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ShoppingAddProductsToCampaignRecommendation>
+        PARSER = new com.google.protobuf.AbstractParser<ShoppingAddProductsToCampaignRecommendation>() {
+      @java.lang.Override
+      public ShoppingAddProductsToCampaignRecommendation parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ShoppingAddProductsToCampaignRecommendation> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ShoppingAddProductsToCampaignRecommendation> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ShoppingMerchantCenterAccountSuspensionRecommendationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Output only. The details of the Merchant Center account.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the merchant field is set.
+     */
+    boolean hasMerchant();
+    /**
+     * <pre>
+     * Output only. The details of the Merchant Center account.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The merchant.
+     */
+    com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo getMerchant();
+    /**
+     * <pre>
+     * Output only. The details of the Merchant Center account.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder getMerchantOrBuilder();
+
+    /**
+     * <pre>
+     * Output only. The feed label of the campaign for which the suspension
+     * happened.
+     * </pre>
+     *
+     * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The feedLabel.
+     */
+    java.lang.String getFeedLabel();
+    /**
+     * <pre>
+     * Output only. The feed label of the campaign for which the suspension
+     * happened.
+     * </pre>
+     *
+     * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The bytes for feedLabel.
+     */
+    com.google.protobuf.ByteString
+        getFeedLabelBytes();
+  }
+  /**
+   * <pre>
+   * The shopping recommendation to fix Merchant Center account suspension
+   * issues.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation}
+   */
+  public static final class ShoppingMerchantCenterAccountSuspensionRecommendation extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation)
+      ShoppingMerchantCenterAccountSuspensionRecommendationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ShoppingMerchantCenterAccountSuspensionRecommendation.newBuilder() to construct.
+    private ShoppingMerchantCenterAccountSuspensionRecommendation(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ShoppingMerchantCenterAccountSuspensionRecommendation() {
+      feedLabel_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ShoppingMerchantCenterAccountSuspensionRecommendation();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v13.resources.RecommendationProto.internal_static_google_ads_googleads_v13_resources_Recommendation_ShoppingMerchantCenterAccountSuspensionRecommendation_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v13.resources.RecommendationProto.internal_static_google_ads_googleads_v13_resources_Recommendation_ShoppingMerchantCenterAccountSuspensionRecommendation_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation.class, com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation.Builder.class);
+    }
+
+    public static final int MERCHANT_FIELD_NUMBER = 1;
+    private com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant_;
+    /**
+     * <pre>
+     * Output only. The details of the Merchant Center account.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the merchant field is set.
+     */
+    @java.lang.Override
+    public boolean hasMerchant() {
+      return merchant_ != null;
+    }
+    /**
+     * <pre>
+     * Output only. The details of the Merchant Center account.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The merchant.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo getMerchant() {
+      return merchant_ == null ? com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.getDefaultInstance() : merchant_;
+    }
+    /**
+     * <pre>
+     * Output only. The details of the Merchant Center account.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder getMerchantOrBuilder() {
+      return merchant_ == null ? com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.getDefaultInstance() : merchant_;
+    }
+
+    public static final int FEED_LABEL_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object feedLabel_ = "";
+    /**
+     * <pre>
+     * Output only. The feed label of the campaign for which the suspension
+     * happened.
+     * </pre>
+     *
+     * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The feedLabel.
+     */
+    @java.lang.Override
+    public java.lang.String getFeedLabel() {
+      java.lang.Object ref = feedLabel_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        feedLabel_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The feed label of the campaign for which the suspension
+     * happened.
+     * </pre>
+     *
+     * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The bytes for feedLabel.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFeedLabelBytes() {
+      java.lang.Object ref = feedLabel_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        feedLabel_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (merchant_ != null) {
+        output.writeMessage(1, getMerchant());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedLabel_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, feedLabel_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (merchant_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMerchant());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedLabel_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, feedLabel_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation other = (com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation) obj;
+
+      if (hasMerchant() != other.hasMerchant()) return false;
+      if (hasMerchant()) {
+        if (!getMerchant()
+            .equals(other.getMerchant())) return false;
+      }
+      if (!getFeedLabel()
+          .equals(other.getFeedLabel())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMerchant()) {
+        hash = (37 * hash) + MERCHANT_FIELD_NUMBER;
+        hash = (53 * hash) + getMerchant().hashCode();
+      }
+      hash = (37 * hash) + FEED_LABEL_FIELD_NUMBER;
+      hash = (53 * hash) + getFeedLabel().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * The shopping recommendation to fix Merchant Center account suspension
+     * issues.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation)
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v13.resources.RecommendationProto.internal_static_google_ads_googleads_v13_resources_Recommendation_ShoppingMerchantCenterAccountSuspensionRecommendation_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v13.resources.RecommendationProto.internal_static_google_ads_googleads_v13_resources_Recommendation_ShoppingMerchantCenterAccountSuspensionRecommendation_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation.class, com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        merchant_ = null;
+        if (merchantBuilder_ != null) {
+          merchantBuilder_.dispose();
+          merchantBuilder_ = null;
+        }
+        feedLabel_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v13.resources.RecommendationProto.internal_static_google_ads_googleads_v13_resources_Recommendation_ShoppingMerchantCenterAccountSuspensionRecommendation_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation getDefaultInstanceForType() {
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation build() {
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation buildPartial() {
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation result = new com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.merchant_ = merchantBuilder_ == null
+              ? merchant_
+              : merchantBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.feedLabel_ = feedLabel_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation) {
+          return mergeFrom((com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation other) {
+        if (other == com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation.getDefaultInstance()) return this;
+        if (other.hasMerchant()) {
+          mergeMerchant(other.getMerchant());
+        }
+        if (!other.getFeedLabel().isEmpty()) {
+          feedLabel_ = other.feedLabel_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getMerchantFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                feedLabel_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.Builder, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder> merchantBuilder_;
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the merchant field is set.
+       */
+      public boolean hasMerchant() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The merchant.
+       */
+      public com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo getMerchant() {
+        if (merchantBuilder_ == null) {
+          return merchant_ == null ? com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.getDefaultInstance() : merchant_;
+        } else {
+          return merchantBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setMerchant(com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo value) {
+        if (merchantBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          merchant_ = value;
+        } else {
+          merchantBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setMerchant(
+          com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.Builder builderForValue) {
+        if (merchantBuilder_ == null) {
+          merchant_ = builderForValue.build();
+        } else {
+          merchantBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder mergeMerchant(com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo value) {
+        if (merchantBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            merchant_ != null &&
+            merchant_ != com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.getDefaultInstance()) {
+            getMerchantBuilder().mergeFrom(value);
+          } else {
+            merchant_ = value;
+          }
+        } else {
+          merchantBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder clearMerchant() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        merchant_ = null;
+        if (merchantBuilder_ != null) {
+          merchantBuilder_.dispose();
+          merchantBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.Builder getMerchantBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getMerchantFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder getMerchantOrBuilder() {
+        if (merchantBuilder_ != null) {
+          return merchantBuilder_.getMessageOrBuilder();
+        } else {
+          return merchant_ == null ?
+              com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.getDefaultInstance() : merchant_;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.Builder, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder> 
+          getMerchantFieldBuilder() {
+        if (merchantBuilder_ == null) {
+          merchantBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.Builder, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder>(
+                  getMerchant(),
+                  getParentForChildren(),
+                  isClean());
+          merchant_ = null;
+        }
+        return merchantBuilder_;
+      }
+
+      private java.lang.Object feedLabel_ = "";
+      /**
+       * <pre>
+       * Output only. The feed label of the campaign for which the suspension
+       * happened.
+       * </pre>
+       *
+       * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The feedLabel.
+       */
+      public java.lang.String getFeedLabel() {
+        java.lang.Object ref = feedLabel_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          feedLabel_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. The feed label of the campaign for which the suspension
+       * happened.
+       * </pre>
+       *
+       * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The bytes for feedLabel.
+       */
+      public com.google.protobuf.ByteString
+          getFeedLabelBytes() {
+        java.lang.Object ref = feedLabel_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          feedLabel_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. The feed label of the campaign for which the suspension
+       * happened.
+       * </pre>
+       *
+       * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The feedLabel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeedLabel(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        feedLabel_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The feed label of the campaign for which the suspension
+       * happened.
+       * </pre>
+       *
+       * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFeedLabel() {
+        feedLabel_ = getDefaultInstance().getFeedLabel();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The feed label of the campaign for which the suspension
+       * happened.
+       * </pre>
+       *
+       * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The bytes for feedLabel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeedLabelBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        feedLabel_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation)
+    private static final com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation();
+    }
+
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ShoppingMerchantCenterAccountSuspensionRecommendation>
+        PARSER = new com.google.protobuf.AbstractParser<ShoppingMerchantCenterAccountSuspensionRecommendation>() {
+      @java.lang.Override
+      public ShoppingMerchantCenterAccountSuspensionRecommendation parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ShoppingMerchantCenterAccountSuspensionRecommendation> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ShoppingMerchantCenterAccountSuspensionRecommendation> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Output only. The details of the Merchant Center account.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the merchant field is set.
+     */
+    boolean hasMerchant();
+    /**
+     * <pre>
+     * Output only. The details of the Merchant Center account.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The merchant.
+     */
+    com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo getMerchant();
+    /**
+     * <pre>
+     * Output only. The details of the Merchant Center account.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder getMerchantOrBuilder();
+
+    /**
+     * <pre>
+     * Output only. The feed label of the offers targeted by the campaigns
+     * sharing this suggestion.
+     * </pre>
+     *
+     * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The feedLabel.
+     */
+    java.lang.String getFeedLabel();
+    /**
+     * <pre>
+     * Output only. The feed label of the offers targeted by the campaigns
+     * sharing this suggestion.
+     * </pre>
+     *
+     * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The bytes for feedLabel.
+     */
+    com.google.protobuf.ByteString
+        getFeedLabelBytes();
+  }
+  /**
+   * <pre>
+   * The shopping recommendation to migrate Regular Shopping Campaign targeted
+   * offers to Performance Max campaigns.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation}
+   */
+  public static final class ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation)
+      ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation.newBuilder() to construct.
+    private ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation() {
+      feedLabel_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v13.resources.RecommendationProto.internal_static_google_ads_googleads_v13_resources_Recommendation_ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v13.resources.RecommendationProto.internal_static_google_ads_googleads_v13_resources_Recommendation_ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation.class, com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation.Builder.class);
+    }
+
+    public static final int MERCHANT_FIELD_NUMBER = 1;
+    private com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant_;
+    /**
+     * <pre>
+     * Output only. The details of the Merchant Center account.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the merchant field is set.
+     */
+    @java.lang.Override
+    public boolean hasMerchant() {
+      return merchant_ != null;
+    }
+    /**
+     * <pre>
+     * Output only. The details of the Merchant Center account.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The merchant.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo getMerchant() {
+      return merchant_ == null ? com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.getDefaultInstance() : merchant_;
+    }
+    /**
+     * <pre>
+     * Output only. The details of the Merchant Center account.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder getMerchantOrBuilder() {
+      return merchant_ == null ? com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.getDefaultInstance() : merchant_;
+    }
+
+    public static final int FEED_LABEL_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object feedLabel_ = "";
+    /**
+     * <pre>
+     * Output only. The feed label of the offers targeted by the campaigns
+     * sharing this suggestion.
+     * </pre>
+     *
+     * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The feedLabel.
+     */
+    @java.lang.Override
+    public java.lang.String getFeedLabel() {
+      java.lang.Object ref = feedLabel_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        feedLabel_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The feed label of the offers targeted by the campaigns
+     * sharing this suggestion.
+     * </pre>
+     *
+     * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The bytes for feedLabel.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFeedLabelBytes() {
+      java.lang.Object ref = feedLabel_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        feedLabel_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (merchant_ != null) {
+        output.writeMessage(1, getMerchant());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedLabel_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, feedLabel_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (merchant_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMerchant());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedLabel_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, feedLabel_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation other = (com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation) obj;
+
+      if (hasMerchant() != other.hasMerchant()) return false;
+      if (hasMerchant()) {
+        if (!getMerchant()
+            .equals(other.getMerchant())) return false;
+      }
+      if (!getFeedLabel()
+          .equals(other.getFeedLabel())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMerchant()) {
+        hash = (37 * hash) + MERCHANT_FIELD_NUMBER;
+        hash = (53 * hash) + getMerchant().hashCode();
+      }
+      hash = (37 * hash) + FEED_LABEL_FIELD_NUMBER;
+      hash = (53 * hash) + getFeedLabel().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * The shopping recommendation to migrate Regular Shopping Campaign targeted
+     * offers to Performance Max campaigns.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation)
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v13.resources.RecommendationProto.internal_static_google_ads_googleads_v13_resources_Recommendation_ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v13.resources.RecommendationProto.internal_static_google_ads_googleads_v13_resources_Recommendation_ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation.class, com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        merchant_ = null;
+        if (merchantBuilder_ != null) {
+          merchantBuilder_.dispose();
+          merchantBuilder_ = null;
+        }
+        feedLabel_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v13.resources.RecommendationProto.internal_static_google_ads_googleads_v13_resources_Recommendation_ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation getDefaultInstanceForType() {
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation build() {
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation buildPartial() {
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation result = new com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.merchant_ = merchantBuilder_ == null
+              ? merchant_
+              : merchantBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.feedLabel_ = feedLabel_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation) {
+          return mergeFrom((com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation other) {
+        if (other == com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation.getDefaultInstance()) return this;
+        if (other.hasMerchant()) {
+          mergeMerchant(other.getMerchant());
+        }
+        if (!other.getFeedLabel().isEmpty()) {
+          feedLabel_ = other.feedLabel_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getMerchantFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                feedLabel_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.Builder, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder> merchantBuilder_;
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the merchant field is set.
+       */
+      public boolean hasMerchant() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The merchant.
+       */
+      public com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo getMerchant() {
+        if (merchantBuilder_ == null) {
+          return merchant_ == null ? com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.getDefaultInstance() : merchant_;
+        } else {
+          return merchantBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setMerchant(com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo value) {
+        if (merchantBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          merchant_ = value;
+        } else {
+          merchantBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setMerchant(
+          com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.Builder builderForValue) {
+        if (merchantBuilder_ == null) {
+          merchant_ = builderForValue.build();
+        } else {
+          merchantBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder mergeMerchant(com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo value) {
+        if (merchantBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            merchant_ != null &&
+            merchant_ != com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.getDefaultInstance()) {
+            getMerchantBuilder().mergeFrom(value);
+          } else {
+            merchant_ = value;
+          }
+        } else {
+          merchantBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder clearMerchant() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        merchant_ = null;
+        if (merchantBuilder_ != null) {
+          merchantBuilder_.dispose();
+          merchantBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.Builder getMerchantBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getMerchantFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder getMerchantOrBuilder() {
+        if (merchantBuilder_ != null) {
+          return merchantBuilder_.getMessageOrBuilder();
+        } else {
+          return merchant_ == null ?
+              com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.getDefaultInstance() : merchant_;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. The details of the Merchant Center account.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v13.resources.Recommendation.MerchantInfo merchant = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.Builder, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder> 
+          getMerchantFieldBuilder() {
+        if (merchantBuilder_ == null) {
+          merchantBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfo.Builder, com.google.ads.googleads.v13.resources.Recommendation.MerchantInfoOrBuilder>(
+                  getMerchant(),
+                  getParentForChildren(),
+                  isClean());
+          merchant_ = null;
+        }
+        return merchantBuilder_;
+      }
+
+      private java.lang.Object feedLabel_ = "";
+      /**
+       * <pre>
+       * Output only. The feed label of the offers targeted by the campaigns
+       * sharing this suggestion.
+       * </pre>
+       *
+       * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The feedLabel.
+       */
+      public java.lang.String getFeedLabel() {
+        java.lang.Object ref = feedLabel_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          feedLabel_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. The feed label of the offers targeted by the campaigns
+       * sharing this suggestion.
+       * </pre>
+       *
+       * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The bytes for feedLabel.
+       */
+      public com.google.protobuf.ByteString
+          getFeedLabelBytes() {
+        java.lang.Object ref = feedLabel_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          feedLabel_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. The feed label of the offers targeted by the campaigns
+       * sharing this suggestion.
+       * </pre>
+       *
+       * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The feedLabel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeedLabel(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        feedLabel_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The feed label of the offers targeted by the campaigns
+       * sharing this suggestion.
+       * </pre>
+       *
+       * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFeedLabel() {
+        feedLabel_ = getDefaultInstance().getFeedLabel();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The feed label of the offers targeted by the campaigns
+       * sharing this suggestion.
+       * </pre>
+       *
+       * <code>string feed_label = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The bytes for feedLabel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeedLabelBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        feedLabel_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation)
+    private static final com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation();
+    }
+
+    public static com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation>
+        PARSER = new com.google.protobuf.AbstractParser<ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation>() {
+      @java.lang.Override
+      public ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface CampaignBudgetOrBuilder extends
       // @@protoc_insertion_point(interface_extends:google.ads.googleads.v13.resources.Recommendation.CampaignBudget)
       com.google.protobuf.MessageOrBuilder {
@@ -23672,6 +30182,18 @@ private static final long serialVersionUID = 0L;
     CALLOUT_ASSET_RECOMMENDATION(39),
     SITELINK_ASSET_RECOMMENDATION(40),
     CALL_ASSET_RECOMMENDATION(41),
+    SHOPPING_ADD_AGE_GROUP_RECOMMENDATION(42),
+    SHOPPING_ADD_COLOR_RECOMMENDATION(43),
+    SHOPPING_ADD_GENDER_RECOMMENDATION(44),
+    SHOPPING_ADD_GTIN_RECOMMENDATION(45),
+    SHOPPING_ADD_MORE_IDENTIFIERS_RECOMMENDATION(46),
+    SHOPPING_ADD_SIZE_RECOMMENDATION(47),
+    SHOPPING_ADD_PRODUCTS_TO_CAMPAIGN_RECOMMENDATION(48),
+    SHOPPING_FIX_DISAPPROVED_PRODUCTS_RECOMMENDATION(49),
+    SHOPPING_TARGET_ALL_OFFERS_RECOMMENDATION(50),
+    SHOPPING_FIX_SUSPENDED_MERCHANT_CENTER_ACCOUNT_RECOMMENDATION(51),
+    SHOPPING_FIX_MERCHANT_CENTER_ACCOUNT_SUSPENSION_WARNING_RECOMMENDATION(52),
+    SHOPPING_MIGRATE_REGULAR_SHOPPING_CAMPAIGN_OFFERS_TO_PERFORMANCE_MAX_RECOMMENDATION(53),
     RECOMMENDATION_NOT_SET(0);
     private final int value;
     private RecommendationCase(int value) {
@@ -23715,6 +30237,18 @@ private static final long serialVersionUID = 0L;
         case 39: return CALLOUT_ASSET_RECOMMENDATION;
         case 40: return SITELINK_ASSET_RECOMMENDATION;
         case 41: return CALL_ASSET_RECOMMENDATION;
+        case 42: return SHOPPING_ADD_AGE_GROUP_RECOMMENDATION;
+        case 43: return SHOPPING_ADD_COLOR_RECOMMENDATION;
+        case 44: return SHOPPING_ADD_GENDER_RECOMMENDATION;
+        case 45: return SHOPPING_ADD_GTIN_RECOMMENDATION;
+        case 46: return SHOPPING_ADD_MORE_IDENTIFIERS_RECOMMENDATION;
+        case 47: return SHOPPING_ADD_SIZE_RECOMMENDATION;
+        case 48: return SHOPPING_ADD_PRODUCTS_TO_CAMPAIGN_RECOMMENDATION;
+        case 49: return SHOPPING_FIX_DISAPPROVED_PRODUCTS_RECOMMENDATION;
+        case 50: return SHOPPING_TARGET_ALL_OFFERS_RECOMMENDATION;
+        case 51: return SHOPPING_FIX_SUSPENDED_MERCHANT_CENTER_ACCOUNT_RECOMMENDATION;
+        case 52: return SHOPPING_FIX_MERCHANT_CENTER_ACCOUNT_SUSPENSION_WARNING_RECOMMENDATION;
+        case 53: return SHOPPING_MIGRATE_REGULAR_SHOPPING_CAMPAIGN_OFFERS_TO_PERFORMANCE_MAX_RECOMMENDATION;
         case 0: return RECOMMENDATION_NOT_SET;
         default: return null;
       }
@@ -23935,6 +30469,10 @@ private static final long serialVersionUID = 0L;
    * TARGET_ROAS_OPT_IN, TEXT_AD,
    * UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX ,
    * RAISE_TARGET_CPA_BID_TOO_LOW, FORECASTING_SET_TARGET_ROAS
+   * SHOPPING_ADD_AGE_GROUP, SHOPPING_ADD_COLOR, SHOPPING_ADD_GENDER,
+   * SHOPPING_ADD_SIZE, SHOPPING_ADD_GTIN, SHOPPING_ADD_MORE_IDENTIFIERS,
+   * SHOPPING_ADD_PRODUCTS_TO_CAMPAIGN, SHOPPING_FIX_DISAPPROVED_PRODUCTS,
+   * SHOPPING_MIGRATE_REGULAR_SHOPPING_CAMPAIGN_OFFERS_TO_PERFORMANCE_MAX
    * </pre>
    *
    * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -23959,6 +30497,10 @@ private static final long serialVersionUID = 0L;
    * TARGET_ROAS_OPT_IN, TEXT_AD,
    * UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX ,
    * RAISE_TARGET_CPA_BID_TOO_LOW, FORECASTING_SET_TARGET_ROAS
+   * SHOPPING_ADD_AGE_GROUP, SHOPPING_ADD_COLOR, SHOPPING_ADD_GENDER,
+   * SHOPPING_ADD_SIZE, SHOPPING_ADD_GTIN, SHOPPING_ADD_MORE_IDENTIFIERS,
+   * SHOPPING_ADD_PRODUCTS_TO_CAMPAIGN, SHOPPING_FIX_DISAPPROVED_PRODUCTS,
+   * SHOPPING_MIGRATE_REGULAR_SHOPPING_CAMPAIGN_OFFERS_TO_PERFORMANCE_MAX
    * </pre>
    *
    * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -23992,6 +30534,10 @@ private static final long serialVersionUID = 0L;
    * TARGET_ROAS_OPT_IN, TEXT_AD,
    * UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX ,
    * RAISE_TARGET_CPA_BID_TOO_LOW, FORECASTING_SET_TARGET_ROAS
+   * SHOPPING_ADD_AGE_GROUP, SHOPPING_ADD_COLOR, SHOPPING_ADD_GENDER,
+   * SHOPPING_ADD_SIZE, SHOPPING_ADD_GTIN, SHOPPING_ADD_MORE_IDENTIFIERS,
+   * SHOPPING_ADD_PRODUCTS_TO_CAMPAIGN, SHOPPING_FIX_DISAPPROVED_PRODUCTS,
+   * SHOPPING_MIGRATE_REGULAR_SHOPPING_CAMPAIGN_OFFERS_TO_PERFORMANCE_MAX
    * </pre>
    *
    * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -25298,6 +31844,531 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v13.resources.Recommendation.CallAssetRecommendation.getDefaultInstance();
   }
 
+  public static final int SHOPPING_ADD_AGE_GROUP_RECOMMENDATION_FIELD_NUMBER = 42;
+  /**
+   * <pre>
+   * Output only. The shopping add age group recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_age_group_recommendation = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the shoppingAddAgeGroupRecommendation field is set.
+   */
+  @java.lang.Override
+  public boolean hasShoppingAddAgeGroupRecommendation() {
+    return recommendationCase_ == 42;
+  }
+  /**
+   * <pre>
+   * Output only. The shopping add age group recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_age_group_recommendation = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The shoppingAddAgeGroupRecommendation.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation getShoppingAddAgeGroupRecommendation() {
+    if (recommendationCase_ == 42) {
+       return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_;
+    }
+    return com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Output only. The shopping add age group recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_age_group_recommendation = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder getShoppingAddAgeGroupRecommendationOrBuilder() {
+    if (recommendationCase_ == 42) {
+       return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_;
+    }
+    return com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+  }
+
+  public static final int SHOPPING_ADD_COLOR_RECOMMENDATION_FIELD_NUMBER = 43;
+  /**
+   * <pre>
+   * Output only. The shopping add color recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_color_recommendation = 43 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the shoppingAddColorRecommendation field is set.
+   */
+  @java.lang.Override
+  public boolean hasShoppingAddColorRecommendation() {
+    return recommendationCase_ == 43;
+  }
+  /**
+   * <pre>
+   * Output only. The shopping add color recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_color_recommendation = 43 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The shoppingAddColorRecommendation.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation getShoppingAddColorRecommendation() {
+    if (recommendationCase_ == 43) {
+       return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_;
+    }
+    return com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Output only. The shopping add color recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_color_recommendation = 43 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder getShoppingAddColorRecommendationOrBuilder() {
+    if (recommendationCase_ == 43) {
+       return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_;
+    }
+    return com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+  }
+
+  public static final int SHOPPING_ADD_GENDER_RECOMMENDATION_FIELD_NUMBER = 44;
+  /**
+   * <pre>
+   * Output only. The shopping add gender recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_gender_recommendation = 44 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the shoppingAddGenderRecommendation field is set.
+   */
+  @java.lang.Override
+  public boolean hasShoppingAddGenderRecommendation() {
+    return recommendationCase_ == 44;
+  }
+  /**
+   * <pre>
+   * Output only. The shopping add gender recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_gender_recommendation = 44 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The shoppingAddGenderRecommendation.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation getShoppingAddGenderRecommendation() {
+    if (recommendationCase_ == 44) {
+       return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_;
+    }
+    return com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Output only. The shopping add gender recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_gender_recommendation = 44 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder getShoppingAddGenderRecommendationOrBuilder() {
+    if (recommendationCase_ == 44) {
+       return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_;
+    }
+    return com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+  }
+
+  public static final int SHOPPING_ADD_GTIN_RECOMMENDATION_FIELD_NUMBER = 45;
+  /**
+   * <pre>
+   * Output only. The shopping add GTIN recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_gtin_recommendation = 45 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the shoppingAddGtinRecommendation field is set.
+   */
+  @java.lang.Override
+  public boolean hasShoppingAddGtinRecommendation() {
+    return recommendationCase_ == 45;
+  }
+  /**
+   * <pre>
+   * Output only. The shopping add GTIN recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_gtin_recommendation = 45 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The shoppingAddGtinRecommendation.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation getShoppingAddGtinRecommendation() {
+    if (recommendationCase_ == 45) {
+       return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_;
+    }
+    return com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Output only. The shopping add GTIN recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_gtin_recommendation = 45 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder getShoppingAddGtinRecommendationOrBuilder() {
+    if (recommendationCase_ == 45) {
+       return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_;
+    }
+    return com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+  }
+
+  public static final int SHOPPING_ADD_MORE_IDENTIFIERS_RECOMMENDATION_FIELD_NUMBER = 46;
+  /**
+   * <pre>
+   * Output only. The shopping add more identifiers recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_more_identifiers_recommendation = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the shoppingAddMoreIdentifiersRecommendation field is set.
+   */
+  @java.lang.Override
+  public boolean hasShoppingAddMoreIdentifiersRecommendation() {
+    return recommendationCase_ == 46;
+  }
+  /**
+   * <pre>
+   * Output only. The shopping add more identifiers recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_more_identifiers_recommendation = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The shoppingAddMoreIdentifiersRecommendation.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation getShoppingAddMoreIdentifiersRecommendation() {
+    if (recommendationCase_ == 46) {
+       return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_;
+    }
+    return com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Output only. The shopping add more identifiers recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_more_identifiers_recommendation = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder getShoppingAddMoreIdentifiersRecommendationOrBuilder() {
+    if (recommendationCase_ == 46) {
+       return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_;
+    }
+    return com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+  }
+
+  public static final int SHOPPING_ADD_SIZE_RECOMMENDATION_FIELD_NUMBER = 47;
+  /**
+   * <pre>
+   * Output only. The shopping add size recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_size_recommendation = 47 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the shoppingAddSizeRecommendation field is set.
+   */
+  @java.lang.Override
+  public boolean hasShoppingAddSizeRecommendation() {
+    return recommendationCase_ == 47;
+  }
+  /**
+   * <pre>
+   * Output only. The shopping add size recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_size_recommendation = 47 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The shoppingAddSizeRecommendation.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation getShoppingAddSizeRecommendation() {
+    if (recommendationCase_ == 47) {
+       return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_;
+    }
+    return com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Output only. The shopping add size recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_size_recommendation = 47 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder getShoppingAddSizeRecommendationOrBuilder() {
+    if (recommendationCase_ == 47) {
+       return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_;
+    }
+    return com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+  }
+
+  public static final int SHOPPING_ADD_PRODUCTS_TO_CAMPAIGN_RECOMMENDATION_FIELD_NUMBER = 48;
+  /**
+   * <pre>
+   * Output only. The shopping add products to campaign recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation shopping_add_products_to_campaign_recommendation = 48 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the shoppingAddProductsToCampaignRecommendation field is set.
+   */
+  @java.lang.Override
+  public boolean hasShoppingAddProductsToCampaignRecommendation() {
+    return recommendationCase_ == 48;
+  }
+  /**
+   * <pre>
+   * Output only. The shopping add products to campaign recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation shopping_add_products_to_campaign_recommendation = 48 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The shoppingAddProductsToCampaignRecommendation.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation getShoppingAddProductsToCampaignRecommendation() {
+    if (recommendationCase_ == 48) {
+       return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation) recommendation_;
+    }
+    return com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Output only. The shopping add products to campaign recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation shopping_add_products_to_campaign_recommendation = 48 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendationOrBuilder getShoppingAddProductsToCampaignRecommendationOrBuilder() {
+    if (recommendationCase_ == 48) {
+       return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation) recommendation_;
+    }
+    return com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation.getDefaultInstance();
+  }
+
+  public static final int SHOPPING_FIX_DISAPPROVED_PRODUCTS_RECOMMENDATION_FIELD_NUMBER = 49;
+  /**
+   * <pre>
+   * Output only. The shopping fix disapproved products recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation shopping_fix_disapproved_products_recommendation = 49 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the shoppingFixDisapprovedProductsRecommendation field is set.
+   */
+  @java.lang.Override
+  public boolean hasShoppingFixDisapprovedProductsRecommendation() {
+    return recommendationCase_ == 49;
+  }
+  /**
+   * <pre>
+   * Output only. The shopping fix disapproved products recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation shopping_fix_disapproved_products_recommendation = 49 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The shoppingFixDisapprovedProductsRecommendation.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation getShoppingFixDisapprovedProductsRecommendation() {
+    if (recommendationCase_ == 49) {
+       return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation) recommendation_;
+    }
+    return com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Output only. The shopping fix disapproved products recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation shopping_fix_disapproved_products_recommendation = 49 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendationOrBuilder getShoppingFixDisapprovedProductsRecommendationOrBuilder() {
+    if (recommendationCase_ == 49) {
+       return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation) recommendation_;
+    }
+    return com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation.getDefaultInstance();
+  }
+
+  public static final int SHOPPING_TARGET_ALL_OFFERS_RECOMMENDATION_FIELD_NUMBER = 50;
+  /**
+   * <pre>
+   * Output only. The shopping target all offers recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation shopping_target_all_offers_recommendation = 50 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the shoppingTargetAllOffersRecommendation field is set.
+   */
+  @java.lang.Override
+  public boolean hasShoppingTargetAllOffersRecommendation() {
+    return recommendationCase_ == 50;
+  }
+  /**
+   * <pre>
+   * Output only. The shopping target all offers recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation shopping_target_all_offers_recommendation = 50 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The shoppingTargetAllOffersRecommendation.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation getShoppingTargetAllOffersRecommendation() {
+    if (recommendationCase_ == 50) {
+       return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation) recommendation_;
+    }
+    return com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Output only. The shopping target all offers recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation shopping_target_all_offers_recommendation = 50 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendationOrBuilder getShoppingTargetAllOffersRecommendationOrBuilder() {
+    if (recommendationCase_ == 50) {
+       return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation) recommendation_;
+    }
+    return com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation.getDefaultInstance();
+  }
+
+  public static final int SHOPPING_FIX_SUSPENDED_MERCHANT_CENTER_ACCOUNT_RECOMMENDATION_FIELD_NUMBER = 51;
+  /**
+   * <pre>
+   * Output only. The shopping fix suspended Merchant Center account
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation shopping_fix_suspended_merchant_center_account_recommendation = 51 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the shoppingFixSuspendedMerchantCenterAccountRecommendation field is set.
+   */
+  @java.lang.Override
+  public boolean hasShoppingFixSuspendedMerchantCenterAccountRecommendation() {
+    return recommendationCase_ == 51;
+  }
+  /**
+   * <pre>
+   * Output only. The shopping fix suspended Merchant Center account
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation shopping_fix_suspended_merchant_center_account_recommendation = 51 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The shoppingFixSuspendedMerchantCenterAccountRecommendation.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation getShoppingFixSuspendedMerchantCenterAccountRecommendation() {
+    if (recommendationCase_ == 51) {
+       return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation) recommendation_;
+    }
+    return com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Output only. The shopping fix suspended Merchant Center account
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation shopping_fix_suspended_merchant_center_account_recommendation = 51 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendationOrBuilder getShoppingFixSuspendedMerchantCenterAccountRecommendationOrBuilder() {
+    if (recommendationCase_ == 51) {
+       return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation) recommendation_;
+    }
+    return com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation.getDefaultInstance();
+  }
+
+  public static final int SHOPPING_FIX_MERCHANT_CENTER_ACCOUNT_SUSPENSION_WARNING_RECOMMENDATION_FIELD_NUMBER = 52;
+  /**
+   * <pre>
+   * Output only. The shopping fix Merchant Center account suspension warning
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation shopping_fix_merchant_center_account_suspension_warning_recommendation = 52 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the shoppingFixMerchantCenterAccountSuspensionWarningRecommendation field is set.
+   */
+  @java.lang.Override
+  public boolean hasShoppingFixMerchantCenterAccountSuspensionWarningRecommendation() {
+    return recommendationCase_ == 52;
+  }
+  /**
+   * <pre>
+   * Output only. The shopping fix Merchant Center account suspension warning
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation shopping_fix_merchant_center_account_suspension_warning_recommendation = 52 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The shoppingFixMerchantCenterAccountSuspensionWarningRecommendation.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation getShoppingFixMerchantCenterAccountSuspensionWarningRecommendation() {
+    if (recommendationCase_ == 52) {
+       return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation) recommendation_;
+    }
+    return com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Output only. The shopping fix Merchant Center account suspension warning
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation shopping_fix_merchant_center_account_suspension_warning_recommendation = 52 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendationOrBuilder getShoppingFixMerchantCenterAccountSuspensionWarningRecommendationOrBuilder() {
+    if (recommendationCase_ == 52) {
+       return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation) recommendation_;
+    }
+    return com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation.getDefaultInstance();
+  }
+
+  public static final int SHOPPING_MIGRATE_REGULAR_SHOPPING_CAMPAIGN_OFFERS_TO_PERFORMANCE_MAX_RECOMMENDATION_FIELD_NUMBER = 53;
+  /**
+   * <pre>
+   * Output only. The shopping migrate Regular Shopping Campaign offers to
+   * Performance Max recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation shopping_migrate_regular_shopping_campaign_offers_to_performance_max_recommendation = 53 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the shoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation field is set.
+   */
+  @java.lang.Override
+  public boolean hasShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation() {
+    return recommendationCase_ == 53;
+  }
+  /**
+   * <pre>
+   * Output only. The shopping migrate Regular Shopping Campaign offers to
+   * Performance Max recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation shopping_migrate_regular_shopping_campaign_offers_to_performance_max_recommendation = 53 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The shoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation getShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation() {
+    if (recommendationCase_ == 53) {
+       return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation) recommendation_;
+    }
+    return com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Output only. The shopping migrate Regular Shopping Campaign offers to
+   * Performance Max recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation shopping_migrate_regular_shopping_campaign_offers_to_performance_max_recommendation = 53 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationOrBuilder getShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationOrBuilder() {
+    if (recommendationCase_ == 53) {
+       return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation) recommendation_;
+    }
+    return com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -25413,6 +32484,42 @@ private static final long serialVersionUID = 0L;
     }
     if (recommendationCase_ == 41) {
       output.writeMessage(41, (com.google.ads.googleads.v13.resources.Recommendation.CallAssetRecommendation) recommendation_);
+    }
+    if (recommendationCase_ == 42) {
+      output.writeMessage(42, (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_);
+    }
+    if (recommendationCase_ == 43) {
+      output.writeMessage(43, (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_);
+    }
+    if (recommendationCase_ == 44) {
+      output.writeMessage(44, (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_);
+    }
+    if (recommendationCase_ == 45) {
+      output.writeMessage(45, (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_);
+    }
+    if (recommendationCase_ == 46) {
+      output.writeMessage(46, (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_);
+    }
+    if (recommendationCase_ == 47) {
+      output.writeMessage(47, (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_);
+    }
+    if (recommendationCase_ == 48) {
+      output.writeMessage(48, (com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation) recommendation_);
+    }
+    if (recommendationCase_ == 49) {
+      output.writeMessage(49, (com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation) recommendation_);
+    }
+    if (recommendationCase_ == 50) {
+      output.writeMessage(50, (com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation) recommendation_);
+    }
+    if (recommendationCase_ == 51) {
+      output.writeMessage(51, (com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation) recommendation_);
+    }
+    if (recommendationCase_ == 52) {
+      output.writeMessage(52, (com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation) recommendation_);
+    }
+    if (recommendationCase_ == 53) {
+      output.writeMessage(53, (com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation) recommendation_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -25558,6 +32665,54 @@ private static final long serialVersionUID = 0L;
     if (recommendationCase_ == 41) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(41, (com.google.ads.googleads.v13.resources.Recommendation.CallAssetRecommendation) recommendation_);
+    }
+    if (recommendationCase_ == 42) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(42, (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_);
+    }
+    if (recommendationCase_ == 43) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(43, (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_);
+    }
+    if (recommendationCase_ == 44) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(44, (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_);
+    }
+    if (recommendationCase_ == 45) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(45, (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_);
+    }
+    if (recommendationCase_ == 46) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(46, (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_);
+    }
+    if (recommendationCase_ == 47) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(47, (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_);
+    }
+    if (recommendationCase_ == 48) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(48, (com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation) recommendation_);
+    }
+    if (recommendationCase_ == 49) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(49, (com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation) recommendation_);
+    }
+    if (recommendationCase_ == 50) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(50, (com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation) recommendation_);
+    }
+    if (recommendationCase_ == 51) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(51, (com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation) recommendation_);
+    }
+    if (recommendationCase_ == 52) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(52, (com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation) recommendation_);
+    }
+    if (recommendationCase_ == 53) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(53, (com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation) recommendation_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -25710,6 +32865,54 @@ private static final long serialVersionUID = 0L;
         if (!getCallAssetRecommendation()
             .equals(other.getCallAssetRecommendation())) return false;
         break;
+      case 42:
+        if (!getShoppingAddAgeGroupRecommendation()
+            .equals(other.getShoppingAddAgeGroupRecommendation())) return false;
+        break;
+      case 43:
+        if (!getShoppingAddColorRecommendation()
+            .equals(other.getShoppingAddColorRecommendation())) return false;
+        break;
+      case 44:
+        if (!getShoppingAddGenderRecommendation()
+            .equals(other.getShoppingAddGenderRecommendation())) return false;
+        break;
+      case 45:
+        if (!getShoppingAddGtinRecommendation()
+            .equals(other.getShoppingAddGtinRecommendation())) return false;
+        break;
+      case 46:
+        if (!getShoppingAddMoreIdentifiersRecommendation()
+            .equals(other.getShoppingAddMoreIdentifiersRecommendation())) return false;
+        break;
+      case 47:
+        if (!getShoppingAddSizeRecommendation()
+            .equals(other.getShoppingAddSizeRecommendation())) return false;
+        break;
+      case 48:
+        if (!getShoppingAddProductsToCampaignRecommendation()
+            .equals(other.getShoppingAddProductsToCampaignRecommendation())) return false;
+        break;
+      case 49:
+        if (!getShoppingFixDisapprovedProductsRecommendation()
+            .equals(other.getShoppingFixDisapprovedProductsRecommendation())) return false;
+        break;
+      case 50:
+        if (!getShoppingTargetAllOffersRecommendation()
+            .equals(other.getShoppingTargetAllOffersRecommendation())) return false;
+        break;
+      case 51:
+        if (!getShoppingFixSuspendedMerchantCenterAccountRecommendation()
+            .equals(other.getShoppingFixSuspendedMerchantCenterAccountRecommendation())) return false;
+        break;
+      case 52:
+        if (!getShoppingFixMerchantCenterAccountSuspensionWarningRecommendation()
+            .equals(other.getShoppingFixMerchantCenterAccountSuspensionWarningRecommendation())) return false;
+        break;
+      case 53:
+        if (!getShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation()
+            .equals(other.getShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation())) return false;
+        break;
       case 0:
       default:
     }
@@ -25857,6 +33060,54 @@ private static final long serialVersionUID = 0L;
       case 41:
         hash = (37 * hash) + CALL_ASSET_RECOMMENDATION_FIELD_NUMBER;
         hash = (53 * hash) + getCallAssetRecommendation().hashCode();
+        break;
+      case 42:
+        hash = (37 * hash) + SHOPPING_ADD_AGE_GROUP_RECOMMENDATION_FIELD_NUMBER;
+        hash = (53 * hash) + getShoppingAddAgeGroupRecommendation().hashCode();
+        break;
+      case 43:
+        hash = (37 * hash) + SHOPPING_ADD_COLOR_RECOMMENDATION_FIELD_NUMBER;
+        hash = (53 * hash) + getShoppingAddColorRecommendation().hashCode();
+        break;
+      case 44:
+        hash = (37 * hash) + SHOPPING_ADD_GENDER_RECOMMENDATION_FIELD_NUMBER;
+        hash = (53 * hash) + getShoppingAddGenderRecommendation().hashCode();
+        break;
+      case 45:
+        hash = (37 * hash) + SHOPPING_ADD_GTIN_RECOMMENDATION_FIELD_NUMBER;
+        hash = (53 * hash) + getShoppingAddGtinRecommendation().hashCode();
+        break;
+      case 46:
+        hash = (37 * hash) + SHOPPING_ADD_MORE_IDENTIFIERS_RECOMMENDATION_FIELD_NUMBER;
+        hash = (53 * hash) + getShoppingAddMoreIdentifiersRecommendation().hashCode();
+        break;
+      case 47:
+        hash = (37 * hash) + SHOPPING_ADD_SIZE_RECOMMENDATION_FIELD_NUMBER;
+        hash = (53 * hash) + getShoppingAddSizeRecommendation().hashCode();
+        break;
+      case 48:
+        hash = (37 * hash) + SHOPPING_ADD_PRODUCTS_TO_CAMPAIGN_RECOMMENDATION_FIELD_NUMBER;
+        hash = (53 * hash) + getShoppingAddProductsToCampaignRecommendation().hashCode();
+        break;
+      case 49:
+        hash = (37 * hash) + SHOPPING_FIX_DISAPPROVED_PRODUCTS_RECOMMENDATION_FIELD_NUMBER;
+        hash = (53 * hash) + getShoppingFixDisapprovedProductsRecommendation().hashCode();
+        break;
+      case 50:
+        hash = (37 * hash) + SHOPPING_TARGET_ALL_OFFERS_RECOMMENDATION_FIELD_NUMBER;
+        hash = (53 * hash) + getShoppingTargetAllOffersRecommendation().hashCode();
+        break;
+      case 51:
+        hash = (37 * hash) + SHOPPING_FIX_SUSPENDED_MERCHANT_CENTER_ACCOUNT_RECOMMENDATION_FIELD_NUMBER;
+        hash = (53 * hash) + getShoppingFixSuspendedMerchantCenterAccountRecommendation().hashCode();
+        break;
+      case 52:
+        hash = (37 * hash) + SHOPPING_FIX_MERCHANT_CENTER_ACCOUNT_SUSPENSION_WARNING_RECOMMENDATION_FIELD_NUMBER;
+        hash = (53 * hash) + getShoppingFixMerchantCenterAccountSuspensionWarningRecommendation().hashCode();
+        break;
+      case 53:
+        hash = (37 * hash) + SHOPPING_MIGRATE_REGULAR_SHOPPING_CAMPAIGN_OFFERS_TO_PERFORMANCE_MAX_RECOMMENDATION_FIELD_NUMBER;
+        hash = (53 * hash) + getShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation().hashCode();
         break;
       case 0:
       default:
@@ -26086,6 +33337,42 @@ private static final long serialVersionUID = 0L;
       if (callAssetRecommendationBuilder_ != null) {
         callAssetRecommendationBuilder_.clear();
       }
+      if (shoppingAddAgeGroupRecommendationBuilder_ != null) {
+        shoppingAddAgeGroupRecommendationBuilder_.clear();
+      }
+      if (shoppingAddColorRecommendationBuilder_ != null) {
+        shoppingAddColorRecommendationBuilder_.clear();
+      }
+      if (shoppingAddGenderRecommendationBuilder_ != null) {
+        shoppingAddGenderRecommendationBuilder_.clear();
+      }
+      if (shoppingAddGtinRecommendationBuilder_ != null) {
+        shoppingAddGtinRecommendationBuilder_.clear();
+      }
+      if (shoppingAddMoreIdentifiersRecommendationBuilder_ != null) {
+        shoppingAddMoreIdentifiersRecommendationBuilder_.clear();
+      }
+      if (shoppingAddSizeRecommendationBuilder_ != null) {
+        shoppingAddSizeRecommendationBuilder_.clear();
+      }
+      if (shoppingAddProductsToCampaignRecommendationBuilder_ != null) {
+        shoppingAddProductsToCampaignRecommendationBuilder_.clear();
+      }
+      if (shoppingFixDisapprovedProductsRecommendationBuilder_ != null) {
+        shoppingFixDisapprovedProductsRecommendationBuilder_.clear();
+      }
+      if (shoppingTargetAllOffersRecommendationBuilder_ != null) {
+        shoppingTargetAllOffersRecommendationBuilder_.clear();
+      }
+      if (shoppingFixSuspendedMerchantCenterAccountRecommendationBuilder_ != null) {
+        shoppingFixSuspendedMerchantCenterAccountRecommendationBuilder_.clear();
+      }
+      if (shoppingFixMerchantCenterAccountSuspensionWarningRecommendationBuilder_ != null) {
+        shoppingFixMerchantCenterAccountSuspensionWarningRecommendationBuilder_.clear();
+      }
+      if (shoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationBuilder_ != null) {
+        shoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationBuilder_.clear();
+      }
       recommendationCase_ = 0;
       recommendation_ = null;
       return this;
@@ -26273,6 +33560,54 @@ private static final long serialVersionUID = 0L;
       if (recommendationCase_ == 41 &&
           callAssetRecommendationBuilder_ != null) {
         result.recommendation_ = callAssetRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 42 &&
+          shoppingAddAgeGroupRecommendationBuilder_ != null) {
+        result.recommendation_ = shoppingAddAgeGroupRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 43 &&
+          shoppingAddColorRecommendationBuilder_ != null) {
+        result.recommendation_ = shoppingAddColorRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 44 &&
+          shoppingAddGenderRecommendationBuilder_ != null) {
+        result.recommendation_ = shoppingAddGenderRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 45 &&
+          shoppingAddGtinRecommendationBuilder_ != null) {
+        result.recommendation_ = shoppingAddGtinRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 46 &&
+          shoppingAddMoreIdentifiersRecommendationBuilder_ != null) {
+        result.recommendation_ = shoppingAddMoreIdentifiersRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 47 &&
+          shoppingAddSizeRecommendationBuilder_ != null) {
+        result.recommendation_ = shoppingAddSizeRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 48 &&
+          shoppingAddProductsToCampaignRecommendationBuilder_ != null) {
+        result.recommendation_ = shoppingAddProductsToCampaignRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 49 &&
+          shoppingFixDisapprovedProductsRecommendationBuilder_ != null) {
+        result.recommendation_ = shoppingFixDisapprovedProductsRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 50 &&
+          shoppingTargetAllOffersRecommendationBuilder_ != null) {
+        result.recommendation_ = shoppingTargetAllOffersRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 51 &&
+          shoppingFixSuspendedMerchantCenterAccountRecommendationBuilder_ != null) {
+        result.recommendation_ = shoppingFixSuspendedMerchantCenterAccountRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 52 &&
+          shoppingFixMerchantCenterAccountSuspensionWarningRecommendationBuilder_ != null) {
+        result.recommendation_ = shoppingFixMerchantCenterAccountSuspensionWarningRecommendationBuilder_.build();
+      }
+      if (recommendationCase_ == 53 &&
+          shoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationBuilder_ != null) {
+        result.recommendation_ = shoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationBuilder_.build();
       }
     }
 
@@ -26462,6 +33797,54 @@ private static final long serialVersionUID = 0L;
         }
         case CALL_ASSET_RECOMMENDATION: {
           mergeCallAssetRecommendation(other.getCallAssetRecommendation());
+          break;
+        }
+        case SHOPPING_ADD_AGE_GROUP_RECOMMENDATION: {
+          mergeShoppingAddAgeGroupRecommendation(other.getShoppingAddAgeGroupRecommendation());
+          break;
+        }
+        case SHOPPING_ADD_COLOR_RECOMMENDATION: {
+          mergeShoppingAddColorRecommendation(other.getShoppingAddColorRecommendation());
+          break;
+        }
+        case SHOPPING_ADD_GENDER_RECOMMENDATION: {
+          mergeShoppingAddGenderRecommendation(other.getShoppingAddGenderRecommendation());
+          break;
+        }
+        case SHOPPING_ADD_GTIN_RECOMMENDATION: {
+          mergeShoppingAddGtinRecommendation(other.getShoppingAddGtinRecommendation());
+          break;
+        }
+        case SHOPPING_ADD_MORE_IDENTIFIERS_RECOMMENDATION: {
+          mergeShoppingAddMoreIdentifiersRecommendation(other.getShoppingAddMoreIdentifiersRecommendation());
+          break;
+        }
+        case SHOPPING_ADD_SIZE_RECOMMENDATION: {
+          mergeShoppingAddSizeRecommendation(other.getShoppingAddSizeRecommendation());
+          break;
+        }
+        case SHOPPING_ADD_PRODUCTS_TO_CAMPAIGN_RECOMMENDATION: {
+          mergeShoppingAddProductsToCampaignRecommendation(other.getShoppingAddProductsToCampaignRecommendation());
+          break;
+        }
+        case SHOPPING_FIX_DISAPPROVED_PRODUCTS_RECOMMENDATION: {
+          mergeShoppingFixDisapprovedProductsRecommendation(other.getShoppingFixDisapprovedProductsRecommendation());
+          break;
+        }
+        case SHOPPING_TARGET_ALL_OFFERS_RECOMMENDATION: {
+          mergeShoppingTargetAllOffersRecommendation(other.getShoppingTargetAllOffersRecommendation());
+          break;
+        }
+        case SHOPPING_FIX_SUSPENDED_MERCHANT_CENTER_ACCOUNT_RECOMMENDATION: {
+          mergeShoppingFixSuspendedMerchantCenterAccountRecommendation(other.getShoppingFixSuspendedMerchantCenterAccountRecommendation());
+          break;
+        }
+        case SHOPPING_FIX_MERCHANT_CENTER_ACCOUNT_SUSPENSION_WARNING_RECOMMENDATION: {
+          mergeShoppingFixMerchantCenterAccountSuspensionWarningRecommendation(other.getShoppingFixMerchantCenterAccountSuspensionWarningRecommendation());
+          break;
+        }
+        case SHOPPING_MIGRATE_REGULAR_SHOPPING_CAMPAIGN_OFFERS_TO_PERFORMANCE_MAX_RECOMMENDATION: {
+          mergeShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation(other.getShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation());
           break;
         }
         case RECOMMENDATION_NOT_SET: {
@@ -26719,6 +34102,90 @@ private static final long serialVersionUID = 0L;
               recommendationCase_ = 41;
               break;
             } // case 330
+            case 338: {
+              input.readMessage(
+                  getShoppingAddAgeGroupRecommendationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              recommendationCase_ = 42;
+              break;
+            } // case 338
+            case 346: {
+              input.readMessage(
+                  getShoppingAddColorRecommendationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              recommendationCase_ = 43;
+              break;
+            } // case 346
+            case 354: {
+              input.readMessage(
+                  getShoppingAddGenderRecommendationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              recommendationCase_ = 44;
+              break;
+            } // case 354
+            case 362: {
+              input.readMessage(
+                  getShoppingAddGtinRecommendationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              recommendationCase_ = 45;
+              break;
+            } // case 362
+            case 370: {
+              input.readMessage(
+                  getShoppingAddMoreIdentifiersRecommendationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              recommendationCase_ = 46;
+              break;
+            } // case 370
+            case 378: {
+              input.readMessage(
+                  getShoppingAddSizeRecommendationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              recommendationCase_ = 47;
+              break;
+            } // case 378
+            case 386: {
+              input.readMessage(
+                  getShoppingAddProductsToCampaignRecommendationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              recommendationCase_ = 48;
+              break;
+            } // case 386
+            case 394: {
+              input.readMessage(
+                  getShoppingFixDisapprovedProductsRecommendationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              recommendationCase_ = 49;
+              break;
+            } // case 394
+            case 402: {
+              input.readMessage(
+                  getShoppingTargetAllOffersRecommendationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              recommendationCase_ = 50;
+              break;
+            } // case 402
+            case 410: {
+              input.readMessage(
+                  getShoppingFixSuspendedMerchantCenterAccountRecommendationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              recommendationCase_ = 51;
+              break;
+            } // case 410
+            case 418: {
+              input.readMessage(
+                  getShoppingFixMerchantCenterAccountSuspensionWarningRecommendationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              recommendationCase_ = 52;
+              break;
+            } // case 418
+            case 426: {
+              input.readMessage(
+                  getShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              recommendationCase_ = 53;
+              break;
+            } // case 426
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -27229,6 +34696,10 @@ private static final long serialVersionUID = 0L;
      * TARGET_ROAS_OPT_IN, TEXT_AD,
      * UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX ,
      * RAISE_TARGET_CPA_BID_TOO_LOW, FORECASTING_SET_TARGET_ROAS
+     * SHOPPING_ADD_AGE_GROUP, SHOPPING_ADD_COLOR, SHOPPING_ADD_GENDER,
+     * SHOPPING_ADD_SIZE, SHOPPING_ADD_GTIN, SHOPPING_ADD_MORE_IDENTIFIERS,
+     * SHOPPING_ADD_PRODUCTS_TO_CAMPAIGN, SHOPPING_FIX_DISAPPROVED_PRODUCTS,
+     * SHOPPING_MIGRATE_REGULAR_SHOPPING_CAMPAIGN_OFFERS_TO_PERFORMANCE_MAX
      * </pre>
      *
      * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -27252,6 +34723,10 @@ private static final long serialVersionUID = 0L;
      * TARGET_ROAS_OPT_IN, TEXT_AD,
      * UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX ,
      * RAISE_TARGET_CPA_BID_TOO_LOW, FORECASTING_SET_TARGET_ROAS
+     * SHOPPING_ADD_AGE_GROUP, SHOPPING_ADD_COLOR, SHOPPING_ADD_GENDER,
+     * SHOPPING_ADD_SIZE, SHOPPING_ADD_GTIN, SHOPPING_ADD_MORE_IDENTIFIERS,
+     * SHOPPING_ADD_PRODUCTS_TO_CAMPAIGN, SHOPPING_FIX_DISAPPROVED_PRODUCTS,
+     * SHOPPING_MIGRATE_REGULAR_SHOPPING_CAMPAIGN_OFFERS_TO_PERFORMANCE_MAX
      * </pre>
      *
      * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -27284,6 +34759,10 @@ private static final long serialVersionUID = 0L;
      * TARGET_ROAS_OPT_IN, TEXT_AD,
      * UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX ,
      * RAISE_TARGET_CPA_BID_TOO_LOW, FORECASTING_SET_TARGET_ROAS
+     * SHOPPING_ADD_AGE_GROUP, SHOPPING_ADD_COLOR, SHOPPING_ADD_GENDER,
+     * SHOPPING_ADD_SIZE, SHOPPING_ADD_GTIN, SHOPPING_ADD_MORE_IDENTIFIERS,
+     * SHOPPING_ADD_PRODUCTS_TO_CAMPAIGN, SHOPPING_FIX_DISAPPROVED_PRODUCTS,
+     * SHOPPING_MIGRATE_REGULAR_SHOPPING_CAMPAIGN_OFFERS_TO_PERFORMANCE_MAX
      * </pre>
      *
      * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -27317,6 +34796,10 @@ private static final long serialVersionUID = 0L;
      * TARGET_ROAS_OPT_IN, TEXT_AD,
      * UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX ,
      * RAISE_TARGET_CPA_BID_TOO_LOW, FORECASTING_SET_TARGET_ROAS
+     * SHOPPING_ADD_AGE_GROUP, SHOPPING_ADD_COLOR, SHOPPING_ADD_GENDER,
+     * SHOPPING_ADD_SIZE, SHOPPING_ADD_GTIN, SHOPPING_ADD_MORE_IDENTIFIERS,
+     * SHOPPING_ADD_PRODUCTS_TO_CAMPAIGN, SHOPPING_FIX_DISAPPROVED_PRODUCTS,
+     * SHOPPING_MIGRATE_REGULAR_SHOPPING_CAMPAIGN_OFFERS_TO_PERFORMANCE_MAX
      * </pre>
      *
      * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -27346,6 +34829,10 @@ private static final long serialVersionUID = 0L;
      * TARGET_ROAS_OPT_IN, TEXT_AD,
      * UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX ,
      * RAISE_TARGET_CPA_BID_TOO_LOW, FORECASTING_SET_TARGET_ROAS
+     * SHOPPING_ADD_AGE_GROUP, SHOPPING_ADD_COLOR, SHOPPING_ADD_GENDER,
+     * SHOPPING_ADD_SIZE, SHOPPING_ADD_GTIN, SHOPPING_ADD_MORE_IDENTIFIERS,
+     * SHOPPING_ADD_PRODUCTS_TO_CAMPAIGN, SHOPPING_FIX_DISAPPROVED_PRODUCTS,
+     * SHOPPING_MIGRATE_REGULAR_SHOPPING_CAMPAIGN_OFFERS_TO_PERFORMANCE_MAX
      * </pre>
      *
      * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -27372,6 +34859,10 @@ private static final long serialVersionUID = 0L;
      * TARGET_ROAS_OPT_IN, TEXT_AD,
      * UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX ,
      * RAISE_TARGET_CPA_BID_TOO_LOW, FORECASTING_SET_TARGET_ROAS
+     * SHOPPING_ADD_AGE_GROUP, SHOPPING_ADD_COLOR, SHOPPING_ADD_GENDER,
+     * SHOPPING_ADD_SIZE, SHOPPING_ADD_GTIN, SHOPPING_ADD_MORE_IDENTIFIERS,
+     * SHOPPING_ADD_PRODUCTS_TO_CAMPAIGN, SHOPPING_FIX_DISAPPROVED_PRODUCTS,
+     * SHOPPING_MIGRATE_REGULAR_SHOPPING_CAMPAIGN_OFFERS_TO_PERFORMANCE_MAX
      * </pre>
      *
      * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -32382,6 +39873,2169 @@ private static final long serialVersionUID = 0L;
       recommendationCase_ = 41;
       onChanged();
       return callAssetRecommendationBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.Builder, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder> shoppingAddAgeGroupRecommendationBuilder_;
+    /**
+     * <pre>
+     * Output only. The shopping add age group recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_age_group_recommendation = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the shoppingAddAgeGroupRecommendation field is set.
+     */
+    @java.lang.Override
+    public boolean hasShoppingAddAgeGroupRecommendation() {
+      return recommendationCase_ == 42;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add age group recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_age_group_recommendation = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The shoppingAddAgeGroupRecommendation.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation getShoppingAddAgeGroupRecommendation() {
+      if (shoppingAddAgeGroupRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 42) {
+          return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_;
+        }
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+      } else {
+        if (recommendationCase_ == 42) {
+          return shoppingAddAgeGroupRecommendationBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add age group recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_age_group_recommendation = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setShoppingAddAgeGroupRecommendation(com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation value) {
+      if (shoppingAddAgeGroupRecommendationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        recommendation_ = value;
+        onChanged();
+      } else {
+        shoppingAddAgeGroupRecommendationBuilder_.setMessage(value);
+      }
+      recommendationCase_ = 42;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add age group recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_age_group_recommendation = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setShoppingAddAgeGroupRecommendation(
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.Builder builderForValue) {
+      if (shoppingAddAgeGroupRecommendationBuilder_ == null) {
+        recommendation_ = builderForValue.build();
+        onChanged();
+      } else {
+        shoppingAddAgeGroupRecommendationBuilder_.setMessage(builderForValue.build());
+      }
+      recommendationCase_ = 42;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add age group recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_age_group_recommendation = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder mergeShoppingAddAgeGroupRecommendation(com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation value) {
+      if (shoppingAddAgeGroupRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 42 &&
+            recommendation_ != com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance()) {
+          recommendation_ = com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.newBuilder((com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          recommendation_ = value;
+        }
+        onChanged();
+      } else {
+        if (recommendationCase_ == 42) {
+          shoppingAddAgeGroupRecommendationBuilder_.mergeFrom(value);
+        } else {
+          shoppingAddAgeGroupRecommendationBuilder_.setMessage(value);
+        }
+      }
+      recommendationCase_ = 42;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add age group recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_age_group_recommendation = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder clearShoppingAddAgeGroupRecommendation() {
+      if (shoppingAddAgeGroupRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 42) {
+          recommendationCase_ = 0;
+          recommendation_ = null;
+          onChanged();
+        }
+      } else {
+        if (recommendationCase_ == 42) {
+          recommendationCase_ = 0;
+          recommendation_ = null;
+        }
+        shoppingAddAgeGroupRecommendationBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add age group recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_age_group_recommendation = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.Builder getShoppingAddAgeGroupRecommendationBuilder() {
+      return getShoppingAddAgeGroupRecommendationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add age group recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_age_group_recommendation = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder getShoppingAddAgeGroupRecommendationOrBuilder() {
+      if ((recommendationCase_ == 42) && (shoppingAddAgeGroupRecommendationBuilder_ != null)) {
+        return shoppingAddAgeGroupRecommendationBuilder_.getMessageOrBuilder();
+      } else {
+        if (recommendationCase_ == 42) {
+          return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_;
+        }
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add age group recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_age_group_recommendation = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.Builder, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder> 
+        getShoppingAddAgeGroupRecommendationFieldBuilder() {
+      if (shoppingAddAgeGroupRecommendationBuilder_ == null) {
+        if (!(recommendationCase_ == 42)) {
+          recommendation_ = com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+        }
+        shoppingAddAgeGroupRecommendationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.Builder, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder>(
+                (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_,
+                getParentForChildren(),
+                isClean());
+        recommendation_ = null;
+      }
+      recommendationCase_ = 42;
+      onChanged();
+      return shoppingAddAgeGroupRecommendationBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.Builder, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder> shoppingAddColorRecommendationBuilder_;
+    /**
+     * <pre>
+     * Output only. The shopping add color recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_color_recommendation = 43 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the shoppingAddColorRecommendation field is set.
+     */
+    @java.lang.Override
+    public boolean hasShoppingAddColorRecommendation() {
+      return recommendationCase_ == 43;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add color recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_color_recommendation = 43 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The shoppingAddColorRecommendation.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation getShoppingAddColorRecommendation() {
+      if (shoppingAddColorRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 43) {
+          return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_;
+        }
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+      } else {
+        if (recommendationCase_ == 43) {
+          return shoppingAddColorRecommendationBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add color recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_color_recommendation = 43 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setShoppingAddColorRecommendation(com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation value) {
+      if (shoppingAddColorRecommendationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        recommendation_ = value;
+        onChanged();
+      } else {
+        shoppingAddColorRecommendationBuilder_.setMessage(value);
+      }
+      recommendationCase_ = 43;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add color recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_color_recommendation = 43 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setShoppingAddColorRecommendation(
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.Builder builderForValue) {
+      if (shoppingAddColorRecommendationBuilder_ == null) {
+        recommendation_ = builderForValue.build();
+        onChanged();
+      } else {
+        shoppingAddColorRecommendationBuilder_.setMessage(builderForValue.build());
+      }
+      recommendationCase_ = 43;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add color recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_color_recommendation = 43 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder mergeShoppingAddColorRecommendation(com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation value) {
+      if (shoppingAddColorRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 43 &&
+            recommendation_ != com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance()) {
+          recommendation_ = com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.newBuilder((com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          recommendation_ = value;
+        }
+        onChanged();
+      } else {
+        if (recommendationCase_ == 43) {
+          shoppingAddColorRecommendationBuilder_.mergeFrom(value);
+        } else {
+          shoppingAddColorRecommendationBuilder_.setMessage(value);
+        }
+      }
+      recommendationCase_ = 43;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add color recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_color_recommendation = 43 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder clearShoppingAddColorRecommendation() {
+      if (shoppingAddColorRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 43) {
+          recommendationCase_ = 0;
+          recommendation_ = null;
+          onChanged();
+        }
+      } else {
+        if (recommendationCase_ == 43) {
+          recommendationCase_ = 0;
+          recommendation_ = null;
+        }
+        shoppingAddColorRecommendationBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add color recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_color_recommendation = 43 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.Builder getShoppingAddColorRecommendationBuilder() {
+      return getShoppingAddColorRecommendationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add color recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_color_recommendation = 43 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder getShoppingAddColorRecommendationOrBuilder() {
+      if ((recommendationCase_ == 43) && (shoppingAddColorRecommendationBuilder_ != null)) {
+        return shoppingAddColorRecommendationBuilder_.getMessageOrBuilder();
+      } else {
+        if (recommendationCase_ == 43) {
+          return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_;
+        }
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add color recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_color_recommendation = 43 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.Builder, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder> 
+        getShoppingAddColorRecommendationFieldBuilder() {
+      if (shoppingAddColorRecommendationBuilder_ == null) {
+        if (!(recommendationCase_ == 43)) {
+          recommendation_ = com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+        }
+        shoppingAddColorRecommendationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.Builder, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder>(
+                (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_,
+                getParentForChildren(),
+                isClean());
+        recommendation_ = null;
+      }
+      recommendationCase_ = 43;
+      onChanged();
+      return shoppingAddColorRecommendationBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.Builder, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder> shoppingAddGenderRecommendationBuilder_;
+    /**
+     * <pre>
+     * Output only. The shopping add gender recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_gender_recommendation = 44 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the shoppingAddGenderRecommendation field is set.
+     */
+    @java.lang.Override
+    public boolean hasShoppingAddGenderRecommendation() {
+      return recommendationCase_ == 44;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add gender recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_gender_recommendation = 44 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The shoppingAddGenderRecommendation.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation getShoppingAddGenderRecommendation() {
+      if (shoppingAddGenderRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 44) {
+          return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_;
+        }
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+      } else {
+        if (recommendationCase_ == 44) {
+          return shoppingAddGenderRecommendationBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add gender recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_gender_recommendation = 44 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setShoppingAddGenderRecommendation(com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation value) {
+      if (shoppingAddGenderRecommendationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        recommendation_ = value;
+        onChanged();
+      } else {
+        shoppingAddGenderRecommendationBuilder_.setMessage(value);
+      }
+      recommendationCase_ = 44;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add gender recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_gender_recommendation = 44 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setShoppingAddGenderRecommendation(
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.Builder builderForValue) {
+      if (shoppingAddGenderRecommendationBuilder_ == null) {
+        recommendation_ = builderForValue.build();
+        onChanged();
+      } else {
+        shoppingAddGenderRecommendationBuilder_.setMessage(builderForValue.build());
+      }
+      recommendationCase_ = 44;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add gender recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_gender_recommendation = 44 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder mergeShoppingAddGenderRecommendation(com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation value) {
+      if (shoppingAddGenderRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 44 &&
+            recommendation_ != com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance()) {
+          recommendation_ = com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.newBuilder((com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          recommendation_ = value;
+        }
+        onChanged();
+      } else {
+        if (recommendationCase_ == 44) {
+          shoppingAddGenderRecommendationBuilder_.mergeFrom(value);
+        } else {
+          shoppingAddGenderRecommendationBuilder_.setMessage(value);
+        }
+      }
+      recommendationCase_ = 44;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add gender recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_gender_recommendation = 44 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder clearShoppingAddGenderRecommendation() {
+      if (shoppingAddGenderRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 44) {
+          recommendationCase_ = 0;
+          recommendation_ = null;
+          onChanged();
+        }
+      } else {
+        if (recommendationCase_ == 44) {
+          recommendationCase_ = 0;
+          recommendation_ = null;
+        }
+        shoppingAddGenderRecommendationBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add gender recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_gender_recommendation = 44 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.Builder getShoppingAddGenderRecommendationBuilder() {
+      return getShoppingAddGenderRecommendationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add gender recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_gender_recommendation = 44 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder getShoppingAddGenderRecommendationOrBuilder() {
+      if ((recommendationCase_ == 44) && (shoppingAddGenderRecommendationBuilder_ != null)) {
+        return shoppingAddGenderRecommendationBuilder_.getMessageOrBuilder();
+      } else {
+        if (recommendationCase_ == 44) {
+          return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_;
+        }
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add gender recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_gender_recommendation = 44 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.Builder, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder> 
+        getShoppingAddGenderRecommendationFieldBuilder() {
+      if (shoppingAddGenderRecommendationBuilder_ == null) {
+        if (!(recommendationCase_ == 44)) {
+          recommendation_ = com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+        }
+        shoppingAddGenderRecommendationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.Builder, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder>(
+                (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_,
+                getParentForChildren(),
+                isClean());
+        recommendation_ = null;
+      }
+      recommendationCase_ = 44;
+      onChanged();
+      return shoppingAddGenderRecommendationBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.Builder, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder> shoppingAddGtinRecommendationBuilder_;
+    /**
+     * <pre>
+     * Output only. The shopping add GTIN recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_gtin_recommendation = 45 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the shoppingAddGtinRecommendation field is set.
+     */
+    @java.lang.Override
+    public boolean hasShoppingAddGtinRecommendation() {
+      return recommendationCase_ == 45;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add GTIN recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_gtin_recommendation = 45 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The shoppingAddGtinRecommendation.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation getShoppingAddGtinRecommendation() {
+      if (shoppingAddGtinRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 45) {
+          return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_;
+        }
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+      } else {
+        if (recommendationCase_ == 45) {
+          return shoppingAddGtinRecommendationBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add GTIN recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_gtin_recommendation = 45 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setShoppingAddGtinRecommendation(com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation value) {
+      if (shoppingAddGtinRecommendationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        recommendation_ = value;
+        onChanged();
+      } else {
+        shoppingAddGtinRecommendationBuilder_.setMessage(value);
+      }
+      recommendationCase_ = 45;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add GTIN recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_gtin_recommendation = 45 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setShoppingAddGtinRecommendation(
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.Builder builderForValue) {
+      if (shoppingAddGtinRecommendationBuilder_ == null) {
+        recommendation_ = builderForValue.build();
+        onChanged();
+      } else {
+        shoppingAddGtinRecommendationBuilder_.setMessage(builderForValue.build());
+      }
+      recommendationCase_ = 45;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add GTIN recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_gtin_recommendation = 45 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder mergeShoppingAddGtinRecommendation(com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation value) {
+      if (shoppingAddGtinRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 45 &&
+            recommendation_ != com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance()) {
+          recommendation_ = com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.newBuilder((com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          recommendation_ = value;
+        }
+        onChanged();
+      } else {
+        if (recommendationCase_ == 45) {
+          shoppingAddGtinRecommendationBuilder_.mergeFrom(value);
+        } else {
+          shoppingAddGtinRecommendationBuilder_.setMessage(value);
+        }
+      }
+      recommendationCase_ = 45;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add GTIN recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_gtin_recommendation = 45 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder clearShoppingAddGtinRecommendation() {
+      if (shoppingAddGtinRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 45) {
+          recommendationCase_ = 0;
+          recommendation_ = null;
+          onChanged();
+        }
+      } else {
+        if (recommendationCase_ == 45) {
+          recommendationCase_ = 0;
+          recommendation_ = null;
+        }
+        shoppingAddGtinRecommendationBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add GTIN recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_gtin_recommendation = 45 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.Builder getShoppingAddGtinRecommendationBuilder() {
+      return getShoppingAddGtinRecommendationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add GTIN recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_gtin_recommendation = 45 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder getShoppingAddGtinRecommendationOrBuilder() {
+      if ((recommendationCase_ == 45) && (shoppingAddGtinRecommendationBuilder_ != null)) {
+        return shoppingAddGtinRecommendationBuilder_.getMessageOrBuilder();
+      } else {
+        if (recommendationCase_ == 45) {
+          return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_;
+        }
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add GTIN recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_gtin_recommendation = 45 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.Builder, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder> 
+        getShoppingAddGtinRecommendationFieldBuilder() {
+      if (shoppingAddGtinRecommendationBuilder_ == null) {
+        if (!(recommendationCase_ == 45)) {
+          recommendation_ = com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+        }
+        shoppingAddGtinRecommendationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.Builder, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder>(
+                (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_,
+                getParentForChildren(),
+                isClean());
+        recommendation_ = null;
+      }
+      recommendationCase_ = 45;
+      onChanged();
+      return shoppingAddGtinRecommendationBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.Builder, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder> shoppingAddMoreIdentifiersRecommendationBuilder_;
+    /**
+     * <pre>
+     * Output only. The shopping add more identifiers recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_more_identifiers_recommendation = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the shoppingAddMoreIdentifiersRecommendation field is set.
+     */
+    @java.lang.Override
+    public boolean hasShoppingAddMoreIdentifiersRecommendation() {
+      return recommendationCase_ == 46;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add more identifiers recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_more_identifiers_recommendation = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The shoppingAddMoreIdentifiersRecommendation.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation getShoppingAddMoreIdentifiersRecommendation() {
+      if (shoppingAddMoreIdentifiersRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 46) {
+          return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_;
+        }
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+      } else {
+        if (recommendationCase_ == 46) {
+          return shoppingAddMoreIdentifiersRecommendationBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add more identifiers recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_more_identifiers_recommendation = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setShoppingAddMoreIdentifiersRecommendation(com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation value) {
+      if (shoppingAddMoreIdentifiersRecommendationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        recommendation_ = value;
+        onChanged();
+      } else {
+        shoppingAddMoreIdentifiersRecommendationBuilder_.setMessage(value);
+      }
+      recommendationCase_ = 46;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add more identifiers recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_more_identifiers_recommendation = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setShoppingAddMoreIdentifiersRecommendation(
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.Builder builderForValue) {
+      if (shoppingAddMoreIdentifiersRecommendationBuilder_ == null) {
+        recommendation_ = builderForValue.build();
+        onChanged();
+      } else {
+        shoppingAddMoreIdentifiersRecommendationBuilder_.setMessage(builderForValue.build());
+      }
+      recommendationCase_ = 46;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add more identifiers recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_more_identifiers_recommendation = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder mergeShoppingAddMoreIdentifiersRecommendation(com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation value) {
+      if (shoppingAddMoreIdentifiersRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 46 &&
+            recommendation_ != com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance()) {
+          recommendation_ = com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.newBuilder((com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          recommendation_ = value;
+        }
+        onChanged();
+      } else {
+        if (recommendationCase_ == 46) {
+          shoppingAddMoreIdentifiersRecommendationBuilder_.mergeFrom(value);
+        } else {
+          shoppingAddMoreIdentifiersRecommendationBuilder_.setMessage(value);
+        }
+      }
+      recommendationCase_ = 46;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add more identifiers recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_more_identifiers_recommendation = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder clearShoppingAddMoreIdentifiersRecommendation() {
+      if (shoppingAddMoreIdentifiersRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 46) {
+          recommendationCase_ = 0;
+          recommendation_ = null;
+          onChanged();
+        }
+      } else {
+        if (recommendationCase_ == 46) {
+          recommendationCase_ = 0;
+          recommendation_ = null;
+        }
+        shoppingAddMoreIdentifiersRecommendationBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add more identifiers recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_more_identifiers_recommendation = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.Builder getShoppingAddMoreIdentifiersRecommendationBuilder() {
+      return getShoppingAddMoreIdentifiersRecommendationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add more identifiers recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_more_identifiers_recommendation = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder getShoppingAddMoreIdentifiersRecommendationOrBuilder() {
+      if ((recommendationCase_ == 46) && (shoppingAddMoreIdentifiersRecommendationBuilder_ != null)) {
+        return shoppingAddMoreIdentifiersRecommendationBuilder_.getMessageOrBuilder();
+      } else {
+        if (recommendationCase_ == 46) {
+          return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_;
+        }
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add more identifiers recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_more_identifiers_recommendation = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.Builder, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder> 
+        getShoppingAddMoreIdentifiersRecommendationFieldBuilder() {
+      if (shoppingAddMoreIdentifiersRecommendationBuilder_ == null) {
+        if (!(recommendationCase_ == 46)) {
+          recommendation_ = com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+        }
+        shoppingAddMoreIdentifiersRecommendationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.Builder, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder>(
+                (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_,
+                getParentForChildren(),
+                isClean());
+        recommendation_ = null;
+      }
+      recommendationCase_ = 46;
+      onChanged();
+      return shoppingAddMoreIdentifiersRecommendationBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.Builder, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder> shoppingAddSizeRecommendationBuilder_;
+    /**
+     * <pre>
+     * Output only. The shopping add size recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_size_recommendation = 47 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the shoppingAddSizeRecommendation field is set.
+     */
+    @java.lang.Override
+    public boolean hasShoppingAddSizeRecommendation() {
+      return recommendationCase_ == 47;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add size recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_size_recommendation = 47 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The shoppingAddSizeRecommendation.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation getShoppingAddSizeRecommendation() {
+      if (shoppingAddSizeRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 47) {
+          return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_;
+        }
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+      } else {
+        if (recommendationCase_ == 47) {
+          return shoppingAddSizeRecommendationBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add size recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_size_recommendation = 47 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setShoppingAddSizeRecommendation(com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation value) {
+      if (shoppingAddSizeRecommendationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        recommendation_ = value;
+        onChanged();
+      } else {
+        shoppingAddSizeRecommendationBuilder_.setMessage(value);
+      }
+      recommendationCase_ = 47;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add size recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_size_recommendation = 47 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setShoppingAddSizeRecommendation(
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.Builder builderForValue) {
+      if (shoppingAddSizeRecommendationBuilder_ == null) {
+        recommendation_ = builderForValue.build();
+        onChanged();
+      } else {
+        shoppingAddSizeRecommendationBuilder_.setMessage(builderForValue.build());
+      }
+      recommendationCase_ = 47;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add size recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_size_recommendation = 47 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder mergeShoppingAddSizeRecommendation(com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation value) {
+      if (shoppingAddSizeRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 47 &&
+            recommendation_ != com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance()) {
+          recommendation_ = com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.newBuilder((com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          recommendation_ = value;
+        }
+        onChanged();
+      } else {
+        if (recommendationCase_ == 47) {
+          shoppingAddSizeRecommendationBuilder_.mergeFrom(value);
+        } else {
+          shoppingAddSizeRecommendationBuilder_.setMessage(value);
+        }
+      }
+      recommendationCase_ = 47;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add size recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_size_recommendation = 47 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder clearShoppingAddSizeRecommendation() {
+      if (shoppingAddSizeRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 47) {
+          recommendationCase_ = 0;
+          recommendation_ = null;
+          onChanged();
+        }
+      } else {
+        if (recommendationCase_ == 47) {
+          recommendationCase_ = 0;
+          recommendation_ = null;
+        }
+        shoppingAddSizeRecommendationBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add size recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_size_recommendation = 47 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.Builder getShoppingAddSizeRecommendationBuilder() {
+      return getShoppingAddSizeRecommendationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add size recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_size_recommendation = 47 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder getShoppingAddSizeRecommendationOrBuilder() {
+      if ((recommendationCase_ == 47) && (shoppingAddSizeRecommendationBuilder_ != null)) {
+        return shoppingAddSizeRecommendationBuilder_.getMessageOrBuilder();
+      } else {
+        if (recommendationCase_ == 47) {
+          return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_;
+        }
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add size recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_size_recommendation = 47 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.Builder, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder> 
+        getShoppingAddSizeRecommendationFieldBuilder() {
+      if (shoppingAddSizeRecommendationBuilder_ == null) {
+        if (!(recommendationCase_ == 47)) {
+          recommendation_ = com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.getDefaultInstance();
+        }
+        shoppingAddSizeRecommendationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation.Builder, com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder>(
+                (com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation) recommendation_,
+                getParentForChildren(),
+                isClean());
+        recommendation_ = null;
+      }
+      recommendationCase_ = 47;
+      onChanged();
+      return shoppingAddSizeRecommendationBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation, com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation.Builder, com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendationOrBuilder> shoppingAddProductsToCampaignRecommendationBuilder_;
+    /**
+     * <pre>
+     * Output only. The shopping add products to campaign recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation shopping_add_products_to_campaign_recommendation = 48 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the shoppingAddProductsToCampaignRecommendation field is set.
+     */
+    @java.lang.Override
+    public boolean hasShoppingAddProductsToCampaignRecommendation() {
+      return recommendationCase_ == 48;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add products to campaign recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation shopping_add_products_to_campaign_recommendation = 48 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The shoppingAddProductsToCampaignRecommendation.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation getShoppingAddProductsToCampaignRecommendation() {
+      if (shoppingAddProductsToCampaignRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 48) {
+          return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation) recommendation_;
+        }
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation.getDefaultInstance();
+      } else {
+        if (recommendationCase_ == 48) {
+          return shoppingAddProductsToCampaignRecommendationBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add products to campaign recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation shopping_add_products_to_campaign_recommendation = 48 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setShoppingAddProductsToCampaignRecommendation(com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation value) {
+      if (shoppingAddProductsToCampaignRecommendationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        recommendation_ = value;
+        onChanged();
+      } else {
+        shoppingAddProductsToCampaignRecommendationBuilder_.setMessage(value);
+      }
+      recommendationCase_ = 48;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add products to campaign recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation shopping_add_products_to_campaign_recommendation = 48 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setShoppingAddProductsToCampaignRecommendation(
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation.Builder builderForValue) {
+      if (shoppingAddProductsToCampaignRecommendationBuilder_ == null) {
+        recommendation_ = builderForValue.build();
+        onChanged();
+      } else {
+        shoppingAddProductsToCampaignRecommendationBuilder_.setMessage(builderForValue.build());
+      }
+      recommendationCase_ = 48;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add products to campaign recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation shopping_add_products_to_campaign_recommendation = 48 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder mergeShoppingAddProductsToCampaignRecommendation(com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation value) {
+      if (shoppingAddProductsToCampaignRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 48 &&
+            recommendation_ != com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation.getDefaultInstance()) {
+          recommendation_ = com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation.newBuilder((com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation) recommendation_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          recommendation_ = value;
+        }
+        onChanged();
+      } else {
+        if (recommendationCase_ == 48) {
+          shoppingAddProductsToCampaignRecommendationBuilder_.mergeFrom(value);
+        } else {
+          shoppingAddProductsToCampaignRecommendationBuilder_.setMessage(value);
+        }
+      }
+      recommendationCase_ = 48;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add products to campaign recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation shopping_add_products_to_campaign_recommendation = 48 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder clearShoppingAddProductsToCampaignRecommendation() {
+      if (shoppingAddProductsToCampaignRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 48) {
+          recommendationCase_ = 0;
+          recommendation_ = null;
+          onChanged();
+        }
+      } else {
+        if (recommendationCase_ == 48) {
+          recommendationCase_ = 0;
+          recommendation_ = null;
+        }
+        shoppingAddProductsToCampaignRecommendationBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add products to campaign recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation shopping_add_products_to_campaign_recommendation = 48 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation.Builder getShoppingAddProductsToCampaignRecommendationBuilder() {
+      return getShoppingAddProductsToCampaignRecommendationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add products to campaign recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation shopping_add_products_to_campaign_recommendation = 48 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendationOrBuilder getShoppingAddProductsToCampaignRecommendationOrBuilder() {
+      if ((recommendationCase_ == 48) && (shoppingAddProductsToCampaignRecommendationBuilder_ != null)) {
+        return shoppingAddProductsToCampaignRecommendationBuilder_.getMessageOrBuilder();
+      } else {
+        if (recommendationCase_ == 48) {
+          return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation) recommendation_;
+        }
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The shopping add products to campaign recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation shopping_add_products_to_campaign_recommendation = 48 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation, com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation.Builder, com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendationOrBuilder> 
+        getShoppingAddProductsToCampaignRecommendationFieldBuilder() {
+      if (shoppingAddProductsToCampaignRecommendationBuilder_ == null) {
+        if (!(recommendationCase_ == 48)) {
+          recommendation_ = com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation.getDefaultInstance();
+        }
+        shoppingAddProductsToCampaignRecommendationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation, com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation.Builder, com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendationOrBuilder>(
+                (com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation) recommendation_,
+                getParentForChildren(),
+                isClean());
+        recommendation_ = null;
+      }
+      recommendationCase_ = 48;
+      onChanged();
+      return shoppingAddProductsToCampaignRecommendationBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation, com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation.Builder, com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendationOrBuilder> shoppingFixDisapprovedProductsRecommendationBuilder_;
+    /**
+     * <pre>
+     * Output only. The shopping fix disapproved products recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation shopping_fix_disapproved_products_recommendation = 49 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the shoppingFixDisapprovedProductsRecommendation field is set.
+     */
+    @java.lang.Override
+    public boolean hasShoppingFixDisapprovedProductsRecommendation() {
+      return recommendationCase_ == 49;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping fix disapproved products recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation shopping_fix_disapproved_products_recommendation = 49 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The shoppingFixDisapprovedProductsRecommendation.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation getShoppingFixDisapprovedProductsRecommendation() {
+      if (shoppingFixDisapprovedProductsRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 49) {
+          return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation) recommendation_;
+        }
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation.getDefaultInstance();
+      } else {
+        if (recommendationCase_ == 49) {
+          return shoppingFixDisapprovedProductsRecommendationBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The shopping fix disapproved products recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation shopping_fix_disapproved_products_recommendation = 49 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setShoppingFixDisapprovedProductsRecommendation(com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation value) {
+      if (shoppingFixDisapprovedProductsRecommendationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        recommendation_ = value;
+        onChanged();
+      } else {
+        shoppingFixDisapprovedProductsRecommendationBuilder_.setMessage(value);
+      }
+      recommendationCase_ = 49;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping fix disapproved products recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation shopping_fix_disapproved_products_recommendation = 49 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setShoppingFixDisapprovedProductsRecommendation(
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation.Builder builderForValue) {
+      if (shoppingFixDisapprovedProductsRecommendationBuilder_ == null) {
+        recommendation_ = builderForValue.build();
+        onChanged();
+      } else {
+        shoppingFixDisapprovedProductsRecommendationBuilder_.setMessage(builderForValue.build());
+      }
+      recommendationCase_ = 49;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping fix disapproved products recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation shopping_fix_disapproved_products_recommendation = 49 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder mergeShoppingFixDisapprovedProductsRecommendation(com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation value) {
+      if (shoppingFixDisapprovedProductsRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 49 &&
+            recommendation_ != com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation.getDefaultInstance()) {
+          recommendation_ = com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation.newBuilder((com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation) recommendation_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          recommendation_ = value;
+        }
+        onChanged();
+      } else {
+        if (recommendationCase_ == 49) {
+          shoppingFixDisapprovedProductsRecommendationBuilder_.mergeFrom(value);
+        } else {
+          shoppingFixDisapprovedProductsRecommendationBuilder_.setMessage(value);
+        }
+      }
+      recommendationCase_ = 49;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping fix disapproved products recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation shopping_fix_disapproved_products_recommendation = 49 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder clearShoppingFixDisapprovedProductsRecommendation() {
+      if (shoppingFixDisapprovedProductsRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 49) {
+          recommendationCase_ = 0;
+          recommendation_ = null;
+          onChanged();
+        }
+      } else {
+        if (recommendationCase_ == 49) {
+          recommendationCase_ = 0;
+          recommendation_ = null;
+        }
+        shoppingFixDisapprovedProductsRecommendationBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping fix disapproved products recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation shopping_fix_disapproved_products_recommendation = 49 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation.Builder getShoppingFixDisapprovedProductsRecommendationBuilder() {
+      return getShoppingFixDisapprovedProductsRecommendationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Output only. The shopping fix disapproved products recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation shopping_fix_disapproved_products_recommendation = 49 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendationOrBuilder getShoppingFixDisapprovedProductsRecommendationOrBuilder() {
+      if ((recommendationCase_ == 49) && (shoppingFixDisapprovedProductsRecommendationBuilder_ != null)) {
+        return shoppingFixDisapprovedProductsRecommendationBuilder_.getMessageOrBuilder();
+      } else {
+        if (recommendationCase_ == 49) {
+          return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation) recommendation_;
+        }
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The shopping fix disapproved products recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation shopping_fix_disapproved_products_recommendation = 49 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation, com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation.Builder, com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendationOrBuilder> 
+        getShoppingFixDisapprovedProductsRecommendationFieldBuilder() {
+      if (shoppingFixDisapprovedProductsRecommendationBuilder_ == null) {
+        if (!(recommendationCase_ == 49)) {
+          recommendation_ = com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation.getDefaultInstance();
+        }
+        shoppingFixDisapprovedProductsRecommendationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation, com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation.Builder, com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendationOrBuilder>(
+                (com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation) recommendation_,
+                getParentForChildren(),
+                isClean());
+        recommendation_ = null;
+      }
+      recommendationCase_ = 49;
+      onChanged();
+      return shoppingFixDisapprovedProductsRecommendationBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation, com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation.Builder, com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendationOrBuilder> shoppingTargetAllOffersRecommendationBuilder_;
+    /**
+     * <pre>
+     * Output only. The shopping target all offers recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation shopping_target_all_offers_recommendation = 50 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the shoppingTargetAllOffersRecommendation field is set.
+     */
+    @java.lang.Override
+    public boolean hasShoppingTargetAllOffersRecommendation() {
+      return recommendationCase_ == 50;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping target all offers recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation shopping_target_all_offers_recommendation = 50 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The shoppingTargetAllOffersRecommendation.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation getShoppingTargetAllOffersRecommendation() {
+      if (shoppingTargetAllOffersRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 50) {
+          return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation) recommendation_;
+        }
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation.getDefaultInstance();
+      } else {
+        if (recommendationCase_ == 50) {
+          return shoppingTargetAllOffersRecommendationBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The shopping target all offers recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation shopping_target_all_offers_recommendation = 50 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setShoppingTargetAllOffersRecommendation(com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation value) {
+      if (shoppingTargetAllOffersRecommendationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        recommendation_ = value;
+        onChanged();
+      } else {
+        shoppingTargetAllOffersRecommendationBuilder_.setMessage(value);
+      }
+      recommendationCase_ = 50;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping target all offers recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation shopping_target_all_offers_recommendation = 50 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setShoppingTargetAllOffersRecommendation(
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation.Builder builderForValue) {
+      if (shoppingTargetAllOffersRecommendationBuilder_ == null) {
+        recommendation_ = builderForValue.build();
+        onChanged();
+      } else {
+        shoppingTargetAllOffersRecommendationBuilder_.setMessage(builderForValue.build());
+      }
+      recommendationCase_ = 50;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping target all offers recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation shopping_target_all_offers_recommendation = 50 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder mergeShoppingTargetAllOffersRecommendation(com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation value) {
+      if (shoppingTargetAllOffersRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 50 &&
+            recommendation_ != com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation.getDefaultInstance()) {
+          recommendation_ = com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation.newBuilder((com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation) recommendation_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          recommendation_ = value;
+        }
+        onChanged();
+      } else {
+        if (recommendationCase_ == 50) {
+          shoppingTargetAllOffersRecommendationBuilder_.mergeFrom(value);
+        } else {
+          shoppingTargetAllOffersRecommendationBuilder_.setMessage(value);
+        }
+      }
+      recommendationCase_ = 50;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping target all offers recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation shopping_target_all_offers_recommendation = 50 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder clearShoppingTargetAllOffersRecommendation() {
+      if (shoppingTargetAllOffersRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 50) {
+          recommendationCase_ = 0;
+          recommendation_ = null;
+          onChanged();
+        }
+      } else {
+        if (recommendationCase_ == 50) {
+          recommendationCase_ = 0;
+          recommendation_ = null;
+        }
+        shoppingTargetAllOffersRecommendationBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping target all offers recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation shopping_target_all_offers_recommendation = 50 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation.Builder getShoppingTargetAllOffersRecommendationBuilder() {
+      return getShoppingTargetAllOffersRecommendationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Output only. The shopping target all offers recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation shopping_target_all_offers_recommendation = 50 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendationOrBuilder getShoppingTargetAllOffersRecommendationOrBuilder() {
+      if ((recommendationCase_ == 50) && (shoppingTargetAllOffersRecommendationBuilder_ != null)) {
+        return shoppingTargetAllOffersRecommendationBuilder_.getMessageOrBuilder();
+      } else {
+        if (recommendationCase_ == 50) {
+          return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation) recommendation_;
+        }
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The shopping target all offers recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation shopping_target_all_offers_recommendation = 50 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation, com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation.Builder, com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendationOrBuilder> 
+        getShoppingTargetAllOffersRecommendationFieldBuilder() {
+      if (shoppingTargetAllOffersRecommendationBuilder_ == null) {
+        if (!(recommendationCase_ == 50)) {
+          recommendation_ = com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation.getDefaultInstance();
+        }
+        shoppingTargetAllOffersRecommendationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation, com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation.Builder, com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendationOrBuilder>(
+                (com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation) recommendation_,
+                getParentForChildren(),
+                isClean());
+        recommendation_ = null;
+      }
+      recommendationCase_ = 50;
+      onChanged();
+      return shoppingTargetAllOffersRecommendationBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation, com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation.Builder, com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendationOrBuilder> shoppingFixSuspendedMerchantCenterAccountRecommendationBuilder_;
+    /**
+     * <pre>
+     * Output only. The shopping fix suspended Merchant Center account
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation shopping_fix_suspended_merchant_center_account_recommendation = 51 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the shoppingFixSuspendedMerchantCenterAccountRecommendation field is set.
+     */
+    @java.lang.Override
+    public boolean hasShoppingFixSuspendedMerchantCenterAccountRecommendation() {
+      return recommendationCase_ == 51;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping fix suspended Merchant Center account
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation shopping_fix_suspended_merchant_center_account_recommendation = 51 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The shoppingFixSuspendedMerchantCenterAccountRecommendation.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation getShoppingFixSuspendedMerchantCenterAccountRecommendation() {
+      if (shoppingFixSuspendedMerchantCenterAccountRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 51) {
+          return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation) recommendation_;
+        }
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation.getDefaultInstance();
+      } else {
+        if (recommendationCase_ == 51) {
+          return shoppingFixSuspendedMerchantCenterAccountRecommendationBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The shopping fix suspended Merchant Center account
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation shopping_fix_suspended_merchant_center_account_recommendation = 51 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setShoppingFixSuspendedMerchantCenterAccountRecommendation(com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation value) {
+      if (shoppingFixSuspendedMerchantCenterAccountRecommendationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        recommendation_ = value;
+        onChanged();
+      } else {
+        shoppingFixSuspendedMerchantCenterAccountRecommendationBuilder_.setMessage(value);
+      }
+      recommendationCase_ = 51;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping fix suspended Merchant Center account
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation shopping_fix_suspended_merchant_center_account_recommendation = 51 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setShoppingFixSuspendedMerchantCenterAccountRecommendation(
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation.Builder builderForValue) {
+      if (shoppingFixSuspendedMerchantCenterAccountRecommendationBuilder_ == null) {
+        recommendation_ = builderForValue.build();
+        onChanged();
+      } else {
+        shoppingFixSuspendedMerchantCenterAccountRecommendationBuilder_.setMessage(builderForValue.build());
+      }
+      recommendationCase_ = 51;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping fix suspended Merchant Center account
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation shopping_fix_suspended_merchant_center_account_recommendation = 51 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder mergeShoppingFixSuspendedMerchantCenterAccountRecommendation(com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation value) {
+      if (shoppingFixSuspendedMerchantCenterAccountRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 51 &&
+            recommendation_ != com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation.getDefaultInstance()) {
+          recommendation_ = com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation.newBuilder((com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation) recommendation_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          recommendation_ = value;
+        }
+        onChanged();
+      } else {
+        if (recommendationCase_ == 51) {
+          shoppingFixSuspendedMerchantCenterAccountRecommendationBuilder_.mergeFrom(value);
+        } else {
+          shoppingFixSuspendedMerchantCenterAccountRecommendationBuilder_.setMessage(value);
+        }
+      }
+      recommendationCase_ = 51;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping fix suspended Merchant Center account
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation shopping_fix_suspended_merchant_center_account_recommendation = 51 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder clearShoppingFixSuspendedMerchantCenterAccountRecommendation() {
+      if (shoppingFixSuspendedMerchantCenterAccountRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 51) {
+          recommendationCase_ = 0;
+          recommendation_ = null;
+          onChanged();
+        }
+      } else {
+        if (recommendationCase_ == 51) {
+          recommendationCase_ = 0;
+          recommendation_ = null;
+        }
+        shoppingFixSuspendedMerchantCenterAccountRecommendationBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping fix suspended Merchant Center account
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation shopping_fix_suspended_merchant_center_account_recommendation = 51 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation.Builder getShoppingFixSuspendedMerchantCenterAccountRecommendationBuilder() {
+      return getShoppingFixSuspendedMerchantCenterAccountRecommendationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Output only. The shopping fix suspended Merchant Center account
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation shopping_fix_suspended_merchant_center_account_recommendation = 51 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendationOrBuilder getShoppingFixSuspendedMerchantCenterAccountRecommendationOrBuilder() {
+      if ((recommendationCase_ == 51) && (shoppingFixSuspendedMerchantCenterAccountRecommendationBuilder_ != null)) {
+        return shoppingFixSuspendedMerchantCenterAccountRecommendationBuilder_.getMessageOrBuilder();
+      } else {
+        if (recommendationCase_ == 51) {
+          return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation) recommendation_;
+        }
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The shopping fix suspended Merchant Center account
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation shopping_fix_suspended_merchant_center_account_recommendation = 51 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation, com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation.Builder, com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendationOrBuilder> 
+        getShoppingFixSuspendedMerchantCenterAccountRecommendationFieldBuilder() {
+      if (shoppingFixSuspendedMerchantCenterAccountRecommendationBuilder_ == null) {
+        if (!(recommendationCase_ == 51)) {
+          recommendation_ = com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation.getDefaultInstance();
+        }
+        shoppingFixSuspendedMerchantCenterAccountRecommendationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation, com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation.Builder, com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendationOrBuilder>(
+                (com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation) recommendation_,
+                getParentForChildren(),
+                isClean());
+        recommendation_ = null;
+      }
+      recommendationCase_ = 51;
+      onChanged();
+      return shoppingFixSuspendedMerchantCenterAccountRecommendationBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation, com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation.Builder, com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendationOrBuilder> shoppingFixMerchantCenterAccountSuspensionWarningRecommendationBuilder_;
+    /**
+     * <pre>
+     * Output only. The shopping fix Merchant Center account suspension warning
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation shopping_fix_merchant_center_account_suspension_warning_recommendation = 52 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the shoppingFixMerchantCenterAccountSuspensionWarningRecommendation field is set.
+     */
+    @java.lang.Override
+    public boolean hasShoppingFixMerchantCenterAccountSuspensionWarningRecommendation() {
+      return recommendationCase_ == 52;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping fix Merchant Center account suspension warning
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation shopping_fix_merchant_center_account_suspension_warning_recommendation = 52 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The shoppingFixMerchantCenterAccountSuspensionWarningRecommendation.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation getShoppingFixMerchantCenterAccountSuspensionWarningRecommendation() {
+      if (shoppingFixMerchantCenterAccountSuspensionWarningRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 52) {
+          return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation) recommendation_;
+        }
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation.getDefaultInstance();
+      } else {
+        if (recommendationCase_ == 52) {
+          return shoppingFixMerchantCenterAccountSuspensionWarningRecommendationBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The shopping fix Merchant Center account suspension warning
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation shopping_fix_merchant_center_account_suspension_warning_recommendation = 52 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setShoppingFixMerchantCenterAccountSuspensionWarningRecommendation(com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation value) {
+      if (shoppingFixMerchantCenterAccountSuspensionWarningRecommendationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        recommendation_ = value;
+        onChanged();
+      } else {
+        shoppingFixMerchantCenterAccountSuspensionWarningRecommendationBuilder_.setMessage(value);
+      }
+      recommendationCase_ = 52;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping fix Merchant Center account suspension warning
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation shopping_fix_merchant_center_account_suspension_warning_recommendation = 52 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setShoppingFixMerchantCenterAccountSuspensionWarningRecommendation(
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation.Builder builderForValue) {
+      if (shoppingFixMerchantCenterAccountSuspensionWarningRecommendationBuilder_ == null) {
+        recommendation_ = builderForValue.build();
+        onChanged();
+      } else {
+        shoppingFixMerchantCenterAccountSuspensionWarningRecommendationBuilder_.setMessage(builderForValue.build());
+      }
+      recommendationCase_ = 52;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping fix Merchant Center account suspension warning
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation shopping_fix_merchant_center_account_suspension_warning_recommendation = 52 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder mergeShoppingFixMerchantCenterAccountSuspensionWarningRecommendation(com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation value) {
+      if (shoppingFixMerchantCenterAccountSuspensionWarningRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 52 &&
+            recommendation_ != com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation.getDefaultInstance()) {
+          recommendation_ = com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation.newBuilder((com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation) recommendation_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          recommendation_ = value;
+        }
+        onChanged();
+      } else {
+        if (recommendationCase_ == 52) {
+          shoppingFixMerchantCenterAccountSuspensionWarningRecommendationBuilder_.mergeFrom(value);
+        } else {
+          shoppingFixMerchantCenterAccountSuspensionWarningRecommendationBuilder_.setMessage(value);
+        }
+      }
+      recommendationCase_ = 52;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping fix Merchant Center account suspension warning
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation shopping_fix_merchant_center_account_suspension_warning_recommendation = 52 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder clearShoppingFixMerchantCenterAccountSuspensionWarningRecommendation() {
+      if (shoppingFixMerchantCenterAccountSuspensionWarningRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 52) {
+          recommendationCase_ = 0;
+          recommendation_ = null;
+          onChanged();
+        }
+      } else {
+        if (recommendationCase_ == 52) {
+          recommendationCase_ = 0;
+          recommendation_ = null;
+        }
+        shoppingFixMerchantCenterAccountSuspensionWarningRecommendationBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping fix Merchant Center account suspension warning
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation shopping_fix_merchant_center_account_suspension_warning_recommendation = 52 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation.Builder getShoppingFixMerchantCenterAccountSuspensionWarningRecommendationBuilder() {
+      return getShoppingFixMerchantCenterAccountSuspensionWarningRecommendationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Output only. The shopping fix Merchant Center account suspension warning
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation shopping_fix_merchant_center_account_suspension_warning_recommendation = 52 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendationOrBuilder getShoppingFixMerchantCenterAccountSuspensionWarningRecommendationOrBuilder() {
+      if ((recommendationCase_ == 52) && (shoppingFixMerchantCenterAccountSuspensionWarningRecommendationBuilder_ != null)) {
+        return shoppingFixMerchantCenterAccountSuspensionWarningRecommendationBuilder_.getMessageOrBuilder();
+      } else {
+        if (recommendationCase_ == 52) {
+          return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation) recommendation_;
+        }
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The shopping fix Merchant Center account suspension warning
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation shopping_fix_merchant_center_account_suspension_warning_recommendation = 52 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation, com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation.Builder, com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendationOrBuilder> 
+        getShoppingFixMerchantCenterAccountSuspensionWarningRecommendationFieldBuilder() {
+      if (shoppingFixMerchantCenterAccountSuspensionWarningRecommendationBuilder_ == null) {
+        if (!(recommendationCase_ == 52)) {
+          recommendation_ = com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation.getDefaultInstance();
+        }
+        shoppingFixMerchantCenterAccountSuspensionWarningRecommendationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation, com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation.Builder, com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendationOrBuilder>(
+                (com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation) recommendation_,
+                getParentForChildren(),
+                isClean());
+        recommendation_ = null;
+      }
+      recommendationCase_ = 52;
+      onChanged();
+      return shoppingFixMerchantCenterAccountSuspensionWarningRecommendationBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation, com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation.Builder, com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationOrBuilder> shoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationBuilder_;
+    /**
+     * <pre>
+     * Output only. The shopping migrate Regular Shopping Campaign offers to
+     * Performance Max recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation shopping_migrate_regular_shopping_campaign_offers_to_performance_max_recommendation = 53 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the shoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation field is set.
+     */
+    @java.lang.Override
+    public boolean hasShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation() {
+      return recommendationCase_ == 53;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping migrate Regular Shopping Campaign offers to
+     * Performance Max recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation shopping_migrate_regular_shopping_campaign_offers_to_performance_max_recommendation = 53 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The shoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation getShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation() {
+      if (shoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 53) {
+          return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation) recommendation_;
+        }
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation.getDefaultInstance();
+      } else {
+        if (recommendationCase_ == 53) {
+          return shoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The shopping migrate Regular Shopping Campaign offers to
+     * Performance Max recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation shopping_migrate_regular_shopping_campaign_offers_to_performance_max_recommendation = 53 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation(com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation value) {
+      if (shoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        recommendation_ = value;
+        onChanged();
+      } else {
+        shoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationBuilder_.setMessage(value);
+      }
+      recommendationCase_ = 53;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping migrate Regular Shopping Campaign offers to
+     * Performance Max recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation shopping_migrate_regular_shopping_campaign_offers_to_performance_max_recommendation = 53 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation(
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation.Builder builderForValue) {
+      if (shoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationBuilder_ == null) {
+        recommendation_ = builderForValue.build();
+        onChanged();
+      } else {
+        shoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationBuilder_.setMessage(builderForValue.build());
+      }
+      recommendationCase_ = 53;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping migrate Regular Shopping Campaign offers to
+     * Performance Max recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation shopping_migrate_regular_shopping_campaign_offers_to_performance_max_recommendation = 53 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder mergeShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation(com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation value) {
+      if (shoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 53 &&
+            recommendation_ != com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation.getDefaultInstance()) {
+          recommendation_ = com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation.newBuilder((com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation) recommendation_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          recommendation_ = value;
+        }
+        onChanged();
+      } else {
+        if (recommendationCase_ == 53) {
+          shoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationBuilder_.mergeFrom(value);
+        } else {
+          shoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationBuilder_.setMessage(value);
+        }
+      }
+      recommendationCase_ = 53;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping migrate Regular Shopping Campaign offers to
+     * Performance Max recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation shopping_migrate_regular_shopping_campaign_offers_to_performance_max_recommendation = 53 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder clearShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation() {
+      if (shoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 53) {
+          recommendationCase_ = 0;
+          recommendation_ = null;
+          onChanged();
+        }
+      } else {
+        if (recommendationCase_ == 53) {
+          recommendationCase_ = 0;
+          recommendation_ = null;
+        }
+        shoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The shopping migrate Regular Shopping Campaign offers to
+     * Performance Max recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation shopping_migrate_regular_shopping_campaign_offers_to_performance_max_recommendation = 53 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation.Builder getShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationBuilder() {
+      return getShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Output only. The shopping migrate Regular Shopping Campaign offers to
+     * Performance Max recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation shopping_migrate_regular_shopping_campaign_offers_to_performance_max_recommendation = 53 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationOrBuilder getShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationOrBuilder() {
+      if ((recommendationCase_ == 53) && (shoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationBuilder_ != null)) {
+        return shoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationBuilder_.getMessageOrBuilder();
+      } else {
+        if (recommendationCase_ == 53) {
+          return (com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation) recommendation_;
+        }
+        return com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The shopping migrate Regular Shopping Campaign offers to
+     * Performance Max recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation shopping_migrate_regular_shopping_campaign_offers_to_performance_max_recommendation = 53 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation, com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation.Builder, com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationOrBuilder> 
+        getShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationFieldBuilder() {
+      if (shoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationBuilder_ == null) {
+        if (!(recommendationCase_ == 53)) {
+          recommendation_ = com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation.getDefaultInstance();
+        }
+        shoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation, com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation.Builder, com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationOrBuilder>(
+                (com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation) recommendation_,
+                getParentForChildren(),
+                isClean());
+        recommendation_ = null;
+      }
+      recommendationCase_ = 53;
+      onChanged();
+      return shoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

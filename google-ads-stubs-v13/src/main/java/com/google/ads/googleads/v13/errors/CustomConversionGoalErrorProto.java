@@ -30,21 +30,22 @@ public final class CustomConversionGoalErrorProto {
     java.lang.String[] descriptorData = {
       "\nBgoogle/ads/googleads/v13/errors/custom" +
       "_conversion_goal_error.proto\022\037google.ads" +
-      ".googleads.v13.errors\"\224\002\n\035CustomConversi" +
-      "onGoalErrorEnum\"\362\001\n\031CustomConversionGoal" +
+      ".googleads.v13.errors\"\325\002\n\035CustomConversi" +
+      "onGoalErrorEnum\"\263\002\n\031CustomConversionGoal" +
       "Error\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\035\n\031I" +
       "NVALID_CONVERSION_ACTION\020\002\022!\n\035CONVERSION" +
       "_ACTION_NOT_ENABLED\020\003\022/\n+CANNOT_REMOVE_L" +
       "INKED_CUSTOM_CONVERSION_GOAL\020\004\022\036\n\032CUSTOM" +
       "_GOAL_DUPLICATE_NAME\020\005\022$\n DUPLICATE_CONV" +
-      "ERSION_ACTION_LIST\020\006B\376\001\n#com.google.ads." +
-      "googleads.v13.errorsB\036CustomConversionGo" +
-      "alErrorProtoP\001ZEgoogle.golang.org/genpro" +
-      "to/googleapis/ads/googleads/v13/errors;e" +
-      "rrors\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V13.E" +
-      "rrors\312\002\037Google\\Ads\\GoogleAds\\V13\\Errors\352" +
-      "\002#Google::Ads::GoogleAds::V13::Errorsb\006p" +
-      "roto3"
+      "ERSION_ACTION_LIST\020\006\022?\n;NON_BIDDABLE_CON" +
+      "VERSION_ACTION_NOT_ELIGIBLE_FOR_CUSTOM_G" +
+      "OAL\020\007B\376\001\n#com.google.ads.googleads.v13.e" +
+      "rrorsB\036CustomConversionGoalErrorProtoP\001Z" +
+      "Egoogle.golang.org/genproto/googleapis/a" +
+      "ds/googleads/v13/errors;errors\242\002\003GAA\252\002\037G" +
+      "oogle.Ads.GoogleAds.V13.Errors\312\002\037Google\\" +
+      "Ads\\GoogleAds\\V13\\Errors\352\002#Google::Ads::" +
+      "GoogleAds::V13::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

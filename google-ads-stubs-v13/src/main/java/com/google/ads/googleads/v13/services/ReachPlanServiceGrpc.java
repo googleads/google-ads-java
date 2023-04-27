@@ -168,7 +168,7 @@ public final class ReachPlanServiceGrpc {
    * certain duration with a defined budget.
    * </pre>
    */
-  public static abstract class ReachPlanServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -182,7 +182,7 @@ public final class ReachPlanServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void listPlannableLocations(com.google.ads.googleads.v13.services.ListPlannableLocationsRequest request,
+    default void listPlannableLocations(com.google.ads.googleads.v13.services.ListPlannableLocationsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.ListPlannableLocationsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListPlannableLocationsMethod(), responseObserver);
     }
@@ -200,7 +200,7 @@ public final class ReachPlanServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void listPlannableProducts(com.google.ads.googleads.v13.services.ListPlannableProductsRequest request,
+    default void listPlannableProducts(com.google.ads.googleads.v13.services.ListPlannableProductsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.ListPlannableProductsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListPlannableProductsMethod(), responseObserver);
     }
@@ -220,39 +220,14 @@ public final class ReachPlanServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void generateReachForecast(com.google.ads.googleads.v13.services.GenerateReachForecastRequest request,
+    default void generateReachForecast(com.google.ads.googleads.v13.services.GenerateReachForecastRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.GenerateReachForecastResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGenerateReachForecastMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getListPlannableLocationsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.ListPlannableLocationsRequest,
-                com.google.ads.googleads.v13.services.ListPlannableLocationsResponse>(
-                  this, METHODID_LIST_PLANNABLE_LOCATIONS)))
-          .addMethod(
-            getListPlannableProductsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.ListPlannableProductsRequest,
-                com.google.ads.googleads.v13.services.ListPlannableProductsResponse>(
-                  this, METHODID_LIST_PLANNABLE_PRODUCTS)))
-          .addMethod(
-            getGenerateReachForecastMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.GenerateReachForecastRequest,
-                com.google.ads.googleads.v13.services.GenerateReachForecastResponse>(
-                  this, METHODID_GENERATE_REACH_FORECAST)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service ReachPlanService.
    * <pre>
    * Reach Plan Service gives users information about audience size that can
    * be reached through advertisement on YouTube. In particular,
@@ -261,7 +236,26 @@ public final class ReachPlanServiceGrpc {
    * certain duration with a defined budget.
    * </pre>
    */
-  public static final class ReachPlanServiceStub extends io.grpc.stub.AbstractAsyncStub<ReachPlanServiceStub> {
+  public static abstract class ReachPlanServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return ReachPlanServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service ReachPlanService.
+   * <pre>
+   * Reach Plan Service gives users information about audience size that can
+   * be reached through advertisement on YouTube. In particular,
+   * GenerateReachForecast provides estimated number of people of specified
+   * demographics that can be reached by an ad in a given market by a campaign of
+   * certain duration with a defined budget.
+   * </pre>
+   */
+  public static final class ReachPlanServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<ReachPlanServiceStub> {
     private ReachPlanServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -333,6 +327,7 @@ public final class ReachPlanServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service ReachPlanService.
    * <pre>
    * Reach Plan Service gives users information about audience size that can
    * be reached through advertisement on YouTube. In particular,
@@ -341,7 +336,8 @@ public final class ReachPlanServiceGrpc {
    * certain duration with a defined budget.
    * </pre>
    */
-  public static final class ReachPlanServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ReachPlanServiceBlockingStub> {
+  public static final class ReachPlanServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<ReachPlanServiceBlockingStub> {
     private ReachPlanServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -410,6 +406,7 @@ public final class ReachPlanServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service ReachPlanService.
    * <pre>
    * Reach Plan Service gives users information about audience size that can
    * be reached through advertisement on YouTube. In particular,
@@ -418,7 +415,8 @@ public final class ReachPlanServiceGrpc {
    * certain duration with a defined budget.
    * </pre>
    */
-  public static final class ReachPlanServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ReachPlanServiceFutureStub> {
+  public static final class ReachPlanServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<ReachPlanServiceFutureStub> {
     private ReachPlanServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -498,10 +496,10 @@ public final class ReachPlanServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final ReachPlanServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(ReachPlanServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -536,6 +534,32 @@ public final class ReachPlanServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getListPlannableLocationsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.ListPlannableLocationsRequest,
+              com.google.ads.googleads.v13.services.ListPlannableLocationsResponse>(
+                service, METHODID_LIST_PLANNABLE_LOCATIONS)))
+        .addMethod(
+          getListPlannableProductsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.ListPlannableProductsRequest,
+              com.google.ads.googleads.v13.services.ListPlannableProductsResponse>(
+                service, METHODID_LIST_PLANNABLE_PRODUCTS)))
+        .addMethod(
+          getGenerateReachForecastMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.GenerateReachForecastRequest,
+              com.google.ads.googleads.v13.services.GenerateReachForecastResponse>(
+                service, METHODID_GENERATE_REACH_FORECAST)))
+        .build();
   }
 
   private static abstract class ReachPlanServiceBaseDescriptorSupplier

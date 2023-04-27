@@ -98,7 +98,7 @@ public final class CustomerAssetServiceGrpc {
    * Service to manage customer assets.
    * </pre>
    */
-  public static abstract class CustomerAssetServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -116,30 +116,34 @@ public final class CustomerAssetServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void mutateCustomerAssets(com.google.ads.googleads.v13.services.MutateCustomerAssetsRequest request,
+    default void mutateCustomerAssets(com.google.ads.googleads.v13.services.MutateCustomerAssetsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.MutateCustomerAssetsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateCustomerAssetsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateCustomerAssetsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.MutateCustomerAssetsRequest,
-                com.google.ads.googleads.v13.services.MutateCustomerAssetsResponse>(
-                  this, METHODID_MUTATE_CUSTOMER_ASSETS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service CustomerAssetService.
    * <pre>
    * Service to manage customer assets.
    * </pre>
    */
-  public static final class CustomerAssetServiceStub extends io.grpc.stub.AbstractAsyncStub<CustomerAssetServiceStub> {
+  public static abstract class CustomerAssetServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return CustomerAssetServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service CustomerAssetService.
+   * <pre>
+   * Service to manage customer assets.
+   * </pre>
+   */
+  public static final class CustomerAssetServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<CustomerAssetServiceStub> {
     private CustomerAssetServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -175,11 +179,13 @@ public final class CustomerAssetServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service CustomerAssetService.
    * <pre>
    * Service to manage customer assets.
    * </pre>
    */
-  public static final class CustomerAssetServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CustomerAssetServiceBlockingStub> {
+  public static final class CustomerAssetServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<CustomerAssetServiceBlockingStub> {
     private CustomerAssetServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -214,11 +220,13 @@ public final class CustomerAssetServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service CustomerAssetService.
    * <pre>
    * Service to manage customer assets.
    * </pre>
    */
-  public static final class CustomerAssetServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CustomerAssetServiceFutureStub> {
+  public static final class CustomerAssetServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<CustomerAssetServiceFutureStub> {
     private CustomerAssetServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -260,10 +268,10 @@ public final class CustomerAssetServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final CustomerAssetServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(CustomerAssetServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -290,6 +298,18 @@ public final class CustomerAssetServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateCustomerAssetsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.MutateCustomerAssetsRequest,
+              com.google.ads.googleads.v13.services.MutateCustomerAssetsResponse>(
+                service, METHODID_MUTATE_CUSTOMER_ASSETS)))
+        .build();
   }
 
   private static abstract class CustomerAssetServiceBaseDescriptorSupplier

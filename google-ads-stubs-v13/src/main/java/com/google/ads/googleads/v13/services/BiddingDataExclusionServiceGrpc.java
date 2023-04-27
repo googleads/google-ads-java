@@ -98,7 +98,7 @@ public final class BiddingDataExclusionServiceGrpc {
    * Service to manage bidding data exclusions.
    * </pre>
    */
-  public static abstract class BiddingDataExclusionServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -106,30 +106,34 @@ public final class BiddingDataExclusionServiceGrpc {
      * Operation statuses are returned.
      * </pre>
      */
-    public void mutateBiddingDataExclusions(com.google.ads.googleads.v13.services.MutateBiddingDataExclusionsRequest request,
+    default void mutateBiddingDataExclusions(com.google.ads.googleads.v13.services.MutateBiddingDataExclusionsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.MutateBiddingDataExclusionsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateBiddingDataExclusionsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateBiddingDataExclusionsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.MutateBiddingDataExclusionsRequest,
-                com.google.ads.googleads.v13.services.MutateBiddingDataExclusionsResponse>(
-                  this, METHODID_MUTATE_BIDDING_DATA_EXCLUSIONS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service BiddingDataExclusionService.
    * <pre>
    * Service to manage bidding data exclusions.
    * </pre>
    */
-  public static final class BiddingDataExclusionServiceStub extends io.grpc.stub.AbstractAsyncStub<BiddingDataExclusionServiceStub> {
+  public static abstract class BiddingDataExclusionServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return BiddingDataExclusionServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service BiddingDataExclusionService.
+   * <pre>
+   * Service to manage bidding data exclusions.
+   * </pre>
+   */
+  public static final class BiddingDataExclusionServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<BiddingDataExclusionServiceStub> {
     private BiddingDataExclusionServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -155,11 +159,13 @@ public final class BiddingDataExclusionServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service BiddingDataExclusionService.
    * <pre>
    * Service to manage bidding data exclusions.
    * </pre>
    */
-  public static final class BiddingDataExclusionServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<BiddingDataExclusionServiceBlockingStub> {
+  public static final class BiddingDataExclusionServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<BiddingDataExclusionServiceBlockingStub> {
     private BiddingDataExclusionServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -184,11 +190,13 @@ public final class BiddingDataExclusionServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service BiddingDataExclusionService.
    * <pre>
    * Service to manage bidding data exclusions.
    * </pre>
    */
-  public static final class BiddingDataExclusionServiceFutureStub extends io.grpc.stub.AbstractFutureStub<BiddingDataExclusionServiceFutureStub> {
+  public static final class BiddingDataExclusionServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<BiddingDataExclusionServiceFutureStub> {
     private BiddingDataExclusionServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -220,10 +228,10 @@ public final class BiddingDataExclusionServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final BiddingDataExclusionServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(BiddingDataExclusionServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -250,6 +258,18 @@ public final class BiddingDataExclusionServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateBiddingDataExclusionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.MutateBiddingDataExclusionsRequest,
+              com.google.ads.googleads.v13.services.MutateBiddingDataExclusionsResponse>(
+                service, METHODID_MUTATE_BIDDING_DATA_EXCLUSIONS)))
+        .build();
   }
 
   private static abstract class BiddingDataExclusionServiceBaseDescriptorSupplier

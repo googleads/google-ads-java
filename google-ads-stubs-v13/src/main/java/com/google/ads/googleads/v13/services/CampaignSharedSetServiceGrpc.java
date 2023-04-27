@@ -98,7 +98,7 @@ public final class CampaignSharedSetServiceGrpc {
    * Service to manage campaign shared sets.
    * </pre>
    */
-  public static abstract class CampaignSharedSetServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -128,30 +128,34 @@ public final class CampaignSharedSetServiceGrpc {
      *   [StringLengthError]()
      * </pre>
      */
-    public void mutateCampaignSharedSets(com.google.ads.googleads.v13.services.MutateCampaignSharedSetsRequest request,
+    default void mutateCampaignSharedSets(com.google.ads.googleads.v13.services.MutateCampaignSharedSetsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.MutateCampaignSharedSetsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateCampaignSharedSetsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateCampaignSharedSetsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.MutateCampaignSharedSetsRequest,
-                com.google.ads.googleads.v13.services.MutateCampaignSharedSetsResponse>(
-                  this, METHODID_MUTATE_CAMPAIGN_SHARED_SETS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service CampaignSharedSetService.
    * <pre>
    * Service to manage campaign shared sets.
    * </pre>
    */
-  public static final class CampaignSharedSetServiceStub extends io.grpc.stub.AbstractAsyncStub<CampaignSharedSetServiceStub> {
+  public static abstract class CampaignSharedSetServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return CampaignSharedSetServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service CampaignSharedSetService.
+   * <pre>
+   * Service to manage campaign shared sets.
+   * </pre>
+   */
+  public static final class CampaignSharedSetServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<CampaignSharedSetServiceStub> {
     private CampaignSharedSetServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -199,11 +203,13 @@ public final class CampaignSharedSetServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service CampaignSharedSetService.
    * <pre>
    * Service to manage campaign shared sets.
    * </pre>
    */
-  public static final class CampaignSharedSetServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CampaignSharedSetServiceBlockingStub> {
+  public static final class CampaignSharedSetServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<CampaignSharedSetServiceBlockingStub> {
     private CampaignSharedSetServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -250,11 +256,13 @@ public final class CampaignSharedSetServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service CampaignSharedSetService.
    * <pre>
    * Service to manage campaign shared sets.
    * </pre>
    */
-  public static final class CampaignSharedSetServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CampaignSharedSetServiceFutureStub> {
+  public static final class CampaignSharedSetServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<CampaignSharedSetServiceFutureStub> {
     private CampaignSharedSetServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -308,10 +316,10 @@ public final class CampaignSharedSetServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final CampaignSharedSetServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(CampaignSharedSetServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -338,6 +346,18 @@ public final class CampaignSharedSetServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateCampaignSharedSetsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.MutateCampaignSharedSetsRequest,
+              com.google.ads.googleads.v13.services.MutateCampaignSharedSetsResponse>(
+                service, METHODID_MUTATE_CAMPAIGN_SHARED_SETS)))
+        .build();
   }
 
   private static abstract class CampaignSharedSetServiceBaseDescriptorSupplier

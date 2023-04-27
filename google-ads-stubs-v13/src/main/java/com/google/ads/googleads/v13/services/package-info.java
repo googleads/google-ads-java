@@ -15,7 +15,9 @@
  */
 
 /**
- * The interfaces provided are listed below, along with usage samples.
+ * A client to Google Ads API
+ *
+ * <p>The interfaces provided are listed below, along with usage samples.
  *
  * <p>======================= AccountBudgetProposalServiceClient =======================
  *
@@ -1409,6 +1411,34 @@
  *   String customerId = "customerId-1581184615";
  *   CustomerOperation operation = CustomerOperation.newBuilder().build();
  *   MutateCustomerResponse response = customerServiceClient.mutateCustomer(customerId, operation);
+ * }
+ * }</pre>
+ *
+ * <p>======================= CustomerSkAdNetworkConversionValueSchemaServiceClient
+ * =======================
+ *
+ * <p>Service Description: Service to manage CustomerSkAdNetworkConversionValueSchema.
+ *
+ * <p>Sample for CustomerSkAdNetworkConversionValueSchemaServiceClient:
+ *
+ * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
+ * try (CustomerSkAdNetworkConversionValueSchemaServiceClient
+ *     customerSkAdNetworkConversionValueSchemaServiceClient =
+ *         CustomerSkAdNetworkConversionValueSchemaServiceClient.create()) {
+ *   MutateCustomerSkAdNetworkConversionValueSchemaRequest request =
+ *       MutateCustomerSkAdNetworkConversionValueSchemaRequest.newBuilder()
+ *           .setCustomerId("customerId-1581184615")
+ *           .setOperation(CustomerSkAdNetworkConversionValueSchemaOperation.newBuilder().build())
+ *           .setValidateOnly(true)
+ *           .build();
+ *   MutateCustomerSkAdNetworkConversionValueSchemaResponse response =
+ *       customerSkAdNetworkConversionValueSchemaServiceClient
+ *           .mutateCustomerSkAdNetworkConversionValueSchema(request);
  * }
  * }</pre>
  *

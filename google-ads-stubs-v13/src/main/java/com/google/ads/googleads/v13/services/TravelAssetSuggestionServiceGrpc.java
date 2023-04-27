@@ -98,7 +98,7 @@ public final class TravelAssetSuggestionServiceGrpc {
    * Service to retrieve Travel asset suggestions.
    * </pre>
    */
-  public static abstract class TravelAssetSuggestionServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -108,30 +108,34 @@ public final class TravelAssetSuggestionServiceGrpc {
      * property.
      * </pre>
      */
-    public void suggestTravelAssets(com.google.ads.googleads.v13.services.SuggestTravelAssetsRequest request,
+    default void suggestTravelAssets(com.google.ads.googleads.v13.services.SuggestTravelAssetsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.SuggestTravelAssetsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSuggestTravelAssetsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getSuggestTravelAssetsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.SuggestTravelAssetsRequest,
-                com.google.ads.googleads.v13.services.SuggestTravelAssetsResponse>(
-                  this, METHODID_SUGGEST_TRAVEL_ASSETS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service TravelAssetSuggestionService.
    * <pre>
    * Service to retrieve Travel asset suggestions.
    * </pre>
    */
-  public static final class TravelAssetSuggestionServiceStub extends io.grpc.stub.AbstractAsyncStub<TravelAssetSuggestionServiceStub> {
+  public static abstract class TravelAssetSuggestionServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return TravelAssetSuggestionServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service TravelAssetSuggestionService.
+   * <pre>
+   * Service to retrieve Travel asset suggestions.
+   * </pre>
+   */
+  public static final class TravelAssetSuggestionServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<TravelAssetSuggestionServiceStub> {
     private TravelAssetSuggestionServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -159,11 +163,13 @@ public final class TravelAssetSuggestionServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service TravelAssetSuggestionService.
    * <pre>
    * Service to retrieve Travel asset suggestions.
    * </pre>
    */
-  public static final class TravelAssetSuggestionServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<TravelAssetSuggestionServiceBlockingStub> {
+  public static final class TravelAssetSuggestionServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<TravelAssetSuggestionServiceBlockingStub> {
     private TravelAssetSuggestionServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -190,11 +196,13 @@ public final class TravelAssetSuggestionServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service TravelAssetSuggestionService.
    * <pre>
    * Service to retrieve Travel asset suggestions.
    * </pre>
    */
-  public static final class TravelAssetSuggestionServiceFutureStub extends io.grpc.stub.AbstractFutureStub<TravelAssetSuggestionServiceFutureStub> {
+  public static final class TravelAssetSuggestionServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<TravelAssetSuggestionServiceFutureStub> {
     private TravelAssetSuggestionServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -228,10 +236,10 @@ public final class TravelAssetSuggestionServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final TravelAssetSuggestionServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(TravelAssetSuggestionServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -258,6 +266,18 @@ public final class TravelAssetSuggestionServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getSuggestTravelAssetsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.SuggestTravelAssetsRequest,
+              com.google.ads.googleads.v13.services.SuggestTravelAssetsResponse>(
+                service, METHODID_SUGGEST_TRAVEL_ASSETS)))
+        .build();
   }
 
   private static abstract class TravelAssetSuggestionServiceBaseDescriptorSupplier

@@ -98,7 +98,7 @@ public final class CampaignServiceGrpc {
    * Service to manage campaigns.
    * </pre>
    */
-  public static abstract class CampaignServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -141,30 +141,34 @@ public final class CampaignServiceGrpc {
      *   [UrlFieldError]()
      * </pre>
      */
-    public void mutateCampaigns(com.google.ads.googleads.v13.services.MutateCampaignsRequest request,
+    default void mutateCampaigns(com.google.ads.googleads.v13.services.MutateCampaignsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.MutateCampaignsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateCampaignsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateCampaignsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.MutateCampaignsRequest,
-                com.google.ads.googleads.v13.services.MutateCampaignsResponse>(
-                  this, METHODID_MUTATE_CAMPAIGNS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service CampaignService.
    * <pre>
    * Service to manage campaigns.
    * </pre>
    */
-  public static final class CampaignServiceStub extends io.grpc.stub.AbstractAsyncStub<CampaignServiceStub> {
+  public static abstract class CampaignServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return CampaignServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service CampaignService.
+   * <pre>
+   * Service to manage campaigns.
+   * </pre>
+   */
+  public static final class CampaignServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<CampaignServiceStub> {
     private CampaignServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -225,11 +229,13 @@ public final class CampaignServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service CampaignService.
    * <pre>
    * Service to manage campaigns.
    * </pre>
    */
-  public static final class CampaignServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CampaignServiceBlockingStub> {
+  public static final class CampaignServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<CampaignServiceBlockingStub> {
     private CampaignServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -289,11 +295,13 @@ public final class CampaignServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service CampaignService.
    * <pre>
    * Service to manage campaigns.
    * </pre>
    */
-  public static final class CampaignServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CampaignServiceFutureStub> {
+  public static final class CampaignServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<CampaignServiceFutureStub> {
     private CampaignServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -360,10 +368,10 @@ public final class CampaignServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final CampaignServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(CampaignServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -390,6 +398,18 @@ public final class CampaignServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateCampaignsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.MutateCampaignsRequest,
+              com.google.ads.googleads.v13.services.MutateCampaignsResponse>(
+                service, METHODID_MUTATE_CAMPAIGNS)))
+        .build();
   }
 
   private static abstract class CampaignServiceBaseDescriptorSupplier

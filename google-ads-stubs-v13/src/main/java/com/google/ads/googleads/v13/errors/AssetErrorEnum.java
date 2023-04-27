@@ -354,6 +354,14 @@ private static final long serialVersionUID = 0L;
      * <code>CANNOT_MODIFY_AUTOMATICALLY_CREATED_ASSET = 36;</code>
      */
     CANNOT_MODIFY_AUTOMATICALLY_CREATED_ASSET(36),
+    /**
+     * <pre>
+     * Lead Form is disallowed to use "LOCATION" answer type.
+     * </pre>
+     *
+     * <code>LEAD_FORM_LOCATION_ANSWER_TYPE_DISALLOWED = 37;</code>
+     */
+    LEAD_FORM_LOCATION_ANSWER_TYPE_DISALLOWED(37),
     UNRECOGNIZED(-1),
     ;
 
@@ -655,6 +663,14 @@ private static final long serialVersionUID = 0L;
      * <code>CANNOT_MODIFY_AUTOMATICALLY_CREATED_ASSET = 36;</code>
      */
     public static final int CANNOT_MODIFY_AUTOMATICALLY_CREATED_ASSET_VALUE = 36;
+    /**
+     * <pre>
+     * Lead Form is disallowed to use "LOCATION" answer type.
+     * </pre>
+     *
+     * <code>LEAD_FORM_LOCATION_ANSWER_TYPE_DISALLOWED = 37;</code>
+     */
+    public static final int LEAD_FORM_LOCATION_ANSWER_TYPE_DISALLOWED_VALUE = 37;
 
 
     public final int getNumber() {
@@ -717,6 +733,7 @@ private static final long serialVersionUID = 0L;
         case 34: return NAME_CONFLICT_FOR_ASSET_TYPE;
         case 35: return CANNOT_MODIFY_ASSET_SOURCE;
         case 36: return CANNOT_MODIFY_AUTOMATICALLY_CREATED_ASSET;
+        case 37: return LEAD_FORM_LOCATION_ANSWER_TYPE_DISALLOWED;
         default: return null;
       }
     }

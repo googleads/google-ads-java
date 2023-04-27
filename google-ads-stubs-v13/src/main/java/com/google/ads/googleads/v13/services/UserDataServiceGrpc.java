@@ -108,7 +108,7 @@ public final class UserDataServiceGrpc {
    * section for the Customer Match List in the Google Ads UI.
    * </pre>
    */
-  public static abstract class UserDataServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -127,25 +127,14 @@ public final class UserDataServiceGrpc {
      *   [UserDataError]()
      * </pre>
      */
-    public void uploadUserData(com.google.ads.googleads.v13.services.UploadUserDataRequest request,
+    default void uploadUserData(com.google.ads.googleads.v13.services.UploadUserDataRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.UploadUserDataResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUploadUserDataMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getUploadUserDataMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.UploadUserDataRequest,
-                com.google.ads.googleads.v13.services.UploadUserDataResponse>(
-                  this, METHODID_UPLOAD_USER_DATA)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service UserDataService.
    * <pre>
    * Service to manage user data uploads.
    * Any uploads made to a Customer Match list through this service will be
@@ -155,7 +144,27 @@ public final class UserDataServiceGrpc {
    * section for the Customer Match List in the Google Ads UI.
    * </pre>
    */
-  public static final class UserDataServiceStub extends io.grpc.stub.AbstractAsyncStub<UserDataServiceStub> {
+  public static abstract class UserDataServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return UserDataServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service UserDataService.
+   * <pre>
+   * Service to manage user data uploads.
+   * Any uploads made to a Customer Match list through this service will be
+   * eligible for matching as per the customer matching process. See
+   * https://support.google.com/google-ads/answer/7474263. However, the uploads
+   * made through this service will not be visible under the 'Segment members'
+   * section for the Customer Match List in the Google Ads UI.
+   * </pre>
+   */
+  public static final class UserDataServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<UserDataServiceStub> {
     private UserDataServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -192,6 +201,7 @@ public final class UserDataServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service UserDataService.
    * <pre>
    * Service to manage user data uploads.
    * Any uploads made to a Customer Match list through this service will be
@@ -201,7 +211,8 @@ public final class UserDataServiceGrpc {
    * section for the Customer Match List in the Google Ads UI.
    * </pre>
    */
-  public static final class UserDataServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<UserDataServiceBlockingStub> {
+  public static final class UserDataServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<UserDataServiceBlockingStub> {
     private UserDataServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -237,6 +248,7 @@ public final class UserDataServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service UserDataService.
    * <pre>
    * Service to manage user data uploads.
    * Any uploads made to a Customer Match list through this service will be
@@ -246,7 +258,8 @@ public final class UserDataServiceGrpc {
    * section for the Customer Match List in the Google Ads UI.
    * </pre>
    */
-  public static final class UserDataServiceFutureStub extends io.grpc.stub.AbstractFutureStub<UserDataServiceFutureStub> {
+  public static final class UserDataServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<UserDataServiceFutureStub> {
     private UserDataServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -289,10 +302,10 @@ public final class UserDataServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final UserDataServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(UserDataServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -319,6 +332,18 @@ public final class UserDataServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getUploadUserDataMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.UploadUserDataRequest,
+              com.google.ads.googleads.v13.services.UploadUserDataResponse>(
+                service, METHODID_UPLOAD_USER_DATA)))
+        .build();
   }
 
   private static abstract class UserDataServiceBaseDescriptorSupplier

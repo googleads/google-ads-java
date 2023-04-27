@@ -30,7 +30,7 @@ public final class AssetErrorProto {
     java.lang.String[] descriptorData = {
       "\n1google/ads/googleads/v13/errors/asset_" +
       "error.proto\022\037google.ads.googleads.v13.er" +
-      "rors\"\206\013\n\016AssetErrorEnum\"\363\n\n\nAssetError\022\017" +
+      "rors\"\265\013\n\016AssetErrorEnum\"\242\013\n\nAssetError\022\017" +
       "\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022,\n(CUSTOMER" +
       "_NOT_ON_ALLOWLIST_FOR_ASSET_TYPE\020\r\022\023\n\017DU" +
       "PLICATE_ASSET\020\003\022\030\n\024DUPLICATE_ASSET_NAME\020" +
@@ -65,13 +65,14 @@ public final class AssetErrorProto {
       "FYING_QUESTIONS_DISALLOWED\020!\022 \n\034NAME_CON" +
       "FLICT_FOR_ASSET_TYPE\020\"\022\036\n\032CANNOT_MODIFY_" +
       "ASSET_SOURCE\020#\022-\n)CANNOT_MODIFY_AUTOMATI" +
-      "CALLY_CREATED_ASSET\020$B\357\001\n#com.google.ads" +
-      ".googleads.v13.errorsB\017AssetErrorProtoP\001" +
-      "ZEgoogle.golang.org/genproto/googleapis/" +
-      "ads/googleads/v13/errors;errors\242\002\003GAA\252\002\037" +
-      "Google.Ads.GoogleAds.V13.Errors\312\002\037Google" +
-      "\\Ads\\GoogleAds\\V13\\Errors\352\002#Google::Ads:" +
-      ":GoogleAds::V13::Errorsb\006proto3"
+      "CALLY_CREATED_ASSET\020$\022-\n)LEAD_FORM_LOCAT" +
+      "ION_ANSWER_TYPE_DISALLOWED\020%B\357\001\n#com.goo" +
+      "gle.ads.googleads.v13.errorsB\017AssetError" +
+      "ProtoP\001ZEgoogle.golang.org/genproto/goog" +
+      "leapis/ads/googleads/v13/errors;errors\242\002" +
+      "\003GAA\252\002\037Google.Ads.GoogleAds.V13.Errors\312\002" +
+      "\037Google\\Ads\\GoogleAds\\V13\\Errors\352\002#Googl" +
+      "e::Ads::GoogleAds::V13::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -152,6 +152,54 @@ private static final long serialVersionUID = 0L;
      * <code>FINAL_URL_SHOPPING_MERCHANT_HOME_PAGE_URL_DOMAINS_DIFFER = 11;</code>
      */
     FINAL_URL_SHOPPING_MERCHANT_HOME_PAGE_URL_DOMAINS_DIFFER(11),
+    /**
+     * <pre>
+     * Path1 required when path2 is set.
+     * </pre>
+     *
+     * <code>PATH1_REQUIRED_WHEN_PATH2_IS_SET = 12;</code>
+     */
+    PATH1_REQUIRED_WHEN_PATH2_IS_SET(12),
+    /**
+     * <pre>
+     * At least one short description asset is required for a valid asset group.
+     * </pre>
+     *
+     * <code>SHORT_DESCRIPTION_REQUIRED = 13;</code>
+     */
+    SHORT_DESCRIPTION_REQUIRED(13),
+    /**
+     * <pre>
+     * Final url field is required for asset group.
+     * </pre>
+     *
+     * <code>FINAL_URL_REQUIRED = 14;</code>
+     */
+    FINAL_URL_REQUIRED(14),
+    /**
+     * <pre>
+     * Final url contains invalid domain name.
+     * </pre>
+     *
+     * <code>FINAL_URL_CONTAINS_INVALID_DOMAIN_NAME = 15;</code>
+     */
+    FINAL_URL_CONTAINS_INVALID_DOMAIN_NAME(15),
+    /**
+     * <pre>
+     * Ad customizers are not supported in asset group's text field.
+     * </pre>
+     *
+     * <code>AD_CUSTOMIZER_NOT_SUPPORTED = 16;</code>
+     */
+    AD_CUSTOMIZER_NOT_SUPPORTED(16),
+    /**
+     * <pre>
+     * Cannot mutate asset group for campaign with removed status.
+     * </pre>
+     *
+     * <code>CANNOT_MUTATE_ASSET_GROUP_FOR_REMOVED_CAMPAIGN = 17;</code>
+     */
+    CANNOT_MUTATE_ASSET_GROUP_FOR_REMOVED_CAMPAIGN(17),
     UNRECOGNIZED(-1),
     ;
 
@@ -251,6 +299,54 @@ private static final long serialVersionUID = 0L;
      * <code>FINAL_URL_SHOPPING_MERCHANT_HOME_PAGE_URL_DOMAINS_DIFFER = 11;</code>
      */
     public static final int FINAL_URL_SHOPPING_MERCHANT_HOME_PAGE_URL_DOMAINS_DIFFER_VALUE = 11;
+    /**
+     * <pre>
+     * Path1 required when path2 is set.
+     * </pre>
+     *
+     * <code>PATH1_REQUIRED_WHEN_PATH2_IS_SET = 12;</code>
+     */
+    public static final int PATH1_REQUIRED_WHEN_PATH2_IS_SET_VALUE = 12;
+    /**
+     * <pre>
+     * At least one short description asset is required for a valid asset group.
+     * </pre>
+     *
+     * <code>SHORT_DESCRIPTION_REQUIRED = 13;</code>
+     */
+    public static final int SHORT_DESCRIPTION_REQUIRED_VALUE = 13;
+    /**
+     * <pre>
+     * Final url field is required for asset group.
+     * </pre>
+     *
+     * <code>FINAL_URL_REQUIRED = 14;</code>
+     */
+    public static final int FINAL_URL_REQUIRED_VALUE = 14;
+    /**
+     * <pre>
+     * Final url contains invalid domain name.
+     * </pre>
+     *
+     * <code>FINAL_URL_CONTAINS_INVALID_DOMAIN_NAME = 15;</code>
+     */
+    public static final int FINAL_URL_CONTAINS_INVALID_DOMAIN_NAME_VALUE = 15;
+    /**
+     * <pre>
+     * Ad customizers are not supported in asset group's text field.
+     * </pre>
+     *
+     * <code>AD_CUSTOMIZER_NOT_SUPPORTED = 16;</code>
+     */
+    public static final int AD_CUSTOMIZER_NOT_SUPPORTED_VALUE = 16;
+    /**
+     * <pre>
+     * Cannot mutate asset group for campaign with removed status.
+     * </pre>
+     *
+     * <code>CANNOT_MUTATE_ASSET_GROUP_FOR_REMOVED_CAMPAIGN = 17;</code>
+     */
+    public static final int CANNOT_MUTATE_ASSET_GROUP_FOR_REMOVED_CAMPAIGN_VALUE = 17;
 
 
     public final int getNumber() {
@@ -289,6 +385,12 @@ private static final long serialVersionUID = 0L;
         case 9: return NOT_ENOUGH_SQUARE_MARKETING_IMAGE_ASSET;
         case 10: return NOT_ENOUGH_LOGO_ASSET;
         case 11: return FINAL_URL_SHOPPING_MERCHANT_HOME_PAGE_URL_DOMAINS_DIFFER;
+        case 12: return PATH1_REQUIRED_WHEN_PATH2_IS_SET;
+        case 13: return SHORT_DESCRIPTION_REQUIRED;
+        case 14: return FINAL_URL_REQUIRED;
+        case 15: return FINAL_URL_CONTAINS_INVALID_DOMAIN_NAME;
+        case 16: return AD_CUSTOMIZER_NOT_SUPPORTED;
+        case 17: return CANNOT_MUTATE_ASSET_GROUP_FOR_REMOVED_CAMPAIGN;
         default: return null;
       }
     }

@@ -9,7 +9,7 @@ public interface KeywordPlanHistoricalMetricsOrBuilder extends
 
   /**
    * <pre>
-   * Approximate number of monthly searches on this query averaged
+   * Approximate number of monthly searches on this query, averaged
    * for the past 12 months.
    * </pre>
    *
@@ -19,7 +19,7 @@ public interface KeywordPlanHistoricalMetricsOrBuilder extends
   boolean hasAvgMonthlySearches();
   /**
    * <pre>
-   * Approximate number of monthly searches on this query averaged
+   * Approximate number of monthly searches on this query, averaged
    * for the past 12 months.
    * </pre>
    *

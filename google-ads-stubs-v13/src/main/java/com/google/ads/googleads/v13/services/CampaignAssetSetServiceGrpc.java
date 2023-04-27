@@ -98,7 +98,7 @@ public final class CampaignAssetSetServiceGrpc {
    * Service to manage campaign asset set
    * </pre>
    */
-  public static abstract class CampaignAssetSetServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -106,30 +106,34 @@ public final class CampaignAssetSetServiceGrpc {
      * returned.
      * </pre>
      */
-    public void mutateCampaignAssetSets(com.google.ads.googleads.v13.services.MutateCampaignAssetSetsRequest request,
+    default void mutateCampaignAssetSets(com.google.ads.googleads.v13.services.MutateCampaignAssetSetsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.MutateCampaignAssetSetsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateCampaignAssetSetsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateCampaignAssetSetsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.MutateCampaignAssetSetsRequest,
-                com.google.ads.googleads.v13.services.MutateCampaignAssetSetsResponse>(
-                  this, METHODID_MUTATE_CAMPAIGN_ASSET_SETS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service CampaignAssetSetService.
    * <pre>
    * Service to manage campaign asset set
    * </pre>
    */
-  public static final class CampaignAssetSetServiceStub extends io.grpc.stub.AbstractAsyncStub<CampaignAssetSetServiceStub> {
+  public static abstract class CampaignAssetSetServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return CampaignAssetSetServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service CampaignAssetSetService.
+   * <pre>
+   * Service to manage campaign asset set
+   * </pre>
+   */
+  public static final class CampaignAssetSetServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<CampaignAssetSetServiceStub> {
     private CampaignAssetSetServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -155,11 +159,13 @@ public final class CampaignAssetSetServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service CampaignAssetSetService.
    * <pre>
    * Service to manage campaign asset set
    * </pre>
    */
-  public static final class CampaignAssetSetServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CampaignAssetSetServiceBlockingStub> {
+  public static final class CampaignAssetSetServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<CampaignAssetSetServiceBlockingStub> {
     private CampaignAssetSetServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -184,11 +190,13 @@ public final class CampaignAssetSetServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service CampaignAssetSetService.
    * <pre>
    * Service to manage campaign asset set
    * </pre>
    */
-  public static final class CampaignAssetSetServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CampaignAssetSetServiceFutureStub> {
+  public static final class CampaignAssetSetServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<CampaignAssetSetServiceFutureStub> {
     private CampaignAssetSetServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -220,10 +228,10 @@ public final class CampaignAssetSetServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final CampaignAssetSetServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(CampaignAssetSetServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -250,6 +258,18 @@ public final class CampaignAssetSetServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateCampaignAssetSetsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.MutateCampaignAssetSetsRequest,
+              com.google.ads.googleads.v13.services.MutateCampaignAssetSetsResponse>(
+                service, METHODID_MUTATE_CAMPAIGN_ASSET_SETS)))
+        .build();
   }
 
   private static abstract class CampaignAssetSetServiceBaseDescriptorSupplier

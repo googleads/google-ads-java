@@ -5,7 +5,7 @@ package com.google.ads.googleads.v13.enums;
 
 /**
  * <pre>
- * Container for enum describing audience insights dimensions.
+ * Container for enum describing insights dimensions.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v13.enums.AudienceInsightsDimensionEnum}
@@ -49,7 +49,7 @@ private static final long serialVersionUID = 0L;
 
   /**
    * <pre>
-   * Possible audience dimensions for use in generating insights.
+   * Possible dimensions for use in generating insights.
    * </pre>
    *
    * Protobuf enum {@code google.ads.googleads.v13.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension}
@@ -525,7 +525,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Container for enum describing audience insights dimensions.
+   * Container for enum describing insights dimensions.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v13.enums.AudienceInsightsDimensionEnum}

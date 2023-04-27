@@ -193,6 +193,7 @@ private static final long serialVersionUID = 0L;
     SMART_CAMPAIGN_ERROR(147),
     EXPERIMENT_ARM_ERROR(156),
     AUDIENCE_INSIGHTS_ERROR(167),
+    CUSTOMER_SK_AD_NETWORK_CONVERSION_VALUE_SCHEMA_ERROR(170),
     CURRENCY_ERROR(171),
     ERRORCODE_NOT_SET(0);
     private final int value;
@@ -352,6 +353,7 @@ private static final long serialVersionUID = 0L;
         case 147: return SMART_CAMPAIGN_ERROR;
         case 156: return EXPERIMENT_ARM_ERROR;
         case 167: return AUDIENCE_INSIGHTS_ERROR;
+        case 170: return CUSTOMER_SK_AD_NETWORK_CONVERSION_VALUE_SCHEMA_ERROR;
         case 171: return CURRENCY_ERROR;
         case 0: return ERRORCODE_NOT_SET;
         default: return null;
@@ -6431,6 +6433,49 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v13.errors.AudienceInsightsErrorEnum.AudienceInsightsError.UNSPECIFIED;
   }
 
+  public static final int CUSTOMER_SK_AD_NETWORK_CONVERSION_VALUE_SCHEMA_ERROR_FIELD_NUMBER = 170;
+  /**
+   * <pre>
+   * The reasons for the customer SK Ad network conversion value schema error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.errors.CustomerSkAdNetworkConversionValueSchemaErrorEnum.CustomerSkAdNetworkConversionValueSchemaError customer_sk_ad_network_conversion_value_schema_error = 170;</code>
+   * @return Whether the customerSkAdNetworkConversionValueSchemaError field is set.
+   */
+  public boolean hasCustomerSkAdNetworkConversionValueSchemaError() {
+    return errorCodeCase_ == 170;
+  }
+  /**
+   * <pre>
+   * The reasons for the customer SK Ad network conversion value schema error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.errors.CustomerSkAdNetworkConversionValueSchemaErrorEnum.CustomerSkAdNetworkConversionValueSchemaError customer_sk_ad_network_conversion_value_schema_error = 170;</code>
+   * @return The enum numeric value on the wire for customerSkAdNetworkConversionValueSchemaError.
+   */
+  public int getCustomerSkAdNetworkConversionValueSchemaErrorValue() {
+    if (errorCodeCase_ == 170) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the customer SK Ad network conversion value schema error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.errors.CustomerSkAdNetworkConversionValueSchemaErrorEnum.CustomerSkAdNetworkConversionValueSchemaError customer_sk_ad_network_conversion_value_schema_error = 170;</code>
+   * @return The customerSkAdNetworkConversionValueSchemaError.
+   */
+  public com.google.ads.googleads.v13.errors.CustomerSkAdNetworkConversionValueSchemaErrorEnum.CustomerSkAdNetworkConversionValueSchemaError getCustomerSkAdNetworkConversionValueSchemaError() {
+    if (errorCodeCase_ == 170) {
+      com.google.ads.googleads.v13.errors.CustomerSkAdNetworkConversionValueSchemaErrorEnum.CustomerSkAdNetworkConversionValueSchemaError result = com.google.ads.googleads.v13.errors.CustomerSkAdNetworkConversionValueSchemaErrorEnum.CustomerSkAdNetworkConversionValueSchemaError.forNumber(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v13.errors.CustomerSkAdNetworkConversionValueSchemaErrorEnum.CustomerSkAdNetworkConversionValueSchemaError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v13.errors.CustomerSkAdNetworkConversionValueSchemaErrorEnum.CustomerSkAdNetworkConversionValueSchemaError.UNSPECIFIED;
+  }
+
   public static final int CURRENCY_ERROR_FIELD_NUMBER = 171;
   /**
    * <pre>
@@ -6910,6 +6955,9 @@ private static final long serialVersionUID = 0L;
     }
     if (errorCodeCase_ == 167) {
       output.writeEnum(167, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 170) {
+      output.writeEnum(170, ((java.lang.Integer) errorCode_));
     }
     if (errorCodeCase_ == 171) {
       output.writeEnum(171, ((java.lang.Integer) errorCode_));
@@ -7486,6 +7534,10 @@ private static final long serialVersionUID = 0L;
     if (errorCodeCase_ == 167) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(167, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 170) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(170, ((java.lang.Integer) errorCode_));
     }
     if (errorCodeCase_ == 171) {
       size += com.google.protobuf.CodedOutputStream
@@ -8072,6 +8124,10 @@ private static final long serialVersionUID = 0L;
         if (getAudienceInsightsErrorValue()
             != other.getAudienceInsightsErrorValue()) return false;
         break;
+      case 170:
+        if (getCustomerSkAdNetworkConversionValueSchemaErrorValue()
+            != other.getCustomerSkAdNetworkConversionValueSchemaErrorValue()) return false;
+        break;
       case 171:
         if (getCurrencyErrorValue()
             != other.getCurrencyErrorValue()) return false;
@@ -8654,6 +8710,10 @@ private static final long serialVersionUID = 0L;
       case 167:
         hash = (37 * hash) + AUDIENCE_INSIGHTS_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getAudienceInsightsErrorValue();
+        break;
+      case 170:
+        hash = (37 * hash) + CUSTOMER_SK_AD_NETWORK_CONVERSION_VALUE_SCHEMA_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getCustomerSkAdNetworkConversionValueSchemaErrorValue();
         break;
       case 171:
         hash = (37 * hash) + CURRENCY_ERROR_FIELD_NUMBER;
@@ -9469,6 +9529,10 @@ private static final long serialVersionUID = 0L;
         }
         case AUDIENCE_INSIGHTS_ERROR: {
           setAudienceInsightsErrorValue(other.getAudienceInsightsErrorValue());
+          break;
+        }
+        case CUSTOMER_SK_AD_NETWORK_CONVERSION_VALUE_SCHEMA_ERROR: {
+          setCustomerSkAdNetworkConversionValueSchemaErrorValue(other.getCustomerSkAdNetworkConversionValueSchemaErrorValue());
           break;
         }
         case CURRENCY_ERROR: {
@@ -10351,6 +10415,12 @@ private static final long serialVersionUID = 0L;
               errorCode_ = rawValue;
               break;
             } // case 1336
+            case 1360: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 170;
+              errorCode_ = rawValue;
+              break;
+            } // case 1360
             case 1368: {
               int rawValue = input.readEnum();
               errorCodeCase_ = 171;
@@ -23640,6 +23710,100 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearAudienceInsightsError() {
       if (errorCodeCase_ == 167) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the customer SK Ad network conversion value schema error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.errors.CustomerSkAdNetworkConversionValueSchemaErrorEnum.CustomerSkAdNetworkConversionValueSchemaError customer_sk_ad_network_conversion_value_schema_error = 170;</code>
+     * @return Whether the customerSkAdNetworkConversionValueSchemaError field is set.
+     */
+    @java.lang.Override
+    public boolean hasCustomerSkAdNetworkConversionValueSchemaError() {
+      return errorCodeCase_ == 170;
+    }
+    /**
+     * <pre>
+     * The reasons for the customer SK Ad network conversion value schema error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.errors.CustomerSkAdNetworkConversionValueSchemaErrorEnum.CustomerSkAdNetworkConversionValueSchemaError customer_sk_ad_network_conversion_value_schema_error = 170;</code>
+     * @return The enum numeric value on the wire for customerSkAdNetworkConversionValueSchemaError.
+     */
+    @java.lang.Override
+    public int getCustomerSkAdNetworkConversionValueSchemaErrorValue() {
+      if (errorCodeCase_ == 170) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the customer SK Ad network conversion value schema error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.errors.CustomerSkAdNetworkConversionValueSchemaErrorEnum.CustomerSkAdNetworkConversionValueSchemaError customer_sk_ad_network_conversion_value_schema_error = 170;</code>
+     * @param value The enum numeric value on the wire for customerSkAdNetworkConversionValueSchemaError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCustomerSkAdNetworkConversionValueSchemaErrorValue(int value) {
+      errorCodeCase_ = 170;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the customer SK Ad network conversion value schema error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.errors.CustomerSkAdNetworkConversionValueSchemaErrorEnum.CustomerSkAdNetworkConversionValueSchemaError customer_sk_ad_network_conversion_value_schema_error = 170;</code>
+     * @return The customerSkAdNetworkConversionValueSchemaError.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.errors.CustomerSkAdNetworkConversionValueSchemaErrorEnum.CustomerSkAdNetworkConversionValueSchemaError getCustomerSkAdNetworkConversionValueSchemaError() {
+      if (errorCodeCase_ == 170) {
+        com.google.ads.googleads.v13.errors.CustomerSkAdNetworkConversionValueSchemaErrorEnum.CustomerSkAdNetworkConversionValueSchemaError result = com.google.ads.googleads.v13.errors.CustomerSkAdNetworkConversionValueSchemaErrorEnum.CustomerSkAdNetworkConversionValueSchemaError.forNumber(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v13.errors.CustomerSkAdNetworkConversionValueSchemaErrorEnum.CustomerSkAdNetworkConversionValueSchemaError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v13.errors.CustomerSkAdNetworkConversionValueSchemaErrorEnum.CustomerSkAdNetworkConversionValueSchemaError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the customer SK Ad network conversion value schema error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.errors.CustomerSkAdNetworkConversionValueSchemaErrorEnum.CustomerSkAdNetworkConversionValueSchemaError customer_sk_ad_network_conversion_value_schema_error = 170;</code>
+     * @param value The customerSkAdNetworkConversionValueSchemaError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCustomerSkAdNetworkConversionValueSchemaError(com.google.ads.googleads.v13.errors.CustomerSkAdNetworkConversionValueSchemaErrorEnum.CustomerSkAdNetworkConversionValueSchemaError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 170;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the customer SK Ad network conversion value schema error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.errors.CustomerSkAdNetworkConversionValueSchemaErrorEnum.CustomerSkAdNetworkConversionValueSchemaError customer_sk_ad_network_conversion_value_schema_error = 170;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCustomerSkAdNetworkConversionValueSchemaError() {
+      if (errorCodeCase_ == 170) {
         errorCodeCase_ = 0;
         errorCode_ = null;
         onChanged();

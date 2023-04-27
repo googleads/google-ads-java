@@ -98,7 +98,7 @@ public final class ExperimentArmServiceGrpc {
    * Service to manage experiment arms.
    * </pre>
    */
-  public static abstract class ExperimentArmServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -114,30 +114,34 @@ public final class ExperimentArmServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void mutateExperimentArms(com.google.ads.googleads.v13.services.MutateExperimentArmsRequest request,
+    default void mutateExperimentArms(com.google.ads.googleads.v13.services.MutateExperimentArmsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.MutateExperimentArmsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateExperimentArmsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateExperimentArmsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.MutateExperimentArmsRequest,
-                com.google.ads.googleads.v13.services.MutateExperimentArmsResponse>(
-                  this, METHODID_MUTATE_EXPERIMENT_ARMS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service ExperimentArmService.
    * <pre>
    * Service to manage experiment arms.
    * </pre>
    */
-  public static final class ExperimentArmServiceStub extends io.grpc.stub.AbstractAsyncStub<ExperimentArmServiceStub> {
+  public static abstract class ExperimentArmServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return ExperimentArmServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service ExperimentArmService.
+   * <pre>
+   * Service to manage experiment arms.
+   * </pre>
+   */
+  public static final class ExperimentArmServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<ExperimentArmServiceStub> {
     private ExperimentArmServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -171,11 +175,13 @@ public final class ExperimentArmServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service ExperimentArmService.
    * <pre>
    * Service to manage experiment arms.
    * </pre>
    */
-  public static final class ExperimentArmServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ExperimentArmServiceBlockingStub> {
+  public static final class ExperimentArmServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<ExperimentArmServiceBlockingStub> {
     private ExperimentArmServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -208,11 +214,13 @@ public final class ExperimentArmServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service ExperimentArmService.
    * <pre>
    * Service to manage experiment arms.
    * </pre>
    */
-  public static final class ExperimentArmServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ExperimentArmServiceFutureStub> {
+  public static final class ExperimentArmServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<ExperimentArmServiceFutureStub> {
     private ExperimentArmServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -252,10 +260,10 @@ public final class ExperimentArmServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final ExperimentArmServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(ExperimentArmServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -282,6 +290,18 @@ public final class ExperimentArmServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateExperimentArmsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.MutateExperimentArmsRequest,
+              com.google.ads.googleads.v13.services.MutateExperimentArmsResponse>(
+                service, METHODID_MUTATE_EXPERIMENT_ARMS)))
+        .build();
   }
 
   private static abstract class ExperimentArmServiceBaseDescriptorSupplier

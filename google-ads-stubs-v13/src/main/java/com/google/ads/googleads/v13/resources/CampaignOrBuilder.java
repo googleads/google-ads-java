@@ -1505,6 +1505,37 @@ public interface CampaignOrBuilder extends
 
   /**
    * <pre>
+   * Immutable. Listing type of ads served for this campaign.
+   * Field is restricted for usage with Performance Max campaigns.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v13.enums.ListingTypeEnum.ListingType listing_type = 86 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the listingType field is set.
+   */
+  boolean hasListingType();
+  /**
+   * <pre>
+   * Immutable. Listing type of ads served for this campaign.
+   * Field is restricted for usage with Performance Max campaigns.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v13.enums.ListingTypeEnum.ListingType listing_type = 86 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for listingType.
+   */
+  int getListingTypeValue();
+  /**
+   * <pre>
+   * Immutable. Listing type of ads served for this campaign.
+   * Field is restricted for usage with Performance Max campaigns.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v13.enums.ListingTypeEnum.ListingType listing_type = 86 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The listingType.
+   */
+  com.google.ads.googleads.v13.enums.ListingTypeEnum.ListingType getListingType();
+
+  /**
+   * <pre>
    * Portfolio bidding strategy used by campaign.
    * </pre>
    *

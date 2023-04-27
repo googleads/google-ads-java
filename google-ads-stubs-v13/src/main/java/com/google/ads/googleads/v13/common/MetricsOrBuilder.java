@@ -2676,6 +2676,48 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
+   * The average Target CPA, or unset if not available (for example, for
+   * campaigns that had traffic from portfolio bidding strategies or non-tCPA).
+   * </pre>
+   *
+   * <code>optional int64 average_target_cpa_micros = 290;</code>
+   * @return Whether the averageTargetCpaMicros field is set.
+   */
+  boolean hasAverageTargetCpaMicros();
+  /**
+   * <pre>
+   * The average Target CPA, or unset if not available (for example, for
+   * campaigns that had traffic from portfolio bidding strategies or non-tCPA).
+   * </pre>
+   *
+   * <code>optional int64 average_target_cpa_micros = 290;</code>
+   * @return The averageTargetCpaMicros.
+   */
+  long getAverageTargetCpaMicros();
+
+  /**
+   * <pre>
+   * The average Target ROAS, or unset if not available (for example, for
+   * campaigns that had traffic from portfolio bidding strategies or non-tROAS).
+   * </pre>
+   *
+   * <code>optional double average_target_roas = 250;</code>
+   * @return Whether the averageTargetRoas field is set.
+   */
+  boolean hasAverageTargetRoas();
+  /**
+   * <pre>
+   * The average Target ROAS, or unset if not available (for example, for
+   * campaigns that had traffic from portfolio bidding strategies or non-tROAS).
+   * </pre>
+   *
+   * <code>optional double average_target_roas = 250;</code>
+   * @return The averageTargetRoas.
+   */
+  double getAverageTargetRoas();
+
+  /**
+   * <pre>
    * The percent of your ad impressions that are shown anywhere above the
    * organic search results.
    * </pre>

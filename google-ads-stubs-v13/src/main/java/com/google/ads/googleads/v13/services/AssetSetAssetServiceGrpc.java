@@ -98,7 +98,7 @@ public final class AssetSetAssetServiceGrpc {
    * Service to manage asset set asset.
    * </pre>
    */
-  public static abstract class AssetSetAssetServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -106,30 +106,34 @@ public final class AssetSetAssetServiceGrpc {
      * returned.
      * </pre>
      */
-    public void mutateAssetSetAssets(com.google.ads.googleads.v13.services.MutateAssetSetAssetsRequest request,
+    default void mutateAssetSetAssets(com.google.ads.googleads.v13.services.MutateAssetSetAssetsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.MutateAssetSetAssetsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateAssetSetAssetsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateAssetSetAssetsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.MutateAssetSetAssetsRequest,
-                com.google.ads.googleads.v13.services.MutateAssetSetAssetsResponse>(
-                  this, METHODID_MUTATE_ASSET_SET_ASSETS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service AssetSetAssetService.
    * <pre>
    * Service to manage asset set asset.
    * </pre>
    */
-  public static final class AssetSetAssetServiceStub extends io.grpc.stub.AbstractAsyncStub<AssetSetAssetServiceStub> {
+  public static abstract class AssetSetAssetServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return AssetSetAssetServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service AssetSetAssetService.
+   * <pre>
+   * Service to manage asset set asset.
+   * </pre>
+   */
+  public static final class AssetSetAssetServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<AssetSetAssetServiceStub> {
     private AssetSetAssetServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -155,11 +159,13 @@ public final class AssetSetAssetServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service AssetSetAssetService.
    * <pre>
    * Service to manage asset set asset.
    * </pre>
    */
-  public static final class AssetSetAssetServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<AssetSetAssetServiceBlockingStub> {
+  public static final class AssetSetAssetServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<AssetSetAssetServiceBlockingStub> {
     private AssetSetAssetServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -184,11 +190,13 @@ public final class AssetSetAssetServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service AssetSetAssetService.
    * <pre>
    * Service to manage asset set asset.
    * </pre>
    */
-  public static final class AssetSetAssetServiceFutureStub extends io.grpc.stub.AbstractFutureStub<AssetSetAssetServiceFutureStub> {
+  public static final class AssetSetAssetServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<AssetSetAssetServiceFutureStub> {
     private AssetSetAssetServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -220,10 +228,10 @@ public final class AssetSetAssetServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AssetSetAssetServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AssetSetAssetServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -250,6 +258,18 @@ public final class AssetSetAssetServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateAssetSetAssetsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.MutateAssetSetAssetsRequest,
+              com.google.ads.googleads.v13.services.MutateAssetSetAssetsResponse>(
+                service, METHODID_MUTATE_ASSET_SET_ASSETS)))
+        .build();
   }
 
   private static abstract class AssetSetAssetServiceBaseDescriptorSupplier

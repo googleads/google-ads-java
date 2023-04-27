@@ -287,6 +287,31 @@ private static final long serialVersionUID = 0L;
      * <code>CAN_NOT_MIX_CRM_BASED_IN_LOGICAL_LIST_WITH_OTHER_LISTS = 36;</code>
      */
     CAN_NOT_MIX_CRM_BASED_IN_LOGICAL_LIST_WITH_OTHER_LISTS(36),
+    /**
+     * <pre>
+     * crm_based_user_list.app_id field can only be set when upload_key_type is
+     * MOBILE_ADVERTISING_ID.
+     * </pre>
+     *
+     * <code>APP_ID_NOT_ALLOWED = 39;</code>
+     */
+    APP_ID_NOT_ALLOWED(39),
+    /**
+     * <pre>
+     * Google system generated user lists cannot be mutated.
+     * </pre>
+     *
+     * <code>CANNOT_MUTATE_SYSTEM_LIST = 40;</code>
+     */
+    CANNOT_MUTATE_SYSTEM_LIST(40),
+    /**
+     * <pre>
+     * The mobile app associated with the remarketing list is sensitive.
+     * </pre>
+     *
+     * <code>MOBILE_APP_IS_SENSITIVE = 41;</code>
+     */
+    MOBILE_APP_IS_SENSITIVE(41),
     UNRECOGNIZED(-1),
     ;
 
@@ -521,6 +546,31 @@ private static final long serialVersionUID = 0L;
      * <code>CAN_NOT_MIX_CRM_BASED_IN_LOGICAL_LIST_WITH_OTHER_LISTS = 36;</code>
      */
     public static final int CAN_NOT_MIX_CRM_BASED_IN_LOGICAL_LIST_WITH_OTHER_LISTS_VALUE = 36;
+    /**
+     * <pre>
+     * crm_based_user_list.app_id field can only be set when upload_key_type is
+     * MOBILE_ADVERTISING_ID.
+     * </pre>
+     *
+     * <code>APP_ID_NOT_ALLOWED = 39;</code>
+     */
+    public static final int APP_ID_NOT_ALLOWED_VALUE = 39;
+    /**
+     * <pre>
+     * Google system generated user lists cannot be mutated.
+     * </pre>
+     *
+     * <code>CANNOT_MUTATE_SYSTEM_LIST = 40;</code>
+     */
+    public static final int CANNOT_MUTATE_SYSTEM_LIST_VALUE = 40;
+    /**
+     * <pre>
+     * The mobile app associated with the remarketing list is sensitive.
+     * </pre>
+     *
+     * <code>MOBILE_APP_IS_SENSITIVE = 41;</code>
+     */
+    public static final int MOBILE_APP_IS_SENSITIVE_VALUE = 41;
 
 
     public final int getNumber() {
@@ -575,6 +625,9 @@ private static final long serialVersionUID = 0L;
         case 34: return RULE_TYPE_IS_NOT_SUPPORTED;
         case 35: return CAN_NOT_ADD_A_SIMILAR_USERLIST_AS_LOGICAL_LIST_OPERAND;
         case 36: return CAN_NOT_MIX_CRM_BASED_IN_LOGICAL_LIST_WITH_OTHER_LISTS;
+        case 39: return APP_ID_NOT_ALLOWED;
+        case 40: return CANNOT_MUTATE_SYSTEM_LIST;
+        case 41: return MOBILE_APP_IS_SENSITIVE;
         default: return null;
       }
     }

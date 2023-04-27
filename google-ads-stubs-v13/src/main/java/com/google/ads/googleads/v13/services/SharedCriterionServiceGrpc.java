@@ -98,7 +98,7 @@ public final class SharedCriterionServiceGrpc {
    * Service to manage shared criteria.
    * </pre>
    */
-  public static abstract class SharedCriterionServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -126,30 +126,34 @@ public final class SharedCriterionServiceGrpc {
      *   [StringLengthError]()
      * </pre>
      */
-    public void mutateSharedCriteria(com.google.ads.googleads.v13.services.MutateSharedCriteriaRequest request,
+    default void mutateSharedCriteria(com.google.ads.googleads.v13.services.MutateSharedCriteriaRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.MutateSharedCriteriaResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateSharedCriteriaMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateSharedCriteriaMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.MutateSharedCriteriaRequest,
-                com.google.ads.googleads.v13.services.MutateSharedCriteriaResponse>(
-                  this, METHODID_MUTATE_SHARED_CRITERIA)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service SharedCriterionService.
    * <pre>
    * Service to manage shared criteria.
    * </pre>
    */
-  public static final class SharedCriterionServiceStub extends io.grpc.stub.AbstractAsyncStub<SharedCriterionServiceStub> {
+  public static abstract class SharedCriterionServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return SharedCriterionServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service SharedCriterionService.
+   * <pre>
+   * Service to manage shared criteria.
+   * </pre>
+   */
+  public static final class SharedCriterionServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<SharedCriterionServiceStub> {
     private SharedCriterionServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -195,11 +199,13 @@ public final class SharedCriterionServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service SharedCriterionService.
    * <pre>
    * Service to manage shared criteria.
    * </pre>
    */
-  public static final class SharedCriterionServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<SharedCriterionServiceBlockingStub> {
+  public static final class SharedCriterionServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<SharedCriterionServiceBlockingStub> {
     private SharedCriterionServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -244,11 +250,13 @@ public final class SharedCriterionServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service SharedCriterionService.
    * <pre>
    * Service to manage shared criteria.
    * </pre>
    */
-  public static final class SharedCriterionServiceFutureStub extends io.grpc.stub.AbstractFutureStub<SharedCriterionServiceFutureStub> {
+  public static final class SharedCriterionServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<SharedCriterionServiceFutureStub> {
     private SharedCriterionServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -300,10 +308,10 @@ public final class SharedCriterionServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final SharedCriterionServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(SharedCriterionServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -330,6 +338,18 @@ public final class SharedCriterionServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateSharedCriteriaMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.MutateSharedCriteriaRequest,
+              com.google.ads.googleads.v13.services.MutateSharedCriteriaResponse>(
+                service, METHODID_MUTATE_SHARED_CRITERIA)))
+        .build();
   }
 
   private static abstract class SharedCriterionServiceBaseDescriptorSupplier

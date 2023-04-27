@@ -98,7 +98,7 @@ public final class CustomerNegativeCriterionServiceGrpc {
    * Service to manage customer negative criteria.
    * </pre>
    */
-  public static abstract class CustomerNegativeCriterionServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -116,30 +116,34 @@ public final class CustomerNegativeCriterionServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void mutateCustomerNegativeCriteria(com.google.ads.googleads.v13.services.MutateCustomerNegativeCriteriaRequest request,
+    default void mutateCustomerNegativeCriteria(com.google.ads.googleads.v13.services.MutateCustomerNegativeCriteriaRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.MutateCustomerNegativeCriteriaResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateCustomerNegativeCriteriaMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateCustomerNegativeCriteriaMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.MutateCustomerNegativeCriteriaRequest,
-                com.google.ads.googleads.v13.services.MutateCustomerNegativeCriteriaResponse>(
-                  this, METHODID_MUTATE_CUSTOMER_NEGATIVE_CRITERIA)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service CustomerNegativeCriterionService.
    * <pre>
    * Service to manage customer negative criteria.
    * </pre>
    */
-  public static final class CustomerNegativeCriterionServiceStub extends io.grpc.stub.AbstractAsyncStub<CustomerNegativeCriterionServiceStub> {
+  public static abstract class CustomerNegativeCriterionServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return CustomerNegativeCriterionServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service CustomerNegativeCriterionService.
+   * <pre>
+   * Service to manage customer negative criteria.
+   * </pre>
+   */
+  public static final class CustomerNegativeCriterionServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<CustomerNegativeCriterionServiceStub> {
     private CustomerNegativeCriterionServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -175,11 +179,13 @@ public final class CustomerNegativeCriterionServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service CustomerNegativeCriterionService.
    * <pre>
    * Service to manage customer negative criteria.
    * </pre>
    */
-  public static final class CustomerNegativeCriterionServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CustomerNegativeCriterionServiceBlockingStub> {
+  public static final class CustomerNegativeCriterionServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<CustomerNegativeCriterionServiceBlockingStub> {
     private CustomerNegativeCriterionServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -214,11 +220,13 @@ public final class CustomerNegativeCriterionServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service CustomerNegativeCriterionService.
    * <pre>
    * Service to manage customer negative criteria.
    * </pre>
    */
-  public static final class CustomerNegativeCriterionServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CustomerNegativeCriterionServiceFutureStub> {
+  public static final class CustomerNegativeCriterionServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<CustomerNegativeCriterionServiceFutureStub> {
     private CustomerNegativeCriterionServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -260,10 +268,10 @@ public final class CustomerNegativeCriterionServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final CustomerNegativeCriterionServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(CustomerNegativeCriterionServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -290,6 +298,18 @@ public final class CustomerNegativeCriterionServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateCustomerNegativeCriteriaMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.MutateCustomerNegativeCriteriaRequest,
+              com.google.ads.googleads.v13.services.MutateCustomerNegativeCriteriaResponse>(
+                service, METHODID_MUTATE_CUSTOMER_NEGATIVE_CRITERIA)))
+        .build();
   }
 
   private static abstract class CustomerNegativeCriterionServiceBaseDescriptorSupplier

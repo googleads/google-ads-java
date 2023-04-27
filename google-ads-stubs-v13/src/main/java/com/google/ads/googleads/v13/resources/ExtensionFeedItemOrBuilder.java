@@ -299,7 +299,7 @@ public interface ExtensionFeedItemOrBuilder extends
 
   /**
    * <pre>
-   * Sitelink extension.
+   * Sitelink.
    * </pre>
    *
    * <code>.google.ads.googleads.v13.common.SitelinkFeedItem sitelink_feed_item = 2;</code>
@@ -308,7 +308,7 @@ public interface ExtensionFeedItemOrBuilder extends
   boolean hasSitelinkFeedItem();
   /**
    * <pre>
-   * Sitelink extension.
+   * Sitelink.
    * </pre>
    *
    * <code>.google.ads.googleads.v13.common.SitelinkFeedItem sitelink_feed_item = 2;</code>
@@ -317,7 +317,7 @@ public interface ExtensionFeedItemOrBuilder extends
   com.google.ads.googleads.v13.common.SitelinkFeedItem getSitelinkFeedItem();
   /**
    * <pre>
-   * Sitelink extension.
+   * Sitelink.
    * </pre>
    *
    * <code>.google.ads.googleads.v13.common.SitelinkFeedItem sitelink_feed_item = 2;</code>

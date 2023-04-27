@@ -131,7 +131,7 @@ public final class ProductLinkServiceGrpc {
    * Ads customer and another product.
    * </pre>
    */
-  public static abstract class ProductLinkServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -148,7 +148,7 @@ public final class ProductLinkServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void createProductLink(com.google.ads.googleads.v13.services.CreateProductLinkRequest request,
+    default void createProductLink(com.google.ads.googleads.v13.services.CreateProductLinkRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.CreateProductLinkResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateProductLinkMethod(), responseObserver);
     }
@@ -167,38 +167,36 @@ public final class ProductLinkServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void removeProductLink(com.google.ads.googleads.v13.services.RemoveProductLinkRequest request,
+    default void removeProductLink(com.google.ads.googleads.v13.services.RemoveProductLinkRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.RemoveProductLinkResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveProductLinkMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getCreateProductLinkMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.CreateProductLinkRequest,
-                com.google.ads.googleads.v13.services.CreateProductLinkResponse>(
-                  this, METHODID_CREATE_PRODUCT_LINK)))
-          .addMethod(
-            getRemoveProductLinkMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.RemoveProductLinkRequest,
-                com.google.ads.googleads.v13.services.RemoveProductLinkResponse>(
-                  this, METHODID_REMOVE_PRODUCT_LINK)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service ProductLinkService.
    * <pre>
    * This service allows management of links between  a Google
    * Ads customer and another product.
    * </pre>
    */
-  public static final class ProductLinkServiceStub extends io.grpc.stub.AbstractAsyncStub<ProductLinkServiceStub> {
+  public static abstract class ProductLinkServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return ProductLinkServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service ProductLinkService.
+   * <pre>
+   * This service allows management of links between  a Google
+   * Ads customer and another product.
+   * </pre>
+   */
+  public static final class ProductLinkServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<ProductLinkServiceStub> {
     private ProductLinkServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -253,12 +251,14 @@ public final class ProductLinkServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service ProductLinkService.
    * <pre>
    * This service allows management of links between  a Google
    * Ads customer and another product.
    * </pre>
    */
-  public static final class ProductLinkServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ProductLinkServiceBlockingStub> {
+  public static final class ProductLinkServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<ProductLinkServiceBlockingStub> {
     private ProductLinkServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -311,12 +311,14 @@ public final class ProductLinkServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service ProductLinkService.
    * <pre>
    * This service allows management of links between  a Google
    * Ads customer and another product.
    * </pre>
    */
-  public static final class ProductLinkServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ProductLinkServiceFutureStub> {
+  public static final class ProductLinkServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<ProductLinkServiceFutureStub> {
     private ProductLinkServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -378,10 +380,10 @@ public final class ProductLinkServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final ProductLinkServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(ProductLinkServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -412,6 +414,25 @@ public final class ProductLinkServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getCreateProductLinkMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.CreateProductLinkRequest,
+              com.google.ads.googleads.v13.services.CreateProductLinkResponse>(
+                service, METHODID_CREATE_PRODUCT_LINK)))
+        .addMethod(
+          getRemoveProductLinkMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.RemoveProductLinkRequest,
+              com.google.ads.googleads.v13.services.RemoveProductLinkResponse>(
+                service, METHODID_REMOVE_PRODUCT_LINK)))
+        .build();
   }
 
   private static abstract class ProductLinkServiceBaseDescriptorSupplier
