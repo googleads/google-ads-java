@@ -625,7 +625,7 @@ private static final long serialVersionUID = 0L;
   public static final int SITELINK_FEED_ITEM_FIELD_NUMBER = 2;
   /**
    * <pre>
-   * Sitelink extension.
+   * Sitelink.
    * </pre>
    *
    * <code>.google.ads.googleads.v13.common.SitelinkFeedItem sitelink_feed_item = 2;</code>
@@ -637,7 +637,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Sitelink extension.
+   * Sitelink.
    * </pre>
    *
    * <code>.google.ads.googleads.v13.common.SitelinkFeedItem sitelink_feed_item = 2;</code>
@@ -652,7 +652,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Sitelink extension.
+   * Sitelink.
    * </pre>
    *
    * <code>.google.ads.googleads.v13.common.SitelinkFeedItem sitelink_feed_item = 2;</code>
@@ -3653,7 +3653,7 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v13.common.SitelinkFeedItem, com.google.ads.googleads.v13.common.SitelinkFeedItem.Builder, com.google.ads.googleads.v13.common.SitelinkFeedItemOrBuilder> sitelinkFeedItemBuilder_;
     /**
      * <pre>
-     * Sitelink extension.
+     * Sitelink.
      * </pre>
      *
      * <code>.google.ads.googleads.v13.common.SitelinkFeedItem sitelink_feed_item = 2;</code>
@@ -3665,7 +3665,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Sitelink extension.
+     * Sitelink.
      * </pre>
      *
      * <code>.google.ads.googleads.v13.common.SitelinkFeedItem sitelink_feed_item = 2;</code>
@@ -3687,7 +3687,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Sitelink extension.
+     * Sitelink.
      * </pre>
      *
      * <code>.google.ads.googleads.v13.common.SitelinkFeedItem sitelink_feed_item = 2;</code>
@@ -3707,7 +3707,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Sitelink extension.
+     * Sitelink.
      * </pre>
      *
      * <code>.google.ads.googleads.v13.common.SitelinkFeedItem sitelink_feed_item = 2;</code>
@@ -3725,7 +3725,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Sitelink extension.
+     * Sitelink.
      * </pre>
      *
      * <code>.google.ads.googleads.v13.common.SitelinkFeedItem sitelink_feed_item = 2;</code>
@@ -3752,7 +3752,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Sitelink extension.
+     * Sitelink.
      * </pre>
      *
      * <code>.google.ads.googleads.v13.common.SitelinkFeedItem sitelink_feed_item = 2;</code>
@@ -3775,7 +3775,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Sitelink extension.
+     * Sitelink.
      * </pre>
      *
      * <code>.google.ads.googleads.v13.common.SitelinkFeedItem sitelink_feed_item = 2;</code>
@@ -3785,7 +3785,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Sitelink extension.
+     * Sitelink.
      * </pre>
      *
      * <code>.google.ads.googleads.v13.common.SitelinkFeedItem sitelink_feed_item = 2;</code>
@@ -3803,7 +3803,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Sitelink extension.
+     * Sitelink.
      * </pre>
      *
      * <code>.google.ads.googleads.v13.common.SitelinkFeedItem sitelink_feed_item = 2;</code>

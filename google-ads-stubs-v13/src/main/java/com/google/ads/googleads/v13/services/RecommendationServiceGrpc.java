@@ -129,7 +129,7 @@ public final class RecommendationServiceGrpc {
    * Service to manage recommendations.
    * </pre>
    */
-  public static abstract class RecommendationServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -148,7 +148,7 @@ public final class RecommendationServiceGrpc {
      *   [UrlFieldError]()
      * </pre>
      */
-    public void applyRecommendation(com.google.ads.googleads.v13.services.ApplyRecommendationRequest request,
+    default void applyRecommendation(com.google.ads.googleads.v13.services.ApplyRecommendationRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.ApplyRecommendationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getApplyRecommendationMethod(), responseObserver);
     }
@@ -166,37 +166,34 @@ public final class RecommendationServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void dismissRecommendation(com.google.ads.googleads.v13.services.DismissRecommendationRequest request,
+    default void dismissRecommendation(com.google.ads.googleads.v13.services.DismissRecommendationRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.DismissRecommendationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDismissRecommendationMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getApplyRecommendationMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.ApplyRecommendationRequest,
-                com.google.ads.googleads.v13.services.ApplyRecommendationResponse>(
-                  this, METHODID_APPLY_RECOMMENDATION)))
-          .addMethod(
-            getDismissRecommendationMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.DismissRecommendationRequest,
-                com.google.ads.googleads.v13.services.DismissRecommendationResponse>(
-                  this, METHODID_DISMISS_RECOMMENDATION)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service RecommendationService.
    * <pre>
    * Service to manage recommendations.
    * </pre>
    */
-  public static final class RecommendationServiceStub extends io.grpc.stub.AbstractAsyncStub<RecommendationServiceStub> {
+  public static abstract class RecommendationServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return RecommendationServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service RecommendationService.
+   * <pre>
+   * Service to manage recommendations.
+   * </pre>
+   */
+  public static final class RecommendationServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<RecommendationServiceStub> {
     private RecommendationServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -252,11 +249,13 @@ public final class RecommendationServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service RecommendationService.
    * <pre>
    * Service to manage recommendations.
    * </pre>
    */
-  public static final class RecommendationServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<RecommendationServiceBlockingStub> {
+  public static final class RecommendationServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<RecommendationServiceBlockingStub> {
     private RecommendationServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -310,11 +309,13 @@ public final class RecommendationServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service RecommendationService.
    * <pre>
    * Service to manage recommendations.
    * </pre>
    */
-  public static final class RecommendationServiceFutureStub extends io.grpc.stub.AbstractFutureStub<RecommendationServiceFutureStub> {
+  public static final class RecommendationServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<RecommendationServiceFutureStub> {
     private RecommendationServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -377,10 +378,10 @@ public final class RecommendationServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final RecommendationServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(RecommendationServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -411,6 +412,25 @@ public final class RecommendationServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getApplyRecommendationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.ApplyRecommendationRequest,
+              com.google.ads.googleads.v13.services.ApplyRecommendationResponse>(
+                service, METHODID_APPLY_RECOMMENDATION)))
+        .addMethod(
+          getDismissRecommendationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.DismissRecommendationRequest,
+              com.google.ads.googleads.v13.services.DismissRecommendationResponse>(
+                service, METHODID_DISMISS_RECOMMENDATION)))
+        .build();
   }
 
   private static abstract class RecommendationServiceBaseDescriptorSupplier

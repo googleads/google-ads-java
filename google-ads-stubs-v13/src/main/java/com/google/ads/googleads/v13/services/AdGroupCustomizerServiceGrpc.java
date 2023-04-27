@@ -98,7 +98,7 @@ public final class AdGroupCustomizerServiceGrpc {
    * Service to manage ad group customizer
    * </pre>
    */
-  public static abstract class AdGroupCustomizerServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -106,30 +106,34 @@ public final class AdGroupCustomizerServiceGrpc {
      * returned.
      * </pre>
      */
-    public void mutateAdGroupCustomizers(com.google.ads.googleads.v13.services.MutateAdGroupCustomizersRequest request,
+    default void mutateAdGroupCustomizers(com.google.ads.googleads.v13.services.MutateAdGroupCustomizersRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.MutateAdGroupCustomizersResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateAdGroupCustomizersMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateAdGroupCustomizersMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.MutateAdGroupCustomizersRequest,
-                com.google.ads.googleads.v13.services.MutateAdGroupCustomizersResponse>(
-                  this, METHODID_MUTATE_AD_GROUP_CUSTOMIZERS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service AdGroupCustomizerService.
    * <pre>
    * Service to manage ad group customizer
    * </pre>
    */
-  public static final class AdGroupCustomizerServiceStub extends io.grpc.stub.AbstractAsyncStub<AdGroupCustomizerServiceStub> {
+  public static abstract class AdGroupCustomizerServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return AdGroupCustomizerServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service AdGroupCustomizerService.
+   * <pre>
+   * Service to manage ad group customizer
+   * </pre>
+   */
+  public static final class AdGroupCustomizerServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<AdGroupCustomizerServiceStub> {
     private AdGroupCustomizerServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -155,11 +159,13 @@ public final class AdGroupCustomizerServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service AdGroupCustomizerService.
    * <pre>
    * Service to manage ad group customizer
    * </pre>
    */
-  public static final class AdGroupCustomizerServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<AdGroupCustomizerServiceBlockingStub> {
+  public static final class AdGroupCustomizerServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<AdGroupCustomizerServiceBlockingStub> {
     private AdGroupCustomizerServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -184,11 +190,13 @@ public final class AdGroupCustomizerServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service AdGroupCustomizerService.
    * <pre>
    * Service to manage ad group customizer
    * </pre>
    */
-  public static final class AdGroupCustomizerServiceFutureStub extends io.grpc.stub.AbstractFutureStub<AdGroupCustomizerServiceFutureStub> {
+  public static final class AdGroupCustomizerServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<AdGroupCustomizerServiceFutureStub> {
     private AdGroupCustomizerServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -220,10 +228,10 @@ public final class AdGroupCustomizerServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AdGroupCustomizerServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AdGroupCustomizerServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -250,6 +258,18 @@ public final class AdGroupCustomizerServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateAdGroupCustomizersMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.MutateAdGroupCustomizersRequest,
+              com.google.ads.googleads.v13.services.MutateAdGroupCustomizersResponse>(
+                service, METHODID_MUTATE_AD_GROUP_CUSTOMIZERS)))
+        .build();
   }
 
   private static abstract class AdGroupCustomizerServiceBaseDescriptorSupplier

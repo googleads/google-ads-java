@@ -137,6 +137,47 @@ private static final long serialVersionUID = 0L;
     return audience_ == null ? com.google.ads.googleads.v13.services.InsightsAudience.getDefaultInstance() : audience_;
   }
 
+  public static final int BASELINE_AUDIENCE_FIELD_NUMBER = 6;
+  private com.google.ads.googleads.v13.services.InsightsAudience baselineAudience_;
+  /**
+   * <pre>
+   * The baseline audience to which the audience of interest is being
+   * compared.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.services.InsightsAudience baseline_audience = 6;</code>
+   * @return Whether the baselineAudience field is set.
+   */
+  @java.lang.Override
+  public boolean hasBaselineAudience() {
+    return baselineAudience_ != null;
+  }
+  /**
+   * <pre>
+   * The baseline audience to which the audience of interest is being
+   * compared.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.services.InsightsAudience baseline_audience = 6;</code>
+   * @return The baselineAudience.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v13.services.InsightsAudience getBaselineAudience() {
+    return baselineAudience_ == null ? com.google.ads.googleads.v13.services.InsightsAudience.getDefaultInstance() : baselineAudience_;
+  }
+  /**
+   * <pre>
+   * The baseline audience to which the audience of interest is being
+   * compared.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.services.InsightsAudience baseline_audience = 6;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v13.services.InsightsAudienceOrBuilder getBaselineAudienceOrBuilder() {
+    return baselineAudience_ == null ? com.google.ads.googleads.v13.services.InsightsAudience.getDefaultInstance() : baselineAudience_;
+  }
+
   public static final int DATA_MONTH_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
   private volatile java.lang.Object dataMonth_ = "";
@@ -352,6 +393,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customerInsightsGroup_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, customerInsightsGroup_);
     }
+    if (baselineAudience_ != null) {
+      output.writeMessage(6, getBaselineAudience());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -386,6 +430,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customerInsightsGroup_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, customerInsightsGroup_);
     }
+    if (baselineAudience_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, getBaselineAudience());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -408,6 +456,11 @@ private static final long serialVersionUID = 0L;
       if (!getAudience()
           .equals(other.getAudience())) return false;
     }
+    if (hasBaselineAudience() != other.hasBaselineAudience()) return false;
+    if (hasBaselineAudience()) {
+      if (!getBaselineAudience()
+          .equals(other.getBaselineAudience())) return false;
+    }
     if (!getDataMonth()
         .equals(other.getDataMonth())) return false;
     if (!dimensions_.equals(other.dimensions_)) return false;
@@ -429,6 +482,10 @@ private static final long serialVersionUID = 0L;
     if (hasAudience()) {
       hash = (37 * hash) + AUDIENCE_FIELD_NUMBER;
       hash = (53 * hash) + getAudience().hashCode();
+    }
+    if (hasBaselineAudience()) {
+      hash = (37 * hash) + BASELINE_AUDIENCE_FIELD_NUMBER;
+      hash = (53 * hash) + getBaselineAudience().hashCode();
     }
     hash = (37 * hash) + DATA_MONTH_FIELD_NUMBER;
     hash = (53 * hash) + getDataMonth().hashCode();
@@ -578,9 +635,14 @@ private static final long serialVersionUID = 0L;
         audienceBuilder_.dispose();
         audienceBuilder_ = null;
       }
+      baselineAudience_ = null;
+      if (baselineAudienceBuilder_ != null) {
+        baselineAudienceBuilder_.dispose();
+        baselineAudienceBuilder_ = null;
+      }
       dataMonth_ = "";
       dimensions_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000010);
       customerInsightsGroup_ = "";
       return this;
     }
@@ -615,9 +677,9 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.google.ads.googleads.v13.services.GenerateAudienceCompositionInsightsRequest result) {
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         dimensions_ = java.util.Collections.unmodifiableList(dimensions_);
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
       }
       result.dimensions_ = dimensions_;
     }
@@ -633,9 +695,14 @@ private static final long serialVersionUID = 0L;
             : audienceBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.baselineAudience_ = baselineAudienceBuilder_ == null
+            ? baselineAudience_
+            : baselineAudienceBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.dataMonth_ = dataMonth_;
       }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000020) != 0)) {
         result.customerInsightsGroup_ = customerInsightsGroup_;
       }
     }
@@ -692,15 +759,18 @@ private static final long serialVersionUID = 0L;
       if (other.hasAudience()) {
         mergeAudience(other.getAudience());
       }
+      if (other.hasBaselineAudience()) {
+        mergeBaselineAudience(other.getBaselineAudience());
+      }
       if (!other.getDataMonth().isEmpty()) {
         dataMonth_ = other.dataMonth_;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.dimensions_.isEmpty()) {
         if (dimensions_.isEmpty()) {
           dimensions_ = other.dimensions_;
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000010);
         } else {
           ensureDimensionsIsMutable();
           dimensions_.addAll(other.dimensions_);
@@ -709,7 +779,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getCustomerInsightsGroup().isEmpty()) {
         customerInsightsGroup_ = other.customerInsightsGroup_;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -752,7 +822,7 @@ private static final long serialVersionUID = 0L;
             } // case 18
             case 26: {
               dataMonth_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               break;
             } // case 26
             case 32: {
@@ -774,9 +844,16 @@ private static final long serialVersionUID = 0L;
             } // case 34
             case 42: {
               customerInsightsGroup_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000020;
               break;
             } // case 42
+            case 50: {
+              input.readMessage(
+                  getBaselineAudienceFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1041,6 +1118,170 @@ private static final long serialVersionUID = 0L;
       return audienceBuilder_;
     }
 
+    private com.google.ads.googleads.v13.services.InsightsAudience baselineAudience_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v13.services.InsightsAudience, com.google.ads.googleads.v13.services.InsightsAudience.Builder, com.google.ads.googleads.v13.services.InsightsAudienceOrBuilder> baselineAudienceBuilder_;
+    /**
+     * <pre>
+     * The baseline audience to which the audience of interest is being
+     * compared.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.services.InsightsAudience baseline_audience = 6;</code>
+     * @return Whether the baselineAudience field is set.
+     */
+    public boolean hasBaselineAudience() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * The baseline audience to which the audience of interest is being
+     * compared.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.services.InsightsAudience baseline_audience = 6;</code>
+     * @return The baselineAudience.
+     */
+    public com.google.ads.googleads.v13.services.InsightsAudience getBaselineAudience() {
+      if (baselineAudienceBuilder_ == null) {
+        return baselineAudience_ == null ? com.google.ads.googleads.v13.services.InsightsAudience.getDefaultInstance() : baselineAudience_;
+      } else {
+        return baselineAudienceBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The baseline audience to which the audience of interest is being
+     * compared.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.services.InsightsAudience baseline_audience = 6;</code>
+     */
+    public Builder setBaselineAudience(com.google.ads.googleads.v13.services.InsightsAudience value) {
+      if (baselineAudienceBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        baselineAudience_ = value;
+      } else {
+        baselineAudienceBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The baseline audience to which the audience of interest is being
+     * compared.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.services.InsightsAudience baseline_audience = 6;</code>
+     */
+    public Builder setBaselineAudience(
+        com.google.ads.googleads.v13.services.InsightsAudience.Builder builderForValue) {
+      if (baselineAudienceBuilder_ == null) {
+        baselineAudience_ = builderForValue.build();
+      } else {
+        baselineAudienceBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The baseline audience to which the audience of interest is being
+     * compared.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.services.InsightsAudience baseline_audience = 6;</code>
+     */
+    public Builder mergeBaselineAudience(com.google.ads.googleads.v13.services.InsightsAudience value) {
+      if (baselineAudienceBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0) &&
+          baselineAudience_ != null &&
+          baselineAudience_ != com.google.ads.googleads.v13.services.InsightsAudience.getDefaultInstance()) {
+          getBaselineAudienceBuilder().mergeFrom(value);
+        } else {
+          baselineAudience_ = value;
+        }
+      } else {
+        baselineAudienceBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The baseline audience to which the audience of interest is being
+     * compared.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.services.InsightsAudience baseline_audience = 6;</code>
+     */
+    public Builder clearBaselineAudience() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      baselineAudience_ = null;
+      if (baselineAudienceBuilder_ != null) {
+        baselineAudienceBuilder_.dispose();
+        baselineAudienceBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The baseline audience to which the audience of interest is being
+     * compared.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.services.InsightsAudience baseline_audience = 6;</code>
+     */
+    public com.google.ads.googleads.v13.services.InsightsAudience.Builder getBaselineAudienceBuilder() {
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return getBaselineAudienceFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The baseline audience to which the audience of interest is being
+     * compared.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.services.InsightsAudience baseline_audience = 6;</code>
+     */
+    public com.google.ads.googleads.v13.services.InsightsAudienceOrBuilder getBaselineAudienceOrBuilder() {
+      if (baselineAudienceBuilder_ != null) {
+        return baselineAudienceBuilder_.getMessageOrBuilder();
+      } else {
+        return baselineAudience_ == null ?
+            com.google.ads.googleads.v13.services.InsightsAudience.getDefaultInstance() : baselineAudience_;
+      }
+    }
+    /**
+     * <pre>
+     * The baseline audience to which the audience of interest is being
+     * compared.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.services.InsightsAudience baseline_audience = 6;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v13.services.InsightsAudience, com.google.ads.googleads.v13.services.InsightsAudience.Builder, com.google.ads.googleads.v13.services.InsightsAudienceOrBuilder> 
+        getBaselineAudienceFieldBuilder() {
+      if (baselineAudienceBuilder_ == null) {
+        baselineAudienceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v13.services.InsightsAudience, com.google.ads.googleads.v13.services.InsightsAudience.Builder, com.google.ads.googleads.v13.services.InsightsAudienceOrBuilder>(
+                getBaselineAudience(),
+                getParentForChildren(),
+                isClean());
+        baselineAudience_ = null;
+      }
+      return baselineAudienceBuilder_;
+    }
+
     private java.lang.Object dataMonth_ = "";
     /**
      * <pre>
@@ -1102,7 +1343,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       dataMonth_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1118,7 +1359,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearDataMonth() {
       dataMonth_ = getDefaultInstance().getDataMonth();
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1138,7 +1379,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       dataMonth_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1146,9 +1387,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> dimensions_ =
       java.util.Collections.emptyList();
     private void ensureDimensionsIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
+      if (!((bitField0_ & 0x00000010) != 0)) {
         dimensions_ = new java.util.ArrayList<java.lang.Integer>(dimensions_);
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
       }
     }
     /**
@@ -1259,7 +1500,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearDimensions() {
       dimensions_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1398,7 +1639,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       customerInsightsGroup_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1412,7 +1653,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearCustomerInsightsGroup() {
       customerInsightsGroup_ = getDefaultInstance().getCustomerInsightsGroup();
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1430,7 +1671,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       customerInsightsGroup_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }

@@ -30,7 +30,7 @@ public final class RequestErrorProto {
     java.lang.String[] descriptorData = {
       "\n3google/ads/googleads/v13/errors/reques" +
       "t_error.proto\022\037google.ads.googleads.v13." +
-      "errors\"\273\006\n\020RequestErrorEnum\"\246\006\n\014RequestE" +
+      "errors\"\324\006\n\020RequestErrorEnum\"\277\006\n\014RequestE" +
       "rror\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\031\n\025RE" +
       "SOURCE_NAME_MISSING\020\003\022\033\n\027RESOURCE_NAME_M" +
       "ALFORMED\020\004\022\023\n\017BAD_RESOURCE_ID\020\021\022\027\n\023INVAL" +
@@ -50,14 +50,14 @@ public final class RequestErrorProto {
       "RY_ROW_FOR_VALIDATE_ONLY_REQUESTS\020\036\022)\n%I" +
       "NCONSISTENT_RETURN_SUMMARY_ROW_VALUE\020\037\0220" +
       "\n,TOTAL_RESULTS_COUNT_NOT_ORIGINALLY_REQ" +
-      "UESTED\020 \022\032\n\026RPC_DEADLINE_TOO_SHORT\020!B\361\001\n" +
-      "#com.google.ads.googleads.v13.errorsB\021Re" +
-      "questErrorProtoP\001ZEgoogle.golang.org/gen" +
-      "proto/googleapis/ads/googleads/v13/error" +
-      "s;errors\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V1" +
-      "3.Errors\312\002\037Google\\Ads\\GoogleAds\\V13\\Erro" +
-      "rs\352\002#Google::Ads::GoogleAds::V13::Errors" +
-      "b\006proto3"
+      "UESTED\020 \022\032\n\026RPC_DEADLINE_TOO_SHORT\020!\022\027\n\023" +
+      "UNSUPPORTED_VERSION\020&B\361\001\n#com.google.ads" +
+      ".googleads.v13.errorsB\021RequestErrorProto" +
+      "P\001ZEgoogle.golang.org/genproto/googleapi" +
+      "s/ads/googleads/v13/errors;errors\242\002\003GAA\252" +
+      "\002\037Google.Ads.GoogleAds.V13.Errors\312\002\037Goog" +
+      "le\\Ads\\GoogleAds\\V13\\Errors\352\002#Google::Ad" +
+      "s::GoogleAds::V13::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

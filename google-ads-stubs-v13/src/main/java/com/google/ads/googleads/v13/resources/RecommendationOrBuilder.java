@@ -134,6 +134,10 @@ public interface RecommendationOrBuilder extends
    * TARGET_ROAS_OPT_IN, TEXT_AD,
    * UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX ,
    * RAISE_TARGET_CPA_BID_TOO_LOW, FORECASTING_SET_TARGET_ROAS
+   * SHOPPING_ADD_AGE_GROUP, SHOPPING_ADD_COLOR, SHOPPING_ADD_GENDER,
+   * SHOPPING_ADD_SIZE, SHOPPING_ADD_GTIN, SHOPPING_ADD_MORE_IDENTIFIERS,
+   * SHOPPING_ADD_PRODUCTS_TO_CAMPAIGN, SHOPPING_FIX_DISAPPROVED_PRODUCTS,
+   * SHOPPING_MIGRATE_REGULAR_SHOPPING_CAMPAIGN_OFFERS_TO_PERFORMANCE_MAX
    * </pre>
    *
    * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -155,6 +159,10 @@ public interface RecommendationOrBuilder extends
    * TARGET_ROAS_OPT_IN, TEXT_AD,
    * UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX ,
    * RAISE_TARGET_CPA_BID_TOO_LOW, FORECASTING_SET_TARGET_ROAS
+   * SHOPPING_ADD_AGE_GROUP, SHOPPING_ADD_COLOR, SHOPPING_ADD_GENDER,
+   * SHOPPING_ADD_SIZE, SHOPPING_ADD_GTIN, SHOPPING_ADD_MORE_IDENTIFIERS,
+   * SHOPPING_ADD_PRODUCTS_TO_CAMPAIGN, SHOPPING_FIX_DISAPPROVED_PRODUCTS,
+   * SHOPPING_MIGRATE_REGULAR_SHOPPING_CAMPAIGN_OFFERS_TO_PERFORMANCE_MAX
    * </pre>
    *
    * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -176,6 +184,10 @@ public interface RecommendationOrBuilder extends
    * TARGET_ROAS_OPT_IN, TEXT_AD,
    * UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX ,
    * RAISE_TARGET_CPA_BID_TOO_LOW, FORECASTING_SET_TARGET_ROAS
+   * SHOPPING_ADD_AGE_GROUP, SHOPPING_ADD_COLOR, SHOPPING_ADD_GENDER,
+   * SHOPPING_ADD_SIZE, SHOPPING_ADD_GTIN, SHOPPING_ADD_MORE_IDENTIFIERS,
+   * SHOPPING_ADD_PRODUCTS_TO_CAMPAIGN, SHOPPING_FIX_DISAPPROVED_PRODUCTS,
+   * SHOPPING_MIGRATE_REGULAR_SHOPPING_CAMPAIGN_OFFERS_TO_PERFORMANCE_MAX
    * </pre>
    *
    * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -1004,6 +1016,339 @@ public interface RecommendationOrBuilder extends
    * <code>.google.ads.googleads.v13.resources.Recommendation.CallAssetRecommendation call_asset_recommendation = 41 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v13.resources.Recommendation.CallAssetRecommendationOrBuilder getCallAssetRecommendationOrBuilder();
+
+  /**
+   * <pre>
+   * Output only. The shopping add age group recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_age_group_recommendation = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the shoppingAddAgeGroupRecommendation field is set.
+   */
+  boolean hasShoppingAddAgeGroupRecommendation();
+  /**
+   * <pre>
+   * Output only. The shopping add age group recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_age_group_recommendation = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The shoppingAddAgeGroupRecommendation.
+   */
+  com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation getShoppingAddAgeGroupRecommendation();
+  /**
+   * <pre>
+   * Output only. The shopping add age group recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_age_group_recommendation = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder getShoppingAddAgeGroupRecommendationOrBuilder();
+
+  /**
+   * <pre>
+   * Output only. The shopping add color recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_color_recommendation = 43 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the shoppingAddColorRecommendation field is set.
+   */
+  boolean hasShoppingAddColorRecommendation();
+  /**
+   * <pre>
+   * Output only. The shopping add color recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_color_recommendation = 43 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The shoppingAddColorRecommendation.
+   */
+  com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation getShoppingAddColorRecommendation();
+  /**
+   * <pre>
+   * Output only. The shopping add color recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_color_recommendation = 43 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder getShoppingAddColorRecommendationOrBuilder();
+
+  /**
+   * <pre>
+   * Output only. The shopping add gender recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_gender_recommendation = 44 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the shoppingAddGenderRecommendation field is set.
+   */
+  boolean hasShoppingAddGenderRecommendation();
+  /**
+   * <pre>
+   * Output only. The shopping add gender recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_gender_recommendation = 44 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The shoppingAddGenderRecommendation.
+   */
+  com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation getShoppingAddGenderRecommendation();
+  /**
+   * <pre>
+   * Output only. The shopping add gender recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_gender_recommendation = 44 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder getShoppingAddGenderRecommendationOrBuilder();
+
+  /**
+   * <pre>
+   * Output only. The shopping add GTIN recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_gtin_recommendation = 45 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the shoppingAddGtinRecommendation field is set.
+   */
+  boolean hasShoppingAddGtinRecommendation();
+  /**
+   * <pre>
+   * Output only. The shopping add GTIN recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_gtin_recommendation = 45 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The shoppingAddGtinRecommendation.
+   */
+  com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation getShoppingAddGtinRecommendation();
+  /**
+   * <pre>
+   * Output only. The shopping add GTIN recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_gtin_recommendation = 45 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder getShoppingAddGtinRecommendationOrBuilder();
+
+  /**
+   * <pre>
+   * Output only. The shopping add more identifiers recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_more_identifiers_recommendation = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the shoppingAddMoreIdentifiersRecommendation field is set.
+   */
+  boolean hasShoppingAddMoreIdentifiersRecommendation();
+  /**
+   * <pre>
+   * Output only. The shopping add more identifiers recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_more_identifiers_recommendation = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The shoppingAddMoreIdentifiersRecommendation.
+   */
+  com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation getShoppingAddMoreIdentifiersRecommendation();
+  /**
+   * <pre>
+   * Output only. The shopping add more identifiers recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_more_identifiers_recommendation = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder getShoppingAddMoreIdentifiersRecommendationOrBuilder();
+
+  /**
+   * <pre>
+   * Output only. The shopping add size recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_size_recommendation = 47 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the shoppingAddSizeRecommendation field is set.
+   */
+  boolean hasShoppingAddSizeRecommendation();
+  /**
+   * <pre>
+   * Output only. The shopping add size recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_size_recommendation = 47 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The shoppingAddSizeRecommendation.
+   */
+  com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation getShoppingAddSizeRecommendation();
+  /**
+   * <pre>
+   * Output only. The shopping add size recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendation shopping_add_size_recommendation = 47 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.ads.googleads.v13.resources.Recommendation.ShoppingOfferAttributeRecommendationOrBuilder getShoppingAddSizeRecommendationOrBuilder();
+
+  /**
+   * <pre>
+   * Output only. The shopping add products to campaign recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation shopping_add_products_to_campaign_recommendation = 48 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the shoppingAddProductsToCampaignRecommendation field is set.
+   */
+  boolean hasShoppingAddProductsToCampaignRecommendation();
+  /**
+   * <pre>
+   * Output only. The shopping add products to campaign recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation shopping_add_products_to_campaign_recommendation = 48 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The shoppingAddProductsToCampaignRecommendation.
+   */
+  com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation getShoppingAddProductsToCampaignRecommendation();
+  /**
+   * <pre>
+   * Output only. The shopping add products to campaign recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendation shopping_add_products_to_campaign_recommendation = 48 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.ads.googleads.v13.resources.Recommendation.ShoppingAddProductsToCampaignRecommendationOrBuilder getShoppingAddProductsToCampaignRecommendationOrBuilder();
+
+  /**
+   * <pre>
+   * Output only. The shopping fix disapproved products recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation shopping_fix_disapproved_products_recommendation = 49 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the shoppingFixDisapprovedProductsRecommendation field is set.
+   */
+  boolean hasShoppingFixDisapprovedProductsRecommendation();
+  /**
+   * <pre>
+   * Output only. The shopping fix disapproved products recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation shopping_fix_disapproved_products_recommendation = 49 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The shoppingFixDisapprovedProductsRecommendation.
+   */
+  com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation getShoppingFixDisapprovedProductsRecommendation();
+  /**
+   * <pre>
+   * Output only. The shopping fix disapproved products recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendation shopping_fix_disapproved_products_recommendation = 49 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.ads.googleads.v13.resources.Recommendation.ShoppingFixDisapprovedProductsRecommendationOrBuilder getShoppingFixDisapprovedProductsRecommendationOrBuilder();
+
+  /**
+   * <pre>
+   * Output only. The shopping target all offers recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation shopping_target_all_offers_recommendation = 50 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the shoppingTargetAllOffersRecommendation field is set.
+   */
+  boolean hasShoppingTargetAllOffersRecommendation();
+  /**
+   * <pre>
+   * Output only. The shopping target all offers recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation shopping_target_all_offers_recommendation = 50 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The shoppingTargetAllOffersRecommendation.
+   */
+  com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation getShoppingTargetAllOffersRecommendation();
+  /**
+   * <pre>
+   * Output only. The shopping target all offers recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendation shopping_target_all_offers_recommendation = 50 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.ads.googleads.v13.resources.Recommendation.ShoppingTargetAllOffersRecommendationOrBuilder getShoppingTargetAllOffersRecommendationOrBuilder();
+
+  /**
+   * <pre>
+   * Output only. The shopping fix suspended Merchant Center account
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation shopping_fix_suspended_merchant_center_account_recommendation = 51 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the shoppingFixSuspendedMerchantCenterAccountRecommendation field is set.
+   */
+  boolean hasShoppingFixSuspendedMerchantCenterAccountRecommendation();
+  /**
+   * <pre>
+   * Output only. The shopping fix suspended Merchant Center account
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation shopping_fix_suspended_merchant_center_account_recommendation = 51 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The shoppingFixSuspendedMerchantCenterAccountRecommendation.
+   */
+  com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation getShoppingFixSuspendedMerchantCenterAccountRecommendation();
+  /**
+   * <pre>
+   * Output only. The shopping fix suspended Merchant Center account
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation shopping_fix_suspended_merchant_center_account_recommendation = 51 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendationOrBuilder getShoppingFixSuspendedMerchantCenterAccountRecommendationOrBuilder();
+
+  /**
+   * <pre>
+   * Output only. The shopping fix Merchant Center account suspension warning
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation shopping_fix_merchant_center_account_suspension_warning_recommendation = 52 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the shoppingFixMerchantCenterAccountSuspensionWarningRecommendation field is set.
+   */
+  boolean hasShoppingFixMerchantCenterAccountSuspensionWarningRecommendation();
+  /**
+   * <pre>
+   * Output only. The shopping fix Merchant Center account suspension warning
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation shopping_fix_merchant_center_account_suspension_warning_recommendation = 52 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The shoppingFixMerchantCenterAccountSuspensionWarningRecommendation.
+   */
+  com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation getShoppingFixMerchantCenterAccountSuspensionWarningRecommendation();
+  /**
+   * <pre>
+   * Output only. The shopping fix Merchant Center account suspension warning
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendation shopping_fix_merchant_center_account_suspension_warning_recommendation = 52 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.ads.googleads.v13.resources.Recommendation.ShoppingMerchantCenterAccountSuspensionRecommendationOrBuilder getShoppingFixMerchantCenterAccountSuspensionWarningRecommendationOrBuilder();
+
+  /**
+   * <pre>
+   * Output only. The shopping migrate Regular Shopping Campaign offers to
+   * Performance Max recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation shopping_migrate_regular_shopping_campaign_offers_to_performance_max_recommendation = 53 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the shoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation field is set.
+   */
+  boolean hasShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation();
+  /**
+   * <pre>
+   * Output only. The shopping migrate Regular Shopping Campaign offers to
+   * Performance Max recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation shopping_migrate_regular_shopping_campaign_offers_to_performance_max_recommendation = 53 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The shoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation.
+   */
+  com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation getShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation();
+  /**
+   * <pre>
+   * Output only. The shopping migrate Regular Shopping Campaign offers to
+   * Performance Max recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendation shopping_migrate_regular_shopping_campaign_offers_to_performance_max_recommendation = 53 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationOrBuilder getShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationOrBuilder();
 
   public com.google.ads.googleads.v13.resources.Recommendation.RecommendationCase getRecommendationCase();
 }

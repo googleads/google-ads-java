@@ -112,6 +112,7 @@ import com.google.ads.googleads.v13.resources.CustomerLabelName;
 import com.google.ads.googleads.v13.resources.CustomerManagerLinkName;
 import com.google.ads.googleads.v13.resources.CustomerName;
 import com.google.ads.googleads.v13.resources.CustomerNegativeCriterionName;
+import com.google.ads.googleads.v13.resources.CustomerSkAdNetworkConversionValueSchemaName;
 import com.google.ads.googleads.v13.resources.CustomerUserAccessInvitationName;
 import com.google.ads.googleads.v13.resources.CustomerUserAccessName;
 import com.google.ads.googleads.v13.resources.CustomizerAttributeName;
@@ -745,6 +746,16 @@ public class ResourceNames {
   public static String customerCustomizer(long customerId, long customizerAttributeId) {
     return CustomerCustomizerName.format(
         String.valueOf(customerId), String.valueOf(customizerAttributeId));
+  }
+
+  /**
+   * Returns the Customer SK Ad Network Conversion Value Schema resource name for the specified
+   * components.
+   */
+  public static String customerSkAdNetworkConversionValueSchema(
+      long customerId, long accountLinkId) {
+    return CustomerSkAdNetworkConversionValueSchemaName.format(
+        String.valueOf(customerId), String.valueOf(accountLinkId));
   }
 
   /** Returns the Customer User Access Invitation resource name for the specified components. */

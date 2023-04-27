@@ -51,4 +51,40 @@ public interface ListInsightsEligibleDatesResponseOrBuilder extends
    */
   com.google.protobuf.ByteString
       getDataMonthsBytes(int index);
+
+  /**
+   * <pre>
+   * The actual dates covered by the "last 30 days" date range that will be used
+   * implicitly for
+   * [AudienceInsightsService.GenerateAudienceCompositionInsights][google.ads.googleads.v13.services.AudienceInsightsService.GenerateAudienceCompositionInsights]
+   * requests that have no data_month set.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.common.DateRange last_thirty_days = 2;</code>
+   * @return Whether the lastThirtyDays field is set.
+   */
+  boolean hasLastThirtyDays();
+  /**
+   * <pre>
+   * The actual dates covered by the "last 30 days" date range that will be used
+   * implicitly for
+   * [AudienceInsightsService.GenerateAudienceCompositionInsights][google.ads.googleads.v13.services.AudienceInsightsService.GenerateAudienceCompositionInsights]
+   * requests that have no data_month set.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.common.DateRange last_thirty_days = 2;</code>
+   * @return The lastThirtyDays.
+   */
+  com.google.ads.googleads.v13.common.DateRange getLastThirtyDays();
+  /**
+   * <pre>
+   * The actual dates covered by the "last 30 days" date range that will be used
+   * implicitly for
+   * [AudienceInsightsService.GenerateAudienceCompositionInsights][google.ads.googleads.v13.services.AudienceInsightsService.GenerateAudienceCompositionInsights]
+   * requests that have no data_month set.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.common.DateRange last_thirty_days = 2;</code>
+   */
+  com.google.ads.googleads.v13.common.DateRangeOrBuilder getLastThirtyDaysOrBuilder();
 }

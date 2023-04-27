@@ -262,6 +262,14 @@ private static final long serialVersionUID = 0L;
      * <code>RPC_DEADLINE_TOO_SHORT = 33;</code>
      */
     RPC_DEADLINE_TOO_SHORT(33),
+    /**
+     * <pre>
+     * This API version has been sunset and is no longer supported.
+     * </pre>
+     *
+     * <code>UNSUPPORTED_VERSION = 38;</code>
+     */
+    UNSUPPORTED_VERSION(38),
     UNRECOGNIZED(-1),
     ;
 
@@ -471,6 +479,14 @@ private static final long serialVersionUID = 0L;
      * <code>RPC_DEADLINE_TOO_SHORT = 33;</code>
      */
     public static final int RPC_DEADLINE_TOO_SHORT_VALUE = 33;
+    /**
+     * <pre>
+     * This API version has been sunset and is no longer supported.
+     * </pre>
+     *
+     * <code>UNSUPPORTED_VERSION = 38;</code>
+     */
+    public static final int UNSUPPORTED_VERSION_VALUE = 38;
 
 
     public final int getNumber() {
@@ -522,6 +538,7 @@ private static final long serialVersionUID = 0L;
         case 31: return INCONSISTENT_RETURN_SUMMARY_ROW_VALUE;
         case 32: return TOTAL_RESULTS_COUNT_NOT_ORIGINALLY_REQUESTED;
         case 33: return RPC_DEADLINE_TOO_SHORT;
+        case 38: return UNSUPPORTED_VERSION;
         default: return null;
       }
     }

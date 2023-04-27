@@ -98,7 +98,7 @@ public final class CampaignFeedServiceGrpc {
    * Service to manage campaign feeds.
    * </pre>
    */
-  public static abstract class CampaignFeedServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -130,30 +130,34 @@ public final class CampaignFeedServiceGrpc {
      *   [StringLengthError]()
      * </pre>
      */
-    public void mutateCampaignFeeds(com.google.ads.googleads.v13.services.MutateCampaignFeedsRequest request,
+    default void mutateCampaignFeeds(com.google.ads.googleads.v13.services.MutateCampaignFeedsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.MutateCampaignFeedsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateCampaignFeedsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateCampaignFeedsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.MutateCampaignFeedsRequest,
-                com.google.ads.googleads.v13.services.MutateCampaignFeedsResponse>(
-                  this, METHODID_MUTATE_CAMPAIGN_FEEDS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service CampaignFeedService.
    * <pre>
    * Service to manage campaign feeds.
    * </pre>
    */
-  public static final class CampaignFeedServiceStub extends io.grpc.stub.AbstractAsyncStub<CampaignFeedServiceStub> {
+  public static abstract class CampaignFeedServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return CampaignFeedServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service CampaignFeedService.
+   * <pre>
+   * Service to manage campaign feeds.
+   * </pre>
+   */
+  public static final class CampaignFeedServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<CampaignFeedServiceStub> {
     private CampaignFeedServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -203,11 +207,13 @@ public final class CampaignFeedServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service CampaignFeedService.
    * <pre>
    * Service to manage campaign feeds.
    * </pre>
    */
-  public static final class CampaignFeedServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CampaignFeedServiceBlockingStub> {
+  public static final class CampaignFeedServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<CampaignFeedServiceBlockingStub> {
     private CampaignFeedServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -256,11 +262,13 @@ public final class CampaignFeedServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service CampaignFeedService.
    * <pre>
    * Service to manage campaign feeds.
    * </pre>
    */
-  public static final class CampaignFeedServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CampaignFeedServiceFutureStub> {
+  public static final class CampaignFeedServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<CampaignFeedServiceFutureStub> {
     private CampaignFeedServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -316,10 +324,10 @@ public final class CampaignFeedServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final CampaignFeedServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(CampaignFeedServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -346,6 +354,18 @@ public final class CampaignFeedServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateCampaignFeedsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.MutateCampaignFeedsRequest,
+              com.google.ads.googleads.v13.services.MutateCampaignFeedsResponse>(
+                service, METHODID_MUTATE_CAMPAIGN_FEEDS)))
+        .build();
   }
 
   private static abstract class CampaignFeedServiceBaseDescriptorSupplier

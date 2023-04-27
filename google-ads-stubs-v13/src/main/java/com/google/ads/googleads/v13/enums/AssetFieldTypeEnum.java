@@ -163,7 +163,7 @@ private static final long serialVersionUID = 0L;
     STRUCTURED_SNIPPET(12),
     /**
      * <pre>
-     * The asset is linked for use as a Sitelink extension.
+     * The asset is linked for use as a Sitelink.
      * </pre>
      *
      * <code>SITELINK = 13;</code>
@@ -400,7 +400,7 @@ private static final long serialVersionUID = 0L;
     public static final int STRUCTURED_SNIPPET_VALUE = 12;
     /**
      * <pre>
-     * The asset is linked for use as a Sitelink extension.
+     * The asset is linked for use as a Sitelink.
      * </pre>
      *
      * <code>SITELINK = 13;</code>

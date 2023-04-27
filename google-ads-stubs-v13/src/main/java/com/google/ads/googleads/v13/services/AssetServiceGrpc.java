@@ -102,7 +102,7 @@ public final class AssetServiceGrpc {
    * created with Ad inline.
    * </pre>
    */
-  public static abstract class AssetServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -137,32 +137,38 @@ public final class AssetServiceGrpc {
      *   [YoutubeVideoRegistrationError]()
      * </pre>
      */
-    public void mutateAssets(com.google.ads.googleads.v13.services.MutateAssetsRequest request,
+    default void mutateAssets(com.google.ads.googleads.v13.services.MutateAssetsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.MutateAssetsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateAssetsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateAssetsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.MutateAssetsRequest,
-                com.google.ads.googleads.v13.services.MutateAssetsResponse>(
-                  this, METHODID_MUTATE_ASSETS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service AssetService.
    * <pre>
    * Service to manage assets. Asset types can be created with AssetService are
    * YoutubeVideoAsset, MediaBundleAsset and ImageAsset. TextAsset should be
    * created with Ad inline.
    * </pre>
    */
-  public static final class AssetServiceStub extends io.grpc.stub.AbstractAsyncStub<AssetServiceStub> {
+  public static abstract class AssetServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return AssetServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service AssetService.
+   * <pre>
+   * Service to manage assets. Asset types can be created with AssetService are
+   * YoutubeVideoAsset, MediaBundleAsset and ImageAsset. TextAsset should be
+   * created with Ad inline.
+   * </pre>
+   */
+  public static final class AssetServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<AssetServiceStub> {
     private AssetServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -215,13 +221,15 @@ public final class AssetServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service AssetService.
    * <pre>
    * Service to manage assets. Asset types can be created with AssetService are
    * YoutubeVideoAsset, MediaBundleAsset and ImageAsset. TextAsset should be
    * created with Ad inline.
    * </pre>
    */
-  public static final class AssetServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<AssetServiceBlockingStub> {
+  public static final class AssetServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<AssetServiceBlockingStub> {
     private AssetServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -273,13 +281,15 @@ public final class AssetServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service AssetService.
    * <pre>
    * Service to manage assets. Asset types can be created with AssetService are
    * YoutubeVideoAsset, MediaBundleAsset and ImageAsset. TextAsset should be
    * created with Ad inline.
    * </pre>
    */
-  public static final class AssetServiceFutureStub extends io.grpc.stub.AbstractFutureStub<AssetServiceFutureStub> {
+  public static final class AssetServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<AssetServiceFutureStub> {
     private AssetServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -338,10 +348,10 @@ public final class AssetServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AssetServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AssetServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -368,6 +378,18 @@ public final class AssetServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateAssetsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.MutateAssetsRequest,
+              com.google.ads.googleads.v13.services.MutateAssetsResponse>(
+                service, METHODID_MUTATE_ASSETS)))
+        .build();
   }
 
   private static abstract class AssetServiceBaseDescriptorSupplier

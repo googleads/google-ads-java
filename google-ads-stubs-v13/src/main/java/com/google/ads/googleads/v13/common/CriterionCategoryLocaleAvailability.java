@@ -88,7 +88,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object countryCode_ = "";
   /**
    * <pre>
-   * Code of the country.
+   * The ISO-3166-1 alpha-2 country code associated with the category.
    * </pre>
    *
    * <code>optional string country_code = 4;</code>
@@ -100,7 +100,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Code of the country.
+   * The ISO-3166-1 alpha-2 country code associated with the category.
    * </pre>
    *
    * <code>optional string country_code = 4;</code>
@@ -121,7 +121,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Code of the country.
+   * The ISO-3166-1 alpha-2 country code associated with the category.
    * </pre>
    *
    * <code>optional string country_code = 4;</code>
@@ -147,7 +147,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object languageCode_ = "";
   /**
    * <pre>
-   * Code of the language.
+   * ISO 639-1 code of the language associated with the category.
    * </pre>
    *
    * <code>optional string language_code = 5;</code>
@@ -159,7 +159,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Code of the language.
+   * ISO 639-1 code of the language associated with the category.
    * </pre>
    *
    * <code>optional string language_code = 5;</code>
@@ -180,7 +180,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Code of the language.
+   * ISO 639-1 code of the language associated with the category.
    * </pre>
    *
    * <code>optional string language_code = 5;</code>
@@ -680,7 +680,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object countryCode_ = "";
     /**
      * <pre>
-     * Code of the country.
+     * The ISO-3166-1 alpha-2 country code associated with the category.
      * </pre>
      *
      * <code>optional string country_code = 4;</code>
@@ -691,7 +691,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Code of the country.
+     * The ISO-3166-1 alpha-2 country code associated with the category.
      * </pre>
      *
      * <code>optional string country_code = 4;</code>
@@ -711,7 +711,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Code of the country.
+     * The ISO-3166-1 alpha-2 country code associated with the category.
      * </pre>
      *
      * <code>optional string country_code = 4;</code>
@@ -732,7 +732,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Code of the country.
+     * The ISO-3166-1 alpha-2 country code associated with the category.
      * </pre>
      *
      * <code>optional string country_code = 4;</code>
@@ -749,7 +749,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Code of the country.
+     * The ISO-3166-1 alpha-2 country code associated with the category.
      * </pre>
      *
      * <code>optional string country_code = 4;</code>
@@ -763,7 +763,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Code of the country.
+     * The ISO-3166-1 alpha-2 country code associated with the category.
      * </pre>
      *
      * <code>optional string country_code = 4;</code>
@@ -783,7 +783,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object languageCode_ = "";
     /**
      * <pre>
-     * Code of the language.
+     * ISO 639-1 code of the language associated with the category.
      * </pre>
      *
      * <code>optional string language_code = 5;</code>
@@ -794,7 +794,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Code of the language.
+     * ISO 639-1 code of the language associated with the category.
      * </pre>
      *
      * <code>optional string language_code = 5;</code>
@@ -814,7 +814,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Code of the language.
+     * ISO 639-1 code of the language associated with the category.
      * </pre>
      *
      * <code>optional string language_code = 5;</code>
@@ -835,7 +835,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Code of the language.
+     * ISO 639-1 code of the language associated with the category.
      * </pre>
      *
      * <code>optional string language_code = 5;</code>
@@ -852,7 +852,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Code of the language.
+     * ISO 639-1 code of the language associated with the category.
      * </pre>
      *
      * <code>optional string language_code = 5;</code>
@@ -866,7 +866,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Code of the language.
+     * ISO 639-1 code of the language associated with the category.
      * </pre>
      *
      * <code>optional string language_code = 5;</code>

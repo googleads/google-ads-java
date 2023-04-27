@@ -20,6 +20,9 @@ package com.google.ads.googleads.v13.resources;
  * * MULTI_CHANNEL - TARGET_CPA - UNIFORM
  * * DISCOVERY - TARGET_CPA - DEFAULT
  * * DISPLAY - TARGET_CPA - UNIFORM
+ * * PERFORMANCE_MAX - TARGET_CPA - UNIFORM
+ * * PERFORMANCE_MAX - TARGET_ROAS - UNIFORM
+ * * PERFORMANCE_MAX - BUDGET - UNIFORM
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v13.resources.CampaignSimulation}
@@ -854,6 +857,9 @@ private static final long serialVersionUID = 0L;
    * * MULTI_CHANNEL - TARGET_CPA - UNIFORM
    * * DISCOVERY - TARGET_CPA - DEFAULT
    * * DISPLAY - TARGET_CPA - UNIFORM
+   * * PERFORMANCE_MAX - TARGET_CPA - UNIFORM
+   * * PERFORMANCE_MAX - TARGET_ROAS - UNIFORM
+   * * PERFORMANCE_MAX - BUDGET - UNIFORM
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v13.resources.CampaignSimulation}

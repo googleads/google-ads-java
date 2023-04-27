@@ -220,6 +220,9 @@ public interface GoogleAdsVersion {
         @ServiceClientDescriptor(settingsClass = CustomerServiceSettings.class)
         CustomerServiceClient createCustomerServiceClient();
          
+        @ServiceClientDescriptor(settingsClass = CustomerSkAdNetworkConversionValueSchemaServiceSettings.class)
+        CustomerSkAdNetworkConversionValueSchemaServiceClient createCustomerSkAdNetworkConversionValueSchemaServiceClient();
+         
         @ServiceClientDescriptor(settingsClass = CustomerUserAccessInvitationServiceSettings.class)
         CustomerUserAccessInvitationServiceClient createCustomerUserAccessInvitationServiceClient();
          

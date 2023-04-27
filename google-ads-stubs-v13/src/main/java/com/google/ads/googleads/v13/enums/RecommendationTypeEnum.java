@@ -208,8 +208,8 @@ private static final long serialVersionUID = 0L;
     MARGINAL_ROI_CAMPAIGN_BUDGET(19),
     /**
      * <pre>
-     * Recommendation to expand keywords to broad match for fully automated
-     * conversion-based bidding campaigns.
+     * Recommendation to add broad match versions of keywords for fully
+     * automated conversion-based bidding campaigns.
      * </pre>
      *
      * <code>USE_BROAD_MATCH_KEYWORD = 20;</code>
@@ -262,7 +262,7 @@ private static final long serialVersionUID = 0L;
      * Recommendation to raise target CPA when it is too low and there are very
      * few or no conversions.
      * It is applied asynchronously and can take minutes
-     * depending on the number of ad groups there is in the related campaign.
+     * depending on the number of ad groups there are in the related campaign.
      * </pre>
      *
      * <code>RAISE_TARGET_CPA_BID_TOO_LOW = 26;</code>
@@ -302,6 +302,111 @@ private static final long serialVersionUID = 0L;
      * <code>CALL_ASSET = 30;</code>
      */
     CALL_ASSET(30),
+    /**
+     * <pre>
+     * Recommendation to add the age group attribute to offers that are
+     * demoted because of a missing age group.
+     * </pre>
+     *
+     * <code>SHOPPING_ADD_AGE_GROUP = 31;</code>
+     */
+    SHOPPING_ADD_AGE_GROUP(31),
+    /**
+     * <pre>
+     * Recommendation to add a color to offers that are demoted
+     * because of a missing color.
+     * </pre>
+     *
+     * <code>SHOPPING_ADD_COLOR = 32;</code>
+     */
+    SHOPPING_ADD_COLOR(32),
+    /**
+     * <pre>
+     * Recommendation to add a gender to offers that are demoted
+     * because of a missing gender.
+     * </pre>
+     *
+     * <code>SHOPPING_ADD_GENDER = 33;</code>
+     */
+    SHOPPING_ADD_GENDER(33),
+    /**
+     * <pre>
+     * Recommendation to add a GTIN (Global Trade Item Number) to offers
+     * that are demoted because of a missing GTIN.
+     * </pre>
+     *
+     * <code>SHOPPING_ADD_GTIN = 34;</code>
+     */
+    SHOPPING_ADD_GTIN(34),
+    /**
+     * <pre>
+     * Recommendation to add more identifiers to offers that are demoted because
+     * of missing identifiers.
+     * </pre>
+     *
+     * <code>SHOPPING_ADD_MORE_IDENTIFIERS = 35;</code>
+     */
+    SHOPPING_ADD_MORE_IDENTIFIERS(35),
+    /**
+     * <pre>
+     * Recommendation to add the size to offers that are demoted
+     * because of a missing size.
+     * </pre>
+     *
+     * <code>SHOPPING_ADD_SIZE = 36;</code>
+     */
+    SHOPPING_ADD_SIZE(36),
+    /**
+     * <pre>
+     * Recommendation informing a customer about a campaign that cannot serve
+     * because no products are being targeted.
+     * </pre>
+     *
+     * <code>SHOPPING_ADD_PRODUCTS_TO_CAMPAIGN = 37;</code>
+     */
+    SHOPPING_ADD_PRODUCTS_TO_CAMPAIGN(37),
+    /**
+     * <pre>
+     * The shopping recommendation informing a customer about campaign with a
+     * high percentage of disapproved products.
+     * </pre>
+     *
+     * <code>SHOPPING_FIX_DISAPPROVED_PRODUCTS = 38;</code>
+     */
+    SHOPPING_FIX_DISAPPROVED_PRODUCTS(38),
+    /**
+     * <pre>
+     * Recommendation to create a catch-all campaign that targets all offers.
+     * </pre>
+     *
+     * <code>SHOPPING_TARGET_ALL_OFFERS = 39;</code>
+     */
+    SHOPPING_TARGET_ALL_OFFERS(39),
+    /**
+     * <pre>
+     * Recommendation to fix Merchant Center account suspension issues.
+     * </pre>
+     *
+     * <code>SHOPPING_FIX_SUSPENDED_MERCHANT_CENTER_ACCOUNT = 40;</code>
+     */
+    SHOPPING_FIX_SUSPENDED_MERCHANT_CENTER_ACCOUNT(40),
+    /**
+     * <pre>
+     * Recommendation to fix Merchant Center account suspension warning issues.
+     * </pre>
+     *
+     * <code>SHOPPING_FIX_MERCHANT_CENTER_ACCOUNT_SUSPENSION_WARNING = 41;</code>
+     */
+    SHOPPING_FIX_MERCHANT_CENTER_ACCOUNT_SUSPENSION_WARNING(41),
+    /**
+     * <pre>
+     * Recommendation to migrate offers targeted by Regular Shopping Campaigns
+     * to existing Performance Max campaigns.
+     * </pre>
+     *
+     * <code>SHOPPING_MIGRATE_REGULAR_SHOPPING_CAMPAIGN_OFFERS_TO_PERFORMANCE_MAX = 42;</code>
+     */
+    SHOPPING_MIGRATE_REGULAR_SHOPPING_CAMPAIGN_OFFERS_TO_PERFORMANCE_MAX(42),
     UNRECOGNIZED(-1),
     ;
 
@@ -457,8 +562,8 @@ private static final long serialVersionUID = 0L;
     public static final int MARGINAL_ROI_CAMPAIGN_BUDGET_VALUE = 19;
     /**
      * <pre>
-     * Recommendation to expand keywords to broad match for fully automated
-     * conversion-based bidding campaigns.
+     * Recommendation to add broad match versions of keywords for fully
+     * automated conversion-based bidding campaigns.
      * </pre>
      *
      * <code>USE_BROAD_MATCH_KEYWORD = 20;</code>
@@ -511,7 +616,7 @@ private static final long serialVersionUID = 0L;
      * Recommendation to raise target CPA when it is too low and there are very
      * few or no conversions.
      * It is applied asynchronously and can take minutes
-     * depending on the number of ad groups there is in the related campaign.
+     * depending on the number of ad groups there are in the related campaign.
      * </pre>
      *
      * <code>RAISE_TARGET_CPA_BID_TOO_LOW = 26;</code>
@@ -551,6 +656,111 @@ private static final long serialVersionUID = 0L;
      * <code>CALL_ASSET = 30;</code>
      */
     public static final int CALL_ASSET_VALUE = 30;
+    /**
+     * <pre>
+     * Recommendation to add the age group attribute to offers that are
+     * demoted because of a missing age group.
+     * </pre>
+     *
+     * <code>SHOPPING_ADD_AGE_GROUP = 31;</code>
+     */
+    public static final int SHOPPING_ADD_AGE_GROUP_VALUE = 31;
+    /**
+     * <pre>
+     * Recommendation to add a color to offers that are demoted
+     * because of a missing color.
+     * </pre>
+     *
+     * <code>SHOPPING_ADD_COLOR = 32;</code>
+     */
+    public static final int SHOPPING_ADD_COLOR_VALUE = 32;
+    /**
+     * <pre>
+     * Recommendation to add a gender to offers that are demoted
+     * because of a missing gender.
+     * </pre>
+     *
+     * <code>SHOPPING_ADD_GENDER = 33;</code>
+     */
+    public static final int SHOPPING_ADD_GENDER_VALUE = 33;
+    /**
+     * <pre>
+     * Recommendation to add a GTIN (Global Trade Item Number) to offers
+     * that are demoted because of a missing GTIN.
+     * </pre>
+     *
+     * <code>SHOPPING_ADD_GTIN = 34;</code>
+     */
+    public static final int SHOPPING_ADD_GTIN_VALUE = 34;
+    /**
+     * <pre>
+     * Recommendation to add more identifiers to offers that are demoted because
+     * of missing identifiers.
+     * </pre>
+     *
+     * <code>SHOPPING_ADD_MORE_IDENTIFIERS = 35;</code>
+     */
+    public static final int SHOPPING_ADD_MORE_IDENTIFIERS_VALUE = 35;
+    /**
+     * <pre>
+     * Recommendation to add the size to offers that are demoted
+     * because of a missing size.
+     * </pre>
+     *
+     * <code>SHOPPING_ADD_SIZE = 36;</code>
+     */
+    public static final int SHOPPING_ADD_SIZE_VALUE = 36;
+    /**
+     * <pre>
+     * Recommendation informing a customer about a campaign that cannot serve
+     * because no products are being targeted.
+     * </pre>
+     *
+     * <code>SHOPPING_ADD_PRODUCTS_TO_CAMPAIGN = 37;</code>
+     */
+    public static final int SHOPPING_ADD_PRODUCTS_TO_CAMPAIGN_VALUE = 37;
+    /**
+     * <pre>
+     * The shopping recommendation informing a customer about campaign with a
+     * high percentage of disapproved products.
+     * </pre>
+     *
+     * <code>SHOPPING_FIX_DISAPPROVED_PRODUCTS = 38;</code>
+     */
+    public static final int SHOPPING_FIX_DISAPPROVED_PRODUCTS_VALUE = 38;
+    /**
+     * <pre>
+     * Recommendation to create a catch-all campaign that targets all offers.
+     * </pre>
+     *
+     * <code>SHOPPING_TARGET_ALL_OFFERS = 39;</code>
+     */
+    public static final int SHOPPING_TARGET_ALL_OFFERS_VALUE = 39;
+    /**
+     * <pre>
+     * Recommendation to fix Merchant Center account suspension issues.
+     * </pre>
+     *
+     * <code>SHOPPING_FIX_SUSPENDED_MERCHANT_CENTER_ACCOUNT = 40;</code>
+     */
+    public static final int SHOPPING_FIX_SUSPENDED_MERCHANT_CENTER_ACCOUNT_VALUE = 40;
+    /**
+     * <pre>
+     * Recommendation to fix Merchant Center account suspension warning issues.
+     * </pre>
+     *
+     * <code>SHOPPING_FIX_MERCHANT_CENTER_ACCOUNT_SUSPENSION_WARNING = 41;</code>
+     */
+    public static final int SHOPPING_FIX_MERCHANT_CENTER_ACCOUNT_SUSPENSION_WARNING_VALUE = 41;
+    /**
+     * <pre>
+     * Recommendation to migrate offers targeted by Regular Shopping Campaigns
+     * to existing Performance Max campaigns.
+     * </pre>
+     *
+     * <code>SHOPPING_MIGRATE_REGULAR_SHOPPING_CAMPAIGN_OFFERS_TO_PERFORMANCE_MAX = 42;</code>
+     */
+    public static final int SHOPPING_MIGRATE_REGULAR_SHOPPING_CAMPAIGN_OFFERS_TO_PERFORMANCE_MAX_VALUE = 42;
 
 
     public final int getNumber() {
@@ -605,6 +815,18 @@ private static final long serialVersionUID = 0L;
         case 28: return CALLOUT_ASSET;
         case 29: return SITELINK_ASSET;
         case 30: return CALL_ASSET;
+        case 31: return SHOPPING_ADD_AGE_GROUP;
+        case 32: return SHOPPING_ADD_COLOR;
+        case 33: return SHOPPING_ADD_GENDER;
+        case 34: return SHOPPING_ADD_GTIN;
+        case 35: return SHOPPING_ADD_MORE_IDENTIFIERS;
+        case 36: return SHOPPING_ADD_SIZE;
+        case 37: return SHOPPING_ADD_PRODUCTS_TO_CAMPAIGN;
+        case 38: return SHOPPING_FIX_DISAPPROVED_PRODUCTS;
+        case 39: return SHOPPING_TARGET_ALL_OFFERS;
+        case 40: return SHOPPING_FIX_SUSPENDED_MERCHANT_CENTER_ACCOUNT;
+        case 41: return SHOPPING_FIX_MERCHANT_CENTER_ACCOUNT_SUSPENSION_WARNING;
+        case 42: return SHOPPING_MIGRATE_REGULAR_SHOPPING_CAMPAIGN_OFFERS_TO_PERFORMANCE_MAX;
         default: return null;
       }
     }

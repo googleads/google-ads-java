@@ -54,6 +54,7 @@ private static final long serialVersionUID = 0L;
       implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     SINGLE_CHOICE_ANSWERS(2),
+    HAS_LOCATION_ANSWER(3),
     ANSWERS_NOT_SET(0);
     private final int value;
     private AnswersCase(int value) {
@@ -72,6 +73,7 @@ private static final long serialVersionUID = 0L;
     public static AnswersCase forNumber(int value) {
       switch (value) {
         case 2: return SINGLE_CHOICE_ANSWERS;
+        case 3: return HAS_LOCATION_ANSWER;
         case 0: return ANSWERS_NOT_SET;
         default: return null;
       }
@@ -164,6 +166,45 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v13.common.LeadFormSingleChoiceAnswers.getDefaultInstance();
   }
 
+  public static final int HAS_LOCATION_ANSWER_FIELD_NUMBER = 3;
+  /**
+   * <pre>
+   * Answer configuration for location question. If true, campaign/account
+   * level location data (state, city, business name etc) will be rendered on
+   * the Lead Form.
+   * Starting V13.1, has_location_answer can only be set for "What is your
+   * preferred dealership?" question, for advertisers with Location Assets
+   * setup at campaign/account level.
+   * </pre>
+   *
+   * <code>bool has_location_answer = 3;</code>
+   * @return Whether the hasLocationAnswer field is set.
+   */
+  @java.lang.Override
+  public boolean hasHasLocationAnswer() {
+    return answersCase_ == 3;
+  }
+  /**
+   * <pre>
+   * Answer configuration for location question. If true, campaign/account
+   * level location data (state, city, business name etc) will be rendered on
+   * the Lead Form.
+   * Starting V13.1, has_location_answer can only be set for "What is your
+   * preferred dealership?" question, for advertisers with Location Assets
+   * setup at campaign/account level.
+   * </pre>
+   *
+   * <code>bool has_location_answer = 3;</code>
+   * @return The hasLocationAnswer.
+   */
+  @java.lang.Override
+  public boolean getHasLocationAnswer() {
+    if (answersCase_ == 3) {
+      return (java.lang.Boolean) answers_;
+    }
+    return false;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -184,6 +225,10 @@ private static final long serialVersionUID = 0L;
     if (answersCase_ == 2) {
       output.writeMessage(2, (com.google.ads.googleads.v13.common.LeadFormSingleChoiceAnswers) answers_);
     }
+    if (answersCase_ == 3) {
+      output.writeBool(
+          3, (boolean)((java.lang.Boolean) answers_));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -200,6 +245,11 @@ private static final long serialVersionUID = 0L;
     if (answersCase_ == 2) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, (com.google.ads.googleads.v13.common.LeadFormSingleChoiceAnswers) answers_);
+    }
+    if (answersCase_ == 3) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(
+            3, (boolean)((java.lang.Boolean) answers_));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -223,6 +273,10 @@ private static final long serialVersionUID = 0L;
         if (!getSingleChoiceAnswers()
             .equals(other.getSingleChoiceAnswers())) return false;
         break;
+      case 3:
+        if (getHasLocationAnswer()
+            != other.getHasLocationAnswer()) return false;
+        break;
       case 0:
       default:
     }
@@ -243,6 +297,11 @@ private static final long serialVersionUID = 0L;
       case 2:
         hash = (37 * hash) + SINGLE_CHOICE_ANSWERS_FIELD_NUMBER;
         hash = (53 * hash) + getSingleChoiceAnswers().hashCode();
+        break;
+      case 3:
+        hash = (37 * hash) + HAS_LOCATION_ANSWER_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getHasLocationAnswer());
         break;
       case 0:
       default:
@@ -486,6 +545,10 @@ private static final long serialVersionUID = 0L;
           mergeSingleChoiceAnswers(other.getSingleChoiceAnswers());
           break;
         }
+        case HAS_LOCATION_ANSWER: {
+          setHasLocationAnswer(other.getHasLocationAnswer());
+          break;
+        }
         case ANSWERS_NOT_SET: {
           break;
         }
@@ -528,6 +591,11 @@ private static final long serialVersionUID = 0L;
               answersCase_ = 2;
               break;
             } // case 18
+            case 24: {
+              answers_ = input.readBool();
+              answersCase_ = 3;
+              break;
+            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -832,6 +900,84 @@ private static final long serialVersionUID = 0L;
       answersCase_ = 2;
       onChanged();
       return singleChoiceAnswersBuilder_;
+    }
+
+    /**
+     * <pre>
+     * Answer configuration for location question. If true, campaign/account
+     * level location data (state, city, business name etc) will be rendered on
+     * the Lead Form.
+     * Starting V13.1, has_location_answer can only be set for "What is your
+     * preferred dealership?" question, for advertisers with Location Assets
+     * setup at campaign/account level.
+     * </pre>
+     *
+     * <code>bool has_location_answer = 3;</code>
+     * @return Whether the hasLocationAnswer field is set.
+     */
+    public boolean hasHasLocationAnswer() {
+      return answersCase_ == 3;
+    }
+    /**
+     * <pre>
+     * Answer configuration for location question. If true, campaign/account
+     * level location data (state, city, business name etc) will be rendered on
+     * the Lead Form.
+     * Starting V13.1, has_location_answer can only be set for "What is your
+     * preferred dealership?" question, for advertisers with Location Assets
+     * setup at campaign/account level.
+     * </pre>
+     *
+     * <code>bool has_location_answer = 3;</code>
+     * @return The hasLocationAnswer.
+     */
+    public boolean getHasLocationAnswer() {
+      if (answersCase_ == 3) {
+        return (java.lang.Boolean) answers_;
+      }
+      return false;
+    }
+    /**
+     * <pre>
+     * Answer configuration for location question. If true, campaign/account
+     * level location data (state, city, business name etc) will be rendered on
+     * the Lead Form.
+     * Starting V13.1, has_location_answer can only be set for "What is your
+     * preferred dealership?" question, for advertisers with Location Assets
+     * setup at campaign/account level.
+     * </pre>
+     *
+     * <code>bool has_location_answer = 3;</code>
+     * @param value The hasLocationAnswer to set.
+     * @return This builder for chaining.
+     */
+    public Builder setHasLocationAnswer(boolean value) {
+      
+      answersCase_ = 3;
+      answers_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Answer configuration for location question. If true, campaign/account
+     * level location data (state, city, business name etc) will be rendered on
+     * the Lead Form.
+     * Starting V13.1, has_location_answer can only be set for "What is your
+     * preferred dealership?" question, for advertisers with Location Assets
+     * setup at campaign/account level.
+     * </pre>
+     *
+     * <code>bool has_location_answer = 3;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearHasLocationAnswer() {
+      if (answersCase_ == 3) {
+        answersCase_ = 0;
+        answers_ = null;
+        onChanged();
+      }
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

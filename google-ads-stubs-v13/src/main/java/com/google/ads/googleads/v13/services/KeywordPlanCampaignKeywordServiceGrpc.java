@@ -104,7 +104,7 @@ public final class KeywordPlanCampaignKeywordServiceGrpc {
    * campaign negative keywords and ad group negative keywords.
    * </pre>
    */
-  public static abstract class KeywordPlanCampaignKeywordServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -124,25 +124,14 @@ public final class KeywordPlanCampaignKeywordServiceGrpc {
      *   [ResourceCountLimitExceededError]()
      * </pre>
      */
-    public void mutateKeywordPlanCampaignKeywords(com.google.ads.googleads.v13.services.MutateKeywordPlanCampaignKeywordsRequest request,
+    default void mutateKeywordPlanCampaignKeywords(com.google.ads.googleads.v13.services.MutateKeywordPlanCampaignKeywordsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.MutateKeywordPlanCampaignKeywordsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateKeywordPlanCampaignKeywordsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateKeywordPlanCampaignKeywordsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.MutateKeywordPlanCampaignKeywordsRequest,
-                com.google.ads.googleads.v13.services.MutateKeywordPlanCampaignKeywordsResponse>(
-                  this, METHODID_MUTATE_KEYWORD_PLAN_CAMPAIGN_KEYWORDS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service KeywordPlanCampaignKeywordService.
    * <pre>
    * Service to manage Keyword Plan campaign keywords. KeywordPlanCampaign is
    * required to add the campaign keywords. Only negative keywords are supported.
@@ -150,7 +139,25 @@ public final class KeywordPlanCampaignKeywordServiceGrpc {
    * campaign negative keywords and ad group negative keywords.
    * </pre>
    */
-  public static final class KeywordPlanCampaignKeywordServiceStub extends io.grpc.stub.AbstractAsyncStub<KeywordPlanCampaignKeywordServiceStub> {
+  public static abstract class KeywordPlanCampaignKeywordServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return KeywordPlanCampaignKeywordServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service KeywordPlanCampaignKeywordService.
+   * <pre>
+   * Service to manage Keyword Plan campaign keywords. KeywordPlanCampaign is
+   * required to add the campaign keywords. Only negative keywords are supported.
+   * A maximum of 1000 negative keywords are allowed per plan. This includes both
+   * campaign negative keywords and ad group negative keywords.
+   * </pre>
+   */
+  public static final class KeywordPlanCampaignKeywordServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<KeywordPlanCampaignKeywordServiceStub> {
     private KeywordPlanCampaignKeywordServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -188,6 +195,7 @@ public final class KeywordPlanCampaignKeywordServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service KeywordPlanCampaignKeywordService.
    * <pre>
    * Service to manage Keyword Plan campaign keywords. KeywordPlanCampaign is
    * required to add the campaign keywords. Only negative keywords are supported.
@@ -195,7 +203,8 @@ public final class KeywordPlanCampaignKeywordServiceGrpc {
    * campaign negative keywords and ad group negative keywords.
    * </pre>
    */
-  public static final class KeywordPlanCampaignKeywordServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<KeywordPlanCampaignKeywordServiceBlockingStub> {
+  public static final class KeywordPlanCampaignKeywordServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<KeywordPlanCampaignKeywordServiceBlockingStub> {
     private KeywordPlanCampaignKeywordServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -232,6 +241,7 @@ public final class KeywordPlanCampaignKeywordServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service KeywordPlanCampaignKeywordService.
    * <pre>
    * Service to manage Keyword Plan campaign keywords. KeywordPlanCampaign is
    * required to add the campaign keywords. Only negative keywords are supported.
@@ -239,7 +249,8 @@ public final class KeywordPlanCampaignKeywordServiceGrpc {
    * campaign negative keywords and ad group negative keywords.
    * </pre>
    */
-  public static final class KeywordPlanCampaignKeywordServiceFutureStub extends io.grpc.stub.AbstractFutureStub<KeywordPlanCampaignKeywordServiceFutureStub> {
+  public static final class KeywordPlanCampaignKeywordServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<KeywordPlanCampaignKeywordServiceFutureStub> {
     private KeywordPlanCampaignKeywordServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -283,10 +294,10 @@ public final class KeywordPlanCampaignKeywordServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final KeywordPlanCampaignKeywordServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(KeywordPlanCampaignKeywordServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -313,6 +324,18 @@ public final class KeywordPlanCampaignKeywordServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateKeywordPlanCampaignKeywordsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.MutateKeywordPlanCampaignKeywordsRequest,
+              com.google.ads.googleads.v13.services.MutateKeywordPlanCampaignKeywordsResponse>(
+                service, METHODID_MUTATE_KEYWORD_PLAN_CAMPAIGN_KEYWORDS)))
+        .build();
   }
 
   private static abstract class KeywordPlanCampaignKeywordServiceBaseDescriptorSupplier

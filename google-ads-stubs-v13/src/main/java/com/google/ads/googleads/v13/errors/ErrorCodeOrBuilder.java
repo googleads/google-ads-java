@@ -3957,6 +3957,34 @@ public interface ErrorCodeOrBuilder extends
 
   /**
    * <pre>
+   * The reasons for the customer SK Ad network conversion value schema error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.errors.CustomerSkAdNetworkConversionValueSchemaErrorEnum.CustomerSkAdNetworkConversionValueSchemaError customer_sk_ad_network_conversion_value_schema_error = 170;</code>
+   * @return Whether the customerSkAdNetworkConversionValueSchemaError field is set.
+   */
+  boolean hasCustomerSkAdNetworkConversionValueSchemaError();
+  /**
+   * <pre>
+   * The reasons for the customer SK Ad network conversion value schema error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.errors.CustomerSkAdNetworkConversionValueSchemaErrorEnum.CustomerSkAdNetworkConversionValueSchemaError customer_sk_ad_network_conversion_value_schema_error = 170;</code>
+   * @return The enum numeric value on the wire for customerSkAdNetworkConversionValueSchemaError.
+   */
+  int getCustomerSkAdNetworkConversionValueSchemaErrorValue();
+  /**
+   * <pre>
+   * The reasons for the customer SK Ad network conversion value schema error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.errors.CustomerSkAdNetworkConversionValueSchemaErrorEnum.CustomerSkAdNetworkConversionValueSchemaError customer_sk_ad_network_conversion_value_schema_error = 170;</code>
+   * @return The customerSkAdNetworkConversionValueSchemaError.
+   */
+  com.google.ads.googleads.v13.errors.CustomerSkAdNetworkConversionValueSchemaErrorEnum.CustomerSkAdNetworkConversionValueSchemaError getCustomerSkAdNetworkConversionValueSchemaError();
+
+  /**
+   * <pre>
    * The reasons for the currency errors.
    * </pre>
    *

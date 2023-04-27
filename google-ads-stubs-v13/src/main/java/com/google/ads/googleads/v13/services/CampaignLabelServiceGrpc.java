@@ -98,7 +98,7 @@ public final class CampaignLabelServiceGrpc {
    * Service to manage labels on campaigns.
    * </pre>
    */
-  public static abstract class CampaignLabelServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -118,30 +118,34 @@ public final class CampaignLabelServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void mutateCampaignLabels(com.google.ads.googleads.v13.services.MutateCampaignLabelsRequest request,
+    default void mutateCampaignLabels(com.google.ads.googleads.v13.services.MutateCampaignLabelsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.MutateCampaignLabelsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateCampaignLabelsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateCampaignLabelsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.MutateCampaignLabelsRequest,
-                com.google.ads.googleads.v13.services.MutateCampaignLabelsResponse>(
-                  this, METHODID_MUTATE_CAMPAIGN_LABELS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service CampaignLabelService.
    * <pre>
    * Service to manage labels on campaigns.
    * </pre>
    */
-  public static final class CampaignLabelServiceStub extends io.grpc.stub.AbstractAsyncStub<CampaignLabelServiceStub> {
+  public static abstract class CampaignLabelServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return CampaignLabelServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service CampaignLabelService.
+   * <pre>
+   * Service to manage labels on campaigns.
+   * </pre>
+   */
+  public static final class CampaignLabelServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<CampaignLabelServiceStub> {
     private CampaignLabelServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -179,11 +183,13 @@ public final class CampaignLabelServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service CampaignLabelService.
    * <pre>
    * Service to manage labels on campaigns.
    * </pre>
    */
-  public static final class CampaignLabelServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CampaignLabelServiceBlockingStub> {
+  public static final class CampaignLabelServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<CampaignLabelServiceBlockingStub> {
     private CampaignLabelServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -220,11 +226,13 @@ public final class CampaignLabelServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service CampaignLabelService.
    * <pre>
    * Service to manage labels on campaigns.
    * </pre>
    */
-  public static final class CampaignLabelServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CampaignLabelServiceFutureStub> {
+  public static final class CampaignLabelServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<CampaignLabelServiceFutureStub> {
     private CampaignLabelServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -268,10 +276,10 @@ public final class CampaignLabelServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final CampaignLabelServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(CampaignLabelServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -298,6 +306,18 @@ public final class CampaignLabelServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateCampaignLabelsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.MutateCampaignLabelsRequest,
+              com.google.ads.googleads.v13.services.MutateCampaignLabelsResponse>(
+                service, METHODID_MUTATE_CAMPAIGN_LABELS)))
+        .build();
   }
 
   private static abstract class CampaignLabelServiceBaseDescriptorSupplier

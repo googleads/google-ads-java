@@ -98,7 +98,7 @@ public final class RemarketingActionServiceGrpc {
    * Service to manage remarketing actions.
    * </pre>
    */
-  public static abstract class RemarketingActionServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -113,30 +113,34 @@ public final class RemarketingActionServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void mutateRemarketingActions(com.google.ads.googleads.v13.services.MutateRemarketingActionsRequest request,
+    default void mutateRemarketingActions(com.google.ads.googleads.v13.services.MutateRemarketingActionsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.MutateRemarketingActionsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateRemarketingActionsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateRemarketingActionsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.MutateRemarketingActionsRequest,
-                com.google.ads.googleads.v13.services.MutateRemarketingActionsResponse>(
-                  this, METHODID_MUTATE_REMARKETING_ACTIONS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service RemarketingActionService.
    * <pre>
    * Service to manage remarketing actions.
    * </pre>
    */
-  public static final class RemarketingActionServiceStub extends io.grpc.stub.AbstractAsyncStub<RemarketingActionServiceStub> {
+  public static abstract class RemarketingActionServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return RemarketingActionServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service RemarketingActionService.
+   * <pre>
+   * Service to manage remarketing actions.
+   * </pre>
+   */
+  public static final class RemarketingActionServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<RemarketingActionServiceStub> {
     private RemarketingActionServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -169,11 +173,13 @@ public final class RemarketingActionServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service RemarketingActionService.
    * <pre>
    * Service to manage remarketing actions.
    * </pre>
    */
-  public static final class RemarketingActionServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<RemarketingActionServiceBlockingStub> {
+  public static final class RemarketingActionServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<RemarketingActionServiceBlockingStub> {
     private RemarketingActionServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -205,11 +211,13 @@ public final class RemarketingActionServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service RemarketingActionService.
    * <pre>
    * Service to manage remarketing actions.
    * </pre>
    */
-  public static final class RemarketingActionServiceFutureStub extends io.grpc.stub.AbstractFutureStub<RemarketingActionServiceFutureStub> {
+  public static final class RemarketingActionServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<RemarketingActionServiceFutureStub> {
     private RemarketingActionServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -248,10 +256,10 @@ public final class RemarketingActionServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final RemarketingActionServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(RemarketingActionServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -278,6 +286,18 @@ public final class RemarketingActionServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateRemarketingActionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.MutateRemarketingActionsRequest,
+              com.google.ads.googleads.v13.services.MutateRemarketingActionsResponse>(
+                service, METHODID_MUTATE_REMARKETING_ACTIONS)))
+        .build();
   }
 
   private static abstract class RemarketingActionServiceBaseDescriptorSupplier

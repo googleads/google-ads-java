@@ -98,7 +98,7 @@ public final class ExtensionFeedItemServiceGrpc {
    * Service to manage extension feed items.
    * </pre>
    */
-  public static abstract class ExtensionFeedItemServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -130,30 +130,34 @@ public final class ExtensionFeedItemServiceGrpc {
      *   [UrlFieldError]()
      * </pre>
      */
-    public void mutateExtensionFeedItems(com.google.ads.googleads.v13.services.MutateExtensionFeedItemsRequest request,
+    default void mutateExtensionFeedItems(com.google.ads.googleads.v13.services.MutateExtensionFeedItemsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.MutateExtensionFeedItemsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateExtensionFeedItemsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateExtensionFeedItemsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.MutateExtensionFeedItemsRequest,
-                com.google.ads.googleads.v13.services.MutateExtensionFeedItemsResponse>(
-                  this, METHODID_MUTATE_EXTENSION_FEED_ITEMS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service ExtensionFeedItemService.
    * <pre>
    * Service to manage extension feed items.
    * </pre>
    */
-  public static final class ExtensionFeedItemServiceStub extends io.grpc.stub.AbstractAsyncStub<ExtensionFeedItemServiceStub> {
+  public static abstract class ExtensionFeedItemServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return ExtensionFeedItemServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service ExtensionFeedItemService.
+   * <pre>
+   * Service to manage extension feed items.
+   * </pre>
+   */
+  public static final class ExtensionFeedItemServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<ExtensionFeedItemServiceStub> {
     private ExtensionFeedItemServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -203,11 +207,13 @@ public final class ExtensionFeedItemServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service ExtensionFeedItemService.
    * <pre>
    * Service to manage extension feed items.
    * </pre>
    */
-  public static final class ExtensionFeedItemServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ExtensionFeedItemServiceBlockingStub> {
+  public static final class ExtensionFeedItemServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<ExtensionFeedItemServiceBlockingStub> {
     private ExtensionFeedItemServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -256,11 +262,13 @@ public final class ExtensionFeedItemServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service ExtensionFeedItemService.
    * <pre>
    * Service to manage extension feed items.
    * </pre>
    */
-  public static final class ExtensionFeedItemServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ExtensionFeedItemServiceFutureStub> {
+  public static final class ExtensionFeedItemServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<ExtensionFeedItemServiceFutureStub> {
     private ExtensionFeedItemServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -316,10 +324,10 @@ public final class ExtensionFeedItemServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final ExtensionFeedItemServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(ExtensionFeedItemServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -346,6 +354,18 @@ public final class ExtensionFeedItemServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateExtensionFeedItemsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.MutateExtensionFeedItemsRequest,
+              com.google.ads.googleads.v13.services.MutateExtensionFeedItemsResponse>(
+                service, METHODID_MUTATE_EXTENSION_FEED_ITEMS)))
+        .build();
   }
 
   private static abstract class ExtensionFeedItemServiceBaseDescriptorSupplier

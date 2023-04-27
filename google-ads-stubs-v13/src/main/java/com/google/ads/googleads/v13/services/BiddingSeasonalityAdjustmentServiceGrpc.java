@@ -98,7 +98,7 @@ public final class BiddingSeasonalityAdjustmentServiceGrpc {
    * Service to manage bidding seasonality adjustments.
    * </pre>
    */
-  public static abstract class BiddingSeasonalityAdjustmentServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -106,30 +106,34 @@ public final class BiddingSeasonalityAdjustmentServiceGrpc {
      * Operation statuses are returned.
      * </pre>
      */
-    public void mutateBiddingSeasonalityAdjustments(com.google.ads.googleads.v13.services.MutateBiddingSeasonalityAdjustmentsRequest request,
+    default void mutateBiddingSeasonalityAdjustments(com.google.ads.googleads.v13.services.MutateBiddingSeasonalityAdjustmentsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.MutateBiddingSeasonalityAdjustmentsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateBiddingSeasonalityAdjustmentsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateBiddingSeasonalityAdjustmentsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.MutateBiddingSeasonalityAdjustmentsRequest,
-                com.google.ads.googleads.v13.services.MutateBiddingSeasonalityAdjustmentsResponse>(
-                  this, METHODID_MUTATE_BIDDING_SEASONALITY_ADJUSTMENTS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service BiddingSeasonalityAdjustmentService.
    * <pre>
    * Service to manage bidding seasonality adjustments.
    * </pre>
    */
-  public static final class BiddingSeasonalityAdjustmentServiceStub extends io.grpc.stub.AbstractAsyncStub<BiddingSeasonalityAdjustmentServiceStub> {
+  public static abstract class BiddingSeasonalityAdjustmentServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return BiddingSeasonalityAdjustmentServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service BiddingSeasonalityAdjustmentService.
+   * <pre>
+   * Service to manage bidding seasonality adjustments.
+   * </pre>
+   */
+  public static final class BiddingSeasonalityAdjustmentServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<BiddingSeasonalityAdjustmentServiceStub> {
     private BiddingSeasonalityAdjustmentServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -155,11 +159,13 @@ public final class BiddingSeasonalityAdjustmentServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service BiddingSeasonalityAdjustmentService.
    * <pre>
    * Service to manage bidding seasonality adjustments.
    * </pre>
    */
-  public static final class BiddingSeasonalityAdjustmentServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<BiddingSeasonalityAdjustmentServiceBlockingStub> {
+  public static final class BiddingSeasonalityAdjustmentServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<BiddingSeasonalityAdjustmentServiceBlockingStub> {
     private BiddingSeasonalityAdjustmentServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -184,11 +190,13 @@ public final class BiddingSeasonalityAdjustmentServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service BiddingSeasonalityAdjustmentService.
    * <pre>
    * Service to manage bidding seasonality adjustments.
    * </pre>
    */
-  public static final class BiddingSeasonalityAdjustmentServiceFutureStub extends io.grpc.stub.AbstractFutureStub<BiddingSeasonalityAdjustmentServiceFutureStub> {
+  public static final class BiddingSeasonalityAdjustmentServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<BiddingSeasonalityAdjustmentServiceFutureStub> {
     private BiddingSeasonalityAdjustmentServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -220,10 +228,10 @@ public final class BiddingSeasonalityAdjustmentServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final BiddingSeasonalityAdjustmentServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(BiddingSeasonalityAdjustmentServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -250,6 +258,18 @@ public final class BiddingSeasonalityAdjustmentServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateBiddingSeasonalityAdjustmentsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.MutateBiddingSeasonalityAdjustmentsRequest,
+              com.google.ads.googleads.v13.services.MutateBiddingSeasonalityAdjustmentsResponse>(
+                service, METHODID_MUTATE_BIDDING_SEASONALITY_ADJUSTMENTS)))
+        .build();
   }
 
   private static abstract class BiddingSeasonalityAdjustmentServiceBaseDescriptorSupplier

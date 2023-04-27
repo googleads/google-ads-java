@@ -56,6 +56,36 @@ public interface GenerateAudienceCompositionInsightsRequestOrBuilder extends
 
   /**
    * <pre>
+   * The baseline audience to which the audience of interest is being
+   * compared.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.services.InsightsAudience baseline_audience = 6;</code>
+   * @return Whether the baselineAudience field is set.
+   */
+  boolean hasBaselineAudience();
+  /**
+   * <pre>
+   * The baseline audience to which the audience of interest is being
+   * compared.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.services.InsightsAudience baseline_audience = 6;</code>
+   * @return The baselineAudience.
+   */
+  com.google.ads.googleads.v13.services.InsightsAudience getBaselineAudience();
+  /**
+   * <pre>
+   * The baseline audience to which the audience of interest is being
+   * compared.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.services.InsightsAudience baseline_audience = 6;</code>
+   */
+  com.google.ads.googleads.v13.services.InsightsAudienceOrBuilder getBaselineAudienceOrBuilder();
+
+  /**
+   * <pre>
    * The one-month range of historical data to use for insights, in the format
    * "yyyy-mm". If unset, insights will be returned for the last thirty days of
    * data.

@@ -98,7 +98,7 @@ public final class AdGroupAssetSetServiceGrpc {
    * Service to manage ad group asset set
    * </pre>
    */
-  public static abstract class AdGroupAssetSetServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -106,30 +106,34 @@ public final class AdGroupAssetSetServiceGrpc {
      * returned.
      * </pre>
      */
-    public void mutateAdGroupAssetSets(com.google.ads.googleads.v13.services.MutateAdGroupAssetSetsRequest request,
+    default void mutateAdGroupAssetSets(com.google.ads.googleads.v13.services.MutateAdGroupAssetSetsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.MutateAdGroupAssetSetsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateAdGroupAssetSetsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateAdGroupAssetSetsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.MutateAdGroupAssetSetsRequest,
-                com.google.ads.googleads.v13.services.MutateAdGroupAssetSetsResponse>(
-                  this, METHODID_MUTATE_AD_GROUP_ASSET_SETS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service AdGroupAssetSetService.
    * <pre>
    * Service to manage ad group asset set
    * </pre>
    */
-  public static final class AdGroupAssetSetServiceStub extends io.grpc.stub.AbstractAsyncStub<AdGroupAssetSetServiceStub> {
+  public static abstract class AdGroupAssetSetServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return AdGroupAssetSetServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service AdGroupAssetSetService.
+   * <pre>
+   * Service to manage ad group asset set
+   * </pre>
+   */
+  public static final class AdGroupAssetSetServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<AdGroupAssetSetServiceStub> {
     private AdGroupAssetSetServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -155,11 +159,13 @@ public final class AdGroupAssetSetServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service AdGroupAssetSetService.
    * <pre>
    * Service to manage ad group asset set
    * </pre>
    */
-  public static final class AdGroupAssetSetServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<AdGroupAssetSetServiceBlockingStub> {
+  public static final class AdGroupAssetSetServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<AdGroupAssetSetServiceBlockingStub> {
     private AdGroupAssetSetServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -184,11 +190,13 @@ public final class AdGroupAssetSetServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service AdGroupAssetSetService.
    * <pre>
    * Service to manage ad group asset set
    * </pre>
    */
-  public static final class AdGroupAssetSetServiceFutureStub extends io.grpc.stub.AbstractFutureStub<AdGroupAssetSetServiceFutureStub> {
+  public static final class AdGroupAssetSetServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<AdGroupAssetSetServiceFutureStub> {
     private AdGroupAssetSetServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -220,10 +228,10 @@ public final class AdGroupAssetSetServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AdGroupAssetSetServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AdGroupAssetSetServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -250,6 +258,18 @@ public final class AdGroupAssetSetServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateAdGroupAssetSetsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.MutateAdGroupAssetSetsRequest,
+              com.google.ads.googleads.v13.services.MutateAdGroupAssetSetsResponse>(
+                service, METHODID_MUTATE_AD_GROUP_ASSET_SETS)))
+        .build();
   }
 
   private static abstract class AdGroupAssetSetServiceBaseDescriptorSupplier

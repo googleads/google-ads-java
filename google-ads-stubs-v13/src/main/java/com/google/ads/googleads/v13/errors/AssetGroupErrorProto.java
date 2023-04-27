@@ -30,7 +30,7 @@ public final class AssetGroupErrorProto {
     java.lang.String[] descriptorData = {
       "\n7google/ads/googleads/v13/errors/asset_" +
       "group_error.proto\022\037google.ads.googleads." +
-      "v13.errors\"\276\003\n\023AssetGroupErrorEnum\"\246\003\n\017A" +
+      "v13.errors\"\235\005\n\023AssetGroupErrorEnum\"\205\005\n\017A" +
       "ssetGroupError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNO" +
       "WN\020\001\022\022\n\016DUPLICATE_NAME\020\002\022,\n(CANNOT_ADD_A" +
       "SSET_GROUP_FOR_CAMPAIGN_TYPE\020\003\022\035\n\031NOT_EN" +
@@ -41,13 +41,19 @@ public final class AssetGroupErrorProto {
       "SET\020\010\022+\n\'NOT_ENOUGH_SQUARE_MARKETING_IMA" +
       "GE_ASSET\020\t\022\031\n\025NOT_ENOUGH_LOGO_ASSET\020\n\022<\n" +
       "8FINAL_URL_SHOPPING_MERCHANT_HOME_PAGE_U" +
-      "RL_DOMAINS_DIFFER\020\013B\364\001\n#com.google.ads.g" +
-      "oogleads.v13.errorsB\024AssetGroupErrorProt" +
-      "oP\001ZEgoogle.golang.org/genproto/googleap" +
-      "is/ads/googleads/v13/errors;errors\242\002\003GAA" +
-      "\252\002\037Google.Ads.GoogleAds.V13.Errors\312\002\037Goo" +
-      "gle\\Ads\\GoogleAds\\V13\\Errors\352\002#Google::A" +
-      "ds::GoogleAds::V13::Errorsb\006proto3"
+      "RL_DOMAINS_DIFFER\020\013\022$\n PATH1_REQUIRED_WH" +
+      "EN_PATH2_IS_SET\020\014\022\036\n\032SHORT_DESCRIPTION_R" +
+      "EQUIRED\020\r\022\026\n\022FINAL_URL_REQUIRED\020\016\022*\n&FIN" +
+      "AL_URL_CONTAINS_INVALID_DOMAIN_NAME\020\017\022\037\n" +
+      "\033AD_CUSTOMIZER_NOT_SUPPORTED\020\020\0222\n.CANNOT" +
+      "_MUTATE_ASSET_GROUP_FOR_REMOVED_CAMPAIGN" +
+      "\020\021B\364\001\n#com.google.ads.googleads.v13.erro" +
+      "rsB\024AssetGroupErrorProtoP\001ZEgoogle.golan" +
+      "g.org/genproto/googleapis/ads/googleads/" +
+      "v13/errors;errors\242\002\003GAA\252\002\037Google.Ads.Goo" +
+      "gleAds.V13.Errors\312\002\037Google\\Ads\\GoogleAds" +
+      "\\V13\\Errors\352\002#Google::Ads::GoogleAds::V1" +
+      "3::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

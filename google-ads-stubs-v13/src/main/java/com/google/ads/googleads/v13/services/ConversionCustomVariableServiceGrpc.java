@@ -98,7 +98,7 @@ public final class ConversionCustomVariableServiceGrpc {
    * Service to manage conversion custom variables.
    * </pre>
    */
-  public static abstract class ConversionCustomVariableServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -115,30 +115,34 @@ public final class ConversionCustomVariableServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void mutateConversionCustomVariables(com.google.ads.googleads.v13.services.MutateConversionCustomVariablesRequest request,
+    default void mutateConversionCustomVariables(com.google.ads.googleads.v13.services.MutateConversionCustomVariablesRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.MutateConversionCustomVariablesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateConversionCustomVariablesMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateConversionCustomVariablesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.MutateConversionCustomVariablesRequest,
-                com.google.ads.googleads.v13.services.MutateConversionCustomVariablesResponse>(
-                  this, METHODID_MUTATE_CONVERSION_CUSTOM_VARIABLES)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service ConversionCustomVariableService.
    * <pre>
    * Service to manage conversion custom variables.
    * </pre>
    */
-  public static final class ConversionCustomVariableServiceStub extends io.grpc.stub.AbstractAsyncStub<ConversionCustomVariableServiceStub> {
+  public static abstract class ConversionCustomVariableServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return ConversionCustomVariableServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service ConversionCustomVariableService.
+   * <pre>
+   * Service to manage conversion custom variables.
+   * </pre>
+   */
+  public static final class ConversionCustomVariableServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<ConversionCustomVariableServiceStub> {
     private ConversionCustomVariableServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -173,11 +177,13 @@ public final class ConversionCustomVariableServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service ConversionCustomVariableService.
    * <pre>
    * Service to manage conversion custom variables.
    * </pre>
    */
-  public static final class ConversionCustomVariableServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ConversionCustomVariableServiceBlockingStub> {
+  public static final class ConversionCustomVariableServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<ConversionCustomVariableServiceBlockingStub> {
     private ConversionCustomVariableServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -211,11 +217,13 @@ public final class ConversionCustomVariableServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service ConversionCustomVariableService.
    * <pre>
    * Service to manage conversion custom variables.
    * </pre>
    */
-  public static final class ConversionCustomVariableServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ConversionCustomVariableServiceFutureStub> {
+  public static final class ConversionCustomVariableServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<ConversionCustomVariableServiceFutureStub> {
     private ConversionCustomVariableServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -256,10 +264,10 @@ public final class ConversionCustomVariableServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final ConversionCustomVariableServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(ConversionCustomVariableServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -286,6 +294,18 @@ public final class ConversionCustomVariableServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateConversionCustomVariablesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.MutateConversionCustomVariablesRequest,
+              com.google.ads.googleads.v13.services.MutateConversionCustomVariablesResponse>(
+                service, METHODID_MUTATE_CONVERSION_CUSTOM_VARIABLES)))
+        .build();
   }
 
   private static abstract class ConversionCustomVariableServiceBaseDescriptorSupplier

@@ -542,6 +542,7 @@ public class AudienceInsightsServiceClient implements BackgroundResource {
    *       GenerateAudienceCompositionInsightsRequest.newBuilder()
    *           .setCustomerId("customerId-1581184615")
    *           .setAudience(InsightsAudience.newBuilder().build())
+   *           .setBaselineAudience(InsightsAudience.newBuilder().build())
    *           .setDataMonth("dataMonth-380142346")
    *           .addAllDimensions(
    *               new ArrayList<AudienceInsightsDimensionEnum.AudienceInsightsDimension>())
@@ -584,6 +585,7 @@ public class AudienceInsightsServiceClient implements BackgroundResource {
    *       GenerateAudienceCompositionInsightsRequest.newBuilder()
    *           .setCustomerId("customerId-1581184615")
    *           .setAudience(InsightsAudience.newBuilder().build())
+   *           .setBaselineAudience(InsightsAudience.newBuilder().build())
    *           .setDataMonth("dataMonth-380142346")
    *           .addAllDimensions(
    *               new ArrayList<AudienceInsightsDimensionEnum.AudienceInsightsDimension>())

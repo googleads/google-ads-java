@@ -48,6 +48,7 @@ private static final long serialVersionUID = 0L;
     excludedParentAssetFieldTypes_ = java.util.Collections.emptyList();
     excludedParentAssetSetTypes_ = java.util.Collections.emptyList();
     hotelPropertyAssetSet_ = "";
+    listingType_ = 0;
   }
 
   @java.lang.Override
@@ -3899,7 +3900,9 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Immutable. Whether to target Vehicle Listing inventory.
+     * Immutable. Whether to target Vehicle Listing inventory. This field is
+     * supported only in Smart Shopping Campaigns. For setting Vehicle Listing
+     * inventory in Performance Max campaigns, use `listing_type` instead.
      * </pre>
      *
      * <code>bool use_vehicle_inventory = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -4183,7 +4186,9 @@ private static final long serialVersionUID = 0L;
     private boolean useVehicleInventory_ = false;
     /**
      * <pre>
-     * Immutable. Whether to target Vehicle Listing inventory.
+     * Immutable. Whether to target Vehicle Listing inventory. This field is
+     * supported only in Smart Shopping Campaigns. For setting Vehicle Listing
+     * inventory in Performance Max campaigns, use `listing_type` instead.
      * </pre>
      *
      * <code>bool use_vehicle_inventory = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -5112,7 +5117,9 @@ private static final long serialVersionUID = 0L;
       private boolean useVehicleInventory_ ;
       /**
        * <pre>
-       * Immutable. Whether to target Vehicle Listing inventory.
+       * Immutable. Whether to target Vehicle Listing inventory. This field is
+       * supported only in Smart Shopping Campaigns. For setting Vehicle Listing
+       * inventory in Performance Max campaigns, use `listing_type` instead.
        * </pre>
        *
        * <code>bool use_vehicle_inventory = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -5124,7 +5131,9 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Immutable. Whether to target Vehicle Listing inventory.
+       * Immutable. Whether to target Vehicle Listing inventory. This field is
+       * supported only in Smart Shopping Campaigns. For setting Vehicle Listing
+       * inventory in Performance Max campaigns, use `listing_type` instead.
        * </pre>
        *
        * <code>bool use_vehicle_inventory = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -5140,7 +5149,9 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Immutable. Whether to target Vehicle Listing inventory.
+       * Immutable. Whether to target Vehicle Listing inventory. This field is
+       * supported only in Smart Shopping Campaigns. For setting Vehicle Listing
+       * inventory in Performance Max campaigns, use `listing_type` instead.
        * </pre>
        *
        * <code>bool use_vehicle_inventory = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -15364,6 +15375,46 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int LISTING_TYPE_FIELD_NUMBER = 86;
+  private int listingType_ = 0;
+  /**
+   * <pre>
+   * Immutable. Listing type of ads served for this campaign.
+   * Field is restricted for usage with Performance Max campaigns.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v13.enums.ListingTypeEnum.ListingType listing_type = 86 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the listingType field is set.
+   */
+  @java.lang.Override public boolean hasListingType() {
+    return ((bitField0_ & 0x00002000) != 0);
+  }
+  /**
+   * <pre>
+   * Immutable. Listing type of ads served for this campaign.
+   * Field is restricted for usage with Performance Max campaigns.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v13.enums.ListingTypeEnum.ListingType listing_type = 86 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The enum numeric value on the wire for listingType.
+   */
+  @java.lang.Override public int getListingTypeValue() {
+    return listingType_;
+  }
+  /**
+   * <pre>
+   * Immutable. Listing type of ads served for this campaign.
+   * Field is restricted for usage with Performance Max campaigns.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v13.enums.ListingTypeEnum.ListingType listing_type = 86 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The listingType.
+   */
+  @java.lang.Override public com.google.ads.googleads.v13.enums.ListingTypeEnum.ListingType getListingType() {
+    com.google.ads.googleads.v13.enums.ListingTypeEnum.ListingType result = com.google.ads.googleads.v13.enums.ListingTypeEnum.ListingType.forNumber(listingType_);
+    return result == null ? com.google.ads.googleads.v13.enums.ListingTypeEnum.ListingType.UNRECOGNIZED : result;
+  }
+
   public static final int BIDDING_STRATEGY_FIELD_NUMBER = 67;
   /**
    * <pre>
@@ -16248,6 +16299,9 @@ private static final long serialVersionUID = 0L;
     if (travelCampaignSettings_ != null) {
       output.writeMessage(85, getTravelCampaignSettings());
     }
+    if (((bitField0_ & 0x00002000) != 0)) {
+      output.writeEnum(86, listingType_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -16521,6 +16575,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(85, getTravelCampaignSettings());
     }
+    if (((bitField0_ & 0x00002000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(86, listingType_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -16705,6 +16763,10 @@ private static final long serialVersionUID = 0L;
     if (hasHotelPropertyAssetSet()) {
       if (!getHotelPropertyAssetSet()
           .equals(other.getHotelPropertyAssetSet())) return false;
+    }
+    if (hasListingType() != other.hasListingType()) return false;
+    if (hasListingType()) {
+      if (listingType_ != other.listingType_) return false;
     }
     if (!getCampaignBiddingStrategyCase().equals(other.getCampaignBiddingStrategyCase())) return false;
     switch (campaignBiddingStrategyCase_) {
@@ -16946,6 +17008,10 @@ private static final long serialVersionUID = 0L;
     if (hasHotelPropertyAssetSet()) {
       hash = (37 * hash) + HOTEL_PROPERTY_ASSET_SET_FIELD_NUMBER;
       hash = (53 * hash) + getHotelPropertyAssetSet().hashCode();
+    }
+    if (hasListingType()) {
+      hash = (37 * hash) + LISTING_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + listingType_;
     }
     switch (campaignBiddingStrategyCase_) {
       case 67:
@@ -17297,6 +17363,7 @@ private static final long serialVersionUID = 0L;
         performanceMaxUpgradeBuilder_ = null;
       }
       hotelPropertyAssetSet_ = "";
+      listingType_ = 0;
       if (commissionBuilder_ != null) {
         commissionBuilder_.clear();
       }
@@ -17594,6 +17661,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField1_ & 0x00008000) != 0)) {
         result.hotelPropertyAssetSet_ = hotelPropertyAssetSet_;
         to_bitField0_ |= 0x00001000;
+      }
+      if (((from_bitField1_ & 0x00010000) != 0)) {
+        result.listingType_ = listingType_;
+        to_bitField0_ |= 0x00002000;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -17938,6 +18009,9 @@ private static final long serialVersionUID = 0L;
         hotelPropertyAssetSet_ = other.hotelPropertyAssetSet_;
         bitField1_ |= 0x00008000;
         onChanged();
+      }
+      if (other.hasListingType()) {
+        setListingType(other.getListingType());
       }
       switch (other.getCampaignBiddingStrategyCase()) {
         case BIDDING_STRATEGY: {
@@ -18452,6 +18526,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00004000;
               break;
             } // case 682
+            case 688: {
+              listingType_ = input.readEnum();
+              bitField1_ |= 0x00010000;
+              break;
+            } // case 688
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -24984,6 +25063,96 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       hotelPropertyAssetSet_ = value;
       bitField1_ |= 0x00008000;
+      onChanged();
+      return this;
+    }
+
+    private int listingType_ = 0;
+    /**
+     * <pre>
+     * Immutable. Listing type of ads served for this campaign.
+     * Field is restricted for usage with Performance Max campaigns.
+     * </pre>
+     *
+     * <code>optional .google.ads.googleads.v13.enums.ListingTypeEnum.ListingType listing_type = 86 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the listingType field is set.
+     */
+    @java.lang.Override public boolean hasListingType() {
+      return ((bitField1_ & 0x00010000) != 0);
+    }
+    /**
+     * <pre>
+     * Immutable. Listing type of ads served for this campaign.
+     * Field is restricted for usage with Performance Max campaigns.
+     * </pre>
+     *
+     * <code>optional .google.ads.googleads.v13.enums.ListingTypeEnum.ListingType listing_type = 86 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The enum numeric value on the wire for listingType.
+     */
+    @java.lang.Override public int getListingTypeValue() {
+      return listingType_;
+    }
+    /**
+     * <pre>
+     * Immutable. Listing type of ads served for this campaign.
+     * Field is restricted for usage with Performance Max campaigns.
+     * </pre>
+     *
+     * <code>optional .google.ads.googleads.v13.enums.ListingTypeEnum.ListingType listing_type = 86 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @param value The enum numeric value on the wire for listingType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setListingTypeValue(int value) {
+      listingType_ = value;
+      bitField1_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. Listing type of ads served for this campaign.
+     * Field is restricted for usage with Performance Max campaigns.
+     * </pre>
+     *
+     * <code>optional .google.ads.googleads.v13.enums.ListingTypeEnum.ListingType listing_type = 86 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The listingType.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v13.enums.ListingTypeEnum.ListingType getListingType() {
+      com.google.ads.googleads.v13.enums.ListingTypeEnum.ListingType result = com.google.ads.googleads.v13.enums.ListingTypeEnum.ListingType.forNumber(listingType_);
+      return result == null ? com.google.ads.googleads.v13.enums.ListingTypeEnum.ListingType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Immutable. Listing type of ads served for this campaign.
+     * Field is restricted for usage with Performance Max campaigns.
+     * </pre>
+     *
+     * <code>optional .google.ads.googleads.v13.enums.ListingTypeEnum.ListingType listing_type = 86 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @param value The listingType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setListingType(com.google.ads.googleads.v13.enums.ListingTypeEnum.ListingType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField1_ |= 0x00010000;
+      listingType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. Listing type of ads served for this campaign.
+     * Field is restricted for usage with Performance Max campaigns.
+     * </pre>
+     *
+     * <code>optional .google.ads.googleads.v13.enums.ListingTypeEnum.ListingType listing_type = 86 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearListingType() {
+      bitField1_ = (bitField1_ & ~0x00010000);
+      listingType_ = 0;
       onChanged();
       return this;
     }

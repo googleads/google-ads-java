@@ -6120,7 +6120,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Sitelink extensions to be added. This is a required field.
+     * Sitelinks to be added. This is a required field.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v13.common.SitelinkFeedItem sitelink_extensions = 1;</code>
@@ -6129,7 +6129,7 @@ private static final long serialVersionUID = 0L;
         getSitelinkExtensionsList();
     /**
      * <pre>
-     * Sitelink extensions to be added. This is a required field.
+     * Sitelinks to be added. This is a required field.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v13.common.SitelinkFeedItem sitelink_extensions = 1;</code>
@@ -6137,7 +6137,7 @@ private static final long serialVersionUID = 0L;
     com.google.ads.googleads.v13.common.SitelinkFeedItem getSitelinkExtensions(int index);
     /**
      * <pre>
-     * Sitelink extensions to be added. This is a required field.
+     * Sitelinks to be added. This is a required field.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v13.common.SitelinkFeedItem sitelink_extensions = 1;</code>
@@ -6145,7 +6145,7 @@ private static final long serialVersionUID = 0L;
     int getSitelinkExtensionsCount();
     /**
      * <pre>
-     * Sitelink extensions to be added. This is a required field.
+     * Sitelinks to be added. This is a required field.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v13.common.SitelinkFeedItem sitelink_extensions = 1;</code>
@@ -6154,7 +6154,7 @@ private static final long serialVersionUID = 0L;
         getSitelinkExtensionsOrBuilderList();
     /**
      * <pre>
-     * Sitelink extensions to be added. This is a required field.
+     * Sitelinks to be added. This is a required field.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v13.common.SitelinkFeedItem sitelink_extensions = 1;</code>
@@ -6164,7 +6164,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Parameters to use when applying sitelink extension recommendation.
+   * Parameters to use when applying sitelink recommendation.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v13.services.ApplyRecommendationOperation.SitelinkExtensionParameters}
@@ -6212,7 +6212,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v13.common.SitelinkFeedItem> sitelinkExtensions_;
     /**
      * <pre>
-     * Sitelink extensions to be added. This is a required field.
+     * Sitelinks to be added. This is a required field.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v13.common.SitelinkFeedItem sitelink_extensions = 1;</code>
@@ -6223,7 +6223,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Sitelink extensions to be added. This is a required field.
+     * Sitelinks to be added. This is a required field.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v13.common.SitelinkFeedItem sitelink_extensions = 1;</code>
@@ -6235,7 +6235,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Sitelink extensions to be added. This is a required field.
+     * Sitelinks to be added. This is a required field.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v13.common.SitelinkFeedItem sitelink_extensions = 1;</code>
@@ -6246,7 +6246,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Sitelink extensions to be added. This is a required field.
+     * Sitelinks to be added. This is a required field.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v13.common.SitelinkFeedItem sitelink_extensions = 1;</code>
@@ -6257,7 +6257,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Sitelink extensions to be added. This is a required field.
+     * Sitelinks to be added. This is a required field.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v13.common.SitelinkFeedItem sitelink_extensions = 1;</code>
@@ -6427,7 +6427,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Parameters to use when applying sitelink extension recommendation.
+     * Parameters to use when applying sitelink recommendation.
      * </pre>
      *
      * Protobuf type {@code google.ads.googleads.v13.services.ApplyRecommendationOperation.SitelinkExtensionParameters}
@@ -6658,7 +6658,7 @@ private static final long serialVersionUID = 0L;
 
       /**
        * <pre>
-       * Sitelink extensions to be added. This is a required field.
+       * Sitelinks to be added. This is a required field.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.common.SitelinkFeedItem sitelink_extensions = 1;</code>
@@ -6672,7 +6672,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Sitelink extensions to be added. This is a required field.
+       * Sitelinks to be added. This is a required field.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.common.SitelinkFeedItem sitelink_extensions = 1;</code>
@@ -6686,7 +6686,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Sitelink extensions to be added. This is a required field.
+       * Sitelinks to be added. This is a required field.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.common.SitelinkFeedItem sitelink_extensions = 1;</code>
@@ -6700,7 +6700,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Sitelink extensions to be added. This is a required field.
+       * Sitelinks to be added. This is a required field.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.common.SitelinkFeedItem sitelink_extensions = 1;</code>
@@ -6721,7 +6721,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Sitelink extensions to be added. This is a required field.
+       * Sitelinks to be added. This is a required field.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.common.SitelinkFeedItem sitelink_extensions = 1;</code>
@@ -6739,7 +6739,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Sitelink extensions to be added. This is a required field.
+       * Sitelinks to be added. This is a required field.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.common.SitelinkFeedItem sitelink_extensions = 1;</code>
@@ -6759,7 +6759,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Sitelink extensions to be added. This is a required field.
+       * Sitelinks to be added. This is a required field.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.common.SitelinkFeedItem sitelink_extensions = 1;</code>
@@ -6780,7 +6780,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Sitelink extensions to be added. This is a required field.
+       * Sitelinks to be added. This is a required field.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.common.SitelinkFeedItem sitelink_extensions = 1;</code>
@@ -6798,7 +6798,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Sitelink extensions to be added. This is a required field.
+       * Sitelinks to be added. This is a required field.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.common.SitelinkFeedItem sitelink_extensions = 1;</code>
@@ -6816,7 +6816,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Sitelink extensions to be added. This is a required field.
+       * Sitelinks to be added. This is a required field.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.common.SitelinkFeedItem sitelink_extensions = 1;</code>
@@ -6835,7 +6835,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Sitelink extensions to be added. This is a required field.
+       * Sitelinks to be added. This is a required field.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.common.SitelinkFeedItem sitelink_extensions = 1;</code>
@@ -6852,7 +6852,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Sitelink extensions to be added. This is a required field.
+       * Sitelinks to be added. This is a required field.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.common.SitelinkFeedItem sitelink_extensions = 1;</code>
@@ -6869,7 +6869,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Sitelink extensions to be added. This is a required field.
+       * Sitelinks to be added. This is a required field.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.common.SitelinkFeedItem sitelink_extensions = 1;</code>
@@ -6880,7 +6880,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Sitelink extensions to be added. This is a required field.
+       * Sitelinks to be added. This is a required field.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.common.SitelinkFeedItem sitelink_extensions = 1;</code>
@@ -6894,7 +6894,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Sitelink extensions to be added. This is a required field.
+       * Sitelinks to be added. This is a required field.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.common.SitelinkFeedItem sitelink_extensions = 1;</code>
@@ -6909,7 +6909,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Sitelink extensions to be added. This is a required field.
+       * Sitelinks to be added. This is a required field.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.common.SitelinkFeedItem sitelink_extensions = 1;</code>
@@ -6920,7 +6920,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Sitelink extensions to be added. This is a required field.
+       * Sitelinks to be added. This is a required field.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.common.SitelinkFeedItem sitelink_extensions = 1;</code>
@@ -6932,7 +6932,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Sitelink extensions to be added. This is a required field.
+       * Sitelinks to be added. This is a required field.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v13.common.SitelinkFeedItem sitelink_extensions = 1;</code>
@@ -14672,7 +14672,7 @@ private static final long serialVersionUID = 0L;
   public static final int SITELINK_EXTENSION_FIELD_NUMBER = 8;
   /**
    * <pre>
-   * Parameters to use when applying sitelink extension recommendation.
+   * Parameters to use when applying sitelink recommendation.
    * </pre>
    *
    * <code>.google.ads.googleads.v13.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>
@@ -14684,7 +14684,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Parameters to use when applying sitelink extension recommendation.
+   * Parameters to use when applying sitelink recommendation.
    * </pre>
    *
    * <code>.google.ads.googleads.v13.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>
@@ -14699,7 +14699,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Parameters to use when applying sitelink extension recommendation.
+   * Parameters to use when applying sitelink recommendation.
    * </pre>
    *
    * <code>.google.ads.googleads.v13.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>
@@ -17486,7 +17486,7 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v13.services.ApplyRecommendationOperation.SitelinkExtensionParameters, com.google.ads.googleads.v13.services.ApplyRecommendationOperation.SitelinkExtensionParameters.Builder, com.google.ads.googleads.v13.services.ApplyRecommendationOperation.SitelinkExtensionParametersOrBuilder> sitelinkExtensionBuilder_;
     /**
      * <pre>
-     * Parameters to use when applying sitelink extension recommendation.
+     * Parameters to use when applying sitelink recommendation.
      * </pre>
      *
      * <code>.google.ads.googleads.v13.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>
@@ -17498,7 +17498,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Parameters to use when applying sitelink extension recommendation.
+     * Parameters to use when applying sitelink recommendation.
      * </pre>
      *
      * <code>.google.ads.googleads.v13.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>
@@ -17520,7 +17520,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Parameters to use when applying sitelink extension recommendation.
+     * Parameters to use when applying sitelink recommendation.
      * </pre>
      *
      * <code>.google.ads.googleads.v13.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>
@@ -17540,7 +17540,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Parameters to use when applying sitelink extension recommendation.
+     * Parameters to use when applying sitelink recommendation.
      * </pre>
      *
      * <code>.google.ads.googleads.v13.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>
@@ -17558,7 +17558,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Parameters to use when applying sitelink extension recommendation.
+     * Parameters to use when applying sitelink recommendation.
      * </pre>
      *
      * <code>.google.ads.googleads.v13.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>
@@ -17585,7 +17585,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Parameters to use when applying sitelink extension recommendation.
+     * Parameters to use when applying sitelink recommendation.
      * </pre>
      *
      * <code>.google.ads.googleads.v13.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>
@@ -17608,7 +17608,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Parameters to use when applying sitelink extension recommendation.
+     * Parameters to use when applying sitelink recommendation.
      * </pre>
      *
      * <code>.google.ads.googleads.v13.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>
@@ -17618,7 +17618,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Parameters to use when applying sitelink extension recommendation.
+     * Parameters to use when applying sitelink recommendation.
      * </pre>
      *
      * <code>.google.ads.googleads.v13.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>
@@ -17636,7 +17636,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Parameters to use when applying sitelink extension recommendation.
+     * Parameters to use when applying sitelink recommendation.
      * </pre>
      *
      * <code>.google.ads.googleads.v13.services.ApplyRecommendationOperation.SitelinkExtensionParameters sitelink_extension = 8;</code>

@@ -98,7 +98,7 @@ public final class CustomerClientLinkServiceGrpc {
    * Service to manage customer client links.
    * </pre>
    */
-  public static abstract class CustomerClientLinkServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -118,30 +118,34 @@ public final class CustomerClientLinkServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void mutateCustomerClientLink(com.google.ads.googleads.v13.services.MutateCustomerClientLinkRequest request,
+    default void mutateCustomerClientLink(com.google.ads.googleads.v13.services.MutateCustomerClientLinkRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.MutateCustomerClientLinkResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateCustomerClientLinkMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateCustomerClientLinkMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.MutateCustomerClientLinkRequest,
-                com.google.ads.googleads.v13.services.MutateCustomerClientLinkResponse>(
-                  this, METHODID_MUTATE_CUSTOMER_CLIENT_LINK)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service CustomerClientLinkService.
    * <pre>
    * Service to manage customer client links.
    * </pre>
    */
-  public static final class CustomerClientLinkServiceStub extends io.grpc.stub.AbstractAsyncStub<CustomerClientLinkServiceStub> {
+  public static abstract class CustomerClientLinkServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return CustomerClientLinkServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service CustomerClientLinkService.
+   * <pre>
+   * Service to manage customer client links.
+   * </pre>
+   */
+  public static final class CustomerClientLinkServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<CustomerClientLinkServiceStub> {
     private CustomerClientLinkServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -179,11 +183,13 @@ public final class CustomerClientLinkServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service CustomerClientLinkService.
    * <pre>
    * Service to manage customer client links.
    * </pre>
    */
-  public static final class CustomerClientLinkServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CustomerClientLinkServiceBlockingStub> {
+  public static final class CustomerClientLinkServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<CustomerClientLinkServiceBlockingStub> {
     private CustomerClientLinkServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -220,11 +226,13 @@ public final class CustomerClientLinkServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service CustomerClientLinkService.
    * <pre>
    * Service to manage customer client links.
    * </pre>
    */
-  public static final class CustomerClientLinkServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CustomerClientLinkServiceFutureStub> {
+  public static final class CustomerClientLinkServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<CustomerClientLinkServiceFutureStub> {
     private CustomerClientLinkServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -268,10 +276,10 @@ public final class CustomerClientLinkServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final CustomerClientLinkServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(CustomerClientLinkServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -298,6 +306,18 @@ public final class CustomerClientLinkServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateCustomerClientLinkMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.MutateCustomerClientLinkRequest,
+              com.google.ads.googleads.v13.services.MutateCustomerClientLinkResponse>(
+                service, METHODID_MUTATE_CUSTOMER_CLIENT_LINK)))
+        .build();
   }
 
   private static abstract class CustomerClientLinkServiceBaseDescriptorSupplier

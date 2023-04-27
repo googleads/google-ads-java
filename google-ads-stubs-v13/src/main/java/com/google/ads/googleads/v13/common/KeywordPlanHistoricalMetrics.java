@@ -6,7 +6,7 @@ package com.google.ads.googleads.v13.common;
 /**
  * <pre>
  * Historical metrics specific to the targeting options selected.
- * Targeting options include geographies, network, etc.
+ * Targeting options include geographies, network, and so on.
  * Refer to https://support.google.com/google-ads/answer/3022575 for more
  * details.
  * </pre>
@@ -57,7 +57,7 @@ private static final long serialVersionUID = 0L;
   private long avgMonthlySearches_ = 0L;
   /**
    * <pre>
-   * Approximate number of monthly searches on this query averaged
+   * Approximate number of monthly searches on this query, averaged
    * for the past 12 months.
    * </pre>
    *
@@ -70,7 +70,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Approximate number of monthly searches on this query averaged
+   * Approximate number of monthly searches on this query, averaged
    * for the past 12 months.
    * </pre>
    *
@@ -540,7 +540,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Historical metrics specific to the targeting options selected.
-   * Targeting options include geographies, network, etc.
+   * Targeting options include geographies, network, and so on.
    * Refer to https://support.google.com/google-ads/answer/3022575 for more
    * details.
    * </pre>
@@ -841,7 +841,7 @@ private static final long serialVersionUID = 0L;
     private long avgMonthlySearches_ ;
     /**
      * <pre>
-     * Approximate number of monthly searches on this query averaged
+     * Approximate number of monthly searches on this query, averaged
      * for the past 12 months.
      * </pre>
      *
@@ -854,7 +854,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Approximate number of monthly searches on this query averaged
+     * Approximate number of monthly searches on this query, averaged
      * for the past 12 months.
      * </pre>
      *
@@ -867,7 +867,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Approximate number of monthly searches on this query averaged
+     * Approximate number of monthly searches on this query, averaged
      * for the past 12 months.
      * </pre>
      *
@@ -884,7 +884,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Approximate number of monthly searches on this query averaged
+     * Approximate number of monthly searches on this query, averaged
      * for the past 12 months.
      * </pre>
      *

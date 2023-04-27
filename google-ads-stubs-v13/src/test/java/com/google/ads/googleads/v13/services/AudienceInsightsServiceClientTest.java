@@ -16,6 +16,7 @@
 
 package com.google.ads.googleads.v13.services;
 
+import com.google.ads.googleads.v13.common.DateRange;
 import com.google.ads.googleads.v13.enums.AudienceInsightsDimensionEnum;
 import com.google.api.gax.core.NoCredentialsProvider;
 import com.google.api.gax.grpc.GaxGrpcProperties;
@@ -175,6 +176,7 @@ public class AudienceInsightsServiceClientTest {
     ListInsightsEligibleDatesResponse expectedResponse =
         ListInsightsEligibleDatesResponse.newBuilder()
             .addAllDataMonths(new ArrayList<String>())
+            .setLastThirtyDays(DateRange.newBuilder().build())
             .build();
     mockAudienceInsightsService.addResponse(expectedResponse);
 

@@ -98,7 +98,7 @@ public final class AudienceServiceGrpc {
    * Service to manage audiences.
    * </pre>
    */
-  public static abstract class AudienceServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -107,30 +107,34 @@ public final class AudienceServiceGrpc {
      *   [AudienceError]()
      * </pre>
      */
-    public void mutateAudiences(com.google.ads.googleads.v13.services.MutateAudiencesRequest request,
+    default void mutateAudiences(com.google.ads.googleads.v13.services.MutateAudiencesRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.MutateAudiencesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateAudiencesMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateAudiencesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.MutateAudiencesRequest,
-                com.google.ads.googleads.v13.services.MutateAudiencesResponse>(
-                  this, METHODID_MUTATE_AUDIENCES)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service AudienceService.
    * <pre>
    * Service to manage audiences.
    * </pre>
    */
-  public static final class AudienceServiceStub extends io.grpc.stub.AbstractAsyncStub<AudienceServiceStub> {
+  public static abstract class AudienceServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return AudienceServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service AudienceService.
+   * <pre>
+   * Service to manage audiences.
+   * </pre>
+   */
+  public static final class AudienceServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<AudienceServiceStub> {
     private AudienceServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -157,11 +161,13 @@ public final class AudienceServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service AudienceService.
    * <pre>
    * Service to manage audiences.
    * </pre>
    */
-  public static final class AudienceServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<AudienceServiceBlockingStub> {
+  public static final class AudienceServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<AudienceServiceBlockingStub> {
     private AudienceServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -187,11 +193,13 @@ public final class AudienceServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service AudienceService.
    * <pre>
    * Service to manage audiences.
    * </pre>
    */
-  public static final class AudienceServiceFutureStub extends io.grpc.stub.AbstractFutureStub<AudienceServiceFutureStub> {
+  public static final class AudienceServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<AudienceServiceFutureStub> {
     private AudienceServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -224,10 +232,10 @@ public final class AudienceServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AudienceServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AudienceServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -254,6 +262,18 @@ public final class AudienceServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateAudiencesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.MutateAudiencesRequest,
+              com.google.ads.googleads.v13.services.MutateAudiencesResponse>(
+                service, METHODID_MUTATE_AUDIENCES)))
+        .build();
   }
 
   private static abstract class AudienceServiceBaseDescriptorSupplier

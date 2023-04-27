@@ -104,6 +104,53 @@ private static final long serialVersionUID = 0L;
     return dataMonths_.getByteString(index);
   }
 
+  public static final int LAST_THIRTY_DAYS_FIELD_NUMBER = 2;
+  private com.google.ads.googleads.v13.common.DateRange lastThirtyDays_;
+  /**
+   * <pre>
+   * The actual dates covered by the "last 30 days" date range that will be used
+   * implicitly for
+   * [AudienceInsightsService.GenerateAudienceCompositionInsights][google.ads.googleads.v13.services.AudienceInsightsService.GenerateAudienceCompositionInsights]
+   * requests that have no data_month set.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.common.DateRange last_thirty_days = 2;</code>
+   * @return Whether the lastThirtyDays field is set.
+   */
+  @java.lang.Override
+  public boolean hasLastThirtyDays() {
+    return lastThirtyDays_ != null;
+  }
+  /**
+   * <pre>
+   * The actual dates covered by the "last 30 days" date range that will be used
+   * implicitly for
+   * [AudienceInsightsService.GenerateAudienceCompositionInsights][google.ads.googleads.v13.services.AudienceInsightsService.GenerateAudienceCompositionInsights]
+   * requests that have no data_month set.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.common.DateRange last_thirty_days = 2;</code>
+   * @return The lastThirtyDays.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v13.common.DateRange getLastThirtyDays() {
+    return lastThirtyDays_ == null ? com.google.ads.googleads.v13.common.DateRange.getDefaultInstance() : lastThirtyDays_;
+  }
+  /**
+   * <pre>
+   * The actual dates covered by the "last 30 days" date range that will be used
+   * implicitly for
+   * [AudienceInsightsService.GenerateAudienceCompositionInsights][google.ads.googleads.v13.services.AudienceInsightsService.GenerateAudienceCompositionInsights]
+   * requests that have no data_month set.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v13.common.DateRange last_thirty_days = 2;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v13.common.DateRangeOrBuilder getLastThirtyDaysOrBuilder() {
+    return lastThirtyDays_ == null ? com.google.ads.googleads.v13.common.DateRange.getDefaultInstance() : lastThirtyDays_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -120,6 +167,9 @@ private static final long serialVersionUID = 0L;
                       throws java.io.IOException {
     for (int i = 0; i < dataMonths_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dataMonths_.getRaw(i));
+    }
+    if (lastThirtyDays_ != null) {
+      output.writeMessage(2, getLastThirtyDays());
     }
     getUnknownFields().writeTo(output);
   }
@@ -138,6 +188,10 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getDataMonthsList().size();
     }
+    if (lastThirtyDays_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getLastThirtyDays());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -155,6 +209,11 @@ private static final long serialVersionUID = 0L;
 
     if (!getDataMonthsList()
         .equals(other.getDataMonthsList())) return false;
+    if (hasLastThirtyDays() != other.hasLastThirtyDays()) return false;
+    if (hasLastThirtyDays()) {
+      if (!getLastThirtyDays()
+          .equals(other.getLastThirtyDays())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -169,6 +228,10 @@ private static final long serialVersionUID = 0L;
     if (getDataMonthsCount() > 0) {
       hash = (37 * hash) + DATA_MONTHS_FIELD_NUMBER;
       hash = (53 * hash) + getDataMonthsList().hashCode();
+    }
+    if (hasLastThirtyDays()) {
+      hash = (37 * hash) + LAST_THIRTY_DAYS_FIELD_NUMBER;
+      hash = (53 * hash) + getLastThirtyDays().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -305,6 +368,11 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       dataMonths_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       bitField0_ = (bitField0_ & ~0x00000001);
+      lastThirtyDays_ = null;
+      if (lastThirtyDaysBuilder_ != null) {
+        lastThirtyDaysBuilder_.dispose();
+        lastThirtyDaysBuilder_ = null;
+      }
       return this;
     }
 
@@ -347,6 +415,11 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.google.ads.googleads.v13.services.ListInsightsEligibleDatesResponse result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.lastThirtyDays_ = lastThirtyDaysBuilder_ == null
+            ? lastThirtyDays_
+            : lastThirtyDaysBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -403,6 +476,9 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (other.hasLastThirtyDays()) {
+        mergeLastThirtyDays(other.getLastThirtyDays());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -435,6 +511,13 @@ private static final long serialVersionUID = 0L;
               dataMonths_.add(s);
               break;
             } // case 10
+            case 18: {
+              input.readMessage(
+                  getLastThirtyDaysFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -599,6 +682,188 @@ private static final long serialVersionUID = 0L;
       dataMonths_.add(value);
       onChanged();
       return this;
+    }
+
+    private com.google.ads.googleads.v13.common.DateRange lastThirtyDays_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v13.common.DateRange, com.google.ads.googleads.v13.common.DateRange.Builder, com.google.ads.googleads.v13.common.DateRangeOrBuilder> lastThirtyDaysBuilder_;
+    /**
+     * <pre>
+     * The actual dates covered by the "last 30 days" date range that will be used
+     * implicitly for
+     * [AudienceInsightsService.GenerateAudienceCompositionInsights][google.ads.googleads.v13.services.AudienceInsightsService.GenerateAudienceCompositionInsights]
+     * requests that have no data_month set.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.common.DateRange last_thirty_days = 2;</code>
+     * @return Whether the lastThirtyDays field is set.
+     */
+    public boolean hasLastThirtyDays() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * The actual dates covered by the "last 30 days" date range that will be used
+     * implicitly for
+     * [AudienceInsightsService.GenerateAudienceCompositionInsights][google.ads.googleads.v13.services.AudienceInsightsService.GenerateAudienceCompositionInsights]
+     * requests that have no data_month set.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.common.DateRange last_thirty_days = 2;</code>
+     * @return The lastThirtyDays.
+     */
+    public com.google.ads.googleads.v13.common.DateRange getLastThirtyDays() {
+      if (lastThirtyDaysBuilder_ == null) {
+        return lastThirtyDays_ == null ? com.google.ads.googleads.v13.common.DateRange.getDefaultInstance() : lastThirtyDays_;
+      } else {
+        return lastThirtyDaysBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The actual dates covered by the "last 30 days" date range that will be used
+     * implicitly for
+     * [AudienceInsightsService.GenerateAudienceCompositionInsights][google.ads.googleads.v13.services.AudienceInsightsService.GenerateAudienceCompositionInsights]
+     * requests that have no data_month set.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.common.DateRange last_thirty_days = 2;</code>
+     */
+    public Builder setLastThirtyDays(com.google.ads.googleads.v13.common.DateRange value) {
+      if (lastThirtyDaysBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        lastThirtyDays_ = value;
+      } else {
+        lastThirtyDaysBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The actual dates covered by the "last 30 days" date range that will be used
+     * implicitly for
+     * [AudienceInsightsService.GenerateAudienceCompositionInsights][google.ads.googleads.v13.services.AudienceInsightsService.GenerateAudienceCompositionInsights]
+     * requests that have no data_month set.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.common.DateRange last_thirty_days = 2;</code>
+     */
+    public Builder setLastThirtyDays(
+        com.google.ads.googleads.v13.common.DateRange.Builder builderForValue) {
+      if (lastThirtyDaysBuilder_ == null) {
+        lastThirtyDays_ = builderForValue.build();
+      } else {
+        lastThirtyDaysBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The actual dates covered by the "last 30 days" date range that will be used
+     * implicitly for
+     * [AudienceInsightsService.GenerateAudienceCompositionInsights][google.ads.googleads.v13.services.AudienceInsightsService.GenerateAudienceCompositionInsights]
+     * requests that have no data_month set.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.common.DateRange last_thirty_days = 2;</code>
+     */
+    public Builder mergeLastThirtyDays(com.google.ads.googleads.v13.common.DateRange value) {
+      if (lastThirtyDaysBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0) &&
+          lastThirtyDays_ != null &&
+          lastThirtyDays_ != com.google.ads.googleads.v13.common.DateRange.getDefaultInstance()) {
+          getLastThirtyDaysBuilder().mergeFrom(value);
+        } else {
+          lastThirtyDays_ = value;
+        }
+      } else {
+        lastThirtyDaysBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The actual dates covered by the "last 30 days" date range that will be used
+     * implicitly for
+     * [AudienceInsightsService.GenerateAudienceCompositionInsights][google.ads.googleads.v13.services.AudienceInsightsService.GenerateAudienceCompositionInsights]
+     * requests that have no data_month set.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.common.DateRange last_thirty_days = 2;</code>
+     */
+    public Builder clearLastThirtyDays() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      lastThirtyDays_ = null;
+      if (lastThirtyDaysBuilder_ != null) {
+        lastThirtyDaysBuilder_.dispose();
+        lastThirtyDaysBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The actual dates covered by the "last 30 days" date range that will be used
+     * implicitly for
+     * [AudienceInsightsService.GenerateAudienceCompositionInsights][google.ads.googleads.v13.services.AudienceInsightsService.GenerateAudienceCompositionInsights]
+     * requests that have no data_month set.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.common.DateRange last_thirty_days = 2;</code>
+     */
+    public com.google.ads.googleads.v13.common.DateRange.Builder getLastThirtyDaysBuilder() {
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return getLastThirtyDaysFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The actual dates covered by the "last 30 days" date range that will be used
+     * implicitly for
+     * [AudienceInsightsService.GenerateAudienceCompositionInsights][google.ads.googleads.v13.services.AudienceInsightsService.GenerateAudienceCompositionInsights]
+     * requests that have no data_month set.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.common.DateRange last_thirty_days = 2;</code>
+     */
+    public com.google.ads.googleads.v13.common.DateRangeOrBuilder getLastThirtyDaysOrBuilder() {
+      if (lastThirtyDaysBuilder_ != null) {
+        return lastThirtyDaysBuilder_.getMessageOrBuilder();
+      } else {
+        return lastThirtyDays_ == null ?
+            com.google.ads.googleads.v13.common.DateRange.getDefaultInstance() : lastThirtyDays_;
+      }
+    }
+    /**
+     * <pre>
+     * The actual dates covered by the "last 30 days" date range that will be used
+     * implicitly for
+     * [AudienceInsightsService.GenerateAudienceCompositionInsights][google.ads.googleads.v13.services.AudienceInsightsService.GenerateAudienceCompositionInsights]
+     * requests that have no data_month set.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v13.common.DateRange last_thirty_days = 2;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v13.common.DateRange, com.google.ads.googleads.v13.common.DateRange.Builder, com.google.ads.googleads.v13.common.DateRangeOrBuilder> 
+        getLastThirtyDaysFieldBuilder() {
+      if (lastThirtyDaysBuilder_ == null) {
+        lastThirtyDaysBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v13.common.DateRange, com.google.ads.googleads.v13.common.DateRange.Builder, com.google.ads.googleads.v13.common.DateRangeOrBuilder>(
+                getLastThirtyDays(),
+                getParentForChildren(),
+                isClean());
+        lastThirtyDays_ = null;
+      }
+      return lastThirtyDaysBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

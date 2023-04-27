@@ -100,7 +100,7 @@ public final class CustomerUserAccessInvitationServiceGrpc {
    * customer.
    * </pre>
    */
-  public static abstract class CustomerUserAccessInvitationServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -115,31 +115,36 @@ public final class CustomerUserAccessInvitationServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void mutateCustomerUserAccessInvitation(com.google.ads.googleads.v13.services.MutateCustomerUserAccessInvitationRequest request,
+    default void mutateCustomerUserAccessInvitation(com.google.ads.googleads.v13.services.MutateCustomerUserAccessInvitationRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.MutateCustomerUserAccessInvitationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateCustomerUserAccessInvitationMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateCustomerUserAccessInvitationMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.MutateCustomerUserAccessInvitationRequest,
-                com.google.ads.googleads.v13.services.MutateCustomerUserAccessInvitationResponse>(
-                  this, METHODID_MUTATE_CUSTOMER_USER_ACCESS_INVITATION)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service CustomerUserAccessInvitationService.
    * <pre>
    * This service manages the access invitation extended to users for a given
    * customer.
    * </pre>
    */
-  public static final class CustomerUserAccessInvitationServiceStub extends io.grpc.stub.AbstractAsyncStub<CustomerUserAccessInvitationServiceStub> {
+  public static abstract class CustomerUserAccessInvitationServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return CustomerUserAccessInvitationServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service CustomerUserAccessInvitationService.
+   * <pre>
+   * This service manages the access invitation extended to users for a given
+   * customer.
+   * </pre>
+   */
+  public static final class CustomerUserAccessInvitationServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<CustomerUserAccessInvitationServiceStub> {
     private CustomerUserAccessInvitationServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -172,12 +177,14 @@ public final class CustomerUserAccessInvitationServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service CustomerUserAccessInvitationService.
    * <pre>
    * This service manages the access invitation extended to users for a given
    * customer.
    * </pre>
    */
-  public static final class CustomerUserAccessInvitationServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CustomerUserAccessInvitationServiceBlockingStub> {
+  public static final class CustomerUserAccessInvitationServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<CustomerUserAccessInvitationServiceBlockingStub> {
     private CustomerUserAccessInvitationServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -209,12 +216,14 @@ public final class CustomerUserAccessInvitationServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service CustomerUserAccessInvitationService.
    * <pre>
    * This service manages the access invitation extended to users for a given
    * customer.
    * </pre>
    */
-  public static final class CustomerUserAccessInvitationServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CustomerUserAccessInvitationServiceFutureStub> {
+  public static final class CustomerUserAccessInvitationServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<CustomerUserAccessInvitationServiceFutureStub> {
     private CustomerUserAccessInvitationServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -253,10 +262,10 @@ public final class CustomerUserAccessInvitationServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final CustomerUserAccessInvitationServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(CustomerUserAccessInvitationServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -283,6 +292,18 @@ public final class CustomerUserAccessInvitationServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateCustomerUserAccessInvitationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.MutateCustomerUserAccessInvitationRequest,
+              com.google.ads.googleads.v13.services.MutateCustomerUserAccessInvitationResponse>(
+                service, METHODID_MUTATE_CUSTOMER_USER_ACCESS_INVITATION)))
+        .build();
   }
 
   private static abstract class CustomerUserAccessInvitationServiceBaseDescriptorSupplier

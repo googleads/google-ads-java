@@ -98,7 +98,7 @@ public final class MediaFileServiceGrpc {
    * Service to manage media files.
    * </pre>
    */
-  public static abstract class MediaFileServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -127,30 +127,34 @@ public final class MediaFileServiceGrpc {
      *   [StringLengthError]()
      * </pre>
      */
-    public void mutateMediaFiles(com.google.ads.googleads.v13.services.MutateMediaFilesRequest request,
+    default void mutateMediaFiles(com.google.ads.googleads.v13.services.MutateMediaFilesRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.MutateMediaFilesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateMediaFilesMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateMediaFilesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.MutateMediaFilesRequest,
-                com.google.ads.googleads.v13.services.MutateMediaFilesResponse>(
-                  this, METHODID_MUTATE_MEDIA_FILES)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service MediaFileService.
    * <pre>
    * Service to manage media files.
    * </pre>
    */
-  public static final class MediaFileServiceStub extends io.grpc.stub.AbstractAsyncStub<MediaFileServiceStub> {
+  public static abstract class MediaFileServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return MediaFileServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service MediaFileService.
+   * <pre>
+   * Service to manage media files.
+   * </pre>
+   */
+  public static final class MediaFileServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<MediaFileServiceStub> {
     private MediaFileServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -197,11 +201,13 @@ public final class MediaFileServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service MediaFileService.
    * <pre>
    * Service to manage media files.
    * </pre>
    */
-  public static final class MediaFileServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<MediaFileServiceBlockingStub> {
+  public static final class MediaFileServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<MediaFileServiceBlockingStub> {
     private MediaFileServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -247,11 +253,13 @@ public final class MediaFileServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service MediaFileService.
    * <pre>
    * Service to manage media files.
    * </pre>
    */
-  public static final class MediaFileServiceFutureStub extends io.grpc.stub.AbstractFutureStub<MediaFileServiceFutureStub> {
+  public static final class MediaFileServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<MediaFileServiceFutureStub> {
     private MediaFileServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -304,10 +312,10 @@ public final class MediaFileServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final MediaFileServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(MediaFileServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -334,6 +342,18 @@ public final class MediaFileServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateMediaFilesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.MutateMediaFilesRequest,
+              com.google.ads.googleads.v13.services.MutateMediaFilesResponse>(
+                service, METHODID_MUTATE_MEDIA_FILES)))
+        .build();
   }
 
   private static abstract class MediaFileServiceBaseDescriptorSupplier

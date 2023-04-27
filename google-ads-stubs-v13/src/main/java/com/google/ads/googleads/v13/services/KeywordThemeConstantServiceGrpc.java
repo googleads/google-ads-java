@@ -98,7 +98,7 @@ public final class KeywordThemeConstantServiceGrpc {
    * Service to fetch Smart Campaign keyword themes.
    * </pre>
    */
-  public static abstract class KeywordThemeConstantServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -112,30 +112,34 @@ public final class KeywordThemeConstantServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void suggestKeywordThemeConstants(com.google.ads.googleads.v13.services.SuggestKeywordThemeConstantsRequest request,
+    default void suggestKeywordThemeConstants(com.google.ads.googleads.v13.services.SuggestKeywordThemeConstantsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.SuggestKeywordThemeConstantsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSuggestKeywordThemeConstantsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getSuggestKeywordThemeConstantsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.SuggestKeywordThemeConstantsRequest,
-                com.google.ads.googleads.v13.services.SuggestKeywordThemeConstantsResponse>(
-                  this, METHODID_SUGGEST_KEYWORD_THEME_CONSTANTS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service KeywordThemeConstantService.
    * <pre>
    * Service to fetch Smart Campaign keyword themes.
    * </pre>
    */
-  public static final class KeywordThemeConstantServiceStub extends io.grpc.stub.AbstractAsyncStub<KeywordThemeConstantServiceStub> {
+  public static abstract class KeywordThemeConstantServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return KeywordThemeConstantServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service KeywordThemeConstantService.
+   * <pre>
+   * Service to fetch Smart Campaign keyword themes.
+   * </pre>
+   */
+  public static final class KeywordThemeConstantServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<KeywordThemeConstantServiceStub> {
     private KeywordThemeConstantServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -167,11 +171,13 @@ public final class KeywordThemeConstantServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service KeywordThemeConstantService.
    * <pre>
    * Service to fetch Smart Campaign keyword themes.
    * </pre>
    */
-  public static final class KeywordThemeConstantServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<KeywordThemeConstantServiceBlockingStub> {
+  public static final class KeywordThemeConstantServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<KeywordThemeConstantServiceBlockingStub> {
     private KeywordThemeConstantServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -202,11 +208,13 @@ public final class KeywordThemeConstantServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service KeywordThemeConstantService.
    * <pre>
    * Service to fetch Smart Campaign keyword themes.
    * </pre>
    */
-  public static final class KeywordThemeConstantServiceFutureStub extends io.grpc.stub.AbstractFutureStub<KeywordThemeConstantServiceFutureStub> {
+  public static final class KeywordThemeConstantServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<KeywordThemeConstantServiceFutureStub> {
     private KeywordThemeConstantServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -244,10 +252,10 @@ public final class KeywordThemeConstantServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final KeywordThemeConstantServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(KeywordThemeConstantServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -274,6 +282,18 @@ public final class KeywordThemeConstantServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getSuggestKeywordThemeConstantsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.SuggestKeywordThemeConstantsRequest,
+              com.google.ads.googleads.v13.services.SuggestKeywordThemeConstantsResponse>(
+                service, METHODID_SUGGEST_KEYWORD_THEME_CONSTANTS)))
+        .build();
   }
 
   private static abstract class KeywordThemeConstantServiceBaseDescriptorSupplier

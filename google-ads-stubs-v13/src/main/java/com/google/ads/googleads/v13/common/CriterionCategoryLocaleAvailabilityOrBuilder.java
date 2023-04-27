@@ -34,7 +34,7 @@ public interface CriterionCategoryLocaleAvailabilityOrBuilder extends
 
   /**
    * <pre>
-   * Code of the country.
+   * The ISO-3166-1 alpha-2 country code associated with the category.
    * </pre>
    *
    * <code>optional string country_code = 4;</code>
@@ -43,7 +43,7 @@ public interface CriterionCategoryLocaleAvailabilityOrBuilder extends
   boolean hasCountryCode();
   /**
    * <pre>
-   * Code of the country.
+   * The ISO-3166-1 alpha-2 country code associated with the category.
    * </pre>
    *
    * <code>optional string country_code = 4;</code>
@@ -52,7 +52,7 @@ public interface CriterionCategoryLocaleAvailabilityOrBuilder extends
   java.lang.String getCountryCode();
   /**
    * <pre>
-   * Code of the country.
+   * The ISO-3166-1 alpha-2 country code associated with the category.
    * </pre>
    *
    * <code>optional string country_code = 4;</code>
@@ -63,7 +63,7 @@ public interface CriterionCategoryLocaleAvailabilityOrBuilder extends
 
   /**
    * <pre>
-   * Code of the language.
+   * ISO 639-1 code of the language associated with the category.
    * </pre>
    *
    * <code>optional string language_code = 5;</code>
@@ -72,7 +72,7 @@ public interface CriterionCategoryLocaleAvailabilityOrBuilder extends
   boolean hasLanguageCode();
   /**
    * <pre>
-   * Code of the language.
+   * ISO 639-1 code of the language associated with the category.
    * </pre>
    *
    * <code>optional string language_code = 5;</code>
@@ -81,7 +81,7 @@ public interface CriterionCategoryLocaleAvailabilityOrBuilder extends
   java.lang.String getLanguageCode();
   /**
    * <pre>
-   * Code of the language.
+   * ISO 639-1 code of the language associated with the category.
    * </pre>
    *
    * <code>optional string language_code = 5;</code>

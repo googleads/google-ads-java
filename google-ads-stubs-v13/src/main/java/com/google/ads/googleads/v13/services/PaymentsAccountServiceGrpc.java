@@ -100,7 +100,7 @@ public final class PaymentsAccountServiceGrpc {
    * billing.
    * </pre>
    */
-  public static abstract class PaymentsAccountServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -117,31 +117,36 @@ public final class PaymentsAccountServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void listPaymentsAccounts(com.google.ads.googleads.v13.services.ListPaymentsAccountsRequest request,
+    default void listPaymentsAccounts(com.google.ads.googleads.v13.services.ListPaymentsAccountsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.ListPaymentsAccountsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListPaymentsAccountsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getListPaymentsAccountsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.ListPaymentsAccountsRequest,
-                com.google.ads.googleads.v13.services.ListPaymentsAccountsResponse>(
-                  this, METHODID_LIST_PAYMENTS_ACCOUNTS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service PaymentsAccountService.
    * <pre>
    * Service to provide payments accounts that can be used to set up consolidated
    * billing.
    * </pre>
    */
-  public static final class PaymentsAccountServiceStub extends io.grpc.stub.AbstractAsyncStub<PaymentsAccountServiceStub> {
+  public static abstract class PaymentsAccountServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return PaymentsAccountServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service PaymentsAccountService.
+   * <pre>
+   * Service to provide payments accounts that can be used to set up consolidated
+   * billing.
+   * </pre>
+   */
+  public static final class PaymentsAccountServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<PaymentsAccountServiceStub> {
     private PaymentsAccountServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -176,12 +181,14 @@ public final class PaymentsAccountServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service PaymentsAccountService.
    * <pre>
    * Service to provide payments accounts that can be used to set up consolidated
    * billing.
    * </pre>
    */
-  public static final class PaymentsAccountServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<PaymentsAccountServiceBlockingStub> {
+  public static final class PaymentsAccountServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<PaymentsAccountServiceBlockingStub> {
     private PaymentsAccountServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -215,12 +222,14 @@ public final class PaymentsAccountServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service PaymentsAccountService.
    * <pre>
    * Service to provide payments accounts that can be used to set up consolidated
    * billing.
    * </pre>
    */
-  public static final class PaymentsAccountServiceFutureStub extends io.grpc.stub.AbstractFutureStub<PaymentsAccountServiceFutureStub> {
+  public static final class PaymentsAccountServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<PaymentsAccountServiceFutureStub> {
     private PaymentsAccountServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -261,10 +270,10 @@ public final class PaymentsAccountServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final PaymentsAccountServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(PaymentsAccountServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -291,6 +300,18 @@ public final class PaymentsAccountServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getListPaymentsAccountsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.ListPaymentsAccountsRequest,
+              com.google.ads.googleads.v13.services.ListPaymentsAccountsResponse>(
+                service, METHODID_LIST_PAYMENTS_ACCOUNTS)))
+        .build();
   }
 
   private static abstract class PaymentsAccountServiceBaseDescriptorSupplier

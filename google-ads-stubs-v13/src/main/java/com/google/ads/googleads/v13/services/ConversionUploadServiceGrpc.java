@@ -129,7 +129,7 @@ public final class ConversionUploadServiceGrpc {
    * Service to upload conversions.
    * </pre>
    */
-  public static abstract class ConversionUploadServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -145,7 +145,7 @@ public final class ConversionUploadServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void uploadClickConversions(com.google.ads.googleads.v13.services.UploadClickConversionsRequest request,
+    default void uploadClickConversions(com.google.ads.googleads.v13.services.UploadClickConversionsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.UploadClickConversionsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUploadClickConversionsMethod(), responseObserver);
     }
@@ -163,37 +163,34 @@ public final class ConversionUploadServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void uploadCallConversions(com.google.ads.googleads.v13.services.UploadCallConversionsRequest request,
+    default void uploadCallConversions(com.google.ads.googleads.v13.services.UploadCallConversionsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.UploadCallConversionsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUploadCallConversionsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getUploadClickConversionsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.UploadClickConversionsRequest,
-                com.google.ads.googleads.v13.services.UploadClickConversionsResponse>(
-                  this, METHODID_UPLOAD_CLICK_CONVERSIONS)))
-          .addMethod(
-            getUploadCallConversionsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.UploadCallConversionsRequest,
-                com.google.ads.googleads.v13.services.UploadCallConversionsResponse>(
-                  this, METHODID_UPLOAD_CALL_CONVERSIONS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service ConversionUploadService.
    * <pre>
    * Service to upload conversions.
    * </pre>
    */
-  public static final class ConversionUploadServiceStub extends io.grpc.stub.AbstractAsyncStub<ConversionUploadServiceStub> {
+  public static abstract class ConversionUploadServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return ConversionUploadServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service ConversionUploadService.
+   * <pre>
+   * Service to upload conversions.
+   * </pre>
+   */
+  public static final class ConversionUploadServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<ConversionUploadServiceStub> {
     private ConversionUploadServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -246,11 +243,13 @@ public final class ConversionUploadServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service ConversionUploadService.
    * <pre>
    * Service to upload conversions.
    * </pre>
    */
-  public static final class ConversionUploadServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ConversionUploadServiceBlockingStub> {
+  public static final class ConversionUploadServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<ConversionUploadServiceBlockingStub> {
     private ConversionUploadServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -301,11 +300,13 @@ public final class ConversionUploadServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service ConversionUploadService.
    * <pre>
    * Service to upload conversions.
    * </pre>
    */
-  public static final class ConversionUploadServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ConversionUploadServiceFutureStub> {
+  public static final class ConversionUploadServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<ConversionUploadServiceFutureStub> {
     private ConversionUploadServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -365,10 +366,10 @@ public final class ConversionUploadServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final ConversionUploadServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(ConversionUploadServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -399,6 +400,25 @@ public final class ConversionUploadServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getUploadClickConversionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.UploadClickConversionsRequest,
+              com.google.ads.googleads.v13.services.UploadClickConversionsResponse>(
+                service, METHODID_UPLOAD_CLICK_CONVERSIONS)))
+        .addMethod(
+          getUploadCallConversionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.UploadCallConversionsRequest,
+              com.google.ads.googleads.v13.services.UploadCallConversionsResponse>(
+                service, METHODID_UPLOAD_CALL_CONVERSIONS)))
+        .build();
   }
 
   private static abstract class ConversionUploadServiceBaseDescriptorSupplier

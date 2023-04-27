@@ -349,7 +349,6 @@ public interface GenerateReachForecastRequestOrBuilder extends
   /**
    * <pre>
    * The name of the customer being planned for. This is a user-defined value.
-   * Required if targeting.audience_targeting is set.
    * </pre>
    *
    * <code>optional string customer_reach_group = 14;</code>
@@ -359,7 +358,6 @@ public interface GenerateReachForecastRequestOrBuilder extends
   /**
    * <pre>
    * The name of the customer being planned for. This is a user-defined value.
-   * Required if targeting.audience_targeting is set.
    * </pre>
    *
    * <code>optional string customer_reach_group = 14;</code>
@@ -369,7 +367,6 @@ public interface GenerateReachForecastRequestOrBuilder extends
   /**
    * <pre>
    * The name of the customer being planned for. This is a user-defined value.
-   * Required if targeting.audience_targeting is set.
    * </pre>
    *
    * <code>optional string customer_reach_group = 14;</code>

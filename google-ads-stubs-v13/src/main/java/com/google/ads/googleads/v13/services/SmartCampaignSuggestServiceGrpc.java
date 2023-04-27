@@ -160,14 +160,14 @@ public final class SmartCampaignSuggestServiceGrpc {
    * Service to get suggestions for Smart Campaigns.
    * </pre>
    */
-  public static abstract class SmartCampaignSuggestServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
      * Returns BudgetOption suggestions.
      * </pre>
      */
-    public void suggestSmartCampaignBudgetOptions(com.google.ads.googleads.v13.services.SuggestSmartCampaignBudgetOptionsRequest request,
+    default void suggestSmartCampaignBudgetOptions(com.google.ads.googleads.v13.services.SuggestSmartCampaignBudgetOptionsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.SuggestSmartCampaignBudgetOptionsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSuggestSmartCampaignBudgetOptionsMethod(), responseObserver);
     }
@@ -178,7 +178,7 @@ public final class SmartCampaignSuggestServiceGrpc {
      * based on data points such as targeting and the business to advertise.
      * </pre>
      */
-    public void suggestSmartCampaignAd(com.google.ads.googleads.v13.services.SuggestSmartCampaignAdRequest request,
+    default void suggestSmartCampaignAd(com.google.ads.googleads.v13.services.SuggestSmartCampaignAdRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.SuggestSmartCampaignAdResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSuggestSmartCampaignAdMethod(), responseObserver);
     }
@@ -188,44 +188,34 @@ public final class SmartCampaignSuggestServiceGrpc {
      * Suggests keyword themes to advertise on.
      * </pre>
      */
-    public void suggestKeywordThemes(com.google.ads.googleads.v13.services.SuggestKeywordThemesRequest request,
+    default void suggestKeywordThemes(com.google.ads.googleads.v13.services.SuggestKeywordThemesRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.SuggestKeywordThemesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSuggestKeywordThemesMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getSuggestSmartCampaignBudgetOptionsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.SuggestSmartCampaignBudgetOptionsRequest,
-                com.google.ads.googleads.v13.services.SuggestSmartCampaignBudgetOptionsResponse>(
-                  this, METHODID_SUGGEST_SMART_CAMPAIGN_BUDGET_OPTIONS)))
-          .addMethod(
-            getSuggestSmartCampaignAdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.SuggestSmartCampaignAdRequest,
-                com.google.ads.googleads.v13.services.SuggestSmartCampaignAdResponse>(
-                  this, METHODID_SUGGEST_SMART_CAMPAIGN_AD)))
-          .addMethod(
-            getSuggestKeywordThemesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.SuggestKeywordThemesRequest,
-                com.google.ads.googleads.v13.services.SuggestKeywordThemesResponse>(
-                  this, METHODID_SUGGEST_KEYWORD_THEMES)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service SmartCampaignSuggestService.
    * <pre>
    * Service to get suggestions for Smart Campaigns.
    * </pre>
    */
-  public static final class SmartCampaignSuggestServiceStub extends io.grpc.stub.AbstractAsyncStub<SmartCampaignSuggestServiceStub> {
+  public static abstract class SmartCampaignSuggestServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return SmartCampaignSuggestServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service SmartCampaignSuggestService.
+   * <pre>
+   * Service to get suggestions for Smart Campaigns.
+   * </pre>
+   */
+  public static final class SmartCampaignSuggestServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<SmartCampaignSuggestServiceStub> {
     private SmartCampaignSuggestServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -273,11 +263,13 @@ public final class SmartCampaignSuggestServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service SmartCampaignSuggestService.
    * <pre>
    * Service to get suggestions for Smart Campaigns.
    * </pre>
    */
-  public static final class SmartCampaignSuggestServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<SmartCampaignSuggestServiceBlockingStub> {
+  public static final class SmartCampaignSuggestServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<SmartCampaignSuggestServiceBlockingStub> {
     private SmartCampaignSuggestServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -322,11 +314,13 @@ public final class SmartCampaignSuggestServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service SmartCampaignSuggestService.
    * <pre>
    * Service to get suggestions for Smart Campaigns.
    * </pre>
    */
-  public static final class SmartCampaignSuggestServiceFutureStub extends io.grpc.stub.AbstractFutureStub<SmartCampaignSuggestServiceFutureStub> {
+  public static final class SmartCampaignSuggestServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<SmartCampaignSuggestServiceFutureStub> {
     private SmartCampaignSuggestServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -382,10 +376,10 @@ public final class SmartCampaignSuggestServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final SmartCampaignSuggestServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(SmartCampaignSuggestServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -420,6 +414,32 @@ public final class SmartCampaignSuggestServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getSuggestSmartCampaignBudgetOptionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.SuggestSmartCampaignBudgetOptionsRequest,
+              com.google.ads.googleads.v13.services.SuggestSmartCampaignBudgetOptionsResponse>(
+                service, METHODID_SUGGEST_SMART_CAMPAIGN_BUDGET_OPTIONS)))
+        .addMethod(
+          getSuggestSmartCampaignAdMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.SuggestSmartCampaignAdRequest,
+              com.google.ads.googleads.v13.services.SuggestSmartCampaignAdResponse>(
+                service, METHODID_SUGGEST_SMART_CAMPAIGN_AD)))
+        .addMethod(
+          getSuggestKeywordThemesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.SuggestKeywordThemesRequest,
+              com.google.ads.googleads.v13.services.SuggestKeywordThemesResponse>(
+                service, METHODID_SUGGEST_KEYWORD_THEMES)))
+        .build();
   }
 
   private static abstract class SmartCampaignSuggestServiceBaseDescriptorSupplier

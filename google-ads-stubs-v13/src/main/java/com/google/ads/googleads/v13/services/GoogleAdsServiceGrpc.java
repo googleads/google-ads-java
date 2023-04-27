@@ -160,7 +160,7 @@ public final class GoogleAdsServiceGrpc {
    * Service to fetch data and metrics across resources.
    * </pre>
    */
-  public static abstract class GoogleAdsServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -178,7 +178,7 @@ public final class GoogleAdsServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void search(com.google.ads.googleads.v13.services.SearchGoogleAdsRequest request,
+    default void search(com.google.ads.googleads.v13.services.SearchGoogleAdsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.SearchGoogleAdsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSearchMethod(), responseObserver);
     }
@@ -199,7 +199,7 @@ public final class GoogleAdsServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void searchStream(com.google.ads.googleads.v13.services.SearchGoogleAdsStreamRequest request,
+    default void searchStream(com.google.ads.googleads.v13.services.SearchGoogleAdsStreamRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.SearchGoogleAdsStreamResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSearchStreamMethod(), responseObserver);
     }
@@ -307,44 +307,34 @@ public final class GoogleAdsServiceGrpc {
      *   [YoutubeVideoRegistrationError]()
      * </pre>
      */
-    public void mutate(com.google.ads.googleads.v13.services.MutateGoogleAdsRequest request,
+    default void mutate(com.google.ads.googleads.v13.services.MutateGoogleAdsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.MutateGoogleAdsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getSearchMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.SearchGoogleAdsRequest,
-                com.google.ads.googleads.v13.services.SearchGoogleAdsResponse>(
-                  this, METHODID_SEARCH)))
-          .addMethod(
-            getSearchStreamMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.SearchGoogleAdsStreamRequest,
-                com.google.ads.googleads.v13.services.SearchGoogleAdsStreamResponse>(
-                  this, METHODID_SEARCH_STREAM)))
-          .addMethod(
-            getMutateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.MutateGoogleAdsRequest,
-                com.google.ads.googleads.v13.services.MutateGoogleAdsResponse>(
-                  this, METHODID_MUTATE)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service GoogleAdsService.
    * <pre>
    * Service to fetch data and metrics across resources.
    * </pre>
    */
-  public static final class GoogleAdsServiceStub extends io.grpc.stub.AbstractAsyncStub<GoogleAdsServiceStub> {
+  public static abstract class GoogleAdsServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return GoogleAdsServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service GoogleAdsService.
+   * <pre>
+   * Service to fetch data and metrics across resources.
+   * </pre>
+   */
+  public static final class GoogleAdsServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<GoogleAdsServiceStub> {
     private GoogleAdsServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -511,11 +501,13 @@ public final class GoogleAdsServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service GoogleAdsService.
    * <pre>
    * Service to fetch data and metrics across resources.
    * </pre>
    */
-  public static final class GoogleAdsServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<GoogleAdsServiceBlockingStub> {
+  public static final class GoogleAdsServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<GoogleAdsServiceBlockingStub> {
     private GoogleAdsServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -680,11 +672,13 @@ public final class GoogleAdsServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service GoogleAdsService.
    * <pre>
    * Service to fetch data and metrics across resources.
    * </pre>
    */
-  public static final class GoogleAdsServiceFutureStub extends io.grpc.stub.AbstractFutureStub<GoogleAdsServiceFutureStub> {
+  public static final class GoogleAdsServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<GoogleAdsServiceFutureStub> {
     private GoogleAdsServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -837,10 +831,10 @@ public final class GoogleAdsServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final GoogleAdsServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(GoogleAdsServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -875,6 +869,32 @@ public final class GoogleAdsServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getSearchMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.SearchGoogleAdsRequest,
+              com.google.ads.googleads.v13.services.SearchGoogleAdsResponse>(
+                service, METHODID_SEARCH)))
+        .addMethod(
+          getSearchStreamMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.SearchGoogleAdsStreamRequest,
+              com.google.ads.googleads.v13.services.SearchGoogleAdsStreamResponse>(
+                service, METHODID_SEARCH_STREAM)))
+        .addMethod(
+          getMutateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.MutateGoogleAdsRequest,
+              com.google.ads.googleads.v13.services.MutateGoogleAdsResponse>(
+                service, METHODID_MUTATE)))
+        .build();
   }
 
   private static abstract class GoogleAdsServiceBaseDescriptorSupplier

@@ -98,7 +98,7 @@ public final class ConversionGoalCampaignConfigServiceGrpc {
    * Service to manage conversion goal campaign config.
    * </pre>
    */
-  public static abstract class ConversionGoalCampaignConfigServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -106,30 +106,34 @@ public final class ConversionGoalCampaignConfigServiceGrpc {
      * statuses are returned.
      * </pre>
      */
-    public void mutateConversionGoalCampaignConfigs(com.google.ads.googleads.v13.services.MutateConversionGoalCampaignConfigsRequest request,
+    default void mutateConversionGoalCampaignConfigs(com.google.ads.googleads.v13.services.MutateConversionGoalCampaignConfigsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.MutateConversionGoalCampaignConfigsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateConversionGoalCampaignConfigsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateConversionGoalCampaignConfigsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.MutateConversionGoalCampaignConfigsRequest,
-                com.google.ads.googleads.v13.services.MutateConversionGoalCampaignConfigsResponse>(
-                  this, METHODID_MUTATE_CONVERSION_GOAL_CAMPAIGN_CONFIGS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service ConversionGoalCampaignConfigService.
    * <pre>
    * Service to manage conversion goal campaign config.
    * </pre>
    */
-  public static final class ConversionGoalCampaignConfigServiceStub extends io.grpc.stub.AbstractAsyncStub<ConversionGoalCampaignConfigServiceStub> {
+  public static abstract class ConversionGoalCampaignConfigServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return ConversionGoalCampaignConfigServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service ConversionGoalCampaignConfigService.
+   * <pre>
+   * Service to manage conversion goal campaign config.
+   * </pre>
+   */
+  public static final class ConversionGoalCampaignConfigServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<ConversionGoalCampaignConfigServiceStub> {
     private ConversionGoalCampaignConfigServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -155,11 +159,13 @@ public final class ConversionGoalCampaignConfigServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service ConversionGoalCampaignConfigService.
    * <pre>
    * Service to manage conversion goal campaign config.
    * </pre>
    */
-  public static final class ConversionGoalCampaignConfigServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ConversionGoalCampaignConfigServiceBlockingStub> {
+  public static final class ConversionGoalCampaignConfigServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<ConversionGoalCampaignConfigServiceBlockingStub> {
     private ConversionGoalCampaignConfigServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -184,11 +190,13 @@ public final class ConversionGoalCampaignConfigServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service ConversionGoalCampaignConfigService.
    * <pre>
    * Service to manage conversion goal campaign config.
    * </pre>
    */
-  public static final class ConversionGoalCampaignConfigServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ConversionGoalCampaignConfigServiceFutureStub> {
+  public static final class ConversionGoalCampaignConfigServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<ConversionGoalCampaignConfigServiceFutureStub> {
     private ConversionGoalCampaignConfigServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -220,10 +228,10 @@ public final class ConversionGoalCampaignConfigServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final ConversionGoalCampaignConfigServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(ConversionGoalCampaignConfigServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -250,6 +258,18 @@ public final class ConversionGoalCampaignConfigServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateConversionGoalCampaignConfigsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.MutateConversionGoalCampaignConfigsRequest,
+              com.google.ads.googleads.v13.services.MutateConversionGoalCampaignConfigsResponse>(
+                service, METHODID_MUTATE_CONVERSION_GOAL_CAMPAIGN_CONFIGS)))
+        .build();
   }
 
   private static abstract class ConversionGoalCampaignConfigServiceBaseDescriptorSupplier

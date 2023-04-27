@@ -3726,6 +3726,64 @@ private static final long serialVersionUID = 0L;
     return speedScore_;
   }
 
+  public static final int AVERAGE_TARGET_CPA_MICROS_FIELD_NUMBER = 290;
+  private long averageTargetCpaMicros_ = 0L;
+  /**
+   * <pre>
+   * The average Target CPA, or unset if not available (for example, for
+   * campaigns that had traffic from portfolio bidding strategies or non-tCPA).
+   * </pre>
+   *
+   * <code>optional int64 average_target_cpa_micros = 290;</code>
+   * @return Whether the averageTargetCpaMicros field is set.
+   */
+  @java.lang.Override
+  public boolean hasAverageTargetCpaMicros() {
+    return ((bitField3_ & 0x00001000) != 0);
+  }
+  /**
+   * <pre>
+   * The average Target CPA, or unset if not available (for example, for
+   * campaigns that had traffic from portfolio bidding strategies or non-tCPA).
+   * </pre>
+   *
+   * <code>optional int64 average_target_cpa_micros = 290;</code>
+   * @return The averageTargetCpaMicros.
+   */
+  @java.lang.Override
+  public long getAverageTargetCpaMicros() {
+    return averageTargetCpaMicros_;
+  }
+
+  public static final int AVERAGE_TARGET_ROAS_FIELD_NUMBER = 250;
+  private double averageTargetRoas_ = 0D;
+  /**
+   * <pre>
+   * The average Target ROAS, or unset if not available (for example, for
+   * campaigns that had traffic from portfolio bidding strategies or non-tROAS).
+   * </pre>
+   *
+   * <code>optional double average_target_roas = 250;</code>
+   * @return Whether the averageTargetRoas field is set.
+   */
+  @java.lang.Override
+  public boolean hasAverageTargetRoas() {
+    return ((bitField3_ & 0x00002000) != 0);
+  }
+  /**
+   * <pre>
+   * The average Target ROAS, or unset if not available (for example, for
+   * campaigns that had traffic from portfolio bidding strategies or non-tROAS).
+   * </pre>
+   *
+   * <code>optional double average_target_roas = 250;</code>
+   * @return The averageTargetRoas.
+   */
+  @java.lang.Override
+  public double getAverageTargetRoas() {
+    return averageTargetRoas_;
+  }
+
   public static final int TOP_IMPRESSION_PERCENTAGE_FIELD_NUMBER = 148;
   private double topImpressionPercentage_ = 0D;
   /**
@@ -3739,7 +3797,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasTopImpressionPercentage() {
-    return ((bitField3_ & 0x00001000) != 0);
+    return ((bitField3_ & 0x00004000) != 0);
   }
   /**
    * <pre>
@@ -3768,7 +3826,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasValidAcceleratedMobilePagesClicksPercentage() {
-    return ((bitField3_ & 0x00002000) != 0);
+    return ((bitField3_ & 0x00008000) != 0);
   }
   /**
    * <pre>
@@ -3796,7 +3854,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasValuePerAllConversions() {
-    return ((bitField3_ & 0x00004000) != 0);
+    return ((bitField3_ & 0x00010000) != 0);
   }
   /**
    * <pre>
@@ -3826,7 +3884,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasValuePerAllConversionsByConversionDate() {
-    return ((bitField3_ & 0x00008000) != 0);
+    return ((bitField3_ & 0x00020000) != 0);
   }
   /**
    * <pre>
@@ -3859,7 +3917,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasValuePerConversion() {
-    return ((bitField3_ & 0x00010000) != 0);
+    return ((bitField3_ & 0x00040000) != 0);
   }
   /**
    * <pre>
@@ -3895,7 +3953,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasValuePerConversionsByConversionDate() {
-    return ((bitField3_ & 0x00020000) != 0);
+    return ((bitField3_ & 0x00080000) != 0);
   }
   /**
    * <pre>
@@ -3932,7 +3990,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasValuePerCurrentModelAttributedConversion() {
-    return ((bitField3_ & 0x00040000) != 0);
+    return ((bitField3_ & 0x00100000) != 0);
   }
   /**
    * <pre>
@@ -3963,7 +4021,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasVideoQuartileP100Rate() {
-    return ((bitField3_ & 0x00080000) != 0);
+    return ((bitField3_ & 0x00200000) != 0);
   }
   /**
    * <pre>
@@ -3990,7 +4048,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasVideoQuartileP25Rate() {
-    return ((bitField3_ & 0x00100000) != 0);
+    return ((bitField3_ & 0x00400000) != 0);
   }
   /**
    * <pre>
@@ -4017,7 +4075,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasVideoQuartileP50Rate() {
-    return ((bitField3_ & 0x00200000) != 0);
+    return ((bitField3_ & 0x00800000) != 0);
   }
   /**
    * <pre>
@@ -4044,7 +4102,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasVideoQuartileP75Rate() {
-    return ((bitField3_ & 0x00400000) != 0);
+    return ((bitField3_ & 0x01000000) != 0);
   }
   /**
    * <pre>
@@ -4073,7 +4131,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasVideoViewRate() {
-    return ((bitField3_ & 0x00800000) != 0);
+    return ((bitField3_ & 0x02000000) != 0);
   }
   /**
    * <pre>
@@ -4102,7 +4160,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasVideoViews() {
-    return ((bitField3_ & 0x01000000) != 0);
+    return ((bitField3_ & 0x04000000) != 0);
   }
   /**
    * <pre>
@@ -4132,7 +4190,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasViewThroughConversions() {
-    return ((bitField3_ & 0x02000000) != 0);
+    return ((bitField3_ & 0x08000000) != 0);
   }
   /**
    * <pre>
@@ -4227,7 +4285,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAllConversionsFromLocationAssetClickToCall() {
-    return ((bitField3_ & 0x04000000) != 0);
+    return ((bitField3_ & 0x10000000) != 0);
   }
   /**
    * <pre>
@@ -4258,7 +4316,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAllConversionsFromLocationAssetDirections() {
-    return ((bitField3_ & 0x08000000) != 0);
+    return ((bitField3_ & 0x20000000) != 0);
   }
   /**
    * <pre>
@@ -4289,7 +4347,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAllConversionsFromLocationAssetMenu() {
-    return ((bitField3_ & 0x10000000) != 0);
+    return ((bitField3_ & 0x40000000) != 0);
   }
   /**
    * <pre>
@@ -4320,7 +4378,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAllConversionsFromLocationAssetOrder() {
-    return ((bitField3_ & 0x20000000) != 0);
+    return ((bitField3_ & 0x80000000) != 0);
   }
   /**
    * <pre>
@@ -4351,7 +4409,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAllConversionsFromLocationAssetOtherEngagement() {
-    return ((bitField3_ & 0x40000000) != 0);
+    return ((bitField4_ & 0x00000001) != 0);
   }
   /**
    * <pre>
@@ -4382,7 +4440,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAllConversionsFromLocationAssetStoreVisits() {
-    return ((bitField3_ & 0x80000000) != 0);
+    return ((bitField4_ & 0x00000002) != 0);
   }
   /**
    * <pre>
@@ -4413,7 +4471,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasAllConversionsFromLocationAssetWebsite() {
-    return ((bitField4_ & 0x00000001) != 0);
+    return ((bitField4_ & 0x00000004) != 0);
   }
   /**
    * <pre>
@@ -4444,7 +4502,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasEligibleImpressionsFromLocationAssetStoreReach() {
-    return ((bitField4_ & 0x00000002) != 0);
+    return ((bitField4_ & 0x00000008) != 0);
   }
   /**
    * <pre>
@@ -4474,7 +4532,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasViewThroughConversionsFromLocationAssetClickToCall() {
-    return ((bitField4_ & 0x00000004) != 0);
+    return ((bitField4_ & 0x00000010) != 0);
   }
   /**
    * <pre>
@@ -4503,7 +4561,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasViewThroughConversionsFromLocationAssetDirections() {
-    return ((bitField4_ & 0x00000008) != 0);
+    return ((bitField4_ & 0x00000020) != 0);
   }
   /**
    * <pre>
@@ -4532,7 +4590,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasViewThroughConversionsFromLocationAssetMenu() {
-    return ((bitField4_ & 0x00000010) != 0);
+    return ((bitField4_ & 0x00000040) != 0);
   }
   /**
    * <pre>
@@ -4561,7 +4619,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasViewThroughConversionsFromLocationAssetOrder() {
-    return ((bitField4_ & 0x00000020) != 0);
+    return ((bitField4_ & 0x00000080) != 0);
   }
   /**
    * <pre>
@@ -4590,7 +4648,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasViewThroughConversionsFromLocationAssetOtherEngagement() {
-    return ((bitField4_ & 0x00000040) != 0);
+    return ((bitField4_ & 0x00000100) != 0);
   }
   /**
    * <pre>
@@ -4619,7 +4677,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasViewThroughConversionsFromLocationAssetStoreVisits() {
-    return ((bitField4_ & 0x00000080) != 0);
+    return ((bitField4_ & 0x00000200) != 0);
   }
   /**
    * <pre>
@@ -4648,7 +4706,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasViewThroughConversionsFromLocationAssetWebsite() {
-    return ((bitField4_ & 0x00000100) != 0);
+    return ((bitField4_ & 0x00000400) != 0);
   }
   /**
    * <pre>
@@ -4698,16 +4756,16 @@ private static final long serialVersionUID = 0L;
     if (((bitField1_ & 0x00000040) != 0)) {
       output.writeInt64(131, clicks_);
     }
-    if (((bitField3_ & 0x00080000) != 0)) {
+    if (((bitField3_ & 0x00200000) != 0)) {
       output.writeDouble(132, videoQuartileP100Rate_);
     }
-    if (((bitField3_ & 0x00100000) != 0)) {
+    if (((bitField3_ & 0x00400000) != 0)) {
       output.writeDouble(133, videoQuartileP25Rate_);
     }
-    if (((bitField3_ & 0x00200000) != 0)) {
+    if (((bitField3_ & 0x00800000) != 0)) {
       output.writeDouble(134, videoQuartileP50Rate_);
     }
-    if (((bitField3_ & 0x00400000) != 0)) {
+    if (((bitField3_ & 0x01000000) != 0)) {
       output.writeDouble(135, videoQuartileP75Rate_);
     }
     if (((bitField3_ & 0x00000001) != 0)) {
@@ -4746,28 +4804,28 @@ private static final long serialVersionUID = 0L;
     if (((bitField3_ & 0x00000800) != 0)) {
       output.writeInt64(147, speedScore_);
     }
-    if (((bitField3_ & 0x00001000) != 0)) {
+    if (((bitField3_ & 0x00004000) != 0)) {
       output.writeDouble(148, topImpressionPercentage_);
     }
-    if (((bitField3_ & 0x00002000) != 0)) {
+    if (((bitField3_ & 0x00008000) != 0)) {
       output.writeDouble(149, validAcceleratedMobilePagesClicksPercentage_);
     }
-    if (((bitField3_ & 0x00004000) != 0)) {
+    if (((bitField3_ & 0x00010000) != 0)) {
       output.writeDouble(150, valuePerAllConversions_);
     }
-    if (((bitField3_ & 0x00010000) != 0)) {
+    if (((bitField3_ & 0x00040000) != 0)) {
       output.writeDouble(151, valuePerConversion_);
     }
-    if (((bitField3_ & 0x00040000) != 0)) {
+    if (((bitField3_ & 0x00100000) != 0)) {
       output.writeDouble(152, valuePerCurrentModelAttributedConversion_);
     }
-    if (((bitField3_ & 0x00800000) != 0)) {
+    if (((bitField3_ & 0x02000000) != 0)) {
       output.writeDouble(153, videoViewRate_);
     }
-    if (((bitField3_ & 0x01000000) != 0)) {
+    if (((bitField3_ & 0x04000000) != 0)) {
       output.writeInt64(154, videoViews_);
     }
-    if (((bitField3_ & 0x02000000) != 0)) {
+    if (((bitField3_ & 0x08000000) != 0)) {
       output.writeInt64(155, viewThroughConversions_);
     }
     if (((bitField1_ & 0x00000080) != 0)) {
@@ -5031,10 +5089,10 @@ private static final long serialVersionUID = 0L;
     if (java.lang.Double.doubleToRawLongBits(conversionsByConversionDate_) != 0) {
       output.writeDouble(243, conversionsByConversionDate_);
     }
-    if (((bitField3_ & 0x00008000) != 0)) {
+    if (((bitField3_ & 0x00020000) != 0)) {
       output.writeDouble(244, valuePerAllConversionsByConversionDate_);
     }
-    if (((bitField3_ & 0x00020000) != 0)) {
+    if (((bitField3_ & 0x00080000) != 0)) {
       output.writeDouble(245, valuePerConversionsByConversionDate_);
     }
     if (skAdNetworkConversions_ != 0L) {
@@ -5045,6 +5103,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField2_ & 0x00200000) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 248, optimizationScoreUrl_);
+    }
+    if (((bitField3_ & 0x00002000) != 0)) {
+      output.writeDouble(250, averageTargetRoas_);
     }
     if (((bitField1_ & 0x00000004) != 0)) {
       output.writeDouble(254, biddableAppInstallConversions_);
@@ -5085,50 +5146,53 @@ private static final long serialVersionUID = 0L;
     if (publisherUnknownClicks_ != 0L) {
       output.writeInt64(266, publisherUnknownClicks_);
     }
-    if (((bitField3_ & 0x04000000) != 0)) {
+    if (((bitField3_ & 0x10000000) != 0)) {
       output.writeDouble(267, allConversionsFromLocationAssetClickToCall_);
     }
-    if (((bitField3_ & 0x08000000) != 0)) {
+    if (((bitField3_ & 0x20000000) != 0)) {
       output.writeDouble(268, allConversionsFromLocationAssetDirections_);
     }
-    if (((bitField3_ & 0x10000000) != 0)) {
+    if (((bitField3_ & 0x40000000) != 0)) {
       output.writeDouble(269, allConversionsFromLocationAssetMenu_);
     }
-    if (((bitField3_ & 0x20000000) != 0)) {
+    if (((bitField3_ & 0x80000000) != 0)) {
       output.writeDouble(270, allConversionsFromLocationAssetOrder_);
     }
-    if (((bitField3_ & 0x40000000) != 0)) {
+    if (((bitField4_ & 0x00000001) != 0)) {
       output.writeDouble(271, allConversionsFromLocationAssetOtherEngagement_);
     }
-    if (((bitField3_ & 0x80000000) != 0)) {
+    if (((bitField4_ & 0x00000002) != 0)) {
       output.writeDouble(272, allConversionsFromLocationAssetStoreVisits_);
     }
-    if (((bitField4_ & 0x00000001) != 0)) {
+    if (((bitField4_ & 0x00000004) != 0)) {
       output.writeDouble(273, allConversionsFromLocationAssetWebsite_);
     }
-    if (((bitField4_ & 0x00000002) != 0)) {
+    if (((bitField4_ & 0x00000008) != 0)) {
       output.writeInt64(274, eligibleImpressionsFromLocationAssetStoreReach_);
     }
-    if (((bitField4_ & 0x00000004) != 0)) {
+    if (((bitField4_ & 0x00000010) != 0)) {
       output.writeDouble(275, viewThroughConversionsFromLocationAssetClickToCall_);
     }
-    if (((bitField4_ & 0x00000008) != 0)) {
+    if (((bitField4_ & 0x00000020) != 0)) {
       output.writeDouble(276, viewThroughConversionsFromLocationAssetDirections_);
     }
-    if (((bitField4_ & 0x00000010) != 0)) {
+    if (((bitField4_ & 0x00000040) != 0)) {
       output.writeDouble(277, viewThroughConversionsFromLocationAssetMenu_);
     }
-    if (((bitField4_ & 0x00000020) != 0)) {
+    if (((bitField4_ & 0x00000080) != 0)) {
       output.writeDouble(278, viewThroughConversionsFromLocationAssetOrder_);
     }
-    if (((bitField4_ & 0x00000040) != 0)) {
+    if (((bitField4_ & 0x00000100) != 0)) {
       output.writeDouble(279, viewThroughConversionsFromLocationAssetOtherEngagement_);
     }
-    if (((bitField4_ & 0x00000080) != 0)) {
+    if (((bitField4_ & 0x00000200) != 0)) {
       output.writeDouble(280, viewThroughConversionsFromLocationAssetStoreVisits_);
     }
-    if (((bitField4_ & 0x00000100) != 0)) {
+    if (((bitField4_ & 0x00000400) != 0)) {
       output.writeDouble(281, viewThroughConversionsFromLocationAssetWebsite_);
+    }
+    if (((bitField3_ & 0x00001000) != 0)) {
+      output.writeInt64(290, averageTargetCpaMicros_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -5167,19 +5231,19 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(131, clicks_);
     }
-    if (((bitField3_ & 0x00080000) != 0)) {
+    if (((bitField3_ & 0x00200000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(132, videoQuartileP100Rate_);
     }
-    if (((bitField3_ & 0x00100000) != 0)) {
+    if (((bitField3_ & 0x00400000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(133, videoQuartileP25Rate_);
     }
-    if (((bitField3_ & 0x00200000) != 0)) {
+    if (((bitField3_ & 0x00800000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(134, videoQuartileP50Rate_);
     }
-    if (((bitField3_ & 0x00400000) != 0)) {
+    if (((bitField3_ & 0x01000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(135, videoQuartileP75Rate_);
     }
@@ -5231,35 +5295,35 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(147, speedScore_);
     }
-    if (((bitField3_ & 0x00001000) != 0)) {
+    if (((bitField3_ & 0x00004000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(148, topImpressionPercentage_);
     }
-    if (((bitField3_ & 0x00002000) != 0)) {
+    if (((bitField3_ & 0x00008000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(149, validAcceleratedMobilePagesClicksPercentage_);
     }
-    if (((bitField3_ & 0x00004000) != 0)) {
+    if (((bitField3_ & 0x00010000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(150, valuePerAllConversions_);
     }
-    if (((bitField3_ & 0x00010000) != 0)) {
+    if (((bitField3_ & 0x00040000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(151, valuePerConversion_);
     }
-    if (((bitField3_ & 0x00040000) != 0)) {
+    if (((bitField3_ & 0x00100000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(152, valuePerCurrentModelAttributedConversion_);
     }
-    if (((bitField3_ & 0x00800000) != 0)) {
+    if (((bitField3_ & 0x02000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(153, videoViewRate_);
     }
-    if (((bitField3_ & 0x01000000) != 0)) {
+    if (((bitField3_ & 0x04000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(154, videoViews_);
     }
-    if (((bitField3_ & 0x02000000) != 0)) {
+    if (((bitField3_ & 0x08000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(155, viewThroughConversions_);
     }
@@ -5609,11 +5673,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(243, conversionsByConversionDate_);
     }
-    if (((bitField3_ & 0x00008000) != 0)) {
+    if (((bitField3_ & 0x00020000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(244, valuePerAllConversionsByConversionDate_);
     }
-    if (((bitField3_ & 0x00020000) != 0)) {
+    if (((bitField3_ & 0x00080000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(245, valuePerConversionsByConversionDate_);
     }
@@ -5627,6 +5691,10 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField2_ & 0x00200000) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(248, optimizationScoreUrl_);
+    }
+    if (((bitField3_ & 0x00002000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeDoubleSize(250, averageTargetRoas_);
     }
     if (((bitField1_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
@@ -5680,65 +5748,69 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(266, publisherUnknownClicks_);
     }
-    if (((bitField3_ & 0x04000000) != 0)) {
+    if (((bitField3_ & 0x10000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(267, allConversionsFromLocationAssetClickToCall_);
     }
-    if (((bitField3_ & 0x08000000) != 0)) {
+    if (((bitField3_ & 0x20000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(268, allConversionsFromLocationAssetDirections_);
     }
-    if (((bitField3_ & 0x10000000) != 0)) {
+    if (((bitField3_ & 0x40000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(269, allConversionsFromLocationAssetMenu_);
     }
-    if (((bitField3_ & 0x20000000) != 0)) {
+    if (((bitField3_ & 0x80000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(270, allConversionsFromLocationAssetOrder_);
     }
-    if (((bitField3_ & 0x40000000) != 0)) {
+    if (((bitField4_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(271, allConversionsFromLocationAssetOtherEngagement_);
     }
-    if (((bitField3_ & 0x80000000) != 0)) {
+    if (((bitField4_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(272, allConversionsFromLocationAssetStoreVisits_);
     }
-    if (((bitField4_ & 0x00000001) != 0)) {
+    if (((bitField4_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(273, allConversionsFromLocationAssetWebsite_);
     }
-    if (((bitField4_ & 0x00000002) != 0)) {
+    if (((bitField4_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(274, eligibleImpressionsFromLocationAssetStoreReach_);
     }
-    if (((bitField4_ & 0x00000004) != 0)) {
+    if (((bitField4_ & 0x00000010) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(275, viewThroughConversionsFromLocationAssetClickToCall_);
     }
-    if (((bitField4_ & 0x00000008) != 0)) {
+    if (((bitField4_ & 0x00000020) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(276, viewThroughConversionsFromLocationAssetDirections_);
     }
-    if (((bitField4_ & 0x00000010) != 0)) {
+    if (((bitField4_ & 0x00000040) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(277, viewThroughConversionsFromLocationAssetMenu_);
     }
-    if (((bitField4_ & 0x00000020) != 0)) {
+    if (((bitField4_ & 0x00000080) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(278, viewThroughConversionsFromLocationAssetOrder_);
     }
-    if (((bitField4_ & 0x00000040) != 0)) {
+    if (((bitField4_ & 0x00000100) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(279, viewThroughConversionsFromLocationAssetOtherEngagement_);
     }
-    if (((bitField4_ & 0x00000080) != 0)) {
+    if (((bitField4_ & 0x00000200) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(280, viewThroughConversionsFromLocationAssetStoreVisits_);
     }
-    if (((bitField4_ & 0x00000100) != 0)) {
+    if (((bitField4_ & 0x00000400) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(281, viewThroughConversionsFromLocationAssetWebsite_);
+    }
+    if (((bitField3_ & 0x00001000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(290, averageTargetCpaMicros_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -6389,6 +6461,17 @@ private static final long serialVersionUID = 0L;
     if (hasSpeedScore()) {
       if (getSpeedScore()
           != other.getSpeedScore()) return false;
+    }
+    if (hasAverageTargetCpaMicros() != other.hasAverageTargetCpaMicros()) return false;
+    if (hasAverageTargetCpaMicros()) {
+      if (getAverageTargetCpaMicros()
+          != other.getAverageTargetCpaMicros()) return false;
+    }
+    if (hasAverageTargetRoas() != other.hasAverageTargetRoas()) return false;
+    if (hasAverageTargetRoas()) {
+      if (java.lang.Double.doubleToLongBits(getAverageTargetRoas())
+          != java.lang.Double.doubleToLongBits(
+              other.getAverageTargetRoas())) return false;
     }
     if (hasTopImpressionPercentage() != other.hasTopImpressionPercentage()) return false;
     if (hasTopImpressionPercentage()) {
@@ -7139,6 +7222,16 @@ private static final long serialVersionUID = 0L;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getSpeedScore());
     }
+    if (hasAverageTargetCpaMicros()) {
+      hash = (37 * hash) + AVERAGE_TARGET_CPA_MICROS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAverageTargetCpaMicros());
+    }
+    if (hasAverageTargetRoas()) {
+      hash = (37 * hash) + AVERAGE_TARGET_ROAS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getAverageTargetRoas()));
+    }
     if (hasTopImpressionPercentage()) {
       hash = (37 * hash) + TOP_IMPRESSION_PERCENTAGE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -7550,6 +7643,8 @@ private static final long serialVersionUID = 0L;
       searchRankLostTopImpressionShare_ = 0D;
       searchTopImpressionShare_ = 0D;
       speedScore_ = 0L;
+      averageTargetCpaMicros_ = 0L;
+      averageTargetRoas_ = 0D;
       topImpressionPercentage_ = 0D;
       validAcceleratedMobilePagesClicksPercentage_ = 0D;
       valuePerAllConversions_ = 0D;
@@ -8107,51 +8202,51 @@ private static final long serialVersionUID = 0L;
         to_bitField3_ |= 0x00000800;
       }
       if (((from_bitField3_ & 0x00100000) != 0)) {
-        result.topImpressionPercentage_ = topImpressionPercentage_;
+        result.averageTargetCpaMicros_ = averageTargetCpaMicros_;
         to_bitField3_ |= 0x00001000;
       }
       if (((from_bitField3_ & 0x00200000) != 0)) {
-        result.validAcceleratedMobilePagesClicksPercentage_ = validAcceleratedMobilePagesClicksPercentage_;
+        result.averageTargetRoas_ = averageTargetRoas_;
         to_bitField3_ |= 0x00002000;
       }
       if (((from_bitField3_ & 0x00400000) != 0)) {
-        result.valuePerAllConversions_ = valuePerAllConversions_;
+        result.topImpressionPercentage_ = topImpressionPercentage_;
         to_bitField3_ |= 0x00004000;
       }
       if (((from_bitField3_ & 0x00800000) != 0)) {
-        result.valuePerAllConversionsByConversionDate_ = valuePerAllConversionsByConversionDate_;
+        result.validAcceleratedMobilePagesClicksPercentage_ = validAcceleratedMobilePagesClicksPercentage_;
         to_bitField3_ |= 0x00008000;
       }
       if (((from_bitField3_ & 0x01000000) != 0)) {
-        result.valuePerConversion_ = valuePerConversion_;
+        result.valuePerAllConversions_ = valuePerAllConversions_;
         to_bitField3_ |= 0x00010000;
       }
       if (((from_bitField3_ & 0x02000000) != 0)) {
-        result.valuePerConversionsByConversionDate_ = valuePerConversionsByConversionDate_;
+        result.valuePerAllConversionsByConversionDate_ = valuePerAllConversionsByConversionDate_;
         to_bitField3_ |= 0x00020000;
       }
       if (((from_bitField3_ & 0x04000000) != 0)) {
-        result.valuePerCurrentModelAttributedConversion_ = valuePerCurrentModelAttributedConversion_;
+        result.valuePerConversion_ = valuePerConversion_;
         to_bitField3_ |= 0x00040000;
       }
       if (((from_bitField3_ & 0x08000000) != 0)) {
-        result.videoQuartileP100Rate_ = videoQuartileP100Rate_;
+        result.valuePerConversionsByConversionDate_ = valuePerConversionsByConversionDate_;
         to_bitField3_ |= 0x00080000;
       }
       if (((from_bitField3_ & 0x10000000) != 0)) {
-        result.videoQuartileP25Rate_ = videoQuartileP25Rate_;
+        result.valuePerCurrentModelAttributedConversion_ = valuePerCurrentModelAttributedConversion_;
         to_bitField3_ |= 0x00100000;
       }
       if (((from_bitField3_ & 0x20000000) != 0)) {
-        result.videoQuartileP50Rate_ = videoQuartileP50Rate_;
+        result.videoQuartileP100Rate_ = videoQuartileP100Rate_;
         to_bitField3_ |= 0x00200000;
       }
       if (((from_bitField3_ & 0x40000000) != 0)) {
-        result.videoQuartileP75Rate_ = videoQuartileP75Rate_;
+        result.videoQuartileP25Rate_ = videoQuartileP25Rate_;
         to_bitField3_ |= 0x00400000;
       }
       if (((from_bitField3_ & 0x80000000) != 0)) {
-        result.videoViewRate_ = videoViewRate_;
+        result.videoQuartileP50Rate_ = videoQuartileP50Rate_;
         to_bitField3_ |= 0x00800000;
       }
       result.bitField2_ |= to_bitField2_;
@@ -8162,85 +8257,93 @@ private static final long serialVersionUID = 0L;
       int from_bitField4_ = bitField4_;
       int to_bitField3_ = 0;
       if (((from_bitField4_ & 0x00000001) != 0)) {
-        result.videoViews_ = videoViews_;
+        result.videoQuartileP75Rate_ = videoQuartileP75Rate_;
         to_bitField3_ |= 0x01000000;
       }
       if (((from_bitField4_ & 0x00000002) != 0)) {
-        result.viewThroughConversions_ = viewThroughConversions_;
+        result.videoViewRate_ = videoViewRate_;
         to_bitField3_ |= 0x02000000;
       }
       if (((from_bitField4_ & 0x00000004) != 0)) {
-        result.skAdNetworkConversions_ = skAdNetworkConversions_;
-      }
-      if (((from_bitField4_ & 0x00000008) != 0)) {
-        result.publisherPurchasedClicks_ = publisherPurchasedClicks_;
-      }
-      if (((from_bitField4_ & 0x00000010) != 0)) {
-        result.publisherOrganicClicks_ = publisherOrganicClicks_;
-      }
-      if (((from_bitField4_ & 0x00000020) != 0)) {
-        result.publisherUnknownClicks_ = publisherUnknownClicks_;
-      }
-      if (((from_bitField4_ & 0x00000040) != 0)) {
-        result.allConversionsFromLocationAssetClickToCall_ = allConversionsFromLocationAssetClickToCall_;
+        result.videoViews_ = videoViews_;
         to_bitField3_ |= 0x04000000;
       }
-      if (((from_bitField4_ & 0x00000080) != 0)) {
-        result.allConversionsFromLocationAssetDirections_ = allConversionsFromLocationAssetDirections_;
+      if (((from_bitField4_ & 0x00000008) != 0)) {
+        result.viewThroughConversions_ = viewThroughConversions_;
         to_bitField3_ |= 0x08000000;
       }
+      if (((from_bitField4_ & 0x00000010) != 0)) {
+        result.skAdNetworkConversions_ = skAdNetworkConversions_;
+      }
+      if (((from_bitField4_ & 0x00000020) != 0)) {
+        result.publisherPurchasedClicks_ = publisherPurchasedClicks_;
+      }
+      if (((from_bitField4_ & 0x00000040) != 0)) {
+        result.publisherOrganicClicks_ = publisherOrganicClicks_;
+      }
+      if (((from_bitField4_ & 0x00000080) != 0)) {
+        result.publisherUnknownClicks_ = publisherUnknownClicks_;
+      }
       if (((from_bitField4_ & 0x00000100) != 0)) {
-        result.allConversionsFromLocationAssetMenu_ = allConversionsFromLocationAssetMenu_;
+        result.allConversionsFromLocationAssetClickToCall_ = allConversionsFromLocationAssetClickToCall_;
         to_bitField3_ |= 0x10000000;
       }
       if (((from_bitField4_ & 0x00000200) != 0)) {
-        result.allConversionsFromLocationAssetOrder_ = allConversionsFromLocationAssetOrder_;
+        result.allConversionsFromLocationAssetDirections_ = allConversionsFromLocationAssetDirections_;
         to_bitField3_ |= 0x20000000;
       }
       if (((from_bitField4_ & 0x00000400) != 0)) {
-        result.allConversionsFromLocationAssetOtherEngagement_ = allConversionsFromLocationAssetOtherEngagement_;
+        result.allConversionsFromLocationAssetMenu_ = allConversionsFromLocationAssetMenu_;
         to_bitField3_ |= 0x40000000;
       }
       if (((from_bitField4_ & 0x00000800) != 0)) {
-        result.allConversionsFromLocationAssetStoreVisits_ = allConversionsFromLocationAssetStoreVisits_;
+        result.allConversionsFromLocationAssetOrder_ = allConversionsFromLocationAssetOrder_;
         to_bitField3_ |= 0x80000000;
       }
       int to_bitField4_ = 0;
       if (((from_bitField4_ & 0x00001000) != 0)) {
-        result.allConversionsFromLocationAssetWebsite_ = allConversionsFromLocationAssetWebsite_;
+        result.allConversionsFromLocationAssetOtherEngagement_ = allConversionsFromLocationAssetOtherEngagement_;
         to_bitField4_ |= 0x00000001;
       }
       if (((from_bitField4_ & 0x00002000) != 0)) {
-        result.eligibleImpressionsFromLocationAssetStoreReach_ = eligibleImpressionsFromLocationAssetStoreReach_;
+        result.allConversionsFromLocationAssetStoreVisits_ = allConversionsFromLocationAssetStoreVisits_;
         to_bitField4_ |= 0x00000002;
       }
       if (((from_bitField4_ & 0x00004000) != 0)) {
-        result.viewThroughConversionsFromLocationAssetClickToCall_ = viewThroughConversionsFromLocationAssetClickToCall_;
+        result.allConversionsFromLocationAssetWebsite_ = allConversionsFromLocationAssetWebsite_;
         to_bitField4_ |= 0x00000004;
       }
       if (((from_bitField4_ & 0x00008000) != 0)) {
-        result.viewThroughConversionsFromLocationAssetDirections_ = viewThroughConversionsFromLocationAssetDirections_;
+        result.eligibleImpressionsFromLocationAssetStoreReach_ = eligibleImpressionsFromLocationAssetStoreReach_;
         to_bitField4_ |= 0x00000008;
       }
       if (((from_bitField4_ & 0x00010000) != 0)) {
-        result.viewThroughConversionsFromLocationAssetMenu_ = viewThroughConversionsFromLocationAssetMenu_;
+        result.viewThroughConversionsFromLocationAssetClickToCall_ = viewThroughConversionsFromLocationAssetClickToCall_;
         to_bitField4_ |= 0x00000010;
       }
       if (((from_bitField4_ & 0x00020000) != 0)) {
-        result.viewThroughConversionsFromLocationAssetOrder_ = viewThroughConversionsFromLocationAssetOrder_;
+        result.viewThroughConversionsFromLocationAssetDirections_ = viewThroughConversionsFromLocationAssetDirections_;
         to_bitField4_ |= 0x00000020;
       }
       if (((from_bitField4_ & 0x00040000) != 0)) {
-        result.viewThroughConversionsFromLocationAssetOtherEngagement_ = viewThroughConversionsFromLocationAssetOtherEngagement_;
+        result.viewThroughConversionsFromLocationAssetMenu_ = viewThroughConversionsFromLocationAssetMenu_;
         to_bitField4_ |= 0x00000040;
       }
       if (((from_bitField4_ & 0x00080000) != 0)) {
-        result.viewThroughConversionsFromLocationAssetStoreVisits_ = viewThroughConversionsFromLocationAssetStoreVisits_;
+        result.viewThroughConversionsFromLocationAssetOrder_ = viewThroughConversionsFromLocationAssetOrder_;
         to_bitField4_ |= 0x00000080;
       }
       if (((from_bitField4_ & 0x00100000) != 0)) {
-        result.viewThroughConversionsFromLocationAssetWebsite_ = viewThroughConversionsFromLocationAssetWebsite_;
+        result.viewThroughConversionsFromLocationAssetOtherEngagement_ = viewThroughConversionsFromLocationAssetOtherEngagement_;
         to_bitField4_ |= 0x00000100;
+      }
+      if (((from_bitField4_ & 0x00200000) != 0)) {
+        result.viewThroughConversionsFromLocationAssetStoreVisits_ = viewThroughConversionsFromLocationAssetStoreVisits_;
+        to_bitField4_ |= 0x00000200;
+      }
+      if (((from_bitField4_ & 0x00400000) != 0)) {
+        result.viewThroughConversionsFromLocationAssetWebsite_ = viewThroughConversionsFromLocationAssetWebsite_;
+        to_bitField4_ |= 0x00000400;
       }
       result.bitField3_ |= to_bitField3_;
       result.bitField4_ |= to_bitField4_;
@@ -8651,6 +8754,12 @@ private static final long serialVersionUID = 0L;
       if (other.hasSpeedScore()) {
         setSpeedScore(other.getSpeedScore());
       }
+      if (other.hasAverageTargetCpaMicros()) {
+        setAverageTargetCpaMicros(other.getAverageTargetCpaMicros());
+      }
+      if (other.hasAverageTargetRoas()) {
+        setAverageTargetRoas(other.getAverageTargetRoas());
+      }
       if (other.hasTopImpressionPercentage()) {
         setTopImpressionPercentage(other.getTopImpressionPercentage());
       }
@@ -8815,22 +8924,22 @@ private static final long serialVersionUID = 0L;
             } // case 1048
             case 1057: {
               videoQuartileP100Rate_ = input.readDouble();
-              bitField3_ |= 0x08000000;
+              bitField3_ |= 0x20000000;
               break;
             } // case 1057
             case 1065: {
               videoQuartileP25Rate_ = input.readDouble();
-              bitField3_ |= 0x10000000;
+              bitField3_ |= 0x40000000;
               break;
             } // case 1065
             case 1073: {
               videoQuartileP50Rate_ = input.readDouble();
-              bitField3_ |= 0x20000000;
+              bitField3_ |= 0x80000000;
               break;
             } // case 1073
             case 1081: {
               videoQuartileP75Rate_ = input.readDouble();
-              bitField3_ |= 0x40000000;
+              bitField4_ |= 0x00000001;
               break;
             } // case 1081
             case 1089: {
@@ -8895,42 +9004,42 @@ private static final long serialVersionUID = 0L;
             } // case 1176
             case 1185: {
               topImpressionPercentage_ = input.readDouble();
-              bitField3_ |= 0x00100000;
+              bitField3_ |= 0x00400000;
               break;
             } // case 1185
             case 1193: {
               validAcceleratedMobilePagesClicksPercentage_ = input.readDouble();
-              bitField3_ |= 0x00200000;
+              bitField3_ |= 0x00800000;
               break;
             } // case 1193
             case 1201: {
               valuePerAllConversions_ = input.readDouble();
-              bitField3_ |= 0x00400000;
+              bitField3_ |= 0x01000000;
               break;
             } // case 1201
             case 1209: {
               valuePerConversion_ = input.readDouble();
-              bitField3_ |= 0x01000000;
+              bitField3_ |= 0x04000000;
               break;
             } // case 1209
             case 1217: {
               valuePerCurrentModelAttributedConversion_ = input.readDouble();
-              bitField3_ |= 0x04000000;
+              bitField3_ |= 0x10000000;
               break;
             } // case 1217
             case 1225: {
               videoViewRate_ = input.readDouble();
-              bitField3_ |= 0x80000000;
+              bitField4_ |= 0x00000002;
               break;
             } // case 1225
             case 1232: {
               videoViews_ = input.readInt64();
-              bitField4_ |= 0x00000001;
+              bitField4_ |= 0x00000004;
               break;
             } // case 1232
             case 1240: {
               viewThroughConversions_ = input.readInt64();
-              bitField4_ |= 0x00000002;
+              bitField4_ |= 0x00000008;
               break;
             } // case 1240
             case 1248: {
@@ -9370,17 +9479,17 @@ private static final long serialVersionUID = 0L;
             } // case 1945
             case 1953: {
               valuePerAllConversionsByConversionDate_ = input.readDouble();
-              bitField3_ |= 0x00800000;
+              bitField3_ |= 0x02000000;
               break;
             } // case 1953
             case 1961: {
               valuePerConversionsByConversionDate_ = input.readDouble();
-              bitField3_ |= 0x02000000;
+              bitField3_ |= 0x08000000;
               break;
             } // case 1961
             case 1968: {
               skAdNetworkConversions_ = input.readInt64();
-              bitField4_ |= 0x00000004;
+              bitField4_ |= 0x00000010;
               break;
             } // case 1968
             case 1977: {
@@ -9393,6 +9502,11 @@ private static final long serialVersionUID = 0L;
               bitField2_ |= 0x20000000;
               break;
             } // case 1986
+            case 2001: {
+              averageTargetRoas_ = input.readDouble();
+              bitField3_ |= 0x00200000;
+              break;
+            } // case 2001
             case 2033: {
               biddableAppInstallConversions_ = input.readDouble();
               bitField1_ |= 0x00000010;
@@ -9445,94 +9559,99 @@ private static final long serialVersionUID = 0L;
             } // case 2105
             case 2112: {
               publisherPurchasedClicks_ = input.readInt64();
-              bitField4_ |= 0x00000008;
+              bitField4_ |= 0x00000020;
               break;
             } // case 2112
             case 2120: {
               publisherOrganicClicks_ = input.readInt64();
-              bitField4_ |= 0x00000010;
+              bitField4_ |= 0x00000040;
               break;
             } // case 2120
             case 2128: {
               publisherUnknownClicks_ = input.readInt64();
-              bitField4_ |= 0x00000020;
+              bitField4_ |= 0x00000080;
               break;
             } // case 2128
             case 2137: {
               allConversionsFromLocationAssetClickToCall_ = input.readDouble();
-              bitField4_ |= 0x00000040;
+              bitField4_ |= 0x00000100;
               break;
             } // case 2137
             case 2145: {
               allConversionsFromLocationAssetDirections_ = input.readDouble();
-              bitField4_ |= 0x00000080;
+              bitField4_ |= 0x00000200;
               break;
             } // case 2145
             case 2153: {
               allConversionsFromLocationAssetMenu_ = input.readDouble();
-              bitField4_ |= 0x00000100;
+              bitField4_ |= 0x00000400;
               break;
             } // case 2153
             case 2161: {
               allConversionsFromLocationAssetOrder_ = input.readDouble();
-              bitField4_ |= 0x00000200;
+              bitField4_ |= 0x00000800;
               break;
             } // case 2161
             case 2169: {
               allConversionsFromLocationAssetOtherEngagement_ = input.readDouble();
-              bitField4_ |= 0x00000400;
+              bitField4_ |= 0x00001000;
               break;
             } // case 2169
             case 2177: {
               allConversionsFromLocationAssetStoreVisits_ = input.readDouble();
-              bitField4_ |= 0x00000800;
+              bitField4_ |= 0x00002000;
               break;
             } // case 2177
             case 2185: {
               allConversionsFromLocationAssetWebsite_ = input.readDouble();
-              bitField4_ |= 0x00001000;
+              bitField4_ |= 0x00004000;
               break;
             } // case 2185
             case 2192: {
               eligibleImpressionsFromLocationAssetStoreReach_ = input.readInt64();
-              bitField4_ |= 0x00002000;
+              bitField4_ |= 0x00008000;
               break;
             } // case 2192
             case 2201: {
               viewThroughConversionsFromLocationAssetClickToCall_ = input.readDouble();
-              bitField4_ |= 0x00004000;
+              bitField4_ |= 0x00010000;
               break;
             } // case 2201
             case 2209: {
               viewThroughConversionsFromLocationAssetDirections_ = input.readDouble();
-              bitField4_ |= 0x00008000;
+              bitField4_ |= 0x00020000;
               break;
             } // case 2209
             case 2217: {
               viewThroughConversionsFromLocationAssetMenu_ = input.readDouble();
-              bitField4_ |= 0x00010000;
+              bitField4_ |= 0x00040000;
               break;
             } // case 2217
             case 2225: {
               viewThroughConversionsFromLocationAssetOrder_ = input.readDouble();
-              bitField4_ |= 0x00020000;
+              bitField4_ |= 0x00080000;
               break;
             } // case 2225
             case 2233: {
               viewThroughConversionsFromLocationAssetOtherEngagement_ = input.readDouble();
-              bitField4_ |= 0x00040000;
+              bitField4_ |= 0x00100000;
               break;
             } // case 2233
             case 2241: {
               viewThroughConversionsFromLocationAssetStoreVisits_ = input.readDouble();
-              bitField4_ |= 0x00080000;
+              bitField4_ |= 0x00200000;
               break;
             } // case 2241
             case 2249: {
               viewThroughConversionsFromLocationAssetWebsite_ = input.readDouble();
-              bitField4_ |= 0x00100000;
+              bitField4_ |= 0x00400000;
               break;
             } // case 2249
+            case 2320: {
+              averageTargetCpaMicros_ = input.readInt64();
+              bitField3_ |= 0x00100000;
+              break;
+            } // case 2320
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -17223,6 +17342,126 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private long averageTargetCpaMicros_ ;
+    /**
+     * <pre>
+     * The average Target CPA, or unset if not available (for example, for
+     * campaigns that had traffic from portfolio bidding strategies or non-tCPA).
+     * </pre>
+     *
+     * <code>optional int64 average_target_cpa_micros = 290;</code>
+     * @return Whether the averageTargetCpaMicros field is set.
+     */
+    @java.lang.Override
+    public boolean hasAverageTargetCpaMicros() {
+      return ((bitField3_ & 0x00100000) != 0);
+    }
+    /**
+     * <pre>
+     * The average Target CPA, or unset if not available (for example, for
+     * campaigns that had traffic from portfolio bidding strategies or non-tCPA).
+     * </pre>
+     *
+     * <code>optional int64 average_target_cpa_micros = 290;</code>
+     * @return The averageTargetCpaMicros.
+     */
+    @java.lang.Override
+    public long getAverageTargetCpaMicros() {
+      return averageTargetCpaMicros_;
+    }
+    /**
+     * <pre>
+     * The average Target CPA, or unset if not available (for example, for
+     * campaigns that had traffic from portfolio bidding strategies or non-tCPA).
+     * </pre>
+     *
+     * <code>optional int64 average_target_cpa_micros = 290;</code>
+     * @param value The averageTargetCpaMicros to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAverageTargetCpaMicros(long value) {
+      
+      averageTargetCpaMicros_ = value;
+      bitField3_ |= 0x00100000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The average Target CPA, or unset if not available (for example, for
+     * campaigns that had traffic from portfolio bidding strategies or non-tCPA).
+     * </pre>
+     *
+     * <code>optional int64 average_target_cpa_micros = 290;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAverageTargetCpaMicros() {
+      bitField3_ = (bitField3_ & ~0x00100000);
+      averageTargetCpaMicros_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private double averageTargetRoas_ ;
+    /**
+     * <pre>
+     * The average Target ROAS, or unset if not available (for example, for
+     * campaigns that had traffic from portfolio bidding strategies or non-tROAS).
+     * </pre>
+     *
+     * <code>optional double average_target_roas = 250;</code>
+     * @return Whether the averageTargetRoas field is set.
+     */
+    @java.lang.Override
+    public boolean hasAverageTargetRoas() {
+      return ((bitField3_ & 0x00200000) != 0);
+    }
+    /**
+     * <pre>
+     * The average Target ROAS, or unset if not available (for example, for
+     * campaigns that had traffic from portfolio bidding strategies or non-tROAS).
+     * </pre>
+     *
+     * <code>optional double average_target_roas = 250;</code>
+     * @return The averageTargetRoas.
+     */
+    @java.lang.Override
+    public double getAverageTargetRoas() {
+      return averageTargetRoas_;
+    }
+    /**
+     * <pre>
+     * The average Target ROAS, or unset if not available (for example, for
+     * campaigns that had traffic from portfolio bidding strategies or non-tROAS).
+     * </pre>
+     *
+     * <code>optional double average_target_roas = 250;</code>
+     * @param value The averageTargetRoas to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAverageTargetRoas(double value) {
+      
+      averageTargetRoas_ = value;
+      bitField3_ |= 0x00200000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The average Target ROAS, or unset if not available (for example, for
+     * campaigns that had traffic from portfolio bidding strategies or non-tROAS).
+     * </pre>
+     *
+     * <code>optional double average_target_roas = 250;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAverageTargetRoas() {
+      bitField3_ = (bitField3_ & ~0x00200000);
+      averageTargetRoas_ = 0D;
+      onChanged();
+      return this;
+    }
+
     private double topImpressionPercentage_ ;
     /**
      * <pre>
@@ -17235,7 +17474,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasTopImpressionPercentage() {
-      return ((bitField3_ & 0x00100000) != 0);
+      return ((bitField3_ & 0x00400000) != 0);
     }
     /**
      * <pre>
@@ -17263,7 +17502,7 @@ private static final long serialVersionUID = 0L;
     public Builder setTopImpressionPercentage(double value) {
       
       topImpressionPercentage_ = value;
-      bitField3_ |= 0x00100000;
+      bitField3_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -17277,7 +17516,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTopImpressionPercentage() {
-      bitField3_ = (bitField3_ & ~0x00100000);
+      bitField3_ = (bitField3_ & ~0x00400000);
       topImpressionPercentage_ = 0D;
       onChanged();
       return this;
@@ -17295,7 +17534,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasValidAcceleratedMobilePagesClicksPercentage() {
-      return ((bitField3_ & 0x00200000) != 0);
+      return ((bitField3_ & 0x00800000) != 0);
     }
     /**
      * <pre>
@@ -17323,7 +17562,7 @@ private static final long serialVersionUID = 0L;
     public Builder setValidAcceleratedMobilePagesClicksPercentage(double value) {
       
       validAcceleratedMobilePagesClicksPercentage_ = value;
-      bitField3_ |= 0x00200000;
+      bitField3_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -17337,7 +17576,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearValidAcceleratedMobilePagesClicksPercentage() {
-      bitField3_ = (bitField3_ & ~0x00200000);
+      bitField3_ = (bitField3_ & ~0x00800000);
       validAcceleratedMobilePagesClicksPercentage_ = 0D;
       onChanged();
       return this;
@@ -17354,7 +17593,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasValuePerAllConversions() {
-      return ((bitField3_ & 0x00400000) != 0);
+      return ((bitField3_ & 0x01000000) != 0);
     }
     /**
      * <pre>
@@ -17380,7 +17619,7 @@ private static final long serialVersionUID = 0L;
     public Builder setValuePerAllConversions(double value) {
       
       valuePerAllConversions_ = value;
-      bitField3_ |= 0x00400000;
+      bitField3_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -17393,7 +17632,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearValuePerAllConversions() {
-      bitField3_ = (bitField3_ & ~0x00400000);
+      bitField3_ = (bitField3_ & ~0x01000000);
       valuePerAllConversions_ = 0D;
       onChanged();
       return this;
@@ -17413,7 +17652,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasValuePerAllConversionsByConversionDate() {
-      return ((bitField3_ & 0x00800000) != 0);
+      return ((bitField3_ & 0x02000000) != 0);
     }
     /**
      * <pre>
@@ -17445,7 +17684,7 @@ private static final long serialVersionUID = 0L;
     public Builder setValuePerAllConversionsByConversionDate(double value) {
       
       valuePerAllConversionsByConversionDate_ = value;
-      bitField3_ |= 0x00800000;
+      bitField3_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -17461,7 +17700,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearValuePerAllConversionsByConversionDate() {
-      bitField3_ = (bitField3_ & ~0x00800000);
+      bitField3_ = (bitField3_ & ~0x02000000);
       valuePerAllConversionsByConversionDate_ = 0D;
       onChanged();
       return this;
@@ -17481,7 +17720,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasValuePerConversion() {
-      return ((bitField3_ & 0x01000000) != 0);
+      return ((bitField3_ & 0x04000000) != 0);
     }
     /**
      * <pre>
@@ -17513,7 +17752,7 @@ private static final long serialVersionUID = 0L;
     public Builder setValuePerConversion(double value) {
       
       valuePerConversion_ = value;
-      bitField3_ |= 0x01000000;
+      bitField3_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -17529,7 +17768,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearValuePerConversion() {
-      bitField3_ = (bitField3_ & ~0x01000000);
+      bitField3_ = (bitField3_ & ~0x04000000);
       valuePerConversion_ = 0D;
       onChanged();
       return this;
@@ -17552,7 +17791,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasValuePerConversionsByConversionDate() {
-      return ((bitField3_ & 0x02000000) != 0);
+      return ((bitField3_ & 0x08000000) != 0);
     }
     /**
      * <pre>
@@ -17590,7 +17829,7 @@ private static final long serialVersionUID = 0L;
     public Builder setValuePerConversionsByConversionDate(double value) {
       
       valuePerConversionsByConversionDate_ = value;
-      bitField3_ |= 0x02000000;
+      bitField3_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -17609,7 +17848,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearValuePerConversionsByConversionDate() {
-      bitField3_ = (bitField3_ & ~0x02000000);
+      bitField3_ = (bitField3_ & ~0x08000000);
       valuePerConversionsByConversionDate_ = 0D;
       onChanged();
       return this;
@@ -17630,7 +17869,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasValuePerCurrentModelAttributedConversion() {
-      return ((bitField3_ & 0x04000000) != 0);
+      return ((bitField3_ & 0x10000000) != 0);
     }
     /**
      * <pre>
@@ -17664,7 +17903,7 @@ private static final long serialVersionUID = 0L;
     public Builder setValuePerCurrentModelAttributedConversion(double value) {
       
       valuePerCurrentModelAttributedConversion_ = value;
-      bitField3_ |= 0x04000000;
+      bitField3_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -17681,7 +17920,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearValuePerCurrentModelAttributedConversion() {
-      bitField3_ = (bitField3_ & ~0x04000000);
+      bitField3_ = (bitField3_ & ~0x10000000);
       valuePerCurrentModelAttributedConversion_ = 0D;
       onChanged();
       return this;
@@ -17698,7 +17937,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasVideoQuartileP100Rate() {
-      return ((bitField3_ & 0x08000000) != 0);
+      return ((bitField3_ & 0x20000000) != 0);
     }
     /**
      * <pre>
@@ -17724,7 +17963,7 @@ private static final long serialVersionUID = 0L;
     public Builder setVideoQuartileP100Rate(double value) {
       
       videoQuartileP100Rate_ = value;
-      bitField3_ |= 0x08000000;
+      bitField3_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -17737,7 +17976,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVideoQuartileP100Rate() {
-      bitField3_ = (bitField3_ & ~0x08000000);
+      bitField3_ = (bitField3_ & ~0x20000000);
       videoQuartileP100Rate_ = 0D;
       onChanged();
       return this;
@@ -17754,7 +17993,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasVideoQuartileP25Rate() {
-      return ((bitField3_ & 0x10000000) != 0);
+      return ((bitField3_ & 0x40000000) != 0);
     }
     /**
      * <pre>
@@ -17780,7 +18019,7 @@ private static final long serialVersionUID = 0L;
     public Builder setVideoQuartileP25Rate(double value) {
       
       videoQuartileP25Rate_ = value;
-      bitField3_ |= 0x10000000;
+      bitField3_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -17793,7 +18032,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVideoQuartileP25Rate() {
-      bitField3_ = (bitField3_ & ~0x10000000);
+      bitField3_ = (bitField3_ & ~0x40000000);
       videoQuartileP25Rate_ = 0D;
       onChanged();
       return this;
@@ -17810,7 +18049,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasVideoQuartileP50Rate() {
-      return ((bitField3_ & 0x20000000) != 0);
+      return ((bitField3_ & 0x80000000) != 0);
     }
     /**
      * <pre>
@@ -17836,7 +18075,7 @@ private static final long serialVersionUID = 0L;
     public Builder setVideoQuartileP50Rate(double value) {
       
       videoQuartileP50Rate_ = value;
-      bitField3_ |= 0x20000000;
+      bitField3_ |= 0x80000000;
       onChanged();
       return this;
     }
@@ -17849,7 +18088,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVideoQuartileP50Rate() {
-      bitField3_ = (bitField3_ & ~0x20000000);
+      bitField3_ = (bitField3_ & ~0x80000000);
       videoQuartileP50Rate_ = 0D;
       onChanged();
       return this;
@@ -17866,7 +18105,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasVideoQuartileP75Rate() {
-      return ((bitField3_ & 0x40000000) != 0);
+      return ((bitField4_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -17892,7 +18131,7 @@ private static final long serialVersionUID = 0L;
     public Builder setVideoQuartileP75Rate(double value) {
       
       videoQuartileP75Rate_ = value;
-      bitField3_ |= 0x40000000;
+      bitField4_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -17905,7 +18144,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVideoQuartileP75Rate() {
-      bitField3_ = (bitField3_ & ~0x40000000);
+      bitField4_ = (bitField4_ & ~0x00000001);
       videoQuartileP75Rate_ = 0D;
       onChanged();
       return this;
@@ -17924,7 +18163,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasVideoViewRate() {
-      return ((bitField3_ & 0x80000000) != 0);
+      return ((bitField4_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -17954,7 +18193,7 @@ private static final long serialVersionUID = 0L;
     public Builder setVideoViewRate(double value) {
       
       videoViewRate_ = value;
-      bitField3_ |= 0x80000000;
+      bitField4_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -17969,7 +18208,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVideoViewRate() {
-      bitField3_ = (bitField3_ & ~0x80000000);
+      bitField4_ = (bitField4_ & ~0x00000002);
       videoViewRate_ = 0D;
       onChanged();
       return this;
@@ -17986,7 +18225,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasVideoViews() {
-      return ((bitField4_ & 0x00000001) != 0);
+      return ((bitField4_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -18012,7 +18251,7 @@ private static final long serialVersionUID = 0L;
     public Builder setVideoViews(long value) {
       
       videoViews_ = value;
-      bitField4_ |= 0x00000001;
+      bitField4_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -18025,7 +18264,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearVideoViews() {
-      bitField4_ = (bitField4_ & ~0x00000001);
+      bitField4_ = (bitField4_ & ~0x00000004);
       videoViews_ = 0L;
       onChanged();
       return this;
@@ -18045,7 +18284,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasViewThroughConversions() {
-      return ((bitField4_ & 0x00000002) != 0);
+      return ((bitField4_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -18077,7 +18316,7 @@ private static final long serialVersionUID = 0L;
     public Builder setViewThroughConversions(long value) {
       
       viewThroughConversions_ = value;
-      bitField4_ |= 0x00000002;
+      bitField4_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -18093,7 +18332,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearViewThroughConversions() {
-      bitField4_ = (bitField4_ & ~0x00000002);
+      bitField4_ = (bitField4_ & ~0x00000008);
       viewThroughConversions_ = 0L;
       onChanged();
       return this;
@@ -18124,7 +18363,7 @@ private static final long serialVersionUID = 0L;
     public Builder setSkAdNetworkConversions(long value) {
       
       skAdNetworkConversions_ = value;
-      bitField4_ |= 0x00000004;
+      bitField4_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -18137,7 +18376,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSkAdNetworkConversions() {
-      bitField4_ = (bitField4_ & ~0x00000004);
+      bitField4_ = (bitField4_ & ~0x00000010);
       skAdNetworkConversions_ = 0L;
       onChanged();
       return this;
@@ -18170,7 +18409,7 @@ private static final long serialVersionUID = 0L;
     public Builder setPublisherPurchasedClicks(long value) {
       
       publisherPurchasedClicks_ = value;
-      bitField4_ |= 0x00000008;
+      bitField4_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -18184,7 +18423,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPublisherPurchasedClicks() {
-      bitField4_ = (bitField4_ & ~0x00000008);
+      bitField4_ = (bitField4_ & ~0x00000020);
       publisherPurchasedClicks_ = 0L;
       onChanged();
       return this;
@@ -18217,7 +18456,7 @@ private static final long serialVersionUID = 0L;
     public Builder setPublisherOrganicClicks(long value) {
       
       publisherOrganicClicks_ = value;
-      bitField4_ |= 0x00000010;
+      bitField4_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -18231,7 +18470,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPublisherOrganicClicks() {
-      bitField4_ = (bitField4_ & ~0x00000010);
+      bitField4_ = (bitField4_ & ~0x00000040);
       publisherOrganicClicks_ = 0L;
       onChanged();
       return this;
@@ -18264,7 +18503,7 @@ private static final long serialVersionUID = 0L;
     public Builder setPublisherUnknownClicks(long value) {
       
       publisherUnknownClicks_ = value;
-      bitField4_ |= 0x00000020;
+      bitField4_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -18278,7 +18517,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPublisherUnknownClicks() {
-      bitField4_ = (bitField4_ & ~0x00000020);
+      bitField4_ = (bitField4_ & ~0x00000080);
       publisherUnknownClicks_ = 0L;
       onChanged();
       return this;
@@ -18297,7 +18536,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAllConversionsFromLocationAssetClickToCall() {
-      return ((bitField4_ & 0x00000040) != 0);
+      return ((bitField4_ & 0x00000100) != 0);
     }
     /**
      * <pre>
@@ -18327,7 +18566,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAllConversionsFromLocationAssetClickToCall(double value) {
       
       allConversionsFromLocationAssetClickToCall_ = value;
-      bitField4_ |= 0x00000040;
+      bitField4_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -18342,7 +18581,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllConversionsFromLocationAssetClickToCall() {
-      bitField4_ = (bitField4_ & ~0x00000040);
+      bitField4_ = (bitField4_ & ~0x00000100);
       allConversionsFromLocationAssetClickToCall_ = 0D;
       onChanged();
       return this;
@@ -18361,7 +18600,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAllConversionsFromLocationAssetDirections() {
-      return ((bitField4_ & 0x00000080) != 0);
+      return ((bitField4_ & 0x00000200) != 0);
     }
     /**
      * <pre>
@@ -18391,7 +18630,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAllConversionsFromLocationAssetDirections(double value) {
       
       allConversionsFromLocationAssetDirections_ = value;
-      bitField4_ |= 0x00000080;
+      bitField4_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -18406,7 +18645,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllConversionsFromLocationAssetDirections() {
-      bitField4_ = (bitField4_ & ~0x00000080);
+      bitField4_ = (bitField4_ & ~0x00000200);
       allConversionsFromLocationAssetDirections_ = 0D;
       onChanged();
       return this;
@@ -18425,7 +18664,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAllConversionsFromLocationAssetMenu() {
-      return ((bitField4_ & 0x00000100) != 0);
+      return ((bitField4_ & 0x00000400) != 0);
     }
     /**
      * <pre>
@@ -18455,7 +18694,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAllConversionsFromLocationAssetMenu(double value) {
       
       allConversionsFromLocationAssetMenu_ = value;
-      bitField4_ |= 0x00000100;
+      bitField4_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -18470,7 +18709,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllConversionsFromLocationAssetMenu() {
-      bitField4_ = (bitField4_ & ~0x00000100);
+      bitField4_ = (bitField4_ & ~0x00000400);
       allConversionsFromLocationAssetMenu_ = 0D;
       onChanged();
       return this;
@@ -18489,7 +18728,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAllConversionsFromLocationAssetOrder() {
-      return ((bitField4_ & 0x00000200) != 0);
+      return ((bitField4_ & 0x00000800) != 0);
     }
     /**
      * <pre>
@@ -18519,7 +18758,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAllConversionsFromLocationAssetOrder(double value) {
       
       allConversionsFromLocationAssetOrder_ = value;
-      bitField4_ |= 0x00000200;
+      bitField4_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -18534,7 +18773,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllConversionsFromLocationAssetOrder() {
-      bitField4_ = (bitField4_ & ~0x00000200);
+      bitField4_ = (bitField4_ & ~0x00000800);
       allConversionsFromLocationAssetOrder_ = 0D;
       onChanged();
       return this;
@@ -18553,7 +18792,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAllConversionsFromLocationAssetOtherEngagement() {
-      return ((bitField4_ & 0x00000400) != 0);
+      return ((bitField4_ & 0x00001000) != 0);
     }
     /**
      * <pre>
@@ -18583,7 +18822,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAllConversionsFromLocationAssetOtherEngagement(double value) {
       
       allConversionsFromLocationAssetOtherEngagement_ = value;
-      bitField4_ |= 0x00000400;
+      bitField4_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -18598,7 +18837,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllConversionsFromLocationAssetOtherEngagement() {
-      bitField4_ = (bitField4_ & ~0x00000400);
+      bitField4_ = (bitField4_ & ~0x00001000);
       allConversionsFromLocationAssetOtherEngagement_ = 0D;
       onChanged();
       return this;
@@ -18617,7 +18856,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAllConversionsFromLocationAssetStoreVisits() {
-      return ((bitField4_ & 0x00000800) != 0);
+      return ((bitField4_ & 0x00002000) != 0);
     }
     /**
      * <pre>
@@ -18647,7 +18886,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAllConversionsFromLocationAssetStoreVisits(double value) {
       
       allConversionsFromLocationAssetStoreVisits_ = value;
-      bitField4_ |= 0x00000800;
+      bitField4_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -18662,7 +18901,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllConversionsFromLocationAssetStoreVisits() {
-      bitField4_ = (bitField4_ & ~0x00000800);
+      bitField4_ = (bitField4_ & ~0x00002000);
       allConversionsFromLocationAssetStoreVisits_ = 0D;
       onChanged();
       return this;
@@ -18681,7 +18920,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasAllConversionsFromLocationAssetWebsite() {
-      return ((bitField4_ & 0x00001000) != 0);
+      return ((bitField4_ & 0x00004000) != 0);
     }
     /**
      * <pre>
@@ -18711,7 +18950,7 @@ private static final long serialVersionUID = 0L;
     public Builder setAllConversionsFromLocationAssetWebsite(double value) {
       
       allConversionsFromLocationAssetWebsite_ = value;
-      bitField4_ |= 0x00001000;
+      bitField4_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -18726,7 +18965,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAllConversionsFromLocationAssetWebsite() {
-      bitField4_ = (bitField4_ & ~0x00001000);
+      bitField4_ = (bitField4_ & ~0x00004000);
       allConversionsFromLocationAssetWebsite_ = 0D;
       onChanged();
       return this;
@@ -18745,7 +18984,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasEligibleImpressionsFromLocationAssetStoreReach() {
-      return ((bitField4_ & 0x00002000) != 0);
+      return ((bitField4_ & 0x00008000) != 0);
     }
     /**
      * <pre>
@@ -18775,7 +19014,7 @@ private static final long serialVersionUID = 0L;
     public Builder setEligibleImpressionsFromLocationAssetStoreReach(long value) {
       
       eligibleImpressionsFromLocationAssetStoreReach_ = value;
-      bitField4_ |= 0x00002000;
+      bitField4_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -18790,7 +19029,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEligibleImpressionsFromLocationAssetStoreReach() {
-      bitField4_ = (bitField4_ & ~0x00002000);
+      bitField4_ = (bitField4_ & ~0x00008000);
       eligibleImpressionsFromLocationAssetStoreReach_ = 0L;
       onChanged();
       return this;
@@ -18808,7 +19047,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasViewThroughConversionsFromLocationAssetClickToCall() {
-      return ((bitField4_ & 0x00004000) != 0);
+      return ((bitField4_ & 0x00010000) != 0);
     }
     /**
      * <pre>
@@ -18836,7 +19075,7 @@ private static final long serialVersionUID = 0L;
     public Builder setViewThroughConversionsFromLocationAssetClickToCall(double value) {
       
       viewThroughConversionsFromLocationAssetClickToCall_ = value;
-      bitField4_ |= 0x00004000;
+      bitField4_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -18850,7 +19089,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearViewThroughConversionsFromLocationAssetClickToCall() {
-      bitField4_ = (bitField4_ & ~0x00004000);
+      bitField4_ = (bitField4_ & ~0x00010000);
       viewThroughConversionsFromLocationAssetClickToCall_ = 0D;
       onChanged();
       return this;
@@ -18868,7 +19107,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasViewThroughConversionsFromLocationAssetDirections() {
-      return ((bitField4_ & 0x00008000) != 0);
+      return ((bitField4_ & 0x00020000) != 0);
     }
     /**
      * <pre>
@@ -18896,7 +19135,7 @@ private static final long serialVersionUID = 0L;
     public Builder setViewThroughConversionsFromLocationAssetDirections(double value) {
       
       viewThroughConversionsFromLocationAssetDirections_ = value;
-      bitField4_ |= 0x00008000;
+      bitField4_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -18910,7 +19149,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearViewThroughConversionsFromLocationAssetDirections() {
-      bitField4_ = (bitField4_ & ~0x00008000);
+      bitField4_ = (bitField4_ & ~0x00020000);
       viewThroughConversionsFromLocationAssetDirections_ = 0D;
       onChanged();
       return this;
@@ -18928,7 +19167,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasViewThroughConversionsFromLocationAssetMenu() {
-      return ((bitField4_ & 0x00010000) != 0);
+      return ((bitField4_ & 0x00040000) != 0);
     }
     /**
      * <pre>
@@ -18956,7 +19195,7 @@ private static final long serialVersionUID = 0L;
     public Builder setViewThroughConversionsFromLocationAssetMenu(double value) {
       
       viewThroughConversionsFromLocationAssetMenu_ = value;
-      bitField4_ |= 0x00010000;
+      bitField4_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -18970,7 +19209,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearViewThroughConversionsFromLocationAssetMenu() {
-      bitField4_ = (bitField4_ & ~0x00010000);
+      bitField4_ = (bitField4_ & ~0x00040000);
       viewThroughConversionsFromLocationAssetMenu_ = 0D;
       onChanged();
       return this;
@@ -18988,7 +19227,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasViewThroughConversionsFromLocationAssetOrder() {
-      return ((bitField4_ & 0x00020000) != 0);
+      return ((bitField4_ & 0x00080000) != 0);
     }
     /**
      * <pre>
@@ -19016,7 +19255,7 @@ private static final long serialVersionUID = 0L;
     public Builder setViewThroughConversionsFromLocationAssetOrder(double value) {
       
       viewThroughConversionsFromLocationAssetOrder_ = value;
-      bitField4_ |= 0x00020000;
+      bitField4_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -19030,7 +19269,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearViewThroughConversionsFromLocationAssetOrder() {
-      bitField4_ = (bitField4_ & ~0x00020000);
+      bitField4_ = (bitField4_ & ~0x00080000);
       viewThroughConversionsFromLocationAssetOrder_ = 0D;
       onChanged();
       return this;
@@ -19048,7 +19287,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasViewThroughConversionsFromLocationAssetOtherEngagement() {
-      return ((bitField4_ & 0x00040000) != 0);
+      return ((bitField4_ & 0x00100000) != 0);
     }
     /**
      * <pre>
@@ -19076,7 +19315,7 @@ private static final long serialVersionUID = 0L;
     public Builder setViewThroughConversionsFromLocationAssetOtherEngagement(double value) {
       
       viewThroughConversionsFromLocationAssetOtherEngagement_ = value;
-      bitField4_ |= 0x00040000;
+      bitField4_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -19090,7 +19329,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearViewThroughConversionsFromLocationAssetOtherEngagement() {
-      bitField4_ = (bitField4_ & ~0x00040000);
+      bitField4_ = (bitField4_ & ~0x00100000);
       viewThroughConversionsFromLocationAssetOtherEngagement_ = 0D;
       onChanged();
       return this;
@@ -19108,7 +19347,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasViewThroughConversionsFromLocationAssetStoreVisits() {
-      return ((bitField4_ & 0x00080000) != 0);
+      return ((bitField4_ & 0x00200000) != 0);
     }
     /**
      * <pre>
@@ -19136,7 +19375,7 @@ private static final long serialVersionUID = 0L;
     public Builder setViewThroughConversionsFromLocationAssetStoreVisits(double value) {
       
       viewThroughConversionsFromLocationAssetStoreVisits_ = value;
-      bitField4_ |= 0x00080000;
+      bitField4_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -19150,7 +19389,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearViewThroughConversionsFromLocationAssetStoreVisits() {
-      bitField4_ = (bitField4_ & ~0x00080000);
+      bitField4_ = (bitField4_ & ~0x00200000);
       viewThroughConversionsFromLocationAssetStoreVisits_ = 0D;
       onChanged();
       return this;
@@ -19168,7 +19407,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasViewThroughConversionsFromLocationAssetWebsite() {
-      return ((bitField4_ & 0x00100000) != 0);
+      return ((bitField4_ & 0x00400000) != 0);
     }
     /**
      * <pre>
@@ -19196,7 +19435,7 @@ private static final long serialVersionUID = 0L;
     public Builder setViewThroughConversionsFromLocationAssetWebsite(double value) {
       
       viewThroughConversionsFromLocationAssetWebsite_ = value;
-      bitField4_ |= 0x00100000;
+      bitField4_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -19210,7 +19449,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearViewThroughConversionsFromLocationAssetWebsite() {
-      bitField4_ = (bitField4_ & ~0x00100000);
+      bitField4_ = (bitField4_ & ~0x00400000);
       viewThroughConversionsFromLocationAssetWebsite_ = 0D;
       onChanged();
       return this;

@@ -188,6 +188,14 @@ private static final long serialVersionUID = 0L;
      * <code>INVALID_APPLY_REQUEST = 15;</code>
      */
     INVALID_APPLY_REQUEST(15),
+    /**
+     * <pre>
+     * The type of recommendation requested to apply is not supported.
+     * </pre>
+     *
+     * <code>RECOMMENDATION_TYPE_APPLY_NOT_SUPPORTED = 17;</code>
+     */
+    RECOMMENDATION_TYPE_APPLY_NOT_SUPPORTED(17),
     UNRECOGNIZED(-1),
     ;
 
@@ -323,6 +331,14 @@ private static final long serialVersionUID = 0L;
      * <code>INVALID_APPLY_REQUEST = 15;</code>
      */
     public static final int INVALID_APPLY_REQUEST_VALUE = 15;
+    /**
+     * <pre>
+     * The type of recommendation requested to apply is not supported.
+     * </pre>
+     *
+     * <code>RECOMMENDATION_TYPE_APPLY_NOT_SUPPORTED = 17;</code>
+     */
+    public static final int RECOMMENDATION_TYPE_APPLY_NOT_SUPPORTED_VALUE = 17;
 
 
     public final int getNumber() {
@@ -365,6 +381,7 @@ private static final long serialVersionUID = 0L;
         case 13: return DUPLICATE_RESOURCE_NAME;
         case 14: return RECOMMENDATION_ALREADY_DISMISSED;
         case 15: return INVALID_APPLY_REQUEST;
+        case 17: return RECOMMENDATION_TYPE_APPLY_NOT_SUPPORTED;
         default: return null;
       }
     }

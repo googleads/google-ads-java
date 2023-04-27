@@ -5,7 +5,7 @@ package com.google.ads.googleads.v13.common;
 
 /**
  * <pre>
- * The Annotations for the Keyword plan keywords.
+ * The annotations for the keyword plan keywords.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v13.common.KeywordAnnotations}
@@ -268,7 +268,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The Annotations for the Keyword plan keywords.
+   * The annotations for the keyword plan keywords.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v13.common.KeywordAnnotations}

@@ -61,5 +61,34 @@ public interface LeadFormFieldOrBuilder extends
    */
   com.google.ads.googleads.v13.common.LeadFormSingleChoiceAnswersOrBuilder getSingleChoiceAnswersOrBuilder();
 
+  /**
+   * <pre>
+   * Answer configuration for location question. If true, campaign/account
+   * level location data (state, city, business name etc) will be rendered on
+   * the Lead Form.
+   * Starting V13.1, has_location_answer can only be set for "What is your
+   * preferred dealership?" question, for advertisers with Location Assets
+   * setup at campaign/account level.
+   * </pre>
+   *
+   * <code>bool has_location_answer = 3;</code>
+   * @return Whether the hasLocationAnswer field is set.
+   */
+  boolean hasHasLocationAnswer();
+  /**
+   * <pre>
+   * Answer configuration for location question. If true, campaign/account
+   * level location data (state, city, business name etc) will be rendered on
+   * the Lead Form.
+   * Starting V13.1, has_location_answer can only be set for "What is your
+   * preferred dealership?" question, for advertisers with Location Assets
+   * setup at campaign/account level.
+   * </pre>
+   *
+   * <code>bool has_location_answer = 3;</code>
+   * @return The hasLocationAnswer.
+   */
+  boolean getHasLocationAnswer();
+
   public com.google.ads.googleads.v13.common.LeadFormField.AnswersCase getAnswersCase();
 }

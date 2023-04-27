@@ -98,7 +98,7 @@ public final class ConversionAdjustmentUploadServiceGrpc {
    * Service to upload conversion adjustments.
    * </pre>
    */
-  public static abstract class ConversionAdjustmentUploadServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -113,30 +113,34 @@ public final class ConversionAdjustmentUploadServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void uploadConversionAdjustments(com.google.ads.googleads.v13.services.UploadConversionAdjustmentsRequest request,
+    default void uploadConversionAdjustments(com.google.ads.googleads.v13.services.UploadConversionAdjustmentsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.UploadConversionAdjustmentsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUploadConversionAdjustmentsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getUploadConversionAdjustmentsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.UploadConversionAdjustmentsRequest,
-                com.google.ads.googleads.v13.services.UploadConversionAdjustmentsResponse>(
-                  this, METHODID_UPLOAD_CONVERSION_ADJUSTMENTS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service ConversionAdjustmentUploadService.
    * <pre>
    * Service to upload conversion adjustments.
    * </pre>
    */
-  public static final class ConversionAdjustmentUploadServiceStub extends io.grpc.stub.AbstractAsyncStub<ConversionAdjustmentUploadServiceStub> {
+  public static abstract class ConversionAdjustmentUploadServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return ConversionAdjustmentUploadServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service ConversionAdjustmentUploadService.
+   * <pre>
+   * Service to upload conversion adjustments.
+   * </pre>
+   */
+  public static final class ConversionAdjustmentUploadServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<ConversionAdjustmentUploadServiceStub> {
     private ConversionAdjustmentUploadServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -169,11 +173,13 @@ public final class ConversionAdjustmentUploadServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service ConversionAdjustmentUploadService.
    * <pre>
    * Service to upload conversion adjustments.
    * </pre>
    */
-  public static final class ConversionAdjustmentUploadServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ConversionAdjustmentUploadServiceBlockingStub> {
+  public static final class ConversionAdjustmentUploadServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<ConversionAdjustmentUploadServiceBlockingStub> {
     private ConversionAdjustmentUploadServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -205,11 +211,13 @@ public final class ConversionAdjustmentUploadServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service ConversionAdjustmentUploadService.
    * <pre>
    * Service to upload conversion adjustments.
    * </pre>
    */
-  public static final class ConversionAdjustmentUploadServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ConversionAdjustmentUploadServiceFutureStub> {
+  public static final class ConversionAdjustmentUploadServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<ConversionAdjustmentUploadServiceFutureStub> {
     private ConversionAdjustmentUploadServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -248,10 +256,10 @@ public final class ConversionAdjustmentUploadServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final ConversionAdjustmentUploadServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(ConversionAdjustmentUploadServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -278,6 +286,18 @@ public final class ConversionAdjustmentUploadServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getUploadConversionAdjustmentsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.UploadConversionAdjustmentsRequest,
+              com.google.ads.googleads.v13.services.UploadConversionAdjustmentsResponse>(
+                service, METHODID_UPLOAD_CONVERSION_ADJUSTMENTS)))
+        .build();
   }
 
   private static abstract class ConversionAdjustmentUploadServiceBaseDescriptorSupplier

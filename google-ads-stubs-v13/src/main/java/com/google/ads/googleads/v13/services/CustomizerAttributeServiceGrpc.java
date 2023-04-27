@@ -98,7 +98,7 @@ public final class CustomizerAttributeServiceGrpc {
    * Service to manage customizer attribute
    * </pre>
    */
-  public static abstract class CustomizerAttributeServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -106,30 +106,34 @@ public final class CustomizerAttributeServiceGrpc {
      * returned.
      * </pre>
      */
-    public void mutateCustomizerAttributes(com.google.ads.googleads.v13.services.MutateCustomizerAttributesRequest request,
+    default void mutateCustomizerAttributes(com.google.ads.googleads.v13.services.MutateCustomizerAttributesRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.MutateCustomizerAttributesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateCustomizerAttributesMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateCustomizerAttributesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.MutateCustomizerAttributesRequest,
-                com.google.ads.googleads.v13.services.MutateCustomizerAttributesResponse>(
-                  this, METHODID_MUTATE_CUSTOMIZER_ATTRIBUTES)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service CustomizerAttributeService.
    * <pre>
    * Service to manage customizer attribute
    * </pre>
    */
-  public static final class CustomizerAttributeServiceStub extends io.grpc.stub.AbstractAsyncStub<CustomizerAttributeServiceStub> {
+  public static abstract class CustomizerAttributeServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return CustomizerAttributeServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service CustomizerAttributeService.
+   * <pre>
+   * Service to manage customizer attribute
+   * </pre>
+   */
+  public static final class CustomizerAttributeServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<CustomizerAttributeServiceStub> {
     private CustomizerAttributeServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -155,11 +159,13 @@ public final class CustomizerAttributeServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service CustomizerAttributeService.
    * <pre>
    * Service to manage customizer attribute
    * </pre>
    */
-  public static final class CustomizerAttributeServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CustomizerAttributeServiceBlockingStub> {
+  public static final class CustomizerAttributeServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<CustomizerAttributeServiceBlockingStub> {
     private CustomizerAttributeServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -184,11 +190,13 @@ public final class CustomizerAttributeServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service CustomizerAttributeService.
    * <pre>
    * Service to manage customizer attribute
    * </pre>
    */
-  public static final class CustomizerAttributeServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CustomizerAttributeServiceFutureStub> {
+  public static final class CustomizerAttributeServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<CustomizerAttributeServiceFutureStub> {
     private CustomizerAttributeServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -220,10 +228,10 @@ public final class CustomizerAttributeServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final CustomizerAttributeServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(CustomizerAttributeServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -250,6 +258,18 @@ public final class CustomizerAttributeServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateCustomizerAttributesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.MutateCustomizerAttributesRequest,
+              com.google.ads.googleads.v13.services.MutateCustomizerAttributesResponse>(
+                service, METHODID_MUTATE_CUSTOMIZER_ATTRIBUTES)))
+        .build();
   }
 
   private static abstract class CustomizerAttributeServiceBaseDescriptorSupplier

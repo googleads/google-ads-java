@@ -98,7 +98,7 @@ public final class CustomInterestServiceGrpc {
    * Service to manage custom interests.
    * </pre>
    */
-  public static abstract class CustomInterestServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -117,30 +117,34 @@ public final class CustomInterestServiceGrpc {
      *   [StringLengthError]()
      * </pre>
      */
-    public void mutateCustomInterests(com.google.ads.googleads.v13.services.MutateCustomInterestsRequest request,
+    default void mutateCustomInterests(com.google.ads.googleads.v13.services.MutateCustomInterestsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.MutateCustomInterestsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateCustomInterestsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateCustomInterestsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.MutateCustomInterestsRequest,
-                com.google.ads.googleads.v13.services.MutateCustomInterestsResponse>(
-                  this, METHODID_MUTATE_CUSTOM_INTERESTS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service CustomInterestService.
    * <pre>
    * Service to manage custom interests.
    * </pre>
    */
-  public static final class CustomInterestServiceStub extends io.grpc.stub.AbstractAsyncStub<CustomInterestServiceStub> {
+  public static abstract class CustomInterestServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return CustomInterestServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service CustomInterestService.
+   * <pre>
+   * Service to manage custom interests.
+   * </pre>
+   */
+  public static final class CustomInterestServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<CustomInterestServiceStub> {
     private CustomInterestServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -177,11 +181,13 @@ public final class CustomInterestServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service CustomInterestService.
    * <pre>
    * Service to manage custom interests.
    * </pre>
    */
-  public static final class CustomInterestServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CustomInterestServiceBlockingStub> {
+  public static final class CustomInterestServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<CustomInterestServiceBlockingStub> {
     private CustomInterestServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -217,11 +223,13 @@ public final class CustomInterestServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service CustomInterestService.
    * <pre>
    * Service to manage custom interests.
    * </pre>
    */
-  public static final class CustomInterestServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CustomInterestServiceFutureStub> {
+  public static final class CustomInterestServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<CustomInterestServiceFutureStub> {
     private CustomInterestServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -264,10 +272,10 @@ public final class CustomInterestServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final CustomInterestServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(CustomInterestServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -294,6 +302,18 @@ public final class CustomInterestServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateCustomInterestsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.MutateCustomInterestsRequest,
+              com.google.ads.googleads.v13.services.MutateCustomInterestsResponse>(
+                service, METHODID_MUTATE_CUSTOM_INTERESTS)))
+        .build();
   }
 
   private static abstract class CustomInterestServiceBaseDescriptorSupplier

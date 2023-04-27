@@ -98,7 +98,7 @@ public final class InvoiceServiceGrpc {
    * A service to fetch invoices issued for a billing setup during a given month.
    * </pre>
    */
-  public static abstract class InvoiceServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -114,30 +114,34 @@ public final class InvoiceServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void listInvoices(com.google.ads.googleads.v13.services.ListInvoicesRequest request,
+    default void listInvoices(com.google.ads.googleads.v13.services.ListInvoicesRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v13.services.ListInvoicesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListInvoicesMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getListInvoicesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v13.services.ListInvoicesRequest,
-                com.google.ads.googleads.v13.services.ListInvoicesResponse>(
-                  this, METHODID_LIST_INVOICES)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service InvoiceService.
    * <pre>
    * A service to fetch invoices issued for a billing setup during a given month.
    * </pre>
    */
-  public static final class InvoiceServiceStub extends io.grpc.stub.AbstractAsyncStub<InvoiceServiceStub> {
+  public static abstract class InvoiceServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return InvoiceServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service InvoiceService.
+   * <pre>
+   * A service to fetch invoices issued for a billing setup during a given month.
+   * </pre>
+   */
+  public static final class InvoiceServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<InvoiceServiceStub> {
     private InvoiceServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -171,11 +175,13 @@ public final class InvoiceServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service InvoiceService.
    * <pre>
    * A service to fetch invoices issued for a billing setup during a given month.
    * </pre>
    */
-  public static final class InvoiceServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<InvoiceServiceBlockingStub> {
+  public static final class InvoiceServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<InvoiceServiceBlockingStub> {
     private InvoiceServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -208,11 +214,13 @@ public final class InvoiceServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service InvoiceService.
    * <pre>
    * A service to fetch invoices issued for a billing setup during a given month.
    * </pre>
    */
-  public static final class InvoiceServiceFutureStub extends io.grpc.stub.AbstractFutureStub<InvoiceServiceFutureStub> {
+  public static final class InvoiceServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<InvoiceServiceFutureStub> {
     private InvoiceServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -252,10 +260,10 @@ public final class InvoiceServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final InvoiceServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(InvoiceServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -282,6 +290,18 @@ public final class InvoiceServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getListInvoicesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v13.services.ListInvoicesRequest,
+              com.google.ads.googleads.v13.services.ListInvoicesResponse>(
+                service, METHODID_LIST_INVOICES)))
+        .build();
   }
 
   private static abstract class InvoiceServiceBaseDescriptorSupplier

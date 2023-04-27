@@ -30,8 +30,8 @@ public final class RecommendationErrorProto {
     java.lang.String[] descriptorData = {
       "\n:google/ads/googleads/v13/errors/recomm" +
       "endation_error.proto\022\037google.ads.googlea" +
-      "ds.v13.errors\"\332\003\n\027RecommendationErrorEnu" +
-      "m\"\276\003\n\023RecommendationError\022\017\n\013UNSPECIFIED" +
+      "ds.v13.errors\"\207\004\n\027RecommendationErrorEnu" +
+      "m\"\353\003\n\023RecommendationError\022\017\n\013UNSPECIFIED" +
       "\020\000\022\013\n\007UNKNOWN\020\001\022\033\n\027BUDGET_AMOUNT_TOO_SMA" +
       "LL\020\002\022\033\n\027BUDGET_AMOUNT_TOO_LARGE\020\003\022\031\n\025INV" +
       "ALID_BUDGET_AMOUNT\020\004\022\020\n\014POLICY_ERROR\020\005\022\026" +
@@ -42,13 +42,14 @@ public final class RecommendationErrorProto {
       "\013\022!\n\035DIFFERENT_TYPES_NOT_SUPPORTED\020\014\022\033\n\027" +
       "DUPLICATE_RESOURCE_NAME\020\r\022$\n RECOMMENDAT" +
       "ION_ALREADY_DISMISSED\020\016\022\031\n\025INVALID_APPLY" +
-      "_REQUEST\020\017B\370\001\n#com.google.ads.googleads." +
-      "v13.errorsB\030RecommendationErrorProtoP\001ZE" +
-      "google.golang.org/genproto/googleapis/ad" +
-      "s/googleads/v13/errors;errors\242\002\003GAA\252\002\037Go" +
-      "ogle.Ads.GoogleAds.V13.Errors\312\002\037Google\\A" +
-      "ds\\GoogleAds\\V13\\Errors\352\002#Google::Ads::G" +
-      "oogleAds::V13::Errorsb\006proto3"
+      "_REQUEST\020\017\022+\n\'RECOMMENDATION_TYPE_APPLY_" +
+      "NOT_SUPPORTED\020\021B\370\001\n#com.google.ads.googl" +
+      "eads.v13.errorsB\030RecommendationErrorProt" +
+      "oP\001ZEgoogle.golang.org/genproto/googleap" +
+      "is/ads/googleads/v13/errors;errors\242\002\003GAA" +
+      "\252\002\037Google.Ads.GoogleAds.V13.Errors\312\002\037Goo" +
+      "gle\\Ads\\GoogleAds\\V13\\Errors\352\002#Google::A" +
+      "ds::GoogleAds::V13::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
