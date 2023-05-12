@@ -209,6 +209,7 @@ public class AddCustomerMatchUserList {
    * @param customerId the client customer ID.
    * @return the resource name of the newly created user list.
    */
+  // [START add_customer_match_user_list_3]
   private String createCustomerMatchUserList(GoogleAdsClient googleAdsClient, long customerId) {
     // Creates the new user list.
     UserList userList =
@@ -243,6 +244,7 @@ public class AddCustomerMatchUserList {
       return response.getResults(0).getResourceName();
     }
   }
+  // [END add_customer_match_user_list_3]
 
   /**
    * Creates and executes an asynchronous job to add users to the Customer Match user list.
@@ -487,13 +489,13 @@ public class AddCustomerMatchUserList {
         userDataList.add(userDataBuilder.build());
       }
     }
-    // [END add_customer_match_user_list_2]
 
     // Creates the operations to add users.
     List<OfflineUserDataJobOperation> operations = new ArrayList<>();
     for (UserData userData : userDataList) {
       operations.add(OfflineUserDataJobOperation.newBuilder().setCreate(userData).build());
     }
+    // [END add_customer_match_user_list_2]
 
     return operations;
   }
@@ -538,6 +540,7 @@ public class AddCustomerMatchUserList {
    * @param offlineUserDataJobResourceName the resource name of the OfflineUserDataJob to get the
    *     status for.
    */
+  // [START add_customer_match_user_list_4]
   private void checkJobStatus(
       GoogleAdsClient googleAdsClient, long customerId, String offlineUserDataJobResourceName) {
     try (GoogleAdsServiceClient googleAdsServiceClient =
@@ -583,6 +586,7 @@ public class AddCustomerMatchUserList {
       }
     }
   }
+  // [END add_customer_match_user_list_4]
 
   /**
    * Prints information about the Customer Match user list.
@@ -593,6 +597,7 @@ public class AddCustomerMatchUserList {
    */
   private void printCustomerMatchUserListInfo(
       GoogleAdsClient googleAdsClient, long customerId, String userListResourceName) {
+    // [START add_customer_match_user_list_5]
     try (GoogleAdsServiceClient googleAdsServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
       // Creates a query that retrieves the user list.
@@ -613,6 +618,7 @@ public class AddCustomerMatchUserList {
       // Issues the search stream request.
       ServerStream<SearchGoogleAdsStreamResponse> stream =
           googleAdsServiceClient.searchStreamCallable().call(request);
+      // [END add_customer_match_user_list_5]
 
       // Gets the first and only row from the response.
       GoogleAdsRow googleAdsRow = stream.iterator().next().getResultsList().get(0);
