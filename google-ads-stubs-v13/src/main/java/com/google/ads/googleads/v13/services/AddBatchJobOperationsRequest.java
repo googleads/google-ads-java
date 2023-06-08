@@ -33,11 +33,6 @@ private static final long serialVersionUID = 0L;
     return new AddBatchJobOperationsRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.services.BatchJobServiceProto.internal_static_google_ads_googleads_v13_services_AddBatchJobOperationsRequest_descriptor;
@@ -104,6 +99,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A token used to enforce sequencing.
+   *
    * The first AddBatchJobOperations request for a batch job should not set
    * sequence_token. Subsequent requests must set sequence_token to the value of
    * next_sequence_token received in the previous AddBatchJobOperations
@@ -129,6 +125,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A token used to enforce sequencing.
+   *
    * The first AddBatchJobOperations request for a batch job should not set
    * sequence_token. Subsequent requests must set sequence_token to the value of
    * next_sequence_token received in the previous AddBatchJobOperations
@@ -159,6 +156,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Required. The list of mutates being added.
+   *
    * Operations can use negative integers as temp ids to signify dependencies
    * between entities created in this batch job. For example, a customer with
    * id = 1234 can create a campaign and an ad group in that same campaign by
@@ -177,6 +175,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Required. The list of mutates being added.
+   *
    * Operations can use negative integers as temp ids to signify dependencies
    * between entities created in this batch job. For example, a customer with
    * id = 1234 can create a campaign and an ad group in that same campaign by
@@ -196,6 +195,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Required. The list of mutates being added.
+   *
    * Operations can use negative integers as temp ids to signify dependencies
    * between entities created in this batch job. For example, a customer with
    * id = 1234 can create a campaign and an ad group in that same campaign by
@@ -214,6 +214,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Required. The list of mutates being added.
+   *
    * Operations can use negative integers as temp ids to signify dependencies
    * between entities created in this batch job. For example, a customer with
    * id = 1234 can create a campaign and an ad group in that same campaign by
@@ -232,6 +233,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Required. The list of mutates being added.
+   *
    * Operations can use negative integers as temp ids to signify dependencies
    * between entities created in this batch job. For example, a customer with
    * id = 1234 can create a campaign and an ad group in that same campaign by
@@ -380,11 +382,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.services.AddBatchJobOperationsRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.services.AddBatchJobOperationsRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -770,6 +774,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A token used to enforce sequencing.
+     *
      * The first AddBatchJobOperations request for a batch job should not set
      * sequence_token. Subsequent requests must set sequence_token to the value of
      * next_sequence_token received in the previous AddBatchJobOperations
@@ -794,6 +799,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A token used to enforce sequencing.
+     *
      * The first AddBatchJobOperations request for a batch job should not set
      * sequence_token. Subsequent requests must set sequence_token to the value of
      * next_sequence_token received in the previous AddBatchJobOperations
@@ -819,6 +825,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A token used to enforce sequencing.
+     *
      * The first AddBatchJobOperations request for a batch job should not set
      * sequence_token. Subsequent requests must set sequence_token to the value of
      * next_sequence_token received in the previous AddBatchJobOperations
@@ -840,6 +847,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A token used to enforce sequencing.
+     *
      * The first AddBatchJobOperations request for a batch job should not set
      * sequence_token. Subsequent requests must set sequence_token to the value of
      * next_sequence_token received in the previous AddBatchJobOperations
@@ -858,6 +866,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A token used to enforce sequencing.
+     *
      * The first AddBatchJobOperations request for a batch job should not set
      * sequence_token. Subsequent requests must set sequence_token to the value of
      * next_sequence_token received in the previous AddBatchJobOperations
@@ -893,6 +902,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. The list of mutates being added.
+     *
      * Operations can use negative integers as temp ids to signify dependencies
      * between entities created in this batch job. For example, a customer with
      * id = 1234 can create a campaign and an ad group in that same campaign by
@@ -914,6 +924,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. The list of mutates being added.
+     *
      * Operations can use negative integers as temp ids to signify dependencies
      * between entities created in this batch job. For example, a customer with
      * id = 1234 can create a campaign and an ad group in that same campaign by
@@ -935,6 +946,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. The list of mutates being added.
+     *
      * Operations can use negative integers as temp ids to signify dependencies
      * between entities created in this batch job. For example, a customer with
      * id = 1234 can create a campaign and an ad group in that same campaign by
@@ -956,6 +968,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. The list of mutates being added.
+     *
      * Operations can use negative integers as temp ids to signify dependencies
      * between entities created in this batch job. For example, a customer with
      * id = 1234 can create a campaign and an ad group in that same campaign by
@@ -984,6 +997,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. The list of mutates being added.
+     *
      * Operations can use negative integers as temp ids to signify dependencies
      * between entities created in this batch job. For example, a customer with
      * id = 1234 can create a campaign and an ad group in that same campaign by
@@ -1009,6 +1023,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. The list of mutates being added.
+     *
      * Operations can use negative integers as temp ids to signify dependencies
      * between entities created in this batch job. For example, a customer with
      * id = 1234 can create a campaign and an ad group in that same campaign by
@@ -1036,6 +1051,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. The list of mutates being added.
+     *
      * Operations can use negative integers as temp ids to signify dependencies
      * between entities created in this batch job. For example, a customer with
      * id = 1234 can create a campaign and an ad group in that same campaign by
@@ -1064,6 +1080,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. The list of mutates being added.
+     *
      * Operations can use negative integers as temp ids to signify dependencies
      * between entities created in this batch job. For example, a customer with
      * id = 1234 can create a campaign and an ad group in that same campaign by
@@ -1089,6 +1106,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. The list of mutates being added.
+     *
      * Operations can use negative integers as temp ids to signify dependencies
      * between entities created in this batch job. For example, a customer with
      * id = 1234 can create a campaign and an ad group in that same campaign by
@@ -1114,6 +1132,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. The list of mutates being added.
+     *
      * Operations can use negative integers as temp ids to signify dependencies
      * between entities created in this batch job. For example, a customer with
      * id = 1234 can create a campaign and an ad group in that same campaign by
@@ -1140,6 +1159,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. The list of mutates being added.
+     *
      * Operations can use negative integers as temp ids to signify dependencies
      * between entities created in this batch job. For example, a customer with
      * id = 1234 can create a campaign and an ad group in that same campaign by
@@ -1164,6 +1184,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. The list of mutates being added.
+     *
      * Operations can use negative integers as temp ids to signify dependencies
      * between entities created in this batch job. For example, a customer with
      * id = 1234 can create a campaign and an ad group in that same campaign by
@@ -1188,6 +1209,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. The list of mutates being added.
+     *
      * Operations can use negative integers as temp ids to signify dependencies
      * between entities created in this batch job. For example, a customer with
      * id = 1234 can create a campaign and an ad group in that same campaign by
@@ -1206,6 +1228,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. The list of mutates being added.
+     *
      * Operations can use negative integers as temp ids to signify dependencies
      * between entities created in this batch job. For example, a customer with
      * id = 1234 can create a campaign and an ad group in that same campaign by
@@ -1227,6 +1250,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. The list of mutates being added.
+     *
      * Operations can use negative integers as temp ids to signify dependencies
      * between entities created in this batch job. For example, a customer with
      * id = 1234 can create a campaign and an ad group in that same campaign by
@@ -1249,6 +1273,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. The list of mutates being added.
+     *
      * Operations can use negative integers as temp ids to signify dependencies
      * between entities created in this batch job. For example, a customer with
      * id = 1234 can create a campaign and an ad group in that same campaign by
@@ -1267,6 +1292,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. The list of mutates being added.
+     *
      * Operations can use negative integers as temp ids to signify dependencies
      * between entities created in this batch job. For example, a customer with
      * id = 1234 can create a campaign and an ad group in that same campaign by
@@ -1286,6 +1312,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. The list of mutates being added.
+     *
      * Operations can use negative integers as temp ids to signify dependencies
      * between entities created in this batch job. For example, a customer with
      * id = 1234 can create a campaign and an ad group in that same campaign by

@@ -41,32 +41,32 @@ public final class CustomInterestProto {
       "interest_status.proto\0329google/ads/google" +
       "ads/v13/enums/custom_interest_type.proto" +
       "\032\037google/api/field_behavior.proto\032\031googl" +
-      "e/api/resource.proto\"\252\004\n\016CustomInterest\022" +
-      "F\n\rresource_name\030\001 \001(\tB/\340A\005\372A)\n\'googlead" +
-      "s.googleapis.com/CustomInterest\022\024\n\002id\030\010 " +
-      "\001(\003B\003\340A\003H\000\210\001\001\022]\n\006status\030\003 \001(\0162M.google.a" +
-      "ds.googleads.v13.enums.CustomInterestSta" +
-      "tusEnum.CustomInterestStatus\022\021\n\004name\030\t \001" +
-      "(\tH\001\210\001\001\022W\n\004type\030\005 \001(\0162I.google.ads.googl" +
-      "eads.v13.enums.CustomInterestTypeEnum.Cu" +
-      "stomInterestType\022\030\n\013description\030\n \001(\tH\002\210" +
-      "\001\001\022I\n\007members\030\007 \003(\01328.google.ads.googlea" +
-      "ds.v13.resources.CustomInterestMember:j\352" +
-      "Ag\n\'googleads.googleapis.com/CustomInter" +
-      "est\022<customers/{customer_id}/customInter" +
-      "ests/{custom_interest_id}B\005\n\003_idB\007\n\005_nam" +
-      "eB\016\n\014_description\"\250\001\n\024CustomInterestMemb" +
-      "er\022j\n\013member_type\030\001 \001(\0162U.google.ads.goo" +
-      "gleads.v13.enums.CustomInterestMemberTyp" +
-      "eEnum.CustomInterestMemberType\022\026\n\tparame" +
-      "ter\030\003 \001(\tH\000\210\001\001B\014\n\n_parameterB\205\002\n&com.goo" +
-      "gle.ads.googleads.v13.resourcesB\023CustomI" +
-      "nterestProtoP\001ZKgoogle.golang.org/genpro" +
-      "to/googleapis/ads/googleads/v13/resource" +
-      "s;resources\242\002\003GAA\252\002\"Google.Ads.GoogleAds" +
-      ".V13.Resources\312\002\"Google\\Ads\\GoogleAds\\V1" +
-      "3\\Resources\352\002&Google::Ads::GoogleAds::V1" +
-      "3::Resourcesb\006proto3"
+      "e/api/resource.proto\"\254\004\n\016CustomInterest\022" +
+      "G\n\rresource_name\030\001 \001(\tB0\342A\001\005\372A)\n\'googlea" +
+      "ds.googleapis.com/CustomInterest\022\025\n\002id\030\010" +
+      " \001(\003B\004\342A\001\003H\000\210\001\001\022]\n\006status\030\003 \001(\0162M.google" +
+      ".ads.googleads.v13.enums.CustomInterestS" +
+      "tatusEnum.CustomInterestStatus\022\021\n\004name\030\t" +
+      " \001(\tH\001\210\001\001\022W\n\004type\030\005 \001(\0162I.google.ads.goo" +
+      "gleads.v13.enums.CustomInterestTypeEnum." +
+      "CustomInterestType\022\030\n\013description\030\n \001(\tH" +
+      "\002\210\001\001\022I\n\007members\030\007 \003(\01328.google.ads.googl" +
+      "eads.v13.resources.CustomInterestMember:" +
+      "j\352Ag\n\'googleads.googleapis.com/CustomInt" +
+      "erest\022<customers/{customer_id}/customInt" +
+      "erests/{custom_interest_id}B\005\n\003_idB\007\n\005_n" +
+      "ameB\016\n\014_description\"\250\001\n\024CustomInterestMe" +
+      "mber\022j\n\013member_type\030\001 \001(\0162U.google.ads.g" +
+      "oogleads.v13.enums.CustomInterestMemberT" +
+      "ypeEnum.CustomInterestMemberType\022\026\n\tpara" +
+      "meter\030\003 \001(\tH\000\210\001\001B\014\n\n_parameterB\205\002\n&com.g" +
+      "oogle.ads.googleads.v13.resourcesB\023Custo" +
+      "mInterestProtoP\001ZKgoogle.golang.org/genp" +
+      "roto/googleapis/ads/googleads/v13/resour" +
+      "ces;resources\242\002\003GAA\252\002\"Google.Ads.GoogleA" +
+      "ds.V13.Resources\312\002\"Google\\Ads\\GoogleAds\\" +
+      "V13\\Resources\352\002&Google::Ads::GoogleAds::" +
+      "V13::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

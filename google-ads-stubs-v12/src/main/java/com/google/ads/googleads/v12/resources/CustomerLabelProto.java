@@ -31,22 +31,23 @@ public final class CustomerLabelProto {
       "\n7google/ads/googleads/v12/resources/cus" +
       "tomer_label.proto\022\"google.ads.googleads." +
       "v12.resources\032\037google/api/field_behavior" +
-      ".proto\032\031google/api/resource.proto\"\313\002\n\rCu" +
-      "stomerLabel\022E\n\rresource_name\030\001 \001(\tB.\340A\005\372" +
-      "A(\n&googleads.googleapis.com/CustomerLab" +
-      "el\022@\n\010customer\030\004 \001(\tB)\340A\003\372A#\n!googleads." +
-      "googleapis.com/CustomerH\000\210\001\001\022:\n\005label\030\005 " +
-      "\001(\tB&\340A\003\372A \n\036googleads.googleapis.com/La" +
-      "belH\001\210\001\001:^\352A[\n&googleads.googleapis.com/" +
-      "CustomerLabel\0221customers/{customer_id}/c" +
-      "ustomerLabels/{label_id}B\013\n\t_customerB\010\n" +
-      "\006_labelB\204\002\n&com.google.ads.googleads.v12" +
-      ".resourcesB\022CustomerLabelProtoP\001ZKgoogle" +
-      ".golang.org/genproto/googleapis/ads/goog" +
-      "leads/v12/resources;resources\242\002\003GAA\252\002\"Go" +
-      "ogle.Ads.GoogleAds.V12.Resources\312\002\"Googl" +
-      "e\\Ads\\GoogleAds\\V12\\Resources\352\002&Google::" +
-      "Ads::GoogleAds::V12::Resourcesb\006proto3"
+      ".proto\032\031google/api/resource.proto\"\316\002\n\rCu" +
+      "stomerLabel\022F\n\rresource_name\030\001 \001(\tB/\342A\001\005" +
+      "\372A(\n&googleads.googleapis.com/CustomerLa" +
+      "bel\022A\n\010customer\030\004 \001(\tB*\342A\001\003\372A#\n!googlead" +
+      "s.googleapis.com/CustomerH\000\210\001\001\022;\n\005label\030" +
+      "\005 \001(\tB\'\342A\001\003\372A \n\036googleads.googleapis.com" +
+      "/LabelH\001\210\001\001:^\352A[\n&googleads.googleapis.c" +
+      "om/CustomerLabel\0221customers/{customer_id" +
+      "}/customerLabels/{label_id}B\013\n\t_customer" +
+      "B\010\n\006_labelB\204\002\n&com.google.ads.googleads." +
+      "v12.resourcesB\022CustomerLabelProtoP\001ZKgoo" +
+      "gle.golang.org/genproto/googleapis/ads/g" +
+      "oogleads/v12/resources;resources\242\002\003GAA\252\002" +
+      "\"Google.Ads.GoogleAds.V12.Resources\312\002\"Go" +
+      "ogle\\Ads\\GoogleAds\\V12\\Resources\352\002&Googl" +
+      "e::Ads::GoogleAds::V12::Resourcesb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

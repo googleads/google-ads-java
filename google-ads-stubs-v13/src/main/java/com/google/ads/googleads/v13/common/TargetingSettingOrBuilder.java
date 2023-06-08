@@ -59,6 +59,7 @@ public interface TargetingSettingOrBuilder extends
   /**
    * <pre>
    * The list of operations changing the target restrictions.
+   *
    * Adding a target restriction with a targeting dimension that already exists
    * causes the existing target restriction to be replaced with the new value.
    * </pre>
@@ -70,6 +71,7 @@ public interface TargetingSettingOrBuilder extends
   /**
    * <pre>
    * The list of operations changing the target restrictions.
+   *
    * Adding a target restriction with a targeting dimension that already exists
    * causes the existing target restriction to be replaced with the new value.
    * </pre>
@@ -80,6 +82,7 @@ public interface TargetingSettingOrBuilder extends
   /**
    * <pre>
    * The list of operations changing the target restrictions.
+   *
    * Adding a target restriction with a targeting dimension that already exists
    * causes the existing target restriction to be replaced with the new value.
    * </pre>
@@ -90,6 +93,7 @@ public interface TargetingSettingOrBuilder extends
   /**
    * <pre>
    * The list of operations changing the target restrictions.
+   *
    * Adding a target restriction with a targeting dimension that already exists
    * causes the existing target restriction to be replaced with the new value.
    * </pre>
@@ -101,6 +105,7 @@ public interface TargetingSettingOrBuilder extends
   /**
    * <pre>
    * The list of operations changing the target restrictions.
+   *
    * Adding a target restriction with a targeting dimension that already exists
    * causes the existing target restriction to be replaced with the new value.
    * </pre>

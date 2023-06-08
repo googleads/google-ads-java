@@ -11,6 +11,7 @@ public interface CampaignCriterionSimulationOrBuilder extends
    * <pre>
    * Output only. The resource name of the campaign criterion simulation.
    * Campaign criterion simulation resource names have the form:
+   *
    * `customers/{customer_id}/campaignCriterionSimulations/{campaign_id}~{criterion_id}~{type}~{modification_method}~{start_date}~{end_date}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface CampaignCriterionSimulationOrBuilder extends
    * <pre>
    * Output only. The resource name of the campaign criterion simulation.
    * Campaign criterion simulation resource names have the form:
+   *
    * `customers/{customer_id}/campaignCriterionSimulations/{campaign_id}~{criterion_id}~{type}~{modification_method}~{start_date}~{end_date}`
    * </pre>
    *
@@ -198,5 +200,5 @@ public interface CampaignCriterionSimulationOrBuilder extends
    */
   com.google.ads.googleads.v13.common.BidModifierSimulationPointListOrBuilder getBidModifierPointListOrBuilder();
 
-  public com.google.ads.googleads.v13.resources.CampaignCriterionSimulation.PointListCase getPointListCase();
+  com.google.ads.googleads.v13.resources.CampaignCriterionSimulation.PointListCase getPointListCase();
 }

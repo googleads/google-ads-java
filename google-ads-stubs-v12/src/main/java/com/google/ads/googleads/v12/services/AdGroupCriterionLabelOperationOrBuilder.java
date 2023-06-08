@@ -41,6 +41,7 @@ public interface AdGroupCriterionLabelOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the ad group criterion label
    * being removed, in this format:
+   *
    * `customers/{customer_id}/adGroupCriterionLabels/{ad_group_id}~{criterion_id}~{label_id}`
    * </pre>
    *
@@ -52,6 +53,7 @@ public interface AdGroupCriterionLabelOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the ad group criterion label
    * being removed, in this format:
+   *
    * `customers/{customer_id}/adGroupCriterionLabels/{ad_group_id}~{criterion_id}~{label_id}`
    * </pre>
    *
@@ -63,6 +65,7 @@ public interface AdGroupCriterionLabelOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the ad group criterion label
    * being removed, in this format:
+   *
    * `customers/{customer_id}/adGroupCriterionLabels/{ad_group_id}~{criterion_id}~{label_id}`
    * </pre>
    *
@@ -72,5 +75,5 @@ public interface AdGroupCriterionLabelOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v12.services.AdGroupCriterionLabelOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v12.services.AdGroupCriterionLabelOperation.OperationCase getOperationCase();
 }

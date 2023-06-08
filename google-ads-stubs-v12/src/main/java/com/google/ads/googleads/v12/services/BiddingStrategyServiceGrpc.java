@@ -98,7 +98,7 @@ public final class BiddingStrategyServiceGrpc {
    * Service to manage bidding strategies.
    * </pre>
    */
-  public static abstract class BiddingStrategyServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -133,30 +133,34 @@ public final class BiddingStrategyServiceGrpc {
      *   [StringLengthError]()
      * </pre>
      */
-    public void mutateBiddingStrategies(com.google.ads.googleads.v12.services.MutateBiddingStrategiesRequest request,
+    default void mutateBiddingStrategies(com.google.ads.googleads.v12.services.MutateBiddingStrategiesRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.MutateBiddingStrategiesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateBiddingStrategiesMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateBiddingStrategiesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.MutateBiddingStrategiesRequest,
-                com.google.ads.googleads.v12.services.MutateBiddingStrategiesResponse>(
-                  this, METHODID_MUTATE_BIDDING_STRATEGIES)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service BiddingStrategyService.
    * <pre>
    * Service to manage bidding strategies.
    * </pre>
    */
-  public static final class BiddingStrategyServiceStub extends io.grpc.stub.AbstractAsyncStub<BiddingStrategyServiceStub> {
+  public static abstract class BiddingStrategyServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return BiddingStrategyServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service BiddingStrategyService.
+   * <pre>
+   * Service to manage bidding strategies.
+   * </pre>
+   */
+  public static final class BiddingStrategyServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<BiddingStrategyServiceStub> {
     private BiddingStrategyServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -209,11 +213,13 @@ public final class BiddingStrategyServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service BiddingStrategyService.
    * <pre>
    * Service to manage bidding strategies.
    * </pre>
    */
-  public static final class BiddingStrategyServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<BiddingStrategyServiceBlockingStub> {
+  public static final class BiddingStrategyServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<BiddingStrategyServiceBlockingStub> {
     private BiddingStrategyServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -265,11 +271,13 @@ public final class BiddingStrategyServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service BiddingStrategyService.
    * <pre>
    * Service to manage bidding strategies.
    * </pre>
    */
-  public static final class BiddingStrategyServiceFutureStub extends io.grpc.stub.AbstractFutureStub<BiddingStrategyServiceFutureStub> {
+  public static final class BiddingStrategyServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<BiddingStrategyServiceFutureStub> {
     private BiddingStrategyServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -328,10 +336,10 @@ public final class BiddingStrategyServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final BiddingStrategyServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(BiddingStrategyServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -358,6 +366,18 @@ public final class BiddingStrategyServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateBiddingStrategiesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.MutateBiddingStrategiesRequest,
+              com.google.ads.googleads.v12.services.MutateBiddingStrategiesResponse>(
+                service, METHODID_MUTATE_BIDDING_STRATEGIES)))
+        .build();
   }
 
   private static abstract class BiddingStrategyServiceBaseDescriptorSupplier

@@ -21,7 +21,8 @@ private static final long serialVersionUID = 0L;
   }
   private StructuredSnippetFeedItem() {
     header_ = "";
-    values_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    values_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -31,11 +32,6 @@ private static final long serialVersionUID = 0L;
     return new StructuredSnippetFeedItem();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.common.ExtensionsProto.internal_static_google_ads_googleads_v13_common_StructuredSnippetFeedItem_descriptor;
@@ -114,7 +110,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int VALUES_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList values_;
+  private com.google.protobuf.LazyStringArrayList values_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * The values in the snippet.
@@ -298,11 +295,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.common.StructuredSnippetFeedItem parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.common.StructuredSnippetFeedItem parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -383,8 +382,8 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       header_ = "";
-      values_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      values_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -411,18 +410,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v13.common.StructuredSnippetFeedItem buildPartial() {
       com.google.ads.googleads.v13.common.StructuredSnippetFeedItem result = new com.google.ads.googleads.v13.common.StructuredSnippetFeedItem(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(com.google.ads.googleads.v13.common.StructuredSnippetFeedItem result) {
-      if (((bitField0_ & 0x00000002) != 0)) {
-        values_ = values_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000002);
-      }
-      result.values_ = values_;
     }
 
     private void buildPartial0(com.google.ads.googleads.v13.common.StructuredSnippetFeedItem result) {
@@ -431,6 +421,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.header_ = header_;
         to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        values_.makeImmutable();
+        result.values_ = values_;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -487,7 +481,7 @@ private static final long serialVersionUID = 0L;
       if (!other.values_.isEmpty()) {
         if (values_.isEmpty()) {
           values_ = other.values_;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ |= 0x00000002;
         } else {
           ensureValuesIsMutable();
           values_.addAll(other.values_);
@@ -657,12 +651,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.LazyStringList values_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList values_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureValuesIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!values_.isModifiable()) {
         values_ = new com.google.protobuf.LazyStringArrayList(values_);
-        bitField0_ |= 0x00000002;
-       }
+      }
+      bitField0_ |= 0x00000002;
     }
     /**
      * <pre>
@@ -675,7 +670,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getValuesList() {
-      return values_.getUnmodifiableView();
+      values_.makeImmutable();
+      return values_;
     }
     /**
      * <pre>
@@ -732,6 +728,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureValuesIsMutable();
       values_.set(index, value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -750,6 +747,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureValuesIsMutable();
       values_.add(value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -768,6 +766,7 @@ private static final long serialVersionUID = 0L;
       ensureValuesIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, values_);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -781,8 +780,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearValues() {
-      values_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      values_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000002);;
       onChanged();
       return this;
     }
@@ -802,6 +802,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureValuesIsMutable();
       values_.add(value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

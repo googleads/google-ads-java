@@ -34,11 +34,6 @@ private static final long serialVersionUID = 0L;
     return new Recommendation();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.resources.RecommendationProto.internal_static_google_ads_googleads_v12_resources_Recommendation_descriptor;
@@ -137,11 +132,6 @@ private static final long serialVersionUID = 0L;
       return new RecommendationImpact();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.RecommendationProto.internal_static_google_ads_googleads_v12_resources_Recommendation_RecommendationImpact_descriptor;
@@ -361,11 +351,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.RecommendationImpact parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1109,11 +1101,6 @@ private static final long serialVersionUID = 0L;
       return new RecommendationMetrics();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.RecommendationProto.internal_static_google_ads_googleads_v12_resources_Recommendation_RecommendationMetrics_descriptor;
@@ -1452,11 +1439,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.RecommendationMetrics parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.RecommendationMetrics parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1761,7 +1750,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setImpressions(double value) {
-        
+
         impressions_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -1817,7 +1806,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setClicks(double value) {
-        
+
         clicks_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -1876,7 +1865,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setCostMicros(long value) {
-        
+
         costMicros_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
@@ -1933,7 +1922,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setConversions(double value) {
-        
+
         conversions_ = value;
         bitField0_ |= 0x00000008;
         onChanged();
@@ -1989,7 +1978,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setVideoViews(double value) {
-        
+
         videoViews_ = value;
         bitField0_ |= 0x00000010;
         onChanged();
@@ -2191,11 +2180,6 @@ private static final long serialVersionUID = 0L;
       return new CampaignBudgetRecommendation();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.RecommendationProto.internal_static_google_ads_googleads_v12_resources_Recommendation_CampaignBudgetRecommendation_descriptor;
@@ -2288,11 +2272,6 @@ private static final long serialVersionUID = 0L;
         return new CampaignBudgetRecommendationOption();
       }
 
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return com.google.ads.googleads.v12.resources.RecommendationProto.internal_static_google_ads_googleads_v12_resources_Recommendation_CampaignBudgetRecommendation_CampaignBudgetRecommendationOption_descriptor;
@@ -2506,11 +2485,13 @@ private static final long serialVersionUID = 0L;
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
+
       public static com.google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
+
       public static com.google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation.CampaignBudgetRecommendationOption parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2782,7 +2763,7 @@ private static final long serialVersionUID = 0L;
          * @return This builder for chaining.
          */
         public Builder setBudgetAmountMicros(long value) {
-          
+
           budgetAmountMicros_ = value;
           bitField0_ |= 0x00000001;
           onChanged();
@@ -3296,11 +3277,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.CampaignBudgetRecommendation parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3624,7 +3607,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setCurrentBudgetAmountMicros(long value) {
-        
+
         currentBudgetAmountMicros_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -3680,7 +3663,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setRecommendedBudgetAmountMicros(long value) {
-        
+
         recommendedBudgetAmountMicros_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -4170,11 +4153,6 @@ private static final long serialVersionUID = 0L;
       return new KeywordRecommendation();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.RecommendationProto.internal_static_google_ads_googleads_v12_resources_Recommendation_KeywordRecommendation_descriptor;
@@ -4385,11 +4363,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.KeywordRecommendation parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.KeywordRecommendation parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4816,7 +4796,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setRecommendedCpcBidMicros(long value) {
-        
+
         recommendedCpcBidMicros_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -5023,11 +5003,6 @@ private static final long serialVersionUID = 0L;
       return new TextAdRecommendation();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.RecommendationProto.internal_static_google_ads_googleads_v12_resources_Recommendation_TextAdRecommendation_descriptor;
@@ -5348,11 +5323,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.TextAdRecommendation parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.TextAdRecommendation parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6143,11 +6120,6 @@ private static final long serialVersionUID = 0L;
       return new TargetCpaOptInRecommendation();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.RecommendationProto.internal_static_google_ads_googleads_v12_resources_Recommendation_TargetCpaOptInRecommendation_descriptor;
@@ -6280,11 +6252,6 @@ private static final long serialVersionUID = 0L;
         return new TargetCpaOptInRecommendationOption();
       }
 
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return com.google.ads.googleads.v12.resources.RecommendationProto.internal_static_google_ads_googleads_v12_resources_Recommendation_TargetCpaOptInRecommendation_TargetCpaOptInRecommendationOption_descriptor;
@@ -6579,11 +6546,13 @@ private static final long serialVersionUID = 0L;
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
+
       public static com.google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
+
       public static com.google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation.TargetCpaOptInRecommendationOption parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6953,7 +6922,7 @@ private static final long serialVersionUID = 0L;
          * @return This builder for chaining.
          */
         public Builder setTargetCpaMicros(long value) {
-          
+
           targetCpaMicros_ = value;
           bitField0_ |= 0x00000002;
           onChanged();
@@ -7015,7 +6984,7 @@ private static final long serialVersionUID = 0L;
          * @return This builder for chaining.
          */
         public Builder setRequiredCampaignBudgetAmountMicros(long value) {
-          
+
           requiredCampaignBudgetAmountMicros_ = value;
           bitField0_ |= 0x00000004;
           onChanged();
@@ -7480,11 +7449,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.TargetCpaOptInRecommendation parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -8128,7 +8099,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setRecommendedTargetCpaMicros(long value) {
-        
+
         recommendedTargetCpaMicros_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -8262,11 +8233,6 @@ private static final long serialVersionUID = 0L;
       return new MaximizeConversionsOptInRecommendation();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.RecommendationProto.internal_static_google_ads_googleads_v12_resources_Recommendation_MaximizeConversionsOptInRecommendation_descriptor;
@@ -8423,11 +8389,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.MaximizeConversionsOptInRecommendation parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.MaximizeConversionsOptInRecommendation parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -8679,7 +8647,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setRecommendedBudgetAmountMicros(long value) {
-        
+
         recommendedBudgetAmountMicros_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -8793,11 +8761,6 @@ private static final long serialVersionUID = 0L;
       return new EnhancedCpcOptInRecommendation();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.RecommendationProto.internal_static_google_ads_googleads_v12_resources_Recommendation_EnhancedCpcOptInRecommendation_descriptor;
@@ -8909,11 +8872,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.EnhancedCpcOptInRecommendation parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.EnhancedCpcOptInRecommendation parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -9201,11 +9166,6 @@ private static final long serialVersionUID = 0L;
       return new SearchPartnersOptInRecommendation();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.RecommendationProto.internal_static_google_ads_googleads_v12_resources_Recommendation_SearchPartnersOptInRecommendation_descriptor;
@@ -9317,11 +9277,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.SearchPartnersOptInRecommendation parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.SearchPartnersOptInRecommendation parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -9630,11 +9592,6 @@ private static final long serialVersionUID = 0L;
       return new MaximizeClicksOptInRecommendation();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.RecommendationProto.internal_static_google_ads_googleads_v12_resources_Recommendation_MaximizeClicksOptInRecommendation_descriptor;
@@ -9793,11 +9750,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.MaximizeClicksOptInRecommendation parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.MaximizeClicksOptInRecommendation parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -10052,7 +10011,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setRecommendedBudgetAmountMicros(long value) {
-        
+
         recommendedBudgetAmountMicros_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -10167,11 +10126,6 @@ private static final long serialVersionUID = 0L;
       return new OptimizeAdRotationRecommendation();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.RecommendationProto.internal_static_google_ads_googleads_v12_resources_Recommendation_OptimizeAdRotationRecommendation_descriptor;
@@ -10283,11 +10237,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.OptimizeAdRotationRecommendation parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.OptimizeAdRotationRecommendation parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -10620,11 +10576,6 @@ private static final long serialVersionUID = 0L;
       return new CalloutExtensionRecommendation();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.RecommendationProto.internal_static_google_ads_googleads_v12_resources_Recommendation_CalloutExtensionRecommendation_descriptor;
@@ -10810,11 +10761,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.CalloutExtensionRecommendation parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.CalloutExtensionRecommendation parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -11456,7 +11409,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. Sitelink extensions recommended to be added.
+     * Output only. Sitelinks recommended to be added.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.SitelinkFeedItem recommended_extensions = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -11465,7 +11418,7 @@ private static final long serialVersionUID = 0L;
         getRecommendedExtensionsList();
     /**
      * <pre>
-     * Output only. Sitelink extensions recommended to be added.
+     * Output only. Sitelinks recommended to be added.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.SitelinkFeedItem recommended_extensions = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -11473,7 +11426,7 @@ private static final long serialVersionUID = 0L;
     com.google.ads.googleads.v12.common.SitelinkFeedItem getRecommendedExtensions(int index);
     /**
      * <pre>
-     * Output only. Sitelink extensions recommended to be added.
+     * Output only. Sitelinks recommended to be added.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.SitelinkFeedItem recommended_extensions = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -11481,7 +11434,7 @@ private static final long serialVersionUID = 0L;
     int getRecommendedExtensionsCount();
     /**
      * <pre>
-     * Output only. Sitelink extensions recommended to be added.
+     * Output only. Sitelinks recommended to be added.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.SitelinkFeedItem recommended_extensions = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -11490,7 +11443,7 @@ private static final long serialVersionUID = 0L;
         getRecommendedExtensionsOrBuilderList();
     /**
      * <pre>
-     * Output only. Sitelink extensions recommended to be added.
+     * Output only. Sitelinks recommended to be added.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.SitelinkFeedItem recommended_extensions = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -11500,7 +11453,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The Sitelink extension recommendation.
+   * The Sitelink recommendation.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v12.resources.Recommendation.SitelinkExtensionRecommendation}
@@ -11525,11 +11478,6 @@ private static final long serialVersionUID = 0L;
       return new SitelinkExtensionRecommendation();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.RecommendationProto.internal_static_google_ads_googleads_v12_resources_Recommendation_SitelinkExtensionRecommendation_descriptor;
@@ -11548,7 +11496,7 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v12.common.SitelinkFeedItem> recommendedExtensions_;
     /**
      * <pre>
-     * Output only. Sitelink extensions recommended to be added.
+     * Output only. Sitelinks recommended to be added.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.SitelinkFeedItem recommended_extensions = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -11559,7 +11507,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Sitelink extensions recommended to be added.
+     * Output only. Sitelinks recommended to be added.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.SitelinkFeedItem recommended_extensions = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -11571,7 +11519,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Sitelink extensions recommended to be added.
+     * Output only. Sitelinks recommended to be added.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.SitelinkFeedItem recommended_extensions = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -11582,7 +11530,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Sitelink extensions recommended to be added.
+     * Output only. Sitelinks recommended to be added.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.SitelinkFeedItem recommended_extensions = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -11593,7 +11541,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Sitelink extensions recommended to be added.
+     * Output only. Sitelinks recommended to be added.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.SitelinkFeedItem recommended_extensions = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -11715,11 +11663,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.SitelinkExtensionRecommendation parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.SitelinkExtensionRecommendation parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -11763,7 +11713,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Sitelink extension recommendation.
+     * The Sitelink recommendation.
      * </pre>
      *
      * Protobuf type {@code google.ads.googleads.v12.resources.Recommendation.SitelinkExtensionRecommendation}
@@ -11994,7 +11944,7 @@ private static final long serialVersionUID = 0L;
 
       /**
        * <pre>
-       * Output only. Sitelink extensions recommended to be added.
+       * Output only. Sitelinks recommended to be added.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.common.SitelinkFeedItem recommended_extensions = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12008,7 +11958,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Sitelink extensions recommended to be added.
+       * Output only. Sitelinks recommended to be added.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.common.SitelinkFeedItem recommended_extensions = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12022,7 +11972,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Sitelink extensions recommended to be added.
+       * Output only. Sitelinks recommended to be added.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.common.SitelinkFeedItem recommended_extensions = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12036,7 +11986,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Sitelink extensions recommended to be added.
+       * Output only. Sitelinks recommended to be added.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.common.SitelinkFeedItem recommended_extensions = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12057,7 +12007,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Sitelink extensions recommended to be added.
+       * Output only. Sitelinks recommended to be added.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.common.SitelinkFeedItem recommended_extensions = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12075,7 +12025,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Sitelink extensions recommended to be added.
+       * Output only. Sitelinks recommended to be added.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.common.SitelinkFeedItem recommended_extensions = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12095,7 +12045,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Sitelink extensions recommended to be added.
+       * Output only. Sitelinks recommended to be added.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.common.SitelinkFeedItem recommended_extensions = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12116,7 +12066,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Sitelink extensions recommended to be added.
+       * Output only. Sitelinks recommended to be added.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.common.SitelinkFeedItem recommended_extensions = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12134,7 +12084,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Sitelink extensions recommended to be added.
+       * Output only. Sitelinks recommended to be added.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.common.SitelinkFeedItem recommended_extensions = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12152,7 +12102,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Sitelink extensions recommended to be added.
+       * Output only. Sitelinks recommended to be added.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.common.SitelinkFeedItem recommended_extensions = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12171,7 +12121,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Sitelink extensions recommended to be added.
+       * Output only. Sitelinks recommended to be added.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.common.SitelinkFeedItem recommended_extensions = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12188,7 +12138,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Sitelink extensions recommended to be added.
+       * Output only. Sitelinks recommended to be added.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.common.SitelinkFeedItem recommended_extensions = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12205,7 +12155,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Sitelink extensions recommended to be added.
+       * Output only. Sitelinks recommended to be added.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.common.SitelinkFeedItem recommended_extensions = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12216,7 +12166,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Sitelink extensions recommended to be added.
+       * Output only. Sitelinks recommended to be added.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.common.SitelinkFeedItem recommended_extensions = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12230,7 +12180,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Sitelink extensions recommended to be added.
+       * Output only. Sitelinks recommended to be added.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.common.SitelinkFeedItem recommended_extensions = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12245,7 +12195,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Sitelink extensions recommended to be added.
+       * Output only. Sitelinks recommended to be added.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.common.SitelinkFeedItem recommended_extensions = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12256,7 +12206,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Sitelink extensions recommended to be added.
+       * Output only. Sitelinks recommended to be added.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.common.SitelinkFeedItem recommended_extensions = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12268,7 +12218,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Sitelink extensions recommended to be added.
+       * Output only. Sitelinks recommended to be added.
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v12.common.SitelinkFeedItem recommended_extensions = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -12430,11 +12380,6 @@ private static final long serialVersionUID = 0L;
       return new CallExtensionRecommendation();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.RecommendationProto.internal_static_google_ads_googleads_v12_resources_Recommendation_CallExtensionRecommendation_descriptor;
@@ -12620,11 +12565,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.CallExtensionRecommendation parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.CallExtensionRecommendation parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -13340,11 +13287,6 @@ private static final long serialVersionUID = 0L;
       return new KeywordMatchTypeRecommendation();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.RecommendationProto.internal_static_google_ads_googleads_v12_resources_Recommendation_KeywordMatchTypeRecommendation_descriptor;
@@ -13549,11 +13491,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.KeywordMatchTypeRecommendation parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.KeywordMatchTypeRecommendation parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -14174,11 +14118,6 @@ private static final long serialVersionUID = 0L;
       return new MoveUnusedBudgetRecommendation();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.RecommendationProto.internal_static_google_ads_googleads_v12_resources_Recommendation_MoveUnusedBudgetRecommendation_descriptor;
@@ -14419,11 +14358,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.MoveUnusedBudgetRecommendation parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.MoveUnusedBudgetRecommendation parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -15057,11 +14998,6 @@ private static final long serialVersionUID = 0L;
       return new TargetRoasOptInRecommendation();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.RecommendationProto.internal_static_google_ads_googleads_v12_resources_Recommendation_TargetRoasOptInRecommendation_descriptor;
@@ -15269,11 +15205,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.TargetRoasOptInRecommendation parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.TargetRoasOptInRecommendation parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -15541,7 +15479,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setRecommendedTargetRoas(double value) {
-        
+
         recommendedTargetRoas_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -15604,7 +15542,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setRequiredCampaignBudgetAmountMicros(long value) {
-        
+
         requiredCampaignBudgetAmountMicros_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -15777,11 +15715,6 @@ private static final long serialVersionUID = 0L;
       return new ResponsiveSearchAdAssetRecommendation();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.RecommendationProto.internal_static_google_ads_googleads_v12_resources_Recommendation_ResponsiveSearchAdAssetRecommendation_descriptor;
@@ -16004,11 +15937,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.ResponsiveSearchAdAssetRecommendation parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.ResponsiveSearchAdAssetRecommendation parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -16716,11 +16651,6 @@ private static final long serialVersionUID = 0L;
       return new ResponsiveSearchAdImproveAdStrengthRecommendation();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.RecommendationProto.internal_static_google_ads_googleads_v12_resources_Recommendation_ResponsiveSearchAdImproveAdStrengthRecommendation_descriptor;
@@ -16940,11 +16870,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.ResponsiveSearchAdImproveAdStrengthRecommendation parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.ResponsiveSearchAdImproveAdStrengthRecommendation parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -17616,11 +17548,6 @@ private static final long serialVersionUID = 0L;
       return new ResponsiveSearchAdRecommendation();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.RecommendationProto.internal_static_google_ads_googleads_v12_resources_Recommendation_ResponsiveSearchAdRecommendation_descriptor;
@@ -17786,11 +17713,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.ResponsiveSearchAdRecommendation parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.ResponsiveSearchAdRecommendation parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -18347,11 +18276,6 @@ private static final long serialVersionUID = 0L;
       return new UseBroadMatchKeywordRecommendation();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.RecommendationProto.internal_static_google_ads_googleads_v12_resources_Recommendation_UseBroadMatchKeywordRecommendation_descriptor;
@@ -18647,11 +18571,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.UseBroadMatchKeywordRecommendation parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.UseBroadMatchKeywordRecommendation parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -19297,7 +19223,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setSuggestedKeywordsCount(long value) {
-        
+
         suggestedKeywordsCount_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -19342,7 +19268,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setCampaignKeywordsCount(long value) {
-        
+
         campaignKeywordsCount_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
@@ -19386,7 +19312,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setCampaignUsesSharedBudget(boolean value) {
-        
+
         campaignUsesSharedBudget_ = value;
         bitField0_ |= 0x00000008;
         onChanged();
@@ -19432,7 +19358,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setRequiredCampaignBudgetAmountMicros(long value) {
-        
+
         requiredCampaignBudgetAmountMicros_ = value;
         bitField0_ |= 0x00000010;
         onChanged();
@@ -19581,11 +19507,6 @@ private static final long serialVersionUID = 0L;
       return new UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.RecommendationProto.internal_static_google_ads_googleads_v12_resources_Recommendation_UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation_descriptor;
@@ -19783,11 +19704,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.UpgradeSmartShoppingCampaignToPerformanceMaxRecommendation parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -20039,7 +19962,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setMerchantId(long value) {
-        
+
         merchantId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -20292,11 +20215,6 @@ private static final long serialVersionUID = 0L;
       return new RaiseTargetCpaBidTooLowRecommendation();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.RecommendationProto.internal_static_google_ads_googleads_v12_resources_Recommendation_RaiseTargetCpaBidTooLowRecommendation_descriptor;
@@ -20502,11 +20420,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.RaiseTargetCpaBidTooLowRecommendation parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.RaiseTargetCpaBidTooLowRecommendation parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -20774,7 +20694,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setRecommendedTargetMultiplier(double value) {
-        
+
         recommendedTargetMultiplier_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -20834,7 +20754,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setAverageTargetCpaMicros(long value) {
-        
+
         averageTargetCpaMicros_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -20949,11 +20869,6 @@ private static final long serialVersionUID = 0L;
       return new DisplayExpansionOptInRecommendation();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.RecommendationProto.internal_static_google_ads_googleads_v12_resources_Recommendation_DisplayExpansionOptInRecommendation_descriptor;
@@ -21065,11 +20980,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.DisplayExpansionOptInRecommendation parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.DisplayExpansionOptInRecommendation parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -21357,11 +21274,6 @@ private static final long serialVersionUID = 0L;
       return new UpgradeLocalCampaignToPerformanceMaxRecommendation();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.RecommendationProto.internal_static_google_ads_googleads_v12_resources_Recommendation_UpgradeLocalCampaignToPerformanceMaxRecommendation_descriptor;
@@ -21473,11 +21385,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -21803,11 +21717,6 @@ private static final long serialVersionUID = 0L;
       return new ForecastingSetTargetRoasRecommendation();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.RecommendationProto.internal_static_google_ads_googleads_v12_resources_Recommendation_ForecastingSetTargetRoasRecommendation_descriptor;
@@ -22002,11 +21911,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.ForecastingSetTargetRoasRecommendation parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.ForecastingSetTargetRoasRecommendation parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -22265,7 +22176,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setRecommendedTargetRoas(double value) {
-        
+
         recommendedTargetRoas_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -22580,11 +22491,6 @@ private static final long serialVersionUID = 0L;
       return new CampaignBudget();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.RecommendationProto.internal_static_google_ads_googleads_v12_resources_Recommendation_CampaignBudget_descriptor;
@@ -22811,11 +22717,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.CampaignBudget parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.Recommendation.CampaignBudget parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -23078,7 +22986,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setCurrentAmountMicros(long value) {
-        
+
         currentAmountMicros_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -23122,7 +23030,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setRecommendedNewAmountMicros(long value) {
-        
+
         recommendedNewAmountMicros_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -23310,6 +23218,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   private int recommendationCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object recommendation_;
   public enum RecommendationCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -23404,6 +23313,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Immutable. The resource name of the recommendation.
+   *
    * `customers/{customer_id}/recommendations/{recommendation_id}`
    * </pre>
    *
@@ -23426,6 +23336,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Immutable. The resource name of the recommendation.
+   *
    * `customers/{customer_id}/recommendations/{recommendation_id}`
    * </pre>
    *
@@ -23521,6 +23432,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The budget targeted by this recommendation. This will be set
    * only when the recommendation affects a single campaign budget.
+   *
    * This field will be set for the following recommendation types:
    * CAMPAIGN_BUDGET, FORECASTING_CAMPAIGN_BUDGET, MARGINAL_ROI_CAMPAIGN_BUDGET,
    * MOVE_UNUSED_BUDGET
@@ -23537,6 +23449,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The budget targeted by this recommendation. This will be set
    * only when the recommendation affects a single campaign budget.
+   *
    * This field will be set for the following recommendation types:
    * CAMPAIGN_BUDGET, FORECASTING_CAMPAIGN_BUDGET, MARGINAL_ROI_CAMPAIGN_BUDGET,
    * MOVE_UNUSED_BUDGET
@@ -23562,6 +23475,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The budget targeted by this recommendation. This will be set
    * only when the recommendation affects a single campaign budget.
+   *
    * This field will be set for the following recommendation types:
    * CAMPAIGN_BUDGET, FORECASTING_CAMPAIGN_BUDGET, MARGINAL_ROI_CAMPAIGN_BUDGET,
    * MOVE_UNUSED_BUDGET
@@ -23591,6 +23505,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The campaign targeted by this recommendation.
+   *
    * This field will be set for the following recommendation types:
    * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
    * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
@@ -23615,6 +23530,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The campaign targeted by this recommendation.
+   *
    * This field will be set for the following recommendation types:
    * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
    * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
@@ -23648,6 +23564,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The campaign targeted by this recommendation.
+   *
    * This field will be set for the following recommendation types:
    * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
    * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
@@ -23687,6 +23604,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The ad group targeted by this recommendation. This will be set
    * only when the recommendation affects a single ad group.
+   *
    * This field will be set for the following recommendation types:
    * KEYWORD, OPTIMIZE_AD_ROTATION, RESPONSIVE_SEARCH_AD,
    * RESPONSIVE_SEARCH_AD_ASSET, TEXT_AD
@@ -23703,6 +23621,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The ad group targeted by this recommendation. This will be set
    * only when the recommendation affects a single ad group.
+   *
    * This field will be set for the following recommendation types:
    * KEYWORD, OPTIMIZE_AD_ROTATION, RESPONSIVE_SEARCH_AD,
    * RESPONSIVE_SEARCH_AD_ASSET, TEXT_AD
@@ -23728,6 +23647,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The ad group targeted by this recommendation. This will be set
    * only when the recommendation affects a single ad group.
+   *
    * This field will be set for the following recommendation types:
    * KEYWORD, OPTIMIZE_AD_ROTATION, RESPONSIVE_SEARCH_AD,
    * RESPONSIVE_SEARCH_AD_ASSET, TEXT_AD
@@ -24254,7 +24174,7 @@ private static final long serialVersionUID = 0L;
   public static final int SITELINK_EXTENSION_RECOMMENDATION_FIELD_NUMBER = 18;
   /**
    * <pre>
-   * Output only. The Sitelink extension recommendation.
+   * Output only. The Sitelink recommendation.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.Recommendation.SitelinkExtensionRecommendation sitelink_extension_recommendation = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -24266,7 +24186,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The Sitelink extension recommendation.
+   * Output only. The Sitelink recommendation.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.Recommendation.SitelinkExtensionRecommendation sitelink_extension_recommendation = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -24281,7 +24201,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The Sitelink extension recommendation.
+   * Output only. The Sitelink recommendation.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.Recommendation.SitelinkExtensionRecommendation sitelink_extension_recommendation = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -25497,11 +25417,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.resources.Recommendation parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.resources.Recommendation parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -26316,6 +26238,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. The resource name of the recommendation.
+     *
      * `customers/{customer_id}/recommendations/{recommendation_id}`
      * </pre>
      *
@@ -26337,6 +26260,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. The resource name of the recommendation.
+     *
      * `customers/{customer_id}/recommendations/{recommendation_id}`
      * </pre>
      *
@@ -26359,6 +26283,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. The resource name of the recommendation.
+     *
      * `customers/{customer_id}/recommendations/{recommendation_id}`
      * </pre>
      *
@@ -26377,6 +26302,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. The resource name of the recommendation.
+     *
      * `customers/{customer_id}/recommendations/{recommendation_id}`
      * </pre>
      *
@@ -26392,6 +26318,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. The resource name of the recommendation.
+     *
      * `customers/{customer_id}/recommendations/{recommendation_id}`
      * </pre>
      *
@@ -26651,6 +26578,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The budget targeted by this recommendation. This will be set
      * only when the recommendation affects a single campaign budget.
+     *
      * This field will be set for the following recommendation types:
      * CAMPAIGN_BUDGET, FORECASTING_CAMPAIGN_BUDGET, MARGINAL_ROI_CAMPAIGN_BUDGET,
      * MOVE_UNUSED_BUDGET
@@ -26666,6 +26594,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The budget targeted by this recommendation. This will be set
      * only when the recommendation affects a single campaign budget.
+     *
      * This field will be set for the following recommendation types:
      * CAMPAIGN_BUDGET, FORECASTING_CAMPAIGN_BUDGET, MARGINAL_ROI_CAMPAIGN_BUDGET,
      * MOVE_UNUSED_BUDGET
@@ -26690,6 +26619,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The budget targeted by this recommendation. This will be set
      * only when the recommendation affects a single campaign budget.
+     *
      * This field will be set for the following recommendation types:
      * CAMPAIGN_BUDGET, FORECASTING_CAMPAIGN_BUDGET, MARGINAL_ROI_CAMPAIGN_BUDGET,
      * MOVE_UNUSED_BUDGET
@@ -26715,6 +26645,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The budget targeted by this recommendation. This will be set
      * only when the recommendation affects a single campaign budget.
+     *
      * This field will be set for the following recommendation types:
      * CAMPAIGN_BUDGET, FORECASTING_CAMPAIGN_BUDGET, MARGINAL_ROI_CAMPAIGN_BUDGET,
      * MOVE_UNUSED_BUDGET
@@ -26736,6 +26667,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The budget targeted by this recommendation. This will be set
      * only when the recommendation affects a single campaign budget.
+     *
      * This field will be set for the following recommendation types:
      * CAMPAIGN_BUDGET, FORECASTING_CAMPAIGN_BUDGET, MARGINAL_ROI_CAMPAIGN_BUDGET,
      * MOVE_UNUSED_BUDGET
@@ -26754,6 +26686,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The budget targeted by this recommendation. This will be set
      * only when the recommendation affects a single campaign budget.
+     *
      * This field will be set for the following recommendation types:
      * CAMPAIGN_BUDGET, FORECASTING_CAMPAIGN_BUDGET, MARGINAL_ROI_CAMPAIGN_BUDGET,
      * MOVE_UNUSED_BUDGET
@@ -26777,6 +26710,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The campaign targeted by this recommendation.
+     *
      * This field will be set for the following recommendation types:
      * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
      * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
@@ -26800,6 +26734,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The campaign targeted by this recommendation.
+     *
      * This field will be set for the following recommendation types:
      * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
      * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
@@ -26832,6 +26767,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The campaign targeted by this recommendation.
+     *
      * This field will be set for the following recommendation types:
      * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
      * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
@@ -26865,6 +26801,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The campaign targeted by this recommendation.
+     *
      * This field will be set for the following recommendation types:
      * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
      * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
@@ -26894,6 +26831,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The campaign targeted by this recommendation.
+     *
      * This field will be set for the following recommendation types:
      * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
      * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
@@ -26920,6 +26858,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The campaign targeted by this recommendation.
+     *
      * This field will be set for the following recommendation types:
      * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
      * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
@@ -26953,6 +26892,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The ad group targeted by this recommendation. This will be set
      * only when the recommendation affects a single ad group.
+     *
      * This field will be set for the following recommendation types:
      * KEYWORD, OPTIMIZE_AD_ROTATION, RESPONSIVE_SEARCH_AD,
      * RESPONSIVE_SEARCH_AD_ASSET, TEXT_AD
@@ -26968,6 +26908,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The ad group targeted by this recommendation. This will be set
      * only when the recommendation affects a single ad group.
+     *
      * This field will be set for the following recommendation types:
      * KEYWORD, OPTIMIZE_AD_ROTATION, RESPONSIVE_SEARCH_AD,
      * RESPONSIVE_SEARCH_AD_ASSET, TEXT_AD
@@ -26992,6 +26933,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The ad group targeted by this recommendation. This will be set
      * only when the recommendation affects a single ad group.
+     *
      * This field will be set for the following recommendation types:
      * KEYWORD, OPTIMIZE_AD_ROTATION, RESPONSIVE_SEARCH_AD,
      * RESPONSIVE_SEARCH_AD_ASSET, TEXT_AD
@@ -27017,6 +26959,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The ad group targeted by this recommendation. This will be set
      * only when the recommendation affects a single ad group.
+     *
      * This field will be set for the following recommendation types:
      * KEYWORD, OPTIMIZE_AD_ROTATION, RESPONSIVE_SEARCH_AD,
      * RESPONSIVE_SEARCH_AD_ASSET, TEXT_AD
@@ -27038,6 +26981,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The ad group targeted by this recommendation. This will be set
      * only when the recommendation affects a single ad group.
+     *
      * This field will be set for the following recommendation types:
      * KEYWORD, OPTIMIZE_AD_ROTATION, RESPONSIVE_SEARCH_AD,
      * RESPONSIVE_SEARCH_AD_ASSET, TEXT_AD
@@ -27056,6 +27000,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The ad group targeted by this recommendation. This will be set
      * only when the recommendation affects a single ad group.
+     *
      * This field will be set for the following recommendation types:
      * KEYWORD, OPTIMIZE_AD_ROTATION, RESPONSIVE_SEARCH_AD,
      * RESPONSIVE_SEARCH_AD_ASSET, TEXT_AD
@@ -27110,7 +27055,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDismissed(boolean value) {
-      
+
       dismissed_ = value;
       bitField0_ |= 0x00000040;
       onChanged();
@@ -29093,7 +29038,7 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.resources.Recommendation.SitelinkExtensionRecommendation, com.google.ads.googleads.v12.resources.Recommendation.SitelinkExtensionRecommendation.Builder, com.google.ads.googleads.v12.resources.Recommendation.SitelinkExtensionRecommendationOrBuilder> sitelinkExtensionRecommendationBuilder_;
     /**
      * <pre>
-     * Output only. The Sitelink extension recommendation.
+     * Output only. The Sitelink recommendation.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.resources.Recommendation.SitelinkExtensionRecommendation sitelink_extension_recommendation = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -29105,7 +29050,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The Sitelink extension recommendation.
+     * Output only. The Sitelink recommendation.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.resources.Recommendation.SitelinkExtensionRecommendation sitelink_extension_recommendation = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -29127,7 +29072,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The Sitelink extension recommendation.
+     * Output only. The Sitelink recommendation.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.resources.Recommendation.SitelinkExtensionRecommendation sitelink_extension_recommendation = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -29147,7 +29092,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The Sitelink extension recommendation.
+     * Output only. The Sitelink recommendation.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.resources.Recommendation.SitelinkExtensionRecommendation sitelink_extension_recommendation = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -29165,7 +29110,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The Sitelink extension recommendation.
+     * Output only. The Sitelink recommendation.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.resources.Recommendation.SitelinkExtensionRecommendation sitelink_extension_recommendation = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -29192,7 +29137,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The Sitelink extension recommendation.
+     * Output only. The Sitelink recommendation.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.resources.Recommendation.SitelinkExtensionRecommendation sitelink_extension_recommendation = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -29215,7 +29160,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The Sitelink extension recommendation.
+     * Output only. The Sitelink recommendation.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.resources.Recommendation.SitelinkExtensionRecommendation sitelink_extension_recommendation = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -29225,7 +29170,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The Sitelink extension recommendation.
+     * Output only. The Sitelink recommendation.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.resources.Recommendation.SitelinkExtensionRecommendation sitelink_extension_recommendation = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -29243,7 +29188,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The Sitelink extension recommendation.
+     * Output only. The Sitelink recommendation.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.resources.Recommendation.SitelinkExtensionRecommendation sitelink_extension_recommendation = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

@@ -31,29 +31,30 @@ public final class PaymentsAccountProto {
       "\n9google/ads/googleads/v12/resources/pay" +
       "ments_account.proto\022\"google.ads.googlead" +
       "s.v12.resources\032\037google/api/field_behavi" +
-      "or.proto\032\031google/api/resource.proto\"\333\004\n\017" +
-      "PaymentsAccount\022G\n\rresource_name\030\001 \001(\tB0" +
-      "\340A\003\372A*\n(googleads.googleapis.com/Payment" +
-      "sAccount\022%\n\023payments_account_id\030\010 \001(\tB\003\340" +
-      "A\003H\000\210\001\001\022\026\n\004name\030\t \001(\tB\003\340A\003H\001\210\001\001\022\037\n\rcurre" +
-      "ncy_code\030\n \001(\tB\003\340A\003H\002\210\001\001\022%\n\023payments_pro" +
-      "file_id\030\013 \001(\tB\003\340A\003H\003\210\001\001\022/\n\035secondary_pay" +
-      "ments_profile_id\030\014 \001(\tB\003\340A\003H\004\210\001\001\022O\n\027payi" +
-      "ng_manager_customer\030\r \001(\tB)\340A\003\372A#\n!googl" +
-      "eads.googleapis.com/CustomerH\005\210\001\001:m\352Aj\n(" +
-      "googleads.googleapis.com/PaymentsAccount" +
-      "\022>customers/{customer_id}/paymentsAccoun" +
-      "ts/{payments_account_id}B\026\n\024_payments_ac" +
-      "count_idB\007\n\005_nameB\020\n\016_currency_codeB\026\n\024_" +
-      "payments_profile_idB \n\036_secondary_paymen" +
-      "ts_profile_idB\032\n\030_paying_manager_custome" +
-      "rB\206\002\n&com.google.ads.googleads.v12.resou" +
-      "rcesB\024PaymentsAccountProtoP\001ZKgoogle.gol" +
-      "ang.org/genproto/googleapis/ads/googlead" +
-      "s/v12/resources;resources\242\002\003GAA\252\002\"Google" +
-      ".Ads.GoogleAds.V12.Resources\312\002\"Google\\Ad" +
-      "s\\GoogleAds\\V12\\Resources\352\002&Google::Ads:" +
-      ":GoogleAds::V12::Resourcesb\006proto3"
+      "or.proto\032\031google/api/resource.proto\"\342\004\n\017" +
+      "PaymentsAccount\022H\n\rresource_name\030\001 \001(\tB1" +
+      "\342A\001\003\372A*\n(googleads.googleapis.com/Paymen" +
+      "tsAccount\022&\n\023payments_account_id\030\010 \001(\tB\004" +
+      "\342A\001\003H\000\210\001\001\022\027\n\004name\030\t \001(\tB\004\342A\001\003H\001\210\001\001\022 \n\rcu" +
+      "rrency_code\030\n \001(\tB\004\342A\001\003H\002\210\001\001\022&\n\023payments" +
+      "_profile_id\030\013 \001(\tB\004\342A\001\003H\003\210\001\001\0220\n\035secondar" +
+      "y_payments_profile_id\030\014 \001(\tB\004\342A\001\003H\004\210\001\001\022P" +
+      "\n\027paying_manager_customer\030\r \001(\tB*\342A\001\003\372A#" +
+      "\n!googleads.googleapis.com/CustomerH\005\210\001\001" +
+      ":m\352Aj\n(googleads.googleapis.com/Payments" +
+      "Account\022>customers/{customer_id}/payment" +
+      "sAccounts/{payments_account_id}B\026\n\024_paym" +
+      "ents_account_idB\007\n\005_nameB\020\n\016_currency_co" +
+      "deB\026\n\024_payments_profile_idB \n\036_secondary" +
+      "_payments_profile_idB\032\n\030_paying_manager_" +
+      "customerB\206\002\n&com.google.ads.googleads.v1" +
+      "2.resourcesB\024PaymentsAccountProtoP\001ZKgoo" +
+      "gle.golang.org/genproto/googleapis/ads/g" +
+      "oogleads/v12/resources;resources\242\002\003GAA\252\002" +
+      "\"Google.Ads.GoogleAds.V12.Resources\312\002\"Go" +
+      "ogle\\Ads\\GoogleAds\\V12\\Resources\352\002&Googl" +
+      "e::Ads::GoogleAds::V12::Resourcesb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -94,5 +94,5 @@ public interface ConversionCustomVariableOperationOrBuilder extends
    */
   com.google.ads.googleads.v13.resources.ConversionCustomVariableOrBuilder getUpdateOrBuilder();
 
-  public com.google.ads.googleads.v13.services.ConversionCustomVariableOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v13.services.ConversionCustomVariableOperation.OperationCase getOperationCase();
 }

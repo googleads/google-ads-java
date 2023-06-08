@@ -11,6 +11,7 @@ public interface CurrencyConstantOrBuilder extends
    * <pre>
    * Output only. The resource name of the currency constant.
    * Currency constant resource names have the form:
+   *
    * `currencyConstants/{code}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface CurrencyConstantOrBuilder extends
    * <pre>
    * Output only. The resource name of the currency constant.
    * Currency constant resource names have the form:
+   *
    * `currencyConstants/{code}`
    * </pre>
    *

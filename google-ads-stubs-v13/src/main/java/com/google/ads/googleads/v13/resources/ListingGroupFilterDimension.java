@@ -29,11 +29,6 @@ private static final long serialVersionUID = 0L;
     return new ListingGroupFilterDimension();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.resources.AssetGroupListingGroupFilterProto.internal_static_google_ads_googleads_v13_resources_ListingGroupFilterDimension_descriptor;
@@ -54,6 +49,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * ID of the product bidding category.
+     *
      * This ID is equivalent to the google_product_category ID as described in
      * this article: https://support.google.com/merchants/answer/6324436
      * </pre>
@@ -65,6 +61,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * ID of the product bidding category.
+     *
      * This ID is equivalent to the google_product_category ID as described in
      * this article: https://support.google.com/merchants/answer/6324436
      * </pre>
@@ -124,11 +121,6 @@ private static final long serialVersionUID = 0L;
       return new ProductBiddingCategory();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.resources.AssetGroupListingGroupFilterProto.internal_static_google_ads_googleads_v13_resources_ListingGroupFilterDimension_ProductBiddingCategory_descriptor;
@@ -148,6 +140,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * ID of the product bidding category.
+     *
      * This ID is equivalent to the google_product_category ID as described in
      * this article: https://support.google.com/merchants/answer/6324436
      * </pre>
@@ -162,6 +155,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * ID of the product bidding category.
+     *
      * This ID is equivalent to the google_product_category ID as described in
      * this article: https://support.google.com/merchants/answer/6324436
      * </pre>
@@ -325,11 +319,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.resources.ListingGroupFilterDimension.ProductBiddingCategory parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.resources.ListingGroupFilterDimension.ProductBiddingCategory parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -566,6 +562,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * ID of the product bidding category.
+       *
        * This ID is equivalent to the google_product_category ID as described in
        * this article: https://support.google.com/merchants/answer/6324436
        * </pre>
@@ -580,6 +577,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * ID of the product bidding category.
+       *
        * This ID is equivalent to the google_product_category ID as described in
        * this article: https://support.google.com/merchants/answer/6324436
        * </pre>
@@ -594,6 +592,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * ID of the product bidding category.
+       *
        * This ID is equivalent to the google_product_category ID as described in
        * this article: https://support.google.com/merchants/answer/6324436
        * </pre>
@@ -603,7 +602,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setId(long value) {
-        
+
         id_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -612,6 +611,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * ID of the product bidding category.
+       *
        * This ID is equivalent to the google_product_category ID as described in
        * this article: https://support.google.com/merchants/answer/6324436
        * </pre>
@@ -822,11 +822,6 @@ private static final long serialVersionUID = 0L;
       return new ProductBrand();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.resources.AssetGroupListingGroupFilterProto.internal_static_google_ads_googleads_v13_resources_ListingGroupFilterDimension_ProductBrand_descriptor;
@@ -1013,11 +1008,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.resources.ListingGroupFilterDimension.ProductBrand parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.resources.ListingGroupFilterDimension.ProductBrand parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1452,11 +1449,6 @@ private static final long serialVersionUID = 0L;
       return new ProductChannel();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.resources.AssetGroupListingGroupFilterProto.internal_static_google_ads_googleads_v13_resources_ListingGroupFilterDimension_ProductChannel_descriptor;
@@ -1604,11 +1596,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.resources.ListingGroupFilterDimension.ProductChannel parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.resources.ListingGroupFilterDimension.ProductChannel parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2008,11 +2002,6 @@ private static final long serialVersionUID = 0L;
       return new ProductCondition();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.resources.AssetGroupListingGroupFilterProto.internal_static_google_ads_googleads_v13_resources_ListingGroupFilterDimension_ProductCondition_descriptor;
@@ -2160,11 +2149,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.resources.ListingGroupFilterDimension.ProductCondition parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.resources.ListingGroupFilterDimension.ProductCondition parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2594,11 +2585,6 @@ private static final long serialVersionUID = 0L;
       return new ProductCustomAttribute();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.resources.AssetGroupListingGroupFilterProto.internal_static_google_ads_googleads_v13_resources_ListingGroupFilterDimension_ProductCustomAttribute_descriptor;
@@ -2821,11 +2807,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.resources.ListingGroupFilterDimension.ProductCustomAttribute parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.resources.ListingGroupFilterDimension.ProductCustomAttribute parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3355,11 +3343,6 @@ private static final long serialVersionUID = 0L;
       return new ProductItemId();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.resources.AssetGroupListingGroupFilterProto.internal_static_google_ads_googleads_v13_resources_ListingGroupFilterDimension_ProductItemId_descriptor;
@@ -3546,11 +3529,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.resources.ListingGroupFilterDimension.ProductItemId parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.resources.ListingGroupFilterDimension.ProductItemId parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4015,11 +4000,6 @@ private static final long serialVersionUID = 0L;
       return new ProductType();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.resources.AssetGroupListingGroupFilterProto.internal_static_google_ads_googleads_v13_resources_ListingGroupFilterDimension_ProductType_descriptor;
@@ -4242,11 +4222,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.resources.ListingGroupFilterDimension.ProductType parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.resources.ListingGroupFilterDimension.ProductType parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4717,6 +4699,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int dimensionCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object dimension_;
   public enum DimensionCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -5280,11 +5263,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.resources.ListingGroupFilterDimension parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.resources.ListingGroupFilterDimension parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)

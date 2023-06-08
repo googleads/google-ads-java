@@ -33,11 +33,6 @@ private static final long serialVersionUID = 0L;
     return new BillingSetup();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.resources.BillingSetupProto.internal_static_google_ads_googleads_v13_resources_BillingSetup_descriptor;
@@ -59,6 +54,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. A 16 digit id used to identify the payments account
      * associated with the billing setup.
+     *
      * This must be passed as a string with dashes, for example,
      * "1234-5678-9012-3456".
      * </pre>
@@ -71,6 +67,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. A 16 digit id used to identify the payments account
      * associated with the billing setup.
+     *
      * This must be passed as a string with dashes, for example,
      * "1234-5678-9012-3456".
      * </pre>
@@ -83,6 +80,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. A 16 digit id used to identify the payments account
      * associated with the billing setup.
+     *
      * This must be passed as a string with dashes, for example,
      * "1234-5678-9012-3456".
      * </pre>
@@ -97,8 +95,10 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The name of the payments account associated with the billing
      * setup.
+     *
      * This enables the user to specify a meaningful name for a payments account
      * to aid in reconciling monthly invoices.
+     *
      * This name will be printed in the monthly invoices.
      * </pre>
      *
@@ -110,8 +110,10 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The name of the payments account associated with the billing
      * setup.
+     *
      * This enables the user to specify a meaningful name for a payments account
      * to aid in reconciling monthly invoices.
+     *
      * This name will be printed in the monthly invoices.
      * </pre>
      *
@@ -123,8 +125,10 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The name of the payments account associated with the billing
      * setup.
+     *
      * This enables the user to specify a meaningful name for a payments account
      * to aid in reconciling monthly invoices.
+     *
      * This name will be printed in the monthly invoices.
      * </pre>
      *
@@ -138,6 +142,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. A 12 digit id used to identify the payments profile associated
      * with the billing setup.
+     *
      * This must be passed in as a string with dashes, for example,
      * "1234-5678-9012".
      * </pre>
@@ -150,6 +155,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. A 12 digit id used to identify the payments profile associated
      * with the billing setup.
+     *
      * This must be passed in as a string with dashes, for example,
      * "1234-5678-9012".
      * </pre>
@@ -162,6 +168,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. A 12 digit id used to identify the payments profile associated
      * with the billing setup.
+     *
      * This must be passed in as a string with dashes, for example,
      * "1234-5678-9012".
      * </pre>
@@ -270,11 +277,6 @@ private static final long serialVersionUID = 0L;
       return new PaymentsAccountInfo();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.resources.BillingSetupProto.internal_static_google_ads_googleads_v13_resources_BillingSetup_PaymentsAccountInfo_descriptor;
@@ -296,6 +298,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. A 16 digit id used to identify the payments account
      * associated with the billing setup.
+     *
      * This must be passed as a string with dashes, for example,
      * "1234-5678-9012-3456".
      * </pre>
@@ -311,6 +314,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. A 16 digit id used to identify the payments account
      * associated with the billing setup.
+     *
      * This must be passed as a string with dashes, for example,
      * "1234-5678-9012-3456".
      * </pre>
@@ -335,6 +339,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. A 16 digit id used to identify the payments account
      * associated with the billing setup.
+     *
      * This must be passed as a string with dashes, for example,
      * "1234-5678-9012-3456".
      * </pre>
@@ -364,8 +369,10 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The name of the payments account associated with the billing
      * setup.
+     *
      * This enables the user to specify a meaningful name for a payments account
      * to aid in reconciling monthly invoices.
+     *
      * This name will be printed in the monthly invoices.
      * </pre>
      *
@@ -380,8 +387,10 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The name of the payments account associated with the billing
      * setup.
+     *
      * This enables the user to specify a meaningful name for a payments account
      * to aid in reconciling monthly invoices.
+     *
      * This name will be printed in the monthly invoices.
      * </pre>
      *
@@ -405,8 +414,10 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The name of the payments account associated with the billing
      * setup.
+     *
      * This enables the user to specify a meaningful name for a payments account
      * to aid in reconciling monthly invoices.
+     *
      * This name will be printed in the monthly invoices.
      * </pre>
      *
@@ -435,6 +446,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. A 12 digit id used to identify the payments profile associated
      * with the billing setup.
+     *
      * This must be passed in as a string with dashes, for example,
      * "1234-5678-9012".
      * </pre>
@@ -450,6 +462,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. A 12 digit id used to identify the payments profile associated
      * with the billing setup.
+     *
      * This must be passed in as a string with dashes, for example,
      * "1234-5678-9012".
      * </pre>
@@ -474,6 +487,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. A 12 digit id used to identify the payments profile associated
      * with the billing setup.
+     *
      * This must be passed in as a string with dashes, for example,
      * "1234-5678-9012".
      * </pre>
@@ -796,11 +810,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.resources.BillingSetup.PaymentsAccountInfo parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.resources.BillingSetup.PaymentsAccountInfo parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1084,6 +1100,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Output only. A 16 digit id used to identify the payments account
        * associated with the billing setup.
+       *
        * This must be passed as a string with dashes, for example,
        * "1234-5678-9012-3456".
        * </pre>
@@ -1098,6 +1115,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Output only. A 16 digit id used to identify the payments account
        * associated with the billing setup.
+       *
        * This must be passed as a string with dashes, for example,
        * "1234-5678-9012-3456".
        * </pre>
@@ -1121,6 +1139,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Output only. A 16 digit id used to identify the payments account
        * associated with the billing setup.
+       *
        * This must be passed as a string with dashes, for example,
        * "1234-5678-9012-3456".
        * </pre>
@@ -1145,6 +1164,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Output only. A 16 digit id used to identify the payments account
        * associated with the billing setup.
+       *
        * This must be passed as a string with dashes, for example,
        * "1234-5678-9012-3456".
        * </pre>
@@ -1165,6 +1185,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Output only. A 16 digit id used to identify the payments account
        * associated with the billing setup.
+       *
        * This must be passed as a string with dashes, for example,
        * "1234-5678-9012-3456".
        * </pre>
@@ -1182,6 +1203,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Output only. A 16 digit id used to identify the payments account
        * associated with the billing setup.
+       *
        * This must be passed as a string with dashes, for example,
        * "1234-5678-9012-3456".
        * </pre>
@@ -1205,8 +1227,10 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Immutable. The name of the payments account associated with the billing
        * setup.
+       *
        * This enables the user to specify a meaningful name for a payments account
        * to aid in reconciling monthly invoices.
+       *
        * This name will be printed in the monthly invoices.
        * </pre>
        *
@@ -1220,8 +1244,10 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Immutable. The name of the payments account associated with the billing
        * setup.
+       *
        * This enables the user to specify a meaningful name for a payments account
        * to aid in reconciling monthly invoices.
+       *
        * This name will be printed in the monthly invoices.
        * </pre>
        *
@@ -1244,8 +1270,10 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Immutable. The name of the payments account associated with the billing
        * setup.
+       *
        * This enables the user to specify a meaningful name for a payments account
        * to aid in reconciling monthly invoices.
+       *
        * This name will be printed in the monthly invoices.
        * </pre>
        *
@@ -1269,8 +1297,10 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Immutable. The name of the payments account associated with the billing
        * setup.
+       *
        * This enables the user to specify a meaningful name for a payments account
        * to aid in reconciling monthly invoices.
+       *
        * This name will be printed in the monthly invoices.
        * </pre>
        *
@@ -1290,8 +1320,10 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Immutable. The name of the payments account associated with the billing
        * setup.
+       *
        * This enables the user to specify a meaningful name for a payments account
        * to aid in reconciling monthly invoices.
+       *
        * This name will be printed in the monthly invoices.
        * </pre>
        *
@@ -1308,8 +1340,10 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Immutable. The name of the payments account associated with the billing
        * setup.
+       *
        * This enables the user to specify a meaningful name for a payments account
        * to aid in reconciling monthly invoices.
+       *
        * This name will be printed in the monthly invoices.
        * </pre>
        *
@@ -1332,6 +1366,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Immutable. A 12 digit id used to identify the payments profile associated
        * with the billing setup.
+       *
        * This must be passed in as a string with dashes, for example,
        * "1234-5678-9012".
        * </pre>
@@ -1346,6 +1381,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Immutable. A 12 digit id used to identify the payments profile associated
        * with the billing setup.
+       *
        * This must be passed in as a string with dashes, for example,
        * "1234-5678-9012".
        * </pre>
@@ -1369,6 +1405,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Immutable. A 12 digit id used to identify the payments profile associated
        * with the billing setup.
+       *
        * This must be passed in as a string with dashes, for example,
        * "1234-5678-9012".
        * </pre>
@@ -1393,6 +1430,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Immutable. A 12 digit id used to identify the payments profile associated
        * with the billing setup.
+       *
        * This must be passed in as a string with dashes, for example,
        * "1234-5678-9012".
        * </pre>
@@ -1413,6 +1451,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Immutable. A 12 digit id used to identify the payments profile associated
        * with the billing setup.
+       *
        * This must be passed in as a string with dashes, for example,
        * "1234-5678-9012".
        * </pre>
@@ -1430,6 +1469,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Immutable. A 12 digit id used to identify the payments profile associated
        * with the billing setup.
+       *
        * This must be passed in as a string with dashes, for example,
        * "1234-5678-9012".
        * </pre>
@@ -1737,6 +1777,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   private int startTimeCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object startTime_;
   public enum StartTimeCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -1778,6 +1819,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int endTimeCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object endTime_;
   public enum EndTimeCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -1825,6 +1867,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the billing setup.
    * BillingSetup resource names have the form:
+   *
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
@@ -1848,6 +1891,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the billing setup.
    * BillingSetup resource names have the form:
+   *
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
@@ -1929,6 +1973,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the payments account associated with this
    * billing setup. Payments resource names have the form:
+   *
    * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
    * When setting up billing, this is used to signup with an existing payments
    * account (and then payments_account_info should not be set).
@@ -1947,6 +1992,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the payments account associated with this
    * billing setup. Payments resource names have the form:
+   *
    * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
    * When setting up billing, this is used to signup with an existing payments
    * account (and then payments_account_info should not be set).
@@ -1974,6 +2020,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the payments account associated with this
    * billing setup. Payments resource names have the form:
+   *
    * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
    * When setting up billing, this is used to signup with an existing payments
    * account (and then payments_account_info should not be set).
@@ -2508,11 +2555,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.resources.BillingSetup parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.resources.BillingSetup parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2892,6 +2941,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the billing setup.
      * BillingSetup resource names have the form:
+     *
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
@@ -2914,6 +2964,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the billing setup.
      * BillingSetup resource names have the form:
+     *
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
@@ -2937,6 +2988,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the billing setup.
      * BillingSetup resource names have the form:
+     *
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
@@ -2956,6 +3008,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the billing setup.
      * BillingSetup resource names have the form:
+     *
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
@@ -2972,6 +3025,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the billing setup.
      * BillingSetup resource names have the form:
+     *
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
@@ -3024,7 +3078,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      
+
       id_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -3123,6 +3177,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the payments account associated with this
      * billing setup. Payments resource names have the form:
+     *
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
      * When setting up billing, this is used to signup with an existing payments
      * account (and then payments_account_info should not be set).
@@ -3140,6 +3195,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the payments account associated with this
      * billing setup. Payments resource names have the form:
+     *
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
      * When setting up billing, this is used to signup with an existing payments
      * account (and then payments_account_info should not be set).
@@ -3166,6 +3222,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the payments account associated with this
      * billing setup. Payments resource names have the form:
+     *
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
      * When setting up billing, this is used to signup with an existing payments
      * account (and then payments_account_info should not be set).
@@ -3193,6 +3250,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the payments account associated with this
      * billing setup. Payments resource names have the form:
+     *
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
      * When setting up billing, this is used to signup with an existing payments
      * account (and then payments_account_info should not be set).
@@ -3216,6 +3274,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the payments account associated with this
      * billing setup. Payments resource names have the form:
+     *
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
      * When setting up billing, this is used to signup with an existing payments
      * account (and then payments_account_info should not be set).
@@ -3236,6 +3295,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the payments account associated with this
      * billing setup. Payments resource names have the form:
+     *
      * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
      * When setting up billing, this is used to signup with an existing payments
      * account (and then payments_account_info should not be set).

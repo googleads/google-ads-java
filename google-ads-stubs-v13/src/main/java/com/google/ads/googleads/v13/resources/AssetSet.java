@@ -34,11 +34,6 @@ private static final long serialVersionUID = 0L;
     return new AssetSet();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.resources.AssetSetProto.internal_static_google_ads_googleads_v13_resources_AssetSet_descriptor;
@@ -122,11 +117,6 @@ private static final long serialVersionUID = 0L;
       return new MerchantCenterFeed();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.resources.AssetSetProto.internal_static_google_ads_googleads_v13_resources_AssetSet_MerchantCenterFeed_descriptor;
@@ -340,11 +330,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.resources.AssetSet.MerchantCenterFeed parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.resources.AssetSet.MerchantCenterFeed parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -598,7 +590,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setMerchantId(long value) {
-        
+
         merchantId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -865,11 +857,6 @@ private static final long serialVersionUID = 0L;
       return new HotelPropertyData();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.resources.AssetSetProto.internal_static_google_ads_googleads_v13_resources_AssetSet_HotelPropertyData_descriptor;
@@ -1100,11 +1087,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.resources.AssetSet.HotelPropertyData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.resources.AssetSet.HotelPropertyData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1372,7 +1361,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setHotelCenterId(long value) {
-        
+
         hotelCenterId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -1560,6 +1549,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int assetSetSourceCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object assetSetSource_;
   public enum AssetSetSourceCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -1624,6 +1614,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the asset set.
    * Asset set resource names have the form:
+   *
    * `customers/{customer_id}/assetSets/{asset_set_id}`
    * </pre>
    *
@@ -1647,6 +1638,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the asset set.
    * Asset set resource names have the form:
+   *
    * `customers/{customer_id}/assetSets/{asset_set_id}`
    * </pre>
    *
@@ -2252,11 +2244,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.resources.AssetSet parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.resources.AssetSet parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2680,7 +2674,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      
+
       id_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
@@ -2706,6 +2700,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the asset set.
      * Asset set resource names have the form:
+     *
      * `customers/{customer_id}/assetSets/{asset_set_id}`
      * </pre>
      *
@@ -2728,6 +2723,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the asset set.
      * Asset set resource names have the form:
+     *
      * `customers/{customer_id}/assetSets/{asset_set_id}`
      * </pre>
      *
@@ -2751,6 +2747,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the asset set.
      * Asset set resource names have the form:
+     *
      * `customers/{customer_id}/assetSets/{asset_set_id}`
      * </pre>
      *
@@ -2770,6 +2767,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the asset set.
      * Asset set resource names have the form:
+     *
      * `customers/{customer_id}/assetSets/{asset_set_id}`
      * </pre>
      *
@@ -2786,6 +2784,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the asset set.
      * Asset set resource names have the form:
+     *
      * `customers/{customer_id}/assetSets/{asset_set_id}`
      * </pre>
      *
@@ -3230,7 +3229,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLocationGroupParentAssetSetId(long value) {
-      
+
       locationGroupParentAssetSetId_ = value;
       bitField0_ |= 0x00000040;
       onChanged();

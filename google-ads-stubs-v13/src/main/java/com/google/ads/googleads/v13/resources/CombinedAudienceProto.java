@@ -33,23 +33,23 @@ public final class CombinedAudienceProto {
       "ds.v13.resources\032=google/ads/googleads/v" +
       "13/enums/combined_audience_status.proto\032" +
       "\037google/api/field_behavior.proto\032\031google" +
-      "/api/resource.proto\"\364\002\n\020CombinedAudience" +
-      "\022H\n\rresource_name\030\001 \001(\tB1\340A\005\372A+\n)googlea" +
-      "ds.googleapis.com/CombinedAudience\022\017\n\002id" +
-      "\030\002 \001(\003B\003\340A\003\022f\n\006status\030\003 \001(\0162Q.google.ads" +
-      ".googleads.v13.enums.CombinedAudienceSta" +
-      "tusEnum.CombinedAudienceStatusB\003\340A\003\022\021\n\004n" +
-      "ame\030\004 \001(\tB\003\340A\003\022\030\n\013description\030\005 \001(\tB\003\340A\003" +
-      ":p\352Am\n)googleads.googleapis.com/Combined" +
-      "Audience\022@customers/{customer_id}/combin" +
-      "edAudiences/{combined_audience_id}B\207\002\n&c" +
-      "om.google.ads.googleads.v13.resourcesB\025C" +
-      "ombinedAudienceProtoP\001ZKgoogle.golang.or" +
-      "g/genproto/googleapis/ads/googleads/v13/" +
-      "resources;resources\242\002\003GAA\252\002\"Google.Ads.G" +
-      "oogleAds.V13.Resources\312\002\"Google\\Ads\\Goog" +
-      "leAds\\V13\\Resources\352\002&Google::Ads::Googl" +
-      "eAds::V13::Resourcesb\006proto3"
+      "/api/resource.proto\"\371\002\n\020CombinedAudience" +
+      "\022I\n\rresource_name\030\001 \001(\tB2\342A\001\005\372A+\n)google" +
+      "ads.googleapis.com/CombinedAudience\022\020\n\002i" +
+      "d\030\002 \001(\003B\004\342A\001\003\022g\n\006status\030\003 \001(\0162Q.google.a" +
+      "ds.googleads.v13.enums.CombinedAudienceS" +
+      "tatusEnum.CombinedAudienceStatusB\004\342A\001\003\022\022" +
+      "\n\004name\030\004 \001(\tB\004\342A\001\003\022\031\n\013description\030\005 \001(\tB" +
+      "\004\342A\001\003:p\352Am\n)googleads.googleapis.com/Com" +
+      "binedAudience\022@customers/{customer_id}/c" +
+      "ombinedAudiences/{combined_audience_id}B" +
+      "\207\002\n&com.google.ads.googleads.v13.resourc" +
+      "esB\025CombinedAudienceProtoP\001ZKgoogle.gola" +
+      "ng.org/genproto/googleapis/ads/googleads" +
+      "/v13/resources;resources\242\002\003GAA\252\002\"Google." +
+      "Ads.GoogleAds.V13.Resources\312\002\"Google\\Ads" +
+      "\\GoogleAds\\V13\\Resources\352\002&Google::Ads::" +
+      "GoogleAds::V13::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

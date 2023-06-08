@@ -50,39 +50,39 @@ public final class CustomerClientLinkServiceProto {
       "nk.proto\032\034google/api/annotations.proto\032\027" +
       "google/api/client.proto\032\037google/api/fiel" +
       "d_behavior.proto\032\031google/api/resource.pr" +
-      "oto\032 google/protobuf/field_mask.proto\"\252\001" +
-      "\n\037MutateCustomerClientLinkRequest\022\030\n\013cus" +
-      "tomer_id\030\001 \001(\tB\003\340A\002\022V\n\toperation\030\002 \001(\0132>" +
-      ".google.ads.googleads.v13.services.Custo" +
-      "merClientLinkOperationB\003\340A\002\022\025\n\rvalidate_" +
-      "only\030\003 \001(\010\"\357\001\n\033CustomerClientLinkOperati" +
-      "on\022/\n\013update_mask\030\004 \001(\0132\032.google.protobu" +
-      "f.FieldMask\022H\n\006create\030\001 \001(\01326.google.ads" +
-      ".googleads.v13.resources.CustomerClientL" +
-      "inkH\000\022H\n\006update\030\002 \001(\01326.google.ads.googl" +
-      "eads.v13.resources.CustomerClientLinkH\000B" +
-      "\013\n\toperation\"u\n MutateCustomerClientLink" +
-      "Response\022Q\n\006result\030\001 \001(\0132A.google.ads.go" +
-      "ogleads.v13.services.MutateCustomerClien" +
-      "tLinkResult\"i\n\036MutateCustomerClientLinkR" +
-      "esult\022G\n\rresource_name\030\001 \001(\tB0\372A-\n+googl" +
-      "eads.googleapis.com/CustomerClientLink2\346" +
-      "\002\n\031CustomerClientLinkService\022\201\002\n\030MutateC" +
-      "ustomerClientLink\022B.google.ads.googleads" +
-      ".v13.services.MutateCustomerClientLinkRe" +
-      "quest\032C.google.ads.googleads.v13.service" +
-      "s.MutateCustomerClientLinkResponse\"\\\202\323\344\223" +
-      "\002>\"9/v13/customers/{customer_id=*}/custo" +
-      "merClientLinks:mutate:\001*\332A\025customer_id,o" +
-      "peration\032E\312A\030googleads.googleapis.com\322A\'" +
-      "https://www.googleapis.com/auth/adwordsB" +
-      "\212\002\n%com.google.ads.googleads.v13.service" +
-      "sB\036CustomerClientLinkServiceProtoP\001ZIgoo" +
-      "gle.golang.org/genproto/googleapis/ads/g" +
-      "oogleads/v13/services;services\242\002\003GAA\252\002!G" +
-      "oogle.Ads.GoogleAds.V13.Services\312\002!Googl" +
-      "e\\Ads\\GoogleAds\\V13\\Services\352\002%Google::A" +
-      "ds::GoogleAds::V13::Servicesb\006proto3"
+      "oto\032 google/protobuf/field_mask.proto\"\254\001" +
+      "\n\037MutateCustomerClientLinkRequest\022\031\n\013cus" +
+      "tomer_id\030\001 \001(\tB\004\342A\001\002\022W\n\toperation\030\002 \001(\0132" +
+      ">.google.ads.googleads.v13.services.Cust" +
+      "omerClientLinkOperationB\004\342A\001\002\022\025\n\rvalidat" +
+      "e_only\030\003 \001(\010\"\357\001\n\033CustomerClientLinkOpera" +
+      "tion\022/\n\013update_mask\030\004 \001(\0132\032.google.proto" +
+      "buf.FieldMask\022H\n\006create\030\001 \001(\01326.google.a" +
+      "ds.googleads.v13.resources.CustomerClien" +
+      "tLinkH\000\022H\n\006update\030\002 \001(\01326.google.ads.goo" +
+      "gleads.v13.resources.CustomerClientLinkH" +
+      "\000B\013\n\toperation\"u\n MutateCustomerClientLi" +
+      "nkResponse\022Q\n\006result\030\001 \001(\0132A.google.ads." +
+      "googleads.v13.services.MutateCustomerCli" +
+      "entLinkResult\"i\n\036MutateCustomerClientLin" +
+      "kResult\022G\n\rresource_name\030\001 \001(\tB0\372A-\n+goo" +
+      "gleads.googleapis.com/CustomerClientLink" +
+      "2\346\002\n\031CustomerClientLinkService\022\201\002\n\030Mutat" +
+      "eCustomerClientLink\022B.google.ads.googlea" +
+      "ds.v13.services.MutateCustomerClientLink" +
+      "Request\032C.google.ads.googleads.v13.servi" +
+      "ces.MutateCustomerClientLinkResponse\"\\\332A" +
+      "\025customer_id,operation\202\323\344\223\002>\"9/v13/custo" +
+      "mers/{customer_id=*}/customerClientLinks" +
+      ":mutate:\001*\032E\312A\030googleads.googleapis.com\322" +
+      "A\'https://www.googleapis.com/auth/adword" +
+      "sB\212\002\n%com.google.ads.googleads.v13.servi" +
+      "cesB\036CustomerClientLinkServiceProtoP\001ZIg" +
+      "oogle.golang.org/genproto/googleapis/ads" +
+      "/googleads/v13/services;services\242\002\003GAA\252\002" +
+      "!Google.Ads.GoogleAds.V13.Services\312\002!Goo" +
+      "gle\\Ads\\GoogleAds\\V13\\Services\352\002%Google:" +
+      ":Ads::GoogleAds::V13::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

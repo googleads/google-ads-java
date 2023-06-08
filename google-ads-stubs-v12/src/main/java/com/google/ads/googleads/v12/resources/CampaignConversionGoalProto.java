@@ -35,27 +35,27 @@ public final class CampaignConversionGoalProto {
       "ry.proto\0326google/ads/googleads/v12/enums" +
       "/conversion_origin.proto\032\037google/api/fie" +
       "ld_behavior.proto\032\031google/api/resource.p" +
-      "roto\"\202\004\n\026CampaignConversionGoal\022N\n\rresou" +
-      "rce_name\030\001 \001(\tB7\340A\005\372A1\n/googleads.google" +
-      "apis.com/CampaignConversionGoal\022;\n\010campa" +
-      "ign\030\002 \001(\tB)\340A\005\372A#\n!googleads.googleapis." +
-      "com/Campaign\022g\n\010category\030\003 \001(\0162U.google." +
-      "ads.googleads.v12.enums.ConversionAction" +
-      "CategoryEnum.ConversionActionCategory\022U\n" +
-      "\006origin\030\004 \001(\0162E.google.ads.googleads.v12" +
-      ".enums.ConversionOriginEnum.ConversionOr" +
-      "igin\022\020\n\010biddable\030\005 \001(\010:\210\001\352A\204\001\n/googleads" +
-      ".googleapis.com/CampaignConversionGoal\022Q" +
-      "customers/{customer_id}/campaignConversi" +
-      "onGoals/{campaign_id}~{category}~{source" +
-      "}B\215\002\n&com.google.ads.googleads.v12.resou" +
-      "rcesB\033CampaignConversionGoalProtoP\001ZKgoo" +
-      "gle.golang.org/genproto/googleapis/ads/g" +
-      "oogleads/v12/resources;resources\242\002\003GAA\252\002" +
-      "\"Google.Ads.GoogleAds.V12.Resources\312\002\"Go" +
-      "ogle\\Ads\\GoogleAds\\V12\\Resources\352\002&Googl" +
-      "e::Ads::GoogleAds::V12::Resourcesb\006proto" +
-      "3"
+      "roto\"\204\004\n\026CampaignConversionGoal\022O\n\rresou" +
+      "rce_name\030\001 \001(\tB8\342A\001\005\372A1\n/googleads.googl" +
+      "eapis.com/CampaignConversionGoal\022<\n\010camp" +
+      "aign\030\002 \001(\tB*\342A\001\005\372A#\n!googleads.googleapi" +
+      "s.com/Campaign\022g\n\010category\030\003 \001(\0162U.googl" +
+      "e.ads.googleads.v12.enums.ConversionActi" +
+      "onCategoryEnum.ConversionActionCategory\022" +
+      "U\n\006origin\030\004 \001(\0162E.google.ads.googleads.v" +
+      "12.enums.ConversionOriginEnum.Conversion" +
+      "Origin\022\020\n\010biddable\030\005 \001(\010:\210\001\352A\204\001\n/googlea" +
+      "ds.googleapis.com/CampaignConversionGoal" +
+      "\022Qcustomers/{customer_id}/campaignConver" +
+      "sionGoals/{campaign_id}~{category}~{sour" +
+      "ce}B\215\002\n&com.google.ads.googleads.v12.res" +
+      "ourcesB\033CampaignConversionGoalProtoP\001ZKg" +
+      "oogle.golang.org/genproto/googleapis/ads" +
+      "/googleads/v12/resources;resources\242\002\003GAA" +
+      "\252\002\"Google.Ads.GoogleAds.V12.Resources\312\002\"" +
+      "Google\\Ads\\GoogleAds\\V12\\Resources\352\002&Goo" +
+      "gle::Ads::GoogleAds::V12::Resourcesb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

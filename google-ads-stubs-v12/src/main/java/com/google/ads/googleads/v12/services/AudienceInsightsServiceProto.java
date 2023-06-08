@@ -150,189 +150,189 @@ public final class AudienceInsightsServiceProto {
       "ds/googleads/v12/enums/audience_insights" +
       "_dimension.proto\032\034google/api/annotations" +
       ".proto\032\027google/api/client.proto\032\037google/" +
-      "api/field_behavior.proto\"\224\002\n#GenerateIns" +
-      "ightsFinderReportRequest\022\030\n\013customer_id\030" +
-      "\001 \001(\tB\003\340A\002\022X\n\021baseline_audience\030\002 \001(\01328." +
-      "google.ads.googleads.v12.services.BasicI" +
-      "nsightsAudienceB\003\340A\002\022X\n\021specific_audienc" +
-      "e\030\003 \001(\01328.google.ads.googleads.v12.servi" +
-      "ces.BasicInsightsAudienceB\003\340A\002\022\037\n\027custom" +
-      "er_insights_group\030\004 \001(\t\"@\n$GenerateInsig" +
-      "htsFinderReportResponse\022\030\n\020saved_report_" +
-      "url\030\001 \001(\t\"\271\002\n*GenerateAudienceCompositio" +
-      "nInsightsRequest\022\030\n\013customer_id\030\001 \001(\tB\003\340" +
-      "A\002\022J\n\010audience\030\002 \001(\01323.google.ads.google" +
-      "ads.v12.services.InsightsAudienceB\003\340A\002\022\022" +
-      "\n\ndata_month\030\003 \001(\t\022p\n\ndimensions\030\004 \003(\0162W" +
-      ".google.ads.googleads.v12.enums.Audience" +
-      "InsightsDimensionEnum.AudienceInsightsDi" +
-      "mensionB\003\340A\002\022\037\n\027customer_insights_group\030" +
-      "\005 \001(\t\"~\n+GenerateAudienceCompositionInsi" +
-      "ghtsResponse\022O\n\010sections\030\001 \003(\0132=.google." +
-      "ads.googleads.v12.services.AudienceCompo" +
-      "sitionSection\"\276\002\n%ListAudienceInsightsAt" +
-      "tributesRequest\022\030\n\013customer_id\030\001 \001(\tB\003\340A" +
-      "\002\022p\n\ndimensions\030\002 \003(\0162W.google.ads.googl" +
-      "eads.v12.enums.AudienceInsightsDimension" +
-      "Enum.AudienceInsightsDimensionB\003\340A\002\022\027\n\nq" +
-      "uery_text\030\003 \001(\tB\003\340A\002\022\037\n\027customer_insight" +
-      "s_group\030\004 \001(\t\022O\n\030location_country_filter" +
-      "s\030\005 \003(\0132-.google.ads.googleads.v12.commo" +
-      "n.LocationInfo\"\202\001\n&ListAudienceInsightsA" +
-      "ttributesResponse\022X\n\nattributes\030\001 \003(\0132D." +
-      "google.ads.googleads.v12.services.Audien" +
-      "ceInsightsAttributeMetadata\"\"\n ListInsig" +
-      "htsEligibleDatesRequest\"8\n!ListInsightsE" +
-      "ligibleDatesResponse\022\023\n\013data_months\030\001 \003(" +
-      "\t\"\236\006\n\031AudienceInsightsAttribute\022B\n\tage_r" +
-      "ange\030\001 \001(\0132-.google.ads.googleads.v12.co" +
-      "mmon.AgeRangeInfoH\000\022=\n\006gender\030\002 \001(\0132+.go" +
-      "ogle.ads.googleads.v12.common.GenderInfo" +
-      "H\000\022A\n\010location\030\003 \001(\0132-.google.ads.google" +
-      "ads.v12.common.LocationInfoH\000\022J\n\ruser_in" +
-      "terest\030\004 \001(\01321.google.ads.googleads.v12." +
-      "common.UserInterestInfoH\000\022K\n\006entity\030\005 \001(" +
-      "\01329.google.ads.googleads.v12.services.Au" +
-      "dienceInsightsEntityH\000\022O\n\010category\030\006 \001(\013" +
-      "2;.google.ads.googleads.v12.services.Aud" +
-      "ienceInsightsCategoryH\000\022Z\n\016dynamic_lineu" +
-      "p\030\007 \001(\0132@.google.ads.googleads.v12.servi" +
-      "ces.AudienceInsightsDynamicLineupH\000\022N\n\017p" +
-      "arental_status\030\010 \001(\01323.google.ads.google" +
-      "ads.v12.common.ParentalStatusInfoH\000\022H\n\014i" +
-      "ncome_range\030\t \001(\01320.google.ads.googleads" +
-      ".v12.common.IncomeRangeInfoH\000\022N\n\017youtube" +
-      "_channel\030\n \001(\01323.google.ads.googleads.v1" +
-      "2.common.YouTubeChannelInfoH\000B\013\n\tattribu" +
-      "te\"\276\001\n\025AudienceInsightsTopic\022K\n\006entity\030\001" +
-      " \001(\01329.google.ads.googleads.v12.services" +
-      ".AudienceInsightsEntityH\000\022O\n\010category\030\002 " +
-      "\001(\0132;.google.ads.googleads.v12.services." +
-      "AudienceInsightsCategoryH\000B\007\n\005topic\"A\n\026A" +
-      "udienceInsightsEntity\022\'\n\032knowledge_graph" +
-      "_machine_id\030\001 \001(\tB\003\340A\002\"4\n\030AudienceInsigh" +
-      "tsCategory\022\030\n\013category_id\030\001 \001(\tB\003\340A\002\"?\n\035" +
-      "AudienceInsightsDynamicLineup\022\036\n\021dynamic" +
-      "_lineup_id\030\001 \001(\tB\003\340A\002\"\310\003\n\025BasicInsightsA" +
-      "udience\022L\n\020country_location\030\001 \003(\0132-.goog" +
-      "le.ads.googleads.v12.common.LocationInfo" +
-      "B\003\340A\002\022L\n\025sub_country_locations\030\002 \003(\0132-.g" +
-      "oogle.ads.googleads.v12.common.LocationI" +
-      "nfo\022;\n\006gender\030\003 \001(\0132+.google.ads.googlea" +
-      "ds.v12.common.GenderInfo\022A\n\nage_ranges\030\004" +
-      " \003(\0132-.google.ads.googleads.v12.common.A" +
-      "geRangeInfo\022I\n\016user_interests\030\005 \003(\01321.go" +
-      "ogle.ads.googleads.v12.common.UserIntere" +
-      "stInfo\022H\n\006topics\030\006 \003(\01328.google.ads.goog" +
-      "leads.v12.services.AudienceInsightsTopic" +
-      "\"\347\004\n!AudienceInsightsAttributeMetadata\022j" +
-      "\n\tdimension\030\001 \001(\0162W.google.ads.googleads" +
-      ".v12.enums.AudienceInsightsDimensionEnum" +
-      ".AudienceInsightsDimension\022O\n\tattribute\030" +
-      "\002 \001(\0132<.google.ads.googleads.v12.service" +
-      "s.AudienceInsightsAttribute\022\024\n\014display_n" +
-      "ame\030\003 \001(\t\022\r\n\005score\030\004 \001(\001\022\024\n\014display_info" +
-      "\030\005 \001(\t\022f\n\030youtube_channel_metadata\030\006 \001(\013" +
-      "2B.google.ads.googleads.v12.services.You" +
-      "TubeChannelAttributeMetadataH\000\022g\n\032dynami" +
-      "c_attribute_metadata\030\007 \001(\0132A.google.ads." +
-      "googleads.v12.services.DynamicLineupAttr" +
-      "ibuteMetadataH\000\022c\n\033location_attribute_me" +
-      "tadata\030\010 \001(\0132<.google.ads.googleads.v12." +
-      "services.LocationAttributeMetadataH\000B\024\n\022" +
-      "dimension_metadata\";\n\037YouTubeChannelAttr" +
-      "ibuteMetadata\022\030\n\020subscriber_count\030\001 \001(\003\"" +
-      "\272\002\n\036DynamicLineupAttributeMetadata\022H\n\021in" +
-      "ventory_country\030\001 \001(\0132-.google.ads.googl" +
-      "eads.v12.common.LocationInfo\022%\n\030median_m" +
-      "onthly_inventory\030\002 \001(\003H\000\210\001\001\022&\n\031channel_c" +
-      "ount_lower_bound\030\003 \001(\003H\001\210\001\001\022&\n\031channel_c" +
-      "ount_upper_bound\030\004 \001(\003H\002\210\001\001B\033\n\031_median_m" +
-      "onthly_inventoryB\034\n\032_channel_count_lower" +
-      "_boundB\034\n\032_channel_count_upper_bound\"d\n\031" +
-      "LocationAttributeMetadata\022G\n\020country_loc" +
-      "ation\030\001 \001(\0132-.google.ads.googleads.v12.c" +
-      "ommon.LocationInfo\"\211\005\n\020InsightsAudience\022" +
-      "M\n\021country_locations\030\001 \003(\0132-.google.ads." +
-      "googleads.v12.common.LocationInfoB\003\340A\002\022L" +
-      "\n\025sub_country_locations\030\002 \003(\0132-.google.a" +
-      "ds.googleads.v12.common.LocationInfo\022;\n\006" +
-      "gender\030\003 \001(\0132+.google.ads.googleads.v12." +
-      "common.GenderInfo\022A\n\nage_ranges\030\004 \003(\0132-." +
-      "google.ads.googleads.v12.common.AgeRange" +
-      "Info\022L\n\017parental_status\030\005 \001(\01323.google.a" +
+      "api/field_behavior.proto\"\227\002\n#GenerateIns" +
+      "ightsFinderReportRequest\022\031\n\013customer_id\030" +
+      "\001 \001(\tB\004\342A\001\002\022Y\n\021baseline_audience\030\002 \001(\01328" +
+      ".google.ads.googleads.v12.services.Basic" +
+      "InsightsAudienceB\004\342A\001\002\022Y\n\021specific_audie" +
+      "nce\030\003 \001(\01328.google.ads.googleads.v12.ser" +
+      "vices.BasicInsightsAudienceB\004\342A\001\002\022\037\n\027cus" +
+      "tomer_insights_group\030\004 \001(\t\"@\n$GenerateIn" +
+      "sightsFinderReportResponse\022\030\n\020saved_repo" +
+      "rt_url\030\001 \001(\t\"\274\002\n*GenerateAudienceComposi" +
+      "tionInsightsRequest\022\031\n\013customer_id\030\001 \001(\t" +
+      "B\004\342A\001\002\022K\n\010audience\030\002 \001(\01323.google.ads.go" +
+      "ogleads.v12.services.InsightsAudienceB\004\342" +
+      "A\001\002\022\022\n\ndata_month\030\003 \001(\t\022q\n\ndimensions\030\004 " +
+      "\003(\0162W.google.ads.googleads.v12.enums.Aud" +
+      "ienceInsightsDimensionEnum.AudienceInsig" +
+      "htsDimensionB\004\342A\001\002\022\037\n\027customer_insights_" +
+      "group\030\005 \001(\t\"~\n+GenerateAudienceCompositi" +
+      "onInsightsResponse\022O\n\010sections\030\001 \003(\0132=.g" +
+      "oogle.ads.googleads.v12.services.Audienc" +
+      "eCompositionSection\"\301\002\n%ListAudienceInsi" +
+      "ghtsAttributesRequest\022\031\n\013customer_id\030\001 \001" +
+      "(\tB\004\342A\001\002\022q\n\ndimensions\030\002 \003(\0162W.google.ad" +
+      "s.googleads.v12.enums.AudienceInsightsDi" +
+      "mensionEnum.AudienceInsightsDimensionB\004\342" +
+      "A\001\002\022\030\n\nquery_text\030\003 \001(\tB\004\342A\001\002\022\037\n\027custome" +
+      "r_insights_group\030\004 \001(\t\022O\n\030location_count" +
+      "ry_filters\030\005 \003(\0132-.google.ads.googleads." +
+      "v12.common.LocationInfo\"\202\001\n&ListAudience" +
+      "InsightsAttributesResponse\022X\n\nattributes" +
+      "\030\001 \003(\0132D.google.ads.googleads.v12.servic" +
+      "es.AudienceInsightsAttributeMetadata\"\"\n " +
+      "ListInsightsEligibleDatesRequest\"8\n!List" +
+      "InsightsEligibleDatesResponse\022\023\n\013data_mo" +
+      "nths\030\001 \003(\t\"\236\006\n\031AudienceInsightsAttribute" +
+      "\022B\n\tage_range\030\001 \001(\0132-.google.ads.googlea" +
+      "ds.v12.common.AgeRangeInfoH\000\022=\n\006gender\030\002" +
+      " \001(\0132+.google.ads.googleads.v12.common.G" +
+      "enderInfoH\000\022A\n\010location\030\003 \001(\0132-.google.a" +
+      "ds.googleads.v12.common.LocationInfoH\000\022J" +
+      "\n\ruser_interest\030\004 \001(\01321.google.ads.googl" +
+      "eads.v12.common.UserInterestInfoH\000\022K\n\006en" +
+      "tity\030\005 \001(\01329.google.ads.googleads.v12.se" +
+      "rvices.AudienceInsightsEntityH\000\022O\n\010categ" +
+      "ory\030\006 \001(\0132;.google.ads.googleads.v12.ser" +
+      "vices.AudienceInsightsCategoryH\000\022Z\n\016dyna" +
+      "mic_lineup\030\007 \001(\0132@.google.ads.googleads." +
+      "v12.services.AudienceInsightsDynamicLine" +
+      "upH\000\022N\n\017parental_status\030\010 \001(\01323.google.a" +
       "ds.googleads.v12.common.ParentalStatusIn" +
-      "fo\022G\n\rincome_ranges\030\006 \003(\01320.google.ads.g" +
-      "oogleads.v12.common.IncomeRangeInfo\022Y\n\017d" +
-      "ynamic_lineups\030\007 \003(\0132@.google.ads.google" +
-      "ads.v12.services.AudienceInsightsDynamic" +
-      "Lineup\022f\n\033topic_audience_combinations\030\010 " +
-      "\003(\0132A.google.ads.googleads.v12.services." +
-      "InsightsAudienceAttributeGroup\"w\n\036Insigh" +
-      "tsAudienceAttributeGroup\022U\n\nattributes\030\001" +
-      " \003(\0132<.google.ads.googleads.v12.services" +
-      ".AudienceInsightsAttributeB\003\340A\002\"\307\002\n\032Audi" +
-      "enceCompositionSection\022j\n\tdimension\030\001 \001(" +
-      "\0162W.google.ads.googleads.v12.enums.Audie" +
-      "nceInsightsDimensionEnum.AudienceInsight" +
-      "sDimension\022W\n\016top_attributes\030\003 \003(\0132?.goo" +
+      "foH\000\022H\n\014income_range\030\t \001(\01320.google.ads." +
+      "googleads.v12.common.IncomeRangeInfoH\000\022N" +
+      "\n\017youtube_channel\030\n \001(\01323.google.ads.goo" +
+      "gleads.v12.common.YouTubeChannelInfoH\000B\013" +
+      "\n\tattribute\"\276\001\n\025AudienceInsightsTopic\022K\n" +
+      "\006entity\030\001 \001(\01329.google.ads.googleads.v12" +
+      ".services.AudienceInsightsEntityH\000\022O\n\010ca" +
+      "tegory\030\002 \001(\0132;.google.ads.googleads.v12." +
+      "services.AudienceInsightsCategoryH\000B\007\n\005t" +
+      "opic\"B\n\026AudienceInsightsEntity\022(\n\032knowle" +
+      "dge_graph_machine_id\030\001 \001(\tB\004\342A\001\002\"5\n\030Audi" +
+      "enceInsightsCategory\022\031\n\013category_id\030\001 \001(" +
+      "\tB\004\342A\001\002\"@\n\035AudienceInsightsDynamicLineup" +
+      "\022\037\n\021dynamic_lineup_id\030\001 \001(\tB\004\342A\001\002\"\311\003\n\025Ba" +
+      "sicInsightsAudience\022M\n\020country_location\030" +
+      "\001 \003(\0132-.google.ads.googleads.v12.common." +
+      "LocationInfoB\004\342A\001\002\022L\n\025sub_country_locati" +
+      "ons\030\002 \003(\0132-.google.ads.googleads.v12.com" +
+      "mon.LocationInfo\022;\n\006gender\030\003 \001(\0132+.googl" +
+      "e.ads.googleads.v12.common.GenderInfo\022A\n" +
+      "\nage_ranges\030\004 \003(\0132-.google.ads.googleads" +
+      ".v12.common.AgeRangeInfo\022I\n\016user_interes" +
+      "ts\030\005 \003(\01321.google.ads.googleads.v12.comm" +
+      "on.UserInterestInfo\022H\n\006topics\030\006 \003(\01328.go" +
+      "ogle.ads.googleads.v12.services.Audience" +
+      "InsightsTopic\"\347\004\n!AudienceInsightsAttrib" +
+      "uteMetadata\022j\n\tdimension\030\001 \001(\0162W.google." +
+      "ads.googleads.v12.enums.AudienceInsights" +
+      "DimensionEnum.AudienceInsightsDimension\022" +
+      "O\n\tattribute\030\002 \001(\0132<.google.ads.googlead" +
+      "s.v12.services.AudienceInsightsAttribute" +
+      "\022\024\n\014display_name\030\003 \001(\t\022\r\n\005score\030\004 \001(\001\022\024\n" +
+      "\014display_info\030\005 \001(\t\022f\n\030youtube_channel_m" +
+      "etadata\030\006 \001(\0132B.google.ads.googleads.v12" +
+      ".services.YouTubeChannelAttributeMetadat" +
+      "aH\000\022g\n\032dynamic_attribute_metadata\030\007 \001(\0132" +
+      "A.google.ads.googleads.v12.services.Dyna" +
+      "micLineupAttributeMetadataH\000\022c\n\033location" +
+      "_attribute_metadata\030\010 \001(\0132<.google.ads.g" +
+      "oogleads.v12.services.LocationAttributeM" +
+      "etadataH\000B\024\n\022dimension_metadata\";\n\037YouTu" +
+      "beChannelAttributeMetadata\022\030\n\020subscriber" +
+      "_count\030\001 \001(\003\"\272\002\n\036DynamicLineupAttributeM" +
+      "etadata\022H\n\021inventory_country\030\001 \001(\0132-.goo" +
+      "gle.ads.googleads.v12.common.LocationInf" +
+      "o\022%\n\030median_monthly_inventory\030\002 \001(\003H\000\210\001\001" +
+      "\022&\n\031channel_count_lower_bound\030\003 \001(\003H\001\210\001\001" +
+      "\022&\n\031channel_count_upper_bound\030\004 \001(\003H\002\210\001\001" +
+      "B\033\n\031_median_monthly_inventoryB\034\n\032_channe" +
+      "l_count_lower_boundB\034\n\032_channel_count_up" +
+      "per_bound\"d\n\031LocationAttributeMetadata\022G" +
+      "\n\020country_location\030\001 \001(\0132-.google.ads.go" +
+      "ogleads.v12.common.LocationInfo\"\212\005\n\020Insi" +
+      "ghtsAudience\022N\n\021country_locations\030\001 \003(\0132" +
+      "-.google.ads.googleads.v12.common.Locati" +
+      "onInfoB\004\342A\001\002\022L\n\025sub_country_locations\030\002 " +
+      "\003(\0132-.google.ads.googleads.v12.common.Lo" +
+      "cationInfo\022;\n\006gender\030\003 \001(\0132+.google.ads." +
+      "googleads.v12.common.GenderInfo\022A\n\nage_r" +
+      "anges\030\004 \003(\0132-.google.ads.googleads.v12.c" +
+      "ommon.AgeRangeInfo\022L\n\017parental_status\030\005 " +
+      "\001(\01323.google.ads.googleads.v12.common.Pa" +
+      "rentalStatusInfo\022G\n\rincome_ranges\030\006 \003(\0132" +
+      "0.google.ads.googleads.v12.common.Income" +
+      "RangeInfo\022Y\n\017dynamic_lineups\030\007 \003(\0132@.goo" +
+      "gle.ads.googleads.v12.services.AudienceI" +
+      "nsightsDynamicLineup\022f\n\033topic_audience_c" +
+      "ombinations\030\010 \003(\0132A.google.ads.googleads" +
+      ".v12.services.InsightsAudienceAttributeG" +
+      "roup\"x\n\036InsightsAudienceAttributeGroup\022V" +
+      "\n\nattributes\030\001 \003(\0132<.google.ads.googlead" +
+      "s.v12.services.AudienceInsightsAttribute" +
+      "B\004\342A\001\002\"\307\002\n\032AudienceCompositionSection\022j\n" +
+      "\tdimension\030\001 \001(\0162W.google.ads.googleads." +
+      "v12.enums.AudienceInsightsDimensionEnum." +
+      "AudienceInsightsDimension\022W\n\016top_attribu" +
+      "tes\030\003 \003(\0132?.google.ads.googleads.v12.ser" +
+      "vices.AudienceCompositionAttribute\022d\n\024cl" +
+      "ustered_attributes\030\004 \003(\0132F.google.ads.go" +
+      "ogleads.v12.services.AudienceComposition" +
+      "AttributeCluster\"\360\001\n#AudienceComposition" +
+      "AttributeCluster\022\034\n\024cluster_display_name" +
+      "\030\001 \001(\t\022V\n\017cluster_metrics\030\003 \001(\0132=.google" +
+      ".ads.googleads.v12.services.AudienceComp" +
+      "ositionMetrics\022S\n\nattributes\030\004 \003(\0132?.goo" +
       "gle.ads.googleads.v12.services.AudienceC" +
-      "ompositionAttribute\022d\n\024clustered_attribu" +
-      "tes\030\004 \003(\0132F.google.ads.googleads.v12.ser" +
-      "vices.AudienceCompositionAttributeCluste" +
-      "r\"\360\001\n#AudienceCompositionAttributeCluste" +
-      "r\022\034\n\024cluster_display_name\030\001 \001(\t\022V\n\017clust" +
-      "er_metrics\030\003 \001(\0132=.google.ads.googleads." +
-      "v12.services.AudienceCompositionMetrics\022" +
-      "S\n\nattributes\030\004 \003(\0132?.google.ads.googlea" +
-      "ds.v12.services.AudienceCompositionAttri" +
-      "bute\"s\n\032AudienceCompositionMetrics\022\037\n\027ba" +
-      "seline_audience_share\030\001 \001(\001\022\026\n\016audience_" +
-      "share\030\002 \001(\001\022\r\n\005index\030\003 \001(\001\022\r\n\005score\030\004 \001(" +
-      "\001\"\320\001\n\034AudienceCompositionAttribute\022`\n\022at" +
-      "tribute_metadata\030\001 \001(\0132D.google.ads.goog" +
-      "leads.v12.services.AudienceInsightsAttri" +
-      "buteMetadata\022N\n\007metrics\030\002 \001(\0132=.google.a" +
-      "ds.googleads.v12.services.AudienceCompos" +
-      "itionMetrics2\321\t\n\027AudienceInsightsService" +
-      "\022\251\002\n\034GenerateInsightsFinderReport\022F.goog" +
-      "le.ads.googleads.v12.services.GenerateIn" +
-      "sightsFinderReportRequest\032G.google.ads.g" +
-      "oogleads.v12.services.GenerateInsightsFi" +
-      "nderReportResponse\"x\202\323\344\223\002@\";/v12/custome" +
-      "rs/{customer_id=*}:generateInsightsFinde" +
-      "rReport:\001*\332A/customer_id,baseline_audien" +
-      "ce,specific_audience\022\245\002\n\036ListAudienceIns" +
-      "ightsAttributes\022H.google.ads.googleads.v" +
-      "12.services.ListAudienceInsightsAttribut" +
-      "esRequest\032I.google.ads.googleads.v12.ser" +
-      "vices.ListAudienceInsightsAttributesResp" +
-      "onse\"n\202\323\344\223\002D\"?/v12/customers/{customer_i" +
-      "d=*}:searchAudienceInsightsAttributes:\001*" +
-      "\332A!customer_id,dimensions,query_text\022\342\001\n" +
-      "\031ListInsightsEligibleDates\022C.google.ads." +
-      "googleads.v12.services.ListInsightsEligi" +
-      "bleDatesRequest\032D.google.ads.googleads.v" +
-      "12.services.ListInsightsEligibleDatesRes" +
-      "ponse\":\202\323\344\223\0024\"//v12/audienceInsights:lis" +
-      "tInsightsEligibleDates:\001*\022\265\002\n#GenerateAu" +
-      "dienceCompositionInsights\022M.google.ads.g" +
-      "oogleads.v12.services.GenerateAudienceCo" +
-      "mpositionInsightsRequest\032N.google.ads.go" +
-      "ogleads.v12.services.GenerateAudienceCom" +
-      "positionInsightsResponse\"o\202\323\344\223\002G\"B/v12/c" +
-      "ustomers/{customer_id=*}:generateAudienc" +
-      "eCompositionInsights:\001*\332A\037customer_id,au" +
-      "dience,dimensions\032E\312A\030googleads.googleap" +
-      "is.com\322A\'https://www.googleapis.com/auth" +
-      "/adwordsB\210\002\n%com.google.ads.googleads.v1" +
-      "2.servicesB\034AudienceInsightsServiceProto" +
-      "P\001ZIgoogle.golang.org/genproto/googleapi" +
-      "s/ads/googleads/v12/services;services\242\002\003" +
-      "GAA\252\002!Google.Ads.GoogleAds.V12.Services\312" +
-      "\002!Google\\Ads\\GoogleAds\\V12\\Services\352\002%Go" +
-      "ogle::Ads::GoogleAds::V12::Servicesb\006pro" +
-      "to3"
+      "ompositionAttribute\"s\n\032AudienceCompositi" +
+      "onMetrics\022\037\n\027baseline_audience_share\030\001 \001" +
+      "(\001\022\026\n\016audience_share\030\002 \001(\001\022\r\n\005index\030\003 \001(" +
+      "\001\022\r\n\005score\030\004 \001(\001\"\320\001\n\034AudienceComposition" +
+      "Attribute\022`\n\022attribute_metadata\030\001 \001(\0132D." +
+      "google.ads.googleads.v12.services.Audien" +
+      "ceInsightsAttributeMetadata\022N\n\007metrics\030\002" +
+      " \001(\0132=.google.ads.googleads.v12.services" +
+      ".AudienceCompositionMetrics2\321\t\n\027Audience" +
+      "InsightsService\022\251\002\n\034GenerateInsightsFind" +
+      "erReport\022F.google.ads.googleads.v12.serv" +
+      "ices.GenerateInsightsFinderReportRequest" +
+      "\032G.google.ads.googleads.v12.services.Gen" +
+      "erateInsightsFinderReportResponse\"x\332A/cu" +
+      "stomer_id,baseline_audience,specific_aud" +
+      "ience\202\323\344\223\002@\";/v12/customers/{customer_id" +
+      "=*}:generateInsightsFinderReport:\001*\022\245\002\n\036" +
+      "ListAudienceInsightsAttributes\022H.google." +
+      "ads.googleads.v12.services.ListAudienceI" +
+      "nsightsAttributesRequest\032I.google.ads.go" +
+      "ogleads.v12.services.ListAudienceInsight" +
+      "sAttributesResponse\"n\332A!customer_id,dime" +
+      "nsions,query_text\202\323\344\223\002D\"?/v12/customers/" +
+      "{customer_id=*}:searchAudienceInsightsAt" +
+      "tributes:\001*\022\342\001\n\031ListInsightsEligibleDate" +
+      "s\022C.google.ads.googleads.v12.services.Li" +
+      "stInsightsEligibleDatesRequest\032D.google." +
+      "ads.googleads.v12.services.ListInsightsE" +
+      "ligibleDatesResponse\":\202\323\344\223\0024\"//v12/audie" +
+      "nceInsights:listInsightsEligibleDates:\001*" +
+      "\022\265\002\n#GenerateAudienceCompositionInsights" +
+      "\022M.google.ads.googleads.v12.services.Gen" +
+      "erateAudienceCompositionInsightsRequest\032" +
+      "N.google.ads.googleads.v12.services.Gene" +
+      "rateAudienceCompositionInsightsResponse\"" +
+      "o\332A\037customer_id,audience,dimensions\202\323\344\223\002" +
+      "G\"B/v12/customers/{customer_id=*}:genera" +
+      "teAudienceCompositionInsights:\001*\032E\312A\030goo" +
+      "gleads.googleapis.com\322A\'https://www.goog" +
+      "leapis.com/auth/adwordsB\210\002\n%com.google.a" +
+      "ds.googleads.v12.servicesB\034AudienceInsig" +
+      "htsServiceProtoP\001ZIgoogle.golang.org/gen" +
+      "proto/googleapis/ads/googleads/v12/servi" +
+      "ces;services\242\002\003GAA\252\002!Google.Ads.GoogleAd" +
+      "s.V12.Services\312\002!Google\\Ads\\GoogleAds\\V1" +
+      "2\\Services\352\002%Google::Ads::GoogleAds::V12" +
+      "::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

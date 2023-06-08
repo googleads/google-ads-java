@@ -30,11 +30,6 @@ private static final long serialVersionUID = 0L;
     return new UserListNumberRuleItemInfo();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.common.UserListsProto.internal_static_google_ads_googleads_v12_common_UserListNumberRuleItemInfo_descriptor;
@@ -236,11 +231,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.common.UserListNumberRuleItemInfo parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.common.UserListNumberRuleItemInfo parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -593,7 +590,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setValue(double value) {
-      
+
       value_ = value;
       bitField0_ |= 0x00000002;
       onChanged();

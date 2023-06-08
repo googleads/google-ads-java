@@ -95,6 +95,7 @@ public interface UserListOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed user list is expected,
    * in this format:
+   *
    * `customers/{customer_id}/userLists/{user_list_id}`
    * </pre>
    *
@@ -106,6 +107,7 @@ public interface UserListOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed user list is expected,
    * in this format:
+   *
    * `customers/{customer_id}/userLists/{user_list_id}`
    * </pre>
    *
@@ -117,6 +119,7 @@ public interface UserListOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed user list is expected,
    * in this format:
+   *
    * `customers/{customer_id}/userLists/{user_list_id}`
    * </pre>
    *
@@ -126,5 +129,5 @@ public interface UserListOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v12.services.UserListOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v12.services.UserListOperation.OperationCase getOperationCase();
 }

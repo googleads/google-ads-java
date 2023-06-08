@@ -55,7 +55,7 @@ sourceSets.test.java.srcDir new File(buildDir, 'generated/source/proto/test')
 
 protobuf {
     protoc {
-        artifact = 'com.google.protobuf:protoc:3.21.12'
+        artifact = 'com.google.protobuf:protoc:3.23.2'
     }
 }
 
@@ -66,7 +66,7 @@ dependencies {
     testImplementation 'org.hamcrest:java-hamcrest:2.0.0.0'
     testImplementation 'org.mockito:mockito-all:1.9.5'
     testImplementation 'com.google.api:gax-grpc::testlib'
-    testImplementation 'io.grpc:grpc-context:1.52.1'
+    testImplementation 'io.grpc:grpc-context:1.55.1'
     testImplementation 'com.google.truth:truth:0.27'
     implementation 'com.google.auto.value:auto-value-annotations:1.10.1'
     testImplementation 'com.google.auto.value:auto-value-annotations:1.10.1'

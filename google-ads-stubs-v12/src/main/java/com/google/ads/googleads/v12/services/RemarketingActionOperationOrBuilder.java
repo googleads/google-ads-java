@@ -94,5 +94,5 @@ public interface RemarketingActionOperationOrBuilder extends
    */
   com.google.ads.googleads.v12.resources.RemarketingActionOrBuilder getUpdateOrBuilder();
 
-  public com.google.ads.googleads.v12.services.RemarketingActionOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v12.services.RemarketingActionOperation.OperationCase getOperationCase();
 }

@@ -11,6 +11,7 @@ public interface CampaignSharedSetOrBuilder extends
    * <pre>
    * Immutable. The resource name of the campaign shared set.
    * Campaign shared set resource names have the form:
+   *
    * `customers/{customer_id}/campaignSharedSets/{campaign_id}~{shared_set_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface CampaignSharedSetOrBuilder extends
    * <pre>
    * Immutable. The resource name of the campaign shared set.
    * Campaign shared set resource names have the form:
+   *
    * `customers/{customer_id}/campaignSharedSets/{campaign_id}~{shared_set_id}`
    * </pre>
    *

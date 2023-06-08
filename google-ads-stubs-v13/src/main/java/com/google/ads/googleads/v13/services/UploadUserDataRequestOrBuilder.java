@@ -98,5 +98,5 @@ public interface UploadUserDataRequestOrBuilder extends
    */
   com.google.ads.googleads.v13.common.CustomerMatchUserListMetadataOrBuilder getCustomerMatchUserListMetadataOrBuilder();
 
-  public com.google.ads.googleads.v13.services.UploadUserDataRequest.MetadataCase getMetadataCase();
+  com.google.ads.googleads.v13.services.UploadUserDataRequest.MetadataCase getMetadataCase();
 }

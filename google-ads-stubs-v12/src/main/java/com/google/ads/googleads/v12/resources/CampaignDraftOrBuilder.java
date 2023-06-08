@@ -11,6 +11,7 @@ public interface CampaignDraftOrBuilder extends
    * <pre>
    * Immutable. The resource name of the campaign draft.
    * Campaign draft resource names have the form:
+   *
    * `customers/{customer_id}/campaignDrafts/{base_campaign_id}~{draft_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface CampaignDraftOrBuilder extends
    * <pre>
    * Immutable. The resource name of the campaign draft.
    * Campaign draft resource names have the form:
+   *
    * `customers/{customer_id}/campaignDrafts/{base_campaign_id}~{draft_id}`
    * </pre>
    *
@@ -34,6 +36,7 @@ public interface CampaignDraftOrBuilder extends
   /**
    * <pre>
    * Output only. The ID of the draft.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -44,6 +47,7 @@ public interface CampaignDraftOrBuilder extends
   /**
    * <pre>
    * Output only. The ID of the draft.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -84,8 +88,10 @@ public interface CampaignDraftOrBuilder extends
   /**
    * <pre>
    * The name of the campaign draft.
+   *
    * This field is required and should not be empty when creating new
    * campaign drafts.
+   *
    * It must not contain any null (code point 0x0), NL line feed
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
@@ -97,8 +103,10 @@ public interface CampaignDraftOrBuilder extends
   /**
    * <pre>
    * The name of the campaign draft.
+   *
    * This field is required and should not be empty when creating new
    * campaign drafts.
+   *
    * It must not contain any null (code point 0x0), NL line feed
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
@@ -110,8 +118,10 @@ public interface CampaignDraftOrBuilder extends
   /**
    * <pre>
    * The name of the campaign draft.
+   *
    * This field is required and should not be empty when creating new
    * campaign drafts.
+   *
    * It must not contain any null (code point 0x0), NL line feed
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
@@ -126,6 +136,7 @@ public interface CampaignDraftOrBuilder extends
    * <pre>
    * Output only. Resource name of the Campaign that results from overlaying the
    * draft changes onto the base campaign.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -137,6 +148,7 @@ public interface CampaignDraftOrBuilder extends
    * <pre>
    * Output only. Resource name of the Campaign that results from overlaying the
    * draft changes onto the base campaign.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -148,6 +160,7 @@ public interface CampaignDraftOrBuilder extends
    * <pre>
    * Output only. Resource name of the Campaign that results from overlaying the
    * draft changes onto the base campaign.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -160,6 +173,7 @@ public interface CampaignDraftOrBuilder extends
   /**
    * <pre>
    * Output only. The status of the campaign draft. This field is read-only.
+   *
    * When a new campaign draft is added, the status defaults to PROPOSED.
    * </pre>
    *
@@ -170,6 +184,7 @@ public interface CampaignDraftOrBuilder extends
   /**
    * <pre>
    * Output only. The status of the campaign draft. This field is read-only.
+   *
    * When a new campaign draft is added, the status defaults to PROPOSED.
    * </pre>
    *

@@ -21,7 +21,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private DynamicBusinessProfileLocationGroupFilter() {
-    labelFilters_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    labelFilters_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     listingIdFilters_ = emptyLongList();
   }
 
@@ -32,11 +33,6 @@ private static final long serialVersionUID = 0L;
     return new DynamicBusinessProfileLocationGroupFilter();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.common.AssetSetTypesProto.internal_static_google_ads_googleads_v12_common_DynamicBusinessProfileLocationGroupFilter_descriptor;
@@ -53,7 +49,8 @@ private static final long serialVersionUID = 0L;
   private int bitField0_;
   public static final int LABEL_FILTERS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList labelFilters_;
+  private com.google.protobuf.LazyStringArrayList labelFilters_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * Used to filter Business Profile locations by label. Only locations that
@@ -349,11 +346,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.common.DynamicBusinessProfileLocationGroupFilter parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.common.DynamicBusinessProfileLocationGroupFilter parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -440,8 +439,8 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      labelFilters_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      labelFilters_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       businessNameFilter_ = null;
       if (businessNameFilterBuilder_ != null) {
         businessNameFilterBuilder_.dispose();
@@ -481,11 +480,6 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.google.ads.googleads.v12.common.DynamicBusinessProfileLocationGroupFilter result) {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        labelFilters_ = labelFilters_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.labelFilters_ = labelFilters_;
       if (((bitField0_ & 0x00000004) != 0)) {
         listingIdFilters_.makeImmutable();
         bitField0_ = (bitField0_ & ~0x00000004);
@@ -495,6 +489,10 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.google.ads.googleads.v12.common.DynamicBusinessProfileLocationGroupFilter result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        labelFilters_.makeImmutable();
+        result.labelFilters_ = labelFilters_;
+      }
       int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.businessNameFilter_ = businessNameFilterBuilder_ == null
@@ -552,7 +550,7 @@ private static final long serialVersionUID = 0L;
       if (!other.labelFilters_.isEmpty()) {
         if (labelFilters_.isEmpty()) {
           labelFilters_ = other.labelFilters_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ |= 0x00000001;
         } else {
           ensureLabelFiltersIsMutable();
           labelFilters_.addAll(other.labelFilters_);
@@ -644,12 +642,13 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.google.protobuf.LazyStringList labelFilters_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList labelFilters_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureLabelFiltersIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!labelFilters_.isModifiable()) {
         labelFilters_ = new com.google.protobuf.LazyStringArrayList(labelFilters_);
-        bitField0_ |= 0x00000001;
-       }
+      }
+      bitField0_ |= 0x00000001;
     }
     /**
      * <pre>
@@ -663,7 +662,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getLabelFiltersList() {
-      return labelFilters_.getUnmodifiableView();
+      labelFilters_.makeImmutable();
+      return labelFilters_;
     }
     /**
      * <pre>
@@ -724,6 +724,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureLabelFiltersIsMutable();
       labelFilters_.set(index, value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -743,6 +744,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureLabelFiltersIsMutable();
       labelFilters_.add(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -762,6 +764,7 @@ private static final long serialVersionUID = 0L;
       ensureLabelFiltersIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, labelFilters_);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -776,8 +779,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLabelFilters() {
-      labelFilters_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      labelFilters_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000001);;
       onChanged();
       return this;
     }
@@ -798,6 +802,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureLabelFiltersIsMutable();
       labelFilters_.add(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1012,7 +1017,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setListingIdFilters(
         int index, long value) {
-      
+
       ensureListingIdFiltersIsMutable();
       listingIdFilters_.setLong(index, value);
       onChanged();
@@ -1028,7 +1033,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder addListingIdFilters(long value) {
-      
+
       ensureListingIdFiltersIsMutable();
       listingIdFilters_.addLong(value);
       onChanged();

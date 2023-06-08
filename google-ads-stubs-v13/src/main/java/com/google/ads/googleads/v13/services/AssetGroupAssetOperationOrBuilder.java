@@ -129,5 +129,5 @@ public interface AssetGroupAssetOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v13.services.AssetGroupAssetOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v13.services.AssetGroupAssetOperation.OperationCase getOperationCase();
 }

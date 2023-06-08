@@ -30,11 +30,6 @@ private static final long serialVersionUID = 0L;
     return new AdGroupCriterionOperation();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.services.AdGroupCriterionServiceProto.internal_static_google_ads_googleads_v13_services_AdGroupCriterionOperation_descriptor;
@@ -49,6 +44,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int operationCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object operation_;
   public enum OperationCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -138,6 +134,7 @@ private static final long serialVersionUID = 0L;
    * PolicyViolationError to be reported. Not all policy violations are
    * exemptable, refer to the is_exemptible field in the returned
    * PolicyViolationError.
+   *
    * Resources violating these polices will be saved, but will not be eligible
    * to serve. They may begin serving at a later time due to a change in
    * policies, re-review of the resource, or a change in advertiser
@@ -156,6 +153,7 @@ private static final long serialVersionUID = 0L;
    * PolicyViolationError to be reported. Not all policy violations are
    * exemptable, refer to the is_exemptible field in the returned
    * PolicyViolationError.
+   *
    * Resources violating these polices will be saved, but will not be eligible
    * to serve. They may begin serving at a later time due to a change in
    * policies, re-review of the resource, or a change in advertiser
@@ -175,6 +173,7 @@ private static final long serialVersionUID = 0L;
    * PolicyViolationError to be reported. Not all policy violations are
    * exemptable, refer to the is_exemptible field in the returned
    * PolicyViolationError.
+   *
    * Resources violating these polices will be saved, but will not be eligible
    * to serve. They may begin serving at a later time due to a change in
    * policies, re-review of the resource, or a change in advertiser
@@ -193,6 +192,7 @@ private static final long serialVersionUID = 0L;
    * PolicyViolationError to be reported. Not all policy violations are
    * exemptable, refer to the is_exemptible field in the returned
    * PolicyViolationError.
+   *
    * Resources violating these polices will be saved, but will not be eligible
    * to serve. They may begin serving at a later time due to a change in
    * policies, re-review of the resource, or a change in advertiser
@@ -211,6 +211,7 @@ private static final long serialVersionUID = 0L;
    * PolicyViolationError to be reported. Not all policy violations are
    * exemptable, refer to the is_exemptible field in the returned
    * PolicyViolationError.
+   *
    * Resources violating these polices will be saved, but will not be eligible
    * to serve. They may begin serving at a later time due to a change in
    * policies, re-review of the resource, or a change in advertiser
@@ -319,6 +320,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Remove operation: A resource name for the removed criterion is expected,
    * in this format:
+   *
    * `customers/{customer_id}/adGroupCriteria/{ad_group_id}~{criterion_id}`
    * </pre>
    *
@@ -332,6 +334,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Remove operation: A resource name for the removed criterion is expected,
    * in this format:
+   *
    * `customers/{customer_id}/adGroupCriteria/{ad_group_id}~{criterion_id}`
    * </pre>
    *
@@ -359,6 +362,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Remove operation: A resource name for the removed criterion is expected,
    * in this format:
+   *
    * `customers/{customer_id}/adGroupCriteria/{ad_group_id}~{criterion_id}`
    * </pre>
    *
@@ -564,11 +568,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.services.AdGroupCriterionOperation parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.services.AdGroupCriterionOperation parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1098,6 +1104,7 @@ private static final long serialVersionUID = 0L;
      * PolicyViolationError to be reported. Not all policy violations are
      * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
+     *
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -1119,6 +1126,7 @@ private static final long serialVersionUID = 0L;
      * PolicyViolationError to be reported. Not all policy violations are
      * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
+     *
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -1140,6 +1148,7 @@ private static final long serialVersionUID = 0L;
      * PolicyViolationError to be reported. Not all policy violations are
      * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
+     *
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -1161,6 +1170,7 @@ private static final long serialVersionUID = 0L;
      * PolicyViolationError to be reported. Not all policy violations are
      * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
+     *
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -1189,6 +1199,7 @@ private static final long serialVersionUID = 0L;
      * PolicyViolationError to be reported. Not all policy violations are
      * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
+     *
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -1214,6 +1225,7 @@ private static final long serialVersionUID = 0L;
      * PolicyViolationError to be reported. Not all policy violations are
      * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
+     *
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -1241,6 +1253,7 @@ private static final long serialVersionUID = 0L;
      * PolicyViolationError to be reported. Not all policy violations are
      * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
+     *
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -1269,6 +1282,7 @@ private static final long serialVersionUID = 0L;
      * PolicyViolationError to be reported. Not all policy violations are
      * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
+     *
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -1294,6 +1308,7 @@ private static final long serialVersionUID = 0L;
      * PolicyViolationError to be reported. Not all policy violations are
      * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
+     *
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -1319,6 +1334,7 @@ private static final long serialVersionUID = 0L;
      * PolicyViolationError to be reported. Not all policy violations are
      * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
+     *
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -1345,6 +1361,7 @@ private static final long serialVersionUID = 0L;
      * PolicyViolationError to be reported. Not all policy violations are
      * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
+     *
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -1369,6 +1386,7 @@ private static final long serialVersionUID = 0L;
      * PolicyViolationError to be reported. Not all policy violations are
      * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
+     *
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -1393,6 +1411,7 @@ private static final long serialVersionUID = 0L;
      * PolicyViolationError to be reported. Not all policy violations are
      * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
+     *
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -1411,6 +1430,7 @@ private static final long serialVersionUID = 0L;
      * PolicyViolationError to be reported. Not all policy violations are
      * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
+     *
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -1432,6 +1452,7 @@ private static final long serialVersionUID = 0L;
      * PolicyViolationError to be reported. Not all policy violations are
      * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
+     *
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -1454,6 +1475,7 @@ private static final long serialVersionUID = 0L;
      * PolicyViolationError to be reported. Not all policy violations are
      * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
+     *
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -1472,6 +1494,7 @@ private static final long serialVersionUID = 0L;
      * PolicyViolationError to be reported. Not all policy violations are
      * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
+     *
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -1491,6 +1514,7 @@ private static final long serialVersionUID = 0L;
      * PolicyViolationError to be reported. Not all policy violations are
      * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
+     *
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -1887,6 +1911,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Remove operation: A resource name for the removed criterion is expected,
      * in this format:
+     *
      * `customers/{customer_id}/adGroupCriteria/{ad_group_id}~{criterion_id}`
      * </pre>
      *
@@ -1901,6 +1926,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Remove operation: A resource name for the removed criterion is expected,
      * in this format:
+     *
      * `customers/{customer_id}/adGroupCriteria/{ad_group_id}~{criterion_id}`
      * </pre>
      *
@@ -1929,6 +1955,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Remove operation: A resource name for the removed criterion is expected,
      * in this format:
+     *
      * `customers/{customer_id}/adGroupCriteria/{ad_group_id}~{criterion_id}`
      * </pre>
      *
@@ -1958,6 +1985,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Remove operation: A resource name for the removed criterion is expected,
      * in this format:
+     *
      * `customers/{customer_id}/adGroupCriteria/{ad_group_id}~{criterion_id}`
      * </pre>
      *
@@ -1977,6 +2005,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Remove operation: A resource name for the removed criterion is expected,
      * in this format:
+     *
      * `customers/{customer_id}/adGroupCriteria/{ad_group_id}~{criterion_id}`
      * </pre>
      *
@@ -1995,6 +2024,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Remove operation: A resource name for the removed criterion is expected,
      * in this format:
+     *
      * `customers/{customer_id}/adGroupCriteria/{ad_group_id}~{criterion_id}`
      * </pre>
      *

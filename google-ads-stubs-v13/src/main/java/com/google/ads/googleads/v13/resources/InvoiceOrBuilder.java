@@ -12,6 +12,7 @@ public interface InvoiceOrBuilder extends
    * Output only. The resource name of the invoice. Multiple customers can share
    * a given invoice, so multiple resource names may point to the same invoice.
    * Invoice resource names have the form:
+   *
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
@@ -24,6 +25,7 @@ public interface InvoiceOrBuilder extends
    * Output only. The resource name of the invoice. Multiple customers can share
    * a given invoice, so multiple resource names may point to the same invoice.
    * Invoice resource names have the form:
+   *
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
@@ -87,6 +89,7 @@ public interface InvoiceOrBuilder extends
   /**
    * <pre>
    * Output only. The resource name of this invoice's billing setup.
+   *
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
@@ -97,6 +100,7 @@ public interface InvoiceOrBuilder extends
   /**
    * <pre>
    * Output only. The resource name of this invoice's billing setup.
+   *
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
@@ -107,6 +111,7 @@ public interface InvoiceOrBuilder extends
   /**
    * <pre>
    * Output only. The resource name of this invoice's billing setup.
+   *
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
@@ -460,6 +465,7 @@ public interface InvoiceOrBuilder extends
    * off, or canceled by this invoice, if applicable. If `corrected_invoice` is
    * set, `replaced_invoices` will not be set. Invoice resource names have the
    * form:
+   *
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
@@ -473,6 +479,7 @@ public interface InvoiceOrBuilder extends
    * off, or canceled by this invoice, if applicable. If `corrected_invoice` is
    * set, `replaced_invoices` will not be set. Invoice resource names have the
    * form:
+   *
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
@@ -486,6 +493,7 @@ public interface InvoiceOrBuilder extends
    * off, or canceled by this invoice, if applicable. If `corrected_invoice` is
    * set, `replaced_invoices` will not be set. Invoice resource names have the
    * form:
+   *
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
@@ -502,6 +510,7 @@ public interface InvoiceOrBuilder extends
    * invoices due to invoice consolidation. The replaced invoices may not belong
    * to the same payments account. If `replaced_invoices` is set,
    * `corrected_invoice` will not be set. Invoice resource names have the form:
+   *
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
@@ -517,6 +526,7 @@ public interface InvoiceOrBuilder extends
    * invoices due to invoice consolidation. The replaced invoices may not belong
    * to the same payments account. If `replaced_invoices` is set,
    * `corrected_invoice` will not be set. Invoice resource names have the form:
+   *
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
@@ -531,6 +541,7 @@ public interface InvoiceOrBuilder extends
    * invoices due to invoice consolidation. The replaced invoices may not belong
    * to the same payments account. If `replaced_invoices` is set,
    * `corrected_invoice` will not be set. Invoice resource names have the form:
+   *
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
@@ -546,6 +557,7 @@ public interface InvoiceOrBuilder extends
    * invoices due to invoice consolidation. The replaced invoices may not belong
    * to the same payments account. If `replaced_invoices` is set,
    * `corrected_invoice` will not be set. Invoice resource names have the form:
+   *
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *

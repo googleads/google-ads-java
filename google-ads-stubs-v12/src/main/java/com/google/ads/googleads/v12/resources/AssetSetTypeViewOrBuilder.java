@@ -11,6 +11,7 @@ public interface AssetSetTypeViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the asset set type view.
    * Asset set type view resource names have the form:
+   *
    * `customers/{customer_id}/assetSetTypeViews/{asset_set_type}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface AssetSetTypeViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the asset set type view.
    * Asset set type view resource names have the form:
+   *
    * `customers/{customer_id}/assetSetTypeViews/{asset_set_type}`
    * </pre>
    *

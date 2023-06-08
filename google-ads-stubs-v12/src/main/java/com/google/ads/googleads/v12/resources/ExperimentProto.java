@@ -37,32 +37,33 @@ public final class ExperimentProto {
       "t_status.proto\0324google/ads/googleads/v12" +
       "/enums/experiment_type.proto\032\037google/api" +
       "/field_behavior.proto\032\031google/api/resour" +
-      "ce.proto\"\365\005\n\nExperiment\022B\n\rresource_name" +
-      "\030\001 \001(\tB+\340A\005\372A%\n#googleads.googleapis.com" +
-      "/Experiment\022\037\n\rexperiment_id\030\t \001(\003B\003\340A\003H" +
-      "\000\210\001\001\022\021\n\004name\030\n \001(\tB\003\340A\002\022\023\n\013description\030\013" +
-      " \001(\t\022\016\n\006suffix\030\014 \001(\t\022T\n\004type\030\r \001(\0162A.goo" +
-      "gle.ads.googleads.v12.enums.ExperimentTy" +
-      "peEnum.ExperimentTypeB\003\340A\002\022U\n\006status\030\016 \001" +
-      "(\0162E.google.ads.googleads.v12.enums.Expe" +
-      "rimentStatusEnum.ExperimentStatus\022\027\n\nsta" +
-      "rt_date\030\017 \001(\tH\001\210\001\001\022\025\n\010end_date\030\020 \001(\tH\002\210\001" +
-      "\001\022:\n\005goals\030\021 \003(\0132+.google.ads.googleads." +
-      "v12.common.MetricGoal\022(\n\026long_running_op" +
-      "eration\030\022 \001(\tB\003\340A\003H\003\210\001\001\022d\n\016promote_statu" +
-      "s\030\023 \001(\0162G.google.ads.googleads.v12.enums" +
-      ".AsyncActionStatusEnum.AsyncActionStatus" +
-      "B\003\340A\003:X\352AU\n#googleads.googleapis.com/Exp" +
-      "eriment\022.customers/{customer_id}/experim" +
-      "ents/{trial_id}B\020\n\016_experiment_idB\r\n\013_st" +
-      "art_dateB\013\n\t_end_dateB\031\n\027_long_running_o" +
-      "perationB\201\002\n&com.google.ads.googleads.v1" +
-      "2.resourcesB\017ExperimentProtoP\001ZKgoogle.g" +
-      "olang.org/genproto/googleapis/ads/google" +
-      "ads/v12/resources;resources\242\002\003GAA\252\002\"Goog" +
-      "le.Ads.GoogleAds.V12.Resources\312\002\"Google\\" +
-      "Ads\\GoogleAds\\V12\\Resources\352\002&Google::Ad" +
-      "s::GoogleAds::V12::Resourcesb\006proto3"
+      "ce.proto\"\373\005\n\nExperiment\022C\n\rresource_name" +
+      "\030\001 \001(\tB,\342A\001\005\372A%\n#googleads.googleapis.co" +
+      "m/Experiment\022 \n\rexperiment_id\030\t \001(\003B\004\342A\001" +
+      "\003H\000\210\001\001\022\022\n\004name\030\n \001(\tB\004\342A\001\002\022\023\n\013descriptio" +
+      "n\030\013 \001(\t\022\016\n\006suffix\030\014 \001(\t\022U\n\004type\030\r \001(\0162A." +
+      "google.ads.googleads.v12.enums.Experimen" +
+      "tTypeEnum.ExperimentTypeB\004\342A\001\002\022U\n\006status" +
+      "\030\016 \001(\0162E.google.ads.googleads.v12.enums." +
+      "ExperimentStatusEnum.ExperimentStatus\022\027\n" +
+      "\nstart_date\030\017 \001(\tH\001\210\001\001\022\025\n\010end_date\030\020 \001(\t" +
+      "H\002\210\001\001\022:\n\005goals\030\021 \003(\0132+.google.ads.google" +
+      "ads.v12.common.MetricGoal\022)\n\026long_runnin" +
+      "g_operation\030\022 \001(\tB\004\342A\001\003H\003\210\001\001\022e\n\016promote_" +
+      "status\030\023 \001(\0162G.google.ads.googleads.v12." +
+      "enums.AsyncActionStatusEnum.AsyncActionS" +
+      "tatusB\004\342A\001\003:X\352AU\n#googleads.googleapis.c" +
+      "om/Experiment\022.customers/{customer_id}/e" +
+      "xperiments/{trial_id}B\020\n\016_experiment_idB" +
+      "\r\n\013_start_dateB\013\n\t_end_dateB\031\n\027_long_run" +
+      "ning_operationB\201\002\n&com.google.ads.google" +
+      "ads.v12.resourcesB\017ExperimentProtoP\001ZKgo" +
+      "ogle.golang.org/genproto/googleapis/ads/" +
+      "googleads/v12/resources;resources\242\002\003GAA\252" +
+      "\002\"Google.Ads.GoogleAds.V12.Resources\312\002\"G" +
+      "oogle\\Ads\\GoogleAds\\V12\\Resources\352\002&Goog" +
+      "le::Ads::GoogleAds::V12::Resourcesb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

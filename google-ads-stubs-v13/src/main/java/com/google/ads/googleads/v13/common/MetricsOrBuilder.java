@@ -50,6 +50,7 @@ public interface MetricsOrBuilder extends
   /**
    * <pre>
    * Active view measurable clicks divided by active view viewable impressions.
+   *
    * This metric is reported only for the Display Network.
    * </pre>
    *
@@ -60,6 +61,7 @@ public interface MetricsOrBuilder extends
   /**
    * <pre>
    * Active view measurable clicks divided by active view viewable impressions.
+   *
    * This metric is reported only for the Display Network.
    * </pre>
    *
@@ -287,6 +289,7 @@ public interface MetricsOrBuilder extends
    * The number of times people clicked the "Call" button to call a store during
    * or after clicking an ad. This number doesn't include whether or not calls
    * were connected, or the duration of any calls.
+   *
    * This metric applies to feed items only.
    * </pre>
    *
@@ -299,6 +302,7 @@ public interface MetricsOrBuilder extends
    * The number of times people clicked the "Call" button to call a store during
    * or after clicking an ad. This number doesn't include whether or not calls
    * were connected, or the duration of any calls.
+   *
    * This metric applies to feed items only.
    * </pre>
    *
@@ -311,6 +315,7 @@ public interface MetricsOrBuilder extends
    * <pre>
    * The number of times people clicked a "Get directions" button to navigate to
    * a store after clicking an ad.
+   *
    * This metric applies to feed items only.
    * </pre>
    *
@@ -322,6 +327,7 @@ public interface MetricsOrBuilder extends
    * <pre>
    * The number of times people clicked a "Get directions" button to navigate to
    * a store after clicking an ad.
+   *
    * This metric applies to feed items only.
    * </pre>
    *
@@ -355,6 +361,7 @@ public interface MetricsOrBuilder extends
    * <pre>
    * The number of times people clicked a link to view a store's menu after
    * clicking an ad.
+   *
    * This metric applies to feed items only.
    * </pre>
    *
@@ -366,6 +373,7 @@ public interface MetricsOrBuilder extends
    * <pre>
    * The number of times people clicked a link to view a store's menu after
    * clicking an ad.
+   *
    * This metric applies to feed items only.
    * </pre>
    *
@@ -377,6 +385,7 @@ public interface MetricsOrBuilder extends
   /**
    * <pre>
    * The number of times people placed an order at a store after clicking an ad.
+   *
    * This metric applies to feed items only.
    * </pre>
    *
@@ -387,6 +396,7 @@ public interface MetricsOrBuilder extends
   /**
    * <pre>
    * The number of times people placed an order at a store after clicking an ad.
+   *
    * This metric applies to feed items only.
    * </pre>
    *
@@ -399,6 +409,7 @@ public interface MetricsOrBuilder extends
    * <pre>
    * The number of other conversions (for example, posting a review or saving a
    * location for a store) that occurred after people clicked an ad.
+   *
    * This metric applies to feed items only.
    * </pre>
    *
@@ -410,6 +421,7 @@ public interface MetricsOrBuilder extends
    * <pre>
    * The number of other conversions (for example, posting a review or saving a
    * location for a store) that occurred after people clicked an ad.
+   *
    * This metric applies to feed items only.
    * </pre>
    *
@@ -421,6 +433,7 @@ public interface MetricsOrBuilder extends
   /**
    * <pre>
    * Estimated number of times people visited a store after clicking an ad.
+   *
    * This metric applies to feed items only.
    * </pre>
    *
@@ -431,6 +444,7 @@ public interface MetricsOrBuilder extends
   /**
    * <pre>
    * Estimated number of times people visited a store after clicking an ad.
+   *
    * This metric applies to feed items only.
    * </pre>
    *
@@ -443,6 +457,7 @@ public interface MetricsOrBuilder extends
    * <pre>
    * The number of times that people were taken to a store's URL after clicking
    * an ad.
+   *
    * This metric applies to feed items only.
    * </pre>
    *
@@ -454,6 +469,7 @@ public interface MetricsOrBuilder extends
    * <pre>
    * The number of times that people were taken to a store's URL after clicking
    * an ad.
+   *
    * This metric applies to feed items only.
    * </pre>
    *
@@ -469,6 +485,7 @@ public interface MetricsOrBuilder extends
    * organic search results.
    * This percentage is computed only over the auctions that you appeared in
    * the page.
+   *
    * This metric is not publicly available.
    * </pre>
    *
@@ -483,6 +500,7 @@ public interface MetricsOrBuilder extends
    * organic search results.
    * This percentage is computed only over the auctions that you appeared in
    * the page.
+   *
    * This metric is not publicly available.
    * </pre>
    *
@@ -497,6 +515,7 @@ public interface MetricsOrBuilder extends
    * percentage of impressions that another participant obtained, over the total
    * number of impressions that your ads were eligible for.
    * Any value below 0.1 is reported as 0.0999.
+   *
    * This metric is not publicly available.
    * </pre>
    *
@@ -510,6 +529,7 @@ public interface MetricsOrBuilder extends
    * percentage of impressions that another participant obtained, over the total
    * number of impressions that your ads were eligible for.
    * Any value below 0.1 is reported as 0.0999.
+   *
    * This metric is not publicly available.
    * </pre>
    *
@@ -525,6 +545,7 @@ public interface MetricsOrBuilder extends
    * another participant in the auction, compared to the total number of
    * impressions that your ads were eligible for.
    * Any value below 0.1 is reported as 0.0999.
+   *
    * This metric is not publicly available.
    * </pre>
    *
@@ -539,6 +560,7 @@ public interface MetricsOrBuilder extends
    * another participant in the auction, compared to the total number of
    * impressions that your ads were eligible for.
    * Any value below 0.1 is reported as 0.0999.
+   *
    * This metric is not publicly available.
    * </pre>
    *
@@ -552,6 +574,7 @@ public interface MetricsOrBuilder extends
    * This metric is part of the Auction Insights report, and tells how often
    * another participant's ad received an impression when your ad also received
    * an impression.
+   *
    * This metric is not publicly available.
    * </pre>
    *
@@ -564,6 +587,7 @@ public interface MetricsOrBuilder extends
    * This metric is part of the Auction Insights report, and tells how often
    * another participant's ad received an impression when your ad also received
    * an impression.
+   *
    * This metric is not publicly available.
    * </pre>
    *
@@ -577,6 +601,7 @@ public interface MetricsOrBuilder extends
    * This metric is part of the Auction Insights report, and tells how often
    * another participant's ad was shown in a higher position than yours, when
    * both of your ads were shown at the same page.
+   *
    * This metric is not publicly available.
    * </pre>
    *
@@ -589,6 +614,7 @@ public interface MetricsOrBuilder extends
    * This metric is part of the Auction Insights report, and tells how often
    * another participant's ad was shown in a higher position than yours, when
    * both of your ads were shown at the same page.
+   *
    * This metric is not publicly available.
    * </pre>
    *
@@ -603,6 +629,7 @@ public interface MetricsOrBuilder extends
    * the ads of another participant showed above the organic search results.
    * This percentage is computed only over the auctions that you appeared in
    * the page.
+   *
    * This metric is not publicly available.
    * </pre>
    *
@@ -616,6 +643,7 @@ public interface MetricsOrBuilder extends
    * the ads of another participant showed above the organic search results.
    * This percentage is computed only over the auctions that you appeared in
    * the page.
+   *
    * This metric is not publicly available.
    * </pre>
    *
@@ -1827,6 +1855,7 @@ public interface MetricsOrBuilder extends
   /**
    * <pre>
    * The number of times a store's location-based ad was shown.
+   *
    * This metric applies to feed items only.
    * </pre>
    *
@@ -1837,6 +1866,7 @@ public interface MetricsOrBuilder extends
   /**
    * <pre>
    * The number of times a store's location-based ad was shown.
+   *
    * This metric applies to feed items only.
    * </pre>
    *

@@ -142,5 +142,5 @@ public interface AudienceSegmentOrBuilder extends
    */
   com.google.ads.googleads.v12.common.CustomAudienceSegmentOrBuilder getCustomAudienceOrBuilder();
 
-  public com.google.ads.googleads.v12.common.AudienceSegment.SegmentCase getSegmentCase();
+  com.google.ads.googleads.v12.common.AudienceSegment.SegmentCase getSegmentCase();
 }

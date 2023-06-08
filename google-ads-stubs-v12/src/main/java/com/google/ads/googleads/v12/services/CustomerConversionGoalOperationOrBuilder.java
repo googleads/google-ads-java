@@ -64,5 +64,5 @@ public interface CustomerConversionGoalOperationOrBuilder extends
    */
   com.google.ads.googleads.v12.resources.CustomerConversionGoalOrBuilder getUpdateOrBuilder();
 
-  public com.google.ads.googleads.v12.services.CustomerConversionGoalOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v12.services.CustomerConversionGoalOperation.OperationCase getOperationCase();
 }

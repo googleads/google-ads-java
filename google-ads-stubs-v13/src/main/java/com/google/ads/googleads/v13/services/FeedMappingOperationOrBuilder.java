@@ -38,6 +38,7 @@ public interface FeedMappingOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed feed mapping is
    * expected, in this format:
+   *
    * `customers/{customer_id}/feedMappings/{feed_id}~{feed_mapping_id}`
    * </pre>
    *
@@ -49,6 +50,7 @@ public interface FeedMappingOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed feed mapping is
    * expected, in this format:
+   *
    * `customers/{customer_id}/feedMappings/{feed_id}~{feed_mapping_id}`
    * </pre>
    *
@@ -60,6 +62,7 @@ public interface FeedMappingOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed feed mapping is
    * expected, in this format:
+   *
    * `customers/{customer_id}/feedMappings/{feed_id}~{feed_mapping_id}`
    * </pre>
    *
@@ -69,5 +72,5 @@ public interface FeedMappingOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v13.services.FeedMappingOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v13.services.FeedMappingOperation.OperationCase getOperationCase();
 }

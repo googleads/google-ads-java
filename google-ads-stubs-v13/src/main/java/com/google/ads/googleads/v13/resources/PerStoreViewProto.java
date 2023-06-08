@@ -31,19 +31,19 @@ public final class PerStoreViewProto {
       "\n7google/ads/googleads/v13/resources/per" +
       "_store_view.proto\022\"google.ads.googleads." +
       "v13.resources\032\037google/api/field_behavior" +
-      ".proto\032\031google/api/resource.proto\"\311\001\n\014Pe" +
-      "rStoreView\022D\n\rresource_name\030\001 \001(\tB-\340A\003\372A" +
-      "\'\n%googleads.googleapis.com/PerStoreView" +
-      "\022\025\n\010place_id\030\002 \001(\tB\003\340A\003:\\\352AY\n%googleads." +
-      "googleapis.com/PerStoreView\0220customers/{" +
-      "customer_id}/perStoreViews/{place_id}B\203\002" +
-      "\n&com.google.ads.googleads.v13.resources" +
-      "B\021PerStoreViewProtoP\001ZKgoogle.golang.org" +
-      "/genproto/googleapis/ads/googleads/v13/r" +
-      "esources;resources\242\002\003GAA\252\002\"Google.Ads.Go" +
-      "ogleAds.V13.Resources\312\002\"Google\\Ads\\Googl" +
-      "eAds\\V13\\Resources\352\002&Google::Ads::Google" +
-      "Ads::V13::Resourcesb\006proto3"
+      ".proto\032\031google/api/resource.proto\"\313\001\n\014Pe" +
+      "rStoreView\022E\n\rresource_name\030\001 \001(\tB.\342A\001\003\372" +
+      "A\'\n%googleads.googleapis.com/PerStoreVie" +
+      "w\022\026\n\010place_id\030\002 \001(\tB\004\342A\001\003:\\\352AY\n%googlead" +
+      "s.googleapis.com/PerStoreView\0220customers" +
+      "/{customer_id}/perStoreViews/{place_id}B" +
+      "\203\002\n&com.google.ads.googleads.v13.resourc" +
+      "esB\021PerStoreViewProtoP\001ZKgoogle.golang.o" +
+      "rg/genproto/googleapis/ads/googleads/v13" +
+      "/resources;resources\242\002\003GAA\252\002\"Google.Ads." +
+      "GoogleAds.V13.Resources\312\002\"Google\\Ads\\Goo" +
+      "gleAds\\V13\\Resources\352\002&Google::Ads::Goog" +
+      "leAds::V13::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

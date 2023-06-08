@@ -126,5 +126,5 @@ public interface FeedItemSetOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v13.services.FeedItemSetOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v13.services.FeedItemSetOperation.OperationCase getOperationCase();
 }

@@ -98,7 +98,7 @@ public final class LabelServiceGrpc {
    * Service to manage labels.
    * </pre>
    */
-  public static abstract class LabelServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -129,30 +129,34 @@ public final class LabelServiceGrpc {
      *   [StringLengthError]()
      * </pre>
      */
-    public void mutateLabels(com.google.ads.googleads.v12.services.MutateLabelsRequest request,
+    default void mutateLabels(com.google.ads.googleads.v12.services.MutateLabelsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.MutateLabelsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateLabelsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateLabelsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.MutateLabelsRequest,
-                com.google.ads.googleads.v12.services.MutateLabelsResponse>(
-                  this, METHODID_MUTATE_LABELS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service LabelService.
    * <pre>
    * Service to manage labels.
    * </pre>
    */
-  public static final class LabelServiceStub extends io.grpc.stub.AbstractAsyncStub<LabelServiceStub> {
+  public static abstract class LabelServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return LabelServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service LabelService.
+   * <pre>
+   * Service to manage labels.
+   * </pre>
+   */
+  public static final class LabelServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<LabelServiceStub> {
     private LabelServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -201,11 +205,13 @@ public final class LabelServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service LabelService.
    * <pre>
    * Service to manage labels.
    * </pre>
    */
-  public static final class LabelServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<LabelServiceBlockingStub> {
+  public static final class LabelServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<LabelServiceBlockingStub> {
     private LabelServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -253,11 +259,13 @@ public final class LabelServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service LabelService.
    * <pre>
    * Service to manage labels.
    * </pre>
    */
-  public static final class LabelServiceFutureStub extends io.grpc.stub.AbstractFutureStub<LabelServiceFutureStub> {
+  public static final class LabelServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<LabelServiceFutureStub> {
     private LabelServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -312,10 +320,10 @@ public final class LabelServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final LabelServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(LabelServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -342,6 +350,18 @@ public final class LabelServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateLabelsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.MutateLabelsRequest,
+              com.google.ads.googleads.v12.services.MutateLabelsResponse>(
+                service, METHODID_MUTATE_LABELS)))
+        .build();
   }
 
   private static abstract class LabelServiceBaseDescriptorSupplier

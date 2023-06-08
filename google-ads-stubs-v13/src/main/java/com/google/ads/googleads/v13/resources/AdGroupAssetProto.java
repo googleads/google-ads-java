@@ -40,37 +40,37 @@ public final class AdGroupAssetProto {
       "3/enums/asset_link_status.proto\0321google/" +
       "ads/googleads/v13/enums/asset_source.pro" +
       "to\032\037google/api/field_behavior.proto\032\031goo" +
-      "gle/api/resource.proto\"\246\007\n\014AdGroupAsset\022" +
-      "D\n\rresource_name\030\001 \001(\tB-\340A\005\372A\'\n%googlead" +
-      "s.googleapis.com/AdGroupAsset\022=\n\010ad_grou" +
-      "p\030\002 \001(\tB+\340A\002\340A\005\372A\"\n googleads.googleapis" +
-      ".com/AdGroup\0228\n\005asset\030\003 \001(\tB)\340A\002\340A\005\372A \n\036" +
-      "googleads.googleapis.com/Asset\022]\n\nfield_" +
-      "type\030\004 \001(\0162A.google.ads.googleads.v13.en" +
-      "ums.AssetFieldTypeEnum.AssetFieldTypeB\006\340" +
-      "A\002\340A\005\022P\n\006source\030\006 \001(\0162;.google.ads.googl" +
-      "eads.v13.enums.AssetSourceEnum.AssetSour" +
-      "ceB\003\340A\003\022S\n\006status\030\005 \001(\0162C.google.ads.goo" +
-      "gleads.v13.enums.AssetLinkStatusEnum.Ass" +
-      "etLinkStatus\022n\n\016primary_status\030\007 \001(\0162Q.g" +
-      "oogle.ads.googleads.v13.enums.AssetLinkP" +
-      "rimaryStatusEnum.AssetLinkPrimaryStatusB" +
-      "\003\340A\003\022c\n\026primary_status_details\030\010 \003(\0132>.g" +
+      "gle/api/resource.proto\"\250\007\n\014AdGroupAsset\022" +
+      "E\n\rresource_name\030\001 \001(\tB.\342A\001\005\372A\'\n%googlea" +
+      "ds.googleapis.com/AdGroupAsset\022<\n\010ad_gro" +
+      "up\030\002 \001(\tB*\342A\002\002\005\372A\"\n googleads.googleapis" +
+      ".com/AdGroup\0227\n\005asset\030\003 \001(\tB(\342A\002\002\005\372A \n\036g" +
+      "oogleads.googleapis.com/Asset\022\\\n\nfield_t" +
+      "ype\030\004 \001(\0162A.google.ads.googleads.v13.enu" +
+      "ms.AssetFieldTypeEnum.AssetFieldTypeB\005\342A" +
+      "\002\002\005\022Q\n\006source\030\006 \001(\0162;.google.ads.googlea" +
+      "ds.v13.enums.AssetSourceEnum.AssetSource" +
+      "B\004\342A\001\003\022S\n\006status\030\005 \001(\0162C.google.ads.goog" +
+      "leads.v13.enums.AssetLinkStatusEnum.Asse" +
+      "tLinkStatus\022o\n\016primary_status\030\007 \001(\0162Q.go" +
+      "ogle.ads.googleads.v13.enums.AssetLinkPr" +
+      "imaryStatusEnum.AssetLinkPrimaryStatusB\004" +
+      "\342A\001\003\022d\n\026primary_status_details\030\010 \003(\0132>.g" +
       "oogle.ads.googleads.v13.common.AssetLink" +
-      "PrimaryStatusDetailsB\003\340A\003\022\202\001\n\026primary_st" +
-      "atus_reasons\030\t \003(\0162].google.ads.googlead" +
-      "s.v13.enums.AssetLinkPrimaryStatusReason" +
-      "Enum.AssetLinkPrimaryStatusReasonB\003\340A\003:w" +
-      "\352At\n%googleads.googleapis.com/AdGroupAss" +
-      "et\022Kcustomers/{customer_id}/adGroupAsset" +
-      "s/{ad_group_id}~{asset_id}~{field_type}B" +
-      "\203\002\n&com.google.ads.googleads.v13.resourc" +
-      "esB\021AdGroupAssetProtoP\001ZKgoogle.golang.o" +
-      "rg/genproto/googleapis/ads/googleads/v13" +
-      "/resources;resources\242\002\003GAA\252\002\"Google.Ads." +
-      "GoogleAds.V13.Resources\312\002\"Google\\Ads\\Goo" +
-      "gleAds\\V13\\Resources\352\002&Google::Ads::Goog" +
-      "leAds::V13::Resourcesb\006proto3"
+      "PrimaryStatusDetailsB\004\342A\001\003\022\203\001\n\026primary_s" +
+      "tatus_reasons\030\t \003(\0162].google.ads.googlea" +
+      "ds.v13.enums.AssetLinkPrimaryStatusReaso" +
+      "nEnum.AssetLinkPrimaryStatusReasonB\004\342A\001\003" +
+      ":w\352At\n%googleads.googleapis.com/AdGroupA" +
+      "sset\022Kcustomers/{customer_id}/adGroupAss" +
+      "ets/{ad_group_id}~{asset_id}~{field_type" +
+      "}B\203\002\n&com.google.ads.googleads.v13.resou" +
+      "rcesB\021AdGroupAssetProtoP\001ZKgoogle.golang" +
+      ".org/genproto/googleapis/ads/googleads/v" +
+      "13/resources;resources\242\002\003GAA\252\002\"Google.Ad" +
+      "s.GoogleAds.V13.Resources\312\002\"Google\\Ads\\G" +
+      "oogleAds\\V13\\Resources\352\002&Google::Ads::Go" +
+      "ogleAds::V13::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

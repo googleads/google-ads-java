@@ -10,6 +10,7 @@ public interface QualifyingQuestionOrBuilder extends
   /**
    * <pre>
    * Output only. The resource name of the qualifying question.
+   *
    * 'qualifyingQuestions/{qualifyingQuestionId}'
    * </pre>
    *
@@ -20,6 +21,7 @@ public interface QualifyingQuestionOrBuilder extends
   /**
    * <pre>
    * Output only. The resource name of the qualifying question.
+   *
    * 'qualifyingQuestions/{qualifyingQuestionId}'
    * </pre>
    *

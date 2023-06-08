@@ -23,7 +23,8 @@ private static final long serialVersionUID = 0L;
   private SuggestTravelAssetsRequest() {
     customerId_ = "";
     languageOption_ = "";
-    placeId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    placeId_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -33,11 +34,6 @@ private static final long serialVersionUID = 0L;
     return new SuggestTravelAssetsRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.services.TravelAssetSuggestionServiceProto.internal_static_google_ads_googleads_v13_services_SuggestTravelAssetsRequest_descriptor;
@@ -151,12 +147,14 @@ private static final long serialVersionUID = 0L;
 
   public static final int PLACE_ID_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList placeId_;
+  private com.google.protobuf.LazyStringArrayList placeId_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * The Google Maps Place IDs of hotels for which assets are requested. See
    * https://developers.google.com/places/web-service/place-id for more
    * information.
+   * .
    * </pre>
    *
    * <code>repeated string place_id = 3;</code>
@@ -171,6 +169,7 @@ private static final long serialVersionUID = 0L;
    * The Google Maps Place IDs of hotels for which assets are requested. See
    * https://developers.google.com/places/web-service/place-id for more
    * information.
+   * .
    * </pre>
    *
    * <code>repeated string place_id = 3;</code>
@@ -184,6 +183,7 @@ private static final long serialVersionUID = 0L;
    * The Google Maps Place IDs of hotels for which assets are requested. See
    * https://developers.google.com/places/web-service/place-id for more
    * information.
+   * .
    * </pre>
    *
    * <code>repeated string place_id = 3;</code>
@@ -198,6 +198,7 @@ private static final long serialVersionUID = 0L;
    * The Google Maps Place IDs of hotels for which assets are requested. See
    * https://developers.google.com/places/web-service/place-id for more
    * information.
+   * .
    * </pre>
    *
    * <code>repeated string place_id = 3;</code>
@@ -344,11 +345,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.services.SuggestTravelAssetsRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.services.SuggestTravelAssetsRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -431,8 +434,8 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       customerId_ = "";
       languageOption_ = "";
-      placeId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000004);
+      placeId_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -459,18 +462,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v13.services.SuggestTravelAssetsRequest buildPartial() {
       com.google.ads.googleads.v13.services.SuggestTravelAssetsRequest result = new com.google.ads.googleads.v13.services.SuggestTravelAssetsRequest(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(com.google.ads.googleads.v13.services.SuggestTravelAssetsRequest result) {
-      if (((bitField0_ & 0x00000004) != 0)) {
-        placeId_ = placeId_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000004);
-      }
-      result.placeId_ = placeId_;
     }
 
     private void buildPartial0(com.google.ads.googleads.v13.services.SuggestTravelAssetsRequest result) {
@@ -480,6 +474,10 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.languageOption_ = languageOption_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        placeId_.makeImmutable();
+        result.placeId_ = placeId_;
       }
     }
 
@@ -540,7 +538,7 @@ private static final long serialVersionUID = 0L;
       if (!other.placeId_.isEmpty()) {
         if (placeId_.isEmpty()) {
           placeId_ = other.placeId_;
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ |= 0x00000004;
         } else {
           ensurePlaceIdIsMutable();
           placeId_.addAll(other.placeId_);
@@ -800,18 +798,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.LazyStringList placeId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList placeId_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensurePlaceIdIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!placeId_.isModifiable()) {
         placeId_ = new com.google.protobuf.LazyStringArrayList(placeId_);
-        bitField0_ |= 0x00000004;
-       }
+      }
+      bitField0_ |= 0x00000004;
     }
     /**
      * <pre>
      * The Google Maps Place IDs of hotels for which assets are requested. See
      * https://developers.google.com/places/web-service/place-id for more
      * information.
+     * .
      * </pre>
      *
      * <code>repeated string place_id = 3;</code>
@@ -819,13 +819,15 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getPlaceIdList() {
-      return placeId_.getUnmodifiableView();
+      placeId_.makeImmutable();
+      return placeId_;
     }
     /**
      * <pre>
      * The Google Maps Place IDs of hotels for which assets are requested. See
      * https://developers.google.com/places/web-service/place-id for more
      * information.
+     * .
      * </pre>
      *
      * <code>repeated string place_id = 3;</code>
@@ -839,6 +841,7 @@ private static final long serialVersionUID = 0L;
      * The Google Maps Place IDs of hotels for which assets are requested. See
      * https://developers.google.com/places/web-service/place-id for more
      * information.
+     * .
      * </pre>
      *
      * <code>repeated string place_id = 3;</code>
@@ -853,6 +856,7 @@ private static final long serialVersionUID = 0L;
      * The Google Maps Place IDs of hotels for which assets are requested. See
      * https://developers.google.com/places/web-service/place-id for more
      * information.
+     * .
      * </pre>
      *
      * <code>repeated string place_id = 3;</code>
@@ -868,6 +872,7 @@ private static final long serialVersionUID = 0L;
      * The Google Maps Place IDs of hotels for which assets are requested. See
      * https://developers.google.com/places/web-service/place-id for more
      * information.
+     * .
      * </pre>
      *
      * <code>repeated string place_id = 3;</code>
@@ -880,6 +885,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensurePlaceIdIsMutable();
       placeId_.set(index, value);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -888,6 +894,7 @@ private static final long serialVersionUID = 0L;
      * The Google Maps Place IDs of hotels for which assets are requested. See
      * https://developers.google.com/places/web-service/place-id for more
      * information.
+     * .
      * </pre>
      *
      * <code>repeated string place_id = 3;</code>
@@ -899,6 +906,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensurePlaceIdIsMutable();
       placeId_.add(value);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -907,6 +915,7 @@ private static final long serialVersionUID = 0L;
      * The Google Maps Place IDs of hotels for which assets are requested. See
      * https://developers.google.com/places/web-service/place-id for more
      * information.
+     * .
      * </pre>
      *
      * <code>repeated string place_id = 3;</code>
@@ -918,6 +927,7 @@ private static final long serialVersionUID = 0L;
       ensurePlaceIdIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, placeId_);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -926,14 +936,16 @@ private static final long serialVersionUID = 0L;
      * The Google Maps Place IDs of hotels for which assets are requested. See
      * https://developers.google.com/places/web-service/place-id for more
      * information.
+     * .
      * </pre>
      *
      * <code>repeated string place_id = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearPlaceId() {
-      placeId_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000004);
+      placeId_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000004);;
       onChanged();
       return this;
     }
@@ -942,6 +954,7 @@ private static final long serialVersionUID = 0L;
      * The Google Maps Place IDs of hotels for which assets are requested. See
      * https://developers.google.com/places/web-service/place-id for more
      * information.
+     * .
      * </pre>
      *
      * <code>repeated string place_id = 3;</code>
@@ -954,6 +967,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensurePlaceIdIsMutable();
       placeId_.add(value);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }

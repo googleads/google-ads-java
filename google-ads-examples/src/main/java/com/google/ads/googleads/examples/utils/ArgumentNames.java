@@ -20,7 +20,6 @@ public final class ArgumentNames {
   // Note to contributors: please insert new items alphabetically.
   public static final String ACCESS_ROLE = "--accessRole";
   public static final String AD_GROUP_ID = "--adGroupId";
-  public static final String AD_GROUP_IDS = "--adGroupIds";
   public static final String AD_ID = "--adId";
   public static final String ADJUSTMENT_DATE_TIME = "--adjustmentDateTime";
   public static final String ADJUSTMENT_TYPE = "--adjustmentType";
@@ -36,10 +35,8 @@ public final class ArgumentNames {
   public static final String BUSINESS_NAME = "--businessName";
   public static final String BUSINESS_PROFILE_LOCATION = "--businessProfileLocation";
   public static final String CALLER_ID = "--callerId";
-  public static final String CALLOUT_TEXT = "--calloutText";
   public static final String CALL_START_DATE_TIME = "--callStartDateTime";
   public static final String CAMPAIGN_BUDGET_ID = "--campaignBudgetId";
-  public static final String CAMPAIGN_EXPERIMENT_ID = "--campaignExperimentId";
   public static final String CAMPAIGN_ID = "--campaignId";
   public static final String CAMPAIGN_IDS = "--campaignIds";
   public static final String CARRIER_COUNTRY_CODE = "--carrierCountryCode";
@@ -57,11 +54,9 @@ public final class ArgumentNames {
   public static final String CPC_BID_MICRO_AMOUNT = "--cpcBidMicroAmount";
   public static final String CREATE_DEFAULT_LISTING_GROUP = "--createDefaultListingGroup";
   public static final String CRITERION_ID = "--criterionId";
-  public static final String CURRENCY_CODE = "--currencyCode";
   public static final String CUSTOMER_ID = "--customerId";
   public static final String CUSTOM_KEY = "--customKey";
   public static final String CUSTOMER_IDS = "--customerIds";
-  public static final String DRAFT_ID = "--draftId";
   public static final String EMAIL_ADDRESS = "--emailAddress";
   public static final String END_DATE_TIME = "--endDateTime";
   public static final String EXTERNAL_ID = "--externalId";
@@ -80,7 +75,6 @@ public final class ArgumentNames {
   public static final String HOTEL_CENTER_ACCOUNT_ID = "--hotelCenterAccountId";
   public static final String IMAGE_ASSET_ID = "--imageAssetId";
   public static final String ITEM_ID = "--itemId";
-  public static final String KEYWORD_PLAN_ID = "--keywordPlanId";
   public static final String KEYWORD_TEXT = "--keywordText";
   public static final String KEYWORD_TEXTS = "--keywordTexts";
   public static final String LABEL_ID = "--labelId";
@@ -93,7 +87,6 @@ public final class ArgumentNames {
   public static final String LOGIN_EMAIL_ADDRESS_HINT = "--loginEmailAddressHint";
   public static final String MANAGER_CUSTOMER_ID = "--managerCustomerId";
   public static final String MANAGER_ID = "--managerId";
-  public static final String MARKETING_IMAGE_ASSET_ID = "--marketingImageAssetId";
   public static final String MERCHANT_CENTER_ACCOUNT_ID = "--merchantCenterAccountId";
   public static final String NAME_PREFIX = "--namePrefix";
   public static final String OAUTH_CLIENT_FILE = "--oAuthClientFile";
@@ -117,7 +110,6 @@ public final class ArgumentNames {
   public static final String RUN_JOB = "--runJob";
   public static final String SALES_COUNTRY = "--salesCountry";
   public static final String SITELINK_TEXT = "--sitelinkText";
-  public static final String SQUARE_MARKETING_IMAGE_ID = "--squareMarketingImageAssetId";
   public static final String START_DATE_TIME = "--startDateTime";
   public static final String USER_AGENT = "--userAgent";
   public static final String USER_LIST_ID = "--userListId";

@@ -170,23 +170,33 @@ dependencies {
   implementation 'com.google.protobuf:protobuf-java-util'
   api 'io.grpc:grpc-stub'
   api 'io.grpc:grpc-protobuf'
-  api 'com.google.auth:google-auth-library-oauth2-http:1.14.0'
-  api 'com.google.auth:google-auth-library-credentials:1.14.0'
-  api platform('com.google.cloud:google-cloud-shared-dependencies:3.1.2')
-  implementation 'com.google.guava:guava:31.1-android'
+  api 'com.google.auth:google-auth-library-oauth2-http'
+  api 'com.google.auth:google-auth-library-credentials'
+  api platform('com.google.cloud:google-cloud-shared-dependencies:3.11.0')
+  implementation 'com.google.guava:guava'
   implementation 'com.google.auto.service:auto-service:1.0.1'
   implementation 'javax.annotation:javax.annotation-api'
   annotationProcessor 'com.google.auto.service:auto-service:1.0.1'
   testImplementation 'junit:junit:4.13.1'
 }
 
-// Disables a task unless we're publishing something.
-def disableUnlessPublishing(toDisable) {
-  toDisable.enabled = false
+// Disables a task unless we're publishing something and we're not doing
+// a fast build.
+def disableUnlessPublishing(taskToDisable) {
+  // Disables the task.
+  taskToDisable.enabled = false
+
+  // Leaves the task disabled if the 'fastbuild' property was set.
+  if (project.properties.containsKey('fastbuild')) {
+    logger.warn('Skipping {} because "fastbuild" property is set', taskToDisable)
+    return
+  }
+  // Once the task graph is ready, checks if it contains publishing tasks. If it
+  // does, rolls back the change above and re-enables `taskToDisable`.
   gradle.taskGraph.whenReady {
     gradle.taskGraph.allTasks
             .findAll { it.group == "publishing" }
-            .any { toDisable.enabled = true }
+            .any { taskToDisable.enabled = true }
   }
 }
 disableUnlessPublishing(tasks.javadocJar)

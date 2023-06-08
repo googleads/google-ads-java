@@ -11,6 +11,7 @@ public interface KeywordPlanCampaignKeywordOrBuilder extends
    * <pre>
    * Immutable. The resource name of the Keyword Plan Campaign keyword.
    * KeywordPlanCampaignKeyword resource names have the form:
+   *
    * `customers/{customer_id}/keywordPlanCampaignKeywords/{kp_campaign_keyword_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface KeywordPlanCampaignKeywordOrBuilder extends
    * <pre>
    * Immutable. The resource name of the Keyword Plan Campaign keyword.
    * KeywordPlanCampaignKeyword resource names have the form:
+   *
    * `customers/{customer_id}/keywordPlanCampaignKeywords/{kp_campaign_keyword_id}`
    * </pre>
    *

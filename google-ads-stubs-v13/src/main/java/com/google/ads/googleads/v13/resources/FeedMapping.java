@@ -33,11 +33,6 @@ private static final long serialVersionUID = 0L;
     return new FeedMapping();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.resources.FeedMappingProto.internal_static_google_ads_googleads_v13_resources_FeedMapping_descriptor;
@@ -53,6 +48,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   private int targetCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object target_;
   public enum TargetCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -100,6 +96,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the feed mapping.
    * Feed mapping resource names have the form:
+   *
    * `customers/{customer_id}/feedMappings/{feed_id}~{feed_mapping_id}`
    * </pre>
    *
@@ -123,6 +120,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the feed mapping.
    * Feed mapping resource names have the form:
+   *
    * `customers/{customer_id}/feedMappings/{feed_id}~{feed_mapping_id}`
    * </pre>
    *
@@ -589,11 +587,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.resources.FeedMapping parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.resources.FeedMapping parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -950,6 +950,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the feed mapping.
      * Feed mapping resource names have the form:
+     *
      * `customers/{customer_id}/feedMappings/{feed_id}~{feed_mapping_id}`
      * </pre>
      *
@@ -972,6 +973,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the feed mapping.
      * Feed mapping resource names have the form:
+     *
      * `customers/{customer_id}/feedMappings/{feed_id}~{feed_mapping_id}`
      * </pre>
      *
@@ -995,6 +997,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the feed mapping.
      * Feed mapping resource names have the form:
+     *
      * `customers/{customer_id}/feedMappings/{feed_id}~{feed_mapping_id}`
      * </pre>
      *
@@ -1014,6 +1017,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the feed mapping.
      * Feed mapping resource names have the form:
+     *
      * `customers/{customer_id}/feedMappings/{feed_id}~{feed_mapping_id}`
      * </pre>
      *
@@ -1030,6 +1034,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the feed mapping.
      * Feed mapping resource names have the form:
+     *
      * `customers/{customer_id}/feedMappings/{feed_id}~{feed_mapping_id}`
      * </pre>
      *

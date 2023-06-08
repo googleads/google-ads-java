@@ -253,7 +253,7 @@ public final class ExperimentServiceGrpc {
    * Service to manage experiments.
    * </pre>
    */
-  public static abstract class ExperimentServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -268,7 +268,7 @@ public final class ExperimentServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void mutateExperiments(com.google.ads.googleads.v12.services.MutateExperimentsRequest request,
+    default void mutateExperiments(com.google.ads.googleads.v12.services.MutateExperimentsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.MutateExperimentsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateExperimentsMethod(), responseObserver);
     }
@@ -288,7 +288,7 @@ public final class ExperimentServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void endExperiment(com.google.ads.googleads.v12.services.EndExperimentRequest request,
+    default void endExperiment(com.google.ads.googleads.v12.services.EndExperimentRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEndExperimentMethod(), responseObserver);
     }
@@ -307,7 +307,7 @@ public final class ExperimentServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void listExperimentAsyncErrors(com.google.ads.googleads.v12.services.ListExperimentAsyncErrorsRequest request,
+    default void listExperimentAsyncErrors(com.google.ads.googleads.v12.services.ListExperimentAsyncErrorsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.ListExperimentAsyncErrorsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListExperimentAsyncErrorsMethod(), responseObserver);
     }
@@ -326,7 +326,7 @@ public final class ExperimentServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void graduateExperiment(com.google.ads.googleads.v12.services.GraduateExperimentRequest request,
+    default void graduateExperiment(com.google.ads.googleads.v12.services.GraduateExperimentRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGraduateExperimentMethod(), responseObserver);
     }
@@ -357,7 +357,7 @@ public final class ExperimentServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void scheduleExperiment(com.google.ads.googleads.v12.services.ScheduleExperimentRequest request,
+    default void scheduleExperiment(com.google.ads.googleads.v12.services.ScheduleExperimentRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getScheduleExperimentMethod(), responseObserver);
     }
@@ -381,65 +381,34 @@ public final class ExperimentServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void promoteExperiment(com.google.ads.googleads.v12.services.PromoteExperimentRequest request,
+    default void promoteExperiment(com.google.ads.googleads.v12.services.PromoteExperimentRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPromoteExperimentMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateExperimentsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.MutateExperimentsRequest,
-                com.google.ads.googleads.v12.services.MutateExperimentsResponse>(
-                  this, METHODID_MUTATE_EXPERIMENTS)))
-          .addMethod(
-            getEndExperimentMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.EndExperimentRequest,
-                com.google.protobuf.Empty>(
-                  this, METHODID_END_EXPERIMENT)))
-          .addMethod(
-            getListExperimentAsyncErrorsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.ListExperimentAsyncErrorsRequest,
-                com.google.ads.googleads.v12.services.ListExperimentAsyncErrorsResponse>(
-                  this, METHODID_LIST_EXPERIMENT_ASYNC_ERRORS)))
-          .addMethod(
-            getGraduateExperimentMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.GraduateExperimentRequest,
-                com.google.protobuf.Empty>(
-                  this, METHODID_GRADUATE_EXPERIMENT)))
-          .addMethod(
-            getScheduleExperimentMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.ScheduleExperimentRequest,
-                com.google.longrunning.Operation>(
-                  this, METHODID_SCHEDULE_EXPERIMENT)))
-          .addMethod(
-            getPromoteExperimentMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.PromoteExperimentRequest,
-                com.google.longrunning.Operation>(
-                  this, METHODID_PROMOTE_EXPERIMENT)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service ExperimentService.
    * <pre>
    * Service to manage experiments.
    * </pre>
    */
-  public static final class ExperimentServiceStub extends io.grpc.stub.AbstractAsyncStub<ExperimentServiceStub> {
+  public static abstract class ExperimentServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return ExperimentServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service ExperimentService.
+   * <pre>
+   * Service to manage experiments.
+   * </pre>
+   */
+  public static final class ExperimentServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<ExperimentServiceStub> {
     private ExperimentServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -590,11 +559,13 @@ public final class ExperimentServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service ExperimentService.
    * <pre>
    * Service to manage experiments.
    * </pre>
    */
-  public static final class ExperimentServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ExperimentServiceBlockingStub> {
+  public static final class ExperimentServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<ExperimentServiceBlockingStub> {
     private ExperimentServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -739,11 +710,13 @@ public final class ExperimentServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service ExperimentService.
    * <pre>
    * Service to manage experiments.
    * </pre>
    */
-  public static final class ExperimentServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ExperimentServiceFutureStub> {
+  public static final class ExperimentServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<ExperimentServiceFutureStub> {
     private ExperimentServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -905,10 +878,10 @@ public final class ExperimentServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final ExperimentServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(ExperimentServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -955,6 +928,53 @@ public final class ExperimentServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateExperimentsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.MutateExperimentsRequest,
+              com.google.ads.googleads.v12.services.MutateExperimentsResponse>(
+                service, METHODID_MUTATE_EXPERIMENTS)))
+        .addMethod(
+          getEndExperimentMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.EndExperimentRequest,
+              com.google.protobuf.Empty>(
+                service, METHODID_END_EXPERIMENT)))
+        .addMethod(
+          getListExperimentAsyncErrorsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.ListExperimentAsyncErrorsRequest,
+              com.google.ads.googleads.v12.services.ListExperimentAsyncErrorsResponse>(
+                service, METHODID_LIST_EXPERIMENT_ASYNC_ERRORS)))
+        .addMethod(
+          getGraduateExperimentMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.GraduateExperimentRequest,
+              com.google.protobuf.Empty>(
+                service, METHODID_GRADUATE_EXPERIMENT)))
+        .addMethod(
+          getScheduleExperimentMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.ScheduleExperimentRequest,
+              com.google.longrunning.Operation>(
+                service, METHODID_SCHEDULE_EXPERIMENT)))
+        .addMethod(
+          getPromoteExperimentMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.PromoteExperimentRequest,
+              com.google.longrunning.Operation>(
+                service, METHODID_PROMOTE_EXPERIMENT)))
+        .build();
   }
 
   private static abstract class ExperimentServiceBaseDescriptorSupplier

@@ -35,11 +35,6 @@ private static final long serialVersionUID = 0L;
     return new ListAudienceInsightsAttributesRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.services.AudienceInsightsServiceProto.internal_static_google_ads_googleads_v12_services_ListAudienceInsightsAttributesRequest_descriptor;
@@ -183,8 +178,11 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object queryText_ = "";
   /**
    * <pre>
-   * Required. A free text query.  Attributes matching or related to this string
-   * will be returned.
+   * Required. A free text query.  If the requested dimensions include
+   * Attributes CATEGORY or KNOWLEDGE_GRAPH, then the attributes returned for
+   * those dimensions will match or be related to this string.  For other
+   * dimensions, this field is ignored and all available attributes are
+   * returned.
    * </pre>
    *
    * <code>string query_text = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -205,8 +203,11 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. A free text query.  Attributes matching or related to this string
-   * will be returned.
+   * Required. A free text query.  If the requested dimensions include
+   * Attributes CATEGORY or KNOWLEDGE_GRAPH, then the attributes returned for
+   * those dimensions will match or be related to this string.  For other
+   * dimensions, this field is ignored and all available attributes are
+   * returned.
    * </pre>
    *
    * <code>string query_text = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -521,11 +522,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.services.ListAudienceInsightsAttributesRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.services.ListAudienceInsightsAttributesRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1146,8 +1149,11 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object queryText_ = "";
     /**
      * <pre>
-     * Required. A free text query.  Attributes matching or related to this string
-     * will be returned.
+     * Required. A free text query.  If the requested dimensions include
+     * Attributes CATEGORY or KNOWLEDGE_GRAPH, then the attributes returned for
+     * those dimensions will match or be related to this string.  For other
+     * dimensions, this field is ignored and all available attributes are
+     * returned.
      * </pre>
      *
      * <code>string query_text = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1167,8 +1173,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A free text query.  Attributes matching or related to this string
-     * will be returned.
+     * Required. A free text query.  If the requested dimensions include
+     * Attributes CATEGORY or KNOWLEDGE_GRAPH, then the attributes returned for
+     * those dimensions will match or be related to this string.  For other
+     * dimensions, this field is ignored and all available attributes are
+     * returned.
      * </pre>
      *
      * <code>string query_text = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1189,8 +1198,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A free text query.  Attributes matching or related to this string
-     * will be returned.
+     * Required. A free text query.  If the requested dimensions include
+     * Attributes CATEGORY or KNOWLEDGE_GRAPH, then the attributes returned for
+     * those dimensions will match or be related to this string.  For other
+     * dimensions, this field is ignored and all available attributes are
+     * returned.
      * </pre>
      *
      * <code>string query_text = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1207,8 +1219,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A free text query.  Attributes matching or related to this string
-     * will be returned.
+     * Required. A free text query.  If the requested dimensions include
+     * Attributes CATEGORY or KNOWLEDGE_GRAPH, then the attributes returned for
+     * those dimensions will match or be related to this string.  For other
+     * dimensions, this field is ignored and all available attributes are
+     * returned.
      * </pre>
      *
      * <code>string query_text = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1222,8 +1237,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. A free text query.  Attributes matching or related to this string
-     * will be returned.
+     * Required. A free text query.  If the requested dimensions include
+     * Attributes CATEGORY or KNOWLEDGE_GRAPH, then the attributes returned for
+     * those dimensions will match or be related to this string.  For other
+     * dimensions, this field is ignored and all available attributes are
+     * returned.
      * </pre>
      *
      * <code>string query_text = 3 [(.google.api.field_behavior) = REQUIRED];</code>

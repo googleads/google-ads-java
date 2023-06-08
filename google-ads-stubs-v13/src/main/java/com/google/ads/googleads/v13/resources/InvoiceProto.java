@@ -50,58 +50,59 @@ public final class InvoiceProto {
       "ums/invoice_type.proto\0322google/ads/googl" +
       "eads/v13/enums/month_of_year.proto\032\037goog" +
       "le/api/field_behavior.proto\032\031google/api/" +
-      "resource.proto\"\377\"\n\007Invoice\022?\n\rresource_n" +
-      "ame\030\001 \001(\tB(\340A\003\372A\"\n googleads.googleapis." +
-      "com/Invoice\022\024\n\002id\030\031 \001(\tB\003\340A\003H\000\210\001\001\022N\n\004typ" +
-      "e\030\003 \001(\0162;.google.ads.googleads.v13.enums" +
-      ".InvoiceTypeEnum.InvoiceTypeB\003\340A\003\022\037\n\rbil" +
-      "ling_setup\030\032 \001(\tB\003\340A\003H\001\210\001\001\022%\n\023payments_a" +
-      "ccount_id\030\033 \001(\tB\003\340A\003H\002\210\001\001\022%\n\023payments_pr" +
-      "ofile_id\030\034 \001(\tB\003\340A\003H\003\210\001\001\022\034\n\nissue_date\030\035" +
-      " \001(\tB\003\340A\003H\004\210\001\001\022\032\n\010due_date\030\036 \001(\tB\003\340A\003H\005\210" +
-      "\001\001\022K\n\022service_date_range\030\t \001(\0132*.google." +
-      "ads.googleads.v13.common.DateRangeB\003\340A\003\022" +
-      "\037\n\rcurrency_code\030\037 \001(\tB\003\340A\003H\006\210\001\001\022/\n\"adju" +
-      "stments_subtotal_amount_micros\030\023 \001(\003B\003\340A" +
-      "\003\022*\n\035adjustments_tax_amount_micros\030\024 \001(\003" +
-      "B\003\340A\003\022,\n\037adjustments_total_amount_micros" +
-      "\030\025 \001(\003B\003\340A\003\0224\n\'regulatory_costs_subtotal" +
-      "_amount_micros\030\026 \001(\003B\003\340A\003\022/\n\"regulatory_" +
-      "costs_tax_amount_micros\030\027 \001(\003B\003\340A\003\0221\n$re" +
-      "gulatory_costs_total_amount_micros\030\030 \001(\003" +
-      "B\003\340A\003\022(\n\026subtotal_amount_micros\030! \001(\003B\003\340" +
-      "A\003H\007\210\001\001\022#\n\021tax_amount_micros\030\" \001(\003B\003\340A\003H" +
-      "\010\210\001\001\022%\n\023total_amount_micros\030# \001(\003B\003\340A\003H\t" +
-      "\210\001\001\022#\n\021corrected_invoice\030$ \001(\tB\003\340A\003H\n\210\001\001" +
-      "\022\036\n\021replaced_invoices\030% \003(\tB\003\340A\003\022\031\n\007pdf_" +
-      "url\030& \001(\tB\003\340A\003H\013\210\001\001\022g\n\030account_budget_su" +
-      "mmaries\030\022 \003(\0132@.google.ads.googleads.v13" +
-      ".resources.Invoice.AccountBudgetSummaryB" +
-      "\003\340A\003\022Z\n\021account_summaries\030\' \003(\0132:.google" +
-      ".ads.googleads.v13.resources.Invoice.Acc" +
-      "ountSummaryB\003\340A\003\032\316\013\n\016AccountSummary\022\032\n\010c" +
-      "ustomer\030\001 \001(\tB\003\340A\003H\000\210\001\001\022;\n)billing_corre" +
-      "ction_subtotal_amount_micros\030\002 \001(\003B\003\340A\003H" +
-      "\001\210\001\001\0226\n$billing_correction_tax_amount_mi" +
-      "cros\030\003 \001(\003B\003\340A\003H\002\210\001\001\0228\n&billing_correcti" +
-      "on_total_amount_micros\030\004 \001(\003B\003\340A\003H\003\210\001\001\022:" +
-      "\n(coupon_adjustment_subtotal_amount_micr" +
-      "os\030\005 \001(\003B\003\340A\003H\004\210\001\001\0225\n#coupon_adjustment_" +
-      "tax_amount_micros\030\006 \001(\003B\003\340A\003H\005\210\001\001\0227\n%cou" +
-      "pon_adjustment_total_amount_micros\030\007 \001(\003" +
-      "B\003\340A\003H\006\210\001\001\022A\n/excess_credit_adjustment_s" +
-      "ubtotal_amount_micros\030\010 \001(\003B\003\340A\003H\007\210\001\001\022<\n" +
-      "*excess_credit_adjustment_tax_amount_mic" +
-      "ros\030\t \001(\003B\003\340A\003H\010\210\001\001\022>\n,excess_credit_adj" +
-      "ustment_total_amount_micros\030\n \001(\003B\003\340A\003H\t" +
-      "\210\001\001\0229\n\'regulatory_costs_subtotal_amount_" +
-      "micros\030\013 \001(\003B\003\340A\003H\n\210\001\001\0224\n\"regulatory_cos" +
-      "ts_tax_amount_micros\030\014 \001(\003B\003\340A\003H\013\210\001\001\0226\n$" +
-      "regulatory_costs_total_amount_micros\030\r \001" +
-      "(\003B\003\340A\003H\014\210\001\001\022(\n\026subtotal_amount_micros\030\016" +
-      " \001(\003B\003\340A\003H\r\210\001\001\022#\n\021tax_amount_micros\030\017 \001(" +
-      "\003B\003\340A\003H\016\210\001\001\022%\n\023total_amount_micros\030\020 \001(\003" +
-      "B\003\340A\003H\017\210\001\001B\013\n\t_customerB,\n*_billing_corr" +
+      "resource.proto\"\273#\n\007Invoice\022@\n\rresource_n" +
+      "ame\030\001 \001(\tB)\342A\001\003\372A\"\n googleads.googleapis" +
+      ".com/Invoice\022\025\n\002id\030\031 \001(\tB\004\342A\001\003H\000\210\001\001\022O\n\004t" +
+      "ype\030\003 \001(\0162;.google.ads.googleads.v13.enu" +
+      "ms.InvoiceTypeEnum.InvoiceTypeB\004\342A\001\003\022 \n\r" +
+      "billing_setup\030\032 \001(\tB\004\342A\001\003H\001\210\001\001\022&\n\023paymen" +
+      "ts_account_id\030\033 \001(\tB\004\342A\001\003H\002\210\001\001\022&\n\023paymen" +
+      "ts_profile_id\030\034 \001(\tB\004\342A\001\003H\003\210\001\001\022\035\n\nissue_" +
+      "date\030\035 \001(\tB\004\342A\001\003H\004\210\001\001\022\033\n\010due_date\030\036 \001(\tB" +
+      "\004\342A\001\003H\005\210\001\001\022L\n\022service_date_range\030\t \001(\0132*" +
+      ".google.ads.googleads.v13.common.DateRan" +
+      "geB\004\342A\001\003\022 \n\rcurrency_code\030\037 \001(\tB\004\342A\001\003H\006\210" +
+      "\001\001\0220\n\"adjustments_subtotal_amount_micros" +
+      "\030\023 \001(\003B\004\342A\001\003\022+\n\035adjustments_tax_amount_m" +
+      "icros\030\024 \001(\003B\004\342A\001\003\022-\n\037adjustments_total_a" +
+      "mount_micros\030\025 \001(\003B\004\342A\001\003\0225\n\'regulatory_c" +
+      "osts_subtotal_amount_micros\030\026 \001(\003B\004\342A\001\003\022" +
+      "0\n\"regulatory_costs_tax_amount_micros\030\027 " +
+      "\001(\003B\004\342A\001\003\0222\n$regulatory_costs_total_amou" +
+      "nt_micros\030\030 \001(\003B\004\342A\001\003\022)\n\026subtotal_amount" +
+      "_micros\030! \001(\003B\004\342A\001\003H\007\210\001\001\022$\n\021tax_amount_m" +
+      "icros\030\" \001(\003B\004\342A\001\003H\010\210\001\001\022&\n\023total_amount_m" +
+      "icros\030# \001(\003B\004\342A\001\003H\t\210\001\001\022$\n\021corrected_invo" +
+      "ice\030$ \001(\tB\004\342A\001\003H\n\210\001\001\022\037\n\021replaced_invoice" +
+      "s\030% \003(\tB\004\342A\001\003\022\032\n\007pdf_url\030& \001(\tB\004\342A\001\003H\013\210\001" +
+      "\001\022h\n\030account_budget_summaries\030\022 \003(\0132@.go" +
+      "ogle.ads.googleads.v13.resources.Invoice" +
+      ".AccountBudgetSummaryB\004\342A\001\003\022[\n\021account_s" +
+      "ummaries\030\' \003(\0132:.google.ads.googleads.v1" +
+      "3.resources.Invoice.AccountSummaryB\004\342A\001\003" +
+      "\032\336\013\n\016AccountSummary\022\033\n\010customer\030\001 \001(\tB\004\342" +
+      "A\001\003H\000\210\001\001\022<\n)billing_correction_subtotal_" +
+      "amount_micros\030\002 \001(\003B\004\342A\001\003H\001\210\001\001\0227\n$billin" +
+      "g_correction_tax_amount_micros\030\003 \001(\003B\004\342A" +
+      "\001\003H\002\210\001\001\0229\n&billing_correction_total_amou" +
+      "nt_micros\030\004 \001(\003B\004\342A\001\003H\003\210\001\001\022;\n(coupon_adj" +
+      "ustment_subtotal_amount_micros\030\005 \001(\003B\004\342A" +
+      "\001\003H\004\210\001\001\0226\n#coupon_adjustment_tax_amount_" +
+      "micros\030\006 \001(\003B\004\342A\001\003H\005\210\001\001\0228\n%coupon_adjust" +
+      "ment_total_amount_micros\030\007 \001(\003B\004\342A\001\003H\006\210\001" +
+      "\001\022B\n/excess_credit_adjustment_subtotal_a" +
+      "mount_micros\030\010 \001(\003B\004\342A\001\003H\007\210\001\001\022=\n*excess_" +
+      "credit_adjustment_tax_amount_micros\030\t \001(" +
+      "\003B\004\342A\001\003H\010\210\001\001\022?\n,excess_credit_adjustment" +
+      "_total_amount_micros\030\n \001(\003B\004\342A\001\003H\t\210\001\001\022:\n" +
+      "\'regulatory_costs_subtotal_amount_micros" +
+      "\030\013 \001(\003B\004\342A\001\003H\n\210\001\001\0225\n\"regulatory_costs_ta" +
+      "x_amount_micros\030\014 \001(\003B\004\342A\001\003H\013\210\001\001\0227\n$regu" +
+      "latory_costs_total_amount_micros\030\r \001(\003B\004" +
+      "\342A\001\003H\014\210\001\001\022)\n\026subtotal_amount_micros\030\016 \001(" +
+      "\003B\004\342A\001\003H\r\210\001\001\022$\n\021tax_amount_micros\030\017 \001(\003B" +
+      "\004\342A\001\003H\016\210\001\001\022&\n\023total_amount_micros\030\020 \001(\003B" +
+      "\004\342A\001\003H\017\210\001\001B\013\n\t_customerB,\n*_billing_corr" +
       "ection_subtotal_amount_microsB\'\n%_billin" +
       "g_correction_tax_amount_microsB)\n\'_billi" +
       "ng_correction_total_amount_microsB+\n)_co" +
@@ -116,60 +117,60 @@ public final class InvoiceProto {
       "ulatory_costs_tax_amount_microsB\'\n%_regu" +
       "latory_costs_total_amount_microsB\031\n\027_sub" +
       "total_amount_microsB\024\n\022_tax_amount_micro" +
-      "sB\026\n\024_total_amount_micros\032\350\007\n\024AccountBud" +
-      "getSummary\022\032\n\010customer\030\n \001(\tB\003\340A\003H\000\210\001\001\022+" +
-      "\n\031customer_descriptive_name\030\013 \001(\tB\003\340A\003H\001" +
-      "\210\001\001\022 \n\016account_budget\030\014 \001(\tB\003\340A\003H\002\210\001\001\022%\n" +
-      "\023account_budget_name\030\r \001(\tB\003\340A\003H\003\210\001\001\022\'\n\025" +
-      "purchase_order_number\030\016 \001(\tB\003\340A\003H\004\210\001\001\022(\n" +
-      "\026subtotal_amount_micros\030\017 \001(\003B\003\340A\003H\005\210\001\001\022" +
-      "#\n\021tax_amount_micros\030\020 \001(\003B\003\340A\003H\006\210\001\001\022%\n\023" +
-      "total_amount_micros\030\021 \001(\003B\003\340A\003H\007\210\001\001\022U\n\034b" +
-      "illable_activity_date_range\030\t \001(\0132*.goog" +
-      "le.ads.googleads.v13.common.DateRangeB\003\340" +
-      "A\003\022&\n\024served_amount_micros\030\022 \001(\003B\003\340A\003H\010\210" +
-      "\001\001\022&\n\024billed_amount_micros\030\023 \001(\003B\003\340A\003H\t\210" +
-      "\001\001\022,\n\032overdelivery_amount_micros\030\024 \001(\003B\003" +
-      "\340A\003H\n\210\001\001\0220\n\036invalid_activity_amount_micr" +
-      "os\030\025 \001(\003B\003\340A\003H\013\210\001\001\022k\n\032invalid_activity_s" +
-      "ummaries\030\026 \003(\0132B.google.ads.googleads.v1" +
-      "3.resources.Invoice.InvalidActivitySumma" +
-      "ryB\003\340A\003B\013\n\t_customerB\034\n\032_customer_descri" +
-      "ptive_nameB\021\n\017_account_budgetB\026\n\024_accoun" +
-      "t_budget_nameB\030\n\026_purchase_order_numberB" +
-      "\031\n\027_subtotal_amount_microsB\024\n\022_tax_amoun" +
-      "t_microsB\026\n\024_total_amount_microsB\027\n\025_ser" +
-      "ved_amount_microsB\027\n\025_billed_amount_micr" +
-      "osB\035\n\033_overdelivery_amount_microsB!\n\037_in" +
-      "valid_activity_amount_micros\032\201\004\n\026Invalid" +
-      "ActivitySummary\022h\n\031original_month_of_ser" +
-      "vice\030\001 \001(\0162;.google.ads.googleads.v13.en" +
-      "ums.MonthOfYearEnum.MonthOfYearB\003\340A\003H\000\210\001" +
-      "\001\022*\n\030original_year_of_service\030\002 \001(\tB\003\340A\003" +
-      "H\001\210\001\001\022%\n\023original_invoice_id\030\003 \001(\tB\003\340A\003H" +
-      "\002\210\001\001\022.\n\034original_account_budget_name\030\004 \001" +
-      "(\tB\003\340A\003H\003\210\001\001\0220\n\036original_purchase_order_" +
-      "number\030\005 \001(\tB\003\340A\003H\004\210\001\001\022\037\n\ramount_micros\030" +
-      "\006 \001(\003B\003\340A\003H\005\210\001\001B\034\n\032_original_month_of_se" +
-      "rviceB\033\n\031_original_year_of_serviceB\026\n\024_o" +
-      "riginal_invoice_idB\037\n\035_original_account_" +
-      "budget_nameB!\n\037_original_purchase_order_" +
-      "numberB\020\n\016_amount_micros:T\352AQ\n googleads" +
-      ".googleapis.com/Invoice\022-customers/{cust" +
-      "omer_id}/invoices/{invoice_id}B\005\n\003_idB\020\n" +
-      "\016_billing_setupB\026\n\024_payments_account_idB" +
-      "\026\n\024_payments_profile_idB\r\n\013_issue_dateB\013" +
-      "\n\t_due_dateB\020\n\016_currency_codeB\031\n\027_subtot" +
-      "al_amount_microsB\024\n\022_tax_amount_microsB\026" +
-      "\n\024_total_amount_microsB\024\n\022_corrected_inv" +
-      "oiceB\n\n\010_pdf_urlB\376\001\n&com.google.ads.goog" +
-      "leads.v13.resourcesB\014InvoiceProtoP\001ZKgoo" +
-      "gle.golang.org/genproto/googleapis/ads/g" +
-      "oogleads/v13/resources;resources\242\002\003GAA\252\002" +
-      "\"Google.Ads.GoogleAds.V13.Resources\312\002\"Go" +
-      "ogle\\Ads\\GoogleAds\\V13\\Resources\352\002&Googl" +
-      "e::Ads::GoogleAds::V13::Resourcesb\006proto" +
-      "3"
+      "sB\026\n\024_total_amount_micros\032\366\007\n\024AccountBud" +
+      "getSummary\022\033\n\010customer\030\n \001(\tB\004\342A\001\003H\000\210\001\001\022" +
+      ",\n\031customer_descriptive_name\030\013 \001(\tB\004\342A\001\003" +
+      "H\001\210\001\001\022!\n\016account_budget\030\014 \001(\tB\004\342A\001\003H\002\210\001\001" +
+      "\022&\n\023account_budget_name\030\r \001(\tB\004\342A\001\003H\003\210\001\001" +
+      "\022(\n\025purchase_order_number\030\016 \001(\tB\004\342A\001\003H\004\210" +
+      "\001\001\022)\n\026subtotal_amount_micros\030\017 \001(\003B\004\342A\001\003" +
+      "H\005\210\001\001\022$\n\021tax_amount_micros\030\020 \001(\003B\004\342A\001\003H\006" +
+      "\210\001\001\022&\n\023total_amount_micros\030\021 \001(\003B\004\342A\001\003H\007" +
+      "\210\001\001\022V\n\034billable_activity_date_range\030\t \001(" +
+      "\0132*.google.ads.googleads.v13.common.Date" +
+      "RangeB\004\342A\001\003\022\'\n\024served_amount_micros\030\022 \001(" +
+      "\003B\004\342A\001\003H\010\210\001\001\022\'\n\024billed_amount_micros\030\023 \001" +
+      "(\003B\004\342A\001\003H\t\210\001\001\022-\n\032overdelivery_amount_mic" +
+      "ros\030\024 \001(\003B\004\342A\001\003H\n\210\001\001\0221\n\036invalid_activity" +
+      "_amount_micros\030\025 \001(\003B\004\342A\001\003H\013\210\001\001\022l\n\032inval" +
+      "id_activity_summaries\030\026 \003(\0132B.google.ads" +
+      ".googleads.v13.resources.Invoice.Invalid" +
+      "ActivitySummaryB\004\342A\001\003B\013\n\t_customerB\034\n\032_c" +
+      "ustomer_descriptive_nameB\021\n\017_account_bud" +
+      "getB\026\n\024_account_budget_nameB\030\n\026_purchase" +
+      "_order_numberB\031\n\027_subtotal_amount_micros" +
+      "B\024\n\022_tax_amount_microsB\026\n\024_total_amount_" +
+      "microsB\027\n\025_served_amount_microsB\027\n\025_bill" +
+      "ed_amount_microsB\035\n\033_overdelivery_amount" +
+      "_microsB!\n\037_invalid_activity_amount_micr" +
+      "os\032\207\004\n\026InvalidActivitySummary\022i\n\031origina" +
+      "l_month_of_service\030\001 \001(\0162;.google.ads.go" +
+      "ogleads.v13.enums.MonthOfYearEnum.MonthO" +
+      "fYearB\004\342A\001\003H\000\210\001\001\022+\n\030original_year_of_ser" +
+      "vice\030\002 \001(\tB\004\342A\001\003H\001\210\001\001\022&\n\023original_invoic" +
+      "e_id\030\003 \001(\tB\004\342A\001\003H\002\210\001\001\022/\n\034original_accoun" +
+      "t_budget_name\030\004 \001(\tB\004\342A\001\003H\003\210\001\001\0221\n\036origin" +
+      "al_purchase_order_number\030\005 \001(\tB\004\342A\001\003H\004\210\001" +
+      "\001\022 \n\ramount_micros\030\006 \001(\003B\004\342A\001\003H\005\210\001\001B\034\n\032_" +
+      "original_month_of_serviceB\033\n\031_original_y" +
+      "ear_of_serviceB\026\n\024_original_invoice_idB\037" +
+      "\n\035_original_account_budget_nameB!\n\037_orig" +
+      "inal_purchase_order_numberB\020\n\016_amount_mi" +
+      "cros:T\352AQ\n googleads.googleapis.com/Invo" +
+      "ice\022-customers/{customer_id}/invoices/{i" +
+      "nvoice_id}B\005\n\003_idB\020\n\016_billing_setupB\026\n\024_" +
+      "payments_account_idB\026\n\024_payments_profile" +
+      "_idB\r\n\013_issue_dateB\013\n\t_due_dateB\020\n\016_curr" +
+      "ency_codeB\031\n\027_subtotal_amount_microsB\024\n\022" +
+      "_tax_amount_microsB\026\n\024_total_amount_micr" +
+      "osB\024\n\022_corrected_invoiceB\n\n\010_pdf_urlB\376\001\n" +
+      "&com.google.ads.googleads.v13.resourcesB" +
+      "\014InvoiceProtoP\001ZKgoogle.golang.org/genpr" +
+      "oto/googleapis/ads/googleads/v13/resourc" +
+      "es;resources\242\002\003GAA\252\002\"Google.Ads.GoogleAd" +
+      "s.V13.Resources\312\002\"Google\\Ads\\GoogleAds\\V" +
+      "13\\Resources\352\002&Google::Ads::GoogleAds::V" +
+      "13::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -91,84 +91,85 @@ public final class SmartCampaignSettingServiceProto {
       "gle/api/client.proto\032\037google/api/field_b" +
       "ehavior.proto\032\031google/api/resource.proto" +
       "\032 google/protobuf/field_mask.proto\032\027goog" +
-      "le/rpc/status.proto\"m\n\035GetSmartCampaignS" +
-      "tatusRequest\022L\n\rresource_name\030\001 \001(\tB5\340A\002" +
-      "\372A/\n-googleads.googleapis.com/SmartCampa" +
-      "ignSetting\"\277\001\n\037SmartCampaignNotEligibleD" +
-      "etails\022\203\001\n\023not_eligible_reason\030\001 \001(\0162a.g" +
-      "oogle.ads.googleads.v13.enums.SmartCampa" +
-      "ignNotEligibleReasonEnum.SmartCampaignNo" +
-      "tEligibleReasonH\000\210\001\001B\026\n\024_not_eligible_re" +
-      "ason\"\222\001\n\034SmartCampaignEligibleDetails\022&\n" +
-      "\031last_impression_date_time\030\001 \001(\tH\000\210\001\001\022\032\n" +
-      "\rend_date_time\030\002 \001(\tH\001\210\001\001B\034\n\032_last_impre" +
-      "ssion_date_timeB\020\n\016_end_date_time\"P\n\032Sma" +
-      "rtCampaignPausedDetails\022\035\n\020paused_date_t" +
-      "ime\030\001 \001(\tH\000\210\001\001B\023\n\021_paused_date_time\"S\n\033S" +
-      "martCampaignRemovedDetails\022\036\n\021removed_da" +
-      "te_time\030\001 \001(\tH\000\210\001\001B\024\n\022_removed_date_time" +
-      "\"I\n\031SmartCampaignEndedDetails\022\032\n\rend_dat" +
-      "e_time\030\001 \001(\tH\000\210\001\001B\020\n\016_end_date_time\"\371\004\n\036" +
-      "GetSmartCampaignStatusResponse\022j\n\025smart_" +
-      "campaign_status\030\001 \001(\0162K.google.ads.googl" +
-      "eads.v13.enums.SmartCampaignStatusEnum.S" +
-      "martCampaignStatus\022b\n\024not_eligible_detai" +
-      "ls\030\002 \001(\0132B.google.ads.googleads.v13.serv" +
-      "ices.SmartCampaignNotEligibleDetailsH\000\022[" +
-      "\n\020eligible_details\030\003 \001(\0132?.google.ads.go" +
-      "ogleads.v13.services.SmartCampaignEligib" +
-      "leDetailsH\000\022W\n\016paused_details\030\004 \001(\0132=.go" +
-      "ogle.ads.googleads.v13.services.SmartCam" +
-      "paignPausedDetailsH\000\022Y\n\017removed_details\030" +
-      "\005 \001(\0132>.google.ads.googleads.v13.service" +
-      "s.SmartCampaignRemovedDetailsH\000\022U\n\rended" +
-      "_details\030\006 \001(\0132<.google.ads.googleads.v1" +
-      "3.services.SmartCampaignEndedDetailsH\000B\037" +
-      "\n\035smart_campaign_status_details\"\265\002\n\"Muta" +
-      "teSmartCampaignSettingsRequest\022\030\n\013custom" +
-      "er_id\030\001 \001(\tB\003\340A\002\022Y\n\noperations\030\002 \003(\0132@.g" +
+      "le/rpc/status.proto\"n\n\035GetSmartCampaignS" +
+      "tatusRequest\022M\n\rresource_name\030\001 \001(\tB6\342A\001" +
+      "\002\372A/\n-googleads.googleapis.com/SmartCamp" +
+      "aignSetting\"\277\001\n\037SmartCampaignNotEligible" +
+      "Details\022\203\001\n\023not_eligible_reason\030\001 \001(\0162a." +
+      "google.ads.googleads.v13.enums.SmartCamp" +
+      "aignNotEligibleReasonEnum.SmartCampaignN" +
+      "otEligibleReasonH\000\210\001\001B\026\n\024_not_eligible_r" +
+      "eason\"\222\001\n\034SmartCampaignEligibleDetails\022&" +
+      "\n\031last_impression_date_time\030\001 \001(\tH\000\210\001\001\022\032" +
+      "\n\rend_date_time\030\002 \001(\tH\001\210\001\001B\034\n\032_last_impr" +
+      "ession_date_timeB\020\n\016_end_date_time\"P\n\032Sm" +
+      "artCampaignPausedDetails\022\035\n\020paused_date_" +
+      "time\030\001 \001(\tH\000\210\001\001B\023\n\021_paused_date_time\"S\n\033" +
+      "SmartCampaignRemovedDetails\022\036\n\021removed_d" +
+      "ate_time\030\001 \001(\tH\000\210\001\001B\024\n\022_removed_date_tim" +
+      "e\"I\n\031SmartCampaignEndedDetails\022\032\n\rend_da" +
+      "te_time\030\001 \001(\tH\000\210\001\001B\020\n\016_end_date_time\"\371\004\n" +
+      "\036GetSmartCampaignStatusResponse\022j\n\025smart" +
+      "_campaign_status\030\001 \001(\0162K.google.ads.goog" +
+      "leads.v13.enums.SmartCampaignStatusEnum." +
+      "SmartCampaignStatus\022b\n\024not_eligible_deta" +
+      "ils\030\002 \001(\0132B.google.ads.googleads.v13.ser" +
+      "vices.SmartCampaignNotEligibleDetailsH\000\022" +
+      "[\n\020eligible_details\030\003 \001(\0132?.google.ads.g" +
+      "oogleads.v13.services.SmartCampaignEligi" +
+      "bleDetailsH\000\022W\n\016paused_details\030\004 \001(\0132=.g" +
       "oogle.ads.googleads.v13.services.SmartCa" +
-      "mpaignSettingOperationB\003\340A\002\022\027\n\017partial_f" +
-      "ailure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\022j\n\025r" +
-      "esponse_content_type\030\005 \001(\0162K.google.ads." +
-      "googleads.v13.enums.ResponseContentTypeE" +
-      "num.ResponseContentType\"\232\001\n\035SmartCampaig" +
-      "nSettingOperation\022H\n\006update\030\001 \001(\01328.goog" +
-      "le.ads.googleads.v13.resources.SmartCamp" +
-      "aignSetting\022/\n\013update_mask\030\002 \001(\0132\032.googl" +
-      "e.protobuf.FieldMask\"\256\001\n#MutateSmartCamp" +
-      "aignSettingsResponse\0221\n\025partial_failure_" +
-      "error\030\001 \001(\0132\022.google.rpc.Status\022T\n\007resul" +
-      "ts\030\002 \003(\0132C.google.ads.googleads.v13.serv" +
-      "ices.MutateSmartCampaignSettingResult\"\307\001" +
-      "\n MutateSmartCampaignSettingResult\022I\n\rre" +
-      "source_name\030\001 \001(\tB2\372A/\n-googleads.google" +
-      "apis.com/SmartCampaignSetting\022X\n\026smart_c" +
-      "ampaign_setting\030\002 \001(\01328.google.ads.googl" +
-      "eads.v13.resources.SmartCampaignSetting2" +
-      "\375\004\n\033SmartCampaignSettingService\022\206\002\n\026GetS" +
-      "martCampaignStatus\022@.google.ads.googlead" +
-      "s.v13.services.GetSmartCampaignStatusReq" +
-      "uest\032A.google.ads.googleads.v13.services" +
-      ".GetSmartCampaignStatusResponse\"g\202\323\344\223\002Q\022" +
-      "O/v13/{resource_name=customers/*/smartCa" +
-      "mpaignSettings/*}:getSmartCampaignStatus" +
-      "\332A\rresource_name\022\215\002\n\033MutateSmartCampaign" +
-      "Settings\022E.google.ads.googleads.v13.serv" +
-      "ices.MutateSmartCampaignSettingsRequest\032" +
-      "F.google.ads.googleads.v13.services.Muta" +
-      "teSmartCampaignSettingsResponse\"_\202\323\344\223\002@\"" +
-      ";/v13/customers/{customer_id=*}/smartCam" +
-      "paignSettings:mutate:\001*\332A\026customer_id,op" +
-      "erations\032E\312A\030googleads.googleapis.com\322A\'" +
-      "https://www.googleapis.com/auth/adwordsB" +
-      "\214\002\n%com.google.ads.googleads.v13.service" +
-      "sB SmartCampaignSettingServiceProtoP\001ZIg" +
-      "oogle.golang.org/genproto/googleapis/ads" +
-      "/googleads/v13/services;services\242\002\003GAA\252\002" +
-      "!Google.Ads.GoogleAds.V13.Services\312\002!Goo" +
-      "gle\\Ads\\GoogleAds\\V13\\Services\352\002%Google:" +
-      ":Ads::GoogleAds::V13::Servicesb\006proto3"
+      "mpaignPausedDetailsH\000\022Y\n\017removed_details" +
+      "\030\005 \001(\0132>.google.ads.googleads.v13.servic" +
+      "es.SmartCampaignRemovedDetailsH\000\022U\n\rende" +
+      "d_details\030\006 \001(\0132<.google.ads.googleads.v" +
+      "13.services.SmartCampaignEndedDetailsH\000B" +
+      "\037\n\035smart_campaign_status_details\"\267\002\n\"Mut" +
+      "ateSmartCampaignSettingsRequest\022\031\n\013custo" +
+      "mer_id\030\001 \001(\tB\004\342A\001\002\022Z\n\noperations\030\002 \003(\0132@" +
+      ".google.ads.googleads.v13.services.Smart" +
+      "CampaignSettingOperationB\004\342A\001\002\022\027\n\017partia" +
+      "l_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\022j" +
+      "\n\025response_content_type\030\005 \001(\0162K.google.a" +
+      "ds.googleads.v13.enums.ResponseContentTy" +
+      "peEnum.ResponseContentType\"\232\001\n\035SmartCamp" +
+      "aignSettingOperation\022H\n\006update\030\001 \001(\01328.g" +
+      "oogle.ads.googleads.v13.resources.SmartC" +
+      "ampaignSetting\022/\n\013update_mask\030\002 \001(\0132\032.go" +
+      "ogle.protobuf.FieldMask\"\256\001\n#MutateSmartC" +
+      "ampaignSettingsResponse\0221\n\025partial_failu" +
+      "re_error\030\001 \001(\0132\022.google.rpc.Status\022T\n\007re" +
+      "sults\030\002 \003(\0132C.google.ads.googleads.v13.s" +
+      "ervices.MutateSmartCampaignSettingResult" +
+      "\"\307\001\n MutateSmartCampaignSettingResult\022I\n" +
+      "\rresource_name\030\001 \001(\tB2\372A/\n-googleads.goo" +
+      "gleapis.com/SmartCampaignSetting\022X\n\026smar" +
+      "t_campaign_setting\030\002 \001(\01328.google.ads.go" +
+      "ogleads.v13.resources.SmartCampaignSetti" +
+      "ng2\375\004\n\033SmartCampaignSettingService\022\206\002\n\026G" +
+      "etSmartCampaignStatus\022@.google.ads.googl" +
+      "eads.v13.services.GetSmartCampaignStatus" +
+      "Request\032A.google.ads.googleads.v13.servi" +
+      "ces.GetSmartCampaignStatusResponse\"g\332A\rr" +
+      "esource_name\202\323\344\223\002Q\022O/v13/{resource_name=" +
+      "customers/*/smartCampaignSettings/*}:get" +
+      "SmartCampaignStatus\022\215\002\n\033MutateSmartCampa" +
+      "ignSettings\022E.google.ads.googleads.v13.s" +
+      "ervices.MutateSmartCampaignSettingsReque" +
+      "st\032F.google.ads.googleads.v13.services.M" +
+      "utateSmartCampaignSettingsResponse\"_\332A\026c" +
+      "ustomer_id,operations\202\323\344\223\002@\";/v13/custom" +
+      "ers/{customer_id=*}/smartCampaignSetting" +
+      "s:mutate:\001*\032E\312A\030googleads.googleapis.com" +
+      "\322A\'https://www.googleapis.com/auth/adwor" +
+      "dsB\214\002\n%com.google.ads.googleads.v13.serv" +
+      "icesB SmartCampaignSettingServiceProtoP\001" +
+      "ZIgoogle.golang.org/genproto/googleapis/" +
+      "ads/googleads/v13/services;services\242\002\003GA" +
+      "A\252\002!Google.Ads.GoogleAds.V13.Services\312\002!" +
+      "Google\\Ads\\GoogleAds\\V13\\Services\352\002%Goog" +
+      "le::Ads::GoogleAds::V13::Servicesb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

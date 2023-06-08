@@ -11,6 +11,7 @@ public interface AdGroupFeedOrBuilder extends
    * <pre>
    * Immutable. The resource name of the ad group feed.
    * Ad group feed resource names have the form:
+   *
    * `customers/{customer_id}/adGroupFeeds/{ad_group_id}~{feed_id}
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface AdGroupFeedOrBuilder extends
    * <pre>
    * Immutable. The resource name of the ad group feed.
    * Ad group feed resource names have the form:
+   *
    * `customers/{customer_id}/adGroupFeeds/{ad_group_id}~{feed_id}
    * </pre>
    *

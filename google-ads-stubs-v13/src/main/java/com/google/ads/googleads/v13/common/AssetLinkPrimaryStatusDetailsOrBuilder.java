@@ -90,5 +90,5 @@ public interface AssetLinkPrimaryStatusDetailsOrBuilder extends
    */
   com.google.ads.googleads.v13.common.AssetDisapprovedOrBuilder getAssetDisapprovedOrBuilder();
 
-  public com.google.ads.googleads.v13.common.AssetLinkPrimaryStatusDetails.DetailsCase getDetailsCase();
+  com.google.ads.googleads.v13.common.AssetLinkPrimaryStatusDetails.DetailsCase getDetailsCase();
 }

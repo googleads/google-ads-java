@@ -11,6 +11,7 @@ public interface CustomerFeedOrBuilder extends
    * <pre>
    * Immutable. The resource name of the customer feed.
    * Customer feed resource names have the form:
+   *
    * `customers/{customer_id}/customerFeeds/{feed_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface CustomerFeedOrBuilder extends
    * <pre>
    * Immutable. The resource name of the customer feed.
    * Customer feed resource names have the form:
+   *
    * `customers/{customer_id}/customerFeeds/{feed_id}`
    * </pre>
    *

@@ -29,11 +29,6 @@ private static final long serialVersionUID = 0L;
     return new HistoricalMetricsOptions();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.common.KeywordPlanCommonProto.internal_static_google_ads_googleads_v12_common_HistoricalMetricsOptions_descriptor;
@@ -52,11 +47,11 @@ private static final long serialVersionUID = 0L;
   private com.google.ads.googleads.v12.common.YearMonthRange yearMonthRange_;
   /**
    * <pre>
-   * The year month range for historical metrics. If not specified the searches
-   * will be returned for past 12 months.
-   * Searches data is available for the past 4 years. If the search volume is
+   * The year month range for historical metrics. If not specified, metrics
+   * for the past 12 months are returned.
+   * Search metrics are available for the past 4 years. If the search volume is
    * not available for the entire year_month_range provided, the subset of the
-   * year month range for which search volume is available will be returned.
+   * year month range for which search volume is available are returned.
    * </pre>
    *
    * <code>optional .google.ads.googleads.v12.common.YearMonthRange year_month_range = 1;</code>
@@ -68,11 +63,11 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The year month range for historical metrics. If not specified the searches
-   * will be returned for past 12 months.
-   * Searches data is available for the past 4 years. If the search volume is
+   * The year month range for historical metrics. If not specified, metrics
+   * for the past 12 months are returned.
+   * Search metrics are available for the past 4 years. If the search volume is
    * not available for the entire year_month_range provided, the subset of the
-   * year month range for which search volume is available will be returned.
+   * year month range for which search volume is available are returned.
    * </pre>
    *
    * <code>optional .google.ads.googleads.v12.common.YearMonthRange year_month_range = 1;</code>
@@ -84,11 +79,11 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The year month range for historical metrics. If not specified the searches
-   * will be returned for past 12 months.
-   * Searches data is available for the past 4 years. If the search volume is
+   * The year month range for historical metrics. If not specified, metrics
+   * for the past 12 months are returned.
+   * Search metrics are available for the past 4 years. If the search volume is
    * not available for the entire year_month_range provided, the subset of the
-   * year month range for which search volume is available will be returned.
+   * year month range for which search volume is available are returned.
    * </pre>
    *
    * <code>optional .google.ads.googleads.v12.common.YearMonthRange year_month_range = 1;</code>
@@ -103,10 +98,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Indicates whether to include average cost per click value.
-   * Average CPC is a legacy value that will be removed and replaced in the
-   * future, and as such we are including it as an optioanl value so clients
-   * only use it when strictly necessary and to better track clients that use
-   * this value.
+   * Average CPC is provided only for legacy support.
    * </pre>
    *
    * <code>bool include_average_cpc = 2;</code>
@@ -243,11 +235,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.common.HistoricalMetricsOptions parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.common.HistoricalMetricsOptions parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -495,11 +489,11 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.YearMonthRange, com.google.ads.googleads.v12.common.YearMonthRange.Builder, com.google.ads.googleads.v12.common.YearMonthRangeOrBuilder> yearMonthRangeBuilder_;
     /**
      * <pre>
-     * The year month range for historical metrics. If not specified the searches
-     * will be returned for past 12 months.
-     * Searches data is available for the past 4 years. If the search volume is
+     * The year month range for historical metrics. If not specified, metrics
+     * for the past 12 months are returned.
+     * Search metrics are available for the past 4 years. If the search volume is
      * not available for the entire year_month_range provided, the subset of the
-     * year month range for which search volume is available will be returned.
+     * year month range for which search volume is available are returned.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v12.common.YearMonthRange year_month_range = 1;</code>
@@ -510,11 +504,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The year month range for historical metrics. If not specified the searches
-     * will be returned for past 12 months.
-     * Searches data is available for the past 4 years. If the search volume is
+     * The year month range for historical metrics. If not specified, metrics
+     * for the past 12 months are returned.
+     * Search metrics are available for the past 4 years. If the search volume is
      * not available for the entire year_month_range provided, the subset of the
-     * year month range for which search volume is available will be returned.
+     * year month range for which search volume is available are returned.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v12.common.YearMonthRange year_month_range = 1;</code>
@@ -529,11 +523,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The year month range for historical metrics. If not specified the searches
-     * will be returned for past 12 months.
-     * Searches data is available for the past 4 years. If the search volume is
+     * The year month range for historical metrics. If not specified, metrics
+     * for the past 12 months are returned.
+     * Search metrics are available for the past 4 years. If the search volume is
      * not available for the entire year_month_range provided, the subset of the
-     * year month range for which search volume is available will be returned.
+     * year month range for which search volume is available are returned.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v12.common.YearMonthRange year_month_range = 1;</code>
@@ -553,11 +547,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The year month range for historical metrics. If not specified the searches
-     * will be returned for past 12 months.
-     * Searches data is available for the past 4 years. If the search volume is
+     * The year month range for historical metrics. If not specified, metrics
+     * for the past 12 months are returned.
+     * Search metrics are available for the past 4 years. If the search volume is
      * not available for the entire year_month_range provided, the subset of the
-     * year month range for which search volume is available will be returned.
+     * year month range for which search volume is available are returned.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v12.common.YearMonthRange year_month_range = 1;</code>
@@ -575,11 +569,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The year month range for historical metrics. If not specified the searches
-     * will be returned for past 12 months.
-     * Searches data is available for the past 4 years. If the search volume is
+     * The year month range for historical metrics. If not specified, metrics
+     * for the past 12 months are returned.
+     * Search metrics are available for the past 4 years. If the search volume is
      * not available for the entire year_month_range provided, the subset of the
-     * year month range for which search volume is available will be returned.
+     * year month range for which search volume is available are returned.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v12.common.YearMonthRange year_month_range = 1;</code>
@@ -602,11 +596,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The year month range for historical metrics. If not specified the searches
-     * will be returned for past 12 months.
-     * Searches data is available for the past 4 years. If the search volume is
+     * The year month range for historical metrics. If not specified, metrics
+     * for the past 12 months are returned.
+     * Search metrics are available for the past 4 years. If the search volume is
      * not available for the entire year_month_range provided, the subset of the
-     * year month range for which search volume is available will be returned.
+     * year month range for which search volume is available are returned.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v12.common.YearMonthRange year_month_range = 1;</code>
@@ -623,11 +617,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The year month range for historical metrics. If not specified the searches
-     * will be returned for past 12 months.
-     * Searches data is available for the past 4 years. If the search volume is
+     * The year month range for historical metrics. If not specified, metrics
+     * for the past 12 months are returned.
+     * Search metrics are available for the past 4 years. If the search volume is
      * not available for the entire year_month_range provided, the subset of the
-     * year month range for which search volume is available will be returned.
+     * year month range for which search volume is available are returned.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v12.common.YearMonthRange year_month_range = 1;</code>
@@ -639,11 +633,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The year month range for historical metrics. If not specified the searches
-     * will be returned for past 12 months.
-     * Searches data is available for the past 4 years. If the search volume is
+     * The year month range for historical metrics. If not specified, metrics
+     * for the past 12 months are returned.
+     * Search metrics are available for the past 4 years. If the search volume is
      * not available for the entire year_month_range provided, the subset of the
-     * year month range for which search volume is available will be returned.
+     * year month range for which search volume is available are returned.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v12.common.YearMonthRange year_month_range = 1;</code>
@@ -658,11 +652,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The year month range for historical metrics. If not specified the searches
-     * will be returned for past 12 months.
-     * Searches data is available for the past 4 years. If the search volume is
+     * The year month range for historical metrics. If not specified, metrics
+     * for the past 12 months are returned.
+     * Search metrics are available for the past 4 years. If the search volume is
      * not available for the entire year_month_range provided, the subset of the
-     * year month range for which search volume is available will be returned.
+     * year month range for which search volume is available are returned.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v12.common.YearMonthRange year_month_range = 1;</code>
@@ -685,10 +679,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Indicates whether to include average cost per click value.
-     * Average CPC is a legacy value that will be removed and replaced in the
-     * future, and as such we are including it as an optioanl value so clients
-     * only use it when strictly necessary and to better track clients that use
-     * this value.
+     * Average CPC is provided only for legacy support.
      * </pre>
      *
      * <code>bool include_average_cpc = 2;</code>
@@ -701,10 +692,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Indicates whether to include average cost per click value.
-     * Average CPC is a legacy value that will be removed and replaced in the
-     * future, and as such we are including it as an optioanl value so clients
-     * only use it when strictly necessary and to better track clients that use
-     * this value.
+     * Average CPC is provided only for legacy support.
      * </pre>
      *
      * <code>bool include_average_cpc = 2;</code>
@@ -712,7 +700,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIncludeAverageCpc(boolean value) {
-      
+
       includeAverageCpc_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -721,10 +709,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Indicates whether to include average cost per click value.
-     * Average CPC is a legacy value that will be removed and replaced in the
-     * future, and as such we are including it as an optioanl value so clients
-     * only use it when strictly necessary and to better track clients that use
-     * this value.
+     * Average CPC is provided only for legacy support.
      * </pre>
      *
      * <code>bool include_average_cpc = 2;</code>

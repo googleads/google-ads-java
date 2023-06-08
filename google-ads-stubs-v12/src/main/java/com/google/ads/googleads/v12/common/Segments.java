@@ -103,11 +103,6 @@ private static final long serialVersionUID = 0L;
     return new Segments();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.common.SegmentsProto.internal_static_google_ads_googleads_v12_common_Segments_descriptor;
@@ -5453,11 +5448,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.common.Segments parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.common.Segments parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7747,7 +7744,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setConversionAdjustment(boolean value) {
-      
+
       conversionAdjustment_ = value;
       bitField0_ |= 0x00000100;
       onChanged();
@@ -9606,7 +9603,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHotelBookingWindowDays(long value) {
-      
+
       hotelBookingWindowDays_ = value;
       bitField0_ |= 0x10000000;
       onChanged();
@@ -9662,7 +9659,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHotelCenterId(long value) {
-      
+
       hotelCenterId_ = value;
       bitField0_ |= 0x20000000;
       onChanged();
@@ -9997,7 +9994,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHotelClass(int value) {
-      
+
       hotelClass_ = value;
       bitField1_ |= 0x00000002;
       onChanged();
@@ -10229,7 +10226,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHotelLengthOfStay(int value) {
-      
+
       hotelLengthOfStay_ = value;
       bitField1_ |= 0x00000010;
       onChanged();
@@ -10637,7 +10634,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHour(int value) {
-      
+
       hour_ = value;
       bitField1_ |= 0x00000200;
       onChanged();
@@ -10699,7 +10696,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setInteractionOnThisExtension(boolean value) {
-      
+
       interactionOnThisExtension_ = value;
       bitField1_ |= 0x00000400;
       onChanged();
@@ -11270,7 +11267,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setProductAggregatorId(long value) {
-      
+
       productAggregatorId_ = value;
       bitField1_ |= 0x00010000;
       onChanged();
@@ -12993,7 +12990,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setProductMerchantId(long value) {
-      
+
       productMerchantId_ = value;
       bitField2_ |= 0x00000004;
       onChanged();
@@ -14492,7 +14489,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setYear(int value) {
-      
+
       year_ = value;
       bitField2_ |= 0x00040000;
       onChanged();
@@ -14554,7 +14551,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSkAdNetworkConversionValue(long value) {
-      
+
       skAdNetworkConversionValue_ = value;
       bitField2_ |= 0x00080000;
       onChanged();

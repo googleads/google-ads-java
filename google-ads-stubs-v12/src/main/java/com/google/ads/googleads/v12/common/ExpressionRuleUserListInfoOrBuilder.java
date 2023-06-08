@@ -13,6 +13,7 @@ public interface ExpressionRuleUserListInfoOrBuilder extends
    * rule item groups and each rule item group consists of a list of rule items.
    * All the rule item groups are ORed or ANDed together for evaluation based on
    * rule.rule_type.
+   *
    * Required for creating an expression rule user list.
    * </pre>
    *
@@ -26,6 +27,7 @@ public interface ExpressionRuleUserListInfoOrBuilder extends
    * rule item groups and each rule item group consists of a list of rule items.
    * All the rule item groups are ORed or ANDed together for evaluation based on
    * rule.rule_type.
+   *
    * Required for creating an expression rule user list.
    * </pre>
    *
@@ -39,6 +41,7 @@ public interface ExpressionRuleUserListInfoOrBuilder extends
    * rule item groups and each rule item group consists of a list of rule items.
    * All the rule item groups are ORed or ANDed together for evaluation based on
    * rule.rule_type.
+   *
    * Required for creating an expression rule user list.
    * </pre>
    *

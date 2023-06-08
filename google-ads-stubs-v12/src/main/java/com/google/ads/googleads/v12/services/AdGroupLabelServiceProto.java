@@ -50,37 +50,37 @@ public final class AdGroupLabelServiceProto {
       "ogle/api/annotations.proto\032\027google/api/c" +
       "lient.proto\032\037google/api/field_behavior.p" +
       "roto\032\031google/api/resource.proto\032\027google/" +
-      "rpc/status.proto\"\271\001\n\032MutateAdGroupLabels" +
-      "Request\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022Q\n\nope" +
-      "rations\030\002 \003(\01328.google.ads.googleads.v12" +
-      ".services.AdGroupLabelOperationB\003\340A\002\022\027\n\017" +
-      "partial_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004" +
-      " \001(\010\"\246\001\n\025AdGroupLabelOperation\022B\n\006create" +
-      "\030\001 \001(\01320.google.ads.googleads.v12.resour" +
-      "ces.AdGroupLabelH\000\022<\n\006remove\030\002 \001(\tB*\372A\'\n" +
-      "%googleads.googleapis.com/AdGroupLabelH\000" +
-      "B\013\n\toperation\"\236\001\n\033MutateAdGroupLabelsRes" +
-      "ponse\0221\n\025partial_failure_error\030\003 \001(\0132\022.g" +
-      "oogle.rpc.Status\022L\n\007results\030\002 \003(\0132;.goog" +
-      "le.ads.googleads.v12.services.MutateAdGr" +
-      "oupLabelResult\"]\n\030MutateAdGroupLabelResu" +
-      "lt\022A\n\rresource_name\030\001 \001(\tB*\372A\'\n%googlead" +
-      "s.googleapis.com/AdGroupLabel2\314\002\n\023AdGrou" +
-      "pLabelService\022\355\001\n\023MutateAdGroupLabels\022=." +
-      "google.ads.googleads.v12.services.Mutate" +
-      "AdGroupLabelsRequest\032>.google.ads.google" +
-      "ads.v12.services.MutateAdGroupLabelsResp" +
-      "onse\"W\202\323\344\223\0028\"3/v12/customers/{customer_i" +
-      "d=*}/adGroupLabels:mutate:\001*\332A\026customer_" +
-      "id,operations\032E\312A\030googleads.googleapis.c" +
-      "om\322A\'https://www.googleapis.com/auth/adw" +
-      "ordsB\204\002\n%com.google.ads.googleads.v12.se" +
-      "rvicesB\030AdGroupLabelServiceProtoP\001ZIgoog" +
-      "le.golang.org/genproto/googleapis/ads/go" +
-      "ogleads/v12/services;services\242\002\003GAA\252\002!Go" +
-      "ogle.Ads.GoogleAds.V12.Services\312\002!Google" +
-      "\\Ads\\GoogleAds\\V12\\Services\352\002%Google::Ad" +
-      "s::GoogleAds::V12::Servicesb\006proto3"
+      "rpc/status.proto\"\273\001\n\032MutateAdGroupLabels" +
+      "Request\022\031\n\013customer_id\030\001 \001(\tB\004\342A\001\002\022R\n\nop" +
+      "erations\030\002 \003(\01328.google.ads.googleads.v1" +
+      "2.services.AdGroupLabelOperationB\004\342A\001\002\022\027" +
+      "\n\017partial_failure\030\003 \001(\010\022\025\n\rvalidate_only" +
+      "\030\004 \001(\010\"\246\001\n\025AdGroupLabelOperation\022B\n\006crea" +
+      "te\030\001 \001(\01320.google.ads.googleads.v12.reso" +
+      "urces.AdGroupLabelH\000\022<\n\006remove\030\002 \001(\tB*\372A" +
+      "\'\n%googleads.googleapis.com/AdGroupLabel" +
+      "H\000B\013\n\toperation\"\236\001\n\033MutateAdGroupLabelsR" +
+      "esponse\0221\n\025partial_failure_error\030\003 \001(\0132\022" +
+      ".google.rpc.Status\022L\n\007results\030\002 \003(\0132;.go" +
+      "ogle.ads.googleads.v12.services.MutateAd" +
+      "GroupLabelResult\"]\n\030MutateAdGroupLabelRe" +
+      "sult\022A\n\rresource_name\030\001 \001(\tB*\372A\'\n%google" +
+      "ads.googleapis.com/AdGroupLabel2\314\002\n\023AdGr" +
+      "oupLabelService\022\355\001\n\023MutateAdGroupLabels\022" +
+      "=.google.ads.googleads.v12.services.Muta" +
+      "teAdGroupLabelsRequest\032>.google.ads.goog" +
+      "leads.v12.services.MutateAdGroupLabelsRe" +
+      "sponse\"W\332A\026customer_id,operations\202\323\344\223\0028\"" +
+      "3/v12/customers/{customer_id=*}/adGroupL" +
+      "abels:mutate:\001*\032E\312A\030googleads.googleapis" +
+      ".com\322A\'https://www.googleapis.com/auth/a" +
+      "dwordsB\204\002\n%com.google.ads.googleads.v12." +
+      "servicesB\030AdGroupLabelServiceProtoP\001ZIgo" +
+      "ogle.golang.org/genproto/googleapis/ads/" +
+      "googleads/v12/services;services\242\002\003GAA\252\002!" +
+      "Google.Ads.GoogleAds.V12.Services\312\002!Goog" +
+      "le\\Ads\\GoogleAds\\V12\\Services\352\002%Google::" +
+      "Ads::GoogleAds::V12::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

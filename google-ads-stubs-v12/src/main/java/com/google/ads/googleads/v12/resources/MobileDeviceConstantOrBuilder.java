@@ -11,6 +11,7 @@ public interface MobileDeviceConstantOrBuilder extends
    * <pre>
    * Output only. The resource name of the mobile device constant.
    * Mobile device constant resource names have the form:
+   *
    * `mobileDeviceConstants/{criterion_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface MobileDeviceConstantOrBuilder extends
    * <pre>
    * Output only. The resource name of the mobile device constant.
    * Mobile device constant resource names have the form:
+   *
    * `mobileDeviceConstants/{criterion_id}`
    * </pre>
    *

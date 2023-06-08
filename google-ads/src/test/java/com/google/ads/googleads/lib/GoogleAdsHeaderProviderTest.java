@@ -22,6 +22,7 @@ import static org.junit.Assert.fail;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
@@ -112,7 +113,7 @@ public class GoogleAdsHeaderProviderTest {
     assertValueMatchesVersionPattern("gccl/", headerValue);
   }
 
-  @Test
+  @Ignore("As of v3.22.0, protobuf-java jar does not contain version information")
   public void includes_protobufLibraryVersion() {
     GoogleAdsHeaderProvider provider =
         GoogleAdsHeaderProvider.newBuilder().setDeveloperToken("test").build();

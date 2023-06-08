@@ -11,6 +11,7 @@ public interface MerchantCenterLinkOrBuilder extends
    * <pre>
    * Immutable. The resource name of the merchant center link.
    * Merchant center link resource names have the form:
+   *
    * `customers/{customer_id}/merchantCenterLinks/{merchant_center_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface MerchantCenterLinkOrBuilder extends
    * <pre>
    * Immutable. The resource name of the merchant center link.
    * Merchant center link resource names have the form:
+   *
    * `customers/{customer_id}/merchantCenterLinks/{merchant_center_id}`
    * </pre>
    *

@@ -30,6 +30,7 @@ public interface AddBatchJobOperationsRequestOrBuilder extends
   /**
    * <pre>
    * A token used to enforce sequencing.
+   *
    * The first AddBatchJobOperations request for a batch job should not set
    * sequence_token. Subsequent requests must set sequence_token to the value of
    * next_sequence_token received in the previous AddBatchJobOperations
@@ -43,6 +44,7 @@ public interface AddBatchJobOperationsRequestOrBuilder extends
   /**
    * <pre>
    * A token used to enforce sequencing.
+   *
    * The first AddBatchJobOperations request for a batch job should not set
    * sequence_token. Subsequent requests must set sequence_token to the value of
    * next_sequence_token received in the previous AddBatchJobOperations
@@ -58,6 +60,7 @@ public interface AddBatchJobOperationsRequestOrBuilder extends
   /**
    * <pre>
    * Required. The list of mutates being added.
+   *
    * Operations can use negative integers as temp ids to signify dependencies
    * between entities created in this batch job. For example, a customer with
    * id = 1234 can create a campaign and an ad group in that same campaign by
@@ -74,6 +77,7 @@ public interface AddBatchJobOperationsRequestOrBuilder extends
   /**
    * <pre>
    * Required. The list of mutates being added.
+   *
    * Operations can use negative integers as temp ids to signify dependencies
    * between entities created in this batch job. For example, a customer with
    * id = 1234 can create a campaign and an ad group in that same campaign by
@@ -89,6 +93,7 @@ public interface AddBatchJobOperationsRequestOrBuilder extends
   /**
    * <pre>
    * Required. The list of mutates being added.
+   *
    * Operations can use negative integers as temp ids to signify dependencies
    * between entities created in this batch job. For example, a customer with
    * id = 1234 can create a campaign and an ad group in that same campaign by
@@ -104,6 +109,7 @@ public interface AddBatchJobOperationsRequestOrBuilder extends
   /**
    * <pre>
    * Required. The list of mutates being added.
+   *
    * Operations can use negative integers as temp ids to signify dependencies
    * between entities created in this batch job. For example, a customer with
    * id = 1234 can create a campaign and an ad group in that same campaign by
@@ -120,6 +126,7 @@ public interface AddBatchJobOperationsRequestOrBuilder extends
   /**
    * <pre>
    * Required. The list of mutates being added.
+   *
    * Operations can use negative integers as temp ids to signify dependencies
    * between entities created in this batch job. For example, a customer with
    * id = 1234 can create a campaign and an ad group in that same campaign by

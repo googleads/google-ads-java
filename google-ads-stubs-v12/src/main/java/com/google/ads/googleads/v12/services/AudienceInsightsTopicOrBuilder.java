@@ -61,5 +61,5 @@ public interface AudienceInsightsTopicOrBuilder extends
    */
   com.google.ads.googleads.v12.services.AudienceInsightsCategoryOrBuilder getCategoryOrBuilder();
 
-  public com.google.ads.googleads.v12.services.AudienceInsightsTopic.TopicCase getTopicCase();
+  com.google.ads.googleads.v12.services.AudienceInsightsTopic.TopicCase getTopicCase();
 }

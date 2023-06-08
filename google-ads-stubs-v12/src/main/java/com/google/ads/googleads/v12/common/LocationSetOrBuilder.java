@@ -115,5 +115,5 @@ public interface LocationSetOrBuilder extends
    */
   com.google.ads.googleads.v12.common.MapsLocationSetOrBuilder getMapsLocationSetOrBuilder();
 
-  public com.google.ads.googleads.v12.common.LocationSet.SourceCase getSourceCase();
+  com.google.ads.googleads.v12.common.LocationSet.SourceCase getSourceCase();
 }

@@ -38,6 +38,7 @@ public interface BatchJobOperationOrBuilder extends
    * <pre>
    * Remove operation: The batch job must not have been run. A resource name
    * for the removed batch job is expected, in this format:
+   *
    * `customers/{customer_id}/batchJobs/{batch_job_id}`
    * </pre>
    *
@@ -49,6 +50,7 @@ public interface BatchJobOperationOrBuilder extends
    * <pre>
    * Remove operation: The batch job must not have been run. A resource name
    * for the removed batch job is expected, in this format:
+   *
    * `customers/{customer_id}/batchJobs/{batch_job_id}`
    * </pre>
    *
@@ -60,6 +62,7 @@ public interface BatchJobOperationOrBuilder extends
    * <pre>
    * Remove operation: The batch job must not have been run. A resource name
    * for the removed batch job is expected, in this format:
+   *
    * `customers/{customer_id}/batchJobs/{batch_job_id}`
    * </pre>
    *
@@ -69,5 +72,5 @@ public interface BatchJobOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v12.services.BatchJobOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v12.services.BatchJobOperation.OperationCase getOperationCase();
 }

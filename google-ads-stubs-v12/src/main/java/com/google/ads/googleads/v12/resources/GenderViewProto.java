@@ -31,19 +31,19 @@ public final class GenderViewProto {
       "\n4google/ads/googleads/v12/resources/gen" +
       "der_view.proto\022\"google.ads.googleads.v12" +
       ".resources\032\037google/api/field_behavior.pr" +
-      "oto\032\031google/api/resource.proto\"\274\001\n\nGende" +
-      "rView\022B\n\rresource_name\030\001 \001(\tB+\340A\003\372A%\n#go" +
-      "ogleads.googleapis.com/GenderView:j\352Ag\n#" +
-      "googleads.googleapis.com/GenderView\022@cus" +
-      "tomers/{customer_id}/genderViews/{ad_gro" +
-      "up_id}~{criterion_id}B\201\002\n&com.google.ads" +
-      ".googleads.v12.resourcesB\017GenderViewProt" +
-      "oP\001ZKgoogle.golang.org/genproto/googleap" +
-      "is/ads/googleads/v12/resources;resources" +
-      "\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V12.Resour" +
-      "ces\312\002\"Google\\Ads\\GoogleAds\\V12\\Resources" +
-      "\352\002&Google::Ads::GoogleAds::V12::Resource" +
-      "sb\006proto3"
+      "oto\032\031google/api/resource.proto\"\275\001\n\nGende" +
+      "rView\022C\n\rresource_name\030\001 \001(\tB,\342A\001\003\372A%\n#g" +
+      "oogleads.googleapis.com/GenderView:j\352Ag\n" +
+      "#googleads.googleapis.com/GenderView\022@cu" +
+      "stomers/{customer_id}/genderViews/{ad_gr" +
+      "oup_id}~{criterion_id}B\201\002\n&com.google.ad" +
+      "s.googleads.v12.resourcesB\017GenderViewPro" +
+      "toP\001ZKgoogle.golang.org/genproto/googlea" +
+      "pis/ads/googleads/v12/resources;resource" +
+      "s\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V12.Resou" +
+      "rces\312\002\"Google\\Ads\\GoogleAds\\V12\\Resource" +
+      "s\352\002&Google::Ads::GoogleAds::V12::Resourc" +
+      "esb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -31,19 +31,19 @@ public final class HotelGroupViewProto {
       "\n9google/ads/googleads/v12/resources/hot" +
       "el_group_view.proto\022\"google.ads.googlead" +
       "s.v12.resources\032\037google/api/field_behavi" +
-      "or.proto\032\031google/api/resource.proto\"\314\001\n\016" +
-      "HotelGroupView\022F\n\rresource_name\030\001 \001(\tB/\340" +
-      "A\003\372A)\n\'googleads.googleapis.com/HotelGro" +
-      "upView:r\352Ao\n\'googleads.googleapis.com/Ho" +
-      "telGroupView\022Dcustomers/{customer_id}/ho" +
-      "telGroupViews/{ad_group_id}~{criterion_i" +
-      "d}B\205\002\n&com.google.ads.googleads.v12.reso" +
-      "urcesB\023HotelGroupViewProtoP\001ZKgoogle.gol" +
-      "ang.org/genproto/googleapis/ads/googlead" +
-      "s/v12/resources;resources\242\002\003GAA\252\002\"Google" +
-      ".Ads.GoogleAds.V12.Resources\312\002\"Google\\Ad" +
-      "s\\GoogleAds\\V12\\Resources\352\002&Google::Ads:" +
-      ":GoogleAds::V12::Resourcesb\006proto3"
+      "or.proto\032\031google/api/resource.proto\"\315\001\n\016" +
+      "HotelGroupView\022G\n\rresource_name\030\001 \001(\tB0\342" +
+      "A\001\003\372A)\n\'googleads.googleapis.com/HotelGr" +
+      "oupView:r\352Ao\n\'googleads.googleapis.com/H" +
+      "otelGroupView\022Dcustomers/{customer_id}/h" +
+      "otelGroupViews/{ad_group_id}~{criterion_" +
+      "id}B\205\002\n&com.google.ads.googleads.v12.res" +
+      "ourcesB\023HotelGroupViewProtoP\001ZKgoogle.go" +
+      "lang.org/genproto/googleapis/ads/googlea" +
+      "ds/v12/resources;resources\242\002\003GAA\252\002\"Googl" +
+      "e.Ads.GoogleAds.V12.Resources\312\002\"Google\\A" +
+      "ds\\GoogleAds\\V12\\Resources\352\002&Google::Ads" +
+      "::GoogleAds::V12::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

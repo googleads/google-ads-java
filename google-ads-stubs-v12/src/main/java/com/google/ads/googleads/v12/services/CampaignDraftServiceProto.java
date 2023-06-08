@@ -67,69 +67,70 @@ public final class CampaignDraftServiceProto {
       ".proto\032\027google/api/client.proto\032\037google/" +
       "api/field_behavior.proto\032\031google/api/res" +
       "ource.proto\032#google/longrunning/operatio" +
-      "ns.proto\032 google/protobuf/field_mask.pro" +
-      "to\032\027google/rpc/status.proto\"\247\002\n\033MutateCa" +
-      "mpaignDraftsRequest\022\030\n\013customer_id\030\001 \001(\t" +
-      "B\003\340A\002\022R\n\noperations\030\002 \003(\01329.google.ads.g" +
-      "oogleads.v12.services.CampaignDraftOpera" +
-      "tionB\003\340A\002\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rva" +
-      "lidate_only\030\004 \001(\010\022j\n\025response_content_ty" +
-      "pe\030\005 \001(\0162K.google.ads.googleads.v12.enum" +
-      "s.ResponseContentTypeEnum.ResponseConten" +
-      "tType\"|\n\033PromoteCampaignDraftRequest\022F\n\016" +
-      "campaign_draft\030\001 \001(\tB.\340A\002\372A(\n&googleads." +
-      "googleapis.com/CampaignDraft\022\025\n\rvalidate" +
-      "_only\030\002 \001(\010\"\237\002\n\026CampaignDraftOperation\022/" +
-      "\n\013update_mask\030\004 \001(\0132\032.google.protobuf.Fi" +
-      "eldMask\022C\n\006create\030\001 \001(\01321.google.ads.goo" +
-      "gleads.v12.resources.CampaignDraftH\000\022C\n\006" +
-      "update\030\002 \001(\01321.google.ads.googleads.v12." +
-      "resources.CampaignDraftH\000\022=\n\006remove\030\003 \001(" +
-      "\tB+\372A(\n&googleads.googleapis.com/Campaig" +
-      "nDraftH\000B\013\n\toperation\"\240\001\n\034MutateCampaign" +
-      "DraftsResponse\0221\n\025partial_failure_error\030" +
-      "\003 \001(\0132\022.google.rpc.Status\022M\n\007results\030\002 \003" +
-      "(\0132<.google.ads.googleads.v12.services.M" +
-      "utateCampaignDraftResult\"\252\001\n\031MutateCampa" +
-      "ignDraftResult\022B\n\rresource_name\030\001 \001(\tB+\372" +
-      "A(\n&googleads.googleapis.com/CampaignDra" +
-      "ft\022I\n\016campaign_draft\030\002 \001(\01321.google.ads." +
-      "googleads.v12.resources.CampaignDraft\"\223\001" +
-      "\n#ListCampaignDraftAsyncErrorsRequest\022E\n" +
-      "\rresource_name\030\001 \001(\tB.\340A\002\372A(\n&googleads." +
-      "googleapis.com/CampaignDraft\022\022\n\npage_tok" +
-      "en\030\002 \001(\t\022\021\n\tpage_size\030\003 \001(\005\"c\n$ListCampa" +
-      "ignDraftAsyncErrorsResponse\022\"\n\006errors\030\001 " +
-      "\003(\0132\022.google.rpc.Status\022\027\n\017next_page_tok" +
-      "en\030\002 \001(\t2\340\006\n\024CampaignDraftService\022\361\001\n\024Mu" +
-      "tateCampaignDrafts\022>.google.ads.googlead" +
-      "s.v12.services.MutateCampaignDraftsReque" +
-      "st\032?.google.ads.googleads.v12.services.M" +
-      "utateCampaignDraftsResponse\"X\202\323\344\223\0029\"4/v1" +
-      "2/customers/{customer_id=*}/campaignDraf" +
-      "ts:mutate:\001*\332A\026customer_id,operations\022\377\001" +
-      "\n\024PromoteCampaignDraft\022>.google.ads.goog" +
-      "leads.v12.services.PromoteCampaignDraftR" +
-      "equest\032\035.google.longrunning.Operation\"\207\001" +
-      "\202\323\344\223\002?\":/v12/{campaign_draft=customers/*" +
-      "/campaignDrafts/*}:promote:\001*\332A\016campaign" +
-      "_draft\312A.\n\025google.protobuf.Empty\022\025google" +
-      ".protobuf.Empty\022\212\002\n\034ListCampaignDraftAsy" +
-      "ncErrors\022F.google.ads.googleads.v12.serv" +
-      "ices.ListCampaignDraftAsyncErrorsRequest" +
-      "\032G.google.ads.googleads.v12.services.Lis" +
-      "tCampaignDraftAsyncErrorsResponse\"Y\202\323\344\223\002" +
-      "C\022A/v12/{resource_name=customers/*/campa" +
-      "ignDrafts/*}:listAsyncErrors\332A\rresource_" +
-      "name\032E\312A\030googleads.googleapis.com\322A\'http" +
-      "s://www.googleapis.com/auth/adwordsB\205\002\n%" +
-      "com.google.ads.googleads.v12.servicesB\031C" +
-      "ampaignDraftServiceProtoP\001ZIgoogle.golan" +
-      "g.org/genproto/googleapis/ads/googleads/" +
-      "v12/services;services\242\002\003GAA\252\002!Google.Ads" +
-      ".GoogleAds.V12.Services\312\002!Google\\Ads\\Goo" +
-      "gleAds\\V12\\Services\352\002%Google::Ads::Googl" +
-      "eAds::V12::Servicesb\006proto3"
+      "ns.proto\032\033google/protobuf/empty.proto\032 g" +
+      "oogle/protobuf/field_mask.proto\032\027google/" +
+      "rpc/status.proto\"\251\002\n\033MutateCampaignDraft" +
+      "sRequest\022\031\n\013customer_id\030\001 \001(\tB\004\342A\001\002\022S\n\no" +
+      "perations\030\002 \003(\01329.google.ads.googleads.v" +
+      "12.services.CampaignDraftOperationB\004\342A\001\002" +
+      "\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rvalidate_on" +
+      "ly\030\004 \001(\010\022j\n\025response_content_type\030\005 \001(\0162" +
+      "K.google.ads.googleads.v12.enums.Respons" +
+      "eContentTypeEnum.ResponseContentType\"}\n\033" +
+      "PromoteCampaignDraftRequest\022G\n\016campaign_" +
+      "draft\030\001 \001(\tB/\342A\001\002\372A(\n&googleads.googleap" +
+      "is.com/CampaignDraft\022\025\n\rvalidate_only\030\002 " +
+      "\001(\010\"\237\002\n\026CampaignDraftOperation\022/\n\013update" +
+      "_mask\030\004 \001(\0132\032.google.protobuf.FieldMask\022" +
+      "C\n\006create\030\001 \001(\01321.google.ads.googleads.v" +
+      "12.resources.CampaignDraftH\000\022C\n\006update\030\002" +
+      " \001(\01321.google.ads.googleads.v12.resource" +
+      "s.CampaignDraftH\000\022=\n\006remove\030\003 \001(\tB+\372A(\n&" +
+      "googleads.googleapis.com/CampaignDraftH\000" +
+      "B\013\n\toperation\"\240\001\n\034MutateCampaignDraftsRe" +
+      "sponse\0221\n\025partial_failure_error\030\003 \001(\0132\022." +
+      "google.rpc.Status\022M\n\007results\030\002 \003(\0132<.goo" +
+      "gle.ads.googleads.v12.services.MutateCam" +
+      "paignDraftResult\"\252\001\n\031MutateCampaignDraft" +
+      "Result\022B\n\rresource_name\030\001 \001(\tB+\372A(\n&goog" +
+      "leads.googleapis.com/CampaignDraft\022I\n\016ca" +
+      "mpaign_draft\030\002 \001(\01321.google.ads.googlead" +
+      "s.v12.resources.CampaignDraft\"\224\001\n#ListCa" +
+      "mpaignDraftAsyncErrorsRequest\022F\n\rresourc" +
+      "e_name\030\001 \001(\tB/\342A\001\002\372A(\n&googleads.googlea" +
+      "pis.com/CampaignDraft\022\022\n\npage_token\030\002 \001(" +
+      "\t\022\021\n\tpage_size\030\003 \001(\005\"c\n$ListCampaignDraf" +
+      "tAsyncErrorsResponse\022\"\n\006errors\030\001 \003(\0132\022.g" +
+      "oogle.rpc.Status\022\027\n\017next_page_token\030\002 \001(" +
+      "\t2\340\006\n\024CampaignDraftService\022\361\001\n\024MutateCam" +
+      "paignDrafts\022>.google.ads.googleads.v12.s" +
+      "ervices.MutateCampaignDraftsRequest\032?.go" +
+      "ogle.ads.googleads.v12.services.MutateCa" +
+      "mpaignDraftsResponse\"X\332A\026customer_id,ope" +
+      "rations\202\323\344\223\0029\"4/v12/customers/{customer_" +
+      "id=*}/campaignDrafts:mutate:\001*\022\377\001\n\024Promo" +
+      "teCampaignDraft\022>.google.ads.googleads.v" +
+      "12.services.PromoteCampaignDraftRequest\032" +
+      "\035.google.longrunning.Operation\"\207\001\312A.\n\025go" +
+      "ogle.protobuf.Empty\022\025google.protobuf.Emp" +
+      "ty\332A\016campaign_draft\202\323\344\223\002?\":/v12/{campaig" +
+      "n_draft=customers/*/campaignDrafts/*}:pr" +
+      "omote:\001*\022\212\002\n\034ListCampaignDraftAsyncError" +
+      "s\022F.google.ads.googleads.v12.services.Li" +
+      "stCampaignDraftAsyncErrorsRequest\032G.goog" +
+      "le.ads.googleads.v12.services.ListCampai" +
+      "gnDraftAsyncErrorsResponse\"Y\332A\rresource_" +
+      "name\202\323\344\223\002C\022A/v12/{resource_name=customer" +
+      "s/*/campaignDrafts/*}:listAsyncErrors\032E\312" +
+      "A\030googleads.googleapis.com\322A\'https://www" +
+      ".googleapis.com/auth/adwordsB\205\002\n%com.goo" +
+      "gle.ads.googleads.v12.servicesB\031Campaign" +
+      "DraftServiceProtoP\001ZIgoogle.golang.org/g" +
+      "enproto/googleapis/ads/googleads/v12/ser" +
+      "vices;services\242\002\003GAA\252\002!Google.Ads.Google" +
+      "Ads.V12.Services\312\002!Google\\Ads\\GoogleAds\\" +
+      "V12\\Services\352\002%Google::Ads::GoogleAds::V" +
+      "12::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -141,6 +142,7 @@ public final class CampaignDraftServiceProto {
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.longrunning.OperationsProto.getDescriptor(),
+          com.google.protobuf.EmptyProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.rpc.StatusProto.getDescriptor(),
         });
@@ -204,6 +206,7 @@ public final class CampaignDraftServiceProto {
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.longrunning.OperationsProto.getDescriptor();
+    com.google.protobuf.EmptyProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.rpc.StatusProto.getDescriptor();
   }

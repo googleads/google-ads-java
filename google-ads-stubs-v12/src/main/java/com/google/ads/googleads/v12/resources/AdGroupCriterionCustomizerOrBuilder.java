@@ -11,6 +11,7 @@ public interface AdGroupCriterionCustomizerOrBuilder extends
    * <pre>
    * Immutable. The resource name of the ad group criterion customizer.
    * Ad group criterion customizer resource names have the form:
+   *
    * `customers/{customer_id}/adGroupCriterionCustomizers/{ad_group_id}~{criterion_id}~{customizer_attribute_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface AdGroupCriterionCustomizerOrBuilder extends
    * <pre>
    * Immutable. The resource name of the ad group criterion customizer.
    * Ad group criterion customizer resource names have the form:
+   *
    * `customers/{customer_id}/adGroupCriterionCustomizers/{ad_group_id}~{criterion_id}~{customizer_attribute_id}`
    * </pre>
    *

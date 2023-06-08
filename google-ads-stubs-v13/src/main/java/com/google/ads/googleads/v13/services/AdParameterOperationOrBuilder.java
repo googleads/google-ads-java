@@ -95,6 +95,7 @@ public interface AdParameterOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the ad parameter to remove is
    * expected in this format:
+   *
    * `customers/{customer_id}/adParameters/{ad_group_id}~{criterion_id}~{parameter_index}`
    * </pre>
    *
@@ -106,6 +107,7 @@ public interface AdParameterOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the ad parameter to remove is
    * expected in this format:
+   *
    * `customers/{customer_id}/adParameters/{ad_group_id}~{criterion_id}~{parameter_index}`
    * </pre>
    *
@@ -117,6 +119,7 @@ public interface AdParameterOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the ad parameter to remove is
    * expected in this format:
+   *
    * `customers/{customer_id}/adParameters/{ad_group_id}~{criterion_id}~{parameter_index}`
    * </pre>
    *
@@ -126,5 +129,5 @@ public interface AdParameterOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v13.services.AdParameterOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v13.services.AdParameterOperation.OperationCase getOperationCase();
 }

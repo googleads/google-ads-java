@@ -31,19 +31,19 @@ public final class TopicViewProto {
       "\n3google/ads/googleads/v12/resources/top" +
       "ic_view.proto\022\"google.ads.googleads.v12." +
       "resources\032\037google/api/field_behavior.pro" +
-      "to\032\031google/api/resource.proto\"\270\001\n\tTopicV" +
-      "iew\022A\n\rresource_name\030\001 \001(\tB*\340A\003\372A$\n\"goog" +
-      "leads.googleapis.com/TopicView:h\352Ae\n\"goo" +
-      "gleads.googleapis.com/TopicView\022?custome" +
-      "rs/{customer_id}/topicViews/{ad_group_id" +
-      "}~{criterion_id}B\200\002\n&com.google.ads.goog" +
-      "leads.v12.resourcesB\016TopicViewProtoP\001ZKg" +
-      "oogle.golang.org/genproto/googleapis/ads" +
-      "/googleads/v12/resources;resources\242\002\003GAA" +
-      "\252\002\"Google.Ads.GoogleAds.V12.Resources\312\002\"" +
-      "Google\\Ads\\GoogleAds\\V12\\Resources\352\002&Goo" +
-      "gle::Ads::GoogleAds::V12::Resourcesb\006pro" +
-      "to3"
+      "to\032\031google/api/resource.proto\"\271\001\n\tTopicV" +
+      "iew\022B\n\rresource_name\030\001 \001(\tB+\342A\001\003\372A$\n\"goo" +
+      "gleads.googleapis.com/TopicView:h\352Ae\n\"go" +
+      "ogleads.googleapis.com/TopicView\022?custom" +
+      "ers/{customer_id}/topicViews/{ad_group_i" +
+      "d}~{criterion_id}B\200\002\n&com.google.ads.goo" +
+      "gleads.v12.resourcesB\016TopicViewProtoP\001ZK" +
+      "google.golang.org/genproto/googleapis/ad" +
+      "s/googleads/v12/resources;resources\242\002\003GA" +
+      "A\252\002\"Google.Ads.GoogleAds.V12.Resources\312\002" +
+      "\"Google\\Ads\\GoogleAds\\V12\\Resources\352\002&Go" +
+      "ogle::Ads::GoogleAds::V12::Resourcesb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

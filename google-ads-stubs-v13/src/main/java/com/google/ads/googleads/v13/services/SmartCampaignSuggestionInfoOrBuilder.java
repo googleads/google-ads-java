@@ -175,6 +175,7 @@ public interface SmartCampaignSuggestionInfoOrBuilder extends
    * Business Profile location resource names can be fetched through the
    * Business Profile API and adhere to the following format:
    * `locations/{locationId}`.
+   *
    * See the [Business Profile API]
    * (https://developers.google.com/my-business/reference/businessinformation/rest/v1/accounts.locations)
    * for additional details.
@@ -190,6 +191,7 @@ public interface SmartCampaignSuggestionInfoOrBuilder extends
    * Business Profile location resource names can be fetched through the
    * Business Profile API and adhere to the following format:
    * `locations/{locationId}`.
+   *
    * See the [Business Profile API]
    * (https://developers.google.com/my-business/reference/businessinformation/rest/v1/accounts.locations)
    * for additional details.
@@ -205,6 +207,7 @@ public interface SmartCampaignSuggestionInfoOrBuilder extends
    * Business Profile location resource names can be fetched through the
    * Business Profile API and adhere to the following format:
    * `locations/{locationId}`.
+   *
    * See the [Business Profile API]
    * (https://developers.google.com/my-business/reference/businessinformation/rest/v1/accounts.locations)
    * for additional details.
@@ -270,7 +273,7 @@ public interface SmartCampaignSuggestionInfoOrBuilder extends
    */
   com.google.ads.googleads.v13.common.ProximityInfoOrBuilder getProximityOrBuilder();
 
-  public com.google.ads.googleads.v13.services.SmartCampaignSuggestionInfo.BusinessSettingCase getBusinessSettingCase();
+  com.google.ads.googleads.v13.services.SmartCampaignSuggestionInfo.BusinessSettingCase getBusinessSettingCase();
 
-  public com.google.ads.googleads.v13.services.SmartCampaignSuggestionInfo.GeoTargetCase getGeoTargetCase();
+  com.google.ads.googleads.v13.services.SmartCampaignSuggestionInfo.GeoTargetCase getGeoTargetCase();
 }

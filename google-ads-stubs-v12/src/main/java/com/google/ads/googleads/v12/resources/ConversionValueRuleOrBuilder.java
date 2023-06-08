@@ -11,6 +11,7 @@ public interface ConversionValueRuleOrBuilder extends
    * <pre>
    * Immutable. The resource name of the conversion value rule.
    * Conversion value rule resource names have the form:
+   *
    * `customers/{customer_id}/conversionValueRules/{conversion_value_rule_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface ConversionValueRuleOrBuilder extends
    * <pre>
    * Immutable. The resource name of the conversion value rule.
    * Conversion value rule resource names have the form:
+   *
    * `customers/{customer_id}/conversionValueRules/{conversion_value_rule_id}`
    * </pre>
    *

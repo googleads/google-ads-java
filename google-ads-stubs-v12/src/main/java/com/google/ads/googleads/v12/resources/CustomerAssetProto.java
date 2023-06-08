@@ -36,14 +36,14 @@ public final class CustomerAssetProto {
       "roto\0321google/ads/googleads/v12/enums/ass" +
       "et_source.proto\032\037google/api/field_behavi" +
       "or.proto\032\031google/api/resource.proto\"\203\004\n\r" +
-      "CustomerAsset\022E\n\rresource_name\030\001 \001(\tB.\340A" +
-      "\005\372A(\n&googleads.googleapis.com/CustomerA" +
-      "sset\0228\n\005asset\030\002 \001(\tB)\340A\002\340A\005\372A \n\036googlead" +
-      "s.googleapis.com/Asset\022]\n\nfield_type\030\003 \001" +
+      "CustomerAsset\022F\n\rresource_name\030\001 \001(\tB/\342A" +
+      "\001\005\372A(\n&googleads.googleapis.com/Customer" +
+      "Asset\0227\n\005asset\030\002 \001(\tB(\342A\002\002\005\372A \n\036googlead" +
+      "s.googleapis.com/Asset\022\\\n\nfield_type\030\003 \001" +
       "(\0162A.google.ads.googleads.v12.enums.Asse" +
-      "tFieldTypeEnum.AssetFieldTypeB\006\340A\002\340A\005\022P\n" +
-      "\006source\030\005 \001(\0162;.google.ads.googleads.v12" +
-      ".enums.AssetSourceEnum.AssetSourceB\003\340A\003\022" +
+      "tFieldTypeEnum.AssetFieldTypeB\005\342A\002\002\005\022Q\n\006" +
+      "source\030\005 \001(\0162;.google.ads.googleads.v12." +
+      "enums.AssetSourceEnum.AssetSourceB\004\342A\001\003\022" +
       "S\n\006status\030\004 \001(\0162C.google.ads.googleads.v" +
       "12.enums.AssetLinkStatusEnum.AssetLinkSt" +
       "atus:k\352Ah\n&googleads.googleapis.com/Cust" +

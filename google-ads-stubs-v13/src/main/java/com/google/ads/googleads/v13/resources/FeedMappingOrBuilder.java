@@ -11,6 +11,7 @@ public interface FeedMappingOrBuilder extends
    * <pre>
    * Immutable. The resource name of the feed mapping.
    * Feed mapping resource names have the form:
+   *
    * `customers/{customer_id}/feedMappings/{feed_id}~{feed_mapping_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface FeedMappingOrBuilder extends
    * <pre>
    * Immutable. The resource name of the feed mapping.
    * Feed mapping resource names have the form:
+   *
    * `customers/{customer_id}/feedMappings/{feed_id}~{feed_mapping_id}`
    * </pre>
    *
@@ -207,5 +209,5 @@ public interface FeedMappingOrBuilder extends
    */
   com.google.ads.googleads.v13.enums.FeedMappingCriterionTypeEnum.FeedMappingCriterionType getCriterionType();
 
-  public com.google.ads.googleads.v13.resources.FeedMapping.TargetCase getTargetCase();
+  com.google.ads.googleads.v13.resources.FeedMapping.TargetCase getTargetCase();
 }

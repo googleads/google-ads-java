@@ -11,6 +11,7 @@ public interface GeographicViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the geographic view.
    * Geographic view resource names have the form:
+   *
    * `customers/{customer_id}/geographicViews/{country_criterion_id}~{location_type}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface GeographicViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the geographic view.
    * Geographic view resource names have the form:
+   *
    * `customers/{customer_id}/geographicViews/{country_criterion_id}~{location_type}`
    * </pre>
    *

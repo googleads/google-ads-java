@@ -11,6 +11,7 @@ public interface BiddingDataExclusionOrBuilder extends
    * <pre>
    * Immutable. The resource name of the data exclusion.
    * Data exclusion resource names have the form:
+   *
    * `customers/{customer_id}/biddingDataExclusions/{data_exclusion_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface BiddingDataExclusionOrBuilder extends
    * <pre>
    * Immutable. The resource name of the data exclusion.
    * Data exclusion resource names have the form:
+   *
    * `customers/{customer_id}/biddingDataExclusions/{data_exclusion_id}`
    * </pre>
    *
@@ -83,6 +85,7 @@ public interface BiddingDataExclusionOrBuilder extends
    * <pre>
    * Required. The inclusive start time of the data exclusion in yyyy-MM-dd
    * HH:mm:ss format.
+   *
    * A data exclusion is backward looking and should be used for events that
    * start in the past and end either in the past or future.
    * </pre>
@@ -95,6 +98,7 @@ public interface BiddingDataExclusionOrBuilder extends
    * <pre>
    * Required. The inclusive start time of the data exclusion in yyyy-MM-dd
    * HH:mm:ss format.
+   *
    * A data exclusion is backward looking and should be used for events that
    * start in the past and end either in the past or future.
    * </pre>
@@ -109,6 +113,7 @@ public interface BiddingDataExclusionOrBuilder extends
    * <pre>
    * Required. The exclusive end time of the data exclusion in yyyy-MM-dd
    * HH:mm:ss format.
+   *
    * The length of [start_date_time, end_date_time) interval must be
    * within (0, 14 days].
    * </pre>
@@ -121,6 +126,7 @@ public interface BiddingDataExclusionOrBuilder extends
    * <pre>
    * Required. The exclusive end time of the data exclusion in yyyy-MM-dd
    * HH:mm:ss format.
+   *
    * The length of [start_date_time, end_date_time) interval must be
    * within (0, 14 days].
    * </pre>

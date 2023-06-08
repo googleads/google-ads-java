@@ -31,23 +31,23 @@ public final class CurrencyConstantProto {
       "\n:google/ads/googleads/v12/resources/cur" +
       "rency_constant.proto\022\"google.ads.googlea" +
       "ds.v12.resources\032\037google/api/field_behav" +
-      "ior.proto\032\031google/api/resource.proto\"\316\002\n" +
-      "\020CurrencyConstant\022H\n\rresource_name\030\001 \001(\t" +
-      "B1\340A\003\372A+\n)googleads.googleapis.com/Curre" +
-      "ncyConstant\022\026\n\004code\030\006 \001(\tB\003\340A\003H\000\210\001\001\022\026\n\004n" +
-      "ame\030\007 \001(\tB\003\340A\003H\001\210\001\001\022\030\n\006symbol\030\010 \001(\tB\003\340A\003" +
-      "H\002\210\001\001\022&\n\024billable_unit_micros\030\t \001(\003B\003\340A\003" +
-      "H\003\210\001\001:H\352AE\n)googleads.googleapis.com/Cur" +
-      "rencyConstant\022\030currencyConstants/{code}B" +
-      "\007\n\005_codeB\007\n\005_nameB\t\n\007_symbolB\027\n\025_billabl" +
-      "e_unit_microsB\207\002\n&com.google.ads.googlea" +
-      "ds.v12.resourcesB\025CurrencyConstantProtoP" +
-      "\001ZKgoogle.golang.org/genproto/googleapis" +
-      "/ads/googleads/v12/resources;resources\242\002" +
-      "\003GAA\252\002\"Google.Ads.GoogleAds.V12.Resource" +
-      "s\312\002\"Google\\Ads\\GoogleAds\\V12\\Resources\352\002" +
-      "&Google::Ads::GoogleAds::V12::Resourcesb" +
-      "\006proto3"
+      "ior.proto\032\031google/api/resource.proto\"\323\002\n" +
+      "\020CurrencyConstant\022I\n\rresource_name\030\001 \001(\t" +
+      "B2\342A\001\003\372A+\n)googleads.googleapis.com/Curr" +
+      "encyConstant\022\027\n\004code\030\006 \001(\tB\004\342A\001\003H\000\210\001\001\022\027\n" +
+      "\004name\030\007 \001(\tB\004\342A\001\003H\001\210\001\001\022\031\n\006symbol\030\010 \001(\tB\004" +
+      "\342A\001\003H\002\210\001\001\022\'\n\024billable_unit_micros\030\t \001(\003B" +
+      "\004\342A\001\003H\003\210\001\001:H\352AE\n)googleads.googleapis.co" +
+      "m/CurrencyConstant\022\030currencyConstants/{c" +
+      "ode}B\007\n\005_codeB\007\n\005_nameB\t\n\007_symbolB\027\n\025_bi" +
+      "llable_unit_microsB\207\002\n&com.google.ads.go" +
+      "ogleads.v12.resourcesB\025CurrencyConstantP" +
+      "rotoP\001ZKgoogle.golang.org/genproto/googl" +
+      "eapis/ads/googleads/v12/resources;resour" +
+      "ces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V12.Res" +
+      "ources\312\002\"Google\\Ads\\GoogleAds\\V12\\Resour" +
+      "ces\352\002&Google::Ads::GoogleAds::V12::Resou" +
+      "rcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

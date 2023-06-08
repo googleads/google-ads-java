@@ -33,11 +33,6 @@ private static final long serialVersionUID = 0L;
     return new KeywordPlan();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.resources.KeywordPlanProto.internal_static_google_ads_googleads_v13_resources_KeywordPlan_descriptor;
@@ -59,6 +54,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the Keyword Planner plan.
    * KeywordPlan resource names have the form:
+   *
    * `customers/{customer_id}/keywordPlans/{kp_plan_id}`
    * </pre>
    *
@@ -82,6 +78,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the Keyword Planner plan.
    * KeywordPlan resource names have the form:
+   *
    * `customers/{customer_id}/keywordPlans/{kp_plan_id}`
    * </pre>
    *
@@ -136,6 +133,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The name of the keyword plan.
+   *
    * This field is required and should not be empty when creating new keyword
    * plans.
    * </pre>
@@ -150,6 +148,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The name of the keyword plan.
+   *
    * This field is required and should not be empty when creating new keyword
    * plans.
    * </pre>
@@ -173,6 +172,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The name of the keyword plan.
+   *
    * This field is required and should not be empty when creating new keyword
    * plans.
    * </pre>
@@ -389,11 +389,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.resources.KeywordPlan parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.resources.KeywordPlan parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -666,6 +668,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the Keyword Planner plan.
      * KeywordPlan resource names have the form:
+     *
      * `customers/{customer_id}/keywordPlans/{kp_plan_id}`
      * </pre>
      *
@@ -688,6 +691,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the Keyword Planner plan.
      * KeywordPlan resource names have the form:
+     *
      * `customers/{customer_id}/keywordPlans/{kp_plan_id}`
      * </pre>
      *
@@ -711,6 +715,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the Keyword Planner plan.
      * KeywordPlan resource names have the form:
+     *
      * `customers/{customer_id}/keywordPlans/{kp_plan_id}`
      * </pre>
      *
@@ -730,6 +735,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the Keyword Planner plan.
      * KeywordPlan resource names have the form:
+     *
      * `customers/{customer_id}/keywordPlans/{kp_plan_id}`
      * </pre>
      *
@@ -746,6 +752,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the Keyword Planner plan.
      * KeywordPlan resource names have the form:
+     *
      * `customers/{customer_id}/keywordPlans/{kp_plan_id}`
      * </pre>
      *
@@ -798,7 +805,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      
+
       id_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -823,6 +830,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the keyword plan.
+     *
      * This field is required and should not be empty when creating new keyword
      * plans.
      * </pre>
@@ -836,6 +844,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the keyword plan.
+     *
      * This field is required and should not be empty when creating new keyword
      * plans.
      * </pre>
@@ -858,6 +867,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the keyword plan.
+     *
      * This field is required and should not be empty when creating new keyword
      * plans.
      * </pre>
@@ -881,6 +891,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the keyword plan.
+     *
      * This field is required and should not be empty when creating new keyword
      * plans.
      * </pre>
@@ -900,6 +911,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the keyword plan.
+     *
      * This field is required and should not be empty when creating new keyword
      * plans.
      * </pre>
@@ -916,6 +928,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the keyword plan.
+     *
      * This field is required and should not be empty when creating new keyword
      * plans.
      * </pre>

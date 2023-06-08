@@ -11,6 +11,7 @@ public interface ConversionCustomVariableOrBuilder extends
    * <pre>
    * Immutable. The resource name of the conversion custom variable.
    * Conversion custom variable resource names have the form:
+   *
    * `customers/{customer_id}/conversionCustomVariables/{conversion_custom_variable_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface ConversionCustomVariableOrBuilder extends
    * <pre>
    * Immutable. The resource name of the conversion custom variable.
    * Conversion custom variable resource names have the form:
+   *
    * `customers/{customer_id}/conversionCustomVariables/{conversion_custom_variable_id}`
    * </pre>
    *

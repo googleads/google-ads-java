@@ -145,5 +145,5 @@ public interface AudienceDimensionOrBuilder extends
    */
   com.google.ads.googleads.v13.common.AudienceSegmentDimensionOrBuilder getAudienceSegmentsOrBuilder();
 
-  public com.google.ads.googleads.v13.common.AudienceDimension.DimensionCase getDimensionCase();
+  com.google.ads.googleads.v13.common.AudienceDimension.DimensionCase getDimensionCase();
 }

@@ -112,5 +112,5 @@ public interface ValueOrBuilder extends
   com.google.protobuf.ByteString
       getStringValueBytes();
 
-  public com.google.ads.googleads.v13.common.Value.ValueCase getValueCase();
+  com.google.ads.googleads.v13.common.Value.ValueCase getValueCase();
 }

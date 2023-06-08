@@ -32,19 +32,19 @@ public final class ManagedPlacementViewProto {
       "aged_placement_view.proto\022\"google.ads.go" +
       "ogleads.v13.resources\032\037google/api/field_" +
       "behavior.proto\032\031google/api/resource.prot" +
-      "o\"\344\001\n\024ManagedPlacementView\022L\n\rresource_n" +
-      "ame\030\001 \001(\tB5\340A\003\372A/\n-googleads.googleapis." +
-      "com/ManagedPlacementView:~\352A{\n-googleads" +
-      ".googleapis.com/ManagedPlacementView\022Jcu" +
-      "stomers/{customer_id}/managedPlacementVi" +
-      "ews/{ad_group_id}~{criterion_id}B\213\002\n&com" +
-      ".google.ads.googleads.v13.resourcesB\031Man" +
-      "agedPlacementViewProtoP\001ZKgoogle.golang." +
-      "org/genproto/googleapis/ads/googleads/v1" +
-      "3/resources;resources\242\002\003GAA\252\002\"Google.Ads" +
-      ".GoogleAds.V13.Resources\312\002\"Google\\Ads\\Go" +
-      "ogleAds\\V13\\Resources\352\002&Google::Ads::Goo" +
-      "gleAds::V13::Resourcesb\006proto3"
+      "o\"\345\001\n\024ManagedPlacementView\022M\n\rresource_n" +
+      "ame\030\001 \001(\tB6\342A\001\003\372A/\n-googleads.googleapis" +
+      ".com/ManagedPlacementView:~\352A{\n-googlead" +
+      "s.googleapis.com/ManagedPlacementView\022Jc" +
+      "ustomers/{customer_id}/managedPlacementV" +
+      "iews/{ad_group_id}~{criterion_id}B\213\002\n&co" +
+      "m.google.ads.googleads.v13.resourcesB\031Ma" +
+      "nagedPlacementViewProtoP\001ZKgoogle.golang" +
+      ".org/genproto/googleapis/ads/googleads/v" +
+      "13/resources;resources\242\002\003GAA\252\002\"Google.Ad" +
+      "s.GoogleAds.V13.Resources\312\002\"Google\\Ads\\G" +
+      "oogleAds\\V13\\Resources\352\002&Google::Ads::Go" +
+      "ogleAds::V13::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

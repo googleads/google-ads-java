@@ -537,5 +537,5 @@ public interface ApplyRecommendationOperationOrBuilder extends
    */
   com.google.ads.googleads.v13.services.ApplyRecommendationOperation.SitelinkAssetParametersOrBuilder getSitelinkAssetOrBuilder();
 
-  public com.google.ads.googleads.v13.services.ApplyRecommendationOperation.ApplyParametersCase getApplyParametersCase();
+  com.google.ads.googleads.v13.services.ApplyRecommendationOperation.ApplyParametersCase getApplyParametersCase();
 }

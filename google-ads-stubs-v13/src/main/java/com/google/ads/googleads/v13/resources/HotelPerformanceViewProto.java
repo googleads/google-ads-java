@@ -32,18 +32,19 @@ public final class HotelPerformanceViewProto {
       "el_performance_view.proto\022\"google.ads.go" +
       "ogleads.v13.resources\032\037google/api/field_" +
       "behavior.proto\032\031google/api/resource.prot" +
-      "o\"\306\001\n\024HotelPerformanceView\022L\n\rresource_n" +
-      "ame\030\001 \001(\tB5\340A\003\372A/\n-googleads.googleapis." +
-      "com/HotelPerformanceView:`\352A]\n-googleads" +
-      ".googleapis.com/HotelPerformanceView\022,cu" +
-      "stomers/{customer_id}/hotelPerformanceVi" +
-      "ewB\213\002\n&com.google.ads.googleads.v13.reso" +
-      "urcesB\031HotelPerformanceViewProtoP\001ZKgoog" +
-      "le.golang.org/genproto/googleapis/ads/go" +
-      "ogleads/v13/resources;resources\242\002\003GAA\252\002\"" +
-      "Google.Ads.GoogleAds.V13.Resources\312\002\"Goo" +
-      "gle\\Ads\\GoogleAds\\V13\\Resources\352\002&Google" +
-      "::Ads::GoogleAds::V13::Resourcesb\006proto3"
+      "o\"\307\001\n\024HotelPerformanceView\022M\n\rresource_n" +
+      "ame\030\001 \001(\tB6\342A\001\003\372A/\n-googleads.googleapis" +
+      ".com/HotelPerformanceView:`\352A]\n-googlead" +
+      "s.googleapis.com/HotelPerformanceView\022,c" +
+      "ustomers/{customer_id}/hotelPerformanceV" +
+      "iewB\213\002\n&com.google.ads.googleads.v13.res" +
+      "ourcesB\031HotelPerformanceViewProtoP\001ZKgoo" +
+      "gle.golang.org/genproto/googleapis/ads/g" +
+      "oogleads/v13/resources;resources\242\002\003GAA\252\002" +
+      "\"Google.Ads.GoogleAds.V13.Resources\312\002\"Go" +
+      "ogle\\Ads\\GoogleAds\\V13\\Resources\352\002&Googl" +
+      "e::Ads::GoogleAds::V13::Resourcesb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

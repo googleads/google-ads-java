@@ -29,11 +29,6 @@ private static final long serialVersionUID = 0L;
     return new RecommendationTypeEnum();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.enums.RecommendationTypeProto.internal_static_google_ads_googleads_v12_enums_RecommendationTypeEnum_descriptor;
@@ -161,7 +156,7 @@ private static final long serialVersionUID = 0L;
     CALLOUT_EXTENSION(11),
     /**
      * <pre>
-     * Recommendation to add sitelink extensions to a campaign.
+     * Recommendation to add sitelinks to a campaign.
      * </pre>
      *
      * <code>SITELINK_EXTENSION = 12;</code>
@@ -232,8 +227,8 @@ private static final long serialVersionUID = 0L;
     MARGINAL_ROI_CAMPAIGN_BUDGET(19),
     /**
      * <pre>
-     * Recommendation to expand keywords to broad match for fully automated
-     * conversion-based bidding campaigns.
+     * Recommendation to add broad match versions of keywords for fully
+     * automated conversion-based bidding campaigns.
      * </pre>
      *
      * <code>USE_BROAD_MATCH_KEYWORD = 20;</code>
@@ -286,7 +281,7 @@ private static final long serialVersionUID = 0L;
      * Recommendation to raise target CPA when it is too low and there are very
      * few or no conversions.
      * It is applied asynchronously and can take minutes
-     * depending on the number of ad groups there is in the related campaign.
+     * depending on the number of ad groups there are in the related campaign.
      * </pre>
      *
      * <code>RAISE_TARGET_CPA_BID_TOO_LOW = 26;</code>
@@ -410,7 +405,7 @@ private static final long serialVersionUID = 0L;
     public static final int CALLOUT_EXTENSION_VALUE = 11;
     /**
      * <pre>
-     * Recommendation to add sitelink extensions to a campaign.
+     * Recommendation to add sitelinks to a campaign.
      * </pre>
      *
      * <code>SITELINK_EXTENSION = 12;</code>
@@ -481,8 +476,8 @@ private static final long serialVersionUID = 0L;
     public static final int MARGINAL_ROI_CAMPAIGN_BUDGET_VALUE = 19;
     /**
      * <pre>
-     * Recommendation to expand keywords to broad match for fully automated
-     * conversion-based bidding campaigns.
+     * Recommendation to add broad match versions of keywords for fully
+     * automated conversion-based bidding campaigns.
      * </pre>
      *
      * <code>USE_BROAD_MATCH_KEYWORD = 20;</code>
@@ -535,7 +530,7 @@ private static final long serialVersionUID = 0L;
      * Recommendation to raise target CPA when it is too low and there are very
      * few or no conversions.
      * It is applied asynchronously and can take minutes
-     * depending on the number of ad groups there is in the related campaign.
+     * depending on the number of ad groups there are in the related campaign.
      * </pre>
      *
      * <code>RAISE_TARGET_CPA_BID_TOO_LOW = 26;</code>
@@ -759,11 +754,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.enums.RecommendationTypeEnum parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.enums.RecommendationTypeEnum parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)

@@ -23,7 +23,8 @@ private static final long serialVersionUID = 0L;
     stringValue_ = "";
     integerValues_ = emptyLongList();
     booleanValues_ = emptyBooleanList();
-    stringValues_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    stringValues_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     doubleValues_ = emptyDoubleList();
   }
 
@@ -34,11 +35,6 @@ private static final long serialVersionUID = 0L;
     return new FeedItemAttributeValue();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.resources.FeedItemProto.internal_static_google_ads_googleads_v13_resources_FeedItemAttributeValue_descriptor;
@@ -369,13 +365,15 @@ private static final long serialVersionUID = 0L;
 
   public static final int STRING_VALUES_FIELD_NUMBER = 18;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList stringValues_;
+  private com.google.protobuf.LazyStringArrayList stringValues_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * Repeated string value. Should be set if feed_attribute_id refers to a feed
    * attribute of type STRING_LIST, URL_LIST or DATE_TIME_LIST.
    * For STRING_LIST and URL_LIST the total size of the list in bytes may not
    * exceed 3000. For DATE_TIME_LIST the number of elements may not exceed 200.
+   *
    * For STRING_LIST the maximum length of each string element is 1500
    * characters. For URL_LIST the maximum length is 2076 characters. For
    * DATE_TIME the format of the string must be the same as start and end time
@@ -395,6 +393,7 @@ private static final long serialVersionUID = 0L;
    * attribute of type STRING_LIST, URL_LIST or DATE_TIME_LIST.
    * For STRING_LIST and URL_LIST the total size of the list in bytes may not
    * exceed 3000. For DATE_TIME_LIST the number of elements may not exceed 200.
+   *
    * For STRING_LIST the maximum length of each string element is 1500
    * characters. For URL_LIST the maximum length is 2076 characters. For
    * DATE_TIME the format of the string must be the same as start and end time
@@ -413,6 +412,7 @@ private static final long serialVersionUID = 0L;
    * attribute of type STRING_LIST, URL_LIST or DATE_TIME_LIST.
    * For STRING_LIST and URL_LIST the total size of the list in bytes may not
    * exceed 3000. For DATE_TIME_LIST the number of elements may not exceed 200.
+   *
    * For STRING_LIST the maximum length of each string element is 1500
    * characters. For URL_LIST the maximum length is 2076 characters. For
    * DATE_TIME the format of the string must be the same as start and end time
@@ -432,6 +432,7 @@ private static final long serialVersionUID = 0L;
    * attribute of type STRING_LIST, URL_LIST or DATE_TIME_LIST.
    * For STRING_LIST and URL_LIST the total size of the list in bytes may not
    * exceed 3000. For DATE_TIME_LIST the number of elements may not exceed 200.
+   *
    * For STRING_LIST the maximum length of each string element is 1500
    * characters. For URL_LIST the maximum length is 2076 characters. For
    * DATE_TIME the format of the string must be the same as start and end time
@@ -782,11 +783,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.resources.FeedItemAttributeValue parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.resources.FeedItemAttributeValue parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -878,8 +881,8 @@ private static final long serialVersionUID = 0L;
       }
       integerValues_ = emptyLongList();
       booleanValues_ = emptyBooleanList();
-      stringValues_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000100);
+      stringValues_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       doubleValues_ = emptyDoubleList();
       return this;
     }
@@ -924,11 +927,6 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000080);
       }
       result.booleanValues_ = booleanValues_;
-      if (((bitField0_ & 0x00000100) != 0)) {
-        stringValues_ = stringValues_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000100);
-      }
-      result.stringValues_ = stringValues_;
       if (((bitField0_ & 0x00000200) != 0)) {
         doubleValues_.makeImmutable();
         bitField0_ = (bitField0_ & ~0x00000200);
@@ -963,6 +961,10 @@ private static final long serialVersionUID = 0L;
         result.priceValue_ = priceValueBuilder_ == null
             ? priceValue_
             : priceValueBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        stringValues_.makeImmutable();
+        result.stringValues_ = stringValues_;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -1054,7 +1056,7 @@ private static final long serialVersionUID = 0L;
       if (!other.stringValues_.isEmpty()) {
         if (stringValues_.isEmpty()) {
           stringValues_ = other.stringValues_;
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ |= 0x00000100;
         } else {
           ensureStringValuesIsMutable();
           stringValues_.addAll(other.stringValues_);
@@ -1235,7 +1237,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFeedAttributeId(long value) {
-      
+
       feedAttributeId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
@@ -1294,7 +1296,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIntegerValue(long value) {
-      
+
       integerValue_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -1354,7 +1356,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBooleanValue(boolean value) {
-      
+
       booleanValue_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
@@ -1541,7 +1543,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDoubleValue(double value) {
-      
+
       doubleValue_ = value;
       bitField0_ |= 0x00000010;
       onChanged();
@@ -1786,7 +1788,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setIntegerValues(
         int index, long value) {
-      
+
       ensureIntegerValuesIsMutable();
       integerValues_.setLong(index, value);
       onChanged();
@@ -1803,7 +1805,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder addIntegerValues(long value) {
-      
+
       ensureIntegerValuesIsMutable();
       integerValues_.addLong(value);
       onChanged();
@@ -1902,7 +1904,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setBooleanValues(
         int index, boolean value) {
-      
+
       ensureBooleanValuesIsMutable();
       booleanValues_.setBoolean(index, value);
       onChanged();
@@ -1919,7 +1921,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder addBooleanValues(boolean value) {
-      
+
       ensureBooleanValuesIsMutable();
       booleanValues_.addBoolean(value);
       onChanged();
@@ -1959,12 +1961,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.LazyStringList stringValues_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList stringValues_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureStringValuesIsMutable() {
-      if (!((bitField0_ & 0x00000100) != 0)) {
+      if (!stringValues_.isModifiable()) {
         stringValues_ = new com.google.protobuf.LazyStringArrayList(stringValues_);
-        bitField0_ |= 0x00000100;
-       }
+      }
+      bitField0_ |= 0x00000100;
     }
     /**
      * <pre>
@@ -1972,6 +1975,7 @@ private static final long serialVersionUID = 0L;
      * attribute of type STRING_LIST, URL_LIST or DATE_TIME_LIST.
      * For STRING_LIST and URL_LIST the total size of the list in bytes may not
      * exceed 3000. For DATE_TIME_LIST the number of elements may not exceed 200.
+     *
      * For STRING_LIST the maximum length of each string element is 1500
      * characters. For URL_LIST the maximum length is 2076 characters. For
      * DATE_TIME the format of the string must be the same as start and end time
@@ -1983,7 +1987,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getStringValuesList() {
-      return stringValues_.getUnmodifiableView();
+      stringValues_.makeImmutable();
+      return stringValues_;
     }
     /**
      * <pre>
@@ -1991,6 +1996,7 @@ private static final long serialVersionUID = 0L;
      * attribute of type STRING_LIST, URL_LIST or DATE_TIME_LIST.
      * For STRING_LIST and URL_LIST the total size of the list in bytes may not
      * exceed 3000. For DATE_TIME_LIST the number of elements may not exceed 200.
+     *
      * For STRING_LIST the maximum length of each string element is 1500
      * characters. For URL_LIST the maximum length is 2076 characters. For
      * DATE_TIME the format of the string must be the same as start and end time
@@ -2009,6 +2015,7 @@ private static final long serialVersionUID = 0L;
      * attribute of type STRING_LIST, URL_LIST or DATE_TIME_LIST.
      * For STRING_LIST and URL_LIST the total size of the list in bytes may not
      * exceed 3000. For DATE_TIME_LIST the number of elements may not exceed 200.
+     *
      * For STRING_LIST the maximum length of each string element is 1500
      * characters. For URL_LIST the maximum length is 2076 characters. For
      * DATE_TIME the format of the string must be the same as start and end time
@@ -2028,6 +2035,7 @@ private static final long serialVersionUID = 0L;
      * attribute of type STRING_LIST, URL_LIST or DATE_TIME_LIST.
      * For STRING_LIST and URL_LIST the total size of the list in bytes may not
      * exceed 3000. For DATE_TIME_LIST the number of elements may not exceed 200.
+     *
      * For STRING_LIST the maximum length of each string element is 1500
      * characters. For URL_LIST the maximum length is 2076 characters. For
      * DATE_TIME the format of the string must be the same as start and end time
@@ -2048,6 +2056,7 @@ private static final long serialVersionUID = 0L;
      * attribute of type STRING_LIST, URL_LIST or DATE_TIME_LIST.
      * For STRING_LIST and URL_LIST the total size of the list in bytes may not
      * exceed 3000. For DATE_TIME_LIST the number of elements may not exceed 200.
+     *
      * For STRING_LIST the maximum length of each string element is 1500
      * characters. For URL_LIST the maximum length is 2076 characters. For
      * DATE_TIME the format of the string must be the same as start and end time
@@ -2064,6 +2073,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureStringValuesIsMutable();
       stringValues_.set(index, value);
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2073,6 +2083,7 @@ private static final long serialVersionUID = 0L;
      * attribute of type STRING_LIST, URL_LIST or DATE_TIME_LIST.
      * For STRING_LIST and URL_LIST the total size of the list in bytes may not
      * exceed 3000. For DATE_TIME_LIST the number of elements may not exceed 200.
+     *
      * For STRING_LIST the maximum length of each string element is 1500
      * characters. For URL_LIST the maximum length is 2076 characters. For
      * DATE_TIME the format of the string must be the same as start and end time
@@ -2088,6 +2099,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureStringValuesIsMutable();
       stringValues_.add(value);
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2097,6 +2109,7 @@ private static final long serialVersionUID = 0L;
      * attribute of type STRING_LIST, URL_LIST or DATE_TIME_LIST.
      * For STRING_LIST and URL_LIST the total size of the list in bytes may not
      * exceed 3000. For DATE_TIME_LIST the number of elements may not exceed 200.
+     *
      * For STRING_LIST the maximum length of each string element is 1500
      * characters. For URL_LIST the maximum length is 2076 characters. For
      * DATE_TIME the format of the string must be the same as start and end time
@@ -2112,6 +2125,7 @@ private static final long serialVersionUID = 0L;
       ensureStringValuesIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, stringValues_);
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2121,6 +2135,7 @@ private static final long serialVersionUID = 0L;
      * attribute of type STRING_LIST, URL_LIST or DATE_TIME_LIST.
      * For STRING_LIST and URL_LIST the total size of the list in bytes may not
      * exceed 3000. For DATE_TIME_LIST the number of elements may not exceed 200.
+     *
      * For STRING_LIST the maximum length of each string element is 1500
      * characters. For URL_LIST the maximum length is 2076 characters. For
      * DATE_TIME the format of the string must be the same as start and end time
@@ -2131,8 +2146,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearStringValues() {
-      stringValues_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000100);
+      stringValues_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000100);;
       onChanged();
       return this;
     }
@@ -2142,6 +2158,7 @@ private static final long serialVersionUID = 0L;
      * attribute of type STRING_LIST, URL_LIST or DATE_TIME_LIST.
      * For STRING_LIST and URL_LIST the total size of the list in bytes may not
      * exceed 3000. For DATE_TIME_LIST the number of elements may not exceed 200.
+     *
      * For STRING_LIST the maximum length of each string element is 1500
      * characters. For URL_LIST the maximum length is 2076 characters. For
      * DATE_TIME the format of the string must be the same as start and end time
@@ -2158,6 +2175,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureStringValuesIsMutable();
       stringValues_.add(value);
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2221,7 +2239,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setDoubleValues(
         int index, double value) {
-      
+
       ensureDoubleValuesIsMutable();
       doubleValues_.setDouble(index, value);
       onChanged();
@@ -2238,7 +2256,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder addDoubleValues(double value) {
-      
+
       ensureDoubleValuesIsMutable();
       doubleValues_.addDouble(value);
       onChanged();

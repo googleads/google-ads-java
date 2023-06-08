@@ -32,22 +32,22 @@ public final class SmartCampaignSearchTermViewProto {
       "rt_campaign_search_term_view.proto\022\"goog" +
       "le.ads.googleads.v13.resources\032\037google/a" +
       "pi/field_behavior.proto\032\031google/api/reso" +
-      "urce.proto\"\322\002\n\033SmartCampaignSearchTermVi" +
-      "ew\022S\n\rresource_name\030\001 \001(\tB<\340A\003\372A6\n4googl" +
-      "eads.googleapis.com/SmartCampaignSearchT" +
-      "ermView\022\030\n\013search_term\030\002 \001(\tB\003\340A\003\022;\n\010cam" +
-      "paign\030\003 \001(\tB)\340A\003\372A#\n!googleads.googleapi" +
-      "s.com/Campaign:\206\001\352A\202\001\n4googleads.googlea" +
-      "pis.com/SmartCampaignSearchTermView\022Jcus" +
-      "tomers/{customer_id}/smartCampaignSearch" +
-      "TermViews/{campaign_id}~{query}B\222\002\n&com." +
-      "google.ads.googleads.v13.resourcesB Smar" +
-      "tCampaignSearchTermViewProtoP\001ZKgoogle.g" +
-      "olang.org/genproto/googleapis/ads/google" +
-      "ads/v13/resources;resources\242\002\003GAA\252\002\"Goog" +
-      "le.Ads.GoogleAds.V13.Resources\312\002\"Google\\" +
-      "Ads\\GoogleAds\\V13\\Resources\352\002&Google::Ad" +
-      "s::GoogleAds::V13::Resourcesb\006proto3"
+      "urce.proto\"\325\002\n\033SmartCampaignSearchTermVi" +
+      "ew\022T\n\rresource_name\030\001 \001(\tB=\342A\001\003\372A6\n4goog" +
+      "leads.googleapis.com/SmartCampaignSearch" +
+      "TermView\022\031\n\013search_term\030\002 \001(\tB\004\342A\001\003\022<\n\010c" +
+      "ampaign\030\003 \001(\tB*\342A\001\003\372A#\n!googleads.google" +
+      "apis.com/Campaign:\206\001\352A\202\001\n4googleads.goog" +
+      "leapis.com/SmartCampaignSearchTermView\022J" +
+      "customers/{customer_id}/smartCampaignSea" +
+      "rchTermViews/{campaign_id}~{query}B\222\002\n&c" +
+      "om.google.ads.googleads.v13.resourcesB S" +
+      "martCampaignSearchTermViewProtoP\001ZKgoogl" +
+      "e.golang.org/genproto/googleapis/ads/goo" +
+      "gleads/v13/resources;resources\242\002\003GAA\252\002\"G" +
+      "oogle.Ads.GoogleAds.V13.Resources\312\002\"Goog" +
+      "le\\Ads\\GoogleAds\\V13\\Resources\352\002&Google:" +
+      ":Ads::GoogleAds::V13::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

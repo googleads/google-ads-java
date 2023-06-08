@@ -34,5 +34,5 @@ public interface LeadFormDeliveryMethodOrBuilder extends
    */
   com.google.ads.googleads.v12.common.WebhookDeliveryOrBuilder getWebhookOrBuilder();
 
-  public com.google.ads.googleads.v12.common.LeadFormDeliveryMethod.DeliveryDetailsCase getDeliveryDetailsCase();
+  com.google.ads.googleads.v12.common.LeadFormDeliveryMethod.DeliveryDetailsCase getDeliveryDetailsCase();
 }

@@ -38,11 +38,6 @@ private static final long serialVersionUID = 0L;
     return new PromotionAsset();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.common.AssetTypesProto.internal_static_google_ads_googleads_v13_common_PromotionAsset_descriptor;
@@ -57,6 +52,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int discountTypeCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object discountType_;
   public enum DiscountTypeCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -98,6 +94,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int promotionTriggerCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object promotionTrigger_;
   public enum PromotionTriggerCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -1015,11 +1012,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.common.PromotionAsset parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.common.PromotionAsset parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2616,7 +2615,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPercentOff(long value) {
-      
+
       discountTypeCase_ = 3;
       discountType_ = value;
       onChanged();

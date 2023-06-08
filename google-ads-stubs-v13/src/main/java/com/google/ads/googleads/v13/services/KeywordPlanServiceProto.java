@@ -142,146 +142,147 @@ public final class KeywordPlanServiceProto {
       "o\032\027google/api/client.proto\032\037google/api/f" +
       "ield_behavior.proto\032\031google/api/resource" +
       ".proto\032 google/protobuf/field_mask.proto" +
-      "\032\027google/rpc/status.proto\"\267\001\n\031MutateKeyw" +
-      "ordPlansRequest\022\030\n\013customer_id\030\001 \001(\tB\003\340A" +
-      "\002\022P\n\noperations\030\002 \003(\01327.google.ads.googl" +
-      "eads.v13.services.KeywordPlanOperationB\003" +
-      "\340A\002\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rvalidate" +
-      "_only\030\004 \001(\010\"\227\002\n\024KeywordPlanOperation\022/\n\013" +
-      "update_mask\030\004 \001(\0132\032.google.protobuf.Fiel" +
-      "dMask\022A\n\006create\030\001 \001(\0132/.google.ads.googl" +
-      "eads.v13.resources.KeywordPlanH\000\022A\n\006upda" +
-      "te\030\002 \001(\0132/.google.ads.googleads.v13.reso" +
-      "urces.KeywordPlanH\000\022;\n\006remove\030\003 \001(\tB)\372A&" +
-      "\n$googleads.googleapis.com/KeywordPlanH\000" +
-      "B\013\n\toperation\"\235\001\n\032MutateKeywordPlansResp" +
-      "onse\0221\n\025partial_failure_error\030\003 \001(\0132\022.go" +
-      "ogle.rpc.Status\022L\n\007results\030\002 \003(\0132;.googl" +
-      "e.ads.googleads.v13.services.MutateKeywo" +
-      "rdPlansResult\"\\\n\030MutateKeywordPlansResul" +
-      "t\022@\n\rresource_name\030\001 \001(\tB)\372A&\n$googleads" +
-      ".googleapis.com/KeywordPlan\"b\n\034GenerateF" +
-      "orecastCurveRequest\022B\n\014keyword_plan\030\001 \001(" +
-      "\tB,\340A\002\372A&\n$googleads.googleapis.com/Keyw" +
-      "ordPlan\"\206\001\n\035GenerateForecastCurveRespons" +
-      "e\022e\n\030campaign_forecast_curves\030\001 \003(\0132C.go" +
-      "ogle.ads.googleads.v13.services.KeywordP" +
-      "lanCampaignForecastCurve\"g\n!GenerateFore" +
-      "castTimeSeriesRequest\022B\n\014keyword_plan\030\001 " +
-      "\001(\tB,\340A\002\372A&\n$googleads.googleapis.com/Ke" +
-      "ywordPlan\"\222\001\n\"GenerateForecastTimeSeries" +
-      "Response\022l\n\034weekly_time_series_forecasts" +
-      "\030\001 \003(\0132F.google.ads.googleads.v13.servic" +
-      "es.KeywordPlanWeeklyTimeSeriesForecast\"d" +
-      "\n\036GenerateForecastMetricsRequest\022B\n\014keyw" +
-      "ord_plan\030\001 \001(\tB,\340A\002\372A&\n$googleads.google" +
-      "apis.com/KeywordPlan\"\262\002\n\037GenerateForecas" +
-      "tMetricsResponse\022Z\n\022campaign_forecasts\030\001" +
-      " \003(\0132>.google.ads.googleads.v13.services" +
-      ".KeywordPlanCampaignForecast\022Y\n\022ad_group" +
-      "_forecasts\030\002 \003(\0132=.google.ads.googleads." +
-      "v13.services.KeywordPlanAdGroupForecast\022" +
-      "X\n\021keyword_forecasts\030\003 \003(\0132=.google.ads." +
-      "googleads.v13.services.KeywordPlanKeywor" +
-      "dForecast\"\252\001\n\033KeywordPlanCampaignForecas" +
-      "t\022\"\n\025keyword_plan_campaign\030\003 \001(\tH\000\210\001\001\022M\n" +
-      "\021campaign_forecast\030\002 \001(\01322.google.ads.go" +
-      "ogleads.v13.services.ForecastMetricsB\030\n\026" +
-      "_keyword_plan_campaign\"\251\001\n\032KeywordPlanAd" +
-      "GroupForecast\022\"\n\025keyword_plan_ad_group\030\003" +
-      " \001(\tH\000\210\001\001\022M\n\021ad_group_forecast\030\002 \001(\01322.g" +
-      "oogle.ads.googleads.v13.services.Forecas" +
-      "tMetricsB\030\n\026_keyword_plan_ad_group\"\270\001\n\032K" +
-      "eywordPlanKeywordForecast\022*\n\035keyword_pla" +
-      "n_ad_group_keyword\030\003 \001(\tH\000\210\001\001\022L\n\020keyword" +
-      "_forecast\030\002 \001(\01322.google.ads.googleads.v" +
-      "13.services.ForecastMetricsB \n\036_keyword_" +
-      "plan_ad_group_keyword\"\312\001\n KeywordPlanCam" +
-      "paignForecastCurve\022\"\n\025keyword_plan_campa" +
-      "ign\030\003 \001(\tH\000\210\001\001\022h\n\032max_cpc_bid_forecast_c" +
-      "urve\030\002 \001(\0132D.google.ads.googleads.v13.se" +
-      "rvices.KeywordPlanMaxCpcBidForecastCurve" +
-      "B\030\n\026_keyword_plan_campaign\"\203\001\n!KeywordPl" +
-      "anMaxCpcBidForecastCurve\022^\n\025max_cpc_bid_" +
-      "forecasts\030\001 \003(\0132?.google.ads.googleads.v" +
+      "\032\027google/rpc/status.proto\"\271\001\n\031MutateKeyw" +
+      "ordPlansRequest\022\031\n\013customer_id\030\001 \001(\tB\004\342A" +
+      "\001\002\022Q\n\noperations\030\002 \003(\01327.google.ads.goog" +
+      "leads.v13.services.KeywordPlanOperationB" +
+      "\004\342A\001\002\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rvalida" +
+      "te_only\030\004 \001(\010\"\227\002\n\024KeywordPlanOperation\022/" +
+      "\n\013update_mask\030\004 \001(\0132\032.google.protobuf.Fi" +
+      "eldMask\022A\n\006create\030\001 \001(\0132/.google.ads.goo" +
+      "gleads.v13.resources.KeywordPlanH\000\022A\n\006up" +
+      "date\030\002 \001(\0132/.google.ads.googleads.v13.re" +
+      "sources.KeywordPlanH\000\022;\n\006remove\030\003 \001(\tB)\372" +
+      "A&\n$googleads.googleapis.com/KeywordPlan" +
+      "H\000B\013\n\toperation\"\235\001\n\032MutateKeywordPlansRe" +
+      "sponse\0221\n\025partial_failure_error\030\003 \001(\0132\022." +
+      "google.rpc.Status\022L\n\007results\030\002 \003(\0132;.goo" +
+      "gle.ads.googleads.v13.services.MutateKey" +
+      "wordPlansResult\"\\\n\030MutateKeywordPlansRes" +
+      "ult\022@\n\rresource_name\030\001 \001(\tB)\372A&\n$googlea" +
+      "ds.googleapis.com/KeywordPlan\"c\n\034Generat" +
+      "eForecastCurveRequest\022C\n\014keyword_plan\030\001 " +
+      "\001(\tB-\342A\001\002\372A&\n$googleads.googleapis.com/K" +
+      "eywordPlan\"\206\001\n\035GenerateForecastCurveResp" +
+      "onse\022e\n\030campaign_forecast_curves\030\001 \003(\0132C" +
+      ".google.ads.googleads.v13.services.Keywo" +
+      "rdPlanCampaignForecastCurve\"h\n!GenerateF" +
+      "orecastTimeSeriesRequest\022C\n\014keyword_plan" +
+      "\030\001 \001(\tB-\342A\001\002\372A&\n$googleads.googleapis.co" +
+      "m/KeywordPlan\"\222\001\n\"GenerateForecastTimeSe" +
+      "riesResponse\022l\n\034weekly_time_series_forec" +
+      "asts\030\001 \003(\0132F.google.ads.googleads.v13.se" +
+      "rvices.KeywordPlanWeeklyTimeSeriesForeca" +
+      "st\"e\n\036GenerateForecastMetricsRequest\022C\n\014" +
+      "keyword_plan\030\001 \001(\tB-\342A\001\002\372A&\n$googleads.g" +
+      "oogleapis.com/KeywordPlan\"\262\002\n\037GenerateFo" +
+      "recastMetricsResponse\022Z\n\022campaign_foreca" +
+      "sts\030\001 \003(\0132>.google.ads.googleads.v13.ser" +
+      "vices.KeywordPlanCampaignForecast\022Y\n\022ad_" +
+      "group_forecasts\030\002 \003(\0132=.google.ads.googl" +
+      "eads.v13.services.KeywordPlanAdGroupFore" +
+      "cast\022X\n\021keyword_forecasts\030\003 \003(\0132=.google" +
+      ".ads.googleads.v13.services.KeywordPlanK" +
+      "eywordForecast\"\252\001\n\033KeywordPlanCampaignFo" +
+      "recast\022\"\n\025keyword_plan_campaign\030\003 \001(\tH\000\210" +
+      "\001\001\022M\n\021campaign_forecast\030\002 \001(\01322.google.a" +
+      "ds.googleads.v13.services.ForecastMetric" +
+      "sB\030\n\026_keyword_plan_campaign\"\251\001\n\032KeywordP" +
+      "lanAdGroupForecast\022\"\n\025keyword_plan_ad_gr" +
+      "oup\030\003 \001(\tH\000\210\001\001\022M\n\021ad_group_forecast\030\002 \001(" +
+      "\01322.google.ads.googleads.v13.services.Fo" +
+      "recastMetricsB\030\n\026_keyword_plan_ad_group\"" +
+      "\270\001\n\032KeywordPlanKeywordForecast\022*\n\035keywor" +
+      "d_plan_ad_group_keyword\030\003 \001(\tH\000\210\001\001\022L\n\020ke" +
+      "yword_forecast\030\002 \001(\01322.google.ads.google" +
+      "ads.v13.services.ForecastMetricsB \n\036_key" +
+      "word_plan_ad_group_keyword\"\312\001\n KeywordPl" +
+      "anCampaignForecastCurve\022\"\n\025keyword_plan_" +
+      "campaign\030\003 \001(\tH\000\210\001\001\022h\n\032max_cpc_bid_forec" +
+      "ast_curve\030\002 \001(\0132D.google.ads.googleads.v" +
       "13.services.KeywordPlanMaxCpcBidForecast" +
-      "\"\250\001\n\034KeywordPlanMaxCpcBidForecast\022\037\n\022max" +
-      "_cpc_bid_micros\030\003 \001(\003H\000\210\001\001\022P\n\024max_cpc_bi" +
-      "d_forecast\030\002 \001(\01322.google.ads.googleads." +
-      "v13.services.ForecastMetricsB\025\n\023_max_cpc" +
-      "_bid_micros\"\273\001\n#KeywordPlanWeeklyTimeSer" +
-      "iesForecast\022\"\n\025keyword_plan_campaign\030\001 \001" +
-      "(\tH\000\210\001\001\022V\n\020weekly_forecasts\030\002 \003(\0132<.goog" +
-      "le.ads.googleads.v13.services.KeywordPla" +
-      "nWeeklyForecastB\030\n\026_keyword_plan_campaig" +
-      "n\"\211\001\n\031KeywordPlanWeeklyForecast\022\027\n\nstart" +
-      "_date\030\001 \001(\tH\000\210\001\001\022D\n\010forecast\030\002 \001(\01322.goo" +
-      "gle.ads.googleads.v13.services.ForecastM" +
-      "etricsB\r\n\013_start_date\"\311\001\n\017ForecastMetric" +
-      "s\022\030\n\013impressions\030\007 \001(\001H\000\210\001\001\022\020\n\003ctr\030\010 \001(\001" +
-      "H\001\210\001\001\022\030\n\013average_cpc\030\t \001(\003H\002\210\001\001\022\023\n\006click" +
-      "s\030\n \001(\001H\003\210\001\001\022\030\n\013cost_micros\030\013 \001(\003H\004\210\001\001B\016" +
-      "\n\014_impressionsB\006\n\004_ctrB\016\n\014_average_cpcB\t" +
-      "\n\007_clicksB\016\n\014_cost_micros\"\236\002\n GenerateHi" +
-      "storicalMetricsRequest\022B\n\014keyword_plan\030\001" +
-      " \001(\tB,\340A\002\372A&\n$googleads.googleapis.com/K" +
-      "eywordPlan\022W\n\021aggregate_metrics\030\002 \001(\0132<." +
-      "google.ads.googleads.v13.common.KeywordP" +
-      "lanAggregateMetrics\022]\n\032historical_metric" +
-      "s_options\030\003 \001(\01329.google.ads.googleads.v" +
-      "13.common.HistoricalMetricsOptions\"\342\001\n!G" +
-      "enerateHistoricalMetricsResponse\022W\n\007metr" +
-      "ics\030\001 \003(\0132F.google.ads.googleads.v13.ser" +
-      "vices.KeywordPlanKeywordHistoricalMetric" +
-      "s\022d\n\030aggregate_metric_results\030\002 \001(\0132B.go" +
-      "ogle.ads.googleads.v13.common.KeywordPla" +
-      "nAggregateMetricResults\"\301\001\n#KeywordPlanK" +
-      "eywordHistoricalMetrics\022\031\n\014search_query\030" +
-      "\004 \001(\tH\000\210\001\001\022\026\n\016close_variants\030\003 \003(\t\022V\n\017ke" +
-      "yword_metrics\030\002 \001(\0132=.google.ads.googlea" +
-      "ds.v13.common.KeywordPlanHistoricalMetri" +
-      "csB\017\n\r_search_query2\347\n\n\022KeywordPlanServi" +
-      "ce\022\351\001\n\022MutateKeywordPlans\022<.google.ads.g" +
-      "oogleads.v13.services.MutateKeywordPlans" +
-      "Request\032=.google.ads.googleads.v13.servi" +
-      "ces.MutateKeywordPlansResponse\"V\202\323\344\223\0027\"2" +
-      "/v13/customers/{customer_id=*}/keywordPl" +
-      "ans:mutate:\001*\332A\026customer_id,operations\022\372" +
-      "\001\n\025GenerateForecastCurve\022?.google.ads.go" +
-      "ogleads.v13.services.GenerateForecastCur" +
-      "veRequest\032@.google.ads.googleads.v13.ser" +
-      "vices.GenerateForecastCurveResponse\"^\202\323\344" +
-      "\223\002I\"D/v13/{keyword_plan=customers/*/keyw" +
-      "ordPlans/*}:generateForecastCurve:\001*\332A\014k" +
-      "eyword_plan\022\216\002\n\032GenerateForecastTimeSeri" +
-      "es\022D.google.ads.googleads.v13.services.G" +
-      "enerateForecastTimeSeriesRequest\032E.googl" +
-      "e.ads.googleads.v13.services.GenerateFor" +
-      "ecastTimeSeriesResponse\"c\202\323\344\223\002N\"I/v13/{k" +
-      "eyword_plan=customers/*/keywordPlans/*}:" +
-      "generateForecastTimeSeries:\001*\332A\014keyword_" +
-      "plan\022\202\002\n\027GenerateForecastMetrics\022A.googl" +
-      "e.ads.googleads.v13.services.GenerateFor" +
-      "ecastMetricsRequest\032B.google.ads.googlea" +
-      "ds.v13.services.GenerateForecastMetricsR" +
-      "esponse\"`\202\323\344\223\002K\"F/v13/{keyword_plan=cust" +
-      "omers/*/keywordPlans/*}:generateForecast" +
-      "Metrics:\001*\332A\014keyword_plan\022\212\002\n\031GenerateHi" +
-      "storicalMetrics\022C.google.ads.googleads.v" +
-      "13.services.GenerateHistoricalMetricsReq" +
-      "uest\032D.google.ads.googleads.v13.services" +
-      ".GenerateHistoricalMetricsResponse\"b\202\323\344\223" +
-      "\002M\"H/v13/{keyword_plan=customers/*/keywo" +
-      "rdPlans/*}:generateHistoricalMetrics:\001*\332" +
-      "A\014keyword_plan\032E\312A\030googleads.googleapis." +
-      "com\322A\'https://www.googleapis.com/auth/ad" +
-      "wordsB\203\002\n%com.google.ads.googleads.v13.s" +
-      "ervicesB\027KeywordPlanServiceProtoP\001ZIgoog" +
-      "le.golang.org/genproto/googleapis/ads/go" +
-      "ogleads/v13/services;services\242\002\003GAA\252\002!Go" +
-      "ogle.Ads.GoogleAds.V13.Services\312\002!Google" +
-      "\\Ads\\GoogleAds\\V13\\Services\352\002%Google::Ad" +
-      "s::GoogleAds::V13::Servicesb\006proto3"
+      "CurveB\030\n\026_keyword_plan_campaign\"\203\001\n!Keyw" +
+      "ordPlanMaxCpcBidForecastCurve\022^\n\025max_cpc" +
+      "_bid_forecasts\030\001 \003(\0132?.google.ads.google" +
+      "ads.v13.services.KeywordPlanMaxCpcBidFor" +
+      "ecast\"\250\001\n\034KeywordPlanMaxCpcBidForecast\022\037" +
+      "\n\022max_cpc_bid_micros\030\003 \001(\003H\000\210\001\001\022P\n\024max_c" +
+      "pc_bid_forecast\030\002 \001(\01322.google.ads.googl" +
+      "eads.v13.services.ForecastMetricsB\025\n\023_ma" +
+      "x_cpc_bid_micros\"\273\001\n#KeywordPlanWeeklyTi" +
+      "meSeriesForecast\022\"\n\025keyword_plan_campaig" +
+      "n\030\001 \001(\tH\000\210\001\001\022V\n\020weekly_forecasts\030\002 \003(\0132<" +
+      ".google.ads.googleads.v13.services.Keywo" +
+      "rdPlanWeeklyForecastB\030\n\026_keyword_plan_ca" +
+      "mpaign\"\211\001\n\031KeywordPlanWeeklyForecast\022\027\n\n" +
+      "start_date\030\001 \001(\tH\000\210\001\001\022D\n\010forecast\030\002 \001(\0132" +
+      "2.google.ads.googleads.v13.services.Fore" +
+      "castMetricsB\r\n\013_start_date\"\311\001\n\017ForecastM" +
+      "etrics\022\030\n\013impressions\030\007 \001(\001H\000\210\001\001\022\020\n\003ctr\030" +
+      "\010 \001(\001H\001\210\001\001\022\030\n\013average_cpc\030\t \001(\003H\002\210\001\001\022\023\n\006" +
+      "clicks\030\n \001(\001H\003\210\001\001\022\030\n\013cost_micros\030\013 \001(\003H\004" +
+      "\210\001\001B\016\n\014_impressionsB\006\n\004_ctrB\016\n\014_average_" +
+      "cpcB\t\n\007_clicksB\016\n\014_cost_micros\"\237\002\n Gener" +
+      "ateHistoricalMetricsRequest\022C\n\014keyword_p" +
+      "lan\030\001 \001(\tB-\342A\001\002\372A&\n$googleads.googleapis" +
+      ".com/KeywordPlan\022W\n\021aggregate_metrics\030\002 " +
+      "\001(\0132<.google.ads.googleads.v13.common.Ke" +
+      "ywordPlanAggregateMetrics\022]\n\032historical_" +
+      "metrics_options\030\003 \001(\01329.google.ads.googl" +
+      "eads.v13.common.HistoricalMetricsOptions" +
+      "\"\342\001\n!GenerateHistoricalMetricsResponse\022W" +
+      "\n\007metrics\030\001 \003(\0132F.google.ads.googleads.v" +
+      "13.services.KeywordPlanKeywordHistorical" +
+      "Metrics\022d\n\030aggregate_metric_results\030\002 \001(" +
+      "\0132B.google.ads.googleads.v13.common.Keyw" +
+      "ordPlanAggregateMetricResults\"\301\001\n#Keywor" +
+      "dPlanKeywordHistoricalMetrics\022\031\n\014search_" +
+      "query\030\004 \001(\tH\000\210\001\001\022\026\n\016close_variants\030\003 \003(\t" +
+      "\022V\n\017keyword_metrics\030\002 \001(\0132=.google.ads.g" +
+      "oogleads.v13.common.KeywordPlanHistorica" +
+      "lMetricsB\017\n\r_search_query2\347\n\n\022KeywordPla" +
+      "nService\022\351\001\n\022MutateKeywordPlans\022<.google" +
+      ".ads.googleads.v13.services.MutateKeywor" +
+      "dPlansRequest\032=.google.ads.googleads.v13" +
+      ".services.MutateKeywordPlansResponse\"V\332A" +
+      "\026customer_id,operations\202\323\344\223\0027\"2/v13/cust" +
+      "omers/{customer_id=*}/keywordPlans:mutat" +
+      "e:\001*\022\372\001\n\025GenerateForecastCurve\022?.google." +
+      "ads.googleads.v13.services.GenerateForec" +
+      "astCurveRequest\032@.google.ads.googleads.v" +
+      "13.services.GenerateForecastCurveRespons" +
+      "e\"^\332A\014keyword_plan\202\323\344\223\002I\"D/v13/{keyword_" +
+      "plan=customers/*/keywordPlans/*}:generat" +
+      "eForecastCurve:\001*\022\216\002\n\032GenerateForecastTi" +
+      "meSeries\022D.google.ads.googleads.v13.serv" +
+      "ices.GenerateForecastTimeSeriesRequest\032E" +
+      ".google.ads.googleads.v13.services.Gener" +
+      "ateForecastTimeSeriesResponse\"c\332A\014keywor" +
+      "d_plan\202\323\344\223\002N\"I/v13/{keyword_plan=custome" +
+      "rs/*/keywordPlans/*}:generateForecastTim" +
+      "eSeries:\001*\022\202\002\n\027GenerateForecastMetrics\022A" +
+      ".google.ads.googleads.v13.services.Gener" +
+      "ateForecastMetricsRequest\032B.google.ads.g" +
+      "oogleads.v13.services.GenerateForecastMe" +
+      "tricsResponse\"`\332A\014keyword_plan\202\323\344\223\002K\"F/v" +
+      "13/{keyword_plan=customers/*/keywordPlan" +
+      "s/*}:generateForecastMetrics:\001*\022\212\002\n\031Gene" +
+      "rateHistoricalMetrics\022C.google.ads.googl" +
+      "eads.v13.services.GenerateHistoricalMetr" +
+      "icsRequest\032D.google.ads.googleads.v13.se" +
+      "rvices.GenerateHistoricalMetricsResponse" +
+      "\"b\332A\014keyword_plan\202\323\344\223\002M\"H/v13/{keyword_p" +
+      "lan=customers/*/keywordPlans/*}:generate" +
+      "HistoricalMetrics:\001*\032E\312A\030googleads.googl" +
+      "eapis.com\322A\'https://www.googleapis.com/a" +
+      "uth/adwordsB\203\002\n%com.google.ads.googleads" +
+      ".v13.servicesB\027KeywordPlanServiceProtoP\001" +
+      "ZIgoogle.golang.org/genproto/googleapis/" +
+      "ads/googleads/v13/services;services\242\002\003GA" +
+      "A\252\002!Google.Ads.GoogleAds.V13.Services\312\002!" +
+      "Google\\Ads\\GoogleAds\\V13\\Services\352\002%Goog" +
+      "le::Ads::GoogleAds::V13::Servicesb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

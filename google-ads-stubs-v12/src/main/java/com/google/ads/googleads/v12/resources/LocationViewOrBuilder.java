@@ -11,6 +11,7 @@ public interface LocationViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the location view.
    * Location view resource names have the form:
+   *
    * `customers/{customer_id}/locationViews/{campaign_id}~{criterion_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface LocationViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the location view.
    * Location view resource names have the form:
+   *
    * `customers/{customer_id}/locationViews/{campaign_id}~{criterion_id}`
    * </pre>
    *

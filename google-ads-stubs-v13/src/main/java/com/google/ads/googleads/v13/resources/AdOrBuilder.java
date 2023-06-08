@@ -11,6 +11,7 @@ public interface AdOrBuilder extends
    * <pre>
    * Immutable. The resource name of the ad.
    * Ad resource names have the form:
+   *
    * `customers/{customer_id}/ads/{ad_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface AdOrBuilder extends
    * <pre>
    * Immutable. The resource name of the ad.
    * Ad resource names have the form:
+   *
    * `customers/{customer_id}/ads/{ad_id}`
    * </pre>
    *
@@ -1171,5 +1173,5 @@ public interface AdOrBuilder extends
    */
   com.google.ads.googleads.v13.common.TravelAdInfoOrBuilder getTravelAdOrBuilder();
 
-  public com.google.ads.googleads.v13.resources.Ad.AdDataCase getAdDataCase();
+  com.google.ads.googleads.v13.resources.Ad.AdDataCase getAdDataCase();
 }

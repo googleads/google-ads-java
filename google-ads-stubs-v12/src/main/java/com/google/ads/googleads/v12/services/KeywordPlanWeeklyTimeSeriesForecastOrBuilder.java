@@ -10,6 +10,7 @@ public interface KeywordPlanWeeklyTimeSeriesForecastOrBuilder extends
   /**
    * <pre>
    * The resource name of the Keyword Plan campaign related to the forecast.
+   *
    * `customers/{customer_id}/keywordPlanCampaigns/{keyword_plan_campaign_id}`
    * </pre>
    *
@@ -20,6 +21,7 @@ public interface KeywordPlanWeeklyTimeSeriesForecastOrBuilder extends
   /**
    * <pre>
    * The resource name of the Keyword Plan campaign related to the forecast.
+   *
    * `customers/{customer_id}/keywordPlanCampaigns/{keyword_plan_campaign_id}`
    * </pre>
    *
@@ -30,6 +32,7 @@ public interface KeywordPlanWeeklyTimeSeriesForecastOrBuilder extends
   /**
    * <pre>
    * The resource name of the Keyword Plan campaign related to the forecast.
+   *
    * `customers/{customer_id}/keywordPlanCampaigns/{keyword_plan_campaign_id}`
    * </pre>
    *

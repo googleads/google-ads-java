@@ -11,6 +11,7 @@ public interface GroupPlacementViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the group placement view.
    * Group placement view resource names have the form:
+   *
    * `customers/{customer_id}/groupPlacementViews/{ad_group_id}~{base64_placement}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface GroupPlacementViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the group placement view.
    * Group placement view resource names have the form:
+   *
    * `customers/{customer_id}/groupPlacementViews/{ad_group_id}~{base64_placement}`
    * </pre>
    *

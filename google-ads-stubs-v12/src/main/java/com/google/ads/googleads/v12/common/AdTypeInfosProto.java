@@ -389,23 +389,24 @@ public final class AdTypeInfosProto {
       "sset\022\032\n\rbusiness_name\030\007 \001(\tH\000\210\001\001\022 \n\023call" +
       "_to_action_text\030\010 \001(\tH\001\210\001\001\022\033\n\016lead_form_" +
       "only\030\t \001(\010H\002\210\001\001B\020\n\016_business_nameB\026\n\024_ca" +
-      "ll_to_action_textB\021\n\017_lead_form_only\"\203\003\n" +
-      "\027DiscoveryCarouselAdInfo\022\032\n\rbusiness_nam" +
-      "e\030\001 \001(\tB\003\340A\002\022F\n\nlogo_image\030\002 \001(\0132-.googl" +
-      "e.ads.googleads.v12.common.AdImageAssetB" +
-      "\003\340A\002\022C\n\010headline\030\003 \001(\0132,.google.ads.goog" +
-      "leads.v12.common.AdTextAssetB\003\340A\002\022F\n\013des" +
-      "cription\030\004 \001(\0132,.google.ads.googleads.v1" +
-      "2.common.AdTextAssetB\003\340A\002\022\033\n\023call_to_act" +
-      "ion_text\030\005 \001(\t\022Z\n\016carousel_cards\030\006 \003(\0132=" +
-      ".google.ads.googleads.v12.common.AdDisco" +
-      "veryCarouselCardAssetB\003\340A\002B\360\001\n#com.googl" +
-      "e.ads.googleads.v12.commonB\020AdTypeInfosP" +
-      "rotoP\001ZEgoogle.golang.org/genproto/googl" +
-      "eapis/ads/googleads/v12/common;common\242\002\003" +
-      "GAA\252\002\037Google.Ads.GoogleAds.V12.Common\312\002\037" +
-      "Google\\Ads\\GoogleAds\\V12\\Common\352\002#Google" +
-      "::Ads::GoogleAds::V12::Commonb\006proto3"
+      "ll_to_action_textB\021\n\017_lead_form_only\"\210\003\n" +
+      "\027DiscoveryCarouselAdInfo\022\033\n\rbusiness_nam" +
+      "e\030\001 \001(\tB\004\342A\001\002\022G\n\nlogo_image\030\002 \001(\0132-.goog" +
+      "le.ads.googleads.v12.common.AdImageAsset" +
+      "B\004\342A\001\002\022D\n\010headline\030\003 \001(\0132,.google.ads.go" +
+      "ogleads.v12.common.AdTextAssetB\004\342A\001\002\022G\n\013" +
+      "description\030\004 \001(\0132,.google.ads.googleads" +
+      ".v12.common.AdTextAssetB\004\342A\001\002\022\033\n\023call_to" +
+      "_action_text\030\005 \001(\t\022[\n\016carousel_cards\030\006 \003" +
+      "(\0132=.google.ads.googleads.v12.common.AdD" +
+      "iscoveryCarouselCardAssetB\004\342A\001\002B\360\001\n#com." +
+      "google.ads.googleads.v12.commonB\020AdTypeI" +
+      "nfosProtoP\001ZEgoogle.golang.org/genproto/" +
+      "googleapis/ads/googleads/v12/common;comm" +
+      "on\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V12.Comm" +
+      "on\312\002\037Google\\Ads\\GoogleAds\\V12\\Common\352\002#G" +
+      "oogle::Ads::GoogleAds::V12::Commonb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

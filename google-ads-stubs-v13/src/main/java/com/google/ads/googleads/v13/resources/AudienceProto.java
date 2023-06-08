@@ -34,25 +34,25 @@ public final class AudienceProto {
       "/audiences.proto\0324google/ads/googleads/v" +
       "13/enums/audience_status.proto\032\037google/a" +
       "pi/field_behavior.proto\032\031google/api/reso" +
-      "urce.proto\"\330\003\n\010Audience\022@\n\rresource_name" +
-      "\030\001 \001(\tB)\340A\005\372A#\n!googleads.googleapis.com" +
-      "/Audience\022\017\n\002id\030\002 \001(\003B\003\340A\003\022V\n\006status\030\003 \001" +
-      "(\0162A.google.ads.googleads.v13.enums.Audi" +
-      "enceStatusEnum.AudienceStatusB\003\340A\003\022\021\n\004na" +
-      "me\030\004 \001(\tB\003\340A\002\022\023\n\013description\030\005 \001(\t\022F\n\ndi" +
-      "mensions\030\006 \003(\01322.google.ads.googleads.v1" +
-      "3.common.AudienceDimension\022X\n\023exclusion_" +
-      "dimension\030\007 \001(\0132;.google.ads.googleads.v" +
-      "13.common.AudienceExclusionDimension:W\352A" +
-      "T\n!googleads.googleapis.com/Audience\022/cu" +
-      "stomers/{customer_id}/audiences/{audienc" +
-      "e_id}B\377\001\n&com.google.ads.googleads.v13.r" +
-      "esourcesB\rAudienceProtoP\001ZKgoogle.golang" +
-      ".org/genproto/googleapis/ads/googleads/v" +
-      "13/resources;resources\242\002\003GAA\252\002\"Google.Ad" +
-      "s.GoogleAds.V13.Resources\312\002\"Google\\Ads\\G" +
-      "oogleAds\\V13\\Resources\352\002&Google::Ads::Go" +
-      "ogleAds::V13::Resourcesb\006proto3"
+      "urce.proto\"\334\003\n\010Audience\022A\n\rresource_name" +
+      "\030\001 \001(\tB*\342A\001\005\372A#\n!googleads.googleapis.co" +
+      "m/Audience\022\020\n\002id\030\002 \001(\003B\004\342A\001\003\022W\n\006status\030\003" +
+      " \001(\0162A.google.ads.googleads.v13.enums.Au" +
+      "dienceStatusEnum.AudienceStatusB\004\342A\001\003\022\022\n" +
+      "\004name\030\004 \001(\tB\004\342A\001\002\022\023\n\013description\030\005 \001(\t\022F" +
+      "\n\ndimensions\030\006 \003(\01322.google.ads.googlead" +
+      "s.v13.common.AudienceDimension\022X\n\023exclus" +
+      "ion_dimension\030\007 \001(\0132;.google.ads.googlea" +
+      "ds.v13.common.AudienceExclusionDimension" +
+      ":W\352AT\n!googleads.googleapis.com/Audience" +
+      "\022/customers/{customer_id}/audiences/{aud" +
+      "ience_id}B\377\001\n&com.google.ads.googleads.v" +
+      "13.resourcesB\rAudienceProtoP\001ZKgoogle.go" +
+      "lang.org/genproto/googleapis/ads/googlea" +
+      "ds/v13/resources;resources\242\002\003GAA\252\002\"Googl" +
+      "e.Ads.GoogleAds.V13.Resources\312\002\"Google\\A" +
+      "ds\\GoogleAds\\V13\\Resources\352\002&Google::Ads" +
+      "::GoogleAds::V13::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

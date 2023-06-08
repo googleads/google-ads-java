@@ -11,6 +11,7 @@ public interface FeedOrBuilder extends
    * <pre>
    * Immutable. The resource name of the feed.
    * Feed resource names have the form:
+   *
    * `customers/{customer_id}/feeds/{feed_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface FeedOrBuilder extends
    * <pre>
    * Immutable. The resource name of the feed.
    * Feed resource names have the form:
+   *
    * `customers/{customer_id}/feeds/{feed_id}`
    * </pre>
    *
@@ -286,5 +288,5 @@ public interface FeedOrBuilder extends
    */
   com.google.ads.googleads.v13.resources.Feed.AffiliateLocationFeedDataOrBuilder getAffiliateLocationFeedDataOrBuilder();
 
-  public com.google.ads.googleads.v13.resources.Feed.SystemFeedGenerationDataCase getSystemFeedGenerationDataCase();
+  com.google.ads.googleads.v13.resources.Feed.SystemFeedGenerationDataCase getSystemFeedGenerationDataCase();
 }

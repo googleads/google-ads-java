@@ -98,6 +98,7 @@ public interface ConversionValueRuleOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed conversion value rule
    * is expected, in this format:
+   *
    * `customers/{customer_id}/conversionValueRules/{conversion_value_rule_id}`
    * </pre>
    *
@@ -109,6 +110,7 @@ public interface ConversionValueRuleOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed conversion value rule
    * is expected, in this format:
+   *
    * `customers/{customer_id}/conversionValueRules/{conversion_value_rule_id}`
    * </pre>
    *
@@ -120,6 +122,7 @@ public interface ConversionValueRuleOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed conversion value rule
    * is expected, in this format:
+   *
    * `customers/{customer_id}/conversionValueRules/{conversion_value_rule_id}`
    * </pre>
    *
@@ -129,5 +132,5 @@ public interface ConversionValueRuleOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v13.services.ConversionValueRuleOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v13.services.ConversionValueRuleOperation.OperationCase getOperationCase();
 }

@@ -92,93 +92,94 @@ public final class SmartCampaignSuggestServiceProto {
       "rces/keyword_theme_constant.proto\032\034googl" +
       "e/api/annotations.proto\032\027google/api/clie" +
       "nt.proto\032\037google/api/field_behavior.prot" +
-      "o\032\031google/api/resource.proto\"\366\001\n(Suggest" +
-      "SmartCampaignBudgetOptionsRequest\022\030\n\013cus" +
-      "tomer_id\030\001 \001(\tB\003\340A\002\022=\n\010campaign\030\002 \001(\tB)\340" +
-      "A\002\372A#\n!googleads.googleapis.com/Campaign" +
-      "H\000\022^\n\017suggestion_info\030\003 \001(\0132>.google.ads" +
-      ".googleads.v13.services.SmartCampaignSug" +
-      "gestionInfoB\003\340A\002H\000B\021\n\017suggestion_data\"\345\005" +
-      "\n\033SmartCampaignSuggestionInfo\022\026\n\tfinal_u" +
-      "rl\030\001 \001(\tB\003\340A\001\022\032\n\rlanguage_code\030\003 \001(\tB\003\340A" +
-      "\001\022J\n\014ad_schedules\030\006 \003(\0132/.google.ads.goo" +
-      "gleads.v13.common.AdScheduleInfoB\003\340A\001\022N\n" +
-      "\016keyword_themes\030\007 \003(\01321.google.ads.googl" +
-      "eads.v13.common.KeywordThemeInfoB\003\340A\001\022o\n" +
-      "\020business_context\030\010 \001(\0132N.google.ads.goo" +
-      "gleads.v13.services.SmartCampaignSuggest" +
-      "ionInfo.BusinessContextB\003\340A\001H\000\022(\n\031busine" +
-      "ss_profile_location\030\t \001(\tB\003\340A\001H\000\022i\n\rloca" +
-      "tion_list\030\004 \001(\0132K.google.ads.googleads.v" +
-      "13.services.SmartCampaignSuggestionInfo." +
-      "LocationListB\003\340A\001H\001\022H\n\tproximity\030\005 \001(\0132." +
-      ".google.ads.googleads.v13.common.Proximi" +
-      "tyInfoB\003\340A\001H\001\032U\n\014LocationList\022E\n\tlocatio" +
-      "ns\030\001 \003(\0132-.google.ads.googleads.v13.comm" +
-      "on.LocationInfoB\003\340A\002\032-\n\017BusinessContext\022" +
-      "\032\n\rbusiness_name\030\001 \001(\tB\003\340A\001B\022\n\020business_" +
-      "settingB\014\n\ngeo_target\"\377\004\n)SuggestSmartCa" +
-      "mpaignBudgetOptionsResponse\022p\n\003low\030\001 \001(\013" +
-      "2Y.google.ads.googleads.v13.services.Sug" +
-      "gestSmartCampaignBudgetOptionsResponse.B" +
-      "udgetOptionB\003\340A\001H\000\210\001\001\022x\n\013recommended\030\002 \001" +
-      "(\0132Y.google.ads.googleads.v13.services.S" +
+      "o\032\031google/api/resource.proto\"\371\001\n(Suggest" +
+      "SmartCampaignBudgetOptionsRequest\022\031\n\013cus" +
+      "tomer_id\030\001 \001(\tB\004\342A\001\002\022>\n\010campaign\030\002 \001(\tB*" +
+      "\342A\001\002\372A#\n!googleads.googleapis.com/Campai" +
+      "gnH\000\022_\n\017suggestion_info\030\003 \001(\0132>.google.a" +
+      "ds.googleads.v13.services.SmartCampaignS" +
+      "uggestionInfoB\004\342A\001\002H\000B\021\n\017suggestion_data" +
+      "\"\357\005\n\033SmartCampaignSuggestionInfo\022\027\n\tfina" +
+      "l_url\030\001 \001(\tB\004\342A\001\001\022\033\n\rlanguage_code\030\003 \001(\t" +
+      "B\004\342A\001\001\022K\n\014ad_schedules\030\006 \003(\0132/.google.ad" +
+      "s.googleads.v13.common.AdScheduleInfoB\004\342" +
+      "A\001\001\022O\n\016keyword_themes\030\007 \003(\01321.google.ads" +
+      ".googleads.v13.common.KeywordThemeInfoB\004" +
+      "\342A\001\001\022p\n\020business_context\030\010 \001(\0132N.google." +
+      "ads.googleads.v13.services.SmartCampaign" +
+      "SuggestionInfo.BusinessContextB\004\342A\001\001H\000\022)" +
+      "\n\031business_profile_location\030\t \001(\tB\004\342A\001\001H" +
+      "\000\022j\n\rlocation_list\030\004 \001(\0132K.google.ads.go" +
+      "ogleads.v13.services.SmartCampaignSugges" +
+      "tionInfo.LocationListB\004\342A\001\001H\001\022I\n\tproximi" +
+      "ty\030\005 \001(\0132..google.ads.googleads.v13.comm" +
+      "on.ProximityInfoB\004\342A\001\001H\001\032V\n\014LocationList" +
+      "\022F\n\tlocations\030\001 \003(\0132-.google.ads.googlea" +
+      "ds.v13.common.LocationInfoB\004\342A\001\002\032.\n\017Busi" +
+      "nessContext\022\033\n\rbusiness_name\030\001 \001(\tB\004\342A\001\001" +
+      "B\022\n\020business_settingB\014\n\ngeo_target\"\202\005\n)S" +
       "uggestSmartCampaignBudgetOptionsResponse" +
-      ".BudgetOptionB\003\340A\001H\001\210\001\001\022q\n\004high\030\003 \001(\0132Y." +
+      "\022q\n\003low\030\001 \001(\0132Y.google.ads.googleads.v13" +
+      ".services.SuggestSmartCampaignBudgetOpti" +
+      "onsResponse.BudgetOptionB\004\342A\001\001H\000\210\001\001\022y\n\013r" +
+      "ecommended\030\002 \001(\0132Y.google.ads.googleads." +
+      "v13.services.SuggestSmartCampaignBudgetO" +
+      "ptionsResponse.BudgetOptionB\004\342A\001\001H\001\210\001\001\022r" +
+      "\n\004high\030\003 \001(\0132Y.google.ads.googleads.v13." +
+      "services.SuggestSmartCampaignBudgetOptio" +
+      "nsResponse.BudgetOptionB\004\342A\001\001H\002\210\001\001\032=\n\007Me" +
+      "trics\022\030\n\020min_daily_clicks\030\001 \001(\003\022\030\n\020max_d" +
+      "aily_clicks\030\002 \001(\003\032\222\001\n\014BudgetOption\022\033\n\023da" +
+      "ily_amount_micros\030\001 \001(\003\022e\n\007metrics\030\002 \001(\013" +
+      "2T.google.ads.googleads.v13.services.Sug" +
+      "gestSmartCampaignBudgetOptionsResponse.M" +
+      "etricsB\006\n\004_lowB\016\n\014_recommendedB\007\n\005_high\"" +
+      "\231\001\n\035SuggestSmartCampaignAdRequest\022\031\n\013cus" +
+      "tomer_id\030\001 \001(\tB\004\342A\001\002\022]\n\017suggestion_info\030" +
+      "\002 \001(\0132>.google.ads.googleads.v13.service" +
+      "s.SmartCampaignSuggestionInfoB\004\342A\001\002\"m\n\036S" +
+      "uggestSmartCampaignAdResponse\022K\n\007ad_info" +
+      "\030\001 \001(\01324.google.ads.googleads.v13.common" +
+      ".SmartCampaignAdInfoB\004\342A\001\001\"\227\001\n\033SuggestKe" +
+      "ywordThemesRequest\022\031\n\013customer_id\030\001 \001(\tB" +
+      "\004\342A\001\002\022]\n\017suggestion_info\030\002 \001(\0132>.google." +
+      "ads.googleads.v13.services.SmartCampaign" +
+      "SuggestionInfoB\004\342A\001\002\"\245\002\n\034SuggestKeywordT" +
+      "hemesResponse\022d\n\016keyword_themes\030\002 \003(\0132L." +
       "google.ads.googleads.v13.services.Sugges" +
-      "tSmartCampaignBudgetOptionsResponse.Budg" +
-      "etOptionB\003\340A\001H\002\210\001\001\032=\n\007Metrics\022\030\n\020min_dai" +
-      "ly_clicks\030\001 \001(\003\022\030\n\020max_daily_clicks\030\002 \001(" +
-      "\003\032\222\001\n\014BudgetOption\022\033\n\023daily_amount_micro" +
-      "s\030\001 \001(\003\022e\n\007metrics\030\002 \001(\0132T.google.ads.go" +
-      "ogleads.v13.services.SuggestSmartCampaig" +
-      "nBudgetOptionsResponse.MetricsB\006\n\004_lowB\016" +
-      "\n\014_recommendedB\007\n\005_high\"\227\001\n\035SuggestSmart" +
-      "CampaignAdRequest\022\030\n\013customer_id\030\001 \001(\tB\003" +
-      "\340A\002\022\\\n\017suggestion_info\030\002 \001(\0132>.google.ad" +
-      "s.googleads.v13.services.SmartCampaignSu" +
-      "ggestionInfoB\003\340A\002\"l\n\036SuggestSmartCampaig" +
-      "nAdResponse\022J\n\007ad_info\030\001 \001(\01324.google.ad" +
-      "s.googleads.v13.common.SmartCampaignAdIn" +
-      "foB\003\340A\001\"\225\001\n\033SuggestKeywordThemesRequest\022" +
-      "\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022\\\n\017suggestion_" +
-      "info\030\002 \001(\0132>.google.ads.googleads.v13.se" +
-      "rvices.SmartCampaignSuggestionInfoB\003\340A\002\"" +
-      "\245\002\n\034SuggestKeywordThemesResponse\022d\n\016keyw" +
-      "ord_themes\030\002 \003(\0132L.google.ads.googleads." +
-      "v13.services.SuggestKeywordThemesRespons" +
-      "e.KeywordTheme\032\236\001\n\014KeywordTheme\022Z\n\026keywo" +
-      "rd_theme_constant\030\001 \001(\01328.google.ads.goo" +
-      "gleads.v13.resources.KeywordThemeConstan" +
-      "tH\000\022!\n\027free_form_keyword_theme\030\002 \001(\tH\000B\017" +
-      "\n\rkeyword_theme2\256\006\n\033SmartCampaignSuggest" +
-      "Service\022\213\002\n!SuggestSmartCampaignBudgetOp" +
-      "tions\022K.google.ads.googleads.v13.service" +
-      "s.SuggestSmartCampaignBudgetOptionsReque" +
-      "st\032L.google.ads.googleads.v13.services.S" +
-      "uggestSmartCampaignBudgetOptionsResponse" +
-      "\"K\202\323\344\223\002E\"@/v13/customers/{customer_id=*}" +
-      ":suggestSmartCampaignBudgetOptions:\001*\022\337\001" +
-      "\n\026SuggestSmartCampaignAd\022@.google.ads.go" +
-      "ogleads.v13.services.SuggestSmartCampaig" +
-      "nAdRequest\032A.google.ads.googleads.v13.se" +
-      "rvices.SuggestSmartCampaignAdResponse\"@\202" +
-      "\323\344\223\002:\"5/v13/customers/{customer_id=*}:su" +
-      "ggestSmartCampaignAd:\001*\022\327\001\n\024SuggestKeywo" +
-      "rdThemes\022>.google.ads.googleads.v13.serv" +
-      "ices.SuggestKeywordThemesRequest\032?.googl" +
-      "e.ads.googleads.v13.services.SuggestKeyw" +
-      "ordThemesResponse\">\202\323\344\223\0028\"3/v13/customer" +
-      "s/{customer_id=*}:suggestKeywordThemes:\001" +
-      "*\032E\312A\030googleads.googleapis.com\322A\'https:/" +
-      "/www.googleapis.com/auth/adwordsB\214\002\n%com" +
-      ".google.ads.googleads.v13.servicesB Smar" +
-      "tCampaignSuggestServiceProtoP\001ZIgoogle.g" +
-      "olang.org/genproto/googleapis/ads/google" +
-      "ads/v13/services;services\242\002\003GAA\252\002!Google" +
-      ".Ads.GoogleAds.V13.Services\312\002!Google\\Ads" +
-      "\\GoogleAds\\V13\\Services\352\002%Google::Ads::G" +
-      "oogleAds::V13::Servicesb\006proto3"
+      "tKeywordThemesResponse.KeywordTheme\032\236\001\n\014" +
+      "KeywordTheme\022Z\n\026keyword_theme_constant\030\001" +
+      " \001(\01328.google.ads.googleads.v13.resource" +
+      "s.KeywordThemeConstantH\000\022!\n\027free_form_ke" +
+      "yword_theme\030\002 \001(\tH\000B\017\n\rkeyword_theme2\256\006\n" +
+      "\033SmartCampaignSuggestService\022\213\002\n!Suggest" +
+      "SmartCampaignBudgetOptions\022K.google.ads." +
+      "googleads.v13.services.SuggestSmartCampa" +
+      "ignBudgetOptionsRequest\032L.google.ads.goo" +
+      "gleads.v13.services.SuggestSmartCampaign" +
+      "BudgetOptionsResponse\"K\202\323\344\223\002E\"@/v13/cust" +
+      "omers/{customer_id=*}:suggestSmartCampai" +
+      "gnBudgetOptions:\001*\022\337\001\n\026SuggestSmartCampa" +
+      "ignAd\022@.google.ads.googleads.v13.service" +
+      "s.SuggestSmartCampaignAdRequest\032A.google" +
+      ".ads.googleads.v13.services.SuggestSmart" +
+      "CampaignAdResponse\"@\202\323\344\223\002:\"5/v13/custome" +
+      "rs/{customer_id=*}:suggestSmartCampaignA" +
+      "d:\001*\022\327\001\n\024SuggestKeywordThemes\022>.google.a" +
+      "ds.googleads.v13.services.SuggestKeyword" +
+      "ThemesRequest\032?.google.ads.googleads.v13" +
+      ".services.SuggestKeywordThemesResponse\">" +
+      "\202\323\344\223\0028\"3/v13/customers/{customer_id=*}:s" +
+      "uggestKeywordThemes:\001*\032E\312A\030googleads.goo" +
+      "gleapis.com\322A\'https://www.googleapis.com" +
+      "/auth/adwordsB\214\002\n%com.google.ads.googlea" +
+      "ds.v13.servicesB SmartCampaignSuggestSer" +
+      "viceProtoP\001ZIgoogle.golang.org/genproto/" +
+      "googleapis/ads/googleads/v13/services;se" +
+      "rvices\242\002\003GAA\252\002!Google.Ads.GoogleAds.V13." +
+      "Services\312\002!Google\\Ads\\GoogleAds\\V13\\Serv" +
+      "ices\352\002%Google::Ads::GoogleAds::V13::Serv" +
+      "icesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

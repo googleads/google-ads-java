@@ -62,63 +62,63 @@ public final class CustomerSkAdNetworkConversionValueSchemaProto {
       "tomer_sk_ad_network_conversion_value_sch" +
       "ema.proto\022\"google.ads.googleads.v13.reso" +
       "urces\032\037google/api/field_behavior.proto\032\031" +
-      "google/api/resource.proto\"\205\017\n(CustomerSk" +
-      "AdNetworkConversionValueSchema\022`\n\rresour" +
-      "ce_name\030\001 \001(\tBI\340A\003\372AC\nAgoogleads.googlea" +
-      "pis.com/CustomerSkAdNetworkConversionVal" +
-      "ueSchema\022\202\001\n\006schema\030\002 \001(\0132m.google.ads.g" +
-      "oogleads.v13.resources.CustomerSkAdNetwo" +
-      "rkConversionValueSchema.SkAdNetworkConve" +
-      "rsionValueSchemaB\003\340A\003\032\322\013\n SkAdNetworkCon" +
-      "versionValueSchema\022\026\n\006app_id\030\001 \001(\tB\006\340A\002\340" +
-      "A\003\022%\n\030measurement_window_hours\030\002 \001(\005B\003\340A" +
-      "\003\022\306\001\n&fine_grained_conversion_value_mapp" +
-      "ings\030\003 \003(\0132\220\001.google.ads.googleads.v13.r" +
-      "esources.CustomerSkAdNetworkConversionVa" +
-      "lueSchema.SkAdNetworkConversionValueSche" +
-      "ma.FineGrainedConversionValueMappingsB\003\340" +
-      "A\003\032\377\001\n\"FineGrainedConversionValueMapping" +
-      "s\022*\n\035fine_grained_conversion_value\030\001 \001(\005" +
-      "B\003\340A\003\022\254\001\n\030conversion_value_mapping\030\002 \001(\013" +
-      "2\204\001.google.ads.googleads.v13.resources.C" +
-      "ustomerSkAdNetworkConversionValueSchema." +
-      "SkAdNetworkConversionValueSchema.Convers" +
-      "ionValueMappingB\003\340A\003\032\376\001\n\026ConversionValue" +
-      "Mapping\022(\n\033min_time_post_install_hours\030\001" +
-      " \001(\003B\003\340A\003\022(\n\033max_time_post_install_hours" +
-      "\030\002 \001(\003B\003\340A\003\022\217\001\n\rmapped_events\030\003 \003(\0132s.go" +
-      "ogle.ads.googleads.v13.resources.Custome" +
-      "rSkAdNetworkConversionValueSchema.SkAdNe" +
-      "tworkConversionValueSchema.EventB\003\340A\003\032\242\005" +
-      "\n\005Event\022\036\n\021mapped_event_name\030\001 \001(\tB\003\340A\003\022" +
-      "\032\n\rcurrency_code\030\002 \001(\tB\003\340A\003\022\245\001\n\023event_re" +
-      "venue_range\030\003 \001(\0132\200\001.google.ads.googlead" +
-      "s.v13.resources.CustomerSkAdNetworkConve" +
-      "rsionValueSchema.SkAdNetworkConversionVa" +
-      "lueSchema.Event.RevenueRangeB\003\340A\003H\000\022\"\n\023e" +
-      "vent_revenue_value\030\004 \001(\001B\003\340A\003H\000\022\260\001\n\026even" +
-      "t_occurrence_range\030\005 \001(\0132\210\001.google.ads.g" +
-      "oogleads.v13.resources.CustomerSkAdNetwo" +
-      "rkConversionValueSchema.SkAdNetworkConve" +
-      "rsionValueSchema.Event.EventOccurrenceRa" +
-      "ngeB\003\340A\003H\001\022\034\n\revent_counter\030\006 \001(\003B\003\340A\003H\001" +
-      "\032N\n\014RevenueRange\022\036\n\021min_event_revenue\030\003 " +
-      "\001(\001B\003\340A\003\022\036\n\021max_event_revenue\030\004 \001(\001B\003\340A\003" +
-      "\032R\n\024EventOccurrenceRange\022\034\n\017min_event_co" +
-      "unt\030\001 \001(\003B\003\340A\003\022\034\n\017max_event_count\030\002 \001(\003B" +
-      "\003\340A\003B\016\n\014revenue_rateB\014\n\nevent_rate:\234\001\352A\230" +
-      "\001\nAgoogleads.googleapis.com/CustomerSkAd" +
-      "NetworkConversionValueSchema\022Scustomers/" +
-      "{customer_id}/customerSkAdNetworkConvers" +
-      "ionValueSchemas/{account_link_id}B\237\002\n&co" +
-      "m.google.ads.googleads.v13.resourcesB-Cu" +
-      "stomerSkAdNetworkConversionValueSchemaPr" +
-      "otoP\001ZKgoogle.golang.org/genproto/google" +
-      "apis/ads/googleads/v13/resources;resourc" +
-      "es\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V13.Reso" +
-      "urces\312\002\"Google\\Ads\\GoogleAds\\V13\\Resourc" +
-      "es\352\002&Google::Ads::GoogleAds::V13::Resour" +
-      "cesb\006proto3"
+      "google/api/resource.proto\"\227\017\n(CustomerSk" +
+      "AdNetworkConversionValueSchema\022a\n\rresour" +
+      "ce_name\030\001 \001(\tBJ\342A\001\003\372AC\nAgoogleads.google" +
+      "apis.com/CustomerSkAdNetworkConversionVa" +
+      "lueSchema\022\203\001\n\006schema\030\002 \001(\0132m.google.ads." +
+      "googleads.v13.resources.CustomerSkAdNetw" +
+      "orkConversionValueSchema.SkAdNetworkConv" +
+      "ersionValueSchemaB\004\342A\001\003\032\342\013\n SkAdNetworkC" +
+      "onversionValueSchema\022\025\n\006app_id\030\001 \001(\tB\005\342A" +
+      "\002\002\003\022&\n\030measurement_window_hours\030\002 \001(\005B\004\342" +
+      "A\001\003\022\307\001\n&fine_grained_conversion_value_ma" +
+      "ppings\030\003 \003(\0132\220\001.google.ads.googleads.v13" +
+      ".resources.CustomerSkAdNetworkConversion" +
+      "ValueSchema.SkAdNetworkConversionValueSc" +
+      "hema.FineGrainedConversionValueMappingsB" +
+      "\004\342A\001\003\032\201\002\n\"FineGrainedConversionValueMapp" +
+      "ings\022+\n\035fine_grained_conversion_value\030\001 " +
+      "\001(\005B\004\342A\001\003\022\255\001\n\030conversion_value_mapping\030\002" +
+      " \001(\0132\204\001.google.ads.googleads.v13.resourc" +
+      "es.CustomerSkAdNetworkConversionValueSch" +
+      "ema.SkAdNetworkConversionValueSchema.Con" +
+      "versionValueMappingB\004\342A\001\003\032\201\002\n\026Conversion" +
+      "ValueMapping\022)\n\033min_time_post_install_ho" +
+      "urs\030\001 \001(\003B\004\342A\001\003\022)\n\033max_time_post_install" +
+      "_hours\030\002 \001(\003B\004\342A\001\003\022\220\001\n\rmapped_events\030\003 \003" +
+      "(\0132s.google.ads.googleads.v13.resources." +
+      "CustomerSkAdNetworkConversionValueSchema" +
+      ".SkAdNetworkConversionValueSchema.EventB" +
+      "\004\342A\001\003\032\254\005\n\005Event\022\037\n\021mapped_event_name\030\001 \001" +
+      "(\tB\004\342A\001\003\022\033\n\rcurrency_code\030\002 \001(\tB\004\342A\001\003\022\246\001" +
+      "\n\023event_revenue_range\030\003 \001(\0132\200\001.google.ad" +
+      "s.googleads.v13.resources.CustomerSkAdNe" +
+      "tworkConversionValueSchema.SkAdNetworkCo" +
+      "nversionValueSchema.Event.RevenueRangeB\004" +
+      "\342A\001\003H\000\022#\n\023event_revenue_value\030\004 \001(\001B\004\342A\001" +
+      "\003H\000\022\261\001\n\026event_occurrence_range\030\005 \001(\0132\210\001." +
+      "google.ads.googleads.v13.resources.Custo" +
+      "merSkAdNetworkConversionValueSchema.SkAd" +
+      "NetworkConversionValueSchema.Event.Event" +
+      "OccurrenceRangeB\004\342A\001\003H\001\022\035\n\revent_counter" +
+      "\030\006 \001(\003B\004\342A\001\003H\001\032P\n\014RevenueRange\022\037\n\021min_ev" +
+      "ent_revenue\030\003 \001(\001B\004\342A\001\003\022\037\n\021max_event_rev" +
+      "enue\030\004 \001(\001B\004\342A\001\003\032T\n\024EventOccurrenceRange" +
+      "\022\035\n\017min_event_count\030\001 \001(\003B\004\342A\001\003\022\035\n\017max_e" +
+      "vent_count\030\002 \001(\003B\004\342A\001\003B\016\n\014revenue_rateB\014" +
+      "\n\nevent_rate:\234\001\352A\230\001\nAgoogleads.googleapi" +
+      "s.com/CustomerSkAdNetworkConversionValue" +
+      "Schema\022Scustomers/{customer_id}/customer" +
+      "SkAdNetworkConversionValueSchemas/{accou" +
+      "nt_link_id}B\237\002\n&com.google.ads.googleads" +
+      ".v13.resourcesB-CustomerSkAdNetworkConve" +
+      "rsionValueSchemaProtoP\001ZKgoogle.golang.o" +
+      "rg/genproto/googleapis/ads/googleads/v13" +
+      "/resources;resources\242\002\003GAA\252\002\"Google.Ads." +
+      "GoogleAds.V13.Resources\312\002\"Google\\Ads\\Goo" +
+      "gleAds\\V13\\Resources\352\002&Google::Ads::Goog" +
+      "leAds::V13::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

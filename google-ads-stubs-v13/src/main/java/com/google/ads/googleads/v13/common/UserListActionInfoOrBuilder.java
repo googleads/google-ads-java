@@ -65,5 +65,5 @@ public interface UserListActionInfoOrBuilder extends
   com.google.protobuf.ByteString
       getRemarketingActionBytes();
 
-  public com.google.ads.googleads.v13.common.UserListActionInfo.UserListActionCase getUserListActionCase();
+  com.google.ads.googleads.v13.common.UserListActionInfo.UserListActionCase getUserListActionCase();
 }

@@ -41,32 +41,32 @@ public final class CustomAudienceProto {
       "audience_status.proto\0329google/ads/google" +
       "ads/v12/enums/custom_audience_type.proto" +
       "\032\037google/api/field_behavior.proto\032\031googl" +
-      "e/api/resource.proto\"\200\004\n\016CustomAudience\022" +
-      "F\n\rresource_name\030\001 \001(\tB/\340A\005\372A)\n\'googlead" +
-      "s.googleapis.com/CustomAudience\022\017\n\002id\030\002 " +
-      "\001(\003B\003\340A\003\022b\n\006status\030\003 \001(\0162M.google.ads.go" +
-      "ogleads.v12.enums.CustomAudienceStatusEn" +
-      "um.CustomAudienceStatusB\003\340A\003\022\014\n\004name\030\004 \001" +
-      "(\t\022W\n\004type\030\005 \001(\0162I.google.ads.googleads." +
-      "v12.enums.CustomAudienceTypeEnum.CustomA" +
-      "udienceType\022\023\n\013description\030\006 \001(\t\022I\n\007memb" +
-      "ers\030\007 \003(\01328.google.ads.googleads.v12.res" +
-      "ources.CustomAudienceMember:j\352Ag\n\'google" +
-      "ads.googleapis.com/CustomAudience\022<custo" +
-      "mers/{customer_id}/customAudiences/{cust" +
-      "om_audience_id}\"\326\001\n\024CustomAudienceMember" +
-      "\022j\n\013member_type\030\001 \001(\0162U.google.ads.googl" +
-      "eads.v12.enums.CustomAudienceMemberTypeE" +
-      "num.CustomAudienceMemberType\022\021\n\007keyword\030" +
-      "\002 \001(\tH\000\022\r\n\003url\030\003 \001(\tH\000\022\030\n\016place_category" +
-      "\030\004 \001(\003H\000\022\r\n\003app\030\005 \001(\tH\000B\007\n\005valueB\205\002\n&com" +
-      ".google.ads.googleads.v12.resourcesB\023Cus" +
-      "tomAudienceProtoP\001ZKgoogle.golang.org/ge" +
-      "nproto/googleapis/ads/googleads/v12/reso" +
-      "urces;resources\242\002\003GAA\252\002\"Google.Ads.Googl" +
-      "eAds.V12.Resources\312\002\"Google\\Ads\\GoogleAd" +
-      "s\\V12\\Resources\352\002&Google::Ads::GoogleAds" +
-      "::V12::Resourcesb\006proto3"
+      "e/api/resource.proto\"\203\004\n\016CustomAudience\022" +
+      "G\n\rresource_name\030\001 \001(\tB0\342A\001\005\372A)\n\'googlea" +
+      "ds.googleapis.com/CustomAudience\022\020\n\002id\030\002" +
+      " \001(\003B\004\342A\001\003\022c\n\006status\030\003 \001(\0162M.google.ads." +
+      "googleads.v12.enums.CustomAudienceStatus" +
+      "Enum.CustomAudienceStatusB\004\342A\001\003\022\014\n\004name\030" +
+      "\004 \001(\t\022W\n\004type\030\005 \001(\0162I.google.ads.googlea" +
+      "ds.v12.enums.CustomAudienceTypeEnum.Cust" +
+      "omAudienceType\022\023\n\013description\030\006 \001(\t\022I\n\007m" +
+      "embers\030\007 \003(\01328.google.ads.googleads.v12." +
+      "resources.CustomAudienceMember:j\352Ag\n\'goo" +
+      "gleads.googleapis.com/CustomAudience\022<cu" +
+      "stomers/{customer_id}/customAudiences/{c" +
+      "ustom_audience_id}\"\326\001\n\024CustomAudienceMem" +
+      "ber\022j\n\013member_type\030\001 \001(\0162U.google.ads.go" +
+      "ogleads.v12.enums.CustomAudienceMemberTy" +
+      "peEnum.CustomAudienceMemberType\022\021\n\007keywo" +
+      "rd\030\002 \001(\tH\000\022\r\n\003url\030\003 \001(\tH\000\022\030\n\016place_categ" +
+      "ory\030\004 \001(\003H\000\022\r\n\003app\030\005 \001(\tH\000B\007\n\005valueB\205\002\n&" +
+      "com.google.ads.googleads.v12.resourcesB\023" +
+      "CustomAudienceProtoP\001ZKgoogle.golang.org" +
+      "/genproto/googleapis/ads/googleads/v12/r" +
+      "esources;resources\242\002\003GAA\252\002\"Google.Ads.Go" +
+      "ogleAds.V12.Resources\312\002\"Google\\Ads\\Googl" +
+      "eAds\\V12\\Resources\352\002&Google::Ads::Google" +
+      "Ads::V12::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -11,6 +11,7 @@ public interface MobileAppCategoryConstantOrBuilder extends
    * <pre>
    * Output only. The resource name of the mobile app category constant.
    * Mobile app category constant resource names have the form:
+   *
    * `mobileAppCategoryConstants/{mobile_app_category_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface MobileAppCategoryConstantOrBuilder extends
    * <pre>
    * Output only. The resource name of the mobile app category constant.
    * Mobile app category constant resource names have the form:
+   *
    * `mobileAppCategoryConstants/{mobile_app_category_id}`
    * </pre>
    *

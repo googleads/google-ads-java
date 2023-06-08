@@ -72,5 +72,5 @@ public interface AdGroupCustomizerOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v13.services.AdGroupCustomizerOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v13.services.AdGroupCustomizerOperation.OperationCase getOperationCase();
 }

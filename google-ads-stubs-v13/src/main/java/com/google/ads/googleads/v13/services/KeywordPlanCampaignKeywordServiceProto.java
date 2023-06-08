@@ -52,45 +52,46 @@ public final class KeywordPlanCampaignKeywordServiceProto {
       "o\032\037google/api/field_behavior.proto\032\031goog" +
       "le/api/resource.proto\032 google/protobuf/f" +
       "ield_mask.proto\032\027google/rpc/status.proto" +
-      "\"\325\001\n(MutateKeywordPlanCampaignKeywordsRe" +
-      "quest\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022_\n\nopera" +
-      "tions\030\002 \003(\0132F.google.ads.googleads.v13.s" +
-      "ervices.KeywordPlanCampaignKeywordOperat" +
-      "ionB\003\340A\002\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rval" +
-      "idate_only\030\004 \001(\010\"\323\002\n#KeywordPlanCampaign" +
-      "KeywordOperation\022/\n\013update_mask\030\004 \001(\0132\032." +
-      "google.protobuf.FieldMask\022P\n\006create\030\001 \001(" +
-      "\0132>.google.ads.googleads.v13.resources.K" +
-      "eywordPlanCampaignKeywordH\000\022P\n\006update\030\002 " +
+      "\"\327\001\n(MutateKeywordPlanCampaignKeywordsRe" +
+      "quest\022\031\n\013customer_id\030\001 \001(\tB\004\342A\001\002\022`\n\noper" +
+      "ations\030\002 \003(\0132F.google.ads.googleads.v13." +
+      "services.KeywordPlanCampaignKeywordOpera" +
+      "tionB\004\342A\001\002\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rv" +
+      "alidate_only\030\004 \001(\010\"\323\002\n#KeywordPlanCampai" +
+      "gnKeywordOperation\022/\n\013update_mask\030\004 \001(\0132" +
+      "\032.google.protobuf.FieldMask\022P\n\006create\030\001 " +
       "\001(\0132>.google.ads.googleads.v13.resources" +
-      ".KeywordPlanCampaignKeywordH\000\022J\n\006remove\030" +
-      "\003 \001(\tB8\372A5\n3googleads.googleapis.com/Key" +
-      "wordPlanCampaignKeywordH\000B\013\n\toperation\"\272" +
-      "\001\n)MutateKeywordPlanCampaignKeywordsResp" +
-      "onse\0221\n\025partial_failure_error\030\003 \001(\0132\022.go" +
-      "ogle.rpc.Status\022Z\n\007results\030\002 \003(\0132I.googl" +
-      "e.ads.googleads.v13.services.MutateKeywo" +
-      "rdPlanCampaignKeywordResult\"y\n&MutateKey" +
-      "wordPlanCampaignKeywordResult\022O\n\rresourc" +
-      "e_name\030\001 \001(\tB8\372A5\n3googleads.googleapis." +
-      "com/KeywordPlanCampaignKeyword2\222\003\n!Keywo" +
-      "rdPlanCampaignKeywordService\022\245\002\n!MutateK" +
-      "eywordPlanCampaignKeywords\022K.google.ads." +
-      "googleads.v13.services.MutateKeywordPlan" +
-      "CampaignKeywordsRequest\032L.google.ads.goo" +
-      "gleads.v13.services.MutateKeywordPlanCam" +
-      "paignKeywordsResponse\"e\202\323\344\223\002F\"A/v13/cust" +
-      "omers/{customer_id=*}/keywordPlanCampaig" +
-      "nKeywords:mutate:\001*\332A\026customer_id,operat" +
-      "ions\032E\312A\030googleads.googleapis.com\322A\'http" +
-      "s://www.googleapis.com/auth/adwordsB\222\002\n%" +
-      "com.google.ads.googleads.v13.servicesB&K" +
-      "eywordPlanCampaignKeywordServiceProtoP\001Z" +
-      "Igoogle.golang.org/genproto/googleapis/a" +
-      "ds/googleads/v13/services;services\242\002\003GAA" +
-      "\252\002!Google.Ads.GoogleAds.V13.Services\312\002!G" +
-      "oogle\\Ads\\GoogleAds\\V13\\Services\352\002%Googl" +
-      "e::Ads::GoogleAds::V13::Servicesb\006proto3"
+      ".KeywordPlanCampaignKeywordH\000\022P\n\006update\030" +
+      "\002 \001(\0132>.google.ads.googleads.v13.resourc" +
+      "es.KeywordPlanCampaignKeywordH\000\022J\n\006remov" +
+      "e\030\003 \001(\tB8\372A5\n3googleads.googleapis.com/K" +
+      "eywordPlanCampaignKeywordH\000B\013\n\toperation" +
+      "\"\272\001\n)MutateKeywordPlanCampaignKeywordsRe" +
+      "sponse\0221\n\025partial_failure_error\030\003 \001(\0132\022." +
+      "google.rpc.Status\022Z\n\007results\030\002 \003(\0132I.goo" +
+      "gle.ads.googleads.v13.services.MutateKey" +
+      "wordPlanCampaignKeywordResult\"y\n&MutateK" +
+      "eywordPlanCampaignKeywordResult\022O\n\rresou" +
+      "rce_name\030\001 \001(\tB8\372A5\n3googleads.googleapi" +
+      "s.com/KeywordPlanCampaignKeyword2\222\003\n!Key" +
+      "wordPlanCampaignKeywordService\022\245\002\n!Mutat" +
+      "eKeywordPlanCampaignKeywords\022K.google.ad" +
+      "s.googleads.v13.services.MutateKeywordPl" +
+      "anCampaignKeywordsRequest\032L.google.ads.g" +
+      "oogleads.v13.services.MutateKeywordPlanC" +
+      "ampaignKeywordsResponse\"e\332A\026customer_id," +
+      "operations\202\323\344\223\002F\"A/v13/customers/{custom" +
+      "er_id=*}/keywordPlanCampaignKeywords:mut" +
+      "ate:\001*\032E\312A\030googleads.googleapis.com\322A\'ht" +
+      "tps://www.googleapis.com/auth/adwordsB\222\002" +
+      "\n%com.google.ads.googleads.v13.servicesB" +
+      "&KeywordPlanCampaignKeywordServiceProtoP" +
+      "\001ZIgoogle.golang.org/genproto/googleapis" +
+      "/ads/googleads/v13/services;services\242\002\003G" +
+      "AA\252\002!Google.Ads.GoogleAds.V13.Services\312\002" +
+      "!Google\\Ads\\GoogleAds\\V13\\Services\352\002%Goo" +
+      "gle::Ads::GoogleAds::V13::Servicesb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

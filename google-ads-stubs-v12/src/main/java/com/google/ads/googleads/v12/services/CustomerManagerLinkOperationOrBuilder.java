@@ -61,5 +61,5 @@ public interface CustomerManagerLinkOperationOrBuilder extends
    */
   com.google.ads.googleads.v12.resources.CustomerManagerLinkOrBuilder getUpdateOrBuilder();
 
-  public com.google.ads.googleads.v12.services.CustomerManagerLinkOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v12.services.CustomerManagerLinkOperation.OperationCase getOperationCase();
 }

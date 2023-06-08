@@ -23,7 +23,8 @@ private static final long serialVersionUID = 0L;
   private GenerateKeywordIdeasRequest() {
     customerId_ = "";
     language_ = "";
-    geoTargetConstants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    geoTargetConstants_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     pageToken_ = "";
     keywordPlanNetwork_ = 0;
     keywordAnnotation_ = java.util.Collections.emptyList();
@@ -36,11 +37,6 @@ private static final long serialVersionUID = 0L;
     return new GenerateKeywordIdeasRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.services.KeywordPlanIdeaServiceProto.internal_static_google_ads_googleads_v12_services_GenerateKeywordIdeasRequest_descriptor;
@@ -56,6 +52,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   private int seedCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object seed_;
   public enum SeedCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -217,7 +214,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int GEO_TARGET_CONSTANTS_FIELD_NUMBER = 15;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList geoTargetConstants_;
+  private com.google.protobuf.LazyStringArrayList geoTargetConstants_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * The resource names of the location to target. Maximum is 10.
@@ -1027,11 +1025,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.services.GenerateKeywordIdeasRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.services.GenerateKeywordIdeasRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1114,8 +1114,8 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       customerId_ = "";
       language_ = "";
-      geoTargetConstants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000004);
+      geoTargetConstants_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       includeAdultKeywords_ = false;
       pageToken_ = "";
       pageSize_ = 0;
@@ -1180,11 +1180,6 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.google.ads.googleads.v12.services.GenerateKeywordIdeasRequest result) {
-      if (((bitField0_ & 0x00000004) != 0)) {
-        geoTargetConstants_ = geoTargetConstants_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000004);
-      }
-      result.geoTargetConstants_ = geoTargetConstants_;
       if (((bitField0_ & 0x00000080) != 0)) {
         keywordAnnotation_ = java.util.Collections.unmodifiableList(keywordAnnotation_);
         bitField0_ = (bitField0_ & ~0x00000080);
@@ -1201,6 +1196,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.language_ = language_;
         to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        geoTargetConstants_.makeImmutable();
+        result.geoTargetConstants_ = geoTargetConstants_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.includeAdultKeywords_ = includeAdultKeywords_;
@@ -1305,7 +1304,7 @@ private static final long serialVersionUID = 0L;
       if (!other.geoTargetConstants_.isEmpty()) {
         if (geoTargetConstants_.isEmpty()) {
           geoTargetConstants_ = other.geoTargetConstants_;
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ |= 0x00000004;
         } else {
           ensureGeoTargetConstantsIsMutable();
           geoTargetConstants_.addAll(other.geoTargetConstants_);
@@ -1729,12 +1728,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.LazyStringList geoTargetConstants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList geoTargetConstants_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureGeoTargetConstantsIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!geoTargetConstants_.isModifiable()) {
         geoTargetConstants_ = new com.google.protobuf.LazyStringArrayList(geoTargetConstants_);
-        bitField0_ |= 0x00000004;
-       }
+      }
+      bitField0_ |= 0x00000004;
     }
     /**
      * <pre>
@@ -1747,7 +1747,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getGeoTargetConstantsList() {
-      return geoTargetConstants_.getUnmodifiableView();
+      geoTargetConstants_.makeImmutable();
+      return geoTargetConstants_;
     }
     /**
      * <pre>
@@ -1804,6 +1805,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureGeoTargetConstantsIsMutable();
       geoTargetConstants_.set(index, value);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1822,6 +1824,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureGeoTargetConstantsIsMutable();
       geoTargetConstants_.add(value);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1840,6 +1843,7 @@ private static final long serialVersionUID = 0L;
       ensureGeoTargetConstantsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, geoTargetConstants_);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1853,8 +1857,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearGeoTargetConstants() {
-      geoTargetConstants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000004);
+      geoTargetConstants_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000004);;
       onChanged();
       return this;
     }
@@ -1874,6 +1879,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureGeoTargetConstantsIsMutable();
       geoTargetConstants_.add(value);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1903,7 +1909,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIncludeAdultKeywords(boolean value) {
-      
+
       includeAdultKeywords_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
@@ -2067,7 +2073,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPageSize(int value) {
-      
+
       pageSize_ = value;
       bitField0_ |= 0x00000020;
       onChanged();

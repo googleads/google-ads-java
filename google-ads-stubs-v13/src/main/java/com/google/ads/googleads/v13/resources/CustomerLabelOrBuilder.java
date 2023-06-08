@@ -66,6 +66,7 @@ public interface CustomerLabelOrBuilder extends
   /**
    * <pre>
    * Output only. The resource name of the label assigned to the customer.
+   *
    * Note: the Customer ID portion of the label resource name is not
    * validated when creating a new CustomerLabel.
    * </pre>
@@ -77,6 +78,7 @@ public interface CustomerLabelOrBuilder extends
   /**
    * <pre>
    * Output only. The resource name of the label assigned to the customer.
+   *
    * Note: the Customer ID portion of the label resource name is not
    * validated when creating a new CustomerLabel.
    * </pre>
@@ -88,6 +90,7 @@ public interface CustomerLabelOrBuilder extends
   /**
    * <pre>
    * Output only. The resource name of the label assigned to the customer.
+   *
    * Note: the Customer ID portion of the label resource name is not
    * validated when creating a new CustomerLabel.
    * </pre>

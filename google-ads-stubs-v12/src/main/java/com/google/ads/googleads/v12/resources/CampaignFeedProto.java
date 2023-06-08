@@ -36,28 +36,28 @@ public final class CampaignFeedProto {
       "roto\0325google/ads/googleads/v12/enums/pla" +
       "ceholder_type.proto\032\037google/api/field_be" +
       "havior.proto\032\031google/api/resource.proto\"" +
-      "\327\004\n\014CampaignFeed\022D\n\rresource_name\030\001 \001(\tB" +
-      "-\340A\005\372A\'\n%googleads.googleapis.com/Campai" +
-      "gnFeed\0228\n\004feed\030\007 \001(\tB%\340A\005\372A\037\n\035googleads." +
-      "googleapis.com/FeedH\000\210\001\001\022@\n\010campaign\030\010 \001" +
-      "(\tB)\340A\005\372A#\n!googleads.googleapis.com/Cam" +
-      "paignH\001\210\001\001\022^\n\021placeholder_types\030\004 \003(\0162C." +
-      "google.ads.googleads.v12.enums.Placehold" +
-      "erTypeEnum.PlaceholderType\022L\n\021matching_f" +
-      "unction\030\005 \001(\01321.google.ads.googleads.v12" +
-      ".common.MatchingFunction\022V\n\006status\030\006 \001(\016" +
-      "2A.google.ads.googleads.v12.enums.FeedLi" +
-      "nkStatusEnum.FeedLinkStatusB\003\340A\003:i\352Af\n%g" +
-      "oogleads.googleapis.com/CampaignFeed\022=cu" +
-      "stomers/{customer_id}/campaignFeeds/{cam" +
-      "paign_id}~{feed_id}B\007\n\005_feedB\013\n\t_campaig" +
-      "nB\203\002\n&com.google.ads.googleads.v12.resou" +
-      "rcesB\021CampaignFeedProtoP\001ZKgoogle.golang" +
-      ".org/genproto/googleapis/ads/googleads/v" +
-      "12/resources;resources\242\002\003GAA\252\002\"Google.Ad" +
-      "s.GoogleAds.V12.Resources\312\002\"Google\\Ads\\G" +
-      "oogleAds\\V12\\Resources\352\002&Google::Ads::Go" +
-      "ogleAds::V12::Resourcesb\006proto3"
+      "\333\004\n\014CampaignFeed\022E\n\rresource_name\030\001 \001(\tB" +
+      ".\342A\001\005\372A\'\n%googleads.googleapis.com/Campa" +
+      "ignFeed\0229\n\004feed\030\007 \001(\tB&\342A\001\005\372A\037\n\035googlead" +
+      "s.googleapis.com/FeedH\000\210\001\001\022A\n\010campaign\030\010" +
+      " \001(\tB*\342A\001\005\372A#\n!googleads.googleapis.com/" +
+      "CampaignH\001\210\001\001\022^\n\021placeholder_types\030\004 \003(\016" +
+      "2C.google.ads.googleads.v12.enums.Placeh" +
+      "olderTypeEnum.PlaceholderType\022L\n\021matchin" +
+      "g_function\030\005 \001(\01321.google.ads.googleads." +
+      "v12.common.MatchingFunction\022W\n\006status\030\006 " +
+      "\001(\0162A.google.ads.googleads.v12.enums.Fee" +
+      "dLinkStatusEnum.FeedLinkStatusB\004\342A\001\003:i\352A" +
+      "f\n%googleads.googleapis.com/CampaignFeed" +
+      "\022=customers/{customer_id}/campaignFeeds/" +
+      "{campaign_id}~{feed_id}B\007\n\005_feedB\013\n\t_cam" +
+      "paignB\203\002\n&com.google.ads.googleads.v12.r" +
+      "esourcesB\021CampaignFeedProtoP\001ZKgoogle.go" +
+      "lang.org/genproto/googleapis/ads/googlea" +
+      "ds/v12/resources;resources\242\002\003GAA\252\002\"Googl" +
+      "e.Ads.GoogleAds.V12.Resources\312\002\"Google\\A" +
+      "ds\\GoogleAds\\V12\\Resources\352\002&Google::Ads" +
+      "::GoogleAds::V12::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

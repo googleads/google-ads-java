@@ -11,6 +11,7 @@ public interface ConversionActionOrBuilder extends
    * <pre>
    * Immutable. The resource name of the conversion action.
    * Conversion action resource names have the form:
+   *
    * `customers/{customer_id}/conversionActions/{conversion_action_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface ConversionActionOrBuilder extends
    * <pre>
    * Immutable. The resource name of the conversion action.
    * Conversion action resource names have the form:
+   *
    * `customers/{customer_id}/conversionActions/{conversion_action_id}`
    * </pre>
    *
@@ -53,6 +55,7 @@ public interface ConversionActionOrBuilder extends
   /**
    * <pre>
    * The name of the conversion action.
+   *
    * This field is required and should not be empty when creating new
    * conversion actions.
    * </pre>
@@ -64,6 +67,7 @@ public interface ConversionActionOrBuilder extends
   /**
    * <pre>
    * The name of the conversion action.
+   *
    * This field is required and should not be empty when creating new
    * conversion actions.
    * </pre>
@@ -75,6 +79,7 @@ public interface ConversionActionOrBuilder extends
   /**
    * <pre>
    * The name of the conversion action.
+   *
    * This field is required and should not be empty when creating new
    * conversion actions.
    * </pre>
@@ -417,6 +422,7 @@ public interface ConversionActionOrBuilder extends
    * <pre>
    * The phone call duration in seconds after which a conversion should be
    * reported for this conversion action.
+   *
    * The value must be between 0 and 10000, inclusive.
    * </pre>
    *
@@ -428,6 +434,7 @@ public interface ConversionActionOrBuilder extends
    * <pre>
    * The phone call duration in seconds after which a conversion should be
    * reported for this conversion action.
+   *
    * The value must be between 0 and 10000, inclusive.
    * </pre>
    *

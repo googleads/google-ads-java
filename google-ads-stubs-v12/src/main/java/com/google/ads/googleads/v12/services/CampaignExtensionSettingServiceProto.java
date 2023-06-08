@@ -53,50 +53,50 @@ public final class CampaignExtensionSettingServiceProto {
       "pi/client.proto\032\037google/api/field_behavi" +
       "or.proto\032\031google/api/resource.proto\032 goo" +
       "gle/protobuf/field_mask.proto\032\027google/rp" +
-      "c/status.proto\"\275\002\n&MutateCampaignExtensi" +
-      "onSettingsRequest\022\030\n\013customer_id\030\001 \001(\tB\003" +
-      "\340A\002\022]\n\noperations\030\002 \003(\0132D.google.ads.goo" +
-      "gleads.v12.services.CampaignExtensionSet" +
-      "tingOperationB\003\340A\002\022\027\n\017partial_failure\030\003 " +
-      "\001(\010\022\025\n\rvalidate_only\030\004 \001(\010\022j\n\025response_c" +
-      "ontent_type\030\005 \001(\0162K.google.ads.googleads" +
-      ".v12.enums.ResponseContentTypeEnum.Respo" +
-      "nseContentType\"\313\002\n!CampaignExtensionSett" +
-      "ingOperation\022/\n\013update_mask\030\004 \001(\0132\032.goog" +
-      "le.protobuf.FieldMask\022N\n\006create\030\001 \001(\0132<." +
-      "google.ads.googleads.v12.resources.Campa" +
-      "ignExtensionSettingH\000\022N\n\006update\030\002 \001(\0132<." +
-      "google.ads.googleads.v12.resources.Campa" +
-      "ignExtensionSettingH\000\022H\n\006remove\030\003 \001(\tB6\372" +
-      "A3\n1googleads.googleapis.com/CampaignExt" +
-      "ensionSettingH\000B\013\n\toperation\"\266\001\n\'MutateC" +
-      "ampaignExtensionSettingsResponse\0221\n\025part" +
-      "ial_failure_error\030\003 \001(\0132\022.google.rpc.Sta" +
-      "tus\022X\n\007results\030\002 \003(\0132G.google.ads.google" +
+      "c/status.proto\"\277\002\n&MutateCampaignExtensi" +
+      "onSettingsRequest\022\031\n\013customer_id\030\001 \001(\tB\004" +
+      "\342A\001\002\022^\n\noperations\030\002 \003(\0132D.google.ads.go" +
+      "ogleads.v12.services.CampaignExtensionSe" +
+      "ttingOperationB\004\342A\001\002\022\027\n\017partial_failure\030" +
+      "\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\022j\n\025response" +
+      "_content_type\030\005 \001(\0162K.google.ads.googlea" +
+      "ds.v12.enums.ResponseContentTypeEnum.Res" +
+      "ponseContentType\"\313\002\n!CampaignExtensionSe" +
+      "ttingOperation\022/\n\013update_mask\030\004 \001(\0132\032.go" +
+      "ogle.protobuf.FieldMask\022N\n\006create\030\001 \001(\0132" +
+      "<.google.ads.googleads.v12.resources.Cam" +
+      "paignExtensionSettingH\000\022N\n\006update\030\002 \001(\0132" +
+      "<.google.ads.googleads.v12.resources.Cam" +
+      "paignExtensionSettingH\000\022H\n\006remove\030\003 \001(\tB" +
+      "6\372A3\n1googleads.googleapis.com/CampaignE" +
+      "xtensionSettingH\000B\013\n\toperation\"\266\001\n\'Mutat" +
+      "eCampaignExtensionSettingsResponse\0221\n\025pa" +
+      "rtial_failure_error\030\003 \001(\0132\022.google.rpc.S" +
+      "tatus\022X\n\007results\030\002 \003(\0132G.google.ads.goog" +
+      "leads.v12.services.MutateCampaignExtensi" +
+      "onSettingResult\"\327\001\n$MutateCampaignExtens" +
+      "ionSettingResult\022M\n\rresource_name\030\001 \001(\tB" +
+      "6\372A3\n1googleads.googleapis.com/CampaignE" +
+      "xtensionSetting\022`\n\032campaign_extension_se" +
+      "tting\030\002 \001(\0132<.google.ads.googleads.v12.r" +
+      "esources.CampaignExtensionSetting2\210\003\n\037Ca" +
+      "mpaignExtensionSettingService\022\235\002\n\037Mutate" +
+      "CampaignExtensionSettings\022I.google.ads.g" +
+      "oogleads.v12.services.MutateCampaignExte" +
+      "nsionSettingsRequest\032J.google.ads.google" +
       "ads.v12.services.MutateCampaignExtension" +
-      "SettingResult\"\327\001\n$MutateCampaignExtensio" +
-      "nSettingResult\022M\n\rresource_name\030\001 \001(\tB6\372" +
-      "A3\n1googleads.googleapis.com/CampaignExt" +
-      "ensionSetting\022`\n\032campaign_extension_sett" +
-      "ing\030\002 \001(\0132<.google.ads.googleads.v12.res" +
-      "ources.CampaignExtensionSetting2\210\003\n\037Camp" +
-      "aignExtensionSettingService\022\235\002\n\037MutateCa" +
-      "mpaignExtensionSettings\022I.google.ads.goo" +
-      "gleads.v12.services.MutateCampaignExtens" +
-      "ionSettingsRequest\032J.google.ads.googlead" +
-      "s.v12.services.MutateCampaignExtensionSe" +
-      "ttingsResponse\"c\202\323\344\223\002D\"?/v12/customers/{" +
-      "customer_id=*}/campaignExtensionSettings" +
-      ":mutate:\001*\332A\026customer_id,operations\032E\312A\030" +
-      "googleads.googleapis.com\322A\'https://www.g" +
-      "oogleapis.com/auth/adwordsB\220\002\n%com.googl" +
-      "e.ads.googleads.v12.servicesB$CampaignEx" +
-      "tensionSettingServiceProtoP\001ZIgoogle.gol" +
-      "ang.org/genproto/googleapis/ads/googlead" +
-      "s/v12/services;services\242\002\003GAA\252\002!Google.A" +
-      "ds.GoogleAds.V12.Services\312\002!Google\\Ads\\G" +
-      "oogleAds\\V12\\Services\352\002%Google::Ads::Goo" +
-      "gleAds::V12::Servicesb\006proto3"
+      "SettingsResponse\"c\332A\026customer_id,operati" +
+      "ons\202\323\344\223\002D\"?/v12/customers/{customer_id=*" +
+      "}/campaignExtensionSettings:mutate:\001*\032E\312" +
+      "A\030googleads.googleapis.com\322A\'https://www" +
+      ".googleapis.com/auth/adwordsB\220\002\n%com.goo" +
+      "gle.ads.googleads.v12.servicesB$Campaign" +
+      "ExtensionSettingServiceProtoP\001ZIgoogle.g" +
+      "olang.org/genproto/googleapis/ads/google" +
+      "ads/v12/services;services\242\002\003GAA\252\002!Google" +
+      ".Ads.GoogleAds.V12.Services\312\002!Google\\Ads" +
+      "\\GoogleAds\\V12\\Services\352\002%Google::Ads::G" +
+      "oogleAds::V12::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

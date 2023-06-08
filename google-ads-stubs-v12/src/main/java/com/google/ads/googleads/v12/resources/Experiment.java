@@ -41,11 +41,6 @@ private static final long serialVersionUID = 0L;
     return new Experiment();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.resources.ExperimentProto.internal_static_google_ads_googleads_v12_resources_Experiment_descriptor;
@@ -67,6 +62,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the experiment.
    * Experiment resource names have the form:
+   *
    * `customers/{customer_id}/experiments/{experiment_id}`
    * </pre>
    *
@@ -90,6 +86,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the experiment.
    * Experiment resource names have the form:
+   *
    * `customers/{customer_id}/experiments/{experiment_id}`
    * </pre>
    *
@@ -350,6 +347,7 @@ private static final long serialVersionUID = 0L;
    * now or on the campaign's start date, whichever is later. If this field is
    * set, then the experiment starts at the beginning of the specified date in
    * the customer's time zone.
+   *
    * Format: YYYY-MM-DD
    * Example: 2019-03-14
    * </pre>
@@ -367,6 +365,7 @@ private static final long serialVersionUID = 0L;
    * now or on the campaign's start date, whichever is later. If this field is
    * set, then the experiment starts at the beginning of the specified date in
    * the customer's time zone.
+   *
    * Format: YYYY-MM-DD
    * Example: 2019-03-14
    * </pre>
@@ -393,6 +392,7 @@ private static final long serialVersionUID = 0L;
    * now or on the campaign's start date, whichever is later. If this field is
    * set, then the experiment starts at the beginning of the specified date in
    * the customer's time zone.
+   *
    * Format: YYYY-MM-DD
    * Example: 2019-03-14
    * </pre>
@@ -423,6 +423,7 @@ private static final long serialVersionUID = 0L;
    * Date when the experiment ends. By default, the experiment ends on
    * the campaign's end date. If this field is set, then the experiment ends at
    * the end of the specified date in the customer's time zone.
+   *
    * Format: YYYY-MM-DD
    * Example: 2019-04-18
    * </pre>
@@ -439,6 +440,7 @@ private static final long serialVersionUID = 0L;
    * Date when the experiment ends. By default, the experiment ends on
    * the campaign's end date. If this field is set, then the experiment ends at
    * the end of the specified date in the customer's time zone.
+   *
    * Format: YYYY-MM-DD
    * Example: 2019-04-18
    * </pre>
@@ -464,6 +466,7 @@ private static final long serialVersionUID = 0L;
    * Date when the experiment ends. By default, the experiment ends on
    * the campaign's end date. If this field is set, then the experiment ends at
    * the end of the specified date in the customer's time zone.
+   *
    * Format: YYYY-MM-DD
    * Example: 2019-04-18
    * </pre>
@@ -881,11 +884,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.resources.Experiment parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.resources.Experiment parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1304,6 +1309,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the experiment.
      * Experiment resource names have the form:
+     *
      * `customers/{customer_id}/experiments/{experiment_id}`
      * </pre>
      *
@@ -1326,6 +1332,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the experiment.
      * Experiment resource names have the form:
+     *
      * `customers/{customer_id}/experiments/{experiment_id}`
      * </pre>
      *
@@ -1349,6 +1356,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the experiment.
      * Experiment resource names have the form:
+     *
      * `customers/{customer_id}/experiments/{experiment_id}`
      * </pre>
      *
@@ -1368,6 +1376,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the experiment.
      * Experiment resource names have the form:
+     *
      * `customers/{customer_id}/experiments/{experiment_id}`
      * </pre>
      *
@@ -1384,6 +1393,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the experiment.
      * Experiment resource names have the form:
+     *
      * `customers/{customer_id}/experiments/{experiment_id}`
      * </pre>
      *
@@ -1436,7 +1446,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setExperimentId(long value) {
-      
+
       experimentId_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -1911,6 +1921,7 @@ private static final long serialVersionUID = 0L;
      * now or on the campaign's start date, whichever is later. If this field is
      * set, then the experiment starts at the beginning of the specified date in
      * the customer's time zone.
+     *
      * Format: YYYY-MM-DD
      * Example: 2019-03-14
      * </pre>
@@ -1927,6 +1938,7 @@ private static final long serialVersionUID = 0L;
      * now or on the campaign's start date, whichever is later. If this field is
      * set, then the experiment starts at the beginning of the specified date in
      * the customer's time zone.
+     *
      * Format: YYYY-MM-DD
      * Example: 2019-03-14
      * </pre>
@@ -1952,6 +1964,7 @@ private static final long serialVersionUID = 0L;
      * now or on the campaign's start date, whichever is later. If this field is
      * set, then the experiment starts at the beginning of the specified date in
      * the customer's time zone.
+     *
      * Format: YYYY-MM-DD
      * Example: 2019-03-14
      * </pre>
@@ -1978,6 +1991,7 @@ private static final long serialVersionUID = 0L;
      * now or on the campaign's start date, whichever is later. If this field is
      * set, then the experiment starts at the beginning of the specified date in
      * the customer's time zone.
+     *
      * Format: YYYY-MM-DD
      * Example: 2019-03-14
      * </pre>
@@ -2000,6 +2014,7 @@ private static final long serialVersionUID = 0L;
      * now or on the campaign's start date, whichever is later. If this field is
      * set, then the experiment starts at the beginning of the specified date in
      * the customer's time zone.
+     *
      * Format: YYYY-MM-DD
      * Example: 2019-03-14
      * </pre>
@@ -2019,6 +2034,7 @@ private static final long serialVersionUID = 0L;
      * now or on the campaign's start date, whichever is later. If this field is
      * set, then the experiment starts at the beginning of the specified date in
      * the customer's time zone.
+     *
      * Format: YYYY-MM-DD
      * Example: 2019-03-14
      * </pre>
@@ -2043,6 +2059,7 @@ private static final long serialVersionUID = 0L;
      * Date when the experiment ends. By default, the experiment ends on
      * the campaign's end date. If this field is set, then the experiment ends at
      * the end of the specified date in the customer's time zone.
+     *
      * Format: YYYY-MM-DD
      * Example: 2019-04-18
      * </pre>
@@ -2058,6 +2075,7 @@ private static final long serialVersionUID = 0L;
      * Date when the experiment ends. By default, the experiment ends on
      * the campaign's end date. If this field is set, then the experiment ends at
      * the end of the specified date in the customer's time zone.
+     *
      * Format: YYYY-MM-DD
      * Example: 2019-04-18
      * </pre>
@@ -2082,6 +2100,7 @@ private static final long serialVersionUID = 0L;
      * Date when the experiment ends. By default, the experiment ends on
      * the campaign's end date. If this field is set, then the experiment ends at
      * the end of the specified date in the customer's time zone.
+     *
      * Format: YYYY-MM-DD
      * Example: 2019-04-18
      * </pre>
@@ -2107,6 +2126,7 @@ private static final long serialVersionUID = 0L;
      * Date when the experiment ends. By default, the experiment ends on
      * the campaign's end date. If this field is set, then the experiment ends at
      * the end of the specified date in the customer's time zone.
+     *
      * Format: YYYY-MM-DD
      * Example: 2019-04-18
      * </pre>
@@ -2128,6 +2148,7 @@ private static final long serialVersionUID = 0L;
      * Date when the experiment ends. By default, the experiment ends on
      * the campaign's end date. If this field is set, then the experiment ends at
      * the end of the specified date in the customer's time zone.
+     *
      * Format: YYYY-MM-DD
      * Example: 2019-04-18
      * </pre>
@@ -2146,6 +2167,7 @@ private static final long serialVersionUID = 0L;
      * Date when the experiment ends. By default, the experiment ends on
      * the campaign's end date. If this field is set, then the experiment ends at
      * the end of the specified date in the customer's time zone.
+     *
      * Format: YYYY-MM-DD
      * Example: 2019-04-18
      * </pre>

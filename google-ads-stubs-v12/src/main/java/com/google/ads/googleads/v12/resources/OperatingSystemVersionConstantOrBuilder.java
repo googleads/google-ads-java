@@ -11,6 +11,7 @@ public interface OperatingSystemVersionConstantOrBuilder extends
    * <pre>
    * Output only. The resource name of the operating system version constant.
    * Operating system version constant resource names have the form:
+   *
    * `operatingSystemVersionConstants/{criterion_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface OperatingSystemVersionConstantOrBuilder extends
    * <pre>
    * Output only. The resource name of the operating system version constant.
    * Operating system version constant resource names have the form:
+   *
    * `operatingSystemVersionConstants/{criterion_id}`
    * </pre>
    *

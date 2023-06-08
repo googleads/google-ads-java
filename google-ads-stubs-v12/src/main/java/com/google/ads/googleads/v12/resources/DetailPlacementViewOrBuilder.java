@@ -11,6 +11,7 @@ public interface DetailPlacementViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the detail placement view.
    * Detail placement view resource names have the form:
+   *
    * `customers/{customer_id}/detailPlacementViews/{ad_group_id}~{base64_placement}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface DetailPlacementViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the detail placement view.
    * Detail placement view resource names have the form:
+   *
    * `customers/{customer_id}/detailPlacementViews/{ad_group_id}~{base64_placement}`
    * </pre>
    *

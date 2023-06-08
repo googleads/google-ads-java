@@ -11,6 +11,7 @@ public interface AdGroupCustomizerOrBuilder extends
    * <pre>
    * Immutable. The resource name of the ad group customizer.
    * Ad group customizer resource names have the form:
+   *
    * `customers/{customer_id}/adGroupCustomizers/{ad_group_id}~{customizer_attribute_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface AdGroupCustomizerOrBuilder extends
    * <pre>
    * Immutable. The resource name of the ad group customizer.
    * Ad group customizer resource names have the form:
+   *
    * `customers/{customer_id}/adGroupCustomizers/{ad_group_id}~{customizer_attribute_id}`
    * </pre>
    *

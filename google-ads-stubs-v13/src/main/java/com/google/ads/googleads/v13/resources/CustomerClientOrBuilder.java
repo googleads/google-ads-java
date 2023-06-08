@@ -262,6 +262,7 @@ public interface CustomerClientOrBuilder extends
    * Output only. The resource names of the labels owned by the requesting
    * customer that are applied to the client customer. Label resource names have
    * the form:
+   *
    * `customers/{customer_id}/labels/{label_id}`
    * </pre>
    *
@@ -275,6 +276,7 @@ public interface CustomerClientOrBuilder extends
    * Output only. The resource names of the labels owned by the requesting
    * customer that are applied to the client customer. Label resource names have
    * the form:
+   *
    * `customers/{customer_id}/labels/{label_id}`
    * </pre>
    *
@@ -287,6 +289,7 @@ public interface CustomerClientOrBuilder extends
    * Output only. The resource names of the labels owned by the requesting
    * customer that are applied to the client customer. Label resource names have
    * the form:
+   *
    * `customers/{customer_id}/labels/{label_id}`
    * </pre>
    *
@@ -300,6 +303,7 @@ public interface CustomerClientOrBuilder extends
    * Output only. The resource names of the labels owned by the requesting
    * customer that are applied to the client customer. Label resource names have
    * the form:
+   *
    * `customers/{customer_id}/labels/{label_id}`
    * </pre>
    *

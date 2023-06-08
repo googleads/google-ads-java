@@ -34,27 +34,27 @@ public final class AssetGroupProto {
       "ms/ad_strength.proto\0327google/ads/googlea" +
       "ds/v12/enums/asset_group_status.proto\032\037g" +
       "oogle/api/field_behavior.proto\032\031google/a" +
-      "pi/resource.proto\"\212\004\n\nAssetGroup\022B\n\rreso" +
-      "urce_name\030\001 \001(\tB+\340A\005\372A%\n#googleads.googl" +
-      "eapis.com/AssetGroup\022\017\n\002id\030\t \001(\003B\003\340A\003\022;\n" +
-      "\010campaign\030\002 \001(\tB)\340A\005\372A#\n!googleads.googl" +
-      "eapis.com/Campaign\022\021\n\004name\030\003 \001(\tB\003\340A\002\022\022\n" +
-      "\nfinal_urls\030\004 \003(\t\022\031\n\021final_mobile_urls\030\005" +
-      " \003(\t\022U\n\006status\030\006 \001(\0162E.google.ads.google" +
-      "ads.v12.enums.AssetGroupStatusEnum.Asset" +
-      "GroupStatus\022\r\n\005path1\030\007 \001(\t\022\r\n\005path2\030\010 \001(" +
-      "\t\022S\n\013ad_strength\030\n \001(\01629.google.ads.goog" +
-      "leads.v12.enums.AdStrengthEnum.AdStrengt" +
-      "hB\003\340A\003:^\352A[\n#googleads.googleapis.com/As" +
-      "setGroup\0224customers/{customer_id}/assetG" +
-      "roups/{asset_group_id}B\201\002\n&com.google.ad" +
-      "s.googleads.v12.resourcesB\017AssetGroupPro" +
-      "toP\001ZKgoogle.golang.org/genproto/googlea" +
-      "pis/ads/googleads/v12/resources;resource" +
-      "s\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V12.Resou" +
-      "rces\312\002\"Google\\Ads\\GoogleAds\\V12\\Resource" +
-      "s\352\002&Google::Ads::GoogleAds::V12::Resourc" +
-      "esb\006proto3"
+      "pi/resource.proto\"\217\004\n\nAssetGroup\022C\n\rreso" +
+      "urce_name\030\001 \001(\tB,\342A\001\005\372A%\n#googleads.goog" +
+      "leapis.com/AssetGroup\022\020\n\002id\030\t \001(\003B\004\342A\001\003\022" +
+      "<\n\010campaign\030\002 \001(\tB*\342A\001\005\372A#\n!googleads.go" +
+      "ogleapis.com/Campaign\022\022\n\004name\030\003 \001(\tB\004\342A\001" +
+      "\002\022\022\n\nfinal_urls\030\004 \003(\t\022\031\n\021final_mobile_ur" +
+      "ls\030\005 \003(\t\022U\n\006status\030\006 \001(\0162E.google.ads.go" +
+      "ogleads.v12.enums.AssetGroupStatusEnum.A" +
+      "ssetGroupStatus\022\r\n\005path1\030\007 \001(\t\022\r\n\005path2\030" +
+      "\010 \001(\t\022T\n\013ad_strength\030\n \001(\01629.google.ads." +
+      "googleads.v12.enums.AdStrengthEnum.AdStr" +
+      "engthB\004\342A\001\003:^\352A[\n#googleads.googleapis.c" +
+      "om/AssetGroup\0224customers/{customer_id}/a" +
+      "ssetGroups/{asset_group_id}B\201\002\n&com.goog" +
+      "le.ads.googleads.v12.resourcesB\017AssetGro" +
+      "upProtoP\001ZKgoogle.golang.org/genproto/go" +
+      "ogleapis/ads/googleads/v12/resources;res" +
+      "ources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V12." +
+      "Resources\312\002\"Google\\Ads\\GoogleAds\\V12\\Res" +
+      "ources\352\002&Google::Ads::GoogleAds::V12::Re" +
+      "sourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

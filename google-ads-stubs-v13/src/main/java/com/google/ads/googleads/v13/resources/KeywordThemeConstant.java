@@ -33,11 +33,6 @@ private static final long serialVersionUID = 0L;
     return new KeywordThemeConstant();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.resources.KeywordThemeConstantProto.internal_static_google_ads_googleads_v13_resources_KeywordThemeConstant_descriptor;
@@ -59,6 +54,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the keyword theme constant.
    * Keyword theme constant resource names have the form:
+   *
    * `keywordThemeConstants/{keyword_theme_id}~{sub_keyword_theme_id}`
    * </pre>
    *
@@ -82,6 +78,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the keyword theme constant.
    * Keyword theme constant resource names have the form:
+   *
    * `keywordThemeConstants/{keyword_theme_id}~{sub_keyword_theme_id}`
    * </pre>
    *
@@ -445,11 +442,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.resources.KeywordThemeConstant parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.resources.KeywordThemeConstant parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -717,6 +716,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the keyword theme constant.
      * Keyword theme constant resource names have the form:
+     *
      * `keywordThemeConstants/{keyword_theme_id}~{sub_keyword_theme_id}`
      * </pre>
      *
@@ -739,6 +739,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the keyword theme constant.
      * Keyword theme constant resource names have the form:
+     *
      * `keywordThemeConstants/{keyword_theme_id}~{sub_keyword_theme_id}`
      * </pre>
      *
@@ -762,6 +763,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the keyword theme constant.
      * Keyword theme constant resource names have the form:
+     *
      * `keywordThemeConstants/{keyword_theme_id}~{sub_keyword_theme_id}`
      * </pre>
      *
@@ -781,6 +783,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the keyword theme constant.
      * Keyword theme constant resource names have the form:
+     *
      * `keywordThemeConstants/{keyword_theme_id}~{sub_keyword_theme_id}`
      * </pre>
      *
@@ -797,6 +800,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the keyword theme constant.
      * Keyword theme constant resource names have the form:
+     *
      * `keywordThemeConstants/{keyword_theme_id}~{sub_keyword_theme_id}`
      * </pre>
      *

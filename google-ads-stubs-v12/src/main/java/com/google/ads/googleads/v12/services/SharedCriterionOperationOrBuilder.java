@@ -41,6 +41,7 @@ public interface SharedCriterionOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed shared criterion is
    * expected, in this format:
+   *
    * `customers/{customer_id}/sharedCriteria/{shared_set_id}~{criterion_id}`
    * </pre>
    *
@@ -52,6 +53,7 @@ public interface SharedCriterionOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed shared criterion is
    * expected, in this format:
+   *
    * `customers/{customer_id}/sharedCriteria/{shared_set_id}~{criterion_id}`
    * </pre>
    *
@@ -63,6 +65,7 @@ public interface SharedCriterionOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed shared criterion is
    * expected, in this format:
+   *
    * `customers/{customer_id}/sharedCriteria/{shared_set_id}~{criterion_id}`
    * </pre>
    *
@@ -72,5 +75,5 @@ public interface SharedCriterionOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v12.services.SharedCriterionOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v12.services.SharedCriterionOperation.OperationCase getOperationCase();
 }

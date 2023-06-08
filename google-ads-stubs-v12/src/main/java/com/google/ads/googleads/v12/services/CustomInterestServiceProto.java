@@ -50,38 +50,38 @@ public final class CustomInterestServiceProto {
       "google/api/annotations.proto\032\027google/api" +
       "/client.proto\032\037google/api/field_behavior" +
       ".proto\032\031google/api/resource.proto\032 googl" +
-      "e/protobuf/field_mask.proto\"\244\001\n\034MutateCu" +
-      "stomInterestsRequest\022\030\n\013customer_id\030\001 \001(" +
-      "\tB\003\340A\002\022S\n\noperations\030\002 \003(\0132:.google.ads." +
-      "googleads.v12.services.CustomInterestOpe" +
-      "rationB\003\340A\002\022\025\n\rvalidate_only\030\004 \001(\010\"\343\001\n\027C" +
-      "ustomInterestOperation\022/\n\013update_mask\030\004 " +
-      "\001(\0132\032.google.protobuf.FieldMask\022D\n\006creat" +
-      "e\030\001 \001(\01322.google.ads.googleads.v12.resou" +
-      "rces.CustomInterestH\000\022D\n\006update\030\002 \001(\01322." +
-      "google.ads.googleads.v12.resources.Custo" +
-      "mInterestH\000B\013\n\toperation\"o\n\035MutateCustom" +
-      "InterestsResponse\022N\n\007results\030\002 \003(\0132=.goo" +
-      "gle.ads.googleads.v12.services.MutateCus" +
-      "tomInterestResult\"a\n\032MutateCustomInteres" +
-      "tResult\022C\n\rresource_name\030\001 \001(\tB,\372A)\n\'goo" +
-      "gleads.googleapis.com/CustomInterest2\326\002\n" +
-      "\025CustomInterestService\022\365\001\n\025MutateCustomI" +
-      "nterests\022?.google.ads.googleads.v12.serv" +
-      "ices.MutateCustomInterestsRequest\032@.goog" +
-      "le.ads.googleads.v12.services.MutateCust" +
-      "omInterestsResponse\"Y\202\323\344\223\002:\"5/v12/custom" +
-      "ers/{customer_id=*}/customInterests:muta" +
-      "te:\001*\332A\026customer_id,operations\032E\312A\030googl" +
-      "eads.googleapis.com\322A\'https://www.google" +
-      "apis.com/auth/adwordsB\206\002\n%com.google.ads" +
-      ".googleads.v12.servicesB\032CustomInterestS" +
-      "erviceProtoP\001ZIgoogle.golang.org/genprot" +
-      "o/googleapis/ads/googleads/v12/services;" +
-      "services\242\002\003GAA\252\002!Google.Ads.GoogleAds.V1" +
-      "2.Services\312\002!Google\\Ads\\GoogleAds\\V12\\Se" +
-      "rvices\352\002%Google::Ads::GoogleAds::V12::Se" +
-      "rvicesb\006proto3"
+      "e/protobuf/field_mask.proto\"\246\001\n\034MutateCu" +
+      "stomInterestsRequest\022\031\n\013customer_id\030\001 \001(" +
+      "\tB\004\342A\001\002\022T\n\noperations\030\002 \003(\0132:.google.ads" +
+      ".googleads.v12.services.CustomInterestOp" +
+      "erationB\004\342A\001\002\022\025\n\rvalidate_only\030\004 \001(\010\"\343\001\n" +
+      "\027CustomInterestOperation\022/\n\013update_mask\030" +
+      "\004 \001(\0132\032.google.protobuf.FieldMask\022D\n\006cre" +
+      "ate\030\001 \001(\01322.google.ads.googleads.v12.res" +
+      "ources.CustomInterestH\000\022D\n\006update\030\002 \001(\0132" +
+      "2.google.ads.googleads.v12.resources.Cus" +
+      "tomInterestH\000B\013\n\toperation\"o\n\035MutateCust" +
+      "omInterestsResponse\022N\n\007results\030\002 \003(\0132=.g" +
+      "oogle.ads.googleads.v12.services.MutateC" +
+      "ustomInterestResult\"a\n\032MutateCustomInter" +
+      "estResult\022C\n\rresource_name\030\001 \001(\tB,\372A)\n\'g" +
+      "oogleads.googleapis.com/CustomInterest2\326" +
+      "\002\n\025CustomInterestService\022\365\001\n\025MutateCusto" +
+      "mInterests\022?.google.ads.googleads.v12.se" +
+      "rvices.MutateCustomInterestsRequest\032@.go" +
+      "ogle.ads.googleads.v12.services.MutateCu" +
+      "stomInterestsResponse\"Y\332A\026customer_id,op" +
+      "erations\202\323\344\223\002:\"5/v12/customers/{customer" +
+      "_id=*}/customInterests:mutate:\001*\032E\312A\030goo" +
+      "gleads.googleapis.com\322A\'https://www.goog" +
+      "leapis.com/auth/adwordsB\206\002\n%com.google.a" +
+      "ds.googleads.v12.servicesB\032CustomInteres" +
+      "tServiceProtoP\001ZIgoogle.golang.org/genpr" +
+      "oto/googleapis/ads/googleads/v12/service" +
+      "s;services\242\002\003GAA\252\002!Google.Ads.GoogleAds." +
+      "V12.Services\312\002!Google\\Ads\\GoogleAds\\V12\\" +
+      "Services\352\002%Google::Ads::GoogleAds::V12::" +
+      "Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

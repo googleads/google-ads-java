@@ -53,137 +53,138 @@ public final class AdGroupCriterionProto {
       "ads/v13/enums/criterion_type.proto\0329goog" +
       "le/ads/googleads/v13/enums/quality_score" +
       "_bucket.proto\032\037google/api/field_behavior" +
-      ".proto\032\031google/api/resource.proto\"\257&\n\020Ad" +
-      "GroupCriterion\022H\n\rresource_name\030\001 \001(\tB1\340" +
-      "A\005\372A+\n)googleads.googleapis.com/AdGroupC" +
-      "riterion\022\036\n\014criterion_id\0308 \001(\003B\003\340A\003H\001\210\001\001" +
-      "\022\031\n\014display_name\030M \001(\tB\003\340A\003\022a\n\006status\030\003 " +
-      "\001(\0162Q.google.ads.googleads.v13.enums.AdG" +
-      "roupCriterionStatusEnum.AdGroupCriterion" +
-      "Status\022[\n\014quality_info\030\004 \001(\0132@.google.ad" +
-      "s.googleads.v13.resources.AdGroupCriteri" +
-      "on.QualityInfoB\003\340A\003\022?\n\010ad_group\0309 \001(\tB(\340" +
-      "A\005\372A\"\n googleads.googleapis.com/AdGroupH" +
-      "\002\210\001\001\022R\n\004type\030\031 \001(\0162?.google.ads.googlead" +
-      "s.v13.enums.CriterionTypeEnum.CriterionT" +
-      "ypeB\003\340A\003\022\032\n\010negative\030: \001(\010B\003\340A\005H\003\210\001\001\022\201\001\n" +
-      "\025system_serving_status\0304 \001(\0162].google.ad" +
-      "s.googleads.v13.enums.CriterionSystemSer" +
-      "vingStatusEnum.CriterionSystemServingSta" +
-      "tusB\003\340A\003\022\177\n\017approval_status\0305 \001(\0162a.goog" +
-      "le.ads.googleads.v13.enums.AdGroupCriter" +
-      "ionApprovalStatusEnum.AdGroupCriterionAp" +
-      "provalStatusB\003\340A\003\022 \n\023disapproval_reasons" +
-      "\030; \003(\tB\003\340A\003\022F\n\006labels\030< \003(\tB6\340A\003\372A0\n.goo" +
-      "gleads.googleapis.com/AdGroupCriterionLa" +
-      "bel\022\031\n\014bid_modifier\030= \001(\001H\004\210\001\001\022\033\n\016cpc_bi" +
-      "d_micros\030> \001(\003H\005\210\001\001\022\033\n\016cpm_bid_micros\030? " +
-      "\001(\003H\006\210\001\001\022\033\n\016cpv_bid_micros\030@ \001(\003H\007\210\001\001\022#\n" +
-      "\026percent_cpc_bid_micros\030A \001(\003H\010\210\001\001\022*\n\030ef" +
-      "fective_cpc_bid_micros\030B \001(\003B\003\340A\003H\t\210\001\001\022*" +
-      "\n\030effective_cpm_bid_micros\030C \001(\003B\003\340A\003H\n\210" +
-      "\001\001\022*\n\030effective_cpv_bid_micros\030D \001(\003B\003\340A" +
-      "\003H\013\210\001\001\0222\n effective_percent_cpc_bid_micr" +
-      "os\030E \001(\003B\003\340A\003H\014\210\001\001\022f\n\030effective_cpc_bid_" +
-      "source\030\025 \001(\0162?.google.ads.googleads.v13." +
-      "enums.BiddingSourceEnum.BiddingSourceB\003\340" +
-      "A\003\022f\n\030effective_cpm_bid_source\030\026 \001(\0162?.g" +
-      "oogle.ads.googleads.v13.enums.BiddingSou" +
-      "rceEnum.BiddingSourceB\003\340A\003\022f\n\030effective_" +
-      "cpv_bid_source\030\027 \001(\0162?.google.ads.google" +
-      "ads.v13.enums.BiddingSourceEnum.BiddingS" +
-      "ourceB\003\340A\003\022n\n effective_percent_cpc_bid_" +
-      "source\030# \001(\0162?.google.ads.googleads.v13." +
-      "enums.BiddingSourceEnum.BiddingSourceB\003\340" +
-      "A\003\022g\n\022position_estimates\030\n \001(\0132F.google." +
-      "ads.googleads.v13.resources.AdGroupCrite" +
-      "rion.PositionEstimatesB\003\340A\003\022\022\n\nfinal_url" +
-      "s\030F \003(\t\022\031\n\021final_mobile_urls\030G \003(\t\022\035\n\020fi" +
-      "nal_url_suffix\030H \001(\tH\r\210\001\001\022\"\n\025tracking_ur" +
-      "l_template\030I \001(\tH\016\210\001\001\022O\n\025url_custom_para" +
-      "meters\030\016 \003(\01320.google.ads.googleads.v13." +
-      "common.CustomParameter\022D\n\007keyword\030\033 \001(\0132" +
-      ",.google.ads.googleads.v13.common.Keywor" +
-      "dInfoB\003\340A\005H\000\022H\n\tplacement\030\034 \001(\0132..google" +
-      ".ads.googleads.v13.common.PlacementInfoB" +
-      "\003\340A\005H\000\022Z\n\023mobile_app_category\030\035 \001(\01326.go" +
-      "ogle.ads.googleads.v13.common.MobileAppC" +
-      "ategoryInfoB\003\340A\005H\000\022Y\n\022mobile_application" +
-      "\030\036 \001(\01326.google.ads.googleads.v13.common" +
-      ".MobileApplicationInfoB\003\340A\005H\000\022O\n\rlisting" +
-      "_group\030  \001(\01321.google.ads.googleads.v13." +
-      "common.ListingGroupInfoB\003\340A\005H\000\022G\n\tage_ra" +
-      "nge\030$ \001(\0132-.google.ads.googleads.v13.com" +
-      "mon.AgeRangeInfoB\003\340A\005H\000\022B\n\006gender\030% \001(\0132" +
-      "+.google.ads.googleads.v13.common.Gender" +
-      "InfoB\003\340A\005H\000\022M\n\014income_range\030& \001(\01320.goog" +
-      "le.ads.googleads.v13.common.IncomeRangeI" +
-      "nfoB\003\340A\005H\000\022S\n\017parental_status\030\' \001(\01323.go" +
-      "ogle.ads.googleads.v13.common.ParentalSt" +
-      "atusInfoB\003\340A\005H\000\022G\n\tuser_list\030* \001(\0132-.goo" +
-      "gle.ads.googleads.v13.common.UserListInf" +
-      "oB\003\340A\005H\000\022O\n\ryoutube_video\030( \001(\01321.google" +
-      ".ads.googleads.v13.common.YouTubeVideoIn" +
-      "foB\003\340A\005H\000\022S\n\017youtube_channel\030) \001(\01323.goo" +
-      "gle.ads.googleads.v13.common.YouTubeChan" +
-      "nelInfoB\003\340A\005H\000\022@\n\005topic\030+ \001(\0132*.google.a" +
-      "ds.googleads.v13.common.TopicInfoB\003\340A\005H\000" +
-      "\022O\n\ruser_interest\030- \001(\01321.google.ads.goo" +
-      "gleads.v13.common.UserInterestInfoB\003\340A\005H" +
-      "\000\022D\n\007webpage\030. \001(\0132,.google.ads.googlead" +
-      "s.v13.common.WebpageInfoB\003\340A\005H\000\022V\n\021app_p" +
-      "ayment_model\030/ \001(\01324.google.ads.googlead" +
-      "s.v13.common.AppPaymentModelInfoB\003\340A\005H\000\022" +
-      "S\n\017custom_affinity\0300 \001(\01323.google.ads.go" +
-      "ogleads.v13.common.CustomAffinityInfoB\003\340" +
-      "A\005H\000\022O\n\rcustom_intent\0301 \001(\01321.google.ads" +
-      ".googleads.v13.common.CustomIntentInfoB\003" +
-      "\340A\005H\000\022S\n\017custom_audience\030J \001(\01323.google." +
-      "ads.googleads.v13.common.CustomAudienceI" +
-      "nfoB\003\340A\005H\000\022W\n\021combined_audience\030K \001(\01325." +
+      ".proto\032\031google/api/resource.proto\"\342&\n\020Ad" +
+      "GroupCriterion\022I\n\rresource_name\030\001 \001(\tB2\342" +
+      "A\001\005\372A+\n)googleads.googleapis.com/AdGroup" +
+      "Criterion\022\037\n\014criterion_id\0308 \001(\003B\004\342A\001\003H\001\210" +
+      "\001\001\022\032\n\014display_name\030M \001(\tB\004\342A\001\003\022a\n\006status" +
+      "\030\003 \001(\0162Q.google.ads.googleads.v13.enums." +
+      "AdGroupCriterionStatusEnum.AdGroupCriter" +
+      "ionStatus\022\\\n\014quality_info\030\004 \001(\0132@.google" +
+      ".ads.googleads.v13.resources.AdGroupCrit" +
+      "erion.QualityInfoB\004\342A\001\003\022@\n\010ad_group\0309 \001(" +
+      "\tB)\342A\001\005\372A\"\n googleads.googleapis.com/AdG" +
+      "roupH\002\210\001\001\022S\n\004type\030\031 \001(\0162?.google.ads.goo" +
+      "gleads.v13.enums.CriterionTypeEnum.Crite" +
+      "rionTypeB\004\342A\001\003\022\033\n\010negative\030: \001(\010B\004\342A\001\005H\003" +
+      "\210\001\001\022\202\001\n\025system_serving_status\0304 \001(\0162].go" +
+      "ogle.ads.googleads.v13.enums.CriterionSy" +
+      "stemServingStatusEnum.CriterionSystemSer" +
+      "vingStatusB\004\342A\001\003\022\200\001\n\017approval_status\0305 \001" +
+      "(\0162a.google.ads.googleads.v13.enums.AdGr" +
+      "oupCriterionApprovalStatusEnum.AdGroupCr" +
+      "iterionApprovalStatusB\004\342A\001\003\022!\n\023disapprov" +
+      "al_reasons\030; \003(\tB\004\342A\001\003\022G\n\006labels\030< \003(\tB7" +
+      "\342A\001\003\372A0\n.googleads.googleapis.com/AdGrou" +
+      "pCriterionLabel\022\031\n\014bid_modifier\030= \001(\001H\004\210" +
+      "\001\001\022\033\n\016cpc_bid_micros\030> \001(\003H\005\210\001\001\022\033\n\016cpm_b" +
+      "id_micros\030? \001(\003H\006\210\001\001\022\033\n\016cpv_bid_micros\030@" +
+      " \001(\003H\007\210\001\001\022#\n\026percent_cpc_bid_micros\030A \001(" +
+      "\003H\010\210\001\001\022+\n\030effective_cpc_bid_micros\030B \001(\003" +
+      "B\004\342A\001\003H\t\210\001\001\022+\n\030effective_cpm_bid_micros\030" +
+      "C \001(\003B\004\342A\001\003H\n\210\001\001\022+\n\030effective_cpv_bid_mi" +
+      "cros\030D \001(\003B\004\342A\001\003H\013\210\001\001\0223\n effective_perce" +
+      "nt_cpc_bid_micros\030E \001(\003B\004\342A\001\003H\014\210\001\001\022g\n\030ef" +
+      "fective_cpc_bid_source\030\025 \001(\0162?.google.ad" +
+      "s.googleads.v13.enums.BiddingSourceEnum." +
+      "BiddingSourceB\004\342A\001\003\022g\n\030effective_cpm_bid" +
+      "_source\030\026 \001(\0162?.google.ads.googleads.v13" +
+      ".enums.BiddingSourceEnum.BiddingSourceB\004" +
+      "\342A\001\003\022g\n\030effective_cpv_bid_source\030\027 \001(\0162?" +
+      ".google.ads.googleads.v13.enums.BiddingS" +
+      "ourceEnum.BiddingSourceB\004\342A\001\003\022o\n effecti" +
+      "ve_percent_cpc_bid_source\030# \001(\0162?.google" +
+      ".ads.googleads.v13.enums.BiddingSourceEn" +
+      "um.BiddingSourceB\004\342A\001\003\022h\n\022position_estim" +
+      "ates\030\n \001(\0132F.google.ads.googleads.v13.re" +
+      "sources.AdGroupCriterion.PositionEstimat" +
+      "esB\004\342A\001\003\022\022\n\nfinal_urls\030F \003(\t\022\031\n\021final_mo" +
+      "bile_urls\030G \003(\t\022\035\n\020final_url_suffix\030H \001(" +
+      "\tH\r\210\001\001\022\"\n\025tracking_url_template\030I \001(\tH\016\210" +
+      "\001\001\022O\n\025url_custom_parameters\030\016 \003(\01320.goog" +
+      "le.ads.googleads.v13.common.CustomParame" +
+      "ter\022E\n\007keyword\030\033 \001(\0132,.google.ads.google" +
+      "ads.v13.common.KeywordInfoB\004\342A\001\005H\000\022I\n\tpl" +
+      "acement\030\034 \001(\0132..google.ads.googleads.v13" +
+      ".common.PlacementInfoB\004\342A\001\005H\000\022[\n\023mobile_" +
+      "app_category\030\035 \001(\01326.google.ads.googlead" +
+      "s.v13.common.MobileAppCategoryInfoB\004\342A\001\005" +
+      "H\000\022Z\n\022mobile_application\030\036 \001(\01326.google." +
+      "ads.googleads.v13.common.MobileApplicati" +
+      "onInfoB\004\342A\001\005H\000\022P\n\rlisting_group\030  \001(\01321." +
+      "google.ads.googleads.v13.common.ListingG" +
+      "roupInfoB\004\342A\001\005H\000\022H\n\tage_range\030$ \001(\0132-.go" +
+      "ogle.ads.googleads.v13.common.AgeRangeIn" +
+      "foB\004\342A\001\005H\000\022C\n\006gender\030% \001(\0132+.google.ads." +
+      "googleads.v13.common.GenderInfoB\004\342A\001\005H\000\022" +
+      "N\n\014income_range\030& \001(\01320.google.ads.googl" +
+      "eads.v13.common.IncomeRangeInfoB\004\342A\001\005H\000\022" +
+      "T\n\017parental_status\030\' \001(\01323.google.ads.go" +
+      "ogleads.v13.common.ParentalStatusInfoB\004\342" +
+      "A\001\005H\000\022H\n\tuser_list\030* \001(\0132-.google.ads.go" +
+      "ogleads.v13.common.UserListInfoB\004\342A\001\005H\000\022" +
+      "P\n\ryoutube_video\030( \001(\01321.google.ads.goog" +
+      "leads.v13.common.YouTubeVideoInfoB\004\342A\001\005H" +
+      "\000\022T\n\017youtube_channel\030) \001(\01323.google.ads." +
+      "googleads.v13.common.YouTubeChannelInfoB" +
+      "\004\342A\001\005H\000\022A\n\005topic\030+ \001(\0132*.google.ads.goog" +
+      "leads.v13.common.TopicInfoB\004\342A\001\005H\000\022P\n\rus" +
+      "er_interest\030- \001(\01321.google.ads.googleads" +
+      ".v13.common.UserInterestInfoB\004\342A\001\005H\000\022E\n\007" +
+      "webpage\030. \001(\0132,.google.ads.googleads.v13" +
+      ".common.WebpageInfoB\004\342A\001\005H\000\022W\n\021app_payme" +
+      "nt_model\030/ \001(\01324.google.ads.googleads.v1" +
+      "3.common.AppPaymentModelInfoB\004\342A\001\005H\000\022T\n\017" +
+      "custom_affinity\0300 \001(\01323.google.ads.googl" +
+      "eads.v13.common.CustomAffinityInfoB\004\342A\001\005" +
+      "H\000\022P\n\rcustom_intent\0301 \001(\01321.google.ads.g" +
+      "oogleads.v13.common.CustomIntentInfoB\004\342A" +
+      "\001\005H\000\022T\n\017custom_audience\030J \001(\01323.google.a" +
+      "ds.googleads.v13.common.CustomAudienceIn" +
+      "foB\004\342A\001\005H\000\022X\n\021combined_audience\030K \001(\01325." +
       "google.ads.googleads.v13.common.Combined" +
-      "AudienceInfoB\003\340A\005H\000\022F\n\010audience\030O \001(\0132-." +
-      "google.ads.googleads.v13.common.Audience" +
-      "InfoB\003\340A\005H\000\032\220\003\n\013QualityInfo\022\037\n\rquality_s" +
-      "core\030\005 \001(\005B\003\340A\003H\000\210\001\001\022n\n\026creative_quality" +
-      "_score\030\002 \001(\0162I.google.ads.googleads.v13." +
-      "enums.QualityScoreBucketEnum.QualityScor" +
-      "eBucketB\003\340A\003\022p\n\030post_click_quality_score" +
-      "\030\003 \001(\0162I.google.ads.googleads.v13.enums." +
-      "QualityScoreBucketEnum.QualityScoreBucke" +
-      "tB\003\340A\003\022l\n\024search_predicted_ctr\030\004 \001(\0162I.g" +
-      "oogle.ads.googleads.v13.enums.QualitySco" +
-      "reBucketEnum.QualityScoreBucketB\003\340A\003B\020\n\016" +
-      "_quality_score\032\274\003\n\021PositionEstimates\022\'\n\025" +
-      "first_page_cpc_micros\030\006 \001(\003B\003\340A\003H\000\210\001\001\022+\n" +
-      "\031first_position_cpc_micros\030\007 \001(\003B\003\340A\003H\001\210" +
-      "\001\001\022(\n\026top_of_page_cpc_micros\030\010 \001(\003B\003\340A\003H" +
-      "\002\210\001\001\022<\n*estimated_add_clicks_at_first_po" +
-      "sition_cpc\030\t \001(\003B\003\340A\003H\003\210\001\001\022:\n(estimated_" +
-      "add_cost_at_first_position_cpc\030\n \001(\003B\003\340A" +
-      "\003H\004\210\001\001B\030\n\026_first_page_cpc_microsB\034\n\032_fir" +
-      "st_position_cpc_microsB\031\n\027_top_of_page_c" +
-      "pc_microsB-\n+_estimated_add_clicks_at_fi" +
-      "rst_position_cpcB+\n)_estimated_add_cost_" +
-      "at_first_position_cpc:t\352Aq\n)googleads.go" +
-      "ogleapis.com/AdGroupCriterion\022Dcustomers" +
-      "/{customer_id}/adGroupCriteria/{ad_group" +
-      "_id}~{criterion_id}B\013\n\tcriterionB\017\n\r_cri" +
-      "terion_idB\013\n\t_ad_groupB\013\n\t_negativeB\017\n\r_" +
-      "bid_modifierB\021\n\017_cpc_bid_microsB\021\n\017_cpm_" +
-      "bid_microsB\021\n\017_cpv_bid_microsB\031\n\027_percen" +
-      "t_cpc_bid_microsB\033\n\031_effective_cpc_bid_m" +
-      "icrosB\033\n\031_effective_cpm_bid_microsB\033\n\031_e" +
-      "ffective_cpv_bid_microsB#\n!_effective_pe" +
-      "rcent_cpc_bid_microsB\023\n\021_final_url_suffi" +
-      "xB\030\n\026_tracking_url_templateB\207\002\n&com.goog" +
-      "le.ads.googleads.v13.resourcesB\025AdGroupC" +
-      "riterionProtoP\001ZKgoogle.golang.org/genpr" +
-      "oto/googleapis/ads/googleads/v13/resourc" +
-      "es;resources\242\002\003GAA\252\002\"Google.Ads.GoogleAd" +
-      "s.V13.Resources\312\002\"Google\\Ads\\GoogleAds\\V" +
-      "13\\Resources\352\002&Google::Ads::GoogleAds::V" +
-      "13::Resourcesb\006proto3"
+      "AudienceInfoB\004\342A\001\005H\000\022G\n\010audience\030O \001(\0132-" +
+      ".google.ads.googleads.v13.common.Audienc" +
+      "eInfoB\004\342A\001\005H\000\032\224\003\n\013QualityInfo\022 \n\rquality" +
+      "_score\030\005 \001(\005B\004\342A\001\003H\000\210\001\001\022o\n\026creative_qual" +
+      "ity_score\030\002 \001(\0162I.google.ads.googleads.v" +
+      "13.enums.QualityScoreBucketEnum.QualityS" +
+      "coreBucketB\004\342A\001\003\022q\n\030post_click_quality_s" +
+      "core\030\003 \001(\0162I.google.ads.googleads.v13.en" +
+      "ums.QualityScoreBucketEnum.QualityScoreB" +
+      "ucketB\004\342A\001\003\022m\n\024search_predicted_ctr\030\004 \001(" +
+      "\0162I.google.ads.googleads.v13.enums.Quali" +
+      "tyScoreBucketEnum.QualityScoreBucketB\004\342A" +
+      "\001\003B\020\n\016_quality_score\032\301\003\n\021PositionEstimat" +
+      "es\022(\n\025first_page_cpc_micros\030\006 \001(\003B\004\342A\001\003H" +
+      "\000\210\001\001\022,\n\031first_position_cpc_micros\030\007 \001(\003B" +
+      "\004\342A\001\003H\001\210\001\001\022)\n\026top_of_page_cpc_micros\030\010 \001" +
+      "(\003B\004\342A\001\003H\002\210\001\001\022=\n*estimated_add_clicks_at" +
+      "_first_position_cpc\030\t \001(\003B\004\342A\001\003H\003\210\001\001\022;\n(" +
+      "estimated_add_cost_at_first_position_cpc" +
+      "\030\n \001(\003B\004\342A\001\003H\004\210\001\001B\030\n\026_first_page_cpc_mic" +
+      "rosB\034\n\032_first_position_cpc_microsB\031\n\027_to" +
+      "p_of_page_cpc_microsB-\n+_estimated_add_c" +
+      "licks_at_first_position_cpcB+\n)_estimate" +
+      "d_add_cost_at_first_position_cpc:t\352Aq\n)g" +
+      "oogleads.googleapis.com/AdGroupCriterion" +
+      "\022Dcustomers/{customer_id}/adGroupCriteri" +
+      "a/{ad_group_id}~{criterion_id}B\013\n\tcriter" +
+      "ionB\017\n\r_criterion_idB\013\n\t_ad_groupB\013\n\t_ne" +
+      "gativeB\017\n\r_bid_modifierB\021\n\017_cpc_bid_micr" +
+      "osB\021\n\017_cpm_bid_microsB\021\n\017_cpv_bid_micros" +
+      "B\031\n\027_percent_cpc_bid_microsB\033\n\031_effectiv" +
+      "e_cpc_bid_microsB\033\n\031_effective_cpm_bid_m" +
+      "icrosB\033\n\031_effective_cpv_bid_microsB#\n!_e" +
+      "ffective_percent_cpc_bid_microsB\023\n\021_fina" +
+      "l_url_suffixB\030\n\026_tracking_url_templateB\207" +
+      "\002\n&com.google.ads.googleads.v13.resource" +
+      "sB\025AdGroupCriterionProtoP\001ZKgoogle.golan" +
+      "g.org/genproto/googleapis/ads/googleads/" +
+      "v13/resources;resources\242\002\003GAA\252\002\"Google.A" +
+      "ds.GoogleAds.V13.Resources\312\002\"Google\\Ads\\" +
+      "GoogleAds\\V13\\Resources\352\002&Google::Ads::G" +
+      "oogleAds::V13::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

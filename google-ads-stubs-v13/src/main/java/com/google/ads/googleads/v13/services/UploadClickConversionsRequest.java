@@ -32,11 +32,6 @@ private static final long serialVersionUID = 0L;
     return new UploadClickConversionsRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.services.ConversionUploadServiceProto.internal_static_google_ads_googleads_v13_services_UploadClickConversionsRequest_descriptor;
@@ -203,6 +198,7 @@ private static final long serialVersionUID = 0L;
    * any are found. If false, it will perform only basic input validation,
    * skip subsequent upload checks, and return success even if no click
    * was found for the provided `user_identifiers`.
+   *
    * This setting only affects Enhanced conversions for leads uploads that use
    * `user_identifiers` instead of `GCLID`, `GBRAID`, or `WBRAID`. When
    * uploading enhanced conversions for leads, you should upload all conversion
@@ -214,6 +210,7 @@ private static final long serialVersionUID = 0L;
    * `CLICK_NOT_FOUND` errors from all of the conversions that are not from a
    * Google Ads campaign. This will allow you to focus only on errors that you
    * can address.
+   *
    * Default is false.
    * </pre>
    *
@@ -382,11 +379,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.services.UploadClickConversionsRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.services.UploadClickConversionsRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1137,7 +1136,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPartialFailure(boolean value) {
-      
+
       partialFailure_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
@@ -1189,7 +1188,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setValidateOnly(boolean value) {
-      
+
       validateOnly_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
@@ -1218,6 +1217,7 @@ private static final long serialVersionUID = 0L;
      * any are found. If false, it will perform only basic input validation,
      * skip subsequent upload checks, and return success even if no click
      * was found for the provided `user_identifiers`.
+     *
      * This setting only affects Enhanced conversions for leads uploads that use
      * `user_identifiers` instead of `GCLID`, `GBRAID`, or `WBRAID`. When
      * uploading enhanced conversions for leads, you should upload all conversion
@@ -1229,6 +1229,7 @@ private static final long serialVersionUID = 0L;
      * `CLICK_NOT_FOUND` errors from all of the conversions that are not from a
      * Google Ads campaign. This will allow you to focus only on errors that you
      * can address.
+     *
      * Default is false.
      * </pre>
      *
@@ -1245,6 +1246,7 @@ private static final long serialVersionUID = 0L;
      * any are found. If false, it will perform only basic input validation,
      * skip subsequent upload checks, and return success even if no click
      * was found for the provided `user_identifiers`.
+     *
      * This setting only affects Enhanced conversions for leads uploads that use
      * `user_identifiers` instead of `GCLID`, `GBRAID`, or `WBRAID`. When
      * uploading enhanced conversions for leads, you should upload all conversion
@@ -1256,6 +1258,7 @@ private static final long serialVersionUID = 0L;
      * `CLICK_NOT_FOUND` errors from all of the conversions that are not from a
      * Google Ads campaign. This will allow you to focus only on errors that you
      * can address.
+     *
      * Default is false.
      * </pre>
      *
@@ -1264,7 +1267,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDebugEnabled(boolean value) {
-      
+
       debugEnabled_ = value;
       bitField0_ |= 0x00000010;
       onChanged();
@@ -1276,6 +1279,7 @@ private static final long serialVersionUID = 0L;
      * any are found. If false, it will perform only basic input validation,
      * skip subsequent upload checks, and return success even if no click
      * was found for the provided `user_identifiers`.
+     *
      * This setting only affects Enhanced conversions for leads uploads that use
      * `user_identifiers` instead of `GCLID`, `GBRAID`, or `WBRAID`. When
      * uploading enhanced conversions for leads, you should upload all conversion
@@ -1287,6 +1291,7 @@ private static final long serialVersionUID = 0L;
      * `CLICK_NOT_FOUND` errors from all of the conversions that are not from a
      * Google Ads campaign. This will allow you to focus only on errors that you
      * can address.
+     *
      * Default is false.
      * </pre>
      *

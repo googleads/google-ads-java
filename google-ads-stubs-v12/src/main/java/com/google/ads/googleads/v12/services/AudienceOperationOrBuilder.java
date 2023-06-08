@@ -91,5 +91,5 @@ public interface AudienceOperationOrBuilder extends
    */
   com.google.ads.googleads.v12.resources.AudienceOrBuilder getUpdateOrBuilder();
 
-  public com.google.ads.googleads.v12.services.AudienceOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v12.services.AudienceOperation.OperationCase getOperationCase();
 }

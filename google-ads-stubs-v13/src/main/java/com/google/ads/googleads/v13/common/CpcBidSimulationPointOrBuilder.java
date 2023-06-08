@@ -176,5 +176,5 @@ public interface CpcBidSimulationPointOrBuilder extends
    */
   double getCpcBidScalingModifier();
 
-  public com.google.ads.googleads.v13.common.CpcBidSimulationPoint.CpcSimulationKeyValueCase getCpcSimulationKeyValueCase();
+  com.google.ads.googleads.v13.common.CpcBidSimulationPoint.CpcSimulationKeyValueCase getCpcSimulationKeyValueCase();
 }

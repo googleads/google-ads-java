@@ -29,11 +29,6 @@ private static final long serialVersionUID = 0L;
     return new CampaignDuration();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.services.ReachPlanServiceProto.internal_static_google_ads_googleads_v12_services_CampaignDuration_descriptor;
@@ -53,6 +48,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The duration value in days.
+   *
    * This field cannot be combined with the date_range field.
    * </pre>
    *
@@ -66,6 +62,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The duration value in days.
+   *
    * This field cannot be combined with the date_range field.
    * </pre>
    *
@@ -85,6 +82,7 @@ private static final long serialVersionUID = 0L;
    * Dates are in the yyyy-mm-dd format and inclusive.
    * The end date must be &lt; 1 year in the future and the
    * date range must be &lt;= 92 days long.
+   *
    * This field cannot be combined with the duration_in_days field.
    * </pre>
    *
@@ -101,6 +99,7 @@ private static final long serialVersionUID = 0L;
    * Dates are in the yyyy-mm-dd format and inclusive.
    * The end date must be &lt; 1 year in the future and the
    * date range must be &lt;= 92 days long.
+   *
    * This field cannot be combined with the duration_in_days field.
    * </pre>
    *
@@ -117,6 +116,7 @@ private static final long serialVersionUID = 0L;
    * Dates are in the yyyy-mm-dd format and inclusive.
    * The end date must be &lt; 1 year in the future and the
    * date range must be &lt;= 92 days long.
+   *
    * This field cannot be combined with the duration_in_days field.
    * </pre>
    *
@@ -257,11 +257,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.services.CampaignDuration parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.services.CampaignDuration parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -502,6 +504,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The duration value in days.
+     *
      * This field cannot be combined with the date_range field.
      * </pre>
      *
@@ -515,6 +518,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The duration value in days.
+     *
      * This field cannot be combined with the date_range field.
      * </pre>
      *
@@ -528,6 +532,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The duration value in days.
+     *
      * This field cannot be combined with the date_range field.
      * </pre>
      *
@@ -536,7 +541,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDurationInDays(int value) {
-      
+
       durationInDays_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
@@ -545,6 +550,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The duration value in days.
+     *
      * This field cannot be combined with the date_range field.
      * </pre>
      *
@@ -567,6 +573,7 @@ private static final long serialVersionUID = 0L;
      * Dates are in the yyyy-mm-dd format and inclusive.
      * The end date must be &lt; 1 year in the future and the
      * date range must be &lt;= 92 days long.
+     *
      * This field cannot be combined with the duration_in_days field.
      * </pre>
      *
@@ -582,6 +589,7 @@ private static final long serialVersionUID = 0L;
      * Dates are in the yyyy-mm-dd format and inclusive.
      * The end date must be &lt; 1 year in the future and the
      * date range must be &lt;= 92 days long.
+     *
      * This field cannot be combined with the duration_in_days field.
      * </pre>
      *
@@ -601,6 +609,7 @@ private static final long serialVersionUID = 0L;
      * Dates are in the yyyy-mm-dd format and inclusive.
      * The end date must be &lt; 1 year in the future and the
      * date range must be &lt;= 92 days long.
+     *
      * This field cannot be combined with the duration_in_days field.
      * </pre>
      *
@@ -625,6 +634,7 @@ private static final long serialVersionUID = 0L;
      * Dates are in the yyyy-mm-dd format and inclusive.
      * The end date must be &lt; 1 year in the future and the
      * date range must be &lt;= 92 days long.
+     *
      * This field cannot be combined with the duration_in_days field.
      * </pre>
      *
@@ -647,6 +657,7 @@ private static final long serialVersionUID = 0L;
      * Dates are in the yyyy-mm-dd format and inclusive.
      * The end date must be &lt; 1 year in the future and the
      * date range must be &lt;= 92 days long.
+     *
      * This field cannot be combined with the duration_in_days field.
      * </pre>
      *
@@ -674,6 +685,7 @@ private static final long serialVersionUID = 0L;
      * Dates are in the yyyy-mm-dd format and inclusive.
      * The end date must be &lt; 1 year in the future and the
      * date range must be &lt;= 92 days long.
+     *
      * This field cannot be combined with the duration_in_days field.
      * </pre>
      *
@@ -695,6 +707,7 @@ private static final long serialVersionUID = 0L;
      * Dates are in the yyyy-mm-dd format and inclusive.
      * The end date must be &lt; 1 year in the future and the
      * date range must be &lt;= 92 days long.
+     *
      * This field cannot be combined with the duration_in_days field.
      * </pre>
      *
@@ -711,6 +724,7 @@ private static final long serialVersionUID = 0L;
      * Dates are in the yyyy-mm-dd format and inclusive.
      * The end date must be &lt; 1 year in the future and the
      * date range must be &lt;= 92 days long.
+     *
      * This field cannot be combined with the duration_in_days field.
      * </pre>
      *
@@ -730,6 +744,7 @@ private static final long serialVersionUID = 0L;
      * Dates are in the yyyy-mm-dd format and inclusive.
      * The end date must be &lt; 1 year in the future and the
      * date range must be &lt;= 92 days long.
+     *
      * This field cannot be combined with the duration_in_days field.
      * </pre>
      *

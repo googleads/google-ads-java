@@ -11,6 +11,7 @@ public interface CustomConversionGoalOrBuilder extends
    * <pre>
    * Immutable. The resource name of the custom conversion goal.
    * Custom conversion goal resource names have the form:
+   *
    * `customers/{customer_id}/customConversionGoals/{goal_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface CustomConversionGoalOrBuilder extends
    * <pre>
    * Immutable. The resource name of the custom conversion goal.
    * Custom conversion goal resource names have the form:
+   *
    * `customers/{customer_id}/customConversionGoals/{goal_id}`
    * </pre>
    *

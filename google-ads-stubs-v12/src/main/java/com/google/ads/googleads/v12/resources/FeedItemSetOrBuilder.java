@@ -167,5 +167,5 @@ public interface FeedItemSetOrBuilder extends
    */
   com.google.ads.googleads.v12.common.DynamicAffiliateLocationSetFilterOrBuilder getDynamicAffiliateLocationSetFilterOrBuilder();
 
-  public com.google.ads.googleads.v12.resources.FeedItemSet.DynamicSetFilterCase getDynamicSetFilterCase();
+  com.google.ads.googleads.v12.resources.FeedItemSet.DynamicSetFilterCase getDynamicSetFilterCase();
 }

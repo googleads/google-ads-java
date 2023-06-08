@@ -31,19 +31,19 @@ public final class AgeRangeViewProto {
       "\n7google/ads/googleads/v13/resources/age" +
       "_range_view.proto\022\"google.ads.googleads." +
       "v13.resources\032\037google/api/field_behavior" +
-      ".proto\032\031google/api/resource.proto\"\304\001\n\014Ag" +
-      "eRangeView\022D\n\rresource_name\030\001 \001(\tB-\340A\003\372A" +
-      "\'\n%googleads.googleapis.com/AgeRangeView" +
-      ":n\352Ak\n%googleads.googleapis.com/AgeRange" +
-      "View\022Bcustomers/{customer_id}/ageRangeVi" +
-      "ews/{ad_group_id}~{criterion_id}B\203\002\n&com" +
-      ".google.ads.googleads.v13.resourcesB\021Age" +
-      "RangeViewProtoP\001ZKgoogle.golang.org/genp" +
-      "roto/googleapis/ads/googleads/v13/resour" +
-      "ces;resources\242\002\003GAA\252\002\"Google.Ads.GoogleA" +
-      "ds.V13.Resources\312\002\"Google\\Ads\\GoogleAds\\" +
-      "V13\\Resources\352\002&Google::Ads::GoogleAds::" +
-      "V13::Resourcesb\006proto3"
+      ".proto\032\031google/api/resource.proto\"\305\001\n\014Ag" +
+      "eRangeView\022E\n\rresource_name\030\001 \001(\tB.\342A\001\003\372" +
+      "A\'\n%googleads.googleapis.com/AgeRangeVie" +
+      "w:n\352Ak\n%googleads.googleapis.com/AgeRang" +
+      "eView\022Bcustomers/{customer_id}/ageRangeV" +
+      "iews/{ad_group_id}~{criterion_id}B\203\002\n&co" +
+      "m.google.ads.googleads.v13.resourcesB\021Ag" +
+      "eRangeViewProtoP\001ZKgoogle.golang.org/gen" +
+      "proto/googleapis/ads/googleads/v13/resou" +
+      "rces;resources\242\002\003GAA\252\002\"Google.Ads.Google" +
+      "Ads.V13.Resources\312\002\"Google\\Ads\\GoogleAds" +
+      "\\V13\\Resources\352\002&Google::Ads::GoogleAds:" +
+      ":V13::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

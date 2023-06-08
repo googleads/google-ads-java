@@ -41,6 +41,7 @@ public interface AdGroupCriterionCustomizerOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed ad group criterion
    * customizer is expected, in this format:
+   *
    * `customers/{customer_id}/adGroupCriterionCustomizers/{ad_group_id}~{criterion_id}~{customizer_attribute_id}`
    * </pre>
    *
@@ -52,6 +53,7 @@ public interface AdGroupCriterionCustomizerOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed ad group criterion
    * customizer is expected, in this format:
+   *
    * `customers/{customer_id}/adGroupCriterionCustomizers/{ad_group_id}~{criterion_id}~{customizer_attribute_id}`
    * </pre>
    *
@@ -63,6 +65,7 @@ public interface AdGroupCriterionCustomizerOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed ad group criterion
    * customizer is expected, in this format:
+   *
    * `customers/{customer_id}/adGroupCriterionCustomizers/{ad_group_id}~{criterion_id}~{customizer_attribute_id}`
    * </pre>
    *
@@ -72,5 +75,5 @@ public interface AdGroupCriterionCustomizerOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v12.services.AdGroupCriterionCustomizerOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v12.services.AdGroupCriterionCustomizerOperation.OperationCase getOperationCase();
 }

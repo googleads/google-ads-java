@@ -76,6 +76,7 @@ public interface CombinedRuleUserListInfoOrBuilder extends
   /**
    * <pre>
    * Operator to connect the two operands.
+   *
    * Required for creating a combined rule user list.
    * </pre>
    *
@@ -86,6 +87,7 @@ public interface CombinedRuleUserListInfoOrBuilder extends
   /**
    * <pre>
    * Operator to connect the two operands.
+   *
    * Required for creating a combined rule user list.
    * </pre>
    *

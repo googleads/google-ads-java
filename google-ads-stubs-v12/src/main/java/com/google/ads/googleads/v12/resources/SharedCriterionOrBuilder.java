@@ -11,6 +11,7 @@ public interface SharedCriterionOrBuilder extends
    * <pre>
    * Immutable. The resource name of the shared criterion.
    * Shared set resource names have the form:
+   *
    * `customers/{customer_id}/sharedCriteria/{shared_set_id}~{criterion_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface SharedCriterionOrBuilder extends
    * <pre>
    * Immutable. The resource name of the shared criterion.
    * Shared set resource names have the form:
+   *
    * `customers/{customer_id}/sharedCriteria/{shared_set_id}~{criterion_id}`
    * </pre>
    *
@@ -63,6 +65,7 @@ public interface SharedCriterionOrBuilder extends
   /**
    * <pre>
    * Output only. The ID of the criterion.
+   *
    * This field is ignored for mutates.
    * </pre>
    *
@@ -73,6 +76,7 @@ public interface SharedCriterionOrBuilder extends
   /**
    * <pre>
    * Output only. The ID of the criterion.
+   *
    * This field is ignored for mutates.
    * </pre>
    *
@@ -262,5 +266,5 @@ public interface SharedCriterionOrBuilder extends
    */
   com.google.ads.googleads.v12.common.MobileApplicationInfoOrBuilder getMobileApplicationOrBuilder();
 
-  public com.google.ads.googleads.v12.resources.SharedCriterion.CriterionCase getCriterionCase();
+  com.google.ads.googleads.v12.resources.SharedCriterion.CriterionCase getCriterionCase();
 }

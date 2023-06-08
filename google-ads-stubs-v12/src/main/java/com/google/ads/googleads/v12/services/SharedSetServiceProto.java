@@ -52,44 +52,44 @@ public final class SharedSetServiceProto {
       "google/api/client.proto\032\037google/api/fiel" +
       "d_behavior.proto\032\031google/api/resource.pr" +
       "oto\032 google/protobuf/field_mask.proto\032\027g" +
-      "oogle/rpc/status.proto\"\237\002\n\027MutateSharedS" +
-      "etsRequest\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022N\n\n" +
-      "operations\030\002 \003(\01325.google.ads.googleads." +
-      "v12.services.SharedSetOperationB\003\340A\002\022\027\n\017" +
-      "partial_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004" +
-      " \001(\010\022j\n\025response_content_type\030\005 \001(\0162K.go" +
-      "ogle.ads.googleads.v12.enums.ResponseCon" +
-      "tentTypeEnum.ResponseContentType\"\217\002\n\022Sha" +
-      "redSetOperation\022/\n\013update_mask\030\004 \001(\0132\032.g" +
-      "oogle.protobuf.FieldMask\022?\n\006create\030\001 \001(\013" +
-      "2-.google.ads.googleads.v12.resources.Sh" +
-      "aredSetH\000\022?\n\006update\030\002 \001(\0132-.google.ads.g" +
-      "oogleads.v12.resources.SharedSetH\000\0229\n\006re" +
-      "move\030\003 \001(\tB\'\372A$\n\"googleads.googleapis.co" +
-      "m/SharedSetH\000B\013\n\toperation\"\230\001\n\030MutateSha" +
-      "redSetsResponse\0221\n\025partial_failure_error" +
-      "\030\003 \001(\0132\022.google.rpc.Status\022I\n\007results\030\002 " +
-      "\003(\01328.google.ads.googleads.v12.services." +
-      "MutateSharedSetResult\"\232\001\n\025MutateSharedSe" +
-      "tResult\022>\n\rresource_name\030\001 \001(\tB\'\372A$\n\"goo" +
-      "gleads.googleapis.com/SharedSet\022A\n\nshare" +
-      "d_set\030\002 \001(\0132-.google.ads.googleads.v12.r" +
-      "esources.SharedSet2\275\002\n\020SharedSetService\022" +
-      "\341\001\n\020MutateSharedSets\022:.google.ads.google" +
-      "ads.v12.services.MutateSharedSetsRequest" +
-      "\032;.google.ads.googleads.v12.services.Mut" +
-      "ateSharedSetsResponse\"T\202\323\344\223\0025\"0/v12/cust" +
-      "omers/{customer_id=*}/sharedSets:mutate:" +
-      "\001*\332A\026customer_id,operations\032E\312A\030googlead" +
-      "s.googleapis.com\322A\'https://www.googleapi" +
-      "s.com/auth/adwordsB\201\002\n%com.google.ads.go" +
-      "ogleads.v12.servicesB\025SharedSetServicePr" +
-      "otoP\001ZIgoogle.golang.org/genproto/google" +
-      "apis/ads/googleads/v12/services;services" +
-      "\242\002\003GAA\252\002!Google.Ads.GoogleAds.V12.Servic" +
-      "es\312\002!Google\\Ads\\GoogleAds\\V12\\Services\352\002" +
-      "%Google::Ads::GoogleAds::V12::Servicesb\006" +
-      "proto3"
+      "oogle/rpc/status.proto\"\241\002\n\027MutateSharedS" +
+      "etsRequest\022\031\n\013customer_id\030\001 \001(\tB\004\342A\001\002\022O\n" +
+      "\noperations\030\002 \003(\01325.google.ads.googleads" +
+      ".v12.services.SharedSetOperationB\004\342A\001\002\022\027" +
+      "\n\017partial_failure\030\003 \001(\010\022\025\n\rvalidate_only" +
+      "\030\004 \001(\010\022j\n\025response_content_type\030\005 \001(\0162K." +
+      "google.ads.googleads.v12.enums.ResponseC" +
+      "ontentTypeEnum.ResponseContentType\"\217\002\n\022S" +
+      "haredSetOperation\022/\n\013update_mask\030\004 \001(\0132\032" +
+      ".google.protobuf.FieldMask\022?\n\006create\030\001 \001" +
+      "(\0132-.google.ads.googleads.v12.resources." +
+      "SharedSetH\000\022?\n\006update\030\002 \001(\0132-.google.ads" +
+      ".googleads.v12.resources.SharedSetH\000\0229\n\006" +
+      "remove\030\003 \001(\tB\'\372A$\n\"googleads.googleapis." +
+      "com/SharedSetH\000B\013\n\toperation\"\230\001\n\030MutateS" +
+      "haredSetsResponse\0221\n\025partial_failure_err" +
+      "or\030\003 \001(\0132\022.google.rpc.Status\022I\n\007results\030" +
+      "\002 \003(\01328.google.ads.googleads.v12.service" +
+      "s.MutateSharedSetResult\"\232\001\n\025MutateShared" +
+      "SetResult\022>\n\rresource_name\030\001 \001(\tB\'\372A$\n\"g" +
+      "oogleads.googleapis.com/SharedSet\022A\n\nsha" +
+      "red_set\030\002 \001(\0132-.google.ads.googleads.v12" +
+      ".resources.SharedSet2\275\002\n\020SharedSetServic" +
+      "e\022\341\001\n\020MutateSharedSets\022:.google.ads.goog" +
+      "leads.v12.services.MutateSharedSetsReque" +
+      "st\032;.google.ads.googleads.v12.services.M" +
+      "utateSharedSetsResponse\"T\332A\026customer_id," +
+      "operations\202\323\344\223\0025\"0/v12/customers/{custom" +
+      "er_id=*}/sharedSets:mutate:\001*\032E\312A\030google" +
+      "ads.googleapis.com\322A\'https://www.googlea" +
+      "pis.com/auth/adwordsB\201\002\n%com.google.ads." +
+      "googleads.v12.servicesB\025SharedSetService" +
+      "ProtoP\001ZIgoogle.golang.org/genproto/goog" +
+      "leapis/ads/googleads/v12/services;servic" +
+      "es\242\002\003GAA\252\002!Google.Ads.GoogleAds.V12.Serv" +
+      "ices\312\002!Google\\Ads\\GoogleAds\\V12\\Services" +
+      "\352\002%Google::Ads::GoogleAds::V12::Services" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

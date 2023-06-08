@@ -21,6 +21,7 @@ public interface AssetSetOrBuilder extends
    * <pre>
    * Immutable. The resource name of the asset set.
    * Asset set resource names have the form:
+   *
    * `customers/{customer_id}/assetSets/{asset_set_id}`
    * </pre>
    *
@@ -32,6 +33,7 @@ public interface AssetSetOrBuilder extends
    * <pre>
    * Immutable. The resource name of the asset set.
    * Asset set resource names have the form:
+   *
    * `customers/{customer_id}/assetSets/{asset_set_id}`
    * </pre>
    *
@@ -231,5 +233,5 @@ public interface AssetSetOrBuilder extends
    */
   com.google.ads.googleads.v12.common.ChainLocationGroupOrBuilder getChainLocationGroupOrBuilder();
 
-  public com.google.ads.googleads.v12.resources.AssetSet.AssetSetSourceCase getAssetSetSourceCase();
+  com.google.ads.googleads.v12.resources.AssetSet.AssetSetSourceCase getAssetSetSourceCase();
 }

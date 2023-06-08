@@ -73,61 +73,61 @@ public final class CustomerServiceProto {
       "roto\032\027google/api/client.proto\032\037google/ap" +
       "i/field_behavior.proto\032\031google/api/resou" +
       "rce.proto\032 google/protobuf/field_mask.pr" +
-      "oto\"\202\002\n\025MutateCustomerRequest\022\030\n\013custome" +
-      "r_id\030\001 \001(\tB\003\340A\002\022L\n\toperation\030\004 \001(\01324.goo" +
-      "gle.ads.googleads.v13.services.CustomerO" +
-      "perationB\003\340A\002\022\025\n\rvalidate_only\030\005 \001(\010\022j\n\025" +
-      "response_content_type\030\006 \001(\0162K.google.ads" +
-      ".googleads.v13.enums.ResponseContentType" +
-      "Enum.ResponseContentType\"\230\002\n\033CreateCusto" +
-      "merClientRequest\022\030\n\013customer_id\030\001 \001(\tB\003\340" +
-      "A\002\022J\n\017customer_client\030\002 \001(\0132,.google.ads" +
-      ".googleads.v13.resources.CustomerB\003\340A\002\022\032" +
-      "\n\remail_address\030\005 \001(\tH\000\210\001\001\022N\n\013access_rol" +
-      "e\030\004 \001(\01629.google.ads.googleads.v13.enums" +
-      ".AccessRoleEnum.AccessRole\022\025\n\rvalidate_o" +
-      "nly\030\006 \001(\010B\020\n\016_email_address\"\202\001\n\021Customer" +
-      "Operation\022<\n\006update\030\001 \001(\0132,.google.ads.g" +
-      "oogleads.v13.resources.Customer\022/\n\013updat" +
-      "e_mask\030\002 \001(\0132\032.google.protobuf.FieldMask" +
-      "\"v\n\034CreateCustomerClientResponse\022=\n\rreso" +
-      "urce_name\030\002 \001(\tB&\372A#\n!googleads.googleap" +
-      "is.com/Customer\022\027\n\017invitation_link\030\003 \001(\t" +
-      "\"a\n\026MutateCustomerResponse\022G\n\006result\030\002 \001" +
-      "(\01327.google.ads.googleads.v13.services.M" +
-      "utateCustomerResult\"\225\001\n\024MutateCustomerRe" +
-      "sult\022=\n\rresource_name\030\001 \001(\tB&\372A#\n!google" +
-      "ads.googleapis.com/Customer\022>\n\010customer\030" +
-      "\002 \001(\0132,.google.ads.googleads.v13.resourc" +
-      "es.Customer\" \n\036ListAccessibleCustomersRe" +
-      "quest\"9\n\037ListAccessibleCustomersResponse" +
-      "\022\026\n\016resource_names\030\001 \003(\t2\365\005\n\017CustomerSer" +
-      "vice\022\317\001\n\016MutateCustomer\0228.google.ads.goo" +
-      "gleads.v13.services.MutateCustomerReques" +
-      "t\0329.google.ads.googleads.v13.services.Mu" +
-      "tateCustomerResponse\"H\202\323\344\223\002*\"%/v13/custo" +
-      "mers/{customer_id=*}:mutate:\001*\332A\025custome" +
-      "r_id,operation\022\320\001\n\027ListAccessibleCustome" +
-      "rs\022A.google.ads.googleads.v13.services.L" +
-      "istAccessibleCustomersRequest\032B.google.a" +
-      "ds.googleads.v13.services.ListAccessible" +
-      "CustomersResponse\".\202\323\344\223\002(\022&/v13/customer" +
-      "s:listAccessibleCustomers\022\365\001\n\024CreateCust" +
-      "omerClient\022>.google.ads.googleads.v13.se" +
-      "rvices.CreateCustomerClientRequest\032?.goo" +
-      "gle.ads.googleads.v13.services.CreateCus" +
-      "tomerClientResponse\"\\\202\323\344\223\0028\"3/v13/custom" +
-      "ers/{customer_id=*}:createCustomerClient" +
-      ":\001*\332A\033customer_id,customer_client\032E\312A\030go" +
-      "ogleads.googleapis.com\322A\'https://www.goo" +
-      "gleapis.com/auth/adwordsB\200\002\n%com.google." +
-      "ads.googleads.v13.servicesB\024CustomerServ" +
-      "iceProtoP\001ZIgoogle.golang.org/genproto/g" +
-      "oogleapis/ads/googleads/v13/services;ser" +
-      "vices\242\002\003GAA\252\002!Google.Ads.GoogleAds.V13.S" +
-      "ervices\312\002!Google\\Ads\\GoogleAds\\V13\\Servi" +
-      "ces\352\002%Google::Ads::GoogleAds::V13::Servi" +
-      "cesb\006proto3"
+      "oto\"\204\002\n\025MutateCustomerRequest\022\031\n\013custome" +
+      "r_id\030\001 \001(\tB\004\342A\001\002\022M\n\toperation\030\004 \001(\01324.go" +
+      "ogle.ads.googleads.v13.services.Customer" +
+      "OperationB\004\342A\001\002\022\025\n\rvalidate_only\030\005 \001(\010\022j" +
+      "\n\025response_content_type\030\006 \001(\0162K.google.a" +
+      "ds.googleads.v13.enums.ResponseContentTy" +
+      "peEnum.ResponseContentType\"\232\002\n\033CreateCus" +
+      "tomerClientRequest\022\031\n\013customer_id\030\001 \001(\tB" +
+      "\004\342A\001\002\022K\n\017customer_client\030\002 \001(\0132,.google." +
+      "ads.googleads.v13.resources.CustomerB\004\342A" +
+      "\001\002\022\032\n\remail_address\030\005 \001(\tH\000\210\001\001\022N\n\013access" +
+      "_role\030\004 \001(\01629.google.ads.googleads.v13.e" +
+      "nums.AccessRoleEnum.AccessRole\022\025\n\rvalida" +
+      "te_only\030\006 \001(\010B\020\n\016_email_address\"\202\001\n\021Cust" +
+      "omerOperation\022<\n\006update\030\001 \001(\0132,.google.a" +
+      "ds.googleads.v13.resources.Customer\022/\n\013u" +
+      "pdate_mask\030\002 \001(\0132\032.google.protobuf.Field" +
+      "Mask\"v\n\034CreateCustomerClientResponse\022=\n\r" +
+      "resource_name\030\002 \001(\tB&\372A#\n!googleads.goog" +
+      "leapis.com/Customer\022\027\n\017invitation_link\030\003" +
+      " \001(\t\"a\n\026MutateCustomerResponse\022G\n\006result" +
+      "\030\002 \001(\01327.google.ads.googleads.v13.servic" +
+      "es.MutateCustomerResult\"\225\001\n\024MutateCustom" +
+      "erResult\022=\n\rresource_name\030\001 \001(\tB&\372A#\n!go" +
+      "ogleads.googleapis.com/Customer\022>\n\010custo" +
+      "mer\030\002 \001(\0132,.google.ads.googleads.v13.res" +
+      "ources.Customer\" \n\036ListAccessibleCustome" +
+      "rsRequest\"9\n\037ListAccessibleCustomersResp" +
+      "onse\022\026\n\016resource_names\030\001 \003(\t2\365\005\n\017Custome" +
+      "rService\022\317\001\n\016MutateCustomer\0228.google.ads" +
+      ".googleads.v13.services.MutateCustomerRe" +
+      "quest\0329.google.ads.googleads.v13.service" +
+      "s.MutateCustomerResponse\"H\332A\025customer_id" +
+      ",operation\202\323\344\223\002*\"%/v13/customers/{custom" +
+      "er_id=*}:mutate:\001*\022\320\001\n\027ListAccessibleCus" +
+      "tomers\022A.google.ads.googleads.v13.servic" +
+      "es.ListAccessibleCustomersRequest\032B.goog" +
+      "le.ads.googleads.v13.services.ListAccess" +
+      "ibleCustomersResponse\".\202\323\344\223\002(\022&/v13/cust" +
+      "omers:listAccessibleCustomers\022\365\001\n\024Create" +
+      "CustomerClient\022>.google.ads.googleads.v1" +
+      "3.services.CreateCustomerClientRequest\032?" +
+      ".google.ads.googleads.v13.services.Creat" +
+      "eCustomerClientResponse\"\\\332A\033customer_id," +
+      "customer_client\202\323\344\223\0028\"3/v13/customers/{c" +
+      "ustomer_id=*}:createCustomerClient:\001*\032E\312" +
+      "A\030googleads.googleapis.com\322A\'https://www" +
+      ".googleapis.com/auth/adwordsB\200\002\n%com.goo" +
+      "gle.ads.googleads.v13.servicesB\024Customer" +
+      "ServiceProtoP\001ZIgoogle.golang.org/genpro" +
+      "to/googleapis/ads/googleads/v13/services" +
+      ";services\242\002\003GAA\252\002!Google.Ads.GoogleAds.V" +
+      "13.Services\312\002!Google\\Ads\\GoogleAds\\V13\\S" +
+      "ervices\352\002%Google::Ads::GoogleAds::V13::S" +
+      "ervicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -6,10 +6,12 @@ package com.google.ads.googleads.v12.resources;
 /**
  * <pre>
  * An account-level budget proposal.
+ *
  * All fields prefixed with 'proposed' may not necessarily be applied directly.
  * For example, proposed spending limits may be adjusted before their
  * application.  This is true if the 'proposed' field has an 'approved'
  * counterpart, for example, spending limits.
+ *
  * Note that the proposal type (proposal_type) changes which fields are
  * required and which must remain empty.
  * </pre>
@@ -46,11 +48,6 @@ private static final long serialVersionUID = 0L;
     return new AccountBudgetProposal();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.resources.AccountBudgetProposalProto.internal_static_google_ads_googleads_v12_resources_AccountBudgetProposal_descriptor;
@@ -66,6 +63,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   private int proposedStartTimeCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object proposedStartTime_;
   public enum ProposedStartTimeCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -107,6 +105,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int proposedEndTimeCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object proposedEndTime_;
   public enum ProposedEndTimeCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -148,6 +147,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int approvedEndTimeCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object approvedEndTime_;
   public enum ApprovedEndTimeCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -189,6 +189,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int proposedSpendingLimitCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object proposedSpendingLimit_;
   public enum ProposedSpendingLimitCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -230,6 +231,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int approvedSpendingLimitCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object approvedSpendingLimit_;
   public enum ApprovedSpendingLimitCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -277,6 +279,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the proposal.
    * AccountBudgetProposal resource names have the form:
+   *
    * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
    * </pre>
    *
@@ -300,6 +303,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the proposal.
    * AccountBudgetProposal resource names have the form:
+   *
    * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
    * </pre>
    *
@@ -1838,11 +1842,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.resources.AccountBudgetProposal parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.resources.AccountBudgetProposal parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1887,10 +1893,12 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * An account-level budget proposal.
+   *
    * All fields prefixed with 'proposed' may not necessarily be applied directly.
    * For example, proposed spending limits may be adjusted before their
    * application.  This is true if the 'proposed' field has an 'approved'
    * counterpart, for example, spending limits.
+   *
    * Note that the proposal type (proposal_type) changes which fields are
    * required and which must remain empty.
    * </pre>
@@ -2456,6 +2464,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the proposal.
      * AccountBudgetProposal resource names have the form:
+     *
      * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
      * </pre>
      *
@@ -2478,6 +2487,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the proposal.
      * AccountBudgetProposal resource names have the form:
+     *
      * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
      * </pre>
      *
@@ -2501,6 +2511,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the proposal.
      * AccountBudgetProposal resource names have the form:
+     *
      * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
      * </pre>
      *
@@ -2520,6 +2531,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the proposal.
      * AccountBudgetProposal resource names have the form:
+     *
      * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
      * </pre>
      *
@@ -2536,6 +2548,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the proposal.
      * AccountBudgetProposal resource names have the form:
+     *
      * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
      * </pre>
      *
@@ -2588,7 +2601,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      
+
       id_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -4308,7 +4321,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setProposedSpendingLimitMicros(long value) {
-      
+
       proposedSpendingLimitCase_ = 33;
       proposedSpendingLimit_ = value;
       onChanged();
@@ -4470,7 +4483,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setApprovedSpendingLimitMicros(long value) {
-      
+
       approvedSpendingLimitCase_ = 34;
       approvedSpendingLimit_ = value;
       onChanged();

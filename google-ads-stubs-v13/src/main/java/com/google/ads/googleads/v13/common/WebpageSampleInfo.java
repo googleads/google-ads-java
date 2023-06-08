@@ -20,7 +20,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private WebpageSampleInfo() {
-    sampleUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    sampleUrls_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -30,11 +31,6 @@ private static final long serialVersionUID = 0L;
     return new WebpageSampleInfo();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.common.CriteriaProto.internal_static_google_ads_googleads_v13_common_WebpageSampleInfo_descriptor;
@@ -50,7 +46,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int SAMPLE_URLS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList sampleUrls_;
+  private com.google.protobuf.LazyStringArrayList sampleUrls_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * Webpage sample urls
@@ -215,11 +212,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.common.WebpageSampleInfo parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.common.WebpageSampleInfo parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -299,8 +298,8 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      sampleUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      sampleUrls_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -327,22 +326,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v13.common.WebpageSampleInfo buildPartial() {
       com.google.ads.googleads.v13.common.WebpageSampleInfo result = new com.google.ads.googleads.v13.common.WebpageSampleInfo(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(com.google.ads.googleads.v13.common.WebpageSampleInfo result) {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        sampleUrls_ = sampleUrls_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.sampleUrls_ = sampleUrls_;
-    }
-
     private void buildPartial0(com.google.ads.googleads.v13.common.WebpageSampleInfo result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        sampleUrls_.makeImmutable();
+        result.sampleUrls_ = sampleUrls_;
+      }
     }
 
     @java.lang.Override
@@ -392,7 +386,7 @@ private static final long serialVersionUID = 0L;
       if (!other.sampleUrls_.isEmpty()) {
         if (sampleUrls_.isEmpty()) {
           sampleUrls_ = other.sampleUrls_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ |= 0x00000001;
         } else {
           ensureSampleUrlsIsMutable();
           sampleUrls_.addAll(other.sampleUrls_);
@@ -448,12 +442,13 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.google.protobuf.LazyStringList sampleUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList sampleUrls_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureSampleUrlsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!sampleUrls_.isModifiable()) {
         sampleUrls_ = new com.google.protobuf.LazyStringArrayList(sampleUrls_);
-        bitField0_ |= 0x00000001;
-       }
+      }
+      bitField0_ |= 0x00000001;
     }
     /**
      * <pre>
@@ -465,7 +460,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getSampleUrlsList() {
-      return sampleUrls_.getUnmodifiableView();
+      sampleUrls_.makeImmutable();
+      return sampleUrls_;
     }
     /**
      * <pre>
@@ -518,6 +514,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureSampleUrlsIsMutable();
       sampleUrls_.set(index, value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -535,6 +532,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureSampleUrlsIsMutable();
       sampleUrls_.add(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -552,6 +550,7 @@ private static final long serialVersionUID = 0L;
       ensureSampleUrlsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, sampleUrls_);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -564,8 +563,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSampleUrls() {
-      sampleUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      sampleUrls_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000001);;
       onChanged();
       return this;
     }
@@ -584,6 +584,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureSampleUrlsIsMutable();
       sampleUrls_.add(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

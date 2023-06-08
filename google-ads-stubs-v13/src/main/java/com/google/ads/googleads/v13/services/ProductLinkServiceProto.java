@@ -49,40 +49,40 @@ public final class ProductLinkServiceProto {
       "v13/resources/product_link.proto\032\034google" +
       "/api/annotations.proto\032\027google/api/clien" +
       "t.proto\032\037google/api/field_behavior.proto" +
-      "\032\031google/api/resource.proto\"\200\001\n\030CreatePr" +
-      "oductLinkRequest\022\030\n\013customer_id\030\001 \001(\tB\003\340" +
-      "A\002\022J\n\014product_link\030\002 \001(\0132/.google.ads.go" +
-      "ogleads.v13.resources.ProductLinkB\003\340A\002\"]" +
-      "\n\031CreateProductLinkResponse\022@\n\rresource_" +
-      "name\030\001 \001(\tB)\372A&\n$googleads.googleapis.co" +
-      "m/ProductLink\"\220\001\n\030RemoveProductLinkReque" +
-      "st\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022C\n\rresource" +
-      "_name\030\002 \001(\tB,\340A\002\372A&\n$googleads.googleapi" +
-      "s.com/ProductLink\022\025\n\rvalidate_only\030\003 \001(\010" +
-      "\"]\n\031RemoveProductLinkResponse\022@\n\rresourc" +
+      "\032\031google/api/resource.proto\"\202\001\n\030CreatePr" +
+      "oductLinkRequest\022\031\n\013customer_id\030\001 \001(\tB\004\342" +
+      "A\001\002\022K\n\014product_link\030\002 \001(\0132/.google.ads.g" +
+      "oogleads.v13.resources.ProductLinkB\004\342A\001\002" +
+      "\"]\n\031CreateProductLinkResponse\022@\n\rresourc" +
       "e_name\030\001 \001(\tB)\372A&\n$googleads.googleapis." +
-      "com/ProductLink2\262\004\n\022ProductLinkService\022\350" +
-      "\001\n\021CreateProductLink\022;.google.ads.google" +
-      "ads.v13.services.CreateProductLinkReques" +
-      "t\032<.google.ads.googleads.v13.services.Cr" +
-      "eateProductLinkResponse\"X\202\323\344\223\0027\"2/v13/cu" +
-      "stomers/{customer_id=*}/productLinks:cre" +
-      "ate:\001*\332A\030customer_id,product_link\022\351\001\n\021Re" +
-      "moveProductLink\022;.google.ads.googleads.v" +
-      "13.services.RemoveProductLinkRequest\032<.g" +
-      "oogle.ads.googleads.v13.services.RemoveP" +
-      "roductLinkResponse\"Y\202\323\344\223\0027\"2/v13/custome" +
-      "rs/{customer_id=*}/productLinks:remove:\001" +
-      "*\332A\031customer_id,resource_name\032E\312A\030google" +
-      "ads.googleapis.com\322A\'https://www.googlea" +
-      "pis.com/auth/adwordsB\203\002\n%com.google.ads." +
-      "googleads.v13.servicesB\027ProductLinkServi" +
-      "ceProtoP\001ZIgoogle.golang.org/genproto/go" +
-      "ogleapis/ads/googleads/v13/services;serv" +
-      "ices\242\002\003GAA\252\002!Google.Ads.GoogleAds.V13.Se" +
-      "rvices\312\002!Google\\Ads\\GoogleAds\\V13\\Servic" +
-      "es\352\002%Google::Ads::GoogleAds::V13::Servic" +
-      "esb\006proto3"
+      "com/ProductLink\"\222\001\n\030RemoveProductLinkReq" +
+      "uest\022\031\n\013customer_id\030\001 \001(\tB\004\342A\001\002\022D\n\rresou" +
+      "rce_name\030\002 \001(\tB-\342A\001\002\372A&\n$googleads.googl" +
+      "eapis.com/ProductLink\022\025\n\rvalidate_only\030\003" +
+      " \001(\010\"]\n\031RemoveProductLinkResponse\022@\n\rres" +
+      "ource_name\030\001 \001(\tB)\372A&\n$googleads.googlea" +
+      "pis.com/ProductLink2\262\004\n\022ProductLinkServi" +
+      "ce\022\350\001\n\021CreateProductLink\022;.google.ads.go" +
+      "ogleads.v13.services.CreateProductLinkRe" +
+      "quest\032<.google.ads.googleads.v13.service" +
+      "s.CreateProductLinkResponse\"X\332A\030customer" +
+      "_id,product_link\202\323\344\223\0027\"2/v13/customers/{" +
+      "customer_id=*}/productLinks:create:\001*\022\351\001" +
+      "\n\021RemoveProductLink\022;.google.ads.googlea" +
+      "ds.v13.services.RemoveProductLinkRequest" +
+      "\032<.google.ads.googleads.v13.services.Rem" +
+      "oveProductLinkResponse\"Y\332A\031customer_id,r" +
+      "esource_name\202\323\344\223\0027\"2/v13/customers/{cust" +
+      "omer_id=*}/productLinks:remove:\001*\032E\312A\030go" +
+      "ogleads.googleapis.com\322A\'https://www.goo" +
+      "gleapis.com/auth/adwordsB\203\002\n%com.google." +
+      "ads.googleads.v13.servicesB\027ProductLinkS" +
+      "erviceProtoP\001ZIgoogle.golang.org/genprot" +
+      "o/googleapis/ads/googleads/v13/services;" +
+      "services\242\002\003GAA\252\002!Google.Ads.GoogleAds.V1" +
+      "3.Services\312\002!Google\\Ads\\GoogleAds\\V13\\Se" +
+      "rvices\352\002%Google::Ads::GoogleAds::V13::Se" +
+      "rvicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

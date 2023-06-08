@@ -33,22 +33,22 @@ public final class CampaignGroupProto {
       "v12.resources\032:google/ads/googleads/v12/" +
       "enums/campaign_group_status.proto\032\037googl" +
       "e/api/field_behavior.proto\032\031google/api/r" +
-      "esource.proto\"\273\002\n\rCampaignGroup\022E\n\rresou" +
-      "rce_name\030\001 \001(\tB.\340A\005\372A(\n&googleads.google" +
-      "apis.com/CampaignGroup\022\017\n\002id\030\003 \001(\003B\003\340A\003\022" +
-      "\014\n\004name\030\004 \001(\t\022[\n\006status\030\005 \001(\0162K.google.a" +
-      "ds.googleads.v12.enums.CampaignGroupStat" +
-      "usEnum.CampaignGroupStatus:g\352Ad\n&googlea" +
-      "ds.googleapis.com/CampaignGroup\022:custome" +
-      "rs/{customer_id}/campaignGroups/{campaig" +
-      "n_group_id}B\204\002\n&com.google.ads.googleads" +
-      ".v12.resourcesB\022CampaignGroupProtoP\001ZKgo" +
-      "ogle.golang.org/genproto/googleapis/ads/" +
-      "googleads/v12/resources;resources\242\002\003GAA\252" +
-      "\002\"Google.Ads.GoogleAds.V12.Resources\312\002\"G" +
-      "oogle\\Ads\\GoogleAds\\V12\\Resources\352\002&Goog" +
-      "le::Ads::GoogleAds::V12::Resourcesb\006prot" +
-      "o3"
+      "esource.proto\"\275\002\n\rCampaignGroup\022F\n\rresou" +
+      "rce_name\030\001 \001(\tB/\342A\001\005\372A(\n&googleads.googl" +
+      "eapis.com/CampaignGroup\022\020\n\002id\030\003 \001(\003B\004\342A\001" +
+      "\003\022\014\n\004name\030\004 \001(\t\022[\n\006status\030\005 \001(\0162K.google" +
+      ".ads.googleads.v12.enums.CampaignGroupSt" +
+      "atusEnum.CampaignGroupStatus:g\352Ad\n&googl" +
+      "eads.googleapis.com/CampaignGroup\022:custo" +
+      "mers/{customer_id}/campaignGroups/{campa" +
+      "ign_group_id}B\204\002\n&com.google.ads.googlea" +
+      "ds.v12.resourcesB\022CampaignGroupProtoP\001ZK" +
+      "google.golang.org/genproto/googleapis/ad" +
+      "s/googleads/v12/resources;resources\242\002\003GA" +
+      "A\252\002\"Google.Ads.GoogleAds.V12.Resources\312\002" +
+      "\"Google\\Ads\\GoogleAds\\V12\\Resources\352\002&Go" +
+      "ogle::Ads::GoogleAds::V12::Resourcesb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

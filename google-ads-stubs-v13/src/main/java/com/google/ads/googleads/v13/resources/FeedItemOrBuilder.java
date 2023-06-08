@@ -11,6 +11,7 @@ public interface FeedItemOrBuilder extends
    * <pre>
    * Immutable. The resource name of the feed item.
    * Feed item resource names have the form:
+   *
    * `customers/{customer_id}/feedItems/{feed_id}~{feed_item_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface FeedItemOrBuilder extends
    * <pre>
    * Immutable. The resource name of the feed item.
    * Feed item resource names have the form:
+   *
    * `customers/{customer_id}/feedItems/{feed_id}~{feed_item_id}`
    * </pre>
    *

@@ -33,11 +33,6 @@ private static final long serialVersionUID = 0L;
     return new MutateSharedSetsRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.services.SharedSetServiceProto.internal_static_google_ads_googleads_v12_services_MutateSharedSetsRequest_descriptor;
@@ -376,11 +371,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.services.MutateSharedSetsRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.services.MutateSharedSetsRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1125,7 +1122,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPartialFailure(boolean value) {
-      
+
       partialFailure_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
@@ -1174,7 +1171,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setValidateOnly(boolean value) {
-      
+
       validateOnly_ = value;
       bitField0_ |= 0x00000008;
       onChanged();

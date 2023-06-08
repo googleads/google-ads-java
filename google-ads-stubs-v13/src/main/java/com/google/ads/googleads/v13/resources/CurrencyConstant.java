@@ -33,11 +33,6 @@ private static final long serialVersionUID = 0L;
     return new CurrencyConstant();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.resources.CurrencyConstantProto.internal_static_google_ads_googleads_v13_resources_CurrencyConstant_descriptor;
@@ -59,6 +54,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the currency constant.
    * Currency constant resource names have the form:
+   *
    * `currencyConstants/{code}`
    * </pre>
    *
@@ -82,6 +78,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the currency constant.
    * Currency constant resource names have the form:
+   *
    * `currencyConstants/{code}`
    * </pre>
    *
@@ -482,11 +479,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.resources.CurrencyConstant parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.resources.CurrencyConstant parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -767,6 +766,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the currency constant.
      * Currency constant resource names have the form:
+     *
      * `currencyConstants/{code}`
      * </pre>
      *
@@ -789,6 +789,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the currency constant.
      * Currency constant resource names have the form:
+     *
      * `currencyConstants/{code}`
      * </pre>
      *
@@ -812,6 +813,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the currency constant.
      * Currency constant resource names have the form:
+     *
      * `currencyConstants/{code}`
      * </pre>
      *
@@ -831,6 +833,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the currency constant.
      * Currency constant resource names have the form:
+     *
      * `currencyConstants/{code}`
      * </pre>
      *
@@ -847,6 +850,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the currency constant.
      * Currency constant resource names have the form:
+     *
      * `currencyConstants/{code}`
      * </pre>
      *
@@ -1217,7 +1221,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBillableUnitMicros(long value) {
-      
+
       billableUnitMicros_ = value;
       bitField0_ |= 0x00000010;
       onChanged();

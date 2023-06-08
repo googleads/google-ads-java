@@ -31,23 +31,23 @@ public final class UserLocationViewProto {
       "\n;google/ads/googleads/v12/resources/use" +
       "r_location_view.proto\022\"google.ads.google" +
       "ads.v12.resources\032\037google/api/field_beha" +
-      "vior.proto\032\031google/api/resource.proto\"\346\002" +
-      "\n\020UserLocationView\022H\n\rresource_name\030\001 \001(" +
-      "\tB1\340A\003\372A+\n)googleads.googleapis.com/User" +
-      "LocationView\022&\n\024country_criterion_id\030\004 \001" +
-      "(\003B\003\340A\003H\000\210\001\001\022$\n\022targeting_location\030\005 \001(\010" +
-      "B\003\340A\003H\001\210\001\001:\211\001\352A\205\001\n)googleads.googleapis." +
-      "com/UserLocationView\022Xcustomers/{custome" +
-      "r_id}/userLocationViews/{country_criteri" +
-      "on_id}~{is_targeting_location}B\027\n\025_count" +
-      "ry_criterion_idB\025\n\023_targeting_locationB\207" +
-      "\002\n&com.google.ads.googleads.v12.resource" +
-      "sB\025UserLocationViewProtoP\001ZKgoogle.golan" +
-      "g.org/genproto/googleapis/ads/googleads/" +
-      "v12/resources;resources\242\002\003GAA\252\002\"Google.A" +
-      "ds.GoogleAds.V12.Resources\312\002\"Google\\Ads\\" +
-      "GoogleAds\\V12\\Resources\352\002&Google::Ads::G" +
-      "oogleAds::V12::Resourcesb\006proto3"
+      "vior.proto\032\031google/api/resource.proto\"\351\002" +
+      "\n\020UserLocationView\022I\n\rresource_name\030\001 \001(" +
+      "\tB2\342A\001\003\372A+\n)googleads.googleapis.com/Use" +
+      "rLocationView\022\'\n\024country_criterion_id\030\004 " +
+      "\001(\003B\004\342A\001\003H\000\210\001\001\022%\n\022targeting_location\030\005 \001" +
+      "(\010B\004\342A\001\003H\001\210\001\001:\211\001\352A\205\001\n)googleads.googleap" +
+      "is.com/UserLocationView\022Xcustomers/{cust" +
+      "omer_id}/userLocationViews/{country_crit" +
+      "erion_id}~{is_targeting_location}B\027\n\025_co" +
+      "untry_criterion_idB\025\n\023_targeting_locatio" +
+      "nB\207\002\n&com.google.ads.googleads.v12.resou" +
+      "rcesB\025UserLocationViewProtoP\001ZKgoogle.go" +
+      "lang.org/genproto/googleapis/ads/googlea" +
+      "ds/v12/resources;resources\242\002\003GAA\252\002\"Googl" +
+      "e.Ads.GoogleAds.V12.Resources\312\002\"Google\\A" +
+      "ds\\GoogleAds\\V12\\Resources\352\002&Google::Ads" +
+      "::GoogleAds::V12::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

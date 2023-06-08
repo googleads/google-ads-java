@@ -38,6 +38,7 @@ public interface CustomerNegativeCriterionOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed criterion is expected,
    * in this format:
+   *
    * `customers/{customer_id}/customerNegativeCriteria/{criterion_id}`
    * </pre>
    *
@@ -49,6 +50,7 @@ public interface CustomerNegativeCriterionOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed criterion is expected,
    * in this format:
+   *
    * `customers/{customer_id}/customerNegativeCriteria/{criterion_id}`
    * </pre>
    *
@@ -60,6 +62,7 @@ public interface CustomerNegativeCriterionOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed criterion is expected,
    * in this format:
+   *
    * `customers/{customer_id}/customerNegativeCriteria/{criterion_id}`
    * </pre>
    *
@@ -69,5 +72,5 @@ public interface CustomerNegativeCriterionOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v12.services.CustomerNegativeCriterionOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v12.services.CustomerNegativeCriterionOperation.OperationCase getOperationCase();
 }

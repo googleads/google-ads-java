@@ -68,80 +68,81 @@ public final class ChangeEventProto {
       "ads/googleads/v13/resources/feed_item.pr" +
       "oto\032\037google/api/field_behavior.proto\032\031go" +
       "ogle/api/resource.proto\032 google/protobuf" +
-      "/field_mask.proto\"\321\024\n\013ChangeEvent\022C\n\rres" +
-      "ource_name\030\001 \001(\tB,\340A\003\372A&\n$googleads.goog" +
-      "leapis.com/ChangeEvent\022\035\n\020change_date_ti" +
-      "me\030\002 \001(\tB\003\340A\003\022v\n\024change_resource_type\030\003 " +
-      "\001(\0162S.google.ads.googleads.v13.enums.Cha" +
-      "ngeEventResourceTypeEnum.ChangeEventReso" +
-      "urceTypeB\003\340A\003\022!\n\024change_resource_name\030\004 " +
-      "\001(\tB\003\340A\003\022_\n\013client_type\030\005 \001(\0162E.google.a" +
-      "ds.googleads.v13.enums.ChangeClientTypeE" +
-      "num.ChangeClientTypeB\003\340A\003\022\027\n\nuser_email\030" +
-      "\006 \001(\tB\003\340A\003\022Z\n\014old_resource\030\007 \001(\0132?.googl" +
-      "e.ads.googleads.v13.resources.ChangeEven" +
-      "t.ChangedResourceB\003\340A\003\022Z\n\014new_resource\030\010" +
-      " \001(\0132?.google.ads.googleads.v13.resource" +
-      "s.ChangeEvent.ChangedResourceB\003\340A\003\022{\n\031re" +
-      "source_change_operation\030\t \001(\0162S.google.a" +
-      "ds.googleads.v13.enums.ResourceChangeOpe" +
-      "rationEnum.ResourceChangeOperationB\003\340A\003\022" +
-      "7\n\016changed_fields\030\n \001(\0132\032.google.protobu" +
-      "f.FieldMaskB\003\340A\003\022;\n\010campaign\030\013 \001(\tB)\340A\003\372" +
-      "A#\n!googleads.googleapis.com/Campaign\022:\n" +
-      "\010ad_group\030\014 \001(\tB(\340A\003\372A\"\n googleads.googl" +
-      "eapis.com/AdGroup\0223\n\004feed\030\r \001(\tB%\340A\003\372A\037\n" +
-      "\035googleads.googleapis.com/Feed\022<\n\tfeed_i" +
-      "tem\030\016 \001(\tB)\340A\003\372A#\n!googleads.googleapis." +
-      "com/FeedItem\0225\n\005asset\030\024 \001(\tB&\340A\003\372A \n\036goo" +
-      "gleads.googleapis.com/Asset\032\263\013\n\017ChangedR" +
-      "esource\0227\n\002ad\030\001 \001(\0132&.google.ads.googlea" +
-      "ds.v13.resources.AdB\003\340A\003\022B\n\010ad_group\030\002 \001" +
-      "(\0132+.google.ads.googleads.v13.resources." +
-      "AdGroupB\003\340A\003\022U\n\022ad_group_criterion\030\003 \001(\013" +
-      "24.google.ads.googleads.v13.resources.Ad" +
-      "GroupCriterionB\003\340A\003\022C\n\010campaign\030\004 \001(\0132,." +
-      "google.ads.googleads.v13.resources.Campa" +
-      "ignB\003\340A\003\022P\n\017campaign_budget\030\005 \001(\01322.goog" +
-      "le.ads.googleads.v13.resources.CampaignB" +
-      "udgetB\003\340A\003\022Z\n\025ad_group_bid_modifier\030\006 \001(" +
-      "\01326.google.ads.googleads.v13.resources.A" +
-      "dGroupBidModifierB\003\340A\003\022V\n\022campaign_crite" +
-      "rion\030\007 \001(\01325.google.ads.googleads.v13.re" +
-      "sources.CampaignCriterionB\003\340A\003\022;\n\004feed\030\010" +
-      " \001(\0132(.google.ads.googleads.v13.resource" +
-      "s.FeedB\003\340A\003\022D\n\tfeed_item\030\t \001(\0132,.google." +
-      "ads.googleads.v13.resources.FeedItemB\003\340A" +
-      "\003\022L\n\rcampaign_feed\030\n \001(\01320.google.ads.go" +
-      "ogleads.v13.resources.CampaignFeedB\003\340A\003\022" +
-      "K\n\rad_group_feed\030\013 \001(\0132/.google.ads.goog" +
-      "leads.v13.resources.AdGroupFeedB\003\340A\003\022G\n\013" +
-      "ad_group_ad\030\014 \001(\0132-.google.ads.googleads" +
-      ".v13.resources.AdGroupAdB\003\340A\003\022=\n\005asset\030\r" +
-      " \001(\0132).google.ads.googleads.v13.resource" +
-      "s.AssetB\003\340A\003\022N\n\016customer_asset\030\016 \001(\01321.g" +
-      "oogle.ads.googleads.v13.resources.Custom" +
-      "erAssetB\003\340A\003\022N\n\016campaign_asset\030\017 \001(\01321.g" +
-      "oogle.ads.googleads.v13.resources.Campai" +
-      "gnAssetB\003\340A\003\022M\n\016ad_group_asset\030\020 \001(\01320.g" +
-      "oogle.ads.googleads.v13.resources.AdGrou" +
-      "pAssetB\003\340A\003\022D\n\tasset_set\030\021 \001(\0132,.google." +
-      "ads.googleads.v13.resources.AssetSetB\003\340A" +
-      "\003\022O\n\017asset_set_asset\030\022 \001(\01321.google.ads." +
-      "googleads.v13.resources.AssetSetAssetB\003\340" +
-      "A\003\022U\n\022campaign_asset_set\030\023 \001(\01324.google." +
-      "ads.googleads.v13.resources.CampaignAsse" +
-      "tSetB\003\340A\003:\201\001\352A~\n$googleads.googleapis.co" +
-      "m/ChangeEvent\022Vcustomers/{customer_id}/c" +
-      "hangeEvents/{timestamp_micros}~{command_" +
-      "index}~{mutate_index}B\202\002\n&com.google.ads" +
-      ".googleads.v13.resourcesB\020ChangeEventPro" +
-      "toP\001ZKgoogle.golang.org/genproto/googlea" +
-      "pis/ads/googleads/v13/resources;resource" +
-      "s\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V13.Resou" +
-      "rces\312\002\"Google\\Ads\\GoogleAds\\V13\\Resource" +
-      "s\352\002&Google::Ads::GoogleAds::V13::Resourc" +
-      "esb\006proto3"
+      "/field_mask.proto\"\363\024\n\013ChangeEvent\022D\n\rres" +
+      "ource_name\030\001 \001(\tB-\342A\001\003\372A&\n$googleads.goo" +
+      "gleapis.com/ChangeEvent\022\036\n\020change_date_t" +
+      "ime\030\002 \001(\tB\004\342A\001\003\022w\n\024change_resource_type\030" +
+      "\003 \001(\0162S.google.ads.googleads.v13.enums.C" +
+      "hangeEventResourceTypeEnum.ChangeEventRe" +
+      "sourceTypeB\004\342A\001\003\022\"\n\024change_resource_name" +
+      "\030\004 \001(\tB\004\342A\001\003\022`\n\013client_type\030\005 \001(\0162E.goog" +
+      "le.ads.googleads.v13.enums.ChangeClientT" +
+      "ypeEnum.ChangeClientTypeB\004\342A\001\003\022\030\n\nuser_e" +
+      "mail\030\006 \001(\tB\004\342A\001\003\022[\n\014old_resource\030\007 \001(\0132?" +
+      ".google.ads.googleads.v13.resources.Chan" +
+      "geEvent.ChangedResourceB\004\342A\001\003\022[\n\014new_res" +
+      "ource\030\010 \001(\0132?.google.ads.googleads.v13.r" +
+      "esources.ChangeEvent.ChangedResourceB\004\342A" +
+      "\001\003\022|\n\031resource_change_operation\030\t \001(\0162S." +
+      "google.ads.googleads.v13.enums.ResourceC" +
+      "hangeOperationEnum.ResourceChangeOperati" +
+      "onB\004\342A\001\003\0228\n\016changed_fields\030\n \001(\0132\032.googl" +
+      "e.protobuf.FieldMaskB\004\342A\001\003\022<\n\010campaign\030\013" +
+      " \001(\tB*\342A\001\003\372A#\n!googleads.googleapis.com/" +
+      "Campaign\022;\n\010ad_group\030\014 \001(\tB)\342A\001\003\372A\"\n goo" +
+      "gleads.googleapis.com/AdGroup\0224\n\004feed\030\r " +
+      "\001(\tB&\342A\001\003\372A\037\n\035googleads.googleapis.com/F" +
+      "eed\022=\n\tfeed_item\030\016 \001(\tB*\342A\001\003\372A#\n!googlea" +
+      "ds.googleapis.com/FeedItem\0226\n\005asset\030\024 \001(" +
+      "\tB\'\342A\001\003\372A \n\036googleads.googleapis.com/Ass" +
+      "et\032\306\013\n\017ChangedResource\0228\n\002ad\030\001 \001(\0132&.goo" +
+      "gle.ads.googleads.v13.resources.AdB\004\342A\001\003" +
+      "\022C\n\010ad_group\030\002 \001(\0132+.google.ads.googlead" +
+      "s.v13.resources.AdGroupB\004\342A\001\003\022V\n\022ad_grou" +
+      "p_criterion\030\003 \001(\01324.google.ads.googleads" +
+      ".v13.resources.AdGroupCriterionB\004\342A\001\003\022D\n" +
+      "\010campaign\030\004 \001(\0132,.google.ads.googleads.v" +
+      "13.resources.CampaignB\004\342A\001\003\022Q\n\017campaign_" +
+      "budget\030\005 \001(\01322.google.ads.googleads.v13." +
+      "resources.CampaignBudgetB\004\342A\001\003\022[\n\025ad_gro" +
+      "up_bid_modifier\030\006 \001(\01326.google.ads.googl" +
+      "eads.v13.resources.AdGroupBidModifierB\004\342" +
+      "A\001\003\022W\n\022campaign_criterion\030\007 \001(\01325.google" +
+      ".ads.googleads.v13.resources.CampaignCri" +
+      "terionB\004\342A\001\003\022<\n\004feed\030\010 \001(\0132(.google.ads." +
+      "googleads.v13.resources.FeedB\004\342A\001\003\022E\n\tfe" +
+      "ed_item\030\t \001(\0132,.google.ads.googleads.v13" +
+      ".resources.FeedItemB\004\342A\001\003\022M\n\rcampaign_fe" +
+      "ed\030\n \001(\01320.google.ads.googleads.v13.reso" +
+      "urces.CampaignFeedB\004\342A\001\003\022L\n\rad_group_fee" +
+      "d\030\013 \001(\0132/.google.ads.googleads.v13.resou" +
+      "rces.AdGroupFeedB\004\342A\001\003\022H\n\013ad_group_ad\030\014 " +
+      "\001(\0132-.google.ads.googleads.v13.resources" +
+      ".AdGroupAdB\004\342A\001\003\022>\n\005asset\030\r \001(\0132).google" +
+      ".ads.googleads.v13.resources.AssetB\004\342A\001\003" +
+      "\022O\n\016customer_asset\030\016 \001(\01321.google.ads.go" +
+      "ogleads.v13.resources.CustomerAssetB\004\342A\001" +
+      "\003\022O\n\016campaign_asset\030\017 \001(\01321.google.ads.g" +
+      "oogleads.v13.resources.CampaignAssetB\004\342A" +
+      "\001\003\022N\n\016ad_group_asset\030\020 \001(\01320.google.ads." +
+      "googleads.v13.resources.AdGroupAssetB\004\342A" +
+      "\001\003\022E\n\tasset_set\030\021 \001(\0132,.google.ads.googl" +
+      "eads.v13.resources.AssetSetB\004\342A\001\003\022P\n\017ass" +
+      "et_set_asset\030\022 \001(\01321.google.ads.googlead" +
+      "s.v13.resources.AssetSetAssetB\004\342A\001\003\022V\n\022c" +
+      "ampaign_asset_set\030\023 \001(\01324.google.ads.goo" +
+      "gleads.v13.resources.CampaignAssetSetB\004\342" +
+      "A\001\003:\201\001\352A~\n$googleads.googleapis.com/Chan" +
+      "geEvent\022Vcustomers/{customer_id}/changeE" +
+      "vents/{timestamp_micros}~{command_index}" +
+      "~{mutate_index}B\202\002\n&com.google.ads.googl" +
+      "eads.v13.resourcesB\020ChangeEventProtoP\001ZK" +
+      "google.golang.org/genproto/googleapis/ad" +
+      "s/googleads/v13/resources;resources\242\002\003GA" +
+      "A\252\002\"Google.Ads.GoogleAds.V13.Resources\312\002" +
+      "\"Google\\Ads\\GoogleAds\\V13\\Resources\352\002&Go" +
+      "ogle::Ads::GoogleAds::V13::Resourcesb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

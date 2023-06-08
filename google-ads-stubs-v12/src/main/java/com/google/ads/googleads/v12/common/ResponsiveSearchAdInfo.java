@@ -6,6 +6,7 @@ package com.google.ads.googleads.v12.common;
 /**
  * <pre>
  * A responsive search ad.
+ *
  * Responsive search ads let you create an ad that adapts to show more text, and
  * more relevant messages, to your customers. Enter multiple headlines and
  * descriptions when creating a responsive search ad, and over time, Google Ads
@@ -13,6 +14,7 @@ package com.google.ads.googleads.v12.common;
  * perform best. By adapting your ad's content to more closely match potential
  * customers' search terms, responsive search ads may improve your campaign's
  * performance.
+ *
  * More information at https://support.google.com/google-ads/answer/7684791
  * </pre>
  *
@@ -41,11 +43,6 @@ private static final long serialVersionUID = 0L;
     return new ResponsiveSearchAdInfo();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.common.AdTypeInfosProto.internal_static_google_ads_googleads_v12_common_ResponsiveSearchAdInfo_descriptor;
@@ -467,11 +464,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.common.ResponsiveSearchAdInfo parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.common.ResponsiveSearchAdInfo parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -516,6 +515,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A responsive search ad.
+   *
    * Responsive search ads let you create an ad that adapts to show more text, and
    * more relevant messages, to your customers. Enter multiple headlines and
    * descriptions when creating a responsive search ad, and over time, Google Ads
@@ -523,6 +523,7 @@ private static final long serialVersionUID = 0L;
    * perform best. By adapting your ad's content to more closely match potential
    * customers' search terms, responsive search ads may improve your campaign's
    * performance.
+   *
    * More information at https://support.google.com/google-ads/answer/7684791
    * </pre>
    *

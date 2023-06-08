@@ -194,5 +194,5 @@ public interface AudienceInsightsAttributeMetadataOrBuilder extends
    */
   com.google.ads.googleads.v12.services.LocationAttributeMetadataOrBuilder getLocationAttributeMetadataOrBuilder();
 
-  public com.google.ads.googleads.v12.services.AudienceInsightsAttributeMetadata.DimensionMetadataCase getDimensionMetadataCase();
+  com.google.ads.googleads.v12.services.AudienceInsightsAttributeMetadata.DimensionMetadataCase getDimensionMetadataCase();
 }

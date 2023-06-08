@@ -61,49 +61,49 @@ public final class AccountLinkServiceProto {
       "t.proto\032\037google/api/field_behavior.proto" +
       "\032\031google/api/resource.proto\032 google/prot" +
       "obuf/field_mask.proto\032\027google/rpc/status" +
-      ".proto\"\200\001\n\030CreateAccountLinkRequest\022\030\n\013c" +
-      "ustomer_id\030\001 \001(\tB\003\340A\002\022J\n\014account_link\030\002 " +
-      "\001(\0132/.google.ads.googleads.v12.resources" +
-      ".AccountLinkB\003\340A\002\"]\n\031CreateAccountLinkRe" +
-      "sponse\022@\n\rresource_name\030\001 \001(\tB)\372A&\n$goog" +
-      "leads.googleapis.com/AccountLink\"\265\001\n\030Mut" +
-      "ateAccountLinkRequest\022\030\n\013customer_id\030\001 \001" +
-      "(\tB\003\340A\002\022O\n\toperation\030\002 \001(\01327.google.ads." +
-      "googleads.v12.services.AccountLinkOperat" +
-      "ionB\003\340A\002\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rval" +
-      "idate_only\030\004 \001(\010\"\324\001\n\024AccountLinkOperatio" +
-      "n\022/\n\013update_mask\030\004 \001(\0132\032.google.protobuf" +
-      ".FieldMask\022A\n\006update\030\002 \001(\0132/.google.ads." +
-      "googleads.v12.resources.AccountLinkH\000\022;\n" +
-      "\006remove\030\003 \001(\tB)\372A&\n$googleads.googleapis" +
-      ".com/AccountLinkH\000B\013\n\toperation\"\232\001\n\031Muta" +
-      "teAccountLinkResponse\022J\n\006result\030\001 \001(\0132:." +
-      "google.ads.googleads.v12.services.Mutate" +
-      "AccountLinkResult\0221\n\025partial_failure_err" +
-      "or\030\002 \001(\0132\022.google.rpc.Status\"[\n\027MutateAc" +
-      "countLinkResult\022@\n\rresource_name\030\001 \001(\tB)" +
-      "\372A&\n$googleads.googleapis.com/AccountLin" +
-      "k2\256\004\n\022AccountLinkService\022\350\001\n\021CreateAccou" +
-      "ntLink\022;.google.ads.googleads.v12.servic" +
-      "es.CreateAccountLinkRequest\032<.google.ads" +
-      ".googleads.v12.services.CreateAccountLin" +
-      "kResponse\"X\202\323\344\223\0027\"2/v12/customers/{custo" +
-      "mer_id=*}/accountLinks:create:\001*\332A\030custo" +
-      "mer_id,account_link\022\345\001\n\021MutateAccountLin" +
-      "k\022;.google.ads.googleads.v12.services.Mu" +
-      "tateAccountLinkRequest\032<.google.ads.goog" +
-      "leads.v12.services.MutateAccountLinkResp" +
-      "onse\"U\202\323\344\223\0027\"2/v12/customers/{customer_i" +
-      "d=*}/accountLinks:mutate:\001*\332A\025customer_i" +
-      "d,operation\032E\312A\030googleads.googleapis.com" +
-      "\322A\'https://www.googleapis.com/auth/adwor" +
-      "dsB\203\002\n%com.google.ads.googleads.v12.serv" +
-      "icesB\027AccountLinkServiceProtoP\001ZIgoogle." +
-      "golang.org/genproto/googleapis/ads/googl" +
-      "eads/v12/services;services\242\002\003GAA\252\002!Googl" +
-      "e.Ads.GoogleAds.V12.Services\312\002!Google\\Ad" +
-      "s\\GoogleAds\\V12\\Services\352\002%Google::Ads::" +
-      "GoogleAds::V12::Servicesb\006proto3"
+      ".proto\"\202\001\n\030CreateAccountLinkRequest\022\031\n\013c" +
+      "ustomer_id\030\001 \001(\tB\004\342A\001\002\022K\n\014account_link\030\002" +
+      " \001(\0132/.google.ads.googleads.v12.resource" +
+      "s.AccountLinkB\004\342A\001\002\"]\n\031CreateAccountLink" +
+      "Response\022@\n\rresource_name\030\001 \001(\tB)\372A&\n$go" +
+      "ogleads.googleapis.com/AccountLink\"\267\001\n\030M" +
+      "utateAccountLinkRequest\022\031\n\013customer_id\030\001" +
+      " \001(\tB\004\342A\001\002\022P\n\toperation\030\002 \001(\01327.google.a" +
+      "ds.googleads.v12.services.AccountLinkOpe" +
+      "rationB\004\342A\001\002\022\027\n\017partial_failure\030\003 \001(\010\022\025\n" +
+      "\rvalidate_only\030\004 \001(\010\"\324\001\n\024AccountLinkOper" +
+      "ation\022/\n\013update_mask\030\004 \001(\0132\032.google.prot" +
+      "obuf.FieldMask\022A\n\006update\030\002 \001(\0132/.google." +
+      "ads.googleads.v12.resources.AccountLinkH" +
+      "\000\022;\n\006remove\030\003 \001(\tB)\372A&\n$googleads.google" +
+      "apis.com/AccountLinkH\000B\013\n\toperation\"\232\001\n\031" +
+      "MutateAccountLinkResponse\022J\n\006result\030\001 \001(" +
+      "\0132:.google.ads.googleads.v12.services.Mu" +
+      "tateAccountLinkResult\0221\n\025partial_failure" +
+      "_error\030\002 \001(\0132\022.google.rpc.Status\"[\n\027Muta" +
+      "teAccountLinkResult\022@\n\rresource_name\030\001 \001" +
+      "(\tB)\372A&\n$googleads.googleapis.com/Accoun" +
+      "tLink2\256\004\n\022AccountLinkService\022\350\001\n\021CreateA" +
+      "ccountLink\022;.google.ads.googleads.v12.se" +
+      "rvices.CreateAccountLinkRequest\032<.google" +
+      ".ads.googleads.v12.services.CreateAccoun" +
+      "tLinkResponse\"X\332A\030customer_id,account_li" +
+      "nk\202\323\344\223\0027\"2/v12/customers/{customer_id=*}" +
+      "/accountLinks:create:\001*\022\345\001\n\021MutateAccoun" +
+      "tLink\022;.google.ads.googleads.v12.service" +
+      "s.MutateAccountLinkRequest\032<.google.ads." +
+      "googleads.v12.services.MutateAccountLink" +
+      "Response\"U\332A\025customer_id,operation\202\323\344\223\0027" +
+      "\"2/v12/customers/{customer_id=*}/account" +
+      "Links:mutate:\001*\032E\312A\030googleads.googleapis" +
+      ".com\322A\'https://www.googleapis.com/auth/a" +
+      "dwordsB\203\002\n%com.google.ads.googleads.v12." +
+      "servicesB\027AccountLinkServiceProtoP\001ZIgoo" +
+      "gle.golang.org/genproto/googleapis/ads/g" +
+      "oogleads/v12/services;services\242\002\003GAA\252\002!G" +
+      "oogle.Ads.GoogleAds.V12.Services\312\002!Googl" +
+      "e\\Ads\\GoogleAds\\V12\\Services\352\002%Google::A" +
+      "ds::GoogleAds::V12::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

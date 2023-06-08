@@ -34,28 +34,28 @@ public final class CampaignCustomizerProto {
       "/v13/common/customizer_value.proto\032<goog" +
       "le/ads/googleads/v13/enums/customizer_va" +
       "lue_status.proto\032\037google/api/field_behav" +
-      "ior.proto\032\031google/api/resource.proto\"\251\004\n" +
-      "\022CampaignCustomizer\022J\n\rresource_name\030\001 \001" +
-      "(\tB3\340A\005\372A-\n+googleads.googleapis.com/Cam" +
-      "paignCustomizer\022;\n\010campaign\030\002 \001(\tB)\340A\005\372A" +
-      "#\n!googleads.googleapis.com/Campaign\022U\n\024" +
-      "customizer_attribute\030\003 \001(\tB7\340A\002\340A\005\372A.\n,g" +
-      "oogleads.googleapis.com/CustomizerAttrib" +
-      "ute\022d\n\006status\030\004 \001(\0162O.google.ads.googlea" +
-      "ds.v13.enums.CustomizerValueStatusEnum.C" +
-      "ustomizerValueStatusB\003\340A\003\022D\n\005value\030\005 \001(\013" +
-      "20.google.ads.googleads.v13.common.Custo" +
-      "mizerValueB\003\340A\002:\206\001\352A\202\001\n+googleads.google" +
-      "apis.com/CampaignCustomizer\022Scustomers/{" +
-      "customer_id}/campaignCustomizers/{campai" +
-      "gn_id}~{customizer_attribute_id}B\211\002\n&com" +
-      ".google.ads.googleads.v13.resourcesB\027Cam" +
-      "paignCustomizerProtoP\001ZKgoogle.golang.or" +
-      "g/genproto/googleapis/ads/googleads/v13/" +
-      "resources;resources\242\002\003GAA\252\002\"Google.Ads.G" +
-      "oogleAds.V13.Resources\312\002\"Google\\Ads\\Goog" +
-      "leAds\\V13\\Resources\352\002&Google::Ads::Googl" +
-      "eAds::V13::Resourcesb\006proto3"
+      "ior.proto\032\031google/api/resource.proto\"\254\004\n" +
+      "\022CampaignCustomizer\022K\n\rresource_name\030\001 \001" +
+      "(\tB4\342A\001\005\372A-\n+googleads.googleapis.com/Ca" +
+      "mpaignCustomizer\022<\n\010campaign\030\002 \001(\tB*\342A\001\005" +
+      "\372A#\n!googleads.googleapis.com/Campaign\022T" +
+      "\n\024customizer_attribute\030\003 \001(\tB6\342A\002\002\005\372A.\n," +
+      "googleads.googleapis.com/CustomizerAttri" +
+      "bute\022e\n\006status\030\004 \001(\0162O.google.ads.google" +
+      "ads.v13.enums.CustomizerValueStatusEnum." +
+      "CustomizerValueStatusB\004\342A\001\003\022E\n\005value\030\005 \001" +
+      "(\01320.google.ads.googleads.v13.common.Cus" +
+      "tomizerValueB\004\342A\001\002:\206\001\352A\202\001\n+googleads.goo" +
+      "gleapis.com/CampaignCustomizer\022Scustomer" +
+      "s/{customer_id}/campaignCustomizers/{cam" +
+      "paign_id}~{customizer_attribute_id}B\211\002\n&" +
+      "com.google.ads.googleads.v13.resourcesB\027" +
+      "CampaignCustomizerProtoP\001ZKgoogle.golang" +
+      ".org/genproto/googleapis/ads/googleads/v" +
+      "13/resources;resources\242\002\003GAA\252\002\"Google.Ad" +
+      "s.GoogleAds.V13.Resources\312\002\"Google\\Ads\\G" +
+      "oogleAds\\V13\\Resources\352\002&Google::Ads::Go" +
+      "ogleAds::V13::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

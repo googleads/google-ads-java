@@ -39,42 +39,43 @@ public final class BillingSetupProto {
       "nums/billing_setup_status.proto\032.google/" +
       "ads/googleads/v12/enums/time_type.proto\032" +
       "\037google/api/field_behavior.proto\032\031google" +
-      "/api/resource.proto\"\372\010\n\014BillingSetup\022D\n\r" +
-      "resource_name\030\001 \001(\tB-\340A\005\372A\'\n%googleads.g" +
-      "oogleapis.com/BillingSetup\022\024\n\002id\030\017 \001(\003B\003" +
-      "\340A\003H\002\210\001\001\022^\n\006status\030\003 \001(\0162I.google.ads.go" +
-      "ogleads.v12.enums.BillingSetupStatusEnum" +
-      ".BillingSetupStatusB\003\340A\003\022O\n\020payments_acc" +
-      "ount\030\022 \001(\tB0\340A\005\372A*\n(googleads.googleapis" +
-      ".com/PaymentsAccountH\003\210\001\001\022h\n\025payments_ac" +
-      "count_info\030\014 \001(\0132D.google.ads.googleads." +
-      "v12.resources.BillingSetup.PaymentsAccou" +
-      "ntInfoB\003\340A\005\022\036\n\017start_date_time\030\020 \001(\tB\003\340A" +
-      "\005H\000\022U\n\017start_time_type\030\n \001(\01625.google.ad" +
-      "s.googleads.v12.enums.TimeTypeEnum.TimeT" +
-      "ypeB\003\340A\005H\000\022\034\n\rend_date_time\030\021 \001(\tB\003\340A\003H\001" +
-      "\022S\n\rend_time_type\030\016 \001(\01625.google.ads.goo" +
-      "gleads.v12.enums.TimeTypeEnum.TimeTypeB\003" +
-      "\340A\003H\001\032\354\002\n\023PaymentsAccountInfo\022%\n\023payment" +
-      "s_account_id\030\006 \001(\tB\003\340A\003H\000\210\001\001\022\'\n\025payments" +
-      "_account_name\030\007 \001(\tB\003\340A\005H\001\210\001\001\022%\n\023payment" +
-      "s_profile_id\030\010 \001(\tB\003\340A\005H\002\210\001\001\022\'\n\025payments" +
-      "_profile_name\030\t \001(\tB\003\340A\003H\003\210\001\001\022/\n\035seconda" +
-      "ry_payments_profile_id\030\n \001(\tB\003\340A\003H\004\210\001\001B\026" +
-      "\n\024_payments_account_idB\030\n\026_payments_acco" +
-      "unt_nameB\026\n\024_payments_profile_idB\030\n\026_pay" +
-      "ments_profile_nameB \n\036_secondary_payment" +
-      "s_profile_id:d\352Aa\n%googleads.googleapis." +
-      "com/BillingSetup\0228customers/{customer_id" +
-      "}/billingSetups/{billing_setup_id}B\014\n\nst" +
-      "art_timeB\n\n\010end_timeB\005\n\003_idB\023\n\021_payments" +
-      "_accountB\203\002\n&com.google.ads.googleads.v1" +
-      "2.resourcesB\021BillingSetupProtoP\001ZKgoogle" +
-      ".golang.org/genproto/googleapis/ads/goog" +
-      "leads/v12/resources;resources\242\002\003GAA\252\002\"Go" +
-      "ogle.Ads.GoogleAds.V12.Resources\312\002\"Googl" +
-      "e\\Ads\\GoogleAds\\V12\\Resources\352\002&Google::" +
-      "Ads::GoogleAds::V12::Resourcesb\006proto3"
+      "/api/resource.proto\"\210\t\n\014BillingSetup\022E\n\r" +
+      "resource_name\030\001 \001(\tB.\342A\001\005\372A\'\n%googleads." +
+      "googleapis.com/BillingSetup\022\025\n\002id\030\017 \001(\003B" +
+      "\004\342A\001\003H\002\210\001\001\022_\n\006status\030\003 \001(\0162I.google.ads." +
+      "googleads.v12.enums.BillingSetupStatusEn" +
+      "um.BillingSetupStatusB\004\342A\001\003\022P\n\020payments_" +
+      "account\030\022 \001(\tB1\342A\001\005\372A*\n(googleads.google" +
+      "apis.com/PaymentsAccountH\003\210\001\001\022i\n\025payment" +
+      "s_account_info\030\014 \001(\0132D.google.ads.google" +
+      "ads.v12.resources.BillingSetup.PaymentsA" +
+      "ccountInfoB\004\342A\001\005\022\037\n\017start_date_time\030\020 \001(" +
+      "\tB\004\342A\001\005H\000\022V\n\017start_time_type\030\n \001(\01625.goo" +
+      "gle.ads.googleads.v12.enums.TimeTypeEnum" +
+      ".TimeTypeB\004\342A\001\005H\000\022\035\n\rend_date_time\030\021 \001(\t" +
+      "B\004\342A\001\003H\001\022T\n\rend_time_type\030\016 \001(\01625.google" +
+      ".ads.googleads.v12.enums.TimeTypeEnum.Ti" +
+      "meTypeB\004\342A\001\003H\001\032\361\002\n\023PaymentsAccountInfo\022&" +
+      "\n\023payments_account_id\030\006 \001(\tB\004\342A\001\003H\000\210\001\001\022(" +
+      "\n\025payments_account_name\030\007 \001(\tB\004\342A\001\005H\001\210\001\001" +
+      "\022&\n\023payments_profile_id\030\010 \001(\tB\004\342A\001\005H\002\210\001\001" +
+      "\022(\n\025payments_profile_name\030\t \001(\tB\004\342A\001\003H\003\210" +
+      "\001\001\0220\n\035secondary_payments_profile_id\030\n \001(" +
+      "\tB\004\342A\001\003H\004\210\001\001B\026\n\024_payments_account_idB\030\n\026" +
+      "_payments_account_nameB\026\n\024_payments_prof" +
+      "ile_idB\030\n\026_payments_profile_nameB \n\036_sec" +
+      "ondary_payments_profile_id:d\352Aa\n%googlea" +
+      "ds.googleapis.com/BillingSetup\0228customer" +
+      "s/{customer_id}/billingSetups/{billing_s" +
+      "etup_id}B\014\n\nstart_timeB\n\n\010end_timeB\005\n\003_i" +
+      "dB\023\n\021_payments_accountB\203\002\n&com.google.ad" +
+      "s.googleads.v12.resourcesB\021BillingSetupP" +
+      "rotoP\001ZKgoogle.golang.org/genproto/googl" +
+      "eapis/ads/googleads/v12/resources;resour" +
+      "ces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V12.Res" +
+      "ources\312\002\"Google\\Ads\\GoogleAds\\V12\\Resour" +
+      "ces\352\002&Google::Ads::GoogleAds::V12::Resou" +
+      "rcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -40,38 +40,38 @@ public final class CampaignAssetProto {
       "3/enums/asset_link_status.proto\0321google/" +
       "ads/googleads/v13/enums/asset_source.pro" +
       "to\032\037google/api/field_behavior.proto\032\031goo" +
-      "gle/api/resource.proto\"\303\007\n\rCampaignAsset" +
-      "\022E\n\rresource_name\030\001 \001(\tB.\340A\005\372A(\n&googlea" +
-      "ds.googleapis.com/CampaignAsset\022@\n\010campa" +
-      "ign\030\006 \001(\tB)\340A\005\372A#\n!googleads.googleapis." +
-      "com/CampaignH\000\210\001\001\022:\n\005asset\030\007 \001(\tB&\340A\005\372A " +
-      "\n\036googleads.googleapis.com/AssetH\001\210\001\001\022Z\n" +
-      "\nfield_type\030\004 \001(\0162A.google.ads.googleads" +
-      ".v13.enums.AssetFieldTypeEnum.AssetField" +
-      "TypeB\003\340A\005\022P\n\006source\030\010 \001(\0162;.google.ads.g" +
-      "oogleads.v13.enums.AssetSourceEnum.Asset" +
-      "SourceB\003\340A\003\022S\n\006status\030\005 \001(\0162C.google.ads" +
-      ".googleads.v13.enums.AssetLinkStatusEnum" +
-      ".AssetLinkStatus\022n\n\016primary_status\030\t \001(\016" +
-      "2Q.google.ads.googleads.v13.enums.AssetL" +
-      "inkPrimaryStatusEnum.AssetLinkPrimarySta" +
-      "tusB\003\340A\003\022c\n\026primary_status_details\030\n \003(\013" +
-      "2>.google.ads.googleads.v13.common.Asset" +
-      "LinkPrimaryStatusDetailsB\003\340A\003\022\202\001\n\026primar" +
-      "y_status_reasons\030\013 \003(\0162].google.ads.goog" +
-      "leads.v13.enums.AssetLinkPrimaryStatusRe" +
-      "asonEnum.AssetLinkPrimaryStatusReasonB\003\340" +
-      "A\003:y\352Av\n&googleads.googleapis.com/Campai" +
-      "gnAsset\022Lcustomers/{customer_id}/campaig" +
-      "nAssets/{campaign_id}~{asset_id}~{field_" +
-      "type}B\013\n\t_campaignB\010\n\006_assetB\204\002\n&com.goo" +
-      "gle.ads.googleads.v13.resourcesB\022Campaig" +
-      "nAssetProtoP\001ZKgoogle.golang.org/genprot" +
-      "o/googleapis/ads/googleads/v13/resources" +
-      ";resources\242\002\003GAA\252\002\"Google.Ads.GoogleAds." +
-      "V13.Resources\312\002\"Google\\Ads\\GoogleAds\\V13" +
-      "\\Resources\352\002&Google::Ads::GoogleAds::V13" +
-      "::Resourcesb\006proto3"
+      "gle/api/resource.proto\"\313\007\n\rCampaignAsset" +
+      "\022F\n\rresource_name\030\001 \001(\tB/\342A\001\005\372A(\n&google" +
+      "ads.googleapis.com/CampaignAsset\022A\n\010camp" +
+      "aign\030\006 \001(\tB*\342A\001\005\372A#\n!googleads.googleapi" +
+      "s.com/CampaignH\000\210\001\001\022;\n\005asset\030\007 \001(\tB\'\342A\001\005" +
+      "\372A \n\036googleads.googleapis.com/AssetH\001\210\001\001" +
+      "\022[\n\nfield_type\030\004 \001(\0162A.google.ads.google" +
+      "ads.v13.enums.AssetFieldTypeEnum.AssetFi" +
+      "eldTypeB\004\342A\001\005\022Q\n\006source\030\010 \001(\0162;.google.a" +
+      "ds.googleads.v13.enums.AssetSourceEnum.A" +
+      "ssetSourceB\004\342A\001\003\022S\n\006status\030\005 \001(\0162C.googl" +
+      "e.ads.googleads.v13.enums.AssetLinkStatu" +
+      "sEnum.AssetLinkStatus\022o\n\016primary_status\030" +
+      "\t \001(\0162Q.google.ads.googleads.v13.enums.A" +
+      "ssetLinkPrimaryStatusEnum.AssetLinkPrima" +
+      "ryStatusB\004\342A\001\003\022d\n\026primary_status_details" +
+      "\030\n \003(\0132>.google.ads.googleads.v13.common" +
+      ".AssetLinkPrimaryStatusDetailsB\004\342A\001\003\022\203\001\n" +
+      "\026primary_status_reasons\030\013 \003(\0162].google.a" +
+      "ds.googleads.v13.enums.AssetLinkPrimaryS" +
+      "tatusReasonEnum.AssetLinkPrimaryStatusRe" +
+      "asonB\004\342A\001\003:y\352Av\n&googleads.googleapis.co" +
+      "m/CampaignAsset\022Lcustomers/{customer_id}" +
+      "/campaignAssets/{campaign_id}~{asset_id}" +
+      "~{field_type}B\013\n\t_campaignB\010\n\006_assetB\204\002\n" +
+      "&com.google.ads.googleads.v13.resourcesB" +
+      "\022CampaignAssetProtoP\001ZKgoogle.golang.org" +
+      "/genproto/googleapis/ads/googleads/v13/r" +
+      "esources;resources\242\002\003GAA\252\002\"Google.Ads.Go" +
+      "ogleAds.V13.Resources\312\002\"Google\\Ads\\Googl" +
+      "eAds\\V13\\Resources\352\002&Google::Ads::Google" +
+      "Ads::V13::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

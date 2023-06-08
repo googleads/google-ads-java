@@ -71,5 +71,5 @@ public interface DisplayUploadAdInfoOrBuilder extends
    */
   com.google.ads.googleads.v12.common.AdMediaBundleAssetOrBuilder getMediaBundleOrBuilder();
 
-  public com.google.ads.googleads.v12.common.DisplayUploadAdInfo.MediaAssetCase getMediaAssetCase();
+  com.google.ads.googleads.v12.common.DisplayUploadAdInfo.MediaAssetCase getMediaAssetCase();
 }

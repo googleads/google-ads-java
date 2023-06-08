@@ -37,11 +37,6 @@ private static final long serialVersionUID = 0L;
     return new AdGroupAdAssetView();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.resources.AdGroupAdAssetViewProto.internal_static_google_ads_googleads_v12_resources_AdGroupAdAssetView_descriptor;
@@ -63,8 +58,11 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the ad group ad asset view.
    * Ad group ad asset view resource names have the form (Before V4):
+   *
    * `customers/{customer_id}/adGroupAdAssets/{AdGroupAdAsset.ad_group_id}~{AdGroupAdAsset.ad.ad_id}~{AdGroupAdAsset.asset_id}~{AdGroupAdAsset.field_type}`
+   *
    * Ad group ad asset view resource names have the form (Beginning from V4):
+   *
    * `customers/{customer_id}/adGroupAdAssetViews/{AdGroupAdAsset.ad_group_id}~{AdGroupAdAsset.ad_id}~{AdGroupAdAsset.asset_id}~{AdGroupAdAsset.field_type}`
    * </pre>
    *
@@ -88,8 +86,11 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the ad group ad asset view.
    * Ad group ad asset view resource names have the form (Before V4):
+   *
    * `customers/{customer_id}/adGroupAdAssets/{AdGroupAdAsset.ad_group_id}~{AdGroupAdAsset.ad.ad_id}~{AdGroupAdAsset.asset_id}~{AdGroupAdAsset.field_type}`
+   *
    * Ad group ad asset view resource names have the form (Beginning from V4):
+   *
    * `customers/{customer_id}/adGroupAdAssetViews/{AdGroupAdAsset.ad_group_id}~{AdGroupAdAsset.ad_id}~{AdGroupAdAsset.asset_id}~{AdGroupAdAsset.field_type}`
    * </pre>
    *
@@ -579,11 +580,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.resources.AdGroupAdAssetView parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.resources.AdGroupAdAssetView parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -907,8 +910,11 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the ad group ad asset view.
      * Ad group ad asset view resource names have the form (Before V4):
+     *
      * `customers/{customer_id}/adGroupAdAssets/{AdGroupAdAsset.ad_group_id}~{AdGroupAdAsset.ad.ad_id}~{AdGroupAdAsset.asset_id}~{AdGroupAdAsset.field_type}`
+     *
      * Ad group ad asset view resource names have the form (Beginning from V4):
+     *
      * `customers/{customer_id}/adGroupAdAssetViews/{AdGroupAdAsset.ad_group_id}~{AdGroupAdAsset.ad_id}~{AdGroupAdAsset.asset_id}~{AdGroupAdAsset.field_type}`
      * </pre>
      *
@@ -931,8 +937,11 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the ad group ad asset view.
      * Ad group ad asset view resource names have the form (Before V4):
+     *
      * `customers/{customer_id}/adGroupAdAssets/{AdGroupAdAsset.ad_group_id}~{AdGroupAdAsset.ad.ad_id}~{AdGroupAdAsset.asset_id}~{AdGroupAdAsset.field_type}`
+     *
      * Ad group ad asset view resource names have the form (Beginning from V4):
+     *
      * `customers/{customer_id}/adGroupAdAssetViews/{AdGroupAdAsset.ad_group_id}~{AdGroupAdAsset.ad_id}~{AdGroupAdAsset.asset_id}~{AdGroupAdAsset.field_type}`
      * </pre>
      *
@@ -956,8 +965,11 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the ad group ad asset view.
      * Ad group ad asset view resource names have the form (Before V4):
+     *
      * `customers/{customer_id}/adGroupAdAssets/{AdGroupAdAsset.ad_group_id}~{AdGroupAdAsset.ad.ad_id}~{AdGroupAdAsset.asset_id}~{AdGroupAdAsset.field_type}`
+     *
      * Ad group ad asset view resource names have the form (Beginning from V4):
+     *
      * `customers/{customer_id}/adGroupAdAssetViews/{AdGroupAdAsset.ad_group_id}~{AdGroupAdAsset.ad_id}~{AdGroupAdAsset.asset_id}~{AdGroupAdAsset.field_type}`
      * </pre>
      *
@@ -977,8 +989,11 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the ad group ad asset view.
      * Ad group ad asset view resource names have the form (Before V4):
+     *
      * `customers/{customer_id}/adGroupAdAssets/{AdGroupAdAsset.ad_group_id}~{AdGroupAdAsset.ad.ad_id}~{AdGroupAdAsset.asset_id}~{AdGroupAdAsset.field_type}`
+     *
      * Ad group ad asset view resource names have the form (Beginning from V4):
+     *
      * `customers/{customer_id}/adGroupAdAssetViews/{AdGroupAdAsset.ad_group_id}~{AdGroupAdAsset.ad_id}~{AdGroupAdAsset.asset_id}~{AdGroupAdAsset.field_type}`
      * </pre>
      *
@@ -995,8 +1010,11 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the ad group ad asset view.
      * Ad group ad asset view resource names have the form (Before V4):
+     *
      * `customers/{customer_id}/adGroupAdAssets/{AdGroupAdAsset.ad_group_id}~{AdGroupAdAsset.ad.ad_id}~{AdGroupAdAsset.asset_id}~{AdGroupAdAsset.field_type}`
+     *
      * Ad group ad asset view resource names have the form (Beginning from V4):
+     *
      * `customers/{customer_id}/adGroupAdAssetViews/{AdGroupAdAsset.ad_group_id}~{AdGroupAdAsset.ad_id}~{AdGroupAdAsset.asset_id}~{AdGroupAdAsset.field_type}`
      * </pre>
      *
@@ -1337,7 +1355,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEnabled(boolean value) {
-      
+
       enabled_ = value;
       bitField0_ |= 0x00000010;
       onChanged();

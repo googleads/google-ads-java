@@ -129,7 +129,7 @@ public final class GoogleAdsFieldServiceGrpc {
    * Service to fetch Google Ads API fields.
    * </pre>
    */
-  public static abstract class GoogleAdsFieldServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -143,7 +143,7 @@ public final class GoogleAdsFieldServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void getGoogleAdsField(com.google.ads.googleads.v12.services.GetGoogleAdsFieldRequest request,
+    default void getGoogleAdsField(com.google.ads.googleads.v12.services.GetGoogleAdsFieldRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.resources.GoogleAdsField> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetGoogleAdsFieldMethod(), responseObserver);
     }
@@ -161,37 +161,34 @@ public final class GoogleAdsFieldServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void searchGoogleAdsFields(com.google.ads.googleads.v12.services.SearchGoogleAdsFieldsRequest request,
+    default void searchGoogleAdsFields(com.google.ads.googleads.v12.services.SearchGoogleAdsFieldsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.SearchGoogleAdsFieldsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSearchGoogleAdsFieldsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getGetGoogleAdsFieldMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.GetGoogleAdsFieldRequest,
-                com.google.ads.googleads.v12.resources.GoogleAdsField>(
-                  this, METHODID_GET_GOOGLE_ADS_FIELD)))
-          .addMethod(
-            getSearchGoogleAdsFieldsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.SearchGoogleAdsFieldsRequest,
-                com.google.ads.googleads.v12.services.SearchGoogleAdsFieldsResponse>(
-                  this, METHODID_SEARCH_GOOGLE_ADS_FIELDS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service GoogleAdsFieldService.
    * <pre>
    * Service to fetch Google Ads API fields.
    * </pre>
    */
-  public static final class GoogleAdsFieldServiceStub extends io.grpc.stub.AbstractAsyncStub<GoogleAdsFieldServiceStub> {
+  public static abstract class GoogleAdsFieldServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return GoogleAdsFieldServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service GoogleAdsFieldService.
+   * <pre>
+   * Service to fetch Google Ads API fields.
+   * </pre>
+   */
+  public static final class GoogleAdsFieldServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<GoogleAdsFieldServiceStub> {
     private GoogleAdsFieldServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -242,11 +239,13 @@ public final class GoogleAdsFieldServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service GoogleAdsFieldService.
    * <pre>
    * Service to fetch Google Ads API fields.
    * </pre>
    */
-  public static final class GoogleAdsFieldServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<GoogleAdsFieldServiceBlockingStub> {
+  public static final class GoogleAdsFieldServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<GoogleAdsFieldServiceBlockingStub> {
     private GoogleAdsFieldServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -295,11 +294,13 @@ public final class GoogleAdsFieldServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service GoogleAdsFieldService.
    * <pre>
    * Service to fetch Google Ads API fields.
    * </pre>
    */
-  public static final class GoogleAdsFieldServiceFutureStub extends io.grpc.stub.AbstractFutureStub<GoogleAdsFieldServiceFutureStub> {
+  public static final class GoogleAdsFieldServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<GoogleAdsFieldServiceFutureStub> {
     private GoogleAdsFieldServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -357,10 +358,10 @@ public final class GoogleAdsFieldServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final GoogleAdsFieldServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(GoogleAdsFieldServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -391,6 +392,25 @@ public final class GoogleAdsFieldServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getGetGoogleAdsFieldMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.GetGoogleAdsFieldRequest,
+              com.google.ads.googleads.v12.resources.GoogleAdsField>(
+                service, METHODID_GET_GOOGLE_ADS_FIELD)))
+        .addMethod(
+          getSearchGoogleAdsFieldsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.SearchGoogleAdsFieldsRequest,
+              com.google.ads.googleads.v12.services.SearchGoogleAdsFieldsResponse>(
+                service, METHODID_SEARCH_GOOGLE_ADS_FIELDS)))
+        .build();
   }
 
   private static abstract class GoogleAdsFieldServiceBaseDescriptorSupplier

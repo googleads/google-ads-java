@@ -11,6 +11,7 @@ public interface BiddingStrategySimulationOrBuilder extends
    * <pre>
    * Output only. The resource name of the bidding strategy simulation.
    * Bidding strategy simulation resource names have the form:
+   *
    * `customers/{customer_id}/biddingStrategySimulations/{bidding_strategy_id}~{type}~{modification_method}~{start_date}~{end_date}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface BiddingStrategySimulationOrBuilder extends
    * <pre>
    * Output only. The resource name of the bidding strategy simulation.
    * Bidding strategy simulation resource names have the form:
+   *
    * `customers/{customer_id}/biddingStrategySimulations/{bidding_strategy_id}~{type}~{modification_method}~{start_date}~{end_date}`
    * </pre>
    *
@@ -177,5 +179,5 @@ public interface BiddingStrategySimulationOrBuilder extends
    */
   com.google.ads.googleads.v12.common.TargetRoasSimulationPointListOrBuilder getTargetRoasPointListOrBuilder();
 
-  public com.google.ads.googleads.v12.resources.BiddingStrategySimulation.PointListCase getPointListCase();
+  com.google.ads.googleads.v12.resources.BiddingStrategySimulation.PointListCase getPointListCase();
 }

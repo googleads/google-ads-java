@@ -34,11 +34,6 @@ private static final long serialVersionUID = 0L;
     return new OperatingSystemVersionConstant();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.resources.OperatingSystemVersionConstantProto.internal_static_google_ads_googleads_v13_resources_OperatingSystemVersionConstant_descriptor;
@@ -60,6 +55,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the operating system version constant.
    * Operating system version constant resource names have the form:
+   *
    * `operatingSystemVersionConstants/{criterion_id}`
    * </pre>
    *
@@ -83,6 +79,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the operating system version constant.
    * Operating system version constant resource names have the form:
+   *
    * `operatingSystemVersionConstants/{criterion_id}`
    * </pre>
    *
@@ -454,11 +451,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.resources.OperatingSystemVersionConstant parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.resources.OperatingSystemVersionConstant parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -749,6 +748,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the operating system version constant.
      * Operating system version constant resource names have the form:
+     *
      * `operatingSystemVersionConstants/{criterion_id}`
      * </pre>
      *
@@ -771,6 +771,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the operating system version constant.
      * Operating system version constant resource names have the form:
+     *
      * `operatingSystemVersionConstants/{criterion_id}`
      * </pre>
      *
@@ -794,6 +795,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the operating system version constant.
      * Operating system version constant resource names have the form:
+     *
      * `operatingSystemVersionConstants/{criterion_id}`
      * </pre>
      *
@@ -813,6 +815,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the operating system version constant.
      * Operating system version constant resource names have the form:
+     *
      * `operatingSystemVersionConstants/{criterion_id}`
      * </pre>
      *
@@ -829,6 +832,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the operating system version constant.
      * Operating system version constant resource names have the form:
+     *
      * `operatingSystemVersionConstants/{criterion_id}`
      * </pre>
      *
@@ -881,7 +885,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      
+
       id_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -1040,7 +1044,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOsMajorVersion(int value) {
-      
+
       osMajorVersion_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
@@ -1096,7 +1100,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOsMinorVersion(int value) {
-      
+
       osMinorVersion_ = value;
       bitField0_ |= 0x00000010;
       onChanged();

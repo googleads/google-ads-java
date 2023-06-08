@@ -11,6 +11,7 @@ public interface AdParameterOrBuilder extends
    * <pre>
    * Immutable. The resource name of the ad parameter.
    * Ad parameter resource names have the form:
+   *
    * `customers/{customer_id}/adParameters/{ad_group_id}~{criterion_id}~{parameter_index}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface AdParameterOrBuilder extends
    * <pre>
    * Immutable. The resource name of the ad parameter.
    * Ad parameter resource names have the form:
+   *
    * `customers/{customer_id}/adParameters/{ad_group_id}~{criterion_id}~{parameter_index}`
    * </pre>
    *

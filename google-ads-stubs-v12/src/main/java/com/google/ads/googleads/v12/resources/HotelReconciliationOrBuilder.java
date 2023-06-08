@@ -11,6 +11,7 @@ public interface HotelReconciliationOrBuilder extends
    * <pre>
    * Immutable. The resource name of the hotel reconciliation.
    * Hotel reconciliation resource names have the form:
+   *
    * `customers/{customer_id}/hotelReconciliations/{commission_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface HotelReconciliationOrBuilder extends
    * <pre>
    * Immutable. The resource name of the hotel reconciliation.
    * Hotel reconciliation resource names have the form:
+   *
    * `customers/{customer_id}/hotelReconciliations/{commission_id}`
    * </pre>
    *

@@ -45,42 +45,42 @@ public final class OfflineUserDataJobProto {
       "job_status.proto\032?google/ads/googleads/v" +
       "12/enums/offline_user_data_job_type.prot" +
       "o\032\037google/api/field_behavior.proto\032\031goog" +
-      "le/api/resource.proto\"\267\007\n\022OfflineUserDat" +
-      "aJob\022J\n\rresource_name\030\001 \001(\tB3\340A\005\372A-\n+goo" +
-      "gleads.googleapis.com/OfflineUserDataJob" +
-      "\022\024\n\002id\030\t \001(\003B\003\340A\003H\001\210\001\001\022\035\n\013external_id\030\n " +
-      "\001(\003B\003\340A\005H\002\210\001\001\022d\n\004type\030\004 \001(\0162Q.google.ads" +
-      ".googleads.v12.enums.OfflineUserDataJobT" +
-      "ypeEnum.OfflineUserDataJobTypeB\003\340A\005\022j\n\006s" +
-      "tatus\030\005 \001(\0162U.google.ads.googleads.v12.e" +
-      "nums.OfflineUserDataJobStatusEnum.Offlin" +
-      "eUserDataJobStatusB\003\340A\003\022\200\001\n\016failure_reas" +
-      "on\030\006 \001(\0162c.google.ads.googleads.v12.enum" +
-      "s.OfflineUserDataJobFailureReasonEnum.Of" +
-      "flineUserDataJobFailureReasonB\003\340A\003\022_\n\022op" +
-      "eration_metadata\030\013 \001(\0132>.google.ads.goog" +
-      "leads.v12.resources.OfflineUserDataJobMe" +
-      "tadataB\003\340A\003\022p\n!customer_match_user_list_" +
-      "metadata\030\007 \001(\0132>.google.ads.googleads.v1" +
-      "2.common.CustomerMatchUserListMetadataB\003" +
-      "\340A\005H\000\022X\n\024store_sales_metadata\030\010 \001(\01323.go" +
-      "ogle.ads.googleads.v12.common.StoreSales" +
-      "MetadataB\003\340A\005H\000:{\352Ax\n+googleads.googleap" +
-      "is.com/OfflineUserDataJob\022Icustomers/{cu" +
-      "stomer_id}/offlineUserDataJobs/{offline_" +
-      "user_data_update_id}B\n\n\010metadataB\005\n\003_idB" +
-      "\016\n\014_external_id\"\243\001\n\032OfflineUserDataJobMe" +
-      "tadata\022\204\001\n\020match_rate_range\030\001 \001(\0162e.goog" +
-      "le.ads.googleads.v12.enums.OfflineUserDa" +
-      "taJobMatchRateRangeEnum.OfflineUserDataJ" +
-      "obMatchRateRangeB\003\340A\003B\211\002\n&com.google.ads" +
-      ".googleads.v12.resourcesB\027OfflineUserDat" +
-      "aJobProtoP\001ZKgoogle.golang.org/genproto/" +
-      "googleapis/ads/googleads/v12/resources;r" +
-      "esources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V1" +
-      "2.Resources\312\002\"Google\\Ads\\GoogleAds\\V12\\R" +
-      "esources\352\002&Google::Ads::GoogleAds::V12::" +
-      "Resourcesb\006proto3"
+      "le/api/resource.proto\"\300\007\n\022OfflineUserDat" +
+      "aJob\022K\n\rresource_name\030\001 \001(\tB4\342A\001\005\372A-\n+go" +
+      "ogleads.googleapis.com/OfflineUserDataJo" +
+      "b\022\025\n\002id\030\t \001(\003B\004\342A\001\003H\001\210\001\001\022\036\n\013external_id\030" +
+      "\n \001(\003B\004\342A\001\005H\002\210\001\001\022e\n\004type\030\004 \001(\0162Q.google." +
+      "ads.googleads.v12.enums.OfflineUserDataJ" +
+      "obTypeEnum.OfflineUserDataJobTypeB\004\342A\001\005\022" +
+      "k\n\006status\030\005 \001(\0162U.google.ads.googleads.v" +
+      "12.enums.OfflineUserDataJobStatusEnum.Of" +
+      "flineUserDataJobStatusB\004\342A\001\003\022\201\001\n\016failure" +
+      "_reason\030\006 \001(\0162c.google.ads.googleads.v12" +
+      ".enums.OfflineUserDataJobFailureReasonEn" +
+      "um.OfflineUserDataJobFailureReasonB\004\342A\001\003" +
+      "\022`\n\022operation_metadata\030\013 \001(\0132>.google.ad" +
+      "s.googleads.v12.resources.OfflineUserDat" +
+      "aJobMetadataB\004\342A\001\003\022q\n!customer_match_use" +
+      "r_list_metadata\030\007 \001(\0132>.google.ads.googl" +
+      "eads.v12.common.CustomerMatchUserListMet" +
+      "adataB\004\342A\001\005H\000\022Y\n\024store_sales_metadata\030\010 " +
+      "\001(\01323.google.ads.googleads.v12.common.St" +
+      "oreSalesMetadataB\004\342A\001\005H\000:{\352Ax\n+googleads" +
+      ".googleapis.com/OfflineUserDataJob\022Icust" +
+      "omers/{customer_id}/offlineUserDataJobs/" +
+      "{offline_user_data_update_id}B\n\n\010metadat" +
+      "aB\005\n\003_idB\016\n\014_external_id\"\244\001\n\032OfflineUser" +
+      "DataJobMetadata\022\205\001\n\020match_rate_range\030\001 \001" +
+      "(\0162e.google.ads.googleads.v12.enums.Offl" +
+      "ineUserDataJobMatchRateRangeEnum.Offline" +
+      "UserDataJobMatchRateRangeB\004\342A\001\003B\211\002\n&com." +
+      "google.ads.googleads.v12.resourcesB\027Offl" +
+      "ineUserDataJobProtoP\001ZKgoogle.golang.org" +
+      "/genproto/googleapis/ads/googleads/v12/r" +
+      "esources;resources\242\002\003GAA\252\002\"Google.Ads.Go" +
+      "ogleAds.V12.Resources\312\002\"Google\\Ads\\Googl" +
+      "eAds\\V12\\Resources\352\002&Google::Ads::Google" +
+      "Ads::V12::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

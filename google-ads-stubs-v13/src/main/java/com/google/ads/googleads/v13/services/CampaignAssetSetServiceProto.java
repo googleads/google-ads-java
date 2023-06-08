@@ -52,43 +52,43 @@ public final class CampaignAssetSetServiceProto {
       "otations.proto\032\027google/api/client.proto\032" +
       "\037google/api/field_behavior.proto\032\031google" +
       "/api/resource.proto\032\027google/rpc/status.p" +
-      "roto\"\255\002\n\036MutateCampaignAssetSetsRequest\022" +
-      "\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022U\n\noperations\030" +
-      "\002 \003(\0132<.google.ads.googleads.v13.service" +
-      "s.CampaignAssetSetOperationB\003\340A\002\022\027\n\017part" +
-      "ial_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010" +
-      "\022j\n\025response_content_type\030\005 \001(\0162K.google" +
-      ".ads.googleads.v13.enums.ResponseContent" +
-      "TypeEnum.ResponseContentType\"\262\001\n\031Campaig" +
-      "nAssetSetOperation\022F\n\006create\030\001 \001(\01324.goo" +
-      "gle.ads.googleads.v13.resources.Campaign" +
-      "AssetSetH\000\022@\n\006remove\030\002 \001(\tB.\372A+\n)googlea" +
-      "ds.googleapis.com/CampaignAssetSetH\000B\013\n\t" +
-      "operation\"\246\001\n\037MutateCampaignAssetSetsRes" +
-      "ponse\022P\n\007results\030\001 \003(\0132?.google.ads.goog" +
+      "roto\"\257\002\n\036MutateCampaignAssetSetsRequest\022" +
+      "\031\n\013customer_id\030\001 \001(\tB\004\342A\001\002\022V\n\noperations" +
+      "\030\002 \003(\0132<.google.ads.googleads.v13.servic" +
+      "es.CampaignAssetSetOperationB\004\342A\001\002\022\027\n\017pa" +
+      "rtial_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001" +
+      "(\010\022j\n\025response_content_type\030\005 \001(\0162K.goog" +
+      "le.ads.googleads.v13.enums.ResponseConte" +
+      "ntTypeEnum.ResponseContentType\"\262\001\n\031Campa" +
+      "ignAssetSetOperation\022F\n\006create\030\001 \001(\01324.g" +
+      "oogle.ads.googleads.v13.resources.Campai" +
+      "gnAssetSetH\000\022@\n\006remove\030\002 \001(\tB.\372A+\n)googl" +
+      "eads.googleapis.com/CampaignAssetSetH\000B\013" +
+      "\n\toperation\"\246\001\n\037MutateCampaignAssetSetsR" +
+      "esponse\022P\n\007results\030\001 \003(\0132?.google.ads.go" +
+      "ogleads.v13.services.MutateCampaignAsset" +
+      "SetResult\0221\n\025partial_failure_error\030\002 \001(\013" +
+      "2\022.google.rpc.Status\"\267\001\n\034MutateCampaignA" +
+      "ssetSetResult\022E\n\rresource_name\030\001 \001(\tB.\372A" +
+      "+\n)googleads.googleapis.com/CampaignAsse" +
+      "tSet\022P\n\022campaign_asset_set\030\002 \001(\01324.googl" +
+      "e.ads.googleads.v13.resources.CampaignAs" +
+      "setSet2\340\002\n\027CampaignAssetSetService\022\375\001\n\027M" +
+      "utateCampaignAssetSets\022A.google.ads.goog" +
       "leads.v13.services.MutateCampaignAssetSe" +
-      "tResult\0221\n\025partial_failure_error\030\002 \001(\0132\022" +
-      ".google.rpc.Status\"\267\001\n\034MutateCampaignAss" +
-      "etSetResult\022E\n\rresource_name\030\001 \001(\tB.\372A+\n" +
-      ")googleads.googleapis.com/CampaignAssetS" +
-      "et\022P\n\022campaign_asset_set\030\002 \001(\01324.google." +
-      "ads.googleads.v13.resources.CampaignAsse" +
-      "tSet2\340\002\n\027CampaignAssetSetService\022\375\001\n\027Mut" +
-      "ateCampaignAssetSets\022A.google.ads.google" +
-      "ads.v13.services.MutateCampaignAssetSets" +
-      "Request\032B.google.ads.googleads.v13.servi" +
-      "ces.MutateCampaignAssetSetsResponse\"[\202\323\344" +
-      "\223\002<\"7/v13/customers/{customer_id=*}/camp" +
-      "aignAssetSets:mutate:\001*\332A\026customer_id,op" +
-      "erations\032E\312A\030googleads.googleapis.com\322A\'" +
-      "https://www.googleapis.com/auth/adwordsB" +
-      "\210\002\n%com.google.ads.googleads.v13.service" +
-      "sB\034CampaignAssetSetServiceProtoP\001ZIgoogl" +
-      "e.golang.org/genproto/googleapis/ads/goo" +
-      "gleads/v13/services;services\242\002\003GAA\252\002!Goo" +
-      "gle.Ads.GoogleAds.V13.Services\312\002!Google\\" +
-      "Ads\\GoogleAds\\V13\\Services\352\002%Google::Ads" +
-      "::GoogleAds::V13::Servicesb\006proto3"
+      "tsRequest\032B.google.ads.googleads.v13.ser" +
+      "vices.MutateCampaignAssetSetsResponse\"[\332" +
+      "A\026customer_id,operations\202\323\344\223\002<\"7/v13/cus" +
+      "tomers/{customer_id=*}/campaignAssetSets" +
+      ":mutate:\001*\032E\312A\030googleads.googleapis.com\322" +
+      "A\'https://www.googleapis.com/auth/adword" +
+      "sB\210\002\n%com.google.ads.googleads.v13.servi" +
+      "cesB\034CampaignAssetSetServiceProtoP\001ZIgoo" +
+      "gle.golang.org/genproto/googleapis/ads/g" +
+      "oogleads/v13/services;services\242\002\003GAA\252\002!G" +
+      "oogle.Ads.GoogleAds.V13.Services\312\002!Googl" +
+      "e\\Ads\\GoogleAds\\V13\\Services\352\002%Google::A" +
+      "ds::GoogleAds::V13::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

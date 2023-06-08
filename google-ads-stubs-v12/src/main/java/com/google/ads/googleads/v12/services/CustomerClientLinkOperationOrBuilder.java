@@ -88,5 +88,5 @@ public interface CustomerClientLinkOperationOrBuilder extends
    */
   com.google.ads.googleads.v12.resources.CustomerClientLinkOrBuilder getUpdateOrBuilder();
 
-  public com.google.ads.googleads.v12.services.CustomerClientLinkOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v12.services.CustomerClientLinkOperation.OperationCase getOperationCase();
 }

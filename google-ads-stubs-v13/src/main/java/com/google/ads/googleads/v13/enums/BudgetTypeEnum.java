@@ -29,11 +29,6 @@ private static final long serialVersionUID = 0L;
     return new BudgetTypeEnum();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.enums.BudgetTypeProto.internal_static_google_ads_googleads_v13_enums_BudgetTypeEnum_descriptor;
@@ -86,6 +81,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Budget type with a fixed cost-per-acquisition (conversion).
      * Full details: https://support.google.com/google-ads/answer/7528254
+     *
      * This type is only supported by campaigns with
      * AdvertisingChannelType.DISPLAY (excluding
      * AdvertisingChannelSubType.DISPLAY_GMAIL),
@@ -99,6 +95,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Budget type for Smart Campaign.
      * Full details: https://support.google.com/google-ads/answer/7653509
+     *
      * This type is only supported by campaigns with
      * AdvertisingChannelType.SMART and
      * AdvertisingChannelSubType.SMART_CAMPAIGN.
@@ -111,6 +108,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Budget type for Local Services Campaign.
      * Full details: https://support.google.com/localservices/answer/7434558
+     *
      * This type is only supported by campaigns with
      * AdvertisingChannelType.LOCAL_SERVICES.
      * </pre>
@@ -151,6 +149,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Budget type with a fixed cost-per-acquisition (conversion).
      * Full details: https://support.google.com/google-ads/answer/7528254
+     *
      * This type is only supported by campaigns with
      * AdvertisingChannelType.DISPLAY (excluding
      * AdvertisingChannelSubType.DISPLAY_GMAIL),
@@ -164,6 +163,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Budget type for Smart Campaign.
      * Full details: https://support.google.com/google-ads/answer/7653509
+     *
      * This type is only supported by campaigns with
      * AdvertisingChannelType.SMART and
      * AdvertisingChannelSubType.SMART_CAMPAIGN.
@@ -176,6 +176,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Budget type for Local Services Campaign.
      * Full details: https://support.google.com/localservices/answer/7434558
+     *
      * This type is only supported by campaigns with
      * AdvertisingChannelType.LOCAL_SERVICES.
      * </pre>
@@ -369,11 +370,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.enums.BudgetTypeEnum parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.enums.BudgetTypeEnum parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)

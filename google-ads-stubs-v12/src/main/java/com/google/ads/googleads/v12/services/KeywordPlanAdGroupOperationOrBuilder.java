@@ -101,6 +101,7 @@ public interface KeywordPlanAdGroupOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed Keyword Plan ad group
    * is expected, in this format:
+   *
    * `customers/{customer_id}/keywordPlanAdGroups/{kp_ad_group_id}`
    * </pre>
    *
@@ -112,6 +113,7 @@ public interface KeywordPlanAdGroupOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed Keyword Plan ad group
    * is expected, in this format:
+   *
    * `customers/{customer_id}/keywordPlanAdGroups/{kp_ad_group_id}`
    * </pre>
    *
@@ -123,6 +125,7 @@ public interface KeywordPlanAdGroupOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed Keyword Plan ad group
    * is expected, in this format:
+   *
    * `customers/{customer_id}/keywordPlanAdGroups/{kp_ad_group_id}`
    * </pre>
    *
@@ -132,5 +135,5 @@ public interface KeywordPlanAdGroupOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v12.services.KeywordPlanAdGroupOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v12.services.KeywordPlanAdGroupOperation.OperationCase getOperationCase();
 }

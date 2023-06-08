@@ -11,6 +11,7 @@ public interface CampaignCriterionOrBuilder extends
    * <pre>
    * Immutable. The resource name of the campaign criterion.
    * Campaign criterion resource names have the form:
+   *
    * `customers/{customer_id}/campaignCriteria/{campaign_id}~{criterion_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface CampaignCriterionOrBuilder extends
    * <pre>
    * Immutable. The resource name of the campaign criterion.
    * Campaign criterion resource names have the form:
+   *
    * `customers/{customer_id}/campaignCriteria/{campaign_id}~{criterion_id}`
    * </pre>
    *
@@ -63,6 +65,7 @@ public interface CampaignCriterionOrBuilder extends
   /**
    * <pre>
    * Output only. The ID of the criterion.
+   *
    * This field is ignored during mutate.
    * </pre>
    *
@@ -73,6 +76,7 @@ public interface CampaignCriterionOrBuilder extends
   /**
    * <pre>
    * Output only. The ID of the criterion.
+   *
    * This field is ignored during mutate.
    * </pre>
    *
@@ -84,6 +88,7 @@ public interface CampaignCriterionOrBuilder extends
   /**
    * <pre>
    * Output only. The display name of the criterion.
+   *
    * This field is ignored for mutates.
    * </pre>
    *
@@ -94,6 +99,7 @@ public interface CampaignCriterionOrBuilder extends
   /**
    * <pre>
    * Output only. The display name of the criterion.
+   *
    * This field is ignored for mutates.
    * </pre>
    *
@@ -1029,5 +1035,5 @@ public interface CampaignCriterionOrBuilder extends
    */
   com.google.ads.googleads.v13.common.LocalServiceIdInfoOrBuilder getLocalServiceIdOrBuilder();
 
-  public com.google.ads.googleads.v13.resources.CampaignCriterion.CriterionCase getCriterionCase();
+  com.google.ads.googleads.v13.resources.CampaignCriterion.CriterionCase getCriterionCase();
 }

@@ -10,6 +10,7 @@ public interface CampaignDurationOrBuilder extends
   /**
    * <pre>
    * The duration value in days.
+   *
    * This field cannot be combined with the date_range field.
    * </pre>
    *
@@ -20,6 +21,7 @@ public interface CampaignDurationOrBuilder extends
   /**
    * <pre>
    * The duration value in days.
+   *
    * This field cannot be combined with the date_range field.
    * </pre>
    *
@@ -34,6 +36,7 @@ public interface CampaignDurationOrBuilder extends
    * Dates are in the yyyy-mm-dd format and inclusive.
    * The end date must be &lt; 1 year in the future and the
    * date range must be &lt;= 92 days long.
+   *
    * This field cannot be combined with the duration_in_days field.
    * </pre>
    *
@@ -47,6 +50,7 @@ public interface CampaignDurationOrBuilder extends
    * Dates are in the yyyy-mm-dd format and inclusive.
    * The end date must be &lt; 1 year in the future and the
    * date range must be &lt;= 92 days long.
+   *
    * This field cannot be combined with the duration_in_days field.
    * </pre>
    *
@@ -60,6 +64,7 @@ public interface CampaignDurationOrBuilder extends
    * Dates are in the yyyy-mm-dd format and inclusive.
    * The end date must be &lt; 1 year in the future and the
    * date range must be &lt;= 92 days long.
+   *
    * This field cannot be combined with the duration_in_days field.
    * </pre>
    *

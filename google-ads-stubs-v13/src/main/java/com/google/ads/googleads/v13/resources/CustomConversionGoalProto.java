@@ -33,25 +33,25 @@ public final class CustomConversionGoalProto {
       "ogleads.v13.resources\032Bgoogle/ads/google" +
       "ads/v13/enums/custom_conversion_goal_sta" +
       "tus.proto\032\037google/api/field_behavior.pro" +
-      "to\032\031google/api/resource.proto\"\247\003\n\024Custom" +
-      "ConversionGoal\022L\n\rresource_name\030\001 \001(\tB5\340" +
-      "A\005\372A/\n-googleads.googleapis.com/CustomCo" +
-      "nversionGoal\022\017\n\002id\030\002 \001(\003B\003\340A\005\022\014\n\004name\030\003 " +
-      "\001(\t\022J\n\022conversion_actions\030\004 \003(\tB.\372A+\n)go" +
-      "ogleads.googleapis.com/ConversionAction\022" +
-      "i\n\006status\030\005 \001(\0162Y.google.ads.googleads.v" +
-      "13.enums.CustomConversionGoalStatusEnum." +
-      "CustomConversionGoalStatus:k\352Ah\n-googlea" +
-      "ds.googleapis.com/CustomConversionGoal\0227" +
-      "customers/{customer_id}/customConversion" +
-      "Goals/{goal_id}B\213\002\n&com.google.ads.googl" +
-      "eads.v13.resourcesB\031CustomConversionGoal" +
-      "ProtoP\001ZKgoogle.golang.org/genproto/goog" +
-      "leapis/ads/googleads/v13/resources;resou" +
-      "rces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V13.Re" +
-      "sources\312\002\"Google\\Ads\\GoogleAds\\V13\\Resou" +
-      "rces\352\002&Google::Ads::GoogleAds::V13::Reso" +
-      "urcesb\006proto3"
+      "to\032\031google/api/resource.proto\"\251\003\n\024Custom" +
+      "ConversionGoal\022M\n\rresource_name\030\001 \001(\tB6\342" +
+      "A\001\005\372A/\n-googleads.googleapis.com/CustomC" +
+      "onversionGoal\022\020\n\002id\030\002 \001(\003B\004\342A\001\005\022\014\n\004name\030" +
+      "\003 \001(\t\022J\n\022conversion_actions\030\004 \003(\tB.\372A+\n)" +
+      "googleads.googleapis.com/ConversionActio" +
+      "n\022i\n\006status\030\005 \001(\0162Y.google.ads.googleads" +
+      ".v13.enums.CustomConversionGoalStatusEnu" +
+      "m.CustomConversionGoalStatus:k\352Ah\n-googl" +
+      "eads.googleapis.com/CustomConversionGoal" +
+      "\0227customers/{customer_id}/customConversi" +
+      "onGoals/{goal_id}B\213\002\n&com.google.ads.goo" +
+      "gleads.v13.resourcesB\031CustomConversionGo" +
+      "alProtoP\001ZKgoogle.golang.org/genproto/go" +
+      "ogleapis/ads/googleads/v13/resources;res" +
+      "ources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V13." +
+      "Resources\312\002\"Google\\Ads\\GoogleAds\\V13\\Res" +
+      "ources\352\002&Google::Ads::GoogleAds::V13::Re" +
+      "sourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -11,6 +11,7 @@ public interface AssetGroupProductGroupViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the asset group product group view.
    * Asset group product group view resource names have the form:
+   *
    * `customers/{customer_id}/assetGroupProductGroupViews/{asset_group_id}~{listing_group_filter_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface AssetGroupProductGroupViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the asset group product group view.
    * Asset group product group view resource names have the form:
+   *
    * `customers/{customer_id}/assetGroupProductGroupViews/{asset_group_id}~{listing_group_filter_id}`
    * </pre>
    *

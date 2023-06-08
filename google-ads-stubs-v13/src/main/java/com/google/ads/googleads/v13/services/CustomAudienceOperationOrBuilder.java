@@ -98,6 +98,7 @@ public interface CustomAudienceOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed custom audience is
    * expected, in this format:
+   *
    * `customers/{customer_id}/customAudiences/{custom_audience_id}`
    * </pre>
    *
@@ -109,6 +110,7 @@ public interface CustomAudienceOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed custom audience is
    * expected, in this format:
+   *
    * `customers/{customer_id}/customAudiences/{custom_audience_id}`
    * </pre>
    *
@@ -120,6 +122,7 @@ public interface CustomAudienceOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed custom audience is
    * expected, in this format:
+   *
    * `customers/{customer_id}/customAudiences/{custom_audience_id}`
    * </pre>
    *
@@ -129,5 +132,5 @@ public interface CustomAudienceOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v13.services.CustomAudienceOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v13.services.CustomAudienceOperation.OperationCase getOperationCase();
 }

@@ -52,47 +52,47 @@ public final class CustomerNegativeCriterionServiceProto {
       "to\032\034google/api/annotations.proto\032\027google" +
       "/api/client.proto\032\037google/api/field_beha" +
       "vior.proto\032\031google/api/resource.proto\032\027g" +
-      "oogle/rpc/status.proto\"\275\002\n%MutateCustome" +
-      "rNegativeCriteriaRequest\022\030\n\013customer_id\030" +
-      "\001 \001(\tB\003\340A\002\022^\n\noperations\030\002 \003(\0132E.google." +
-      "ads.googleads.v12.services.CustomerNegat" +
-      "iveCriterionOperationB\003\340A\002\022\027\n\017partial_fa" +
-      "ilure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\022j\n\025re" +
-      "sponse_content_type\030\005 \001(\0162K.google.ads.g" +
-      "oogleads.v12.enums.ResponseContentTypeEn" +
-      "um.ResponseContentType\"\315\001\n\"CustomerNegat" +
-      "iveCriterionOperation\022O\n\006create\030\001 \001(\0132=." +
-      "google.ads.googleads.v12.resources.Custo" +
-      "merNegativeCriterionH\000\022I\n\006remove\030\002 \001(\tB7" +
-      "\372A4\n2googleads.googleapis.com/CustomerNe" +
-      "gativeCriterionH\000B\013\n\toperation\"\265\001\n&Mutat" +
-      "eCustomerNegativeCriteriaResponse\0221\n\025par" +
-      "tial_failure_error\030\003 \001(\0132\022.google.rpc.St" +
-      "atus\022X\n\007results\030\002 \003(\0132G.google.ads.googl" +
-      "eads.v12.services.MutateCustomerNegative" +
-      "CriteriaResult\"\332\001\n$MutateCustomerNegativ" +
-      "eCriteriaResult\022N\n\rresource_name\030\001 \001(\tB7" +
-      "\372A4\n2googleads.googleapis.com/CustomerNe" +
-      "gativeCriterion\022b\n\033customer_negative_cri" +
-      "terion\030\002 \001(\0132=.google.ads.googleads.v12." +
-      "resources.CustomerNegativeCriterion2\205\003\n " +
-      "CustomerNegativeCriterionService\022\231\002\n\036Mut" +
-      "ateCustomerNegativeCriteria\022H.google.ads" +
-      ".googleads.v12.services.MutateCustomerNe" +
-      "gativeCriteriaRequest\032I.google.ads.googl" +
-      "eads.v12.services.MutateCustomerNegative" +
-      "CriteriaResponse\"b\202\323\344\223\002C\">/v12/customers" +
-      "/{customer_id=*}/customerNegativeCriteri" +
-      "a:mutate:\001*\332A\026customer_id,operations\032E\312A" +
-      "\030googleads.googleapis.com\322A\'https://www." +
-      "googleapis.com/auth/adwordsB\221\002\n%com.goog" +
-      "le.ads.googleads.v12.servicesB%CustomerN" +
-      "egativeCriterionServiceProtoP\001ZIgoogle.g" +
-      "olang.org/genproto/googleapis/ads/google" +
-      "ads/v12/services;services\242\002\003GAA\252\002!Google" +
-      ".Ads.GoogleAds.V12.Services\312\002!Google\\Ads" +
-      "\\GoogleAds\\V12\\Services\352\002%Google::Ads::G" +
-      "oogleAds::V12::Servicesb\006proto3"
+      "oogle/rpc/status.proto\"\277\002\n%MutateCustome" +
+      "rNegativeCriteriaRequest\022\031\n\013customer_id\030" +
+      "\001 \001(\tB\004\342A\001\002\022_\n\noperations\030\002 \003(\0132E.google" +
+      ".ads.googleads.v12.services.CustomerNega" +
+      "tiveCriterionOperationB\004\342A\001\002\022\027\n\017partial_" +
+      "failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\022j\n\025" +
+      "response_content_type\030\005 \001(\0162K.google.ads" +
+      ".googleads.v12.enums.ResponseContentType" +
+      "Enum.ResponseContentType\"\315\001\n\"CustomerNeg" +
+      "ativeCriterionOperation\022O\n\006create\030\001 \001(\0132" +
+      "=.google.ads.googleads.v12.resources.Cus" +
+      "tomerNegativeCriterionH\000\022I\n\006remove\030\002 \001(\t" +
+      "B7\372A4\n2googleads.googleapis.com/Customer" +
+      "NegativeCriterionH\000B\013\n\toperation\"\265\001\n&Mut" +
+      "ateCustomerNegativeCriteriaResponse\0221\n\025p" +
+      "artial_failure_error\030\003 \001(\0132\022.google.rpc." +
+      "Status\022X\n\007results\030\002 \003(\0132G.google.ads.goo" +
+      "gleads.v12.services.MutateCustomerNegati" +
+      "veCriteriaResult\"\332\001\n$MutateCustomerNegat" +
+      "iveCriteriaResult\022N\n\rresource_name\030\001 \001(\t" +
+      "B7\372A4\n2googleads.googleapis.com/Customer" +
+      "NegativeCriterion\022b\n\033customer_negative_c" +
+      "riterion\030\002 \001(\0132=.google.ads.googleads.v1" +
+      "2.resources.CustomerNegativeCriterion2\205\003" +
+      "\n CustomerNegativeCriterionService\022\231\002\n\036M" +
+      "utateCustomerNegativeCriteria\022H.google.a" +
+      "ds.googleads.v12.services.MutateCustomer" +
+      "NegativeCriteriaRequest\032I.google.ads.goo" +
+      "gleads.v12.services.MutateCustomerNegati" +
+      "veCriteriaResponse\"b\332A\026customer_id,opera" +
+      "tions\202\323\344\223\002C\">/v12/customers/{customer_id" +
+      "=*}/customerNegativeCriteria:mutate:\001*\032E" +
+      "\312A\030googleads.googleapis.com\322A\'https://ww" +
+      "w.googleapis.com/auth/adwordsB\221\002\n%com.go" +
+      "ogle.ads.googleads.v12.servicesB%Custome" +
+      "rNegativeCriterionServiceProtoP\001ZIgoogle" +
+      ".golang.org/genproto/googleapis/ads/goog" +
+      "leads/v12/services;services\242\002\003GAA\252\002!Goog" +
+      "le.Ads.GoogleAds.V12.Services\312\002!Google\\A" +
+      "ds\\GoogleAds\\V12\\Services\352\002%Google::Ads:" +
+      ":GoogleAds::V12::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

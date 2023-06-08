@@ -23,11 +23,16 @@ private static final long serialVersionUID = 0L;
     resourceName_ = "";
     name_ = "";
     category_ = 0;
-    selectableWith_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    attributeResources_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    metrics_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    segments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    enumValues_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    selectableWith_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    attributeResources_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    metrics_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    segments_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    enumValues_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     dataType_ = 0;
     typeUrl_ = "";
   }
@@ -39,11 +44,6 @@ private static final long serialVersionUID = 0L;
     return new GoogleAdsField();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.resources.GoogleAdsFieldProto.internal_static_google_ads_googleads_v12_resources_GoogleAdsField_descriptor;
@@ -65,6 +65,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the artifact.
    * Artifact resource names have the form:
+   *
    * `googleAdsFields/{name}`
    * </pre>
    *
@@ -88,6 +89,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the artifact.
    * Artifact resource names have the form:
+   *
    * `googleAdsFields/{name}`
    * </pre>
    *
@@ -283,7 +285,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int SELECTABLE_WITH_FIELD_NUMBER = 25;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList selectableWith_;
+  private com.google.protobuf.LazyStringArrayList selectableWith_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * Output only. The names of all resources, segments, and metrics that are
@@ -339,12 +342,14 @@ private static final long serialVersionUID = 0L;
 
   public static final int ATTRIBUTE_RESOURCES_FIELD_NUMBER = 26;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList attributeResources_;
+  private com.google.protobuf.LazyStringArrayList attributeResources_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * Output only. The names of all resources that are selectable with the
    * described artifact. Fields from these resources do not segment metrics when
    * included in search queries.
+   *
    * This field is only set for artifacts whose category is RESOURCE.
    * </pre>
    *
@@ -360,6 +365,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The names of all resources that are selectable with the
    * described artifact. Fields from these resources do not segment metrics when
    * included in search queries.
+   *
    * This field is only set for artifacts whose category is RESOURCE.
    * </pre>
    *
@@ -374,6 +380,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The names of all resources that are selectable with the
    * described artifact. Fields from these resources do not segment metrics when
    * included in search queries.
+   *
    * This field is only set for artifacts whose category is RESOURCE.
    * </pre>
    *
@@ -389,6 +396,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The names of all resources that are selectable with the
    * described artifact. Fields from these resources do not segment metrics when
    * included in search queries.
+   *
    * This field is only set for artifacts whose category is RESOURCE.
    * </pre>
    *
@@ -403,7 +411,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int METRICS_FIELD_NUMBER = 27;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList metrics_;
+  private com.google.protobuf.LazyStringArrayList metrics_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * Output only. This field lists the names of all metrics that are selectable
@@ -463,7 +472,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int SEGMENTS_FIELD_NUMBER = 28;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList segments_;
+  private com.google.protobuf.LazyStringArrayList segments_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * Output only. This field lists the names of all artifacts, whether a segment
@@ -527,10 +537,12 @@ private static final long serialVersionUID = 0L;
 
   public static final int ENUM_VALUES_FIELD_NUMBER = 29;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList enumValues_;
+  private com.google.protobuf.LazyStringArrayList enumValues_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * Output only. Values the artifact can assume if it is a field of type ENUM.
+   *
    * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
    * </pre>
    *
@@ -544,6 +556,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. Values the artifact can assume if it is a field of type ENUM.
+   *
    * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
    * </pre>
    *
@@ -556,6 +569,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. Values the artifact can assume if it is a field of type ENUM.
+   *
    * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
    * </pre>
    *
@@ -569,6 +583,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. Values the artifact can assume if it is a field of type ENUM.
+   *
    * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
    * </pre>
    *
@@ -1006,11 +1021,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.resources.GoogleAdsField parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.resources.GoogleAdsField parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1096,16 +1113,16 @@ private static final long serialVersionUID = 0L;
       selectable_ = false;
       filterable_ = false;
       sortable_ = false;
-      selectableWith_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000040);
-      attributeResources_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000080);
-      metrics_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000100);
-      segments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000200);
-      enumValues_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000400);
+      selectableWith_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      attributeResources_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      metrics_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      segments_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      enumValues_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       dataType_ = 0;
       typeUrl_ = "";
       isRepeated_ = false;
@@ -1135,38 +1152,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.GoogleAdsField buildPartial() {
       com.google.ads.googleads.v12.resources.GoogleAdsField result = new com.google.ads.googleads.v12.resources.GoogleAdsField(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.resources.GoogleAdsField result) {
-      if (((bitField0_ & 0x00000040) != 0)) {
-        selectableWith_ = selectableWith_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000040);
-      }
-      result.selectableWith_ = selectableWith_;
-      if (((bitField0_ & 0x00000080) != 0)) {
-        attributeResources_ = attributeResources_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000080);
-      }
-      result.attributeResources_ = attributeResources_;
-      if (((bitField0_ & 0x00000100) != 0)) {
-        metrics_ = metrics_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000100);
-      }
-      result.metrics_ = metrics_;
-      if (((bitField0_ & 0x00000200) != 0)) {
-        segments_ = segments_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000200);
-      }
-      result.segments_ = segments_;
-      if (((bitField0_ & 0x00000400) != 0)) {
-        enumValues_ = enumValues_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000400);
-      }
-      result.enumValues_ = enumValues_;
     }
 
     private void buildPartial0(com.google.ads.googleads.v12.resources.GoogleAdsField result) {
@@ -1193,6 +1181,26 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.sortable_ = sortable_;
         to_bitField0_ |= 0x00000008;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        selectableWith_.makeImmutable();
+        result.selectableWith_ = selectableWith_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        attributeResources_.makeImmutable();
+        result.attributeResources_ = attributeResources_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        metrics_.makeImmutable();
+        result.metrics_ = metrics_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        segments_.makeImmutable();
+        result.segments_ = segments_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        enumValues_.makeImmutable();
+        result.enumValues_ = enumValues_;
       }
       if (((from_bitField0_ & 0x00000800) != 0)) {
         result.dataType_ = dataType_;
@@ -1277,7 +1285,7 @@ private static final long serialVersionUID = 0L;
       if (!other.selectableWith_.isEmpty()) {
         if (selectableWith_.isEmpty()) {
           selectableWith_ = other.selectableWith_;
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ |= 0x00000040;
         } else {
           ensureSelectableWithIsMutable();
           selectableWith_.addAll(other.selectableWith_);
@@ -1287,7 +1295,7 @@ private static final long serialVersionUID = 0L;
       if (!other.attributeResources_.isEmpty()) {
         if (attributeResources_.isEmpty()) {
           attributeResources_ = other.attributeResources_;
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ |= 0x00000080;
         } else {
           ensureAttributeResourcesIsMutable();
           attributeResources_.addAll(other.attributeResources_);
@@ -1297,7 +1305,7 @@ private static final long serialVersionUID = 0L;
       if (!other.metrics_.isEmpty()) {
         if (metrics_.isEmpty()) {
           metrics_ = other.metrics_;
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ |= 0x00000100;
         } else {
           ensureMetricsIsMutable();
           metrics_.addAll(other.metrics_);
@@ -1307,7 +1315,7 @@ private static final long serialVersionUID = 0L;
       if (!other.segments_.isEmpty()) {
         if (segments_.isEmpty()) {
           segments_ = other.segments_;
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ |= 0x00000200;
         } else {
           ensureSegmentsIsMutable();
           segments_.addAll(other.segments_);
@@ -1317,7 +1325,7 @@ private static final long serialVersionUID = 0L;
       if (!other.enumValues_.isEmpty()) {
         if (enumValues_.isEmpty()) {
           enumValues_ = other.enumValues_;
-          bitField0_ = (bitField0_ & ~0x00000400);
+          bitField0_ |= 0x00000400;
         } else {
           ensureEnumValuesIsMutable();
           enumValues_.addAll(other.enumValues_);
@@ -1458,6 +1466,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the artifact.
      * Artifact resource names have the form:
+     *
      * `googleAdsFields/{name}`
      * </pre>
      *
@@ -1480,6 +1489,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the artifact.
      * Artifact resource names have the form:
+     *
      * `googleAdsFields/{name}`
      * </pre>
      *
@@ -1503,6 +1513,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the artifact.
      * Artifact resource names have the form:
+     *
      * `googleAdsFields/{name}`
      * </pre>
      *
@@ -1522,6 +1533,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the artifact.
      * Artifact resource names have the form:
+     *
      * `googleAdsFields/{name}`
      * </pre>
      *
@@ -1538,6 +1550,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the artifact.
      * Artifact resource names have the form:
+     *
      * `googleAdsFields/{name}`
      * </pre>
      *
@@ -1769,7 +1782,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSelectable(boolean value) {
-      
+
       selectable_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
@@ -1829,7 +1842,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFilterable(boolean value) {
-      
+
       filterable_ = value;
       bitField0_ |= 0x00000010;
       onChanged();
@@ -1889,7 +1902,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSortable(boolean value) {
-      
+
       sortable_ = value;
       bitField0_ |= 0x00000020;
       onChanged();
@@ -1911,12 +1924,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.LazyStringList selectableWith_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList selectableWith_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureSelectableWithIsMutable() {
-      if (!((bitField0_ & 0x00000040) != 0)) {
+      if (!selectableWith_.isModifiable()) {
         selectableWith_ = new com.google.protobuf.LazyStringArrayList(selectableWith_);
-        bitField0_ |= 0x00000040;
-       }
+      }
+      bitField0_ |= 0x00000040;
     }
     /**
      * <pre>
@@ -1929,7 +1943,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getSelectableWithList() {
-      return selectableWith_.getUnmodifiableView();
+      selectableWith_.makeImmutable();
+      return selectableWith_;
     }
     /**
      * <pre>
@@ -1986,6 +2001,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureSelectableWithIsMutable();
       selectableWith_.set(index, value);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2004,6 +2020,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureSelectableWithIsMutable();
       selectableWith_.add(value);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2022,6 +2039,7 @@ private static final long serialVersionUID = 0L;
       ensureSelectableWithIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, selectableWith_);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2035,8 +2053,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSelectableWith() {
-      selectableWith_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000040);
+      selectableWith_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000040);;
       onChanged();
       return this;
     }
@@ -2056,22 +2075,25 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureSelectableWithIsMutable();
       selectableWith_.add(value);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList attributeResources_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList attributeResources_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureAttributeResourcesIsMutable() {
-      if (!((bitField0_ & 0x00000080) != 0)) {
+      if (!attributeResources_.isModifiable()) {
         attributeResources_ = new com.google.protobuf.LazyStringArrayList(attributeResources_);
-        bitField0_ |= 0x00000080;
-       }
+      }
+      bitField0_ |= 0x00000080;
     }
     /**
      * <pre>
      * Output only. The names of all resources that are selectable with the
      * described artifact. Fields from these resources do not segment metrics when
      * included in search queries.
+     *
      * This field is only set for artifacts whose category is RESOURCE.
      * </pre>
      *
@@ -2080,13 +2102,15 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getAttributeResourcesList() {
-      return attributeResources_.getUnmodifiableView();
+      attributeResources_.makeImmutable();
+      return attributeResources_;
     }
     /**
      * <pre>
      * Output only. The names of all resources that are selectable with the
      * described artifact. Fields from these resources do not segment metrics when
      * included in search queries.
+     *
      * This field is only set for artifacts whose category is RESOURCE.
      * </pre>
      *
@@ -2101,6 +2125,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The names of all resources that are selectable with the
      * described artifact. Fields from these resources do not segment metrics when
      * included in search queries.
+     *
      * This field is only set for artifacts whose category is RESOURCE.
      * </pre>
      *
@@ -2116,6 +2141,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The names of all resources that are selectable with the
      * described artifact. Fields from these resources do not segment metrics when
      * included in search queries.
+     *
      * This field is only set for artifacts whose category is RESOURCE.
      * </pre>
      *
@@ -2132,6 +2158,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The names of all resources that are selectable with the
      * described artifact. Fields from these resources do not segment metrics when
      * included in search queries.
+     *
      * This field is only set for artifacts whose category is RESOURCE.
      * </pre>
      *
@@ -2145,6 +2172,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureAttributeResourcesIsMutable();
       attributeResources_.set(index, value);
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2153,6 +2181,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The names of all resources that are selectable with the
      * described artifact. Fields from these resources do not segment metrics when
      * included in search queries.
+     *
      * This field is only set for artifacts whose category is RESOURCE.
      * </pre>
      *
@@ -2165,6 +2194,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureAttributeResourcesIsMutable();
       attributeResources_.add(value);
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2173,6 +2203,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The names of all resources that are selectable with the
      * described artifact. Fields from these resources do not segment metrics when
      * included in search queries.
+     *
      * This field is only set for artifacts whose category is RESOURCE.
      * </pre>
      *
@@ -2185,6 +2216,7 @@ private static final long serialVersionUID = 0L;
       ensureAttributeResourcesIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, attributeResources_);
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2193,6 +2225,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The names of all resources that are selectable with the
      * described artifact. Fields from these resources do not segment metrics when
      * included in search queries.
+     *
      * This field is only set for artifacts whose category is RESOURCE.
      * </pre>
      *
@@ -2200,8 +2233,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAttributeResources() {
-      attributeResources_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000080);
+      attributeResources_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000080);;
       onChanged();
       return this;
     }
@@ -2210,6 +2244,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The names of all resources that are selectable with the
      * described artifact. Fields from these resources do not segment metrics when
      * included in search queries.
+     *
      * This field is only set for artifacts whose category is RESOURCE.
      * </pre>
      *
@@ -2223,16 +2258,18 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureAttributeResourcesIsMutable();
       attributeResources_.add(value);
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList metrics_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList metrics_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureMetricsIsMutable() {
-      if (!((bitField0_ & 0x00000100) != 0)) {
+      if (!metrics_.isModifiable()) {
         metrics_ = new com.google.protobuf.LazyStringArrayList(metrics_);
-        bitField0_ |= 0x00000100;
-       }
+      }
+      bitField0_ |= 0x00000100;
     }
     /**
      * <pre>
@@ -2246,7 +2283,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getMetricsList() {
-      return metrics_.getUnmodifiableView();
+      metrics_.makeImmutable();
+      return metrics_;
     }
     /**
      * <pre>
@@ -2307,6 +2345,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureMetricsIsMutable();
       metrics_.set(index, value);
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2326,6 +2365,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureMetricsIsMutable();
       metrics_.add(value);
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2345,6 +2385,7 @@ private static final long serialVersionUID = 0L;
       ensureMetricsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, metrics_);
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2359,8 +2400,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearMetrics() {
-      metrics_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000100);
+      metrics_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000100);;
       onChanged();
       return this;
     }
@@ -2381,16 +2423,18 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureMetricsIsMutable();
       metrics_.add(value);
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList segments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList segments_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureSegmentsIsMutable() {
-      if (!((bitField0_ & 0x00000200) != 0)) {
+      if (!segments_.isModifiable()) {
         segments_ = new com.google.protobuf.LazyStringArrayList(segments_);
-        bitField0_ |= 0x00000200;
-       }
+      }
+      bitField0_ |= 0x00000200;
     }
     /**
      * <pre>
@@ -2405,7 +2449,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getSegmentsList() {
-      return segments_.getUnmodifiableView();
+      segments_.makeImmutable();
+      return segments_;
     }
     /**
      * <pre>
@@ -2470,6 +2515,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureSegmentsIsMutable();
       segments_.set(index, value);
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2490,6 +2536,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureSegmentsIsMutable();
       segments_.add(value);
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2510,6 +2557,7 @@ private static final long serialVersionUID = 0L;
       ensureSegmentsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, segments_);
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2525,8 +2573,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSegments() {
-      segments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000200);
+      segments_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000200);;
       onChanged();
       return this;
     }
@@ -2548,20 +2597,23 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureSegmentsIsMutable();
       segments_.add(value);
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList enumValues_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList enumValues_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureEnumValuesIsMutable() {
-      if (!((bitField0_ & 0x00000400) != 0)) {
+      if (!enumValues_.isModifiable()) {
         enumValues_ = new com.google.protobuf.LazyStringArrayList(enumValues_);
-        bitField0_ |= 0x00000400;
-       }
+      }
+      bitField0_ |= 0x00000400;
     }
     /**
      * <pre>
      * Output only. Values the artifact can assume if it is a field of type ENUM.
+     *
      * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
      * </pre>
      *
@@ -2570,11 +2622,13 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getEnumValuesList() {
-      return enumValues_.getUnmodifiableView();
+      enumValues_.makeImmutable();
+      return enumValues_;
     }
     /**
      * <pre>
      * Output only. Values the artifact can assume if it is a field of type ENUM.
+     *
      * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
      * </pre>
      *
@@ -2587,6 +2641,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Values the artifact can assume if it is a field of type ENUM.
+     *
      * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
      * </pre>
      *
@@ -2600,6 +2655,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Values the artifact can assume if it is a field of type ENUM.
+     *
      * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
      * </pre>
      *
@@ -2614,6 +2670,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Values the artifact can assume if it is a field of type ENUM.
+     *
      * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
      * </pre>
      *
@@ -2627,12 +2684,14 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureEnumValuesIsMutable();
       enumValues_.set(index, value);
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
     /**
      * <pre>
      * Output only. Values the artifact can assume if it is a field of type ENUM.
+     *
      * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
      * </pre>
      *
@@ -2645,12 +2704,14 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureEnumValuesIsMutable();
       enumValues_.add(value);
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
     /**
      * <pre>
      * Output only. Values the artifact can assume if it is a field of type ENUM.
+     *
      * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
      * </pre>
      *
@@ -2663,12 +2724,14 @@ private static final long serialVersionUID = 0L;
       ensureEnumValuesIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, enumValues_);
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
     /**
      * <pre>
      * Output only. Values the artifact can assume if it is a field of type ENUM.
+     *
      * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
      * </pre>
      *
@@ -2676,14 +2739,16 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEnumValues() {
-      enumValues_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000400);
+      enumValues_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000400);;
       onChanged();
       return this;
     }
     /**
      * <pre>
      * Output only. Values the artifact can assume if it is a field of type ENUM.
+     *
      * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
      * </pre>
      *
@@ -2697,6 +2762,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureEnumValuesIsMutable();
       enumValues_.add(value);
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2917,7 +2983,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIsRepeated(boolean value) {
-      
+
       isRepeated_ = value;
       bitField0_ |= 0x00002000;
       onChanged();

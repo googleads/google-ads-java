@@ -32,24 +32,24 @@ public final class KeywordPlanAdGroupProto {
       "word_plan_ad_group.proto\022\"google.ads.goo" +
       "gleads.v13.resources\032\037google/api/field_b" +
       "ehavior.proto\032\031google/api/resource.proto" +
-      "\"\264\003\n\022KeywordPlanAdGroup\022J\n\rresource_name" +
-      "\030\001 \001(\tB3\340A\005\372A-\n+googleads.googleapis.com" +
-      "/KeywordPlanAdGroup\022U\n\025keyword_plan_camp" +
-      "aign\030\006 \001(\tB1\372A.\n,googleads.googleapis.co" +
-      "m/KeywordPlanCampaignH\000\210\001\001\022\024\n\002id\030\007 \001(\003B\003" +
-      "\340A\003H\001\210\001\001\022\021\n\004name\030\010 \001(\tH\002\210\001\001\022\033\n\016cpc_bid_m" +
-      "icros\030\t \001(\003H\003\210\001\001:x\352Au\n+googleads.googlea" +
-      "pis.com/KeywordPlanAdGroup\022Fcustomers/{c" +
-      "ustomer_id}/keywordPlanAdGroups/{keyword" +
-      "_plan_ad_group_id}B\030\n\026_keyword_plan_camp" +
-      "aignB\005\n\003_idB\007\n\005_nameB\021\n\017_cpc_bid_microsB" +
-      "\211\002\n&com.google.ads.googleads.v13.resourc" +
-      "esB\027KeywordPlanAdGroupProtoP\001ZKgoogle.go" +
-      "lang.org/genproto/googleapis/ads/googlea" +
-      "ds/v13/resources;resources\242\002\003GAA\252\002\"Googl" +
-      "e.Ads.GoogleAds.V13.Resources\312\002\"Google\\A" +
-      "ds\\GoogleAds\\V13\\Resources\352\002&Google::Ads" +
-      "::GoogleAds::V13::Resourcesb\006proto3"
+      "\"\266\003\n\022KeywordPlanAdGroup\022K\n\rresource_name" +
+      "\030\001 \001(\tB4\342A\001\005\372A-\n+googleads.googleapis.co" +
+      "m/KeywordPlanAdGroup\022U\n\025keyword_plan_cam" +
+      "paign\030\006 \001(\tB1\372A.\n,googleads.googleapis.c" +
+      "om/KeywordPlanCampaignH\000\210\001\001\022\025\n\002id\030\007 \001(\003B" +
+      "\004\342A\001\003H\001\210\001\001\022\021\n\004name\030\010 \001(\tH\002\210\001\001\022\033\n\016cpc_bid" +
+      "_micros\030\t \001(\003H\003\210\001\001:x\352Au\n+googleads.googl" +
+      "eapis.com/KeywordPlanAdGroup\022Fcustomers/" +
+      "{customer_id}/keywordPlanAdGroups/{keywo" +
+      "rd_plan_ad_group_id}B\030\n\026_keyword_plan_ca" +
+      "mpaignB\005\n\003_idB\007\n\005_nameB\021\n\017_cpc_bid_micro" +
+      "sB\211\002\n&com.google.ads.googleads.v13.resou" +
+      "rcesB\027KeywordPlanAdGroupProtoP\001ZKgoogle." +
+      "golang.org/genproto/googleapis/ads/googl" +
+      "eads/v13/resources;resources\242\002\003GAA\252\002\"Goo" +
+      "gle.Ads.GoogleAds.V13.Resources\312\002\"Google" +
+      "\\Ads\\GoogleAds\\V13\\Resources\352\002&Google::A" +
+      "ds::GoogleAds::V13::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

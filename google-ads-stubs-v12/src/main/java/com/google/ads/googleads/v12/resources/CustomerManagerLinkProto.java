@@ -33,26 +33,26 @@ public final class CustomerManagerLinkProto {
       "gleads.v12.resources\0328google/ads/googlea" +
       "ds/v12/enums/manager_link_status.proto\032\037" +
       "google/api/field_behavior.proto\032\031google/" +
-      "api/resource.proto\"\334\003\n\023CustomerManagerLi" +
-      "nk\022K\n\rresource_name\030\001 \001(\tB4\340A\005\372A.\n,googl" +
-      "eads.googleapis.com/CustomerManagerLink\022" +
-      "H\n\020manager_customer\030\006 \001(\tB)\340A\003\372A#\n!googl" +
-      "eads.googleapis.com/CustomerH\000\210\001\001\022!\n\017man" +
-      "ager_link_id\030\007 \001(\003B\003\340A\003H\001\210\001\001\022W\n\006status\030\005" +
-      " \001(\0162G.google.ads.googleads.v12.enums.Ma" +
-      "nagerLinkStatusEnum.ManagerLinkStatus:\210\001" +
-      "\352A\204\001\n,googleads.googleapis.com/CustomerM" +
-      "anagerLink\022Tcustomers/{customer_id}/cust" +
-      "omerManagerLinks/{manager_customer_id}~{" +
-      "manager_link_id}B\023\n\021_manager_customerB\022\n" +
-      "\020_manager_link_idB\212\002\n&com.google.ads.goo" +
-      "gleads.v12.resourcesB\030CustomerManagerLin" +
-      "kProtoP\001ZKgoogle.golang.org/genproto/goo" +
-      "gleapis/ads/googleads/v12/resources;reso" +
-      "urces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V12.R" +
-      "esources\312\002\"Google\\Ads\\GoogleAds\\V12\\Reso" +
-      "urces\352\002&Google::Ads::GoogleAds::V12::Res" +
-      "ourcesb\006proto3"
+      "api/resource.proto\"\337\003\n\023CustomerManagerLi" +
+      "nk\022L\n\rresource_name\030\001 \001(\tB5\342A\001\005\372A.\n,goog" +
+      "leads.googleapis.com/CustomerManagerLink" +
+      "\022I\n\020manager_customer\030\006 \001(\tB*\342A\001\003\372A#\n!goo" +
+      "gleads.googleapis.com/CustomerH\000\210\001\001\022\"\n\017m" +
+      "anager_link_id\030\007 \001(\003B\004\342A\001\003H\001\210\001\001\022W\n\006statu" +
+      "s\030\005 \001(\0162G.google.ads.googleads.v12.enums" +
+      ".ManagerLinkStatusEnum.ManagerLinkStatus" +
+      ":\210\001\352A\204\001\n,googleads.googleapis.com/Custom" +
+      "erManagerLink\022Tcustomers/{customer_id}/c" +
+      "ustomerManagerLinks/{manager_customer_id" +
+      "}~{manager_link_id}B\023\n\021_manager_customer" +
+      "B\022\n\020_manager_link_idB\212\002\n&com.google.ads." +
+      "googleads.v12.resourcesB\030CustomerManager" +
+      "LinkProtoP\001ZKgoogle.golang.org/genproto/" +
+      "googleapis/ads/googleads/v12/resources;r" +
+      "esources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V1" +
+      "2.Resources\312\002\"Google\\Ads\\GoogleAds\\V12\\R" +
+      "esources\352\002&Google::Ads::GoogleAds::V12::" +
+      "Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

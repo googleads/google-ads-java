@@ -11,6 +11,7 @@ public interface VideoOrBuilder extends
    * <pre>
    * Output only. The resource name of the video.
    * Video resource names have the form:
+   *
    * `customers/{customer_id}/videos/{video_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface VideoOrBuilder extends
    * <pre>
    * Output only. The resource name of the video.
    * Video resource names have the form:
+   *
    * `customers/{customer_id}/videos/{video_id}`
    * </pre>
    *

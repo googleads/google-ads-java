@@ -11,6 +11,7 @@ public interface IncomeRangeViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the income range view.
    * Income range view resource names have the form:
+   *
    * `customers/{customer_id}/incomeRangeViews/{ad_group_id}~{criterion_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface IncomeRangeViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the income range view.
    * Income range view resource names have the form:
+   *
    * `customers/{customer_id}/incomeRangeViews/{ad_group_id}~{criterion_id}`
    * </pre>
    *

@@ -32,20 +32,20 @@ public final class TravelActivityGroupViewProto {
       "vel_activity_group_view.proto\022\"google.ad" +
       "s.googleads.v13.resources\032\037google/api/fi" +
       "eld_behavior.proto\032\031google/api/resource." +
-      "proto\"\362\001\n\027TravelActivityGroupView\022O\n\rres" +
-      "ource_name\030\001 \001(\tB8\340A\003\372A2\n0googleads.goog" +
-      "leapis.com/TravelActivityGroupView:\205\001\352A\201" +
-      "\001\n0googleads.googleapis.com/TravelActivi" +
-      "tyGroupView\022Mcustomers/{customer_id}/tra" +
-      "velActivityGroupViews/{ad_group_id}~{cri" +
-      "terion_id}B\216\002\n&com.google.ads.googleads." +
-      "v13.resourcesB\034TravelActivityGroupViewPr" +
-      "otoP\001ZKgoogle.golang.org/genproto/google" +
-      "apis/ads/googleads/v13/resources;resourc" +
-      "es\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V13.Reso" +
-      "urces\312\002\"Google\\Ads\\GoogleAds\\V13\\Resourc" +
-      "es\352\002&Google::Ads::GoogleAds::V13::Resour" +
-      "cesb\006proto3"
+      "proto\"\363\001\n\027TravelActivityGroupView\022P\n\rres" +
+      "ource_name\030\001 \001(\tB9\342A\001\003\372A2\n0googleads.goo" +
+      "gleapis.com/TravelActivityGroupView:\205\001\352A" +
+      "\201\001\n0googleads.googleapis.com/TravelActiv" +
+      "ityGroupView\022Mcustomers/{customer_id}/tr" +
+      "avelActivityGroupViews/{ad_group_id}~{cr" +
+      "iterion_id}B\216\002\n&com.google.ads.googleads" +
+      ".v13.resourcesB\034TravelActivityGroupViewP" +
+      "rotoP\001ZKgoogle.golang.org/genproto/googl" +
+      "eapis/ads/googleads/v13/resources;resour" +
+      "ces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V13.Res" +
+      "ources\312\002\"Google\\Ads\\GoogleAds\\V13\\Resour" +
+      "ces\352\002&Google::Ads::GoogleAds::V13::Resou" +
+      "rcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

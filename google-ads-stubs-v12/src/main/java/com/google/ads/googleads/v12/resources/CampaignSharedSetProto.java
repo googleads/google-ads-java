@@ -33,26 +33,26 @@ public final class CampaignSharedSetProto {
       "eads.v12.resources\032?google/ads/googleads" +
       "/v12/enums/campaign_shared_set_status.pr" +
       "oto\032\037google/api/field_behavior.proto\032\031go" +
-      "ogle/api/resource.proto\"\346\003\n\021CampaignShar" +
-      "edSet\022I\n\rresource_name\030\001 \001(\tB2\340A\005\372A,\n*go" +
-      "ogleads.googleapis.com/CampaignSharedSet" +
-      "\022@\n\010campaign\030\005 \001(\tB)\340A\005\372A#\n!googleads.go" +
-      "ogleapis.com/CampaignH\000\210\001\001\022C\n\nshared_set" +
-      "\030\006 \001(\tB*\340A\005\372A$\n\"googleads.googleapis.com" +
-      "/SharedSetH\001\210\001\001\022h\n\006status\030\002 \001(\0162S.google" +
-      ".ads.googleads.v12.enums.CampaignSharedS" +
-      "etStatusEnum.CampaignSharedSetStatusB\003\340A" +
-      "\003:y\352Av\n*googleads.googleapis.com/Campaig" +
-      "nSharedSet\022Hcustomers/{customer_id}/camp" +
-      "aignSharedSets/{campaign_id}~{shared_set" +
-      "_id}B\013\n\t_campaignB\r\n\013_shared_setB\210\002\n&com" +
-      ".google.ads.googleads.v12.resourcesB\026Cam" +
-      "paignSharedSetProtoP\001ZKgoogle.golang.org" +
-      "/genproto/googleapis/ads/googleads/v12/r" +
-      "esources;resources\242\002\003GAA\252\002\"Google.Ads.Go" +
-      "ogleAds.V12.Resources\312\002\"Google\\Ads\\Googl" +
-      "eAds\\V12\\Resources\352\002&Google::Ads::Google" +
-      "Ads::V12::Resourcesb\006proto3"
+      "ogle/api/resource.proto\"\352\003\n\021CampaignShar" +
+      "edSet\022J\n\rresource_name\030\001 \001(\tB3\342A\001\005\372A,\n*g" +
+      "oogleads.googleapis.com/CampaignSharedSe" +
+      "t\022A\n\010campaign\030\005 \001(\tB*\342A\001\005\372A#\n!googleads." +
+      "googleapis.com/CampaignH\000\210\001\001\022D\n\nshared_s" +
+      "et\030\006 \001(\tB+\342A\001\005\372A$\n\"googleads.googleapis." +
+      "com/SharedSetH\001\210\001\001\022i\n\006status\030\002 \001(\0162S.goo" +
+      "gle.ads.googleads.v12.enums.CampaignShar" +
+      "edSetStatusEnum.CampaignSharedSetStatusB" +
+      "\004\342A\001\003:y\352Av\n*googleads.googleapis.com/Cam" +
+      "paignSharedSet\022Hcustomers/{customer_id}/" +
+      "campaignSharedSets/{campaign_id}~{shared" +
+      "_set_id}B\013\n\t_campaignB\r\n\013_shared_setB\210\002\n" +
+      "&com.google.ads.googleads.v12.resourcesB" +
+      "\026CampaignSharedSetProtoP\001ZKgoogle.golang" +
+      ".org/genproto/googleapis/ads/googleads/v" +
+      "12/resources;resources\242\002\003GAA\252\002\"Google.Ad" +
+      "s.GoogleAds.V12.Resources\312\002\"Google\\Ads\\G" +
+      "oogleAds\\V12\\Resources\352\002&Google::Ads::Go" +
+      "ogleAds::V12::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -11,6 +11,7 @@ public interface ChangeStatusOrBuilder extends
    * <pre>
    * Output only. The resource name of the change status.
    * Change status resource names have the form:
+   *
    * `customers/{customer_id}/changeStatus/{change_status_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface ChangeStatusOrBuilder extends
    * <pre>
    * Output only. The resource name of the change status.
    * Change status resource names have the form:
+   *
    * `customers/{customer_id}/changeStatus/{change_status_id}`
    * </pre>
    *

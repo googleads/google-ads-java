@@ -11,6 +11,7 @@ public interface GeoTargetConstantOrBuilder extends
    * <pre>
    * Output only. The resource name of the geo target constant.
    * Geo target constant resource names have the form:
+   *
    * `geoTargetConstants/{geo_target_constant_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface GeoTargetConstantOrBuilder extends
    * <pre>
    * Output only. The resource name of the geo target constant.
    * Geo target constant resource names have the form:
+   *
    * `geoTargetConstants/{geo_target_constant_id}`
    * </pre>
    *
@@ -195,6 +197,7 @@ public interface GeoTargetConstantOrBuilder extends
    * <pre>
    * Output only. The resource name of the parent geo target constant.
    * Geo target constant resource names have the form:
+   *
    * `geoTargetConstants/{parent_geo_target_constant_id}`
    * </pre>
    *
@@ -206,6 +209,7 @@ public interface GeoTargetConstantOrBuilder extends
    * <pre>
    * Output only. The resource name of the parent geo target constant.
    * Geo target constant resource names have the form:
+   *
    * `geoTargetConstants/{parent_geo_target_constant_id}`
    * </pre>
    *
@@ -217,6 +221,7 @@ public interface GeoTargetConstantOrBuilder extends
    * <pre>
    * Output only. The resource name of the parent geo target constant.
    * Geo target constant resource names have the form:
+   *
    * `geoTargetConstants/{parent_geo_target_constant_id}`
    * </pre>
    *

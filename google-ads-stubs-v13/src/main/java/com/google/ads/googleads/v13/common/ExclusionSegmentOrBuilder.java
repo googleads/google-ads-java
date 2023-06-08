@@ -34,5 +34,5 @@ public interface ExclusionSegmentOrBuilder extends
    */
   com.google.ads.googleads.v13.common.UserListSegmentOrBuilder getUserListOrBuilder();
 
-  public com.google.ads.googleads.v13.common.ExclusionSegment.SegmentCase getSegmentCase();
+  com.google.ads.googleads.v13.common.ExclusionSegment.SegmentCase getSegmentCase();
 }

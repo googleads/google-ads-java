@@ -11,6 +11,7 @@ public interface CustomizerAttributeOrBuilder extends
    * <pre>
    * Immutable. The resource name of the customizer attribute.
    * Customizer Attribute resource names have the form:
+   *
    * `customers/{customer_id}/customizerAttributes/{customizer_attribute_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface CustomizerAttributeOrBuilder extends
    * <pre>
    * Immutable. The resource name of the customizer attribute.
    * Customizer Attribute resource names have the form:
+   *
    * `customers/{customer_id}/customizerAttributes/{customizer_attribute_id}`
    * </pre>
    *

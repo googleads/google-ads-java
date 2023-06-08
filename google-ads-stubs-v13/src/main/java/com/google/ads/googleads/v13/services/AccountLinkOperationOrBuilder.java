@@ -68,6 +68,7 @@ public interface AccountLinkOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the account link to remove is
    * expected, in this format:
+   *
    * `customers/{customer_id}/accountLinks/{account_link_id}`
    * </pre>
    *
@@ -79,6 +80,7 @@ public interface AccountLinkOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the account link to remove is
    * expected, in this format:
+   *
    * `customers/{customer_id}/accountLinks/{account_link_id}`
    * </pre>
    *
@@ -90,6 +92,7 @@ public interface AccountLinkOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the account link to remove is
    * expected, in this format:
+   *
    * `customers/{customer_id}/accountLinks/{account_link_id}`
    * </pre>
    *
@@ -99,5 +102,5 @@ public interface AccountLinkOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v13.services.AccountLinkOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v13.services.AccountLinkOperation.OperationCase getOperationCase();
 }

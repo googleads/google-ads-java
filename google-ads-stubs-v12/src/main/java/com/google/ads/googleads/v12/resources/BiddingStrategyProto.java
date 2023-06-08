@@ -36,45 +36,46 @@ public final class BiddingStrategyProto {
       "roto\032:google/ads/googleads/v12/enums/bid" +
       "ding_strategy_type.proto\032\037google/api/fie" +
       "ld_behavior.proto\032\031google/api/resource.p" +
-      "roto\"\376\t\n\017BiddingStrategy\022G\n\rresource_nam" +
-      "e\030\001 \001(\tB0\340A\005\372A*\n(googleads.googleapis.co" +
-      "m/BiddingStrategy\022\024\n\002id\030\020 \001(\003B\003\340A\003H\001\210\001\001\022" +
-      "\021\n\004name\030\021 \001(\tH\002\210\001\001\022d\n\006status\030\017 \001(\0162O.goo" +
-      "gle.ads.googleads.v12.enums.BiddingStrat" +
-      "egyStatusEnum.BiddingStrategyStatusB\003\340A\003" +
-      "\022^\n\004type\030\005 \001(\0162K.google.ads.googleads.v1" +
-      "2.enums.BiddingStrategyTypeEnum.BiddingS" +
-      "trategyTypeB\003\340A\003\022\032\n\rcurrency_code\030\027 \001(\tB" +
-      "\003\340A\005\022)\n\027effective_currency_code\030\024 \001(\tB\003\340" +
-      "A\003H\003\210\001\001\022\"\n\032aligned_campaign_budget_id\030\031 " +
-      "\001(\003\022 \n\016campaign_count\030\022 \001(\003B\003\340A\003H\004\210\001\001\022,\n" +
-      "\032non_removed_campaign_count\030\023 \001(\003B\003\340A\003H\005" +
-      "\210\001\001\022D\n\014enhanced_cpc\030\007 \001(\0132,.google.ads.g" +
-      "oogleads.v12.common.EnhancedCpcH\000\022]\n\031max" +
-      "imize_conversion_value\030\025 \001(\01328.google.ad" +
-      "s.googleads.v12.common.MaximizeConversio" +
-      "nValueH\000\022T\n\024maximize_conversions\030\026 \001(\01324" +
-      ".google.ads.googleads.v12.common.Maximiz" +
-      "eConversionsH\000\022@\n\ntarget_cpa\030\t \001(\0132*.goo" +
-      "gle.ads.googleads.v12.common.TargetCpaH\000" +
-      "\022Y\n\027target_impression_share\0300 \001(\01326.goog" +
-      "le.ads.googleads.v12.common.TargetImpres" +
-      "sionShareH\000\022B\n\013target_roas\030\013 \001(\0132+.googl" +
-      "e.ads.googleads.v12.common.TargetRoasH\000\022" +
-      "D\n\014target_spend\030\014 \001(\0132,.google.ads.googl" +
-      "eads.v12.common.TargetSpendH\000:n\352Ak\n(goog" +
-      "leads.googleapis.com/BiddingStrategy\022?cu" +
-      "stomers/{customer_id}/biddingStrategies/" +
-      "{bidding_strategy_id}B\010\n\006schemeB\005\n\003_idB\007" +
-      "\n\005_nameB\032\n\030_effective_currency_codeB\021\n\017_" +
-      "campaign_countB\035\n\033_non_removed_campaign_" +
-      "countB\206\002\n&com.google.ads.googleads.v12.r" +
-      "esourcesB\024BiddingStrategyProtoP\001ZKgoogle" +
-      ".golang.org/genproto/googleapis/ads/goog" +
-      "leads/v12/resources;resources\242\002\003GAA\252\002\"Go" +
-      "ogle.Ads.GoogleAds.V12.Resources\312\002\"Googl" +
-      "e\\Ads\\GoogleAds\\V12\\Resources\352\002&Google::" +
-      "Ads::GoogleAds::V12::Resourcesb\006proto3"
+      "roto\"\206\n\n\017BiddingStrategy\022H\n\rresource_nam" +
+      "e\030\001 \001(\tB1\342A\001\005\372A*\n(googleads.googleapis.c" +
+      "om/BiddingStrategy\022\025\n\002id\030\020 \001(\003B\004\342A\001\003H\001\210\001" +
+      "\001\022\021\n\004name\030\021 \001(\tH\002\210\001\001\022e\n\006status\030\017 \001(\0162O.g" +
+      "oogle.ads.googleads.v12.enums.BiddingStr" +
+      "ategyStatusEnum.BiddingStrategyStatusB\004\342" +
+      "A\001\003\022_\n\004type\030\005 \001(\0162K.google.ads.googleads" +
+      ".v12.enums.BiddingStrategyTypeEnum.Biddi" +
+      "ngStrategyTypeB\004\342A\001\003\022\033\n\rcurrency_code\030\027 " +
+      "\001(\tB\004\342A\001\005\022*\n\027effective_currency_code\030\024 \001" +
+      "(\tB\004\342A\001\003H\003\210\001\001\022\"\n\032aligned_campaign_budget" +
+      "_id\030\031 \001(\003\022!\n\016campaign_count\030\022 \001(\003B\004\342A\001\003H" +
+      "\004\210\001\001\022-\n\032non_removed_campaign_count\030\023 \001(\003" +
+      "B\004\342A\001\003H\005\210\001\001\022D\n\014enhanced_cpc\030\007 \001(\0132,.goog" +
+      "le.ads.googleads.v12.common.EnhancedCpcH" +
+      "\000\022]\n\031maximize_conversion_value\030\025 \001(\01328.g" +
+      "oogle.ads.googleads.v12.common.MaximizeC" +
+      "onversionValueH\000\022T\n\024maximize_conversions" +
+      "\030\026 \001(\01324.google.ads.googleads.v12.common" +
+      ".MaximizeConversionsH\000\022@\n\ntarget_cpa\030\t \001" +
+      "(\0132*.google.ads.googleads.v12.common.Tar" +
+      "getCpaH\000\022Y\n\027target_impression_share\0300 \001(" +
+      "\01326.google.ads.googleads.v12.common.Targ" +
+      "etImpressionShareH\000\022B\n\013target_roas\030\013 \001(\013" +
+      "2+.google.ads.googleads.v12.common.Targe" +
+      "tRoasH\000\022D\n\014target_spend\030\014 \001(\0132,.google.a" +
+      "ds.googleads.v12.common.TargetSpendH\000:n\352" +
+      "Ak\n(googleads.googleapis.com/BiddingStra" +
+      "tegy\022?customers/{customer_id}/biddingStr" +
+      "ategies/{bidding_strategy_id}B\010\n\006schemeB" +
+      "\005\n\003_idB\007\n\005_nameB\032\n\030_effective_currency_c" +
+      "odeB\021\n\017_campaign_countB\035\n\033_non_removed_c" +
+      "ampaign_countB\206\002\n&com.google.ads.googlea" +
+      "ds.v12.resourcesB\024BiddingStrategyProtoP\001" +
+      "ZKgoogle.golang.org/genproto/googleapis/" +
+      "ads/googleads/v12/resources;resources\242\002\003" +
+      "GAA\252\002\"Google.Ads.GoogleAds.V12.Resources" +
+      "\312\002\"Google\\Ads\\GoogleAds\\V12\\Resources\352\002&" +
+      "Google::Ads::GoogleAds::V12::Resourcesb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

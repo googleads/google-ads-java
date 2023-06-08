@@ -35,27 +35,27 @@ public final class CustomerUserAccessInvitationProto {
       "_status.proto\0320google/ads/googleads/v13/" +
       "enums/access_role.proto\032\037google/api/fiel" +
       "d_behavior.proto\032\031google/api/resource.pr" +
-      "oto\"\231\004\n\034CustomerUserAccessInvitation\022T\n\r" +
-      "resource_name\030\001 \001(\tB=\340A\005\372A7\n5googleads.g" +
-      "oogleapis.com/CustomerUserAccessInvitati" +
-      "on\022\032\n\rinvitation_id\030\002 \001(\003B\003\340A\003\022S\n\013access" +
-      "_role\030\003 \001(\01629.google.ads.googleads.v13.e" +
-      "nums.AccessRoleEnum.AccessRoleB\003\340A\005\022\032\n\re" +
-      "mail_address\030\004 \001(\tB\003\340A\005\022\037\n\022creation_date" +
-      "_time\030\005 \001(\tB\003\340A\003\022q\n\021invitation_status\030\006 " +
-      "\001(\0162Q.google.ads.googleads.v13.enums.Acc" +
-      "essInvitationStatusEnum.AccessInvitation" +
-      "StatusB\003\340A\003:\201\001\352A~\n5googleads.googleapis." +
-      "com/CustomerUserAccessInvitation\022Ecustom" +
-      "ers/{customer_id}/customerUserAccessInvi" +
-      "tations/{invitation_id}B\223\002\n&com.google.a" +
-      "ds.googleads.v13.resourcesB!CustomerUser" +
-      "AccessInvitationProtoP\001ZKgoogle.golang.o" +
-      "rg/genproto/googleapis/ads/googleads/v13" +
-      "/resources;resources\242\002\003GAA\252\002\"Google.Ads." +
-      "GoogleAds.V13.Resources\312\002\"Google\\Ads\\Goo" +
-      "gleAds\\V13\\Resources\352\002&Google::Ads::Goog" +
-      "leAds::V13::Resourcesb\006proto3"
+      "oto\"\237\004\n\034CustomerUserAccessInvitation\022U\n\r" +
+      "resource_name\030\001 \001(\tB>\342A\001\005\372A7\n5googleads." +
+      "googleapis.com/CustomerUserAccessInvitat" +
+      "ion\022\033\n\rinvitation_id\030\002 \001(\003B\004\342A\001\003\022T\n\013acce" +
+      "ss_role\030\003 \001(\01629.google.ads.googleads.v13" +
+      ".enums.AccessRoleEnum.AccessRoleB\004\342A\001\005\022\033" +
+      "\n\remail_address\030\004 \001(\tB\004\342A\001\005\022 \n\022creation_" +
+      "date_time\030\005 \001(\tB\004\342A\001\003\022r\n\021invitation_stat" +
+      "us\030\006 \001(\0162Q.google.ads.googleads.v13.enum" +
+      "s.AccessInvitationStatusEnum.AccessInvit" +
+      "ationStatusB\004\342A\001\003:\201\001\352A~\n5googleads.googl" +
+      "eapis.com/CustomerUserAccessInvitation\022E" +
+      "customers/{customer_id}/customerUserAcce" +
+      "ssInvitations/{invitation_id}B\223\002\n&com.go" +
+      "ogle.ads.googleads.v13.resourcesB!Custom" +
+      "erUserAccessInvitationProtoP\001ZKgoogle.go" +
+      "lang.org/genproto/googleapis/ads/googlea" +
+      "ds/v13/resources;resources\242\002\003GAA\252\002\"Googl" +
+      "e.Ads.GoogleAds.V13.Resources\312\002\"Google\\A" +
+      "ds\\GoogleAds\\V13\\Resources\352\002&Google::Ads" +
+      "::GoogleAds::V13::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

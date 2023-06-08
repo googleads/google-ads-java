@@ -98,7 +98,7 @@ public final class CustomerExtensionSettingServiceGrpc {
    * Service to manage customer extension settings.
    * </pre>
    */
-  public static abstract class CustomerExtensionSettingServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -132,30 +132,34 @@ public final class CustomerExtensionSettingServiceGrpc {
      *   [UrlFieldError]()
      * </pre>
      */
-    public void mutateCustomerExtensionSettings(com.google.ads.googleads.v12.services.MutateCustomerExtensionSettingsRequest request,
+    default void mutateCustomerExtensionSettings(com.google.ads.googleads.v12.services.MutateCustomerExtensionSettingsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.MutateCustomerExtensionSettingsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateCustomerExtensionSettingsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateCustomerExtensionSettingsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.MutateCustomerExtensionSettingsRequest,
-                com.google.ads.googleads.v12.services.MutateCustomerExtensionSettingsResponse>(
-                  this, METHODID_MUTATE_CUSTOMER_EXTENSION_SETTINGS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service CustomerExtensionSettingService.
    * <pre>
    * Service to manage customer extension settings.
    * </pre>
    */
-  public static final class CustomerExtensionSettingServiceStub extends io.grpc.stub.AbstractAsyncStub<CustomerExtensionSettingServiceStub> {
+  public static abstract class CustomerExtensionSettingServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return CustomerExtensionSettingServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service CustomerExtensionSettingService.
+   * <pre>
+   * Service to manage customer extension settings.
+   * </pre>
+   */
+  public static final class CustomerExtensionSettingServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<CustomerExtensionSettingServiceStub> {
     private CustomerExtensionSettingServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -207,11 +211,13 @@ public final class CustomerExtensionSettingServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service CustomerExtensionSettingService.
    * <pre>
    * Service to manage customer extension settings.
    * </pre>
    */
-  public static final class CustomerExtensionSettingServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CustomerExtensionSettingServiceBlockingStub> {
+  public static final class CustomerExtensionSettingServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<CustomerExtensionSettingServiceBlockingStub> {
     private CustomerExtensionSettingServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -262,11 +268,13 @@ public final class CustomerExtensionSettingServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service CustomerExtensionSettingService.
    * <pre>
    * Service to manage customer extension settings.
    * </pre>
    */
-  public static final class CustomerExtensionSettingServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CustomerExtensionSettingServiceFutureStub> {
+  public static final class CustomerExtensionSettingServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<CustomerExtensionSettingServiceFutureStub> {
     private CustomerExtensionSettingServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -324,10 +332,10 @@ public final class CustomerExtensionSettingServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final CustomerExtensionSettingServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(CustomerExtensionSettingServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -354,6 +362,18 @@ public final class CustomerExtensionSettingServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateCustomerExtensionSettingsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.MutateCustomerExtensionSettingsRequest,
+              com.google.ads.googleads.v12.services.MutateCustomerExtensionSettingsResponse>(
+                service, METHODID_MUTATE_CUSTOMER_EXTENSION_SETTINGS)))
+        .build();
   }
 
   private static abstract class CustomerExtensionSettingServiceBaseDescriptorSupplier

@@ -29,11 +29,6 @@ private static final long serialVersionUID = 0L;
     return new ConversionUploadErrorEnum();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.errors.ConversionUploadErrorProto.internal_static_google_ads_googleads_v12_errors_ConversionUploadErrorEnum_descriptor;
@@ -66,7 +61,7 @@ private static final long serialVersionUID = 0L;
     UNSPECIFIED(0),
     /**
      * <pre>
-     * The received error code is not known in this version.
+     * Used for return value only. Represents value unknown in this version.
      * </pre>
      *
      * <code>UNKNOWN = 1;</code>
@@ -74,7 +69,7 @@ private static final long serialVersionUID = 0L;
     UNKNOWN(1),
     /**
      * <pre>
-     * The request contained more than 2000 conversions.
+     * Upload fewer than 2001 events in a single request.
      * </pre>
      *
      * <code>TOO_MANY_CONVERSIONS_IN_REQUEST = 2;</code>
@@ -82,7 +77,8 @@ private static final long serialVersionUID = 0L;
     TOO_MANY_CONVERSIONS_IN_REQUEST(2),
     /**
      * <pre>
-     * The specified gclid could not be decoded.
+     * The imported gclid could not be decoded. Make sure you have not modified
+     * the click IDs.
      * </pre>
      *
      * <code>UNPARSEABLE_GCLID = 3;</code>
@@ -90,8 +86,8 @@ private static final long serialVersionUID = 0L;
     UNPARSEABLE_GCLID(3),
     /**
      * <pre>
-     * The specified conversion_date_time is before the event time
-     * associated with the given identifier or iOS URL parameter.
+     * The imported event has a `conversion_date_time` that precedes the click.
+     * Make sure your `conversion_date_time` is correct and try again.
      * </pre>
      *
      * <code>CONVERSION_PRECEDES_EVENT = 42;</code>
@@ -99,9 +95,9 @@ private static final long serialVersionUID = 0L;
     CONVERSION_PRECEDES_EVENT(42),
     /**
      * <pre>
-     * The click associated with the given identifier or iOS URL parameter is
-     * either too old to be imported or occurred outside of the click through
-     * lookback window for the specified conversion action.
+     * The imported event can't be recorded because its click occurred before
+     * this conversion's click-through window. Make sure you import the most
+     * recent data.
      * </pre>
      *
      * <code>EXPIRED_EVENT = 43;</code>
@@ -110,8 +106,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The click associated with the given identifier or iOS URL parameter
-     * occurred too recently. Try uploading again after 6 hours have
-     * passed since the click occurred.
+     * occurred less than 6 hours ago. Retry after 6 hours have passed.
      * </pre>
      *
      * <code>TOO_RECENT_EVENT = 44;</code>
@@ -119,9 +114,8 @@ private static final long serialVersionUID = 0L;
     TOO_RECENT_EVENT(44),
     /**
      * <pre>
-     * The click associated with the given identifier or iOS URL parameter could
-     * not be found in the system. This can happen if the identifier or iOS URL
-     * parameter are collected for non Google Ads clicks.
+     * The imported event could not be attributed to a click. This may be
+     * because the event did not come from a Google Ads campaign.
      * </pre>
      *
      * <code>EVENT_NOT_FOUND = 45;</code>
@@ -129,8 +123,9 @@ private static final long serialVersionUID = 0L;
     EVENT_NOT_FOUND(45),
     /**
      * <pre>
-     * The click associated with the given identifier or iOS URL parameter is
-     * owned by a customer account that the uploading customer does not manage.
+     * The click ID or call is associated with an Ads account you don't have
+     * access to. Make sure you import conversions for accounts managed by your
+     * manager account.
      * </pre>
      *
      * <code>UNAUTHORIZED_CUSTOMER = 8;</code>
@@ -138,8 +133,8 @@ private static final long serialVersionUID = 0L;
     UNAUTHORIZED_CUSTOMER(8),
     /**
      * <pre>
-     * No upload eligible conversion action that matches the provided
-     * information can be found for the customer.
+     * Make sure you specify a valid conversion action set up for offline
+     * import.
      * </pre>
      *
      * <code>INVALID_CONVERSION_ACTION = 9;</code>
@@ -147,9 +142,8 @@ private static final long serialVersionUID = 0L;
     INVALID_CONVERSION_ACTION(9),
     /**
      * <pre>
-     * The specified conversion action was created too recently.
-     * Try the upload again after 4-6 hours have passed since the
-     * conversion action was created.
+     * Can't import events to a conversion action that was just created. Try
+     * importing again in 6 hours.
      * </pre>
      *
      * <code>TOO_RECENT_CONVERSION_ACTION = 10;</code>
@@ -157,8 +151,8 @@ private static final long serialVersionUID = 0L;
     TOO_RECENT_CONVERSION_ACTION(10),
     /**
      * <pre>
-     * The click associated with the given identifier does not contain
-     * conversion tracking information.
+     * At the time of the click, conversion tracking was not enabled in the
+     * effective conversion account of the click's Google Ads account.
      * </pre>
      *
      * <code>CONVERSION_TRACKING_NOT_ENABLED_AT_IMPRESSION_TIME = 11;</code>
@@ -166,8 +160,9 @@ private static final long serialVersionUID = 0L;
     CONVERSION_TRACKING_NOT_ENABLED_AT_IMPRESSION_TIME(11),
     /**
      * <pre>
-     * The specified conversion action does not use an external attribution
-     * model, but external_attribution_data was set.
+     * The imported event includes external attribution data, but the conversion
+     * action isn't set up to use an external attribution model. Make sure the
+     * conversion action is correctly configured and try again.
      * </pre>
      *
      * <code>EXTERNAL_ATTRIBUTION_DATA_SET_FOR_NON_EXTERNALLY_ATTRIBUTED_CONVERSION_ACTION = 12;</code>
@@ -175,10 +170,9 @@ private static final long serialVersionUID = 0L;
     EXTERNAL_ATTRIBUTION_DATA_SET_FOR_NON_EXTERNALLY_ATTRIBUTED_CONVERSION_ACTION(12),
     /**
      * <pre>
-     * The specified conversion action uses an external attribution model, but
-     * external_attribution_data or one of its contained fields was not set.
-     * Both external_attribution_credit and external_attribution_model must be
-     * set for externally attributed conversion actions.
+     * The conversion action is set up to use an external attribution model, but
+     * the imported event is missing data. Make sure imported events include the
+     * external attribution credit and all necessary fields.
      * </pre>
      *
      * <code>EXTERNAL_ATTRIBUTION_DATA_NOT_SET_FOR_EXTERNALLY_ATTRIBUTED_CONVERSION_ACTION = 13;</code>
@@ -186,8 +180,9 @@ private static final long serialVersionUID = 0L;
     EXTERNAL_ATTRIBUTION_DATA_NOT_SET_FOR_EXTERNALLY_ATTRIBUTED_CONVERSION_ACTION(13),
     /**
      * <pre>
-     * Order IDs are not supported for conversion actions which use an external
-     * attribution model.
+     * Order IDs can't be used for a conversion measured with an external
+     * attribution model. Make sure the conversion is correctly configured and
+     * imported events include only necessary data and try again.
      * </pre>
      *
      * <code>ORDER_ID_NOT_PERMITTED_FOR_EXTERNALLY_ATTRIBUTED_CONVERSION_ACTION = 14;</code>
@@ -195,8 +190,8 @@ private static final long serialVersionUID = 0L;
     ORDER_ID_NOT_PERMITTED_FOR_EXTERNALLY_ATTRIBUTED_CONVERSION_ACTION(14),
     /**
      * <pre>
-     * A conversion with the same order id and conversion action combination
-     * already exists in our system.
+     * The imported event includes an order ID that was previously recorded, so
+     * the event was not processed.
      * </pre>
      *
      * <code>ORDER_ID_ALREADY_IN_USE = 15;</code>
@@ -204,8 +199,8 @@ private static final long serialVersionUID = 0L;
     ORDER_ID_ALREADY_IN_USE(15),
     /**
      * <pre>
-     * The request contained two or more conversions with the same order id and
-     * conversion action combination.
+     * Imported events include multiple conversions with the same order ID and
+     * were not processed.  Make sure order IDs are unique and try again.
      * </pre>
      *
      * <code>DUPLICATE_ORDER_ID = 16;</code>
@@ -213,8 +208,8 @@ private static final long serialVersionUID = 0L;
     DUPLICATE_ORDER_ID(16),
     /**
      * <pre>
-     * The call occurred too recently. Try uploading again after 12 hours
-     * have passed since the call occurred.
+     * Can't import calls that occurred less than 6 hours ago. Try uploading
+     * again in 6 hours.
      * </pre>
      *
      * <code>TOO_RECENT_CALL = 17;</code>
@@ -222,8 +217,9 @@ private static final long serialVersionUID = 0L;
     TOO_RECENT_CALL(17),
     /**
      * <pre>
-     * The click that initiated the call is too old for this conversion to be
-     * imported.
+     * The call can't be recorded because it occurred before this conversion
+     * action's lookback window. Make sure your import is configured to get the
+     * most recent data.
      * </pre>
      *
      * <code>EXPIRED_CALL = 18;</code>
@@ -231,7 +227,8 @@ private static final long serialVersionUID = 0L;
     EXPIRED_CALL(18),
     /**
      * <pre>
-     * The call or the click leading to the call was not found.
+     * The call or click leading to the imported event can't be found. Make sure
+     * your data source is set up to include correct identifiers.
      * </pre>
      *
      * <code>CALL_NOT_FOUND = 19;</code>
@@ -239,7 +236,8 @@ private static final long serialVersionUID = 0L;
     CALL_NOT_FOUND(19),
     /**
      * <pre>
-     * The specified conversion_date_time is before the call_start_date_time.
+     * The call has a `conversion_date_time` that precedes the associated click.
+     * Make sure your `conversion_date_time` is correct.
      * </pre>
      *
      * <code>CONVERSION_PRECEDES_CALL = 20;</code>
@@ -247,8 +245,8 @@ private static final long serialVersionUID = 0L;
     CONVERSION_PRECEDES_CALL(20),
     /**
      * <pre>
-     * The click associated with the call does not contain conversion tracking
-     * information.
+     * At the time of the imported call, conversion tracking was not enabled in
+     * the effective conversion account of the click's Google Ads account.
      * </pre>
      *
      * <code>CONVERSION_TRACKING_NOT_ENABLED_AT_CALL_TIME = 21;</code>
@@ -256,9 +254,8 @@ private static final long serialVersionUID = 0L;
     CONVERSION_TRACKING_NOT_ENABLED_AT_CALL_TIME(21),
     /**
      * <pre>
-     * The caller's phone number cannot be parsed. It should be formatted either
-     * as E.164 "+16502531234", International "+64 3-331 6005" or US national
-     * number "6502531234".
+     * Make sure phone numbers are formatted as E.164 (+16502531234),
+     * International (+64 3-331 6005), or US national number (6502531234).
      * </pre>
      *
      * <code>UNPARSEABLE_CALLERS_PHONE_NUMBER = 22;</code>
@@ -266,8 +263,9 @@ private static final long serialVersionUID = 0L;
     UNPARSEABLE_CALLERS_PHONE_NUMBER(22),
     /**
      * <pre>
-     * A conversion with this timestamp already exists for this click. To upload
-     * another conversion, use a different timestamp.
+     * The imported event has the same click and `conversion_date_time` as an
+     * existing conversion. Use a unique `conversion_date_time` or order ID for
+     * each unique event and try again.
      * </pre>
      *
      * <code>CLICK_CONVERSION_ALREADY_EXISTS = 23;</code>
@@ -275,8 +273,9 @@ private static final long serialVersionUID = 0L;
     CLICK_CONVERSION_ALREADY_EXISTS(23),
     /**
      * <pre>
-     * A conversion with this timestamp already exists for this call. To upload
-     * another conversion, use a different timestamp.
+     * The imported call has the same `conversion_date_time` as an existing
+     * conversion. Make sure your `conversion_date_time` correctly configured
+     * and try again.
      * </pre>
      *
      * <code>CALL_CONVERSION_ALREADY_EXISTS = 24;</code>
@@ -284,9 +283,8 @@ private static final long serialVersionUID = 0L;
     CALL_CONVERSION_ALREADY_EXISTS(24),
     /**
      * <pre>
-     * This conversion has the same click and timestamp as another conversion in
-     * the request. To upload another conversion for this click, use a
-     * different timestamp.
+     * Multiple events have the same click and `conversion_date_time`. Make sure
+     * your `conversion_date_time` is correctly configured and try again.
      * </pre>
      *
      * <code>DUPLICATE_CLICK_CONVERSION_IN_REQUEST = 25;</code>
@@ -294,9 +292,8 @@ private static final long serialVersionUID = 0L;
     DUPLICATE_CLICK_CONVERSION_IN_REQUEST(25),
     /**
      * <pre>
-     * This conversion has the same call and timestamp as another conversion in
-     * the request. To upload another conversion for this call, use a
-     * different timestamp.
+     * Multiple events have the same call and `conversion_date_time`. Make sure
+     * your `conversion_date_time` is correctly configured and try again.
      * </pre>
      *
      * <code>DUPLICATE_CALL_CONVERSION_IN_REQUEST = 26;</code>
@@ -304,7 +301,7 @@ private static final long serialVersionUID = 0L;
     DUPLICATE_CALL_CONVERSION_IN_REQUEST(26),
     /**
      * <pre>
-     * The custom variable is not enabled.
+     * Enable the custom variable in your conversion settings and try again.
      * </pre>
      *
      * <code>CUSTOM_VARIABLE_NOT_ENABLED = 28;</code>
@@ -312,8 +309,9 @@ private static final long serialVersionUID = 0L;
     CUSTOM_VARIABLE_NOT_ENABLED(28),
     /**
      * <pre>
-     * The value of the custom variable contains personally identifiable
-     * information (PII), such as an email address or phone number.
+     * Can't import events with custom variables containing
+     * personally-identifiable information (PII). Remove these variables and try
+     * again.
      * </pre>
      *
      * <code>CUSTOM_VARIABLE_VALUE_CONTAINS_PII = 29;</code>
@@ -321,8 +319,8 @@ private static final long serialVersionUID = 0L;
     CUSTOM_VARIABLE_VALUE_CONTAINS_PII(29),
     /**
      * <pre>
-     * The click associated with the given identifier or iOS URL parameter isn't
-     * from the account where conversion tracking is set up.
+     * The click from the imported event is associated with a different Google
+     * Ads account. Make sure you're importing to the correct account.
      * </pre>
      *
      * <code>INVALID_CUSTOMER_FOR_CLICK = 30;</code>
@@ -330,8 +328,10 @@ private static final long serialVersionUID = 0L;
     INVALID_CUSTOMER_FOR_CLICK(30),
     /**
      * <pre>
-     * The click associated with the given call isn't from the account where
-     * conversion tracking is set up.
+     * The click from the call is associated with a different Google Ads
+     * account. Make sure you're importing to the correct account. Query
+     * conversion_tracking_setting.google_ads_conversion_customer on Customer to
+     * identify the correct account.
      * </pre>
      *
      * <code>INVALID_CUSTOMER_FOR_CALL = 31;</code>
@@ -339,9 +339,9 @@ private static final long serialVersionUID = 0L;
     INVALID_CUSTOMER_FOR_CALL(31),
     /**
      * <pre>
-     * The conversion can't be uploaded because the conversion source didn't
-     * comply with the App Tracking Transparency (ATT) policy or the person who
-     * converted didn't consent to tracking.
+     * The connversion can't be imported because the conversion source didn't
+     * comply with Apple App Transparency Tracking (ATT) policies or because the
+     * customer didn't consent to tracking.
      * </pre>
      *
      * <code>CONVERSION_NOT_COMPLIANT_WITH_ATT_POLICY = 32;</code>
@@ -349,8 +349,8 @@ private static final long serialVersionUID = 0L;
     CONVERSION_NOT_COMPLIANT_WITH_ATT_POLICY(32),
     /**
      * <pre>
-     * No click was found for the provided user identifiers. This may be because
-     * the conversion did not come from a Google Ads campaign.
+     * The click can't be found for the specified identifiers. This may be
+     * because it did not come from a Google Ads campaign.
      * </pre>
      *
      * <code>CLICK_NOT_FOUND = 33;</code>
@@ -358,8 +358,8 @@ private static final long serialVersionUID = 0L;
     CLICK_NOT_FOUND(33),
     /**
      * <pre>
-     * The provided user identifier is not a SHA-256 hash. It is either unhashed
-     * or hashed using a different hash function.
+     * Make sure you hash user provided data using SHA-256 and ensure you are
+     * normalizing according to the guidelines.
      * </pre>
      *
      * <code>INVALID_USER_IDENTIFIER = 34;</code>
@@ -367,8 +367,8 @@ private static final long serialVersionUID = 0L;
     INVALID_USER_IDENTIFIER(34),
     /**
      * <pre>
-     * Conversion actions which use an external attribution model cannot be used
-     * with UserIdentifier.
+     * User provided data can't be used with external attribution models. Use a
+     * different attribution model or omit user identifiers and try again.
      * </pre>
      *
      * <code>EXTERNALLY_ATTRIBUTED_CONVERSION_ACTION_NOT_PERMITTED_WITH_USER_IDENTIFIER = 35;</code>
@@ -376,8 +376,8 @@ private static final long serialVersionUID = 0L;
     EXTERNALLY_ATTRIBUTED_CONVERSION_ACTION_NOT_PERMITTED_WITH_USER_IDENTIFIER(35),
     /**
      * <pre>
-     * The provided user identifier is not supported. ConversionUploadService
-     * only supports hashed_email and hashed_phone_number.
+     * The provided user identifiers are not supported. Use only hashed email
+     * or phone number and try again.
      * </pre>
      *
      * <code>UNSUPPORTED_USER_IDENTIFIER = 36;</code>
@@ -385,7 +385,7 @@ private static final long serialVersionUID = 0L;
     UNSUPPORTED_USER_IDENTIFIER(36),
     /**
      * <pre>
-     * gbraid and wbraid are both set in the request. Only one is allowed.
+     * Can't use both gbraid and wbraid parameters. Use only 1 and try again.
      * </pre>
      *
      * <code>GBRAID_WBRAID_BOTH_SET = 38;</code>
@@ -393,7 +393,8 @@ private static final long serialVersionUID = 0L;
     GBRAID_WBRAID_BOTH_SET(38),
     /**
      * <pre>
-     * The specified wbraid could not be decoded.
+     * Can't parse event import data. Check if your wbraid parameter was
+     * not modified and try again.
      * </pre>
      *
      * <code>UNPARSEABLE_WBRAID = 39;</code>
@@ -401,7 +402,8 @@ private static final long serialVersionUID = 0L;
     UNPARSEABLE_WBRAID(39),
     /**
      * <pre>
-     * The specified gbraid could not be decoded.
+     * Can't parse event import data. Check if your gbraid parameter was
+     * not modified and try again.
      * </pre>
      *
      * <code>UNPARSEABLE_GBRAID = 40;</code>
@@ -409,8 +411,8 @@ private static final long serialVersionUID = 0L;
     UNPARSEABLE_GBRAID(40),
     /**
      * <pre>
-     * Conversion actions which use the one-per-click counting type cannot be
-     * used with gbraid or wbraid.
+     * Conversion actions that use one-per-click counting can't be used with
+     * gbraid or wbraid parameters.
      * </pre>
      *
      * <code>ONE_PER_CLICK_CONVERSION_ACTION_NOT_PERMITTED_WITH_BRAID = 46;</code>
@@ -418,9 +420,8 @@ private static final long serialVersionUID = 0L;
     ONE_PER_CLICK_CONVERSION_ACTION_NOT_PERMITTED_WITH_BRAID(46),
     /**
      * <pre>
-     * Per our customer data policies, enhanced conversions have been prohibited
-     * in your account. If you have any questions, contact your Google
-     * representative.
+     * Enhanced conversions can't be used for this account because of Google
+     * customer data policies. Contact your Google representative.
      * </pre>
      *
      * <code>CUSTOMER_DATA_POLICY_PROHIBITS_ENHANCED_CONVERSIONS = 47;</code>
@@ -428,8 +429,9 @@ private static final long serialVersionUID = 0L;
     CUSTOMER_DATA_POLICY_PROHIBITS_ENHANCED_CONVERSIONS(47),
     /**
      * <pre>
-     * The customer has not accepted the customer data terms in the conversion
-     * settings page.
+     * Make sure you agree to the customer data processing terms in conversion
+     * settings and try again. You can check your setting by querying
+     * conversion_tracking_setting.accepted_customer_data_terms on Customer.
      * </pre>
      *
      * <code>CUSTOMER_NOT_ACCEPTED_CUSTOMER_DATA_TERMS = 48;</code>
@@ -437,8 +439,8 @@ private static final long serialVersionUID = 0L;
     CUSTOMER_NOT_ACCEPTED_CUSTOMER_DATA_TERMS(48),
     /**
      * <pre>
-     * The order_id contains personally identifiable information (PII), such as
-     * an email address or phone number.
+     * Can't import events with order IDs containing personally-identifiable
+     * information (PII).
      * </pre>
      *
      * <code>ORDER_ID_CONTAINS_PII = 49;</code>
@@ -457,7 +459,7 @@ private static final long serialVersionUID = 0L;
     public static final int UNSPECIFIED_VALUE = 0;
     /**
      * <pre>
-     * The received error code is not known in this version.
+     * Used for return value only. Represents value unknown in this version.
      * </pre>
      *
      * <code>UNKNOWN = 1;</code>
@@ -465,7 +467,7 @@ private static final long serialVersionUID = 0L;
     public static final int UNKNOWN_VALUE = 1;
     /**
      * <pre>
-     * The request contained more than 2000 conversions.
+     * Upload fewer than 2001 events in a single request.
      * </pre>
      *
      * <code>TOO_MANY_CONVERSIONS_IN_REQUEST = 2;</code>
@@ -473,7 +475,8 @@ private static final long serialVersionUID = 0L;
     public static final int TOO_MANY_CONVERSIONS_IN_REQUEST_VALUE = 2;
     /**
      * <pre>
-     * The specified gclid could not be decoded.
+     * The imported gclid could not be decoded. Make sure you have not modified
+     * the click IDs.
      * </pre>
      *
      * <code>UNPARSEABLE_GCLID = 3;</code>
@@ -481,8 +484,8 @@ private static final long serialVersionUID = 0L;
     public static final int UNPARSEABLE_GCLID_VALUE = 3;
     /**
      * <pre>
-     * The specified conversion_date_time is before the event time
-     * associated with the given identifier or iOS URL parameter.
+     * The imported event has a `conversion_date_time` that precedes the click.
+     * Make sure your `conversion_date_time` is correct and try again.
      * </pre>
      *
      * <code>CONVERSION_PRECEDES_EVENT = 42;</code>
@@ -490,9 +493,9 @@ private static final long serialVersionUID = 0L;
     public static final int CONVERSION_PRECEDES_EVENT_VALUE = 42;
     /**
      * <pre>
-     * The click associated with the given identifier or iOS URL parameter is
-     * either too old to be imported or occurred outside of the click through
-     * lookback window for the specified conversion action.
+     * The imported event can't be recorded because its click occurred before
+     * this conversion's click-through window. Make sure you import the most
+     * recent data.
      * </pre>
      *
      * <code>EXPIRED_EVENT = 43;</code>
@@ -501,8 +504,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The click associated with the given identifier or iOS URL parameter
-     * occurred too recently. Try uploading again after 6 hours have
-     * passed since the click occurred.
+     * occurred less than 6 hours ago. Retry after 6 hours have passed.
      * </pre>
      *
      * <code>TOO_RECENT_EVENT = 44;</code>
@@ -510,9 +512,8 @@ private static final long serialVersionUID = 0L;
     public static final int TOO_RECENT_EVENT_VALUE = 44;
     /**
      * <pre>
-     * The click associated with the given identifier or iOS URL parameter could
-     * not be found in the system. This can happen if the identifier or iOS URL
-     * parameter are collected for non Google Ads clicks.
+     * The imported event could not be attributed to a click. This may be
+     * because the event did not come from a Google Ads campaign.
      * </pre>
      *
      * <code>EVENT_NOT_FOUND = 45;</code>
@@ -520,8 +521,9 @@ private static final long serialVersionUID = 0L;
     public static final int EVENT_NOT_FOUND_VALUE = 45;
     /**
      * <pre>
-     * The click associated with the given identifier or iOS URL parameter is
-     * owned by a customer account that the uploading customer does not manage.
+     * The click ID or call is associated with an Ads account you don't have
+     * access to. Make sure you import conversions for accounts managed by your
+     * manager account.
      * </pre>
      *
      * <code>UNAUTHORIZED_CUSTOMER = 8;</code>
@@ -529,8 +531,8 @@ private static final long serialVersionUID = 0L;
     public static final int UNAUTHORIZED_CUSTOMER_VALUE = 8;
     /**
      * <pre>
-     * No upload eligible conversion action that matches the provided
-     * information can be found for the customer.
+     * Make sure you specify a valid conversion action set up for offline
+     * import.
      * </pre>
      *
      * <code>INVALID_CONVERSION_ACTION = 9;</code>
@@ -538,9 +540,8 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_CONVERSION_ACTION_VALUE = 9;
     /**
      * <pre>
-     * The specified conversion action was created too recently.
-     * Try the upload again after 4-6 hours have passed since the
-     * conversion action was created.
+     * Can't import events to a conversion action that was just created. Try
+     * importing again in 6 hours.
      * </pre>
      *
      * <code>TOO_RECENT_CONVERSION_ACTION = 10;</code>
@@ -548,8 +549,8 @@ private static final long serialVersionUID = 0L;
     public static final int TOO_RECENT_CONVERSION_ACTION_VALUE = 10;
     /**
      * <pre>
-     * The click associated with the given identifier does not contain
-     * conversion tracking information.
+     * At the time of the click, conversion tracking was not enabled in the
+     * effective conversion account of the click's Google Ads account.
      * </pre>
      *
      * <code>CONVERSION_TRACKING_NOT_ENABLED_AT_IMPRESSION_TIME = 11;</code>
@@ -557,8 +558,9 @@ private static final long serialVersionUID = 0L;
     public static final int CONVERSION_TRACKING_NOT_ENABLED_AT_IMPRESSION_TIME_VALUE = 11;
     /**
      * <pre>
-     * The specified conversion action does not use an external attribution
-     * model, but external_attribution_data was set.
+     * The imported event includes external attribution data, but the conversion
+     * action isn't set up to use an external attribution model. Make sure the
+     * conversion action is correctly configured and try again.
      * </pre>
      *
      * <code>EXTERNAL_ATTRIBUTION_DATA_SET_FOR_NON_EXTERNALLY_ATTRIBUTED_CONVERSION_ACTION = 12;</code>
@@ -566,10 +568,9 @@ private static final long serialVersionUID = 0L;
     public static final int EXTERNAL_ATTRIBUTION_DATA_SET_FOR_NON_EXTERNALLY_ATTRIBUTED_CONVERSION_ACTION_VALUE = 12;
     /**
      * <pre>
-     * The specified conversion action uses an external attribution model, but
-     * external_attribution_data or one of its contained fields was not set.
-     * Both external_attribution_credit and external_attribution_model must be
-     * set for externally attributed conversion actions.
+     * The conversion action is set up to use an external attribution model, but
+     * the imported event is missing data. Make sure imported events include the
+     * external attribution credit and all necessary fields.
      * </pre>
      *
      * <code>EXTERNAL_ATTRIBUTION_DATA_NOT_SET_FOR_EXTERNALLY_ATTRIBUTED_CONVERSION_ACTION = 13;</code>
@@ -577,8 +578,9 @@ private static final long serialVersionUID = 0L;
     public static final int EXTERNAL_ATTRIBUTION_DATA_NOT_SET_FOR_EXTERNALLY_ATTRIBUTED_CONVERSION_ACTION_VALUE = 13;
     /**
      * <pre>
-     * Order IDs are not supported for conversion actions which use an external
-     * attribution model.
+     * Order IDs can't be used for a conversion measured with an external
+     * attribution model. Make sure the conversion is correctly configured and
+     * imported events include only necessary data and try again.
      * </pre>
      *
      * <code>ORDER_ID_NOT_PERMITTED_FOR_EXTERNALLY_ATTRIBUTED_CONVERSION_ACTION = 14;</code>
@@ -586,8 +588,8 @@ private static final long serialVersionUID = 0L;
     public static final int ORDER_ID_NOT_PERMITTED_FOR_EXTERNALLY_ATTRIBUTED_CONVERSION_ACTION_VALUE = 14;
     /**
      * <pre>
-     * A conversion with the same order id and conversion action combination
-     * already exists in our system.
+     * The imported event includes an order ID that was previously recorded, so
+     * the event was not processed.
      * </pre>
      *
      * <code>ORDER_ID_ALREADY_IN_USE = 15;</code>
@@ -595,8 +597,8 @@ private static final long serialVersionUID = 0L;
     public static final int ORDER_ID_ALREADY_IN_USE_VALUE = 15;
     /**
      * <pre>
-     * The request contained two or more conversions with the same order id and
-     * conversion action combination.
+     * Imported events include multiple conversions with the same order ID and
+     * were not processed.  Make sure order IDs are unique and try again.
      * </pre>
      *
      * <code>DUPLICATE_ORDER_ID = 16;</code>
@@ -604,8 +606,8 @@ private static final long serialVersionUID = 0L;
     public static final int DUPLICATE_ORDER_ID_VALUE = 16;
     /**
      * <pre>
-     * The call occurred too recently. Try uploading again after 12 hours
-     * have passed since the call occurred.
+     * Can't import calls that occurred less than 6 hours ago. Try uploading
+     * again in 6 hours.
      * </pre>
      *
      * <code>TOO_RECENT_CALL = 17;</code>
@@ -613,8 +615,9 @@ private static final long serialVersionUID = 0L;
     public static final int TOO_RECENT_CALL_VALUE = 17;
     /**
      * <pre>
-     * The click that initiated the call is too old for this conversion to be
-     * imported.
+     * The call can't be recorded because it occurred before this conversion
+     * action's lookback window. Make sure your import is configured to get the
+     * most recent data.
      * </pre>
      *
      * <code>EXPIRED_CALL = 18;</code>
@@ -622,7 +625,8 @@ private static final long serialVersionUID = 0L;
     public static final int EXPIRED_CALL_VALUE = 18;
     /**
      * <pre>
-     * The call or the click leading to the call was not found.
+     * The call or click leading to the imported event can't be found. Make sure
+     * your data source is set up to include correct identifiers.
      * </pre>
      *
      * <code>CALL_NOT_FOUND = 19;</code>
@@ -630,7 +634,8 @@ private static final long serialVersionUID = 0L;
     public static final int CALL_NOT_FOUND_VALUE = 19;
     /**
      * <pre>
-     * The specified conversion_date_time is before the call_start_date_time.
+     * The call has a `conversion_date_time` that precedes the associated click.
+     * Make sure your `conversion_date_time` is correct.
      * </pre>
      *
      * <code>CONVERSION_PRECEDES_CALL = 20;</code>
@@ -638,8 +643,8 @@ private static final long serialVersionUID = 0L;
     public static final int CONVERSION_PRECEDES_CALL_VALUE = 20;
     /**
      * <pre>
-     * The click associated with the call does not contain conversion tracking
-     * information.
+     * At the time of the imported call, conversion tracking was not enabled in
+     * the effective conversion account of the click's Google Ads account.
      * </pre>
      *
      * <code>CONVERSION_TRACKING_NOT_ENABLED_AT_CALL_TIME = 21;</code>
@@ -647,9 +652,8 @@ private static final long serialVersionUID = 0L;
     public static final int CONVERSION_TRACKING_NOT_ENABLED_AT_CALL_TIME_VALUE = 21;
     /**
      * <pre>
-     * The caller's phone number cannot be parsed. It should be formatted either
-     * as E.164 "+16502531234", International "+64 3-331 6005" or US national
-     * number "6502531234".
+     * Make sure phone numbers are formatted as E.164 (+16502531234),
+     * International (+64 3-331 6005), or US national number (6502531234).
      * </pre>
      *
      * <code>UNPARSEABLE_CALLERS_PHONE_NUMBER = 22;</code>
@@ -657,8 +661,9 @@ private static final long serialVersionUID = 0L;
     public static final int UNPARSEABLE_CALLERS_PHONE_NUMBER_VALUE = 22;
     /**
      * <pre>
-     * A conversion with this timestamp already exists for this click. To upload
-     * another conversion, use a different timestamp.
+     * The imported event has the same click and `conversion_date_time` as an
+     * existing conversion. Use a unique `conversion_date_time` or order ID for
+     * each unique event and try again.
      * </pre>
      *
      * <code>CLICK_CONVERSION_ALREADY_EXISTS = 23;</code>
@@ -666,8 +671,9 @@ private static final long serialVersionUID = 0L;
     public static final int CLICK_CONVERSION_ALREADY_EXISTS_VALUE = 23;
     /**
      * <pre>
-     * A conversion with this timestamp already exists for this call. To upload
-     * another conversion, use a different timestamp.
+     * The imported call has the same `conversion_date_time` as an existing
+     * conversion. Make sure your `conversion_date_time` correctly configured
+     * and try again.
      * </pre>
      *
      * <code>CALL_CONVERSION_ALREADY_EXISTS = 24;</code>
@@ -675,9 +681,8 @@ private static final long serialVersionUID = 0L;
     public static final int CALL_CONVERSION_ALREADY_EXISTS_VALUE = 24;
     /**
      * <pre>
-     * This conversion has the same click and timestamp as another conversion in
-     * the request. To upload another conversion for this click, use a
-     * different timestamp.
+     * Multiple events have the same click and `conversion_date_time`. Make sure
+     * your `conversion_date_time` is correctly configured and try again.
      * </pre>
      *
      * <code>DUPLICATE_CLICK_CONVERSION_IN_REQUEST = 25;</code>
@@ -685,9 +690,8 @@ private static final long serialVersionUID = 0L;
     public static final int DUPLICATE_CLICK_CONVERSION_IN_REQUEST_VALUE = 25;
     /**
      * <pre>
-     * This conversion has the same call and timestamp as another conversion in
-     * the request. To upload another conversion for this call, use a
-     * different timestamp.
+     * Multiple events have the same call and `conversion_date_time`. Make sure
+     * your `conversion_date_time` is correctly configured and try again.
      * </pre>
      *
      * <code>DUPLICATE_CALL_CONVERSION_IN_REQUEST = 26;</code>
@@ -695,7 +699,7 @@ private static final long serialVersionUID = 0L;
     public static final int DUPLICATE_CALL_CONVERSION_IN_REQUEST_VALUE = 26;
     /**
      * <pre>
-     * The custom variable is not enabled.
+     * Enable the custom variable in your conversion settings and try again.
      * </pre>
      *
      * <code>CUSTOM_VARIABLE_NOT_ENABLED = 28;</code>
@@ -703,8 +707,9 @@ private static final long serialVersionUID = 0L;
     public static final int CUSTOM_VARIABLE_NOT_ENABLED_VALUE = 28;
     /**
      * <pre>
-     * The value of the custom variable contains personally identifiable
-     * information (PII), such as an email address or phone number.
+     * Can't import events with custom variables containing
+     * personally-identifiable information (PII). Remove these variables and try
+     * again.
      * </pre>
      *
      * <code>CUSTOM_VARIABLE_VALUE_CONTAINS_PII = 29;</code>
@@ -712,8 +717,8 @@ private static final long serialVersionUID = 0L;
     public static final int CUSTOM_VARIABLE_VALUE_CONTAINS_PII_VALUE = 29;
     /**
      * <pre>
-     * The click associated with the given identifier or iOS URL parameter isn't
-     * from the account where conversion tracking is set up.
+     * The click from the imported event is associated with a different Google
+     * Ads account. Make sure you're importing to the correct account.
      * </pre>
      *
      * <code>INVALID_CUSTOMER_FOR_CLICK = 30;</code>
@@ -721,8 +726,10 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_CUSTOMER_FOR_CLICK_VALUE = 30;
     /**
      * <pre>
-     * The click associated with the given call isn't from the account where
-     * conversion tracking is set up.
+     * The click from the call is associated with a different Google Ads
+     * account. Make sure you're importing to the correct account. Query
+     * conversion_tracking_setting.google_ads_conversion_customer on Customer to
+     * identify the correct account.
      * </pre>
      *
      * <code>INVALID_CUSTOMER_FOR_CALL = 31;</code>
@@ -730,9 +737,9 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_CUSTOMER_FOR_CALL_VALUE = 31;
     /**
      * <pre>
-     * The conversion can't be uploaded because the conversion source didn't
-     * comply with the App Tracking Transparency (ATT) policy or the person who
-     * converted didn't consent to tracking.
+     * The connversion can't be imported because the conversion source didn't
+     * comply with Apple App Transparency Tracking (ATT) policies or because the
+     * customer didn't consent to tracking.
      * </pre>
      *
      * <code>CONVERSION_NOT_COMPLIANT_WITH_ATT_POLICY = 32;</code>
@@ -740,8 +747,8 @@ private static final long serialVersionUID = 0L;
     public static final int CONVERSION_NOT_COMPLIANT_WITH_ATT_POLICY_VALUE = 32;
     /**
      * <pre>
-     * No click was found for the provided user identifiers. This may be because
-     * the conversion did not come from a Google Ads campaign.
+     * The click can't be found for the specified identifiers. This may be
+     * because it did not come from a Google Ads campaign.
      * </pre>
      *
      * <code>CLICK_NOT_FOUND = 33;</code>
@@ -749,8 +756,8 @@ private static final long serialVersionUID = 0L;
     public static final int CLICK_NOT_FOUND_VALUE = 33;
     /**
      * <pre>
-     * The provided user identifier is not a SHA-256 hash. It is either unhashed
-     * or hashed using a different hash function.
+     * Make sure you hash user provided data using SHA-256 and ensure you are
+     * normalizing according to the guidelines.
      * </pre>
      *
      * <code>INVALID_USER_IDENTIFIER = 34;</code>
@@ -758,8 +765,8 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_USER_IDENTIFIER_VALUE = 34;
     /**
      * <pre>
-     * Conversion actions which use an external attribution model cannot be used
-     * with UserIdentifier.
+     * User provided data can't be used with external attribution models. Use a
+     * different attribution model or omit user identifiers and try again.
      * </pre>
      *
      * <code>EXTERNALLY_ATTRIBUTED_CONVERSION_ACTION_NOT_PERMITTED_WITH_USER_IDENTIFIER = 35;</code>
@@ -767,8 +774,8 @@ private static final long serialVersionUID = 0L;
     public static final int EXTERNALLY_ATTRIBUTED_CONVERSION_ACTION_NOT_PERMITTED_WITH_USER_IDENTIFIER_VALUE = 35;
     /**
      * <pre>
-     * The provided user identifier is not supported. ConversionUploadService
-     * only supports hashed_email and hashed_phone_number.
+     * The provided user identifiers are not supported. Use only hashed email
+     * or phone number and try again.
      * </pre>
      *
      * <code>UNSUPPORTED_USER_IDENTIFIER = 36;</code>
@@ -776,7 +783,7 @@ private static final long serialVersionUID = 0L;
     public static final int UNSUPPORTED_USER_IDENTIFIER_VALUE = 36;
     /**
      * <pre>
-     * gbraid and wbraid are both set in the request. Only one is allowed.
+     * Can't use both gbraid and wbraid parameters. Use only 1 and try again.
      * </pre>
      *
      * <code>GBRAID_WBRAID_BOTH_SET = 38;</code>
@@ -784,7 +791,8 @@ private static final long serialVersionUID = 0L;
     public static final int GBRAID_WBRAID_BOTH_SET_VALUE = 38;
     /**
      * <pre>
-     * The specified wbraid could not be decoded.
+     * Can't parse event import data. Check if your wbraid parameter was
+     * not modified and try again.
      * </pre>
      *
      * <code>UNPARSEABLE_WBRAID = 39;</code>
@@ -792,7 +800,8 @@ private static final long serialVersionUID = 0L;
     public static final int UNPARSEABLE_WBRAID_VALUE = 39;
     /**
      * <pre>
-     * The specified gbraid could not be decoded.
+     * Can't parse event import data. Check if your gbraid parameter was
+     * not modified and try again.
      * </pre>
      *
      * <code>UNPARSEABLE_GBRAID = 40;</code>
@@ -800,8 +809,8 @@ private static final long serialVersionUID = 0L;
     public static final int UNPARSEABLE_GBRAID_VALUE = 40;
     /**
      * <pre>
-     * Conversion actions which use the one-per-click counting type cannot be
-     * used with gbraid or wbraid.
+     * Conversion actions that use one-per-click counting can't be used with
+     * gbraid or wbraid parameters.
      * </pre>
      *
      * <code>ONE_PER_CLICK_CONVERSION_ACTION_NOT_PERMITTED_WITH_BRAID = 46;</code>
@@ -809,9 +818,8 @@ private static final long serialVersionUID = 0L;
     public static final int ONE_PER_CLICK_CONVERSION_ACTION_NOT_PERMITTED_WITH_BRAID_VALUE = 46;
     /**
      * <pre>
-     * Per our customer data policies, enhanced conversions have been prohibited
-     * in your account. If you have any questions, contact your Google
-     * representative.
+     * Enhanced conversions can't be used for this account because of Google
+     * customer data policies. Contact your Google representative.
      * </pre>
      *
      * <code>CUSTOMER_DATA_POLICY_PROHIBITS_ENHANCED_CONVERSIONS = 47;</code>
@@ -819,8 +827,9 @@ private static final long serialVersionUID = 0L;
     public static final int CUSTOMER_DATA_POLICY_PROHIBITS_ENHANCED_CONVERSIONS_VALUE = 47;
     /**
      * <pre>
-     * The customer has not accepted the customer data terms in the conversion
-     * settings page.
+     * Make sure you agree to the customer data processing terms in conversion
+     * settings and try again. You can check your setting by querying
+     * conversion_tracking_setting.accepted_customer_data_terms on Customer.
      * </pre>
      *
      * <code>CUSTOMER_NOT_ACCEPTED_CUSTOMER_DATA_TERMS = 48;</code>
@@ -828,8 +837,8 @@ private static final long serialVersionUID = 0L;
     public static final int CUSTOMER_NOT_ACCEPTED_CUSTOMER_DATA_TERMS_VALUE = 48;
     /**
      * <pre>
-     * The order_id contains personally identifiable information (PII), such as
-     * an email address or phone number.
+     * Can't import events with order IDs containing personally-identifiable
+     * information (PII).
      * </pre>
      *
      * <code>ORDER_ID_CONTAINS_PII = 49;</code>
@@ -1058,11 +1067,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.errors.ConversionUploadErrorEnum parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.errors.ConversionUploadErrorEnum parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)

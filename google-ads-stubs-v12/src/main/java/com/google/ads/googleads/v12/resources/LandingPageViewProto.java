@@ -31,21 +31,21 @@ public final class LandingPageViewProto {
       "\n:google/ads/googleads/v12/resources/lan" +
       "ding_page_view.proto\022\"google.ads.googlea" +
       "ds.v12.resources\032\037google/api/field_behav" +
-      "ior.proto\032\031google/api/resource.proto\"\227\002\n" +
-      "\017LandingPageView\022G\n\rresource_name\030\001 \001(\tB" +
-      "0\340A\003\372A*\n(googleads.googleapis.com/Landin" +
-      "gPageView\022&\n\024unexpanded_final_url\030\003 \001(\tB" +
-      "\003\340A\003H\000\210\001\001:z\352Aw\n(googleads.googleapis.com" +
-      "/LandingPageView\022Kcustomers/{customer_id" +
-      "}/landingPageViews/{unexpanded_final_url" +
-      "_fingerprint}B\027\n\025_unexpanded_final_urlB\206" +
-      "\002\n&com.google.ads.googleads.v12.resource" +
-      "sB\024LandingPageViewProtoP\001ZKgoogle.golang" +
-      ".org/genproto/googleapis/ads/googleads/v" +
-      "12/resources;resources\242\002\003GAA\252\002\"Google.Ad" +
-      "s.GoogleAds.V12.Resources\312\002\"Google\\Ads\\G" +
-      "oogleAds\\V12\\Resources\352\002&Google::Ads::Go" +
-      "ogleAds::V12::Resourcesb\006proto3"
+      "ior.proto\032\031google/api/resource.proto\"\231\002\n" +
+      "\017LandingPageView\022H\n\rresource_name\030\001 \001(\tB" +
+      "1\342A\001\003\372A*\n(googleads.googleapis.com/Landi" +
+      "ngPageView\022\'\n\024unexpanded_final_url\030\003 \001(\t" +
+      "B\004\342A\001\003H\000\210\001\001:z\352Aw\n(googleads.googleapis.c" +
+      "om/LandingPageView\022Kcustomers/{customer_" +
+      "id}/landingPageViews/{unexpanded_final_u" +
+      "rl_fingerprint}B\027\n\025_unexpanded_final_url" +
+      "B\206\002\n&com.google.ads.googleads.v12.resour" +
+      "cesB\024LandingPageViewProtoP\001ZKgoogle.gola" +
+      "ng.org/genproto/googleapis/ads/googleads" +
+      "/v12/resources;resources\242\002\003GAA\252\002\"Google." +
+      "Ads.GoogleAds.V12.Resources\312\002\"Google\\Ads" +
+      "\\GoogleAds\\V12\\Resources\352\002&Google::Ads::" +
+      "GoogleAds::V12::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

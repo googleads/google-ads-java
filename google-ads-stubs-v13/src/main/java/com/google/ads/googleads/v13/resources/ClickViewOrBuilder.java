@@ -11,6 +11,7 @@ public interface ClickViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the click view.
    * Click view resource names have the form:
+   *
    * `customers/{customer_id}/clickViews/{date (yyyy-MM-dd)}~{gclid}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface ClickViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the click view.
    * Click view resource names have the form:
+   *
    * `customers/{customer_id}/clickViews/{date (yyyy-MM-dd)}~{gclid}`
    * </pre>
    *

@@ -40,11 +40,6 @@ private static final long serialVersionUID = 0L;
     return new ConversionAction();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.resources.ConversionActionProto.internal_static_google_ads_googleads_v13_resources_ConversionAction_descriptor;
@@ -130,11 +125,6 @@ private static final long serialVersionUID = 0L;
       return new AttributionModelSettings();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.resources.ConversionActionProto.internal_static_google_ads_googleads_v13_resources_ConversionAction_AttributionModelSettings_descriptor;
@@ -320,11 +310,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.resources.ConversionAction.AttributionModelSettings parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.resources.ConversionAction.AttributionModelSettings parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -877,11 +869,6 @@ private static final long serialVersionUID = 0L;
       return new ValueSettings();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.resources.ConversionActionProto.internal_static_google_ads_googleads_v13_resources_ConversionAction_ValueSettings_descriptor;
@@ -1171,11 +1158,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.resources.ConversionAction.ValueSettings parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.resources.ConversionAction.ValueSettings parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1462,7 +1451,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setDefaultValue(double value) {
-        
+
         defaultValue_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -1641,7 +1630,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setAlwaysUseDefaultValue(boolean value) {
-        
+
         alwaysUseDefaultValue_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
@@ -1808,11 +1797,6 @@ private static final long serialVersionUID = 0L;
       return new ThirdPartyAppAnalyticsSettings();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.resources.ConversionActionProto.internal_static_google_ads_googleads_v13_resources_ConversionAction_ThirdPartyAppAnalyticsSettings_descriptor;
@@ -2056,11 +2040,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.resources.ConversionAction.ThirdPartyAppAnalyticsSettings parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.resources.ConversionAction.ThirdPartyAppAnalyticsSettings parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2672,11 +2658,6 @@ private static final long serialVersionUID = 0L;
       return new FirebaseSettings();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.resources.ConversionActionProto.internal_static_google_ads_googleads_v13_resources_ConversionAction_FirebaseSettings_descriptor;
@@ -3021,11 +3002,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.resources.ConversionAction.FirebaseSettings parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.resources.ConversionAction.FirebaseSettings parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3514,7 +3497,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setPropertyId(long value) {
-        
+
         propertyId_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
@@ -3698,6 +3681,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the conversion action.
    * Conversion action resource names have the form:
+   *
    * `customers/{customer_id}/conversionActions/{conversion_action_id}`
    * </pre>
    *
@@ -3721,6 +3705,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the conversion action.
    * Conversion action resource names have the form:
+   *
    * `customers/{customer_id}/conversionActions/{conversion_action_id}`
    * </pre>
    *
@@ -3775,6 +3760,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The name of the conversion action.
+   *
    * This field is required and should not be empty when creating new
    * conversion actions.
    * </pre>
@@ -3789,6 +3775,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The name of the conversion action.
+   *
    * This field is required and should not be empty when creating new
    * conversion actions.
    * </pre>
@@ -3812,6 +3799,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The name of the conversion action.
+   *
    * This field is required and should not be empty when creating new
    * conversion actions.
    * </pre>
@@ -4304,6 +4292,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The phone call duration in seconds after which a conversion should be
    * reported for this conversion action.
+   *
    * The value must be between 0 and 10000, inclusive.
    * </pre>
    *
@@ -4318,6 +4307,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The phone call duration in seconds after which a conversion should be
    * reported for this conversion action.
+   *
    * The value must be between 0 and 10000, inclusive.
    * </pre>
    *
@@ -4885,11 +4875,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.resources.ConversionAction parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.resources.ConversionAction parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5446,6 +5438,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the conversion action.
      * Conversion action resource names have the form:
+     *
      * `customers/{customer_id}/conversionActions/{conversion_action_id}`
      * </pre>
      *
@@ -5468,6 +5461,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the conversion action.
      * Conversion action resource names have the form:
+     *
      * `customers/{customer_id}/conversionActions/{conversion_action_id}`
      * </pre>
      *
@@ -5491,6 +5485,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the conversion action.
      * Conversion action resource names have the form:
+     *
      * `customers/{customer_id}/conversionActions/{conversion_action_id}`
      * </pre>
      *
@@ -5510,6 +5505,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the conversion action.
      * Conversion action resource names have the form:
+     *
      * `customers/{customer_id}/conversionActions/{conversion_action_id}`
      * </pre>
      *
@@ -5526,6 +5522,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the conversion action.
      * Conversion action resource names have the form:
+     *
      * `customers/{customer_id}/conversionActions/{conversion_action_id}`
      * </pre>
      *
@@ -5578,7 +5575,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      
+
       id_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -5603,6 +5600,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the conversion action.
+     *
      * This field is required and should not be empty when creating new
      * conversion actions.
      * </pre>
@@ -5616,6 +5614,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the conversion action.
+     *
      * This field is required and should not be empty when creating new
      * conversion actions.
      * </pre>
@@ -5638,6 +5637,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the conversion action.
+     *
      * This field is required and should not be empty when creating new
      * conversion actions.
      * </pre>
@@ -5661,6 +5661,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the conversion action.
+     *
      * This field is required and should not be empty when creating new
      * conversion actions.
      * </pre>
@@ -5680,6 +5681,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the conversion action.
+     *
      * This field is required and should not be empty when creating new
      * conversion actions.
      * </pre>
@@ -5696,6 +5698,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the conversion action.
+     *
      * This field is required and should not be empty when creating new
      * conversion actions.
      * </pre>
@@ -5995,7 +5998,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPrimaryForGoal(boolean value) {
-      
+
       primaryForGoal_ = value;
       bitField0_ |= 0x00000040;
       onChanged();
@@ -6245,7 +6248,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIncludeInConversionsMetric(boolean value) {
-      
+
       includeInConversionsMetric_ = value;
       bitField0_ |= 0x00000200;
       onChanged();
@@ -6305,7 +6308,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setClickThroughLookbackWindowDays(long value) {
-      
+
       clickThroughLookbackWindowDays_ = value;
       bitField0_ |= 0x00000400;
       onChanged();
@@ -6365,7 +6368,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setViewThroughLookbackWindowDays(long value) {
-      
+
       viewThroughLookbackWindowDays_ = value;
       bitField0_ |= 0x00000800;
       onChanged();
@@ -7096,6 +7099,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The phone call duration in seconds after which a conversion should be
      * reported for this conversion action.
+     *
      * The value must be between 0 and 10000, inclusive.
      * </pre>
      *
@@ -7110,6 +7114,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The phone call duration in seconds after which a conversion should be
      * reported for this conversion action.
+     *
      * The value must be between 0 and 10000, inclusive.
      * </pre>
      *
@@ -7124,6 +7129,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The phone call duration in seconds after which a conversion should be
      * reported for this conversion action.
+     *
      * The value must be between 0 and 10000, inclusive.
      * </pre>
      *
@@ -7132,7 +7138,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPhoneCallDurationSeconds(long value) {
-      
+
       phoneCallDurationSeconds_ = value;
       bitField0_ |= 0x00010000;
       onChanged();
@@ -7142,6 +7148,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The phone call duration in seconds after which a conversion should be
      * reported for this conversion action.
+     *
      * The value must be between 0 and 10000, inclusive.
      * </pre>
      *

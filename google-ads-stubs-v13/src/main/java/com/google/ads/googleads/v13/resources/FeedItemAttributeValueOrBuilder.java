@@ -230,6 +230,7 @@ public interface FeedItemAttributeValueOrBuilder extends
    * attribute of type STRING_LIST, URL_LIST or DATE_TIME_LIST.
    * For STRING_LIST and URL_LIST the total size of the list in bytes may not
    * exceed 3000. For DATE_TIME_LIST the number of elements may not exceed 200.
+   *
    * For STRING_LIST the maximum length of each string element is 1500
    * characters. For URL_LIST the maximum length is 2076 characters. For
    * DATE_TIME the format of the string must be the same as start and end time
@@ -247,6 +248,7 @@ public interface FeedItemAttributeValueOrBuilder extends
    * attribute of type STRING_LIST, URL_LIST or DATE_TIME_LIST.
    * For STRING_LIST and URL_LIST the total size of the list in bytes may not
    * exceed 3000. For DATE_TIME_LIST the number of elements may not exceed 200.
+   *
    * For STRING_LIST the maximum length of each string element is 1500
    * characters. For URL_LIST the maximum length is 2076 characters. For
    * DATE_TIME the format of the string must be the same as start and end time
@@ -263,6 +265,7 @@ public interface FeedItemAttributeValueOrBuilder extends
    * attribute of type STRING_LIST, URL_LIST or DATE_TIME_LIST.
    * For STRING_LIST and URL_LIST the total size of the list in bytes may not
    * exceed 3000. For DATE_TIME_LIST the number of elements may not exceed 200.
+   *
    * For STRING_LIST the maximum length of each string element is 1500
    * characters. For URL_LIST the maximum length is 2076 characters. For
    * DATE_TIME the format of the string must be the same as start and end time
@@ -280,6 +283,7 @@ public interface FeedItemAttributeValueOrBuilder extends
    * attribute of type STRING_LIST, URL_LIST or DATE_TIME_LIST.
    * For STRING_LIST and URL_LIST the total size of the list in bytes may not
    * exceed 3000. For DATE_TIME_LIST the number of elements may not exceed 200.
+   *
    * For STRING_LIST the maximum length of each string element is 1500
    * characters. For URL_LIST the maximum length is 2076 characters. For
    * DATE_TIME the format of the string must be the same as start and end time

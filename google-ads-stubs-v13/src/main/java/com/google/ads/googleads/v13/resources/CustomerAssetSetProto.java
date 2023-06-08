@@ -33,24 +33,24 @@ public final class CustomerAssetSetProto {
       "ads.v13.resources\032:google/ads/googleads/" +
       "v13/enums/asset_set_link_status.proto\032\037g" +
       "oogle/api/field_behavior.proto\032\031google/a" +
-      "pi/resource.proto\"\241\003\n\020CustomerAssetSet\022H" +
-      "\n\rresource_name\030\001 \001(\tB1\340A\005\372A+\n)googleads" +
-      ".googleapis.com/CustomerAssetSet\022<\n\tasse" +
-      "t_set\030\002 \001(\tB)\340A\005\372A#\n!googleads.googleapi" +
-      "s.com/AssetSet\022;\n\010customer\030\003 \001(\tB)\340A\005\372A#" +
-      "\n!googleads.googleapis.com/Customer\022^\n\006s" +
-      "tatus\030\004 \001(\0162I.google.ads.googleads.v13.e" +
-      "nums.AssetSetLinkStatusEnum.AssetSetLink" +
-      "StatusB\003\340A\003:h\352Ae\n)googleads.googleapis.c" +
-      "om/CustomerAssetSet\0228customers/{customer" +
-      "_id}/customerAssetSets/{asset_set_id}B\207\002" +
-      "\n&com.google.ads.googleads.v13.resources" +
-      "B\025CustomerAssetSetProtoP\001ZKgoogle.golang" +
-      ".org/genproto/googleapis/ads/googleads/v" +
-      "13/resources;resources\242\002\003GAA\252\002\"Google.Ad" +
-      "s.GoogleAds.V13.Resources\312\002\"Google\\Ads\\G" +
-      "oogleAds\\V13\\Resources\352\002&Google::Ads::Go" +
-      "ogleAds::V13::Resourcesb\006proto3"
+      "pi/resource.proto\"\245\003\n\020CustomerAssetSet\022I" +
+      "\n\rresource_name\030\001 \001(\tB2\342A\001\005\372A+\n)googlead" +
+      "s.googleapis.com/CustomerAssetSet\022=\n\tass" +
+      "et_set\030\002 \001(\tB*\342A\001\005\372A#\n!googleads.googlea" +
+      "pis.com/AssetSet\022<\n\010customer\030\003 \001(\tB*\342A\001\005" +
+      "\372A#\n!googleads.googleapis.com/Customer\022_" +
+      "\n\006status\030\004 \001(\0162I.google.ads.googleads.v1" +
+      "3.enums.AssetSetLinkStatusEnum.AssetSetL" +
+      "inkStatusB\004\342A\001\003:h\352Ae\n)googleads.googleap" +
+      "is.com/CustomerAssetSet\0228customers/{cust" +
+      "omer_id}/customerAssetSets/{asset_set_id" +
+      "}B\207\002\n&com.google.ads.googleads.v13.resou" +
+      "rcesB\025CustomerAssetSetProtoP\001ZKgoogle.go" +
+      "lang.org/genproto/googleapis/ads/googlea" +
+      "ds/v13/resources;resources\242\002\003GAA\252\002\"Googl" +
+      "e.Ads.GoogleAds.V13.Resources\312\002\"Google\\A" +
+      "ds\\GoogleAds\\V13\\Resources\352\002&Google::Ads" +
+      "::GoogleAds::V13::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

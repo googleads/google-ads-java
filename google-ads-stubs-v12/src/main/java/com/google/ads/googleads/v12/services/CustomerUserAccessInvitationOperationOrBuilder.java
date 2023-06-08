@@ -41,6 +41,7 @@ public interface CustomerUserAccessInvitationOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the revoke invitation is
    * expected, in this format:
+   *
    * `customers/{customer_id}/customerUserAccessInvitations/{invitation_id}`
    * </pre>
    *
@@ -52,6 +53,7 @@ public interface CustomerUserAccessInvitationOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the revoke invitation is
    * expected, in this format:
+   *
    * `customers/{customer_id}/customerUserAccessInvitations/{invitation_id}`
    * </pre>
    *
@@ -63,6 +65,7 @@ public interface CustomerUserAccessInvitationOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the revoke invitation is
    * expected, in this format:
+   *
    * `customers/{customer_id}/customerUserAccessInvitations/{invitation_id}`
    * </pre>
    *
@@ -72,5 +75,5 @@ public interface CustomerUserAccessInvitationOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v12.services.CustomerUserAccessInvitationOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v12.services.CustomerUserAccessInvitationOperation.OperationCase getOperationCase();
 }

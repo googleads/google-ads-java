@@ -11,6 +11,7 @@ public interface AssetOrBuilder extends
    * <pre>
    * Immutable. The resource name of the asset.
    * Asset resource names have the form:
+   *
    * `customers/{customer_id}/assets/{asset_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface AssetOrBuilder extends
    * <pre>
    * Immutable. The resource name of the asset.
    * Asset resource names have the form:
+   *
    * `customers/{customer_id}/assets/{asset_id}`
    * </pre>
    *
@@ -1038,5 +1040,5 @@ public interface AssetOrBuilder extends
    */
   com.google.ads.googleads.v12.common.LocationAssetOrBuilder getLocationAssetOrBuilder();
 
-  public com.google.ads.googleads.v12.resources.Asset.AssetDataCase getAssetDataCase();
+  com.google.ads.googleads.v12.resources.Asset.AssetDataCase getAssetDataCase();
 }

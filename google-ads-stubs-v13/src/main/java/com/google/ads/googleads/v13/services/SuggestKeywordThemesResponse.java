@@ -31,11 +31,6 @@ private static final long serialVersionUID = 0L;
     return new SuggestKeywordThemesResponse();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.services.SmartCampaignSuggestServiceProto.internal_static_google_ads_googleads_v13_services_SuggestKeywordThemesResponse_descriptor;
@@ -109,7 +104,7 @@ private static final long serialVersionUID = 0L;
     com.google.protobuf.ByteString
         getFreeFormKeywordThemeBytes();
 
-    public com.google.ads.googleads.v13.services.SuggestKeywordThemesResponse.KeywordTheme.KeywordThemeCase getKeywordThemeCase();
+    com.google.ads.googleads.v13.services.SuggestKeywordThemesResponse.KeywordTheme.KeywordThemeCase getKeywordThemeCase();
   }
   /**
    * <pre>
@@ -137,11 +132,6 @@ private static final long serialVersionUID = 0L;
       return new KeywordTheme();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.services.SmartCampaignSuggestServiceProto.internal_static_google_ads_googleads_v13_services_SuggestKeywordThemesResponse_KeywordTheme_descriptor;
@@ -156,6 +146,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private int keywordThemeCase_ = 0;
+    @SuppressWarnings("serial")
     private java.lang.Object keywordTheme_;
     public enum KeywordThemeCase
         implements com.google.protobuf.Internal.EnumLite,
@@ -439,11 +430,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.services.SuggestKeywordThemesResponse.KeywordTheme parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.services.SuggestKeywordThemesResponse.KeywordTheme parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1233,11 +1226,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.services.SuggestKeywordThemesResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.services.SuggestKeywordThemesResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)

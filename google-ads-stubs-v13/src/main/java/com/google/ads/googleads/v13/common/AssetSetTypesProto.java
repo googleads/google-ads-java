@@ -80,32 +80,32 @@ public final class AssetSetTypesProto {
       "ds/googleads/v13/enums/location_ownershi" +
       "p_type.proto\032@google/ads/googleads/v13/e" +
       "nums/location_string_filter_type.proto\032\037" +
-      "google/api/field_behavior.proto\"\217\003\n\013Loca" +
-      "tionSet\022x\n\027location_ownership_type\030\003 \001(\016" +
+      "google/api/field_behavior.proto\"\216\003\n\013Loca" +
+      "tionSet\022w\n\027location_ownership_type\030\003 \001(\016" +
       "2O.google.ads.googleads.v13.enums.Locati" +
       "onOwnershipTypeEnum.LocationOwnershipTyp" +
-      "eB\006\340A\002\340A\005\022d\n\035business_profile_location_s" +
-      "et\030\001 \001(\0132;.google.ads.googleads.v13.comm" +
-      "on.BusinessProfileLocationSetH\000\022G\n\022chain" +
-      "_location_set\030\002 \001(\0132).google.ads.googlea" +
-      "ds.v13.common.ChainSetH\000\022M\n\021maps_locatio" +
-      "n_set\030\005 \001(\01320.google.ads.googleads.v13.c" +
-      "ommon.MapsLocationSetH\000B\010\n\006source\"\330\001\n\032Bu" +
-      "sinessProfileLocationSet\022(\n\030http_authori" +
-      "zation_token\030\001 \001(\tB\006\340A\005\340A\002\022\035\n\remail_addr" +
-      "ess\030\002 \001(\tB\006\340A\002\340A\005\022\034\n\024business_name_filte" +
-      "r\030\003 \001(\t\022\025\n\rlabel_filters\030\004 \003(\t\022\032\n\022listin" +
-      "g_id_filters\030\005 \003(\003\022 \n\023business_account_i" +
-      "d\030\006 \001(\tB\003\340A\005\"\301\001\n\010ChainSet\022r\n\021relationshi" +
-      "p_type\030\001 \001(\0162O.google.ads.googleads.v13." +
-      "enums.ChainRelationshipTypeEnum.ChainRel" +
-      "ationshipTypeB\006\340A\002\340A\005\022A\n\006chains\030\002 \003(\0132,." +
-      "google.ads.googleads.v13.common.ChainFil" +
-      "terB\003\340A\002\"A\n\013ChainFilter\022\025\n\010chain_id\030\001 \001(" +
-      "\003B\003\340A\002\022\033\n\023location_attributes\030\002 \003(\t\"a\n\017M" +
-      "apsLocationSet\022N\n\016maps_locations\030\001 \003(\01321" +
-      ".google.ads.googleads.v13.common.MapsLoc" +
-      "ationInfoB\003\340A\002\"$\n\020MapsLocationInfo\022\020\n\010pl" +
+      "eB\005\342A\002\002\005\022d\n\035business_profile_location_se" +
+      "t\030\001 \001(\0132;.google.ads.googleads.v13.commo" +
+      "n.BusinessProfileLocationSetH\000\022G\n\022chain_" +
+      "location_set\030\002 \001(\0132).google.ads.googlead" +
+      "s.v13.common.ChainSetH\000\022M\n\021maps_location" +
+      "_set\030\005 \001(\01320.google.ads.googleads.v13.co" +
+      "mmon.MapsLocationSetH\000B\010\n\006source\"\327\001\n\032Bus" +
+      "inessProfileLocationSet\022\'\n\030http_authoriz" +
+      "ation_token\030\001 \001(\tB\005\342A\002\005\002\022\034\n\remail_addres" +
+      "s\030\002 \001(\tB\005\342A\002\002\005\022\034\n\024business_name_filter\030\003" +
+      " \001(\t\022\025\n\rlabel_filters\030\004 \003(\t\022\032\n\022listing_i" +
+      "d_filters\030\005 \003(\003\022!\n\023business_account_id\030\006" +
+      " \001(\tB\004\342A\001\005\"\301\001\n\010ChainSet\022q\n\021relationship_" +
+      "type\030\001 \001(\0162O.google.ads.googleads.v13.en" +
+      "ums.ChainRelationshipTypeEnum.ChainRelat" +
+      "ionshipTypeB\005\342A\002\002\005\022B\n\006chains\030\002 \003(\0132,.goo" +
+      "gle.ads.googleads.v13.common.ChainFilter" +
+      "B\004\342A\001\002\"B\n\013ChainFilter\022\026\n\010chain_id\030\001 \001(\003B" +
+      "\004\342A\001\002\022\033\n\023location_attributes\030\002 \003(\t\"b\n\017Ma" +
+      "psLocationSet\022O\n\016maps_locations\030\001 \003(\01321." +
+      "google.ads.googleads.v13.common.MapsLoca" +
+      "tionInfoB\004\342A\001\002\"$\n\020MapsLocationInfo\022\020\n\010pl" +
       "ace_id\030\001 \001(\t\"\243\001\n\034BusinessProfileLocation" +
       "Group\022\202\001\n.dynamic_business_profile_locat" +
       "ion_group_filter\030\001 \001(\0132J.google.ads.goog" +

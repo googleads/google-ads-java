@@ -31,6 +31,7 @@ public interface RemoveProductLinkRequestOrBuilder extends
    * <pre>
    * Required. Remove operation: A resource name for the product link to remove
    * is expected, in this format:
+   *
    * `customers/{customer_id}/productLinks/{product_link_id} `
    * </pre>
    *
@@ -42,6 +43,7 @@ public interface RemoveProductLinkRequestOrBuilder extends
    * <pre>
    * Required. Remove operation: A resource name for the product link to remove
    * is expected, in this format:
+   *
    * `customers/{customer_id}/productLinks/{product_link_id} `
    * </pre>
    *

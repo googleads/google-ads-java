@@ -32,11 +32,6 @@ private static final long serialVersionUID = 0L;
     return new ConversionValueRule();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.resources.ConversionValueRuleProto.internal_static_google_ads_googleads_v12_resources_ConversionValueRule_descriptor;
@@ -110,11 +105,6 @@ private static final long serialVersionUID = 0L;
       return new ValueRuleAction();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.ConversionValueRuleProto.internal_static_google_ads_googleads_v12_resources_ConversionValueRule_ValueRuleAction_descriptor;
@@ -290,11 +280,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.ConversionValueRule.ValueRuleAction parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.ConversionValueRule.ValueRuleAction parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -616,7 +608,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setValue(double value) {
-        
+
         value_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -841,9 +833,11 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private ValueRuleGeoLocationCondition() {
-      excludedGeoTargetConstants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      excludedGeoTargetConstants_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       excludedGeoMatchType_ = 0;
-      geoTargetConstants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      geoTargetConstants_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       geoMatchType_ = 0;
     }
 
@@ -854,11 +848,6 @@ private static final long serialVersionUID = 0L;
       return new ValueRuleGeoLocationCondition();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.ConversionValueRuleProto.internal_static_google_ads_googleads_v12_resources_ConversionValueRule_ValueRuleGeoLocationCondition_descriptor;
@@ -874,7 +863,8 @@ private static final long serialVersionUID = 0L;
 
     public static final int EXCLUDED_GEO_TARGET_CONSTANTS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringList excludedGeoTargetConstants_;
+    private com.google.protobuf.LazyStringArrayList excludedGeoTargetConstants_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <pre>
      * Geo locations that advertisers want to exclude.
@@ -952,7 +942,8 @@ private static final long serialVersionUID = 0L;
 
     public static final int GEO_TARGET_CONSTANTS_FIELD_NUMBER = 3;
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringList geoTargetConstants_;
+    private com.google.protobuf.LazyStringArrayList geoTargetConstants_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <pre>
      * Geo locations that advertisers want to include.
@@ -1180,11 +1171,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.ConversionValueRule.ValueRuleGeoLocationCondition parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.ConversionValueRule.ValueRuleGeoLocationCondition parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1264,11 +1257,11 @@ private static final long serialVersionUID = 0L;
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        excludedGeoTargetConstants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        excludedGeoTargetConstants_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         excludedGeoMatchType_ = 0;
-        geoTargetConstants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        geoTargetConstants_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         geoMatchType_ = 0;
         return this;
       }
@@ -1296,29 +1289,23 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v12.resources.ConversionValueRule.ValueRuleGeoLocationCondition buildPartial() {
         com.google.ads.googleads.v12.resources.ConversionValueRule.ValueRuleGeoLocationCondition result = new com.google.ads.googleads.v12.resources.ConversionValueRule.ValueRuleGeoLocationCondition(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(com.google.ads.googleads.v12.resources.ConversionValueRule.ValueRuleGeoLocationCondition result) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          excludedGeoTargetConstants_ = excludedGeoTargetConstants_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.excludedGeoTargetConstants_ = excludedGeoTargetConstants_;
-        if (((bitField0_ & 0x00000004) != 0)) {
-          geoTargetConstants_ = geoTargetConstants_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000004);
-        }
-        result.geoTargetConstants_ = geoTargetConstants_;
-      }
-
       private void buildPartial0(com.google.ads.googleads.v12.resources.ConversionValueRule.ValueRuleGeoLocationCondition result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          excludedGeoTargetConstants_.makeImmutable();
+          result.excludedGeoTargetConstants_ = excludedGeoTargetConstants_;
+        }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.excludedGeoMatchType_ = excludedGeoMatchType_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          geoTargetConstants_.makeImmutable();
+          result.geoTargetConstants_ = geoTargetConstants_;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.geoMatchType_ = geoMatchType_;
@@ -1372,7 +1359,7 @@ private static final long serialVersionUID = 0L;
         if (!other.excludedGeoTargetConstants_.isEmpty()) {
           if (excludedGeoTargetConstants_.isEmpty()) {
             excludedGeoTargetConstants_ = other.excludedGeoTargetConstants_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ |= 0x00000001;
           } else {
             ensureExcludedGeoTargetConstantsIsMutable();
             excludedGeoTargetConstants_.addAll(other.excludedGeoTargetConstants_);
@@ -1385,7 +1372,7 @@ private static final long serialVersionUID = 0L;
         if (!other.geoTargetConstants_.isEmpty()) {
           if (geoTargetConstants_.isEmpty()) {
             geoTargetConstants_ = other.geoTargetConstants_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ |= 0x00000004;
           } else {
             ensureGeoTargetConstantsIsMutable();
             geoTargetConstants_.addAll(other.geoTargetConstants_);
@@ -1460,12 +1447,13 @@ private static final long serialVersionUID = 0L;
       }
       private int bitField0_;
 
-      private com.google.protobuf.LazyStringList excludedGeoTargetConstants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList excludedGeoTargetConstants_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureExcludedGeoTargetConstantsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!excludedGeoTargetConstants_.isModifiable()) {
           excludedGeoTargetConstants_ = new com.google.protobuf.LazyStringArrayList(excludedGeoTargetConstants_);
-          bitField0_ |= 0x00000001;
-         }
+        }
+        bitField0_ |= 0x00000001;
       }
       /**
        * <pre>
@@ -1477,7 +1465,8 @@ private static final long serialVersionUID = 0L;
        */
       public com.google.protobuf.ProtocolStringList
           getExcludedGeoTargetConstantsList() {
-        return excludedGeoTargetConstants_.getUnmodifiableView();
+        excludedGeoTargetConstants_.makeImmutable();
+        return excludedGeoTargetConstants_;
       }
       /**
        * <pre>
@@ -1530,6 +1519,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) { throw new NullPointerException(); }
         ensureExcludedGeoTargetConstantsIsMutable();
         excludedGeoTargetConstants_.set(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1547,6 +1537,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) { throw new NullPointerException(); }
         ensureExcludedGeoTargetConstantsIsMutable();
         excludedGeoTargetConstants_.add(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1564,6 +1555,7 @@ private static final long serialVersionUID = 0L;
         ensureExcludedGeoTargetConstantsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, excludedGeoTargetConstants_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1576,8 +1568,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearExcludedGeoTargetConstants() {
-        excludedGeoTargetConstants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        excludedGeoTargetConstants_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
         onChanged();
         return this;
       }
@@ -1596,6 +1589,7 @@ private static final long serialVersionUID = 0L;
         checkByteStringIsUtf8(value);
         ensureExcludedGeoTargetConstantsIsMutable();
         excludedGeoTargetConstants_.add(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1673,12 +1667,13 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private com.google.protobuf.LazyStringList geoTargetConstants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList geoTargetConstants_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureGeoTargetConstantsIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!geoTargetConstants_.isModifiable()) {
           geoTargetConstants_ = new com.google.protobuf.LazyStringArrayList(geoTargetConstants_);
-          bitField0_ |= 0x00000004;
-         }
+        }
+        bitField0_ |= 0x00000004;
       }
       /**
        * <pre>
@@ -1690,7 +1685,8 @@ private static final long serialVersionUID = 0L;
        */
       public com.google.protobuf.ProtocolStringList
           getGeoTargetConstantsList() {
-        return geoTargetConstants_.getUnmodifiableView();
+        geoTargetConstants_.makeImmutable();
+        return geoTargetConstants_;
       }
       /**
        * <pre>
@@ -1743,6 +1739,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) { throw new NullPointerException(); }
         ensureGeoTargetConstantsIsMutable();
         geoTargetConstants_.set(index, value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1760,6 +1757,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) { throw new NullPointerException(); }
         ensureGeoTargetConstantsIsMutable();
         geoTargetConstants_.add(value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1777,6 +1775,7 @@ private static final long serialVersionUID = 0L;
         ensureGeoTargetConstantsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, geoTargetConstants_);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1789,8 +1788,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearGeoTargetConstants() {
-        geoTargetConstants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        geoTargetConstants_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);;
         onChanged();
         return this;
       }
@@ -1809,6 +1809,7 @@ private static final long serialVersionUID = 0L;
         checkByteStringIsUtf8(value);
         ensureGeoTargetConstantsIsMutable();
         geoTargetConstants_.add(value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2029,11 +2030,6 @@ private static final long serialVersionUID = 0L;
       return new ValueRuleDeviceCondition();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.ConversionValueRuleProto.internal_static_google_ads_googleads_v12_resources_ConversionValueRule_ValueRuleDeviceCondition_descriptor;
@@ -2248,11 +2244,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.ConversionValueRule.ValueRuleDeviceCondition parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.ConversionValueRule.ValueRuleDeviceCondition parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2858,8 +2856,10 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private ValueRuleAudienceCondition() {
-      userLists_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      userInterests_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      userLists_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      userInterests_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
     @java.lang.Override
@@ -2869,11 +2869,6 @@ private static final long serialVersionUID = 0L;
       return new ValueRuleAudienceCondition();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.ConversionValueRuleProto.internal_static_google_ads_googleads_v12_resources_ConversionValueRule_ValueRuleAudienceCondition_descriptor;
@@ -2889,7 +2884,8 @@ private static final long serialVersionUID = 0L;
 
     public static final int USER_LISTS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringList userLists_;
+    private com.google.protobuf.LazyStringArrayList userLists_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <pre>
      * User Lists.
@@ -2953,7 +2949,8 @@ private static final long serialVersionUID = 0L;
 
     public static final int USER_INTERESTS_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringList userInterests_;
+    private com.google.protobuf.LazyStringArrayList userInterests_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <pre>
      * User Interests.
@@ -3135,11 +3132,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.ConversionValueRule.ValueRuleAudienceCondition parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.ConversionValueRule.ValueRuleAudienceCondition parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3219,10 +3218,10 @@ private static final long serialVersionUID = 0L;
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        userLists_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        userInterests_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        userLists_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        userInterests_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         return this;
       }
 
@@ -3249,27 +3248,21 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v12.resources.ConversionValueRule.ValueRuleAudienceCondition buildPartial() {
         com.google.ads.googleads.v12.resources.ConversionValueRule.ValueRuleAudienceCondition result = new com.google.ads.googleads.v12.resources.ConversionValueRule.ValueRuleAudienceCondition(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(com.google.ads.googleads.v12.resources.ConversionValueRule.ValueRuleAudienceCondition result) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          userLists_ = userLists_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.userLists_ = userLists_;
-        if (((bitField0_ & 0x00000002) != 0)) {
-          userInterests_ = userInterests_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.userInterests_ = userInterests_;
-      }
-
       private void buildPartial0(com.google.ads.googleads.v12.resources.ConversionValueRule.ValueRuleAudienceCondition result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          userLists_.makeImmutable();
+          result.userLists_ = userLists_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          userInterests_.makeImmutable();
+          result.userInterests_ = userInterests_;
+        }
       }
 
       @java.lang.Override
@@ -3319,7 +3312,7 @@ private static final long serialVersionUID = 0L;
         if (!other.userLists_.isEmpty()) {
           if (userLists_.isEmpty()) {
             userLists_ = other.userLists_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ |= 0x00000001;
           } else {
             ensureUserListsIsMutable();
             userLists_.addAll(other.userLists_);
@@ -3329,7 +3322,7 @@ private static final long serialVersionUID = 0L;
         if (!other.userInterests_.isEmpty()) {
           if (userInterests_.isEmpty()) {
             userInterests_ = other.userInterests_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ |= 0x00000002;
           } else {
             ensureUserInterestsIsMutable();
             userInterests_.addAll(other.userInterests_);
@@ -3391,12 +3384,13 @@ private static final long serialVersionUID = 0L;
       }
       private int bitField0_;
 
-      private com.google.protobuf.LazyStringList userLists_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList userLists_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureUserListsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!userLists_.isModifiable()) {
           userLists_ = new com.google.protobuf.LazyStringArrayList(userLists_);
-          bitField0_ |= 0x00000001;
-         }
+        }
+        bitField0_ |= 0x00000001;
       }
       /**
        * <pre>
@@ -3411,7 +3405,8 @@ private static final long serialVersionUID = 0L;
        */
       public com.google.protobuf.ProtocolStringList
           getUserListsList() {
-        return userLists_.getUnmodifiableView();
+        userLists_.makeImmutable();
+        return userLists_;
       }
       /**
        * <pre>
@@ -3476,6 +3471,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) { throw new NullPointerException(); }
         ensureUserListsIsMutable();
         userLists_.set(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3496,6 +3492,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) { throw new NullPointerException(); }
         ensureUserListsIsMutable();
         userLists_.add(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3516,6 +3513,7 @@ private static final long serialVersionUID = 0L;
         ensureUserListsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, userLists_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3531,8 +3529,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearUserLists() {
-        userLists_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        userLists_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
         onChanged();
         return this;
       }
@@ -3554,16 +3553,18 @@ private static final long serialVersionUID = 0L;
         checkByteStringIsUtf8(value);
         ensureUserListsIsMutable();
         userLists_.add(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.LazyStringList userInterests_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList userInterests_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureUserInterestsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!userInterests_.isModifiable()) {
           userInterests_ = new com.google.protobuf.LazyStringArrayList(userInterests_);
-          bitField0_ |= 0x00000002;
-         }
+        }
+        bitField0_ |= 0x00000002;
       }
       /**
        * <pre>
@@ -3575,7 +3576,8 @@ private static final long serialVersionUID = 0L;
        */
       public com.google.protobuf.ProtocolStringList
           getUserInterestsList() {
-        return userInterests_.getUnmodifiableView();
+        userInterests_.makeImmutable();
+        return userInterests_;
       }
       /**
        * <pre>
@@ -3628,6 +3630,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) { throw new NullPointerException(); }
         ensureUserInterestsIsMutable();
         userInterests_.set(index, value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3645,6 +3648,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) { throw new NullPointerException(); }
         ensureUserInterestsIsMutable();
         userInterests_.add(value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3662,6 +3666,7 @@ private static final long serialVersionUID = 0L;
         ensureUserInterestsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, userInterests_);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3674,8 +3679,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearUserInterests() {
-        userInterests_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        userInterests_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);;
         onChanged();
         return this;
       }
@@ -3694,6 +3700,7 @@ private static final long serialVersionUID = 0L;
         checkByteStringIsUtf8(value);
         ensureUserInterestsIsMutable();
         userInterests_.add(value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3768,6 +3775,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the conversion value rule.
    * Conversion value rule resource names have the form:
+   *
    * `customers/{customer_id}/conversionValueRules/{conversion_value_rule_id}`
    * </pre>
    *
@@ -3791,6 +3799,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the conversion value rule.
    * Conversion value rule resource names have the form:
+   *
    * `customers/{customer_id}/conversionValueRules/{conversion_value_rule_id}`
    * </pre>
    *
@@ -4270,11 +4279,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.resources.ConversionValueRule parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.resources.ConversionValueRule parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4613,6 +4624,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the conversion value rule.
      * Conversion value rule resource names have the form:
+     *
      * `customers/{customer_id}/conversionValueRules/{conversion_value_rule_id}`
      * </pre>
      *
@@ -4635,6 +4647,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the conversion value rule.
      * Conversion value rule resource names have the form:
+     *
      * `customers/{customer_id}/conversionValueRules/{conversion_value_rule_id}`
      * </pre>
      *
@@ -4658,6 +4671,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the conversion value rule.
      * Conversion value rule resource names have the form:
+     *
      * `customers/{customer_id}/conversionValueRules/{conversion_value_rule_id}`
      * </pre>
      *
@@ -4677,6 +4691,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the conversion value rule.
      * Conversion value rule resource names have the form:
+     *
      * `customers/{customer_id}/conversionValueRules/{conversion_value_rule_id}`
      * </pre>
      *
@@ -4693,6 +4708,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the conversion value rule.
      * Conversion value rule resource names have the form:
+     *
      * `customers/{customer_id}/conversionValueRules/{conversion_value_rule_id}`
      * </pre>
      *
@@ -4733,7 +4749,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      
+
       id_ = value;
       bitField0_ |= 0x00000002;
       onChanged();

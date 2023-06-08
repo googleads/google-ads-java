@@ -51,38 +51,38 @@ public final class UserListServiceProto {
       "o\032\037google/api/field_behavior.proto\032\031goog" +
       "le/api/resource.proto\032 google/protobuf/f" +
       "ield_mask.proto\032\027google/rpc/status.proto" +
-      "\"\261\001\n\026MutateUserListsRequest\022\030\n\013customer_" +
-      "id\030\001 \001(\tB\003\340A\002\022M\n\noperations\030\002 \003(\01324.goog" +
-      "le.ads.googleads.v12.services.UserListOp" +
-      "erationB\003\340A\002\022\027\n\017partial_failure\030\003 \001(\010\022\025\n" +
-      "\rvalidate_only\030\004 \001(\010\"\213\002\n\021UserListOperati" +
-      "on\022/\n\013update_mask\030\004 \001(\0132\032.google.protobu" +
-      "f.FieldMask\022>\n\006create\030\001 \001(\0132,.google.ads" +
-      ".googleads.v12.resources.UserListH\000\022>\n\006u" +
-      "pdate\030\002 \001(\0132,.google.ads.googleads.v12.r" +
-      "esources.UserListH\000\0228\n\006remove\030\003 \001(\tB&\372A#" +
-      "\n!googleads.googleapis.com/UserListH\000B\013\n" +
-      "\toperation\"\226\001\n\027MutateUserListsResponse\0221" +
-      "\n\025partial_failure_error\030\003 \001(\0132\022.google.r" +
-      "pc.Status\022H\n\007results\030\002 \003(\01327.google.ads." +
-      "googleads.v12.services.MutateUserListRes" +
-      "ult\"U\n\024MutateUserListResult\022=\n\rresource_" +
-      "name\030\001 \001(\tB&\372A#\n!googleads.googleapis.co" +
-      "m/UserList2\270\002\n\017UserListService\022\335\001\n\017Mutat" +
-      "eUserLists\0229.google.ads.googleads.v12.se" +
-      "rvices.MutateUserListsRequest\032:.google.a" +
-      "ds.googleads.v12.services.MutateUserList" +
-      "sResponse\"S\202\323\344\223\0024\"//v12/customers/{custo" +
-      "mer_id=*}/userLists:mutate:\001*\332A\026customer" +
-      "_id,operations\032E\312A\030googleads.googleapis." +
-      "com\322A\'https://www.googleapis.com/auth/ad" +
-      "wordsB\200\002\n%com.google.ads.googleads.v12.s" +
-      "ervicesB\024UserListServiceProtoP\001ZIgoogle." +
-      "golang.org/genproto/googleapis/ads/googl" +
-      "eads/v12/services;services\242\002\003GAA\252\002!Googl" +
-      "e.Ads.GoogleAds.V12.Services\312\002!Google\\Ad" +
-      "s\\GoogleAds\\V12\\Services\352\002%Google::Ads::" +
-      "GoogleAds::V12::Servicesb\006proto3"
+      "\"\263\001\n\026MutateUserListsRequest\022\031\n\013customer_" +
+      "id\030\001 \001(\tB\004\342A\001\002\022N\n\noperations\030\002 \003(\01324.goo" +
+      "gle.ads.googleads.v12.services.UserListO" +
+      "perationB\004\342A\001\002\022\027\n\017partial_failure\030\003 \001(\010\022" +
+      "\025\n\rvalidate_only\030\004 \001(\010\"\213\002\n\021UserListOpera" +
+      "tion\022/\n\013update_mask\030\004 \001(\0132\032.google.proto" +
+      "buf.FieldMask\022>\n\006create\030\001 \001(\0132,.google.a" +
+      "ds.googleads.v12.resources.UserListH\000\022>\n" +
+      "\006update\030\002 \001(\0132,.google.ads.googleads.v12" +
+      ".resources.UserListH\000\0228\n\006remove\030\003 \001(\tB&\372" +
+      "A#\n!googleads.googleapis.com/UserListH\000B" +
+      "\013\n\toperation\"\226\001\n\027MutateUserListsResponse" +
+      "\0221\n\025partial_failure_error\030\003 \001(\0132\022.google" +
+      ".rpc.Status\022H\n\007results\030\002 \003(\01327.google.ad" +
+      "s.googleads.v12.services.MutateUserListR" +
+      "esult\"U\n\024MutateUserListResult\022=\n\rresourc" +
+      "e_name\030\001 \001(\tB&\372A#\n!googleads.googleapis." +
+      "com/UserList2\270\002\n\017UserListService\022\335\001\n\017Mut" +
+      "ateUserLists\0229.google.ads.googleads.v12." +
+      "services.MutateUserListsRequest\032:.google" +
+      ".ads.googleads.v12.services.MutateUserLi" +
+      "stsResponse\"S\332A\026customer_id,operations\202\323" +
+      "\344\223\0024\"//v12/customers/{customer_id=*}/use" +
+      "rLists:mutate:\001*\032E\312A\030googleads.googleapi" +
+      "s.com\322A\'https://www.googleapis.com/auth/" +
+      "adwordsB\200\002\n%com.google.ads.googleads.v12" +
+      ".servicesB\024UserListServiceProtoP\001ZIgoogl" +
+      "e.golang.org/genproto/googleapis/ads/goo" +
+      "gleads/v12/services;services\242\002\003GAA\252\002!Goo" +
+      "gle.Ads.GoogleAds.V12.Services\312\002!Google\\" +
+      "Ads\\GoogleAds\\V12\\Services\352\002%Google::Ads" +
+      "::GoogleAds::V12::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

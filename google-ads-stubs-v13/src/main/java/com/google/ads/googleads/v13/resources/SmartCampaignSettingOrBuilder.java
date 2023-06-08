@@ -11,6 +11,7 @@ public interface SmartCampaignSettingOrBuilder extends
    * <pre>
    * Immutable. The resource name of the Smart campaign setting.
    * Smart campaign setting resource names have the form:
+   *
    * `customers/{customer_id}/smartCampaignSettings/{campaign_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface SmartCampaignSettingOrBuilder extends
    * <pre>
    * Immutable. The resource name of the Smart campaign setting.
    * Smart campaign setting resource names have the form:
+   *
    * `customers/{customer_id}/smartCampaignSettings/{campaign_id}`
    * </pre>
    *
@@ -202,6 +204,7 @@ public interface SmartCampaignSettingOrBuilder extends
    * Business Profile location resource names can be fetched through the
    * Business Profile API and adhere to the following format:
    * `locations/{locationId}`.
+   *
    * See the [Business Profile API]
    * (https://developers.google.com/my-business/reference/businessinformation/rest/v1/accounts.locations)
    * for additional details.
@@ -217,6 +220,7 @@ public interface SmartCampaignSettingOrBuilder extends
    * Business Profile location resource names can be fetched through the
    * Business Profile API and adhere to the following format:
    * `locations/{locationId}`.
+   *
    * See the [Business Profile API]
    * (https://developers.google.com/my-business/reference/businessinformation/rest/v1/accounts.locations)
    * for additional details.
@@ -232,6 +236,7 @@ public interface SmartCampaignSettingOrBuilder extends
    * Business Profile location resource names can be fetched through the
    * Business Profile API and adhere to the following format:
    * `locations/{locationId}`.
+   *
    * See the [Business Profile API]
    * (https://developers.google.com/my-business/reference/businessinformation/rest/v1/accounts.locations)
    * for additional details.
@@ -243,7 +248,7 @@ public interface SmartCampaignSettingOrBuilder extends
   com.google.protobuf.ByteString
       getBusinessProfileLocationBytes();
 
-  public com.google.ads.googleads.v13.resources.SmartCampaignSetting.LandingPageCase getLandingPageCase();
+  com.google.ads.googleads.v13.resources.SmartCampaignSetting.LandingPageCase getLandingPageCase();
 
-  public com.google.ads.googleads.v13.resources.SmartCampaignSetting.BusinessSettingCase getBusinessSettingCase();
+  com.google.ads.googleads.v13.resources.SmartCampaignSetting.BusinessSettingCase getBusinessSettingCase();
 }

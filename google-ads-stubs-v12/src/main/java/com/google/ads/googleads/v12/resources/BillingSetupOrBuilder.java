@@ -11,6 +11,7 @@ public interface BillingSetupOrBuilder extends
    * <pre>
    * Immutable. The resource name of the billing setup.
    * BillingSetup resource names have the form:
+   *
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface BillingSetupOrBuilder extends
    * <pre>
    * Immutable. The resource name of the billing setup.
    * BillingSetup resource names have the form:
+   *
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
@@ -73,6 +75,7 @@ public interface BillingSetupOrBuilder extends
    * <pre>
    * Immutable. The resource name of the payments account associated with this
    * billing setup. Payments resource names have the form:
+   *
    * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
    * When setting up billing, this is used to signup with an existing payments
    * account (and then payments_account_info should not be set).
@@ -88,6 +91,7 @@ public interface BillingSetupOrBuilder extends
    * <pre>
    * Immutable. The resource name of the payments account associated with this
    * billing setup. Payments resource names have the form:
+   *
    * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
    * When setting up billing, this is used to signup with an existing payments
    * account (and then payments_account_info should not be set).
@@ -103,6 +107,7 @@ public interface BillingSetupOrBuilder extends
    * <pre>
    * Immutable. The resource name of the payments account associated with this
    * billing setup. Payments resource names have the form:
+   *
    * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
    * When setting up billing, this is used to signup with an existing payments
    * account (and then payments_account_info should not be set).
@@ -272,7 +277,7 @@ public interface BillingSetupOrBuilder extends
    */
   com.google.ads.googleads.v12.enums.TimeTypeEnum.TimeType getEndTimeType();
 
-  public com.google.ads.googleads.v12.resources.BillingSetup.StartTimeCase getStartTimeCase();
+  com.google.ads.googleads.v12.resources.BillingSetup.StartTimeCase getStartTimeCase();
 
-  public com.google.ads.googleads.v12.resources.BillingSetup.EndTimeCase getEndTimeCase();
+  com.google.ads.googleads.v12.resources.BillingSetup.EndTimeCase getEndTimeCase();
 }

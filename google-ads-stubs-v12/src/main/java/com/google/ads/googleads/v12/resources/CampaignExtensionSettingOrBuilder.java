@@ -11,6 +11,7 @@ public interface CampaignExtensionSettingOrBuilder extends
    * <pre>
    * Immutable. The resource name of the campaign extension setting.
    * CampaignExtensionSetting resource names have the form:
+   *
    * `customers/{customer_id}/campaignExtensionSettings/{campaign_id}~{extension_type}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface CampaignExtensionSettingOrBuilder extends
    * <pre>
    * Immutable. The resource name of the campaign extension setting.
    * CampaignExtensionSetting resource names have the form:
+   *
    * `customers/{customer_id}/campaignExtensionSettings/{campaign_id}~{extension_type}`
    * </pre>
    *
@@ -55,6 +57,7 @@ public interface CampaignExtensionSettingOrBuilder extends
    * Immutable. The resource name of the campaign. The linked extension feed
    * items will serve under this campaign. Campaign resource names have the
    * form:
+   *
    * `customers/{customer_id}/campaigns/{campaign_id}`
    * </pre>
    *
@@ -67,6 +70,7 @@ public interface CampaignExtensionSettingOrBuilder extends
    * Immutable. The resource name of the campaign. The linked extension feed
    * items will serve under this campaign. Campaign resource names have the
    * form:
+   *
    * `customers/{customer_id}/campaigns/{campaign_id}`
    * </pre>
    *
@@ -79,6 +83,7 @@ public interface CampaignExtensionSettingOrBuilder extends
    * Immutable. The resource name of the campaign. The linked extension feed
    * items will serve under this campaign. Campaign resource names have the
    * form:
+   *
    * `customers/{customer_id}/campaigns/{campaign_id}`
    * </pre>
    *
@@ -92,6 +97,7 @@ public interface CampaignExtensionSettingOrBuilder extends
    * <pre>
    * The resource names of the extension feed items to serve under the campaign.
    * ExtensionFeedItem resource names have the form:
+   *
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
@@ -104,6 +110,7 @@ public interface CampaignExtensionSettingOrBuilder extends
    * <pre>
    * The resource names of the extension feed items to serve under the campaign.
    * ExtensionFeedItem resource names have the form:
+   *
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
@@ -115,6 +122,7 @@ public interface CampaignExtensionSettingOrBuilder extends
    * <pre>
    * The resource names of the extension feed items to serve under the campaign.
    * ExtensionFeedItem resource names have the form:
+   *
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
@@ -127,6 +135,7 @@ public interface CampaignExtensionSettingOrBuilder extends
    * <pre>
    * The resource names of the extension feed items to serve under the campaign.
    * ExtensionFeedItem resource names have the form:
+   *
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *

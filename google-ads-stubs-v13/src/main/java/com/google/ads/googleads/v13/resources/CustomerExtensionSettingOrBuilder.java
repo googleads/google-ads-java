@@ -11,6 +11,7 @@ public interface CustomerExtensionSettingOrBuilder extends
    * <pre>
    * Immutable. The resource name of the customer extension setting.
    * CustomerExtensionSetting resource names have the form:
+   *
    * `customers/{customer_id}/customerExtensionSettings/{extension_type}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface CustomerExtensionSettingOrBuilder extends
    * <pre>
    * Immutable. The resource name of the customer extension setting.
    * CustomerExtensionSetting resource names have the form:
+   *
    * `customers/{customer_id}/customerExtensionSettings/{extension_type}`
    * </pre>
    *
@@ -54,6 +56,7 @@ public interface CustomerExtensionSettingOrBuilder extends
    * <pre>
    * The resource names of the extension feed items to serve under the customer.
    * ExtensionFeedItem resource names have the form:
+   *
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
@@ -66,6 +69,7 @@ public interface CustomerExtensionSettingOrBuilder extends
    * <pre>
    * The resource names of the extension feed items to serve under the customer.
    * ExtensionFeedItem resource names have the form:
+   *
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
@@ -77,6 +81,7 @@ public interface CustomerExtensionSettingOrBuilder extends
    * <pre>
    * The resource names of the extension feed items to serve under the customer.
    * ExtensionFeedItem resource names have the form:
+   *
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
@@ -89,6 +94,7 @@ public interface CustomerExtensionSettingOrBuilder extends
    * <pre>
    * The resource names of the extension feed items to serve under the customer.
    * ExtensionFeedItem resource names have the form:
+   *
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *

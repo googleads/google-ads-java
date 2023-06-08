@@ -78,8 +78,11 @@ public interface ListAudienceInsightsAttributesRequestOrBuilder extends
 
   /**
    * <pre>
-   * Required. A free text query.  Attributes matching or related to this string
-   * will be returned.
+   * Required. A free text query.  If the requested dimensions include
+   * Attributes CATEGORY or KNOWLEDGE_GRAPH, then the attributes returned for
+   * those dimensions will match or be related to this string.  For other
+   * dimensions, this field is ignored and all available attributes are
+   * returned.
    * </pre>
    *
    * <code>string query_text = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -88,8 +91,11 @@ public interface ListAudienceInsightsAttributesRequestOrBuilder extends
   java.lang.String getQueryText();
   /**
    * <pre>
-   * Required. A free text query.  Attributes matching or related to this string
-   * will be returned.
+   * Required. A free text query.  If the requested dimensions include
+   * Attributes CATEGORY or KNOWLEDGE_GRAPH, then the attributes returned for
+   * those dimensions will match or be related to this string.  For other
+   * dimensions, this field is ignored and all available attributes are
+   * returned.
    * </pre>
    *
    * <code>string query_text = 3 [(.google.api.field_behavior) = REQUIRED];</code>

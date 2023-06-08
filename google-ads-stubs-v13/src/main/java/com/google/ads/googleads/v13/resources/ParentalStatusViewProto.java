@@ -32,19 +32,19 @@ public final class ParentalStatusViewProto {
       "ental_status_view.proto\022\"google.ads.goog" +
       "leads.v13.resources\032\037google/api/field_be" +
       "havior.proto\032\031google/api/resource.proto\"" +
-      "\334\001\n\022ParentalStatusView\022J\n\rresource_name\030" +
-      "\001 \001(\tB3\340A\003\372A-\n+googleads.googleapis.com/" +
-      "ParentalStatusView:z\352Aw\n+googleads.googl" +
-      "eapis.com/ParentalStatusView\022Hcustomers/" +
-      "{customer_id}/parentalStatusViews/{ad_gr" +
-      "oup_id}~{criterion_id}B\211\002\n&com.google.ad" +
-      "s.googleads.v13.resourcesB\027ParentalStatu" +
-      "sViewProtoP\001ZKgoogle.golang.org/genproto" +
-      "/googleapis/ads/googleads/v13/resources;" +
-      "resources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V" +
-      "13.Resources\312\002\"Google\\Ads\\GoogleAds\\V13\\" +
-      "Resources\352\002&Google::Ads::GoogleAds::V13:" +
-      ":Resourcesb\006proto3"
+      "\335\001\n\022ParentalStatusView\022K\n\rresource_name\030" +
+      "\001 \001(\tB4\342A\001\003\372A-\n+googleads.googleapis.com" +
+      "/ParentalStatusView:z\352Aw\n+googleads.goog" +
+      "leapis.com/ParentalStatusView\022Hcustomers" +
+      "/{customer_id}/parentalStatusViews/{ad_g" +
+      "roup_id}~{criterion_id}B\211\002\n&com.google.a" +
+      "ds.googleads.v13.resourcesB\027ParentalStat" +
+      "usViewProtoP\001ZKgoogle.golang.org/genprot" +
+      "o/googleapis/ads/googleads/v13/resources" +
+      ";resources\242\002\003GAA\252\002\"Google.Ads.GoogleAds." +
+      "V13.Resources\312\002\"Google\\Ads\\GoogleAds\\V13" +
+      "\\Resources\352\002&Google::Ads::GoogleAds::V13" +
+      "::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

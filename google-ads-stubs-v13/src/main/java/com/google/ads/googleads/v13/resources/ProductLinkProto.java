@@ -43,31 +43,31 @@ public final class ProductLinkProto {
       "3.resources\0328google/ads/googleads/v13/en" +
       "ums/linked_product_type.proto\032\037google/ap" +
       "i/field_behavior.proto\032\031google/api/resou" +
-      "rce.proto\"\206\004\n\013ProductLink\022C\n\rresource_na" +
-      "me\030\001 \001(\tB,\340A\005\372A&\n$googleads.googleapis.c" +
-      "om/ProductLink\022!\n\017product_link_id\030\002 \001(\003B" +
-      "\003\340A\003H\001\210\001\001\022Z\n\004type\030\003 \001(\0162G.google.ads.goo" +
-      "gleads.v13.enums.LinkedProductTypeEnum.L" +
-      "inkedProductTypeB\003\340A\003\022V\n\014data_partner\030\004 " +
-      "\001(\01329.google.ads.googleads.v13.resources" +
-      ".DataPartnerIdentifierB\003\340A\005H\000\022R\n\ngoogle_" +
-      "ads\030\005 \001(\01327.google.ads.googleads.v13.res" +
-      "ources.GoogleAdsIdentifierB\003\340A\005H\000:a\352A^\n$" +
-      "googleads.googleapis.com/ProductLink\0226cu" +
-      "stomers/{customer_id}/productLinks/{prod" +
-      "uct_link_id}B\020\n\016linked_productB\022\n\020_produ" +
-      "ct_link_id\"N\n\025DataPartnerIdentifier\022!\n\017d" +
-      "ata_partner_id\030\001 \001(\003B\003\340A\005H\000\210\001\001B\022\n\020_data_" +
-      "partner_id\"d\n\023GoogleAdsIdentifier\022@\n\010cus" +
-      "tomer\030\001 \001(\tB)\340A\005\372A#\n!googleads.googleapi" +
-      "s.com/CustomerH\000\210\001\001B\013\n\t_customerB\202\002\n&com" +
-      ".google.ads.googleads.v13.resourcesB\020Pro" +
-      "ductLinkProtoP\001ZKgoogle.golang.org/genpr" +
-      "oto/googleapis/ads/googleads/v13/resourc" +
-      "es;resources\242\002\003GAA\252\002\"Google.Ads.GoogleAd" +
-      "s.V13.Resources\312\002\"Google\\Ads\\GoogleAds\\V" +
-      "13\\Resources\352\002&Google::Ads::GoogleAds::V" +
-      "13::Resourcesb\006proto3"
+      "rce.proto\"\213\004\n\013ProductLink\022D\n\rresource_na" +
+      "me\030\001 \001(\tB-\342A\001\005\372A&\n$googleads.googleapis." +
+      "com/ProductLink\022\"\n\017product_link_id\030\002 \001(\003" +
+      "B\004\342A\001\003H\001\210\001\001\022[\n\004type\030\003 \001(\0162G.google.ads.g" +
+      "oogleads.v13.enums.LinkedProductTypeEnum" +
+      ".LinkedProductTypeB\004\342A\001\003\022W\n\014data_partner" +
+      "\030\004 \001(\01329.google.ads.googleads.v13.resour" +
+      "ces.DataPartnerIdentifierB\004\342A\001\005H\000\022S\n\ngoo" +
+      "gle_ads\030\005 \001(\01327.google.ads.googleads.v13" +
+      ".resources.GoogleAdsIdentifierB\004\342A\001\005H\000:a" +
+      "\352A^\n$googleads.googleapis.com/ProductLin" +
+      "k\0226customers/{customer_id}/productLinks/" +
+      "{product_link_id}B\020\n\016linked_productB\022\n\020_" +
+      "product_link_id\"O\n\025DataPartnerIdentifier" +
+      "\022\"\n\017data_partner_id\030\001 \001(\003B\004\342A\001\005H\000\210\001\001B\022\n\020" +
+      "_data_partner_id\"e\n\023GoogleAdsIdentifier\022" +
+      "A\n\010customer\030\001 \001(\tB*\342A\001\005\372A#\n!googleads.go" +
+      "ogleapis.com/CustomerH\000\210\001\001B\013\n\t_customerB" +
+      "\202\002\n&com.google.ads.googleads.v13.resourc" +
+      "esB\020ProductLinkProtoP\001ZKgoogle.golang.or" +
+      "g/genproto/googleapis/ads/googleads/v13/" +
+      "resources;resources\242\002\003GAA\252\002\"Google.Ads.G" +
+      "oogleAds.V13.Resources\312\002\"Google\\Ads\\Goog" +
+      "leAds\\V13\\Resources\352\002&Google::Ads::Googl" +
+      "eAds::V13::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

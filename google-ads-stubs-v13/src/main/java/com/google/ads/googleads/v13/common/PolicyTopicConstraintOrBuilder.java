@@ -118,5 +118,5 @@ public interface PolicyTopicConstraintOrBuilder extends
    */
   com.google.ads.googleads.v13.common.PolicyTopicConstraint.CountryConstraintListOrBuilder getCertificateDomainMismatchInCountryListOrBuilder();
 
-  public com.google.ads.googleads.v13.common.PolicyTopicConstraint.ValueCase getValueCase();
+  com.google.ads.googleads.v13.common.PolicyTopicConstraint.ValueCase getValueCase();
 }

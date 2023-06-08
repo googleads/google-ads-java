@@ -95,6 +95,7 @@ public interface AdGroupFeedOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed ad group feed is
    * expected, in this format:
+   *
    * `customers/{customer_id}/adGroupFeeds/{ad_group_id}~{feed_id}`
    * </pre>
    *
@@ -106,6 +107,7 @@ public interface AdGroupFeedOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed ad group feed is
    * expected, in this format:
+   *
    * `customers/{customer_id}/adGroupFeeds/{ad_group_id}~{feed_id}`
    * </pre>
    *
@@ -117,6 +119,7 @@ public interface AdGroupFeedOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed ad group feed is
    * expected, in this format:
+   *
    * `customers/{customer_id}/adGroupFeeds/{ad_group_id}~{feed_id}`
    * </pre>
    *
@@ -126,5 +129,5 @@ public interface AdGroupFeedOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v13.services.AdGroupFeedOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v13.services.AdGroupFeedOperation.OperationCase getOperationCase();
 }

@@ -11,6 +11,7 @@ public interface AgeRangeViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the age range view.
    * Age range view resource names have the form:
+   *
    * `customers/{customer_id}/ageRangeViews/{ad_group_id}~{criterion_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface AgeRangeViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the age range view.
    * Age range view resource names have the form:
+   *
    * `customers/{customer_id}/ageRangeViews/{ad_group_id}~{criterion_id}`
    * </pre>
    *

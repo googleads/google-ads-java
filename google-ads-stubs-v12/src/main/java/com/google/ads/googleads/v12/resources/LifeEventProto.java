@@ -33,23 +33,24 @@ public final class LifeEventProto {
       "resources\032Egoogle/ads/googleads/v12/comm" +
       "on/criterion_category_availability.proto" +
       "\032\037google/api/field_behavior.proto\032\031googl" +
-      "e/api/resource.proto\"\206\003\n\tLifeEvent\022A\n\rre" +
-      "source_name\030\001 \001(\tB*\340A\003\372A$\n\"googleads.goo" +
-      "gleapis.com/LifeEvent\022\017\n\002id\030\002 \001(\003B\003\340A\003\022\021" +
-      "\n\004name\030\003 \001(\tB\003\340A\003\022:\n\006parent\030\004 \001(\tB*\340A\003\372A" +
-      "$\n\"googleads.googleapis.com/LifeEvent\022\034\n" +
-      "\017launched_to_all\030\005 \001(\010B\003\340A\003\022[\n\016availabil" +
-      "ities\030\006 \003(\0132>.google.ads.googleads.v12.c" +
-      "ommon.CriterionCategoryAvailabilityB\003\340A\003" +
-      ":[\352AX\n\"googleads.googleapis.com/LifeEven" +
-      "t\0222customers/{customer_id}/lifeEvents/{l" +
-      "ife_event_id}B\200\002\n&com.google.ads.googlea" +
-      "ds.v12.resourcesB\016LifeEventProtoP\001ZKgoog" +
-      "le.golang.org/genproto/googleapis/ads/go" +
-      "ogleads/v12/resources;resources\242\002\003GAA\252\002\"" +
-      "Google.Ads.GoogleAds.V12.Resources\312\002\"Goo" +
-      "gle\\Ads\\GoogleAds\\V12\\Resources\352\002&Google" +
-      "::Ads::GoogleAds::V12::Resourcesb\006proto3"
+      "e/api/resource.proto\"\214\003\n\tLifeEvent\022B\n\rre" +
+      "source_name\030\001 \001(\tB+\342A\001\003\372A$\n\"googleads.go" +
+      "ogleapis.com/LifeEvent\022\020\n\002id\030\002 \001(\003B\004\342A\001\003" +
+      "\022\022\n\004name\030\003 \001(\tB\004\342A\001\003\022;\n\006parent\030\004 \001(\tB+\342A" +
+      "\001\003\372A$\n\"googleads.googleapis.com/LifeEven" +
+      "t\022\035\n\017launched_to_all\030\005 \001(\010B\004\342A\001\003\022\\\n\016avai" +
+      "labilities\030\006 \003(\0132>.google.ads.googleads." +
+      "v12.common.CriterionCategoryAvailability" +
+      "B\004\342A\001\003:[\352AX\n\"googleads.googleapis.com/Li" +
+      "feEvent\0222customers/{customer_id}/lifeEve" +
+      "nts/{life_event_id}B\200\002\n&com.google.ads.g" +
+      "oogleads.v12.resourcesB\016LifeEventProtoP\001" +
+      "ZKgoogle.golang.org/genproto/googleapis/" +
+      "ads/googleads/v12/resources;resources\242\002\003" +
+      "GAA\252\002\"Google.Ads.GoogleAds.V12.Resources" +
+      "\312\002\"Google\\Ads\\GoogleAds\\V12\\Resources\352\002&" +
+      "Google::Ads::GoogleAds::V12::Resourcesb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

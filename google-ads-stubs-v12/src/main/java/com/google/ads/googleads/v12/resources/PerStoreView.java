@@ -5,7 +5,7 @@ package com.google.ads.googleads.v12.resources;
 
 /**
  * <pre>
- * An per store view.
+ * A per store view.
  * This view provides per store impression reach and local action conversion
  * stats for advertisers.
  * </pre>
@@ -33,11 +33,6 @@ private static final long serialVersionUID = 0L;
     return new PerStoreView();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.resources.PerStoreViewProto.internal_static_google_ads_googleads_v12_resources_PerStoreView_descriptor;
@@ -58,6 +53,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the per store view.
    * Per Store view resource names have the form:
+   *
    * `customers/{customer_id}/perStoreViews/{place_id}`
    * </pre>
    *
@@ -81,6 +77,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the per store view.
    * Per Store view resource names have the form:
+   *
    * `customers/{customer_id}/perStoreViews/{place_id}`
    * </pre>
    *
@@ -267,11 +264,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.resources.PerStoreView parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.resources.PerStoreView parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -315,7 +314,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * An per store view.
+   * A per store view.
    * This view provides per store impression reach and local action conversion
    * stats for advertisers.
    * </pre>
@@ -508,6 +507,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the per store view.
      * Per Store view resource names have the form:
+     *
      * `customers/{customer_id}/perStoreViews/{place_id}`
      * </pre>
      *
@@ -530,6 +530,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the per store view.
      * Per Store view resource names have the form:
+     *
      * `customers/{customer_id}/perStoreViews/{place_id}`
      * </pre>
      *
@@ -553,6 +554,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the per store view.
      * Per Store view resource names have the form:
+     *
      * `customers/{customer_id}/perStoreViews/{place_id}`
      * </pre>
      *
@@ -572,6 +574,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the per store view.
      * Per Store view resource names have the form:
+     *
      * `customers/{customer_id}/perStoreViews/{place_id}`
      * </pre>
      *
@@ -588,6 +591,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the per store view.
      * Per Store view resource names have the form:
+     *
      * `customers/{customer_id}/perStoreViews/{place_id}`
      * </pre>
      *

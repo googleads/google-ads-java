@@ -82,7 +82,7 @@ public interface GetSmartCampaignStatusResponseOrBuilder extends
 
   /**
    * <pre>
-   * Details relaed to paused Smart campaigns.
+   * Details related to paused Smart campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v13.services.SmartCampaignPausedDetails paused_details = 4;</code>
@@ -91,7 +91,7 @@ public interface GetSmartCampaignStatusResponseOrBuilder extends
   boolean hasPausedDetails();
   /**
    * <pre>
-   * Details relaed to paused Smart campaigns.
+   * Details related to paused Smart campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v13.services.SmartCampaignPausedDetails paused_details = 4;</code>
@@ -100,7 +100,7 @@ public interface GetSmartCampaignStatusResponseOrBuilder extends
   com.google.ads.googleads.v13.services.SmartCampaignPausedDetails getPausedDetails();
   /**
    * <pre>
-   * Details relaed to paused Smart campaigns.
+   * Details related to paused Smart campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v13.services.SmartCampaignPausedDetails paused_details = 4;</code>
@@ -161,5 +161,5 @@ public interface GetSmartCampaignStatusResponseOrBuilder extends
    */
   com.google.ads.googleads.v13.services.SmartCampaignEndedDetailsOrBuilder getEndedDetailsOrBuilder();
 
-  public com.google.ads.googleads.v13.services.GetSmartCampaignStatusResponse.SmartCampaignStatusDetailsCase getSmartCampaignStatusDetailsCase();
+  com.google.ads.googleads.v13.services.GetSmartCampaignStatusResponse.SmartCampaignStatusDetailsCase getSmartCampaignStatusDetailsCase();
 }

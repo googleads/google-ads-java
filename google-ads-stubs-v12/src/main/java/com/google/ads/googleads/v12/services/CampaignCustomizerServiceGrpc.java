@@ -98,7 +98,7 @@ public final class CampaignCustomizerServiceGrpc {
    * Service to manage campaign customizer
    * </pre>
    */
-  public static abstract class CampaignCustomizerServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -106,30 +106,34 @@ public final class CampaignCustomizerServiceGrpc {
      * returned.
      * </pre>
      */
-    public void mutateCampaignCustomizers(com.google.ads.googleads.v12.services.MutateCampaignCustomizersRequest request,
+    default void mutateCampaignCustomizers(com.google.ads.googleads.v12.services.MutateCampaignCustomizersRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.MutateCampaignCustomizersResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateCampaignCustomizersMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateCampaignCustomizersMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.MutateCampaignCustomizersRequest,
-                com.google.ads.googleads.v12.services.MutateCampaignCustomizersResponse>(
-                  this, METHODID_MUTATE_CAMPAIGN_CUSTOMIZERS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service CampaignCustomizerService.
    * <pre>
    * Service to manage campaign customizer
    * </pre>
    */
-  public static final class CampaignCustomizerServiceStub extends io.grpc.stub.AbstractAsyncStub<CampaignCustomizerServiceStub> {
+  public static abstract class CampaignCustomizerServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return CampaignCustomizerServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service CampaignCustomizerService.
+   * <pre>
+   * Service to manage campaign customizer
+   * </pre>
+   */
+  public static final class CampaignCustomizerServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<CampaignCustomizerServiceStub> {
     private CampaignCustomizerServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -155,11 +159,13 @@ public final class CampaignCustomizerServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service CampaignCustomizerService.
    * <pre>
    * Service to manage campaign customizer
    * </pre>
    */
-  public static final class CampaignCustomizerServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CampaignCustomizerServiceBlockingStub> {
+  public static final class CampaignCustomizerServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<CampaignCustomizerServiceBlockingStub> {
     private CampaignCustomizerServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -184,11 +190,13 @@ public final class CampaignCustomizerServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service CampaignCustomizerService.
    * <pre>
    * Service to manage campaign customizer
    * </pre>
    */
-  public static final class CampaignCustomizerServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CampaignCustomizerServiceFutureStub> {
+  public static final class CampaignCustomizerServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<CampaignCustomizerServiceFutureStub> {
     private CampaignCustomizerServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -220,10 +228,10 @@ public final class CampaignCustomizerServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final CampaignCustomizerServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(CampaignCustomizerServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -250,6 +258,18 @@ public final class CampaignCustomizerServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateCampaignCustomizersMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.MutateCampaignCustomizersRequest,
+              com.google.ads.googleads.v12.services.MutateCampaignCustomizersResponse>(
+                service, METHODID_MUTATE_CAMPAIGN_CUSTOMIZERS)))
+        .build();
   }
 
   private static abstract class CampaignCustomizerServiceBaseDescriptorSupplier

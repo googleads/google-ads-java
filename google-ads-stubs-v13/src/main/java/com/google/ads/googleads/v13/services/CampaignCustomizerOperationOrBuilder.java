@@ -72,5 +72,5 @@ public interface CampaignCustomizerOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v13.services.CampaignCustomizerOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v13.services.CampaignCustomizerOperation.OperationCase getOperationCase();
 }

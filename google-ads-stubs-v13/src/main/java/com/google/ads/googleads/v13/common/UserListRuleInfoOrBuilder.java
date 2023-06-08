@@ -10,9 +10,11 @@ public interface UserListRuleInfoOrBuilder extends
   /**
    * <pre>
    * Rule type is used to determine how to group rule items.
+   *
    * The default is OR of ANDs (disjunctive normal form).
    * That is, rule items will be ANDed together within rule item groups and the
    * groups themselves will be ORed together.
+   *
    * OR of ANDs is the only supported type for FlexibleRuleUserList.
    * </pre>
    *
@@ -23,9 +25,11 @@ public interface UserListRuleInfoOrBuilder extends
   /**
    * <pre>
    * Rule type is used to determine how to group rule items.
+   *
    * The default is OR of ANDs (disjunctive normal form).
    * That is, rule items will be ANDed together within rule item groups and the
    * groups themselves will be ORed together.
+   *
    * OR of ANDs is the only supported type for FlexibleRuleUserList.
    * </pre>
    *

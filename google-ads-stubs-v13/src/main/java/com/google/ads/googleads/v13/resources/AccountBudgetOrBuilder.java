@@ -11,6 +11,7 @@ public interface AccountBudgetOrBuilder extends
    * <pre>
    * Output only. The resource name of the account-level budget.
    * AccountBudget resource names have the form:
+   *
    * `customers/{customer_id}/accountBudgets/{account_budget_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface AccountBudgetOrBuilder extends
    * <pre>
    * Output only. The resource name of the account-level budget.
    * AccountBudget resource names have the form:
+   *
    * `customers/{customer_id}/accountBudgets/{account_budget_id}`
    * </pre>
    *
@@ -54,6 +56,7 @@ public interface AccountBudgetOrBuilder extends
    * <pre>
    * Output only. The resource name of the billing setup associated with this
    * account-level budget.  BillingSetup resource names have the form:
+   *
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
@@ -65,6 +68,7 @@ public interface AccountBudgetOrBuilder extends
    * <pre>
    * Output only. The resource name of the billing setup associated with this
    * account-level budget.  BillingSetup resource names have the form:
+   *
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
@@ -76,6 +80,7 @@ public interface AccountBudgetOrBuilder extends
    * <pre>
    * Output only. The resource name of the billing setup associated with this
    * account-level budget.  BillingSetup resource names have the form:
+   *
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
@@ -172,6 +177,7 @@ public interface AccountBudgetOrBuilder extends
    * <pre>
    * Output only. The approved start time of the account-level budget in
    * yyyy-MM-dd HH:mm:ss format.
+   *
    * For example, if a new budget is approved after the proposed start time,
    * the approved start time is the time of approval.
    * </pre>
@@ -184,6 +190,7 @@ public interface AccountBudgetOrBuilder extends
    * <pre>
    * Output only. The approved start time of the account-level budget in
    * yyyy-MM-dd HH:mm:ss format.
+   *
    * For example, if a new budget is approved after the proposed start time,
    * the approved start time is the time of approval.
    * </pre>
@@ -196,6 +203,7 @@ public interface AccountBudgetOrBuilder extends
    * <pre>
    * Output only. The approved start time of the account-level budget in
    * yyyy-MM-dd HH:mm:ss format.
+   *
    * For example, if a new budget is approved after the proposed start time,
    * the approved start time is the time of approval.
    * </pre>
@@ -209,6 +217,7 @@ public interface AccountBudgetOrBuilder extends
   /**
    * <pre>
    * Output only. The total adjustments amount.
+   *
    * An example of an adjustment is courtesy credits.
    * </pre>
    *
@@ -220,6 +229,7 @@ public interface AccountBudgetOrBuilder extends
   /**
    * <pre>
    * Output only. The value of Ads that have been served, in micros.
+   *
    * This includes overdelivery costs, in which case a credit might be
    * automatically applied to the budget (see total_adjustments_micros).
    * </pre>
@@ -552,11 +562,14 @@ public interface AccountBudgetOrBuilder extends
    * <pre>
    * Output only. The adjusted spending limit in micros.  One million is
    * equivalent to one unit.
+   *
    * If the approved spending limit is finite, the adjusted
    * spending limit may vary depending on the types of adjustments applied
    * to this budget, if applicable.
+   *
    * The different kinds of adjustments are described here:
    * https://support.google.com/google-ads/answer/1704323
+   *
    * For example, a debit adjustment reduces how much the account is
    * allowed to spend.
    * </pre>
@@ -569,11 +582,14 @@ public interface AccountBudgetOrBuilder extends
    * <pre>
    * Output only. The adjusted spending limit in micros.  One million is
    * equivalent to one unit.
+   *
    * If the approved spending limit is finite, the adjusted
    * spending limit may vary depending on the types of adjustments applied
    * to this budget, if applicable.
+   *
    * The different kinds of adjustments are described here:
    * https://support.google.com/google-ads/answer/1704323
+   *
    * For example, a debit adjustment reduces how much the account is
    * allowed to spend.
    * </pre>
@@ -620,13 +636,13 @@ public interface AccountBudgetOrBuilder extends
    */
   com.google.ads.googleads.v13.enums.SpendingLimitTypeEnum.SpendingLimitType getAdjustedSpendingLimitType();
 
-  public com.google.ads.googleads.v13.resources.AccountBudget.ProposedEndTimeCase getProposedEndTimeCase();
+  com.google.ads.googleads.v13.resources.AccountBudget.ProposedEndTimeCase getProposedEndTimeCase();
 
-  public com.google.ads.googleads.v13.resources.AccountBudget.ApprovedEndTimeCase getApprovedEndTimeCase();
+  com.google.ads.googleads.v13.resources.AccountBudget.ApprovedEndTimeCase getApprovedEndTimeCase();
 
-  public com.google.ads.googleads.v13.resources.AccountBudget.ProposedSpendingLimitCase getProposedSpendingLimitCase();
+  com.google.ads.googleads.v13.resources.AccountBudget.ProposedSpendingLimitCase getProposedSpendingLimitCase();
 
-  public com.google.ads.googleads.v13.resources.AccountBudget.ApprovedSpendingLimitCase getApprovedSpendingLimitCase();
+  com.google.ads.googleads.v13.resources.AccountBudget.ApprovedSpendingLimitCase getApprovedSpendingLimitCase();
 
-  public com.google.ads.googleads.v13.resources.AccountBudget.AdjustedSpendingLimitCase getAdjustedSpendingLimitCase();
+  com.google.ads.googleads.v13.resources.AccountBudget.AdjustedSpendingLimitCase getAdjustedSpendingLimitCase();
 }

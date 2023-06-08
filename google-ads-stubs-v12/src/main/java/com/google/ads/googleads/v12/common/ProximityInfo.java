@@ -8,6 +8,7 @@ package com.google.ads.googleads.v12.common;
  * A Proximity criterion. The geo point and radius determine what geographical
  * area is included. The address is a description of the geo point that does
  * not affect ad serving.
+ *
  * There are two ways to create a proximity. First, by setting an address
  * and radius. The geo point will be automatically computed. Second, by
  * setting a geo point and radius. The address is an optional label that won't
@@ -36,11 +37,6 @@ private static final long serialVersionUID = 0L;
     return new ProximityInfo();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.common.CriteriaProto.internal_static_google_ads_googleads_v12_common_ProximityInfo_descriptor;
@@ -342,11 +338,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.common.ProximityInfo parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.common.ProximityInfo parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -393,6 +391,7 @@ private static final long serialVersionUID = 0L;
    * A Proximity criterion. The geo point and radius determine what geographical
    * area is included. The address is a description of the geo point that does
    * not affect ad serving.
+   *
    * There are two ways to create a proximity. First, by setting an address
    * and radius. The geo point will be automatically computed. Second, by
    * setting a geo point and radius. The address is an optional label that won't
@@ -811,7 +810,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRadius(double value) {
-      
+
       radius_ = value;
       bitField0_ |= 0x00000002;
       onChanged();

@@ -32,23 +32,23 @@ public final class KeywordThemeConstantProto {
       "word_theme_constant.proto\022\"google.ads.go" +
       "ogleads.v13.resources\032\037google/api/field_" +
       "behavior.proto\032\031google/api/resource.prot" +
-      "o\"\364\002\n\024KeywordThemeConstant\022L\n\rresource_n" +
-      "ame\030\001 \001(\tB5\340A\003\372A/\n-googleads.googleapis." +
-      "com/KeywordThemeConstant\022\036\n\014country_code" +
-      "\030\002 \001(\tB\003\340A\003H\000\210\001\001\022\037\n\rlanguage_code\030\003 \001(\tB" +
-      "\003\340A\003H\001\210\001\001\022\036\n\014display_name\030\004 \001(\tB\003\340A\003H\002\210\001" +
-      "\001:y\352Av\n-googleads.googleapis.com/Keyword" +
-      "ThemeConstant\022EkeywordThemeConstants/{ex" +
-      "press_category_id}~{express_sub_category" +
-      "_id}B\017\n\r_country_codeB\020\n\016_language_codeB" +
-      "\017\n\r_display_nameB\213\002\n&com.google.ads.goog" +
-      "leads.v13.resourcesB\031KeywordThemeConstan" +
-      "tProtoP\001ZKgoogle.golang.org/genproto/goo" +
-      "gleapis/ads/googleads/v13/resources;reso" +
-      "urces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V13.R" +
-      "esources\312\002\"Google\\Ads\\GoogleAds\\V13\\Reso" +
-      "urces\352\002&Google::Ads::GoogleAds::V13::Res" +
-      "ourcesb\006proto3"
+      "o\"\370\002\n\024KeywordThemeConstant\022M\n\rresource_n" +
+      "ame\030\001 \001(\tB6\342A\001\003\372A/\n-googleads.googleapis" +
+      ".com/KeywordThemeConstant\022\037\n\014country_cod" +
+      "e\030\002 \001(\tB\004\342A\001\003H\000\210\001\001\022 \n\rlanguage_code\030\003 \001(" +
+      "\tB\004\342A\001\003H\001\210\001\001\022\037\n\014display_name\030\004 \001(\tB\004\342A\001\003" +
+      "H\002\210\001\001:y\352Av\n-googleads.googleapis.com/Key" +
+      "wordThemeConstant\022EkeywordThemeConstants" +
+      "/{express_category_id}~{express_sub_cate" +
+      "gory_id}B\017\n\r_country_codeB\020\n\016_language_c" +
+      "odeB\017\n\r_display_nameB\213\002\n&com.google.ads." +
+      "googleads.v13.resourcesB\031KeywordThemeCon" +
+      "stantProtoP\001ZKgoogle.golang.org/genproto" +
+      "/googleapis/ads/googleads/v13/resources;" +
+      "resources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V" +
+      "13.Resources\312\002\"Google\\Ads\\GoogleAds\\V13\\" +
+      "Resources\352\002&Google::Ads::GoogleAds::V13:" +
+      ":Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

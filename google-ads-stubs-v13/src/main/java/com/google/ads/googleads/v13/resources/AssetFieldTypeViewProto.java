@@ -33,21 +33,21 @@ public final class AssetFieldTypeViewProto {
       "gleads.v13.resources\0325google/ads/googlea" +
       "ds/v13/enums/asset_field_type.proto\032\037goo" +
       "gle/api/field_behavior.proto\032\031google/api" +
-      "/resource.proto\"\250\002\n\022AssetFieldTypeView\022J" +
-      "\n\rresource_name\030\001 \001(\tB3\340A\003\372A-\n+googleads" +
-      ".googleapis.com/AssetFieldTypeView\022Z\n\nfi" +
-      "eld_type\030\003 \001(\0162A.google.ads.googleads.v1" +
-      "3.enums.AssetFieldTypeEnum.AssetFieldTyp" +
-      "eB\003\340A\003:j\352Ag\n+googleads.googleapis.com/As" +
-      "setFieldTypeView\0228customers/{customer_id" +
-      "}/assetFieldTypeViews/{field_type}B\211\002\n&c" +
-      "om.google.ads.googleads.v13.resourcesB\027A" +
-      "ssetFieldTypeViewProtoP\001ZKgoogle.golang." +
-      "org/genproto/googleapis/ads/googleads/v1" +
-      "3/resources;resources\242\002\003GAA\252\002\"Google.Ads" +
-      ".GoogleAds.V13.Resources\312\002\"Google\\Ads\\Go" +
-      "ogleAds\\V13\\Resources\352\002&Google::Ads::Goo" +
-      "gleAds::V13::Resourcesb\006proto3"
+      "/resource.proto\"\252\002\n\022AssetFieldTypeView\022K" +
+      "\n\rresource_name\030\001 \001(\tB4\342A\001\003\372A-\n+googlead" +
+      "s.googleapis.com/AssetFieldTypeView\022[\n\nf" +
+      "ield_type\030\003 \001(\0162A.google.ads.googleads.v" +
+      "13.enums.AssetFieldTypeEnum.AssetFieldTy" +
+      "peB\004\342A\001\003:j\352Ag\n+googleads.googleapis.com/" +
+      "AssetFieldTypeView\0228customers/{customer_" +
+      "id}/assetFieldTypeViews/{field_type}B\211\002\n" +
+      "&com.google.ads.googleads.v13.resourcesB" +
+      "\027AssetFieldTypeViewProtoP\001ZKgoogle.golan" +
+      "g.org/genproto/googleapis/ads/googleads/" +
+      "v13/resources;resources\242\002\003GAA\252\002\"Google.A" +
+      "ds.GoogleAds.V13.Resources\312\002\"Google\\Ads\\" +
+      "GoogleAds\\V13\\Resources\352\002&Google::Ads::G" +
+      "oogleAds::V13::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

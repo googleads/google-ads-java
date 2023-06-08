@@ -36,91 +36,92 @@ public final class CampaignCriterionProto {
       "tus.proto\0323google/ads/googleads/v13/enum" +
       "s/criterion_type.proto\032\037google/api/field" +
       "_behavior.proto\032\031google/api/resource.pro" +
-      "to\"\232\030\n\021CampaignCriterion\022I\n\rresource_nam" +
-      "e\030\001 \001(\tB2\340A\005\372A,\n*googleads.googleapis.co" +
-      "m/CampaignCriterion\022@\n\010campaign\030% \001(\tB)\340" +
-      "A\005\372A#\n!googleads.googleapis.com/Campaign" +
-      "H\001\210\001\001\022\036\n\014criterion_id\030& \001(\003B\003\340A\003H\002\210\001\001\022\031\n" +
-      "\014display_name\030+ \001(\tB\003\340A\003\022\031\n\014bid_modifier" +
-      "\030\' \001(\002H\003\210\001\001\022\032\n\010negative\030( \001(\010B\003\340A\005H\004\210\001\001\022" +
-      "R\n\004type\030\006 \001(\0162?.google.ads.googleads.v13" +
-      ".enums.CriterionTypeEnum.CriterionTypeB\003" +
-      "\340A\003\022c\n\006status\030# \001(\0162S.google.ads.googlea" +
-      "ds.v13.enums.CampaignCriterionStatusEnum" +
-      ".CampaignCriterionStatus\022D\n\007keyword\030\010 \001(" +
-      "\0132,.google.ads.googleads.v13.common.Keyw" +
-      "ordInfoB\003\340A\005H\000\022H\n\tplacement\030\t \001(\0132..goog" +
-      "le.ads.googleads.v13.common.PlacementInf" +
-      "oB\003\340A\005H\000\022Z\n\023mobile_app_category\030\n \001(\01326." +
-      "google.ads.googleads.v13.common.MobileAp" +
-      "pCategoryInfoB\003\340A\005H\000\022Y\n\022mobile_applicati" +
-      "on\030\013 \001(\01326.google.ads.googleads.v13.comm" +
-      "on.MobileApplicationInfoB\003\340A\005H\000\022F\n\010locat" +
-      "ion\030\014 \001(\0132-.google.ads.googleads.v13.com" +
-      "mon.LocationInfoB\003\340A\005H\000\022B\n\006device\030\r \001(\0132" +
-      "+.google.ads.googleads.v13.common.Device" +
-      "InfoB\003\340A\005H\000\022K\n\013ad_schedule\030\017 \001(\0132/.googl" +
-      "e.ads.googleads.v13.common.AdScheduleInf" +
-      "oB\003\340A\005H\000\022G\n\tage_range\030\020 \001(\0132-.google.ads" +
-      ".googleads.v13.common.AgeRangeInfoB\003\340A\005H" +
-      "\000\022B\n\006gender\030\021 \001(\0132+.google.ads.googleads" +
-      ".v13.common.GenderInfoB\003\340A\005H\000\022M\n\014income_" +
-      "range\030\022 \001(\01320.google.ads.googleads.v13.c" +
-      "ommon.IncomeRangeInfoB\003\340A\005H\000\022S\n\017parental" +
-      "_status\030\023 \001(\01323.google.ads.googleads.v13" +
-      ".common.ParentalStatusInfoB\003\340A\005H\000\022G\n\tuse" +
-      "r_list\030\026 \001(\0132-.google.ads.googleads.v13." +
-      "common.UserListInfoB\003\340A\005H\000\022O\n\ryoutube_vi" +
-      "deo\030\024 \001(\01321.google.ads.googleads.v13.com" +
-      "mon.YouTubeVideoInfoB\003\340A\005H\000\022S\n\017youtube_c" +
-      "hannel\030\025 \001(\01323.google.ads.googleads.v13." +
-      "common.YouTubeChannelInfoB\003\340A\005H\000\022H\n\tprox" +
-      "imity\030\027 \001(\0132..google.ads.googleads.v13.c" +
-      "ommon.ProximityInfoB\003\340A\005H\000\022@\n\005topic\030\030 \001(" +
-      "\0132*.google.ads.googleads.v13.common.Topi" +
-      "cInfoB\003\340A\005H\000\022O\n\rlisting_scope\030\031 \001(\01321.go" +
-      "ogle.ads.googleads.v13.common.ListingSco" +
-      "peInfoB\003\340A\005H\000\022F\n\010language\030\032 \001(\0132-.google" +
-      ".ads.googleads.v13.common.LanguageInfoB\003" +
-      "\340A\005H\000\022E\n\010ip_block\030\033 \001(\0132,.google.ads.goo" +
-      "gleads.v13.common.IpBlockInfoB\003\340A\005H\000\022O\n\r" +
-      "content_label\030\034 \001(\01321.google.ads.googlea" +
-      "ds.v13.common.ContentLabelInfoB\003\340A\005H\000\022D\n" +
-      "\007carrier\030\035 \001(\0132,.google.ads.googleads.v1" +
-      "3.common.CarrierInfoB\003\340A\005H\000\022O\n\ruser_inte" +
-      "rest\030\036 \001(\01321.google.ads.googleads.v13.co" +
-      "mmon.UserInterestInfoB\003\340A\005H\000\022D\n\007webpage\030" +
-      "\037 \001(\0132,.google.ads.googleads.v13.common." +
-      "WebpageInfoB\003\340A\005H\000\022d\n\030operating_system_v" +
-      "ersion\030  \001(\0132;.google.ads.googleads.v13." +
-      "common.OperatingSystemVersionInfoB\003\340A\005H\000" +
-      "\022O\n\rmobile_device\030! \001(\01321.google.ads.goo" +
-      "gleads.v13.common.MobileDeviceInfoB\003\340A\005H" +
-      "\000\022Q\n\016location_group\030\" \001(\01322.google.ads.g" +
-      "oogleads.v13.common.LocationGroupInfoB\003\340" +
-      "A\005H\000\022S\n\017custom_affinity\030$ \001(\01323.google.a" +
-      "ds.googleads.v13.common.CustomAffinityIn" +
-      "foB\003\340A\005H\000\022S\n\017custom_audience\030) \001(\01323.goo" +
-      "gle.ads.googleads.v13.common.CustomAudie" +
-      "nceInfoB\003\340A\005H\000\022W\n\021combined_audience\030* \001(" +
-      "\01325.google.ads.googleads.v13.common.Comb" +
-      "inedAudienceInfoB\003\340A\005H\000\022O\n\rkeyword_theme" +
-      "\030- \001(\01321.google.ads.googleads.v13.common" +
-      ".KeywordThemeInfoB\003\340A\005H\000\022T\n\020local_servic" +
-      "e_id\030. \001(\01323.google.ads.googleads.v13.co" +
-      "mmon.LocalServiceIdInfoB\003\340A\005H\000:v\352As\n*goo" +
-      "gleads.googleapis.com/CampaignCriterion\022" +
-      "Ecustomers/{customer_id}/campaignCriteri" +
-      "a/{campaign_id}~{criterion_id}B\013\n\tcriter" +
-      "ionB\013\n\t_campaignB\017\n\r_criterion_idB\017\n\r_bi" +
-      "d_modifierB\013\n\t_negativeB\210\002\n&com.google.a" +
-      "ds.googleads.v13.resourcesB\026CampaignCrit" +
-      "erionProtoP\001ZKgoogle.golang.org/genproto" +
-      "/googleapis/ads/googleads/v13/resources;" +
-      "resources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V" +
-      "13.Resources\312\002\"Google\\Ads\\GoogleAds\\V13\\" +
-      "Resources\352\002&Google::Ads::GoogleAds::V13:" +
-      ":Resourcesb\006proto3"
+      "to\"\277\030\n\021CampaignCriterion\022J\n\rresource_nam" +
+      "e\030\001 \001(\tB3\342A\001\005\372A,\n*googleads.googleapis.c" +
+      "om/CampaignCriterion\022A\n\010campaign\030% \001(\tB*" +
+      "\342A\001\005\372A#\n!googleads.googleapis.com/Campai" +
+      "gnH\001\210\001\001\022\037\n\014criterion_id\030& \001(\003B\004\342A\001\003H\002\210\001\001" +
+      "\022\032\n\014display_name\030+ \001(\tB\004\342A\001\003\022\031\n\014bid_modi" +
+      "fier\030\' \001(\002H\003\210\001\001\022\033\n\010negative\030( \001(\010B\004\342A\001\005H" +
+      "\004\210\001\001\022S\n\004type\030\006 \001(\0162?.google.ads.googlead" +
+      "s.v13.enums.CriterionTypeEnum.CriterionT" +
+      "ypeB\004\342A\001\003\022c\n\006status\030# \001(\0162S.google.ads.g" +
+      "oogleads.v13.enums.CampaignCriterionStat" +
+      "usEnum.CampaignCriterionStatus\022E\n\007keywor" +
+      "d\030\010 \001(\0132,.google.ads.googleads.v13.commo" +
+      "n.KeywordInfoB\004\342A\001\005H\000\022I\n\tplacement\030\t \001(\013" +
+      "2..google.ads.googleads.v13.common.Place" +
+      "mentInfoB\004\342A\001\005H\000\022[\n\023mobile_app_category\030" +
+      "\n \001(\01326.google.ads.googleads.v13.common." +
+      "MobileAppCategoryInfoB\004\342A\001\005H\000\022Z\n\022mobile_" +
+      "application\030\013 \001(\01326.google.ads.googleads" +
+      ".v13.common.MobileApplicationInfoB\004\342A\001\005H" +
+      "\000\022G\n\010location\030\014 \001(\0132-.google.ads.googlea" +
+      "ds.v13.common.LocationInfoB\004\342A\001\005H\000\022C\n\006de" +
+      "vice\030\r \001(\0132+.google.ads.googleads.v13.co" +
+      "mmon.DeviceInfoB\004\342A\001\005H\000\022L\n\013ad_schedule\030\017" +
+      " \001(\0132/.google.ads.googleads.v13.common.A" +
+      "dScheduleInfoB\004\342A\001\005H\000\022H\n\tage_range\030\020 \001(\013" +
+      "2-.google.ads.googleads.v13.common.AgeRa" +
+      "ngeInfoB\004\342A\001\005H\000\022C\n\006gender\030\021 \001(\0132+.google" +
+      ".ads.googleads.v13.common.GenderInfoB\004\342A" +
+      "\001\005H\000\022N\n\014income_range\030\022 \001(\01320.google.ads." +
+      "googleads.v13.common.IncomeRangeInfoB\004\342A" +
+      "\001\005H\000\022T\n\017parental_status\030\023 \001(\01323.google.a" +
+      "ds.googleads.v13.common.ParentalStatusIn" +
+      "foB\004\342A\001\005H\000\022H\n\tuser_list\030\026 \001(\0132-.google.a" +
+      "ds.googleads.v13.common.UserListInfoB\004\342A" +
+      "\001\005H\000\022P\n\ryoutube_video\030\024 \001(\01321.google.ads" +
+      ".googleads.v13.common.YouTubeVideoInfoB\004" +
+      "\342A\001\005H\000\022T\n\017youtube_channel\030\025 \001(\01323.google" +
+      ".ads.googleads.v13.common.YouTubeChannel" +
+      "InfoB\004\342A\001\005H\000\022I\n\tproximity\030\027 \001(\0132..google" +
+      ".ads.googleads.v13.common.ProximityInfoB" +
+      "\004\342A\001\005H\000\022A\n\005topic\030\030 \001(\0132*.google.ads.goog" +
+      "leads.v13.common.TopicInfoB\004\342A\001\005H\000\022P\n\rli" +
+      "sting_scope\030\031 \001(\01321.google.ads.googleads" +
+      ".v13.common.ListingScopeInfoB\004\342A\001\005H\000\022G\n\010" +
+      "language\030\032 \001(\0132-.google.ads.googleads.v1" +
+      "3.common.LanguageInfoB\004\342A\001\005H\000\022F\n\010ip_bloc" +
+      "k\030\033 \001(\0132,.google.ads.googleads.v13.commo" +
+      "n.IpBlockInfoB\004\342A\001\005H\000\022P\n\rcontent_label\030\034" +
+      " \001(\01321.google.ads.googleads.v13.common.C" +
+      "ontentLabelInfoB\004\342A\001\005H\000\022E\n\007carrier\030\035 \001(\013" +
+      "2,.google.ads.googleads.v13.common.Carri" +
+      "erInfoB\004\342A\001\005H\000\022P\n\ruser_interest\030\036 \001(\01321." +
+      "google.ads.googleads.v13.common.UserInte" +
+      "restInfoB\004\342A\001\005H\000\022E\n\007webpage\030\037 \001(\0132,.goog" +
+      "le.ads.googleads.v13.common.WebpageInfoB" +
+      "\004\342A\001\005H\000\022e\n\030operating_system_version\030  \001(" +
+      "\0132;.google.ads.googleads.v13.common.Oper" +
+      "atingSystemVersionInfoB\004\342A\001\005H\000\022P\n\rmobile" +
+      "_device\030! \001(\01321.google.ads.googleads.v13" +
+      ".common.MobileDeviceInfoB\004\342A\001\005H\000\022R\n\016loca" +
+      "tion_group\030\" \001(\01322.google.ads.googleads." +
+      "v13.common.LocationGroupInfoB\004\342A\001\005H\000\022T\n\017" +
+      "custom_affinity\030$ \001(\01323.google.ads.googl" +
+      "eads.v13.common.CustomAffinityInfoB\004\342A\001\005" +
+      "H\000\022T\n\017custom_audience\030) \001(\01323.google.ads" +
+      ".googleads.v13.common.CustomAudienceInfo" +
+      "B\004\342A\001\005H\000\022X\n\021combined_audience\030* \001(\01325.go" +
+      "ogle.ads.googleads.v13.common.CombinedAu" +
+      "dienceInfoB\004\342A\001\005H\000\022P\n\rkeyword_theme\030- \001(" +
+      "\01321.google.ads.googleads.v13.common.Keyw" +
+      "ordThemeInfoB\004\342A\001\005H\000\022U\n\020local_service_id" +
+      "\030. \001(\01323.google.ads.googleads.v13.common" +
+      ".LocalServiceIdInfoB\004\342A\001\005H\000:v\352As\n*google" +
+      "ads.googleapis.com/CampaignCriterion\022Ecu" +
+      "stomers/{customer_id}/campaignCriteria/{" +
+      "campaign_id}~{criterion_id}B\013\n\tcriterion" +
+      "B\013\n\t_campaignB\017\n\r_criterion_idB\017\n\r_bid_m" +
+      "odifierB\013\n\t_negativeB\210\002\n&com.google.ads." +
+      "googleads.v13.resourcesB\026CampaignCriteri" +
+      "onProtoP\001ZKgoogle.golang.org/genproto/go" +
+      "ogleapis/ads/googleads/v13/resources;res" +
+      "ources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V13." +
+      "Resources\312\002\"Google\\Ads\\GoogleAds\\V13\\Res" +
+      "ources\352\002&Google::Ads::GoogleAds::V13::Re" +
+      "sourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

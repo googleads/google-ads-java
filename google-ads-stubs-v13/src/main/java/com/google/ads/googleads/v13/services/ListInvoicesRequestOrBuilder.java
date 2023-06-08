@@ -30,6 +30,7 @@ public interface ListInvoicesRequestOrBuilder extends
   /**
    * <pre>
    * Required. The billing setup resource name of the requested invoices.
+   *
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
@@ -40,6 +41,7 @@ public interface ListInvoicesRequestOrBuilder extends
   /**
    * <pre>
    * Required. The billing setup resource name of the requested invoices.
+   *
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *

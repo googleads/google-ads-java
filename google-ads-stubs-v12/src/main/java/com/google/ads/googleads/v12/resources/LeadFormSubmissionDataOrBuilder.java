@@ -11,6 +11,7 @@ public interface LeadFormSubmissionDataOrBuilder extends
    * <pre>
    * Output only. The resource name of the lead form submission data.
    * Lead form submission data resource names have the form:
+   *
    * `customers/{customer_id}/leadFormSubmissionData/{lead_form_submission_data_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface LeadFormSubmissionDataOrBuilder extends
    * <pre>
    * Output only. The resource name of the lead form submission data.
    * Lead form submission data resource names have the form:
+   *
    * `customers/{customer_id}/leadFormSubmissionData/{lead_form_submission_data_id}`
    * </pre>
    *

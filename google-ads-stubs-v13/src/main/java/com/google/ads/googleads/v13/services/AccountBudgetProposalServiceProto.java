@@ -51,40 +51,40 @@ public final class AccountBudgetProposalServiceProto {
       "roto\032\027google/api/client.proto\032\037google/ap" +
       "i/field_behavior.proto\032\031google/api/resou" +
       "rce.proto\032 google/protobuf/field_mask.pr" +
-      "oto\"\260\001\n\"MutateAccountBudgetProposalReque" +
-      "st\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022Y\n\toperatio" +
-      "n\030\002 \001(\0132A.google.ads.googleads.v13.servi" +
-      "ces.AccountBudgetProposalOperationB\003\340A\002\022" +
-      "\025\n\rvalidate_only\030\003 \001(\010\"\362\001\n\036AccountBudget" +
-      "ProposalOperation\022/\n\013update_mask\030\003 \001(\0132\032" +
-      ".google.protobuf.FieldMask\022K\n\006create\030\002 \001" +
-      "(\01329.google.ads.googleads.v13.resources." +
-      "AccountBudgetProposalH\000\022E\n\006remove\030\001 \001(\tB" +
-      "3\372A0\n.googleads.googleapis.com/AccountBu" +
-      "dgetProposalH\000B\013\n\toperation\"{\n#MutateAcc" +
-      "ountBudgetProposalResponse\022T\n\006result\030\002 \001" +
-      "(\0132D.google.ads.googleads.v13.services.M" +
-      "utateAccountBudgetProposalResult\"o\n!Muta" +
-      "teAccountBudgetProposalResult\022J\n\rresourc" +
-      "e_name\030\001 \001(\tB3\372A0\n.googleads.googleapis." +
-      "com/AccountBudgetProposal2\365\002\n\034AccountBud" +
-      "getProposalService\022\215\002\n\033MutateAccountBudg" +
-      "etProposal\022E.google.ads.googleads.v13.se" +
-      "rvices.MutateAccountBudgetProposalReques" +
-      "t\032F.google.ads.googleads.v13.services.Mu" +
-      "tateAccountBudgetProposalResponse\"_\202\323\344\223\002" +
-      "A\"</v13/customers/{customer_id=*}/accoun" +
-      "tBudgetProposals:mutate:\001*\332A\025customer_id" +
-      ",operation\032E\312A\030googleads.googleapis.com\322" +
-      "A\'https://www.googleapis.com/auth/adword" +
-      "sB\215\002\n%com.google.ads.googleads.v13.servi" +
-      "cesB!AccountBudgetProposalServiceProtoP\001" +
-      "ZIgoogle.golang.org/genproto/googleapis/" +
-      "ads/googleads/v13/services;services\242\002\003GA" +
-      "A\252\002!Google.Ads.GoogleAds.V13.Services\312\002!" +
-      "Google\\Ads\\GoogleAds\\V13\\Services\352\002%Goog" +
-      "le::Ads::GoogleAds::V13::Servicesb\006proto" +
-      "3"
+      "oto\"\262\001\n\"MutateAccountBudgetProposalReque" +
+      "st\022\031\n\013customer_id\030\001 \001(\tB\004\342A\001\002\022Z\n\toperati" +
+      "on\030\002 \001(\0132A.google.ads.googleads.v13.serv" +
+      "ices.AccountBudgetProposalOperationB\004\342A\001" +
+      "\002\022\025\n\rvalidate_only\030\003 \001(\010\"\362\001\n\036AccountBudg" +
+      "etProposalOperation\022/\n\013update_mask\030\003 \001(\013" +
+      "2\032.google.protobuf.FieldMask\022K\n\006create\030\002" +
+      " \001(\01329.google.ads.googleads.v13.resource" +
+      "s.AccountBudgetProposalH\000\022E\n\006remove\030\001 \001(" +
+      "\tB3\372A0\n.googleads.googleapis.com/Account" +
+      "BudgetProposalH\000B\013\n\toperation\"{\n#MutateA" +
+      "ccountBudgetProposalResponse\022T\n\006result\030\002" +
+      " \001(\0132D.google.ads.googleads.v13.services" +
+      ".MutateAccountBudgetProposalResult\"o\n!Mu" +
+      "tateAccountBudgetProposalResult\022J\n\rresou" +
+      "rce_name\030\001 \001(\tB3\372A0\n.googleads.googleapi" +
+      "s.com/AccountBudgetProposal2\365\002\n\034AccountB" +
+      "udgetProposalService\022\215\002\n\033MutateAccountBu" +
+      "dgetProposal\022E.google.ads.googleads.v13." +
+      "services.MutateAccountBudgetProposalRequ" +
+      "est\032F.google.ads.googleads.v13.services." +
+      "MutateAccountBudgetProposalResponse\"_\332A\025" +
+      "customer_id,operation\202\323\344\223\002A\"</v13/custom" +
+      "ers/{customer_id=*}/accountBudgetProposa" +
+      "ls:mutate:\001*\032E\312A\030googleads.googleapis.co" +
+      "m\322A\'https://www.googleapis.com/auth/adwo" +
+      "rdsB\215\002\n%com.google.ads.googleads.v13.ser" +
+      "vicesB!AccountBudgetProposalServiceProto" +
+      "P\001ZIgoogle.golang.org/genproto/googleapi" +
+      "s/ads/googleads/v13/services;services\242\002\003" +
+      "GAA\252\002!Google.Ads.GoogleAds.V13.Services\312" +
+      "\002!Google\\Ads\\GoogleAds\\V13\\Services\352\002%Go" +
+      "ogle::Ads::GoogleAds::V13::Servicesb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

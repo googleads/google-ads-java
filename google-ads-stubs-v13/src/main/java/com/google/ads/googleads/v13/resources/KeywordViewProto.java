@@ -31,19 +31,19 @@ public final class KeywordViewProto {
       "\n5google/ads/googleads/v13/resources/key" +
       "word_view.proto\022\"google.ads.googleads.v1" +
       "3.resources\032\037google/api/field_behavior.p" +
-      "roto\032\031google/api/resource.proto\"\300\001\n\013Keyw" +
-      "ordView\022C\n\rresource_name\030\001 \001(\tB,\340A\003\372A&\n$" +
-      "googleads.googleapis.com/KeywordView:l\352A" +
-      "i\n$googleads.googleapis.com/KeywordView\022" +
-      "Acustomers/{customer_id}/keywordViews/{a" +
-      "d_group_id}~{criterion_id}B\202\002\n&com.googl" +
-      "e.ads.googleads.v13.resourcesB\020KeywordVi" +
-      "ewProtoP\001ZKgoogle.golang.org/genproto/go" +
-      "ogleapis/ads/googleads/v13/resources;res" +
-      "ources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V13." +
-      "Resources\312\002\"Google\\Ads\\GoogleAds\\V13\\Res" +
-      "ources\352\002&Google::Ads::GoogleAds::V13::Re" +
-      "sourcesb\006proto3"
+      "roto\032\031google/api/resource.proto\"\301\001\n\013Keyw" +
+      "ordView\022D\n\rresource_name\030\001 \001(\tB-\342A\001\003\372A&\n" +
+      "$googleads.googleapis.com/KeywordView:l\352" +
+      "Ai\n$googleads.googleapis.com/KeywordView" +
+      "\022Acustomers/{customer_id}/keywordViews/{" +
+      "ad_group_id}~{criterion_id}B\202\002\n&com.goog" +
+      "le.ads.googleads.v13.resourcesB\020KeywordV" +
+      "iewProtoP\001ZKgoogle.golang.org/genproto/g" +
+      "oogleapis/ads/googleads/v13/resources;re" +
+      "sources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V13" +
+      ".Resources\312\002\"Google\\Ads\\GoogleAds\\V13\\Re" +
+      "sources\352\002&Google::Ads::GoogleAds::V13::R" +
+      "esourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

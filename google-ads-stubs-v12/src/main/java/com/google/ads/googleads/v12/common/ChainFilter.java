@@ -21,7 +21,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ChainFilter() {
-    locationAttributes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    locationAttributes_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -31,11 +32,6 @@ private static final long serialVersionUID = 0L;
     return new ChainFilter();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.common.AssetSetTypesProto.internal_static_google_ads_googleads_v12_common_ChainFilter_descriptor;
@@ -67,7 +63,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int LOCATION_ATTRIBUTES_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList locationAttributes_;
+  private com.google.protobuf.LazyStringArrayList locationAttributes_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * Used to filter chain locations by location attributes.
@@ -256,11 +253,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.common.ChainFilter parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.common.ChainFilter parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -342,8 +341,8 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       chainId_ = 0L;
-      locationAttributes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      locationAttributes_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -370,24 +369,19 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.ChainFilter buildPartial() {
       com.google.ads.googleads.v12.common.ChainFilter result = new com.google.ads.googleads.v12.common.ChainFilter(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.common.ChainFilter result) {
-      if (((bitField0_ & 0x00000002) != 0)) {
-        locationAttributes_ = locationAttributes_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000002);
-      }
-      result.locationAttributes_ = locationAttributes_;
     }
 
     private void buildPartial0(com.google.ads.googleads.v12.common.ChainFilter result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.chainId_ = chainId_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        locationAttributes_.makeImmutable();
+        result.locationAttributes_ = locationAttributes_;
       }
     }
 
@@ -441,7 +435,7 @@ private static final long serialVersionUID = 0L;
       if (!other.locationAttributes_.isEmpty()) {
         if (locationAttributes_.isEmpty()) {
           locationAttributes_ = other.locationAttributes_;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ |= 0x00000002;
         } else {
           ensureLocationAttributesIsMutable();
           locationAttributes_.addAll(other.locationAttributes_);
@@ -527,7 +521,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setChainId(long value) {
-      
+
       chainId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
@@ -549,12 +543,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.LazyStringList locationAttributes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList locationAttributes_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureLocationAttributesIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!locationAttributes_.isModifiable()) {
         locationAttributes_ = new com.google.protobuf.LazyStringArrayList(locationAttributes_);
-        bitField0_ |= 0x00000002;
-       }
+      }
+      bitField0_ |= 0x00000002;
     }
     /**
      * <pre>
@@ -569,7 +564,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getLocationAttributesList() {
-      return locationAttributes_.getUnmodifiableView();
+      locationAttributes_.makeImmutable();
+      return locationAttributes_;
     }
     /**
      * <pre>
@@ -634,6 +630,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureLocationAttributesIsMutable();
       locationAttributes_.set(index, value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -654,6 +651,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureLocationAttributesIsMutable();
       locationAttributes_.add(value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -674,6 +672,7 @@ private static final long serialVersionUID = 0L;
       ensureLocationAttributesIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, locationAttributes_);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -689,8 +688,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLocationAttributes() {
-      locationAttributes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      locationAttributes_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000002);;
       onChanged();
       return this;
     }
@@ -712,6 +712,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureLocationAttributesIsMutable();
       locationAttributes_.add(value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

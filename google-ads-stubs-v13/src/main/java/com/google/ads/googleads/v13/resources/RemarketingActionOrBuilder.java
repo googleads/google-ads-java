@@ -11,6 +11,7 @@ public interface RemarketingActionOrBuilder extends
    * <pre>
    * Immutable. The resource name of the remarketing action.
    * Remarketing action resource names have the form:
+   *
    * `customers/{customer_id}/remarketingActions/{remarketing_action_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface RemarketingActionOrBuilder extends
    * <pre>
    * Immutable. The resource name of the remarketing action.
    * Remarketing action resource names have the form:
+   *
    * `customers/{customer_id}/remarketingActions/{remarketing_action_id}`
    * </pre>
    *
@@ -53,6 +55,7 @@ public interface RemarketingActionOrBuilder extends
   /**
    * <pre>
    * The name of the remarketing action.
+   *
    * This field is required and should not be empty when creating new
    * remarketing actions.
    * </pre>
@@ -64,6 +67,7 @@ public interface RemarketingActionOrBuilder extends
   /**
    * <pre>
    * The name of the remarketing action.
+   *
    * This field is required and should not be empty when creating new
    * remarketing actions.
    * </pre>
@@ -75,6 +79,7 @@ public interface RemarketingActionOrBuilder extends
   /**
    * <pre>
    * The name of the remarketing action.
+   *
    * This field is required and should not be empty when creating new
    * remarketing actions.
    * </pre>

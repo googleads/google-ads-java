@@ -34,11 +34,6 @@ private static final long serialVersionUID = 0L;
     return new StoreSalesThirdPartyMetadata();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.common.OfflineUserDataProto.internal_static_google_ads_googleads_v13_common_StoreSalesThirdPartyMetadata_descriptor;
@@ -502,11 +497,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.common.StoreSalesThirdPartyMetadata parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.common.StoreSalesThirdPartyMetadata parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -954,7 +951,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setValidTransactionFraction(double value) {
-      
+
       validTransactionFraction_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -1022,7 +1019,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPartnerMatchFraction(double value) {
-      
+
       partnerMatchFraction_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
@@ -1090,7 +1087,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPartnerUploadFraction(double value) {
-      
+
       partnerUploadFraction_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
@@ -1252,7 +1249,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPartnerId(long value) {
-      
+
       partnerId_ = value;
       bitField0_ |= 0x00000020;
       onChanged();

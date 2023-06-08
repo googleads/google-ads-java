@@ -586,5 +586,5 @@ public interface ListingDimensionInfoOrBuilder extends
    */
   com.google.ads.googleads.v13.common.UnknownListingDimensionInfoOrBuilder getUnknownListingDimensionOrBuilder();
 
-  public com.google.ads.googleads.v13.common.ListingDimensionInfo.DimensionCase getDimensionCase();
+  com.google.ads.googleads.v13.common.ListingDimensionInfo.DimensionCase getDimensionCase();
 }

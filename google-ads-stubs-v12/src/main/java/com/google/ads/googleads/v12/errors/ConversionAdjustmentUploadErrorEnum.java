@@ -29,11 +29,6 @@ private static final long serialVersionUID = 0L;
     return new ConversionAdjustmentUploadErrorEnum();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.errors.ConversionAdjustmentUploadErrorProto.internal_static_google_ads_googleads_v12_errors_ConversionAdjustmentUploadErrorEnum_descriptor;
@@ -66,7 +61,7 @@ private static final long serialVersionUID = 0L;
     UNSPECIFIED(0),
     /**
      * <pre>
-     * The received error code is not known in this version.
+     * Used for return value only. Represents value unknown in this version.
      * </pre>
      *
      * <code>UNKNOWN = 1;</code>
@@ -74,9 +69,8 @@ private static final long serialVersionUID = 0L;
     UNKNOWN(1),
     /**
      * <pre>
-     * The specified conversion action was created too recently.
-     * Try the upload again after 4-6 hours have passed since the
-     * conversion action was created.
+     * Can't import events to a conversion action that was just created. Try
+     * importing again in 6 hours.
      * </pre>
      *
      * <code>TOO_RECENT_CONVERSION_ACTION = 2;</code>
@@ -84,8 +78,7 @@ private static final long serialVersionUID = 0L;
     TOO_RECENT_CONVERSION_ACTION(2),
     /**
      * <pre>
-     * No conversion action of a supported ConversionActionType that matches the
-     * provided information can be found for the customer.
+     * Make sure you specify an active conversion action that can be adjusted.
      * </pre>
      *
      * <code>INVALID_CONVERSION_ACTION = 3;</code>
@@ -93,7 +86,7 @@ private static final long serialVersionUID = 0L;
     INVALID_CONVERSION_ACTION(3),
     /**
      * <pre>
-     * A retraction was already reported for this conversion.
+     * The conversion was already retracted. This adjustment was not processed.
      * </pre>
      *
      * <code>CONVERSION_ALREADY_RETRACTED = 4;</code>
@@ -101,8 +94,9 @@ private static final long serialVersionUID = 0L;
     CONVERSION_ALREADY_RETRACTED(4),
     /**
      * <pre>
-     * A conversion for the supplied combination of conversion
-     * action and conversion identifier could not be found.
+     * The conversion for this conversion action and conversion identifier can't
+     * be found. Make sure your conversion identifiers are associated with the
+     * correct conversion action and try again.
      * </pre>
      *
      * <code>CONVERSION_NOT_FOUND = 5;</code>
@@ -110,8 +104,8 @@ private static final long serialVersionUID = 0L;
     CONVERSION_NOT_FOUND(5),
     /**
      * <pre>
-     * The specified conversion has already expired. Conversions expire after 55
-     * days, after which adjustments cannot be reported against them.
+     * Adjustment can't be made to a conversion that occurred more than 54 days
+     * ago.
      * </pre>
      *
      * <code>CONVERSION_EXPIRED = 6;</code>
@@ -119,8 +113,9 @@ private static final long serialVersionUID = 0L;
     CONVERSION_EXPIRED(6),
     /**
      * <pre>
-     * The supplied adjustment date time precedes that of the original
-     * conversion.
+     * Adjustment has an `adjustment_date_time` that occurred before the
+     * associated conversion. Make sure your `adjustment_date_time` is correct
+     * and try again.
      * </pre>
      *
      * <code>ADJUSTMENT_PRECEDES_CONVERSION = 7;</code>
@@ -128,8 +123,9 @@ private static final long serialVersionUID = 0L;
     ADJUSTMENT_PRECEDES_CONVERSION(7),
     /**
      * <pre>
-     * A restatement with a more recent adjustment date time was already
-     * reported for this conversion.
+     * More recent adjustment `adjustment_date_time` has already been reported
+     * for the associated conversion.  Make sure your adjustment
+     * `adjustment_date_time` is correct and try again.
      * </pre>
      *
      * <code>MORE_RECENT_RESTATEMENT_FOUND = 8;</code>
@@ -137,7 +133,8 @@ private static final long serialVersionUID = 0L;
     MORE_RECENT_RESTATEMENT_FOUND(8),
     /**
      * <pre>
-     * The conversion was created too recently.
+     * Adjustment can't be recorded because the conversion occurred too
+     * recently. Try adjusting a conversion that occurred at least 24 hours ago.
      * </pre>
      *
      * <code>TOO_RECENT_CONVERSION = 9;</code>
@@ -145,8 +142,8 @@ private static final long serialVersionUID = 0L;
     TOO_RECENT_CONVERSION(9),
     /**
      * <pre>
-     * Restatements cannot be reported for a conversion action that always uses
-     * the default value.
+     * Can't make an adjustment to a conversion that is set up to use the
+     * default value. Check your conversion action value setting and try again.
      * </pre>
      *
      * <code>CANNOT_RESTATE_CONVERSION_ACTION_THAT_ALWAYS_USES_DEFAULT_CONVERSION_VALUE = 10;</code>
@@ -154,7 +151,7 @@ private static final long serialVersionUID = 0L;
     CANNOT_RESTATE_CONVERSION_ACTION_THAT_ALWAYS_USES_DEFAULT_CONVERSION_VALUE(10),
     /**
      * <pre>
-     * The request contained more than 2000 adjustments.
+     * Try uploading fewer than 2001 adjustments in a single API request.
      * </pre>
      *
      * <code>TOO_MANY_ADJUSTMENTS_IN_REQUEST = 11;</code>
@@ -162,7 +159,8 @@ private static final long serialVersionUID = 0L;
     TOO_MANY_ADJUSTMENTS_IN_REQUEST(11),
     /**
      * <pre>
-     * The conversion has been adjusted too many times.
+     * The conversion has already been adjusted the maximum number of times.
+     * Make sure you're only making necessary adjustment to existing conversion.
      * </pre>
      *
      * <code>TOO_MANY_ADJUSTMENTS = 12;</code>
@@ -170,8 +168,9 @@ private static final long serialVersionUID = 0L;
     TOO_MANY_ADJUSTMENTS(12),
     /**
      * <pre>
-     * A restatement with this timestamp already exists for this conversion. To
-     * upload another adjustment, use a different timestamp.
+     * The conversion has prior a restatement with the same
+     * `adjustment_date_time`. Make sure your adjustment has the correct and
+     * unique `adjustment_date_time` and try again.
      * </pre>
      *
      * <code>RESTATEMENT_ALREADY_EXISTS = 13;</code>
@@ -179,9 +178,9 @@ private static final long serialVersionUID = 0L;
     RESTATEMENT_ALREADY_EXISTS(13),
     /**
      * <pre>
-     * This adjustment has the same timestamp as another adjustment in the
-     * request for this conversion. To upload another adjustment, use a
-     * different timestamp.
+     * Imported adjustment has a duplicate conversion adjustment with same
+     * `adjustment_date_time`. Make sure your adjustment has the correct
+     * `adjustment_date_time` and try again.
      * </pre>
      *
      * <code>DUPLICATE_ADJUSTMENT_IN_REQUEST = 14;</code>
@@ -189,8 +188,8 @@ private static final long serialVersionUID = 0L;
     DUPLICATE_ADJUSTMENT_IN_REQUEST(14),
     /**
      * <pre>
-     * The customer has not accepted the customer data terms in the conversion
-     * settings page.
+     * Make sure you agree to the customer data processing terms in conversion
+     * settings and try again.
      * </pre>
      *
      * <code>CUSTOMER_NOT_ACCEPTED_CUSTOMER_DATA_TERMS = 15;</code>
@@ -198,8 +197,7 @@ private static final long serialVersionUID = 0L;
     CUSTOMER_NOT_ACCEPTED_CUSTOMER_DATA_TERMS(15),
     /**
      * <pre>
-     * The enhanced conversion settings of the conversion action supplied is
-     * not eligible for enhancements.
+     * Can't use enhanced conversions with the specified conversion action.
      * </pre>
      *
      * <code>CONVERSION_ACTION_NOT_ELIGIBLE_FOR_ENHANCEMENT = 16;</code>
@@ -207,8 +205,8 @@ private static final long serialVersionUID = 0L;
     CONVERSION_ACTION_NOT_ELIGIBLE_FOR_ENHANCEMENT(16),
     /**
      * <pre>
-     * The provided user identifier is not a SHA-256 hash. It is either unhashed
-     * or hashed using a different hash function.
+     * Make sure you hash user provided data using SHA-256 and ensure you are
+     * normalizing according to the guidelines.
      * </pre>
      *
      * <code>INVALID_USER_IDENTIFIER = 17;</code>
@@ -216,9 +214,8 @@ private static final long serialVersionUID = 0L;
     INVALID_USER_IDENTIFIER(17),
     /**
      * <pre>
-     * The provided user identifier is not supported.
-     * ConversionAdjustmentUploadService only supports hashed_email,
-     * hashed_phone_number, and address_info.
+     * Use user provided data such as emails or phone numbers hashed using
+     * SHA-256 and try again.
      * </pre>
      *
      * <code>UNSUPPORTED_USER_IDENTIFIER = 18;</code>
@@ -226,7 +223,8 @@ private static final long serialVersionUID = 0L;
     UNSUPPORTED_USER_IDENTIFIER(18),
     /**
      * <pre>
-     * Cannot set both gclid_date_time_pair and order_id.
+     * Cannot set both gclid_date_time_pair and order_id. Use only 1 type and
+     * try again.
      * </pre>
      *
      * <code>GCLID_DATE_TIME_PAIR_AND_ORDER_ID_BOTH_SET = 20;</code>
@@ -234,8 +232,8 @@ private static final long serialVersionUID = 0L;
     GCLID_DATE_TIME_PAIR_AND_ORDER_ID_BOTH_SET(20),
     /**
      * <pre>
-     * An enhancement with this conversion action and order_id already exists
-     * for this conversion.
+     * Conversion already has enhancements with the same Order ID and conversion
+     * action. Make sure your data is correctly configured and try again.
      * </pre>
      *
      * <code>CONVERSION_ALREADY_ENHANCED = 21;</code>
@@ -243,8 +241,8 @@ private static final long serialVersionUID = 0L;
     CONVERSION_ALREADY_ENHANCED(21),
     /**
      * <pre>
-     * This enhancement has the same conversion action and order_id as
-     * another enhancement in the request.
+     * Multiple enhancements have the same conversion action and Order ID.  Make
+     * sure your data is correctly configured and try again.
      * </pre>
      *
      * <code>DUPLICATE_ENHANCEMENT_IN_REQUEST = 22;</code>
@@ -252,9 +250,8 @@ private static final long serialVersionUID = 0L;
     DUPLICATE_ENHANCEMENT_IN_REQUEST(22),
     /**
      * <pre>
-     * Per our customer data policies, enhancement has been prohibited in your
-     * account. If you have any questions, contact your Google
-     * representative.
+     * Enhanced conversions can't be used for this account because of Google
+     * customer data policies. Contact your Google representative.
      * </pre>
      *
      * <code>CUSTOMER_DATA_POLICY_PROHIBITS_ENHANCEMENT = 23;</code>
@@ -262,9 +259,9 @@ private static final long serialVersionUID = 0L;
     CUSTOMER_DATA_POLICY_PROHIBITS_ENHANCEMENT(23),
     /**
      * <pre>
-     * The conversion adjustment is for a conversion action of type WEBPAGE, but
-     * does not have an order_id. The order_id is required for an adjustment for
-     * a WEBPAGE conversion action.
+     * Adjustment for website conversion requires Order ID (ie, transaction ID).
+     * Make sure your website tags capture Order IDs and you send the same Order
+     * IDs with your adjustment.
      * </pre>
      *
      * <code>MISSING_ORDER_ID_FOR_WEBPAGE = 24;</code>
@@ -272,8 +269,8 @@ private static final long serialVersionUID = 0L;
     MISSING_ORDER_ID_FOR_WEBPAGE(24),
     /**
      * <pre>
-     * The order_id contains personally identifiable information (PII), such as
-     * an email address or phone number.
+     * Can't use adjustment with Order IDs containing personally-identifiable
+     * information (PII).
      * </pre>
      *
      * <code>ORDER_ID_CONTAINS_PII = 25;</code>
@@ -292,7 +289,7 @@ private static final long serialVersionUID = 0L;
     public static final int UNSPECIFIED_VALUE = 0;
     /**
      * <pre>
-     * The received error code is not known in this version.
+     * Used for return value only. Represents value unknown in this version.
      * </pre>
      *
      * <code>UNKNOWN = 1;</code>
@@ -300,9 +297,8 @@ private static final long serialVersionUID = 0L;
     public static final int UNKNOWN_VALUE = 1;
     /**
      * <pre>
-     * The specified conversion action was created too recently.
-     * Try the upload again after 4-6 hours have passed since the
-     * conversion action was created.
+     * Can't import events to a conversion action that was just created. Try
+     * importing again in 6 hours.
      * </pre>
      *
      * <code>TOO_RECENT_CONVERSION_ACTION = 2;</code>
@@ -310,8 +306,7 @@ private static final long serialVersionUID = 0L;
     public static final int TOO_RECENT_CONVERSION_ACTION_VALUE = 2;
     /**
      * <pre>
-     * No conversion action of a supported ConversionActionType that matches the
-     * provided information can be found for the customer.
+     * Make sure you specify an active conversion action that can be adjusted.
      * </pre>
      *
      * <code>INVALID_CONVERSION_ACTION = 3;</code>
@@ -319,7 +314,7 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_CONVERSION_ACTION_VALUE = 3;
     /**
      * <pre>
-     * A retraction was already reported for this conversion.
+     * The conversion was already retracted. This adjustment was not processed.
      * </pre>
      *
      * <code>CONVERSION_ALREADY_RETRACTED = 4;</code>
@@ -327,8 +322,9 @@ private static final long serialVersionUID = 0L;
     public static final int CONVERSION_ALREADY_RETRACTED_VALUE = 4;
     /**
      * <pre>
-     * A conversion for the supplied combination of conversion
-     * action and conversion identifier could not be found.
+     * The conversion for this conversion action and conversion identifier can't
+     * be found. Make sure your conversion identifiers are associated with the
+     * correct conversion action and try again.
      * </pre>
      *
      * <code>CONVERSION_NOT_FOUND = 5;</code>
@@ -336,8 +332,8 @@ private static final long serialVersionUID = 0L;
     public static final int CONVERSION_NOT_FOUND_VALUE = 5;
     /**
      * <pre>
-     * The specified conversion has already expired. Conversions expire after 55
-     * days, after which adjustments cannot be reported against them.
+     * Adjustment can't be made to a conversion that occurred more than 54 days
+     * ago.
      * </pre>
      *
      * <code>CONVERSION_EXPIRED = 6;</code>
@@ -345,8 +341,9 @@ private static final long serialVersionUID = 0L;
     public static final int CONVERSION_EXPIRED_VALUE = 6;
     /**
      * <pre>
-     * The supplied adjustment date time precedes that of the original
-     * conversion.
+     * Adjustment has an `adjustment_date_time` that occurred before the
+     * associated conversion. Make sure your `adjustment_date_time` is correct
+     * and try again.
      * </pre>
      *
      * <code>ADJUSTMENT_PRECEDES_CONVERSION = 7;</code>
@@ -354,8 +351,9 @@ private static final long serialVersionUID = 0L;
     public static final int ADJUSTMENT_PRECEDES_CONVERSION_VALUE = 7;
     /**
      * <pre>
-     * A restatement with a more recent adjustment date time was already
-     * reported for this conversion.
+     * More recent adjustment `adjustment_date_time` has already been reported
+     * for the associated conversion.  Make sure your adjustment
+     * `adjustment_date_time` is correct and try again.
      * </pre>
      *
      * <code>MORE_RECENT_RESTATEMENT_FOUND = 8;</code>
@@ -363,7 +361,8 @@ private static final long serialVersionUID = 0L;
     public static final int MORE_RECENT_RESTATEMENT_FOUND_VALUE = 8;
     /**
      * <pre>
-     * The conversion was created too recently.
+     * Adjustment can't be recorded because the conversion occurred too
+     * recently. Try adjusting a conversion that occurred at least 24 hours ago.
      * </pre>
      *
      * <code>TOO_RECENT_CONVERSION = 9;</code>
@@ -371,8 +370,8 @@ private static final long serialVersionUID = 0L;
     public static final int TOO_RECENT_CONVERSION_VALUE = 9;
     /**
      * <pre>
-     * Restatements cannot be reported for a conversion action that always uses
-     * the default value.
+     * Can't make an adjustment to a conversion that is set up to use the
+     * default value. Check your conversion action value setting and try again.
      * </pre>
      *
      * <code>CANNOT_RESTATE_CONVERSION_ACTION_THAT_ALWAYS_USES_DEFAULT_CONVERSION_VALUE = 10;</code>
@@ -380,7 +379,7 @@ private static final long serialVersionUID = 0L;
     public static final int CANNOT_RESTATE_CONVERSION_ACTION_THAT_ALWAYS_USES_DEFAULT_CONVERSION_VALUE_VALUE = 10;
     /**
      * <pre>
-     * The request contained more than 2000 adjustments.
+     * Try uploading fewer than 2001 adjustments in a single API request.
      * </pre>
      *
      * <code>TOO_MANY_ADJUSTMENTS_IN_REQUEST = 11;</code>
@@ -388,7 +387,8 @@ private static final long serialVersionUID = 0L;
     public static final int TOO_MANY_ADJUSTMENTS_IN_REQUEST_VALUE = 11;
     /**
      * <pre>
-     * The conversion has been adjusted too many times.
+     * The conversion has already been adjusted the maximum number of times.
+     * Make sure you're only making necessary adjustment to existing conversion.
      * </pre>
      *
      * <code>TOO_MANY_ADJUSTMENTS = 12;</code>
@@ -396,8 +396,9 @@ private static final long serialVersionUID = 0L;
     public static final int TOO_MANY_ADJUSTMENTS_VALUE = 12;
     /**
      * <pre>
-     * A restatement with this timestamp already exists for this conversion. To
-     * upload another adjustment, use a different timestamp.
+     * The conversion has prior a restatement with the same
+     * `adjustment_date_time`. Make sure your adjustment has the correct and
+     * unique `adjustment_date_time` and try again.
      * </pre>
      *
      * <code>RESTATEMENT_ALREADY_EXISTS = 13;</code>
@@ -405,9 +406,9 @@ private static final long serialVersionUID = 0L;
     public static final int RESTATEMENT_ALREADY_EXISTS_VALUE = 13;
     /**
      * <pre>
-     * This adjustment has the same timestamp as another adjustment in the
-     * request for this conversion. To upload another adjustment, use a
-     * different timestamp.
+     * Imported adjustment has a duplicate conversion adjustment with same
+     * `adjustment_date_time`. Make sure your adjustment has the correct
+     * `adjustment_date_time` and try again.
      * </pre>
      *
      * <code>DUPLICATE_ADJUSTMENT_IN_REQUEST = 14;</code>
@@ -415,8 +416,8 @@ private static final long serialVersionUID = 0L;
     public static final int DUPLICATE_ADJUSTMENT_IN_REQUEST_VALUE = 14;
     /**
      * <pre>
-     * The customer has not accepted the customer data terms in the conversion
-     * settings page.
+     * Make sure you agree to the customer data processing terms in conversion
+     * settings and try again.
      * </pre>
      *
      * <code>CUSTOMER_NOT_ACCEPTED_CUSTOMER_DATA_TERMS = 15;</code>
@@ -424,8 +425,7 @@ private static final long serialVersionUID = 0L;
     public static final int CUSTOMER_NOT_ACCEPTED_CUSTOMER_DATA_TERMS_VALUE = 15;
     /**
      * <pre>
-     * The enhanced conversion settings of the conversion action supplied is
-     * not eligible for enhancements.
+     * Can't use enhanced conversions with the specified conversion action.
      * </pre>
      *
      * <code>CONVERSION_ACTION_NOT_ELIGIBLE_FOR_ENHANCEMENT = 16;</code>
@@ -433,8 +433,8 @@ private static final long serialVersionUID = 0L;
     public static final int CONVERSION_ACTION_NOT_ELIGIBLE_FOR_ENHANCEMENT_VALUE = 16;
     /**
      * <pre>
-     * The provided user identifier is not a SHA-256 hash. It is either unhashed
-     * or hashed using a different hash function.
+     * Make sure you hash user provided data using SHA-256 and ensure you are
+     * normalizing according to the guidelines.
      * </pre>
      *
      * <code>INVALID_USER_IDENTIFIER = 17;</code>
@@ -442,9 +442,8 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_USER_IDENTIFIER_VALUE = 17;
     /**
      * <pre>
-     * The provided user identifier is not supported.
-     * ConversionAdjustmentUploadService only supports hashed_email,
-     * hashed_phone_number, and address_info.
+     * Use user provided data such as emails or phone numbers hashed using
+     * SHA-256 and try again.
      * </pre>
      *
      * <code>UNSUPPORTED_USER_IDENTIFIER = 18;</code>
@@ -452,7 +451,8 @@ private static final long serialVersionUID = 0L;
     public static final int UNSUPPORTED_USER_IDENTIFIER_VALUE = 18;
     /**
      * <pre>
-     * Cannot set both gclid_date_time_pair and order_id.
+     * Cannot set both gclid_date_time_pair and order_id. Use only 1 type and
+     * try again.
      * </pre>
      *
      * <code>GCLID_DATE_TIME_PAIR_AND_ORDER_ID_BOTH_SET = 20;</code>
@@ -460,8 +460,8 @@ private static final long serialVersionUID = 0L;
     public static final int GCLID_DATE_TIME_PAIR_AND_ORDER_ID_BOTH_SET_VALUE = 20;
     /**
      * <pre>
-     * An enhancement with this conversion action and order_id already exists
-     * for this conversion.
+     * Conversion already has enhancements with the same Order ID and conversion
+     * action. Make sure your data is correctly configured and try again.
      * </pre>
      *
      * <code>CONVERSION_ALREADY_ENHANCED = 21;</code>
@@ -469,8 +469,8 @@ private static final long serialVersionUID = 0L;
     public static final int CONVERSION_ALREADY_ENHANCED_VALUE = 21;
     /**
      * <pre>
-     * This enhancement has the same conversion action and order_id as
-     * another enhancement in the request.
+     * Multiple enhancements have the same conversion action and Order ID.  Make
+     * sure your data is correctly configured and try again.
      * </pre>
      *
      * <code>DUPLICATE_ENHANCEMENT_IN_REQUEST = 22;</code>
@@ -478,9 +478,8 @@ private static final long serialVersionUID = 0L;
     public static final int DUPLICATE_ENHANCEMENT_IN_REQUEST_VALUE = 22;
     /**
      * <pre>
-     * Per our customer data policies, enhancement has been prohibited in your
-     * account. If you have any questions, contact your Google
-     * representative.
+     * Enhanced conversions can't be used for this account because of Google
+     * customer data policies. Contact your Google representative.
      * </pre>
      *
      * <code>CUSTOMER_DATA_POLICY_PROHIBITS_ENHANCEMENT = 23;</code>
@@ -488,9 +487,9 @@ private static final long serialVersionUID = 0L;
     public static final int CUSTOMER_DATA_POLICY_PROHIBITS_ENHANCEMENT_VALUE = 23;
     /**
      * <pre>
-     * The conversion adjustment is for a conversion action of type WEBPAGE, but
-     * does not have an order_id. The order_id is required for an adjustment for
-     * a WEBPAGE conversion action.
+     * Adjustment for website conversion requires Order ID (ie, transaction ID).
+     * Make sure your website tags capture Order IDs and you send the same Order
+     * IDs with your adjustment.
      * </pre>
      *
      * <code>MISSING_ORDER_ID_FOR_WEBPAGE = 24;</code>
@@ -498,8 +497,8 @@ private static final long serialVersionUID = 0L;
     public static final int MISSING_ORDER_ID_FOR_WEBPAGE_VALUE = 24;
     /**
      * <pre>
-     * The order_id contains personally identifiable information (PII), such as
-     * an email address or phone number.
+     * Can't use adjustment with Order IDs containing personally-identifiable
+     * information (PII).
      * </pre>
      *
      * <code>ORDER_ID_CONTAINS_PII = 25;</code>
@@ -710,11 +709,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.errors.ConversionAdjustmentUploadErrorEnum parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.errors.ConversionAdjustmentUploadErrorEnum parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)

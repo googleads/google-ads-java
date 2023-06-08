@@ -36,30 +36,30 @@ public final class CallViewProto {
       "proto\032=google/ads/googleads/v13/enums/go" +
       "ogle_voice_call_status.proto\032\037google/api" +
       "/field_behavior.proto\032\031google/api/resour" +
-      "ce.proto\"\221\005\n\010CallView\022@\n\rresource_name\030\001" +
-      " \001(\tB)\340A\003\372A#\n!googleads.googleapis.com/C" +
-      "allView\022 \n\023caller_country_code\030\002 \001(\tB\003\340A" +
-      "\003\022\035\n\020caller_area_code\030\003 \001(\tB\003\340A\003\022\"\n\025call" +
-      "_duration_seconds\030\004 \001(\003B\003\340A\003\022!\n\024start_ca" +
-      "ll_date_time\030\005 \001(\tB\003\340A\003\022\037\n\022end_call_date" +
-      "_time\030\006 \001(\tB\003\340A\003\022\210\001\n\036call_tracking_displ" +
-      "ay_location\030\007 \001(\0162[.google.ads.googleads" +
-      ".v13.enums.CallTrackingDisplayLocationEn" +
-      "um.CallTrackingDisplayLocationB\003\340A\003\022H\n\004t" +
-      "ype\030\010 \001(\01625.google.ads.googleads.v13.enu" +
-      "ms.CallTypeEnum.CallTypeB\003\340A\003\022i\n\013call_st" +
-      "atus\030\t \001(\0162O.google.ads.googleads.v13.en" +
-      "ums.GoogleVoiceCallStatusEnum.GoogleVoic" +
-      "eCallStatusB\003\340A\003:Z\352AW\n!googleads.googlea" +
-      "pis.com/CallView\0222customers/{customer_id" +
-      "}/callViews/{call_detail_id}B\377\001\n&com.goo" +
-      "gle.ads.googleads.v13.resourcesB\rCallVie" +
-      "wProtoP\001ZKgoogle.golang.org/genproto/goo" +
-      "gleapis/ads/googleads/v13/resources;reso" +
-      "urces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V13.R" +
-      "esources\312\002\"Google\\Ads\\GoogleAds\\V13\\Reso" +
-      "urces\352\002&Google::Ads::GoogleAds::V13::Res" +
-      "ourcesb\006proto3"
+      "ce.proto\"\232\005\n\010CallView\022A\n\rresource_name\030\001" +
+      " \001(\tB*\342A\001\003\372A#\n!googleads.googleapis.com/" +
+      "CallView\022!\n\023caller_country_code\030\002 \001(\tB\004\342" +
+      "A\001\003\022\036\n\020caller_area_code\030\003 \001(\tB\004\342A\001\003\022#\n\025c" +
+      "all_duration_seconds\030\004 \001(\003B\004\342A\001\003\022\"\n\024star" +
+      "t_call_date_time\030\005 \001(\tB\004\342A\001\003\022 \n\022end_call" +
+      "_date_time\030\006 \001(\tB\004\342A\001\003\022\211\001\n\036call_tracking" +
+      "_display_location\030\007 \001(\0162[.google.ads.goo" +
+      "gleads.v13.enums.CallTrackingDisplayLoca" +
+      "tionEnum.CallTrackingDisplayLocationB\004\342A" +
+      "\001\003\022I\n\004type\030\010 \001(\01625.google.ads.googleads." +
+      "v13.enums.CallTypeEnum.CallTypeB\004\342A\001\003\022j\n" +
+      "\013call_status\030\t \001(\0162O.google.ads.googlead" +
+      "s.v13.enums.GoogleVoiceCallStatusEnum.Go" +
+      "ogleVoiceCallStatusB\004\342A\001\003:Z\352AW\n!googlead" +
+      "s.googleapis.com/CallView\0222customers/{cu" +
+      "stomer_id}/callViews/{call_detail_id}B\377\001" +
+      "\n&com.google.ads.googleads.v13.resources" +
+      "B\rCallViewProtoP\001ZKgoogle.golang.org/gen" +
+      "proto/googleapis/ads/googleads/v13/resou" +
+      "rces;resources\242\002\003GAA\252\002\"Google.Ads.Google" +
+      "Ads.V13.Resources\312\002\"Google\\Ads\\GoogleAds" +
+      "\\V13\\Resources\352\002&Google::Ads::GoogleAds:" +
+      ":V13::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

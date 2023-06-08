@@ -6,6 +6,7 @@ package com.google.ads.googleads.v13.resources;
 /**
  * <pre>
  * Represents a bidding seasonality adjustment.
+ *
  * See "About seasonality adjustments" at
  * https://support.google.com/google-ads/answer/10369906.
  * </pre>
@@ -30,7 +31,8 @@ private static final long serialVersionUID = 0L;
     name_ = "";
     description_ = "";
     devices_ = java.util.Collections.emptyList();
-    campaigns_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    campaigns_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     advertisingChannelTypes_ = java.util.Collections.emptyList();
   }
 
@@ -41,11 +43,6 @@ private static final long serialVersionUID = 0L;
     return new BiddingSeasonalityAdjustment();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.resources.BiddingSeasonalityAdjustmentProto.internal_static_google_ads_googleads_v13_resources_BiddingSeasonalityAdjustment_descriptor;
@@ -66,6 +63,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the seasonality adjustment.
    * Seasonality adjustment resource names have the form:
+   *
    * `customers/{customer_id}/biddingSeasonalityAdjustments/{seasonality_adjustment_id}`
    * </pre>
    *
@@ -89,6 +87,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the seasonality adjustment.
    * Seasonality adjustment resource names have the form:
+   *
    * `customers/{customer_id}/biddingSeasonalityAdjustments/{seasonality_adjustment_id}`
    * </pre>
    *
@@ -184,6 +183,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Required. The inclusive start time of the seasonality adjustment in
    * yyyy-MM-dd HH:mm:ss format.
+   *
    * A seasonality adjustment is forward looking and should be used for events
    * that start and end in the future.
    * </pre>
@@ -208,6 +208,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Required. The inclusive start time of the seasonality adjustment in
    * yyyy-MM-dd HH:mm:ss format.
+   *
    * A seasonality adjustment is forward looking and should be used for events
    * that start and end in the future.
    * </pre>
@@ -237,6 +238,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Required. The exclusive end time of the seasonality adjustment in
    * yyyy-MM-dd HH:mm:ss format.
+   *
    * The length of [start_date_time, end_date_time) interval must be
    * within (0, 14 days].
    * </pre>
@@ -261,6 +263,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Required. The exclusive end time of the seasonality adjustment in
    * yyyy-MM-dd HH:mm:ss format.
+   *
    * The length of [start_date_time, end_date_time) interval must be
    * within (0, 14 days].
    * </pre>
@@ -488,7 +491,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int CAMPAIGNS_FIELD_NUMBER = 11;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList campaigns_;
+  private com.google.protobuf.LazyStringArrayList campaigns_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * The seasonality adjustment will apply to the campaigns listed when the
@@ -916,11 +920,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.resources.BiddingSeasonalityAdjustment parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.resources.BiddingSeasonalityAdjustment parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -965,6 +971,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Represents a bidding seasonality adjustment.
+   *
    * See "About seasonality adjustments" at
    * https://support.google.com/google-ads/answer/10369906.
    * </pre>
@@ -1013,8 +1020,8 @@ private static final long serialVersionUID = 0L;
       devices_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000100);
       conversionRateModifier_ = 0D;
-      campaigns_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000400);
+      campaigns_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       advertisingChannelTypes_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000800);
       return this;
@@ -1055,11 +1062,6 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000100);
       }
       result.devices_ = devices_;
-      if (((bitField0_ & 0x00000400) != 0)) {
-        campaigns_ = campaigns_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000400);
-      }
-      result.campaigns_ = campaigns_;
       if (((bitField0_ & 0x00000800) != 0)) {
         advertisingChannelTypes_ = java.util.Collections.unmodifiableList(advertisingChannelTypes_);
         bitField0_ = (bitField0_ & ~0x00000800);
@@ -1095,6 +1097,10 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.conversionRateModifier_ = conversionRateModifier_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        campaigns_.makeImmutable();
+        result.campaigns_ = campaigns_;
       }
     }
 
@@ -1192,7 +1198,7 @@ private static final long serialVersionUID = 0L;
       if (!other.campaigns_.isEmpty()) {
         if (campaigns_.isEmpty()) {
           campaigns_ = other.campaigns_;
-          bitField0_ = (bitField0_ & ~0x00000400);
+          bitField0_ |= 0x00000400;
         } else {
           ensureCampaignsIsMutable();
           campaigns_.addAll(other.campaigns_);
@@ -1342,6 +1348,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the seasonality adjustment.
      * Seasonality adjustment resource names have the form:
+     *
      * `customers/{customer_id}/biddingSeasonalityAdjustments/{seasonality_adjustment_id}`
      * </pre>
      *
@@ -1364,6 +1371,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the seasonality adjustment.
      * Seasonality adjustment resource names have the form:
+     *
      * `customers/{customer_id}/biddingSeasonalityAdjustments/{seasonality_adjustment_id}`
      * </pre>
      *
@@ -1387,6 +1395,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the seasonality adjustment.
      * Seasonality adjustment resource names have the form:
+     *
      * `customers/{customer_id}/biddingSeasonalityAdjustments/{seasonality_adjustment_id}`
      * </pre>
      *
@@ -1406,6 +1415,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the seasonality adjustment.
      * Seasonality adjustment resource names have the form:
+     *
      * `customers/{customer_id}/biddingSeasonalityAdjustments/{seasonality_adjustment_id}`
      * </pre>
      *
@@ -1422,6 +1432,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the seasonality adjustment.
      * Seasonality adjustment resource names have the form:
+     *
      * `customers/{customer_id}/biddingSeasonalityAdjustments/{seasonality_adjustment_id}`
      * </pre>
      *
@@ -1462,7 +1473,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSeasonalityAdjustmentId(long value) {
-      
+
       seasonalityAdjustmentId_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -1634,6 +1645,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Required. The inclusive start time of the seasonality adjustment in
      * yyyy-MM-dd HH:mm:ss format.
+     *
      * A seasonality adjustment is forward looking and should be used for events
      * that start and end in the future.
      * </pre>
@@ -1657,6 +1669,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Required. The inclusive start time of the seasonality adjustment in
      * yyyy-MM-dd HH:mm:ss format.
+     *
      * A seasonality adjustment is forward looking and should be used for events
      * that start and end in the future.
      * </pre>
@@ -1681,6 +1694,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Required. The inclusive start time of the seasonality adjustment in
      * yyyy-MM-dd HH:mm:ss format.
+     *
      * A seasonality adjustment is forward looking and should be used for events
      * that start and end in the future.
      * </pre>
@@ -1701,6 +1715,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Required. The inclusive start time of the seasonality adjustment in
      * yyyy-MM-dd HH:mm:ss format.
+     *
      * A seasonality adjustment is forward looking and should be used for events
      * that start and end in the future.
      * </pre>
@@ -1718,6 +1733,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Required. The inclusive start time of the seasonality adjustment in
      * yyyy-MM-dd HH:mm:ss format.
+     *
      * A seasonality adjustment is forward looking and should be used for events
      * that start and end in the future.
      * </pre>
@@ -1741,6 +1757,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Required. The exclusive end time of the seasonality adjustment in
      * yyyy-MM-dd HH:mm:ss format.
+     *
      * The length of [start_date_time, end_date_time) interval must be
      * within (0, 14 days].
      * </pre>
@@ -1764,6 +1781,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Required. The exclusive end time of the seasonality adjustment in
      * yyyy-MM-dd HH:mm:ss format.
+     *
      * The length of [start_date_time, end_date_time) interval must be
      * within (0, 14 days].
      * </pre>
@@ -1788,6 +1806,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Required. The exclusive end time of the seasonality adjustment in
      * yyyy-MM-dd HH:mm:ss format.
+     *
      * The length of [start_date_time, end_date_time) interval must be
      * within (0, 14 days].
      * </pre>
@@ -1808,6 +1827,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Required. The exclusive end time of the seasonality adjustment in
      * yyyy-MM-dd HH:mm:ss format.
+     *
      * The length of [start_date_time, end_date_time) interval must be
      * within (0, 14 days].
      * </pre>
@@ -1825,6 +1845,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Required. The exclusive end time of the seasonality adjustment in
      * yyyy-MM-dd HH:mm:ss format.
+     *
      * The length of [start_date_time, end_date_time) interval must be
      * within (0, 14 days].
      * </pre>
@@ -2276,7 +2297,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setConversionRateModifier(double value) {
-      
+
       conversionRateModifier_ = value;
       bitField0_ |= 0x00000200;
       onChanged();
@@ -2299,12 +2320,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.LazyStringList campaigns_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList campaigns_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureCampaignsIsMutable() {
-      if (!((bitField0_ & 0x00000400) != 0)) {
+      if (!campaigns_.isModifiable()) {
         campaigns_ = new com.google.protobuf.LazyStringArrayList(campaigns_);
-        bitField0_ |= 0x00000400;
-       }
+      }
+      bitField0_ |= 0x00000400;
     }
     /**
      * <pre>
@@ -2320,7 +2342,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getCampaignsList() {
-      return campaigns_.getUnmodifiableView();
+      campaigns_.makeImmutable();
+      return campaigns_;
     }
     /**
      * <pre>
@@ -2389,6 +2412,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureCampaignsIsMutable();
       campaigns_.set(index, value);
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2410,6 +2434,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureCampaignsIsMutable();
       campaigns_.add(value);
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2431,6 +2456,7 @@ private static final long serialVersionUID = 0L;
       ensureCampaignsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, campaigns_);
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2447,8 +2473,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCampaigns() {
-      campaigns_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000400);
+      campaigns_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000400);;
       onChanged();
       return this;
     }
@@ -2471,6 +2498,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureCampaignsIsMutable();
       campaigns_.add(value);
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }

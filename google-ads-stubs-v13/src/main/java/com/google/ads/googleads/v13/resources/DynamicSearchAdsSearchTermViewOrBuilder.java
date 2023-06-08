@@ -11,6 +11,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the dynamic search ads search term view.
    * Dynamic search ads search term view resource names have the form:
+   *
    * `customers/{customer_id}/dynamicSearchAdsSearchTermViews/{ad_group_id}~{search_term_fingerprint}~{headline_fingerprint}~{landing_page_fingerprint}~{page_url_fingerprint}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the dynamic search ads search term view.
    * Dynamic search ads search term view resource names have the form:
+   *
    * `customers/{customer_id}/dynamicSearchAdsSearchTermViews/{ad_group_id}~{search_term_fingerprint}~{headline_fingerprint}~{landing_page_fingerprint}~{page_url_fingerprint}`
    * </pre>
    *
@@ -34,6 +36,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
   /**
    * <pre>
    * Output only. Search term
+   *
    * This field is read-only.
    * </pre>
    *
@@ -44,6 +47,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
   /**
    * <pre>
    * Output only. Search term
+   *
    * This field is read-only.
    * </pre>
    *
@@ -54,6 +58,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
   /**
    * <pre>
    * Output only. Search term
+   *
    * This field is read-only.
    * </pre>
    *
@@ -66,6 +71,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
   /**
    * <pre>
    * Output only. The dynamically generated headline of the Dynamic Search Ad.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -76,6 +82,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
   /**
    * <pre>
    * Output only. The dynamically generated headline of the Dynamic Search Ad.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -86,6 +93,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
   /**
    * <pre>
    * Output only. The dynamically generated headline of the Dynamic Search Ad.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -98,6 +106,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
   /**
    * <pre>
    * Output only. The dynamically selected landing page URL of the impression.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -108,6 +117,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
   /**
    * <pre>
    * Output only. The dynamically selected landing page URL of the impression.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -118,6 +128,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
   /**
    * <pre>
    * Output only. The dynamically selected landing page URL of the impression.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -130,6 +141,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
   /**
    * <pre>
    * Output only. The URL of page feed item served for the impression.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -140,6 +152,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
   /**
    * <pre>
    * Output only. The URL of page feed item served for the impression.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -150,6 +163,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
   /**
    * <pre>
    * Output only. The URL of page feed item served for the impression.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -162,6 +176,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
   /**
    * <pre>
    * Output only. True if query matches a negative keyword.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -172,6 +187,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
   /**
    * <pre>
    * Output only. True if query matches a negative keyword.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -183,6 +199,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
   /**
    * <pre>
    * Output only. True if query is added to targeted keywords.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -193,6 +210,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
   /**
    * <pre>
    * Output only. True if query is added to targeted keywords.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -204,6 +222,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
   /**
    * <pre>
    * Output only. True if query matches a negative url.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -214,6 +233,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
   /**
    * <pre>
    * Output only. True if query matches a negative url.
+   *
    * This field is read-only.
    * </pre>
    *

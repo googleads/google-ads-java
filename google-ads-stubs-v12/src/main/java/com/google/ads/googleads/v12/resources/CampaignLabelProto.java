@@ -31,23 +31,23 @@ public final class CampaignLabelProto {
       "\n7google/ads/googleads/v12/resources/cam" +
       "paign_label.proto\022\"google.ads.googleads." +
       "v12.resources\032\037google/api/field_behavior" +
-      ".proto\032\031google/api/resource.proto\"\331\002\n\rCa" +
-      "mpaignLabel\022E\n\rresource_name\030\001 \001(\tB.\340A\005\372" +
-      "A(\n&googleads.googleapis.com/CampaignLab" +
-      "el\022@\n\010campaign\030\004 \001(\tB)\340A\005\372A#\n!googleads." +
-      "googleapis.com/CampaignH\000\210\001\001\022:\n\005label\030\005 " +
-      "\001(\tB&\340A\005\372A \n\036googleads.googleapis.com/La" +
-      "belH\001\210\001\001:l\352Ai\n&googleads.googleapis.com/" +
-      "CampaignLabel\022?customers/{customer_id}/c" +
-      "ampaignLabels/{campaign_id}~{label_id}B\013" +
-      "\n\t_campaignB\010\n\006_labelB\204\002\n&com.google.ads" +
-      ".googleads.v12.resourcesB\022CampaignLabelP" +
-      "rotoP\001ZKgoogle.golang.org/genproto/googl" +
-      "eapis/ads/googleads/v12/resources;resour" +
-      "ces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V12.Res" +
-      "ources\312\002\"Google\\Ads\\GoogleAds\\V12\\Resour" +
-      "ces\352\002&Google::Ads::GoogleAds::V12::Resou" +
-      "rcesb\006proto3"
+      ".proto\032\031google/api/resource.proto\"\334\002\n\rCa" +
+      "mpaignLabel\022F\n\rresource_name\030\001 \001(\tB/\342A\001\005" +
+      "\372A(\n&googleads.googleapis.com/CampaignLa" +
+      "bel\022A\n\010campaign\030\004 \001(\tB*\342A\001\005\372A#\n!googlead" +
+      "s.googleapis.com/CampaignH\000\210\001\001\022;\n\005label\030" +
+      "\005 \001(\tB\'\342A\001\005\372A \n\036googleads.googleapis.com" +
+      "/LabelH\001\210\001\001:l\352Ai\n&googleads.googleapis.c" +
+      "om/CampaignLabel\022?customers/{customer_id" +
+      "}/campaignLabels/{campaign_id}~{label_id" +
+      "}B\013\n\t_campaignB\010\n\006_labelB\204\002\n&com.google." +
+      "ads.googleads.v12.resourcesB\022CampaignLab" +
+      "elProtoP\001ZKgoogle.golang.org/genproto/go" +
+      "ogleapis/ads/googleads/v12/resources;res" +
+      "ources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V12." +
+      "Resources\312\002\"Google\\Ads\\GoogleAds\\V12\\Res" +
+      "ources\352\002&Google::Ads::GoogleAds::V12::Re" +
+      "sourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

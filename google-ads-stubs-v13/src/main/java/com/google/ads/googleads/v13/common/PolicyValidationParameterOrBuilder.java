@@ -12,6 +12,7 @@ public interface PolicyValidationParameterOrBuilder extends
    * The list of policy topics that should not cause a PolicyFindingError to
    * be reported. This field is currently only compatible with Enhanced Text Ad.
    * It corresponds to the PolicyTopicEntry.topic field.
+   *
    * Resources violating these policies will be saved, but will not be eligible
    * to serve. They may begin serving at a later time due to a change in
    * policies, re-review of the resource, or a change in advertiser
@@ -28,6 +29,7 @@ public interface PolicyValidationParameterOrBuilder extends
    * The list of policy topics that should not cause a PolicyFindingError to
    * be reported. This field is currently only compatible with Enhanced Text Ad.
    * It corresponds to the PolicyTopicEntry.topic field.
+   *
    * Resources violating these policies will be saved, but will not be eligible
    * to serve. They may begin serving at a later time due to a change in
    * policies, re-review of the resource, or a change in advertiser
@@ -43,6 +45,7 @@ public interface PolicyValidationParameterOrBuilder extends
    * The list of policy topics that should not cause a PolicyFindingError to
    * be reported. This field is currently only compatible with Enhanced Text Ad.
    * It corresponds to the PolicyTopicEntry.topic field.
+   *
    * Resources violating these policies will be saved, but will not be eligible
    * to serve. They may begin serving at a later time due to a change in
    * policies, re-review of the resource, or a change in advertiser
@@ -59,6 +62,7 @@ public interface PolicyValidationParameterOrBuilder extends
    * The list of policy topics that should not cause a PolicyFindingError to
    * be reported. This field is currently only compatible with Enhanced Text Ad.
    * It corresponds to the PolicyTopicEntry.topic field.
+   *
    * Resources violating these policies will be saved, but will not be eligible
    * to serve. They may begin serving at a later time due to a change in
    * policies, re-review of the resource, or a change in advertiser
@@ -78,6 +82,7 @@ public interface PolicyValidationParameterOrBuilder extends
    * PolicyViolationError to be reported. Not all policy violations are
    * exemptable, refer to the is_exemptible field in the returned
    * PolicyViolationError.
+   *
    * Resources violating these polices will be saved, but will not be eligible
    * to serve. They may begin serving at a later time due to a change in
    * policies, re-review of the resource, or a change in advertiser
@@ -94,6 +99,7 @@ public interface PolicyValidationParameterOrBuilder extends
    * PolicyViolationError to be reported. Not all policy violations are
    * exemptable, refer to the is_exemptible field in the returned
    * PolicyViolationError.
+   *
    * Resources violating these polices will be saved, but will not be eligible
    * to serve. They may begin serving at a later time due to a change in
    * policies, re-review of the resource, or a change in advertiser
@@ -109,6 +115,7 @@ public interface PolicyValidationParameterOrBuilder extends
    * PolicyViolationError to be reported. Not all policy violations are
    * exemptable, refer to the is_exemptible field in the returned
    * PolicyViolationError.
+   *
    * Resources violating these polices will be saved, but will not be eligible
    * to serve. They may begin serving at a later time due to a change in
    * policies, re-review of the resource, or a change in advertiser
@@ -124,6 +131,7 @@ public interface PolicyValidationParameterOrBuilder extends
    * PolicyViolationError to be reported. Not all policy violations are
    * exemptable, refer to the is_exemptible field in the returned
    * PolicyViolationError.
+   *
    * Resources violating these polices will be saved, but will not be eligible
    * to serve. They may begin serving at a later time due to a change in
    * policies, re-review of the resource, or a change in advertiser
@@ -140,6 +148,7 @@ public interface PolicyValidationParameterOrBuilder extends
    * PolicyViolationError to be reported. Not all policy violations are
    * exemptable, refer to the is_exemptible field in the returned
    * PolicyViolationError.
+   *
    * Resources violating these polices will be saved, but will not be eligible
    * to serve. They may begin serving at a later time due to a change in
    * policies, re-review of the resource, or a change in advertiser

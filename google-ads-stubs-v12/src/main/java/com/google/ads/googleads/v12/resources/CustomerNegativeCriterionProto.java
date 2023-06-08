@@ -34,36 +34,36 @@ public final class CustomerNegativeCriterionProto {
       "oogleads/v12/common/criteria.proto\0323goog" +
       "le/ads/googleads/v12/enums/criterion_typ" +
       "e.proto\032\037google/api/field_behavior.proto" +
-      "\032\031google/api/resource.proto\"\336\006\n\031Customer" +
-      "NegativeCriterion\022Q\n\rresource_name\030\001 \001(\t" +
-      "B:\340A\005\372A4\n2googleads.googleapis.com/Custo" +
-      "merNegativeCriterion\022\024\n\002id\030\n \001(\003B\003\340A\003H\001\210" +
-      "\001\001\022R\n\004type\030\003 \001(\0162?.google.ads.googleads." +
-      "v12.enums.CriterionTypeEnum.CriterionTyp" +
-      "eB\003\340A\003\022O\n\rcontent_label\030\004 \001(\01321.google.a" +
-      "ds.googleads.v12.common.ContentLabelInfo" +
-      "B\003\340A\005H\000\022Y\n\022mobile_application\030\005 \001(\01326.go" +
-      "ogle.ads.googleads.v12.common.MobileAppl" +
-      "icationInfoB\003\340A\005H\000\022Z\n\023mobile_app_categor" +
-      "y\030\006 \001(\01326.google.ads.googleads.v12.commo" +
-      "n.MobileAppCategoryInfoB\003\340A\005H\000\022H\n\tplacem" +
-      "ent\030\007 \001(\0132..google.ads.googleads.v12.com" +
-      "mon.PlacementInfoB\003\340A\005H\000\022O\n\ryoutube_vide" +
-      "o\030\010 \001(\01321.google.ads.googleads.v12.commo" +
-      "n.YouTubeVideoInfoB\003\340A\005H\000\022S\n\017youtube_cha" +
-      "nnel\030\t \001(\01323.google.ads.googleads.v12.co" +
-      "mmon.YouTubeChannelInfoB\003\340A\005H\000:x\352Au\n2goo" +
-      "gleads.googleapis.com/CustomerNegativeCr" +
-      "iterion\022?customers/{customer_id}/custome" +
-      "rNegativeCriteria/{criterion_id}B\013\n\tcrit" +
-      "erionB\005\n\003_idB\220\002\n&com.google.ads.googlead" +
-      "s.v12.resourcesB\036CustomerNegativeCriteri" +
-      "onProtoP\001ZKgoogle.golang.org/genproto/go" +
-      "ogleapis/ads/googleads/v12/resources;res" +
-      "ources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V12." +
-      "Resources\312\002\"Google\\Ads\\GoogleAds\\V12\\Res" +
-      "ources\352\002&Google::Ads::GoogleAds::V12::Re" +
-      "sourcesb\006proto3"
+      "\032\031google/api/resource.proto\"\347\006\n\031Customer" +
+      "NegativeCriterion\022R\n\rresource_name\030\001 \001(\t" +
+      "B;\342A\001\005\372A4\n2googleads.googleapis.com/Cust" +
+      "omerNegativeCriterion\022\025\n\002id\030\n \001(\003B\004\342A\001\003H" +
+      "\001\210\001\001\022S\n\004type\030\003 \001(\0162?.google.ads.googlead" +
+      "s.v12.enums.CriterionTypeEnum.CriterionT" +
+      "ypeB\004\342A\001\003\022P\n\rcontent_label\030\004 \001(\01321.googl" +
+      "e.ads.googleads.v12.common.ContentLabelI" +
+      "nfoB\004\342A\001\005H\000\022Z\n\022mobile_application\030\005 \001(\0132" +
+      "6.google.ads.googleads.v12.common.Mobile" +
+      "ApplicationInfoB\004\342A\001\005H\000\022[\n\023mobile_app_ca" +
+      "tegory\030\006 \001(\01326.google.ads.googleads.v12." +
+      "common.MobileAppCategoryInfoB\004\342A\001\005H\000\022I\n\t" +
+      "placement\030\007 \001(\0132..google.ads.googleads.v" +
+      "12.common.PlacementInfoB\004\342A\001\005H\000\022P\n\ryoutu" +
+      "be_video\030\010 \001(\01321.google.ads.googleads.v1" +
+      "2.common.YouTubeVideoInfoB\004\342A\001\005H\000\022T\n\017you" +
+      "tube_channel\030\t \001(\01323.google.ads.googlead" +
+      "s.v12.common.YouTubeChannelInfoB\004\342A\001\005H\000:" +
+      "x\352Au\n2googleads.googleapis.com/CustomerN" +
+      "egativeCriterion\022?customers/{customer_id" +
+      "}/customerNegativeCriteria/{criterion_id" +
+      "}B\013\n\tcriterionB\005\n\003_idB\220\002\n&com.google.ads" +
+      ".googleads.v12.resourcesB\036CustomerNegati" +
+      "veCriterionProtoP\001ZKgoogle.golang.org/ge" +
+      "nproto/googleapis/ads/googleads/v12/reso" +
+      "urces;resources\242\002\003GAA\252\002\"Google.Ads.Googl" +
+      "eAds.V12.Resources\312\002\"Google\\Ads\\GoogleAd" +
+      "s\\V12\\Resources\352\002&Google::Ads::GoogleAds" +
+      "::V12::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

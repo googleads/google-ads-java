@@ -34,28 +34,28 @@ public final class AdGroupCustomizerProto {
       "/v12/common/customizer_value.proto\032<goog" +
       "le/ads/googleads/v12/enums/customizer_va" +
       "lue_status.proto\032\037google/api/field_behav" +
-      "ior.proto\032\031google/api/resource.proto\"\244\004\n" +
-      "\021AdGroupCustomizer\022I\n\rresource_name\030\001 \001(" +
-      "\tB2\340A\005\372A,\n*googleads.googleapis.com/AdGr" +
-      "oupCustomizer\022:\n\010ad_group\030\002 \001(\tB(\340A\005\372A\"\n" +
-      " googleads.googleapis.com/AdGroup\022U\n\024cus" +
-      "tomizer_attribute\030\003 \001(\tB7\340A\002\340A\005\372A.\n,goog" +
-      "leads.googleapis.com/CustomizerAttribute" +
-      "\022d\n\006status\030\004 \001(\0162O.google.ads.googleads." +
-      "v12.enums.CustomizerValueStatusEnum.Cust" +
-      "omizerValueStatusB\003\340A\003\022D\n\005value\030\005 \001(\01320." +
-      "google.ads.googleads.v12.common.Customiz" +
-      "erValueB\003\340A\002:\204\001\352A\200\001\n*googleads.googleapi" +
-      "s.com/AdGroupCustomizer\022Rcustomers/{cust" +
-      "omer_id}/adGroupCustomizers/{ad_group_id" +
-      "}~{customizer_attribute_id}B\210\002\n&com.goog" +
-      "le.ads.googleads.v12.resourcesB\026AdGroupC" +
-      "ustomizerProtoP\001ZKgoogle.golang.org/genp" +
-      "roto/googleapis/ads/googleads/v12/resour" +
-      "ces;resources\242\002\003GAA\252\002\"Google.Ads.GoogleA" +
-      "ds.V12.Resources\312\002\"Google\\Ads\\GoogleAds\\" +
-      "V12\\Resources\352\002&Google::Ads::GoogleAds::" +
-      "V12::Resourcesb\006proto3"
+      "ior.proto\032\031google/api/resource.proto\"\247\004\n" +
+      "\021AdGroupCustomizer\022J\n\rresource_name\030\001 \001(" +
+      "\tB3\342A\001\005\372A,\n*googleads.googleapis.com/AdG" +
+      "roupCustomizer\022;\n\010ad_group\030\002 \001(\tB)\342A\001\005\372A" +
+      "\"\n googleads.googleapis.com/AdGroup\022T\n\024c" +
+      "ustomizer_attribute\030\003 \001(\tB6\342A\002\002\005\372A.\n,goo" +
+      "gleads.googleapis.com/CustomizerAttribut" +
+      "e\022e\n\006status\030\004 \001(\0162O.google.ads.googleads" +
+      ".v12.enums.CustomizerValueStatusEnum.Cus" +
+      "tomizerValueStatusB\004\342A\001\003\022E\n\005value\030\005 \001(\0132" +
+      "0.google.ads.googleads.v12.common.Custom" +
+      "izerValueB\004\342A\001\002:\204\001\352A\200\001\n*googleads.google" +
+      "apis.com/AdGroupCustomizer\022Rcustomers/{c" +
+      "ustomer_id}/adGroupCustomizers/{ad_group" +
+      "_id}~{customizer_attribute_id}B\210\002\n&com.g" +
+      "oogle.ads.googleads.v12.resourcesB\026AdGro" +
+      "upCustomizerProtoP\001ZKgoogle.golang.org/g" +
+      "enproto/googleapis/ads/googleads/v12/res" +
+      "ources;resources\242\002\003GAA\252\002\"Google.Ads.Goog" +
+      "leAds.V12.Resources\312\002\"Google\\Ads\\GoogleA" +
+      "ds\\V12\\Resources\352\002&Google::Ads::GoogleAd" +
+      "s::V12::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

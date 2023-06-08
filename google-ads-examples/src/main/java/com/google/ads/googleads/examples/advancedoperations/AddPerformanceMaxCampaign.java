@@ -20,38 +20,38 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v13.common.AudienceInfo;
-import com.google.ads.googleads.v13.common.ImageAsset;
-import com.google.ads.googleads.v13.common.LanguageInfo;
-import com.google.ads.googleads.v13.common.LocationInfo;
-import com.google.ads.googleads.v13.common.MaximizeConversionValue;
-import com.google.ads.googleads.v13.common.TextAsset;
-import com.google.ads.googleads.v13.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
-import com.google.ads.googleads.v13.enums.AssetFieldTypeEnum.AssetFieldType;
-import com.google.ads.googleads.v13.enums.AssetGroupStatusEnum.AssetGroupStatus;
-import com.google.ads.googleads.v13.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
-import com.google.ads.googleads.v13.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v13.errors.GoogleAdsError;
-import com.google.ads.googleads.v13.errors.GoogleAdsException;
-import com.google.ads.googleads.v13.resources.Asset;
-import com.google.ads.googleads.v13.resources.AssetGroup;
-import com.google.ads.googleads.v13.resources.AssetGroupAsset;
-import com.google.ads.googleads.v13.resources.AssetGroupSignal;
-import com.google.ads.googleads.v13.resources.Campaign;
-import com.google.ads.googleads.v13.resources.CampaignBudget;
-import com.google.ads.googleads.v13.resources.CampaignCriterion;
-import com.google.ads.googleads.v13.services.AssetGroupAssetOperation;
-import com.google.ads.googleads.v13.services.AssetGroupOperation;
-import com.google.ads.googleads.v13.services.AssetGroupSignalOperation;
-import com.google.ads.googleads.v13.services.AssetOperation;
-import com.google.ads.googleads.v13.services.CampaignBudgetOperation;
-import com.google.ads.googleads.v13.services.CampaignCriterionOperation;
-import com.google.ads.googleads.v13.services.CampaignOperation;
-import com.google.ads.googleads.v13.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v13.services.MutateGoogleAdsResponse;
-import com.google.ads.googleads.v13.services.MutateOperation;
-import com.google.ads.googleads.v13.services.MutateOperationResponse;
-import com.google.ads.googleads.v13.utils.ResourceNames;
+import com.google.ads.googleads.v14.common.AudienceInfo;
+import com.google.ads.googleads.v14.common.ImageAsset;
+import com.google.ads.googleads.v14.common.LanguageInfo;
+import com.google.ads.googleads.v14.common.LocationInfo;
+import com.google.ads.googleads.v14.common.MaximizeConversionValue;
+import com.google.ads.googleads.v14.common.TextAsset;
+import com.google.ads.googleads.v14.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
+import com.google.ads.googleads.v14.enums.AssetFieldTypeEnum.AssetFieldType;
+import com.google.ads.googleads.v14.enums.AssetGroupStatusEnum.AssetGroupStatus;
+import com.google.ads.googleads.v14.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
+import com.google.ads.googleads.v14.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v14.errors.GoogleAdsError;
+import com.google.ads.googleads.v14.errors.GoogleAdsException;
+import com.google.ads.googleads.v14.resources.Asset;
+import com.google.ads.googleads.v14.resources.AssetGroup;
+import com.google.ads.googleads.v14.resources.AssetGroupAsset;
+import com.google.ads.googleads.v14.resources.AssetGroupSignal;
+import com.google.ads.googleads.v14.resources.Campaign;
+import com.google.ads.googleads.v14.resources.CampaignBudget;
+import com.google.ads.googleads.v14.resources.CampaignCriterion;
+import com.google.ads.googleads.v14.services.AssetGroupAssetOperation;
+import com.google.ads.googleads.v14.services.AssetGroupOperation;
+import com.google.ads.googleads.v14.services.AssetGroupSignalOperation;
+import com.google.ads.googleads.v14.services.AssetOperation;
+import com.google.ads.googleads.v14.services.CampaignBudgetOperation;
+import com.google.ads.googleads.v14.services.CampaignCriterionOperation;
+import com.google.ads.googleads.v14.services.CampaignOperation;
+import com.google.ads.googleads.v14.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v14.services.MutateGoogleAdsResponse;
+import com.google.ads.googleads.v14.services.MutateOperation;
+import com.google.ads.googleads.v14.services.MutateOperationResponse;
+import com.google.ads.googleads.v14.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import com.google.common.io.ByteStreams;
 import com.google.protobuf.ByteString;
@@ -553,7 +553,7 @@ public class AddPerformanceMaxCampaign {
   // [START add_performance_max_campaign_9]
   /**
    * Creates a list of MutateOperations that create {@link
-   * com.google.ads.googleads.v13.resources.AssetGroupSignal} objects.
+   * com.google.ads.googleads.v14.resources.AssetGroupSignal} objects.
    */
   private List<MutateOperation> createAssetGroupSignalOperations(
       long customerId, String assetGroupResourceName, Long audienceId) {

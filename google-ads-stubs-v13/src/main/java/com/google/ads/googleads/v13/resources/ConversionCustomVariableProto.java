@@ -33,27 +33,27 @@ public final class ConversionCustomVariableProto {
       "s.googleads.v13.resources\032Fgoogle/ads/go" +
       "ogleads/v13/enums/conversion_custom_vari" +
       "able_status.proto\032\037google/api/field_beha" +
-      "vior.proto\032\031google/api/resource.proto\"\350\003" +
-      "\n\030ConversionCustomVariable\022P\n\rresource_n" +
-      "ame\030\001 \001(\tB9\340A\005\372A3\n1googleads.googleapis." +
-      "com/ConversionCustomVariable\022\017\n\002id\030\002 \001(\003" +
-      "B\003\340A\003\022\021\n\004name\030\003 \001(\tB\003\340A\002\022\023\n\003tag\030\004 \001(\tB\006\340" +
-      "A\002\340A\005\022q\n\006status\030\005 \001(\0162a.google.ads.googl" +
-      "eads.v13.enums.ConversionCustomVariableS" +
-      "tatusEnum.ConversionCustomVariableStatus" +
-      "\022A\n\016owner_customer\030\006 \001(\tB)\340A\003\372A#\n!google" +
-      "ads.googleapis.com/Customer:\212\001\352A\206\001\n1goog" +
-      "leads.googleapis.com/ConversionCustomVar" +
-      "iable\022Qcustomers/{customer_id}/conversio" +
-      "nCustomVariables/{conversion_custom_vari" +
-      "able_id}B\217\002\n&com.google.ads.googleads.v1" +
-      "3.resourcesB\035ConversionCustomVariablePro" +
-      "toP\001ZKgoogle.golang.org/genproto/googlea" +
-      "pis/ads/googleads/v13/resources;resource" +
-      "s\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V13.Resou" +
-      "rces\312\002\"Google\\Ads\\GoogleAds\\V13\\Resource" +
-      "s\352\002&Google::Ads::GoogleAds::V13::Resourc" +
-      "esb\006proto3"
+      "vior.proto\032\031google/api/resource.proto\"\353\003" +
+      "\n\030ConversionCustomVariable\022Q\n\rresource_n" +
+      "ame\030\001 \001(\tB:\342A\001\005\372A3\n1googleads.googleapis" +
+      ".com/ConversionCustomVariable\022\020\n\002id\030\002 \001(" +
+      "\003B\004\342A\001\003\022\022\n\004name\030\003 \001(\tB\004\342A\001\002\022\022\n\003tag\030\004 \001(\t" +
+      "B\005\342A\002\002\005\022q\n\006status\030\005 \001(\0162a.google.ads.goo" +
+      "gleads.v13.enums.ConversionCustomVariabl" +
+      "eStatusEnum.ConversionCustomVariableStat" +
+      "us\022B\n\016owner_customer\030\006 \001(\tB*\342A\001\003\372A#\n!goo" +
+      "gleads.googleapis.com/Customer:\212\001\352A\206\001\n1g" +
+      "oogleads.googleapis.com/ConversionCustom" +
+      "Variable\022Qcustomers/{customer_id}/conver" +
+      "sionCustomVariables/{conversion_custom_v" +
+      "ariable_id}B\217\002\n&com.google.ads.googleads" +
+      ".v13.resourcesB\035ConversionCustomVariable" +
+      "ProtoP\001ZKgoogle.golang.org/genproto/goog" +
+      "leapis/ads/googleads/v13/resources;resou" +
+      "rces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V13.Re" +
+      "sources\312\002\"Google\\Ads\\GoogleAds\\V13\\Resou" +
+      "rces\352\002&Google::Ads::GoogleAds::V13::Reso" +
+      "urcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

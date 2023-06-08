@@ -24,8 +24,10 @@ private static final long serialVersionUID = 0L;
     resourceName_ = "";
     experiment_ = "";
     name_ = "";
-    campaigns_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    inDesignCampaigns_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    campaigns_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    inDesignCampaigns_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -35,11 +37,6 @@ private static final long serialVersionUID = 0L;
     return new ExperimentArm();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.resources.ExperimentArmProto.internal_static_google_ads_googleads_v12_resources_ExperimentArm_descriptor;
@@ -60,6 +57,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the experiment arm.
    * Experiment arm resource names have the form:
+   *
    * `customers/{customer_id}/experimentArms/{TrialArm.trial_id}~{TrialArm.trial_arm_id}`
    * </pre>
    *
@@ -83,6 +81,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the experiment arm.
    * Experiment arm resource names have the form:
+   *
    * `customers/{customer_id}/experimentArms/{TrialArm.trial_id}~{TrialArm.trial_arm_id}`
    * </pre>
    *
@@ -234,7 +233,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int CAMPAIGNS_FIELD_NUMBER = 6;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList campaigns_;
+  private com.google.protobuf.LazyStringArrayList campaigns_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * List of campaigns in the trial arm. The max length is one.
@@ -286,7 +286,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int IN_DESIGN_CAMPAIGNS_FIELD_NUMBER = 7;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList inDesignCampaigns_;
+  private com.google.protobuf.LazyStringArrayList inDesignCampaigns_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * Output only. The in design campaigns in the treatment experiment arm.
@@ -522,11 +523,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.resources.ExperimentArm parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.resources.ExperimentArm parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -612,10 +615,10 @@ private static final long serialVersionUID = 0L;
       name_ = "";
       control_ = false;
       trafficSplit_ = 0L;
-      campaigns_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000020);
-      inDesignCampaigns_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000040);
+      campaigns_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      inDesignCampaigns_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -642,23 +645,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.ExperimentArm buildPartial() {
       com.google.ads.googleads.v12.resources.ExperimentArm result = new com.google.ads.googleads.v12.resources.ExperimentArm(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.resources.ExperimentArm result) {
-      if (((bitField0_ & 0x00000020) != 0)) {
-        campaigns_ = campaigns_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000020);
-      }
-      result.campaigns_ = campaigns_;
-      if (((bitField0_ & 0x00000040) != 0)) {
-        inDesignCampaigns_ = inDesignCampaigns_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000040);
-      }
-      result.inDesignCampaigns_ = inDesignCampaigns_;
     }
 
     private void buildPartial0(com.google.ads.googleads.v12.resources.ExperimentArm result) {
@@ -677,6 +666,14 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.trafficSplit_ = trafficSplit_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        campaigns_.makeImmutable();
+        result.campaigns_ = campaigns_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        inDesignCampaigns_.makeImmutable();
+        result.inDesignCampaigns_ = inDesignCampaigns_;
       }
     }
 
@@ -748,7 +745,7 @@ private static final long serialVersionUID = 0L;
       if (!other.campaigns_.isEmpty()) {
         if (campaigns_.isEmpty()) {
           campaigns_ = other.campaigns_;
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ |= 0x00000020;
         } else {
           ensureCampaignsIsMutable();
           campaigns_.addAll(other.campaigns_);
@@ -758,7 +755,7 @@ private static final long serialVersionUID = 0L;
       if (!other.inDesignCampaigns_.isEmpty()) {
         if (inDesignCampaigns_.isEmpty()) {
           inDesignCampaigns_ = other.inDesignCampaigns_;
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ |= 0x00000040;
         } else {
           ensureInDesignCampaignsIsMutable();
           inDesignCampaigns_.addAll(other.inDesignCampaigns_);
@@ -850,6 +847,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the experiment arm.
      * Experiment arm resource names have the form:
+     *
      * `customers/{customer_id}/experimentArms/{TrialArm.trial_id}~{TrialArm.trial_arm_id}`
      * </pre>
      *
@@ -872,6 +870,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the experiment arm.
      * Experiment arm resource names have the form:
+     *
      * `customers/{customer_id}/experimentArms/{TrialArm.trial_id}~{TrialArm.trial_arm_id}`
      * </pre>
      *
@@ -895,6 +894,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the experiment arm.
      * Experiment arm resource names have the form:
+     *
      * `customers/{customer_id}/experimentArms/{TrialArm.trial_id}~{TrialArm.trial_arm_id}`
      * </pre>
      *
@@ -914,6 +914,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the experiment arm.
      * Experiment arm resource names have the form:
+     *
      * `customers/{customer_id}/experimentArms/{TrialArm.trial_id}~{TrialArm.trial_arm_id}`
      * </pre>
      *
@@ -930,6 +931,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the experiment arm.
      * Experiment arm resource names have the form:
+     *
      * `customers/{customer_id}/experimentArms/{TrialArm.trial_id}~{TrialArm.trial_arm_id}`
      * </pre>
      *
@@ -1161,7 +1163,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setControl(boolean value) {
-      
+
       control_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
@@ -1208,7 +1210,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTrafficSplit(long value) {
-      
+
       trafficSplit_ = value;
       bitField0_ |= 0x00000010;
       onChanged();
@@ -1230,12 +1232,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.LazyStringList campaigns_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList campaigns_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureCampaignsIsMutable() {
-      if (!((bitField0_ & 0x00000020) != 0)) {
+      if (!campaigns_.isModifiable()) {
         campaigns_ = new com.google.protobuf.LazyStringArrayList(campaigns_);
-        bitField0_ |= 0x00000020;
-       }
+      }
+      bitField0_ |= 0x00000020;
     }
     /**
      * <pre>
@@ -1247,7 +1250,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getCampaignsList() {
-      return campaigns_.getUnmodifiableView();
+      campaigns_.makeImmutable();
+      return campaigns_;
     }
     /**
      * <pre>
@@ -1300,6 +1304,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureCampaignsIsMutable();
       campaigns_.set(index, value);
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1317,6 +1322,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureCampaignsIsMutable();
       campaigns_.add(value);
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1334,6 +1340,7 @@ private static final long serialVersionUID = 0L;
       ensureCampaignsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, campaigns_);
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1346,8 +1353,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCampaigns() {
-      campaigns_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000020);
+      campaigns_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000020);;
       onChanged();
       return this;
     }
@@ -1366,16 +1374,18 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureCampaignsIsMutable();
       campaigns_.add(value);
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList inDesignCampaigns_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList inDesignCampaigns_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureInDesignCampaignsIsMutable() {
-      if (!((bitField0_ & 0x00000040) != 0)) {
+      if (!inDesignCampaigns_.isModifiable()) {
         inDesignCampaigns_ = new com.google.protobuf.LazyStringArrayList(inDesignCampaigns_);
-        bitField0_ |= 0x00000040;
-       }
+      }
+      bitField0_ |= 0x00000040;
     }
     /**
      * <pre>
@@ -1387,7 +1397,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getInDesignCampaignsList() {
-      return inDesignCampaigns_.getUnmodifiableView();
+      inDesignCampaigns_.makeImmutable();
+      return inDesignCampaigns_;
     }
     /**
      * <pre>
@@ -1440,6 +1451,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureInDesignCampaignsIsMutable();
       inDesignCampaigns_.set(index, value);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1457,6 +1469,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureInDesignCampaignsIsMutable();
       inDesignCampaigns_.add(value);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1474,6 +1487,7 @@ private static final long serialVersionUID = 0L;
       ensureInDesignCampaignsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, inDesignCampaigns_);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1486,8 +1500,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearInDesignCampaigns() {
-      inDesignCampaigns_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000040);
+      inDesignCampaigns_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000040);;
       onChanged();
       return this;
     }
@@ -1506,6 +1521,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureInDesignCampaignsIsMutable();
       inDesignCampaigns_.add(value);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }

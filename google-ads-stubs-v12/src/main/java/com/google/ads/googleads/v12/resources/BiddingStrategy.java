@@ -35,11 +35,6 @@ private static final long serialVersionUID = 0L;
     return new BiddingStrategy();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.resources.BiddingStrategyProto.internal_static_google_ads_googleads_v12_resources_BiddingStrategy_descriptor;
@@ -55,6 +50,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   private int schemeCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object scheme_;
   public enum SchemeCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -112,6 +108,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the bidding strategy.
    * Bidding strategy resource names have the form:
+   *
    * `customers/{customer_id}/biddingStrategies/{bidding_strategy_id}`
    * </pre>
    *
@@ -135,6 +132,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the bidding strategy.
    * Bidding strategy resource names have the form:
+   *
    * `customers/{customer_id}/biddingStrategies/{bidding_strategy_id}`
    * </pre>
    *
@@ -190,6 +188,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The name of the bidding strategy.
    * All bidding strategies within an account must be named distinctly.
+   *
    * The length of this string should be between 1 and 255, inclusive,
    * in UTF-8 bytes, (trimmed).
    * </pre>
@@ -205,6 +204,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The name of the bidding strategy.
    * All bidding strategies within an account must be named distinctly.
+   *
    * The length of this string should be between 1 and 255, inclusive,
    * in UTF-8 bytes, (trimmed).
    * </pre>
@@ -229,6 +229,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The name of the bidding strategy.
    * All bidding strategies within an account must be named distinctly.
+   *
    * The length of this string should be between 1 and 255, inclusive,
    * in UTF-8 bytes, (trimmed).
    * </pre>
@@ -256,6 +257,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The status of the bidding strategy.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -268,6 +270,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The status of the bidding strategy.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -285,6 +288,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The type of the bidding strategy.
    * Create a bidding strategy by setting the bidding scheme.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -298,6 +302,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The type of the bidding strategy.
    * Create a bidding strategy by setting the bidding scheme.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -316,6 +321,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The currency used by the bidding strategy (ISO 4217 three-letter
    * code).
+   *
    * For bidding strategies in manager customers, this currency can be set on
    * creation and defaults to the manager customer's currency. For serving
    * customers, this field cannot be set; all strategies in a serving customer
@@ -343,6 +349,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The currency used by the bidding strategy (ISO 4217 three-letter
    * code).
+   *
    * For bidding strategies in manager customers, this currency can be set on
    * creation and defaults to the manager customer's currency. For serving
    * customers, this field cannot be set; all strategies in a serving customer
@@ -375,10 +382,13 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The currency used by the bidding strategy (ISO 4217
    * three-letter code).
+   *
    * For bidding strategies in manager customers, this is the currency set by
    * the advertiser when creating the strategy. For serving customers, this is
    * the customer's currency_code.
+   *
    * Bidding strategy metrics are reported in this currency.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -393,10 +403,13 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The currency used by the bidding strategy (ISO 4217
    * three-letter code).
+   *
    * For bidding strategies in manager customers, this is the currency set by
    * the advertiser when creating the strategy. For serving customers, this is
    * the customer's currency_code.
+   *
    * Bidding strategy metrics are reported in this currency.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -420,10 +433,13 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The currency used by the bidding strategy (ISO 4217
    * three-letter code).
+   *
    * For bidding strategies in manager customers, this is the currency set by
    * the advertiser when creating the strategy. For serving customers, this is
    * the customer's currency_code.
+   *
    * Bidding strategy metrics are reported in this currency.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -469,6 +485,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The number of campaigns attached to this bidding strategy.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -482,6 +499,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The number of campaigns attached to this bidding strategy.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -499,6 +517,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The number of non-removed campaigns attached to this bidding
    * strategy.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -513,6 +532,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The number of non-removed campaigns attached to this bidding
    * strategy.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -1194,11 +1214,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.resources.BiddingStrategy parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.resources.BiddingStrategy parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1694,6 +1716,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the bidding strategy.
      * Bidding strategy resource names have the form:
+     *
      * `customers/{customer_id}/biddingStrategies/{bidding_strategy_id}`
      * </pre>
      *
@@ -1716,6 +1739,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the bidding strategy.
      * Bidding strategy resource names have the form:
+     *
      * `customers/{customer_id}/biddingStrategies/{bidding_strategy_id}`
      * </pre>
      *
@@ -1739,6 +1763,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the bidding strategy.
      * Bidding strategy resource names have the form:
+     *
      * `customers/{customer_id}/biddingStrategies/{bidding_strategy_id}`
      * </pre>
      *
@@ -1758,6 +1783,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the bidding strategy.
      * Bidding strategy resource names have the form:
+     *
      * `customers/{customer_id}/biddingStrategies/{bidding_strategy_id}`
      * </pre>
      *
@@ -1774,6 +1800,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the bidding strategy.
      * Bidding strategy resource names have the form:
+     *
      * `customers/{customer_id}/biddingStrategies/{bidding_strategy_id}`
      * </pre>
      *
@@ -1826,7 +1853,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      
+
       id_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -1852,6 +1879,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The name of the bidding strategy.
      * All bidding strategies within an account must be named distinctly.
+     *
      * The length of this string should be between 1 and 255, inclusive,
      * in UTF-8 bytes, (trimmed).
      * </pre>
@@ -1866,6 +1894,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The name of the bidding strategy.
      * All bidding strategies within an account must be named distinctly.
+     *
      * The length of this string should be between 1 and 255, inclusive,
      * in UTF-8 bytes, (trimmed).
      * </pre>
@@ -1889,6 +1918,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The name of the bidding strategy.
      * All bidding strategies within an account must be named distinctly.
+     *
      * The length of this string should be between 1 and 255, inclusive,
      * in UTF-8 bytes, (trimmed).
      * </pre>
@@ -1913,6 +1943,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The name of the bidding strategy.
      * All bidding strategies within an account must be named distinctly.
+     *
      * The length of this string should be between 1 and 255, inclusive,
      * in UTF-8 bytes, (trimmed).
      * </pre>
@@ -1933,6 +1964,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The name of the bidding strategy.
      * All bidding strategies within an account must be named distinctly.
+     *
      * The length of this string should be between 1 and 255, inclusive,
      * in UTF-8 bytes, (trimmed).
      * </pre>
@@ -1950,6 +1982,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The name of the bidding strategy.
      * All bidding strategies within an account must be named distinctly.
+     *
      * The length of this string should be between 1 and 255, inclusive,
      * in UTF-8 bytes, (trimmed).
      * </pre>
@@ -1972,6 +2005,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The status of the bidding strategy.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -1984,6 +2018,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The status of the bidding strategy.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2000,6 +2035,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The status of the bidding strategy.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2014,6 +2050,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The status of the bidding strategy.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2033,6 +2070,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The status of the bidding strategy.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2051,6 +2089,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The type of the bidding strategy.
      * Create a bidding strategy by setting the bidding scheme.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2064,6 +2103,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The type of the bidding strategy.
      * Create a bidding strategy by setting the bidding scheme.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2081,6 +2121,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The type of the bidding strategy.
      * Create a bidding strategy by setting the bidding scheme.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2096,6 +2137,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The type of the bidding strategy.
      * Create a bidding strategy by setting the bidding scheme.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2116,6 +2158,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The type of the bidding strategy.
      * Create a bidding strategy by setting the bidding scheme.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2134,6 +2177,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The currency used by the bidding strategy (ISO 4217 three-letter
      * code).
+     *
      * For bidding strategies in manager customers, this currency can be set on
      * creation and defaults to the manager customer's currency. For serving
      * customers, this field cannot be set; all strategies in a serving customer
@@ -2160,6 +2204,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The currency used by the bidding strategy (ISO 4217 three-letter
      * code).
+     *
      * For bidding strategies in manager customers, this currency can be set on
      * creation and defaults to the manager customer's currency. For serving
      * customers, this field cannot be set; all strategies in a serving customer
@@ -2187,6 +2232,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The currency used by the bidding strategy (ISO 4217 three-letter
      * code).
+     *
      * For bidding strategies in manager customers, this currency can be set on
      * creation and defaults to the manager customer's currency. For serving
      * customers, this field cannot be set; all strategies in a serving customer
@@ -2210,6 +2256,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The currency used by the bidding strategy (ISO 4217 three-letter
      * code).
+     *
      * For bidding strategies in manager customers, this currency can be set on
      * creation and defaults to the manager customer's currency. For serving
      * customers, this field cannot be set; all strategies in a serving customer
@@ -2230,6 +2277,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The currency used by the bidding strategy (ISO 4217 three-letter
      * code).
+     *
      * For bidding strategies in manager customers, this currency can be set on
      * creation and defaults to the manager customer's currency. For serving
      * customers, this field cannot be set; all strategies in a serving customer
@@ -2256,10 +2304,13 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The currency used by the bidding strategy (ISO 4217
      * three-letter code).
+     *
      * For bidding strategies in manager customers, this is the currency set by
      * the advertiser when creating the strategy. For serving customers, this is
      * the customer's currency_code.
+     *
      * Bidding strategy metrics are reported in this currency.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2273,10 +2324,13 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The currency used by the bidding strategy (ISO 4217
      * three-letter code).
+     *
      * For bidding strategies in manager customers, this is the currency set by
      * the advertiser when creating the strategy. For serving customers, this is
      * the customer's currency_code.
+     *
      * Bidding strategy metrics are reported in this currency.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2299,10 +2353,13 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The currency used by the bidding strategy (ISO 4217
      * three-letter code).
+     *
      * For bidding strategies in manager customers, this is the currency set by
      * the advertiser when creating the strategy. For serving customers, this is
      * the customer's currency_code.
+     *
      * Bidding strategy metrics are reported in this currency.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2326,10 +2383,13 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The currency used by the bidding strategy (ISO 4217
      * three-letter code).
+     *
      * For bidding strategies in manager customers, this is the currency set by
      * the advertiser when creating the strategy. For serving customers, this is
      * the customer's currency_code.
+     *
      * Bidding strategy metrics are reported in this currency.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2349,10 +2409,13 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The currency used by the bidding strategy (ISO 4217
      * three-letter code).
+     *
      * For bidding strategies in manager customers, this is the currency set by
      * the advertiser when creating the strategy. For serving customers, this is
      * the customer's currency_code.
+     *
      * Bidding strategy metrics are reported in this currency.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2369,10 +2432,13 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The currency used by the bidding strategy (ISO 4217
      * three-letter code).
+     *
      * For bidding strategies in manager customers, this is the currency set by
      * the advertiser when creating the strategy. For serving customers, this is
      * the customer's currency_code.
+     *
      * Bidding strategy metrics are reported in this currency.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2421,7 +2487,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAlignedCampaignBudgetId(long value) {
-      
+
       alignedCampaignBudgetId_ = value;
       bitField0_ |= 0x00000080;
       onChanged();
@@ -2450,6 +2516,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The number of campaigns attached to this bidding strategy.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2463,6 +2530,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The number of campaigns attached to this bidding strategy.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2476,6 +2544,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The number of campaigns attached to this bidding strategy.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2484,7 +2553,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCampaignCount(long value) {
-      
+
       campaignCount_ = value;
       bitField0_ |= 0x00000100;
       onChanged();
@@ -2493,6 +2562,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The number of campaigns attached to this bidding strategy.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2511,6 +2581,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The number of non-removed campaigns attached to this bidding
      * strategy.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2525,6 +2596,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The number of non-removed campaigns attached to this bidding
      * strategy.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2539,6 +2611,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The number of non-removed campaigns attached to this bidding
      * strategy.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2547,7 +2620,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setNonRemovedCampaignCount(long value) {
-      
+
       nonRemovedCampaignCount_ = value;
       bitField0_ |= 0x00000200;
       onChanged();
@@ -2557,6 +2630,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The number of non-removed campaigns attached to this bidding
      * strategy.
+     *
      * This field is read-only.
      * </pre>
      *

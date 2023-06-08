@@ -34,5 +34,5 @@ public interface AdvancedProductTargetingOrBuilder extends
    */
   com.google.ads.googleads.v12.services.YouTubeSelectSettingsOrBuilder getYoutubeSelectSettingsOrBuilder();
 
-  public com.google.ads.googleads.v12.services.AdvancedProductTargeting.AdvancedTargetingCase getAdvancedTargetingCase();
+  com.google.ads.googleads.v12.services.AdvancedProductTargeting.AdvancedTargetingCase getAdvancedTargetingCase();
 }

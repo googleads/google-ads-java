@@ -11,6 +11,7 @@ public interface MediaFileOrBuilder extends
    * <pre>
    * Immutable. The resource name of the media file.
    * Media file resource names have the form:
+   *
    * `customers/{customer_id}/mediaFiles/{media_file_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface MediaFileOrBuilder extends
    * <pre>
    * Immutable. The resource name of the media file.
    * Media file resource names have the form:
+   *
    * `customers/{customer_id}/mediaFiles/{media_file_id}`
    * </pre>
    *
@@ -282,5 +284,5 @@ public interface MediaFileOrBuilder extends
    */
   com.google.ads.googleads.v13.resources.MediaVideoOrBuilder getVideoOrBuilder();
 
-  public com.google.ads.googleads.v13.resources.MediaFile.MediatypeCase getMediatypeCase();
+  com.google.ads.googleads.v13.resources.MediaFile.MediatypeCase getMediatypeCase();
 }

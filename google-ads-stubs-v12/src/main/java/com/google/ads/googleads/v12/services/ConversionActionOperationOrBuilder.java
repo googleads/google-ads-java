@@ -98,6 +98,7 @@ public interface ConversionActionOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed conversion action is
    * expected, in this format:
+   *
    * `customers/{customer_id}/conversionActions/{conversion_action_id}`
    * </pre>
    *
@@ -109,6 +110,7 @@ public interface ConversionActionOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed conversion action is
    * expected, in this format:
+   *
    * `customers/{customer_id}/conversionActions/{conversion_action_id}`
    * </pre>
    *
@@ -120,6 +122,7 @@ public interface ConversionActionOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed conversion action is
    * expected, in this format:
+   *
    * `customers/{customer_id}/conversionActions/{conversion_action_id}`
    * </pre>
    *
@@ -129,5 +132,5 @@ public interface ConversionActionOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v12.services.ConversionActionOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v12.services.ConversionActionOperation.OperationCase getOperationCase();
 }

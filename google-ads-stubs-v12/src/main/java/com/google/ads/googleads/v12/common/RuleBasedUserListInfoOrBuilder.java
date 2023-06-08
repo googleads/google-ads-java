@@ -42,7 +42,13 @@ public interface RuleBasedUserListInfoOrBuilder extends
 
   /**
    * <pre>
-   * Flexible rule representation of visitors with one or multiple actions.
+   * Flexible rule representation of visitors with one or multiple actions. The
+   * flexible user list is defined by two lists of operands – inclusive_operands
+   * and exclusive_operands; each operand represents a set of users based on
+   * actions they took in a given timeframe. These lists of operands are
+   * combined with the AND_NOT operator, so that users represented by the
+   * inclusive operands are included in the user list, minus the users
+   * represented by the exclusive operands.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.FlexibleRuleUserListInfo flexible_rule_user_list = 5;</code>
@@ -51,7 +57,13 @@ public interface RuleBasedUserListInfoOrBuilder extends
   boolean hasFlexibleRuleUserList();
   /**
    * <pre>
-   * Flexible rule representation of visitors with one or multiple actions.
+   * Flexible rule representation of visitors with one or multiple actions. The
+   * flexible user list is defined by two lists of operands – inclusive_operands
+   * and exclusive_operands; each operand represents a set of users based on
+   * actions they took in a given timeframe. These lists of operands are
+   * combined with the AND_NOT operator, so that users represented by the
+   * inclusive operands are included in the user list, minus the users
+   * represented by the exclusive operands.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.FlexibleRuleUserListInfo flexible_rule_user_list = 5;</code>
@@ -60,7 +72,13 @@ public interface RuleBasedUserListInfoOrBuilder extends
   com.google.ads.googleads.v12.common.FlexibleRuleUserListInfo getFlexibleRuleUserList();
   /**
    * <pre>
-   * Flexible rule representation of visitors with one or multiple actions.
+   * Flexible rule representation of visitors with one or multiple actions. The
+   * flexible user list is defined by two lists of operands – inclusive_operands
+   * and exclusive_operands; each operand represents a set of users based on
+   * actions they took in a given timeframe. These lists of operands are
+   * combined with the AND_NOT operator, so that users represented by the
+   * inclusive operands are included in the user list, minus the users
+   * represented by the exclusive operands.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.FlexibleRuleUserListInfo flexible_rule_user_list = 5;</code>
@@ -130,5 +148,5 @@ public interface RuleBasedUserListInfoOrBuilder extends
    */
   com.google.ads.googleads.v12.common.ExpressionRuleUserListInfoOrBuilder getExpressionRuleUserListOrBuilder();
 
-  public com.google.ads.googleads.v12.common.RuleBasedUserListInfo.RuleBasedUserListCase getRuleBasedUserListCase();
+  com.google.ads.googleads.v12.common.RuleBasedUserListInfo.RuleBasedUserListCase getRuleBasedUserListCase();
 }

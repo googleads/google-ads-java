@@ -11,6 +11,7 @@ public interface CustomInterestOrBuilder extends
    * <pre>
    * Immutable. The resource name of the custom interest.
    * Custom interest resource names have the form:
+   *
    * `customers/{customer_id}/customInterests/{custom_interest_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface CustomInterestOrBuilder extends
    * <pre>
    * Immutable. The resource name of the custom interest.
    * Custom interest resource names have the form:
+   *
    * `customers/{customer_id}/customInterests/{custom_interest_id}`
    * </pre>
    *

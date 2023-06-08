@@ -34,11 +34,6 @@ private static final long serialVersionUID = 0L;
     return new KeywordPlanHistoricalMetrics();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.common.KeywordPlanCommonProto.internal_static_google_ads_googleads_v13_common_KeywordPlanHistoricalMetrics_descriptor;
@@ -491,11 +486,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.common.KeywordPlanHistoricalMetrics parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.common.KeywordPlanHistoricalMetrics parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -876,7 +873,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAvgMonthlySearches(long value) {
-      
+
       avgMonthlySearches_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
@@ -1330,7 +1327,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCompetitionIndex(long value) {
-      
+
       competitionIndex_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
@@ -1390,7 +1387,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLowTopOfPageBidMicros(long value) {
-      
+
       lowTopOfPageBidMicros_ = value;
       bitField0_ |= 0x00000010;
       onChanged();
@@ -1446,7 +1443,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHighTopOfPageBidMicros(long value) {
-      
+
       highTopOfPageBidMicros_ = value;
       bitField0_ |= 0x00000020;
       onChanged();
@@ -1502,7 +1499,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAverageCpcMicros(long value) {
-      
+
       averageCpcMicros_ = value;
       bitField0_ |= 0x00000040;
       onChanged();

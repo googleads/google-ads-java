@@ -50,39 +50,39 @@ public final class CustomerUserAccessServiceProto {
       "ss.proto\032\034google/api/annotations.proto\032\027" +
       "google/api/client.proto\032\037google/api/fiel" +
       "d_behavior.proto\032\031google/api/resource.pr" +
-      "oto\032 google/protobuf/field_mask.proto\"\223\001" +
-      "\n\037MutateCustomerUserAccessRequest\022\030\n\013cus" +
-      "tomer_id\030\001 \001(\tB\003\340A\002\022V\n\toperation\030\002 \001(\0132>" +
-      ".google.ads.googleads.v12.services.Custo" +
-      "merUserAccessOperationB\003\340A\002\"\351\001\n\033Customer" +
-      "UserAccessOperation\022/\n\013update_mask\030\003 \001(\013" +
-      "2\032.google.protobuf.FieldMask\022H\n\006update\030\001" +
-      " \001(\01326.google.ads.googleads.v12.resource" +
-      "s.CustomerUserAccessH\000\022B\n\006remove\030\002 \001(\tB0" +
-      "\372A-\n+googleads.googleapis.com/CustomerUs" +
-      "erAccessH\000B\013\n\toperation\"u\n MutateCustome" +
-      "rUserAccessResponse\022Q\n\006result\030\001 \001(\0132A.go" +
-      "ogle.ads.googleads.v12.services.MutateCu" +
-      "stomerUserAccessResult\"i\n\036MutateCustomer" +
-      "UserAccessResult\022G\n\rresource_name\030\001 \001(\tB" +
-      "0\372A-\n+googleads.googleapis.com/CustomerU" +
-      "serAccess2\347\002\n\031CustomerUserAccessService\022" +
-      "\202\002\n\030MutateCustomerUserAccess\022B.google.ad" +
-      "s.googleads.v12.services.MutateCustomerU" +
-      "serAccessRequest\032C.google.ads.googleads." +
-      "v12.services.MutateCustomerUserAccessRes" +
-      "ponse\"]\202\323\344\223\002?\":/v12/customers/{customer_" +
-      "id=*}/customerUserAccesses:mutate:\001*\332A\025c" +
-      "ustomer_id,operation\032E\312A\030googleads.googl" +
-      "eapis.com\322A\'https://www.googleapis.com/a" +
-      "uth/adwordsB\212\002\n%com.google.ads.googleads" +
-      ".v12.servicesB\036CustomerUserAccessService" +
-      "ProtoP\001ZIgoogle.golang.org/genproto/goog" +
-      "leapis/ads/googleads/v12/services;servic" +
-      "es\242\002\003GAA\252\002!Google.Ads.GoogleAds.V12.Serv" +
-      "ices\312\002!Google\\Ads\\GoogleAds\\V12\\Services" +
-      "\352\002%Google::Ads::GoogleAds::V12::Services" +
-      "b\006proto3"
+      "oto\032 google/protobuf/field_mask.proto\"\225\001" +
+      "\n\037MutateCustomerUserAccessRequest\022\031\n\013cus" +
+      "tomer_id\030\001 \001(\tB\004\342A\001\002\022W\n\toperation\030\002 \001(\0132" +
+      ">.google.ads.googleads.v12.services.Cust" +
+      "omerUserAccessOperationB\004\342A\001\002\"\351\001\n\033Custom" +
+      "erUserAccessOperation\022/\n\013update_mask\030\003 \001" +
+      "(\0132\032.google.protobuf.FieldMask\022H\n\006update" +
+      "\030\001 \001(\01326.google.ads.googleads.v12.resour" +
+      "ces.CustomerUserAccessH\000\022B\n\006remove\030\002 \001(\t" +
+      "B0\372A-\n+googleads.googleapis.com/Customer" +
+      "UserAccessH\000B\013\n\toperation\"u\n MutateCusto" +
+      "merUserAccessResponse\022Q\n\006result\030\001 \001(\0132A." +
+      "google.ads.googleads.v12.services.Mutate" +
+      "CustomerUserAccessResult\"i\n\036MutateCustom" +
+      "erUserAccessResult\022G\n\rresource_name\030\001 \001(" +
+      "\tB0\372A-\n+googleads.googleapis.com/Custome" +
+      "rUserAccess2\347\002\n\031CustomerUserAccessServic" +
+      "e\022\202\002\n\030MutateCustomerUserAccess\022B.google." +
+      "ads.googleads.v12.services.MutateCustome" +
+      "rUserAccessRequest\032C.google.ads.googlead" +
+      "s.v12.services.MutateCustomerUserAccessR" +
+      "esponse\"]\332A\025customer_id,operation\202\323\344\223\002?\"" +
+      ":/v12/customers/{customer_id=*}/customer" +
+      "UserAccesses:mutate:\001*\032E\312A\030googleads.goo" +
+      "gleapis.com\322A\'https://www.googleapis.com" +
+      "/auth/adwordsB\212\002\n%com.google.ads.googlea" +
+      "ds.v12.servicesB\036CustomerUserAccessServi" +
+      "ceProtoP\001ZIgoogle.golang.org/genproto/go" +
+      "ogleapis/ads/googleads/v12/services;serv" +
+      "ices\242\002\003GAA\252\002!Google.Ads.GoogleAds.V12.Se" +
+      "rvices\312\002!Google\\Ads\\GoogleAds\\V12\\Servic" +
+      "es\352\002%Google::Ads::GoogleAds::V12::Servic" +
+      "esb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

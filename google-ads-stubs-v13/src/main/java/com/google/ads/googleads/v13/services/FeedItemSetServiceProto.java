@@ -51,40 +51,40 @@ public final class FeedItemSetServiceProto {
       "ent.proto\032\037google/api/field_behavior.pro" +
       "to\032\031google/api/resource.proto\032 google/pr" +
       "otobuf/field_mask.proto\032\027google/rpc/stat" +
-      "us.proto\"\267\001\n\031MutateFeedItemSetsRequest\022\030" +
-      "\n\013customer_id\030\001 \001(\tB\003\340A\002\022P\n\noperations\030\002" +
-      " \003(\01327.google.ads.googleads.v13.services" +
-      ".FeedItemSetOperationB\003\340A\002\022\027\n\017partial_fa" +
-      "ilure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\"\227\002\n\024F" +
-      "eedItemSetOperation\022/\n\013update_mask\030\004 \001(\013" +
-      "2\032.google.protobuf.FieldMask\022A\n\006create\030\001" +
-      " \001(\0132/.google.ads.googleads.v13.resource" +
-      "s.FeedItemSetH\000\022A\n\006update\030\002 \001(\0132/.google" +
-      ".ads.googleads.v13.resources.FeedItemSet" +
-      "H\000\022;\n\006remove\030\003 \001(\tB)\372A&\n$googleads.googl" +
-      "eapis.com/FeedItemSetH\000B\013\n\toperation\"\234\001\n" +
-      "\032MutateFeedItemSetsResponse\022K\n\007results\030\001" +
-      " \003(\0132:.google.ads.googleads.v13.services" +
-      ".MutateFeedItemSetResult\0221\n\025partial_fail" +
-      "ure_error\030\002 \001(\0132\022.google.rpc.Status\"[\n\027M" +
-      "utateFeedItemSetResult\022@\n\rresource_name\030" +
-      "\001 \001(\tB)\372A&\n$googleads.googleapis.com/Fee" +
-      "dItemSet2\307\002\n\022FeedItemSetService\022\351\001\n\022Muta" +
-      "teFeedItemSets\022<.google.ads.googleads.v1" +
-      "3.services.MutateFeedItemSetsRequest\032=.g" +
-      "oogle.ads.googleads.v13.services.MutateF" +
-      "eedItemSetsResponse\"V\202\323\344\223\0027\"2/v13/custom" +
-      "ers/{customer_id=*}/feedItemSets:mutate:" +
-      "\001*\332A\026customer_id,operations\032E\312A\030googlead" +
-      "s.googleapis.com\322A\'https://www.googleapi" +
-      "s.com/auth/adwordsB\203\002\n%com.google.ads.go" +
-      "ogleads.v13.servicesB\027FeedItemSetService" +
-      "ProtoP\001ZIgoogle.golang.org/genproto/goog" +
-      "leapis/ads/googleads/v13/services;servic" +
-      "es\242\002\003GAA\252\002!Google.Ads.GoogleAds.V13.Serv" +
-      "ices\312\002!Google\\Ads\\GoogleAds\\V13\\Services" +
-      "\352\002%Google::Ads::GoogleAds::V13::Services" +
-      "b\006proto3"
+      "us.proto\"\271\001\n\031MutateFeedItemSetsRequest\022\031" +
+      "\n\013customer_id\030\001 \001(\tB\004\342A\001\002\022Q\n\noperations\030" +
+      "\002 \003(\01327.google.ads.googleads.v13.service" +
+      "s.FeedItemSetOperationB\004\342A\001\002\022\027\n\017partial_" +
+      "failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\"\227\002\n" +
+      "\024FeedItemSetOperation\022/\n\013update_mask\030\004 \001" +
+      "(\0132\032.google.protobuf.FieldMask\022A\n\006create" +
+      "\030\001 \001(\0132/.google.ads.googleads.v13.resour" +
+      "ces.FeedItemSetH\000\022A\n\006update\030\002 \001(\0132/.goog" +
+      "le.ads.googleads.v13.resources.FeedItemS" +
+      "etH\000\022;\n\006remove\030\003 \001(\tB)\372A&\n$googleads.goo" +
+      "gleapis.com/FeedItemSetH\000B\013\n\toperation\"\234" +
+      "\001\n\032MutateFeedItemSetsResponse\022K\n\007results" +
+      "\030\001 \003(\0132:.google.ads.googleads.v13.servic" +
+      "es.MutateFeedItemSetResult\0221\n\025partial_fa" +
+      "ilure_error\030\002 \001(\0132\022.google.rpc.Status\"[\n" +
+      "\027MutateFeedItemSetResult\022@\n\rresource_nam" +
+      "e\030\001 \001(\tB)\372A&\n$googleads.googleapis.com/F" +
+      "eedItemSet2\307\002\n\022FeedItemSetService\022\351\001\n\022Mu" +
+      "tateFeedItemSets\022<.google.ads.googleads." +
+      "v13.services.MutateFeedItemSetsRequest\032=" +
+      ".google.ads.googleads.v13.services.Mutat" +
+      "eFeedItemSetsResponse\"V\332A\026customer_id,op" +
+      "erations\202\323\344\223\0027\"2/v13/customers/{customer" +
+      "_id=*}/feedItemSets:mutate:\001*\032E\312A\030google" +
+      "ads.googleapis.com\322A\'https://www.googlea" +
+      "pis.com/auth/adwordsB\203\002\n%com.google.ads." +
+      "googleads.v13.servicesB\027FeedItemSetServi" +
+      "ceProtoP\001ZIgoogle.golang.org/genproto/go" +
+      "ogleapis/ads/googleads/v13/services;serv" +
+      "ices\242\002\003GAA\252\002!Google.Ads.GoogleAds.V13.Se" +
+      "rvices\312\002!Google\\Ads\\GoogleAds\\V13\\Servic" +
+      "es\352\002%Google::Ads::GoogleAds::V13::Servic" +
+      "esb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

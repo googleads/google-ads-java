@@ -75,5 +75,5 @@ public interface BillingSetupOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v13.services.BillingSetupOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v13.services.BillingSetupOperation.OperationCase getOperationCase();
 }

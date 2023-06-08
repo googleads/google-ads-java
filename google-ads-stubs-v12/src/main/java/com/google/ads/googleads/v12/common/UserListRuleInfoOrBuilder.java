@@ -10,11 +10,12 @@ public interface UserListRuleInfoOrBuilder extends
   /**
    * <pre>
    * Rule type is used to determine how to group rule items.
+   *
    * The default is OR of ANDs (disjunctive normal form).
    * That is, rule items will be ANDed together within rule item groups and the
    * groups themselves will be ORed together.
-   * Currently AND of ORs (conjunctive normal form) is only supported for
-   * ExpressionRuleUserList.
+   *
+   * OR of ANDs is the only supported type for FlexibleRuleUserList.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.UserListRuleTypeEnum.UserListRuleType rule_type = 1;</code>
@@ -24,11 +25,12 @@ public interface UserListRuleInfoOrBuilder extends
   /**
    * <pre>
    * Rule type is used to determine how to group rule items.
+   *
    * The default is OR of ANDs (disjunctive normal form).
    * That is, rule items will be ANDed together within rule item groups and the
    * groups themselves will be ORed together.
-   * Currently AND of ORs (conjunctive normal form) is only supported for
-   * ExpressionRuleUserList.
+   *
+   * OR of ANDs is the only supported type for FlexibleRuleUserList.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.enums.UserListRuleTypeEnum.UserListRuleType rule_type = 1;</code>

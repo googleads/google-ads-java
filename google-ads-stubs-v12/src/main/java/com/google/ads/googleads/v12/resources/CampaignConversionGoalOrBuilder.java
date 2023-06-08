@@ -11,6 +11,7 @@ public interface CampaignConversionGoalOrBuilder extends
    * <pre>
    * Immutable. The resource name of the campaign conversion goal.
    * Campaign conversion goal resource names have the form:
+   *
    * `customers/{customer_id}/campaignConversionGoals/{campaign_id}~{category}~{origin}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface CampaignConversionGoalOrBuilder extends
    * <pre>
    * Immutable. The resource name of the campaign conversion goal.
    * Campaign conversion goal resource names have the form:
+   *
    * `customers/{customer_id}/campaignConversionGoals/{campaign_id}~{category}~{origin}`
    * </pre>
    *

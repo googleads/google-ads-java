@@ -11,6 +11,7 @@ public interface AdGroupAdOrBuilder extends
    * <pre>
    * Immutable. The resource name of the ad.
    * Ad group ad resource names have the form:
+   *
    * `customers/{customer_id}/adGroupAds/{ad_group_id}~{ad_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface AdGroupAdOrBuilder extends
    * <pre>
    * Immutable. The resource name of the ad.
    * Ad group ad resource names have the form:
+   *
    * `customers/{customer_id}/adGroupAds/{ad_group_id}~{ad_id}`
    * </pre>
    *

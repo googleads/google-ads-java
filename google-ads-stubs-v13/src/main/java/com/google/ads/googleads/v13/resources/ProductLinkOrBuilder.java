@@ -11,6 +11,7 @@ public interface ProductLinkOrBuilder extends
    * <pre>
    * Immutable. Resource name of the product link.
    * ProductLink resource names have the form:
+   *
    * `customers/{customer_id}/productLinks/{product_link_id} `
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface ProductLinkOrBuilder extends
    * <pre>
    * Immutable. Resource name of the product link.
    * ProductLink resource names have the form:
+   *
    * `customers/{customer_id}/productLinks/{product_link_id} `
    * </pre>
    *
@@ -125,5 +127,5 @@ public interface ProductLinkOrBuilder extends
    */
   com.google.ads.googleads.v13.resources.GoogleAdsIdentifierOrBuilder getGoogleAdsOrBuilder();
 
-  public com.google.ads.googleads.v13.resources.ProductLink.LinkedProductCase getLinkedProductCase();
+  com.google.ads.googleads.v13.resources.ProductLink.LinkedProductCase getLinkedProductCase();
 }

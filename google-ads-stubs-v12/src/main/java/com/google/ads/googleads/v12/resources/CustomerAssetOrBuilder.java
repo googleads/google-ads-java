@@ -11,6 +11,7 @@ public interface CustomerAssetOrBuilder extends
    * <pre>
    * Immutable. The resource name of the customer asset.
    * CustomerAsset resource names have the form:
+   *
    * `customers/{customer_id}/customerAssets/{asset_id}~{field_type}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface CustomerAssetOrBuilder extends
    * <pre>
    * Immutable. The resource name of the customer asset.
    * CustomerAsset resource names have the form:
+   *
    * `customers/{customer_id}/customerAssets/{asset_id}~{field_type}`
    * </pre>
    *

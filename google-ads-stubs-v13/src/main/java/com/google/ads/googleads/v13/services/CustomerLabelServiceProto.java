@@ -50,38 +50,38 @@ public final class CustomerLabelServiceProto {
       "ogle/api/annotations.proto\032\027google/api/c" +
       "lient.proto\032\037google/api/field_behavior.p" +
       "roto\032\031google/api/resource.proto\032\027google/" +
-      "rpc/status.proto\"\273\001\n\033MutateCustomerLabel" +
-      "sRequest\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022R\n\nop" +
-      "erations\030\002 \003(\01329.google.ads.googleads.v1" +
-      "3.services.CustomerLabelOperationB\003\340A\002\022\027" +
-      "\n\017partial_failure\030\003 \001(\010\022\025\n\rvalidate_only" +
-      "\030\004 \001(\010\"\251\001\n\026CustomerLabelOperation\022C\n\006cre" +
-      "ate\030\001 \001(\01321.google.ads.googleads.v13.res" +
-      "ources.CustomerLabelH\000\022=\n\006remove\030\002 \001(\tB+" +
-      "\372A(\n&googleads.googleapis.com/CustomerLa" +
-      "belH\000B\013\n\toperation\"\240\001\n\034MutateCustomerLab" +
-      "elsResponse\0221\n\025partial_failure_error\030\003 \001" +
-      "(\0132\022.google.rpc.Status\022M\n\007results\030\002 \003(\0132" +
-      "<.google.ads.googleads.v13.services.Muta" +
-      "teCustomerLabelResult\"_\n\031MutateCustomerL" +
-      "abelResult\022B\n\rresource_name\030\001 \001(\tB+\372A(\n&" +
-      "googleads.googleapis.com/CustomerLabel2\321" +
-      "\002\n\024CustomerLabelService\022\361\001\n\024MutateCustom" +
-      "erLabels\022>.google.ads.googleads.v13.serv" +
-      "ices.MutateCustomerLabelsRequest\032?.googl" +
-      "e.ads.googleads.v13.services.MutateCusto" +
-      "merLabelsResponse\"X\202\323\344\223\0029\"4/v13/customer" +
-      "s/{customer_id=*}/customerLabels:mutate:" +
-      "\001*\332A\026customer_id,operations\032E\312A\030googlead" +
-      "s.googleapis.com\322A\'https://www.googleapi" +
-      "s.com/auth/adwordsB\205\002\n%com.google.ads.go" +
-      "ogleads.v13.servicesB\031CustomerLabelServi" +
-      "ceProtoP\001ZIgoogle.golang.org/genproto/go" +
-      "ogleapis/ads/googleads/v13/services;serv" +
-      "ices\242\002\003GAA\252\002!Google.Ads.GoogleAds.V13.Se" +
-      "rvices\312\002!Google\\Ads\\GoogleAds\\V13\\Servic" +
-      "es\352\002%Google::Ads::GoogleAds::V13::Servic" +
-      "esb\006proto3"
+      "rpc/status.proto\"\275\001\n\033MutateCustomerLabel" +
+      "sRequest\022\031\n\013customer_id\030\001 \001(\tB\004\342A\001\002\022S\n\no" +
+      "perations\030\002 \003(\01329.google.ads.googleads.v" +
+      "13.services.CustomerLabelOperationB\004\342A\001\002" +
+      "\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rvalidate_on" +
+      "ly\030\004 \001(\010\"\251\001\n\026CustomerLabelOperation\022C\n\006c" +
+      "reate\030\001 \001(\01321.google.ads.googleads.v13.r" +
+      "esources.CustomerLabelH\000\022=\n\006remove\030\002 \001(\t" +
+      "B+\372A(\n&googleads.googleapis.com/Customer" +
+      "LabelH\000B\013\n\toperation\"\240\001\n\034MutateCustomerL" +
+      "abelsResponse\0221\n\025partial_failure_error\030\003" +
+      " \001(\0132\022.google.rpc.Status\022M\n\007results\030\002 \003(" +
+      "\0132<.google.ads.googleads.v13.services.Mu" +
+      "tateCustomerLabelResult\"_\n\031MutateCustome" +
+      "rLabelResult\022B\n\rresource_name\030\001 \001(\tB+\372A(" +
+      "\n&googleads.googleapis.com/CustomerLabel" +
+      "2\321\002\n\024CustomerLabelService\022\361\001\n\024MutateCust" +
+      "omerLabels\022>.google.ads.googleads.v13.se" +
+      "rvices.MutateCustomerLabelsRequest\032?.goo" +
+      "gle.ads.googleads.v13.services.MutateCus" +
+      "tomerLabelsResponse\"X\332A\026customer_id,oper" +
+      "ations\202\323\344\223\0029\"4/v13/customers/{customer_i" +
+      "d=*}/customerLabels:mutate:\001*\032E\312A\030google" +
+      "ads.googleapis.com\322A\'https://www.googlea" +
+      "pis.com/auth/adwordsB\205\002\n%com.google.ads." +
+      "googleads.v13.servicesB\031CustomerLabelSer" +
+      "viceProtoP\001ZIgoogle.golang.org/genproto/" +
+      "googleapis/ads/googleads/v13/services;se" +
+      "rvices\242\002\003GAA\252\002!Google.Ads.GoogleAds.V13." +
+      "Services\312\002!Google\\Ads\\GoogleAds\\V13\\Serv" +
+      "ices\352\002%Google::Ads::GoogleAds::V13::Serv" +
+      "icesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

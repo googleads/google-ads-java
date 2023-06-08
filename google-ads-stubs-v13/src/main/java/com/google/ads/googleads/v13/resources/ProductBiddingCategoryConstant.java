@@ -36,11 +36,6 @@ private static final long serialVersionUID = 0L;
     return new ProductBiddingCategoryConstant();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.resources.ProductBiddingCategoryConstantProto.internal_static_google_ads_googleads_v13_resources_ProductBiddingCategoryConstant_descriptor;
@@ -62,6 +57,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the product bidding category.
    * Product bidding category resource names have the form:
+   *
    * `productBiddingCategoryConstants/{country_code}~{level}~{id}`
    * </pre>
    *
@@ -85,6 +81,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the product bidding category.
    * Product bidding category resource names have the form:
+   *
    * `productBiddingCategoryConstants/{country_code}~{level}~{id}`
    * </pre>
    *
@@ -111,6 +108,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. ID of the product bidding category.
+   *
    * This ID is equivalent to the google_product_category ID as described in
    * this article: https://support.google.com/merchants/answer/6324436.
    * </pre>
@@ -125,6 +123,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. ID of the product bidding category.
+   *
    * This ID is equivalent to the google_product_category ID as described in
    * this article: https://support.google.com/merchants/answer/6324436.
    * </pre>
@@ -636,11 +635,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.resources.ProductBiddingCategoryConstant parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.resources.ProductBiddingCategoryConstant parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -960,6 +961,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the product bidding category.
      * Product bidding category resource names have the form:
+     *
      * `productBiddingCategoryConstants/{country_code}~{level}~{id}`
      * </pre>
      *
@@ -982,6 +984,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the product bidding category.
      * Product bidding category resource names have the form:
+     *
      * `productBiddingCategoryConstants/{country_code}~{level}~{id}`
      * </pre>
      *
@@ -1005,6 +1008,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the product bidding category.
      * Product bidding category resource names have the form:
+     *
      * `productBiddingCategoryConstants/{country_code}~{level}~{id}`
      * </pre>
      *
@@ -1024,6 +1028,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the product bidding category.
      * Product bidding category resource names have the form:
+     *
      * `productBiddingCategoryConstants/{country_code}~{level}~{id}`
      * </pre>
      *
@@ -1040,6 +1045,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the product bidding category.
      * Product bidding category resource names have the form:
+     *
      * `productBiddingCategoryConstants/{country_code}~{level}~{id}`
      * </pre>
      *
@@ -1061,6 +1067,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. ID of the product bidding category.
+     *
      * This ID is equivalent to the google_product_category ID as described in
      * this article: https://support.google.com/merchants/answer/6324436.
      * </pre>
@@ -1075,6 +1082,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. ID of the product bidding category.
+     *
      * This ID is equivalent to the google_product_category ID as described in
      * this article: https://support.google.com/merchants/answer/6324436.
      * </pre>
@@ -1089,6 +1097,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. ID of the product bidding category.
+     *
      * This ID is equivalent to the google_product_category ID as described in
      * this article: https://support.google.com/merchants/answer/6324436.
      * </pre>
@@ -1098,7 +1107,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      
+
       id_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -1107,6 +1116,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. ID of the product bidding category.
+     *
      * This ID is equivalent to the google_product_category ID as described in
      * this article: https://support.google.com/merchants/answer/6324436.
      * </pre>

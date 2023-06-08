@@ -2032,5 +2032,5 @@ public interface MutateOperationOrBuilder extends
    */
   com.google.ads.googleads.v12.services.UserListOperationOrBuilder getUserListOperationOrBuilder();
 
-  public com.google.ads.googleads.v12.services.MutateOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v12.services.MutateOperation.OperationCase getOperationCase();
 }

@@ -11,6 +11,7 @@ public interface AccessibleBiddingStrategyOrBuilder extends
    * <pre>
    * Output only. The resource name of the accessible bidding strategy.
    * AccessibleBiddingStrategy resource names have the form:
+   *
    * `customers/{customer_id}/accessibleBiddingStrategies/{bidding_strategy_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface AccessibleBiddingStrategyOrBuilder extends
    * <pre>
    * Output only. The resource name of the accessible bidding strategy.
    * AccessibleBiddingStrategy resource names have the form:
+   *
    * `customers/{customer_id}/accessibleBiddingStrategies/{bidding_strategy_id}`
    * </pre>
    *
@@ -292,5 +294,5 @@ public interface AccessibleBiddingStrategyOrBuilder extends
    */
   com.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.TargetSpendOrBuilder getTargetSpendOrBuilder();
 
-  public com.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.SchemeCase getSchemeCase();
+  com.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.SchemeCase getSchemeCase();
 }

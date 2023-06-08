@@ -11,6 +11,7 @@ public interface ManagedPlacementViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the Managed Placement view.
    * Managed placement view resource names have the form:
+   *
    * `customers/{customer_id}/managedPlacementViews/{ad_group_id}~{criterion_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface ManagedPlacementViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the Managed Placement view.
    * Managed placement view resource names have the form:
+   *
    * `customers/{customer_id}/managedPlacementViews/{ad_group_id}~{criterion_id}`
    * </pre>
    *

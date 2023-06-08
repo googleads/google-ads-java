@@ -35,11 +35,6 @@ private static final long serialVersionUID = 0L;
     return new CampaignBudget();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.resources.CampaignBudgetProto.internal_static_google_ads_googleads_v13_resources_CampaignBudget_descriptor;
@@ -61,6 +56,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the campaign budget.
    * Campaign budget resource names have the form:
+   *
    * `customers/{customer_id}/campaignBudgets/{campaign_budget_id}`
    * </pre>
    *
@@ -84,6 +80,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the campaign budget.
    * Campaign budget resource names have the form:
+   *
    * `customers/{customer_id}/campaignBudgets/{campaign_budget_id}`
    * </pre>
    *
@@ -110,6 +107,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The ID of the campaign budget.
+   *
    * A campaign budget is created using the CampaignBudgetService create
    * operation and is assigned a budget ID. A budget ID can be shared across
    * different campaigns; the system will then allocate the campaign budget
@@ -126,6 +124,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The ID of the campaign budget.
+   *
    * A campaign budget is created using the CampaignBudgetService create
    * operation and is assigned a budget ID. A budget ID can be shared across
    * different campaigns; the system will then allocate the campaign budget
@@ -146,10 +145,12 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The name of the campaign budget.
+   *
    * When creating a campaign budget through CampaignBudgetService, every
    * explicitly shared campaign budget must have a non-null, non-empty name.
    * Campaign budgets that are not explicitly shared derive their name from the
    * attached campaign's name.
+   *
    * The length of this string must be between 1 and 255, inclusive,
    * in UTF-8 bytes, (trimmed).
    * </pre>
@@ -164,10 +165,12 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The name of the campaign budget.
+   *
    * When creating a campaign budget through CampaignBudgetService, every
    * explicitly shared campaign budget must have a non-null, non-empty name.
    * Campaign budgets that are not explicitly shared derive their name from the
    * attached campaign's name.
+   *
    * The length of this string must be between 1 and 255, inclusive,
    * in UTF-8 bytes, (trimmed).
    * </pre>
@@ -191,10 +194,12 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The name of the campaign budget.
+   *
    * When creating a campaign budget through CampaignBudgetService, every
    * explicitly shared campaign budget must have a non-null, non-empty name.
    * Campaign budgets that are not explicitly shared derive their name from the
    * attached campaign's name.
+   *
    * The length of this string must be between 1 and 255, inclusive,
    * in UTF-8 bytes, (trimmed).
    * </pre>
@@ -311,6 +316,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The delivery method that determines the rate at which the campaign budget
    * is spent.
+   *
    * Defaults to STANDARD if unspecified in a create operation.
    * </pre>
    *
@@ -324,6 +330,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The delivery method that determines the rate at which the campaign budget
    * is spent.
+   *
    * Defaults to STANDARD if unspecified in a create operation.
    * </pre>
    *
@@ -341,14 +348,18 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Specifies whether the budget is explicitly shared. Defaults to true if
    * unspecified in a create operation.
+   *
    * If true, the budget was created with the purpose of sharing
    * across one or more campaigns.
+   *
    * If false, the budget was created with the intention of only being used
    * with a single campaign. The budget's name and status will stay in sync
    * with the campaign's name and status. Attempting to share the budget with a
    * second campaign will result in an error.
+   *
    * A non-shared budget can become an explicitly shared. The same operation
    * must also assign the budget a name.
+   *
    * A shared campaign budget can never become non-shared.
    * </pre>
    *
@@ -363,14 +374,18 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Specifies whether the budget is explicitly shared. Defaults to true if
    * unspecified in a create operation.
+   *
    * If true, the budget was created with the purpose of sharing
    * across one or more campaigns.
+   *
    * If false, the budget was created with the intention of only being used
    * with a single campaign. The budget's name and status will stay in sync
    * with the campaign's name and status. Attempting to share the budget with a
    * second campaign will result in an error.
+   *
    * A non-shared budget can become an explicitly shared. The same operation
    * must also assign the budget a name.
+   *
    * A shared campaign budget can never become non-shared.
    * </pre>
    *
@@ -387,6 +402,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The number of campaigns actively using the budget.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -400,6 +416,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The number of campaigns actively using the budget.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -417,6 +434,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. Indicates whether there is a recommended budget for this
    * campaign budget.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -431,6 +449,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. Indicates whether there is a recommended budget for this
    * campaign budget.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -449,6 +468,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The recommended budget amount. If no recommendation is
    * available, this will be set to the budget amount. Amount is specified in
    * micros, where one million is equivalent to one currency unit.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -464,6 +484,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The recommended budget amount. If no recommendation is
    * available, this will be set to the budget amount. Amount is specified in
    * micros, where one million is equivalent to one currency unit.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -509,6 +530,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The estimated change in weekly clicks if the recommended
    * budget is applied.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -523,6 +545,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The estimated change in weekly clicks if the recommended
    * budget is applied.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -541,6 +564,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The estimated change in weekly cost in micros if the
    * recommended budget is applied. One million is equivalent to one currency
    * unit.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -556,6 +580,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The estimated change in weekly cost in micros if the
    * recommended budget is applied. One million is equivalent to one currency
    * unit.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -573,6 +598,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The estimated change in weekly interactions if the recommended
    * budget is applied.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -587,6 +613,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The estimated change in weekly interactions if the recommended
    * budget is applied.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -604,6 +631,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The estimated change in weekly views if the recommended budget
    * is applied.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -618,6 +646,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The estimated change in weekly views if the recommended budget
    * is applied.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -1036,11 +1065,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.resources.CampaignBudget parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.resources.CampaignBudget parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1481,6 +1512,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the campaign budget.
      * Campaign budget resource names have the form:
+     *
      * `customers/{customer_id}/campaignBudgets/{campaign_budget_id}`
      * </pre>
      *
@@ -1503,6 +1535,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the campaign budget.
      * Campaign budget resource names have the form:
+     *
      * `customers/{customer_id}/campaignBudgets/{campaign_budget_id}`
      * </pre>
      *
@@ -1526,6 +1559,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the campaign budget.
      * Campaign budget resource names have the form:
+     *
      * `customers/{customer_id}/campaignBudgets/{campaign_budget_id}`
      * </pre>
      *
@@ -1545,6 +1579,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the campaign budget.
      * Campaign budget resource names have the form:
+     *
      * `customers/{customer_id}/campaignBudgets/{campaign_budget_id}`
      * </pre>
      *
@@ -1561,6 +1596,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the campaign budget.
      * Campaign budget resource names have the form:
+     *
      * `customers/{customer_id}/campaignBudgets/{campaign_budget_id}`
      * </pre>
      *
@@ -1582,6 +1618,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The ID of the campaign budget.
+     *
      * A campaign budget is created using the CampaignBudgetService create
      * operation and is assigned a budget ID. A budget ID can be shared across
      * different campaigns; the system will then allocate the campaign budget
@@ -1598,6 +1635,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The ID of the campaign budget.
+     *
      * A campaign budget is created using the CampaignBudgetService create
      * operation and is assigned a budget ID. A budget ID can be shared across
      * different campaigns; the system will then allocate the campaign budget
@@ -1614,6 +1652,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The ID of the campaign budget.
+     *
      * A campaign budget is created using the CampaignBudgetService create
      * operation and is assigned a budget ID. A budget ID can be shared across
      * different campaigns; the system will then allocate the campaign budget
@@ -1625,7 +1664,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      
+
       id_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -1634,6 +1673,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The ID of the campaign budget.
+     *
      * A campaign budget is created using the CampaignBudgetService create
      * operation and is assigned a budget ID. A budget ID can be shared across
      * different campaigns; the system will then allocate the campaign budget
@@ -1654,10 +1694,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the campaign budget.
+     *
      * When creating a campaign budget through CampaignBudgetService, every
      * explicitly shared campaign budget must have a non-null, non-empty name.
      * Campaign budgets that are not explicitly shared derive their name from the
      * attached campaign's name.
+     *
      * The length of this string must be between 1 and 255, inclusive,
      * in UTF-8 bytes, (trimmed).
      * </pre>
@@ -1671,10 +1713,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the campaign budget.
+     *
      * When creating a campaign budget through CampaignBudgetService, every
      * explicitly shared campaign budget must have a non-null, non-empty name.
      * Campaign budgets that are not explicitly shared derive their name from the
      * attached campaign's name.
+     *
      * The length of this string must be between 1 and 255, inclusive,
      * in UTF-8 bytes, (trimmed).
      * </pre>
@@ -1697,10 +1741,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the campaign budget.
+     *
      * When creating a campaign budget through CampaignBudgetService, every
      * explicitly shared campaign budget must have a non-null, non-empty name.
      * Campaign budgets that are not explicitly shared derive their name from the
      * attached campaign's name.
+     *
      * The length of this string must be between 1 and 255, inclusive,
      * in UTF-8 bytes, (trimmed).
      * </pre>
@@ -1724,10 +1770,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the campaign budget.
+     *
      * When creating a campaign budget through CampaignBudgetService, every
      * explicitly shared campaign budget must have a non-null, non-empty name.
      * Campaign budgets that are not explicitly shared derive their name from the
      * attached campaign's name.
+     *
      * The length of this string must be between 1 and 255, inclusive,
      * in UTF-8 bytes, (trimmed).
      * </pre>
@@ -1747,10 +1795,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the campaign budget.
+     *
      * When creating a campaign budget through CampaignBudgetService, every
      * explicitly shared campaign budget must have a non-null, non-empty name.
      * Campaign budgets that are not explicitly shared derive their name from the
      * attached campaign's name.
+     *
      * The length of this string must be between 1 and 255, inclusive,
      * in UTF-8 bytes, (trimmed).
      * </pre>
@@ -1767,10 +1817,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the campaign budget.
+     *
      * When creating a campaign budget through CampaignBudgetService, every
      * explicitly shared campaign budget must have a non-null, non-empty name.
      * Campaign budgets that are not explicitly shared derive their name from the
      * attached campaign's name.
+     *
      * The length of this string must be between 1 and 255, inclusive,
      * in UTF-8 bytes, (trimmed).
      * </pre>
@@ -1830,7 +1882,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAmountMicros(long value) {
-      
+
       amountMicros_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
@@ -1894,7 +1946,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalAmountMicros(long value) {
-      
+
       totalAmountMicros_ = value;
       bitField0_ |= 0x00000010;
       onChanged();
@@ -1995,6 +2047,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The delivery method that determines the rate at which the campaign budget
      * is spent.
+     *
      * Defaults to STANDARD if unspecified in a create operation.
      * </pre>
      *
@@ -2008,6 +2061,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The delivery method that determines the rate at which the campaign budget
      * is spent.
+     *
      * Defaults to STANDARD if unspecified in a create operation.
      * </pre>
      *
@@ -2025,6 +2079,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The delivery method that determines the rate at which the campaign budget
      * is spent.
+     *
      * Defaults to STANDARD if unspecified in a create operation.
      * </pre>
      *
@@ -2040,6 +2095,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The delivery method that determines the rate at which the campaign budget
      * is spent.
+     *
      * Defaults to STANDARD if unspecified in a create operation.
      * </pre>
      *
@@ -2060,6 +2116,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The delivery method that determines the rate at which the campaign budget
      * is spent.
+     *
      * Defaults to STANDARD if unspecified in a create operation.
      * </pre>
      *
@@ -2078,14 +2135,18 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Specifies whether the budget is explicitly shared. Defaults to true if
      * unspecified in a create operation.
+     *
      * If true, the budget was created with the purpose of sharing
      * across one or more campaigns.
+     *
      * If false, the budget was created with the intention of only being used
      * with a single campaign. The budget's name and status will stay in sync
      * with the campaign's name and status. Attempting to share the budget with a
      * second campaign will result in an error.
+     *
      * A non-shared budget can become an explicitly shared. The same operation
      * must also assign the budget a name.
+     *
      * A shared campaign budget can never become non-shared.
      * </pre>
      *
@@ -2100,14 +2161,18 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Specifies whether the budget is explicitly shared. Defaults to true if
      * unspecified in a create operation.
+     *
      * If true, the budget was created with the purpose of sharing
      * across one or more campaigns.
+     *
      * If false, the budget was created with the intention of only being used
      * with a single campaign. The budget's name and status will stay in sync
      * with the campaign's name and status. Attempting to share the budget with a
      * second campaign will result in an error.
+     *
      * A non-shared budget can become an explicitly shared. The same operation
      * must also assign the budget a name.
+     *
      * A shared campaign budget can never become non-shared.
      * </pre>
      *
@@ -2122,14 +2187,18 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Specifies whether the budget is explicitly shared. Defaults to true if
      * unspecified in a create operation.
+     *
      * If true, the budget was created with the purpose of sharing
      * across one or more campaigns.
+     *
      * If false, the budget was created with the intention of only being used
      * with a single campaign. The budget's name and status will stay in sync
      * with the campaign's name and status. Attempting to share the budget with a
      * second campaign will result in an error.
+     *
      * A non-shared budget can become an explicitly shared. The same operation
      * must also assign the budget a name.
+     *
      * A shared campaign budget can never become non-shared.
      * </pre>
      *
@@ -2138,7 +2207,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setExplicitlyShared(boolean value) {
-      
+
       explicitlyShared_ = value;
       bitField0_ |= 0x00000080;
       onChanged();
@@ -2148,14 +2217,18 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Specifies whether the budget is explicitly shared. Defaults to true if
      * unspecified in a create operation.
+     *
      * If true, the budget was created with the purpose of sharing
      * across one or more campaigns.
+     *
      * If false, the budget was created with the intention of only being used
      * with a single campaign. The budget's name and status will stay in sync
      * with the campaign's name and status. Attempting to share the budget with a
      * second campaign will result in an error.
+     *
      * A non-shared budget can become an explicitly shared. The same operation
      * must also assign the budget a name.
+     *
      * A shared campaign budget can never become non-shared.
      * </pre>
      *
@@ -2173,6 +2246,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The number of campaigns actively using the budget.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2186,6 +2260,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The number of campaigns actively using the budget.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2199,6 +2274,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The number of campaigns actively using the budget.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2207,7 +2283,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setReferenceCount(long value) {
-      
+
       referenceCount_ = value;
       bitField0_ |= 0x00000100;
       onChanged();
@@ -2216,6 +2292,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The number of campaigns actively using the budget.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2234,6 +2311,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. Indicates whether there is a recommended budget for this
      * campaign budget.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2248,6 +2326,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. Indicates whether there is a recommended budget for this
      * campaign budget.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2262,6 +2341,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. Indicates whether there is a recommended budget for this
      * campaign budget.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2270,7 +2350,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHasRecommendedBudget(boolean value) {
-      
+
       hasRecommendedBudget_ = value;
       bitField0_ |= 0x00000200;
       onChanged();
@@ -2280,6 +2360,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. Indicates whether there is a recommended budget for this
      * campaign budget.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2299,6 +2380,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The recommended budget amount. If no recommendation is
      * available, this will be set to the budget amount. Amount is specified in
      * micros, where one million is equivalent to one currency unit.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2314,6 +2396,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The recommended budget amount. If no recommendation is
      * available, this will be set to the budget amount. Amount is specified in
      * micros, where one million is equivalent to one currency unit.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2329,6 +2412,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The recommended budget amount. If no recommendation is
      * available, this will be set to the budget amount. Amount is specified in
      * micros, where one million is equivalent to one currency unit.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2337,7 +2421,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRecommendedBudgetAmountMicros(long value) {
-      
+
       recommendedBudgetAmountMicros_ = value;
       bitField0_ |= 0x00000400;
       onChanged();
@@ -2348,6 +2432,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The recommended budget amount. If no recommendation is
      * available, this will be set to the budget amount. Amount is specified in
      * micros, where one million is equivalent to one currency unit.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2444,6 +2529,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The estimated change in weekly clicks if the recommended
      * budget is applied.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2458,6 +2544,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The estimated change in weekly clicks if the recommended
      * budget is applied.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2472,6 +2559,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The estimated change in weekly clicks if the recommended
      * budget is applied.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2480,7 +2568,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRecommendedBudgetEstimatedChangeWeeklyClicks(long value) {
-      
+
       recommendedBudgetEstimatedChangeWeeklyClicks_ = value;
       bitField0_ |= 0x00001000;
       onChanged();
@@ -2490,6 +2578,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The estimated change in weekly clicks if the recommended
      * budget is applied.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2509,6 +2598,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The estimated change in weekly cost in micros if the
      * recommended budget is applied. One million is equivalent to one currency
      * unit.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2524,6 +2614,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The estimated change in weekly cost in micros if the
      * recommended budget is applied. One million is equivalent to one currency
      * unit.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2539,6 +2630,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The estimated change in weekly cost in micros if the
      * recommended budget is applied. One million is equivalent to one currency
      * unit.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2547,7 +2639,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRecommendedBudgetEstimatedChangeWeeklyCostMicros(long value) {
-      
+
       recommendedBudgetEstimatedChangeWeeklyCostMicros_ = value;
       bitField0_ |= 0x00002000;
       onChanged();
@@ -2558,6 +2650,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The estimated change in weekly cost in micros if the
      * recommended budget is applied. One million is equivalent to one currency
      * unit.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2576,6 +2669,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The estimated change in weekly interactions if the recommended
      * budget is applied.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2590,6 +2684,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The estimated change in weekly interactions if the recommended
      * budget is applied.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2604,6 +2699,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The estimated change in weekly interactions if the recommended
      * budget is applied.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2612,7 +2708,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRecommendedBudgetEstimatedChangeWeeklyInteractions(long value) {
-      
+
       recommendedBudgetEstimatedChangeWeeklyInteractions_ = value;
       bitField0_ |= 0x00004000;
       onChanged();
@@ -2622,6 +2718,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The estimated change in weekly interactions if the recommended
      * budget is applied.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2640,6 +2737,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The estimated change in weekly views if the recommended budget
      * is applied.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2654,6 +2752,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The estimated change in weekly views if the recommended budget
      * is applied.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2668,6 +2767,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The estimated change in weekly views if the recommended budget
      * is applied.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2676,7 +2776,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRecommendedBudgetEstimatedChangeWeeklyViews(long value) {
-      
+
       recommendedBudgetEstimatedChangeWeeklyViews_ = value;
       bitField0_ |= 0x00008000;
       onChanged();
@@ -2686,6 +2786,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The estimated change in weekly views if the recommended budget
      * is applied.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2803,7 +2904,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAlignedBiddingStrategyId(long value) {
-      
+
       alignedBiddingStrategyId_ = value;
       bitField0_ |= 0x00020000;
       onChanged();

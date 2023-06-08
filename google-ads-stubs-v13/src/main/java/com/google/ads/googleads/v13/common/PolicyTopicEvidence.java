@@ -29,11 +29,6 @@ private static final long serialVersionUID = 0L;
     return new PolicyTopicEvidence();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.common.PolicyProto.internal_static_google_ads_googleads_v13_common_PolicyTopicEvidence_descriptor;
@@ -109,7 +104,8 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private TextList() {
-      texts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      texts_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
     @java.lang.Override
@@ -119,11 +115,6 @@ private static final long serialVersionUID = 0L;
       return new TextList();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.common.PolicyProto.internal_static_google_ads_googleads_v13_common_PolicyTopicEvidence_TextList_descriptor;
@@ -139,7 +130,8 @@ private static final long serialVersionUID = 0L;
 
     public static final int TEXTS_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringList texts_;
+    private com.google.protobuf.LazyStringArrayList texts_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <pre>
      * The fragments of text from the resource that caused the policy finding.
@@ -304,11 +296,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.common.PolicyTopicEvidence.TextList parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.common.PolicyTopicEvidence.TextList parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -388,8 +382,8 @@ private static final long serialVersionUID = 0L;
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        texts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        texts_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         return this;
       }
 
@@ -416,22 +410,17 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v13.common.PolicyTopicEvidence.TextList buildPartial() {
         com.google.ads.googleads.v13.common.PolicyTopicEvidence.TextList result = new com.google.ads.googleads.v13.common.PolicyTopicEvidence.TextList(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(com.google.ads.googleads.v13.common.PolicyTopicEvidence.TextList result) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          texts_ = texts_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.texts_ = texts_;
-      }
-
       private void buildPartial0(com.google.ads.googleads.v13.common.PolicyTopicEvidence.TextList result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          texts_.makeImmutable();
+          result.texts_ = texts_;
+        }
       }
 
       @java.lang.Override
@@ -481,7 +470,7 @@ private static final long serialVersionUID = 0L;
         if (!other.texts_.isEmpty()) {
           if (texts_.isEmpty()) {
             texts_ = other.texts_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ |= 0x00000001;
           } else {
             ensureTextsIsMutable();
             texts_.addAll(other.texts_);
@@ -537,12 +526,13 @@ private static final long serialVersionUID = 0L;
       }
       private int bitField0_;
 
-      private com.google.protobuf.LazyStringList texts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList texts_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureTextsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!texts_.isModifiable()) {
           texts_ = new com.google.protobuf.LazyStringArrayList(texts_);
-          bitField0_ |= 0x00000001;
-         }
+        }
+        bitField0_ |= 0x00000001;
       }
       /**
        * <pre>
@@ -554,7 +544,8 @@ private static final long serialVersionUID = 0L;
        */
       public com.google.protobuf.ProtocolStringList
           getTextsList() {
-        return texts_.getUnmodifiableView();
+        texts_.makeImmutable();
+        return texts_;
       }
       /**
        * <pre>
@@ -607,6 +598,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) { throw new NullPointerException(); }
         ensureTextsIsMutable();
         texts_.set(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -624,6 +616,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) { throw new NullPointerException(); }
         ensureTextsIsMutable();
         texts_.add(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -641,6 +634,7 @@ private static final long serialVersionUID = 0L;
         ensureTextsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, texts_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -653,8 +647,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearTexts() {
-        texts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        texts_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
         onChanged();
         return this;
       }
@@ -673,6 +668,7 @@ private static final long serialVersionUID = 0L;
         checkByteStringIsUtf8(value);
         ensureTextsIsMutable();
         texts_.add(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -805,7 +801,8 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private WebsiteList() {
-      websites_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      websites_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
     @java.lang.Override
@@ -815,11 +812,6 @@ private static final long serialVersionUID = 0L;
       return new WebsiteList();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.common.PolicyProto.internal_static_google_ads_googleads_v13_common_PolicyTopicEvidence_WebsiteList_descriptor;
@@ -835,7 +827,8 @@ private static final long serialVersionUID = 0L;
 
     public static final int WEBSITES_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringList websites_;
+    private com.google.protobuf.LazyStringArrayList websites_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <pre>
      * Websites that caused the policy finding.
@@ -1000,11 +993,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.common.PolicyTopicEvidence.WebsiteList parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.common.PolicyTopicEvidence.WebsiteList parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1087,8 +1082,8 @@ private static final long serialVersionUID = 0L;
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        websites_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        websites_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         return this;
       }
 
@@ -1115,22 +1110,17 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v13.common.PolicyTopicEvidence.WebsiteList buildPartial() {
         com.google.ads.googleads.v13.common.PolicyTopicEvidence.WebsiteList result = new com.google.ads.googleads.v13.common.PolicyTopicEvidence.WebsiteList(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(com.google.ads.googleads.v13.common.PolicyTopicEvidence.WebsiteList result) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          websites_ = websites_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.websites_ = websites_;
-      }
-
       private void buildPartial0(com.google.ads.googleads.v13.common.PolicyTopicEvidence.WebsiteList result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          websites_.makeImmutable();
+          result.websites_ = websites_;
+        }
       }
 
       @java.lang.Override
@@ -1180,7 +1170,7 @@ private static final long serialVersionUID = 0L;
         if (!other.websites_.isEmpty()) {
           if (websites_.isEmpty()) {
             websites_ = other.websites_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ |= 0x00000001;
           } else {
             ensureWebsitesIsMutable();
             websites_.addAll(other.websites_);
@@ -1236,12 +1226,13 @@ private static final long serialVersionUID = 0L;
       }
       private int bitField0_;
 
-      private com.google.protobuf.LazyStringList websites_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList websites_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureWebsitesIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!websites_.isModifiable()) {
           websites_ = new com.google.protobuf.LazyStringArrayList(websites_);
-          bitField0_ |= 0x00000001;
-         }
+        }
+        bitField0_ |= 0x00000001;
       }
       /**
        * <pre>
@@ -1253,7 +1244,8 @@ private static final long serialVersionUID = 0L;
        */
       public com.google.protobuf.ProtocolStringList
           getWebsitesList() {
-        return websites_.getUnmodifiableView();
+        websites_.makeImmutable();
+        return websites_;
       }
       /**
        * <pre>
@@ -1306,6 +1298,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) { throw new NullPointerException(); }
         ensureWebsitesIsMutable();
         websites_.set(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1323,6 +1316,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) { throw new NullPointerException(); }
         ensureWebsitesIsMutable();
         websites_.add(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1340,6 +1334,7 @@ private static final long serialVersionUID = 0L;
         ensureWebsitesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, websites_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1352,8 +1347,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearWebsites() {
-        websites_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        websites_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
         onChanged();
         return this;
       }
@@ -1372,6 +1368,7 @@ private static final long serialVersionUID = 0L;
         checkByteStringIsUtf8(value);
         ensureWebsitesIsMutable();
         websites_.add(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1502,7 +1499,8 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private DestinationTextList() {
-      destinationTexts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      destinationTexts_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
     @java.lang.Override
@@ -1512,11 +1510,6 @@ private static final long serialVersionUID = 0L;
       return new DestinationTextList();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.common.PolicyProto.internal_static_google_ads_googleads_v13_common_PolicyTopicEvidence_DestinationTextList_descriptor;
@@ -1532,7 +1525,8 @@ private static final long serialVersionUID = 0L;
 
     public static final int DESTINATION_TEXTS_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringList destinationTexts_;
+    private com.google.protobuf.LazyStringArrayList destinationTexts_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <pre>
      * List of text found in the resource's destination page.
@@ -1697,11 +1691,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.common.PolicyTopicEvidence.DestinationTextList parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.common.PolicyTopicEvidence.DestinationTextList parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1782,8 +1778,8 @@ private static final long serialVersionUID = 0L;
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        destinationTexts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        destinationTexts_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         return this;
       }
 
@@ -1810,22 +1806,17 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v13.common.PolicyTopicEvidence.DestinationTextList buildPartial() {
         com.google.ads.googleads.v13.common.PolicyTopicEvidence.DestinationTextList result = new com.google.ads.googleads.v13.common.PolicyTopicEvidence.DestinationTextList(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(com.google.ads.googleads.v13.common.PolicyTopicEvidence.DestinationTextList result) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          destinationTexts_ = destinationTexts_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.destinationTexts_ = destinationTexts_;
-      }
-
       private void buildPartial0(com.google.ads.googleads.v13.common.PolicyTopicEvidence.DestinationTextList result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          destinationTexts_.makeImmutable();
+          result.destinationTexts_ = destinationTexts_;
+        }
       }
 
       @java.lang.Override
@@ -1875,7 +1866,7 @@ private static final long serialVersionUID = 0L;
         if (!other.destinationTexts_.isEmpty()) {
           if (destinationTexts_.isEmpty()) {
             destinationTexts_ = other.destinationTexts_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ |= 0x00000001;
           } else {
             ensureDestinationTextsIsMutable();
             destinationTexts_.addAll(other.destinationTexts_);
@@ -1931,12 +1922,13 @@ private static final long serialVersionUID = 0L;
       }
       private int bitField0_;
 
-      private com.google.protobuf.LazyStringList destinationTexts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList destinationTexts_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureDestinationTextsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!destinationTexts_.isModifiable()) {
           destinationTexts_ = new com.google.protobuf.LazyStringArrayList(destinationTexts_);
-          bitField0_ |= 0x00000001;
-         }
+        }
+        bitField0_ |= 0x00000001;
       }
       /**
        * <pre>
@@ -1948,7 +1940,8 @@ private static final long serialVersionUID = 0L;
        */
       public com.google.protobuf.ProtocolStringList
           getDestinationTextsList() {
-        return destinationTexts_.getUnmodifiableView();
+        destinationTexts_.makeImmutable();
+        return destinationTexts_;
       }
       /**
        * <pre>
@@ -2001,6 +1994,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) { throw new NullPointerException(); }
         ensureDestinationTextsIsMutable();
         destinationTexts_.set(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2018,6 +2012,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) { throw new NullPointerException(); }
         ensureDestinationTextsIsMutable();
         destinationTexts_.add(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2035,6 +2030,7 @@ private static final long serialVersionUID = 0L;
         ensureDestinationTextsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, destinationTexts_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2047,8 +2043,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearDestinationTexts() {
-        destinationTexts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        destinationTexts_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
         onChanged();
         return this;
       }
@@ -2067,6 +2064,7 @@ private static final long serialVersionUID = 0L;
         checkByteStringIsUtf8(value);
         ensureDestinationTextsIsMutable();
         destinationTexts_.add(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2214,11 +2212,6 @@ private static final long serialVersionUID = 0L;
       return new DestinationMismatch();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.common.PolicyProto.internal_static_google_ads_googleads_v13_common_PolicyTopicEvidence_DestinationMismatch_descriptor;
@@ -2433,11 +2426,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.common.PolicyTopicEvidence.DestinationMismatch parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.common.PolicyTopicEvidence.DestinationMismatch parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3062,7 +3057,7 @@ private static final long serialVersionUID = 0L;
      */
     long getHttpErrorCode();
 
-    public com.google.ads.googleads.v13.common.PolicyTopicEvidence.DestinationNotWorking.ReasonCase getReasonCase();
+    com.google.ads.googleads.v13.common.PolicyTopicEvidence.DestinationNotWorking.ReasonCase getReasonCase();
   }
   /**
    * <pre>
@@ -3094,11 +3089,6 @@ private static final long serialVersionUID = 0L;
       return new DestinationNotWorking();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.common.PolicyProto.internal_static_google_ads_googleads_v13_common_PolicyTopicEvidence_DestinationNotWorking_descriptor;
@@ -3114,6 +3104,7 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
     private int reasonCase_ = 0;
+    @SuppressWarnings("serial")
     private java.lang.Object reason_;
     public enum ReasonCase
         implements com.google.protobuf.Internal.EnumLite,
@@ -3556,11 +3547,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.common.PolicyTopicEvidence.DestinationNotWorking parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.common.PolicyTopicEvidence.DestinationNotWorking parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4274,7 +4267,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setHttpErrorCode(long value) {
-        
+
         reasonCase_ = 6;
         reason_ = value;
         onChanged();
@@ -4361,6 +4354,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int valueCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object value_;
   public enum ValueCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -4893,11 +4887,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.common.PolicyTopicEvidence parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.common.PolicyTopicEvidence parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)

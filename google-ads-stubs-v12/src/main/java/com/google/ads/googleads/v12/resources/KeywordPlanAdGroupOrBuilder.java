@@ -11,6 +11,7 @@ public interface KeywordPlanAdGroupOrBuilder extends
    * <pre>
    * Immutable. The resource name of the Keyword Planner ad group.
    * KeywordPlanAdGroup resource names have the form:
+   *
    * `customers/{customer_id}/keywordPlanAdGroups/{kp_ad_group_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface KeywordPlanAdGroupOrBuilder extends
    * <pre>
    * Immutable. The resource name of the Keyword Planner ad group.
    * KeywordPlanAdGroup resource names have the form:
+   *
    * `customers/{customer_id}/keywordPlanAdGroups/{kp_ad_group_id}`
    * </pre>
    *
@@ -82,6 +84,7 @@ public interface KeywordPlanAdGroupOrBuilder extends
   /**
    * <pre>
    * The name of the keyword plan ad group.
+   *
    * This field is required and should not be empty when creating keyword plan
    * ad group.
    * </pre>
@@ -93,6 +96,7 @@ public interface KeywordPlanAdGroupOrBuilder extends
   /**
    * <pre>
    * The name of the keyword plan ad group.
+   *
    * This field is required and should not be empty when creating keyword plan
    * ad group.
    * </pre>
@@ -104,6 +108,7 @@ public interface KeywordPlanAdGroupOrBuilder extends
   /**
    * <pre>
    * The name of the keyword plan ad group.
+   *
    * This field is required and should not be empty when creating keyword plan
    * ad group.
    * </pre>

@@ -101,6 +101,7 @@ public interface KeywordPlanCampaignKeywordOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed Keyword Plan campaign
    * keywords expected in this format:
+   *
    * `customers/{customer_id}/keywordPlanCampaignKeywords/{kp_campaign_keyword_id}`
    * </pre>
    *
@@ -112,6 +113,7 @@ public interface KeywordPlanCampaignKeywordOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed Keyword Plan campaign
    * keywords expected in this format:
+   *
    * `customers/{customer_id}/keywordPlanCampaignKeywords/{kp_campaign_keyword_id}`
    * </pre>
    *
@@ -123,6 +125,7 @@ public interface KeywordPlanCampaignKeywordOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed Keyword Plan campaign
    * keywords expected in this format:
+   *
    * `customers/{customer_id}/keywordPlanCampaignKeywords/{kp_campaign_keyword_id}`
    * </pre>
    *
@@ -132,5 +135,5 @@ public interface KeywordPlanCampaignKeywordOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v12.services.KeywordPlanCampaignKeywordOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v12.services.KeywordPlanCampaignKeywordOperation.OperationCase getOperationCase();
 }

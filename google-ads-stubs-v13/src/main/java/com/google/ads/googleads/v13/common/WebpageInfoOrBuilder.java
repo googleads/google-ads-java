@@ -12,6 +12,7 @@ public interface WebpageInfoOrBuilder extends
    * The name of the criterion that is defined by this parameter. The name value
    * will be used for identifying, sorting and filtering criteria with this type
    * of parameters.
+   *
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -25,6 +26,7 @@ public interface WebpageInfoOrBuilder extends
    * The name of the criterion that is defined by this parameter. The name value
    * will be used for identifying, sorting and filtering criteria with this type
    * of parameters.
+   *
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -38,6 +40,7 @@ public interface WebpageInfoOrBuilder extends
    * The name of the criterion that is defined by this parameter. The name value
    * will be used for identifying, sorting and filtering criteria with this type
    * of parameters.
+   *
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -54,6 +57,7 @@ public interface WebpageInfoOrBuilder extends
    * webpage targeting conditions are and-ed together when evaluated
    * for targeting. An empty list of conditions indicates all pages of the
    * campaign's website are targeted.
+   *
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -68,6 +72,7 @@ public interface WebpageInfoOrBuilder extends
    * webpage targeting conditions are and-ed together when evaluated
    * for targeting. An empty list of conditions indicates all pages of the
    * campaign's website are targeted.
+   *
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -81,6 +86,7 @@ public interface WebpageInfoOrBuilder extends
    * webpage targeting conditions are and-ed together when evaluated
    * for targeting. An empty list of conditions indicates all pages of the
    * campaign's website are targeted.
+   *
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -94,6 +100,7 @@ public interface WebpageInfoOrBuilder extends
    * webpage targeting conditions are and-ed together when evaluated
    * for targeting. An empty list of conditions indicates all pages of the
    * campaign's website are targeted.
+   *
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -108,6 +115,7 @@ public interface WebpageInfoOrBuilder extends
    * webpage targeting conditions are and-ed together when evaluated
    * for targeting. An empty list of conditions indicates all pages of the
    * campaign's website are targeted.
+   *
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>

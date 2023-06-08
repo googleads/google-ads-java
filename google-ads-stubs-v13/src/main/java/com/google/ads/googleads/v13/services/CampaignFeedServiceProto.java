@@ -52,45 +52,45 @@ public final class CampaignFeedServiceProto {
       "roto\032\027google/api/client.proto\032\037google/ap" +
       "i/field_behavior.proto\032\031google/api/resou" +
       "rce.proto\032 google/protobuf/field_mask.pr" +
-      "oto\032\027google/rpc/status.proto\"\245\002\n\032MutateC" +
-      "ampaignFeedsRequest\022\030\n\013customer_id\030\001 \001(\t" +
-      "B\003\340A\002\022Q\n\noperations\030\002 \003(\01328.google.ads.g" +
-      "oogleads.v13.services.CampaignFeedOperat" +
-      "ionB\003\340A\002\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rval" +
-      "idate_only\030\004 \001(\010\022j\n\025response_content_typ" +
-      "e\030\005 \001(\0162K.google.ads.googleads.v13.enums" +
-      ".ResponseContentTypeEnum.ResponseContent" +
-      "Type\"\233\002\n\025CampaignFeedOperation\022/\n\013update" +
-      "_mask\030\004 \001(\0132\032.google.protobuf.FieldMask\022" +
-      "B\n\006create\030\001 \001(\01320.google.ads.googleads.v" +
-      "13.resources.CampaignFeedH\000\022B\n\006update\030\002 " +
-      "\001(\01320.google.ads.googleads.v13.resources" +
-      ".CampaignFeedH\000\022<\n\006remove\030\003 \001(\tB*\372A\'\n%go" +
-      "ogleads.googleapis.com/CampaignFeedH\000B\013\n" +
-      "\toperation\"\236\001\n\033MutateCampaignFeedsRespon" +
-      "se\0221\n\025partial_failure_error\030\003 \001(\0132\022.goog" +
-      "le.rpc.Status\022L\n\007results\030\002 \003(\0132;.google." +
+      "oto\032\027google/rpc/status.proto\"\247\002\n\032MutateC" +
+      "ampaignFeedsRequest\022\031\n\013customer_id\030\001 \001(\t" +
+      "B\004\342A\001\002\022R\n\noperations\030\002 \003(\01328.google.ads." +
+      "googleads.v13.services.CampaignFeedOpera" +
+      "tionB\004\342A\001\002\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rv" +
+      "alidate_only\030\004 \001(\010\022j\n\025response_content_t" +
+      "ype\030\005 \001(\0162K.google.ads.googleads.v13.enu" +
+      "ms.ResponseContentTypeEnum.ResponseConte" +
+      "ntType\"\233\002\n\025CampaignFeedOperation\022/\n\013upda" +
+      "te_mask\030\004 \001(\0132\032.google.protobuf.FieldMas" +
+      "k\022B\n\006create\030\001 \001(\01320.google.ads.googleads" +
+      ".v13.resources.CampaignFeedH\000\022B\n\006update\030" +
+      "\002 \001(\01320.google.ads.googleads.v13.resourc" +
+      "es.CampaignFeedH\000\022<\n\006remove\030\003 \001(\tB*\372A\'\n%" +
+      "googleads.googleapis.com/CampaignFeedH\000B" +
+      "\013\n\toperation\"\236\001\n\033MutateCampaignFeedsResp" +
+      "onse\0221\n\025partial_failure_error\030\003 \001(\0132\022.go" +
+      "ogle.rpc.Status\022L\n\007results\030\002 \003(\0132;.googl" +
+      "e.ads.googleads.v13.services.MutateCampa" +
+      "ignFeedResult\"\246\001\n\030MutateCampaignFeedResu" +
+      "lt\022A\n\rresource_name\030\001 \001(\tB*\372A\'\n%googlead" +
+      "s.googleapis.com/CampaignFeed\022G\n\rcampaig" +
+      "n_feed\030\002 \001(\01320.google.ads.googleads.v13." +
+      "resources.CampaignFeed2\314\002\n\023CampaignFeedS" +
+      "ervice\022\355\001\n\023MutateCampaignFeeds\022=.google." +
       "ads.googleads.v13.services.MutateCampaig" +
-      "nFeedResult\"\246\001\n\030MutateCampaignFeedResult" +
-      "\022A\n\rresource_name\030\001 \001(\tB*\372A\'\n%googleads." +
-      "googleapis.com/CampaignFeed\022G\n\rcampaign_" +
-      "feed\030\002 \001(\01320.google.ads.googleads.v13.re" +
-      "sources.CampaignFeed2\314\002\n\023CampaignFeedSer" +
-      "vice\022\355\001\n\023MutateCampaignFeeds\022=.google.ad" +
-      "s.googleads.v13.services.MutateCampaignF" +
-      "eedsRequest\032>.google.ads.googleads.v13.s" +
-      "ervices.MutateCampaignFeedsResponse\"W\202\323\344" +
-      "\223\0028\"3/v13/customers/{customer_id=*}/camp" +
-      "aignFeeds:mutate:\001*\332A\026customer_id,operat" +
-      "ions\032E\312A\030googleads.googleapis.com\322A\'http" +
-      "s://www.googleapis.com/auth/adwordsB\204\002\n%" +
-      "com.google.ads.googleads.v13.servicesB\030C" +
-      "ampaignFeedServiceProtoP\001ZIgoogle.golang" +
-      ".org/genproto/googleapis/ads/googleads/v" +
-      "13/services;services\242\002\003GAA\252\002!Google.Ads." +
-      "GoogleAds.V13.Services\312\002!Google\\Ads\\Goog" +
-      "leAds\\V13\\Services\352\002%Google::Ads::Google" +
-      "Ads::V13::Servicesb\006proto3"
+      "nFeedsRequest\032>.google.ads.googleads.v13" +
+      ".services.MutateCampaignFeedsResponse\"W\332" +
+      "A\026customer_id,operations\202\323\344\223\0028\"3/v13/cus" +
+      "tomers/{customer_id=*}/campaignFeeds:mut" +
+      "ate:\001*\032E\312A\030googleads.googleapis.com\322A\'ht" +
+      "tps://www.googleapis.com/auth/adwordsB\204\002" +
+      "\n%com.google.ads.googleads.v13.servicesB" +
+      "\030CampaignFeedServiceProtoP\001ZIgoogle.gola" +
+      "ng.org/genproto/googleapis/ads/googleads" +
+      "/v13/services;services\242\002\003GAA\252\002!Google.Ad" +
+      "s.GoogleAds.V13.Services\312\002!Google\\Ads\\Go" +
+      "ogleAds\\V13\\Services\352\002%Google::Ads::Goog" +
+      "leAds::V13::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

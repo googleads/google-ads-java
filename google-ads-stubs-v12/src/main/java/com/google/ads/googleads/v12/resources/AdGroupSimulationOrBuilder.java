@@ -11,6 +11,7 @@ public interface AdGroupSimulationOrBuilder extends
    * <pre>
    * Output only. The resource name of the ad group simulation.
    * Ad group simulation resource names have the form:
+   *
    * `customers/{customer_id}/adGroupSimulations/{ad_group_id}~{type}~{modification_method}~{start_date}~{end_date}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface AdGroupSimulationOrBuilder extends
    * <pre>
    * Output only. The resource name of the ad group simulation.
    * Ad group simulation resource names have the form:
+   *
    * `customers/{customer_id}/adGroupSimulations/{ad_group_id}~{type}~{modification_method}~{start_date}~{end_date}`
    * </pre>
    *
@@ -260,5 +262,5 @@ public interface AdGroupSimulationOrBuilder extends
    */
   com.google.ads.googleads.v12.common.TargetRoasSimulationPointListOrBuilder getTargetRoasPointListOrBuilder();
 
-  public com.google.ads.googleads.v12.resources.AdGroupSimulation.PointListCase getPointListCase();
+  com.google.ads.googleads.v12.resources.AdGroupSimulation.PointListCase getPointListCase();
 }

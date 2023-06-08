@@ -36,26 +36,26 @@ public final class CustomerFeedProto {
       "roto\0325google/ads/googleads/v13/enums/pla" +
       "ceholder_type.proto\032\037google/api/field_be" +
       "havior.proto\032\031google/api/resource.proto\"" +
-      "\372\003\n\014CustomerFeed\022D\n\rresource_name\030\001 \001(\tB" +
-      "-\340A\005\372A\'\n%googleads.googleapis.com/Custom" +
-      "erFeed\0228\n\004feed\030\006 \001(\tB%\340A\005\372A\037\n\035googleads." +
-      "googleapis.com/FeedH\000\210\001\001\022^\n\021placeholder_" +
-      "types\030\003 \003(\0162C.google.ads.googleads.v13.e" +
-      "nums.PlaceholderTypeEnum.PlaceholderType" +
-      "\022L\n\021matching_function\030\004 \001(\01321.google.ads" +
-      ".googleads.v13.common.MatchingFunction\022V" +
-      "\n\006status\030\005 \001(\0162A.google.ads.googleads.v1" +
-      "3.enums.FeedLinkStatusEnum.FeedLinkStatu" +
-      "sB\003\340A\003:[\352AX\n%googleads.googleapis.com/Cu" +
-      "stomerFeed\022/customers/{customer_id}/cust" +
-      "omerFeeds/{feed_id}B\007\n\005_feedB\203\002\n&com.goo" +
-      "gle.ads.googleads.v13.resourcesB\021Custome" +
-      "rFeedProtoP\001ZKgoogle.golang.org/genproto" +
-      "/googleapis/ads/googleads/v13/resources;" +
-      "resources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V" +
-      "13.Resources\312\002\"Google\\Ads\\GoogleAds\\V13\\" +
-      "Resources\352\002&Google::Ads::GoogleAds::V13:" +
-      ":Resourcesb\006proto3"
+      "\375\003\n\014CustomerFeed\022E\n\rresource_name\030\001 \001(\tB" +
+      ".\342A\001\005\372A\'\n%googleads.googleapis.com/Custo" +
+      "merFeed\0229\n\004feed\030\006 \001(\tB&\342A\001\005\372A\037\n\035googlead" +
+      "s.googleapis.com/FeedH\000\210\001\001\022^\n\021placeholde" +
+      "r_types\030\003 \003(\0162C.google.ads.googleads.v13" +
+      ".enums.PlaceholderTypeEnum.PlaceholderTy" +
+      "pe\022L\n\021matching_function\030\004 \001(\01321.google.a" +
+      "ds.googleads.v13.common.MatchingFunction" +
+      "\022W\n\006status\030\005 \001(\0162A.google.ads.googleads." +
+      "v13.enums.FeedLinkStatusEnum.FeedLinkSta" +
+      "tusB\004\342A\001\003:[\352AX\n%googleads.googleapis.com" +
+      "/CustomerFeed\022/customers/{customer_id}/c" +
+      "ustomerFeeds/{feed_id}B\007\n\005_feedB\203\002\n&com." +
+      "google.ads.googleads.v13.resourcesB\021Cust" +
+      "omerFeedProtoP\001ZKgoogle.golang.org/genpr" +
+      "oto/googleapis/ads/googleads/v13/resourc" +
+      "es;resources\242\002\003GAA\252\002\"Google.Ads.GoogleAd" +
+      "s.V13.Resources\312\002\"Google\\Ads\\GoogleAds\\V" +
+      "13\\Resources\352\002&Google::Ads::GoogleAds::V" +
+      "13::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

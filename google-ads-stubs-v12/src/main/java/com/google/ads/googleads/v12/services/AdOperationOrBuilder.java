@@ -65,6 +65,7 @@ public interface AdOperationOrBuilder extends
    * <pre>
    * Update operation: The ad is expected to have a valid resource name
    * in this format:
+   *
    * `customers/{customer_id}/ads/{ad_id}`
    * </pre>
    *
@@ -76,6 +77,7 @@ public interface AdOperationOrBuilder extends
    * <pre>
    * Update operation: The ad is expected to have a valid resource name
    * in this format:
+   *
    * `customers/{customer_id}/ads/{ad_id}`
    * </pre>
    *
@@ -87,6 +89,7 @@ public interface AdOperationOrBuilder extends
    * <pre>
    * Update operation: The ad is expected to have a valid resource name
    * in this format:
+   *
    * `customers/{customer_id}/ads/{ad_id}`
    * </pre>
    *
@@ -94,5 +97,5 @@ public interface AdOperationOrBuilder extends
    */
   com.google.ads.googleads.v12.resources.AdOrBuilder getUpdateOrBuilder();
 
-  public com.google.ads.googleads.v12.services.AdOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v12.services.AdOperation.OperationCase getOperationCase();
 }

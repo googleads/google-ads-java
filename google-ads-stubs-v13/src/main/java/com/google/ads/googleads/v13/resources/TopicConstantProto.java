@@ -31,22 +31,22 @@ public final class TopicConstantProto {
       "\n7google/ads/googleads/v13/resources/top" +
       "ic_constant.proto\022\"google.ads.googleads." +
       "v13.resources\032\037google/api/field_behavior" +
-      ".proto\032\031google/api/resource.proto\"\274\002\n\rTo" +
-      "picConstant\022E\n\rresource_name\030\001 \001(\tB.\340A\003\372" +
-      "A(\n&googleads.googleapis.com/TopicConsta" +
-      "nt\022\024\n\002id\030\005 \001(\003B\003\340A\003H\000\210\001\001\022R\n\025topic_consta" +
-      "nt_parent\030\006 \001(\tB.\340A\003\372A(\n&googleads.googl" +
-      "eapis.com/TopicConstantH\001\210\001\001\022\021\n\004path\030\007 \003" +
-      "(\tB\003\340A\003:F\352AC\n&googleads.googleapis.com/T" +
-      "opicConstant\022\031topicConstants/{topic_id}B" +
-      "\005\n\003_idB\030\n\026_topic_constant_parentB\204\002\n&com" +
-      ".google.ads.googleads.v13.resourcesB\022Top" +
-      "icConstantProtoP\001ZKgoogle.golang.org/gen" +
-      "proto/googleapis/ads/googleads/v13/resou" +
-      "rces;resources\242\002\003GAA\252\002\"Google.Ads.Google" +
-      "Ads.V13.Resources\312\002\"Google\\Ads\\GoogleAds" +
-      "\\V13\\Resources\352\002&Google::Ads::GoogleAds:" +
-      ":V13::Resourcesb\006proto3"
+      ".proto\032\031google/api/resource.proto\"\300\002\n\rTo" +
+      "picConstant\022F\n\rresource_name\030\001 \001(\tB/\342A\001\003" +
+      "\372A(\n&googleads.googleapis.com/TopicConst" +
+      "ant\022\025\n\002id\030\005 \001(\003B\004\342A\001\003H\000\210\001\001\022S\n\025topic_cons" +
+      "tant_parent\030\006 \001(\tB/\342A\001\003\372A(\n&googleads.go" +
+      "ogleapis.com/TopicConstantH\001\210\001\001\022\022\n\004path\030" +
+      "\007 \003(\tB\004\342A\001\003:F\352AC\n&googleads.googleapis.c" +
+      "om/TopicConstant\022\031topicConstants/{topic_" +
+      "id}B\005\n\003_idB\030\n\026_topic_constant_parentB\204\002\n" +
+      "&com.google.ads.googleads.v13.resourcesB" +
+      "\022TopicConstantProtoP\001ZKgoogle.golang.org" +
+      "/genproto/googleapis/ads/googleads/v13/r" +
+      "esources;resources\242\002\003GAA\252\002\"Google.Ads.Go" +
+      "ogleAds.V13.Resources\312\002\"Google\\Ads\\Googl" +
+      "eAds\\V13\\Resources\352\002&Google::Ads::Google" +
+      "Ads::V13::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

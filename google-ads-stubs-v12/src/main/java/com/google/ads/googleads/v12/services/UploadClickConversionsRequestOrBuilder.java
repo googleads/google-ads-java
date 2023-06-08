@@ -104,6 +104,7 @@ public interface UploadClickConversionsRequestOrBuilder extends
    * any are found. If false, it will perform only basic input validation,
    * skip subsequent upload checks, and return success even if no click
    * was found for the provided `user_identifiers`.
+   *
    * This setting only affects Enhanced conversions for leads uploads that use
    * `user_identifiers` instead of `GCLID`, `GBRAID`, or `WBRAID`. When
    * uploading enhanced conversions for leads, you should upload all conversion
@@ -115,6 +116,7 @@ public interface UploadClickConversionsRequestOrBuilder extends
    * `CLICK_NOT_FOUND` errors from all of the conversions that are not from a
    * Google Ads campaign. This will allow you to focus only on errors that you
    * can address.
+   *
    * Default is false.
    * </pre>
    *

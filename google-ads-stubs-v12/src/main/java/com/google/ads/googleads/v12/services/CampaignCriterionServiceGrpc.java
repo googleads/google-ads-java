@@ -98,7 +98,7 @@ public final class CampaignCriterionServiceGrpc {
    * Service to manage campaign criteria.
    * </pre>
    */
-  public static abstract class CampaignCriterionServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -135,30 +135,34 @@ public final class CampaignCriterionServiceGrpc {
      *   [StringLengthError]()
      * </pre>
      */
-    public void mutateCampaignCriteria(com.google.ads.googleads.v12.services.MutateCampaignCriteriaRequest request,
+    default void mutateCampaignCriteria(com.google.ads.googleads.v12.services.MutateCampaignCriteriaRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.MutateCampaignCriteriaResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateCampaignCriteriaMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateCampaignCriteriaMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.MutateCampaignCriteriaRequest,
-                com.google.ads.googleads.v12.services.MutateCampaignCriteriaResponse>(
-                  this, METHODID_MUTATE_CAMPAIGN_CRITERIA)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service CampaignCriterionService.
    * <pre>
    * Service to manage campaign criteria.
    * </pre>
    */
-  public static final class CampaignCriterionServiceStub extends io.grpc.stub.AbstractAsyncStub<CampaignCriterionServiceStub> {
+  public static abstract class CampaignCriterionServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return CampaignCriterionServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service CampaignCriterionService.
+   * <pre>
+   * Service to manage campaign criteria.
+   * </pre>
+   */
+  public static final class CampaignCriterionServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<CampaignCriterionServiceStub> {
     private CampaignCriterionServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -213,11 +217,13 @@ public final class CampaignCriterionServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service CampaignCriterionService.
    * <pre>
    * Service to manage campaign criteria.
    * </pre>
    */
-  public static final class CampaignCriterionServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CampaignCriterionServiceBlockingStub> {
+  public static final class CampaignCriterionServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<CampaignCriterionServiceBlockingStub> {
     private CampaignCriterionServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -271,11 +277,13 @@ public final class CampaignCriterionServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service CampaignCriterionService.
    * <pre>
    * Service to manage campaign criteria.
    * </pre>
    */
-  public static final class CampaignCriterionServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CampaignCriterionServiceFutureStub> {
+  public static final class CampaignCriterionServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<CampaignCriterionServiceFutureStub> {
     private CampaignCriterionServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -336,10 +344,10 @@ public final class CampaignCriterionServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final CampaignCriterionServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(CampaignCriterionServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -366,6 +374,18 @@ public final class CampaignCriterionServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateCampaignCriteriaMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.MutateCampaignCriteriaRequest,
+              com.google.ads.googleads.v12.services.MutateCampaignCriteriaResponse>(
+                service, METHODID_MUTATE_CAMPAIGN_CRITERIA)))
+        .build();
   }
 
   private static abstract class CampaignCriterionServiceBaseDescriptorSupplier

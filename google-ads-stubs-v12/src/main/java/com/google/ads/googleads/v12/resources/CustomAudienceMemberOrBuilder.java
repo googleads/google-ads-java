@@ -147,5 +147,5 @@ public interface CustomAudienceMemberOrBuilder extends
   com.google.protobuf.ByteString
       getAppBytes();
 
-  public com.google.ads.googleads.v12.resources.CustomAudienceMember.ValueCase getValueCase();
+  com.google.ads.googleads.v12.resources.CustomAudienceMember.ValueCase getValueCase();
 }

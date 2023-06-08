@@ -37,11 +37,6 @@ private static final long serialVersionUID = 0L;
     return new ExtensionFeedItem();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.resources.ExtensionFeedItemProto.internal_static_google_ads_googleads_v12_resources_ExtensionFeedItem_descriptor;
@@ -57,6 +52,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   private int extensionCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object extension_;
   public enum ExtensionCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -118,6 +114,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int servingResourceTargetingCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object servingResourceTargeting_;
   public enum ServingResourceTargetingCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -165,6 +162,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the extension feed item.
    * Extension feed item resource names have the form:
+   *
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
@@ -188,6 +186,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the extension feed item.
    * Extension feed item resource names have the form:
+   *
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
@@ -625,7 +624,7 @@ private static final long serialVersionUID = 0L;
   public static final int SITELINK_FEED_ITEM_FIELD_NUMBER = 2;
   /**
    * <pre>
-   * Sitelink extension.
+   * Sitelink.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.SitelinkFeedItem sitelink_feed_item = 2;</code>
@@ -637,7 +636,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Sitelink extension.
+   * Sitelink.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.SitelinkFeedItem sitelink_feed_item = 2;</code>
@@ -652,7 +651,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Sitelink extension.
+   * Sitelink.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.SitelinkFeedItem sitelink_feed_item = 2;</code>
@@ -1727,11 +1726,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.resources.ExtensionFeedItem parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.resources.ExtensionFeedItem parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2419,6 +2420,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the extension feed item.
      * Extension feed item resource names have the form:
+     *
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
@@ -2441,6 +2443,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the extension feed item.
      * Extension feed item resource names have the form:
+     *
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
@@ -2464,6 +2467,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the extension feed item.
      * Extension feed item resource names have the form:
+     *
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
@@ -2483,6 +2487,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the extension feed item.
      * Extension feed item resource names have the form:
+     *
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
@@ -2499,6 +2504,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the extension feed item.
      * Extension feed item resource names have the form:
+     *
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
@@ -2551,7 +2557,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      
+
       id_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -3653,7 +3659,7 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.SitelinkFeedItem, com.google.ads.googleads.v12.common.SitelinkFeedItem.Builder, com.google.ads.googleads.v12.common.SitelinkFeedItemOrBuilder> sitelinkFeedItemBuilder_;
     /**
      * <pre>
-     * Sitelink extension.
+     * Sitelink.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.SitelinkFeedItem sitelink_feed_item = 2;</code>
@@ -3665,7 +3671,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Sitelink extension.
+     * Sitelink.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.SitelinkFeedItem sitelink_feed_item = 2;</code>
@@ -3687,7 +3693,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Sitelink extension.
+     * Sitelink.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.SitelinkFeedItem sitelink_feed_item = 2;</code>
@@ -3707,7 +3713,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Sitelink extension.
+     * Sitelink.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.SitelinkFeedItem sitelink_feed_item = 2;</code>
@@ -3725,7 +3731,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Sitelink extension.
+     * Sitelink.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.SitelinkFeedItem sitelink_feed_item = 2;</code>
@@ -3752,7 +3758,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Sitelink extension.
+     * Sitelink.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.SitelinkFeedItem sitelink_feed_item = 2;</code>
@@ -3775,7 +3781,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Sitelink extension.
+     * Sitelink.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.SitelinkFeedItem sitelink_feed_item = 2;</code>
@@ -3785,7 +3791,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Sitelink extension.
+     * Sitelink.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.SitelinkFeedItem sitelink_feed_item = 2;</code>
@@ -3803,7 +3809,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Sitelink extension.
+     * Sitelink.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.SitelinkFeedItem sitelink_feed_item = 2;</code>

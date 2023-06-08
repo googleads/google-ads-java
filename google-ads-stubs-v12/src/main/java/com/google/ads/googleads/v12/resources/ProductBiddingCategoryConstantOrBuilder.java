@@ -11,6 +11,7 @@ public interface ProductBiddingCategoryConstantOrBuilder extends
    * <pre>
    * Output only. The resource name of the product bidding category.
    * Product bidding category resource names have the form:
+   *
    * `productBiddingCategoryConstants/{country_code}~{level}~{id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface ProductBiddingCategoryConstantOrBuilder extends
    * <pre>
    * Output only. The resource name of the product bidding category.
    * Product bidding category resource names have the form:
+   *
    * `productBiddingCategoryConstants/{country_code}~{level}~{id}`
    * </pre>
    *
@@ -34,6 +36,7 @@ public interface ProductBiddingCategoryConstantOrBuilder extends
   /**
    * <pre>
    * Output only. ID of the product bidding category.
+   *
    * This ID is equivalent to the google_product_category ID as described in
    * this article: https://support.google.com/merchants/answer/6324436.
    * </pre>
@@ -45,6 +48,7 @@ public interface ProductBiddingCategoryConstantOrBuilder extends
   /**
    * <pre>
    * Output only. ID of the product bidding category.
+   *
    * This ID is equivalent to the google_product_category ID as described in
    * this article: https://support.google.com/merchants/answer/6324436.
    * </pre>

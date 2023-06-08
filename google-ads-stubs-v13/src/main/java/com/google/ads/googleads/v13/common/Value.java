@@ -29,11 +29,6 @@ private static final long serialVersionUID = 0L;
     return new Value();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.common.ValueProto.internal_static_google_ads_googleads_v13_common_Value_descriptor;
@@ -48,6 +43,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int valueCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object value_;
   public enum ValueCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -469,11 +465,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.common.Value parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.common.Value parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -786,7 +784,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBooleanValue(boolean value) {
-      
+
       valueCase_ = 1;
       value_ = value;
       onChanged();
@@ -844,7 +842,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setInt64Value(long value) {
-      
+
       valueCase_ = 2;
       value_ = value;
       onChanged();
@@ -902,7 +900,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFloatValue(float value) {
-      
+
       valueCase_ = 3;
       value_ = value;
       onChanged();
@@ -960,7 +958,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDoubleValue(double value) {
-      
+
       valueCase_ = 4;
       value_ = value;
       onChanged();

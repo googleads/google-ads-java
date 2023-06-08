@@ -5,7 +5,7 @@ package com.google.ads.googleads.v12.common;
 
 /**
  * <pre>
- * The Annotations for the Keyword plan keywords.
+ * The annotations for the keyword plan keywords.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v12.common.KeywordAnnotations}
@@ -30,11 +30,6 @@ private static final long serialVersionUID = 0L;
     return new KeywordAnnotations();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.common.KeywordPlanCommonProto.internal_static_google_ads_googleads_v12_common_KeywordAnnotations_descriptor;
@@ -220,11 +215,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.common.KeywordAnnotations parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.common.KeywordAnnotations parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -268,7 +265,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The Annotations for the Keyword plan keywords.
+   * The annotations for the keyword plan keywords.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v12.common.KeywordAnnotations}

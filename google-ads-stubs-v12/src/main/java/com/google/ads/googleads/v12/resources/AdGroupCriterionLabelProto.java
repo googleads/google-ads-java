@@ -32,24 +32,24 @@ public final class AdGroupCriterionLabelProto {
       "group_criterion_label.proto\022\"google.ads." +
       "googleads.v12.resources\032\037google/api/fiel" +
       "d_behavior.proto\032\031google/api/resource.pr" +
-      "oto\"\246\003\n\025AdGroupCriterionLabel\022M\n\rresourc" +
-      "e_name\030\001 \001(\tB6\340A\005\372A0\n.googleads.googleap" +
-      "is.com/AdGroupCriterionLabel\022R\n\022ad_group" +
-      "_criterion\030\004 \001(\tB1\340A\005\372A+\n)googleads.goog" +
-      "leapis.com/AdGroupCriterionH\000\210\001\001\022:\n\005labe" +
-      "l\030\005 \001(\tB&\340A\005\372A \n\036googleads.googleapis.co" +
-      "m/LabelH\001\210\001\001:\214\001\352A\210\001\n.googleads.googleapi" +
-      "s.com/AdGroupCriterionLabel\022Vcustomers/{" +
-      "customer_id}/adGroupCriterionLabels/{ad_" +
-      "group_id}~{criterion_id}~{label_id}B\025\n\023_" +
-      "ad_group_criterionB\010\n\006_labelB\214\002\n&com.goo" +
-      "gle.ads.googleads.v12.resourcesB\032AdGroup" +
-      "CriterionLabelProtoP\001ZKgoogle.golang.org" +
-      "/genproto/googleapis/ads/googleads/v12/r" +
-      "esources;resources\242\002\003GAA\252\002\"Google.Ads.Go" +
-      "ogleAds.V12.Resources\312\002\"Google\\Ads\\Googl" +
-      "eAds\\V12\\Resources\352\002&Google::Ads::Google" +
-      "Ads::V12::Resourcesb\006proto3"
+      "oto\"\251\003\n\025AdGroupCriterionLabel\022N\n\rresourc" +
+      "e_name\030\001 \001(\tB7\342A\001\005\372A0\n.googleads.googlea" +
+      "pis.com/AdGroupCriterionLabel\022S\n\022ad_grou" +
+      "p_criterion\030\004 \001(\tB2\342A\001\005\372A+\n)googleads.go" +
+      "ogleapis.com/AdGroupCriterionH\000\210\001\001\022;\n\005la" +
+      "bel\030\005 \001(\tB\'\342A\001\005\372A \n\036googleads.googleapis" +
+      ".com/LabelH\001\210\001\001:\214\001\352A\210\001\n.googleads.google" +
+      "apis.com/AdGroupCriterionLabel\022Vcustomer" +
+      "s/{customer_id}/adGroupCriterionLabels/{" +
+      "ad_group_id}~{criterion_id}~{label_id}B\025" +
+      "\n\023_ad_group_criterionB\010\n\006_labelB\214\002\n&com." +
+      "google.ads.googleads.v12.resourcesB\032AdGr" +
+      "oupCriterionLabelProtoP\001ZKgoogle.golang." +
+      "org/genproto/googleapis/ads/googleads/v1" +
+      "2/resources;resources\242\002\003GAA\252\002\"Google.Ads" +
+      ".GoogleAds.V12.Resources\312\002\"Google\\Ads\\Go" +
+      "ogleAds\\V12\\Resources\352\002&Google::Ads::Goo" +
+      "gleAds::V12::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

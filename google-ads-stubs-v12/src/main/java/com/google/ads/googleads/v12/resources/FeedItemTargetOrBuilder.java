@@ -290,5 +290,5 @@ public interface FeedItemTargetOrBuilder extends
    */
   com.google.ads.googleads.v12.common.AdScheduleInfoOrBuilder getAdScheduleOrBuilder();
 
-  public com.google.ads.googleads.v12.resources.FeedItemTarget.TargetCase getTargetCase();
+  com.google.ads.googleads.v12.resources.FeedItemTarget.TargetCase getTargetCase();
 }

@@ -11,6 +11,7 @@ public interface CustomerCustomizerOrBuilder extends
    * <pre>
    * Immutable. The resource name of the customer customizer.
    * Customer customizer resource names have the form:
+   *
    * `customers/{customer_id}/customerCustomizers/{customizer_attribute_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface CustomerCustomizerOrBuilder extends
    * <pre>
    * Immutable. The resource name of the customer customizer.
    * Customer customizer resource names have the form:
+   *
    * `customers/{customer_id}/customerCustomizers/{customizer_attribute_id}`
    * </pre>
    *

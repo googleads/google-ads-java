@@ -11,6 +11,7 @@ public interface DistanceViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the distance view.
    * Distance view resource names have the form:
+   *
    * `customers/{customer_id}/distanceViews/1~{distance_bucket}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface DistanceViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the distance view.
    * Distance view resource names have the form:
+   *
    * `customers/{customer_id}/distanceViews/1~{distance_bucket}`
    * </pre>
    *
