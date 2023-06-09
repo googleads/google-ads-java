@@ -11,6 +11,7 @@ public interface KeywordPlanOrBuilder extends
    * <pre>
    * Immutable. The resource name of the Keyword Planner plan.
    * KeywordPlan resource names have the form:
+   *
    * `customers/{customer_id}/keywordPlans/{kp_plan_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface KeywordPlanOrBuilder extends
    * <pre>
    * Immutable. The resource name of the Keyword Planner plan.
    * KeywordPlan resource names have the form:
+   *
    * `customers/{customer_id}/keywordPlans/{kp_plan_id}`
    * </pre>
    *
@@ -53,6 +55,7 @@ public interface KeywordPlanOrBuilder extends
   /**
    * <pre>
    * The name of the keyword plan.
+   *
    * This field is required and should not be empty when creating new keyword
    * plans.
    * </pre>
@@ -64,6 +67,7 @@ public interface KeywordPlanOrBuilder extends
   /**
    * <pre>
    * The name of the keyword plan.
+   *
    * This field is required and should not be empty when creating new keyword
    * plans.
    * </pre>
@@ -75,6 +79,7 @@ public interface KeywordPlanOrBuilder extends
   /**
    * <pre>
    * The name of the keyword plan.
+   *
    * This field is required and should not be empty when creating new keyword
    * plans.
    * </pre>

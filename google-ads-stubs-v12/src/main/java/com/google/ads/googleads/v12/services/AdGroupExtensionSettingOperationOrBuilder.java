@@ -119,6 +119,7 @@ public interface AdGroupExtensionSettingOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed ad group extension
    * setting is expected, in this format:
+   *
    * `customers/{customer_id}/adGroupExtensionSettings/{ad_group_id}~{extension_type}`
    * </pre>
    *
@@ -130,6 +131,7 @@ public interface AdGroupExtensionSettingOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed ad group extension
    * setting is expected, in this format:
+   *
    * `customers/{customer_id}/adGroupExtensionSettings/{ad_group_id}~{extension_type}`
    * </pre>
    *
@@ -141,6 +143,7 @@ public interface AdGroupExtensionSettingOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed ad group extension
    * setting is expected, in this format:
+   *
    * `customers/{customer_id}/adGroupExtensionSettings/{ad_group_id}~{extension_type}`
    * </pre>
    *
@@ -150,5 +153,5 @@ public interface AdGroupExtensionSettingOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v12.services.AdGroupExtensionSettingOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v12.services.AdGroupExtensionSettingOperation.OperationCase getOperationCase();
 }

@@ -129,7 +129,7 @@ public final class CustomerManagerLinkServiceGrpc {
    * Service to manage customer-manager links.
    * </pre>
    */
-  public static abstract class CustomerManagerLinkServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -148,7 +148,7 @@ public final class CustomerManagerLinkServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void mutateCustomerManagerLink(com.google.ads.googleads.v12.services.MutateCustomerManagerLinkRequest request,
+    default void mutateCustomerManagerLink(com.google.ads.googleads.v12.services.MutateCustomerManagerLinkRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.MutateCustomerManagerLinkResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateCustomerManagerLinkMethod(), responseObserver);
     }
@@ -172,37 +172,34 @@ public final class CustomerManagerLinkServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void moveManagerLink(com.google.ads.googleads.v12.services.MoveManagerLinkRequest request,
+    default void moveManagerLink(com.google.ads.googleads.v12.services.MoveManagerLinkRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.MoveManagerLinkResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMoveManagerLinkMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateCustomerManagerLinkMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.MutateCustomerManagerLinkRequest,
-                com.google.ads.googleads.v12.services.MutateCustomerManagerLinkResponse>(
-                  this, METHODID_MUTATE_CUSTOMER_MANAGER_LINK)))
-          .addMethod(
-            getMoveManagerLinkMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.MoveManagerLinkRequest,
-                com.google.ads.googleads.v12.services.MoveManagerLinkResponse>(
-                  this, METHODID_MOVE_MANAGER_LINK)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service CustomerManagerLinkService.
    * <pre>
    * Service to manage customer-manager links.
    * </pre>
    */
-  public static final class CustomerManagerLinkServiceStub extends io.grpc.stub.AbstractAsyncStub<CustomerManagerLinkServiceStub> {
+  public static abstract class CustomerManagerLinkServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return CustomerManagerLinkServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service CustomerManagerLinkService.
+   * <pre>
+   * Service to manage customer-manager links.
+   * </pre>
+   */
+  public static final class CustomerManagerLinkServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<CustomerManagerLinkServiceStub> {
     private CustomerManagerLinkServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -264,11 +261,13 @@ public final class CustomerManagerLinkServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service CustomerManagerLinkService.
    * <pre>
    * Service to manage customer-manager links.
    * </pre>
    */
-  public static final class CustomerManagerLinkServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CustomerManagerLinkServiceBlockingStub> {
+  public static final class CustomerManagerLinkServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<CustomerManagerLinkServiceBlockingStub> {
     private CustomerManagerLinkServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -328,11 +327,13 @@ public final class CustomerManagerLinkServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service CustomerManagerLinkService.
    * <pre>
    * Service to manage customer-manager links.
    * </pre>
    */
-  public static final class CustomerManagerLinkServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CustomerManagerLinkServiceFutureStub> {
+  public static final class CustomerManagerLinkServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<CustomerManagerLinkServiceFutureStub> {
     private CustomerManagerLinkServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -401,10 +402,10 @@ public final class CustomerManagerLinkServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final CustomerManagerLinkServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(CustomerManagerLinkServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -435,6 +436,25 @@ public final class CustomerManagerLinkServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateCustomerManagerLinkMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.MutateCustomerManagerLinkRequest,
+              com.google.ads.googleads.v12.services.MutateCustomerManagerLinkResponse>(
+                service, METHODID_MUTATE_CUSTOMER_MANAGER_LINK)))
+        .addMethod(
+          getMoveManagerLinkMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.MoveManagerLinkRequest,
+              com.google.ads.googleads.v12.services.MoveManagerLinkResponse>(
+                service, METHODID_MOVE_MANAGER_LINK)))
+        .build();
   }
 
   private static abstract class CustomerManagerLinkServiceBaseDescriptorSupplier

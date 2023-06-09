@@ -34,5 +34,5 @@ public interface MediaFileOperationOrBuilder extends
    */
   com.google.ads.googleads.v13.resources.MediaFileOrBuilder getCreateOrBuilder();
 
-  public com.google.ads.googleads.v13.services.MediaFileOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v13.services.MediaFileOperation.OperationCase getOperationCase();
 }

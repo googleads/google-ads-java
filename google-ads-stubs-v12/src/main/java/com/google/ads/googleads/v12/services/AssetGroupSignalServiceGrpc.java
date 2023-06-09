@@ -98,7 +98,7 @@ public final class AssetGroupSignalServiceGrpc {
    * Service to manage asset group signal.
    * </pre>
    */
-  public static abstract class AssetGroupSignalServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -106,30 +106,34 @@ public final class AssetGroupSignalServiceGrpc {
      * returned.
      * </pre>
      */
-    public void mutateAssetGroupSignals(com.google.ads.googleads.v12.services.MutateAssetGroupSignalsRequest request,
+    default void mutateAssetGroupSignals(com.google.ads.googleads.v12.services.MutateAssetGroupSignalsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.MutateAssetGroupSignalsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateAssetGroupSignalsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateAssetGroupSignalsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.MutateAssetGroupSignalsRequest,
-                com.google.ads.googleads.v12.services.MutateAssetGroupSignalsResponse>(
-                  this, METHODID_MUTATE_ASSET_GROUP_SIGNALS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service AssetGroupSignalService.
    * <pre>
    * Service to manage asset group signal.
    * </pre>
    */
-  public static final class AssetGroupSignalServiceStub extends io.grpc.stub.AbstractAsyncStub<AssetGroupSignalServiceStub> {
+  public static abstract class AssetGroupSignalServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return AssetGroupSignalServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service AssetGroupSignalService.
+   * <pre>
+   * Service to manage asset group signal.
+   * </pre>
+   */
+  public static final class AssetGroupSignalServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<AssetGroupSignalServiceStub> {
     private AssetGroupSignalServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -155,11 +159,13 @@ public final class AssetGroupSignalServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service AssetGroupSignalService.
    * <pre>
    * Service to manage asset group signal.
    * </pre>
    */
-  public static final class AssetGroupSignalServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<AssetGroupSignalServiceBlockingStub> {
+  public static final class AssetGroupSignalServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<AssetGroupSignalServiceBlockingStub> {
     private AssetGroupSignalServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -184,11 +190,13 @@ public final class AssetGroupSignalServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service AssetGroupSignalService.
    * <pre>
    * Service to manage asset group signal.
    * </pre>
    */
-  public static final class AssetGroupSignalServiceFutureStub extends io.grpc.stub.AbstractFutureStub<AssetGroupSignalServiceFutureStub> {
+  public static final class AssetGroupSignalServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<AssetGroupSignalServiceFutureStub> {
     private AssetGroupSignalServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -220,10 +228,10 @@ public final class AssetGroupSignalServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AssetGroupSignalServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AssetGroupSignalServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -250,6 +258,18 @@ public final class AssetGroupSignalServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateAssetGroupSignalsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.MutateAssetGroupSignalsRequest,
+              com.google.ads.googleads.v12.services.MutateAssetGroupSignalsResponse>(
+                service, METHODID_MUTATE_ASSET_GROUP_SIGNALS)))
+        .build();
   }
 
   private static abstract class AssetGroupSignalServiceBaseDescriptorSupplier

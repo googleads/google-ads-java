@@ -34,11 +34,6 @@ private static final long serialVersionUID = 0L;
     return new GroupPlacementView();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.resources.GroupPlacementViewProto.internal_static_google_ads_googleads_v13_resources_GroupPlacementView_descriptor;
@@ -60,6 +55,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the group placement view.
    * Group placement view resource names have the form:
+   *
    * `customers/{customer_id}/groupPlacementViews/{ad_group_id}~{base64_placement}`
    * </pre>
    *
@@ -83,6 +79,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the group placement view.
    * Group placement view resource names have the form:
+   *
    * `customers/{customer_id}/groupPlacementViews/{ad_group_id}~{base64_placement}`
    * </pre>
    *
@@ -481,11 +478,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.resources.GroupPlacementView parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.resources.GroupPlacementView parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -765,6 +764,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the group placement view.
      * Group placement view resource names have the form:
+     *
      * `customers/{customer_id}/groupPlacementViews/{ad_group_id}~{base64_placement}`
      * </pre>
      *
@@ -787,6 +787,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the group placement view.
      * Group placement view resource names have the form:
+     *
      * `customers/{customer_id}/groupPlacementViews/{ad_group_id}~{base64_placement}`
      * </pre>
      *
@@ -810,6 +811,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the group placement view.
      * Group placement view resource names have the form:
+     *
      * `customers/{customer_id}/groupPlacementViews/{ad_group_id}~{base64_placement}`
      * </pre>
      *
@@ -829,6 +831,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the group placement view.
      * Group placement view resource names have the form:
+     *
      * `customers/{customer_id}/groupPlacementViews/{ad_group_id}~{base64_placement}`
      * </pre>
      *
@@ -845,6 +848,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the group placement view.
      * Group placement view resource names have the form:
+     *
      * `customers/{customer_id}/groupPlacementViews/{ad_group_id}~{base64_placement}`
      * </pre>
      *

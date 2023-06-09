@@ -36,28 +36,28 @@ public final class AdGroupFeedProto {
       "roto\0325google/ads/googleads/v12/enums/pla" +
       "ceholder_type.proto\032\037google/api/field_be" +
       "havior.proto\032\031google/api/resource.proto\"" +
-      "\322\004\n\013AdGroupFeed\022C\n\rresource_name\030\001 \001(\tB," +
-      "\340A\005\372A&\n$googleads.googleapis.com/AdGroup" +
-      "Feed\0228\n\004feed\030\007 \001(\tB%\340A\005\372A\037\n\035googleads.go" +
-      "ogleapis.com/FeedH\000\210\001\001\022?\n\010ad_group\030\010 \001(\t" +
-      "B(\340A\005\372A\"\n googleads.googleapis.com/AdGro" +
-      "upH\001\210\001\001\022^\n\021placeholder_types\030\004 \003(\0162C.goo" +
-      "gle.ads.googleads.v12.enums.PlaceholderT" +
-      "ypeEnum.PlaceholderType\022L\n\021matching_func" +
-      "tion\030\005 \001(\01321.google.ads.googleads.v12.co" +
-      "mmon.MatchingFunction\022V\n\006status\030\006 \001(\0162A." +
-      "google.ads.googleads.v12.enums.FeedLinkS" +
-      "tatusEnum.FeedLinkStatusB\003\340A\003:g\352Ad\n$goog" +
-      "leads.googleapis.com/AdGroupFeed\022<custom" +
-      "ers/{customer_id}/adGroupFeeds/{ad_group" +
-      "_id}~{feed_id}B\007\n\005_feedB\013\n\t_ad_groupB\202\002\n" +
-      "&com.google.ads.googleads.v12.resourcesB" +
-      "\020AdGroupFeedProtoP\001ZKgoogle.golang.org/g" +
-      "enproto/googleapis/ads/googleads/v12/res" +
-      "ources;resources\242\002\003GAA\252\002\"Google.Ads.Goog" +
-      "leAds.V12.Resources\312\002\"Google\\Ads\\GoogleA" +
-      "ds\\V12\\Resources\352\002&Google::Ads::GoogleAd" +
-      "s::V12::Resourcesb\006proto3"
+      "\326\004\n\013AdGroupFeed\022D\n\rresource_name\030\001 \001(\tB-" +
+      "\342A\001\005\372A&\n$googleads.googleapis.com/AdGrou" +
+      "pFeed\0229\n\004feed\030\007 \001(\tB&\342A\001\005\372A\037\n\035googleads." +
+      "googleapis.com/FeedH\000\210\001\001\022@\n\010ad_group\030\010 \001" +
+      "(\tB)\342A\001\005\372A\"\n googleads.googleapis.com/Ad" +
+      "GroupH\001\210\001\001\022^\n\021placeholder_types\030\004 \003(\0162C." +
+      "google.ads.googleads.v12.enums.Placehold" +
+      "erTypeEnum.PlaceholderType\022L\n\021matching_f" +
+      "unction\030\005 \001(\01321.google.ads.googleads.v12" +
+      ".common.MatchingFunction\022W\n\006status\030\006 \001(\016" +
+      "2A.google.ads.googleads.v12.enums.FeedLi" +
+      "nkStatusEnum.FeedLinkStatusB\004\342A\001\003:g\352Ad\n$" +
+      "googleads.googleapis.com/AdGroupFeed\022<cu" +
+      "stomers/{customer_id}/adGroupFeeds/{ad_g" +
+      "roup_id}~{feed_id}B\007\n\005_feedB\013\n\t_ad_group" +
+      "B\202\002\n&com.google.ads.googleads.v12.resour" +
+      "cesB\020AdGroupFeedProtoP\001ZKgoogle.golang.o" +
+      "rg/genproto/googleapis/ads/googleads/v12" +
+      "/resources;resources\242\002\003GAA\252\002\"Google.Ads." +
+      "GoogleAds.V12.Resources\312\002\"Google\\Ads\\Goo" +
+      "gleAds\\V12\\Resources\352\002&Google::Ads::Goog" +
+      "leAds::V12::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -40,6 +40,7 @@ public interface AdGroupCriterionOperationOrBuilder extends
    * PolicyViolationError to be reported. Not all policy violations are
    * exemptable, refer to the is_exemptible field in the returned
    * PolicyViolationError.
+   *
    * Resources violating these polices will be saved, but will not be eligible
    * to serve. They may begin serving at a later time due to a change in
    * policies, re-review of the resource, or a change in advertiser
@@ -56,6 +57,7 @@ public interface AdGroupCriterionOperationOrBuilder extends
    * PolicyViolationError to be reported. Not all policy violations are
    * exemptable, refer to the is_exemptible field in the returned
    * PolicyViolationError.
+   *
    * Resources violating these polices will be saved, but will not be eligible
    * to serve. They may begin serving at a later time due to a change in
    * policies, re-review of the resource, or a change in advertiser
@@ -71,6 +73,7 @@ public interface AdGroupCriterionOperationOrBuilder extends
    * PolicyViolationError to be reported. Not all policy violations are
    * exemptable, refer to the is_exemptible field in the returned
    * PolicyViolationError.
+   *
    * Resources violating these polices will be saved, but will not be eligible
    * to serve. They may begin serving at a later time due to a change in
    * policies, re-review of the resource, or a change in advertiser
@@ -86,6 +89,7 @@ public interface AdGroupCriterionOperationOrBuilder extends
    * PolicyViolationError to be reported. Not all policy violations are
    * exemptable, refer to the is_exemptible field in the returned
    * PolicyViolationError.
+   *
    * Resources violating these polices will be saved, but will not be eligible
    * to serve. They may begin serving at a later time due to a change in
    * policies, re-review of the resource, or a change in advertiser
@@ -102,6 +106,7 @@ public interface AdGroupCriterionOperationOrBuilder extends
    * PolicyViolationError to be reported. Not all policy violations are
    * exemptable, refer to the is_exemptible field in the returned
    * PolicyViolationError.
+   *
    * Resources violating these polices will be saved, but will not be eligible
    * to serve. They may begin serving at a later time due to a change in
    * policies, re-review of the resource, or a change in advertiser
@@ -174,6 +179,7 @@ public interface AdGroupCriterionOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed criterion is expected,
    * in this format:
+   *
    * `customers/{customer_id}/adGroupCriteria/{ad_group_id}~{criterion_id}`
    * </pre>
    *
@@ -185,6 +191,7 @@ public interface AdGroupCriterionOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed criterion is expected,
    * in this format:
+   *
    * `customers/{customer_id}/adGroupCriteria/{ad_group_id}~{criterion_id}`
    * </pre>
    *
@@ -196,6 +203,7 @@ public interface AdGroupCriterionOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed criterion is expected,
    * in this format:
+   *
    * `customers/{customer_id}/adGroupCriteria/{ad_group_id}~{criterion_id}`
    * </pre>
    *
@@ -205,5 +213,5 @@ public interface AdGroupCriterionOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v13.services.AdGroupCriterionOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v13.services.AdGroupCriterionOperation.OperationCase getOperationCase();
 }

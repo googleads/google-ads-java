@@ -11,6 +11,7 @@ public interface ProductGroupViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the product group view.
    * Product group view resource names have the form:
+   *
    * `customers/{customer_id}/productGroupViews/{ad_group_id}~{criterion_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface ProductGroupViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the product group view.
    * Product group view resource names have the form:
+   *
    * `customers/{customer_id}/productGroupViews/{ad_group_id}~{criterion_id}`
    * </pre>
    *

@@ -36,11 +36,6 @@ private static final long serialVersionUID = 0L;
     return new Metrics();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.common.MetricsProto.internal_static_google_ads_googleads_v13_common_Metrics_descriptor;
@@ -120,6 +115,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Active view measurable clicks divided by active view viewable impressions.
+   *
    * This metric is reported only for the Display Network.
    * </pre>
    *
@@ -133,6 +129,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Active view measurable clicks divided by active view viewable impressions.
+   *
    * This metric is reported only for the Display Network.
    * </pre>
    *
@@ -447,6 +444,7 @@ private static final long serialVersionUID = 0L;
    * The number of times people clicked the "Call" button to call a store during
    * or after clicking an ad. This number doesn't include whether or not calls
    * were connected, or the duration of any calls.
+   *
    * This metric applies to feed items only.
    * </pre>
    *
@@ -462,6 +460,7 @@ private static final long serialVersionUID = 0L;
    * The number of times people clicked the "Call" button to call a store during
    * or after clicking an ad. This number doesn't include whether or not calls
    * were connected, or the duration of any calls.
+   *
    * This metric applies to feed items only.
    * </pre>
    *
@@ -479,6 +478,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The number of times people clicked a "Get directions" button to navigate to
    * a store after clicking an ad.
+   *
    * This metric applies to feed items only.
    * </pre>
    *
@@ -493,6 +493,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The number of times people clicked a "Get directions" button to navigate to
    * a store after clicking an ad.
+   *
    * This metric applies to feed items only.
    * </pre>
    *
@@ -539,6 +540,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The number of times people clicked a link to view a store's menu after
    * clicking an ad.
+   *
    * This metric applies to feed items only.
    * </pre>
    *
@@ -553,6 +555,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The number of times people clicked a link to view a store's menu after
    * clicking an ad.
+   *
    * This metric applies to feed items only.
    * </pre>
    *
@@ -569,6 +572,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The number of times people placed an order at a store after clicking an ad.
+   *
    * This metric applies to feed items only.
    * </pre>
    *
@@ -582,6 +586,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The number of times people placed an order at a store after clicking an ad.
+   *
    * This metric applies to feed items only.
    * </pre>
    *
@@ -599,6 +604,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The number of other conversions (for example, posting a review or saving a
    * location for a store) that occurred after people clicked an ad.
+   *
    * This metric applies to feed items only.
    * </pre>
    *
@@ -613,6 +619,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The number of other conversions (for example, posting a review or saving a
    * location for a store) that occurred after people clicked an ad.
+   *
    * This metric applies to feed items only.
    * </pre>
    *
@@ -629,6 +636,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Estimated number of times people visited a store after clicking an ad.
+   *
    * This metric applies to feed items only.
    * </pre>
    *
@@ -642,6 +650,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Estimated number of times people visited a store after clicking an ad.
+   *
    * This metric applies to feed items only.
    * </pre>
    *
@@ -659,6 +668,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The number of times that people were taken to a store's URL after clicking
    * an ad.
+   *
    * This metric applies to feed items only.
    * </pre>
    *
@@ -673,6 +683,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The number of times that people were taken to a store's URL after clicking
    * an ad.
+   *
    * This metric applies to feed items only.
    * </pre>
    *
@@ -693,6 +704,7 @@ private static final long serialVersionUID = 0L;
    * organic search results.
    * This percentage is computed only over the auctions that you appeared in
    * the page.
+   *
    * This metric is not publicly available.
    * </pre>
    *
@@ -710,6 +722,7 @@ private static final long serialVersionUID = 0L;
    * organic search results.
    * This percentage is computed only over the auctions that you appeared in
    * the page.
+   *
    * This metric is not publicly available.
    * </pre>
    *
@@ -729,6 +742,7 @@ private static final long serialVersionUID = 0L;
    * percentage of impressions that another participant obtained, over the total
    * number of impressions that your ads were eligible for.
    * Any value below 0.1 is reported as 0.0999.
+   *
    * This metric is not publicly available.
    * </pre>
    *
@@ -745,6 +759,7 @@ private static final long serialVersionUID = 0L;
    * percentage of impressions that another participant obtained, over the total
    * number of impressions that your ads were eligible for.
    * Any value below 0.1 is reported as 0.0999.
+   *
    * This metric is not publicly available.
    * </pre>
    *
@@ -765,6 +780,7 @@ private static final long serialVersionUID = 0L;
    * another participant in the auction, compared to the total number of
    * impressions that your ads were eligible for.
    * Any value below 0.1 is reported as 0.0999.
+   *
    * This metric is not publicly available.
    * </pre>
    *
@@ -782,6 +798,7 @@ private static final long serialVersionUID = 0L;
    * another participant in the auction, compared to the total number of
    * impressions that your ads were eligible for.
    * Any value below 0.1 is reported as 0.0999.
+   *
    * This metric is not publicly available.
    * </pre>
    *
@@ -800,6 +817,7 @@ private static final long serialVersionUID = 0L;
    * This metric is part of the Auction Insights report, and tells how often
    * another participant's ad received an impression when your ad also received
    * an impression.
+   *
    * This metric is not publicly available.
    * </pre>
    *
@@ -815,6 +833,7 @@ private static final long serialVersionUID = 0L;
    * This metric is part of the Auction Insights report, and tells how often
    * another participant's ad received an impression when your ad also received
    * an impression.
+   *
    * This metric is not publicly available.
    * </pre>
    *
@@ -833,6 +852,7 @@ private static final long serialVersionUID = 0L;
    * This metric is part of the Auction Insights report, and tells how often
    * another participant's ad was shown in a higher position than yours, when
    * both of your ads were shown at the same page.
+   *
    * This metric is not publicly available.
    * </pre>
    *
@@ -848,6 +868,7 @@ private static final long serialVersionUID = 0L;
    * This metric is part of the Auction Insights report, and tells how often
    * another participant's ad was shown in a higher position than yours, when
    * both of your ads were shown at the same page.
+   *
    * This metric is not publicly available.
    * </pre>
    *
@@ -867,6 +888,7 @@ private static final long serialVersionUID = 0L;
    * the ads of another participant showed above the organic search results.
    * This percentage is computed only over the auctions that you appeared in
    * the page.
+   *
    * This metric is not publicly available.
    * </pre>
    *
@@ -883,6 +905,7 @@ private static final long serialVersionUID = 0L;
    * the ads of another participant showed above the organic search results.
    * This percentage is computed only over the auctions that you appeared in
    * the page.
+   *
    * This metric is not publicly available.
    * </pre>
    *
@@ -2558,6 +2581,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The number of times a store's location-based ad was shown.
+   *
    * This metric applies to feed items only.
    * </pre>
    *
@@ -2571,6 +2595,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The number of times a store's location-based ad was shown.
+   *
    * This metric applies to feed items only.
    * </pre>
    *
@@ -7438,11 +7463,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.common.Metrics parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.common.Metrics parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -9711,7 +9738,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAbsoluteTopImpressionPercentage(double value) {
-      
+
       absoluteTopImpressionPercentage_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
@@ -9768,7 +9795,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setActiveViewCpm(double value) {
-      
+
       activeViewCpm_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -9793,6 +9820,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Active view measurable clicks divided by active view viewable impressions.
+     *
      * This metric is reported only for the Display Network.
      * </pre>
      *
@@ -9806,6 +9834,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Active view measurable clicks divided by active view viewable impressions.
+     *
      * This metric is reported only for the Display Network.
      * </pre>
      *
@@ -9819,6 +9848,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Active view measurable clicks divided by active view viewable impressions.
+     *
      * This metric is reported only for the Display Network.
      * </pre>
      *
@@ -9827,7 +9857,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setActiveViewCtr(double value) {
-      
+
       activeViewCtr_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
@@ -9836,6 +9866,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Active view measurable clicks divided by active view viewable impressions.
+     *
      * This metric is reported only for the Display Network.
      * </pre>
      *
@@ -9887,7 +9918,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setActiveViewImpressions(long value) {
-      
+
       activeViewImpressions_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
@@ -9947,7 +9978,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setActiveViewMeasurability(double value) {
-      
+
       activeViewMeasurability_ = value;
       bitField0_ |= 0x00000010;
       onChanged();
@@ -10007,7 +10038,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setActiveViewMeasurableCostMicros(long value) {
-      
+
       activeViewMeasurableCostMicros_ = value;
       bitField0_ |= 0x00000020;
       onChanged();
@@ -10067,7 +10098,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setActiveViewMeasurableImpressions(long value) {
-      
+
       activeViewMeasurableImpressions_ = value;
       bitField0_ |= 0x00000040;
       onChanged();
@@ -10127,7 +10158,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setActiveViewViewability(double value) {
-      
+
       activeViewViewability_ = value;
       bitField0_ |= 0x00000080;
       onChanged();
@@ -10187,7 +10218,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAllConversionsFromInteractionsRate(double value) {
-      
+
       allConversionsFromInteractionsRate_ = value;
       bitField0_ |= 0x00000100;
       onChanged();
@@ -10244,7 +10275,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAllConversionsValue(double value) {
-      
+
       allConversionsValue_ = value;
       bitField0_ |= 0x00000200;
       onChanged();
@@ -10294,7 +10325,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAllConversionsValueByConversionDate(double value) {
-      
+
       allConversionsValueByConversionDate_ = value;
       bitField0_ |= 0x00000400;
       onChanged();
@@ -10356,7 +10387,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAllConversions(double value) {
-      
+
       allConversions_ = value;
       bitField0_ |= 0x00000800;
       onChanged();
@@ -10409,7 +10440,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAllConversionsByConversionDate(double value) {
-      
+
       allConversionsByConversionDate_ = value;
       bitField0_ |= 0x00001000;
       onChanged();
@@ -10472,7 +10503,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAllConversionsValuePerCost(double value) {
-      
+
       allConversionsValuePerCost_ = value;
       bitField0_ |= 0x00002000;
       onChanged();
@@ -10500,6 +10531,7 @@ private static final long serialVersionUID = 0L;
      * The number of times people clicked the "Call" button to call a store during
      * or after clicking an ad. This number doesn't include whether or not calls
      * were connected, or the duration of any calls.
+     *
      * This metric applies to feed items only.
      * </pre>
      *
@@ -10515,6 +10547,7 @@ private static final long serialVersionUID = 0L;
      * The number of times people clicked the "Call" button to call a store during
      * or after clicking an ad. This number doesn't include whether or not calls
      * were connected, or the duration of any calls.
+     *
      * This metric applies to feed items only.
      * </pre>
      *
@@ -10530,6 +10563,7 @@ private static final long serialVersionUID = 0L;
      * The number of times people clicked the "Call" button to call a store during
      * or after clicking an ad. This number doesn't include whether or not calls
      * were connected, or the duration of any calls.
+     *
      * This metric applies to feed items only.
      * </pre>
      *
@@ -10538,7 +10572,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAllConversionsFromClickToCall(double value) {
-      
+
       allConversionsFromClickToCall_ = value;
       bitField0_ |= 0x00004000;
       onChanged();
@@ -10549,6 +10583,7 @@ private static final long serialVersionUID = 0L;
      * The number of times people clicked the "Call" button to call a store during
      * or after clicking an ad. This number doesn't include whether or not calls
      * were connected, or the duration of any calls.
+     *
      * This metric applies to feed items only.
      * </pre>
      *
@@ -10567,6 +10602,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The number of times people clicked a "Get directions" button to navigate to
      * a store after clicking an ad.
+     *
      * This metric applies to feed items only.
      * </pre>
      *
@@ -10581,6 +10617,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The number of times people clicked a "Get directions" button to navigate to
      * a store after clicking an ad.
+     *
      * This metric applies to feed items only.
      * </pre>
      *
@@ -10595,6 +10632,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The number of times people clicked a "Get directions" button to navigate to
      * a store after clicking an ad.
+     *
      * This metric applies to feed items only.
      * </pre>
      *
@@ -10603,7 +10641,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAllConversionsFromDirections(double value) {
-      
+
       allConversionsFromDirections_ = value;
       bitField0_ |= 0x00008000;
       onChanged();
@@ -10613,6 +10651,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The number of times people clicked a "Get directions" button to navigate to
      * a store after clicking an ad.
+     *
      * This metric applies to feed items only.
      * </pre>
      *
@@ -10664,7 +10703,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAllConversionsFromInteractionsValuePerInteraction(double value) {
-      
+
       allConversionsFromInteractionsValuePerInteraction_ = value;
       bitField0_ |= 0x00010000;
       onChanged();
@@ -10691,6 +10730,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The number of times people clicked a link to view a store's menu after
      * clicking an ad.
+     *
      * This metric applies to feed items only.
      * </pre>
      *
@@ -10705,6 +10745,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The number of times people clicked a link to view a store's menu after
      * clicking an ad.
+     *
      * This metric applies to feed items only.
      * </pre>
      *
@@ -10719,6 +10760,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The number of times people clicked a link to view a store's menu after
      * clicking an ad.
+     *
      * This metric applies to feed items only.
      * </pre>
      *
@@ -10727,7 +10769,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAllConversionsFromMenu(double value) {
-      
+
       allConversionsFromMenu_ = value;
       bitField0_ |= 0x00020000;
       onChanged();
@@ -10737,6 +10779,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The number of times people clicked a link to view a store's menu after
      * clicking an ad.
+     *
      * This metric applies to feed items only.
      * </pre>
      *
@@ -10754,6 +10797,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The number of times people placed an order at a store after clicking an ad.
+     *
      * This metric applies to feed items only.
      * </pre>
      *
@@ -10767,6 +10811,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The number of times people placed an order at a store after clicking an ad.
+     *
      * This metric applies to feed items only.
      * </pre>
      *
@@ -10780,6 +10825,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The number of times people placed an order at a store after clicking an ad.
+     *
      * This metric applies to feed items only.
      * </pre>
      *
@@ -10788,7 +10834,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAllConversionsFromOrder(double value) {
-      
+
       allConversionsFromOrder_ = value;
       bitField0_ |= 0x00040000;
       onChanged();
@@ -10797,6 +10843,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The number of times people placed an order at a store after clicking an ad.
+     *
      * This metric applies to feed items only.
      * </pre>
      *
@@ -10815,6 +10862,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The number of other conversions (for example, posting a review or saving a
      * location for a store) that occurred after people clicked an ad.
+     *
      * This metric applies to feed items only.
      * </pre>
      *
@@ -10829,6 +10877,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The number of other conversions (for example, posting a review or saving a
      * location for a store) that occurred after people clicked an ad.
+     *
      * This metric applies to feed items only.
      * </pre>
      *
@@ -10843,6 +10892,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The number of other conversions (for example, posting a review or saving a
      * location for a store) that occurred after people clicked an ad.
+     *
      * This metric applies to feed items only.
      * </pre>
      *
@@ -10851,7 +10901,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAllConversionsFromOtherEngagement(double value) {
-      
+
       allConversionsFromOtherEngagement_ = value;
       bitField0_ |= 0x00080000;
       onChanged();
@@ -10861,6 +10911,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The number of other conversions (for example, posting a review or saving a
      * location for a store) that occurred after people clicked an ad.
+     *
      * This metric applies to feed items only.
      * </pre>
      *
@@ -10878,6 +10929,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Estimated number of times people visited a store after clicking an ad.
+     *
      * This metric applies to feed items only.
      * </pre>
      *
@@ -10891,6 +10943,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Estimated number of times people visited a store after clicking an ad.
+     *
      * This metric applies to feed items only.
      * </pre>
      *
@@ -10904,6 +10957,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Estimated number of times people visited a store after clicking an ad.
+     *
      * This metric applies to feed items only.
      * </pre>
      *
@@ -10912,7 +10966,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAllConversionsFromStoreVisit(double value) {
-      
+
       allConversionsFromStoreVisit_ = value;
       bitField0_ |= 0x00100000;
       onChanged();
@@ -10921,6 +10975,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Estimated number of times people visited a store after clicking an ad.
+     *
      * This metric applies to feed items only.
      * </pre>
      *
@@ -10939,6 +10994,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The number of times that people were taken to a store's URL after clicking
      * an ad.
+     *
      * This metric applies to feed items only.
      * </pre>
      *
@@ -10953,6 +11009,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The number of times that people were taken to a store's URL after clicking
      * an ad.
+     *
      * This metric applies to feed items only.
      * </pre>
      *
@@ -10967,6 +11024,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The number of times that people were taken to a store's URL after clicking
      * an ad.
+     *
      * This metric applies to feed items only.
      * </pre>
      *
@@ -10975,7 +11033,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAllConversionsFromStoreWebsite(double value) {
-      
+
       allConversionsFromStoreWebsite_ = value;
       bitField0_ |= 0x00200000;
       onChanged();
@@ -10985,6 +11043,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The number of times that people were taken to a store's URL after clicking
      * an ad.
+     *
      * This metric applies to feed items only.
      * </pre>
      *
@@ -11006,6 +11065,7 @@ private static final long serialVersionUID = 0L;
      * organic search results.
      * This percentage is computed only over the auctions that you appeared in
      * the page.
+     *
      * This metric is not publicly available.
      * </pre>
      *
@@ -11023,6 +11083,7 @@ private static final long serialVersionUID = 0L;
      * organic search results.
      * This percentage is computed only over the auctions that you appeared in
      * the page.
+     *
      * This metric is not publicly available.
      * </pre>
      *
@@ -11040,6 +11101,7 @@ private static final long serialVersionUID = 0L;
      * organic search results.
      * This percentage is computed only over the auctions that you appeared in
      * the page.
+     *
      * This metric is not publicly available.
      * </pre>
      *
@@ -11048,7 +11110,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAuctionInsightSearchAbsoluteTopImpressionPercentage(double value) {
-      
+
       auctionInsightSearchAbsoluteTopImpressionPercentage_ = value;
       bitField0_ |= 0x00400000;
       onChanged();
@@ -11061,6 +11123,7 @@ private static final long serialVersionUID = 0L;
      * organic search results.
      * This percentage is computed only over the auctions that you appeared in
      * the page.
+     *
      * This metric is not publicly available.
      * </pre>
      *
@@ -11081,6 +11144,7 @@ private static final long serialVersionUID = 0L;
      * percentage of impressions that another participant obtained, over the total
      * number of impressions that your ads were eligible for.
      * Any value below 0.1 is reported as 0.0999.
+     *
      * This metric is not publicly available.
      * </pre>
      *
@@ -11097,6 +11161,7 @@ private static final long serialVersionUID = 0L;
      * percentage of impressions that another participant obtained, over the total
      * number of impressions that your ads were eligible for.
      * Any value below 0.1 is reported as 0.0999.
+     *
      * This metric is not publicly available.
      * </pre>
      *
@@ -11113,6 +11178,7 @@ private static final long serialVersionUID = 0L;
      * percentage of impressions that another participant obtained, over the total
      * number of impressions that your ads were eligible for.
      * Any value below 0.1 is reported as 0.0999.
+     *
      * This metric is not publicly available.
      * </pre>
      *
@@ -11121,7 +11187,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAuctionInsightSearchImpressionShare(double value) {
-      
+
       auctionInsightSearchImpressionShare_ = value;
       bitField0_ |= 0x00800000;
       onChanged();
@@ -11133,6 +11199,7 @@ private static final long serialVersionUID = 0L;
      * percentage of impressions that another participant obtained, over the total
      * number of impressions that your ads were eligible for.
      * Any value below 0.1 is reported as 0.0999.
+     *
      * This metric is not publicly available.
      * </pre>
      *
@@ -11154,6 +11221,7 @@ private static final long serialVersionUID = 0L;
      * another participant in the auction, compared to the total number of
      * impressions that your ads were eligible for.
      * Any value below 0.1 is reported as 0.0999.
+     *
      * This metric is not publicly available.
      * </pre>
      *
@@ -11171,6 +11239,7 @@ private static final long serialVersionUID = 0L;
      * another participant in the auction, compared to the total number of
      * impressions that your ads were eligible for.
      * Any value below 0.1 is reported as 0.0999.
+     *
      * This metric is not publicly available.
      * </pre>
      *
@@ -11188,6 +11257,7 @@ private static final long serialVersionUID = 0L;
      * another participant in the auction, compared to the total number of
      * impressions that your ads were eligible for.
      * Any value below 0.1 is reported as 0.0999.
+     *
      * This metric is not publicly available.
      * </pre>
      *
@@ -11196,7 +11266,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAuctionInsightSearchOutrankingShare(double value) {
-      
+
       auctionInsightSearchOutrankingShare_ = value;
       bitField0_ |= 0x01000000;
       onChanged();
@@ -11209,6 +11279,7 @@ private static final long serialVersionUID = 0L;
      * another participant in the auction, compared to the total number of
      * impressions that your ads were eligible for.
      * Any value below 0.1 is reported as 0.0999.
+     *
      * This metric is not publicly available.
      * </pre>
      *
@@ -11228,6 +11299,7 @@ private static final long serialVersionUID = 0L;
      * This metric is part of the Auction Insights report, and tells how often
      * another participant's ad received an impression when your ad also received
      * an impression.
+     *
      * This metric is not publicly available.
      * </pre>
      *
@@ -11243,6 +11315,7 @@ private static final long serialVersionUID = 0L;
      * This metric is part of the Auction Insights report, and tells how often
      * another participant's ad received an impression when your ad also received
      * an impression.
+     *
      * This metric is not publicly available.
      * </pre>
      *
@@ -11258,6 +11331,7 @@ private static final long serialVersionUID = 0L;
      * This metric is part of the Auction Insights report, and tells how often
      * another participant's ad received an impression when your ad also received
      * an impression.
+     *
      * This metric is not publicly available.
      * </pre>
      *
@@ -11266,7 +11340,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAuctionInsightSearchOverlapRate(double value) {
-      
+
       auctionInsightSearchOverlapRate_ = value;
       bitField0_ |= 0x02000000;
       onChanged();
@@ -11277,6 +11351,7 @@ private static final long serialVersionUID = 0L;
      * This metric is part of the Auction Insights report, and tells how often
      * another participant's ad received an impression when your ad also received
      * an impression.
+     *
      * This metric is not publicly available.
      * </pre>
      *
@@ -11296,6 +11371,7 @@ private static final long serialVersionUID = 0L;
      * This metric is part of the Auction Insights report, and tells how often
      * another participant's ad was shown in a higher position than yours, when
      * both of your ads were shown at the same page.
+     *
      * This metric is not publicly available.
      * </pre>
      *
@@ -11311,6 +11387,7 @@ private static final long serialVersionUID = 0L;
      * This metric is part of the Auction Insights report, and tells how often
      * another participant's ad was shown in a higher position than yours, when
      * both of your ads were shown at the same page.
+     *
      * This metric is not publicly available.
      * </pre>
      *
@@ -11326,6 +11403,7 @@ private static final long serialVersionUID = 0L;
      * This metric is part of the Auction Insights report, and tells how often
      * another participant's ad was shown in a higher position than yours, when
      * both of your ads were shown at the same page.
+     *
      * This metric is not publicly available.
      * </pre>
      *
@@ -11334,7 +11412,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAuctionInsightSearchPositionAboveRate(double value) {
-      
+
       auctionInsightSearchPositionAboveRate_ = value;
       bitField0_ |= 0x04000000;
       onChanged();
@@ -11345,6 +11423,7 @@ private static final long serialVersionUID = 0L;
      * This metric is part of the Auction Insights report, and tells how often
      * another participant's ad was shown in a higher position than yours, when
      * both of your ads were shown at the same page.
+     *
      * This metric is not publicly available.
      * </pre>
      *
@@ -11365,6 +11444,7 @@ private static final long serialVersionUID = 0L;
      * the ads of another participant showed above the organic search results.
      * This percentage is computed only over the auctions that you appeared in
      * the page.
+     *
      * This metric is not publicly available.
      * </pre>
      *
@@ -11381,6 +11461,7 @@ private static final long serialVersionUID = 0L;
      * the ads of another participant showed above the organic search results.
      * This percentage is computed only over the auctions that you appeared in
      * the page.
+     *
      * This metric is not publicly available.
      * </pre>
      *
@@ -11397,6 +11478,7 @@ private static final long serialVersionUID = 0L;
      * the ads of another participant showed above the organic search results.
      * This percentage is computed only over the auctions that you appeared in
      * the page.
+     *
      * This metric is not publicly available.
      * </pre>
      *
@@ -11405,7 +11487,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAuctionInsightSearchTopImpressionPercentage(double value) {
-      
+
       auctionInsightSearchTopImpressionPercentage_ = value;
       bitField0_ |= 0x08000000;
       onChanged();
@@ -11417,6 +11499,7 @@ private static final long serialVersionUID = 0L;
      * the ads of another participant showed above the organic search results.
      * This percentage is computed only over the auctions that you appeared in
      * the page.
+     *
      * This metric is not publicly available.
      * </pre>
      *
@@ -11468,7 +11551,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAverageCost(double value) {
-      
+
       averageCost_ = value;
       bitField0_ |= 0x10000000;
       onChanged();
@@ -11528,7 +11611,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAverageCpc(double value) {
-      
+
       averageCpc_ = value;
       bitField0_ |= 0x20000000;
       onChanged();
@@ -11591,7 +11674,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAverageCpe(double value) {
-      
+
       averageCpe_ = value;
       bitField0_ |= 0x40000000;
       onChanged();
@@ -11649,7 +11732,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAverageCpm(double value) {
-      
+
       averageCpm_ = value;
       bitField0_ |= 0x80000000;
       onChanged();
@@ -11711,7 +11794,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAverageCpv(double value) {
-      
+
       averageCpv_ = value;
       bitField1_ |= 0x00000001;
       onChanged();
@@ -11769,7 +11852,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAveragePageViews(double value) {
-      
+
       averagePageViews_ = value;
       bitField1_ |= 0x00000002;
       onChanged();
@@ -11828,7 +11911,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAverageTimeOnSite(double value) {
-      
+
       averageTimeOnSite_ = value;
       bitField1_ |= 0x00000004;
       onChanged();
@@ -11885,7 +11968,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBenchmarkAverageMaxCpc(double value) {
-      
+
       benchmarkAverageMaxCpc_ = value;
       bitField1_ |= 0x00000008;
       onChanged();
@@ -11941,7 +12024,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBiddableAppInstallConversions(double value) {
-      
+
       biddableAppInstallConversions_ = value;
       bitField1_ |= 0x00000010;
       onChanged();
@@ -11997,7 +12080,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBiddableAppPostInstallConversions(double value) {
-      
+
       biddableAppPostInstallConversions_ = value;
       bitField1_ |= 0x00000020;
       onChanged();
@@ -12056,7 +12139,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBenchmarkCtr(double value) {
-      
+
       benchmarkCtr_ = value;
       bitField1_ |= 0x00000040;
       onChanged();
@@ -12116,7 +12199,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBounceRate(double value) {
-      
+
       bounceRate_ = value;
       bitField1_ |= 0x00000080;
       onChanged();
@@ -12173,7 +12256,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setClicks(long value) {
-      
+
       clicks_ = value;
       bitField1_ |= 0x00000100;
       onChanged();
@@ -12235,7 +12318,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCombinedClicks(long value) {
-      
+
       combinedClicks_ = value;
       bitField1_ |= 0x00000200;
       onChanged();
@@ -12302,7 +12385,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCombinedClicksPerQuery(double value) {
-      
+
       combinedClicksPerQuery_ = value;
       bitField1_ |= 0x00000400;
       onChanged();
@@ -12367,7 +12450,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCombinedQueries(long value) {
-      
+
       combinedQueries_ = value;
       bitField1_ |= 0x00000800;
       onChanged();
@@ -12434,7 +12517,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setContentBudgetLostImpressionShare(double value) {
-      
+
       contentBudgetLostImpressionShare_ = value;
       bitField1_ |= 0x00001000;
       onChanged();
@@ -12502,7 +12585,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setContentImpressionShare(double value) {
-      
+
       contentImpressionShare_ = value;
       bitField1_ |= 0x00002000;
       onChanged();
@@ -12806,7 +12889,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setContentRankLostImpressionShare(double value) {
-      
+
       contentRankLostImpressionShare_ = value;
       bitField1_ |= 0x00010000;
       onChanged();
@@ -12877,7 +12960,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setConversionsFromInteractionsRate(double value) {
-      
+
       conversionsFromInteractionsRate_ = value;
       bitField1_ |= 0x00020000;
       onChanged();
@@ -12946,7 +13029,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setConversionsValue(double value) {
-      
+
       conversionsValue_ = value;
       bitField1_ |= 0x00040000;
       onChanged();
@@ -13005,7 +13088,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setConversionsValueByConversionDate(double value) {
-      
+
       conversionsValueByConversionDate_ = value;
       bitField1_ |= 0x00080000;
       onChanged();
@@ -13076,7 +13159,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setConversionsValuePerCost(double value) {
-      
+
       conversionsValuePerCost_ = value;
       bitField1_ |= 0x00100000;
       onChanged();
@@ -13147,7 +13230,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setConversionsFromInteractionsValuePerInteraction(double value) {
-      
+
       conversionsFromInteractionsValuePerInteraction_ = value;
       bitField1_ |= 0x00200000;
       onChanged();
@@ -13216,7 +13299,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setConversions(double value) {
-      
+
       conversions_ = value;
       bitField1_ |= 0x00400000;
       onChanged();
@@ -13275,7 +13358,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setConversionsByConversionDate(double value) {
-      
+
       conversionsByConversionDate_ = value;
       bitField1_ |= 0x00800000;
       onChanged();
@@ -13340,7 +13423,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCostMicros(long value) {
-      
+
       costMicros_ = value;
       bitField1_ |= 0x01000000;
       onChanged();
@@ -13397,7 +13480,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCostPerAllConversions(double value) {
-      
+
       costPerAllConversions_ = value;
       bitField1_ |= 0x02000000;
       onChanged();
@@ -13462,7 +13545,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCostPerConversion(double value) {
-      
+
       costPerConversion_ = value;
       bitField1_ |= 0x04000000;
       onChanged();
@@ -13533,7 +13616,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCostPerCurrentModelAttributedConversion(double value) {
-      
+
       costPerCurrentModelAttributedConversion_ = value;
       bitField1_ |= 0x08000000;
       onChanged();
@@ -13599,7 +13682,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCrossDeviceConversions(double value) {
-      
+
       crossDeviceConversions_ = value;
       bitField1_ |= 0x10000000;
       onChanged();
@@ -13660,7 +13743,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCtr(double value) {
-      
+
       ctr_ = value;
       bitField1_ |= 0x20000000;
       onChanged();
@@ -13729,7 +13812,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCurrentModelAttributedConversions(double value) {
-      
+
       currentModelAttributedConversions_ = value;
       bitField1_ |= 0x40000000;
       onChanged();
@@ -13804,7 +13887,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCurrentModelAttributedConversionsFromInteractionsRate(double value) {
-      
+
       currentModelAttributedConversionsFromInteractionsRate_ = value;
       bitField1_ |= 0x80000000;
       onChanged();
@@ -13877,7 +13960,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCurrentModelAttributedConversionsFromInteractionsValuePerInteraction(double value) {
-      
+
       currentModelAttributedConversionsFromInteractionsValuePerInteraction_ = value;
       bitField2_ |= 0x00000001;
       onChanged();
@@ -13946,7 +14029,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCurrentModelAttributedConversionsValue(double value) {
-      
+
       currentModelAttributedConversionsValue_ = value;
       bitField2_ |= 0x00000002;
       onChanged();
@@ -14017,7 +14100,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCurrentModelAttributedConversionsValuePerCost(double value) {
-      
+
       currentModelAttributedConversionsValuePerCost_ = value;
       bitField2_ |= 0x00000004;
       onChanged();
@@ -14080,7 +14163,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEngagementRate(double value) {
-      
+
       engagementRate_ = value;
       bitField2_ |= 0x00000008;
       onChanged();
@@ -14143,7 +14226,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEngagements(long value) {
-      
+
       engagements_ = value;
       bitField2_ |= 0x00000010;
       onChanged();
@@ -14201,7 +14284,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHotelAverageLeadValueMicros(double value) {
-      
+
       hotelAverageLeadValueMicros_ = value;
       bitField2_ |= 0x00000020;
       onChanged();
@@ -14260,7 +14343,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHotelCommissionRateMicros(long value) {
-      
+
       hotelCommissionRateMicros_ = value;
       bitField2_ |= 0x00000040;
       onChanged();
@@ -14320,7 +14403,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHotelExpectedCommissionCost(double value) {
-      
+
       hotelExpectedCommissionCost_ = value;
       bitField2_ |= 0x00000080;
       onChanged();
@@ -14380,7 +14463,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHotelPriceDifferencePercentage(double value) {
-      
+
       hotelPriceDifferencePercentage_ = value;
       bitField2_ |= 0x00000100;
       onChanged();
@@ -14440,7 +14523,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHotelEligibleImpressions(long value) {
-      
+
       hotelEligibleImpressions_ = value;
       bitField2_ |= 0x00000200;
       onChanged();
@@ -14643,7 +14726,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHistoricalQualityScore(long value) {
-      
+
       historicalQualityScore_ = value;
       bitField2_ |= 0x00001000;
       onChanged();
@@ -14772,7 +14855,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setGmailForwards(long value) {
-      
+
       gmailForwards_ = value;
       bitField2_ |= 0x00004000;
       onChanged();
@@ -14831,7 +14914,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setGmailSaves(long value) {
-      
+
       gmailSaves_ = value;
       bitField2_ |= 0x00008000;
       onChanged();
@@ -14891,7 +14974,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setGmailSecondaryClicks(long value) {
-      
+
       gmailSecondaryClicks_ = value;
       bitField2_ |= 0x00010000;
       onChanged();
@@ -14917,6 +15000,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The number of times a store's location-based ad was shown.
+     *
      * This metric applies to feed items only.
      * </pre>
      *
@@ -14930,6 +15014,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The number of times a store's location-based ad was shown.
+     *
      * This metric applies to feed items only.
      * </pre>
      *
@@ -14943,6 +15028,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The number of times a store's location-based ad was shown.
+     *
      * This metric applies to feed items only.
      * </pre>
      *
@@ -14951,7 +15037,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setImpressionsFromStoreReach(long value) {
-      
+
       impressionsFromStoreReach_ = value;
       bitField2_ |= 0x00020000;
       onChanged();
@@ -14960,6 +15046,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The number of times a store's location-based ad was shown.
+     *
      * This metric applies to feed items only.
      * </pre>
      *
@@ -15011,7 +15098,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setImpressions(long value) {
-      
+
       impressions_ = value;
       bitField2_ |= 0x00040000;
       onChanged();
@@ -15074,7 +15161,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setInteractionRate(double value) {
-      
+
       interactionRate_ = value;
       bitField2_ |= 0x00080000;
       onChanged();
@@ -15138,7 +15225,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setInteractions(long value) {
-      
+
       interactions_ = value;
       bitField2_ |= 0x00100000;
       onChanged();
@@ -15387,7 +15474,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setInvalidClickRate(double value) {
-      
+
       invalidClickRate_ = value;
       bitField2_ |= 0x00400000;
       onChanged();
@@ -15444,7 +15531,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setInvalidClicks(long value) {
-      
+
       invalidClicks_ = value;
       bitField2_ |= 0x00800000;
       onChanged();
@@ -15503,7 +15590,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMessageChats(long value) {
-      
+
       messageChats_ = value;
       bitField2_ |= 0x01000000;
       onChanged();
@@ -15560,7 +15647,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMessageImpressions(long value) {
-      
+
       messageImpressions_ = value;
       bitField2_ |= 0x02000000;
       onChanged();
@@ -15628,7 +15715,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMessageChatRate(double value) {
-      
+
       messageChatRate_ = value;
       bitField2_ |= 0x04000000;
       onChanged();
@@ -15688,7 +15775,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMobileFriendlyClicksPercentage(double value) {
-      
+
       mobileFriendlyClicksPercentage_ = value;
       bitField2_ |= 0x08000000;
       onChanged();
@@ -15744,7 +15831,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOptimizationScoreUplift(double value) {
-      
+
       optimizationScoreUplift_ = value;
       bitField2_ |= 0x10000000;
       onChanged();
@@ -15939,7 +16026,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOrganicClicks(long value) {
-      
+
       organicClicks_ = value;
       bitField2_ |= 0x40000000;
       onChanged();
@@ -16006,7 +16093,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOrganicClicksPerQuery(double value) {
-      
+
       organicClicksPerQuery_ = value;
       bitField2_ |= 0x80000000;
       onChanged();
@@ -16071,7 +16158,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOrganicImpressions(long value) {
-      
+
       organicImpressions_ = value;
       bitField3_ |= 0x00000001;
       onChanged();
@@ -16138,7 +16225,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOrganicImpressionsPerQuery(double value) {
-      
+
       organicImpressionsPerQuery_ = value;
       bitField3_ |= 0x00000002;
       onChanged();
@@ -16203,7 +16290,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOrganicQueries(long value) {
-      
+
       organicQueries_ = value;
       bitField3_ |= 0x00000004;
       onChanged();
@@ -16264,7 +16351,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPercentNewVisitors(double value) {
-      
+
       percentNewVisitors_ = value;
       bitField3_ |= 0x00000008;
       onChanged();
@@ -16321,7 +16408,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPhoneCalls(long value) {
-      
+
       phoneCalls_ = value;
       bitField3_ |= 0x00000010;
       onChanged();
@@ -16377,7 +16464,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPhoneImpressions(long value) {
-      
+
       phoneImpressions_ = value;
       bitField3_ |= 0x00000020;
       onChanged();
@@ -16436,7 +16523,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPhoneThroughRate(double value) {
-      
+
       phoneThroughRate_ = value;
       bitField3_ |= 0x00000040;
       onChanged();
@@ -16499,7 +16586,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRelativeCtr(double value) {
-      
+
       relativeCtr_ = value;
       bitField3_ |= 0x00000080;
       onChanged();
@@ -16566,7 +16653,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSearchAbsoluteTopImpressionShare(double value) {
-      
+
       searchAbsoluteTopImpressionShare_ = value;
       bitField3_ |= 0x00000100;
       onChanged();
@@ -16634,7 +16721,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSearchBudgetLostAbsoluteTopImpressionShare(double value) {
-      
+
       searchBudgetLostAbsoluteTopImpressionShare_ = value;
       bitField3_ |= 0x00000200;
       onChanged();
@@ -16702,7 +16789,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSearchBudgetLostImpressionShare(double value) {
-      
+
       searchBudgetLostImpressionShare_ = value;
       bitField3_ |= 0x00000400;
       onChanged();
@@ -16770,7 +16857,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSearchBudgetLostTopImpressionShare(double value) {
-      
+
       searchBudgetLostTopImpressionShare_ = value;
       bitField3_ |= 0x00000800;
       onChanged();
@@ -16838,7 +16925,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSearchClickShare(double value) {
-      
+
       searchClickShare_ = value;
       bitField3_ |= 0x00001000;
       onChanged();
@@ -16912,7 +16999,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSearchExactMatchImpressionShare(double value) {
-      
+
       searchExactMatchImpressionShare_ = value;
       bitField3_ |= 0x00002000;
       onChanged();
@@ -16982,7 +17069,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSearchImpressionShare(double value) {
-      
+
       searchImpressionShare_ = value;
       bitField3_ |= 0x00004000;
       onChanged();
@@ -17050,7 +17137,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSearchRankLostAbsoluteTopImpressionShare(double value) {
-      
+
       searchRankLostAbsoluteTopImpressionShare_ = value;
       bitField3_ |= 0x00008000;
       onChanged();
@@ -17118,7 +17205,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSearchRankLostImpressionShare(double value) {
-      
+
       searchRankLostImpressionShare_ = value;
       bitField3_ |= 0x00010000;
       onChanged();
@@ -17186,7 +17273,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSearchRankLostTopImpressionShare(double value) {
-      
+
       searchRankLostTopImpressionShare_ = value;
       bitField3_ |= 0x00020000;
       onChanged();
@@ -17257,7 +17344,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSearchTopImpressionShare(double value) {
-      
+
       searchTopImpressionShare_ = value;
       bitField3_ |= 0x00040000;
       onChanged();
@@ -17320,7 +17407,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSpeedScore(long value) {
-      
+
       speedScore_ = value;
       bitField3_ |= 0x00080000;
       onChanged();
@@ -17380,7 +17467,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAverageTargetCpaMicros(long value) {
-      
+
       averageTargetCpaMicros_ = value;
       bitField3_ |= 0x00100000;
       onChanged();
@@ -17440,7 +17527,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAverageTargetRoas(double value) {
-      
+
       averageTargetRoas_ = value;
       bitField3_ |= 0x00200000;
       onChanged();
@@ -17500,7 +17587,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTopImpressionPercentage(double value) {
-      
+
       topImpressionPercentage_ = value;
       bitField3_ |= 0x00400000;
       onChanged();
@@ -17560,7 +17647,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setValidAcceleratedMobilePagesClicksPercentage(double value) {
-      
+
       validAcceleratedMobilePagesClicksPercentage_ = value;
       bitField3_ |= 0x00800000;
       onChanged();
@@ -17617,7 +17704,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setValuePerAllConversions(double value) {
-      
+
       valuePerAllConversions_ = value;
       bitField3_ |= 0x01000000;
       onChanged();
@@ -17682,7 +17769,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setValuePerAllConversionsByConversionDate(double value) {
-      
+
       valuePerAllConversionsByConversionDate_ = value;
       bitField3_ |= 0x02000000;
       onChanged();
@@ -17750,7 +17837,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setValuePerConversion(double value) {
-      
+
       valuePerConversion_ = value;
       bitField3_ |= 0x04000000;
       onChanged();
@@ -17827,7 +17914,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setValuePerConversionsByConversionDate(double value) {
-      
+
       valuePerConversionsByConversionDate_ = value;
       bitField3_ |= 0x08000000;
       onChanged();
@@ -17901,7 +17988,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setValuePerCurrentModelAttributedConversion(double value) {
-      
+
       valuePerCurrentModelAttributedConversion_ = value;
       bitField3_ |= 0x10000000;
       onChanged();
@@ -17961,7 +18048,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setVideoQuartileP100Rate(double value) {
-      
+
       videoQuartileP100Rate_ = value;
       bitField3_ |= 0x20000000;
       onChanged();
@@ -18017,7 +18104,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setVideoQuartileP25Rate(double value) {
-      
+
       videoQuartileP25Rate_ = value;
       bitField3_ |= 0x40000000;
       onChanged();
@@ -18073,7 +18160,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setVideoQuartileP50Rate(double value) {
-      
+
       videoQuartileP50Rate_ = value;
       bitField3_ |= 0x80000000;
       onChanged();
@@ -18129,7 +18216,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setVideoQuartileP75Rate(double value) {
-      
+
       videoQuartileP75Rate_ = value;
       bitField4_ |= 0x00000001;
       onChanged();
@@ -18191,7 +18278,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setVideoViewRate(double value) {
-      
+
       videoViewRate_ = value;
       bitField4_ |= 0x00000002;
       onChanged();
@@ -18249,7 +18336,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setVideoViews(long value) {
-      
+
       videoViews_ = value;
       bitField4_ |= 0x00000004;
       onChanged();
@@ -18314,7 +18401,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setViewThroughConversions(long value) {
-      
+
       viewThroughConversions_ = value;
       bitField4_ |= 0x00000008;
       onChanged();
@@ -18361,7 +18448,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSkAdNetworkConversions(long value) {
-      
+
       skAdNetworkConversions_ = value;
       bitField4_ |= 0x00000010;
       onChanged();
@@ -18407,7 +18494,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPublisherPurchasedClicks(long value) {
-      
+
       publisherPurchasedClicks_ = value;
       bitField4_ |= 0x00000020;
       onChanged();
@@ -18454,7 +18541,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPublisherOrganicClicks(long value) {
-      
+
       publisherOrganicClicks_ = value;
       bitField4_ |= 0x00000040;
       onChanged();
@@ -18501,7 +18588,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPublisherUnknownClicks(long value) {
-      
+
       publisherUnknownClicks_ = value;
       bitField4_ |= 0x00000080;
       onChanged();
@@ -18564,7 +18651,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAllConversionsFromLocationAssetClickToCall(double value) {
-      
+
       allConversionsFromLocationAssetClickToCall_ = value;
       bitField4_ |= 0x00000100;
       onChanged();
@@ -18628,7 +18715,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAllConversionsFromLocationAssetDirections(double value) {
-      
+
       allConversionsFromLocationAssetDirections_ = value;
       bitField4_ |= 0x00000200;
       onChanged();
@@ -18692,7 +18779,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAllConversionsFromLocationAssetMenu(double value) {
-      
+
       allConversionsFromLocationAssetMenu_ = value;
       bitField4_ |= 0x00000400;
       onChanged();
@@ -18756,7 +18843,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAllConversionsFromLocationAssetOrder(double value) {
-      
+
       allConversionsFromLocationAssetOrder_ = value;
       bitField4_ |= 0x00000800;
       onChanged();
@@ -18820,7 +18907,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAllConversionsFromLocationAssetOtherEngagement(double value) {
-      
+
       allConversionsFromLocationAssetOtherEngagement_ = value;
       bitField4_ |= 0x00001000;
       onChanged();
@@ -18884,7 +18971,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAllConversionsFromLocationAssetStoreVisits(double value) {
-      
+
       allConversionsFromLocationAssetStoreVisits_ = value;
       bitField4_ |= 0x00002000;
       onChanged();
@@ -18948,7 +19035,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAllConversionsFromLocationAssetWebsite(double value) {
-      
+
       allConversionsFromLocationAssetWebsite_ = value;
       bitField4_ |= 0x00004000;
       onChanged();
@@ -19012,7 +19099,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEligibleImpressionsFromLocationAssetStoreReach(long value) {
-      
+
       eligibleImpressionsFromLocationAssetStoreReach_ = value;
       bitField4_ |= 0x00008000;
       onChanged();
@@ -19073,7 +19160,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setViewThroughConversionsFromLocationAssetClickToCall(double value) {
-      
+
       viewThroughConversionsFromLocationAssetClickToCall_ = value;
       bitField4_ |= 0x00010000;
       onChanged();
@@ -19133,7 +19220,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setViewThroughConversionsFromLocationAssetDirections(double value) {
-      
+
       viewThroughConversionsFromLocationAssetDirections_ = value;
       bitField4_ |= 0x00020000;
       onChanged();
@@ -19193,7 +19280,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setViewThroughConversionsFromLocationAssetMenu(double value) {
-      
+
       viewThroughConversionsFromLocationAssetMenu_ = value;
       bitField4_ |= 0x00040000;
       onChanged();
@@ -19253,7 +19340,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setViewThroughConversionsFromLocationAssetOrder(double value) {
-      
+
       viewThroughConversionsFromLocationAssetOrder_ = value;
       bitField4_ |= 0x00080000;
       onChanged();
@@ -19313,7 +19400,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setViewThroughConversionsFromLocationAssetOtherEngagement(double value) {
-      
+
       viewThroughConversionsFromLocationAssetOtherEngagement_ = value;
       bitField4_ |= 0x00100000;
       onChanged();
@@ -19373,7 +19460,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setViewThroughConversionsFromLocationAssetStoreVisits(double value) {
-      
+
       viewThroughConversionsFromLocationAssetStoreVisits_ = value;
       bitField4_ |= 0x00200000;
       onChanged();
@@ -19433,7 +19520,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setViewThroughConversionsFromLocationAssetWebsite(double value) {
-      
+
       viewThroughConversionsFromLocationAssetWebsite_ = value;
       bitField4_ |= 0x00400000;
       onChanged();

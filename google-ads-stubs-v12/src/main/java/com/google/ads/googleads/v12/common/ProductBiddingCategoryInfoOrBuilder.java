@@ -10,6 +10,7 @@ public interface ProductBiddingCategoryInfoOrBuilder extends
   /**
    * <pre>
    * ID of the product bidding category.
+   *
    * This ID is equivalent to the google_product_category ID as described in
    * this article: https://support.google.com/merchants/answer/6324436
    * </pre>
@@ -21,6 +22,7 @@ public interface ProductBiddingCategoryInfoOrBuilder extends
   /**
    * <pre>
    * ID of the product bidding category.
+   *
    * This ID is equivalent to the google_product_category ID as described in
    * this article: https://support.google.com/merchants/answer/6324436
    * </pre>

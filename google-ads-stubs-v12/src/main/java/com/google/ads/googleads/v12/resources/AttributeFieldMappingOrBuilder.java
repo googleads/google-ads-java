@@ -668,5 +668,5 @@ public interface AttributeFieldMappingOrBuilder extends
    */
   com.google.ads.googleads.v12.enums.ImagePlaceholderFieldEnum.ImagePlaceholderField getImageField();
 
-  public com.google.ads.googleads.v12.resources.AttributeFieldMapping.FieldCase getFieldCase();
+  com.google.ads.googleads.v12.resources.AttributeFieldMapping.FieldCase getFieldCase();
 }

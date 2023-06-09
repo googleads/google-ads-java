@@ -118,5 +118,5 @@ public interface OperandOrBuilder extends
    */
   com.google.ads.googleads.v12.common.Operand.RequestContextOperandOrBuilder getRequestContextOperandOrBuilder();
 
-  public com.google.ads.googleads.v12.common.Operand.FunctionArgumentOperandCase getFunctionArgumentOperandCase();
+  com.google.ads.googleads.v12.common.Operand.FunctionArgumentOperandCase getFunctionArgumentOperandCase();
 }

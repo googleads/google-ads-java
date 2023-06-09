@@ -196,5 +196,5 @@ public interface ListingGroupFilterDimensionOrBuilder extends
    */
   com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.ProductTypeOrBuilder getProductTypeOrBuilder();
 
-  public com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.DimensionCase getDimensionCase();
+  com.google.ads.googleads.v12.resources.ListingGroupFilterDimension.DimensionCase getDimensionCase();
 }

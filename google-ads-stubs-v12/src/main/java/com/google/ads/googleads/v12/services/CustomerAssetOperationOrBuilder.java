@@ -98,6 +98,7 @@ public interface CustomerAssetOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed customer asset is
    * expected, in this format:
+   *
    * `customers/{customer_id}/customerAssets/{asset_id}~{field_type}`
    * </pre>
    *
@@ -109,6 +110,7 @@ public interface CustomerAssetOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed customer asset is
    * expected, in this format:
+   *
    * `customers/{customer_id}/customerAssets/{asset_id}~{field_type}`
    * </pre>
    *
@@ -120,6 +122,7 @@ public interface CustomerAssetOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed customer asset is
    * expected, in this format:
+   *
    * `customers/{customer_id}/customerAssets/{asset_id}~{field_type}`
    * </pre>
    *
@@ -129,5 +132,5 @@ public interface CustomerAssetOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v12.services.CustomerAssetOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v12.services.CustomerAssetOperation.OperationCase getOperationCase();
 }

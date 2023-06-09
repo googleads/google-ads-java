@@ -11,6 +11,7 @@ public interface BiddingStrategyOrBuilder extends
    * <pre>
    * Immutable. The resource name of the bidding strategy.
    * Bidding strategy resource names have the form:
+   *
    * `customers/{customer_id}/biddingStrategies/{bidding_strategy_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface BiddingStrategyOrBuilder extends
    * <pre>
    * Immutable. The resource name of the bidding strategy.
    * Bidding strategy resource names have the form:
+   *
    * `customers/{customer_id}/biddingStrategies/{bidding_strategy_id}`
    * </pre>
    *
@@ -54,6 +56,7 @@ public interface BiddingStrategyOrBuilder extends
    * <pre>
    * The name of the bidding strategy.
    * All bidding strategies within an account must be named distinctly.
+   *
    * The length of this string should be between 1 and 255, inclusive,
    * in UTF-8 bytes, (trimmed).
    * </pre>
@@ -66,6 +69,7 @@ public interface BiddingStrategyOrBuilder extends
    * <pre>
    * The name of the bidding strategy.
    * All bidding strategies within an account must be named distinctly.
+   *
    * The length of this string should be between 1 and 255, inclusive,
    * in UTF-8 bytes, (trimmed).
    * </pre>
@@ -78,6 +82,7 @@ public interface BiddingStrategyOrBuilder extends
    * <pre>
    * The name of the bidding strategy.
    * All bidding strategies within an account must be named distinctly.
+   *
    * The length of this string should be between 1 and 255, inclusive,
    * in UTF-8 bytes, (trimmed).
    * </pre>
@@ -91,6 +96,7 @@ public interface BiddingStrategyOrBuilder extends
   /**
    * <pre>
    * Output only. The status of the bidding strategy.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -101,6 +107,7 @@ public interface BiddingStrategyOrBuilder extends
   /**
    * <pre>
    * Output only. The status of the bidding strategy.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -113,6 +120,7 @@ public interface BiddingStrategyOrBuilder extends
    * <pre>
    * Output only. The type of the bidding strategy.
    * Create a bidding strategy by setting the bidding scheme.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -124,6 +132,7 @@ public interface BiddingStrategyOrBuilder extends
    * <pre>
    * Output only. The type of the bidding strategy.
    * Create a bidding strategy by setting the bidding scheme.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -136,6 +145,7 @@ public interface BiddingStrategyOrBuilder extends
    * <pre>
    * Immutable. The currency used by the bidding strategy (ISO 4217 three-letter
    * code).
+   *
    * For bidding strategies in manager customers, this currency can be set on
    * creation and defaults to the manager customer's currency. For serving
    * customers, this field cannot be set; all strategies in a serving customer
@@ -151,6 +161,7 @@ public interface BiddingStrategyOrBuilder extends
    * <pre>
    * Immutable. The currency used by the bidding strategy (ISO 4217 three-letter
    * code).
+   *
    * For bidding strategies in manager customers, this currency can be set on
    * creation and defaults to the manager customer's currency. For serving
    * customers, this field cannot be set; all strategies in a serving customer
@@ -168,10 +179,13 @@ public interface BiddingStrategyOrBuilder extends
    * <pre>
    * Output only. The currency used by the bidding strategy (ISO 4217
    * three-letter code).
+   *
    * For bidding strategies in manager customers, this is the currency set by
    * the advertiser when creating the strategy. For serving customers, this is
    * the customer's currency_code.
+   *
    * Bidding strategy metrics are reported in this currency.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -183,10 +197,13 @@ public interface BiddingStrategyOrBuilder extends
    * <pre>
    * Output only. The currency used by the bidding strategy (ISO 4217
    * three-letter code).
+   *
    * For bidding strategies in manager customers, this is the currency set by
    * the advertiser when creating the strategy. For serving customers, this is
    * the customer's currency_code.
+   *
    * Bidding strategy metrics are reported in this currency.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -198,10 +215,13 @@ public interface BiddingStrategyOrBuilder extends
    * <pre>
    * Output only. The currency used by the bidding strategy (ISO 4217
    * three-letter code).
+   *
    * For bidding strategies in manager customers, this is the currency set by
    * the advertiser when creating the strategy. For serving customers, this is
    * the customer's currency_code.
+   *
    * Bidding strategy metrics are reported in this currency.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -228,6 +248,7 @@ public interface BiddingStrategyOrBuilder extends
   /**
    * <pre>
    * Output only. The number of campaigns attached to this bidding strategy.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -238,6 +259,7 @@ public interface BiddingStrategyOrBuilder extends
   /**
    * <pre>
    * Output only. The number of campaigns attached to this bidding strategy.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -250,6 +272,7 @@ public interface BiddingStrategyOrBuilder extends
    * <pre>
    * Output only. The number of non-removed campaigns attached to this bidding
    * strategy.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -261,6 +284,7 @@ public interface BiddingStrategyOrBuilder extends
    * <pre>
    * Output only. The number of non-removed campaigns attached to this bidding
    * strategy.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -482,5 +506,5 @@ public interface BiddingStrategyOrBuilder extends
    */
   com.google.ads.googleads.v13.common.TargetSpendOrBuilder getTargetSpendOrBuilder();
 
-  public com.google.ads.googleads.v13.resources.BiddingStrategy.SchemeCase getSchemeCase();
+  com.google.ads.googleads.v13.resources.BiddingStrategy.SchemeCase getSchemeCase();
 }

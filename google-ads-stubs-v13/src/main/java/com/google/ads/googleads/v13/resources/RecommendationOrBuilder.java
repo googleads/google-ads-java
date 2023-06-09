@@ -10,6 +10,7 @@ public interface RecommendationOrBuilder extends
   /**
    * <pre>
    * Immutable. The resource name of the recommendation.
+   *
    * `customers/{customer_id}/recommendations/{recommendation_id}`
    * </pre>
    *
@@ -20,6 +21,7 @@ public interface RecommendationOrBuilder extends
   /**
    * <pre>
    * Immutable. The resource name of the recommendation.
+   *
    * `customers/{customer_id}/recommendations/{recommendation_id}`
    * </pre>
    *
@@ -82,6 +84,7 @@ public interface RecommendationOrBuilder extends
    * <pre>
    * Output only. The budget targeted by this recommendation. This will be set
    * only when the recommendation affects a single campaign budget.
+   *
    * This field will be set for the following recommendation types:
    * CAMPAIGN_BUDGET, FORECASTING_CAMPAIGN_BUDGET, MARGINAL_ROI_CAMPAIGN_BUDGET,
    * MOVE_UNUSED_BUDGET
@@ -95,6 +98,7 @@ public interface RecommendationOrBuilder extends
    * <pre>
    * Output only. The budget targeted by this recommendation. This will be set
    * only when the recommendation affects a single campaign budget.
+   *
    * This field will be set for the following recommendation types:
    * CAMPAIGN_BUDGET, FORECASTING_CAMPAIGN_BUDGET, MARGINAL_ROI_CAMPAIGN_BUDGET,
    * MOVE_UNUSED_BUDGET
@@ -108,6 +112,7 @@ public interface RecommendationOrBuilder extends
    * <pre>
    * Output only. The budget targeted by this recommendation. This will be set
    * only when the recommendation affects a single campaign budget.
+   *
    * This field will be set for the following recommendation types:
    * CAMPAIGN_BUDGET, FORECASTING_CAMPAIGN_BUDGET, MARGINAL_ROI_CAMPAIGN_BUDGET,
    * MOVE_UNUSED_BUDGET
@@ -122,6 +127,7 @@ public interface RecommendationOrBuilder extends
   /**
    * <pre>
    * Output only. The campaign targeted by this recommendation.
+   *
    * This field will be set for the following recommendation types:
    * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
    * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
@@ -147,6 +153,7 @@ public interface RecommendationOrBuilder extends
   /**
    * <pre>
    * Output only. The campaign targeted by this recommendation.
+   *
    * This field will be set for the following recommendation types:
    * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
    * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
@@ -172,6 +179,7 @@ public interface RecommendationOrBuilder extends
   /**
    * <pre>
    * Output only. The campaign targeted by this recommendation.
+   *
    * This field will be set for the following recommendation types:
    * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
    * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
@@ -200,6 +208,7 @@ public interface RecommendationOrBuilder extends
    * <pre>
    * Output only. The ad group targeted by this recommendation. This will be set
    * only when the recommendation affects a single ad group.
+   *
    * This field will be set for the following recommendation types:
    * KEYWORD, OPTIMIZE_AD_ROTATION, RESPONSIVE_SEARCH_AD,
    * RESPONSIVE_SEARCH_AD_ASSET, TEXT_AD
@@ -213,6 +222,7 @@ public interface RecommendationOrBuilder extends
    * <pre>
    * Output only. The ad group targeted by this recommendation. This will be set
    * only when the recommendation affects a single ad group.
+   *
    * This field will be set for the following recommendation types:
    * KEYWORD, OPTIMIZE_AD_ROTATION, RESPONSIVE_SEARCH_AD,
    * RESPONSIVE_SEARCH_AD_ASSET, TEXT_AD
@@ -226,6 +236,7 @@ public interface RecommendationOrBuilder extends
    * <pre>
    * Output only. The ad group targeted by this recommendation. This will be set
    * only when the recommendation affects a single ad group.
+   *
    * This field will be set for the following recommendation types:
    * KEYWORD, OPTIMIZE_AD_ROTATION, RESPONSIVE_SEARCH_AD,
    * RESPONSIVE_SEARCH_AD_ASSET, TEXT_AD
@@ -259,6 +270,7 @@ public interface RecommendationOrBuilder extends
   /**
    * <pre>
    * Output only. The campaigns targeted by this recommendation.
+   *
    * This field will be set for the following recommendation types:
    * CAMPAIGN_BUDGET, FORECASTING_CAMPAIGN_BUDGET,
    * MARGINAL_ROI_CAMPAIGN_BUDGET and MOVE_UNUSED_BUDGET
@@ -272,6 +284,7 @@ public interface RecommendationOrBuilder extends
   /**
    * <pre>
    * Output only. The campaigns targeted by this recommendation.
+   *
    * This field will be set for the following recommendation types:
    * CAMPAIGN_BUDGET, FORECASTING_CAMPAIGN_BUDGET,
    * MARGINAL_ROI_CAMPAIGN_BUDGET and MOVE_UNUSED_BUDGET
@@ -284,6 +297,7 @@ public interface RecommendationOrBuilder extends
   /**
    * <pre>
    * Output only. The campaigns targeted by this recommendation.
+   *
    * This field will be set for the following recommendation types:
    * CAMPAIGN_BUDGET, FORECASTING_CAMPAIGN_BUDGET,
    * MARGINAL_ROI_CAMPAIGN_BUDGET and MOVE_UNUSED_BUDGET
@@ -297,6 +311,7 @@ public interface RecommendationOrBuilder extends
   /**
    * <pre>
    * Output only. The campaigns targeted by this recommendation.
+   *
    * This field will be set for the following recommendation types:
    * CAMPAIGN_BUDGET, FORECASTING_CAMPAIGN_BUDGET,
    * MARGINAL_ROI_CAMPAIGN_BUDGET and MOVE_UNUSED_BUDGET
@@ -1350,5 +1365,5 @@ public interface RecommendationOrBuilder extends
    */
   com.google.ads.googleads.v13.resources.Recommendation.ShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationOrBuilder getShoppingMigrateRegularShoppingCampaignOffersToPerformanceMaxRecommendationOrBuilder();
 
-  public com.google.ads.googleads.v13.resources.Recommendation.RecommendationCase getRecommendationCase();
+  com.google.ads.googleads.v13.resources.Recommendation.RecommendationCase getRecommendationCase();
 }

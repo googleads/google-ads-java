@@ -11,6 +11,7 @@ public interface TravelActivityGroupViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the travel activity group view.
    * Travel Activity Group view resource names have the form:
+   *
    * `customers/{customer_id}/travelActivityGroupViews/{ad_group_id}~{criterion_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface TravelActivityGroupViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the travel activity group view.
    * Travel Activity Group view resource names have the form:
+   *
    * `customers/{customer_id}/travelActivityGroupViews/{ad_group_id}~{criterion_id}`
    * </pre>
    *

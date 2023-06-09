@@ -160,7 +160,7 @@ public final class KeywordPlanIdeaServiceGrpc {
    * Service to generate keyword ideas.
    * </pre>
    */
-  public static abstract class KeywordPlanIdeaServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -176,7 +176,7 @@ public final class KeywordPlanIdeaServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void generateKeywordIdeas(com.google.ads.googleads.v12.services.GenerateKeywordIdeasRequest request,
+    default void generateKeywordIdeas(com.google.ads.googleads.v12.services.GenerateKeywordIdeasRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.GenerateKeywordIdeaResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGenerateKeywordIdeasMethod(), responseObserver);
     }
@@ -194,7 +194,7 @@ public final class KeywordPlanIdeaServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void generateKeywordHistoricalMetrics(com.google.ads.googleads.v12.services.GenerateKeywordHistoricalMetricsRequest request,
+    default void generateKeywordHistoricalMetrics(com.google.ads.googleads.v12.services.GenerateKeywordHistoricalMetricsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.GenerateKeywordHistoricalMetricsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGenerateKeywordHistoricalMetricsMethod(), responseObserver);
     }
@@ -213,44 +213,34 @@ public final class KeywordPlanIdeaServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void generateAdGroupThemes(com.google.ads.googleads.v12.services.GenerateAdGroupThemesRequest request,
+    default void generateAdGroupThemes(com.google.ads.googleads.v12.services.GenerateAdGroupThemesRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.GenerateAdGroupThemesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGenerateAdGroupThemesMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getGenerateKeywordIdeasMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.GenerateKeywordIdeasRequest,
-                com.google.ads.googleads.v12.services.GenerateKeywordIdeaResponse>(
-                  this, METHODID_GENERATE_KEYWORD_IDEAS)))
-          .addMethod(
-            getGenerateKeywordHistoricalMetricsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.GenerateKeywordHistoricalMetricsRequest,
-                com.google.ads.googleads.v12.services.GenerateKeywordHistoricalMetricsResponse>(
-                  this, METHODID_GENERATE_KEYWORD_HISTORICAL_METRICS)))
-          .addMethod(
-            getGenerateAdGroupThemesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.GenerateAdGroupThemesRequest,
-                com.google.ads.googleads.v12.services.GenerateAdGroupThemesResponse>(
-                  this, METHODID_GENERATE_AD_GROUP_THEMES)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service KeywordPlanIdeaService.
    * <pre>
    * Service to generate keyword ideas.
    * </pre>
    */
-  public static final class KeywordPlanIdeaServiceStub extends io.grpc.stub.AbstractAsyncStub<KeywordPlanIdeaServiceStub> {
+  public static abstract class KeywordPlanIdeaServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return KeywordPlanIdeaServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service KeywordPlanIdeaService.
+   * <pre>
+   * Service to generate keyword ideas.
+   * </pre>
+   */
+  public static final class KeywordPlanIdeaServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<KeywordPlanIdeaServiceStub> {
     private KeywordPlanIdeaServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -323,11 +313,13 @@ public final class KeywordPlanIdeaServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service KeywordPlanIdeaService.
    * <pre>
    * Service to generate keyword ideas.
    * </pre>
    */
-  public static final class KeywordPlanIdeaServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<KeywordPlanIdeaServiceBlockingStub> {
+  public static final class KeywordPlanIdeaServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<KeywordPlanIdeaServiceBlockingStub> {
     private KeywordPlanIdeaServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -397,11 +389,13 @@ public final class KeywordPlanIdeaServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service KeywordPlanIdeaService.
    * <pre>
    * Service to generate keyword ideas.
    * </pre>
    */
-  public static final class KeywordPlanIdeaServiceFutureStub extends io.grpc.stub.AbstractFutureStub<KeywordPlanIdeaServiceFutureStub> {
+  public static final class KeywordPlanIdeaServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<KeywordPlanIdeaServiceFutureStub> {
     private KeywordPlanIdeaServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -482,10 +476,10 @@ public final class KeywordPlanIdeaServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final KeywordPlanIdeaServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(KeywordPlanIdeaServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -520,6 +514,32 @@ public final class KeywordPlanIdeaServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getGenerateKeywordIdeasMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.GenerateKeywordIdeasRequest,
+              com.google.ads.googleads.v12.services.GenerateKeywordIdeaResponse>(
+                service, METHODID_GENERATE_KEYWORD_IDEAS)))
+        .addMethod(
+          getGenerateKeywordHistoricalMetricsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.GenerateKeywordHistoricalMetricsRequest,
+              com.google.ads.googleads.v12.services.GenerateKeywordHistoricalMetricsResponse>(
+                service, METHODID_GENERATE_KEYWORD_HISTORICAL_METRICS)))
+        .addMethod(
+          getGenerateAdGroupThemesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.GenerateAdGroupThemesRequest,
+              com.google.ads.googleads.v12.services.GenerateAdGroupThemesResponse>(
+                service, METHODID_GENERATE_AD_GROUP_THEMES)))
+        .build();
   }
 
   private static abstract class KeywordPlanIdeaServiceBaseDescriptorSupplier

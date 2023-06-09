@@ -32,25 +32,25 @@ public final class AssetGroupProductGroupViewProto {
       "et_group_product_group_view.proto\022\"googl" +
       "e.ads.googleads.v12.resources\032\037google/ap" +
       "i/field_behavior.proto\032\031google/api/resou" +
-      "rce.proto\"\267\003\n\032AssetGroupProductGroupView" +
-      "\022R\n\rresource_name\030\001 \001(\tB;\340A\003\372A5\n3googlea" +
-      "ds.googleapis.com/AssetGroupProductGroup" +
-      "View\022@\n\013asset_group\030\002 \001(\tB+\340A\003\372A%\n#googl" +
-      "eads.googleapis.com/AssetGroup\022g\n asset_" +
-      "group_listing_group_filter\030\004 \001(\tB=\340A\003\372A7" +
-      "\n5googleads.googleapis.com/AssetGroupLis" +
-      "tingGroupFilter:\231\001\352A\225\001\n3googleads.google" +
-      "apis.com/AssetGroupProductGroupView\022^cus" +
-      "tomers/{customer_id}/assetGroupProductGr" +
-      "oupViews/{asset_group_id}~{listing_group" +
-      "_filter_id}B\221\002\n&com.google.ads.googleads" +
-      ".v12.resourcesB\037AssetGroupProductGroupVi" +
-      "ewProtoP\001ZKgoogle.golang.org/genproto/go" +
-      "ogleapis/ads/googleads/v12/resources;res" +
-      "ources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V12." +
-      "Resources\312\002\"Google\\Ads\\GoogleAds\\V12\\Res" +
-      "ources\352\002&Google::Ads::GoogleAds::V12::Re" +
-      "sourcesb\006proto3"
+      "rce.proto\"\272\003\n\032AssetGroupProductGroupView" +
+      "\022S\n\rresource_name\030\001 \001(\tB<\342A\001\003\372A5\n3google" +
+      "ads.googleapis.com/AssetGroupProductGrou" +
+      "pView\022A\n\013asset_group\030\002 \001(\tB,\342A\001\003\372A%\n#goo" +
+      "gleads.googleapis.com/AssetGroup\022h\n asse" +
+      "t_group_listing_group_filter\030\004 \001(\tB>\342A\001\003" +
+      "\372A7\n5googleads.googleapis.com/AssetGroup" +
+      "ListingGroupFilter:\231\001\352A\225\001\n3googleads.goo" +
+      "gleapis.com/AssetGroupProductGroupView\022^" +
+      "customers/{customer_id}/assetGroupProduc" +
+      "tGroupViews/{asset_group_id}~{listing_gr" +
+      "oup_filter_id}B\221\002\n&com.google.ads.google" +
+      "ads.v12.resourcesB\037AssetGroupProductGrou" +
+      "pViewProtoP\001ZKgoogle.golang.org/genproto" +
+      "/googleapis/ads/googleads/v12/resources;" +
+      "resources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V" +
+      "12.Resources\312\002\"Google\\Ads\\GoogleAds\\V12\\" +
+      "Resources\352\002&Google::Ads::GoogleAds::V12:" +
+      ":Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

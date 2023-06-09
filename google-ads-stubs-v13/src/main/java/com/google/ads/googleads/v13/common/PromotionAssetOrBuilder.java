@@ -343,7 +343,7 @@ public interface PromotionAssetOrBuilder extends
    */
   com.google.ads.googleads.v13.common.MoneyOrBuilder getOrdersOverAmountOrBuilder();
 
-  public com.google.ads.googleads.v13.common.PromotionAsset.DiscountTypeCase getDiscountTypeCase();
+  com.google.ads.googleads.v13.common.PromotionAsset.DiscountTypeCase getDiscountTypeCase();
 
-  public com.google.ads.googleads.v13.common.PromotionAsset.PromotionTriggerCase getPromotionTriggerCase();
+  com.google.ads.googleads.v13.common.PromotionAsset.PromotionTriggerCase getPromotionTriggerCase();
 }

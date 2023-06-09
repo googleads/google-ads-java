@@ -72,5 +72,5 @@ public interface CampaignAssetSetOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v12.services.CampaignAssetSetOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v12.services.CampaignAssetSetOperation.OperationCase getOperationCase();
 }

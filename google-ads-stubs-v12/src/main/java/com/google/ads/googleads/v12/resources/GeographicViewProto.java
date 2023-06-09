@@ -33,23 +33,23 @@ public final class GeographicViewProto {
       ".v12.resources\0327google/ads/googleads/v12" +
       "/enums/geo_targeting_type.proto\032\037google/" +
       "api/field_behavior.proto\032\031google/api/res" +
-      "ource.proto\"\372\002\n\016GeographicView\022F\n\rresour" +
-      "ce_name\030\001 \001(\tB/\340A\003\372A)\n\'googleads.googlea" +
-      "pis.com/GeographicView\022a\n\rlocation_type\030" +
-      "\003 \001(\0162E.google.ads.googleads.v12.enums.G" +
-      "eoTargetingTypeEnum.GeoTargetingTypeB\003\340A" +
-      "\003\022&\n\024country_criterion_id\030\005 \001(\003B\003\340A\003H\000\210\001" +
-      "\001:|\352Ay\n\'googleads.googleapis.com/Geograp" +
-      "hicView\022Ncustomers/{customer_id}/geograp" +
-      "hicViews/{country_criterion_id}~{locatio" +
-      "n_type}B\027\n\025_country_criterion_idB\205\002\n&com" +
-      ".google.ads.googleads.v12.resourcesB\023Geo" +
-      "graphicViewProtoP\001ZKgoogle.golang.org/ge" +
-      "nproto/googleapis/ads/googleads/v12/reso" +
-      "urces;resources\242\002\003GAA\252\002\"Google.Ads.Googl" +
-      "eAds.V12.Resources\312\002\"Google\\Ads\\GoogleAd" +
-      "s\\V12\\Resources\352\002&Google::Ads::GoogleAds" +
-      "::V12::Resourcesb\006proto3"
+      "ource.proto\"\375\002\n\016GeographicView\022G\n\rresour" +
+      "ce_name\030\001 \001(\tB0\342A\001\003\372A)\n\'googleads.google" +
+      "apis.com/GeographicView\022b\n\rlocation_type" +
+      "\030\003 \001(\0162E.google.ads.googleads.v12.enums." +
+      "GeoTargetingTypeEnum.GeoTargetingTypeB\004\342" +
+      "A\001\003\022\'\n\024country_criterion_id\030\005 \001(\003B\004\342A\001\003H" +
+      "\000\210\001\001:|\352Ay\n\'googleads.googleapis.com/Geog" +
+      "raphicView\022Ncustomers/{customer_id}/geog" +
+      "raphicViews/{country_criterion_id}~{loca" +
+      "tion_type}B\027\n\025_country_criterion_idB\205\002\n&" +
+      "com.google.ads.googleads.v12.resourcesB\023" +
+      "GeographicViewProtoP\001ZKgoogle.golang.org" +
+      "/genproto/googleapis/ads/googleads/v12/r" +
+      "esources;resources\242\002\003GAA\252\002\"Google.Ads.Go" +
+      "ogleAds.V12.Resources\312\002\"Google\\Ads\\Googl" +
+      "eAds\\V12\\Resources\352\002&Google::Ads::Google" +
+      "Ads::V12::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

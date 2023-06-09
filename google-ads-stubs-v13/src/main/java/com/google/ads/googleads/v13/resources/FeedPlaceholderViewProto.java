@@ -33,22 +33,22 @@ public final class FeedPlaceholderViewProto {
       "gleads.v13.resources\0325google/ads/googlea" +
       "ds/v13/enums/placeholder_type.proto\032\037goo" +
       "gle/api/field_behavior.proto\032\031google/api" +
-      "/resource.proto\"\272\002\n\023FeedPlaceholderView\022" +
-      "K\n\rresource_name\030\001 \001(\tB4\340A\003\372A.\n,googlead" +
-      "s.googleapis.com/FeedPlaceholderView\022b\n\020" +
-      "placeholder_type\030\002 \001(\0162C.google.ads.goog" +
-      "leads.v13.enums.PlaceholderTypeEnum.Plac" +
-      "eholderTypeB\003\340A\003:r\352Ao\n,googleads.googlea" +
-      "pis.com/FeedPlaceholderView\022?customers/{" +
-      "customer_id}/feedPlaceholderViews/{place" +
-      "holder_type}B\212\002\n&com.google.ads.googlead" +
-      "s.v13.resourcesB\030FeedPlaceholderViewProt" +
-      "oP\001ZKgoogle.golang.org/genproto/googleap" +
-      "is/ads/googleads/v13/resources;resources" +
-      "\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V13.Resour" +
-      "ces\312\002\"Google\\Ads\\GoogleAds\\V13\\Resources" +
-      "\352\002&Google::Ads::GoogleAds::V13::Resource" +
-      "sb\006proto3"
+      "/resource.proto\"\274\002\n\023FeedPlaceholderView\022" +
+      "L\n\rresource_name\030\001 \001(\tB5\342A\001\003\372A.\n,googlea" +
+      "ds.googleapis.com/FeedPlaceholderView\022c\n" +
+      "\020placeholder_type\030\002 \001(\0162C.google.ads.goo" +
+      "gleads.v13.enums.PlaceholderTypeEnum.Pla" +
+      "ceholderTypeB\004\342A\001\003:r\352Ao\n,googleads.googl" +
+      "eapis.com/FeedPlaceholderView\022?customers" +
+      "/{customer_id}/feedPlaceholderViews/{pla" +
+      "ceholder_type}B\212\002\n&com.google.ads.google" +
+      "ads.v13.resourcesB\030FeedPlaceholderViewPr" +
+      "otoP\001ZKgoogle.golang.org/genproto/google" +
+      "apis/ads/googleads/v13/resources;resourc" +
+      "es\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V13.Reso" +
+      "urces\312\002\"Google\\Ads\\GoogleAds\\V13\\Resourc" +
+      "es\352\002&Google::Ads::GoogleAds::V13::Resour" +
+      "cesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

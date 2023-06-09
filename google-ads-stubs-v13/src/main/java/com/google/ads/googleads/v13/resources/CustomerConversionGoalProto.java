@@ -35,25 +35,25 @@ public final class CustomerConversionGoalProto {
       "ry.proto\0326google/ads/googleads/v13/enums" +
       "/conversion_origin.proto\032\037google/api/fie" +
       "ld_behavior.proto\032\031google/api/resource.p" +
-      "roto\"\265\003\n\026CustomerConversionGoal\022N\n\rresou" +
-      "rce_name\030\001 \001(\tB7\340A\005\372A1\n/googleads.google" +
-      "apis.com/CustomerConversionGoal\022g\n\010categ" +
-      "ory\030\002 \001(\0162U.google.ads.googleads.v13.enu" +
-      "ms.ConversionActionCategoryEnum.Conversi" +
-      "onActionCategory\022U\n\006origin\030\003 \001(\0162E.googl" +
-      "e.ads.googleads.v13.enums.ConversionOrig" +
-      "inEnum.ConversionOrigin\022\020\n\010biddable\030\004 \001(" +
-      "\010:y\352Av\n/googleads.googleapis.com/Custome" +
-      "rConversionGoal\022Ccustomers/{customer_id}" +
-      "/customerConversionGoals/{category}~{sou" +
-      "rce}B\215\002\n&com.google.ads.googleads.v13.re" +
-      "sourcesB\033CustomerConversionGoalProtoP\001ZK" +
-      "google.golang.org/genproto/googleapis/ad" +
-      "s/googleads/v13/resources;resources\242\002\003GA" +
-      "A\252\002\"Google.Ads.GoogleAds.V13.Resources\312\002" +
-      "\"Google\\Ads\\GoogleAds\\V13\\Resources\352\002&Go" +
-      "ogle::Ads::GoogleAds::V13::Resourcesb\006pr" +
-      "oto3"
+      "roto\"\266\003\n\026CustomerConversionGoal\022O\n\rresou" +
+      "rce_name\030\001 \001(\tB8\342A\001\005\372A1\n/googleads.googl" +
+      "eapis.com/CustomerConversionGoal\022g\n\010cate" +
+      "gory\030\002 \001(\0162U.google.ads.googleads.v13.en" +
+      "ums.ConversionActionCategoryEnum.Convers" +
+      "ionActionCategory\022U\n\006origin\030\003 \001(\0162E.goog" +
+      "le.ads.googleads.v13.enums.ConversionOri" +
+      "ginEnum.ConversionOrigin\022\020\n\010biddable\030\004 \001" +
+      "(\010:y\352Av\n/googleads.googleapis.com/Custom" +
+      "erConversionGoal\022Ccustomers/{customer_id" +
+      "}/customerConversionGoals/{category}~{so" +
+      "urce}B\215\002\n&com.google.ads.googleads.v13.r" +
+      "esourcesB\033CustomerConversionGoalProtoP\001Z" +
+      "Kgoogle.golang.org/genproto/googleapis/a" +
+      "ds/googleads/v13/resources;resources\242\002\003G" +
+      "AA\252\002\"Google.Ads.GoogleAds.V13.Resources\312" +
+      "\002\"Google\\Ads\\GoogleAds\\V13\\Resources\352\002&G" +
+      "oogle::Ads::GoogleAds::V13::Resourcesb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

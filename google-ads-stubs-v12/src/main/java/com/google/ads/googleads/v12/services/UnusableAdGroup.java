@@ -6,7 +6,9 @@ package com.google.ads.googleads.v12.services;
 /**
  * <pre>
  * An AdGroup/Campaign pair that could not be used as a suggestion for keywords.
+ *
  * AdGroups may not be usable if the AdGroup
+ *
  * * belongs to a Campaign that is not ENABLED or PAUSED
  * * is itself not ENABLED
  * </pre>
@@ -34,11 +36,6 @@ private static final long serialVersionUID = 0L;
     return new UnusableAdGroup();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.services.KeywordPlanIdeaServiceProto.internal_static_google_ads_googleads_v12_services_UnusableAdGroup_descriptor;
@@ -268,11 +265,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.services.UnusableAdGroup parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.services.UnusableAdGroup parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -317,7 +316,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * An AdGroup/Campaign pair that could not be used as a suggestion for keywords.
+   *
    * AdGroups may not be usable if the AdGroup
+   *
    * * belongs to a Campaign that is not ENABLED or PAUSED
    * * is itself not ENABLED
    * </pre>

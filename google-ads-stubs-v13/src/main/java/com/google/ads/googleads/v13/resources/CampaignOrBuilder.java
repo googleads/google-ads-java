@@ -11,6 +11,7 @@ public interface CampaignOrBuilder extends
    * <pre>
    * Immutable. The resource name of the campaign.
    * Campaign resource names have the form:
+   *
    * `customers/{customer_id}/campaigns/{campaign_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface CampaignOrBuilder extends
    * <pre>
    * Immutable. The resource name of the campaign.
    * Campaign resource names have the form:
+   *
    * `customers/{customer_id}/campaigns/{campaign_id}`
    * </pre>
    *
@@ -53,8 +55,10 @@ public interface CampaignOrBuilder extends
   /**
    * <pre>
    * The name of the campaign.
+   *
    * This field is required and should not be empty when creating new
    * campaigns.
+   *
    * It must not contain any null (code point 0x0), NL line feed
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
@@ -66,8 +70,10 @@ public interface CampaignOrBuilder extends
   /**
    * <pre>
    * The name of the campaign.
+   *
    * This field is required and should not be empty when creating new
    * campaigns.
+   *
    * It must not contain any null (code point 0x0), NL line feed
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
@@ -79,8 +85,10 @@ public interface CampaignOrBuilder extends
   /**
    * <pre>
    * The name of the campaign.
+   *
    * This field is required and should not be empty when creating new
    * campaigns.
+   *
    * It must not contain any null (code point 0x0), NL line feed
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
@@ -94,6 +102,7 @@ public interface CampaignOrBuilder extends
   /**
    * <pre>
    * Output only. The primary status of the campaign.
+   *
    * Provides insight into why a campaign is not serving or not serving
    * optimally. Modification to the campaign and its related entities might take
    * a while to be reflected in this status.
@@ -106,6 +115,7 @@ public interface CampaignOrBuilder extends
   /**
    * <pre>
    * Output only. The primary status of the campaign.
+   *
    * Provides insight into why a campaign is not serving or not serving
    * optimally. Modification to the campaign and its related entities might take
    * a while to be reflected in this status.
@@ -119,6 +129,7 @@ public interface CampaignOrBuilder extends
   /**
    * <pre>
    * Output only. The primary status reasons of the campaign.
+   *
    * Provides insight into why a campaign is not serving or not serving
    * optimally. These reasons are aggregated to determine an overall
    * CampaignPrimaryStatus.
@@ -131,6 +142,7 @@ public interface CampaignOrBuilder extends
   /**
    * <pre>
    * Output only. The primary status reasons of the campaign.
+   *
    * Provides insight into why a campaign is not serving or not serving
    * optimally. These reasons are aggregated to determine an overall
    * CampaignPrimaryStatus.
@@ -143,6 +155,7 @@ public interface CampaignOrBuilder extends
   /**
    * <pre>
    * Output only. The primary status reasons of the campaign.
+   *
    * Provides insight into why a campaign is not serving or not serving
    * optimally. These reasons are aggregated to determine an overall
    * CampaignPrimaryStatus.
@@ -156,6 +169,7 @@ public interface CampaignOrBuilder extends
   /**
    * <pre>
    * Output only. The primary status reasons of the campaign.
+   *
    * Provides insight into why a campaign is not serving or not serving
    * optimally. These reasons are aggregated to determine an overall
    * CampaignPrimaryStatus.
@@ -169,6 +183,7 @@ public interface CampaignOrBuilder extends
   /**
    * <pre>
    * Output only. The primary status reasons of the campaign.
+   *
    * Provides insight into why a campaign is not serving or not serving
    * optimally. These reasons are aggregated to determine an overall
    * CampaignPrimaryStatus.
@@ -183,6 +198,7 @@ public interface CampaignOrBuilder extends
   /**
    * <pre>
    * The status of the campaign.
+   *
    * When a new campaign is added, the status defaults to ENABLED.
    * </pre>
    *
@@ -193,6 +209,7 @@ public interface CampaignOrBuilder extends
   /**
    * <pre>
    * The status of the campaign.
+   *
    * When a new campaign is added, the status defaults to ENABLED.
    * </pre>
    *
@@ -262,8 +279,10 @@ public interface CampaignOrBuilder extends
    * <pre>
    * Immutable. The primary serving target for ads within the campaign.
    * The targeting options can be refined in `network_settings`.
+   *
    * This field is required and should not be empty when creating new
    * campaigns.
+   *
    * Can be set only when creating campaigns.
    * After the campaign is created, the field can not be changed.
    * </pre>
@@ -276,8 +295,10 @@ public interface CampaignOrBuilder extends
    * <pre>
    * Immutable. The primary serving target for ads within the campaign.
    * The targeting options can be refined in `network_settings`.
+   *
    * This field is required and should not be empty when creating new
    * campaigns.
+   *
    * Can be set only when creating campaigns.
    * After the campaign is created, the field can not be changed.
    * </pre>
@@ -291,6 +312,7 @@ public interface CampaignOrBuilder extends
    * <pre>
    * Immutable. Optional refinement to `advertising_channel_type`.
    * Must be a valid sub-type of the parent channel type.
+   *
    * Can be set only when creating campaigns.
    * After campaign is created, the field can not be changed.
    * </pre>
@@ -303,6 +325,7 @@ public interface CampaignOrBuilder extends
    * <pre>
    * Immutable. Optional refinement to `advertising_channel_type`.
    * Must be a valid sub-type of the parent channel type.
+   *
    * Can be set only when creating campaigns.
    * After campaign is created, the field can not be changed.
    * </pre>
@@ -781,6 +804,7 @@ public interface CampaignOrBuilder extends
    * <pre>
    * Output only. The resource name of the base campaign of a draft or
    * experiment campaign. For base campaigns, this is equal to `resource_name`.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -792,6 +816,7 @@ public interface CampaignOrBuilder extends
    * <pre>
    * Output only. The resource name of the base campaign of a draft or
    * experiment campaign. For base campaigns, this is equal to `resource_name`.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -803,6 +828,7 @@ public interface CampaignOrBuilder extends
    * <pre>
    * Output only. The resource name of the base campaign of a draft or
    * experiment campaign. For base campaigns, this is equal to `resource_name`.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -844,9 +870,11 @@ public interface CampaignOrBuilder extends
   /**
    * <pre>
    * Output only. The type of bidding strategy.
+   *
    * A bidding strategy can be created by setting either the bidding scheme to
    * create a standard bidding strategy or the `bidding_strategy` field to
    * create a portfolio bidding strategy.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -857,9 +885,11 @@ public interface CampaignOrBuilder extends
   /**
    * <pre>
    * Output only. The type of bidding strategy.
+   *
    * A bidding strategy can be created by setting either the bidding scheme to
    * create a standard bidding strategy or the `bidding_strategy` field to
    * create a portfolio bidding strategy.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -1232,12 +1262,15 @@ public interface CampaignOrBuilder extends
   /**
    * <pre>
    * Output only. Optimization score of the campaign.
+   *
    * Optimization score is an estimate of how well a campaign is set to perform.
    * It ranges from 0% (0.0) to 100% (1.0), with 100% indicating that the
    * campaign is performing at full potential. This field is null for unscored
    * campaigns.
+   *
    * See "About optimization score" at
    * https://support.google.com/google-ads/answer/9061546.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -1248,12 +1281,15 @@ public interface CampaignOrBuilder extends
   /**
    * <pre>
    * Output only. Optimization score of the campaign.
+   *
    * Optimization score is an estimate of how well a campaign is set to perform.
    * It ranges from 0% (0.0) to 100% (1.0), with 100% indicating that the
    * campaign is performing at full potential. This field is null for unscored
    * campaigns.
+   *
    * See "About optimization score" at
    * https://support.google.com/google-ads/answer/9061546.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -1962,5 +1998,5 @@ public interface CampaignOrBuilder extends
    */
   com.google.ads.googleads.v13.common.TargetCpmOrBuilder getTargetCpmOrBuilder();
 
-  public com.google.ads.googleads.v13.resources.Campaign.CampaignBiddingStrategyCase getCampaignBiddingStrategyCase();
+  com.google.ads.googleads.v13.resources.Campaign.CampaignBiddingStrategyCase getCampaignBiddingStrategyCase();
 }

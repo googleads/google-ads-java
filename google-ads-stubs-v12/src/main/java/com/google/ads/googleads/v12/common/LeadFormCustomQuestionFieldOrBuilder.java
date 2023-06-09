@@ -59,5 +59,5 @@ public interface LeadFormCustomQuestionFieldOrBuilder extends
    */
   com.google.ads.googleads.v12.common.LeadFormSingleChoiceAnswersOrBuilder getSingleChoiceAnswersOrBuilder();
 
-  public com.google.ads.googleads.v12.common.LeadFormCustomQuestionField.AnswersCase getAnswersCase();
+  com.google.ads.googleads.v12.common.LeadFormCustomQuestionField.AnswersCase getAnswersCase();
 }

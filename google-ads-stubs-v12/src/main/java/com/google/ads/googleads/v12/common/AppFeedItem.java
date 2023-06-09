@@ -23,8 +23,10 @@ private static final long serialVersionUID = 0L;
     linkText_ = "";
     appId_ = "";
     appStore_ = 0;
-    finalUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    finalMobileUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    finalUrls_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    finalMobileUrls_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     trackingUrlTemplate_ = "";
     urlCustomParameters_ = java.util.Collections.emptyList();
     finalUrlSuffix_ = "";
@@ -37,11 +39,6 @@ private static final long serialVersionUID = 0L;
     return new AppFeedItem();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.common.ExtensionsProto.internal_static_google_ads_googleads_v12_common_AppFeedItem_descriptor;
@@ -213,7 +210,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int FINAL_URLS_FIELD_NUMBER = 11;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList finalUrls_;
+  private com.google.protobuf.LazyStringArrayList finalUrls_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * A list of possible final URLs after all cross domain redirects.
@@ -269,7 +267,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int FINAL_MOBILE_URLS_FIELD_NUMBER = 12;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList finalMobileUrls_;
+  private com.google.protobuf.LazyStringArrayList finalMobileUrls_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * A list of possible final mobile URLs after all cross domain redirects.
@@ -721,11 +720,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.common.AppFeedItem parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.common.AppFeedItem parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -808,10 +809,10 @@ private static final long serialVersionUID = 0L;
       linkText_ = "";
       appId_ = "";
       appStore_ = 0;
-      finalUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000008);
-      finalMobileUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000010);
+      finalUrls_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      finalMobileUrls_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       trackingUrlTemplate_ = "";
       if (urlCustomParametersBuilder_ == null) {
         urlCustomParameters_ = java.util.Collections.emptyList();
@@ -854,16 +855,6 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.google.ads.googleads.v12.common.AppFeedItem result) {
-      if (((bitField0_ & 0x00000008) != 0)) {
-        finalUrls_ = finalUrls_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000008);
-      }
-      result.finalUrls_ = finalUrls_;
-      if (((bitField0_ & 0x00000010) != 0)) {
-        finalMobileUrls_ = finalMobileUrls_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000010);
-      }
-      result.finalMobileUrls_ = finalMobileUrls_;
       if (urlCustomParametersBuilder_ == null) {
         if (((bitField0_ & 0x00000040) != 0)) {
           urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
@@ -888,6 +879,14 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.appStore_ = appStore_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        finalUrls_.makeImmutable();
+        result.finalUrls_ = finalUrls_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        finalMobileUrls_.makeImmutable();
+        result.finalMobileUrls_ = finalMobileUrls_;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.trackingUrlTemplate_ = trackingUrlTemplate_;
@@ -960,7 +959,7 @@ private static final long serialVersionUID = 0L;
       if (!other.finalUrls_.isEmpty()) {
         if (finalUrls_.isEmpty()) {
           finalUrls_ = other.finalUrls_;
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ |= 0x00000008;
         } else {
           ensureFinalUrlsIsMutable();
           finalUrls_.addAll(other.finalUrls_);
@@ -970,7 +969,7 @@ private static final long serialVersionUID = 0L;
       if (!other.finalMobileUrls_.isEmpty()) {
         if (finalMobileUrls_.isEmpty()) {
           finalMobileUrls_ = other.finalMobileUrls_;
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ |= 0x00000010;
         } else {
           ensureFinalMobileUrlsIsMutable();
           finalMobileUrls_.addAll(other.finalMobileUrls_);
@@ -1408,12 +1407,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.LazyStringList finalUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList finalUrls_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureFinalUrlsIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
+      if (!finalUrls_.isModifiable()) {
         finalUrls_ = new com.google.protobuf.LazyStringArrayList(finalUrls_);
-        bitField0_ |= 0x00000008;
-       }
+      }
+      bitField0_ |= 0x00000008;
     }
     /**
      * <pre>
@@ -1426,7 +1426,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getFinalUrlsList() {
-      return finalUrls_.getUnmodifiableView();
+      finalUrls_.makeImmutable();
+      return finalUrls_;
     }
     /**
      * <pre>
@@ -1483,6 +1484,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureFinalUrlsIsMutable();
       finalUrls_.set(index, value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1501,6 +1503,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureFinalUrlsIsMutable();
       finalUrls_.add(value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1519,6 +1522,7 @@ private static final long serialVersionUID = 0L;
       ensureFinalUrlsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, finalUrls_);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1532,8 +1536,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFinalUrls() {
-      finalUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000008);
+      finalUrls_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000008);;
       onChanged();
       return this;
     }
@@ -1553,16 +1558,18 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureFinalUrlsIsMutable();
       finalUrls_.add(value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList finalMobileUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList finalMobileUrls_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureFinalMobileUrlsIsMutable() {
-      if (!((bitField0_ & 0x00000010) != 0)) {
+      if (!finalMobileUrls_.isModifiable()) {
         finalMobileUrls_ = new com.google.protobuf.LazyStringArrayList(finalMobileUrls_);
-        bitField0_ |= 0x00000010;
-       }
+      }
+      bitField0_ |= 0x00000010;
     }
     /**
      * <pre>
@@ -1574,7 +1581,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getFinalMobileUrlsList() {
-      return finalMobileUrls_.getUnmodifiableView();
+      finalMobileUrls_.makeImmutable();
+      return finalMobileUrls_;
     }
     /**
      * <pre>
@@ -1627,6 +1635,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureFinalMobileUrlsIsMutable();
       finalMobileUrls_.set(index, value);
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1644,6 +1653,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureFinalMobileUrlsIsMutable();
       finalMobileUrls_.add(value);
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1661,6 +1671,7 @@ private static final long serialVersionUID = 0L;
       ensureFinalMobileUrlsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, finalMobileUrls_);
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1673,8 +1684,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFinalMobileUrls() {
-      finalMobileUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000010);
+      finalMobileUrls_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000010);;
       onChanged();
       return this;
     }
@@ -1693,6 +1705,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureFinalMobileUrlsIsMutable();
       finalMobileUrls_.add(value);
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }

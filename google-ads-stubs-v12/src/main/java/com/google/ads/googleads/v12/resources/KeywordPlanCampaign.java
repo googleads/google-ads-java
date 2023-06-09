@@ -24,7 +24,8 @@ private static final long serialVersionUID = 0L;
     resourceName_ = "";
     keywordPlan_ = "";
     name_ = "";
-    languageConstants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    languageConstants_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     keywordPlanNetwork_ = 0;
     geoTargets_ = java.util.Collections.emptyList();
   }
@@ -36,11 +37,6 @@ private static final long serialVersionUID = 0L;
     return new KeywordPlanCampaign();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.resources.KeywordPlanCampaignProto.internal_static_google_ads_googleads_v12_resources_KeywordPlanCampaign_descriptor;
@@ -62,6 +58,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the Keyword Plan campaign.
    * KeywordPlanCampaign resource names have the form:
+   *
    * `customers/{customer_id}/keywordPlanCampaigns/{kp_campaign_id}`
    * </pre>
    *
@@ -85,6 +82,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the Keyword Plan campaign.
    * KeywordPlanCampaign resource names have the form:
+   *
    * `customers/{customer_id}/keywordPlanCampaigns/{kp_campaign_id}`
    * </pre>
    *
@@ -198,6 +196,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The name of the Keyword Plan campaign.
+   *
    * This field is required and should not be empty when creating Keyword Plan
    * campaigns.
    * </pre>
@@ -212,6 +211,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The name of the Keyword Plan campaign.
+   *
    * This field is required and should not be empty when creating Keyword Plan
    * campaigns.
    * </pre>
@@ -235,6 +235,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The name of the Keyword Plan campaign.
+   *
    * This field is required and should not be empty when creating Keyword Plan
    * campaigns.
    * </pre>
@@ -259,7 +260,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int LANGUAGE_CONSTANTS_FIELD_NUMBER = 12;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList languageConstants_;
+  private com.google.protobuf.LazyStringArrayList languageConstants_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * The languages targeted for the Keyword Plan campaign.
@@ -318,6 +320,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Targeting network.
+   *
    * This field is required and should not be empty when creating Keyword Plan
    * campaigns.
    * </pre>
@@ -331,6 +334,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Targeting network.
+   *
    * This field is required and should not be empty when creating Keyword Plan
    * campaigns.
    * </pre>
@@ -349,6 +353,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * A default max cpc bid in micros, and in the account currency, for all ad
    * groups under the campaign.
+   *
    * This field is required and should not be empty when creating Keyword Plan
    * campaigns.
    * </pre>
@@ -364,6 +369,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * A default max cpc bid in micros, and in the account currency, for all ad
    * groups under the campaign.
+   *
    * This field is required and should not be empty when creating Keyword Plan
    * campaigns.
    * </pre>
@@ -654,11 +660,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.resources.KeywordPlanCampaign parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.resources.KeywordPlanCampaign parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -743,8 +751,8 @@ private static final long serialVersionUID = 0L;
       keywordPlan_ = "";
       id_ = 0L;
       name_ = "";
-      languageConstants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000010);
+      languageConstants_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       keywordPlanNetwork_ = 0;
       cpcBidMicros_ = 0L;
       if (geoTargetsBuilder_ == null) {
@@ -787,11 +795,6 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.google.ads.googleads.v12.resources.KeywordPlanCampaign result) {
-      if (((bitField0_ & 0x00000010) != 0)) {
-        languageConstants_ = languageConstants_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000010);
-      }
-      result.languageConstants_ = languageConstants_;
       if (geoTargetsBuilder_ == null) {
         if (((bitField0_ & 0x00000080) != 0)) {
           geoTargets_ = java.util.Collections.unmodifiableList(geoTargets_);
@@ -820,6 +823,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.name_ = name_;
         to_bitField0_ |= 0x00000004;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        languageConstants_.makeImmutable();
+        result.languageConstants_ = languageConstants_;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.keywordPlanNetwork_ = keywordPlanNetwork_;
@@ -896,7 +903,7 @@ private static final long serialVersionUID = 0L;
       if (!other.languageConstants_.isEmpty()) {
         if (languageConstants_.isEmpty()) {
           languageConstants_ = other.languageConstants_;
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ |= 0x00000010;
         } else {
           ensureLanguageConstantsIsMutable();
           languageConstants_.addAll(other.languageConstants_);
@@ -1032,6 +1039,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the Keyword Plan campaign.
      * KeywordPlanCampaign resource names have the form:
+     *
      * `customers/{customer_id}/keywordPlanCampaigns/{kp_campaign_id}`
      * </pre>
      *
@@ -1054,6 +1062,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the Keyword Plan campaign.
      * KeywordPlanCampaign resource names have the form:
+     *
      * `customers/{customer_id}/keywordPlanCampaigns/{kp_campaign_id}`
      * </pre>
      *
@@ -1077,6 +1086,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the Keyword Plan campaign.
      * KeywordPlanCampaign resource names have the form:
+     *
      * `customers/{customer_id}/keywordPlanCampaigns/{kp_campaign_id}`
      * </pre>
      *
@@ -1096,6 +1106,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the Keyword Plan campaign.
      * KeywordPlanCampaign resource names have the form:
+     *
      * `customers/{customer_id}/keywordPlanCampaigns/{kp_campaign_id}`
      * </pre>
      *
@@ -1112,6 +1123,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the Keyword Plan campaign.
      * KeywordPlanCampaign resource names have the form:
+     *
      * `customers/{customer_id}/keywordPlanCampaigns/{kp_campaign_id}`
      * </pre>
      *
@@ -1267,7 +1279,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      
+
       id_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
@@ -1292,6 +1304,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the Keyword Plan campaign.
+     *
      * This field is required and should not be empty when creating Keyword Plan
      * campaigns.
      * </pre>
@@ -1305,6 +1318,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the Keyword Plan campaign.
+     *
      * This field is required and should not be empty when creating Keyword Plan
      * campaigns.
      * </pre>
@@ -1327,6 +1341,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the Keyword Plan campaign.
+     *
      * This field is required and should not be empty when creating Keyword Plan
      * campaigns.
      * </pre>
@@ -1350,6 +1365,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the Keyword Plan campaign.
+     *
      * This field is required and should not be empty when creating Keyword Plan
      * campaigns.
      * </pre>
@@ -1369,6 +1385,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the Keyword Plan campaign.
+     *
      * This field is required and should not be empty when creating Keyword Plan
      * campaigns.
      * </pre>
@@ -1385,6 +1402,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the Keyword Plan campaign.
+     *
      * This field is required and should not be empty when creating Keyword Plan
      * campaigns.
      * </pre>
@@ -1403,12 +1421,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.LazyStringList languageConstants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList languageConstants_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureLanguageConstantsIsMutable() {
-      if (!((bitField0_ & 0x00000010) != 0)) {
+      if (!languageConstants_.isModifiable()) {
         languageConstants_ = new com.google.protobuf.LazyStringArrayList(languageConstants_);
-        bitField0_ |= 0x00000010;
-       }
+      }
+      bitField0_ |= 0x00000010;
     }
     /**
      * <pre>
@@ -1421,7 +1440,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getLanguageConstantsList() {
-      return languageConstants_.getUnmodifiableView();
+      languageConstants_.makeImmutable();
+      return languageConstants_;
     }
     /**
      * <pre>
@@ -1478,6 +1498,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureLanguageConstantsIsMutable();
       languageConstants_.set(index, value);
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1496,6 +1517,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureLanguageConstantsIsMutable();
       languageConstants_.add(value);
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1514,6 +1536,7 @@ private static final long serialVersionUID = 0L;
       ensureLanguageConstantsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, languageConstants_);
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1527,8 +1550,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLanguageConstants() {
-      languageConstants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000010);
+      languageConstants_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000010);;
       onChanged();
       return this;
     }
@@ -1548,6 +1572,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureLanguageConstantsIsMutable();
       languageConstants_.add(value);
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1556,6 +1581,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Targeting network.
+     *
      * This field is required and should not be empty when creating Keyword Plan
      * campaigns.
      * </pre>
@@ -1569,6 +1595,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Targeting network.
+     *
      * This field is required and should not be empty when creating Keyword Plan
      * campaigns.
      * </pre>
@@ -1586,6 +1613,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Targeting network.
+     *
      * This field is required and should not be empty when creating Keyword Plan
      * campaigns.
      * </pre>
@@ -1601,6 +1629,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Targeting network.
+     *
      * This field is required and should not be empty when creating Keyword Plan
      * campaigns.
      * </pre>
@@ -1621,6 +1650,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Targeting network.
+     *
      * This field is required and should not be empty when creating Keyword Plan
      * campaigns.
      * </pre>
@@ -1640,6 +1670,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * A default max cpc bid in micros, and in the account currency, for all ad
      * groups under the campaign.
+     *
      * This field is required and should not be empty when creating Keyword Plan
      * campaigns.
      * </pre>
@@ -1655,6 +1686,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * A default max cpc bid in micros, and in the account currency, for all ad
      * groups under the campaign.
+     *
      * This field is required and should not be empty when creating Keyword Plan
      * campaigns.
      * </pre>
@@ -1670,6 +1702,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * A default max cpc bid in micros, and in the account currency, for all ad
      * groups under the campaign.
+     *
      * This field is required and should not be empty when creating Keyword Plan
      * campaigns.
      * </pre>
@@ -1679,7 +1712,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCpcBidMicros(long value) {
-      
+
       cpcBidMicros_ = value;
       bitField0_ |= 0x00000040;
       onChanged();
@@ -1689,6 +1722,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * A default max cpc bid in micros, and in the account currency, for all ad
      * groups under the campaign.
+     *
      * This field is required and should not be empty when creating Keyword Plan
      * campaigns.
      * </pre>

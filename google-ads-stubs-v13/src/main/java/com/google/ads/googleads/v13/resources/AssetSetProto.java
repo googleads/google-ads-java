@@ -45,42 +45,42 @@ public final class AssetSetProto {
       "leads/v13/enums/asset_set_status.proto\0323" +
       "google/ads/googleads/v13/enums/asset_set" +
       "_type.proto\032\037google/api/field_behavior.p" +
-      "roto\032\031google/api/resource.proto\"\334\010\n\010Asse" +
-      "tSet\022\017\n\002id\030\006 \001(\003B\003\340A\003\022@\n\rresource_name\030\001" +
-      " \001(\tB)\340A\005\372A#\n!googleads.googleapis.com/A" +
-      "ssetSet\022\021\n\004name\030\002 \001(\tB\003\340A\002\022S\n\004type\030\003 \001(\016" +
-      "2=.google.ads.googleads.v13.enums.AssetS" +
-      "etTypeEnum.AssetSetTypeB\006\340A\002\340A\005\022V\n\006statu" +
-      "s\030\004 \001(\0162A.google.ads.googleads.v13.enums" +
-      ".AssetSetStatusEnum.AssetSetStatusB\003\340A\003\022" +
-      "]\n\024merchant_center_feed\030\005 \001(\0132?.google.a" +
-      "ds.googleads.v13.resources.AssetSet.Merc" +
-      "hantCenterFeed\022/\n\"location_group_parent_" +
-      "asset_set_id\030\n \001(\003B\003\340A\005\022`\n\023hotel_propert" +
-      "y_data\030\013 \001(\0132>.google.ads.googleads.v13." +
-      "resources.AssetSet.HotelPropertyDataB\003\340A" +
-      "\003\022D\n\014location_set\030\007 \001(\0132,.google.ads.goo" +
-      "gleads.v13.common.LocationSetH\000\022h\n\037busin" +
-      "ess_profile_location_group\030\010 \001(\0132=.googl" +
-      "e.ads.googleads.v13.common.BusinessProfi" +
-      "leLocationGroupH\000\022S\n\024chain_location_grou" +
-      "p\030\t \001(\01323.google.ads.googleads.v13.commo" +
-      "n.ChainLocationGroupH\000\032[\n\022MerchantCenter" +
-      "Feed\022\030\n\013merchant_id\030\001 \001(\003B\003\340A\002\022\034\n\nfeed_l" +
-      "abel\030\002 \001(\tB\003\340A\001H\000\210\001\001B\r\n\013_feed_label\032{\n\021H" +
-      "otelPropertyData\022!\n\017hotel_center_id\030\001 \001(" +
-      "\003B\003\340A\003H\000\210\001\001\022\036\n\014partner_name\030\002 \001(\tB\003\340A\003H\001" +
-      "\210\001\001B\022\n\020_hotel_center_idB\017\n\r_partner_name" +
-      ":X\352AU\n!googleads.googleapis.com/AssetSet" +
-      "\0220customers/{customer_id}/assetSets/{ass" +
-      "et_set_id}B\022\n\020asset_set_sourceB\377\001\n&com.g" +
-      "oogle.ads.googleads.v13.resourcesB\rAsset" +
-      "SetProtoP\001ZKgoogle.golang.org/genproto/g" +
-      "oogleapis/ads/googleads/v13/resources;re" +
-      "sources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V13" +
-      ".Resources\312\002\"Google\\Ads\\GoogleAds\\V13\\Re" +
-      "sources\352\002&Google::Ads::GoogleAds::V13::R" +
-      "esourcesb\006proto3"
+      "roto\032\031google/api/resource.proto\"\345\010\n\010Asse" +
+      "tSet\022\020\n\002id\030\006 \001(\003B\004\342A\001\003\022A\n\rresource_name\030" +
+      "\001 \001(\tB*\342A\001\005\372A#\n!googleads.googleapis.com" +
+      "/AssetSet\022\022\n\004name\030\002 \001(\tB\004\342A\001\002\022R\n\004type\030\003 " +
+      "\001(\0162=.google.ads.googleads.v13.enums.Ass" +
+      "etSetTypeEnum.AssetSetTypeB\005\342A\002\002\005\022W\n\006sta" +
+      "tus\030\004 \001(\0162A.google.ads.googleads.v13.enu" +
+      "ms.AssetSetStatusEnum.AssetSetStatusB\004\342A" +
+      "\001\003\022]\n\024merchant_center_feed\030\005 \001(\0132?.googl" +
+      "e.ads.googleads.v13.resources.AssetSet.M" +
+      "erchantCenterFeed\0220\n\"location_group_pare" +
+      "nt_asset_set_id\030\n \001(\003B\004\342A\001\005\022a\n\023hotel_pro" +
+      "perty_data\030\013 \001(\0132>.google.ads.googleads." +
+      "v13.resources.AssetSet.HotelPropertyData" +
+      "B\004\342A\001\003\022D\n\014location_set\030\007 \001(\0132,.google.ad" +
+      "s.googleads.v13.common.LocationSetH\000\022h\n\037" +
+      "business_profile_location_group\030\010 \001(\0132=." +
+      "google.ads.googleads.v13.common.Business" +
+      "ProfileLocationGroupH\000\022S\n\024chain_location" +
+      "_group\030\t \001(\01323.google.ads.googleads.v13." +
+      "common.ChainLocationGroupH\000\032]\n\022MerchantC" +
+      "enterFeed\022\031\n\013merchant_id\030\001 \001(\003B\004\342A\001\002\022\035\n\n" +
+      "feed_label\030\002 \001(\tB\004\342A\001\001H\000\210\001\001B\r\n\013_feed_lab" +
+      "el\032}\n\021HotelPropertyData\022\"\n\017hotel_center_" +
+      "id\030\001 \001(\003B\004\342A\001\003H\000\210\001\001\022\037\n\014partner_name\030\002 \001(" +
+      "\tB\004\342A\001\003H\001\210\001\001B\022\n\020_hotel_center_idB\017\n\r_par" +
+      "tner_name:X\352AU\n!googleads.googleapis.com" +
+      "/AssetSet\0220customers/{customer_id}/asset" +
+      "Sets/{asset_set_id}B\022\n\020asset_set_sourceB" +
+      "\377\001\n&com.google.ads.googleads.v13.resourc" +
+      "esB\rAssetSetProtoP\001ZKgoogle.golang.org/g" +
+      "enproto/googleapis/ads/googleads/v13/res" +
+      "ources;resources\242\002\003GAA\252\002\"Google.Ads.Goog" +
+      "leAds.V13.Resources\312\002\"Google\\Ads\\GoogleA" +
+      "ds\\V13\\Resources\352\002&Google::Ads::GoogleAd" +
+      "s::V13::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

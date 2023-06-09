@@ -21,7 +21,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private DynamicLocationSetFilter() {
-    labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    labels_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -31,11 +32,6 @@ private static final long serialVersionUID = 0L;
     return new DynamicLocationSetFilter();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.common.FeedItemSetFilterTypeInfosProto.internal_static_google_ads_googleads_v12_common_DynamicLocationSetFilter_descriptor;
@@ -51,7 +47,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int LABELS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList labels_;
+  private com.google.protobuf.LazyStringArrayList labels_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * If multiple labels are set, then only feeditems marked with all the labels
@@ -274,11 +271,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.common.DynamicLocationSetFilter parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.common.DynamicLocationSetFilter parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -359,8 +358,8 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      labels_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       businessNameFilter_ = null;
       if (businessNameFilterBuilder_ != null) {
         businessNameFilterBuilder_.dispose();
@@ -392,22 +391,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.DynamicLocationSetFilter buildPartial() {
       com.google.ads.googleads.v12.common.DynamicLocationSetFilter result = new com.google.ads.googleads.v12.common.DynamicLocationSetFilter(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.common.DynamicLocationSetFilter result) {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        labels_ = labels_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.labels_ = labels_;
-    }
-
     private void buildPartial0(com.google.ads.googleads.v12.common.DynamicLocationSetFilter result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        labels_.makeImmutable();
+        result.labels_ = labels_;
+      }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.businessNameFilter_ = businessNameFilterBuilder_ == null
             ? businessNameFilter_
@@ -462,7 +456,7 @@ private static final long serialVersionUID = 0L;
       if (!other.labels_.isEmpty()) {
         if (labels_.isEmpty()) {
           labels_ = other.labels_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ |= 0x00000001;
         } else {
           ensureLabelsIsMutable();
           labels_.addAll(other.labels_);
@@ -528,12 +522,13 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.google.protobuf.LazyStringList labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList labels_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureLabelsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!labels_.isModifiable()) {
         labels_ = new com.google.protobuf.LazyStringArrayList(labels_);
-        bitField0_ |= 0x00000001;
-       }
+      }
+      bitField0_ |= 0x00000001;
     }
     /**
      * <pre>
@@ -546,7 +541,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getLabelsList() {
-      return labels_.getUnmodifiableView();
+      labels_.makeImmutable();
+      return labels_;
     }
     /**
      * <pre>
@@ -603,6 +599,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureLabelsIsMutable();
       labels_.set(index, value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -621,6 +618,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureLabelsIsMutable();
       labels_.add(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -639,6 +637,7 @@ private static final long serialVersionUID = 0L;
       ensureLabelsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, labels_);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -652,8 +651,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLabels() {
-      labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      labels_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000001);;
       onChanged();
       return this;
     }
@@ -673,6 +673,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureLabelsIsMutable();
       labels_.add(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

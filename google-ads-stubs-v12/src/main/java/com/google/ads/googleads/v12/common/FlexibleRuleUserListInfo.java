@@ -5,7 +5,13 @@ package com.google.ads.googleads.v12.common;
 
 /**
  * <pre>
- * Flexible rule representation of visitors with one or multiple actions.
+ * Flexible rule representation of visitors with one or multiple actions. The
+ * flexible user list is defined by two lists of operands – inclusive_operands
+ * and exclusive_operands; each operand represents a set of users based on
+ * actions they took in a given timeframe. These lists of operands are combined
+ * with the AND_NOT operator, so that users represented by the inclusive
+ * operands are included in the user list, minus the users represented by the
+ * exclusive operands.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v12.common.FlexibleRuleUserListInfo}
@@ -32,11 +38,6 @@ private static final long serialVersionUID = 0L;
     return new FlexibleRuleUserListInfo();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.common.UserListsProto.internal_static_google_ads_googleads_v12_common_FlexibleRuleUserListInfo_descriptor;
@@ -81,9 +82,9 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.google.ads.googleads.v12.common.FlexibleRuleOperandInfo> inclusiveOperands_;
   /**
    * <pre>
-   * Actions that are located on the inclusive side.
-   * These are joined together by either AND/OR as specified by the
-   * inclusive_rule_operator.
+   * Rules representing users that should be included in the user list. These
+   * are located on the left side of the AND_NOT operator, and joined together
+   * by either AND/OR as specified by the inclusive_rule_operator.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo inclusive_operands = 2;</code>
@@ -94,9 +95,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Actions that are located on the inclusive side.
-   * These are joined together by either AND/OR as specified by the
-   * inclusive_rule_operator.
+   * Rules representing users that should be included in the user list. These
+   * are located on the left side of the AND_NOT operator, and joined together
+   * by either AND/OR as specified by the inclusive_rule_operator.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo inclusive_operands = 2;</code>
@@ -108,9 +109,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Actions that are located on the inclusive side.
-   * These are joined together by either AND/OR as specified by the
-   * inclusive_rule_operator.
+   * Rules representing users that should be included in the user list. These
+   * are located on the left side of the AND_NOT operator, and joined together
+   * by either AND/OR as specified by the inclusive_rule_operator.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo inclusive_operands = 2;</code>
@@ -121,9 +122,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Actions that are located on the inclusive side.
-   * These are joined together by either AND/OR as specified by the
-   * inclusive_rule_operator.
+   * Rules representing users that should be included in the user list. These
+   * are located on the left side of the AND_NOT operator, and joined together
+   * by either AND/OR as specified by the inclusive_rule_operator.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo inclusive_operands = 2;</code>
@@ -134,9 +135,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Actions that are located on the inclusive side.
-   * These are joined together by either AND/OR as specified by the
-   * inclusive_rule_operator.
+   * Rules representing users that should be included in the user list. These
+   * are located on the left side of the AND_NOT operator, and joined together
+   * by either AND/OR as specified by the inclusive_rule_operator.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo inclusive_operands = 2;</code>
@@ -152,8 +153,9 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.google.ads.googleads.v12.common.FlexibleRuleOperandInfo> exclusiveOperands_;
   /**
    * <pre>
-   * Actions that are located on the exclusive side.
-   * These are joined together with OR.
+   * Rules representing users that should be excluded from the user list. These
+   * are located on the right side of the AND_NOT operator, and joined together
+   * by OR.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo exclusive_operands = 3;</code>
@@ -164,8 +166,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Actions that are located on the exclusive side.
-   * These are joined together with OR.
+   * Rules representing users that should be excluded from the user list. These
+   * are located on the right side of the AND_NOT operator, and joined together
+   * by OR.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo exclusive_operands = 3;</code>
@@ -177,8 +180,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Actions that are located on the exclusive side.
-   * These are joined together with OR.
+   * Rules representing users that should be excluded from the user list. These
+   * are located on the right side of the AND_NOT operator, and joined together
+   * by OR.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo exclusive_operands = 3;</code>
@@ -189,8 +193,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Actions that are located on the exclusive side.
-   * These are joined together with OR.
+   * Rules representing users that should be excluded from the user list. These
+   * are located on the right side of the AND_NOT operator, and joined together
+   * by OR.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo exclusive_operands = 3;</code>
@@ -201,8 +206,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Actions that are located on the exclusive side.
-   * These are joined together with OR.
+   * Rules representing users that should be excluded from the user list. These
+   * are located on the right side of the AND_NOT operator, and joined together
+   * by OR.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo exclusive_operands = 3;</code>
@@ -347,11 +353,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.common.FlexibleRuleUserListInfo parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.common.FlexibleRuleUserListInfo parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -395,7 +403,13 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Flexible rule representation of visitors with one or multiple actions.
+   * Flexible rule representation of visitors with one or multiple actions. The
+   * flexible user list is defined by two lists of operands – inclusive_operands
+   * and exclusive_operands; each operand represents a set of users based on
+   * actions they took in a given timeframe. These lists of operands are combined
+   * with the AND_NOT operator, so that users represented by the inclusive
+   * operands are included in the user list, minus the users represented by the
+   * exclusive operands.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v12.common.FlexibleRuleUserListInfo}
@@ -766,9 +780,9 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Actions that are located on the inclusive side.
-     * These are joined together by either AND/OR as specified by the
-     * inclusive_rule_operator.
+     * Rules representing users that should be included in the user list. These
+     * are located on the left side of the AND_NOT operator, and joined together
+     * by either AND/OR as specified by the inclusive_rule_operator.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo inclusive_operands = 2;</code>
@@ -782,9 +796,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Actions that are located on the inclusive side.
-     * These are joined together by either AND/OR as specified by the
-     * inclusive_rule_operator.
+     * Rules representing users that should be included in the user list. These
+     * are located on the left side of the AND_NOT operator, and joined together
+     * by either AND/OR as specified by the inclusive_rule_operator.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo inclusive_operands = 2;</code>
@@ -798,9 +812,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Actions that are located on the inclusive side.
-     * These are joined together by either AND/OR as specified by the
-     * inclusive_rule_operator.
+     * Rules representing users that should be included in the user list. These
+     * are located on the left side of the AND_NOT operator, and joined together
+     * by either AND/OR as specified by the inclusive_rule_operator.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo inclusive_operands = 2;</code>
@@ -814,9 +828,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Actions that are located on the inclusive side.
-     * These are joined together by either AND/OR as specified by the
-     * inclusive_rule_operator.
+     * Rules representing users that should be included in the user list. These
+     * are located on the left side of the AND_NOT operator, and joined together
+     * by either AND/OR as specified by the inclusive_rule_operator.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo inclusive_operands = 2;</code>
@@ -837,9 +851,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Actions that are located on the inclusive side.
-     * These are joined together by either AND/OR as specified by the
-     * inclusive_rule_operator.
+     * Rules representing users that should be included in the user list. These
+     * are located on the left side of the AND_NOT operator, and joined together
+     * by either AND/OR as specified by the inclusive_rule_operator.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo inclusive_operands = 2;</code>
@@ -857,9 +871,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Actions that are located on the inclusive side.
-     * These are joined together by either AND/OR as specified by the
-     * inclusive_rule_operator.
+     * Rules representing users that should be included in the user list. These
+     * are located on the left side of the AND_NOT operator, and joined together
+     * by either AND/OR as specified by the inclusive_rule_operator.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo inclusive_operands = 2;</code>
@@ -879,9 +893,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Actions that are located on the inclusive side.
-     * These are joined together by either AND/OR as specified by the
-     * inclusive_rule_operator.
+     * Rules representing users that should be included in the user list. These
+     * are located on the left side of the AND_NOT operator, and joined together
+     * by either AND/OR as specified by the inclusive_rule_operator.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo inclusive_operands = 2;</code>
@@ -902,9 +916,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Actions that are located on the inclusive side.
-     * These are joined together by either AND/OR as specified by the
-     * inclusive_rule_operator.
+     * Rules representing users that should be included in the user list. These
+     * are located on the left side of the AND_NOT operator, and joined together
+     * by either AND/OR as specified by the inclusive_rule_operator.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo inclusive_operands = 2;</code>
@@ -922,9 +936,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Actions that are located on the inclusive side.
-     * These are joined together by either AND/OR as specified by the
-     * inclusive_rule_operator.
+     * Rules representing users that should be included in the user list. These
+     * are located on the left side of the AND_NOT operator, and joined together
+     * by either AND/OR as specified by the inclusive_rule_operator.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo inclusive_operands = 2;</code>
@@ -942,9 +956,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Actions that are located on the inclusive side.
-     * These are joined together by either AND/OR as specified by the
-     * inclusive_rule_operator.
+     * Rules representing users that should be included in the user list. These
+     * are located on the left side of the AND_NOT operator, and joined together
+     * by either AND/OR as specified by the inclusive_rule_operator.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo inclusive_operands = 2;</code>
@@ -963,9 +977,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Actions that are located on the inclusive side.
-     * These are joined together by either AND/OR as specified by the
-     * inclusive_rule_operator.
+     * Rules representing users that should be included in the user list. These
+     * are located on the left side of the AND_NOT operator, and joined together
+     * by either AND/OR as specified by the inclusive_rule_operator.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo inclusive_operands = 2;</code>
@@ -982,9 +996,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Actions that are located on the inclusive side.
-     * These are joined together by either AND/OR as specified by the
-     * inclusive_rule_operator.
+     * Rules representing users that should be included in the user list. These
+     * are located on the left side of the AND_NOT operator, and joined together
+     * by either AND/OR as specified by the inclusive_rule_operator.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo inclusive_operands = 2;</code>
@@ -1001,9 +1015,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Actions that are located on the inclusive side.
-     * These are joined together by either AND/OR as specified by the
-     * inclusive_rule_operator.
+     * Rules representing users that should be included in the user list. These
+     * are located on the left side of the AND_NOT operator, and joined together
+     * by either AND/OR as specified by the inclusive_rule_operator.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo inclusive_operands = 2;</code>
@@ -1014,9 +1028,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Actions that are located on the inclusive side.
-     * These are joined together by either AND/OR as specified by the
-     * inclusive_rule_operator.
+     * Rules representing users that should be included in the user list. These
+     * are located on the left side of the AND_NOT operator, and joined together
+     * by either AND/OR as specified by the inclusive_rule_operator.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo inclusive_operands = 2;</code>
@@ -1030,9 +1044,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Actions that are located on the inclusive side.
-     * These are joined together by either AND/OR as specified by the
-     * inclusive_rule_operator.
+     * Rules representing users that should be included in the user list. These
+     * are located on the left side of the AND_NOT operator, and joined together
+     * by either AND/OR as specified by the inclusive_rule_operator.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo inclusive_operands = 2;</code>
@@ -1047,9 +1061,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Actions that are located on the inclusive side.
-     * These are joined together by either AND/OR as specified by the
-     * inclusive_rule_operator.
+     * Rules representing users that should be included in the user list. These
+     * are located on the left side of the AND_NOT operator, and joined together
+     * by either AND/OR as specified by the inclusive_rule_operator.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo inclusive_operands = 2;</code>
@@ -1060,9 +1074,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Actions that are located on the inclusive side.
-     * These are joined together by either AND/OR as specified by the
-     * inclusive_rule_operator.
+     * Rules representing users that should be included in the user list. These
+     * are located on the left side of the AND_NOT operator, and joined together
+     * by either AND/OR as specified by the inclusive_rule_operator.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo inclusive_operands = 2;</code>
@@ -1074,9 +1088,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Actions that are located on the inclusive side.
-     * These are joined together by either AND/OR as specified by the
-     * inclusive_rule_operator.
+     * Rules representing users that should be included in the user list. These
+     * are located on the left side of the AND_NOT operator, and joined together
+     * by either AND/OR as specified by the inclusive_rule_operator.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo inclusive_operands = 2;</code>
@@ -1114,8 +1128,9 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Actions that are located on the exclusive side.
-     * These are joined together with OR.
+     * Rules representing users that should be excluded from the user list. These
+     * are located on the right side of the AND_NOT operator, and joined together
+     * by OR.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo exclusive_operands = 3;</code>
@@ -1129,8 +1144,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Actions that are located on the exclusive side.
-     * These are joined together with OR.
+     * Rules representing users that should be excluded from the user list. These
+     * are located on the right side of the AND_NOT operator, and joined together
+     * by OR.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo exclusive_operands = 3;</code>
@@ -1144,8 +1160,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Actions that are located on the exclusive side.
-     * These are joined together with OR.
+     * Rules representing users that should be excluded from the user list. These
+     * are located on the right side of the AND_NOT operator, and joined together
+     * by OR.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo exclusive_operands = 3;</code>
@@ -1159,8 +1176,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Actions that are located on the exclusive side.
-     * These are joined together with OR.
+     * Rules representing users that should be excluded from the user list. These
+     * are located on the right side of the AND_NOT operator, and joined together
+     * by OR.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo exclusive_operands = 3;</code>
@@ -1181,8 +1199,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Actions that are located on the exclusive side.
-     * These are joined together with OR.
+     * Rules representing users that should be excluded from the user list. These
+     * are located on the right side of the AND_NOT operator, and joined together
+     * by OR.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo exclusive_operands = 3;</code>
@@ -1200,8 +1219,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Actions that are located on the exclusive side.
-     * These are joined together with OR.
+     * Rules representing users that should be excluded from the user list. These
+     * are located on the right side of the AND_NOT operator, and joined together
+     * by OR.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo exclusive_operands = 3;</code>
@@ -1221,8 +1241,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Actions that are located on the exclusive side.
-     * These are joined together with OR.
+     * Rules representing users that should be excluded from the user list. These
+     * are located on the right side of the AND_NOT operator, and joined together
+     * by OR.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo exclusive_operands = 3;</code>
@@ -1243,8 +1264,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Actions that are located on the exclusive side.
-     * These are joined together with OR.
+     * Rules representing users that should be excluded from the user list. These
+     * are located on the right side of the AND_NOT operator, and joined together
+     * by OR.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo exclusive_operands = 3;</code>
@@ -1262,8 +1284,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Actions that are located on the exclusive side.
-     * These are joined together with OR.
+     * Rules representing users that should be excluded from the user list. These
+     * are located on the right side of the AND_NOT operator, and joined together
+     * by OR.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo exclusive_operands = 3;</code>
@@ -1281,8 +1304,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Actions that are located on the exclusive side.
-     * These are joined together with OR.
+     * Rules representing users that should be excluded from the user list. These
+     * are located on the right side of the AND_NOT operator, and joined together
+     * by OR.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo exclusive_operands = 3;</code>
@@ -1301,8 +1325,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Actions that are located on the exclusive side.
-     * These are joined together with OR.
+     * Rules representing users that should be excluded from the user list. These
+     * are located on the right side of the AND_NOT operator, and joined together
+     * by OR.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo exclusive_operands = 3;</code>
@@ -1319,8 +1344,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Actions that are located on the exclusive side.
-     * These are joined together with OR.
+     * Rules representing users that should be excluded from the user list. These
+     * are located on the right side of the AND_NOT operator, and joined together
+     * by OR.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo exclusive_operands = 3;</code>
@@ -1337,8 +1363,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Actions that are located on the exclusive side.
-     * These are joined together with OR.
+     * Rules representing users that should be excluded from the user list. These
+     * are located on the right side of the AND_NOT operator, and joined together
+     * by OR.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo exclusive_operands = 3;</code>
@@ -1349,8 +1376,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Actions that are located on the exclusive side.
-     * These are joined together with OR.
+     * Rules representing users that should be excluded from the user list. These
+     * are located on the right side of the AND_NOT operator, and joined together
+     * by OR.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo exclusive_operands = 3;</code>
@@ -1364,8 +1392,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Actions that are located on the exclusive side.
-     * These are joined together with OR.
+     * Rules representing users that should be excluded from the user list. These
+     * are located on the right side of the AND_NOT operator, and joined together
+     * by OR.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo exclusive_operands = 3;</code>
@@ -1380,8 +1409,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Actions that are located on the exclusive side.
-     * These are joined together with OR.
+     * Rules representing users that should be excluded from the user list. These
+     * are located on the right side of the AND_NOT operator, and joined together
+     * by OR.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo exclusive_operands = 3;</code>
@@ -1392,8 +1422,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Actions that are located on the exclusive side.
-     * These are joined together with OR.
+     * Rules representing users that should be excluded from the user list. These
+     * are located on the right side of the AND_NOT operator, and joined together
+     * by OR.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo exclusive_operands = 3;</code>
@@ -1405,8 +1436,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Actions that are located on the exclusive side.
-     * These are joined together with OR.
+     * Rules representing users that should be excluded from the user list. These
+     * are located on the right side of the AND_NOT operator, and joined together
+     * by OR.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo exclusive_operands = 3;</code>

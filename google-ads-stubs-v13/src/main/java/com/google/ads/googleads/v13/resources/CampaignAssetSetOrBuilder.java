@@ -11,6 +11,7 @@ public interface CampaignAssetSetOrBuilder extends
    * <pre>
    * Immutable. The resource name of the campaign asset set.
    * Asset set asset resource names have the form:
+   *
    * `customers/{customer_id}/campaignAssetSets/{campaign_id}~{asset_set_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface CampaignAssetSetOrBuilder extends
    * <pre>
    * Immutable. The resource name of the campaign asset set.
    * Asset set asset resource names have the form:
+   *
    * `customers/{customer_id}/campaignAssetSets/{campaign_id}~{asset_set_id}`
    * </pre>
    *

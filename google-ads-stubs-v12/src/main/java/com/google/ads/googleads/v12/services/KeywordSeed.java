@@ -20,7 +20,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private KeywordSeed() {
-    keywords_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    keywords_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -30,11 +31,6 @@ private static final long serialVersionUID = 0L;
     return new KeywordSeed();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.services.KeywordPlanIdeaServiceProto.internal_static_google_ads_googleads_v12_services_KeywordSeed_descriptor;
@@ -50,7 +46,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int KEYWORDS_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList keywords_;
+  private com.google.protobuf.LazyStringArrayList keywords_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * Requires at least one keyword.
@@ -215,11 +212,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.services.KeywordSeed parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.services.KeywordSeed parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -299,8 +298,8 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      keywords_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      keywords_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -327,22 +326,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.services.KeywordSeed buildPartial() {
       com.google.ads.googleads.v12.services.KeywordSeed result = new com.google.ads.googleads.v12.services.KeywordSeed(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.services.KeywordSeed result) {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        keywords_ = keywords_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.keywords_ = keywords_;
-    }
-
     private void buildPartial0(com.google.ads.googleads.v12.services.KeywordSeed result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        keywords_.makeImmutable();
+        result.keywords_ = keywords_;
+      }
     }
 
     @java.lang.Override
@@ -392,7 +386,7 @@ private static final long serialVersionUID = 0L;
       if (!other.keywords_.isEmpty()) {
         if (keywords_.isEmpty()) {
           keywords_ = other.keywords_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ |= 0x00000001;
         } else {
           ensureKeywordsIsMutable();
           keywords_.addAll(other.keywords_);
@@ -448,12 +442,13 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.google.protobuf.LazyStringList keywords_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList keywords_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureKeywordsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!keywords_.isModifiable()) {
         keywords_ = new com.google.protobuf.LazyStringArrayList(keywords_);
-        bitField0_ |= 0x00000001;
-       }
+      }
+      bitField0_ |= 0x00000001;
     }
     /**
      * <pre>
@@ -465,7 +460,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getKeywordsList() {
-      return keywords_.getUnmodifiableView();
+      keywords_.makeImmutable();
+      return keywords_;
     }
     /**
      * <pre>
@@ -518,6 +514,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureKeywordsIsMutable();
       keywords_.set(index, value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -535,6 +532,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureKeywordsIsMutable();
       keywords_.add(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -552,6 +550,7 @@ private static final long serialVersionUID = 0L;
       ensureKeywordsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, keywords_);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -564,8 +563,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearKeywords() {
-      keywords_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      keywords_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000001);;
       onChanged();
       return this;
     }
@@ -584,6 +584,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureKeywordsIsMutable();
       keywords_.add(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

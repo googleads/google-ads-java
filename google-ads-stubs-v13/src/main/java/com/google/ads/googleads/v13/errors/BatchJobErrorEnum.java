@@ -29,11 +29,6 @@ private static final long serialVersionUID = 0L;
     return new BatchJobErrorEnum();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.errors.BatchJobErrorProto.internal_static_google_ads_googleads_v13_errors_BatchJobErrorEnum_descriptor;
@@ -121,6 +116,15 @@ private static final long serialVersionUID = 0L;
      * <code>CAN_ONLY_REMOVE_PENDING_JOB = 7;</code>
      */
     CAN_ONLY_REMOVE_PENDING_JOB(7),
+    /**
+     * <pre>
+     * The batch job cannot be listed due to unexpected errors such as duplicate
+     * checkpoints.
+     * </pre>
+     *
+     * <code>CANNOT_LIST_RESULTS = 8;</code>
+     */
+    CANNOT_LIST_RESULTS(8),
     UNRECOGNIZED(-1),
     ;
 
@@ -189,6 +193,15 @@ private static final long serialVersionUID = 0L;
      * <code>CAN_ONLY_REMOVE_PENDING_JOB = 7;</code>
      */
     public static final int CAN_ONLY_REMOVE_PENDING_JOB_VALUE = 7;
+    /**
+     * <pre>
+     * The batch job cannot be listed due to unexpected errors such as duplicate
+     * checkpoints.
+     * </pre>
+     *
+     * <code>CANNOT_LIST_RESULTS = 8;</code>
+     */
+    public static final int CANNOT_LIST_RESULTS_VALUE = 8;
 
 
     public final int getNumber() {
@@ -223,6 +236,7 @@ private static final long serialVersionUID = 0L;
         case 5: return RESULTS_NOT_READY;
         case 6: return INVALID_PAGE_SIZE;
         case 7: return CAN_ONLY_REMOVE_PENDING_JOB;
+        case 8: return CANNOT_LIST_RESULTS;
         default: return null;
       }
     }
@@ -377,11 +391,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.errors.BatchJobErrorEnum parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.errors.BatchJobErrorEnum parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)

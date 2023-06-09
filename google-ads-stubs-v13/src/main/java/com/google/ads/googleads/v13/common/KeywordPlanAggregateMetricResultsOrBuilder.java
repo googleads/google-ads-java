@@ -12,6 +12,7 @@ public interface KeywordPlanAggregateMetricResultsOrBuilder extends
    * The aggregate searches for all the keywords segmented by device
    * for the specified time.
    * Supports the following device types: MOBILE, TABLET, DESKTOP.
+   *
    * This is only set when KeywordPlanAggregateMetricTypeEnum.DEVICE is set
    * in the KeywordPlanAggregateMetrics field in the request.
    * </pre>
@@ -25,6 +26,7 @@ public interface KeywordPlanAggregateMetricResultsOrBuilder extends
    * The aggregate searches for all the keywords segmented by device
    * for the specified time.
    * Supports the following device types: MOBILE, TABLET, DESKTOP.
+   *
    * This is only set when KeywordPlanAggregateMetricTypeEnum.DEVICE is set
    * in the KeywordPlanAggregateMetrics field in the request.
    * </pre>
@@ -37,6 +39,7 @@ public interface KeywordPlanAggregateMetricResultsOrBuilder extends
    * The aggregate searches for all the keywords segmented by device
    * for the specified time.
    * Supports the following device types: MOBILE, TABLET, DESKTOP.
+   *
    * This is only set when KeywordPlanAggregateMetricTypeEnum.DEVICE is set
    * in the KeywordPlanAggregateMetrics field in the request.
    * </pre>
@@ -49,6 +52,7 @@ public interface KeywordPlanAggregateMetricResultsOrBuilder extends
    * The aggregate searches for all the keywords segmented by device
    * for the specified time.
    * Supports the following device types: MOBILE, TABLET, DESKTOP.
+   *
    * This is only set when KeywordPlanAggregateMetricTypeEnum.DEVICE is set
    * in the KeywordPlanAggregateMetrics field in the request.
    * </pre>
@@ -62,6 +66,7 @@ public interface KeywordPlanAggregateMetricResultsOrBuilder extends
    * The aggregate searches for all the keywords segmented by device
    * for the specified time.
    * Supports the following device types: MOBILE, TABLET, DESKTOP.
+   *
    * This is only set when KeywordPlanAggregateMetricTypeEnum.DEVICE is set
    * in the KeywordPlanAggregateMetrics field in the request.
    * </pre>

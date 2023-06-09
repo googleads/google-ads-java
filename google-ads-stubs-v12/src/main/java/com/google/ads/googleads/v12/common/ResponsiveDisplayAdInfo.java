@@ -43,11 +43,6 @@ private static final long serialVersionUID = 0L;
     return new ResponsiveDisplayAdInfo();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.common.AdTypeInfosProto.internal_static_google_ads_googleads_v12_common_ResponsiveDisplayAdInfo_descriptor;
@@ -292,7 +287,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Square logo images to be used in the ad. Valid image types are GIF,
    * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-   * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
+   * be 1:1 (+-1%). Combined with `logo_images`, the maximum is 5.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.AdImageAsset square_logo_images = 4;</code>
@@ -305,7 +300,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Square logo images to be used in the ad. Valid image types are GIF,
    * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-   * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
+   * be 1:1 (+-1%). Combined with `logo_images`, the maximum is 5.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.AdImageAsset square_logo_images = 4;</code>
@@ -319,7 +314,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Square logo images to be used in the ad. Valid image types are GIF,
    * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-   * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
+   * be 1:1 (+-1%). Combined with `logo_images`, the maximum is 5.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.AdImageAsset square_logo_images = 4;</code>
@@ -332,7 +327,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Square logo images to be used in the ad. Valid image types are GIF,
    * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-   * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
+   * be 1:1 (+-1%). Combined with `logo_images`, the maximum is 5.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.AdImageAsset square_logo_images = 4;</code>
@@ -345,7 +340,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Square logo images to be used in the ad. Valid image types are GIF,
    * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-   * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
+   * be 1:1 (+-1%). Combined with `logo_images`, the maximum is 5.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.AdImageAsset square_logo_images = 4;</code>
@@ -1393,11 +1388,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.common.ResponsiveDisplayAdInfo parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.common.ResponsiveDisplayAdInfo parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3241,7 +3238,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-     * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
+     * be 1:1 (+-1%). Combined with `logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.AdImageAsset square_logo_images = 4;</code>
@@ -3257,7 +3254,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-     * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
+     * be 1:1 (+-1%). Combined with `logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.AdImageAsset square_logo_images = 4;</code>
@@ -3273,7 +3270,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-     * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
+     * be 1:1 (+-1%). Combined with `logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.AdImageAsset square_logo_images = 4;</code>
@@ -3289,7 +3286,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-     * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
+     * be 1:1 (+-1%). Combined with `logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.AdImageAsset square_logo_images = 4;</code>
@@ -3312,7 +3309,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-     * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
+     * be 1:1 (+-1%). Combined with `logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.AdImageAsset square_logo_images = 4;</code>
@@ -3332,7 +3329,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-     * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
+     * be 1:1 (+-1%). Combined with `logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.AdImageAsset square_logo_images = 4;</code>
@@ -3354,7 +3351,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-     * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
+     * be 1:1 (+-1%). Combined with `logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.AdImageAsset square_logo_images = 4;</code>
@@ -3377,7 +3374,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-     * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
+     * be 1:1 (+-1%). Combined with `logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.AdImageAsset square_logo_images = 4;</code>
@@ -3397,7 +3394,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-     * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
+     * be 1:1 (+-1%). Combined with `logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.AdImageAsset square_logo_images = 4;</code>
@@ -3417,7 +3414,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-     * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
+     * be 1:1 (+-1%). Combined with `logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.AdImageAsset square_logo_images = 4;</code>
@@ -3438,7 +3435,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-     * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
+     * be 1:1 (+-1%). Combined with `logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.AdImageAsset square_logo_images = 4;</code>
@@ -3457,7 +3454,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-     * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
+     * be 1:1 (+-1%). Combined with `logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.AdImageAsset square_logo_images = 4;</code>
@@ -3476,7 +3473,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-     * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
+     * be 1:1 (+-1%). Combined with `logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.AdImageAsset square_logo_images = 4;</code>
@@ -3489,7 +3486,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-     * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
+     * be 1:1 (+-1%). Combined with `logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.AdImageAsset square_logo_images = 4;</code>
@@ -3505,7 +3502,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-     * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
+     * be 1:1 (+-1%). Combined with `logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.AdImageAsset square_logo_images = 4;</code>
@@ -3522,7 +3519,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-     * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
+     * be 1:1 (+-1%). Combined with `logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.AdImageAsset square_logo_images = 4;</code>
@@ -3535,7 +3532,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-     * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
+     * be 1:1 (+-1%). Combined with `logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.AdImageAsset square_logo_images = 4;</code>
@@ -3549,7 +3546,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Square logo images to be used in the ad. Valid image types are GIF,
      * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-     * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
+     * be 1:1 (+-1%). Combined with `logo_images`, the maximum is 5.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v12.common.AdImageAsset square_logo_images = 4;</code>
@@ -5080,7 +5077,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAllowFlexibleColor(boolean value) {
-      
+
       allowFlexibleColor_ = value;
       bitField0_ |= 0x00000800;
       onChanged();

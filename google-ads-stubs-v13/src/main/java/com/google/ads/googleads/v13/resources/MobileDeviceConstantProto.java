@@ -33,26 +33,26 @@ public final class MobileDeviceConstantProto {
       "ogleads.v13.resources\0327google/ads/google" +
       "ads/v13/enums/mobile_device_type.proto\032\037" +
       "google/api/field_behavior.proto\032\031google/" +
-      "api/resource.proto\"\324\003\n\024MobileDeviceConst" +
-      "ant\022L\n\rresource_name\030\001 \001(\tB5\340A\003\372A/\n-goog" +
-      "leads.googleapis.com/MobileDeviceConstan" +
-      "t\022\024\n\002id\030\007 \001(\003B\003\340A\003H\000\210\001\001\022\026\n\004name\030\010 \001(\tB\003\340" +
-      "A\003H\001\210\001\001\022#\n\021manufacturer_name\030\t \001(\tB\003\340A\003H" +
-      "\002\210\001\001\022\'\n\025operating_system_name\030\n \001(\tB\003\340A\003" +
-      "H\003\210\001\001\022X\n\004type\030\006 \001(\0162E.google.ads.googlea" +
-      "ds.v13.enums.MobileDeviceTypeEnum.Mobile" +
-      "DeviceTypeB\003\340A\003:X\352AU\n-googleads.googleap" +
-      "is.com/MobileDeviceConstant\022$mobileDevic" +
-      "eConstants/{criterion_id}B\005\n\003_idB\007\n\005_nam" +
-      "eB\024\n\022_manufacturer_nameB\030\n\026_operating_sy" +
-      "stem_nameB\213\002\n&com.google.ads.googleads.v" +
-      "13.resourcesB\031MobileDeviceConstantProtoP" +
-      "\001ZKgoogle.golang.org/genproto/googleapis" +
-      "/ads/googleads/v13/resources;resources\242\002" +
-      "\003GAA\252\002\"Google.Ads.GoogleAds.V13.Resource" +
-      "s\312\002\"Google\\Ads\\GoogleAds\\V13\\Resources\352\002" +
-      "&Google::Ads::GoogleAds::V13::Resourcesb" +
-      "\006proto3"
+      "api/resource.proto\"\332\003\n\024MobileDeviceConst" +
+      "ant\022M\n\rresource_name\030\001 \001(\tB6\342A\001\003\372A/\n-goo" +
+      "gleads.googleapis.com/MobileDeviceConsta" +
+      "nt\022\025\n\002id\030\007 \001(\003B\004\342A\001\003H\000\210\001\001\022\027\n\004name\030\010 \001(\tB" +
+      "\004\342A\001\003H\001\210\001\001\022$\n\021manufacturer_name\030\t \001(\tB\004\342" +
+      "A\001\003H\002\210\001\001\022(\n\025operating_system_name\030\n \001(\tB" +
+      "\004\342A\001\003H\003\210\001\001\022Y\n\004type\030\006 \001(\0162E.google.ads.go" +
+      "ogleads.v13.enums.MobileDeviceTypeEnum.M" +
+      "obileDeviceTypeB\004\342A\001\003:X\352AU\n-googleads.go" +
+      "ogleapis.com/MobileDeviceConstant\022$mobil" +
+      "eDeviceConstants/{criterion_id}B\005\n\003_idB\007" +
+      "\n\005_nameB\024\n\022_manufacturer_nameB\030\n\026_operat" +
+      "ing_system_nameB\213\002\n&com.google.ads.googl" +
+      "eads.v13.resourcesB\031MobileDeviceConstant" +
+      "ProtoP\001ZKgoogle.golang.org/genproto/goog" +
+      "leapis/ads/googleads/v13/resources;resou" +
+      "rces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V13.Re" +
+      "sources\312\002\"Google\\Ads\\GoogleAds\\V13\\Resou" +
+      "rces\352\002&Google::Ads::GoogleAds::V13::Reso" +
+      "urcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -29,11 +29,6 @@ private static final long serialVersionUID = 0L;
     return new AssetFieldTypeEnum();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.enums.AssetFieldTypeProto.internal_static_google_ads_googleads_v12_enums_AssetFieldTypeEnum_descriptor;
@@ -163,7 +158,7 @@ private static final long serialVersionUID = 0L;
     STRUCTURED_SNIPPET(12),
     /**
      * <pre>
-     * The asset is linked for use as a Sitelink extension.
+     * The asset is linked for use as a Sitelink.
      * </pre>
      *
      * <code>SITELINK = 13;</code>
@@ -383,7 +378,7 @@ private static final long serialVersionUID = 0L;
     public static final int STRUCTURED_SNIPPET_VALUE = 12;
     /**
      * <pre>
-     * The asset is linked for use as a Sitelink extension.
+     * The asset is linked for use as a Sitelink.
      * </pre>
      *
      * <code>SITELINK = 13;</code>
@@ -700,11 +695,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.enums.AssetFieldTypeEnum parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.enums.AssetFieldTypeEnum parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)

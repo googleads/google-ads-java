@@ -310,8 +310,10 @@ public class AudienceInsightsServiceClient implements BackgroundResource {
    *
    * @param customerId Required. The ID of the customer.
    * @param dimensions Required. The types of attributes to be returned.
-   * @param queryText Required. A free text query. Attributes matching or related to this string
-   *     will be returned.
+   * @param queryText Required. A free text query. If the requested dimensions include Attributes
+   *     CATEGORY or KNOWLEDGE_GRAPH, then the attributes returned for those dimensions will match
+   *     or be related to this string. For other dimensions, this field is ignored and all available
+   *     attributes are returned.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ListAudienceInsightsAttributesResponse listAudienceInsightsAttributes(

@@ -68,6 +68,7 @@ public interface CustomerUserAccessOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed access is
    * expected, in this format:
+   *
    * `customers/{customer_id}/customerUserAccesses/{CustomerUserAccess.user_id}`
    * </pre>
    *
@@ -79,6 +80,7 @@ public interface CustomerUserAccessOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed access is
    * expected, in this format:
+   *
    * `customers/{customer_id}/customerUserAccesses/{CustomerUserAccess.user_id}`
    * </pre>
    *
@@ -90,6 +92,7 @@ public interface CustomerUserAccessOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed access is
    * expected, in this format:
+   *
    * `customers/{customer_id}/customerUserAccesses/{CustomerUserAccess.user_id}`
    * </pre>
    *
@@ -99,5 +102,5 @@ public interface CustomerUserAccessOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v13.services.CustomerUserAccessOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v13.services.CustomerUserAccessOperation.OperationCase getOperationCase();
 }

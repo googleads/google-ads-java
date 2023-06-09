@@ -95,6 +95,7 @@ public interface SharedSetOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed shared set is expected,
    * in this format:
+   *
    * `customers/{customer_id}/sharedSets/{shared_set_id}`
    * </pre>
    *
@@ -106,6 +107,7 @@ public interface SharedSetOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed shared set is expected,
    * in this format:
+   *
    * `customers/{customer_id}/sharedSets/{shared_set_id}`
    * </pre>
    *
@@ -117,6 +119,7 @@ public interface SharedSetOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed shared set is expected,
    * in this format:
+   *
    * `customers/{customer_id}/sharedSets/{shared_set_id}`
    * </pre>
    *
@@ -126,5 +129,5 @@ public interface SharedSetOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v12.services.SharedSetOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v12.services.SharedSetOperation.OperationCase getOperationCase();
 }

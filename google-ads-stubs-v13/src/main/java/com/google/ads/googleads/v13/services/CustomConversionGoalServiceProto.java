@@ -52,47 +52,47 @@ public final class CustomConversionGoalServiceProto {
       "/api/annotations.proto\032\027google/api/clien" +
       "t.proto\032\037google/api/field_behavior.proto" +
       "\032\031google/api/resource.proto\032 google/prot" +
-      "obuf/field_mask.proto\"\234\002\n\"MutateCustomCo" +
-      "nversionGoalsRequest\022\030\n\013customer_id\030\001 \001(" +
-      "\tB\003\340A\002\022Y\n\noperations\030\002 \003(\0132@.google.ads." +
-      "googleads.v13.services.CustomConversionG" +
-      "oalOperationB\003\340A\002\022\025\n\rvalidate_only\030\003 \001(\010" +
-      "\022j\n\025response_content_type\030\004 \001(\0162K.google" +
-      ".ads.googleads.v13.enums.ResponseContent" +
-      "TypeEnum.ResponseContentType\"\273\002\n\035CustomC" +
-      "onversionGoalOperation\022/\n\013update_mask\030\004 " +
-      "\001(\0132\032.google.protobuf.FieldMask\022J\n\006creat" +
-      "e\030\001 \001(\01328.google.ads.googleads.v13.resou" +
-      "rces.CustomConversionGoalH\000\022J\n\006update\030\002 " +
-      "\001(\01328.google.ads.googleads.v13.resources" +
-      ".CustomConversionGoalH\000\022D\n\006remove\030\003 \001(\tB" +
-      "2\372A/\n-googleads.googleapis.com/CustomCon" +
-      "versionGoalH\000B\013\n\toperation\"{\n#MutateCust" +
-      "omConversionGoalsResponse\022T\n\007results\030\001 \003" +
-      "(\0132C.google.ads.googleads.v13.services.M" +
-      "utateCustomConversionGoalResult\"\307\001\n Muta" +
-      "teCustomConversionGoalResult\022I\n\rresource" +
-      "_name\030\001 \001(\tB2\372A/\n-googleads.googleapis.c" +
-      "om/CustomConversionGoal\022X\n\026custom_conver" +
-      "sion_goal\030\002 \001(\01328.google.ads.googleads.v" +
-      "13.resources.CustomConversionGoal2\364\002\n\033Cu" +
-      "stomConversionGoalService\022\215\002\n\033MutateCust" +
-      "omConversionGoals\022E.google.ads.googleads" +
-      ".v13.services.MutateCustomConversionGoal" +
-      "sRequest\032F.google.ads.googleads.v13.serv" +
-      "ices.MutateCustomConversionGoalsResponse" +
-      "\"_\202\323\344\223\002@\";/v13/customers/{customer_id=*}" +
-      "/customConversionGoals:mutate:\001*\332A\026custo" +
-      "mer_id,operations\032E\312A\030googleads.googleap" +
-      "is.com\322A\'https://www.googleapis.com/auth" +
-      "/adwordsB\214\002\n%com.google.ads.googleads.v1" +
-      "3.servicesB CustomConversionGoalServiceP" +
-      "rotoP\001ZIgoogle.golang.org/genproto/googl" +
-      "eapis/ads/googleads/v13/services;service" +
-      "s\242\002\003GAA\252\002!Google.Ads.GoogleAds.V13.Servi" +
-      "ces\312\002!Google\\Ads\\GoogleAds\\V13\\Services\352" +
-      "\002%Google::Ads::GoogleAds::V13::Servicesb" +
-      "\006proto3"
+      "obuf/field_mask.proto\"\236\002\n\"MutateCustomCo" +
+      "nversionGoalsRequest\022\031\n\013customer_id\030\001 \001(" +
+      "\tB\004\342A\001\002\022Z\n\noperations\030\002 \003(\0132@.google.ads" +
+      ".googleads.v13.services.CustomConversion" +
+      "GoalOperationB\004\342A\001\002\022\025\n\rvalidate_only\030\003 \001" +
+      "(\010\022j\n\025response_content_type\030\004 \001(\0162K.goog" +
+      "le.ads.googleads.v13.enums.ResponseConte" +
+      "ntTypeEnum.ResponseContentType\"\273\002\n\035Custo" +
+      "mConversionGoalOperation\022/\n\013update_mask\030" +
+      "\004 \001(\0132\032.google.protobuf.FieldMask\022J\n\006cre" +
+      "ate\030\001 \001(\01328.google.ads.googleads.v13.res" +
+      "ources.CustomConversionGoalH\000\022J\n\006update\030" +
+      "\002 \001(\01328.google.ads.googleads.v13.resourc" +
+      "es.CustomConversionGoalH\000\022D\n\006remove\030\003 \001(" +
+      "\tB2\372A/\n-googleads.googleapis.com/CustomC" +
+      "onversionGoalH\000B\013\n\toperation\"{\n#MutateCu" +
+      "stomConversionGoalsResponse\022T\n\007results\030\001" +
+      " \003(\0132C.google.ads.googleads.v13.services" +
+      ".MutateCustomConversionGoalResult\"\307\001\n Mu" +
+      "tateCustomConversionGoalResult\022I\n\rresour" +
+      "ce_name\030\001 \001(\tB2\372A/\n-googleads.googleapis" +
+      ".com/CustomConversionGoal\022X\n\026custom_conv" +
+      "ersion_goal\030\002 \001(\01328.google.ads.googleads" +
+      ".v13.resources.CustomConversionGoal2\364\002\n\033" +
+      "CustomConversionGoalService\022\215\002\n\033MutateCu" +
+      "stomConversionGoals\022E.google.ads.googlea" +
+      "ds.v13.services.MutateCustomConversionGo" +
+      "alsRequest\032F.google.ads.googleads.v13.se" +
+      "rvices.MutateCustomConversionGoalsRespon" +
+      "se\"_\332A\026customer_id,operations\202\323\344\223\002@\";/v1" +
+      "3/customers/{customer_id=*}/customConver" +
+      "sionGoals:mutate:\001*\032E\312A\030googleads.google" +
+      "apis.com\322A\'https://www.googleapis.com/au" +
+      "th/adwordsB\214\002\n%com.google.ads.googleads." +
+      "v13.servicesB CustomConversionGoalServic" +
+      "eProtoP\001ZIgoogle.golang.org/genproto/goo" +
+      "gleapis/ads/googleads/v13/services;servi" +
+      "ces\242\002\003GAA\252\002!Google.Ads.GoogleAds.V13.Ser" +
+      "vices\312\002!Google\\Ads\\GoogleAds\\V13\\Service" +
+      "s\352\002%Google::Ads::GoogleAds::V13::Service" +
+      "sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

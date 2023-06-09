@@ -53,48 +53,48 @@ public final class CampaignBidModifierServiceProto {
       "proto\032\037google/api/field_behavior.proto\032\031" +
       "google/api/resource.proto\032 google/protob" +
       "uf/field_mask.proto\032\027google/rpc/status.p" +
-      "roto\"\263\002\n!MutateCampaignBidModifiersReque" +
-      "st\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022X\n\noperatio" +
-      "ns\030\002 \003(\0132?.google.ads.googleads.v13.serv" +
-      "ices.CampaignBidModifierOperationB\003\340A\002\022\027" +
-      "\n\017partial_failure\030\003 \001(\010\022\025\n\rvalidate_only" +
-      "\030\004 \001(\010\022j\n\025response_content_type\030\005 \001(\0162K." +
-      "google.ads.googleads.v13.enums.ResponseC" +
-      "ontentTypeEnum.ResponseContentType\"\267\002\n\034C" +
-      "ampaignBidModifierOperation\022/\n\013update_ma" +
-      "sk\030\004 \001(\0132\032.google.protobuf.FieldMask\022I\n\006" +
-      "create\030\001 \001(\01327.google.ads.googleads.v13." +
-      "resources.CampaignBidModifierH\000\022I\n\006updat" +
-      "e\030\002 \001(\01327.google.ads.googleads.v13.resou" +
-      "rces.CampaignBidModifierH\000\022C\n\006remove\030\003 \001" +
-      "(\tB1\372A.\n,googleads.googleapis.com/Campai" +
-      "gnBidModifierH\000B\013\n\toperation\"\254\001\n\"MutateC" +
-      "ampaignBidModifiersResponse\0221\n\025partial_f" +
-      "ailure_error\030\003 \001(\0132\022.google.rpc.Status\022S" +
-      "\n\007results\030\002 \003(\0132B.google.ads.googleads.v" +
-      "13.services.MutateCampaignBidModifierRes" +
-      "ult\"\303\001\n\037MutateCampaignBidModifierResult\022" +
-      "H\n\rresource_name\030\001 \001(\tB1\372A.\n,googleads.g" +
-      "oogleapis.com/CampaignBidModifier\022V\n\025cam" +
-      "paign_bid_modifier\030\002 \001(\01327.google.ads.go" +
-      "ogleads.v13.resources.CampaignBidModifie" +
-      "r2\357\002\n\032CampaignBidModifierService\022\211\002\n\032Mut" +
-      "ateCampaignBidModifiers\022D.google.ads.goo" +
-      "gleads.v13.services.MutateCampaignBidMod" +
-      "ifiersRequest\032E.google.ads.googleads.v13" +
-      ".services.MutateCampaignBidModifiersResp" +
-      "onse\"^\202\323\344\223\002?\":/v13/customers/{customer_i" +
-      "d=*}/campaignBidModifiers:mutate:\001*\332A\026cu" +
-      "stomer_id,operations\032E\312A\030googleads.googl" +
-      "eapis.com\322A\'https://www.googleapis.com/a" +
-      "uth/adwordsB\213\002\n%com.google.ads.googleads" +
-      ".v13.servicesB\037CampaignBidModifierServic" +
-      "eProtoP\001ZIgoogle.golang.org/genproto/goo" +
-      "gleapis/ads/googleads/v13/services;servi" +
-      "ces\242\002\003GAA\252\002!Google.Ads.GoogleAds.V13.Ser" +
-      "vices\312\002!Google\\Ads\\GoogleAds\\V13\\Service" +
-      "s\352\002%Google::Ads::GoogleAds::V13::Service" +
-      "sb\006proto3"
+      "roto\"\265\002\n!MutateCampaignBidModifiersReque" +
+      "st\022\031\n\013customer_id\030\001 \001(\tB\004\342A\001\002\022Y\n\noperati" +
+      "ons\030\002 \003(\0132?.google.ads.googleads.v13.ser" +
+      "vices.CampaignBidModifierOperationB\004\342A\001\002" +
+      "\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rvalidate_on" +
+      "ly\030\004 \001(\010\022j\n\025response_content_type\030\005 \001(\0162" +
+      "K.google.ads.googleads.v13.enums.Respons" +
+      "eContentTypeEnum.ResponseContentType\"\267\002\n" +
+      "\034CampaignBidModifierOperation\022/\n\013update_" +
+      "mask\030\004 \001(\0132\032.google.protobuf.FieldMask\022I" +
+      "\n\006create\030\001 \001(\01327.google.ads.googleads.v1" +
+      "3.resources.CampaignBidModifierH\000\022I\n\006upd" +
+      "ate\030\002 \001(\01327.google.ads.googleads.v13.res" +
+      "ources.CampaignBidModifierH\000\022C\n\006remove\030\003" +
+      " \001(\tB1\372A.\n,googleads.googleapis.com/Camp" +
+      "aignBidModifierH\000B\013\n\toperation\"\254\001\n\"Mutat" +
+      "eCampaignBidModifiersResponse\0221\n\025partial" +
+      "_failure_error\030\003 \001(\0132\022.google.rpc.Status" +
+      "\022S\n\007results\030\002 \003(\0132B.google.ads.googleads" +
+      ".v13.services.MutateCampaignBidModifierR" +
+      "esult\"\303\001\n\037MutateCampaignBidModifierResul" +
+      "t\022H\n\rresource_name\030\001 \001(\tB1\372A.\n,googleads" +
+      ".googleapis.com/CampaignBidModifier\022V\n\025c" +
+      "ampaign_bid_modifier\030\002 \001(\01327.google.ads." +
+      "googleads.v13.resources.CampaignBidModif" +
+      "ier2\357\002\n\032CampaignBidModifierService\022\211\002\n\032M" +
+      "utateCampaignBidModifiers\022D.google.ads.g" +
+      "oogleads.v13.services.MutateCampaignBidM" +
+      "odifiersRequest\032E.google.ads.googleads.v" +
+      "13.services.MutateCampaignBidModifiersRe" +
+      "sponse\"^\332A\026customer_id,operations\202\323\344\223\002?\"" +
+      ":/v13/customers/{customer_id=*}/campaign" +
+      "BidModifiers:mutate:\001*\032E\312A\030googleads.goo" +
+      "gleapis.com\322A\'https://www.googleapis.com" +
+      "/auth/adwordsB\213\002\n%com.google.ads.googlea" +
+      "ds.v13.servicesB\037CampaignBidModifierServ" +
+      "iceProtoP\001ZIgoogle.golang.org/genproto/g" +
+      "oogleapis/ads/googleads/v13/services;ser" +
+      "vices\242\002\003GAA\252\002!Google.Ads.GoogleAds.V13.S" +
+      "ervices\312\002!Google\\Ads\\GoogleAds\\V13\\Servi" +
+      "ces\352\002%Google::Ads::GoogleAds::V13::Servi" +
+      "cesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

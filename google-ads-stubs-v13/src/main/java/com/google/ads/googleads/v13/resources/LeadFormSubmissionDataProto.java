@@ -43,40 +43,40 @@ public final class LeadFormSubmissionDataProto {
       ".googleads.v13.resources\032Dgoogle/ads/goo" +
       "gleads/v13/enums/lead_form_field_user_in" +
       "put_type.proto\032\037google/api/field_behavio" +
-      "r.proto\032\031google/api/resource.proto\"\203\006\n\026L" +
-      "eadFormSubmissionData\022N\n\rresource_name\030\001" +
-      " \001(\tB7\340A\003\372A1\n/googleads.googleapis.com/L" +
-      "eadFormSubmissionData\022\017\n\002id\030\002 \001(\tB\003\340A\003\0225" +
-      "\n\005asset\030\003 \001(\tB&\340A\003\372A \n\036googleads.googlea" +
-      "pis.com/Asset\022;\n\010campaign\030\004 \001(\tB)\340A\003\372A#\n" +
-      "!googleads.googleapis.com/Campaign\022e\n\033le" +
-      "ad_form_submission_fields\030\005 \003(\0132;.google" +
-      ".ads.googleads.v13.resources.LeadFormSub" +
-      "missionFieldB\003\340A\003\022r\n\"custom_lead_form_su" +
-      "bmission_fields\030\n \003(\0132A.google.ads.googl" +
-      "eads.v13.resources.CustomLeadFormSubmiss" +
-      "ionFieldB\003\340A\003\022:\n\010ad_group\030\006 \001(\tB(\340A\003\372A\"\n" +
-      " googleads.googleapis.com/AdGroup\022?\n\013ad_" +
-      "group_ad\030\007 \001(\tB*\340A\003\372A$\n\"googleads.google" +
-      "apis.com/AdGroupAd\022\022\n\005gclid\030\010 \001(\tB\003\340A\003\022!" +
-      "\n\024submission_date_time\030\t \001(\tB\003\340A\003:\204\001\352A\200\001" +
-      "\n/googleads.googleapis.com/LeadFormSubmi" +
-      "ssionData\022Mcustomers/{customer_id}/leadF" +
-      "ormSubmissionData/{lead_form_user_submis" +
-      "sion_id}\"\247\001\n\027LeadFormSubmissionField\022r\n\n" +
-      "field_type\030\001 \001(\0162Y.google.ads.googleads." +
-      "v13.enums.LeadFormFieldUserInputTypeEnum" +
-      ".LeadFormFieldUserInputTypeB\003\340A\003\022\030\n\013fiel" +
-      "d_value\030\002 \001(\tB\003\340A\003\"U\n\035CustomLeadFormSubm" +
-      "issionField\022\032\n\rquestion_text\030\001 \001(\tB\003\340A\003\022" +
-      "\030\n\013field_value\030\002 \001(\tB\003\340A\003B\215\002\n&com.google" +
-      ".ads.googleads.v13.resourcesB\033LeadFormSu" +
-      "bmissionDataProtoP\001ZKgoogle.golang.org/g" +
-      "enproto/googleapis/ads/googleads/v13/res" +
-      "ources;resources\242\002\003GAA\252\002\"Google.Ads.Goog" +
-      "leAds.V13.Resources\312\002\"Google\\Ads\\GoogleA" +
-      "ds\\V13\\Resources\352\002&Google::Ads::GoogleAd" +
-      "s::V13::Resourcesb\006proto3"
+      "r.proto\032\031google/api/resource.proto\"\215\006\n\026L" +
+      "eadFormSubmissionData\022O\n\rresource_name\030\001" +
+      " \001(\tB8\342A\001\003\372A1\n/googleads.googleapis.com/" +
+      "LeadFormSubmissionData\022\020\n\002id\030\002 \001(\tB\004\342A\001\003" +
+      "\0226\n\005asset\030\003 \001(\tB\'\342A\001\003\372A \n\036googleads.goog" +
+      "leapis.com/Asset\022<\n\010campaign\030\004 \001(\tB*\342A\001\003" +
+      "\372A#\n!googleads.googleapis.com/Campaign\022f" +
+      "\n\033lead_form_submission_fields\030\005 \003(\0132;.go" +
+      "ogle.ads.googleads.v13.resources.LeadFor" +
+      "mSubmissionFieldB\004\342A\001\003\022s\n\"custom_lead_fo" +
+      "rm_submission_fields\030\n \003(\0132A.google.ads." +
+      "googleads.v13.resources.CustomLeadFormSu" +
+      "bmissionFieldB\004\342A\001\003\022;\n\010ad_group\030\006 \001(\tB)\342" +
+      "A\001\003\372A\"\n googleads.googleapis.com/AdGroup" +
+      "\022@\n\013ad_group_ad\030\007 \001(\tB+\342A\001\003\372A$\n\"googlead" +
+      "s.googleapis.com/AdGroupAd\022\023\n\005gclid\030\010 \001(" +
+      "\tB\004\342A\001\003\022\"\n\024submission_date_time\030\t \001(\tB\004\342" +
+      "A\001\003:\204\001\352A\200\001\n/googleads.googleapis.com/Lea" +
+      "dFormSubmissionData\022Mcustomers/{customer" +
+      "_id}/leadFormSubmissionData/{lead_form_u" +
+      "ser_submission_id}\"\251\001\n\027LeadFormSubmissio" +
+      "nField\022s\n\nfield_type\030\001 \001(\0162Y.google.ads." +
+      "googleads.v13.enums.LeadFormFieldUserInp" +
+      "utTypeEnum.LeadFormFieldUserInputTypeB\004\342" +
+      "A\001\003\022\031\n\013field_value\030\002 \001(\tB\004\342A\001\003\"W\n\035Custom" +
+      "LeadFormSubmissionField\022\033\n\rquestion_text" +
+      "\030\001 \001(\tB\004\342A\001\003\022\031\n\013field_value\030\002 \001(\tB\004\342A\001\003B" +
+      "\215\002\n&com.google.ads.googleads.v13.resourc" +
+      "esB\033LeadFormSubmissionDataProtoP\001ZKgoogl" +
+      "e.golang.org/genproto/googleapis/ads/goo" +
+      "gleads/v13/resources;resources\242\002\003GAA\252\002\"G" +
+      "oogle.Ads.GoogleAds.V13.Resources\312\002\"Goog" +
+      "le\\Ads\\GoogleAds\\V13\\Resources\352\002&Google:" +
+      ":Ads::GoogleAds::V13::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

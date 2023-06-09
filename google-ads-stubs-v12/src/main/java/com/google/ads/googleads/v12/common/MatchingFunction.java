@@ -35,11 +35,6 @@ private static final long serialVersionUID = 0L;
     return new MatchingFunction();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.common.MatchingFunctionProto.internal_static_google_ads_googleads_v12_common_MatchingFunction_descriptor;
@@ -60,14 +55,18 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * String representation of the Function.
+   *
    * Examples:
+   *
    * 1. IDENTITY(true) or IDENTITY(false). All or no feed items served.
    * 2. EQUALS(CONTEXT.DEVICE,"Mobile")
    * 3. IN(FEED_ITEM_ID,{1000001,1000002,1000003})
    * 4. CONTAINS_ANY(FeedAttribute[12345678,0],{"Mars cruise","Venus cruise"})
    * 5. AND(IN(FEED_ITEM_ID,{10001,10002}),EQUALS(CONTEXT.DEVICE,"Mobile"))
+   *
    * For more details, visit
    * https://developers.google.com/google-ads/api/docs/extensions/feeds/matching-functions
+   *
    * Note that because multiple strings may represent the same underlying
    * function (whitespace and single versus double quotation marks, for
    * example), the value returned may not be identical to the string sent in a
@@ -84,14 +83,18 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * String representation of the Function.
+   *
    * Examples:
+   *
    * 1. IDENTITY(true) or IDENTITY(false). All or no feed items served.
    * 2. EQUALS(CONTEXT.DEVICE,"Mobile")
    * 3. IN(FEED_ITEM_ID,{1000001,1000002,1000003})
    * 4. CONTAINS_ANY(FeedAttribute[12345678,0],{"Mars cruise","Venus cruise"})
    * 5. AND(IN(FEED_ITEM_ID,{10001,10002}),EQUALS(CONTEXT.DEVICE,"Mobile"))
+   *
    * For more details, visit
    * https://developers.google.com/google-ads/api/docs/extensions/feeds/matching-functions
+   *
    * Note that because multiple strings may represent the same underlying
    * function (whitespace and single versus double quotation marks, for
    * example), the value returned may not be identical to the string sent in a
@@ -117,14 +120,18 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * String representation of the Function.
+   *
    * Examples:
+   *
    * 1. IDENTITY(true) or IDENTITY(false). All or no feed items served.
    * 2. EQUALS(CONTEXT.DEVICE,"Mobile")
    * 3. IN(FEED_ITEM_ID,{1000001,1000002,1000003})
    * 4. CONTAINS_ANY(FeedAttribute[12345678,0],{"Mars cruise","Venus cruise"})
    * 5. AND(IN(FEED_ITEM_ID,{10001,10002}),EQUALS(CONTEXT.DEVICE,"Mobile"))
+   *
    * For more details, visit
    * https://developers.google.com/google-ads/api/docs/extensions/feeds/matching-functions
+   *
    * Note that because multiple strings may represent the same underlying
    * function (whitespace and single versus double quotation marks, for
    * example), the value returned may not be identical to the string sent in a
@@ -451,11 +458,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.common.MatchingFunction parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.common.MatchingFunction parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -806,14 +815,18 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * String representation of the Function.
+     *
      * Examples:
+     *
      * 1. IDENTITY(true) or IDENTITY(false). All or no feed items served.
      * 2. EQUALS(CONTEXT.DEVICE,"Mobile")
      * 3. IN(FEED_ITEM_ID,{1000001,1000002,1000003})
      * 4. CONTAINS_ANY(FeedAttribute[12345678,0],{"Mars cruise","Venus cruise"})
      * 5. AND(IN(FEED_ITEM_ID,{10001,10002}),EQUALS(CONTEXT.DEVICE,"Mobile"))
+     *
      * For more details, visit
      * https://developers.google.com/google-ads/api/docs/extensions/feeds/matching-functions
+     *
      * Note that because multiple strings may represent the same underlying
      * function (whitespace and single versus double quotation marks, for
      * example), the value returned may not be identical to the string sent in a
@@ -829,14 +842,18 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * String representation of the Function.
+     *
      * Examples:
+     *
      * 1. IDENTITY(true) or IDENTITY(false). All or no feed items served.
      * 2. EQUALS(CONTEXT.DEVICE,"Mobile")
      * 3. IN(FEED_ITEM_ID,{1000001,1000002,1000003})
      * 4. CONTAINS_ANY(FeedAttribute[12345678,0],{"Mars cruise","Venus cruise"})
      * 5. AND(IN(FEED_ITEM_ID,{10001,10002}),EQUALS(CONTEXT.DEVICE,"Mobile"))
+     *
      * For more details, visit
      * https://developers.google.com/google-ads/api/docs/extensions/feeds/matching-functions
+     *
      * Note that because multiple strings may represent the same underlying
      * function (whitespace and single versus double quotation marks, for
      * example), the value returned may not be identical to the string sent in a
@@ -861,14 +878,18 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * String representation of the Function.
+     *
      * Examples:
+     *
      * 1. IDENTITY(true) or IDENTITY(false). All or no feed items served.
      * 2. EQUALS(CONTEXT.DEVICE,"Mobile")
      * 3. IN(FEED_ITEM_ID,{1000001,1000002,1000003})
      * 4. CONTAINS_ANY(FeedAttribute[12345678,0],{"Mars cruise","Venus cruise"})
      * 5. AND(IN(FEED_ITEM_ID,{10001,10002}),EQUALS(CONTEXT.DEVICE,"Mobile"))
+     *
      * For more details, visit
      * https://developers.google.com/google-ads/api/docs/extensions/feeds/matching-functions
+     *
      * Note that because multiple strings may represent the same underlying
      * function (whitespace and single versus double quotation marks, for
      * example), the value returned may not be identical to the string sent in a
@@ -894,14 +915,18 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * String representation of the Function.
+     *
      * Examples:
+     *
      * 1. IDENTITY(true) or IDENTITY(false). All or no feed items served.
      * 2. EQUALS(CONTEXT.DEVICE,"Mobile")
      * 3. IN(FEED_ITEM_ID,{1000001,1000002,1000003})
      * 4. CONTAINS_ANY(FeedAttribute[12345678,0],{"Mars cruise","Venus cruise"})
      * 5. AND(IN(FEED_ITEM_ID,{10001,10002}),EQUALS(CONTEXT.DEVICE,"Mobile"))
+     *
      * For more details, visit
      * https://developers.google.com/google-ads/api/docs/extensions/feeds/matching-functions
+     *
      * Note that because multiple strings may represent the same underlying
      * function (whitespace and single versus double quotation marks, for
      * example), the value returned may not be identical to the string sent in a
@@ -923,14 +948,18 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * String representation of the Function.
+     *
      * Examples:
+     *
      * 1. IDENTITY(true) or IDENTITY(false). All or no feed items served.
      * 2. EQUALS(CONTEXT.DEVICE,"Mobile")
      * 3. IN(FEED_ITEM_ID,{1000001,1000002,1000003})
      * 4. CONTAINS_ANY(FeedAttribute[12345678,0],{"Mars cruise","Venus cruise"})
      * 5. AND(IN(FEED_ITEM_ID,{10001,10002}),EQUALS(CONTEXT.DEVICE,"Mobile"))
+     *
      * For more details, visit
      * https://developers.google.com/google-ads/api/docs/extensions/feeds/matching-functions
+     *
      * Note that because multiple strings may represent the same underlying
      * function (whitespace and single versus double quotation marks, for
      * example), the value returned may not be identical to the string sent in a
@@ -949,14 +978,18 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * String representation of the Function.
+     *
      * Examples:
+     *
      * 1. IDENTITY(true) or IDENTITY(false). All or no feed items served.
      * 2. EQUALS(CONTEXT.DEVICE,"Mobile")
      * 3. IN(FEED_ITEM_ID,{1000001,1000002,1000003})
      * 4. CONTAINS_ANY(FeedAttribute[12345678,0],{"Mars cruise","Venus cruise"})
      * 5. AND(IN(FEED_ITEM_ID,{10001,10002}),EQUALS(CONTEXT.DEVICE,"Mobile"))
+     *
      * For more details, visit
      * https://developers.google.com/google-ads/api/docs/extensions/feeds/matching-functions
+     *
      * Note that because multiple strings may represent the same underlying
      * function (whitespace and single versus double quotation marks, for
      * example), the value returned may not be identical to the string sent in a

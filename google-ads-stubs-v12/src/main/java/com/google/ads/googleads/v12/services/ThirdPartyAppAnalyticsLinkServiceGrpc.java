@@ -100,7 +100,7 @@ public final class ThirdPartyAppAnalyticsLinkServiceGrpc {
    * app analytics.
    * </pre>
    */
-  public static abstract class ThirdPartyAppAnalyticsLinkServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -115,31 +115,36 @@ public final class ThirdPartyAppAnalyticsLinkServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void regenerateShareableLinkId(com.google.ads.googleads.v12.services.RegenerateShareableLinkIdRequest request,
+    default void regenerateShareableLinkId(com.google.ads.googleads.v12.services.RegenerateShareableLinkIdRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.RegenerateShareableLinkIdResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRegenerateShareableLinkIdMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getRegenerateShareableLinkIdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.RegenerateShareableLinkIdRequest,
-                com.google.ads.googleads.v12.services.RegenerateShareableLinkIdResponse>(
-                  this, METHODID_REGENERATE_SHAREABLE_LINK_ID)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service ThirdPartyAppAnalyticsLinkService.
    * <pre>
    * This service allows management of links between Google Ads and third party
    * app analytics.
    * </pre>
    */
-  public static final class ThirdPartyAppAnalyticsLinkServiceStub extends io.grpc.stub.AbstractAsyncStub<ThirdPartyAppAnalyticsLinkServiceStub> {
+  public static abstract class ThirdPartyAppAnalyticsLinkServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return ThirdPartyAppAnalyticsLinkServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service ThirdPartyAppAnalyticsLinkService.
+   * <pre>
+   * This service allows management of links between Google Ads and third party
+   * app analytics.
+   * </pre>
+   */
+  public static final class ThirdPartyAppAnalyticsLinkServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<ThirdPartyAppAnalyticsLinkServiceStub> {
     private ThirdPartyAppAnalyticsLinkServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -172,12 +177,14 @@ public final class ThirdPartyAppAnalyticsLinkServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service ThirdPartyAppAnalyticsLinkService.
    * <pre>
    * This service allows management of links between Google Ads and third party
    * app analytics.
    * </pre>
    */
-  public static final class ThirdPartyAppAnalyticsLinkServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ThirdPartyAppAnalyticsLinkServiceBlockingStub> {
+  public static final class ThirdPartyAppAnalyticsLinkServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<ThirdPartyAppAnalyticsLinkServiceBlockingStub> {
     private ThirdPartyAppAnalyticsLinkServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -209,12 +216,14 @@ public final class ThirdPartyAppAnalyticsLinkServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service ThirdPartyAppAnalyticsLinkService.
    * <pre>
    * This service allows management of links between Google Ads and third party
    * app analytics.
    * </pre>
    */
-  public static final class ThirdPartyAppAnalyticsLinkServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ThirdPartyAppAnalyticsLinkServiceFutureStub> {
+  public static final class ThirdPartyAppAnalyticsLinkServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<ThirdPartyAppAnalyticsLinkServiceFutureStub> {
     private ThirdPartyAppAnalyticsLinkServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -253,10 +262,10 @@ public final class ThirdPartyAppAnalyticsLinkServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final ThirdPartyAppAnalyticsLinkServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(ThirdPartyAppAnalyticsLinkServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -283,6 +292,18 @@ public final class ThirdPartyAppAnalyticsLinkServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getRegenerateShareableLinkIdMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.RegenerateShareableLinkIdRequest,
+              com.google.ads.googleads.v12.services.RegenerateShareableLinkIdResponse>(
+                service, METHODID_REGENERATE_SHAREABLE_LINK_ID)))
+        .build();
   }
 
   private static abstract class ThirdPartyAppAnalyticsLinkServiceBaseDescriptorSupplier

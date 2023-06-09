@@ -11,6 +11,7 @@ public interface AssetFieldTypeViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the asset field type view.
    * Asset field type view resource names have the form:
+   *
    * `customers/{customer_id}/assetFieldTypeViews/{field_type}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface AssetFieldTypeViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the asset field type view.
    * Asset field type view resource names have the form:
+   *
    * `customers/{customer_id}/assetFieldTypeViews/{field_type}`
    * </pre>
    *

@@ -53,50 +53,50 @@ public final class AdGroupExtensionSettingServiceProto {
       "pi/client.proto\032\037google/api/field_behavi" +
       "or.proto\032\031google/api/resource.proto\032 goo" +
       "gle/protobuf/field_mask.proto\032\027google/rp" +
-      "c/status.proto\"\317\001\n%MutateAdGroupExtensio" +
-      "nSettingsRequest\022\030\n\013customer_id\030\001 \001(\tB\003\340" +
-      "A\002\022\\\n\noperations\030\002 \003(\0132C.google.ads.goog" +
-      "leads.v12.services.AdGroupExtensionSetti" +
-      "ngOperationB\003\340A\002\022\027\n\017partial_failure\030\003 \001(" +
-      "\010\022\025\n\rvalidate_only\030\004 \001(\010\"\263\003\n AdGroupExte" +
-      "nsionSettingOperation\022/\n\013update_mask\030\004 \001" +
-      "(\0132\032.google.protobuf.FieldMask\022j\n\025respon" +
-      "se_content_type\030\005 \001(\0162K.google.ads.googl" +
-      "eads.v12.enums.ResponseContentTypeEnum.R" +
-      "esponseContentType\022M\n\006create\030\001 \001(\0132;.goo" +
-      "gle.ads.googleads.v12.resources.AdGroupE" +
-      "xtensionSettingH\000\022M\n\006update\030\002 \001(\0132;.goog" +
-      "le.ads.googleads.v12.resources.AdGroupEx" +
-      "tensionSettingH\000\022G\n\006remove\030\003 \001(\tB5\372A2\n0g" +
-      "oogleads.googleapis.com/AdGroupExtension" +
-      "SettingH\000B\013\n\toperation\"\264\001\n&MutateAdGroup" +
-      "ExtensionSettingsResponse\0221\n\025partial_fai" +
-      "lure_error\030\003 \001(\0132\022.google.rpc.Status\022W\n\007" +
-      "results\030\002 \003(\0132F.google.ads.googleads.v12" +
-      ".services.MutateAdGroupExtensionSettingR" +
-      "esult\"\324\001\n#MutateAdGroupExtensionSettingR" +
-      "esult\022L\n\rresource_name\030\001 \001(\tB5\372A2\n0googl" +
-      "eads.googleapis.com/AdGroupExtensionSett" +
-      "ing\022_\n\032ad_group_extension_setting\030\002 \001(\0132" +
-      ";.google.ads.googleads.v12.resources.AdG" +
-      "roupExtensionSetting2\203\003\n\036AdGroupExtensio" +
-      "nSettingService\022\231\002\n\036MutateAdGroupExtensi" +
-      "onSettings\022H.google.ads.googleads.v12.se" +
-      "rvices.MutateAdGroupExtensionSettingsReq" +
-      "uest\032I.google.ads.googleads.v12.services" +
-      ".MutateAdGroupExtensionSettingsResponse\"" +
-      "b\202\323\344\223\002C\">/v12/customers/{customer_id=*}/" +
-      "adGroupExtensionSettings:mutate:\001*\332A\026cus" +
-      "tomer_id,operations\032E\312A\030googleads.google" +
-      "apis.com\322A\'https://www.googleapis.com/au" +
-      "th/adwordsB\217\002\n%com.google.ads.googleads." +
-      "v12.servicesB#AdGroupExtensionSettingSer" +
-      "viceProtoP\001ZIgoogle.golang.org/genproto/" +
-      "googleapis/ads/googleads/v12/services;se" +
-      "rvices\242\002\003GAA\252\002!Google.Ads.GoogleAds.V12." +
-      "Services\312\002!Google\\Ads\\GoogleAds\\V12\\Serv" +
-      "ices\352\002%Google::Ads::GoogleAds::V12::Serv" +
-      "icesb\006proto3"
+      "c/status.proto\"\321\001\n%MutateAdGroupExtensio" +
+      "nSettingsRequest\022\031\n\013customer_id\030\001 \001(\tB\004\342" +
+      "A\001\002\022]\n\noperations\030\002 \003(\0132C.google.ads.goo" +
+      "gleads.v12.services.AdGroupExtensionSett" +
+      "ingOperationB\004\342A\001\002\022\027\n\017partial_failure\030\003 " +
+      "\001(\010\022\025\n\rvalidate_only\030\004 \001(\010\"\263\003\n AdGroupEx" +
+      "tensionSettingOperation\022/\n\013update_mask\030\004" +
+      " \001(\0132\032.google.protobuf.FieldMask\022j\n\025resp" +
+      "onse_content_type\030\005 \001(\0162K.google.ads.goo" +
+      "gleads.v12.enums.ResponseContentTypeEnum" +
+      ".ResponseContentType\022M\n\006create\030\001 \001(\0132;.g" +
+      "oogle.ads.googleads.v12.resources.AdGrou" +
+      "pExtensionSettingH\000\022M\n\006update\030\002 \001(\0132;.go" +
+      "ogle.ads.googleads.v12.resources.AdGroup" +
+      "ExtensionSettingH\000\022G\n\006remove\030\003 \001(\tB5\372A2\n" +
+      "0googleads.googleapis.com/AdGroupExtensi" +
+      "onSettingH\000B\013\n\toperation\"\264\001\n&MutateAdGro" +
+      "upExtensionSettingsResponse\0221\n\025partial_f" +
+      "ailure_error\030\003 \001(\0132\022.google.rpc.Status\022W" +
+      "\n\007results\030\002 \003(\0132F.google.ads.googleads.v" +
+      "12.services.MutateAdGroupExtensionSettin" +
+      "gResult\"\324\001\n#MutateAdGroupExtensionSettin" +
+      "gResult\022L\n\rresource_name\030\001 \001(\tB5\372A2\n0goo" +
+      "gleads.googleapis.com/AdGroupExtensionSe" +
+      "tting\022_\n\032ad_group_extension_setting\030\002 \001(" +
+      "\0132;.google.ads.googleads.v12.resources.A" +
+      "dGroupExtensionSetting2\203\003\n\036AdGroupExtens" +
+      "ionSettingService\022\231\002\n\036MutateAdGroupExten" +
+      "sionSettings\022H.google.ads.googleads.v12." +
+      "services.MutateAdGroupExtensionSettingsR" +
+      "equest\032I.google.ads.googleads.v12.servic" +
+      "es.MutateAdGroupExtensionSettingsRespons" +
+      "e\"b\332A\026customer_id,operations\202\323\344\223\002C\">/v12" +
+      "/customers/{customer_id=*}/adGroupExtens" +
+      "ionSettings:mutate:\001*\032E\312A\030googleads.goog" +
+      "leapis.com\322A\'https://www.googleapis.com/" +
+      "auth/adwordsB\217\002\n%com.google.ads.googlead" +
+      "s.v12.servicesB#AdGroupExtensionSettingS" +
+      "erviceProtoP\001ZIgoogle.golang.org/genprot" +
+      "o/googleapis/ads/googleads/v12/services;" +
+      "services\242\002\003GAA\252\002!Google.Ads.GoogleAds.V1" +
+      "2.Services\312\002!Google\\Ads\\GoogleAds\\V12\\Se" +
+      "rvices\352\002%Google::Ads::GoogleAds::V12::Se" +
+      "rvicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

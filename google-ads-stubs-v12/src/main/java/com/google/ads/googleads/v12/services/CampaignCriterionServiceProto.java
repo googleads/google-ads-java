@@ -52,47 +52,47 @@ public final class CampaignCriterionServiceProto {
       "otations.proto\032\027google/api/client.proto\032" +
       "\037google/api/field_behavior.proto\032\031google" +
       "/api/resource.proto\032 google/protobuf/fie" +
-      "ld_mask.proto\032\027google/rpc/status.proto\"\255" +
-      "\002\n\035MutateCampaignCriteriaRequest\022\030\n\013cust" +
-      "omer_id\030\001 \001(\tB\003\340A\002\022V\n\noperations\030\002 \003(\0132=" +
-      ".google.ads.googleads.v12.services.Campa" +
-      "ignCriterionOperationB\003\340A\002\022\027\n\017partial_fa" +
-      "ilure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\022j\n\025re" +
-      "sponse_content_type\030\005 \001(\0162K.google.ads.g" +
-      "oogleads.v12.enums.ResponseContentTypeEn" +
-      "um.ResponseContentType\"\257\002\n\032CampaignCrite" +
-      "rionOperation\022/\n\013update_mask\030\004 \001(\0132\032.goo" +
-      "gle.protobuf.FieldMask\022G\n\006create\030\001 \001(\01325" +
-      ".google.ads.googleads.v12.resources.Camp" +
-      "aignCriterionH\000\022G\n\006update\030\002 \001(\01325.google" +
-      ".ads.googleads.v12.resources.CampaignCri" +
-      "terionH\000\022A\n\006remove\030\003 \001(\tB/\372A,\n*googleads" +
-      ".googleapis.com/CampaignCriterionH\000B\013\n\to" +
-      "peration\"\246\001\n\036MutateCampaignCriteriaRespo" +
-      "nse\0221\n\025partial_failure_error\030\003 \001(\0132\022.goo" +
-      "gle.rpc.Status\022Q\n\007results\030\002 \003(\0132@.google" +
-      ".ads.googleads.v12.services.MutateCampai" +
-      "gnCriterionResult\"\272\001\n\035MutateCampaignCrit" +
-      "erionResult\022F\n\rresource_name\030\001 \001(\tB/\372A,\n" +
-      "*googleads.googleapis.com/CampaignCriter" +
-      "ion\022Q\n\022campaign_criterion\030\002 \001(\01325.google" +
-      ".ads.googleads.v12.resources.CampaignCri" +
-      "terion2\335\002\n\030CampaignCriterionService\022\371\001\n\026" +
-      "MutateCampaignCriteria\022@.google.ads.goog" +
-      "leads.v12.services.MutateCampaignCriteri" +
-      "aRequest\032A.google.ads.googleads.v12.serv" +
-      "ices.MutateCampaignCriteriaResponse\"Z\202\323\344" +
-      "\223\002;\"6/v12/customers/{customer_id=*}/camp" +
-      "aignCriteria:mutate:\001*\332A\026customer_id,ope" +
-      "rations\032E\312A\030googleads.googleapis.com\322A\'h" +
-      "ttps://www.googleapis.com/auth/adwordsB\211" +
-      "\002\n%com.google.ads.googleads.v12.services" +
-      "B\035CampaignCriterionServiceProtoP\001ZIgoogl" +
-      "e.golang.org/genproto/googleapis/ads/goo" +
-      "gleads/v12/services;services\242\002\003GAA\252\002!Goo" +
-      "gle.Ads.GoogleAds.V12.Services\312\002!Google\\" +
-      "Ads\\GoogleAds\\V12\\Services\352\002%Google::Ads" +
-      "::GoogleAds::V12::Servicesb\006proto3"
+      "ld_mask.proto\032\027google/rpc/status.proto\"\257" +
+      "\002\n\035MutateCampaignCriteriaRequest\022\031\n\013cust" +
+      "omer_id\030\001 \001(\tB\004\342A\001\002\022W\n\noperations\030\002 \003(\0132" +
+      "=.google.ads.googleads.v12.services.Camp" +
+      "aignCriterionOperationB\004\342A\001\002\022\027\n\017partial_" +
+      "failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\022j\n\025" +
+      "response_content_type\030\005 \001(\0162K.google.ads" +
+      ".googleads.v12.enums.ResponseContentType" +
+      "Enum.ResponseContentType\"\257\002\n\032CampaignCri" +
+      "terionOperation\022/\n\013update_mask\030\004 \001(\0132\032.g" +
+      "oogle.protobuf.FieldMask\022G\n\006create\030\001 \001(\013" +
+      "25.google.ads.googleads.v12.resources.Ca" +
+      "mpaignCriterionH\000\022G\n\006update\030\002 \001(\01325.goog" +
+      "le.ads.googleads.v12.resources.CampaignC" +
+      "riterionH\000\022A\n\006remove\030\003 \001(\tB/\372A,\n*googlea" +
+      "ds.googleapis.com/CampaignCriterionH\000B\013\n" +
+      "\toperation\"\246\001\n\036MutateCampaignCriteriaRes" +
+      "ponse\0221\n\025partial_failure_error\030\003 \001(\0132\022.g" +
+      "oogle.rpc.Status\022Q\n\007results\030\002 \003(\0132@.goog" +
+      "le.ads.googleads.v12.services.MutateCamp" +
+      "aignCriterionResult\"\272\001\n\035MutateCampaignCr" +
+      "iterionResult\022F\n\rresource_name\030\001 \001(\tB/\372A" +
+      ",\n*googleads.googleapis.com/CampaignCrit" +
+      "erion\022Q\n\022campaign_criterion\030\002 \001(\01325.goog" +
+      "le.ads.googleads.v12.resources.CampaignC" +
+      "riterion2\335\002\n\030CampaignCriterionService\022\371\001" +
+      "\n\026MutateCampaignCriteria\022@.google.ads.go" +
+      "ogleads.v12.services.MutateCampaignCrite" +
+      "riaRequest\032A.google.ads.googleads.v12.se" +
+      "rvices.MutateCampaignCriteriaResponse\"Z\332" +
+      "A\026customer_id,operations\202\323\344\223\002;\"6/v12/cus" +
+      "tomers/{customer_id=*}/campaignCriteria:" +
+      "mutate:\001*\032E\312A\030googleads.googleapis.com\322A" +
+      "\'https://www.googleapis.com/auth/adwords" +
+      "B\211\002\n%com.google.ads.googleads.v12.servic" +
+      "esB\035CampaignCriterionServiceProtoP\001ZIgoo" +
+      "gle.golang.org/genproto/googleapis/ads/g" +
+      "oogleads/v12/services;services\242\002\003GAA\252\002!G" +
+      "oogle.Ads.GoogleAds.V12.Services\312\002!Googl" +
+      "e\\Ads\\GoogleAds\\V12\\Services\352\002%Google::A" +
+      "ds::GoogleAds::V12::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

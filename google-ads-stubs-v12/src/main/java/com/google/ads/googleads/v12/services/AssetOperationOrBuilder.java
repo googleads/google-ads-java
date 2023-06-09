@@ -65,6 +65,7 @@ public interface AssetOperationOrBuilder extends
    * <pre>
    * Update operation: The asset is expected to have a valid resource name in
    * this format:
+   *
    * `customers/{customer_id}/assets/{asset_id}`
    * </pre>
    *
@@ -76,6 +77,7 @@ public interface AssetOperationOrBuilder extends
    * <pre>
    * Update operation: The asset is expected to have a valid resource name in
    * this format:
+   *
    * `customers/{customer_id}/assets/{asset_id}`
    * </pre>
    *
@@ -87,6 +89,7 @@ public interface AssetOperationOrBuilder extends
    * <pre>
    * Update operation: The asset is expected to have a valid resource name in
    * this format:
+   *
    * `customers/{customer_id}/assets/{asset_id}`
    * </pre>
    *
@@ -94,5 +97,5 @@ public interface AssetOperationOrBuilder extends
    */
   com.google.ads.googleads.v12.resources.AssetOrBuilder getUpdateOrBuilder();
 
-  public com.google.ads.googleads.v12.services.AssetOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v12.services.AssetOperation.OperationCase getOperationCase();
 }

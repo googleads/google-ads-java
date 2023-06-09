@@ -5,7 +5,7 @@ package com.google.ads.googleads.v12.enums;
 
 /**
  * <pre>
- * Container for enum describing audience insights dimensions.
+ * Container for enum describing insights dimensions.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum}
@@ -29,11 +29,6 @@ private static final long serialVersionUID = 0L;
     return new AudienceInsightsDimensionEnum();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.enums.AudienceInsightsDimensionProto.internal_static_google_ads_googleads_v12_enums_AudienceInsightsDimensionEnum_descriptor;
@@ -49,7 +44,7 @@ private static final long serialVersionUID = 0L;
 
   /**
    * <pre>
-   * Possible audience dimensions for use in generating insights.
+   * Possible dimensions for use in generating insights.
    * </pre>
    *
    * Protobuf enum {@code google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum.AudienceInsightsDimension}
@@ -477,11 +472,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -525,7 +522,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Container for enum describing audience insights dimensions.
+   * Container for enum describing insights dimensions.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v12.enums.AudienceInsightsDimensionEnum}

@@ -21,7 +21,17 @@ rootProject.name = 'google-ads-parent'
 
 include ':google-ads-codegen'
 include ':google-ads'
-include ':google-ads-shadowjar'
+if (startParameter.projectProperties.containsKey("fastbuild")) {
+  // Makes absolutely sure that we do not try to enable fastbuild when doing a release.
+  if (startParameter.projectProperties.containsKey("release")) {
+    throw new IllegalArgumentException(
+      'Properties "fastbuild" and "release" are both set. These properties are incompatible.')
+  }
+  // Skips the inclusion of the shadowjar project if fastbuild is enabled.
+  logger.warn('Excluding :google-ads-shadowjar because "fastbuild" property is set')
+} else {
+  include ':google-ads-shadowjar'
+}
 include ':google-ads-stubs-lib'
 
 // Enables the examples project only if we're not deploying to Sonatype.
@@ -33,3 +43,4 @@ if (!startParameter.projectProperties.containsKey("release")) {
 // append new modules here as required. There should *not* be a newline at EOF.
 include ':google-ads-stubs-v12'
 include ':google-ads-stubs-v13'
+include ':google-ads-stubs-v14'

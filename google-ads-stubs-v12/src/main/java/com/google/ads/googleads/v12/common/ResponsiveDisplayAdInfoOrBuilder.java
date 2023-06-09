@@ -183,7 +183,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * <pre>
    * Square logo images to be used in the ad. Valid image types are GIF,
    * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-   * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
+   * be 1:1 (+-1%). Combined with `logo_images`, the maximum is 5.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.AdImageAsset square_logo_images = 4;</code>
@@ -194,7 +194,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * <pre>
    * Square logo images to be used in the ad. Valid image types are GIF,
    * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-   * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
+   * be 1:1 (+-1%). Combined with `logo_images`, the maximum is 5.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.AdImageAsset square_logo_images = 4;</code>
@@ -204,7 +204,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * <pre>
    * Square logo images to be used in the ad. Valid image types are GIF,
    * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-   * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
+   * be 1:1 (+-1%). Combined with `logo_images`, the maximum is 5.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.AdImageAsset square_logo_images = 4;</code>
@@ -214,7 +214,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * <pre>
    * Square logo images to be used in the ad. Valid image types are GIF,
    * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-   * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
+   * be 1:1 (+-1%). Combined with `logo_images`, the maximum is 5.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.AdImageAsset square_logo_images = 4;</code>
@@ -225,7 +225,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * <pre>
    * Square logo images to be used in the ad. Valid image types are GIF,
    * JPEG, and PNG. The minimum size is 128x128 and the aspect ratio must
-   * be 1:1 (+-1%). Combined with `square_logo_images`, the maximum is 5.
+   * be 1:1 (+-1%). Combined with `logo_images`, the maximum is 5.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.AdImageAsset square_logo_images = 4;</code>

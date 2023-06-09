@@ -10,6 +10,7 @@ public interface PlacementInfoOrBuilder extends
   /**
    * <pre>
    * URL of the placement.
+   *
    * For example, "http://www.domain.com".
    * </pre>
    *
@@ -20,6 +21,7 @@ public interface PlacementInfoOrBuilder extends
   /**
    * <pre>
    * URL of the placement.
+   *
    * For example, "http://www.domain.com".
    * </pre>
    *
@@ -30,6 +32,7 @@ public interface PlacementInfoOrBuilder extends
   /**
    * <pre>
    * URL of the placement.
+   *
    * For example, "http://www.domain.com".
    * </pre>
    *

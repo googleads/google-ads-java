@@ -31,11 +31,6 @@ private static final long serialVersionUID = 0L;
     return new SmartCampaignEligibleDetails();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.services.SmartCampaignSettingServiceProto.internal_static_google_ads_googleads_v13_services_SmartCampaignEligibleDetails_descriptor;
@@ -55,7 +50,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object lastImpressionDateTime_ = "";
   /**
    * <pre>
-   * The timestamp of the last impression observed in the last 8 hours for this
+   * The timestamp of the last impression observed in the last 48 hours for this
    * campaign.
    * The timestamp is in the customer’s timezone and in
    * “yyyy-MM-dd HH:mm:ss” format.
@@ -70,7 +65,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The timestamp of the last impression observed in the last 8 hours for this
+   * The timestamp of the last impression observed in the last 48 hours for this
    * campaign.
    * The timestamp is in the customer’s timezone and in
    * “yyyy-MM-dd HH:mm:ss” format.
@@ -94,7 +89,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The timestamp of the last impression observed in the last 8 hours for this
+   * The timestamp of the last impression observed in the last 48 hours for this
    * campaign.
    * The timestamp is in the customer’s timezone and in
    * “yyyy-MM-dd HH:mm:ss” format.
@@ -311,11 +306,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.services.SmartCampaignEligibleDetails parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.services.SmartCampaignEligibleDetails parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -552,7 +549,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object lastImpressionDateTime_ = "";
     /**
      * <pre>
-     * The timestamp of the last impression observed in the last 8 hours for this
+     * The timestamp of the last impression observed in the last 48 hours for this
      * campaign.
      * The timestamp is in the customer’s timezone and in
      * “yyyy-MM-dd HH:mm:ss” format.
@@ -566,7 +563,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The timestamp of the last impression observed in the last 8 hours for this
+     * The timestamp of the last impression observed in the last 48 hours for this
      * campaign.
      * The timestamp is in the customer’s timezone and in
      * “yyyy-MM-dd HH:mm:ss” format.
@@ -589,7 +586,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The timestamp of the last impression observed in the last 8 hours for this
+     * The timestamp of the last impression observed in the last 48 hours for this
      * campaign.
      * The timestamp is in the customer’s timezone and in
      * “yyyy-MM-dd HH:mm:ss” format.
@@ -613,7 +610,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The timestamp of the last impression observed in the last 8 hours for this
+     * The timestamp of the last impression observed in the last 48 hours for this
      * campaign.
      * The timestamp is in the customer’s timezone and in
      * “yyyy-MM-dd HH:mm:ss” format.
@@ -633,7 +630,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The timestamp of the last impression observed in the last 8 hours for this
+     * The timestamp of the last impression observed in the last 48 hours for this
      * campaign.
      * The timestamp is in the customer’s timezone and in
      * “yyyy-MM-dd HH:mm:ss” format.
@@ -650,7 +647,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The timestamp of the last impression observed in the last 8 hours for this
+     * The timestamp of the last impression observed in the last 48 hours for this
      * campaign.
      * The timestamp is in the customer’s timezone and in
      * “yyyy-MM-dd HH:mm:ss” format.

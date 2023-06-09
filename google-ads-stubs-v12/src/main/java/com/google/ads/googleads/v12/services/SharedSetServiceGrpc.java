@@ -98,7 +98,7 @@ public final class SharedSetServiceGrpc {
    * Service to manage shared sets.
    * </pre>
    */
-  public static abstract class SharedSetServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -129,30 +129,34 @@ public final class SharedSetServiceGrpc {
      *   [StringLengthError]()
      * </pre>
      */
-    public void mutateSharedSets(com.google.ads.googleads.v12.services.MutateSharedSetsRequest request,
+    default void mutateSharedSets(com.google.ads.googleads.v12.services.MutateSharedSetsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.MutateSharedSetsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateSharedSetsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateSharedSetsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.MutateSharedSetsRequest,
-                com.google.ads.googleads.v12.services.MutateSharedSetsResponse>(
-                  this, METHODID_MUTATE_SHARED_SETS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service SharedSetService.
    * <pre>
    * Service to manage shared sets.
    * </pre>
    */
-  public static final class SharedSetServiceStub extends io.grpc.stub.AbstractAsyncStub<SharedSetServiceStub> {
+  public static abstract class SharedSetServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return SharedSetServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service SharedSetService.
+   * <pre>
+   * Service to manage shared sets.
+   * </pre>
+   */
+  public static final class SharedSetServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<SharedSetServiceStub> {
     private SharedSetServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -201,11 +205,13 @@ public final class SharedSetServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service SharedSetService.
    * <pre>
    * Service to manage shared sets.
    * </pre>
    */
-  public static final class SharedSetServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<SharedSetServiceBlockingStub> {
+  public static final class SharedSetServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<SharedSetServiceBlockingStub> {
     private SharedSetServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -253,11 +259,13 @@ public final class SharedSetServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service SharedSetService.
    * <pre>
    * Service to manage shared sets.
    * </pre>
    */
-  public static final class SharedSetServiceFutureStub extends io.grpc.stub.AbstractFutureStub<SharedSetServiceFutureStub> {
+  public static final class SharedSetServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<SharedSetServiceFutureStub> {
     private SharedSetServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -312,10 +320,10 @@ public final class SharedSetServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final SharedSetServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(SharedSetServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -342,6 +350,18 @@ public final class SharedSetServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateSharedSetsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.MutateSharedSetsRequest,
+              com.google.ads.googleads.v12.services.MutateSharedSetsResponse>(
+                service, METHODID_MUTATE_SHARED_SETS)))
+        .build();
   }
 
   private static abstract class SharedSetServiceBaseDescriptorSupplier

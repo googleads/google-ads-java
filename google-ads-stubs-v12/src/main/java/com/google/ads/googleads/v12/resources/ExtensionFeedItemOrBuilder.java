@@ -11,6 +11,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * <pre>
    * Immutable. The resource name of the extension feed item.
    * Extension feed item resource names have the form:
+   *
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * <pre>
    * Immutable. The resource name of the extension feed item.
    * Extension feed item resource names have the form:
+   *
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
@@ -299,7 +301,7 @@ public interface ExtensionFeedItemOrBuilder extends
 
   /**
    * <pre>
-   * Sitelink extension.
+   * Sitelink.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.SitelinkFeedItem sitelink_feed_item = 2;</code>
@@ -308,7 +310,7 @@ public interface ExtensionFeedItemOrBuilder extends
   boolean hasSitelinkFeedItem();
   /**
    * <pre>
-   * Sitelink extension.
+   * Sitelink.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.SitelinkFeedItem sitelink_feed_item = 2;</code>
@@ -317,7 +319,7 @@ public interface ExtensionFeedItemOrBuilder extends
   com.google.ads.googleads.v12.common.SitelinkFeedItem getSitelinkFeedItem();
   /**
    * <pre>
-   * Sitelink extension.
+   * Sitelink.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.SitelinkFeedItem sitelink_feed_item = 2;</code>
@@ -685,7 +687,7 @@ public interface ExtensionFeedItemOrBuilder extends
   com.google.protobuf.ByteString
       getTargetedAdGroupBytes();
 
-  public com.google.ads.googleads.v12.resources.ExtensionFeedItem.ExtensionCase getExtensionCase();
+  com.google.ads.googleads.v12.resources.ExtensionFeedItem.ExtensionCase getExtensionCase();
 
-  public com.google.ads.googleads.v12.resources.ExtensionFeedItem.ServingResourceTargetingCase getServingResourceTargetingCase();
+  com.google.ads.googleads.v12.resources.ExtensionFeedItem.ServingResourceTargetingCase getServingResourceTargetingCase();
 }

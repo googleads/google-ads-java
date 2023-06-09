@@ -11,6 +11,7 @@ public interface DisplayKeywordViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the display keyword view.
    * Display Keyword view resource names have the form:
+   *
    * `customers/{customer_id}/displayKeywordViews/{ad_group_id}~{criterion_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface DisplayKeywordViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the display keyword view.
    * Display Keyword view resource names have the form:
+   *
    * `customers/{customer_id}/displayKeywordViews/{ad_group_id}~{criterion_id}`
    * </pre>
    *

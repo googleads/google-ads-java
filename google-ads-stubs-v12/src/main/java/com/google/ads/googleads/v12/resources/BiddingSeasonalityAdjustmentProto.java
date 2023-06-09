@@ -38,35 +38,36 @@ public final class BiddingSeasonalityAdjustmentProto {
       "=google/ads/googleads/v12/enums/seasonal" +
       "ity_event_status.proto\032\037google/api/field" +
       "_behavior.proto\032\031google/api/resource.pro" +
-      "to\"\344\006\n\034BiddingSeasonalityAdjustment\022T\n\rr" +
-      "esource_name\030\001 \001(\tB=\340A\005\372A7\n5googleads.go" +
-      "ogleapis.com/BiddingSeasonalityAdjustmen" +
-      "t\022&\n\031seasonality_adjustment_id\030\002 \001(\003B\003\340A" +
-      "\003\022^\n\005scope\030\003 \001(\0162O.google.ads.googleads." +
-      "v12.enums.SeasonalityEventScopeEnum.Seas" +
-      "onalityEventScope\022f\n\006status\030\004 \001(\0162Q.goog" +
-      "le.ads.googleads.v12.enums.SeasonalityEv" +
-      "entStatusEnum.SeasonalityEventStatusB\003\340A" +
-      "\003\022\034\n\017start_date_time\030\005 \001(\tB\003\340A\002\022\032\n\rend_d" +
-      "ate_time\030\006 \001(\tB\003\340A\002\022\014\n\004name\030\007 \001(\t\022\023\n\013des" +
-      "cription\030\010 \001(\t\022B\n\007devices\030\t \003(\01621.google" +
-      ".ads.googleads.v12.enums.DeviceEnum.Devi" +
-      "ce\022 \n\030conversion_rate_modifier\030\n \001(\001\0229\n\t" +
-      "campaigns\030\013 \003(\tB&\372A#\n!googleads.googleap" +
-      "is.com/Campaign\022t\n\031advertising_channel_t" +
-      "ypes\030\014 \003(\0162Q.google.ads.googleads.v12.en" +
-      "ums.AdvertisingChannelTypeEnum.Advertisi" +
-      "ngChannelType:\211\001\352A\205\001\n5googleads.googleap" +
-      "is.com/BiddingSeasonalityAdjustment\022Lcus" +
-      "tomers/{customer_id}/biddingSeasonalityA" +
-      "djustments/{seasonality_event_id}B\223\002\n&co" +
-      "m.google.ads.googleads.v12.resourcesB!Bi" +
-      "ddingSeasonalityAdjustmentProtoP\001ZKgoogl" +
-      "e.golang.org/genproto/googleapis/ads/goo" +
-      "gleads/v12/resources;resources\242\002\003GAA\252\002\"G" +
-      "oogle.Ads.GoogleAds.V12.Resources\312\002\"Goog" +
-      "le\\Ads\\GoogleAds\\V12\\Resources\352\002&Google:" +
-      ":Ads::GoogleAds::V12::Resourcesb\006proto3"
+      "to\"\351\006\n\034BiddingSeasonalityAdjustment\022U\n\rr" +
+      "esource_name\030\001 \001(\tB>\342A\001\005\372A7\n5googleads.g" +
+      "oogleapis.com/BiddingSeasonalityAdjustme" +
+      "nt\022\'\n\031seasonality_adjustment_id\030\002 \001(\003B\004\342" +
+      "A\001\003\022^\n\005scope\030\003 \001(\0162O.google.ads.googlead" +
+      "s.v12.enums.SeasonalityEventScopeEnum.Se" +
+      "asonalityEventScope\022g\n\006status\030\004 \001(\0162Q.go" +
+      "ogle.ads.googleads.v12.enums.Seasonality" +
+      "EventStatusEnum.SeasonalityEventStatusB\004" +
+      "\342A\001\003\022\035\n\017start_date_time\030\005 \001(\tB\004\342A\001\002\022\033\n\re" +
+      "nd_date_time\030\006 \001(\tB\004\342A\001\002\022\014\n\004name\030\007 \001(\t\022\023" +
+      "\n\013description\030\010 \001(\t\022B\n\007devices\030\t \003(\01621.g" +
+      "oogle.ads.googleads.v12.enums.DeviceEnum" +
+      ".Device\022 \n\030conversion_rate_modifier\030\n \001(" +
+      "\001\0229\n\tcampaigns\030\013 \003(\tB&\372A#\n!googleads.goo" +
+      "gleapis.com/Campaign\022t\n\031advertising_chan" +
+      "nel_types\030\014 \003(\0162Q.google.ads.googleads.v" +
+      "12.enums.AdvertisingChannelTypeEnum.Adve" +
+      "rtisingChannelType:\211\001\352A\205\001\n5googleads.goo" +
+      "gleapis.com/BiddingSeasonalityAdjustment" +
+      "\022Lcustomers/{customer_id}/biddingSeasona" +
+      "lityAdjustments/{seasonality_event_id}B\223" +
+      "\002\n&com.google.ads.googleads.v12.resource" +
+      "sB!BiddingSeasonalityAdjustmentProtoP\001ZK" +
+      "google.golang.org/genproto/googleapis/ad" +
+      "s/googleads/v12/resources;resources\242\002\003GA" +
+      "A\252\002\"Google.Ads.GoogleAds.V12.Resources\312\002" +
+      "\"Google\\Ads\\GoogleAds\\V12\\Resources\352\002&Go" +
+      "ogle::Ads::GoogleAds::V12::Resourcesb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

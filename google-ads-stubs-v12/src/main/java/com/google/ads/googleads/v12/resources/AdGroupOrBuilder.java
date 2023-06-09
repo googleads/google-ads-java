@@ -11,6 +11,7 @@ public interface AdGroupOrBuilder extends
    * <pre>
    * Immutable. The resource name of the ad group.
    * Ad group resource names have the form:
+   *
    * `customers/{customer_id}/adGroups/{ad_group_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface AdGroupOrBuilder extends
    * <pre>
    * Immutable. The resource name of the ad group.
    * Ad group resource names have the form:
+   *
    * `customers/{customer_id}/adGroups/{ad_group_id}`
    * </pre>
    *
@@ -53,9 +55,12 @@ public interface AdGroupOrBuilder extends
   /**
    * <pre>
    * The name of the ad group.
+   *
    * This field is required and should not be empty when creating new ad
    * groups.
+   *
    * It must contain fewer than 255 UTF-8 full-width characters.
+   *
    * It must not contain any null (code point 0x0), NL line feed
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
@@ -67,9 +72,12 @@ public interface AdGroupOrBuilder extends
   /**
    * <pre>
    * The name of the ad group.
+   *
    * This field is required and should not be empty when creating new ad
    * groups.
+   *
    * It must contain fewer than 255 UTF-8 full-width characters.
+   *
    * It must not contain any null (code point 0x0), NL line feed
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
@@ -81,9 +89,12 @@ public interface AdGroupOrBuilder extends
   /**
    * <pre>
    * The name of the ad group.
+   *
    * This field is required and should not be empty when creating new ad
    * groups.
+   *
    * It must contain fewer than 255 UTF-8 full-width characters.
+   *
    * It must not contain any null (code point 0x0), NL line feed
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
@@ -157,7 +168,9 @@ public interface AdGroupOrBuilder extends
    * name of the base ad group from which this ad group was created. If a draft
    * or experiment ad group does not have a base ad group, then this field is
    * null.
+   *
    * For base ad groups, this field equals the ad group resource name.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -171,7 +184,9 @@ public interface AdGroupOrBuilder extends
    * name of the base ad group from which this ad group was created. If a draft
    * or experiment ad group does not have a base ad group, then this field is
    * null.
+   *
    * For base ad groups, this field equals the ad group resource name.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -185,7 +200,9 @@ public interface AdGroupOrBuilder extends
    * name of the base ad group from which this ad group was created. If a draft
    * or experiment ad group does not have a base ad group, then this field is
    * null.
+   *
    * For base ad groups, this field equals the ad group resource name.
+   *
    * This field is read-only.
    * </pre>
    *

@@ -2032,5 +2032,5 @@ public interface MutateOperationResponseOrBuilder extends
    */
   com.google.ads.googleads.v13.services.MutateUserListResultOrBuilder getUserListResultOrBuilder();
 
-  public com.google.ads.googleads.v13.services.MutateOperationResponse.ResponseCase getResponseCase();
+  com.google.ads.googleads.v13.services.MutateOperationResponse.ResponseCase getResponseCase();
 }

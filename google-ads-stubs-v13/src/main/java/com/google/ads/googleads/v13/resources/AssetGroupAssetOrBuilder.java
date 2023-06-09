@@ -11,6 +11,7 @@ public interface AssetGroupAssetOrBuilder extends
    * <pre>
    * Immutable. The resource name of the asset group asset.
    * Asset group asset resource name have the form:
+   *
    * `customers/{customer_id}/assetGroupAssets/{asset_group_id}~{asset_id}~{field_type}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface AssetGroupAssetOrBuilder extends
    * <pre>
    * Immutable. The resource name of the asset group asset.
    * Asset group asset resource name have the form:
+   *
    * `customers/{customer_id}/assetGroupAssets/{asset_group_id}~{asset_id}~{field_type}`
    * </pre>
    *

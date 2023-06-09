@@ -11,6 +11,7 @@ public interface HotelPerformanceViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the hotel performance view.
    * Hotel performance view resource names have the form:
+   *
    * `customers/{customer_id}/hotelPerformanceView`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface HotelPerformanceViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the hotel performance view.
    * Hotel performance view resource names have the form:
+   *
    * `customers/{customer_id}/hotelPerformanceView`
    * </pre>
    *

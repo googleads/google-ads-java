@@ -35,30 +35,30 @@ public final class AdGroupCriterionCustomizerProto {
       "roto\032<google/ads/googleads/v13/enums/cus" +
       "tomizer_value_status.proto\032\037google/api/f" +
       "ield_behavior.proto\032\031google/api/resource" +
-      ".proto\"\206\005\n\032AdGroupCriterionCustomizer\022R\n" +
-      "\rresource_name\030\001 \001(\tB;\340A\005\372A5\n3googleads." +
-      "googleapis.com/AdGroupCriterionCustomize" +
-      "r\022R\n\022ad_group_criterion\030\002 \001(\tB1\340A\005\372A+\n)g" +
-      "oogleads.googleapis.com/AdGroupCriterion" +
-      "H\000\210\001\001\022U\n\024customizer_attribute\030\003 \001(\tB7\340A\002" +
-      "\340A\005\372A.\n,googleads.googleapis.com/Customi" +
-      "zerAttribute\022d\n\006status\030\004 \001(\0162O.google.ad" +
-      "s.googleads.v13.enums.CustomizerValueSta" +
-      "tusEnum.CustomizerValueStatusB\003\340A\003\022D\n\005va" +
-      "lue\030\005 \001(\01320.google.ads.googleads.v13.com" +
-      "mon.CustomizerValueB\003\340A\002:\245\001\352A\241\001\n3googlea" +
-      "ds.googleapis.com/AdGroupCriterionCustom" +
-      "izer\022jcustomers/{customer_id}/adGroupCri" +
-      "terionCustomizers/{ad_group_id}~{criteri" +
-      "on_id}~{customizer_attribute_id}B\025\n\023_ad_" +
-      "group_criterionB\221\002\n&com.google.ads.googl" +
-      "eads.v13.resourcesB\037AdGroupCriterionCust" +
-      "omizerProtoP\001ZKgoogle.golang.org/genprot" +
-      "o/googleapis/ads/googleads/v13/resources" +
-      ";resources\242\002\003GAA\252\002\"Google.Ads.GoogleAds." +
-      "V13.Resources\312\002\"Google\\Ads\\GoogleAds\\V13" +
-      "\\Resources\352\002&Google::Ads::GoogleAds::V13" +
-      "::Resourcesb\006proto3"
+      ".proto\"\211\005\n\032AdGroupCriterionCustomizer\022S\n" +
+      "\rresource_name\030\001 \001(\tB<\342A\001\005\372A5\n3googleads" +
+      ".googleapis.com/AdGroupCriterionCustomiz" +
+      "er\022S\n\022ad_group_criterion\030\002 \001(\tB2\342A\001\005\372A+\n" +
+      ")googleads.googleapis.com/AdGroupCriteri" +
+      "onH\000\210\001\001\022T\n\024customizer_attribute\030\003 \001(\tB6\342" +
+      "A\002\002\005\372A.\n,googleads.googleapis.com/Custom" +
+      "izerAttribute\022e\n\006status\030\004 \001(\0162O.google.a" +
+      "ds.googleads.v13.enums.CustomizerValueSt" +
+      "atusEnum.CustomizerValueStatusB\004\342A\001\003\022E\n\005" +
+      "value\030\005 \001(\01320.google.ads.googleads.v13.c" +
+      "ommon.CustomizerValueB\004\342A\001\002:\245\001\352A\241\001\n3goog" +
+      "leads.googleapis.com/AdGroupCriterionCus" +
+      "tomizer\022jcustomers/{customer_id}/adGroup" +
+      "CriterionCustomizers/{ad_group_id}~{crit" +
+      "erion_id}~{customizer_attribute_id}B\025\n\023_" +
+      "ad_group_criterionB\221\002\n&com.google.ads.go" +
+      "ogleads.v13.resourcesB\037AdGroupCriterionC" +
+      "ustomizerProtoP\001ZKgoogle.golang.org/genp" +
+      "roto/googleapis/ads/googleads/v13/resour" +
+      "ces;resources\242\002\003GAA\252\002\"Google.Ads.GoogleA" +
+      "ds.V13.Resources\312\002\"Google\\Ads\\GoogleAds\\" +
+      "V13\\Resources\352\002&Google::Ads::GoogleAds::" +
+      "V13::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

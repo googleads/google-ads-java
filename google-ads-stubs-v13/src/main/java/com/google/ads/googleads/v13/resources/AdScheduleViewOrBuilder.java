@@ -11,6 +11,7 @@ public interface AdScheduleViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the ad schedule view.
    * AdSchedule view resource names have the form:
+   *
    * `customers/{customer_id}/adScheduleViews/{campaign_id}~{criterion_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface AdScheduleViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the ad schedule view.
    * AdSchedule view resource names have the form:
+   *
    * `customers/{customer_id}/adScheduleViews/{campaign_id}~{criterion_id}`
    * </pre>
    *

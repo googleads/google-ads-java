@@ -11,6 +11,7 @@ public interface AdGroupCriterionSimulationOrBuilder extends
    * <pre>
    * Output only. The resource name of the ad group criterion simulation.
    * Ad group criterion simulation resource names have the form:
+   *
    * `customers/{customer_id}/adGroupCriterionSimulations/{ad_group_id}~{criterion_id}~{type}~{modification_method}~{start_date}~{end_date}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface AdGroupCriterionSimulationOrBuilder extends
    * <pre>
    * Output only. The resource name of the ad group criterion simulation.
    * Ad group criterion simulation resource names have the form:
+   *
    * `customers/{customer_id}/adGroupCriterionSimulations/{ad_group_id}~{criterion_id}~{type}~{modification_method}~{start_date}~{end_date}`
    * </pre>
    *
@@ -225,5 +227,5 @@ public interface AdGroupCriterionSimulationOrBuilder extends
    */
   com.google.ads.googleads.v13.common.PercentCpcBidSimulationPointListOrBuilder getPercentCpcBidPointListOrBuilder();
 
-  public com.google.ads.googleads.v13.resources.AdGroupCriterionSimulation.PointListCase getPointListCase();
+  com.google.ads.googleads.v13.resources.AdGroupCriterionSimulation.PointListCase getPointListCase();
 }

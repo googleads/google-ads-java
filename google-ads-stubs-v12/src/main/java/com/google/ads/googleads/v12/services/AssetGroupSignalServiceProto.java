@@ -52,43 +52,43 @@ public final class AssetGroupSignalServiceProto {
       "otations.proto\032\027google/api/client.proto\032" +
       "\037google/api/field_behavior.proto\032\031google" +
       "/api/resource.proto\032\027google/rpc/status.p" +
-      "roto\"\255\002\n\036MutateAssetGroupSignalsRequest\022" +
-      "\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022U\n\noperations\030" +
-      "\002 \003(\0132<.google.ads.googleads.v12.service" +
-      "s.AssetGroupSignalOperationB\003\340A\002\022\027\n\017part" +
-      "ial_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010" +
-      "\022j\n\025response_content_type\030\005 \001(\0162K.google" +
-      ".ads.googleads.v12.enums.ResponseContent" +
-      "TypeEnum.ResponseContentType\"\262\001\n\031AssetGr" +
-      "oupSignalOperation\022F\n\006create\030\001 \001(\01324.goo" +
-      "gle.ads.googleads.v12.resources.AssetGro" +
-      "upSignalH\000\022@\n\006remove\030\002 \001(\tB.\372A+\n)googlea" +
-      "ds.googleapis.com/AssetGroupSignalH\000B\013\n\t" +
-      "operation\"\246\001\n\037MutateAssetGroupSignalsRes" +
-      "ponse\022P\n\007results\030\001 \003(\0132?.google.ads.goog" +
+      "roto\"\257\002\n\036MutateAssetGroupSignalsRequest\022" +
+      "\031\n\013customer_id\030\001 \001(\tB\004\342A\001\002\022V\n\noperations" +
+      "\030\002 \003(\0132<.google.ads.googleads.v12.servic" +
+      "es.AssetGroupSignalOperationB\004\342A\001\002\022\027\n\017pa" +
+      "rtial_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001" +
+      "(\010\022j\n\025response_content_type\030\005 \001(\0162K.goog" +
+      "le.ads.googleads.v12.enums.ResponseConte" +
+      "ntTypeEnum.ResponseContentType\"\262\001\n\031Asset" +
+      "GroupSignalOperation\022F\n\006create\030\001 \001(\01324.g" +
+      "oogle.ads.googleads.v12.resources.AssetG" +
+      "roupSignalH\000\022@\n\006remove\030\002 \001(\tB.\372A+\n)googl" +
+      "eads.googleapis.com/AssetGroupSignalH\000B\013" +
+      "\n\toperation\"\246\001\n\037MutateAssetGroupSignalsR" +
+      "esponse\022P\n\007results\030\001 \003(\0132?.google.ads.go" +
+      "ogleads.v12.services.MutateAssetGroupSig" +
+      "nalResult\0221\n\025partial_failure_error\030\002 \001(\013" +
+      "2\022.google.rpc.Status\"\267\001\n\034MutateAssetGrou" +
+      "pSignalResult\022E\n\rresource_name\030\001 \001(\tB.\372A" +
+      "+\n)googleads.googleapis.com/AssetGroupSi" +
+      "gnal\022P\n\022asset_group_signal\030\002 \001(\01324.googl" +
+      "e.ads.googleads.v12.resources.AssetGroup" +
+      "Signal2\340\002\n\027AssetGroupSignalService\022\375\001\n\027M" +
+      "utateAssetGroupSignals\022A.google.ads.goog" +
       "leads.v12.services.MutateAssetGroupSigna" +
-      "lResult\0221\n\025partial_failure_error\030\002 \001(\0132\022" +
-      ".google.rpc.Status\"\267\001\n\034MutateAssetGroupS" +
-      "ignalResult\022E\n\rresource_name\030\001 \001(\tB.\372A+\n" +
-      ")googleads.googleapis.com/AssetGroupSign" +
-      "al\022P\n\022asset_group_signal\030\002 \001(\01324.google." +
-      "ads.googleads.v12.resources.AssetGroupSi" +
-      "gnal2\340\002\n\027AssetGroupSignalService\022\375\001\n\027Mut" +
-      "ateAssetGroupSignals\022A.google.ads.google" +
-      "ads.v12.services.MutateAssetGroupSignals" +
-      "Request\032B.google.ads.googleads.v12.servi" +
-      "ces.MutateAssetGroupSignalsResponse\"[\202\323\344" +
-      "\223\002<\"7/v12/customers/{customer_id=*}/asse" +
-      "tGroupSignals:mutate:\001*\332A\026customer_id,op" +
-      "erations\032E\312A\030googleads.googleapis.com\322A\'" +
-      "https://www.googleapis.com/auth/adwordsB" +
-      "\210\002\n%com.google.ads.googleads.v12.service" +
-      "sB\034AssetGroupSignalServiceProtoP\001ZIgoogl" +
-      "e.golang.org/genproto/googleapis/ads/goo" +
-      "gleads/v12/services;services\242\002\003GAA\252\002!Goo" +
-      "gle.Ads.GoogleAds.V12.Services\312\002!Google\\" +
-      "Ads\\GoogleAds\\V12\\Services\352\002%Google::Ads" +
-      "::GoogleAds::V12::Servicesb\006proto3"
+      "lsRequest\032B.google.ads.googleads.v12.ser" +
+      "vices.MutateAssetGroupSignalsResponse\"[\332" +
+      "A\026customer_id,operations\202\323\344\223\002<\"7/v12/cus" +
+      "tomers/{customer_id=*}/assetGroupSignals" +
+      ":mutate:\001*\032E\312A\030googleads.googleapis.com\322" +
+      "A\'https://www.googleapis.com/auth/adword" +
+      "sB\210\002\n%com.google.ads.googleads.v12.servi" +
+      "cesB\034AssetGroupSignalServiceProtoP\001ZIgoo" +
+      "gle.golang.org/genproto/googleapis/ads/g" +
+      "oogleads/v12/services;services\242\002\003GAA\252\002!G" +
+      "oogle.Ads.GoogleAds.V12.Services\312\002!Googl" +
+      "e\\Ads\\GoogleAds\\V12\\Services\352\002%Google::A" +
+      "ds::GoogleAds::V12::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

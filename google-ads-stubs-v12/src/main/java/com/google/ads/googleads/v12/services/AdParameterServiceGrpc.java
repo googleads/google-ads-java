@@ -98,7 +98,7 @@ public final class AdParameterServiceGrpc {
    * Service to manage ad parameters.
    * </pre>
    */
-  public static abstract class AdParameterServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -119,30 +119,34 @@ public final class AdParameterServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void mutateAdParameters(com.google.ads.googleads.v12.services.MutateAdParametersRequest request,
+    default void mutateAdParameters(com.google.ads.googleads.v12.services.MutateAdParametersRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.MutateAdParametersResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateAdParametersMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateAdParametersMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.MutateAdParametersRequest,
-                com.google.ads.googleads.v12.services.MutateAdParametersResponse>(
-                  this, METHODID_MUTATE_AD_PARAMETERS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service AdParameterService.
    * <pre>
    * Service to manage ad parameters.
    * </pre>
    */
-  public static final class AdParameterServiceStub extends io.grpc.stub.AbstractAsyncStub<AdParameterServiceStub> {
+  public static abstract class AdParameterServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return AdParameterServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service AdParameterService.
+   * <pre>
+   * Service to manage ad parameters.
+   * </pre>
+   */
+  public static final class AdParameterServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<AdParameterServiceStub> {
     private AdParameterServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -181,11 +185,13 @@ public final class AdParameterServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service AdParameterService.
    * <pre>
    * Service to manage ad parameters.
    * </pre>
    */
-  public static final class AdParameterServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<AdParameterServiceBlockingStub> {
+  public static final class AdParameterServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<AdParameterServiceBlockingStub> {
     private AdParameterServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -223,11 +229,13 @@ public final class AdParameterServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service AdParameterService.
    * <pre>
    * Service to manage ad parameters.
    * </pre>
    */
-  public static final class AdParameterServiceFutureStub extends io.grpc.stub.AbstractFutureStub<AdParameterServiceFutureStub> {
+  public static final class AdParameterServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<AdParameterServiceFutureStub> {
     private AdParameterServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -272,10 +280,10 @@ public final class AdParameterServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AdParameterServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AdParameterServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -302,6 +310,18 @@ public final class AdParameterServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateAdParametersMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.MutateAdParametersRequest,
+              com.google.ads.googleads.v12.services.MutateAdParametersResponse>(
+                service, METHODID_MUTATE_AD_PARAMETERS)))
+        .build();
   }
 
   private static abstract class AdParameterServiceBaseDescriptorSupplier

@@ -11,6 +11,7 @@ public interface CampaignBidModifierOrBuilder extends
    * <pre>
    * Immutable. The resource name of the campaign bid modifier.
    * Campaign bid modifier resource names have the form:
+   *
    * `customers/{customer_id}/campaignBidModifiers/{campaign_id}~{criterion_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface CampaignBidModifierOrBuilder extends
    * <pre>
    * Immutable. The resource name of the campaign bid modifier.
    * Campaign bid modifier resource names have the form:
+   *
    * `customers/{customer_id}/campaignBidModifiers/{campaign_id}~{criterion_id}`
    * </pre>
    *
@@ -63,6 +65,7 @@ public interface CampaignBidModifierOrBuilder extends
   /**
    * <pre>
    * Output only. The ID of the criterion to bid modify.
+   *
    * This field is ignored for mutates.
    * </pre>
    *
@@ -73,6 +76,7 @@ public interface CampaignBidModifierOrBuilder extends
   /**
    * <pre>
    * Output only. The ID of the criterion to bid modify.
+   *
    * This field is ignored for mutates.
    * </pre>
    *
@@ -130,5 +134,5 @@ public interface CampaignBidModifierOrBuilder extends
    */
   com.google.ads.googleads.v12.common.InteractionTypeInfoOrBuilder getInteractionTypeOrBuilder();
 
-  public com.google.ads.googleads.v12.resources.CampaignBidModifier.CriterionCase getCriterionCase();
+  com.google.ads.googleads.v12.resources.CampaignBidModifier.CriterionCase getCriterionCase();
 }

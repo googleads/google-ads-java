@@ -33,22 +33,22 @@ public final class DistanceViewProto {
       "13.resources\0324google/ads/googleads/v13/e" +
       "nums/distance_bucket.proto\032\037google/api/f" +
       "ield_behavior.proto\032\031google/api/resource" +
-      ".proto\"\344\002\n\014DistanceView\022D\n\rresource_name" +
-      "\030\001 \001(\tB-\340A\003\372A\'\n%googleads.googleapis.com" +
-      "/DistanceView\022_\n\017distance_bucket\030\002 \001(\0162A" +
-      ".google.ads.googleads.v13.enums.Distance" +
-      "BucketEnum.DistanceBucketB\003\340A\003\022\037\n\rmetric" +
-      "_system\030\004 \001(\010B\003\340A\003H\000\210\001\001:z\352Aw\n%googleads." +
-      "googleapis.com/DistanceView\022Ncustomers/{" +
-      "customer_id}/distanceViews/{placeholder_" +
-      "chain_id}~{distance_bucket}B\020\n\016_metric_s" +
-      "ystemB\203\002\n&com.google.ads.googleads.v13.r" +
-      "esourcesB\021DistanceViewProtoP\001ZKgoogle.go" +
-      "lang.org/genproto/googleapis/ads/googlea" +
-      "ds/v13/resources;resources\242\002\003GAA\252\002\"Googl" +
-      "e.Ads.GoogleAds.V13.Resources\312\002\"Google\\A" +
-      "ds\\GoogleAds\\V13\\Resources\352\002&Google::Ads" +
-      "::GoogleAds::V13::Resourcesb\006proto3"
+      ".proto\"\347\002\n\014DistanceView\022E\n\rresource_name" +
+      "\030\001 \001(\tB.\342A\001\003\372A\'\n%googleads.googleapis.co" +
+      "m/DistanceView\022`\n\017distance_bucket\030\002 \001(\0162" +
+      "A.google.ads.googleads.v13.enums.Distanc" +
+      "eBucketEnum.DistanceBucketB\004\342A\001\003\022 \n\rmetr" +
+      "ic_system\030\004 \001(\010B\004\342A\001\003H\000\210\001\001:z\352Aw\n%googlea" +
+      "ds.googleapis.com/DistanceView\022Ncustomer" +
+      "s/{customer_id}/distanceViews/{placehold" +
+      "er_chain_id}~{distance_bucket}B\020\n\016_metri" +
+      "c_systemB\203\002\n&com.google.ads.googleads.v1" +
+      "3.resourcesB\021DistanceViewProtoP\001ZKgoogle" +
+      ".golang.org/genproto/googleapis/ads/goog" +
+      "leads/v13/resources;resources\242\002\003GAA\252\002\"Go" +
+      "ogle.Ads.GoogleAds.V13.Resources\312\002\"Googl" +
+      "e\\Ads\\GoogleAds\\V13\\Resources\352\002&Google::" +
+      "Ads::GoogleAds::V13::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -32,11 +32,6 @@ private static final long serialVersionUID = 0L;
     return new CampaignGroup();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.resources.CampaignGroupProto.internal_static_google_ads_googleads_v13_resources_CampaignGroup_descriptor;
@@ -57,6 +52,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the campaign group.
    * Campaign group resource names have the form:
+   *
    * `customers/{customer_id}/campaignGroups/{campaign_group_id}`
    * </pre>
    *
@@ -80,6 +76,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the campaign group.
    * Campaign group resource names have the form:
+   *
    * `customers/{customer_id}/campaignGroups/{campaign_group_id}`
    * </pre>
    *
@@ -122,8 +119,10 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The name of the campaign group.
+   *
    * This field is required and should not be empty when creating new campaign
    * groups.
+   *
    * It must not contain any null (code point 0x0), NL line feed
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
@@ -147,8 +146,10 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The name of the campaign group.
+   *
    * This field is required and should not be empty when creating new campaign
    * groups.
+   *
    * It must not contain any null (code point 0x0), NL line feed
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
@@ -176,6 +177,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The status of the campaign group.
+   *
    * When a new campaign group is added, the status defaults to ENABLED.
    * </pre>
    *
@@ -188,6 +190,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The status of the campaign group.
+   *
    * When a new campaign group is added, the status defaults to ENABLED.
    * </pre>
    *
@@ -339,11 +342,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.resources.CampaignGroup parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.resources.CampaignGroup parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -602,6 +607,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the campaign group.
      * Campaign group resource names have the form:
+     *
      * `customers/{customer_id}/campaignGroups/{campaign_group_id}`
      * </pre>
      *
@@ -624,6 +630,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the campaign group.
      * Campaign group resource names have the form:
+     *
      * `customers/{customer_id}/campaignGroups/{campaign_group_id}`
      * </pre>
      *
@@ -647,6 +654,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the campaign group.
      * Campaign group resource names have the form:
+     *
      * `customers/{customer_id}/campaignGroups/{campaign_group_id}`
      * </pre>
      *
@@ -666,6 +674,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the campaign group.
      * Campaign group resource names have the form:
+     *
      * `customers/{customer_id}/campaignGroups/{campaign_group_id}`
      * </pre>
      *
@@ -682,6 +691,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the campaign group.
      * Campaign group resource names have the form:
+     *
      * `customers/{customer_id}/campaignGroups/{campaign_group_id}`
      * </pre>
      *
@@ -722,7 +732,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      
+
       id_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -747,8 +757,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the campaign group.
+     *
      * This field is required and should not be empty when creating new campaign
      * groups.
+     *
      * It must not contain any null (code point 0x0), NL line feed
      * (code point 0xA) or carriage return (code point 0xD) characters.
      * </pre>
@@ -771,8 +783,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the campaign group.
+     *
      * This field is required and should not be empty when creating new campaign
      * groups.
+     *
      * It must not contain any null (code point 0x0), NL line feed
      * (code point 0xA) or carriage return (code point 0xD) characters.
      * </pre>
@@ -796,8 +810,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the campaign group.
+     *
      * This field is required and should not be empty when creating new campaign
      * groups.
+     *
      * It must not contain any null (code point 0x0), NL line feed
      * (code point 0xA) or carriage return (code point 0xD) characters.
      * </pre>
@@ -817,8 +833,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the campaign group.
+     *
      * This field is required and should not be empty when creating new campaign
      * groups.
+     *
      * It must not contain any null (code point 0x0), NL line feed
      * (code point 0xA) or carriage return (code point 0xD) characters.
      * </pre>
@@ -835,8 +853,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the campaign group.
+     *
      * This field is required and should not be empty when creating new campaign
      * groups.
+     *
      * It must not contain any null (code point 0x0), NL line feed
      * (code point 0xA) or carriage return (code point 0xD) characters.
      * </pre>
@@ -859,6 +879,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The status of the campaign group.
+     *
      * When a new campaign group is added, the status defaults to ENABLED.
      * </pre>
      *
@@ -871,6 +892,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The status of the campaign group.
+     *
      * When a new campaign group is added, the status defaults to ENABLED.
      * </pre>
      *
@@ -887,6 +909,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The status of the campaign group.
+     *
      * When a new campaign group is added, the status defaults to ENABLED.
      * </pre>
      *
@@ -901,6 +924,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The status of the campaign group.
+     *
      * When a new campaign group is added, the status defaults to ENABLED.
      * </pre>
      *
@@ -920,6 +944,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The status of the campaign group.
+     *
      * When a new campaign group is added, the status defaults to ENABLED.
      * </pre>
      *

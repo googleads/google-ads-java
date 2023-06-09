@@ -11,6 +11,7 @@ public interface CallViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the call view.
    * Call view resource names have the form:
+   *
    * `customers/{customer_id}/callViews/{call_detail_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface CallViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the call view.
    * Call view resource names have the form:
+   *
    * `customers/{customer_id}/callViews/{call_detail_id}`
    * </pre>
    *

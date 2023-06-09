@@ -11,6 +11,7 @@ public interface CombinedAudienceOrBuilder extends
    * <pre>
    * Immutable. The resource name of the combined audience.
    * Combined audience names have the form:
+   *
    * `customers/{customer_id}/combinedAudience/{combined_audience_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface CombinedAudienceOrBuilder extends
    * <pre>
    * Immutable. The resource name of the combined audience.
    * Combined audience names have the form:
+   *
    * `customers/{customer_id}/combinedAudience/{combined_audience_id}`
    * </pre>
    *

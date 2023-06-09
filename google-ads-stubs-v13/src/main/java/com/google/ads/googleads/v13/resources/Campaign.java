@@ -32,7 +32,8 @@ private static final long serialVersionUID = 0L;
     advertisingChannelSubType_ = 0;
     trackingUrlTemplate_ = "";
     urlCustomParameters_ = java.util.Collections.emptyList();
-    labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    labels_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     experimentType_ = 0;
     baseCampaign_ = "";
     campaignBudget_ = "";
@@ -58,11 +59,6 @@ private static final long serialVersionUID = 0L;
     return new Campaign();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.resources.CampaignProto.internal_static_google_ads_googleads_v13_resources_Campaign_descriptor;
@@ -172,11 +168,6 @@ private static final long serialVersionUID = 0L;
       return new PerformanceMaxUpgrade();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.resources.CampaignProto.internal_static_google_ads_googleads_v13_resources_Campaign_PerformanceMaxUpgrade_descriptor;
@@ -442,11 +433,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.resources.Campaign.PerformanceMaxUpgrade parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.resources.Campaign.PerformanceMaxUpgrade parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1130,11 +1123,6 @@ private static final long serialVersionUID = 0L;
       return new NetworkSettings();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.resources.CampaignProto.internal_static_google_ads_googleads_v13_resources_Campaign_NetworkSettings_descriptor;
@@ -1429,11 +1417,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.resources.Campaign.NetworkSettings parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.resources.Campaign.NetworkSettings parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1724,7 +1714,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setTargetGoogleSearch(boolean value) {
-        
+
         targetGoogleSearch_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -1783,7 +1773,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setTargetSearchNetwork(boolean value) {
-        
+
         targetSearchNetwork_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -1843,7 +1833,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setTargetContentNetwork(boolean value) {
-        
+
         targetContentNetwork_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
@@ -1903,7 +1893,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setTargetPartnerSearchNetwork(boolean value) {
-        
+
         targetPartnerSearchNetwork_ = value;
         bitField0_ |= 0x00000008;
         onChanged();
@@ -2037,11 +2027,6 @@ private static final long serialVersionUID = 0L;
       return new HotelSettingInfo();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.resources.CampaignProto.internal_static_google_ads_googleads_v13_resources_Campaign_HotelSettingInfo_descriptor;
@@ -2198,11 +2183,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.resources.Campaign.HotelSettingInfo parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.resources.Campaign.HotelSettingInfo parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2454,7 +2441,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setHotelCenterId(long value) {
-        
+
         hotelCenterId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -2665,7 +2652,8 @@ private static final long serialVersionUID = 0L;
     private DynamicSearchAdsSetting() {
       domainName_ = "";
       languageCode_ = "";
-      feeds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      feeds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
     @java.lang.Override
@@ -2675,11 +2663,6 @@ private static final long serialVersionUID = 0L;
       return new DynamicSearchAdsSetting();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.resources.CampaignProto.internal_static_google_ads_googleads_v13_resources_Campaign_DynamicSearchAdsSetting_descriptor;
@@ -2821,7 +2804,8 @@ private static final long serialVersionUID = 0L;
 
     public static final int FEEDS_FIELD_NUMBER = 9;
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringList feeds_;
+    private com.google.protobuf.LazyStringArrayList feeds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <pre>
      * The list of page feeds associated with the campaign.
@@ -3023,11 +3007,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.resources.Campaign.DynamicSearchAdsSetting parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.resources.Campaign.DynamicSearchAdsSetting parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3110,8 +3096,8 @@ private static final long serialVersionUID = 0L;
         domainName_ = "";
         languageCode_ = "";
         useSuppliedUrlsOnly_ = false;
-        feeds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        feeds_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         return this;
       }
 
@@ -3138,18 +3124,9 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v13.resources.Campaign.DynamicSearchAdsSetting buildPartial() {
         com.google.ads.googleads.v13.resources.Campaign.DynamicSearchAdsSetting result = new com.google.ads.googleads.v13.resources.Campaign.DynamicSearchAdsSetting(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
-      }
-
-      private void buildPartialRepeatedFields(com.google.ads.googleads.v13.resources.Campaign.DynamicSearchAdsSetting result) {
-        if (((bitField0_ & 0x00000008) != 0)) {
-          feeds_ = feeds_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000008);
-        }
-        result.feeds_ = feeds_;
       }
 
       private void buildPartial0(com.google.ads.googleads.v13.resources.Campaign.DynamicSearchAdsSetting result) {
@@ -3164,6 +3141,10 @@ private static final long serialVersionUID = 0L;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.useSuppliedUrlsOnly_ = useSuppliedUrlsOnly_;
           to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          feeds_.makeImmutable();
+          result.feeds_ = feeds_;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -3228,7 +3209,7 @@ private static final long serialVersionUID = 0L;
         if (!other.feeds_.isEmpty()) {
           if (feeds_.isEmpty()) {
             feeds_ = other.feeds_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ |= 0x00000008;
           } else {
             ensureFeedsIsMutable();
             feeds_.addAll(other.feeds_);
@@ -3528,7 +3509,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setUseSuppliedUrlsOnly(boolean value) {
-        
+
         useSuppliedUrlsOnly_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
@@ -3549,12 +3530,13 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
-      private com.google.protobuf.LazyStringList feeds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList feeds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureFeedsIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
+        if (!feeds_.isModifiable()) {
           feeds_ = new com.google.protobuf.LazyStringArrayList(feeds_);
-          bitField0_ |= 0x00000008;
-         }
+        }
+        bitField0_ |= 0x00000008;
       }
       /**
        * <pre>
@@ -3566,7 +3548,8 @@ private static final long serialVersionUID = 0L;
        */
       public com.google.protobuf.ProtocolStringList
           getFeedsList() {
-        return feeds_.getUnmodifiableView();
+        feeds_.makeImmutable();
+        return feeds_;
       }
       /**
        * <pre>
@@ -3619,6 +3602,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) { throw new NullPointerException(); }
         ensureFeedsIsMutable();
         feeds_.set(index, value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -3636,6 +3620,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) { throw new NullPointerException(); }
         ensureFeedsIsMutable();
         feeds_.add(value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -3653,6 +3638,7 @@ private static final long serialVersionUID = 0L;
         ensureFeedsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, feeds_);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -3665,8 +3651,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearFeeds() {
-        feeds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        feeds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);;
         onChanged();
         return this;
       }
@@ -3685,6 +3672,7 @@ private static final long serialVersionUID = 0L;
         checkByteStringIsUtf8(value);
         ensureFeedsIsMutable();
         feeds_.add(value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -3940,11 +3928,6 @@ private static final long serialVersionUID = 0L;
       return new ShoppingSetting();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.resources.CampaignProto.internal_static_google_ads_googleads_v13_resources_Campaign_ShoppingSetting_descriptor;
@@ -4384,11 +4367,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.resources.Campaign.ShoppingSetting parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.resources.Campaign.ShoppingSetting parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4715,7 +4700,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setMerchantId(long value) {
-        
+
         merchantId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -5032,7 +5017,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setCampaignPriority(int value) {
-        
+
         campaignPriority_ = value;
         bitField0_ |= 0x00000008;
         onChanged();
@@ -5093,7 +5078,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setEnableLocal(boolean value) {
-        
+
         enableLocal_ = value;
         bitField0_ |= 0x00000010;
         onChanged();
@@ -5141,7 +5126,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setUseVehicleInventory(boolean value) {
-        
+
         useVehicleInventory_ = value;
         bitField0_ |= 0x00000020;
         onChanged();
@@ -5287,11 +5272,6 @@ private static final long serialVersionUID = 0L;
       return new TrackingSetting();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.resources.CampaignProto.internal_static_google_ads_googleads_v13_resources_Campaign_TrackingSetting_descriptor;
@@ -5478,11 +5458,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.resources.Campaign.TrackingSetting parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.resources.Campaign.TrackingSetting parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5937,11 +5919,6 @@ private static final long serialVersionUID = 0L;
       return new GeoTargetTypeSetting();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.resources.CampaignProto.internal_static_google_ads_googleads_v13_resources_Campaign_GeoTargetTypeSetting_descriptor;
@@ -6125,11 +6102,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.resources.Campaign.GeoTargetTypeSetting parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.resources.Campaign.GeoTargetTypeSetting parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -6614,11 +6593,6 @@ private static final long serialVersionUID = 0L;
       return new LocalCampaignSetting();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.resources.CampaignProto.internal_static_google_ads_googleads_v13_resources_Campaign_LocalCampaignSetting_descriptor;
@@ -6766,11 +6740,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.resources.Campaign.LocalCampaignSetting parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.resources.Campaign.LocalCampaignSetting parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7222,11 +7198,6 @@ private static final long serialVersionUID = 0L;
       return new AppCampaignSetting();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.resources.CampaignProto.internal_static_google_ads_googleads_v13_resources_Campaign_AppCampaignSetting_descriptor;
@@ -7487,11 +7458,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.resources.Campaign.AppCampaignSetting parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.resources.Campaign.AppCampaignSetting parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -8123,11 +8096,6 @@ private static final long serialVersionUID = 0L;
       return new VanityPharma();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.resources.CampaignProto.internal_static_google_ads_googleads_v13_resources_Campaign_VanityPharma_descriptor;
@@ -8313,11 +8281,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.resources.Campaign.VanityPharma parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.resources.Campaign.VanityPharma parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -8820,7 +8790,8 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private SelectiveOptimization() {
-      conversionActions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      conversionActions_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
     @java.lang.Override
@@ -8830,11 +8801,6 @@ private static final long serialVersionUID = 0L;
       return new SelectiveOptimization();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.resources.CampaignProto.internal_static_google_ads_googleads_v13_resources_Campaign_SelectiveOptimization_descriptor;
@@ -8850,7 +8816,8 @@ private static final long serialVersionUID = 0L;
 
     public static final int CONVERSION_ACTIONS_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringList conversionActions_;
+    private com.google.protobuf.LazyStringArrayList conversionActions_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <pre>
      * The selected set of conversion actions for optimizing this campaign.
@@ -9015,11 +8982,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.resources.Campaign.SelectiveOptimization parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.resources.Campaign.SelectiveOptimization parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -9100,8 +9069,8 @@ private static final long serialVersionUID = 0L;
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        conversionActions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        conversionActions_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         return this;
       }
 
@@ -9128,22 +9097,17 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public com.google.ads.googleads.v13.resources.Campaign.SelectiveOptimization buildPartial() {
         com.google.ads.googleads.v13.resources.Campaign.SelectiveOptimization result = new com.google.ads.googleads.v13.resources.Campaign.SelectiveOptimization(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(com.google.ads.googleads.v13.resources.Campaign.SelectiveOptimization result) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          conversionActions_ = conversionActions_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.conversionActions_ = conversionActions_;
-      }
-
       private void buildPartial0(com.google.ads.googleads.v13.resources.Campaign.SelectiveOptimization result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          conversionActions_.makeImmutable();
+          result.conversionActions_ = conversionActions_;
+        }
       }
 
       @java.lang.Override
@@ -9193,7 +9157,7 @@ private static final long serialVersionUID = 0L;
         if (!other.conversionActions_.isEmpty()) {
           if (conversionActions_.isEmpty()) {
             conversionActions_ = other.conversionActions_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ |= 0x00000001;
           } else {
             ensureConversionActionsIsMutable();
             conversionActions_.addAll(other.conversionActions_);
@@ -9249,12 +9213,13 @@ private static final long serialVersionUID = 0L;
       }
       private int bitField0_;
 
-      private com.google.protobuf.LazyStringList conversionActions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList conversionActions_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureConversionActionsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!conversionActions_.isModifiable()) {
           conversionActions_ = new com.google.protobuf.LazyStringArrayList(conversionActions_);
-          bitField0_ |= 0x00000001;
-         }
+        }
+        bitField0_ |= 0x00000001;
       }
       /**
        * <pre>
@@ -9266,7 +9231,8 @@ private static final long serialVersionUID = 0L;
        */
       public com.google.protobuf.ProtocolStringList
           getConversionActionsList() {
-        return conversionActions_.getUnmodifiableView();
+        conversionActions_.makeImmutable();
+        return conversionActions_;
       }
       /**
        * <pre>
@@ -9319,6 +9285,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) { throw new NullPointerException(); }
         ensureConversionActionsIsMutable();
         conversionActions_.set(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -9336,6 +9303,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) { throw new NullPointerException(); }
         ensureConversionActionsIsMutable();
         conversionActions_.add(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -9353,6 +9321,7 @@ private static final long serialVersionUID = 0L;
         ensureConversionActionsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, conversionActions_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -9365,8 +9334,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearConversionActions() {
-        conversionActions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        conversionActions_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
         onChanged();
         return this;
       }
@@ -9385,6 +9355,7 @@ private static final long serialVersionUID = 0L;
         checkByteStringIsUtf8(value);
         ensureConversionActionsIsMutable();
         conversionActions_.add(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -9533,11 +9504,6 @@ private static final long serialVersionUID = 0L;
       return new OptimizationGoalSetting();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.resources.CampaignProto.internal_static_google_ads_googleads_v13_resources_Campaign_OptimizationGoalSetting_descriptor;
@@ -9752,11 +9718,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.resources.Campaign.OptimizationGoalSetting parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.resources.Campaign.OptimizationGoalSetting parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -10301,11 +10269,6 @@ private static final long serialVersionUID = 0L;
       return new AudienceSetting();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.resources.CampaignProto.internal_static_google_ads_googleads_v13_resources_Campaign_AudienceSetting_descriptor;
@@ -10466,11 +10429,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.resources.Campaign.AudienceSetting parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.resources.Campaign.AudienceSetting parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -10728,7 +10693,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setUseAudienceGrouped(boolean value) {
-        
+
         useAudienceGrouped_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -10889,11 +10854,6 @@ private static final long serialVersionUID = 0L;
       return new LocalServicesCampaignSettings();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.resources.CampaignProto.internal_static_google_ads_googleads_v13_resources_Campaign_LocalServicesCampaignSettings_descriptor;
@@ -11079,11 +11039,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.resources.Campaign.LocalServicesCampaignSettings parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.resources.Campaign.LocalServicesCampaignSettings parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -11805,11 +11767,6 @@ private static final long serialVersionUID = 0L;
       return new CategoryBid();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.resources.CampaignProto.internal_static_google_ads_googleads_v13_resources_Campaign_CategoryBid_descriptor;
@@ -12047,11 +12004,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.resources.Campaign.CategoryBid parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.resources.Campaign.CategoryBid parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -12433,7 +12392,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setManualCpaBidMicros(long value) {
-        
+
         manualCpaBidMicros_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -12568,11 +12527,6 @@ private static final long serialVersionUID = 0L;
       return new TravelCampaignSettings();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.resources.CampaignProto.internal_static_google_ads_googleads_v13_resources_Campaign_TravelCampaignSettings_descriptor;
@@ -12729,11 +12683,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.resources.Campaign.TravelCampaignSettings parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.resources.Campaign.TravelCampaignSettings parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -12985,7 +12941,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setTravelAccountId(long value) {
-        
+
         travelAccountId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -13071,6 +13027,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   private int campaignBiddingStrategyCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object campaignBiddingStrategy_;
   public enum CampaignBiddingStrategyCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -13142,6 +13099,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the campaign.
    * Campaign resource names have the form:
+   *
    * `customers/{customer_id}/campaigns/{campaign_id}`
    * </pre>
    *
@@ -13165,6 +13123,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the campaign.
    * Campaign resource names have the form:
+   *
    * `customers/{customer_id}/campaigns/{campaign_id}`
    * </pre>
    *
@@ -13219,8 +13178,10 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The name of the campaign.
+   *
    * This field is required and should not be empty when creating new
    * campaigns.
+   *
    * It must not contain any null (code point 0x0), NL line feed
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
@@ -13235,8 +13196,10 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The name of the campaign.
+   *
    * This field is required and should not be empty when creating new
    * campaigns.
+   *
    * It must not contain any null (code point 0x0), NL line feed
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
@@ -13260,8 +13223,10 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The name of the campaign.
+   *
    * This field is required and should not be empty when creating new
    * campaigns.
+   *
    * It must not contain any null (code point 0x0), NL line feed
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
@@ -13289,6 +13254,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The primary status of the campaign.
+   *
    * Provides insight into why a campaign is not serving or not serving
    * optimally. Modification to the campaign and its related entities might take
    * a while to be reflected in this status.
@@ -13303,6 +13269,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The primary status of the campaign.
+   *
    * Provides insight into why a campaign is not serving or not serving
    * optimally. Modification to the campaign and its related entities might take
    * a while to be reflected in this status.
@@ -13331,6 +13298,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The primary status reasons of the campaign.
+   *
    * Provides insight into why a campaign is not serving or not serving
    * optimally. These reasons are aggregated to determine an overall
    * CampaignPrimaryStatus.
@@ -13347,6 +13315,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The primary status reasons of the campaign.
+   *
    * Provides insight into why a campaign is not serving or not serving
    * optimally. These reasons are aggregated to determine an overall
    * CampaignPrimaryStatus.
@@ -13362,6 +13331,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The primary status reasons of the campaign.
+   *
    * Provides insight into why a campaign is not serving or not serving
    * optimally. These reasons are aggregated to determine an overall
    * CampaignPrimaryStatus.
@@ -13378,6 +13348,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The primary status reasons of the campaign.
+   *
    * Provides insight into why a campaign is not serving or not serving
    * optimally. These reasons are aggregated to determine an overall
    * CampaignPrimaryStatus.
@@ -13394,6 +13365,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The primary status reasons of the campaign.
+   *
    * Provides insight into why a campaign is not serving or not serving
    * optimally. These reasons are aggregated to determine an overall
    * CampaignPrimaryStatus.
@@ -13414,6 +13386,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The status of the campaign.
+   *
    * When a new campaign is added, the status defaults to ENABLED.
    * </pre>
    *
@@ -13426,6 +13399,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The status of the campaign.
+   *
    * When a new campaign is added, the status defaults to ENABLED.
    * </pre>
    *
@@ -13521,8 +13495,10 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The primary serving target for ads within the campaign.
    * The targeting options can be refined in `network_settings`.
+   *
    * This field is required and should not be empty when creating new
    * campaigns.
+   *
    * Can be set only when creating campaigns.
    * After the campaign is created, the field can not be changed.
    * </pre>
@@ -13537,8 +13513,10 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The primary serving target for ads within the campaign.
    * The targeting options can be refined in `network_settings`.
+   *
    * This field is required and should not be empty when creating new
    * campaigns.
+   *
    * Can be set only when creating campaigns.
    * After the campaign is created, the field can not be changed.
    * </pre>
@@ -13557,6 +13535,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. Optional refinement to `advertising_channel_type`.
    * Must be a valid sub-type of the parent channel type.
+   *
    * Can be set only when creating campaigns.
    * After campaign is created, the field can not be changed.
    * </pre>
@@ -13571,6 +13550,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. Optional refinement to `advertising_channel_type`.
    * Must be a valid sub-type of the parent channel type.
+   *
    * Can be set only when creating campaigns.
    * After campaign is created, the field can not be changed.
    * </pre>
@@ -14169,7 +14149,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int LABELS_FIELD_NUMBER = 61;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList labels_;
+  private com.google.protobuf.LazyStringArrayList labels_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * Output only. The resource names of labels attached to this campaign.
@@ -14252,6 +14233,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the base campaign of a draft or
    * experiment campaign. For base campaigns, this is equal to `resource_name`.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -14266,6 +14248,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the base campaign of a draft or
    * experiment campaign. For base campaigns, this is equal to `resource_name`.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -14289,6 +14272,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the base campaign of a draft or
    * experiment campaign. For base campaigns, this is equal to `resource_name`.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -14374,9 +14358,11 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The type of bidding strategy.
+   *
    * A bidding strategy can be created by setting either the bidding scheme to
    * create a standard bidding strategy or the `bidding_strategy` field to
    * create a portfolio bidding strategy.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -14389,9 +14375,11 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The type of bidding strategy.
+   *
    * A bidding strategy can be created by setting either the bidding scheme to
    * create a standard bidding strategy or the `bidding_strategy` field to
    * create a portfolio bidding strategy.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -14991,12 +14979,15 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. Optimization score of the campaign.
+   *
    * Optimization score is an estimate of how well a campaign is set to perform.
    * It ranges from 0% (0.0) to 100% (1.0), with 100% indicating that the
    * campaign is performing at full potential. This field is null for unscored
    * campaigns.
+   *
    * See "About optimization score" at
    * https://support.google.com/google-ads/answer/9061546.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -15010,12 +15001,15 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. Optimization score of the campaign.
+   *
    * Optimization score is an estimate of how well a campaign is set to perform.
    * It ranges from 0% (0.0) to 100% (1.0), with 100% indicating that the
    * campaign is performing at full potential. This field is null for unscored
    * campaigns.
+   *
    * See "About optimization score" at
    * https://support.google.com/google-ads/answer/9061546.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -17122,11 +17116,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.resources.Campaign parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.resources.Campaign parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -17311,8 +17307,8 @@ private static final long serialVersionUID = 0L;
         appCampaignSettingBuilder_.dispose();
         appCampaignSettingBuilder_ = null;
       }
-      labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x02000000);
+      labels_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       experimentType_ = 0;
       baseCampaign_ = "";
       campaignBudget_ = "";
@@ -17454,11 +17450,6 @@ private static final long serialVersionUID = 0L;
       } else {
         result.urlCustomParameters_ = urlCustomParametersBuilder_.build();
       }
-      if (((bitField0_ & 0x02000000) != 0)) {
-        labels_ = labels_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x02000000);
-      }
-      result.labels_ = labels_;
       if (frequencyCapsBuilder_ == null) {
         if (((bitField1_ & 0x00000008) != 0)) {
           frequencyCaps_ = java.util.Collections.unmodifiableList(frequencyCaps_);
@@ -17579,6 +17570,10 @@ private static final long serialVersionUID = 0L;
         result.appCampaignSetting_ = appCampaignSettingBuilder_ == null
             ? appCampaignSetting_
             : appCampaignSettingBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x02000000) != 0)) {
+        labels_.makeImmutable();
+        result.labels_ = labels_;
       }
       if (((from_bitField0_ & 0x04000000) != 0)) {
         result.experimentType_ = experimentType_;
@@ -17884,7 +17879,7 @@ private static final long serialVersionUID = 0L;
       if (!other.labels_.isEmpty()) {
         if (labels_.isEmpty()) {
           labels_ = other.labels_;
-          bitField0_ = (bitField0_ & ~0x02000000);
+          bitField0_ |= 0x02000000;
         } else {
           ensureLabelsIsMutable();
           labels_.addAll(other.labels_);
@@ -18569,6 +18564,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the campaign.
      * Campaign resource names have the form:
+     *
      * `customers/{customer_id}/campaigns/{campaign_id}`
      * </pre>
      *
@@ -18591,6 +18587,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the campaign.
      * Campaign resource names have the form:
+     *
      * `customers/{customer_id}/campaigns/{campaign_id}`
      * </pre>
      *
@@ -18614,6 +18611,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the campaign.
      * Campaign resource names have the form:
+     *
      * `customers/{customer_id}/campaigns/{campaign_id}`
      * </pre>
      *
@@ -18633,6 +18631,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the campaign.
      * Campaign resource names have the form:
+     *
      * `customers/{customer_id}/campaigns/{campaign_id}`
      * </pre>
      *
@@ -18649,6 +18648,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the campaign.
      * Campaign resource names have the form:
+     *
      * `customers/{customer_id}/campaigns/{campaign_id}`
      * </pre>
      *
@@ -18701,7 +18701,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      
+
       id_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -18726,8 +18726,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the campaign.
+     *
      * This field is required and should not be empty when creating new
      * campaigns.
+     *
      * It must not contain any null (code point 0x0), NL line feed
      * (code point 0xA) or carriage return (code point 0xD) characters.
      * </pre>
@@ -18741,8 +18743,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the campaign.
+     *
      * This field is required and should not be empty when creating new
      * campaigns.
+     *
      * It must not contain any null (code point 0x0), NL line feed
      * (code point 0xA) or carriage return (code point 0xD) characters.
      * </pre>
@@ -18765,8 +18769,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the campaign.
+     *
      * This field is required and should not be empty when creating new
      * campaigns.
+     *
      * It must not contain any null (code point 0x0), NL line feed
      * (code point 0xA) or carriage return (code point 0xD) characters.
      * </pre>
@@ -18790,8 +18796,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the campaign.
+     *
      * This field is required and should not be empty when creating new
      * campaigns.
+     *
      * It must not contain any null (code point 0x0), NL line feed
      * (code point 0xA) or carriage return (code point 0xD) characters.
      * </pre>
@@ -18811,8 +18819,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the campaign.
+     *
      * This field is required and should not be empty when creating new
      * campaigns.
+     *
      * It must not contain any null (code point 0x0), NL line feed
      * (code point 0xA) or carriage return (code point 0xD) characters.
      * </pre>
@@ -18829,8 +18839,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the campaign.
+     *
      * This field is required and should not be empty when creating new
      * campaigns.
+     *
      * It must not contain any null (code point 0x0), NL line feed
      * (code point 0xA) or carriage return (code point 0xD) characters.
      * </pre>
@@ -18853,6 +18865,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The primary status of the campaign.
+     *
      * Provides insight into why a campaign is not serving or not serving
      * optimally. Modification to the campaign and its related entities might take
      * a while to be reflected in this status.
@@ -18867,6 +18880,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The primary status of the campaign.
+     *
      * Provides insight into why a campaign is not serving or not serving
      * optimally. Modification to the campaign and its related entities might take
      * a while to be reflected in this status.
@@ -18885,6 +18899,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The primary status of the campaign.
+     *
      * Provides insight into why a campaign is not serving or not serving
      * optimally. Modification to the campaign and its related entities might take
      * a while to be reflected in this status.
@@ -18901,6 +18916,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The primary status of the campaign.
+     *
      * Provides insight into why a campaign is not serving or not serving
      * optimally. Modification to the campaign and its related entities might take
      * a while to be reflected in this status.
@@ -18922,6 +18938,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The primary status of the campaign.
+     *
      * Provides insight into why a campaign is not serving or not serving
      * optimally. Modification to the campaign and its related entities might take
      * a while to be reflected in this status.
@@ -18948,6 +18965,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The primary status reasons of the campaign.
+     *
      * Provides insight into why a campaign is not serving or not serving
      * optimally. These reasons are aggregated to determine an overall
      * CampaignPrimaryStatus.
@@ -18963,6 +18981,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The primary status reasons of the campaign.
+     *
      * Provides insight into why a campaign is not serving or not serving
      * optimally. These reasons are aggregated to determine an overall
      * CampaignPrimaryStatus.
@@ -18977,6 +18996,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The primary status reasons of the campaign.
+     *
      * Provides insight into why a campaign is not serving or not serving
      * optimally. These reasons are aggregated to determine an overall
      * CampaignPrimaryStatus.
@@ -18992,6 +19012,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The primary status reasons of the campaign.
+     *
      * Provides insight into why a campaign is not serving or not serving
      * optimally. These reasons are aggregated to determine an overall
      * CampaignPrimaryStatus.
@@ -19015,6 +19036,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The primary status reasons of the campaign.
+     *
      * Provides insight into why a campaign is not serving or not serving
      * optimally. These reasons are aggregated to determine an overall
      * CampaignPrimaryStatus.
@@ -19036,6 +19058,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The primary status reasons of the campaign.
+     *
      * Provides insight into why a campaign is not serving or not serving
      * optimally. These reasons are aggregated to determine an overall
      * CampaignPrimaryStatus.
@@ -19057,6 +19080,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The primary status reasons of the campaign.
+     *
      * Provides insight into why a campaign is not serving or not serving
      * optimally. These reasons are aggregated to determine an overall
      * CampaignPrimaryStatus.
@@ -19074,6 +19098,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The primary status reasons of the campaign.
+     *
      * Provides insight into why a campaign is not serving or not serving
      * optimally. These reasons are aggregated to determine an overall
      * CampaignPrimaryStatus.
@@ -19089,6 +19114,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The primary status reasons of the campaign.
+     *
      * Provides insight into why a campaign is not serving or not serving
      * optimally. These reasons are aggregated to determine an overall
      * CampaignPrimaryStatus.
@@ -19104,6 +19130,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The primary status reasons of the campaign.
+     *
      * Provides insight into why a campaign is not serving or not serving
      * optimally. These reasons are aggregated to determine an overall
      * CampaignPrimaryStatus.
@@ -19124,6 +19151,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The primary status reasons of the campaign.
+     *
      * Provides insight into why a campaign is not serving or not serving
      * optimally. These reasons are aggregated to determine an overall
      * CampaignPrimaryStatus.
@@ -19142,6 +19170,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The primary status reasons of the campaign.
+     *
      * Provides insight into why a campaign is not serving or not serving
      * optimally. These reasons are aggregated to determine an overall
      * CampaignPrimaryStatus.
@@ -19165,6 +19194,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The status of the campaign.
+     *
      * When a new campaign is added, the status defaults to ENABLED.
      * </pre>
      *
@@ -19177,6 +19207,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The status of the campaign.
+     *
      * When a new campaign is added, the status defaults to ENABLED.
      * </pre>
      *
@@ -19193,6 +19224,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The status of the campaign.
+     *
      * When a new campaign is added, the status defaults to ENABLED.
      * </pre>
      *
@@ -19207,6 +19239,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The status of the campaign.
+     *
      * When a new campaign is added, the status defaults to ENABLED.
      * </pre>
      *
@@ -19226,6 +19259,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The status of the campaign.
+     *
      * When a new campaign is added, the status defaults to ENABLED.
      * </pre>
      *
@@ -19463,8 +19497,10 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The primary serving target for ads within the campaign.
      * The targeting options can be refined in `network_settings`.
+     *
      * This field is required and should not be empty when creating new
      * campaigns.
+     *
      * Can be set only when creating campaigns.
      * After the campaign is created, the field can not be changed.
      * </pre>
@@ -19479,8 +19515,10 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The primary serving target for ads within the campaign.
      * The targeting options can be refined in `network_settings`.
+     *
      * This field is required and should not be empty when creating new
      * campaigns.
+     *
      * Can be set only when creating campaigns.
      * After the campaign is created, the field can not be changed.
      * </pre>
@@ -19499,8 +19537,10 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The primary serving target for ads within the campaign.
      * The targeting options can be refined in `network_settings`.
+     *
      * This field is required and should not be empty when creating new
      * campaigns.
+     *
      * Can be set only when creating campaigns.
      * After the campaign is created, the field can not be changed.
      * </pre>
@@ -19517,8 +19557,10 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The primary serving target for ads within the campaign.
      * The targeting options can be refined in `network_settings`.
+     *
      * This field is required and should not be empty when creating new
      * campaigns.
+     *
      * Can be set only when creating campaigns.
      * After the campaign is created, the field can not be changed.
      * </pre>
@@ -19540,8 +19582,10 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The primary serving target for ads within the campaign.
      * The targeting options can be refined in `network_settings`.
+     *
      * This field is required and should not be empty when creating new
      * campaigns.
+     *
      * Can be set only when creating campaigns.
      * After the campaign is created, the field can not be changed.
      * </pre>
@@ -19561,6 +19605,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. Optional refinement to `advertising_channel_type`.
      * Must be a valid sub-type of the parent channel type.
+     *
      * Can be set only when creating campaigns.
      * After campaign is created, the field can not be changed.
      * </pre>
@@ -19575,6 +19620,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. Optional refinement to `advertising_channel_type`.
      * Must be a valid sub-type of the parent channel type.
+     *
      * Can be set only when creating campaigns.
      * After campaign is created, the field can not be changed.
      * </pre>
@@ -19593,6 +19639,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. Optional refinement to `advertising_channel_type`.
      * Must be a valid sub-type of the parent channel type.
+     *
      * Can be set only when creating campaigns.
      * After campaign is created, the field can not be changed.
      * </pre>
@@ -19609,6 +19656,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. Optional refinement to `advertising_channel_type`.
      * Must be a valid sub-type of the parent channel type.
+     *
      * Can be set only when creating campaigns.
      * After campaign is created, the field can not be changed.
      * </pre>
@@ -19630,6 +19678,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. Optional refinement to `advertising_channel_type`.
      * Must be a valid sub-type of the parent channel type.
+     *
      * Can be set only when creating campaigns.
      * After campaign is created, the field can not be changed.
      * </pre>
@@ -21946,12 +21995,13 @@ private static final long serialVersionUID = 0L;
       return appCampaignSettingBuilder_;
     }
 
-    private com.google.protobuf.LazyStringList labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList labels_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureLabelsIsMutable() {
-      if (!((bitField0_ & 0x02000000) != 0)) {
+      if (!labels_.isModifiable()) {
         labels_ = new com.google.protobuf.LazyStringArrayList(labels_);
-        bitField0_ |= 0x02000000;
-       }
+      }
+      bitField0_ |= 0x02000000;
     }
     /**
      * <pre>
@@ -21963,7 +22013,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getLabelsList() {
-      return labels_.getUnmodifiableView();
+      labels_.makeImmutable();
+      return labels_;
     }
     /**
      * <pre>
@@ -22016,6 +22067,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureLabelsIsMutable();
       labels_.set(index, value);
+      bitField0_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -22033,6 +22085,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureLabelsIsMutable();
       labels_.add(value);
+      bitField0_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -22050,6 +22103,7 @@ private static final long serialVersionUID = 0L;
       ensureLabelsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, labels_);
+      bitField0_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -22062,8 +22116,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLabels() {
-      labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x02000000);
+      labels_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x02000000);;
       onChanged();
       return this;
     }
@@ -22082,6 +22137,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureLabelsIsMutable();
       labels_.add(value);
+      bitField0_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -22164,6 +22220,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the base campaign of a draft or
      * experiment campaign. For base campaigns, this is equal to `resource_name`.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -22177,6 +22234,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the base campaign of a draft or
      * experiment campaign. For base campaigns, this is equal to `resource_name`.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -22199,6 +22257,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the base campaign of a draft or
      * experiment campaign. For base campaigns, this is equal to `resource_name`.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -22222,6 +22281,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the base campaign of a draft or
      * experiment campaign. For base campaigns, this is equal to `resource_name`.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -22241,6 +22301,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the base campaign of a draft or
      * experiment campaign. For base campaigns, this is equal to `resource_name`.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -22257,6 +22318,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the base campaign of a draft or
      * experiment campaign. For base campaigns, this is equal to `resource_name`.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -22381,9 +22443,11 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The type of bidding strategy.
+     *
      * A bidding strategy can be created by setting either the bidding scheme to
      * create a standard bidding strategy or the `bidding_strategy` field to
      * create a portfolio bidding strategy.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -22396,9 +22460,11 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The type of bidding strategy.
+     *
      * A bidding strategy can be created by setting either the bidding scheme to
      * create a standard bidding strategy or the `bidding_strategy` field to
      * create a portfolio bidding strategy.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -22415,9 +22481,11 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The type of bidding strategy.
+     *
      * A bidding strategy can be created by setting either the bidding scheme to
      * create a standard bidding strategy or the `bidding_strategy` field to
      * create a portfolio bidding strategy.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -22432,9 +22500,11 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The type of bidding strategy.
+     *
      * A bidding strategy can be created by setting either the bidding scheme to
      * create a standard bidding strategy or the `bidding_strategy` field to
      * create a portfolio bidding strategy.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -22454,9 +22524,11 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The type of bidding strategy.
+     *
      * A bidding strategy can be created by setting either the bidding scheme to
      * create a standard bidding strategy or the `bidding_strategy` field to
      * create a portfolio bidding strategy.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -24139,12 +24211,15 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Optimization score of the campaign.
+     *
      * Optimization score is an estimate of how well a campaign is set to perform.
      * It ranges from 0% (0.0) to 100% (1.0), with 100% indicating that the
      * campaign is performing at full potential. This field is null for unscored
      * campaigns.
+     *
      * See "About optimization score" at
      * https://support.google.com/google-ads/answer/9061546.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -24158,12 +24233,15 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Optimization score of the campaign.
+     *
      * Optimization score is an estimate of how well a campaign is set to perform.
      * It ranges from 0% (0.0) to 100% (1.0), with 100% indicating that the
      * campaign is performing at full potential. This field is null for unscored
      * campaigns.
+     *
      * See "About optimization score" at
      * https://support.google.com/google-ads/answer/9061546.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -24177,12 +24255,15 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Optimization score of the campaign.
+     *
      * Optimization score is an estimate of how well a campaign is set to perform.
      * It ranges from 0% (0.0) to 100% (1.0), with 100% indicating that the
      * campaign is performing at full potential. This field is null for unscored
      * campaigns.
+     *
      * See "About optimization score" at
      * https://support.google.com/google-ads/answer/9061546.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -24191,7 +24272,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOptimizationScore(double value) {
-      
+
       optimizationScore_ = value;
       bitField1_ |= 0x00000400;
       onChanged();
@@ -24200,12 +24281,15 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Optimization score of the campaign.
+     *
      * Optimization score is an estimate of how well a campaign is set to perform.
      * It ranges from 0% (0.0) to 100% (1.0), with 100% indicating that the
      * campaign is performing at full potential. This field is null for unscored
      * campaigns.
+     *
      * See "About optimization score" at
      * https://support.google.com/google-ads/answer/9061546.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -24777,7 +24861,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setUrlExpansionOptOut(boolean value) {
-      
+
       urlExpansionOptOut_ = value;
       bitField1_ |= 0x00002000;
       onChanged();

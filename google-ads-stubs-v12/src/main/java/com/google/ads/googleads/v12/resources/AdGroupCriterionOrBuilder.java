@@ -11,6 +11,7 @@ public interface AdGroupCriterionOrBuilder extends
    * <pre>
    * Immutable. The resource name of the ad group criterion.
    * Ad group criterion resource names have the form:
+   *
    * `customers/{customer_id}/adGroupCriteria/{ad_group_id}~{criterion_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface AdGroupCriterionOrBuilder extends
    * <pre>
    * Immutable. The resource name of the ad group criterion.
    * Ad group criterion resource names have the form:
+   *
    * `customers/{customer_id}/adGroupCriteria/{ad_group_id}~{criterion_id}`
    * </pre>
    *
@@ -34,6 +36,7 @@ public interface AdGroupCriterionOrBuilder extends
   /**
    * <pre>
    * Output only. The ID of the criterion.
+   *
    * This field is ignored for mutates.
    * </pre>
    *
@@ -44,6 +47,7 @@ public interface AdGroupCriterionOrBuilder extends
   /**
    * <pre>
    * Output only. The ID of the criterion.
+   *
    * This field is ignored for mutates.
    * </pre>
    *
@@ -55,6 +59,7 @@ public interface AdGroupCriterionOrBuilder extends
   /**
    * <pre>
    * Output only. The display name of the criterion.
+   *
    * This field is ignored for mutates.
    * </pre>
    *
@@ -65,6 +70,7 @@ public interface AdGroupCriterionOrBuilder extends
   /**
    * <pre>
    * Output only. The display name of the criterion.
+   *
    * This field is ignored for mutates.
    * </pre>
    *
@@ -77,6 +83,7 @@ public interface AdGroupCriterionOrBuilder extends
   /**
    * <pre>
    * The status of the criterion.
+   *
    * This is the status of the ad group criterion entity, set by the client.
    * Note: UI reports may incorporate additional information that affects
    * whether a criterion is eligible to run. In some cases a criterion that's
@@ -94,6 +101,7 @@ public interface AdGroupCriterionOrBuilder extends
   /**
    * <pre>
    * The status of the criterion.
+   *
    * This is the status of the ad group criterion entity, set by the client.
    * Note: UI reports may incorporate additional information that affects
    * whether a criterion is eligible to run. In some cases a criterion that's
@@ -187,6 +195,7 @@ public interface AdGroupCriterionOrBuilder extends
   /**
    * <pre>
    * Immutable. Whether to target (`false`) or exclude (`true`) the criterion.
+   *
    * This field is immutable. To switch a criterion from positive to negative,
    * remove then re-add it.
    * </pre>
@@ -198,6 +207,7 @@ public interface AdGroupCriterionOrBuilder extends
   /**
    * <pre>
    * Immutable. Whether to target (`false`) or exclude (`true`) the criterion.
+   *
    * This field is immutable. To switch a criterion from positive to negative,
    * remove then re-add it.
    * </pre>
@@ -248,8 +258,10 @@ public interface AdGroupCriterionOrBuilder extends
   /**
    * <pre>
    * Output only. List of disapproval reasons of the criterion.
+   *
    * The different reasons for disapproving a criterion can be found here:
    * https://support.google.com/adspolicy/answer/6008942
+   *
    * This field is read-only.
    * </pre>
    *
@@ -261,8 +273,10 @@ public interface AdGroupCriterionOrBuilder extends
   /**
    * <pre>
    * Output only. List of disapproval reasons of the criterion.
+   *
    * The different reasons for disapproving a criterion can be found here:
    * https://support.google.com/adspolicy/answer/6008942
+   *
    * This field is read-only.
    * </pre>
    *
@@ -273,8 +287,10 @@ public interface AdGroupCriterionOrBuilder extends
   /**
    * <pre>
    * Output only. List of disapproval reasons of the criterion.
+   *
    * The different reasons for disapproving a criterion can be found here:
    * https://support.google.com/adspolicy/answer/6008942
+   *
    * This field is read-only.
    * </pre>
    *
@@ -286,8 +302,10 @@ public interface AdGroupCriterionOrBuilder extends
   /**
    * <pre>
    * Output only. List of disapproval reasons of the criterion.
+   *
    * The different reasons for disapproving a criterion can be found here:
    * https://support.google.com/adspolicy/answer/6008942
+   *
    * This field is read-only.
    * </pre>
    *
@@ -1394,5 +1412,5 @@ public interface AdGroupCriterionOrBuilder extends
    */
   com.google.ads.googleads.v12.common.AudienceInfoOrBuilder getAudienceOrBuilder();
 
-  public com.google.ads.googleads.v12.resources.AdGroupCriterion.CriterionCase getCriterionCase();
+  com.google.ads.googleads.v12.resources.AdGroupCriterion.CriterionCase getCriterionCase();
 }

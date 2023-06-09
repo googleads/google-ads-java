@@ -34,11 +34,6 @@ private static final long serialVersionUID = 0L;
     return new DynamicSearchAdsSearchTermView();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.resources.DynamicSearchAdsSearchTermViewProto.internal_static_google_ads_googleads_v13_resources_DynamicSearchAdsSearchTermView_descriptor;
@@ -60,6 +55,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the dynamic search ads search term view.
    * Dynamic search ads search term view resource names have the form:
+   *
    * `customers/{customer_id}/dynamicSearchAdsSearchTermViews/{ad_group_id}~{search_term_fingerprint}~{headline_fingerprint}~{landing_page_fingerprint}~{page_url_fingerprint}`
    * </pre>
    *
@@ -83,6 +79,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the dynamic search ads search term view.
    * Dynamic search ads search term view resource names have the form:
+   *
    * `customers/{customer_id}/dynamicSearchAdsSearchTermViews/{ad_group_id}~{search_term_fingerprint}~{headline_fingerprint}~{landing_page_fingerprint}~{page_url_fingerprint}`
    * </pre>
    *
@@ -110,6 +107,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. Search term
+   *
    * This field is read-only.
    * </pre>
    *
@@ -123,6 +121,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. Search term
+   *
    * This field is read-only.
    * </pre>
    *
@@ -145,6 +144,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. Search term
+   *
    * This field is read-only.
    * </pre>
    *
@@ -172,6 +172,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The dynamically generated headline of the Dynamic Search Ad.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -185,6 +186,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The dynamically generated headline of the Dynamic Search Ad.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -207,6 +209,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The dynamically generated headline of the Dynamic Search Ad.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -234,6 +237,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The dynamically selected landing page URL of the impression.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -247,6 +251,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The dynamically selected landing page URL of the impression.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -269,6 +274,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The dynamically selected landing page URL of the impression.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -296,6 +302,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The URL of page feed item served for the impression.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -309,6 +316,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The URL of page feed item served for the impression.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -331,6 +339,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The URL of page feed item served for the impression.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -357,6 +366,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. True if query matches a negative keyword.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -370,6 +380,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. True if query matches a negative keyword.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -386,6 +397,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. True if query is added to targeted keywords.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -399,6 +411,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. True if query is added to targeted keywords.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -415,6 +428,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. True if query matches a negative url.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -428,6 +442,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. True if query matches a negative url.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -658,11 +673,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.resources.DynamicSearchAdsSearchTermView parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.resources.DynamicSearchAdsSearchTermView parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -984,6 +1001,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the dynamic search ads search term view.
      * Dynamic search ads search term view resource names have the form:
+     *
      * `customers/{customer_id}/dynamicSearchAdsSearchTermViews/{ad_group_id}~{search_term_fingerprint}~{headline_fingerprint}~{landing_page_fingerprint}~{page_url_fingerprint}`
      * </pre>
      *
@@ -1006,6 +1024,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the dynamic search ads search term view.
      * Dynamic search ads search term view resource names have the form:
+     *
      * `customers/{customer_id}/dynamicSearchAdsSearchTermViews/{ad_group_id}~{search_term_fingerprint}~{headline_fingerprint}~{landing_page_fingerprint}~{page_url_fingerprint}`
      * </pre>
      *
@@ -1029,6 +1048,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the dynamic search ads search term view.
      * Dynamic search ads search term view resource names have the form:
+     *
      * `customers/{customer_id}/dynamicSearchAdsSearchTermViews/{ad_group_id}~{search_term_fingerprint}~{headline_fingerprint}~{landing_page_fingerprint}~{page_url_fingerprint}`
      * </pre>
      *
@@ -1048,6 +1068,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the dynamic search ads search term view.
      * Dynamic search ads search term view resource names have the form:
+     *
      * `customers/{customer_id}/dynamicSearchAdsSearchTermViews/{ad_group_id}~{search_term_fingerprint}~{headline_fingerprint}~{landing_page_fingerprint}~{page_url_fingerprint}`
      * </pre>
      *
@@ -1064,6 +1085,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the dynamic search ads search term view.
      * Dynamic search ads search term view resource names have the form:
+     *
      * `customers/{customer_id}/dynamicSearchAdsSearchTermViews/{ad_group_id}~{search_term_fingerprint}~{headline_fingerprint}~{landing_page_fingerprint}~{page_url_fingerprint}`
      * </pre>
      *
@@ -1085,6 +1107,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Search term
+     *
      * This field is read-only.
      * </pre>
      *
@@ -1097,6 +1120,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Search term
+     *
      * This field is read-only.
      * </pre>
      *
@@ -1118,6 +1142,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Search term
+     *
      * This field is read-only.
      * </pre>
      *
@@ -1140,6 +1165,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Search term
+     *
      * This field is read-only.
      * </pre>
      *
@@ -1158,6 +1184,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Search term
+     *
      * This field is read-only.
      * </pre>
      *
@@ -1173,6 +1200,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Search term
+     *
      * This field is read-only.
      * </pre>
      *
@@ -1194,6 +1222,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The dynamically generated headline of the Dynamic Search Ad.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -1206,6 +1235,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The dynamically generated headline of the Dynamic Search Ad.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -1227,6 +1257,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The dynamically generated headline of the Dynamic Search Ad.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -1249,6 +1280,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The dynamically generated headline of the Dynamic Search Ad.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -1267,6 +1299,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The dynamically generated headline of the Dynamic Search Ad.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -1282,6 +1315,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The dynamically generated headline of the Dynamic Search Ad.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -1303,6 +1337,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The dynamically selected landing page URL of the impression.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -1315,6 +1350,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The dynamically selected landing page URL of the impression.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -1336,6 +1372,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The dynamically selected landing page URL of the impression.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -1358,6 +1395,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The dynamically selected landing page URL of the impression.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -1376,6 +1414,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The dynamically selected landing page URL of the impression.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -1391,6 +1430,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The dynamically selected landing page URL of the impression.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -1412,6 +1452,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The URL of page feed item served for the impression.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -1424,6 +1465,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The URL of page feed item served for the impression.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -1445,6 +1487,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The URL of page feed item served for the impression.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -1467,6 +1510,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The URL of page feed item served for the impression.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -1485,6 +1529,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The URL of page feed item served for the impression.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -1500,6 +1545,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The URL of page feed item served for the impression.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -1521,6 +1567,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. True if query matches a negative keyword.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -1534,6 +1581,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. True if query matches a negative keyword.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -1547,6 +1595,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. True if query matches a negative keyword.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -1555,7 +1604,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHasNegativeKeyword(boolean value) {
-      
+
       hasNegativeKeyword_ = value;
       bitField0_ |= 0x00000020;
       onChanged();
@@ -1564,6 +1613,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. True if query matches a negative keyword.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -1581,6 +1631,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. True if query is added to targeted keywords.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -1594,6 +1645,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. True if query is added to targeted keywords.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -1607,6 +1659,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. True if query is added to targeted keywords.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -1615,7 +1668,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHasMatchingKeyword(boolean value) {
-      
+
       hasMatchingKeyword_ = value;
       bitField0_ |= 0x00000040;
       onChanged();
@@ -1624,6 +1677,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. True if query is added to targeted keywords.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -1641,6 +1695,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. True if query matches a negative url.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -1654,6 +1709,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. True if query matches a negative url.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -1667,6 +1723,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. True if query matches a negative url.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -1675,7 +1732,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHasNegativeUrl(boolean value) {
-      
+
       hasNegativeUrl_ = value;
       bitField0_ |= 0x00000080;
       onChanged();
@@ -1684,6 +1741,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. True if query matches a negative url.
+     *
      * This field is read-only.
      * </pre>
      *

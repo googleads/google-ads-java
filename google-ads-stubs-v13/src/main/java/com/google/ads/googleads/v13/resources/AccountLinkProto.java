@@ -61,52 +61,52 @@ public final class AccountLinkProto {
       "e.proto\0326google/ads/googleads/v13/enums/" +
       "mobile_app_vendor.proto\032\037google/api/fiel" +
       "d_behavior.proto\032\031google/api/resource.pr" +
-      "oto\"\241\007\n\013AccountLink\022C\n\rresource_name\030\001 \001" +
-      "(\tB,\340A\005\372A&\n$googleads.googleapis.com/Acc" +
-      "ountLink\022!\n\017account_link_id\030\010 \001(\003B\003\340A\003H\001" +
-      "\210\001\001\022W\n\006status\030\003 \001(\0162G.google.ads.googlea" +
-      "ds.v13.enums.AccountLinkStatusEnum.Accou" +
-      "ntLinkStatus\022Z\n\004type\030\004 \001(\0162G.google.ads." +
-      "googleads.v13.enums.LinkedAccountTypeEnu" +
-      "m.LinkedAccountTypeB\003\340A\003\022r\n\031third_party_" +
-      "app_analytics\030\005 \001(\0132H.google.ads.googlea" +
-      "ds.v13.resources.ThirdPartyAppAnalyticsL" +
-      "inkIdentifierB\003\340A\005H\000\022Z\n\014data_partner\030\006 \001" +
-      "(\0132=.google.ads.googleads.v13.resources." +
-      "DataPartnerLinkIdentifierB\003\340A\003H\000\022V\n\ngoog" +
-      "le_ads\030\007 \001(\0132;.google.ads.googleads.v13." +
-      "resources.GoogleAdsLinkIdentifierB\003\340A\003H\000" +
-      "\022Z\n\014hotel_center\030\t \001(\0132=.google.ads.goog" +
-      "leads.v13.resources.HotelCenterLinkIdent" +
-      "ifierB\003\340A\003H\000\022h\n\023advertising_partner\030\n \001(" +
-      "\0132D.google.ads.googleads.v13.resources.A" +
-      "dvertisingPartnerLinkIdentifierB\003\340A\003H\000:a" +
-      "\352A^\n$googleads.googleapis.com/AccountLin" +
-      "k\0226customers/{customer_id}/accountLinks/" +
-      "{account_link_id}B\020\n\016linked_accountB\022\n\020_" +
-      "account_link_id\"\364\001\n$ThirdPartyAppAnalyti" +
-      "csLinkIdentifier\022+\n\031app_analytics_provid" +
-      "er_id\030\004 \001(\003B\003\340A\005H\000\210\001\001\022\030\n\006app_id\030\005 \001(\tB\003\340" +
-      "A\005H\001\210\001\001\022\\\n\napp_vendor\030\003 \001(\0162C.google.ads" +
-      ".googleads.v13.enums.MobileAppVendorEnum" +
-      ".MobileAppVendorB\003\340A\005B\034\n\032_app_analytics_" +
-      "provider_idB\t\n\007_app_id\"R\n\031DataPartnerLin" +
-      "kIdentifier\022!\n\017data_partner_id\030\001 \001(\003B\003\340A" +
-      "\005H\000\210\001\001B\022\n\020_data_partner_id\"9\n\031HotelCente" +
-      "rLinkIdentifier\022\034\n\017hotel_center_id\030\001 \001(\003" +
-      "B\003\340A\003\"h\n\027GoogleAdsLinkIdentifier\022@\n\010cust" +
-      "omer\030\003 \001(\tB)\340A\005\372A#\n!googleads.googleapis" +
-      ".com/CustomerH\000\210\001\001B\013\n\t_customer\"q\n Adver" +
-      "tisingPartnerLinkIdentifier\022@\n\010customer\030" +
-      "\001 \001(\tB)\340A\005\372A#\n!googleads.googleapis.com/" +
-      "CustomerH\000\210\001\001B\013\n\t_customerB\202\002\n&com.googl" +
-      "e.ads.googleads.v13.resourcesB\020AccountLi" +
-      "nkProtoP\001ZKgoogle.golang.org/genproto/go" +
-      "ogleapis/ads/googleads/v13/resources;res" +
-      "ources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V13." +
-      "Resources\312\002\"Google\\Ads\\GoogleAds\\V13\\Res" +
-      "ources\352\002&Google::Ads::GoogleAds::V13::Re" +
-      "sourcesb\006proto3"
+      "oto\"\251\007\n\013AccountLink\022D\n\rresource_name\030\001 \001" +
+      "(\tB-\342A\001\005\372A&\n$googleads.googleapis.com/Ac" +
+      "countLink\022\"\n\017account_link_id\030\010 \001(\003B\004\342A\001\003" +
+      "H\001\210\001\001\022W\n\006status\030\003 \001(\0162G.google.ads.googl" +
+      "eads.v13.enums.AccountLinkStatusEnum.Acc" +
+      "ountLinkStatus\022[\n\004type\030\004 \001(\0162G.google.ad" +
+      "s.googleads.v13.enums.LinkedAccountTypeE" +
+      "num.LinkedAccountTypeB\004\342A\001\003\022s\n\031third_par" +
+      "ty_app_analytics\030\005 \001(\0132H.google.ads.goog" +
+      "leads.v13.resources.ThirdPartyAppAnalyti" +
+      "csLinkIdentifierB\004\342A\001\005H\000\022[\n\014data_partner" +
+      "\030\006 \001(\0132=.google.ads.googleads.v13.resour" +
+      "ces.DataPartnerLinkIdentifierB\004\342A\001\003H\000\022W\n" +
+      "\ngoogle_ads\030\007 \001(\0132;.google.ads.googleads" +
+      ".v13.resources.GoogleAdsLinkIdentifierB\004" +
+      "\342A\001\003H\000\022[\n\014hotel_center\030\t \001(\0132=.google.ad" +
+      "s.googleads.v13.resources.HotelCenterLin" +
+      "kIdentifierB\004\342A\001\003H\000\022i\n\023advertising_partn" +
+      "er\030\n \001(\0132D.google.ads.googleads.v13.reso" +
+      "urces.AdvertisingPartnerLinkIdentifierB\004" +
+      "\342A\001\003H\000:a\352A^\n$googleads.googleapis.com/Ac" +
+      "countLink\0226customers/{customer_id}/accou" +
+      "ntLinks/{account_link_id}B\020\n\016linked_acco" +
+      "untB\022\n\020_account_link_id\"\367\001\n$ThirdPartyAp" +
+      "pAnalyticsLinkIdentifier\022,\n\031app_analytic" +
+      "s_provider_id\030\004 \001(\003B\004\342A\001\005H\000\210\001\001\022\031\n\006app_id" +
+      "\030\005 \001(\tB\004\342A\001\005H\001\210\001\001\022]\n\napp_vendor\030\003 \001(\0162C." +
+      "google.ads.googleads.v13.enums.MobileApp" +
+      "VendorEnum.MobileAppVendorB\004\342A\001\005B\034\n\032_app" +
+      "_analytics_provider_idB\t\n\007_app_id\"S\n\031Dat" +
+      "aPartnerLinkIdentifier\022\"\n\017data_partner_i" +
+      "d\030\001 \001(\003B\004\342A\001\005H\000\210\001\001B\022\n\020_data_partner_id\":" +
+      "\n\031HotelCenterLinkIdentifier\022\035\n\017hotel_cen" +
+      "ter_id\030\001 \001(\003B\004\342A\001\003\"i\n\027GoogleAdsLinkIdent" +
+      "ifier\022A\n\010customer\030\003 \001(\tB*\342A\001\005\372A#\n!google" +
+      "ads.googleapis.com/CustomerH\000\210\001\001B\013\n\t_cus" +
+      "tomer\"r\n AdvertisingPartnerLinkIdentifie" +
+      "r\022A\n\010customer\030\001 \001(\tB*\342A\001\005\372A#\n!googleads." +
+      "googleapis.com/CustomerH\000\210\001\001B\013\n\t_custome" +
+      "rB\202\002\n&com.google.ads.googleads.v13.resou" +
+      "rcesB\020AccountLinkProtoP\001ZKgoogle.golang." +
+      "org/genproto/googleapis/ads/googleads/v1" +
+      "3/resources;resources\242\002\003GAA\252\002\"Google.Ads" +
+      ".GoogleAds.V13.Resources\312\002\"Google\\Ads\\Go" +
+      "ogleAds\\V13\\Resources\352\002&Google::Ads::Goo" +
+      "gleAds::V13::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -63,66 +63,66 @@ public final class OfflineUserDataJobServiceProto {
       "to\032\037google/api/field_behavior.proto\032\031goo" +
       "gle/api/resource.proto\032#google/longrunni" +
       "ng/operations.proto\032\033google/protobuf/emp" +
-      "ty.proto\032\027google/rpc/status.proto\"\305\001\n\037Cr" +
-      "eateOfflineUserDataJobRequest\022\030\n\013custome" +
-      "r_id\030\001 \001(\tB\003\340A\002\022H\n\003job\030\002 \001(\01326.google.ad" +
-      "s.googleads.v13.resources.OfflineUserDat" +
-      "aJobB\003\340A\002\022\025\n\rvalidate_only\030\003 \001(\010\022\'\n\037enab" +
-      "le_match_rate_range_preview\030\005 \001(\010\"k\n Cre" +
-      "ateOfflineUserDataJobResponse\022G\n\rresourc" +
-      "e_name\030\001 \001(\tB0\372A-\n+googleads.googleapis." +
-      "com/OfflineUserDataJob\"\201\001\n\034RunOfflineUse" +
-      "rDataJobRequest\022J\n\rresource_name\030\001 \001(\tB3" +
-      "\340A\002\372A-\n+googleads.googleapis.com/Offline" +
-      "UserDataJob\022\025\n\rvalidate_only\030\002 \001(\010\"\326\002\n&A" +
-      "ddOfflineUserDataJobOperationsRequest\022J\n" +
-      "\rresource_name\030\001 \001(\tB3\340A\002\372A-\n+googleads." +
-      "googleapis.com/OfflineUserDataJob\022#\n\026ena" +
-      "ble_partial_failure\030\004 \001(\010H\000\210\001\001\022\034\n\017enable" +
-      "_warnings\030\006 \001(\010H\001\210\001\001\022W\n\noperations\030\003 \003(\013" +
-      "2>.google.ads.googleads.v13.services.Off" +
-      "lineUserDataJobOperationB\003\340A\002\022\025\n\rvalidat" +
-      "e_only\030\005 \001(\010B\031\n\027_enable_partial_failureB" +
-      "\022\n\020_enable_warnings\"\272\001\n\033OfflineUserDataJ" +
-      "obOperation\022;\n\006create\030\001 \001(\0132).google.ads" +
-      ".googleads.v13.common.UserDataH\000\022;\n\006remo" +
-      "ve\030\002 \001(\0132).google.ads.googleads.v13.comm" +
-      "on.UserDataH\000\022\024\n\nremove_all\030\003 \001(\010H\000B\013\n\to" +
-      "peration\"\201\001\n\'AddOfflineUserDataJobOperat" +
-      "ionsResponse\0221\n\025partial_failure_error\030\001 " +
-      "\001(\0132\022.google.rpc.Status\022#\n\007warning\030\002 \001(\013" +
-      "2\022.google.rpc.Status2\262\007\n\031OfflineUserData" +
-      "JobService\022\373\001\n\030CreateOfflineUserDataJob\022" +
-      "B.google.ads.googleads.v13.services.Crea" +
-      "teOfflineUserDataJobRequest\032C.google.ads" +
-      ".googleads.v13.services.CreateOfflineUse" +
-      "rDataJobResponse\"V\202\323\344\223\002>\"9/v13/customers" +
-      "/{customer_id=*}/offlineUserDataJobs:cre" +
-      "ate:\001*\332A\017customer_id,job\022\244\002\n\037AddOfflineU" +
-      "serDataJobOperations\022I.google.ads.google" +
+      "ty.proto\032\027google/rpc/status.proto\"\307\001\n\037Cr" +
+      "eateOfflineUserDataJobRequest\022\031\n\013custome" +
+      "r_id\030\001 \001(\tB\004\342A\001\002\022I\n\003job\030\002 \001(\01326.google.a" +
+      "ds.googleads.v13.resources.OfflineUserDa" +
+      "taJobB\004\342A\001\002\022\025\n\rvalidate_only\030\003 \001(\010\022\'\n\037en" +
+      "able_match_rate_range_preview\030\005 \001(\010\"k\n C" +
+      "reateOfflineUserDataJobResponse\022G\n\rresou" +
+      "rce_name\030\001 \001(\tB0\372A-\n+googleads.googleapi" +
+      "s.com/OfflineUserDataJob\"\202\001\n\034RunOfflineU" +
+      "serDataJobRequest\022K\n\rresource_name\030\001 \001(\t" +
+      "B4\342A\001\002\372A-\n+googleads.googleapis.com/Offl" +
+      "ineUserDataJob\022\025\n\rvalidate_only\030\002 \001(\010\"\330\002" +
+      "\n&AddOfflineUserDataJobOperationsRequest" +
+      "\022K\n\rresource_name\030\001 \001(\tB4\342A\001\002\372A-\n+google" +
+      "ads.googleapis.com/OfflineUserDataJob\022#\n" +
+      "\026enable_partial_failure\030\004 \001(\010H\000\210\001\001\022\034\n\017en" +
+      "able_warnings\030\006 \001(\010H\001\210\001\001\022X\n\noperations\030\003" +
+      " \003(\0132>.google.ads.googleads.v13.services" +
+      ".OfflineUserDataJobOperationB\004\342A\001\002\022\025\n\rva" +
+      "lidate_only\030\005 \001(\010B\031\n\027_enable_partial_fai" +
+      "lureB\022\n\020_enable_warnings\"\272\001\n\033OfflineUser" +
+      "DataJobOperation\022;\n\006create\030\001 \001(\0132).googl" +
+      "e.ads.googleads.v13.common.UserDataH\000\022;\n" +
+      "\006remove\030\002 \001(\0132).google.ads.googleads.v13" +
+      ".common.UserDataH\000\022\024\n\nremove_all\030\003 \001(\010H\000" +
+      "B\013\n\toperation\"\201\001\n\'AddOfflineUserDataJobO" +
+      "perationsResponse\0221\n\025partial_failure_err" +
+      "or\030\001 \001(\0132\022.google.rpc.Status\022#\n\007warning\030" +
+      "\002 \001(\0132\022.google.rpc.Status2\262\007\n\031OfflineUse" +
+      "rDataJobService\022\373\001\n\030CreateOfflineUserDat" +
+      "aJob\022B.google.ads.googleads.v13.services" +
+      ".CreateOfflineUserDataJobRequest\032C.googl" +
+      "e.ads.googleads.v13.services.CreateOffli" +
+      "neUserDataJobResponse\"V\332A\017customer_id,jo" +
+      "b\202\323\344\223\002>\"9/v13/customers/{customer_id=*}/" +
+      "offlineUserDataJobs:create:\001*\022\244\002\n\037AddOff" +
+      "lineUserDataJobOperations\022I.google.ads.g" +
+      "oogleads.v13.services.AddOfflineUserData" +
+      "JobOperationsRequest\032J.google.ads.google" +
       "ads.v13.services.AddOfflineUserDataJobOp" +
-      "erationsRequest\032J.google.ads.googleads.v" +
-      "13.services.AddOfflineUserDataJobOperati" +
-      "onsResponse\"j\202\323\344\223\002I\"D/v13/{resource_name" +
-      "=customers/*/offlineUserDataJobs/*}:addO" +
-      "perations:\001*\332A\030resource_name,operations\022" +
-      "\250\002\n\025RunOfflineUserDataJob\022?.google.ads.g" +
-      "oogleads.v13.services.RunOfflineUserData" +
-      "JobRequest\032\035.google.longrunning.Operatio" +
-      "n\"\256\001\202\323\344\223\002?\":/v13/{resource_name=customer" +
-      "s/*/offlineUserDataJobs/*}:run:\001*\332A\rreso" +
-      "urce_name\312AV\n\025google.protobuf.Empty\022=goo" +
+      "erationsResponse\"j\332A\030resource_name,opera" +
+      "tions\202\323\344\223\002I\"D/v13/{resource_name=custome" +
+      "rs/*/offlineUserDataJobs/*}:addOperation" +
+      "s:\001*\022\250\002\n\025RunOfflineUserDataJob\022?.google." +
+      "ads.googleads.v13.services.RunOfflineUse" +
+      "rDataJobRequest\032\035.google.longrunning.Ope" +
+      "ration\"\256\001\312AV\n\025google.protobuf.Empty\022=goo" +
       "gle.ads.googleads.v13.resources.OfflineU" +
-      "serDataJobMetadata\032E\312A\030googleads.googlea" +
-      "pis.com\322A\'https://www.googleapis.com/aut" +
-      "h/adwordsB\212\002\n%com.google.ads.googleads.v" +
-      "13.servicesB\036OfflineUserDataJobServicePr" +
-      "otoP\001ZIgoogle.golang.org/genproto/google" +
-      "apis/ads/googleads/v13/services;services" +
-      "\242\002\003GAA\252\002!Google.Ads.GoogleAds.V13.Servic" +
-      "es\312\002!Google\\Ads\\GoogleAds\\V13\\Services\352\002" +
-      "%Google::Ads::GoogleAds::V13::Servicesb\006" +
-      "proto3"
+      "serDataJobMetadata\332A\rresource_name\202\323\344\223\002?" +
+      "\":/v13/{resource_name=customers/*/offlin" +
+      "eUserDataJobs/*}:run:\001*\032E\312A\030googleads.go" +
+      "ogleapis.com\322A\'https://www.googleapis.co" +
+      "m/auth/adwordsB\212\002\n%com.google.ads.google" +
+      "ads.v13.servicesB\036OfflineUserDataJobServ" +
+      "iceProtoP\001ZIgoogle.golang.org/genproto/g" +
+      "oogleapis/ads/googleads/v13/services;ser" +
+      "vices\242\002\003GAA\252\002!Google.Ads.GoogleAds.V13.S" +
+      "ervices\312\002!Google\\Ads\\GoogleAds\\V13\\Servi" +
+      "ces\352\002%Google::Ads::GoogleAds::V13::Servi" +
+      "cesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

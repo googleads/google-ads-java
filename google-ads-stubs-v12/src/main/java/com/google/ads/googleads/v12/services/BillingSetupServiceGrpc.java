@@ -110,7 +110,7 @@ public final class BillingSetupServiceGrpc {
    * The CREATE operation creates a new billing setup.
    * </pre>
    */
-  public static abstract class BillingSetupServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -128,25 +128,14 @@ public final class BillingSetupServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void mutateBillingSetup(com.google.ads.googleads.v12.services.MutateBillingSetupRequest request,
+    default void mutateBillingSetup(com.google.ads.googleads.v12.services.MutateBillingSetupRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.MutateBillingSetupResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateBillingSetupMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateBillingSetupMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.MutateBillingSetupRequest,
-                com.google.ads.googleads.v12.services.MutateBillingSetupResponse>(
-                  this, METHODID_MUTATE_BILLING_SETUP)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service BillingSetupService.
    * <pre>
    * A service for designating the business entity responsible for accrued costs.
    * A billing setup is associated with a payments account.  Billing-related
@@ -157,7 +146,28 @@ public final class BillingSetupServiceGrpc {
    * The CREATE operation creates a new billing setup.
    * </pre>
    */
-  public static final class BillingSetupServiceStub extends io.grpc.stub.AbstractAsyncStub<BillingSetupServiceStub> {
+  public static abstract class BillingSetupServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return BillingSetupServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service BillingSetupService.
+   * <pre>
+   * A service for designating the business entity responsible for accrued costs.
+   * A billing setup is associated with a payments account.  Billing-related
+   * activity for all billing setups associated with a particular payments account
+   * will appear on a single invoice generated monthly.
+   * Mutates:
+   * The REMOVE operation cancels a pending billing setup.
+   * The CREATE operation creates a new billing setup.
+   * </pre>
+   */
+  public static final class BillingSetupServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<BillingSetupServiceStub> {
     private BillingSetupServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -193,6 +203,7 @@ public final class BillingSetupServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service BillingSetupService.
    * <pre>
    * A service for designating the business entity responsible for accrued costs.
    * A billing setup is associated with a payments account.  Billing-related
@@ -203,7 +214,8 @@ public final class BillingSetupServiceGrpc {
    * The CREATE operation creates a new billing setup.
    * </pre>
    */
-  public static final class BillingSetupServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<BillingSetupServiceBlockingStub> {
+  public static final class BillingSetupServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<BillingSetupServiceBlockingStub> {
     private BillingSetupServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -238,6 +250,7 @@ public final class BillingSetupServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service BillingSetupService.
    * <pre>
    * A service for designating the business entity responsible for accrued costs.
    * A billing setup is associated with a payments account.  Billing-related
@@ -248,7 +261,8 @@ public final class BillingSetupServiceGrpc {
    * The CREATE operation creates a new billing setup.
    * </pre>
    */
-  public static final class BillingSetupServiceFutureStub extends io.grpc.stub.AbstractFutureStub<BillingSetupServiceFutureStub> {
+  public static final class BillingSetupServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<BillingSetupServiceFutureStub> {
     private BillingSetupServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -290,10 +304,10 @@ public final class BillingSetupServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final BillingSetupServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(BillingSetupServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -320,6 +334,18 @@ public final class BillingSetupServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateBillingSetupMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.MutateBillingSetupRequest,
+              com.google.ads.googleads.v12.services.MutateBillingSetupResponse>(
+                service, METHODID_MUTATE_BILLING_SETUP)))
+        .build();
   }
 
   private static abstract class BillingSetupServiceBaseDescriptorSupplier

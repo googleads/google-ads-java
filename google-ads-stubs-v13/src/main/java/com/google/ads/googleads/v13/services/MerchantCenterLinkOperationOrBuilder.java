@@ -68,6 +68,7 @@ public interface MerchantCenterLinkOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed merchant center link is
    * expected, in this format:
+   *
    * `customers/{customer_id}/merchantCenterLinks/{merchant_center_id}`
    * </pre>
    *
@@ -79,6 +80,7 @@ public interface MerchantCenterLinkOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed merchant center link is
    * expected, in this format:
+   *
    * `customers/{customer_id}/merchantCenterLinks/{merchant_center_id}`
    * </pre>
    *
@@ -90,6 +92,7 @@ public interface MerchantCenterLinkOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed merchant center link is
    * expected, in this format:
+   *
    * `customers/{customer_id}/merchantCenterLinks/{merchant_center_id}`
    * </pre>
    *
@@ -99,5 +102,5 @@ public interface MerchantCenterLinkOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v13.services.MerchantCenterLinkOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v13.services.MerchantCenterLinkOperation.OperationCase getOperationCase();
 }

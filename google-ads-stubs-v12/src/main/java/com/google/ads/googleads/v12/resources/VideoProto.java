@@ -31,22 +31,22 @@ public final class VideoProto {
       "\n.google/ads/googleads/v12/resources/vid" +
       "eo.proto\022\"google.ads.googleads.v12.resou" +
       "rces\032\037google/api/field_behavior.proto\032\031g" +
-      "oogle/api/resource.proto\"\272\002\n\005Video\022=\n\rre" +
-      "source_name\030\001 \001(\tB&\340A\003\372A \n\036googleads.goo" +
-      "gleapis.com/Video\022\024\n\002id\030\006 \001(\tB\003\340A\003H\000\210\001\001\022" +
-      "\034\n\nchannel_id\030\007 \001(\tB\003\340A\003H\001\210\001\001\022!\n\017duratio" +
-      "n_millis\030\010 \001(\003B\003\340A\003H\002\210\001\001\022\027\n\005title\030\t \001(\tB" +
-      "\003\340A\003H\003\210\001\001:N\352AK\n\036googleads.googleapis.com" +
-      "/Video\022)customers/{customer_id}/videos/{" +
-      "video_id}B\005\n\003_idB\r\n\013_channel_idB\022\n\020_dura" +
-      "tion_millisB\010\n\006_titleB\374\001\n&com.google.ads" +
-      ".googleads.v12.resourcesB\nVideoProtoP\001ZK" +
-      "google.golang.org/genproto/googleapis/ad" +
-      "s/googleads/v12/resources;resources\242\002\003GA" +
-      "A\252\002\"Google.Ads.GoogleAds.V12.Resources\312\002" +
-      "\"Google\\Ads\\GoogleAds\\V12\\Resources\352\002&Go" +
-      "ogle::Ads::GoogleAds::V12::Resourcesb\006pr" +
-      "oto3"
+      "oogle/api/resource.proto\"\277\002\n\005Video\022>\n\rre" +
+      "source_name\030\001 \001(\tB\'\342A\001\003\372A \n\036googleads.go" +
+      "ogleapis.com/Video\022\025\n\002id\030\006 \001(\tB\004\342A\001\003H\000\210\001" +
+      "\001\022\035\n\nchannel_id\030\007 \001(\tB\004\342A\001\003H\001\210\001\001\022\"\n\017dura" +
+      "tion_millis\030\010 \001(\003B\004\342A\001\003H\002\210\001\001\022\030\n\005title\030\t " +
+      "\001(\tB\004\342A\001\003H\003\210\001\001:N\352AK\n\036googleads.googleapi" +
+      "s.com/Video\022)customers/{customer_id}/vid" +
+      "eos/{video_id}B\005\n\003_idB\r\n\013_channel_idB\022\n\020" +
+      "_duration_millisB\010\n\006_titleB\374\001\n&com.googl" +
+      "e.ads.googleads.v12.resourcesB\nVideoProt" +
+      "oP\001ZKgoogle.golang.org/genproto/googleap" +
+      "is/ads/googleads/v12/resources;resources" +
+      "\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V12.Resour" +
+      "ces\312\002\"Google\\Ads\\GoogleAds\\V12\\Resources" +
+      "\352\002&Google::Ads::GoogleAds::V12::Resource" +
+      "sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -6,6 +6,7 @@ package com.google.ads.googleads.v12.resources;
 /**
  * <pre>
  * Represents a view of BiddingStrategies owned by and shared with the customer.
+ *
  * In contrast to BiddingStrategy, this resource includes strategies owned by
  * managers of the customer and shared with this customer - in addition to
  * strategies owned by this customer. This resource does not provide metrics and
@@ -37,11 +38,6 @@ private static final long serialVersionUID = 0L;
     return new AccessibleBiddingStrategy();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.resources.AccessibleBiddingStrategyProto.internal_static_google_ads_googleads_v12_resources_AccessibleBiddingStrategy_descriptor;
@@ -100,11 +96,6 @@ private static final long serialVersionUID = 0L;
       return new MaximizeConversionValue();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.AccessibleBiddingStrategyProto.internal_static_google_ads_googleads_v12_resources_AccessibleBiddingStrategy_MaximizeConversionValue_descriptor;
@@ -248,11 +239,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.MaximizeConversionValue parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.MaximizeConversionValue parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -498,7 +491,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setTargetRoas(double value) {
-        
+
         targetRoas_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -628,11 +621,6 @@ private static final long serialVersionUID = 0L;
       return new MaximizeConversions();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.AccessibleBiddingStrategyProto.internal_static_google_ads_googleads_v12_resources_AccessibleBiddingStrategy_MaximizeConversions_descriptor;
@@ -772,11 +760,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.MaximizeConversions parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.MaximizeConversions parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1016,7 +1006,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setTargetCpaMicros(long value) {
-        
+
         targetCpaMicros_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -1155,11 +1145,6 @@ private static final long serialVersionUID = 0L;
       return new TargetCpa();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.AccessibleBiddingStrategyProto.internal_static_google_ads_googleads_v12_resources_AccessibleBiddingStrategy_TargetCpa_descriptor;
@@ -1320,11 +1305,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.TargetCpa parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.TargetCpa parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1583,7 +1570,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setTargetCpaMicros(long value) {
-        
+
         targetCpaMicros_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -1765,11 +1752,6 @@ private static final long serialVersionUID = 0L;
       return new TargetImpressionShare();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.AccessibleBiddingStrategyProto.internal_static_google_ads_googleads_v12_resources_AccessibleBiddingStrategy_TargetImpressionShare_descriptor;
@@ -2012,11 +1994,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.TargetImpressionShare parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.TargetImpressionShare parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2371,7 +2355,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setLocationFractionMicros(long value) {
-        
+
         locationFractionMicros_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -2434,7 +2418,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setCpcBidCeilingMicros(long value) {
-        
+
         cpcBidCeilingMicros_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
@@ -2572,11 +2556,6 @@ private static final long serialVersionUID = 0L;
       return new TargetRoas();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.AccessibleBiddingStrategyProto.internal_static_google_ads_googleads_v12_resources_AccessibleBiddingStrategy_TargetRoas_descriptor;
@@ -2736,11 +2715,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.TargetRoas parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.TargetRoas parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2996,7 +2977,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setTargetRoas(double value) {
-        
+
         targetRoas_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -3168,11 +3149,6 @@ private static final long serialVersionUID = 0L;
       return new TargetSpend();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.AccessibleBiddingStrategyProto.internal_static_google_ads_googleads_v12_resources_AccessibleBiddingStrategy_TargetSpend_descriptor;
@@ -3391,11 +3367,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.TargetSpend parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.AccessibleBiddingStrategy.TargetSpend parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3685,7 +3663,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder setTargetSpendMicros(long value) {
-        
+
         targetSpendMicros_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -3752,7 +3730,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setCpcBidCeilingMicros(long value) {
-        
+
         cpcBidCeilingMicros_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -3838,6 +3816,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int schemeCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object scheme_;
   public enum SchemeCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -3893,6 +3872,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the accessible bidding strategy.
    * AccessibleBiddingStrategy resource names have the form:
+   *
    * `customers/{customer_id}/accessibleBiddingStrategies/{bidding_strategy_id}`
    * </pre>
    *
@@ -3916,6 +3896,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the accessible bidding strategy.
    * AccessibleBiddingStrategy resource names have the form:
+   *
    * `customers/{customer_id}/accessibleBiddingStrategies/{bidding_strategy_id}`
    * </pre>
    *
@@ -4626,11 +4607,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.resources.AccessibleBiddingStrategy parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.resources.AccessibleBiddingStrategy parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4675,6 +4658,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Represents a view of BiddingStrategies owned by and shared with the customer.
+   *
    * In contrast to BiddingStrategy, this resource includes strategies owned by
    * managers of the customer and shared with this customer - in addition to
    * strategies owned by this customer. This resource does not provide metrics and
@@ -5055,6 +5039,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the accessible bidding strategy.
      * AccessibleBiddingStrategy resource names have the form:
+     *
      * `customers/{customer_id}/accessibleBiddingStrategies/{bidding_strategy_id}`
      * </pre>
      *
@@ -5077,6 +5062,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the accessible bidding strategy.
      * AccessibleBiddingStrategy resource names have the form:
+     *
      * `customers/{customer_id}/accessibleBiddingStrategies/{bidding_strategy_id}`
      * </pre>
      *
@@ -5100,6 +5086,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the accessible bidding strategy.
      * AccessibleBiddingStrategy resource names have the form:
+     *
      * `customers/{customer_id}/accessibleBiddingStrategies/{bidding_strategy_id}`
      * </pre>
      *
@@ -5119,6 +5106,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the accessible bidding strategy.
      * AccessibleBiddingStrategy resource names have the form:
+     *
      * `customers/{customer_id}/accessibleBiddingStrategies/{bidding_strategy_id}`
      * </pre>
      *
@@ -5135,6 +5123,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the accessible bidding strategy.
      * AccessibleBiddingStrategy resource names have the form:
+     *
      * `customers/{customer_id}/accessibleBiddingStrategies/{bidding_strategy_id}`
      * </pre>
      *
@@ -5175,7 +5164,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      
+
       id_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -5384,7 +5373,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOwnerCustomerId(long value) {
-      
+
       ownerCustomerId_ = value;
       bitField0_ |= 0x00000010;
       onChanged();

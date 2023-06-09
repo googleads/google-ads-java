@@ -11,8 +11,11 @@ public interface AdGroupAdAssetViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the ad group ad asset view.
    * Ad group ad asset view resource names have the form (Before V4):
+   *
    * `customers/{customer_id}/adGroupAdAssets/{AdGroupAdAsset.ad_group_id}~{AdGroupAdAsset.ad.ad_id}~{AdGroupAdAsset.asset_id}~{AdGroupAdAsset.field_type}`
+   *
    * Ad group ad asset view resource names have the form (Beginning from V4):
+   *
    * `customers/{customer_id}/adGroupAdAssetViews/{AdGroupAdAsset.ad_group_id}~{AdGroupAdAsset.ad_id}~{AdGroupAdAsset.asset_id}~{AdGroupAdAsset.field_type}`
    * </pre>
    *
@@ -24,8 +27,11 @@ public interface AdGroupAdAssetViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the ad group ad asset view.
    * Ad group ad asset view resource names have the form (Before V4):
+   *
    * `customers/{customer_id}/adGroupAdAssets/{AdGroupAdAsset.ad_group_id}~{AdGroupAdAsset.ad.ad_id}~{AdGroupAdAsset.asset_id}~{AdGroupAdAsset.field_type}`
+   *
    * Ad group ad asset view resource names have the form (Beginning from V4):
+   *
    * `customers/{customer_id}/adGroupAdAssetViews/{AdGroupAdAsset.ad_group_id}~{AdGroupAdAsset.ad_id}~{AdGroupAdAsset.asset_id}~{AdGroupAdAsset.field_type}`
    * </pre>
    *

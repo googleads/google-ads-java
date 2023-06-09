@@ -11,6 +11,7 @@ public interface AdGroupAudienceViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the ad group audience view.
    * Ad group audience view resource names have the form:
+   *
    * `customers/{customer_id}/adGroupAudienceViews/{ad_group_id}~{criterion_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface AdGroupAudienceViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the ad group audience view.
    * Ad group audience view resource names have the form:
+   *
    * `customers/{customer_id}/adGroupAudienceViews/{ad_group_id}~{criterion_id}`
    * </pre>
    *

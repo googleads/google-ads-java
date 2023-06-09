@@ -35,35 +35,35 @@ public final class ProductBiddingCategoryConstantProto {
       "_category_level.proto\032Dgoogle/ads/google" +
       "ads/v13/enums/product_bidding_category_s" +
       "tatus.proto\032\037google/api/field_behavior.p" +
-      "roto\032\031google/api/resource.proto\"\263\006\n\036Prod" +
-      "uctBiddingCategoryConstant\022V\n\rresource_n" +
-      "ame\030\001 \001(\tB?\340A\003\372A9\n7googleads.googleapis." +
-      "com/ProductBiddingCategoryConstant\022\024\n\002id" +
-      "\030\n \001(\003B\003\340A\003H\000\210\001\001\022\036\n\014country_code\030\013 \001(\tB\003" +
-      "\340A\003H\001\210\001\001\022v\n(product_bidding_category_con" +
-      "stant_parent\030\014 \001(\tB?\340A\003\372A9\n7googleads.go" +
-      "ogleapis.com/ProductBiddingCategoryConst" +
-      "antH\002\210\001\001\022o\n\005level\030\005 \001(\0162[.google.ads.goo" +
-      "gleads.v13.enums.ProductBiddingCategoryL" +
-      "evelEnum.ProductBiddingCategoryLevelB\003\340A" +
-      "\003\022r\n\006status\030\006 \001(\0162].google.ads.googleads" +
-      ".v13.enums.ProductBiddingCategoryStatusE" +
-      "num.ProductBiddingCategoryStatusB\003\340A\003\022\037\n" +
-      "\rlanguage_code\030\r \001(\tB\003\340A\003H\003\210\001\001\022 \n\016locali" +
-      "zed_name\030\016 \001(\tB\003\340A\003H\004\210\001\001:y\352Av\n7googleads" +
-      ".googleapis.com/ProductBiddingCategoryCo" +
-      "nstant\022;productBiddingCategoryConstants/" +
-      "{country_code}~{level}~{id}B\005\n\003_idB\017\n\r_c" +
-      "ountry_codeB+\n)_product_bidding_category" +
-      "_constant_parentB\020\n\016_language_codeB\021\n\017_l" +
-      "ocalized_nameB\225\002\n&com.google.ads.googlea" +
-      "ds.v13.resourcesB#ProductBiddingCategory" +
-      "ConstantProtoP\001ZKgoogle.golang.org/genpr" +
-      "oto/googleapis/ads/googleads/v13/resourc" +
-      "es;resources\242\002\003GAA\252\002\"Google.Ads.GoogleAd" +
-      "s.V13.Resources\312\002\"Google\\Ads\\GoogleAds\\V" +
-      "13\\Resources\352\002&Google::Ads::GoogleAds::V" +
-      "13::Resourcesb\006proto3"
+      "roto\032\031google/api/resource.proto\"\273\006\n\036Prod" +
+      "uctBiddingCategoryConstant\022W\n\rresource_n" +
+      "ame\030\001 \001(\tB@\342A\001\003\372A9\n7googleads.googleapis" +
+      ".com/ProductBiddingCategoryConstant\022\025\n\002i" +
+      "d\030\n \001(\003B\004\342A\001\003H\000\210\001\001\022\037\n\014country_code\030\013 \001(\t" +
+      "B\004\342A\001\003H\001\210\001\001\022w\n(product_bidding_category_" +
+      "constant_parent\030\014 \001(\tB@\342A\001\003\372A9\n7googlead" +
+      "s.googleapis.com/ProductBiddingCategoryC" +
+      "onstantH\002\210\001\001\022p\n\005level\030\005 \001(\0162[.google.ads" +
+      ".googleads.v13.enums.ProductBiddingCateg" +
+      "oryLevelEnum.ProductBiddingCategoryLevel" +
+      "B\004\342A\001\003\022s\n\006status\030\006 \001(\0162].google.ads.goog" +
+      "leads.v13.enums.ProductBiddingCategorySt" +
+      "atusEnum.ProductBiddingCategoryStatusB\004\342" +
+      "A\001\003\022 \n\rlanguage_code\030\r \001(\tB\004\342A\001\003H\003\210\001\001\022!\n" +
+      "\016localized_name\030\016 \001(\tB\004\342A\001\003H\004\210\001\001:y\352Av\n7g" +
+      "oogleads.googleapis.com/ProductBiddingCa" +
+      "tegoryConstant\022;productBiddingCategoryCo" +
+      "nstants/{country_code}~{level}~{id}B\005\n\003_" +
+      "idB\017\n\r_country_codeB+\n)_product_bidding_" +
+      "category_constant_parentB\020\n\016_language_co" +
+      "deB\021\n\017_localized_nameB\225\002\n&com.google.ads" +
+      ".googleads.v13.resourcesB#ProductBidding" +
+      "CategoryConstantProtoP\001ZKgoogle.golang.o" +
+      "rg/genproto/googleapis/ads/googleads/v13" +
+      "/resources;resources\242\002\003GAA\252\002\"Google.Ads." +
+      "GoogleAds.V13.Resources\312\002\"Google\\Ads\\Goo" +
+      "gleAds\\V13\\Resources\352\002&Google::Ads::Goog" +
+      "leAds::V13::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

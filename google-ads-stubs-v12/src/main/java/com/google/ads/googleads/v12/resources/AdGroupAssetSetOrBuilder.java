@@ -11,6 +11,7 @@ public interface AdGroupAssetSetOrBuilder extends
    * <pre>
    * Immutable. The resource name of the ad group asset set.
    * Ad group asset set resource names have the form:
+   *
    * `customers/{customer_id}/adGroupAssetSets/{ad_group_id}~{asset_set_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface AdGroupAssetSetOrBuilder extends
    * <pre>
    * Immutable. The resource name of the ad group asset set.
    * Ad group asset set resource names have the form:
+   *
    * `customers/{customer_id}/adGroupAssetSets/{ad_group_id}~{asset_set_id}`
    * </pre>
    *

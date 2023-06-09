@@ -210,15 +210,15 @@ public final class ExtensionsProto {
       "templateB\023\n\021_final_url_suffix\"`\n\024HotelCa" +
       "lloutFeedItem\022\021\n\004text\030\003 \001(\tH\000\210\001\001\022\032\n\rlang" +
       "uage_code\030\004 \001(\tH\001\210\001\001B\007\n\005_textB\020\n\016_langua" +
-      "ge_code\"L\n\rImageFeedItem\022;\n\013image_asset\030" +
-      "\001 \001(\tB&\340A\002\372A \n\036googleads.googleapis.com/" +
-      "AssetB\357\001\n#com.google.ads.googleads.v13.c" +
-      "ommonB\017ExtensionsProtoP\001ZEgoogle.golang." +
-      "org/genproto/googleapis/ads/googleads/v1" +
-      "3/common;common\242\002\003GAA\252\002\037Google.Ads.Googl" +
-      "eAds.V13.Common\312\002\037Google\\Ads\\GoogleAds\\V" +
-      "13\\Common\352\002#Google::Ads::GoogleAds::V13:" +
-      ":Commonb\006proto3"
+      "ge_code\"M\n\rImageFeedItem\022<\n\013image_asset\030" +
+      "\001 \001(\tB\'\342A\001\002\372A \n\036googleads.googleapis.com" +
+      "/AssetB\357\001\n#com.google.ads.googleads.v13." +
+      "commonB\017ExtensionsProtoP\001ZEgoogle.golang" +
+      ".org/genproto/googleapis/ads/googleads/v" +
+      "13/common;common\242\002\003GAA\252\002\037Google.Ads.Goog" +
+      "leAds.V13.Common\312\002\037Google\\Ads\\GoogleAds\\" +
+      "V13\\Common\352\002#Google::Ads::GoogleAds::V13" +
+      "::Commonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

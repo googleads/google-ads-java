@@ -11,6 +11,7 @@ public interface KeywordPlanKeywordHistoricalMetricsOrBuilder extends
    * <pre>
    * The text of the query associated with one or more ad_group_keywords in the
    * plan.
+   *
    * Note that we de-dupe your keywords list, eliminating close variants before
    * returning the plan's keywords as text. For example, if your plan originally
    * contained the keywords 'car' and 'cars', the returned search query will
@@ -27,6 +28,7 @@ public interface KeywordPlanKeywordHistoricalMetricsOrBuilder extends
    * <pre>
    * The text of the query associated with one or more ad_group_keywords in the
    * plan.
+   *
    * Note that we de-dupe your keywords list, eliminating close variants before
    * returning the plan's keywords as text. For example, if your plan originally
    * contained the keywords 'car' and 'cars', the returned search query will
@@ -43,6 +45,7 @@ public interface KeywordPlanKeywordHistoricalMetricsOrBuilder extends
    * <pre>
    * The text of the query associated with one or more ad_group_keywords in the
    * plan.
+   *
    * Note that we de-dupe your keywords list, eliminating close variants before
    * returning the plan's keywords as text. For example, if your plan originally
    * contained the keywords 'car' and 'cars', the returned search query will

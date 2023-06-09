@@ -52,46 +52,46 @@ public final class CampaignBudgetServiceProto {
       "ns.proto\032\027google/api/client.proto\032\037googl" +
       "e/api/field_behavior.proto\032\031google/api/r" +
       "esource.proto\032 google/protobuf/field_mas" +
-      "k.proto\032\027google/rpc/status.proto\"\251\002\n\034Mut" +
-      "ateCampaignBudgetsRequest\022\030\n\013customer_id" +
-      "\030\001 \001(\tB\003\340A\002\022S\n\noperations\030\002 \003(\0132:.google" +
-      ".ads.googleads.v12.services.CampaignBudg" +
-      "etOperationB\003\340A\002\022\027\n\017partial_failure\030\003 \001(" +
-      "\010\022\025\n\rvalidate_only\030\004 \001(\010\022j\n\025response_con" +
-      "tent_type\030\005 \001(\0162K.google.ads.googleads.v" +
-      "12.enums.ResponseContentTypeEnum.Respons" +
-      "eContentType\"\243\002\n\027CampaignBudgetOperation" +
-      "\022/\n\013update_mask\030\004 \001(\0132\032.google.protobuf." +
-      "FieldMask\022D\n\006create\030\001 \001(\01322.google.ads.g" +
-      "oogleads.v12.resources.CampaignBudgetH\000\022" +
-      "D\n\006update\030\002 \001(\01322.google.ads.googleads.v" +
-      "12.resources.CampaignBudgetH\000\022>\n\006remove\030" +
-      "\003 \001(\tB,\372A)\n\'googleads.googleapis.com/Cam" +
-      "paignBudgetH\000B\013\n\toperation\"\242\001\n\035MutateCam" +
-      "paignBudgetsResponse\0221\n\025partial_failure_" +
-      "error\030\003 \001(\0132\022.google.rpc.Status\022N\n\007resul" +
-      "ts\030\002 \003(\0132=.google.ads.googleads.v12.serv" +
-      "ices.MutateCampaignBudgetResult\"\256\001\n\032Muta" +
-      "teCampaignBudgetResult\022C\n\rresource_name\030" +
-      "\001 \001(\tB,\372A)\n\'googleads.googleapis.com/Cam" +
-      "paignBudget\022K\n\017campaign_budget\030\002 \001(\01322.g" +
-      "oogle.ads.googleads.v12.resources.Campai" +
-      "gnBudget2\326\002\n\025CampaignBudgetService\022\365\001\n\025M" +
-      "utateCampaignBudgets\022?.google.ads.google" +
-      "ads.v12.services.MutateCampaignBudgetsRe" +
-      "quest\032@.google.ads.googleads.v12.service" +
-      "s.MutateCampaignBudgetsResponse\"Y\202\323\344\223\002:\"" +
-      "5/v12/customers/{customer_id=*}/campaign" +
-      "Budgets:mutate:\001*\332A\026customer_id,operatio" +
-      "ns\032E\312A\030googleads.googleapis.com\322A\'https:" +
-      "//www.googleapis.com/auth/adwordsB\206\002\n%co" +
-      "m.google.ads.googleads.v12.servicesB\032Cam" +
-      "paignBudgetServiceProtoP\001ZIgoogle.golang" +
-      ".org/genproto/googleapis/ads/googleads/v" +
-      "12/services;services\242\002\003GAA\252\002!Google.Ads." +
-      "GoogleAds.V12.Services\312\002!Google\\Ads\\Goog" +
-      "leAds\\V12\\Services\352\002%Google::Ads::Google" +
-      "Ads::V12::Servicesb\006proto3"
+      "k.proto\032\027google/rpc/status.proto\"\253\002\n\034Mut" +
+      "ateCampaignBudgetsRequest\022\031\n\013customer_id" +
+      "\030\001 \001(\tB\004\342A\001\002\022T\n\noperations\030\002 \003(\0132:.googl" +
+      "e.ads.googleads.v12.services.CampaignBud" +
+      "getOperationB\004\342A\001\002\022\027\n\017partial_failure\030\003 " +
+      "\001(\010\022\025\n\rvalidate_only\030\004 \001(\010\022j\n\025response_c" +
+      "ontent_type\030\005 \001(\0162K.google.ads.googleads" +
+      ".v12.enums.ResponseContentTypeEnum.Respo" +
+      "nseContentType\"\243\002\n\027CampaignBudgetOperati" +
+      "on\022/\n\013update_mask\030\004 \001(\0132\032.google.protobu" +
+      "f.FieldMask\022D\n\006create\030\001 \001(\01322.google.ads" +
+      ".googleads.v12.resources.CampaignBudgetH" +
+      "\000\022D\n\006update\030\002 \001(\01322.google.ads.googleads" +
+      ".v12.resources.CampaignBudgetH\000\022>\n\006remov" +
+      "e\030\003 \001(\tB,\372A)\n\'googleads.googleapis.com/C" +
+      "ampaignBudgetH\000B\013\n\toperation\"\242\001\n\035MutateC" +
+      "ampaignBudgetsResponse\0221\n\025partial_failur" +
+      "e_error\030\003 \001(\0132\022.google.rpc.Status\022N\n\007res" +
+      "ults\030\002 \003(\0132=.google.ads.googleads.v12.se" +
+      "rvices.MutateCampaignBudgetResult\"\256\001\n\032Mu" +
+      "tateCampaignBudgetResult\022C\n\rresource_nam" +
+      "e\030\001 \001(\tB,\372A)\n\'googleads.googleapis.com/C" +
+      "ampaignBudget\022K\n\017campaign_budget\030\002 \001(\01322" +
+      ".google.ads.googleads.v12.resources.Camp" +
+      "aignBudget2\326\002\n\025CampaignBudgetService\022\365\001\n" +
+      "\025MutateCampaignBudgets\022?.google.ads.goog" +
+      "leads.v12.services.MutateCampaignBudgets" +
+      "Request\032@.google.ads.googleads.v12.servi" +
+      "ces.MutateCampaignBudgetsResponse\"Y\332A\026cu" +
+      "stomer_id,operations\202\323\344\223\002:\"5/v12/custome" +
+      "rs/{customer_id=*}/campaignBudgets:mutat" +
+      "e:\001*\032E\312A\030googleads.googleapis.com\322A\'http" +
+      "s://www.googleapis.com/auth/adwordsB\206\002\n%" +
+      "com.google.ads.googleads.v12.servicesB\032C" +
+      "ampaignBudgetServiceProtoP\001ZIgoogle.gola" +
+      "ng.org/genproto/googleapis/ads/googleads" +
+      "/v12/services;services\242\002\003GAA\252\002!Google.Ad" +
+      "s.GoogleAds.V12.Services\312\002!Google\\Ads\\Go" +
+      "ogleAds\\V12\\Services\352\002%Google::Ads::Goog" +
+      "leAds::V12::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

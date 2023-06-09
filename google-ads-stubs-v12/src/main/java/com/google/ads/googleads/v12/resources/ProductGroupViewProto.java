@@ -31,20 +31,20 @@ public final class ProductGroupViewProto {
       "\n;google/ads/googleads/v12/resources/pro" +
       "duct_group_view.proto\022\"google.ads.google" +
       "ads.v12.resources\032\037google/api/field_beha" +
-      "vior.proto\032\031google/api/resource.proto\"\323\001" +
-      "\n\020ProductGroupView\022H\n\rresource_name\030\001 \001(" +
-      "\tB1\340A\003\372A+\n)googleads.googleapis.com/Prod" +
-      "uctGroupView:u\352Ar\n)googleads.googleapis." +
-      "com/ProductGroupView\022Ecustomers/{custome" +
-      "r_id}/productGroupViews/{adgroup_id}~{cr" +
-      "iterion_id}B\207\002\n&com.google.ads.googleads" +
-      ".v12.resourcesB\025ProductGroupViewProtoP\001Z" +
-      "Kgoogle.golang.org/genproto/googleapis/a" +
-      "ds/googleads/v12/resources;resources\242\002\003G" +
-      "AA\252\002\"Google.Ads.GoogleAds.V12.Resources\312" +
-      "\002\"Google\\Ads\\GoogleAds\\V12\\Resources\352\002&G" +
-      "oogle::Ads::GoogleAds::V12::Resourcesb\006p" +
-      "roto3"
+      "vior.proto\032\031google/api/resource.proto\"\324\001" +
+      "\n\020ProductGroupView\022I\n\rresource_name\030\001 \001(" +
+      "\tB2\342A\001\003\372A+\n)googleads.googleapis.com/Pro" +
+      "ductGroupView:u\352Ar\n)googleads.googleapis" +
+      ".com/ProductGroupView\022Ecustomers/{custom" +
+      "er_id}/productGroupViews/{adgroup_id}~{c" +
+      "riterion_id}B\207\002\n&com.google.ads.googlead" +
+      "s.v12.resourcesB\025ProductGroupViewProtoP\001" +
+      "ZKgoogle.golang.org/genproto/googleapis/" +
+      "ads/googleads/v12/resources;resources\242\002\003" +
+      "GAA\252\002\"Google.Ads.GoogleAds.V12.Resources" +
+      "\312\002\"Google\\Ads\\GoogleAds\\V12\\Resources\352\002&" +
+      "Google::Ads::GoogleAds::V12::Resourcesb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

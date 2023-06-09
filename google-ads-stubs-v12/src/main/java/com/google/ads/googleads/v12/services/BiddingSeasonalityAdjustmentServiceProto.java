@@ -53,52 +53,52 @@ public final class BiddingSeasonalityAdjustmentServiceProto {
       "google/api/client.proto\032\037google/api/fiel" +
       "d_behavior.proto\032\031google/api/resource.pr" +
       "oto\032 google/protobuf/field_mask.proto\032\027g" +
-      "oogle/rpc/status.proto\"\305\002\n*MutateBidding" +
-      "SeasonalityAdjustmentsRequest\022\030\n\013custome" +
-      "r_id\030\001 \001(\tB\003\340A\002\022a\n\noperations\030\002 \003(\0132H.go" +
-      "ogle.ads.googleads.v12.services.BiddingS" +
-      "easonalityAdjustmentOperationB\003\340A\002\022\027\n\017pa" +
-      "rtial_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001" +
-      "(\010\022j\n\025response_content_type\030\005 \001(\0162K.goog" +
-      "le.ads.googleads.v12.enums.ResponseConte" +
-      "ntTypeEnum.ResponseContentType\"\333\002\n%Biddi" +
-      "ngSeasonalityAdjustmentOperation\022/\n\013upda" +
-      "te_mask\030\004 \001(\0132\032.google.protobuf.FieldMas" +
-      "k\022R\n\006create\030\001 \001(\0132@.google.ads.googleads" +
-      ".v12.resources.BiddingSeasonalityAdjustm" +
-      "entH\000\022R\n\006update\030\002 \001(\0132@.google.ads.googl" +
-      "eads.v12.resources.BiddingSeasonalityAdj" +
-      "ustmentH\000\022L\n\006remove\030\003 \001(\tB:\372A7\n5googlead" +
-      "s.googleapis.com/BiddingSeasonalityAdjus" +
-      "tmentH\000B\013\n\toperation\"\277\001\n+MutateBiddingSe" +
-      "asonalityAdjustmentsResponse\0221\n\025partial_" +
-      "failure_error\030\003 \001(\0132\022.google.rpc.Status\022" +
-      "]\n\007results\030\002 \003(\0132L.google.ads.googleads." +
-      "v12.services.MutateBiddingSeasonalityAdj" +
-      "ustmentsResult\"\350\001\n)MutateBiddingSeasonal" +
-      "ityAdjustmentsResult\022Q\n\rresource_name\030\001 " +
-      "\001(\tB:\372A7\n5googleads.googleapis.com/Biddi" +
-      "ngSeasonalityAdjustment\022h\n\036bidding_seaso" +
-      "nality_adjustment\030\002 \001(\0132@.google.ads.goo" +
+      "oogle/rpc/status.proto\"\307\002\n*MutateBidding" +
+      "SeasonalityAdjustmentsRequest\022\031\n\013custome" +
+      "r_id\030\001 \001(\tB\004\342A\001\002\022b\n\noperations\030\002 \003(\0132H.g" +
+      "oogle.ads.googleads.v12.services.Bidding" +
+      "SeasonalityAdjustmentOperationB\004\342A\001\002\022\027\n\017" +
+      "partial_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004" +
+      " \001(\010\022j\n\025response_content_type\030\005 \001(\0162K.go" +
+      "ogle.ads.googleads.v12.enums.ResponseCon" +
+      "tentTypeEnum.ResponseContentType\"\333\002\n%Bid" +
+      "dingSeasonalityAdjustmentOperation\022/\n\013up" +
+      "date_mask\030\004 \001(\0132\032.google.protobuf.FieldM" +
+      "ask\022R\n\006create\030\001 \001(\0132@.google.ads.googlea" +
+      "ds.v12.resources.BiddingSeasonalityAdjus" +
+      "tmentH\000\022R\n\006update\030\002 \001(\0132@.google.ads.goo" +
       "gleads.v12.resources.BiddingSeasonalityA" +
-      "djustment2\234\003\n#BiddingSeasonalityAdjustme" +
-      "ntService\022\255\002\n#MutateBiddingSeasonalityAd" +
-      "justments\022M.google.ads.googleads.v12.ser" +
-      "vices.MutateBiddingSeasonalityAdjustment" +
-      "sRequest\032N.google.ads.googleads.v12.serv" +
-      "ices.MutateBiddingSeasonalityAdjustments" +
-      "Response\"g\202\323\344\223\002H\"C/v12/customers/{custom" +
-      "er_id=*}/biddingSeasonalityAdjustments:m" +
-      "utate:\001*\332A\026customer_id,operations\032E\312A\030go" +
-      "ogleads.googleapis.com\322A\'https://www.goo" +
-      "gleapis.com/auth/adwordsB\224\002\n%com.google." +
-      "ads.googleads.v12.servicesB(BiddingSeaso" +
-      "nalityAdjustmentServiceProtoP\001ZIgoogle.g" +
-      "olang.org/genproto/googleapis/ads/google" +
-      "ads/v12/services;services\242\002\003GAA\252\002!Google" +
-      ".Ads.GoogleAds.V12.Services\312\002!Google\\Ads" +
-      "\\GoogleAds\\V12\\Services\352\002%Google::Ads::G" +
-      "oogleAds::V12::Servicesb\006proto3"
+      "djustmentH\000\022L\n\006remove\030\003 \001(\tB:\372A7\n5google" +
+      "ads.googleapis.com/BiddingSeasonalityAdj" +
+      "ustmentH\000B\013\n\toperation\"\277\001\n+MutateBidding" +
+      "SeasonalityAdjustmentsResponse\0221\n\025partia" +
+      "l_failure_error\030\003 \001(\0132\022.google.rpc.Statu" +
+      "s\022]\n\007results\030\002 \003(\0132L.google.ads.googlead" +
+      "s.v12.services.MutateBiddingSeasonalityA" +
+      "djustmentsResult\"\350\001\n)MutateBiddingSeason" +
+      "alityAdjustmentsResult\022Q\n\rresource_name\030" +
+      "\001 \001(\tB:\372A7\n5googleads.googleapis.com/Bid" +
+      "dingSeasonalityAdjustment\022h\n\036bidding_sea" +
+      "sonality_adjustment\030\002 \001(\0132@.google.ads.g" +
+      "oogleads.v12.resources.BiddingSeasonalit" +
+      "yAdjustment2\234\003\n#BiddingSeasonalityAdjust" +
+      "mentService\022\255\002\n#MutateBiddingSeasonality" +
+      "Adjustments\022M.google.ads.googleads.v12.s" +
+      "ervices.MutateBiddingSeasonalityAdjustme" +
+      "ntsRequest\032N.google.ads.googleads.v12.se" +
+      "rvices.MutateBiddingSeasonalityAdjustmen" +
+      "tsResponse\"g\332A\026customer_id,operations\202\323\344" +
+      "\223\002H\"C/v12/customers/{customer_id=*}/bidd" +
+      "ingSeasonalityAdjustments:mutate:\001*\032E\312A\030" +
+      "googleads.googleapis.com\322A\'https://www.g" +
+      "oogleapis.com/auth/adwordsB\224\002\n%com.googl" +
+      "e.ads.googleads.v12.servicesB(BiddingSea" +
+      "sonalityAdjustmentServiceProtoP\001ZIgoogle" +
+      ".golang.org/genproto/googleapis/ads/goog" +
+      "leads/v12/services;services\242\002\003GAA\252\002!Goog" +
+      "le.Ads.GoogleAds.V12.Services\312\002!Google\\A" +
+      "ds\\GoogleAds\\V12\\Services\352\002%Google::Ads:" +
+      ":GoogleAds::V12::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

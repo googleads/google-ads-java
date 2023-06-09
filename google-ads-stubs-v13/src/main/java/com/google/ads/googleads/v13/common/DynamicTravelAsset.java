@@ -31,8 +31,10 @@ private static final long serialVersionUID = 0L;
     formattedPrice_ = "";
     formattedSalePrice_ = "";
     category_ = "";
-    contextualKeywords_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    similarDestinationIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    contextualKeywords_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    similarDestinationIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     imageUrl_ = "";
     androidAppLink_ = "";
     iosAppLink_ = "";
@@ -45,11 +47,6 @@ private static final long serialVersionUID = 0L;
     return new DynamicTravelAsset();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.common.AssetTypesProto.internal_static_google_ads_googleads_v13_common_DynamicTravelAsset_descriptor;
@@ -602,7 +599,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int CONTEXTUAL_KEYWORDS_FIELD_NUMBER = 12;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList contextualKeywords_;
+  private com.google.protobuf.LazyStringArrayList contextualKeywords_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * Contextual keywords, for example, Paris trains.
@@ -654,7 +652,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int SIMILAR_DESTINATION_IDS_FIELD_NUMBER = 13;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList similarDestinationIds_;
+  private com.google.protobuf.LazyStringArrayList similarDestinationIds_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * Similar destination IDs, for example, NYC.
@@ -1150,11 +1149,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.common.DynamicTravelAsset parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.common.DynamicTravelAsset parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1245,10 +1246,10 @@ private static final long serialVersionUID = 0L;
       formattedPrice_ = "";
       formattedSalePrice_ = "";
       category_ = "";
-      contextualKeywords_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000800);
-      similarDestinationIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00001000);
+      contextualKeywords_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      similarDestinationIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       imageUrl_ = "";
       androidAppLink_ = "";
       iosAppLink_ = "";
@@ -1279,23 +1280,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v13.common.DynamicTravelAsset buildPartial() {
       com.google.ads.googleads.v13.common.DynamicTravelAsset result = new com.google.ads.googleads.v13.common.DynamicTravelAsset(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(com.google.ads.googleads.v13.common.DynamicTravelAsset result) {
-      if (((bitField0_ & 0x00000800) != 0)) {
-        contextualKeywords_ = contextualKeywords_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000800);
-      }
-      result.contextualKeywords_ = contextualKeywords_;
-      if (((bitField0_ & 0x00001000) != 0)) {
-        similarDestinationIds_ = similarDestinationIds_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00001000);
-      }
-      result.similarDestinationIds_ = similarDestinationIds_;
     }
 
     private void buildPartial0(com.google.ads.googleads.v13.common.DynamicTravelAsset result) {
@@ -1332,6 +1319,14 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.category_ = category_;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        contextualKeywords_.makeImmutable();
+        result.contextualKeywords_ = contextualKeywords_;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        similarDestinationIds_.makeImmutable();
+        result.similarDestinationIds_ = similarDestinationIds_;
       }
       if (((from_bitField0_ & 0x00002000) != 0)) {
         result.imageUrl_ = imageUrl_;
@@ -1449,7 +1444,7 @@ private static final long serialVersionUID = 0L;
       if (!other.contextualKeywords_.isEmpty()) {
         if (contextualKeywords_.isEmpty()) {
           contextualKeywords_ = other.contextualKeywords_;
-          bitField0_ = (bitField0_ & ~0x00000800);
+          bitField0_ |= 0x00000800;
         } else {
           ensureContextualKeywordsIsMutable();
           contextualKeywords_.addAll(other.contextualKeywords_);
@@ -1459,7 +1454,7 @@ private static final long serialVersionUID = 0L;
       if (!other.similarDestinationIds_.isEmpty()) {
         if (similarDestinationIds_.isEmpty()) {
           similarDestinationIds_ = other.similarDestinationIds_;
-          bitField0_ = (bitField0_ & ~0x00001000);
+          bitField0_ |= 0x00001000;
         } else {
           ensureSimilarDestinationIdsIsMutable();
           similarDestinationIds_.addAll(other.similarDestinationIds_);
@@ -2676,12 +2671,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.LazyStringList contextualKeywords_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList contextualKeywords_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureContextualKeywordsIsMutable() {
-      if (!((bitField0_ & 0x00000800) != 0)) {
+      if (!contextualKeywords_.isModifiable()) {
         contextualKeywords_ = new com.google.protobuf.LazyStringArrayList(contextualKeywords_);
-        bitField0_ |= 0x00000800;
-       }
+      }
+      bitField0_ |= 0x00000800;
     }
     /**
      * <pre>
@@ -2693,7 +2689,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getContextualKeywordsList() {
-      return contextualKeywords_.getUnmodifiableView();
+      contextualKeywords_.makeImmutable();
+      return contextualKeywords_;
     }
     /**
      * <pre>
@@ -2746,6 +2743,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureContextualKeywordsIsMutable();
       contextualKeywords_.set(index, value);
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -2763,6 +2761,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureContextualKeywordsIsMutable();
       contextualKeywords_.add(value);
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -2780,6 +2779,7 @@ private static final long serialVersionUID = 0L;
       ensureContextualKeywordsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, contextualKeywords_);
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -2792,8 +2792,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearContextualKeywords() {
-      contextualKeywords_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000800);
+      contextualKeywords_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000800);;
       onChanged();
       return this;
     }
@@ -2812,16 +2813,18 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureContextualKeywordsIsMutable();
       contextualKeywords_.add(value);
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList similarDestinationIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList similarDestinationIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureSimilarDestinationIdsIsMutable() {
-      if (!((bitField0_ & 0x00001000) != 0)) {
+      if (!similarDestinationIds_.isModifiable()) {
         similarDestinationIds_ = new com.google.protobuf.LazyStringArrayList(similarDestinationIds_);
-        bitField0_ |= 0x00001000;
-       }
+      }
+      bitField0_ |= 0x00001000;
     }
     /**
      * <pre>
@@ -2833,7 +2836,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getSimilarDestinationIdsList() {
-      return similarDestinationIds_.getUnmodifiableView();
+      similarDestinationIds_.makeImmutable();
+      return similarDestinationIds_;
     }
     /**
      * <pre>
@@ -2886,6 +2890,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureSimilarDestinationIdsIsMutable();
       similarDestinationIds_.set(index, value);
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -2903,6 +2908,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureSimilarDestinationIdsIsMutable();
       similarDestinationIds_.add(value);
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -2920,6 +2926,7 @@ private static final long serialVersionUID = 0L;
       ensureSimilarDestinationIdsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, similarDestinationIds_);
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -2932,8 +2939,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSimilarDestinationIds() {
-      similarDestinationIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00001000);
+      similarDestinationIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00001000);;
       onChanged();
       return this;
     }
@@ -2952,6 +2960,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureSimilarDestinationIdsIsMutable();
       similarDestinationIds_.add(value);
+      bitField0_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -3269,7 +3278,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIosAppStoreId(long value) {
-      
+
       iosAppStoreId_ = value;
       bitField0_ |= 0x00010000;
       onChanged();

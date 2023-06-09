@@ -40,11 +40,6 @@ private static final long serialVersionUID = 0L;
     return new UserList();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.resources.UserListProto.internal_static_google_ads_googleads_v13_resources_UserList_descriptor;
@@ -60,6 +55,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   private int userListCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object userList_;
   public enum UserListCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -113,6 +109,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the user list.
    * User list resource names have the form:
+   *
    * `customers/{customer_id}/userLists/{user_list_id}`
    * </pre>
    *
@@ -136,6 +133,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the user list.
    * User list resource names have the form:
+   *
    * `customers/{customer_id}/userLists/{user_list_id}`
    * </pre>
    *
@@ -191,6 +189,7 @@ private static final long serialVersionUID = 0L;
    * Output only. An option that indicates if a user may edit a list. Depends on
    * the list ownership and list type. For example, external remarketing user
    * lists are not editable.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -206,6 +205,7 @@ private static final long serialVersionUID = 0L;
    * Output only. An option that indicates if a user may edit a list. Depends on
    * the list ownership and list type. For example, external remarketing user
    * lists are not editable.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -438,6 +438,7 @@ private static final long serialVersionUID = 0L;
    * addition to the list. This field must be between 0 and 540 inclusive.
    * However, for CRM based userlists, this field can be set to 10000 which
    * means no expiration.
+   *
    * It'll be ignored for logical_user_list.
    * </pre>
    *
@@ -454,6 +455,7 @@ private static final long serialVersionUID = 0L;
    * addition to the list. This field must be between 0 and 540 inclusive.
    * However, for CRM based userlists, this field can be set to 10000 which
    * means no expiration.
+   *
    * It'll be ignored for logical_user_list.
    * </pre>
    *
@@ -472,6 +474,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Estimated number of users in this user list, on the Google
    * Display Network. This value is null if the number of users has not yet been
    * determined.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -487,6 +490,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Estimated number of users in this user list, on the Google
    * Display Network. This value is null if the number of users has not yet been
    * determined.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -504,6 +508,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. Size range in terms of number of users of the UserList, on the
    * Google Display Network.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -517,6 +522,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. Size range in terms of number of users of the UserList, on the
    * Google Display Network.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -535,6 +541,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Estimated number of users in this user list in the google.com
    * domain. These are the users available for targeting in Search campaigns.
    * This value is null if the number of users has not yet been determined.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -550,6 +557,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Estimated number of users in this user list in the google.com
    * domain. These are the users available for targeting in Search campaigns.
    * This value is null if the number of users has not yet been determined.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -567,6 +575,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. Size range in terms of number of users of the UserList, for
    * Search ads.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -580,6 +589,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. Size range in terms of number of users of the UserList, for
    * Search ads.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -596,6 +606,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. Type of this list.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -608,6 +619,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. Type of this list.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -655,6 +667,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. Indicates the reason this account has been granted access to
    * the list. The reason can be SHARED, OWNED, LICENSED or SUBSCRIBED.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -668,6 +681,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. Indicates the reason this account has been granted access to
    * the list. The reason can be SHARED, OWNED, LICENSED or SUBSCRIBED.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -744,6 +758,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. Indicates this user list is eligible for Google Display
    * Network.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -758,6 +773,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. Indicates this user list is eligible for Google Display
    * Network.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -776,6 +792,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Indicates match rate for Customer Match lists. The range of
    * this field is [0-100]. This will be null for other list types or when it's
    * not possible to calculate the match rate.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -791,6 +808,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Indicates match rate for Customer Match lists. The range of
    * this field is [0-100]. This will be null for other list types or when it's
    * not possible to calculate the match rate.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -1462,11 +1480,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.resources.UserList parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.resources.UserList parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2040,6 +2060,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the user list.
      * User list resource names have the form:
+     *
      * `customers/{customer_id}/userLists/{user_list_id}`
      * </pre>
      *
@@ -2062,6 +2083,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the user list.
      * User list resource names have the form:
+     *
      * `customers/{customer_id}/userLists/{user_list_id}`
      * </pre>
      *
@@ -2085,6 +2107,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the user list.
      * User list resource names have the form:
+     *
      * `customers/{customer_id}/userLists/{user_list_id}`
      * </pre>
      *
@@ -2104,6 +2127,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the user list.
      * User list resource names have the form:
+     *
      * `customers/{customer_id}/userLists/{user_list_id}`
      * </pre>
      *
@@ -2120,6 +2144,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the user list.
      * User list resource names have the form:
+     *
      * `customers/{customer_id}/userLists/{user_list_id}`
      * </pre>
      *
@@ -2172,7 +2197,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      
+
       id_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -2199,6 +2224,7 @@ private static final long serialVersionUID = 0L;
      * Output only. An option that indicates if a user may edit a list. Depends on
      * the list ownership and list type. For example, external remarketing user
      * lists are not editable.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2214,6 +2240,7 @@ private static final long serialVersionUID = 0L;
      * Output only. An option that indicates if a user may edit a list. Depends on
      * the list ownership and list type. For example, external remarketing user
      * lists are not editable.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2229,6 +2256,7 @@ private static final long serialVersionUID = 0L;
      * Output only. An option that indicates if a user may edit a list. Depends on
      * the list ownership and list type. For example, external remarketing user
      * lists are not editable.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2237,7 +2265,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setReadOnly(boolean value) {
-      
+
       readOnly_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
@@ -2248,6 +2276,7 @@ private static final long serialVersionUID = 0L;
      * Output only. An option that indicates if a user may edit a list. Depends on
      * the list ownership and list type. For example, external remarketing user
      * lists are not editable.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2672,6 +2701,7 @@ private static final long serialVersionUID = 0L;
      * addition to the list. This field must be between 0 and 540 inclusive.
      * However, for CRM based userlists, this field can be set to 10000 which
      * means no expiration.
+     *
      * It'll be ignored for logical_user_list.
      * </pre>
      *
@@ -2688,6 +2718,7 @@ private static final long serialVersionUID = 0L;
      * addition to the list. This field must be between 0 and 540 inclusive.
      * However, for CRM based userlists, this field can be set to 10000 which
      * means no expiration.
+     *
      * It'll be ignored for logical_user_list.
      * </pre>
      *
@@ -2704,6 +2735,7 @@ private static final long serialVersionUID = 0L;
      * addition to the list. This field must be between 0 and 540 inclusive.
      * However, for CRM based userlists, this field can be set to 10000 which
      * means no expiration.
+     *
      * It'll be ignored for logical_user_list.
      * </pre>
      *
@@ -2712,7 +2744,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMembershipLifeSpan(long value) {
-      
+
       membershipLifeSpan_ = value;
       bitField0_ |= 0x00000080;
       onChanged();
@@ -2724,6 +2756,7 @@ private static final long serialVersionUID = 0L;
      * addition to the list. This field must be between 0 and 540 inclusive.
      * However, for CRM based userlists, this field can be set to 10000 which
      * means no expiration.
+     *
      * It'll be ignored for logical_user_list.
      * </pre>
      *
@@ -2743,6 +2776,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Estimated number of users in this user list, on the Google
      * Display Network. This value is null if the number of users has not yet been
      * determined.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2758,6 +2792,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Estimated number of users in this user list, on the Google
      * Display Network. This value is null if the number of users has not yet been
      * determined.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2773,6 +2808,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Estimated number of users in this user list, on the Google
      * Display Network. This value is null if the number of users has not yet been
      * determined.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2781,7 +2817,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSizeForDisplay(long value) {
-      
+
       sizeForDisplay_ = value;
       bitField0_ |= 0x00000100;
       onChanged();
@@ -2792,6 +2828,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Estimated number of users in this user list, on the Google
      * Display Network. This value is null if the number of users has not yet been
      * determined.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2810,6 +2847,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. Size range in terms of number of users of the UserList, on the
      * Google Display Network.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2823,6 +2861,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. Size range in terms of number of users of the UserList, on the
      * Google Display Network.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2840,6 +2879,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. Size range in terms of number of users of the UserList, on the
      * Google Display Network.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2855,6 +2895,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. Size range in terms of number of users of the UserList, on the
      * Google Display Network.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2875,6 +2916,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. Size range in terms of number of users of the UserList, on the
      * Google Display Network.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2894,6 +2936,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Estimated number of users in this user list in the google.com
      * domain. These are the users available for targeting in Search campaigns.
      * This value is null if the number of users has not yet been determined.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2909,6 +2952,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Estimated number of users in this user list in the google.com
      * domain. These are the users available for targeting in Search campaigns.
      * This value is null if the number of users has not yet been determined.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2924,6 +2968,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Estimated number of users in this user list in the google.com
      * domain. These are the users available for targeting in Search campaigns.
      * This value is null if the number of users has not yet been determined.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2932,7 +2977,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSizeForSearch(long value) {
-      
+
       sizeForSearch_ = value;
       bitField0_ |= 0x00000400;
       onChanged();
@@ -2943,6 +2988,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Estimated number of users in this user list in the google.com
      * domain. These are the users available for targeting in Search campaigns.
      * This value is null if the number of users has not yet been determined.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2961,6 +3007,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. Size range in terms of number of users of the UserList, for
      * Search ads.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2974,6 +3021,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. Size range in terms of number of users of the UserList, for
      * Search ads.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -2991,6 +3039,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. Size range in terms of number of users of the UserList, for
      * Search ads.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -3006,6 +3055,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. Size range in terms of number of users of the UserList, for
      * Search ads.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -3026,6 +3076,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. Size range in terms of number of users of the UserList, for
      * Search ads.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -3043,6 +3094,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Type of this list.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -3055,6 +3107,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Type of this list.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -3071,6 +3124,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Type of this list.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -3085,6 +3139,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Type of this list.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -3104,6 +3159,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Type of this list.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -3205,6 +3261,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. Indicates the reason this account has been granted access to
      * the list. The reason can be SHARED, OWNED, LICENSED or SUBSCRIBED.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -3218,6 +3275,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. Indicates the reason this account has been granted access to
      * the list. The reason can be SHARED, OWNED, LICENSED or SUBSCRIBED.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -3235,6 +3293,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. Indicates the reason this account has been granted access to
      * the list. The reason can be SHARED, OWNED, LICENSED or SUBSCRIBED.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -3250,6 +3309,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. Indicates the reason this account has been granted access to
      * the list. The reason can be SHARED, OWNED, LICENSED or SUBSCRIBED.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -3270,6 +3330,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. Indicates the reason this account has been granted access to
      * the list. The reason can be SHARED, OWNED, LICENSED or SUBSCRIBED.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -3406,7 +3467,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEligibleForSearch(boolean value) {
-      
+
       eligibleForSearch_ = value;
       bitField0_ |= 0x00010000;
       onChanged();
@@ -3432,6 +3493,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. Indicates this user list is eligible for Google Display
      * Network.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -3446,6 +3508,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. Indicates this user list is eligible for Google Display
      * Network.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -3460,6 +3523,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. Indicates this user list is eligible for Google Display
      * Network.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -3468,7 +3532,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEligibleForDisplay(boolean value) {
-      
+
       eligibleForDisplay_ = value;
       bitField0_ |= 0x00020000;
       onChanged();
@@ -3478,6 +3542,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. Indicates this user list is eligible for Google Display
      * Network.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -3497,6 +3562,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Indicates match rate for Customer Match lists. The range of
      * this field is [0-100]. This will be null for other list types or when it's
      * not possible to calculate the match rate.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -3512,6 +3578,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Indicates match rate for Customer Match lists. The range of
      * this field is [0-100]. This will be null for other list types or when it's
      * not possible to calculate the match rate.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -3527,6 +3594,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Indicates match rate for Customer Match lists. The range of
      * this field is [0-100]. This will be null for other list types or when it's
      * not possible to calculate the match rate.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -3535,7 +3603,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMatchRatePercentage(int value) {
-      
+
       matchRatePercentage_ = value;
       bitField0_ |= 0x00040000;
       onChanged();
@@ -3546,6 +3614,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Indicates match rate for Customer Match lists. The range of
      * this field is [0-100]. This will be null for other list types or when it's
      * not possible to calculate the match rate.
+     *
      * This field is read-only.
      * </pre>
      *

@@ -30,11 +30,6 @@ private static final long serialVersionUID = 0L;
     return new RuleBasedUserListInfo();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.common.UserListsProto.internal_static_google_ads_googleads_v12_common_RuleBasedUserListInfo_descriptor;
@@ -49,6 +44,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int ruleBasedUserListCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object ruleBasedUserList_;
   public enum RuleBasedUserListCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -133,7 +129,13 @@ private static final long serialVersionUID = 0L;
   private com.google.ads.googleads.v12.common.FlexibleRuleUserListInfo flexibleRuleUserList_;
   /**
    * <pre>
-   * Flexible rule representation of visitors with one or multiple actions.
+   * Flexible rule representation of visitors with one or multiple actions. The
+   * flexible user list is defined by two lists of operands – inclusive_operands
+   * and exclusive_operands; each operand represents a set of users based on
+   * actions they took in a given timeframe. These lists of operands are
+   * combined with the AND_NOT operator, so that users represented by the
+   * inclusive operands are included in the user list, minus the users
+   * represented by the exclusive operands.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.FlexibleRuleUserListInfo flexible_rule_user_list = 5;</code>
@@ -145,7 +147,13 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Flexible rule representation of visitors with one or multiple actions.
+   * Flexible rule representation of visitors with one or multiple actions. The
+   * flexible user list is defined by two lists of operands – inclusive_operands
+   * and exclusive_operands; each operand represents a set of users based on
+   * actions they took in a given timeframe. These lists of operands are
+   * combined with the AND_NOT operator, so that users represented by the
+   * inclusive operands are included in the user list, minus the users
+   * represented by the exclusive operands.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.FlexibleRuleUserListInfo flexible_rule_user_list = 5;</code>
@@ -157,7 +165,13 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Flexible rule representation of visitors with one or multiple actions.
+   * Flexible rule representation of visitors with one or multiple actions. The
+   * flexible user list is defined by two lists of operands – inclusive_operands
+   * and exclusive_operands; each operand represents a set of users based on
+   * actions they took in a given timeframe. These lists of operands are
+   * combined with the AND_NOT operator, so that users represented by the
+   * inclusive operands are included in the user list, minus the users
+   * represented by the exclusive operands.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.common.FlexibleRuleUserListInfo flexible_rule_user_list = 5;</code>
@@ -425,11 +439,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.common.RuleBasedUserListInfo parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.common.RuleBasedUserListInfo parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -840,7 +856,13 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v12.common.FlexibleRuleUserListInfo, com.google.ads.googleads.v12.common.FlexibleRuleUserListInfo.Builder, com.google.ads.googleads.v12.common.FlexibleRuleUserListInfoOrBuilder> flexibleRuleUserListBuilder_;
     /**
      * <pre>
-     * Flexible rule representation of visitors with one or multiple actions.
+     * Flexible rule representation of visitors with one or multiple actions. The
+     * flexible user list is defined by two lists of operands – inclusive_operands
+     * and exclusive_operands; each operand represents a set of users based on
+     * actions they took in a given timeframe. These lists of operands are
+     * combined with the AND_NOT operator, so that users represented by the
+     * inclusive operands are included in the user list, minus the users
+     * represented by the exclusive operands.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.FlexibleRuleUserListInfo flexible_rule_user_list = 5;</code>
@@ -851,7 +873,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Flexible rule representation of visitors with one or multiple actions.
+     * Flexible rule representation of visitors with one or multiple actions. The
+     * flexible user list is defined by two lists of operands – inclusive_operands
+     * and exclusive_operands; each operand represents a set of users based on
+     * actions they took in a given timeframe. These lists of operands are
+     * combined with the AND_NOT operator, so that users represented by the
+     * inclusive operands are included in the user list, minus the users
+     * represented by the exclusive operands.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.FlexibleRuleUserListInfo flexible_rule_user_list = 5;</code>
@@ -866,7 +894,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Flexible rule representation of visitors with one or multiple actions.
+     * Flexible rule representation of visitors with one or multiple actions. The
+     * flexible user list is defined by two lists of operands – inclusive_operands
+     * and exclusive_operands; each operand represents a set of users based on
+     * actions they took in a given timeframe. These lists of operands are
+     * combined with the AND_NOT operator, so that users represented by the
+     * inclusive operands are included in the user list, minus the users
+     * represented by the exclusive operands.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.FlexibleRuleUserListInfo flexible_rule_user_list = 5;</code>
@@ -886,7 +920,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Flexible rule representation of visitors with one or multiple actions.
+     * Flexible rule representation of visitors with one or multiple actions. The
+     * flexible user list is defined by two lists of operands – inclusive_operands
+     * and exclusive_operands; each operand represents a set of users based on
+     * actions they took in a given timeframe. These lists of operands are
+     * combined with the AND_NOT operator, so that users represented by the
+     * inclusive operands are included in the user list, minus the users
+     * represented by the exclusive operands.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.FlexibleRuleUserListInfo flexible_rule_user_list = 5;</code>
@@ -904,7 +944,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Flexible rule representation of visitors with one or multiple actions.
+     * Flexible rule representation of visitors with one or multiple actions. The
+     * flexible user list is defined by two lists of operands – inclusive_operands
+     * and exclusive_operands; each operand represents a set of users based on
+     * actions they took in a given timeframe. These lists of operands are
+     * combined with the AND_NOT operator, so that users represented by the
+     * inclusive operands are included in the user list, minus the users
+     * represented by the exclusive operands.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.FlexibleRuleUserListInfo flexible_rule_user_list = 5;</code>
@@ -927,7 +973,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Flexible rule representation of visitors with one or multiple actions.
+     * Flexible rule representation of visitors with one or multiple actions. The
+     * flexible user list is defined by two lists of operands – inclusive_operands
+     * and exclusive_operands; each operand represents a set of users based on
+     * actions they took in a given timeframe. These lists of operands are
+     * combined with the AND_NOT operator, so that users represented by the
+     * inclusive operands are included in the user list, minus the users
+     * represented by the exclusive operands.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.FlexibleRuleUserListInfo flexible_rule_user_list = 5;</code>
@@ -944,7 +996,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Flexible rule representation of visitors with one or multiple actions.
+     * Flexible rule representation of visitors with one or multiple actions. The
+     * flexible user list is defined by two lists of operands – inclusive_operands
+     * and exclusive_operands; each operand represents a set of users based on
+     * actions they took in a given timeframe. These lists of operands are
+     * combined with the AND_NOT operator, so that users represented by the
+     * inclusive operands are included in the user list, minus the users
+     * represented by the exclusive operands.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.FlexibleRuleUserListInfo flexible_rule_user_list = 5;</code>
@@ -956,7 +1014,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Flexible rule representation of visitors with one or multiple actions.
+     * Flexible rule representation of visitors with one or multiple actions. The
+     * flexible user list is defined by two lists of operands – inclusive_operands
+     * and exclusive_operands; each operand represents a set of users based on
+     * actions they took in a given timeframe. These lists of operands are
+     * combined with the AND_NOT operator, so that users represented by the
+     * inclusive operands are included in the user list, minus the users
+     * represented by the exclusive operands.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.FlexibleRuleUserListInfo flexible_rule_user_list = 5;</code>
@@ -971,7 +1035,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Flexible rule representation of visitors with one or multiple actions.
+     * Flexible rule representation of visitors with one or multiple actions. The
+     * flexible user list is defined by two lists of operands – inclusive_operands
+     * and exclusive_operands; each operand represents a set of users based on
+     * actions they took in a given timeframe. These lists of operands are
+     * combined with the AND_NOT operator, so that users represented by the
+     * inclusive operands are included in the user list, minus the users
+     * represented by the exclusive operands.
      * </pre>
      *
      * <code>.google.ads.googleads.v12.common.FlexibleRuleUserListInfo flexible_rule_user_list = 5;</code>

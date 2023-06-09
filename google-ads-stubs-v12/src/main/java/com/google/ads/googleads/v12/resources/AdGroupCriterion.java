@@ -27,14 +27,18 @@ private static final long serialVersionUID = 0L;
     type_ = 0;
     systemServingStatus_ = 0;
     approvalStatus_ = 0;
-    disapprovalReasons_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    disapprovalReasons_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    labels_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     effectiveCpcBidSource_ = 0;
     effectiveCpmBidSource_ = 0;
     effectiveCpvBidSource_ = 0;
     effectivePercentCpcBidSource_ = 0;
-    finalUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    finalMobileUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    finalUrls_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    finalMobileUrls_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     finalUrlSuffix_ = "";
     trackingUrlTemplate_ = "";
     urlCustomParameters_ = java.util.Collections.emptyList();
@@ -47,11 +51,6 @@ private static final long serialVersionUID = 0L;
     return new AdGroupCriterion();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.resources.AdGroupCriterionProto.internal_static_google_ads_googleads_v12_resources_AdGroupCriterion_descriptor;
@@ -72,6 +71,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The quality score.
+     *
      * This field may not be populated if Google does not have enough
      * information to determine a value.
      * </pre>
@@ -83,6 +83,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The quality score.
+     *
      * This field may not be populated if Google does not have enough
      * information to determine a value.
      * </pre>
@@ -180,11 +181,6 @@ private static final long serialVersionUID = 0L;
       return new QualityInfo();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.AdGroupCriterionProto.internal_static_google_ads_googleads_v12_resources_AdGroupCriterion_QualityInfo_descriptor;
@@ -204,6 +200,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The quality score.
+     *
      * This field may not be populated if Google does not have enough
      * information to determine a value.
      * </pre>
@@ -218,6 +215,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The quality score.
+     *
      * This field may not be populated if Google does not have enough
      * information to determine a value.
      * </pre>
@@ -454,11 +452,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.AdGroupCriterion.QualityInfo parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.AdGroupCriterion.QualityInfo parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -715,6 +715,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Output only. The quality score.
+       *
        * This field may not be populated if Google does not have enough
        * information to determine a value.
        * </pre>
@@ -729,6 +730,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Output only. The quality score.
+       *
        * This field may not be populated if Google does not have enough
        * information to determine a value.
        * </pre>
@@ -743,6 +745,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Output only. The quality score.
+       *
        * This field may not be populated if Google does not have enough
        * information to determine a value.
        * </pre>
@@ -752,7 +755,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setQualityScore(int value) {
-        
+
         qualityScore_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -761,6 +764,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Output only. The quality score.
+       *
        * This field may not be populated if Google does not have enough
        * information to determine a value.
        * </pre>
@@ -1197,11 +1201,6 @@ private static final long serialVersionUID = 0L;
       return new PositionEstimates();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.AdGroupCriterionProto.internal_static_google_ads_googleads_v12_resources_AdGroupCriterion_PositionEstimates_descriptor;
@@ -1544,11 +1543,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.AdGroupCriterion.PositionEstimates parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.AdGroupCriterion.PositionEstimates parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1855,7 +1856,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setFirstPageCpcMicros(long value) {
-        
+
         firstPageCpcMicros_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -1915,7 +1916,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setFirstPositionCpcMicros(long value) {
-        
+
         firstPositionCpcMicros_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -1975,7 +1976,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setTopOfPageCpcMicros(long value) {
-        
+
         topOfPageCpcMicros_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
@@ -2035,7 +2036,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setEstimatedAddClicksAtFirstPositionCpc(long value) {
-        
+
         estimatedAddClicksAtFirstPositionCpc_ = value;
         bitField0_ |= 0x00000008;
         onChanged();
@@ -2095,7 +2096,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setEstimatedAddCostAtFirstPositionCpc(long value) {
-        
+
         estimatedAddCostAtFirstPositionCpc_ = value;
         bitField0_ |= 0x00000010;
         onChanged();
@@ -2182,6 +2183,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   private int criterionCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object criterion_;
   public enum CriterionCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -2267,6 +2269,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the ad group criterion.
    * Ad group criterion resource names have the form:
+   *
    * `customers/{customer_id}/adGroupCriteria/{ad_group_id}~{criterion_id}`
    * </pre>
    *
@@ -2290,6 +2293,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the ad group criterion.
    * Ad group criterion resource names have the form:
+   *
    * `customers/{customer_id}/adGroupCriteria/{ad_group_id}~{criterion_id}`
    * </pre>
    *
@@ -2316,6 +2320,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The ID of the criterion.
+   *
    * This field is ignored for mutates.
    * </pre>
    *
@@ -2329,6 +2334,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The ID of the criterion.
+   *
    * This field is ignored for mutates.
    * </pre>
    *
@@ -2346,6 +2352,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The display name of the criterion.
+   *
    * This field is ignored for mutates.
    * </pre>
    *
@@ -2368,6 +2375,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The display name of the criterion.
+   *
    * This field is ignored for mutates.
    * </pre>
    *
@@ -2394,6 +2402,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The status of the criterion.
+   *
    * This is the status of the ad group criterion entity, set by the client.
    * Note: UI reports may incorporate additional information that affects
    * whether a criterion is eligible to run. In some cases a criterion that's
@@ -2413,6 +2422,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The status of the criterion.
+   *
    * This is the status of the ad group criterion entity, set by the client.
    * Note: UI reports may incorporate additional information that affects
    * whether a criterion is eligible to run. In some cases a criterion that's
@@ -2559,6 +2569,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Immutable. Whether to target (`false`) or exclude (`true`) the criterion.
+   *
    * This field is immutable. To switch a criterion from positive to negative,
    * remove then re-add it.
    * </pre>
@@ -2573,6 +2584,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Immutable. Whether to target (`false`) or exclude (`true`) the criterion.
+   *
    * This field is immutable. To switch a criterion from positive to negative,
    * remove then re-add it.
    * </pre>
@@ -2639,12 +2651,15 @@ private static final long serialVersionUID = 0L;
 
   public static final int DISAPPROVAL_REASONS_FIELD_NUMBER = 59;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList disapprovalReasons_;
+  private com.google.protobuf.LazyStringArrayList disapprovalReasons_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * Output only. List of disapproval reasons of the criterion.
+   *
    * The different reasons for disapproving a criterion can be found here:
    * https://support.google.com/adspolicy/answer/6008942
+   *
    * This field is read-only.
    * </pre>
    *
@@ -2658,8 +2673,10 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. List of disapproval reasons of the criterion.
+   *
    * The different reasons for disapproving a criterion can be found here:
    * https://support.google.com/adspolicy/answer/6008942
+   *
    * This field is read-only.
    * </pre>
    *
@@ -2672,8 +2689,10 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. List of disapproval reasons of the criterion.
+   *
    * The different reasons for disapproving a criterion can be found here:
    * https://support.google.com/adspolicy/answer/6008942
+   *
    * This field is read-only.
    * </pre>
    *
@@ -2687,8 +2706,10 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. List of disapproval reasons of the criterion.
+   *
    * The different reasons for disapproving a criterion can be found here:
    * https://support.google.com/adspolicy/answer/6008942
+   *
    * This field is read-only.
    * </pre>
    *
@@ -2703,7 +2724,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int LABELS_FIELD_NUMBER = 60;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList labels_;
+  private com.google.protobuf.LazyStringArrayList labels_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * Output only. The resource names of labels attached to this ad group
@@ -3152,7 +3174,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int FINAL_URLS_FIELD_NUMBER = 70;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList finalUrls_;
+  private com.google.protobuf.LazyStringArrayList finalUrls_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * The list of possible final URLs after all cross-domain redirects for the
@@ -3208,7 +3231,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int FINAL_MOBILE_URLS_FIELD_NUMBER = 71;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList finalMobileUrls_;
+  private com.google.protobuf.LazyStringArrayList finalMobileUrls_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * The list of possible final mobile URLs after all cross-domain redirects.
@@ -5222,11 +5246,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.resources.AdGroupCriterion parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.resources.AdGroupCriterion parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5321,10 +5347,10 @@ private static final long serialVersionUID = 0L;
       negative_ = false;
       systemServingStatus_ = 0;
       approvalStatus_ = 0;
-      disapprovalReasons_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000400);
-      labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000800);
+      disapprovalReasons_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      labels_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       bidModifier_ = 0D;
       cpcBidMicros_ = 0L;
       cpmBidMicros_ = 0L;
@@ -5343,10 +5369,10 @@ private static final long serialVersionUID = 0L;
         positionEstimatesBuilder_.dispose();
         positionEstimatesBuilder_ = null;
       }
-      finalUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x04000000);
-      finalMobileUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x08000000);
+      finalUrls_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      finalMobileUrls_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       finalUrlSuffix_ = "";
       trackingUrlTemplate_ = "";
       if (urlCustomParametersBuilder_ == null) {
@@ -5456,26 +5482,6 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.google.ads.googleads.v12.resources.AdGroupCriterion result) {
-      if (((bitField0_ & 0x00000400) != 0)) {
-        disapprovalReasons_ = disapprovalReasons_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000400);
-      }
-      result.disapprovalReasons_ = disapprovalReasons_;
-      if (((bitField0_ & 0x00000800) != 0)) {
-        labels_ = labels_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000800);
-      }
-      result.labels_ = labels_;
-      if (((bitField0_ & 0x04000000) != 0)) {
-        finalUrls_ = finalUrls_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x04000000);
-      }
-      result.finalUrls_ = finalUrls_;
-      if (((bitField0_ & 0x08000000) != 0)) {
-        finalMobileUrls_ = finalMobileUrls_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x08000000);
-      }
-      result.finalMobileUrls_ = finalMobileUrls_;
       if (urlCustomParametersBuilder_ == null) {
         if (((bitField0_ & 0x40000000) != 0)) {
           urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
@@ -5524,6 +5530,14 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.approvalStatus_ = approvalStatus_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        disapprovalReasons_.makeImmutable();
+        result.disapprovalReasons_ = disapprovalReasons_;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        labels_.makeImmutable();
+        result.labels_ = labels_;
       }
       if (((from_bitField0_ & 0x00001000) != 0)) {
         result.bidModifier_ = bidModifier_;
@@ -5577,6 +5591,14 @@ private static final long serialVersionUID = 0L;
         result.positionEstimates_ = positionEstimatesBuilder_ == null
             ? positionEstimates_
             : positionEstimatesBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x04000000) != 0)) {
+        finalUrls_.makeImmutable();
+        result.finalUrls_ = finalUrls_;
+      }
+      if (((from_bitField0_ & 0x08000000) != 0)) {
+        finalMobileUrls_.makeImmutable();
+        result.finalMobileUrls_ = finalMobileUrls_;
       }
       if (((from_bitField0_ & 0x10000000) != 0)) {
         result.finalUrlSuffix_ = finalUrlSuffix_;
@@ -5765,7 +5787,7 @@ private static final long serialVersionUID = 0L;
       if (!other.disapprovalReasons_.isEmpty()) {
         if (disapprovalReasons_.isEmpty()) {
           disapprovalReasons_ = other.disapprovalReasons_;
-          bitField0_ = (bitField0_ & ~0x00000400);
+          bitField0_ |= 0x00000400;
         } else {
           ensureDisapprovalReasonsIsMutable();
           disapprovalReasons_.addAll(other.disapprovalReasons_);
@@ -5775,7 +5797,7 @@ private static final long serialVersionUID = 0L;
       if (!other.labels_.isEmpty()) {
         if (labels_.isEmpty()) {
           labels_ = other.labels_;
-          bitField0_ = (bitField0_ & ~0x00000800);
+          bitField0_ |= 0x00000800;
         } else {
           ensureLabelsIsMutable();
           labels_.addAll(other.labels_);
@@ -5827,7 +5849,7 @@ private static final long serialVersionUID = 0L;
       if (!other.finalUrls_.isEmpty()) {
         if (finalUrls_.isEmpty()) {
           finalUrls_ = other.finalUrls_;
-          bitField0_ = (bitField0_ & ~0x04000000);
+          bitField0_ |= 0x04000000;
         } else {
           ensureFinalUrlsIsMutable();
           finalUrls_.addAll(other.finalUrls_);
@@ -5837,7 +5859,7 @@ private static final long serialVersionUID = 0L;
       if (!other.finalMobileUrls_.isEmpty()) {
         if (finalMobileUrls_.isEmpty()) {
           finalMobileUrls_ = other.finalMobileUrls_;
-          bitField0_ = (bitField0_ & ~0x08000000);
+          bitField0_ |= 0x08000000;
         } else {
           ensureFinalMobileUrlsIsMutable();
           finalMobileUrls_.addAll(other.finalMobileUrls_);
@@ -6351,6 +6373,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the ad group criterion.
      * Ad group criterion resource names have the form:
+     *
      * `customers/{customer_id}/adGroupCriteria/{ad_group_id}~{criterion_id}`
      * </pre>
      *
@@ -6373,6 +6396,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the ad group criterion.
      * Ad group criterion resource names have the form:
+     *
      * `customers/{customer_id}/adGroupCriteria/{ad_group_id}~{criterion_id}`
      * </pre>
      *
@@ -6396,6 +6420,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the ad group criterion.
      * Ad group criterion resource names have the form:
+     *
      * `customers/{customer_id}/adGroupCriteria/{ad_group_id}~{criterion_id}`
      * </pre>
      *
@@ -6415,6 +6440,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the ad group criterion.
      * Ad group criterion resource names have the form:
+     *
      * `customers/{customer_id}/adGroupCriteria/{ad_group_id}~{criterion_id}`
      * </pre>
      *
@@ -6431,6 +6457,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the ad group criterion.
      * Ad group criterion resource names have the form:
+     *
      * `customers/{customer_id}/adGroupCriteria/{ad_group_id}~{criterion_id}`
      * </pre>
      *
@@ -6452,6 +6479,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The ID of the criterion.
+     *
      * This field is ignored for mutates.
      * </pre>
      *
@@ -6465,6 +6493,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The ID of the criterion.
+     *
      * This field is ignored for mutates.
      * </pre>
      *
@@ -6478,6 +6507,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The ID of the criterion.
+     *
      * This field is ignored for mutates.
      * </pre>
      *
@@ -6486,7 +6516,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCriterionId(long value) {
-      
+
       criterionId_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -6495,6 +6525,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The ID of the criterion.
+     *
      * This field is ignored for mutates.
      * </pre>
      *
@@ -6512,6 +6543,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The display name of the criterion.
+     *
      * This field is ignored for mutates.
      * </pre>
      *
@@ -6533,6 +6565,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The display name of the criterion.
+     *
      * This field is ignored for mutates.
      * </pre>
      *
@@ -6555,6 +6588,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The display name of the criterion.
+     *
      * This field is ignored for mutates.
      * </pre>
      *
@@ -6573,6 +6607,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The display name of the criterion.
+     *
      * This field is ignored for mutates.
      * </pre>
      *
@@ -6588,6 +6623,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The display name of the criterion.
+     *
      * This field is ignored for mutates.
      * </pre>
      *
@@ -6609,6 +6645,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The status of the criterion.
+     *
      * This is the status of the ad group criterion entity, set by the client.
      * Note: UI reports may incorporate additional information that affects
      * whether a criterion is eligible to run. In some cases a criterion that's
@@ -6628,6 +6665,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The status of the criterion.
+     *
      * This is the status of the ad group criterion entity, set by the client.
      * Note: UI reports may incorporate additional information that affects
      * whether a criterion is eligible to run. In some cases a criterion that's
@@ -6651,6 +6689,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The status of the criterion.
+     *
      * This is the status of the ad group criterion entity, set by the client.
      * Note: UI reports may incorporate additional information that affects
      * whether a criterion is eligible to run. In some cases a criterion that's
@@ -6672,6 +6711,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The status of the criterion.
+     *
      * This is the status of the ad group criterion entity, set by the client.
      * Note: UI reports may incorporate additional information that affects
      * whether a criterion is eligible to run. In some cases a criterion that's
@@ -6698,6 +6738,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The status of the criterion.
+     *
      * This is the status of the ad group criterion entity, set by the client.
      * Note: UI reports may incorporate additional information that affects
      * whether a criterion is eligible to run. In some cases a criterion that's
@@ -7053,6 +7094,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. Whether to target (`false`) or exclude (`true`) the criterion.
+     *
      * This field is immutable. To switch a criterion from positive to negative,
      * remove then re-add it.
      * </pre>
@@ -7067,6 +7109,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. Whether to target (`false`) or exclude (`true`) the criterion.
+     *
      * This field is immutable. To switch a criterion from positive to negative,
      * remove then re-add it.
      * </pre>
@@ -7081,6 +7124,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. Whether to target (`false`) or exclude (`true`) the criterion.
+     *
      * This field is immutable. To switch a criterion from positive to negative,
      * remove then re-add it.
      * </pre>
@@ -7090,7 +7134,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setNegative(boolean value) {
-      
+
       negative_ = value;
       bitField0_ |= 0x00000080;
       onChanged();
@@ -7099,6 +7143,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Immutable. Whether to target (`false`) or exclude (`true`) the criterion.
+     *
      * This field is immutable. To switch a criterion from positive to negative,
      * remove then re-add it.
      * </pre>
@@ -7259,18 +7304,21 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.LazyStringList disapprovalReasons_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList disapprovalReasons_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureDisapprovalReasonsIsMutable() {
-      if (!((bitField0_ & 0x00000400) != 0)) {
+      if (!disapprovalReasons_.isModifiable()) {
         disapprovalReasons_ = new com.google.protobuf.LazyStringArrayList(disapprovalReasons_);
-        bitField0_ |= 0x00000400;
-       }
+      }
+      bitField0_ |= 0x00000400;
     }
     /**
      * <pre>
      * Output only. List of disapproval reasons of the criterion.
+     *
      * The different reasons for disapproving a criterion can be found here:
      * https://support.google.com/adspolicy/answer/6008942
+     *
      * This field is read-only.
      * </pre>
      *
@@ -7279,13 +7327,16 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getDisapprovalReasonsList() {
-      return disapprovalReasons_.getUnmodifiableView();
+      disapprovalReasons_.makeImmutable();
+      return disapprovalReasons_;
     }
     /**
      * <pre>
      * Output only. List of disapproval reasons of the criterion.
+     *
      * The different reasons for disapproving a criterion can be found here:
      * https://support.google.com/adspolicy/answer/6008942
+     *
      * This field is read-only.
      * </pre>
      *
@@ -7298,8 +7349,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. List of disapproval reasons of the criterion.
+     *
      * The different reasons for disapproving a criterion can be found here:
      * https://support.google.com/adspolicy/answer/6008942
+     *
      * This field is read-only.
      * </pre>
      *
@@ -7313,8 +7366,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. List of disapproval reasons of the criterion.
+     *
      * The different reasons for disapproving a criterion can be found here:
      * https://support.google.com/adspolicy/answer/6008942
+     *
      * This field is read-only.
      * </pre>
      *
@@ -7329,8 +7384,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. List of disapproval reasons of the criterion.
+     *
      * The different reasons for disapproving a criterion can be found here:
      * https://support.google.com/adspolicy/answer/6008942
+     *
      * This field is read-only.
      * </pre>
      *
@@ -7344,14 +7401,17 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureDisapprovalReasonsIsMutable();
       disapprovalReasons_.set(index, value);
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
     /**
      * <pre>
      * Output only. List of disapproval reasons of the criterion.
+     *
      * The different reasons for disapproving a criterion can be found here:
      * https://support.google.com/adspolicy/answer/6008942
+     *
      * This field is read-only.
      * </pre>
      *
@@ -7364,14 +7424,17 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureDisapprovalReasonsIsMutable();
       disapprovalReasons_.add(value);
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
     /**
      * <pre>
      * Output only. List of disapproval reasons of the criterion.
+     *
      * The different reasons for disapproving a criterion can be found here:
      * https://support.google.com/adspolicy/answer/6008942
+     *
      * This field is read-only.
      * </pre>
      *
@@ -7384,14 +7447,17 @@ private static final long serialVersionUID = 0L;
       ensureDisapprovalReasonsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, disapprovalReasons_);
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
     /**
      * <pre>
      * Output only. List of disapproval reasons of the criterion.
+     *
      * The different reasons for disapproving a criterion can be found here:
      * https://support.google.com/adspolicy/answer/6008942
+     *
      * This field is read-only.
      * </pre>
      *
@@ -7399,16 +7465,19 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearDisapprovalReasons() {
-      disapprovalReasons_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000400);
+      disapprovalReasons_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000400);;
       onChanged();
       return this;
     }
     /**
      * <pre>
      * Output only. List of disapproval reasons of the criterion.
+     *
      * The different reasons for disapproving a criterion can be found here:
      * https://support.google.com/adspolicy/answer/6008942
+     *
      * This field is read-only.
      * </pre>
      *
@@ -7422,16 +7491,18 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureDisapprovalReasonsIsMutable();
       disapprovalReasons_.add(value);
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList labels_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureLabelsIsMutable() {
-      if (!((bitField0_ & 0x00000800) != 0)) {
+      if (!labels_.isModifiable()) {
         labels_ = new com.google.protobuf.LazyStringArrayList(labels_);
-        bitField0_ |= 0x00000800;
-       }
+      }
+      bitField0_ |= 0x00000800;
     }
     /**
      * <pre>
@@ -7444,7 +7515,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getLabelsList() {
-      return labels_.getUnmodifiableView();
+      labels_.makeImmutable();
+      return labels_;
     }
     /**
      * <pre>
@@ -7501,6 +7573,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureLabelsIsMutable();
       labels_.set(index, value);
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -7519,6 +7592,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureLabelsIsMutable();
       labels_.add(value);
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -7537,6 +7611,7 @@ private static final long serialVersionUID = 0L;
       ensureLabelsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, labels_);
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -7550,8 +7625,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLabels() {
-      labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000800);
+      labels_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000800);;
       onChanged();
       return this;
     }
@@ -7571,6 +7647,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureLabelsIsMutable();
       labels_.add(value);
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -7613,7 +7690,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBidModifier(double value) {
-      
+
       bidModifier_ = value;
       bitField0_ |= 0x00001000;
       onChanged();
@@ -7670,7 +7747,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCpcBidMicros(long value) {
-      
+
       cpcBidMicros_ = value;
       bitField0_ |= 0x00002000;
       onChanged();
@@ -7726,7 +7803,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCpmBidMicros(long value) {
-      
+
       cpmBidMicros_ = value;
       bitField0_ |= 0x00004000;
       onChanged();
@@ -7782,7 +7859,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCpvBidMicros(long value) {
-      
+
       cpvBidMicros_ = value;
       bitField0_ |= 0x00008000;
       onChanged();
@@ -7844,7 +7921,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPercentCpcBidMicros(long value) {
-      
+
       percentCpcBidMicros_ = value;
       bitField0_ |= 0x00010000;
       onChanged();
@@ -7902,7 +7979,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEffectiveCpcBidMicros(long value) {
-      
+
       effectiveCpcBidMicros_ = value;
       bitField0_ |= 0x00020000;
       onChanged();
@@ -7961,7 +8038,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEffectiveCpmBidMicros(long value) {
-      
+
       effectiveCpmBidMicros_ = value;
       bitField0_ |= 0x00040000;
       onChanged();
@@ -8018,7 +8095,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEffectiveCpvBidMicros(long value) {
-      
+
       effectiveCpvBidMicros_ = value;
       bitField0_ |= 0x00080000;
       onChanged();
@@ -8074,7 +8151,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEffectivePercentCpcBidMicros(long value) {
-      
+
       effectivePercentCpcBidMicros_ = value;
       bitField0_ |= 0x00100000;
       onChanged();
@@ -8542,12 +8619,13 @@ private static final long serialVersionUID = 0L;
       return positionEstimatesBuilder_;
     }
 
-    private com.google.protobuf.LazyStringList finalUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList finalUrls_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureFinalUrlsIsMutable() {
-      if (!((bitField0_ & 0x04000000) != 0)) {
+      if (!finalUrls_.isModifiable()) {
         finalUrls_ = new com.google.protobuf.LazyStringArrayList(finalUrls_);
-        bitField0_ |= 0x04000000;
-       }
+      }
+      bitField0_ |= 0x04000000;
     }
     /**
      * <pre>
@@ -8560,7 +8638,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getFinalUrlsList() {
-      return finalUrls_.getUnmodifiableView();
+      finalUrls_.makeImmutable();
+      return finalUrls_;
     }
     /**
      * <pre>
@@ -8617,6 +8696,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureFinalUrlsIsMutable();
       finalUrls_.set(index, value);
+      bitField0_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -8635,6 +8715,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureFinalUrlsIsMutable();
       finalUrls_.add(value);
+      bitField0_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -8653,6 +8734,7 @@ private static final long serialVersionUID = 0L;
       ensureFinalUrlsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, finalUrls_);
+      bitField0_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -8666,8 +8748,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFinalUrls() {
-      finalUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x04000000);
+      finalUrls_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x04000000);;
       onChanged();
       return this;
     }
@@ -8687,16 +8770,18 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureFinalUrlsIsMutable();
       finalUrls_.add(value);
+      bitField0_ |= 0x04000000;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList finalMobileUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList finalMobileUrls_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureFinalMobileUrlsIsMutable() {
-      if (!((bitField0_ & 0x08000000) != 0)) {
+      if (!finalMobileUrls_.isModifiable()) {
         finalMobileUrls_ = new com.google.protobuf.LazyStringArrayList(finalMobileUrls_);
-        bitField0_ |= 0x08000000;
-       }
+      }
+      bitField0_ |= 0x08000000;
     }
     /**
      * <pre>
@@ -8708,7 +8793,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getFinalMobileUrlsList() {
-      return finalMobileUrls_.getUnmodifiableView();
+      finalMobileUrls_.makeImmutable();
+      return finalMobileUrls_;
     }
     /**
      * <pre>
@@ -8761,6 +8847,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureFinalMobileUrlsIsMutable();
       finalMobileUrls_.set(index, value);
+      bitField0_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -8778,6 +8865,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureFinalMobileUrlsIsMutable();
       finalMobileUrls_.add(value);
+      bitField0_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -8795,6 +8883,7 @@ private static final long serialVersionUID = 0L;
       ensureFinalMobileUrlsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, finalMobileUrls_);
+      bitField0_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -8807,8 +8896,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFinalMobileUrls() {
-      finalMobileUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x08000000);
+      finalMobileUrls_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x08000000);;
       onChanged();
       return this;
     }
@@ -8827,6 +8917,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureFinalMobileUrlsIsMutable();
       finalMobileUrls_.add(value);
+      bitField0_ |= 0x08000000;
       onChanged();
       return this;
     }

@@ -11,6 +11,7 @@ public interface CampaignFeedOrBuilder extends
    * <pre>
    * Immutable. The resource name of the campaign feed.
    * Campaign feed resource names have the form:
+   *
    * `customers/{customer_id}/campaignFeeds/{campaign_id}~{feed_id}
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface CampaignFeedOrBuilder extends
    * <pre>
    * Immutable. The resource name of the campaign feed.
    * Campaign feed resource names have the form:
+   *
    * `customers/{customer_id}/campaignFeeds/{campaign_id}~{feed_id}
    * </pre>
    *

@@ -11,6 +11,7 @@ public interface ExperimentOrBuilder extends
    * <pre>
    * Immutable. The resource name of the experiment.
    * Experiment resource names have the form:
+   *
    * `customers/{customer_id}/experiments/{experiment_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface ExperimentOrBuilder extends
    * <pre>
    * Immutable. The resource name of the experiment.
    * Experiment resource names have the form:
+   *
    * `customers/{customer_id}/experiments/{experiment_id}`
    * </pre>
    *
@@ -164,6 +166,7 @@ public interface ExperimentOrBuilder extends
    * now or on the campaign's start date, whichever is later. If this field is
    * set, then the experiment starts at the beginning of the specified date in
    * the customer's time zone.
+   *
    * Format: YYYY-MM-DD
    * Example: 2019-03-14
    * </pre>
@@ -178,6 +181,7 @@ public interface ExperimentOrBuilder extends
    * now or on the campaign's start date, whichever is later. If this field is
    * set, then the experiment starts at the beginning of the specified date in
    * the customer's time zone.
+   *
    * Format: YYYY-MM-DD
    * Example: 2019-03-14
    * </pre>
@@ -192,6 +196,7 @@ public interface ExperimentOrBuilder extends
    * now or on the campaign's start date, whichever is later. If this field is
    * set, then the experiment starts at the beginning of the specified date in
    * the customer's time zone.
+   *
    * Format: YYYY-MM-DD
    * Example: 2019-03-14
    * </pre>
@@ -207,6 +212,7 @@ public interface ExperimentOrBuilder extends
    * Date when the experiment ends. By default, the experiment ends on
    * the campaign's end date. If this field is set, then the experiment ends at
    * the end of the specified date in the customer's time zone.
+   *
    * Format: YYYY-MM-DD
    * Example: 2019-04-18
    * </pre>
@@ -220,6 +226,7 @@ public interface ExperimentOrBuilder extends
    * Date when the experiment ends. By default, the experiment ends on
    * the campaign's end date. If this field is set, then the experiment ends at
    * the end of the specified date in the customer's time zone.
+   *
    * Format: YYYY-MM-DD
    * Example: 2019-04-18
    * </pre>
@@ -233,6 +240,7 @@ public interface ExperimentOrBuilder extends
    * Date when the experiment ends. By default, the experiment ends on
    * the campaign's end date. If this field is set, then the experiment ends at
    * the end of the specified date in the customer's time zone.
+   *
    * Format: YYYY-MM-DD
    * Example: 2019-04-18
    * </pre>

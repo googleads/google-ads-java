@@ -33,11 +33,6 @@ private static final long serialVersionUID = 0L;
     return new AudienceInsightsAttributeMetadata();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.services.AudienceInsightsServiceProto.internal_static_google_ads_googleads_v13_services_AudienceInsightsAttributeMetadata_descriptor;
@@ -52,6 +47,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int dimensionMetadataCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object dimensionMetadata_;
   public enum DimensionMetadataCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -617,11 +613,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.services.AudienceInsightsAttributeMetadata parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.services.AudienceInsightsAttributeMetadata parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1321,7 +1319,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setScore(double value) {
-      
+
       score_ = value;
       bitField0_ |= 0x00000008;
       onChanged();

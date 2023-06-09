@@ -39,11 +39,6 @@ private static final long serialVersionUID = 0L;
     return new Customer();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.resources.CustomerProto.internal_static_google_ads_googleads_v13_resources_Customer_descriptor;
@@ -65,6 +60,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the customer.
    * Customer resource names have the form:
+   *
    * `customers/{customer_id}`
    * </pre>
    *
@@ -88,6 +84,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the customer.
    * Customer resource names have the form:
+   *
    * `customers/{customer_id}`
    * </pre>
    *
@@ -767,11 +764,14 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. Optimization score of the customer.
+   *
    * Optimization score is an estimate of how well a customer's campaigns are
    * set to perform. It ranges from 0% (0.0) to 100% (1.0). This field is null
    * for all manager customers, and for unscored non-manager customers.
+   *
    * See "About optimization score" at
    * https://support.google.com/google-ads/answer/9061546.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -785,11 +785,14 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. Optimization score of the customer.
+   *
    * Optimization score is an estimate of how well a customer's campaigns are
    * set to perform. It ranges from 0% (0.0) to 100% (1.0). This field is null
    * for all manager customers, and for unscored non-manager customers.
+   *
    * See "About optimization score" at
    * https://support.google.com/google-ads/answer/9061546.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -806,12 +809,14 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. Optimization score weight of the customer.
+   *
    * Optimization score weight can be used to compare/aggregate optimization
    * scores across multiple non-manager customers. The aggregate optimization
    * score of a manager is computed as the sum over all of their customers of
    * `Customer.optimization_score * Customer.optimization_score_weight`. This
    * field is 0 for all manager customers, and for unscored non-manager
    * customers.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -1477,11 +1482,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.resources.Customer parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.resources.Customer parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2035,6 +2042,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the customer.
      * Customer resource names have the form:
+     *
      * `customers/{customer_id}`
      * </pre>
      *
@@ -2057,6 +2065,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the customer.
      * Customer resource names have the form:
+     *
      * `customers/{customer_id}`
      * </pre>
      *
@@ -2080,6 +2089,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the customer.
      * Customer resource names have the form:
+     *
      * `customers/{customer_id}`
      * </pre>
      *
@@ -2099,6 +2109,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the customer.
      * Customer resource names have the form:
+     *
      * `customers/{customer_id}`
      * </pre>
      *
@@ -2115,6 +2126,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the customer.
      * Customer resource names have the form:
+     *
      * `customers/{customer_id}`
      * </pre>
      *
@@ -2167,7 +2179,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      
+
       id_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -2762,7 +2774,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAutoTaggingEnabled(boolean value) {
-      
+
       autoTaggingEnabled_ = value;
       bitField0_ |= 0x00000080;
       onChanged();
@@ -2827,7 +2839,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHasPartnersBadge(boolean value) {
-      
+
       hasPartnersBadge_ = value;
       bitField0_ |= 0x00000100;
       onChanged();
@@ -2886,7 +2898,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setManager(boolean value) {
-      
+
       manager_ = value;
       bitField0_ |= 0x00000200;
       onChanged();
@@ -2942,7 +2954,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTestAccount(boolean value) {
-      
+
       testAccount_ = value;
       bitField0_ |= 0x00000400;
       onChanged();
@@ -3653,11 +3665,14 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Optimization score of the customer.
+     *
      * Optimization score is an estimate of how well a customer's campaigns are
      * set to perform. It ranges from 0% (0.0) to 100% (1.0). This field is null
      * for all manager customers, and for unscored non-manager customers.
+     *
      * See "About optimization score" at
      * https://support.google.com/google-ads/answer/9061546.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -3671,11 +3686,14 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Optimization score of the customer.
+     *
      * Optimization score is an estimate of how well a customer's campaigns are
      * set to perform. It ranges from 0% (0.0) to 100% (1.0). This field is null
      * for all manager customers, and for unscored non-manager customers.
+     *
      * See "About optimization score" at
      * https://support.google.com/google-ads/answer/9061546.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -3689,11 +3707,14 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Optimization score of the customer.
+     *
      * Optimization score is an estimate of how well a customer's campaigns are
      * set to perform. It ranges from 0% (0.0) to 100% (1.0). This field is null
      * for all manager customers, and for unscored non-manager customers.
+     *
      * See "About optimization score" at
      * https://support.google.com/google-ads/answer/9061546.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -3702,7 +3723,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOptimizationScore(double value) {
-      
+
       optimizationScore_ = value;
       bitField0_ |= 0x00008000;
       onChanged();
@@ -3711,11 +3732,14 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Optimization score of the customer.
+     *
      * Optimization score is an estimate of how well a customer's campaigns are
      * set to perform. It ranges from 0% (0.0) to 100% (1.0). This field is null
      * for all manager customers, and for unscored non-manager customers.
+     *
      * See "About optimization score" at
      * https://support.google.com/google-ads/answer/9061546.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -3733,12 +3757,14 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Optimization score weight of the customer.
+     *
      * Optimization score weight can be used to compare/aggregate optimization
      * scores across multiple non-manager customers. The aggregate optimization
      * score of a manager is computed as the sum over all of their customers of
      * `Customer.optimization_score * Customer.optimization_score_weight`. This
      * field is 0 for all manager customers, and for unscored non-manager
      * customers.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -3752,12 +3778,14 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Optimization score weight of the customer.
+     *
      * Optimization score weight can be used to compare/aggregate optimization
      * scores across multiple non-manager customers. The aggregate optimization
      * score of a manager is computed as the sum over all of their customers of
      * `Customer.optimization_score * Customer.optimization_score_weight`. This
      * field is 0 for all manager customers, and for unscored non-manager
      * customers.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -3766,7 +3794,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOptimizationScoreWeight(double value) {
-      
+
       optimizationScoreWeight_ = value;
       bitField0_ |= 0x00010000;
       onChanged();
@@ -3775,12 +3803,14 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Optimization score weight of the customer.
+     *
      * Optimization score weight can be used to compare/aggregate optimization
      * scores across multiple non-manager customers. The aggregate optimization
      * score of a manager is computed as the sum over all of their customers of
      * `Customer.optimization_score * Customer.optimization_score_weight`. This
      * field is 0 for all manager customers, and for unscored non-manager
      * customers.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -3905,7 +3935,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLocationAssetAutoMigrationDone(boolean value) {
-      
+
       locationAssetAutoMigrationDone_ = value;
       bitField0_ |= 0x00040000;
       onChanged();
@@ -3965,7 +3995,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setImageAssetAutoMigrationDone(boolean value) {
-      
+
       imageAssetAutoMigrationDone_ = value;
       bitField0_ |= 0x00080000;
       onChanged();

@@ -9,6 +9,7 @@ package com.google.ads.googleads.v12.resources;
  * channel type, criterion type, simulation type, and simulation modification
  * method are detailed below respectively. Hotel AdGroupCriterion simulation
  * operations starting in V5.
+ *
  * 1. DISPLAY - KEYWORD - CPC_BID - UNIFORM
  * 2. SEARCH - KEYWORD - CPC_BID - UNIFORM
  * 3. SHOPPING - LISTING_GROUP - CPC_BID - UNIFORM
@@ -42,11 +43,6 @@ private static final long serialVersionUID = 0L;
     return new AdGroupCriterionSimulation();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.resources.AdGroupCriterionSimulationProto.internal_static_google_ads_googleads_v12_resources_AdGroupCriterionSimulation_descriptor;
@@ -62,6 +58,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   private int pointListCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object pointList_;
   public enum PointListCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -109,6 +106,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the ad group criterion simulation.
    * Ad group criterion simulation resource names have the form:
+   *
    * `customers/{customer_id}/adGroupCriterionSimulations/{ad_group_id}~{criterion_id}~{type}~{modification_method}~{start_date}~{end_date}`
    * </pre>
    *
@@ -132,6 +130,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the ad group criterion simulation.
    * Ad group criterion simulation resource names have the form:
+   *
    * `customers/{customer_id}/adGroupCriterionSimulations/{ad_group_id}~{criterion_id}~{type}~{modification_method}~{start_date}~{end_date}`
    * </pre>
    *
@@ -700,11 +699,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.resources.AdGroupCriterionSimulation parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.resources.AdGroupCriterionSimulation parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -752,6 +753,7 @@ private static final long serialVersionUID = 0L;
    * channel type, criterion type, simulation type, and simulation modification
    * method are detailed below respectively. Hotel AdGroupCriterion simulation
    * operations starting in V5.
+   *
    * 1. DISPLAY - KEYWORD - CPC_BID - UNIFORM
    * 2. SEARCH - KEYWORD - CPC_BID - UNIFORM
    * 3. SHOPPING - LISTING_GROUP - CPC_BID - UNIFORM
@@ -1079,6 +1081,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the ad group criterion simulation.
      * Ad group criterion simulation resource names have the form:
+     *
      * `customers/{customer_id}/adGroupCriterionSimulations/{ad_group_id}~{criterion_id}~{type}~{modification_method}~{start_date}~{end_date}`
      * </pre>
      *
@@ -1101,6 +1104,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the ad group criterion simulation.
      * Ad group criterion simulation resource names have the form:
+     *
      * `customers/{customer_id}/adGroupCriterionSimulations/{ad_group_id}~{criterion_id}~{type}~{modification_method}~{start_date}~{end_date}`
      * </pre>
      *
@@ -1124,6 +1128,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the ad group criterion simulation.
      * Ad group criterion simulation resource names have the form:
+     *
      * `customers/{customer_id}/adGroupCriterionSimulations/{ad_group_id}~{criterion_id}~{type}~{modification_method}~{start_date}~{end_date}`
      * </pre>
      *
@@ -1143,6 +1148,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the ad group criterion simulation.
      * Ad group criterion simulation resource names have the form:
+     *
      * `customers/{customer_id}/adGroupCriterionSimulations/{ad_group_id}~{criterion_id}~{type}~{modification_method}~{start_date}~{end_date}`
      * </pre>
      *
@@ -1159,6 +1165,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the ad group criterion simulation.
      * Ad group criterion simulation resource names have the form:
+     *
      * `customers/{customer_id}/adGroupCriterionSimulations/{ad_group_id}~{criterion_id}~{type}~{modification_method}~{start_date}~{end_date}`
      * </pre>
      *
@@ -1211,7 +1218,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAdGroupId(long value) {
-      
+
       adGroupId_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -1267,7 +1274,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCriterionId(long value) {
-      
+
       criterionId_ = value;
       bitField0_ |= 0x00000004;
       onChanged();

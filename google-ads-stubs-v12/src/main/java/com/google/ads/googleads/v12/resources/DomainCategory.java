@@ -37,11 +37,6 @@ private static final long serialVersionUID = 0L;
     return new DomainCategory();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.resources.DomainCategoryProto.internal_static_google_ads_googleads_v12_resources_DomainCategory_descriptor;
@@ -63,6 +58,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the domain category.
    * Domain category resource names have the form:
+   *
    * `customers/{customer_id}/domainCategories/{campaign_id}~{category_base64}~{language_code}`
    * </pre>
    *
@@ -86,6 +82,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the domain category.
    * Domain category resource names have the form:
+   *
    * `customers/{customer_id}/domainCategories/{campaign_id}~{category_base64}~{language_code}`
    * </pre>
    *
@@ -713,11 +710,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.resources.DomainCategory parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.resources.DomainCategory parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1055,6 +1054,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the domain category.
      * Domain category resource names have the form:
+     *
      * `customers/{customer_id}/domainCategories/{campaign_id}~{category_base64}~{language_code}`
      * </pre>
      *
@@ -1077,6 +1077,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the domain category.
      * Domain category resource names have the form:
+     *
      * `customers/{customer_id}/domainCategories/{campaign_id}~{category_base64}~{language_code}`
      * </pre>
      *
@@ -1100,6 +1101,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the domain category.
      * Domain category resource names have the form:
+     *
      * `customers/{customer_id}/domainCategories/{campaign_id}~{category_base64}~{language_code}`
      * </pre>
      *
@@ -1119,6 +1121,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the domain category.
      * Domain category resource names have the form:
+     *
      * `customers/{customer_id}/domainCategories/{campaign_id}~{category_base64}~{language_code}`
      * </pre>
      *
@@ -1135,6 +1138,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the domain category.
      * Domain category resource names have the form:
+     *
      * `customers/{customer_id}/domainCategories/{campaign_id}~{category_base64}~{language_code}`
      * </pre>
      *
@@ -1641,7 +1645,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCoverageFraction(double value) {
-      
+
       coverageFraction_ = value;
       bitField0_ |= 0x00000020;
       onChanged();
@@ -1703,7 +1707,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCategoryRank(long value) {
-      
+
       categoryRank_ = value;
       bitField0_ |= 0x00000040;
       onChanged();
@@ -1761,7 +1765,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHasChildren(boolean value) {
-      
+
       hasChildren_ = value;
       bitField0_ |= 0x00000080;
       onChanged();
@@ -1817,7 +1821,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRecommendedCpcBidMicros(long value) {
-      
+
       recommendedCpcBidMicros_ = value;
       bitField0_ |= 0x00000100;
       onChanged();

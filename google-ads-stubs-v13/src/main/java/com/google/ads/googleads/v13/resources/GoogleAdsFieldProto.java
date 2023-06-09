@@ -35,33 +35,33 @@ public final class GoogleAdsFieldProto {
       "?google/ads/googleads/v13/enums/google_a" +
       "ds_field_data_type.proto\032\037google/api/fie" +
       "ld_behavior.proto\032\031google/api/resource.p" +
-      "roto\"\202\006\n\016GoogleAdsField\022F\n\rresource_name" +
-      "\030\001 \001(\tB/\340A\003\372A)\n\'googleads.googleapis.com" +
-      "/GoogleAdsField\022\026\n\004name\030\025 \001(\tB\003\340A\003H\000\210\001\001\022" +
-      "h\n\010category\030\003 \001(\0162Q.google.ads.googleads" +
-      ".v13.enums.GoogleAdsFieldCategoryEnum.Go" +
-      "ogleAdsFieldCategoryB\003\340A\003\022\034\n\nselectable\030" +
-      "\026 \001(\010B\003\340A\003H\001\210\001\001\022\034\n\nfilterable\030\027 \001(\010B\003\340A\003" +
-      "H\002\210\001\001\022\032\n\010sortable\030\030 \001(\010B\003\340A\003H\003\210\001\001\022\034\n\017sel" +
-      "ectable_with\030\031 \003(\tB\003\340A\003\022 \n\023attribute_res" +
-      "ources\030\032 \003(\tB\003\340A\003\022\024\n\007metrics\030\033 \003(\tB\003\340A\003\022" +
-      "\025\n\010segments\030\034 \003(\tB\003\340A\003\022\030\n\013enum_values\030\035 " +
-      "\003(\tB\003\340A\003\022i\n\tdata_type\030\014 \001(\0162Q.google.ads" +
-      ".googleads.v13.enums.GoogleAdsFieldDataT" +
-      "ypeEnum.GoogleAdsFieldDataTypeB\003\340A\003\022\032\n\010t" +
-      "ype_url\030\036 \001(\tB\003\340A\003H\004\210\001\001\022\035\n\013is_repeated\030\037" +
-      " \001(\010B\003\340A\003H\005\210\001\001:P\352AM\n\'googleads.googleapi" +
-      "s.com/GoogleAdsField\022\"googleAdsFields/{g" +
-      "oogle_ads_field}B\007\n\005_nameB\r\n\013_selectable" +
-      "B\r\n\013_filterableB\013\n\t_sortableB\013\n\t_type_ur" +
-      "lB\016\n\014_is_repeatedB\205\002\n&com.google.ads.goo" +
-      "gleads.v13.resourcesB\023GoogleAdsFieldProt" +
-      "oP\001ZKgoogle.golang.org/genproto/googleap" +
-      "is/ads/googleads/v13/resources;resources" +
-      "\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V13.Resour" +
-      "ces\312\002\"Google\\Ads\\GoogleAds\\V13\\Resources" +
-      "\352\002&Google::Ads::GoogleAds::V13::Resource" +
-      "sb\006proto3"
+      "roto\"\220\006\n\016GoogleAdsField\022G\n\rresource_name" +
+      "\030\001 \001(\tB0\342A\001\003\372A)\n\'googleads.googleapis.co" +
+      "m/GoogleAdsField\022\027\n\004name\030\025 \001(\tB\004\342A\001\003H\000\210\001" +
+      "\001\022i\n\010category\030\003 \001(\0162Q.google.ads.googlea" +
+      "ds.v13.enums.GoogleAdsFieldCategoryEnum." +
+      "GoogleAdsFieldCategoryB\004\342A\001\003\022\035\n\nselectab" +
+      "le\030\026 \001(\010B\004\342A\001\003H\001\210\001\001\022\035\n\nfilterable\030\027 \001(\010B" +
+      "\004\342A\001\003H\002\210\001\001\022\033\n\010sortable\030\030 \001(\010B\004\342A\001\003H\003\210\001\001\022" +
+      "\035\n\017selectable_with\030\031 \003(\tB\004\342A\001\003\022!\n\023attrib" +
+      "ute_resources\030\032 \003(\tB\004\342A\001\003\022\025\n\007metrics\030\033 \003" +
+      "(\tB\004\342A\001\003\022\026\n\010segments\030\034 \003(\tB\004\342A\001\003\022\031\n\013enum" +
+      "_values\030\035 \003(\tB\004\342A\001\003\022j\n\tdata_type\030\014 \001(\0162Q" +
+      ".google.ads.googleads.v13.enums.GoogleAd" +
+      "sFieldDataTypeEnum.GoogleAdsFieldDataTyp" +
+      "eB\004\342A\001\003\022\033\n\010type_url\030\036 \001(\tB\004\342A\001\003H\004\210\001\001\022\036\n\013" +
+      "is_repeated\030\037 \001(\010B\004\342A\001\003H\005\210\001\001:P\352AM\n\'googl" +
+      "eads.googleapis.com/GoogleAdsField\022\"goog" +
+      "leAdsFields/{google_ads_field}B\007\n\005_nameB" +
+      "\r\n\013_selectableB\r\n\013_filterableB\013\n\t_sortab" +
+      "leB\013\n\t_type_urlB\016\n\014_is_repeatedB\205\002\n&com." +
+      "google.ads.googleads.v13.resourcesB\023Goog" +
+      "leAdsFieldProtoP\001ZKgoogle.golang.org/gen" +
+      "proto/googleapis/ads/googleads/v13/resou" +
+      "rces;resources\242\002\003GAA\252\002\"Google.Ads.Google" +
+      "Ads.V13.Resources\312\002\"Google\\Ads\\GoogleAds" +
+      "\\V13\\Resources\352\002&Google::Ads::GoogleAds:" +
+      ":V13::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

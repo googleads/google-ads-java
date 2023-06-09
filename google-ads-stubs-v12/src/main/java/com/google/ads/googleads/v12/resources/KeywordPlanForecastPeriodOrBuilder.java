@@ -74,5 +74,5 @@ public interface KeywordPlanForecastPeriodOrBuilder extends
    */
   com.google.ads.googleads.v12.common.DateRangeOrBuilder getDateRangeOrBuilder();
 
-  public com.google.ads.googleads.v12.resources.KeywordPlanForecastPeriod.IntervalCase getIntervalCase();
+  com.google.ads.googleads.v12.resources.KeywordPlanForecastPeriod.IntervalCase getIntervalCase();
 }

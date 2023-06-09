@@ -11,6 +11,7 @@ public interface BatchJobOrBuilder extends
    * <pre>
    * Immutable. The resource name of the batch job.
    * Batch job resource names have the form:
+   *
    * `customers/{customer_id}/batchJobs/{batch_job_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface BatchJobOrBuilder extends
    * <pre>
    * Immutable. The resource name of the batch job.
    * Batch job resource names have the form:
+   *
    * `customers/{customer_id}/batchJobs/{batch_job_id}`
    * </pre>
    *

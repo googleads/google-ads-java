@@ -29,11 +29,6 @@ private static final long serialVersionUID = 0L;
     return new CustomConversionGoalOperation();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.services.CustomConversionGoalServiceProto.internal_static_google_ads_googleads_v13_services_CustomConversionGoalOperation_descriptor;
@@ -48,6 +43,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int operationCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object operation_;
   public enum OperationCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -225,6 +221,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Remove operation: A resource name for the removed custom conversion goal
    * is expected, in this format:
+   *
    * 'customers/{customer_id}/conversionActions/{ConversionGoal.custom_goal_config.conversion_type_ids}'
    * </pre>
    *
@@ -238,6 +235,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Remove operation: A resource name for the removed custom conversion goal
    * is expected, in this format:
+   *
    * 'customers/{customer_id}/conversionActions/{ConversionGoal.custom_goal_config.conversion_type_ids}'
    * </pre>
    *
@@ -265,6 +263,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Remove operation: A resource name for the removed custom conversion goal
    * is expected, in this format:
+   *
    * 'customers/{customer_id}/conversionActions/{ConversionGoal.custom_goal_config.conversion_type_ids}'
    * </pre>
    *
@@ -457,11 +456,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.services.CustomConversionGoalOperation parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.services.CustomConversionGoalOperation parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1292,6 +1293,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Remove operation: A resource name for the removed custom conversion goal
      * is expected, in this format:
+     *
      * 'customers/{customer_id}/conversionActions/{ConversionGoal.custom_goal_config.conversion_type_ids}'
      * </pre>
      *
@@ -1306,6 +1308,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Remove operation: A resource name for the removed custom conversion goal
      * is expected, in this format:
+     *
      * 'customers/{customer_id}/conversionActions/{ConversionGoal.custom_goal_config.conversion_type_ids}'
      * </pre>
      *
@@ -1334,6 +1337,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Remove operation: A resource name for the removed custom conversion goal
      * is expected, in this format:
+     *
      * 'customers/{customer_id}/conversionActions/{ConversionGoal.custom_goal_config.conversion_type_ids}'
      * </pre>
      *
@@ -1363,6 +1367,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Remove operation: A resource name for the removed custom conversion goal
      * is expected, in this format:
+     *
      * 'customers/{customer_id}/conversionActions/{ConversionGoal.custom_goal_config.conversion_type_ids}'
      * </pre>
      *
@@ -1382,6 +1387,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Remove operation: A resource name for the removed custom conversion goal
      * is expected, in this format:
+     *
      * 'customers/{customer_id}/conversionActions/{ConversionGoal.custom_goal_config.conversion_type_ids}'
      * </pre>
      *
@@ -1400,6 +1406,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Remove operation: A resource name for the removed custom conversion goal
      * is expected, in this format:
+     *
      * 'customers/{customer_id}/conversionActions/{ConversionGoal.custom_goal_config.conversion_type_ids}'
      * </pre>
      *

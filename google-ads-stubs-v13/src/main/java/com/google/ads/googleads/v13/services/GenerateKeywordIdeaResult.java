@@ -21,7 +21,8 @@ private static final long serialVersionUID = 0L;
   }
   private GenerateKeywordIdeaResult() {
     text_ = "";
-    closeVariants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    closeVariants_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -31,11 +32,6 @@ private static final long serialVersionUID = 0L;
     return new GenerateKeywordIdeaResult();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.services.KeywordPlanIdeaServiceProto.internal_static_google_ads_googleads_v13_services_GenerateKeywordIdeaResult_descriptor;
@@ -199,7 +195,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int CLOSE_VARIANTS_FIELD_NUMBER = 7;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList closeVariants_;
+  private com.google.protobuf.LazyStringArrayList closeVariants_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * The list of close variants from the requested keywords that
@@ -423,11 +420,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.services.GenerateKeywordIdeaResult parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.services.GenerateKeywordIdeaResult parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -518,8 +517,8 @@ private static final long serialVersionUID = 0L;
         keywordAnnotationsBuilder_.dispose();
         keywordAnnotationsBuilder_ = null;
       }
-      closeVariants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000008);
+      closeVariants_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -546,18 +545,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v13.services.GenerateKeywordIdeaResult buildPartial() {
       com.google.ads.googleads.v13.services.GenerateKeywordIdeaResult result = new com.google.ads.googleads.v13.services.GenerateKeywordIdeaResult(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(com.google.ads.googleads.v13.services.GenerateKeywordIdeaResult result) {
-      if (((bitField0_ & 0x00000008) != 0)) {
-        closeVariants_ = closeVariants_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000008);
-      }
-      result.closeVariants_ = closeVariants_;
     }
 
     private void buildPartial0(com.google.ads.googleads.v13.services.GenerateKeywordIdeaResult result) {
@@ -576,6 +566,10 @@ private static final long serialVersionUID = 0L;
         result.keywordAnnotations_ = keywordAnnotationsBuilder_ == null
             ? keywordAnnotations_
             : keywordAnnotationsBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        closeVariants_.makeImmutable();
+        result.closeVariants_ = closeVariants_;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -638,7 +632,7 @@ private static final long serialVersionUID = 0L;
       if (!other.closeVariants_.isEmpty()) {
         if (closeVariants_.isEmpty()) {
           closeVariants_ = other.closeVariants_;
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ |= 0x00000008;
         } else {
           ensureCloseVariantsIsMutable();
           closeVariants_.addAll(other.closeVariants_);
@@ -1153,12 +1147,13 @@ private static final long serialVersionUID = 0L;
       return keywordAnnotationsBuilder_;
     }
 
-    private com.google.protobuf.LazyStringList closeVariants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList closeVariants_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureCloseVariantsIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
+      if (!closeVariants_.isModifiable()) {
         closeVariants_ = new com.google.protobuf.LazyStringArrayList(closeVariants_);
-        bitField0_ |= 0x00000008;
-       }
+      }
+      bitField0_ |= 0x00000008;
     }
     /**
      * <pre>
@@ -1173,7 +1168,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getCloseVariantsList() {
-      return closeVariants_.getUnmodifiableView();
+      closeVariants_.makeImmutable();
+      return closeVariants_;
     }
     /**
      * <pre>
@@ -1238,6 +1234,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureCloseVariantsIsMutable();
       closeVariants_.set(index, value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1258,6 +1255,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureCloseVariantsIsMutable();
       closeVariants_.add(value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1278,6 +1276,7 @@ private static final long serialVersionUID = 0L;
       ensureCloseVariantsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, closeVariants_);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1293,8 +1292,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCloseVariants() {
-      closeVariants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000008);
+      closeVariants_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000008);;
       onChanged();
       return this;
     }
@@ -1316,6 +1316,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureCloseVariantsIsMutable();
       closeVariants_.add(value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }

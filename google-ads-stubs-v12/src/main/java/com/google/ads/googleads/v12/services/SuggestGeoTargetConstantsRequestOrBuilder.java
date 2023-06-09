@@ -125,5 +125,5 @@ public interface SuggestGeoTargetConstantsRequestOrBuilder extends
    */
   com.google.ads.googleads.v12.services.SuggestGeoTargetConstantsRequest.GeoTargetsOrBuilder getGeoTargetsOrBuilder();
 
-  public com.google.ads.googleads.v12.services.SuggestGeoTargetConstantsRequest.QueryCase getQueryCase();
+  com.google.ads.googleads.v12.services.SuggestGeoTargetConstantsRequest.QueryCase getQueryCase();
 }

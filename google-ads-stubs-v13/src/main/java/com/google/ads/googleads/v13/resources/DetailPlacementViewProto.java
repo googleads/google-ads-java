@@ -33,27 +33,27 @@ public final class DetailPlacementViewProto {
       "gleads.v13.resources\0323google/ads/googlea" +
       "ds/v13/enums/placement_type.proto\032\037googl" +
       "e/api/field_behavior.proto\032\031google/api/r" +
-      "esource.proto\"\231\004\n\023DetailPlacementView\022K\n" +
-      "\rresource_name\030\001 \001(\tB4\340A\003\372A.\n,googleads." +
-      "googleapis.com/DetailPlacementView\022\033\n\tpl" +
-      "acement\030\007 \001(\tB\003\340A\003H\000\210\001\001\022\036\n\014display_name\030" +
-      "\010 \001(\tB\003\340A\003H\001\210\001\001\022,\n\032group_placement_targe" +
-      "t_url\030\t \001(\tB\003\340A\003H\002\210\001\001\022\034\n\ntarget_url\030\n \001(" +
-      "\tB\003\340A\003H\003\210\001\001\022\\\n\016placement_type\030\006 \001(\0162?.go" +
-      "ogle.ads.googleads.v13.enums.PlacementTy" +
-      "peEnum.PlacementTypeB\003\340A\003:\200\001\352A}\n,googlea" +
-      "ds.googleapis.com/DetailPlacementView\022Mc" +
-      "ustomers/{customer_id}/detailPlacementVi" +
-      "ews/{ad_group_id}~{base64_placement}B\014\n\n" +
-      "_placementB\017\n\r_display_nameB\035\n\033_group_pl" +
-      "acement_target_urlB\r\n\013_target_urlB\212\002\n&co" +
-      "m.google.ads.googleads.v13.resourcesB\030De" +
-      "tailPlacementViewProtoP\001ZKgoogle.golang." +
-      "org/genproto/googleapis/ads/googleads/v1" +
-      "3/resources;resources\242\002\003GAA\252\002\"Google.Ads" +
-      ".GoogleAds.V13.Resources\312\002\"Google\\Ads\\Go" +
-      "ogleAds\\V13\\Resources\352\002&Google::Ads::Goo" +
-      "gleAds::V13::Resourcesb\006proto3"
+      "esource.proto\"\237\004\n\023DetailPlacementView\022L\n" +
+      "\rresource_name\030\001 \001(\tB5\342A\001\003\372A.\n,googleads" +
+      ".googleapis.com/DetailPlacementView\022\034\n\tp" +
+      "lacement\030\007 \001(\tB\004\342A\001\003H\000\210\001\001\022\037\n\014display_nam" +
+      "e\030\010 \001(\tB\004\342A\001\003H\001\210\001\001\022-\n\032group_placement_ta" +
+      "rget_url\030\t \001(\tB\004\342A\001\003H\002\210\001\001\022\035\n\ntarget_url\030" +
+      "\n \001(\tB\004\342A\001\003H\003\210\001\001\022]\n\016placement_type\030\006 \001(\016" +
+      "2?.google.ads.googleads.v13.enums.Placem" +
+      "entTypeEnum.PlacementTypeB\004\342A\001\003:\200\001\352A}\n,g" +
+      "oogleads.googleapis.com/DetailPlacementV" +
+      "iew\022Mcustomers/{customer_id}/detailPlace" +
+      "mentViews/{ad_group_id}~{base64_placemen" +
+      "t}B\014\n\n_placementB\017\n\r_display_nameB\035\n\033_gr" +
+      "oup_placement_target_urlB\r\n\013_target_urlB" +
+      "\212\002\n&com.google.ads.googleads.v13.resourc" +
+      "esB\030DetailPlacementViewProtoP\001ZKgoogle.g" +
+      "olang.org/genproto/googleapis/ads/google" +
+      "ads/v13/resources;resources\242\002\003GAA\252\002\"Goog" +
+      "le.Ads.GoogleAds.V13.Resources\312\002\"Google\\" +
+      "Ads\\GoogleAds\\V13\\Resources\352\002&Google::Ad" +
+      "s::GoogleAds::V13::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

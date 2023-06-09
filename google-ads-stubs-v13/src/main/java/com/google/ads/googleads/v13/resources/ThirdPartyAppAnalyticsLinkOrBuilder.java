@@ -11,6 +11,7 @@ public interface ThirdPartyAppAnalyticsLinkOrBuilder extends
    * <pre>
    * Immutable. The resource name of the third party app analytics link.
    * Third party app analytics link resource names have the form:
+   *
    * `customers/{customer_id}/thirdPartyAppAnalyticsLinks/{account_link_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface ThirdPartyAppAnalyticsLinkOrBuilder extends
    * <pre>
    * Immutable. The resource name of the third party app analytics link.
    * Third party app analytics link resource names have the form:
+   *
    * `customers/{customer_id}/thirdPartyAppAnalyticsLinks/{account_link_id}`
    * </pre>
    *

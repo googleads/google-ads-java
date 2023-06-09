@@ -31,23 +31,23 @@ public final class FeedItemSetLinkProto {
       "\n;google/ads/googleads/v12/resources/fee" +
       "d_item_set_link.proto\022\"google.ads.google" +
       "ads.v12.resources\032\037google/api/field_beha" +
-      "vior.proto\032\031google/api/resource.proto\"\344\002" +
-      "\n\017FeedItemSetLink\022G\n\rresource_name\030\001 \001(\t" +
-      "B0\340A\005\372A*\n(googleads.googleapis.com/FeedI" +
-      "temSetLink\022<\n\tfeed_item\030\002 \001(\tB)\340A\005\372A#\n!g" +
-      "oogleads.googleapis.com/FeedItem\022C\n\rfeed" +
-      "_item_set\030\003 \001(\tB,\340A\005\372A&\n$googleads.googl" +
-      "eapis.com/FeedItemSet:\204\001\352A\200\001\n(googleads." +
-      "googleapis.com/FeedItemSetLink\022Tcustomer" +
-      "s/{customer_id}/feedItemSetLinks/{feed_i" +
-      "d}~{feed_item_set_id}~{feed_item_id}B\206\002\n" +
-      "&com.google.ads.googleads.v12.resourcesB" +
-      "\024FeedItemSetLinkProtoP\001ZKgoogle.golang.o" +
-      "rg/genproto/googleapis/ads/googleads/v12" +
-      "/resources;resources\242\002\003GAA\252\002\"Google.Ads." +
-      "GoogleAds.V12.Resources\312\002\"Google\\Ads\\Goo" +
-      "gleAds\\V12\\Resources\352\002&Google::Ads::Goog" +
-      "leAds::V12::Resourcesb\006proto3"
+      "vior.proto\032\031google/api/resource.proto\"\347\002" +
+      "\n\017FeedItemSetLink\022H\n\rresource_name\030\001 \001(\t" +
+      "B1\342A\001\005\372A*\n(googleads.googleapis.com/Feed" +
+      "ItemSetLink\022=\n\tfeed_item\030\002 \001(\tB*\342A\001\005\372A#\n" +
+      "!googleads.googleapis.com/FeedItem\022D\n\rfe" +
+      "ed_item_set\030\003 \001(\tB-\342A\001\005\372A&\n$googleads.go" +
+      "ogleapis.com/FeedItemSet:\204\001\352A\200\001\n(googlea" +
+      "ds.googleapis.com/FeedItemSetLink\022Tcusto" +
+      "mers/{customer_id}/feedItemSetLinks/{fee" +
+      "d_id}~{feed_item_set_id}~{feed_item_id}B" +
+      "\206\002\n&com.google.ads.googleads.v12.resourc" +
+      "esB\024FeedItemSetLinkProtoP\001ZKgoogle.golan" +
+      "g.org/genproto/googleapis/ads/googleads/" +
+      "v12/resources;resources\242\002\003GAA\252\002\"Google.A" +
+      "ds.GoogleAds.V12.Resources\312\002\"Google\\Ads\\" +
+      "GoogleAds\\V12\\Resources\352\002&Google::Ads::G" +
+      "oogleAds::V12::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

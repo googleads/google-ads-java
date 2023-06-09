@@ -29,11 +29,6 @@ private static final long serialVersionUID = 0L;
     return new CpcBidSimulationPoint();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.common.SimulationProto.internal_static_google_ads_googleads_v12_common_CpcBidSimulationPoint_descriptor;
@@ -49,6 +44,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   private int cpcSimulationKeyValueCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object cpcSimulationKeyValue_;
   public enum CpcSimulationKeyValueCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -591,11 +587,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.common.CpcBidSimulationPoint parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.common.CpcBidSimulationPoint parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -960,7 +958,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRequiredBudgetAmountMicros(long value) {
-      
+
       requiredBudgetAmountMicros_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
@@ -1017,7 +1015,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBiddableConversions(double value) {
-      
+
       biddableConversions_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -1073,7 +1071,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBiddableConversionsValue(double value) {
-      
+
       biddableConversionsValue_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
@@ -1129,7 +1127,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setClicks(long value) {
-      
+
       clicks_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
@@ -1185,7 +1183,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCostMicros(long value) {
-      
+
       costMicros_ = value;
       bitField0_ |= 0x00000010;
       onChanged();
@@ -1241,7 +1239,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setImpressions(long value) {
-      
+
       impressions_ = value;
       bitField0_ |= 0x00000020;
       onChanged();
@@ -1300,7 +1298,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTopSlotImpressions(long value) {
-      
+
       topSlotImpressions_ = value;
       bitField0_ |= 0x00000040;
       onChanged();
@@ -1357,7 +1355,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCpcBidMicros(long value) {
-      
+
       cpcSimulationKeyValueCase_ = 15;
       cpcSimulationKeyValue_ = value;
       onChanged();
@@ -1421,7 +1419,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCpcBidScalingModifier(double value) {
-      
+
       cpcSimulationKeyValueCase_ = 16;
       cpcSimulationKeyValue_ = value;
       onChanged();

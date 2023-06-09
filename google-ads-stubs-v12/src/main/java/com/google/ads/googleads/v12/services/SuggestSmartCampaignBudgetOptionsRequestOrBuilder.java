@@ -83,5 +83,5 @@ public interface SuggestSmartCampaignBudgetOptionsRequestOrBuilder extends
    */
   com.google.ads.googleads.v12.services.SmartCampaignSuggestionInfoOrBuilder getSuggestionInfoOrBuilder();
 
-  public com.google.ads.googleads.v12.services.SuggestSmartCampaignBudgetOptionsRequest.SuggestionDataCase getSuggestionDataCase();
+  com.google.ads.googleads.v12.services.SuggestSmartCampaignBudgetOptionsRequest.SuggestionDataCase getSuggestionDataCase();
 }

@@ -196,5 +196,5 @@ public interface TargetCpaSimulationPointOrBuilder extends
    */
   double getTargetCpaScalingModifier();
 
-  public com.google.ads.googleads.v13.common.TargetCpaSimulationPoint.TargetCpaSimulationKeyValueCase getTargetCpaSimulationKeyValueCase();
+  com.google.ads.googleads.v13.common.TargetCpaSimulationPoint.TargetCpaSimulationKeyValueCase getTargetCpaSimulationKeyValueCase();
 }

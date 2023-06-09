@@ -169,5 +169,5 @@ public interface VideoAdInfoOrBuilder extends
    */
   com.google.ads.googleads.v12.common.InFeedVideoAdInfoOrBuilder getInFeedOrBuilder();
 
-  public com.google.ads.googleads.v12.common.VideoAdInfo.FormatCase getFormatCase();
+  com.google.ads.googleads.v12.common.VideoAdInfo.FormatCase getFormatCase();
 }

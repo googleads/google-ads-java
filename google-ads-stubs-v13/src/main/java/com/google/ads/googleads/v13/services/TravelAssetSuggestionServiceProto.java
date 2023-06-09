@@ -57,45 +57,45 @@ public final class TravelAssetSuggestionServiceProto {
       "ads/v13/enums/hotel_asset_suggestion_sta" +
       "tus.proto\032\034google/api/annotations.proto\032" +
       "\027google/api/client.proto\032\037google/api/fie" +
-      "ld_behavior.proto\"f\n\032SuggestTravelAssets" +
-      "Request\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022\034\n\017lan" +
-      "guage_option\030\002 \001(\tB\003\340A\002\022\020\n\010place_id\030\003 \003(" +
-      "\t\"w\n\033SuggestTravelAssetsResponse\022X\n\027hote" +
-      "l_asset_suggestions\030\001 \003(\01327.google.ads.g" +
-      "oogleads.v13.services.HotelAssetSuggesti" +
-      "on\"\253\003\n\024HotelAssetSuggestion\022\020\n\010place_id\030" +
-      "\001 \001(\t\022\021\n\tfinal_url\030\002 \001(\t\022\022\n\nhotel_name\030\003" +
-      " \001(\t\022]\n\016call_to_action\030\004 \001(\0162E.google.ad" +
-      "s.googleads.v13.enums.CallToActionTypeEn" +
-      "um.CallToActionType\022F\n\013text_assets\030\005 \003(\013" +
-      "21.google.ads.googleads.v13.services.Hot" +
-      "elTextAsset\022H\n\014image_assets\030\006 \003(\01322.goog" +
-      "le.ads.googleads.v13.services.HotelImage" +
-      "Asset\022i\n\006status\030\007 \001(\0162Y.google.ads.googl" +
-      "eads.v13.enums.HotelAssetSuggestionStatu" +
-      "sEnum.HotelAssetSuggestionStatus\"{\n\016Hote" +
-      "lTextAsset\022\014\n\004text\030\001 \001(\t\022[\n\020asset_field_" +
-      "type\030\002 \001(\0162A.google.ads.googleads.v13.en" +
-      "ums.AssetFieldTypeEnum.AssetFieldType\"{\n" +
-      "\017HotelImageAsset\022\013\n\003uri\030\001 \001(\t\022[\n\020asset_f" +
-      "ield_type\030\002 \001(\0162A.google.ads.googleads.v" +
-      "13.enums.AssetFieldTypeEnum.AssetFieldTy" +
-      "pe2\331\002\n\034TravelAssetSuggestionService\022\361\001\n\023" +
-      "SuggestTravelAssets\022=.google.ads.googlea" +
-      "ds.v13.services.SuggestTravelAssetsReque" +
-      "st\032>.google.ads.googleads.v13.services.S" +
-      "uggestTravelAssetsResponse\"[\202\323\344\223\0027\"2/v13" +
-      "/customers/{customer_id=*}:suggestTravel" +
-      "Assets:\001*\332A\033customer_id,language_option\032" +
-      "E\312A\030googleads.googleapis.com\322A\'https://w" +
-      "ww.googleapis.com/auth/adwordsB\215\002\n%com.g" +
-      "oogle.ads.googleads.v13.servicesB!Travel" +
-      "AssetSuggestionServiceProtoP\001ZIgoogle.go" +
-      "lang.org/genproto/googleapis/ads/googlea" +
-      "ds/v13/services;services\242\002\003GAA\252\002!Google." +
-      "Ads.GoogleAds.V13.Services\312\002!Google\\Ads\\" +
-      "GoogleAds\\V13\\Services\352\002%Google::Ads::Go" +
-      "ogleAds::V13::Servicesb\006proto3"
+      "ld_behavior.proto\"h\n\032SuggestTravelAssets" +
+      "Request\022\031\n\013customer_id\030\001 \001(\tB\004\342A\001\002\022\035\n\017la" +
+      "nguage_option\030\002 \001(\tB\004\342A\001\002\022\020\n\010place_id\030\003 " +
+      "\003(\t\"w\n\033SuggestTravelAssetsResponse\022X\n\027ho" +
+      "tel_asset_suggestions\030\001 \003(\01327.google.ads" +
+      ".googleads.v13.services.HotelAssetSugges" +
+      "tion\"\253\003\n\024HotelAssetSuggestion\022\020\n\010place_i" +
+      "d\030\001 \001(\t\022\021\n\tfinal_url\030\002 \001(\t\022\022\n\nhotel_name" +
+      "\030\003 \001(\t\022]\n\016call_to_action\030\004 \001(\0162E.google." +
+      "ads.googleads.v13.enums.CallToActionType" +
+      "Enum.CallToActionType\022F\n\013text_assets\030\005 \003" +
+      "(\01321.google.ads.googleads.v13.services.H" +
+      "otelTextAsset\022H\n\014image_assets\030\006 \003(\01322.go" +
+      "ogle.ads.googleads.v13.services.HotelIma" +
+      "geAsset\022i\n\006status\030\007 \001(\0162Y.google.ads.goo" +
+      "gleads.v13.enums.HotelAssetSuggestionSta" +
+      "tusEnum.HotelAssetSuggestionStatus\"{\n\016Ho" +
+      "telTextAsset\022\014\n\004text\030\001 \001(\t\022[\n\020asset_fiel" +
+      "d_type\030\002 \001(\0162A.google.ads.googleads.v13." +
+      "enums.AssetFieldTypeEnum.AssetFieldType\"" +
+      "{\n\017HotelImageAsset\022\013\n\003uri\030\001 \001(\t\022[\n\020asset" +
+      "_field_type\030\002 \001(\0162A.google.ads.googleads" +
+      ".v13.enums.AssetFieldTypeEnum.AssetField" +
+      "Type2\331\002\n\034TravelAssetSuggestionService\022\361\001" +
+      "\n\023SuggestTravelAssets\022=.google.ads.googl" +
+      "eads.v13.services.SuggestTravelAssetsReq" +
+      "uest\032>.google.ads.googleads.v13.services" +
+      ".SuggestTravelAssetsResponse\"[\332A\033custome" +
+      "r_id,language_option\202\323\344\223\0027\"2/v13/custome" +
+      "rs/{customer_id=*}:suggestTravelAssets:\001" +
+      "*\032E\312A\030googleads.googleapis.com\322A\'https:/" +
+      "/www.googleapis.com/auth/adwordsB\215\002\n%com" +
+      ".google.ads.googleads.v13.servicesB!Trav" +
+      "elAssetSuggestionServiceProtoP\001ZIgoogle." +
+      "golang.org/genproto/googleapis/ads/googl" +
+      "eads/v13/services;services\242\002\003GAA\252\002!Googl" +
+      "e.Ads.GoogleAds.V13.Services\312\002!Google\\Ad" +
+      "s\\GoogleAds\\V13\\Services\352\002%Google::Ads::" +
+      "GoogleAds::V13::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

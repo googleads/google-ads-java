@@ -4011,5 +4011,5 @@ public interface ErrorCodeOrBuilder extends
    */
   com.google.ads.googleads.v13.errors.CurrencyErrorEnum.CurrencyError getCurrencyError();
 
-  public com.google.ads.googleads.v13.errors.ErrorCode.ErrorCodeCase getErrorCodeCase();
+  com.google.ads.googleads.v13.errors.ErrorCode.ErrorCodeCase getErrorCodeCase();
 }

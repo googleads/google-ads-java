@@ -32,17 +32,17 @@ public final class CustomizerValueProto {
       "izer_value.proto\022\037google.ads.googleads.v" +
       "12.common\032>google/ads/googleads/v12/enum" +
       "s/customizer_attribute_type.proto\032\037googl" +
-      "e/api/field_behavior.proto\"\224\001\n\017Customize" +
-      "rValue\022f\n\004type\030\001 \001(\0162S.google.ads.google" +
+      "e/api/field_behavior.proto\"\226\001\n\017Customize" +
+      "rValue\022g\n\004type\030\001 \001(\0162S.google.ads.google" +
       "ads.v12.enums.CustomizerAttributeTypeEnu" +
-      "m.CustomizerAttributeTypeB\003\340A\002\022\031\n\014string" +
-      "_value\030\002 \001(\tB\003\340A\002B\364\001\n#com.google.ads.goo" +
-      "gleads.v12.commonB\024CustomizerValueProtoP" +
-      "\001ZEgoogle.golang.org/genproto/googleapis" +
-      "/ads/googleads/v12/common;common\242\002\003GAA\252\002" +
-      "\037Google.Ads.GoogleAds.V12.Common\312\002\037Googl" +
-      "e\\Ads\\GoogleAds\\V12\\Common\352\002#Google::Ads" +
-      "::GoogleAds::V12::Commonb\006proto3"
+      "m.CustomizerAttributeTypeB\004\342A\001\002\022\032\n\014strin" +
+      "g_value\030\002 \001(\tB\004\342A\001\002B\364\001\n#com.google.ads.g" +
+      "oogleads.v12.commonB\024CustomizerValueProt" +
+      "oP\001ZEgoogle.golang.org/genproto/googleap" +
+      "is/ads/googleads/v12/common;common\242\002\003GAA" +
+      "\252\002\037Google.Ads.GoogleAds.V12.Common\312\002\037Goo" +
+      "gle\\Ads\\GoogleAds\\V12\\Common\352\002#Google::A" +
+      "ds::GoogleAds::V12::Commonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -53,46 +53,46 @@ public final class ConversionGoalCampaignConfigServiceProto {
       "\032\027google/api/client.proto\032\037google/api/fi" +
       "eld_behavior.proto\032\031google/api/resource." +
       "proto\032 google/protobuf/field_mask.proto\"" +
-      "\254\002\n*MutateConversionGoalCampaignConfigsR" +
-      "equest\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022a\n\noper" +
-      "ations\030\002 \003(\0132H.google.ads.googleads.v13." +
-      "services.ConversionGoalCampaignConfigOpe" +
-      "rationB\003\340A\002\022\025\n\rvalidate_only\030\003 \001(\010\022j\n\025re" +
-      "sponse_content_type\030\004 \001(\0162K.google.ads.g" +
-      "oogleads.v13.enums.ResponseContentTypeEn" +
-      "um.ResponseContentType\"\271\001\n%ConversionGoa" +
-      "lCampaignConfigOperation\022/\n\013update_mask\030" +
-      "\002 \001(\0132\032.google.protobuf.FieldMask\022R\n\006upd" +
-      "ate\030\001 \001(\0132@.google.ads.googleads.v13.res" +
-      "ources.ConversionGoalCampaignConfigH\000B\013\n" +
-      "\toperation\"\213\001\n+MutateConversionGoalCampa" +
-      "ignConfigsResponse\022\\\n\007results\030\001 \003(\0132K.go" +
-      "ogle.ads.googleads.v13.services.MutateCo" +
-      "nversionGoalCampaignConfigResult\"\350\001\n(Mut" +
-      "ateConversionGoalCampaignConfigResult\022Q\n" +
-      "\rresource_name\030\001 \001(\tB:\372A7\n5googleads.goo" +
-      "gleapis.com/ConversionGoalCampaignConfig" +
-      "\022i\n\037conversion_goal_campaign_config\030\002 \001(" +
-      "\0132@.google.ads.googleads.v13.resources.C" +
-      "onversionGoalCampaignConfig2\234\003\n#Conversi" +
-      "onGoalCampaignConfigService\022\255\002\n#MutateCo" +
-      "nversionGoalCampaignConfigs\022M.google.ads" +
-      ".googleads.v13.services.MutateConversion" +
-      "GoalCampaignConfigsRequest\032N.google.ads." +
-      "googleads.v13.services.MutateConversionG" +
-      "oalCampaignConfigsResponse\"g\202\323\344\223\002H\"C/v13" +
-      "/customers/{customer_id=*}/conversionGoa" +
-      "lCampaignConfigs:mutate:\001*\332A\026customer_id" +
-      ",operations\032E\312A\030googleads.googleapis.com" +
-      "\322A\'https://www.googleapis.com/auth/adwor" +
-      "dsB\224\002\n%com.google.ads.googleads.v13.serv" +
-      "icesB(ConversionGoalCampaignConfigServic" +
-      "eProtoP\001ZIgoogle.golang.org/genproto/goo" +
-      "gleapis/ads/googleads/v13/services;servi" +
-      "ces\242\002\003GAA\252\002!Google.Ads.GoogleAds.V13.Ser" +
-      "vices\312\002!Google\\Ads\\GoogleAds\\V13\\Service" +
-      "s\352\002%Google::Ads::GoogleAds::V13::Service" +
-      "sb\006proto3"
+      "\256\002\n*MutateConversionGoalCampaignConfigsR" +
+      "equest\022\031\n\013customer_id\030\001 \001(\tB\004\342A\001\002\022b\n\nope" +
+      "rations\030\002 \003(\0132H.google.ads.googleads.v13" +
+      ".services.ConversionGoalCampaignConfigOp" +
+      "erationB\004\342A\001\002\022\025\n\rvalidate_only\030\003 \001(\010\022j\n\025" +
+      "response_content_type\030\004 \001(\0162K.google.ads" +
+      ".googleads.v13.enums.ResponseContentType" +
+      "Enum.ResponseContentType\"\271\001\n%ConversionG" +
+      "oalCampaignConfigOperation\022/\n\013update_mas" +
+      "k\030\002 \001(\0132\032.google.protobuf.FieldMask\022R\n\006u" +
+      "pdate\030\001 \001(\0132@.google.ads.googleads.v13.r" +
+      "esources.ConversionGoalCampaignConfigH\000B" +
+      "\013\n\toperation\"\213\001\n+MutateConversionGoalCam" +
+      "paignConfigsResponse\022\\\n\007results\030\001 \003(\0132K." +
+      "google.ads.googleads.v13.services.Mutate" +
+      "ConversionGoalCampaignConfigResult\"\350\001\n(M" +
+      "utateConversionGoalCampaignConfigResult\022" +
+      "Q\n\rresource_name\030\001 \001(\tB:\372A7\n5googleads.g" +
+      "oogleapis.com/ConversionGoalCampaignConf" +
+      "ig\022i\n\037conversion_goal_campaign_config\030\002 " +
+      "\001(\0132@.google.ads.googleads.v13.resources" +
+      ".ConversionGoalCampaignConfig2\234\003\n#Conver" +
+      "sionGoalCampaignConfigService\022\255\002\n#Mutate" +
+      "ConversionGoalCampaignConfigs\022M.google.a" +
+      "ds.googleads.v13.services.MutateConversi" +
+      "onGoalCampaignConfigsRequest\032N.google.ad" +
+      "s.googleads.v13.services.MutateConversio" +
+      "nGoalCampaignConfigsResponse\"g\332A\026custome" +
+      "r_id,operations\202\323\344\223\002H\"C/v13/customers/{c" +
+      "ustomer_id=*}/conversionGoalCampaignConf" +
+      "igs:mutate:\001*\032E\312A\030googleads.googleapis.c" +
+      "om\322A\'https://www.googleapis.com/auth/adw" +
+      "ordsB\224\002\n%com.google.ads.googleads.v13.se" +
+      "rvicesB(ConversionGoalCampaignConfigServ" +
+      "iceProtoP\001ZIgoogle.golang.org/genproto/g" +
+      "oogleapis/ads/googleads/v13/services;ser" +
+      "vices\242\002\003GAA\252\002!Google.Ads.GoogleAds.V13.S" +
+      "ervices\312\002!Google\\Ads\\GoogleAds\\V13\\Servi" +
+      "ces\352\002%Google::Ads::GoogleAds::V13::Servi" +
+      "cesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

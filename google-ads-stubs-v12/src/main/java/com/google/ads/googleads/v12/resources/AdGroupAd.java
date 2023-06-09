@@ -24,8 +24,10 @@ private static final long serialVersionUID = 0L;
     status_ = 0;
     adGroup_ = "";
     adStrength_ = 0;
-    actionItems_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    actionItems_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    labels_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -35,11 +37,6 @@ private static final long serialVersionUID = 0L;
     return new AdGroupAd();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.resources.AdGroupAdProto.internal_static_google_ads_googleads_v12_resources_AdGroupAd_descriptor;
@@ -61,6 +58,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the ad.
    * Ad group ad resource names have the form:
+   *
    * `customers/{customer_id}/adGroupAds/{ad_group_id}~{ad_id}`
    * </pre>
    *
@@ -84,6 +82,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the ad.
    * Ad group ad resource names have the form:
+   *
    * `customers/{customer_id}/adGroupAds/{ad_group_id}~{ad_id}`
    * </pre>
    *
@@ -294,7 +293,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int ACTION_ITEMS_FIELD_NUMBER = 13;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList actionItems_;
+  private com.google.protobuf.LazyStringArrayList actionItems_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * Output only. A list of recommendations to improve the ad strength. For
@@ -354,7 +354,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int LABELS_FIELD_NUMBER = 10;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList labels_;
+  private com.google.protobuf.LazyStringArrayList labels_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * Output only. The resource names of labels attached to this ad group ad.
@@ -613,11 +614,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.resources.AdGroupAd parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.resources.AdGroupAd parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -711,10 +714,10 @@ private static final long serialVersionUID = 0L;
         policySummaryBuilder_ = null;
       }
       adStrength_ = 0;
-      actionItems_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000040);
-      labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000080);
+      actionItems_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      labels_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -741,23 +744,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.AdGroupAd buildPartial() {
       com.google.ads.googleads.v12.resources.AdGroupAd result = new com.google.ads.googleads.v12.resources.AdGroupAd(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.resources.AdGroupAd result) {
-      if (((bitField0_ & 0x00000040) != 0)) {
-        actionItems_ = actionItems_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000040);
-      }
-      result.actionItems_ = actionItems_;
-      if (((bitField0_ & 0x00000080) != 0)) {
-        labels_ = labels_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000080);
-      }
-      result.labels_ = labels_;
     }
 
     private void buildPartial0(com.google.ads.googleads.v12.resources.AdGroupAd result) {
@@ -785,6 +774,14 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.adStrength_ = adStrength_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        actionItems_.makeImmutable();
+        result.actionItems_ = actionItems_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        labels_.makeImmutable();
+        result.labels_ = labels_;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -858,7 +855,7 @@ private static final long serialVersionUID = 0L;
       if (!other.actionItems_.isEmpty()) {
         if (actionItems_.isEmpty()) {
           actionItems_ = other.actionItems_;
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ |= 0x00000040;
         } else {
           ensureActionItemsIsMutable();
           actionItems_.addAll(other.actionItems_);
@@ -868,7 +865,7 @@ private static final long serialVersionUID = 0L;
       if (!other.labels_.isEmpty()) {
         if (labels_.isEmpty()) {
           labels_ = other.labels_;
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ |= 0x00000080;
         } else {
           ensureLabelsIsMutable();
           labels_.addAll(other.labels_);
@@ -969,6 +966,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the ad.
      * Ad group ad resource names have the form:
+     *
      * `customers/{customer_id}/adGroupAds/{ad_group_id}~{ad_id}`
      * </pre>
      *
@@ -991,6 +989,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the ad.
      * Ad group ad resource names have the form:
+     *
      * `customers/{customer_id}/adGroupAds/{ad_group_id}~{ad_id}`
      * </pre>
      *
@@ -1014,6 +1013,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the ad.
      * Ad group ad resource names have the form:
+     *
      * `customers/{customer_id}/adGroupAds/{ad_group_id}~{ad_id}`
      * </pre>
      *
@@ -1033,6 +1033,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the ad.
      * Ad group ad resource names have the form:
+     *
      * `customers/{customer_id}/adGroupAds/{ad_group_id}~{ad_id}`
      * </pre>
      *
@@ -1049,6 +1050,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the ad.
      * Ad group ad resource names have the form:
+     *
      * `customers/{customer_id}/adGroupAds/{ad_group_id}~{ad_id}`
      * </pre>
      *
@@ -1625,12 +1627,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.LazyStringList actionItems_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList actionItems_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureActionItemsIsMutable() {
-      if (!((bitField0_ & 0x00000040) != 0)) {
+      if (!actionItems_.isModifiable()) {
         actionItems_ = new com.google.protobuf.LazyStringArrayList(actionItems_);
-        bitField0_ |= 0x00000040;
-       }
+      }
+      bitField0_ |= 0x00000040;
     }
     /**
      * <pre>
@@ -1644,7 +1647,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getActionItemsList() {
-      return actionItems_.getUnmodifiableView();
+      actionItems_.makeImmutable();
+      return actionItems_;
     }
     /**
      * <pre>
@@ -1705,6 +1709,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureActionItemsIsMutable();
       actionItems_.set(index, value);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1724,6 +1729,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureActionItemsIsMutable();
       actionItems_.add(value);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1743,6 +1749,7 @@ private static final long serialVersionUID = 0L;
       ensureActionItemsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, actionItems_);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1757,8 +1764,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearActionItems() {
-      actionItems_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000040);
+      actionItems_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000040);;
       onChanged();
       return this;
     }
@@ -1779,16 +1787,18 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureActionItemsIsMutable();
       actionItems_.add(value);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList labels_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureLabelsIsMutable() {
-      if (!((bitField0_ & 0x00000080) != 0)) {
+      if (!labels_.isModifiable()) {
         labels_ = new com.google.protobuf.LazyStringArrayList(labels_);
-        bitField0_ |= 0x00000080;
-       }
+      }
+      bitField0_ |= 0x00000080;
     }
     /**
      * <pre>
@@ -1800,7 +1810,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getLabelsList() {
-      return labels_.getUnmodifiableView();
+      labels_.makeImmutable();
+      return labels_;
     }
     /**
      * <pre>
@@ -1853,6 +1864,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureLabelsIsMutable();
       labels_.set(index, value);
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1870,6 +1882,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureLabelsIsMutable();
       labels_.add(value);
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1887,6 +1900,7 @@ private static final long serialVersionUID = 0L;
       ensureLabelsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, labels_);
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1899,8 +1913,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLabels() {
-      labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000080);
+      labels_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000080);;
       onChanged();
       return this;
     }
@@ -1919,6 +1934,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureLabelsIsMutable();
       labels_.add(value);
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }

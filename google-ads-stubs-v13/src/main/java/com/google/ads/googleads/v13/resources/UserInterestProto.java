@@ -35,30 +35,30 @@ public final class UserInterestProto {
       "oto\032@google/ads/googleads/v13/enums/user" +
       "_interest_taxonomy_type.proto\032\037google/ap" +
       "i/field_behavior.proto\032\031google/api/resou" +
-      "rce.proto\"\206\005\n\014UserInterest\022D\n\rresource_n" +
-      "ame\030\001 \001(\tB-\340A\003\372A\'\n%googleads.googleapis." +
-      "com/UserInterest\022q\n\rtaxonomy_type\030\002 \001(\0162" +
-      "U.google.ads.googleads.v13.enums.UserInt" +
-      "erestTaxonomyTypeEnum.UserInterestTaxono" +
-      "myTypeB\003\340A\003\022\"\n\020user_interest_id\030\010 \001(\003B\003\340" +
-      "A\003H\000\210\001\001\022\026\n\004name\030\t \001(\tB\003\340A\003H\001\210\001\001\022P\n\024user_" +
-      "interest_parent\030\n \001(\tB-\340A\003\372A\'\n%googleads" +
-      ".googleapis.com/UserInterestH\002\210\001\001\022!\n\017lau" +
-      "nched_to_all\030\013 \001(\010B\003\340A\003H\003\210\001\001\022[\n\016availabi" +
-      "lities\030\007 \003(\0132>.google.ads.googleads.v13." +
-      "common.CriterionCategoryAvailabilityB\003\340A" +
-      "\003:d\352Aa\n%googleads.googleapis.com/UserInt" +
-      "erest\0228customers/{customer_id}/userInter" +
-      "ests/{user_interest_id}B\023\n\021_user_interes" +
-      "t_idB\007\n\005_nameB\027\n\025_user_interest_parentB\022" +
-      "\n\020_launched_to_allB\203\002\n&com.google.ads.go" +
-      "ogleads.v13.resourcesB\021UserInterestProto" +
-      "P\001ZKgoogle.golang.org/genproto/googleapi" +
-      "s/ads/googleads/v13/resources;resources\242" +
-      "\002\003GAA\252\002\"Google.Ads.GoogleAds.V13.Resourc" +
-      "es\312\002\"Google\\Ads\\GoogleAds\\V13\\Resources\352" +
-      "\002&Google::Ads::GoogleAds::V13::Resources" +
-      "b\006proto3"
+      "rce.proto\"\215\005\n\014UserInterest\022E\n\rresource_n" +
+      "ame\030\001 \001(\tB.\342A\001\003\372A\'\n%googleads.googleapis" +
+      ".com/UserInterest\022r\n\rtaxonomy_type\030\002 \001(\016" +
+      "2U.google.ads.googleads.v13.enums.UserIn" +
+      "terestTaxonomyTypeEnum.UserInterestTaxon" +
+      "omyTypeB\004\342A\001\003\022#\n\020user_interest_id\030\010 \001(\003B" +
+      "\004\342A\001\003H\000\210\001\001\022\027\n\004name\030\t \001(\tB\004\342A\001\003H\001\210\001\001\022Q\n\024u" +
+      "ser_interest_parent\030\n \001(\tB.\342A\001\003\372A\'\n%goog" +
+      "leads.googleapis.com/UserInterestH\002\210\001\001\022\"" +
+      "\n\017launched_to_all\030\013 \001(\010B\004\342A\001\003H\003\210\001\001\022\\\n\016av" +
+      "ailabilities\030\007 \003(\0132>.google.ads.googlead" +
+      "s.v13.common.CriterionCategoryAvailabili" +
+      "tyB\004\342A\001\003:d\352Aa\n%googleads.googleapis.com/" +
+      "UserInterest\0228customers/{customer_id}/us" +
+      "erInterests/{user_interest_id}B\023\n\021_user_" +
+      "interest_idB\007\n\005_nameB\027\n\025_user_interest_p" +
+      "arentB\022\n\020_launched_to_allB\203\002\n&com.google" +
+      ".ads.googleads.v13.resourcesB\021UserIntere" +
+      "stProtoP\001ZKgoogle.golang.org/genproto/go" +
+      "ogleapis/ads/googleads/v13/resources;res" +
+      "ources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V13." +
+      "Resources\312\002\"Google\\Ads\\GoogleAds\\V13\\Res" +
+      "ources\352\002&Google::Ads::GoogleAds::V13::Re" +
+      "sourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

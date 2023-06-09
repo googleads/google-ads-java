@@ -39,11 +39,6 @@ private static final long serialVersionUID = 0L;
     return new LeadFormSubmissionData();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.resources.LeadFormSubmissionDataProto.internal_static_google_ads_googleads_v12_resources_LeadFormSubmissionData_descriptor;
@@ -64,6 +59,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the lead form submission data.
    * Lead form submission data resource names have the form:
+   *
    * `customers/{customer_id}/leadFormSubmissionData/{lead_form_submission_data_id}`
    * </pre>
    *
@@ -87,6 +83,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the lead form submission data.
    * Lead form submission data resource names have the form:
+   *
    * `customers/{customer_id}/leadFormSubmissionData/{lead_form_submission_data_id}`
    * </pre>
    *
@@ -767,11 +764,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.resources.LeadFormSubmissionData parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.resources.LeadFormSubmissionData parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1204,6 +1203,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the lead form submission data.
      * Lead form submission data resource names have the form:
+     *
      * `customers/{customer_id}/leadFormSubmissionData/{lead_form_submission_data_id}`
      * </pre>
      *
@@ -1226,6 +1226,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the lead form submission data.
      * Lead form submission data resource names have the form:
+     *
      * `customers/{customer_id}/leadFormSubmissionData/{lead_form_submission_data_id}`
      * </pre>
      *
@@ -1249,6 +1250,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the lead form submission data.
      * Lead form submission data resource names have the form:
+     *
      * `customers/{customer_id}/leadFormSubmissionData/{lead_form_submission_data_id}`
      * </pre>
      *
@@ -1268,6 +1270,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the lead form submission data.
      * Lead form submission data resource names have the form:
+     *
      * `customers/{customer_id}/leadFormSubmissionData/{lead_form_submission_data_id}`
      * </pre>
      *
@@ -1284,6 +1287,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the lead form submission data.
      * Lead form submission data resource names have the form:
+     *
      * `customers/{customer_id}/leadFormSubmissionData/{lead_form_submission_data_id}`
      * </pre>
      *

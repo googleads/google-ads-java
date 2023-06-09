@@ -98,6 +98,7 @@ public interface CustomConversionGoalOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed custom conversion goal
    * is expected, in this format:
+   *
    * 'customers/{customer_id}/conversionActions/{ConversionGoal.custom_goal_config.conversion_type_ids}'
    * </pre>
    *
@@ -109,6 +110,7 @@ public interface CustomConversionGoalOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed custom conversion goal
    * is expected, in this format:
+   *
    * 'customers/{customer_id}/conversionActions/{ConversionGoal.custom_goal_config.conversion_type_ids}'
    * </pre>
    *
@@ -120,6 +122,7 @@ public interface CustomConversionGoalOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed custom conversion goal
    * is expected, in this format:
+   *
    * 'customers/{customer_id}/conversionActions/{ConversionGoal.custom_goal_config.conversion_type_ids}'
    * </pre>
    *
@@ -129,5 +132,5 @@ public interface CustomConversionGoalOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v12.services.CustomConversionGoalOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v12.services.CustomConversionGoalOperation.OperationCase getOperationCase();
 }

@@ -11,6 +11,7 @@ public interface ExpandedLandingPageViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the expanded landing page view.
    * Expanded landing page view resource names have the form:
+   *
    * `customers/{customer_id}/expandedLandingPageViews/{expanded_final_url_fingerprint}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface ExpandedLandingPageViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the expanded landing page view.
    * Expanded landing page view resource names have the form:
+   *
    * `customers/{customer_id}/expandedLandingPageViews/{expanded_final_url_fingerprint}`
    * </pre>
    *

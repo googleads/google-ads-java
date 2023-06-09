@@ -21,7 +21,8 @@ private static final long serialVersionUID = 0L;
   }
   private ConversionValueRuleSet() {
     resourceName_ = "";
-    conversionValueRules_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    conversionValueRules_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     dimensions_ = java.util.Collections.emptyList();
     ownerCustomer_ = "";
     attachmentType_ = 0;
@@ -37,11 +38,6 @@ private static final long serialVersionUID = 0L;
     return new ConversionValueRuleSet();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.resources.ConversionValueRuleSetProto.internal_static_google_ads_googleads_v12_resources_ConversionValueRuleSet_descriptor;
@@ -62,6 +58,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the conversion value rule set.
    * Conversion value rule set resource names have the form:
+   *
    * `customers/{customer_id}/conversionValueRuleSets/{conversion_value_rule_set_id}`
    * </pre>
    *
@@ -85,6 +82,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the conversion value rule set.
    * Conversion value rule set resource names have the form:
+   *
    * `customers/{customer_id}/conversionValueRuleSets/{conversion_value_rule_set_id}`
    * </pre>
    *
@@ -123,7 +121,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int CONVERSION_VALUE_RULES_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList conversionValueRules_;
+  private com.google.protobuf.LazyStringArrayList conversionValueRules_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * Resource names of rules within the rule set.
@@ -745,11 +744,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.resources.ConversionValueRuleSet parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.resources.ConversionValueRuleSet parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -831,8 +832,8 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       resourceName_ = "";
       id_ = 0L;
-      conversionValueRules_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000004);
+      conversionValueRules_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       dimensions_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000008);
       ownerCustomer_ = "";
@@ -874,11 +875,6 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.google.ads.googleads.v12.resources.ConversionValueRuleSet result) {
-      if (((bitField0_ & 0x00000004) != 0)) {
-        conversionValueRules_ = conversionValueRules_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000004);
-      }
-      result.conversionValueRules_ = conversionValueRules_;
       if (((bitField0_ & 0x00000008) != 0)) {
         dimensions_ = java.util.Collections.unmodifiableList(dimensions_);
         bitField0_ = (bitField0_ & ~0x00000008);
@@ -898,6 +894,10 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.id_ = id_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        conversionValueRules_.makeImmutable();
+        result.conversionValueRules_ = conversionValueRules_;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.ownerCustomer_ = ownerCustomer_;
@@ -968,7 +968,7 @@ private static final long serialVersionUID = 0L;
       if (!other.conversionValueRules_.isEmpty()) {
         if (conversionValueRules_.isEmpty()) {
           conversionValueRules_ = other.conversionValueRules_;
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ |= 0x00000004;
         } else {
           ensureConversionValueRulesIsMutable();
           conversionValueRules_.addAll(other.conversionValueRules_);
@@ -1129,6 +1129,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the conversion value rule set.
      * Conversion value rule set resource names have the form:
+     *
      * `customers/{customer_id}/conversionValueRuleSets/{conversion_value_rule_set_id}`
      * </pre>
      *
@@ -1151,6 +1152,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the conversion value rule set.
      * Conversion value rule set resource names have the form:
+     *
      * `customers/{customer_id}/conversionValueRuleSets/{conversion_value_rule_set_id}`
      * </pre>
      *
@@ -1174,6 +1176,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the conversion value rule set.
      * Conversion value rule set resource names have the form:
+     *
      * `customers/{customer_id}/conversionValueRuleSets/{conversion_value_rule_set_id}`
      * </pre>
      *
@@ -1193,6 +1196,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the conversion value rule set.
      * Conversion value rule set resource names have the form:
+     *
      * `customers/{customer_id}/conversionValueRuleSets/{conversion_value_rule_set_id}`
      * </pre>
      *
@@ -1209,6 +1213,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the conversion value rule set.
      * Conversion value rule set resource names have the form:
+     *
      * `customers/{customer_id}/conversionValueRuleSets/{conversion_value_rule_set_id}`
      * </pre>
      *
@@ -1249,7 +1254,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      
+
       id_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -1270,12 +1275,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.LazyStringList conversionValueRules_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList conversionValueRules_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureConversionValueRulesIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!conversionValueRules_.isModifiable()) {
         conversionValueRules_ = new com.google.protobuf.LazyStringArrayList(conversionValueRules_);
-        bitField0_ |= 0x00000004;
-       }
+      }
+      bitField0_ |= 0x00000004;
     }
     /**
      * <pre>
@@ -1287,7 +1293,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getConversionValueRulesList() {
-      return conversionValueRules_.getUnmodifiableView();
+      conversionValueRules_.makeImmutable();
+      return conversionValueRules_;
     }
     /**
      * <pre>
@@ -1340,6 +1347,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureConversionValueRulesIsMutable();
       conversionValueRules_.set(index, value);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1357,6 +1365,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureConversionValueRulesIsMutable();
       conversionValueRules_.add(value);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1374,6 +1383,7 @@ private static final long serialVersionUID = 0L;
       ensureConversionValueRulesIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, conversionValueRules_);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -1386,8 +1396,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConversionValueRules() {
-      conversionValueRules_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000004);
+      conversionValueRules_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000004);;
       onChanged();
       return this;
     }
@@ -1406,6 +1417,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureConversionValueRulesIsMutable();
       conversionValueRules_.add(value);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }

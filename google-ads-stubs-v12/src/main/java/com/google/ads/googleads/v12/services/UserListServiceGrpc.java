@@ -98,7 +98,7 @@ public final class UserListServiceGrpc {
    * Service to manage user lists.
    * </pre>
    */
-  public static abstract class UserListServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -126,30 +126,34 @@ public final class UserListServiceGrpc {
      *   [UserListError]()
      * </pre>
      */
-    public void mutateUserLists(com.google.ads.googleads.v12.services.MutateUserListsRequest request,
+    default void mutateUserLists(com.google.ads.googleads.v12.services.MutateUserListsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.MutateUserListsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateUserListsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateUserListsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.MutateUserListsRequest,
-                com.google.ads.googleads.v12.services.MutateUserListsResponse>(
-                  this, METHODID_MUTATE_USER_LISTS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service UserListService.
    * <pre>
    * Service to manage user lists.
    * </pre>
    */
-  public static final class UserListServiceStub extends io.grpc.stub.AbstractAsyncStub<UserListServiceStub> {
+  public static abstract class UserListServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return UserListServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service UserListService.
+   * <pre>
+   * Service to manage user lists.
+   * </pre>
+   */
+  public static final class UserListServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<UserListServiceStub> {
     private UserListServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -195,11 +199,13 @@ public final class UserListServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service UserListService.
    * <pre>
    * Service to manage user lists.
    * </pre>
    */
-  public static final class UserListServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<UserListServiceBlockingStub> {
+  public static final class UserListServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<UserListServiceBlockingStub> {
     private UserListServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -244,11 +250,13 @@ public final class UserListServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service UserListService.
    * <pre>
    * Service to manage user lists.
    * </pre>
    */
-  public static final class UserListServiceFutureStub extends io.grpc.stub.AbstractFutureStub<UserListServiceFutureStub> {
+  public static final class UserListServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<UserListServiceFutureStub> {
     private UserListServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -300,10 +308,10 @@ public final class UserListServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final UserListServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(UserListServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -330,6 +338,18 @@ public final class UserListServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateUserListsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.MutateUserListsRequest,
+              com.google.ads.googleads.v12.services.MutateUserListsResponse>(
+                service, METHODID_MUTATE_USER_LISTS)))
+        .build();
   }
 
   private static abstract class UserListServiceBaseDescriptorSupplier

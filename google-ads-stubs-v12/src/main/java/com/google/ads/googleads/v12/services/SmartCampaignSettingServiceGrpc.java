@@ -98,37 +98,41 @@ public final class SmartCampaignSettingServiceGrpc {
    * Service to manage Smart campaign settings.
    * </pre>
    */
-  public static abstract class SmartCampaignSettingServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
      * Updates Smart campaign settings for campaigns.
      * </pre>
      */
-    public void mutateSmartCampaignSettings(com.google.ads.googleads.v12.services.MutateSmartCampaignSettingsRequest request,
+    default void mutateSmartCampaignSettings(com.google.ads.googleads.v12.services.MutateSmartCampaignSettingsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.MutateSmartCampaignSettingsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateSmartCampaignSettingsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateSmartCampaignSettingsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.MutateSmartCampaignSettingsRequest,
-                com.google.ads.googleads.v12.services.MutateSmartCampaignSettingsResponse>(
-                  this, METHODID_MUTATE_SMART_CAMPAIGN_SETTINGS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service SmartCampaignSettingService.
    * <pre>
    * Service to manage Smart campaign settings.
    * </pre>
    */
-  public static final class SmartCampaignSettingServiceStub extends io.grpc.stub.AbstractAsyncStub<SmartCampaignSettingServiceStub> {
+  public static abstract class SmartCampaignSettingServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return SmartCampaignSettingServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service SmartCampaignSettingService.
+   * <pre>
+   * Service to manage Smart campaign settings.
+   * </pre>
+   */
+  public static final class SmartCampaignSettingServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<SmartCampaignSettingServiceStub> {
     private SmartCampaignSettingServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -153,11 +157,13 @@ public final class SmartCampaignSettingServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service SmartCampaignSettingService.
    * <pre>
    * Service to manage Smart campaign settings.
    * </pre>
    */
-  public static final class SmartCampaignSettingServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<SmartCampaignSettingServiceBlockingStub> {
+  public static final class SmartCampaignSettingServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<SmartCampaignSettingServiceBlockingStub> {
     private SmartCampaignSettingServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -181,11 +187,13 @@ public final class SmartCampaignSettingServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service SmartCampaignSettingService.
    * <pre>
    * Service to manage Smart campaign settings.
    * </pre>
    */
-  public static final class SmartCampaignSettingServiceFutureStub extends io.grpc.stub.AbstractFutureStub<SmartCampaignSettingServiceFutureStub> {
+  public static final class SmartCampaignSettingServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<SmartCampaignSettingServiceFutureStub> {
     private SmartCampaignSettingServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -216,10 +224,10 @@ public final class SmartCampaignSettingServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final SmartCampaignSettingServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(SmartCampaignSettingServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -246,6 +254,18 @@ public final class SmartCampaignSettingServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateSmartCampaignSettingsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.MutateSmartCampaignSettingsRequest,
+              com.google.ads.googleads.v12.services.MutateSmartCampaignSettingsResponse>(
+                service, METHODID_MUTATE_SMART_CAMPAIGN_SETTINGS)))
+        .build();
   }
 
   private static abstract class SmartCampaignSettingServiceBaseDescriptorSupplier

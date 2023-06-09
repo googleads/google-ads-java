@@ -11,6 +11,7 @@ public interface AccountBudgetProposalOrBuilder extends
    * <pre>
    * Immutable. The resource name of the proposal.
    * AccountBudgetProposal resource names have the form:
+   *
    * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface AccountBudgetProposalOrBuilder extends
    * <pre>
    * Immutable. The resource name of the proposal.
    * AccountBudgetProposal resource names have the form:
+   *
    * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
    * </pre>
    *
@@ -623,13 +625,13 @@ public interface AccountBudgetProposalOrBuilder extends
    */
   com.google.ads.googleads.v13.enums.SpendingLimitTypeEnum.SpendingLimitType getApprovedSpendingLimitType();
 
-  public com.google.ads.googleads.v13.resources.AccountBudgetProposal.ProposedStartTimeCase getProposedStartTimeCase();
+  com.google.ads.googleads.v13.resources.AccountBudgetProposal.ProposedStartTimeCase getProposedStartTimeCase();
 
-  public com.google.ads.googleads.v13.resources.AccountBudgetProposal.ProposedEndTimeCase getProposedEndTimeCase();
+  com.google.ads.googleads.v13.resources.AccountBudgetProposal.ProposedEndTimeCase getProposedEndTimeCase();
 
-  public com.google.ads.googleads.v13.resources.AccountBudgetProposal.ApprovedEndTimeCase getApprovedEndTimeCase();
+  com.google.ads.googleads.v13.resources.AccountBudgetProposal.ApprovedEndTimeCase getApprovedEndTimeCase();
 
-  public com.google.ads.googleads.v13.resources.AccountBudgetProposal.ProposedSpendingLimitCase getProposedSpendingLimitCase();
+  com.google.ads.googleads.v13.resources.AccountBudgetProposal.ProposedSpendingLimitCase getProposedSpendingLimitCase();
 
-  public com.google.ads.googleads.v13.resources.AccountBudgetProposal.ApprovedSpendingLimitCase getApprovedSpendingLimitCase();
+  com.google.ads.googleads.v13.resources.AccountBudgetProposal.ApprovedSpendingLimitCase getApprovedSpendingLimitCase();
 }

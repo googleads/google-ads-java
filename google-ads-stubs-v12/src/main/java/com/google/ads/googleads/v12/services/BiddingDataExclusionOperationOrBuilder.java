@@ -98,6 +98,7 @@ public interface BiddingDataExclusionOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed data exclusion
    * is expected, in this format:
+   *
    * `customers/{customer_id}/biddingDataExclusions/{data_exclusion_id}`
    * </pre>
    *
@@ -109,6 +110,7 @@ public interface BiddingDataExclusionOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed data exclusion
    * is expected, in this format:
+   *
    * `customers/{customer_id}/biddingDataExclusions/{data_exclusion_id}`
    * </pre>
    *
@@ -120,6 +122,7 @@ public interface BiddingDataExclusionOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed data exclusion
    * is expected, in this format:
+   *
    * `customers/{customer_id}/biddingDataExclusions/{data_exclusion_id}`
    * </pre>
    *
@@ -129,5 +132,5 @@ public interface BiddingDataExclusionOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v12.services.BiddingDataExclusionOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v12.services.BiddingDataExclusionOperation.OperationCase getOperationCase();
 }

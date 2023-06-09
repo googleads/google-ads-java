@@ -11,6 +11,7 @@ public interface CampaignSimulationOrBuilder extends
    * <pre>
    * Output only. The resource name of the campaign simulation.
    * Campaign simulation resource names have the form:
+   *
    * `customers/{customer_id}/campaignSimulations/{campaign_id}~{type}~{modification_method}~{start_date}~{end_date}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface CampaignSimulationOrBuilder extends
    * <pre>
    * Output only. The resource name of the campaign simulation.
    * Campaign simulation resource names have the form:
+   *
    * `customers/{customer_id}/campaignSimulations/{campaign_id}~{type}~{modification_method}~{start_date}~{end_date}`
    * </pre>
    *
@@ -261,5 +263,5 @@ public interface CampaignSimulationOrBuilder extends
    */
   com.google.ads.googleads.v13.common.BudgetSimulationPointListOrBuilder getBudgetPointListOrBuilder();
 
-  public com.google.ads.googleads.v13.resources.CampaignSimulation.PointListCase getPointListCase();
+  com.google.ads.googleads.v13.resources.CampaignSimulation.PointListCase getPointListCase();
 }

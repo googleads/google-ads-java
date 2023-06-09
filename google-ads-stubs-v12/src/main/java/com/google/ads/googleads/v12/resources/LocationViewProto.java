@@ -31,19 +31,19 @@ public final class LocationViewProto {
       "\n6google/ads/googleads/v12/resources/loc" +
       "ation_view.proto\022\"google.ads.googleads.v" +
       "12.resources\032\037google/api/field_behavior." +
-      "proto\032\031google/api/resource.proto\"\304\001\n\014Loc" +
-      "ationView\022D\n\rresource_name\030\001 \001(\tB-\340A\003\372A\'" +
-      "\n%googleads.googleapis.com/LocationView:" +
-      "n\352Ak\n%googleads.googleapis.com/LocationV" +
-      "iew\022Bcustomers/{customer_id}/locationVie" +
-      "ws/{campaign_id}~{criterion_id}B\203\002\n&com." +
-      "google.ads.googleads.v12.resourcesB\021Loca" +
-      "tionViewProtoP\001ZKgoogle.golang.org/genpr" +
-      "oto/googleapis/ads/googleads/v12/resourc" +
-      "es;resources\242\002\003GAA\252\002\"Google.Ads.GoogleAd" +
-      "s.V12.Resources\312\002\"Google\\Ads\\GoogleAds\\V" +
-      "12\\Resources\352\002&Google::Ads::GoogleAds::V" +
-      "12::Resourcesb\006proto3"
+      "proto\032\031google/api/resource.proto\"\305\001\n\014Loc" +
+      "ationView\022E\n\rresource_name\030\001 \001(\tB.\342A\001\003\372A" +
+      "\'\n%googleads.googleapis.com/LocationView" +
+      ":n\352Ak\n%googleads.googleapis.com/Location" +
+      "View\022Bcustomers/{customer_id}/locationVi" +
+      "ews/{campaign_id}~{criterion_id}B\203\002\n&com" +
+      ".google.ads.googleads.v12.resourcesB\021Loc" +
+      "ationViewProtoP\001ZKgoogle.golang.org/genp" +
+      "roto/googleapis/ads/googleads/v12/resour" +
+      "ces;resources\242\002\003GAA\252\002\"Google.Ads.GoogleA" +
+      "ds.V12.Resources\312\002\"Google\\Ads\\GoogleAds\\" +
+      "V12\\Resources\352\002&Google::Ads::GoogleAds::" +
+      "V12::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

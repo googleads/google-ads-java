@@ -98,7 +98,7 @@ public final class GeoTargetConstantServiceGrpc {
    * Service to fetch geo target constants.
    * </pre>
    */
-  public static abstract class GeoTargetConstantServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -113,30 +113,34 @@ public final class GeoTargetConstantServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void suggestGeoTargetConstants(com.google.ads.googleads.v12.services.SuggestGeoTargetConstantsRequest request,
+    default void suggestGeoTargetConstants(com.google.ads.googleads.v12.services.SuggestGeoTargetConstantsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.SuggestGeoTargetConstantsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSuggestGeoTargetConstantsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getSuggestGeoTargetConstantsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.SuggestGeoTargetConstantsRequest,
-                com.google.ads.googleads.v12.services.SuggestGeoTargetConstantsResponse>(
-                  this, METHODID_SUGGEST_GEO_TARGET_CONSTANTS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service GeoTargetConstantService.
    * <pre>
    * Service to fetch geo target constants.
    * </pre>
    */
-  public static final class GeoTargetConstantServiceStub extends io.grpc.stub.AbstractAsyncStub<GeoTargetConstantServiceStub> {
+  public static abstract class GeoTargetConstantServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return GeoTargetConstantServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service GeoTargetConstantService.
+   * <pre>
+   * Service to fetch geo target constants.
+   * </pre>
+   */
+  public static final class GeoTargetConstantServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<GeoTargetConstantServiceStub> {
     private GeoTargetConstantServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -169,11 +173,13 @@ public final class GeoTargetConstantServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service GeoTargetConstantService.
    * <pre>
    * Service to fetch geo target constants.
    * </pre>
    */
-  public static final class GeoTargetConstantServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<GeoTargetConstantServiceBlockingStub> {
+  public static final class GeoTargetConstantServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<GeoTargetConstantServiceBlockingStub> {
     private GeoTargetConstantServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -205,11 +211,13 @@ public final class GeoTargetConstantServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service GeoTargetConstantService.
    * <pre>
    * Service to fetch geo target constants.
    * </pre>
    */
-  public static final class GeoTargetConstantServiceFutureStub extends io.grpc.stub.AbstractFutureStub<GeoTargetConstantServiceFutureStub> {
+  public static final class GeoTargetConstantServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<GeoTargetConstantServiceFutureStub> {
     private GeoTargetConstantServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -248,10 +256,10 @@ public final class GeoTargetConstantServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final GeoTargetConstantServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(GeoTargetConstantServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -278,6 +286,18 @@ public final class GeoTargetConstantServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getSuggestGeoTargetConstantsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.SuggestGeoTargetConstantsRequest,
+              com.google.ads.googleads.v12.services.SuggestGeoTargetConstantsResponse>(
+                service, METHODID_SUGGEST_GEO_TARGET_CONSTANTS)))
+        .build();
   }
 
   private static abstract class GeoTargetConstantServiceBaseDescriptorSupplier

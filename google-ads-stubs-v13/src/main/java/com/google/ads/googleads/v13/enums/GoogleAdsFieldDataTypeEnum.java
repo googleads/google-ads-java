@@ -29,11 +29,6 @@ private static final long serialVersionUID = 0L;
     return new GoogleAdsFieldDataTypeEnum();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.enums.GoogleAdsFieldDataTypeProto.internal_static_google_ads_googleads_v13_enums_GoogleAdsFieldDataTypeEnum_descriptor;
@@ -75,6 +70,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Maps to google.protobuf.BoolValue
+     *
      * Applicable operators:  =, !=
      * </pre>
      *
@@ -85,6 +81,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Maps to google.protobuf.StringValue. It can be compared using the set of
      * operators specific to dates however.
+     *
      * Applicable operators:  =, &lt;, &gt;, &lt;=, &gt;=, BETWEEN, DURING, and IN
      * </pre>
      *
@@ -94,6 +91,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Maps to google.protobuf.DoubleValue
+     *
      * Applicable operators:  =, !=, &lt;, &gt;, IN, NOT IN
      * </pre>
      *
@@ -103,6 +101,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Maps to an enum. It's specific definition can be found at type_url.
+     *
      * Applicable operators:  =, !=, IN, NOT IN
      * </pre>
      *
@@ -112,6 +111,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Maps to google.protobuf.FloatValue
+     *
      * Applicable operators:  =, !=, &lt;, &gt;, IN, NOT IN
      * </pre>
      *
@@ -121,6 +121,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Maps to google.protobuf.Int32Value
+     *
      * Applicable operators:  =, !=, &lt;, &gt;, &lt;=, &gt;=, BETWEEN, IN, NOT IN
      * </pre>
      *
@@ -130,6 +131,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Maps to google.protobuf.Int64Value
+     *
      * Applicable operators:  =, !=, &lt;, &gt;, &lt;=, &gt;=, BETWEEN, IN, NOT IN
      * </pre>
      *
@@ -140,6 +142,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Maps to a protocol buffer message type. The data type's details can be
      * found in type_url.
+     *
      * No operators work with MESSAGE fields.
      * </pre>
      *
@@ -150,6 +153,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Maps to google.protobuf.StringValue. Represents the resource name
      * (unique id) of a resource or one of its foreign keys.
+     *
      * No operators work with RESOURCE_NAME fields.
      * </pre>
      *
@@ -159,6 +163,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Maps to google.protobuf.StringValue.
+     *
      * Applicable operators:  =, !=, LIKE, NOT LIKE, IN, NOT IN
      * </pre>
      *
@@ -168,6 +173,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Maps to google.protobuf.UInt64Value
+     *
      * Applicable operators:  =, !=, &lt;, &gt;, &lt;=, &gt;=, BETWEEN, IN, NOT IN
      * </pre>
      *
@@ -196,6 +202,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Maps to google.protobuf.BoolValue
+     *
      * Applicable operators:  =, !=
      * </pre>
      *
@@ -206,6 +213,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Maps to google.protobuf.StringValue. It can be compared using the set of
      * operators specific to dates however.
+     *
      * Applicable operators:  =, &lt;, &gt;, &lt;=, &gt;=, BETWEEN, DURING, and IN
      * </pre>
      *
@@ -215,6 +223,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Maps to google.protobuf.DoubleValue
+     *
      * Applicable operators:  =, !=, &lt;, &gt;, IN, NOT IN
      * </pre>
      *
@@ -224,6 +233,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Maps to an enum. It's specific definition can be found at type_url.
+     *
      * Applicable operators:  =, !=, IN, NOT IN
      * </pre>
      *
@@ -233,6 +243,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Maps to google.protobuf.FloatValue
+     *
      * Applicable operators:  =, !=, &lt;, &gt;, IN, NOT IN
      * </pre>
      *
@@ -242,6 +253,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Maps to google.protobuf.Int32Value
+     *
      * Applicable operators:  =, !=, &lt;, &gt;, &lt;=, &gt;=, BETWEEN, IN, NOT IN
      * </pre>
      *
@@ -251,6 +263,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Maps to google.protobuf.Int64Value
+     *
      * Applicable operators:  =, !=, &lt;, &gt;, &lt;=, &gt;=, BETWEEN, IN, NOT IN
      * </pre>
      *
@@ -261,6 +274,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Maps to a protocol buffer message type. The data type's details can be
      * found in type_url.
+     *
      * No operators work with MESSAGE fields.
      * </pre>
      *
@@ -271,6 +285,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Maps to google.protobuf.StringValue. Represents the resource name
      * (unique id) of a resource or one of its foreign keys.
+     *
      * No operators work with RESOURCE_NAME fields.
      * </pre>
      *
@@ -280,6 +295,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Maps to google.protobuf.StringValue.
+     *
      * Applicable operators:  =, !=, LIKE, NOT LIKE, IN, NOT IN
      * </pre>
      *
@@ -289,6 +305,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Maps to google.protobuf.UInt64Value
+     *
      * Applicable operators:  =, !=, &lt;, &gt;, &lt;=, &gt;=, BETWEEN, IN, NOT IN
      * </pre>
      *
@@ -488,11 +505,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.enums.GoogleAdsFieldDataTypeEnum parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.enums.GoogleAdsFieldDataTypeEnum parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)

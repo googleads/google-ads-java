@@ -98,7 +98,7 @@ public final class CampaignExtensionSettingServiceGrpc {
    * Service to manage campaign extension settings.
    * </pre>
    */
-  public static abstract class CampaignExtensionSettingServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -134,30 +134,34 @@ public final class CampaignExtensionSettingServiceGrpc {
      *   [UrlFieldError]()
      * </pre>
      */
-    public void mutateCampaignExtensionSettings(com.google.ads.googleads.v12.services.MutateCampaignExtensionSettingsRequest request,
+    default void mutateCampaignExtensionSettings(com.google.ads.googleads.v12.services.MutateCampaignExtensionSettingsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.MutateCampaignExtensionSettingsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateCampaignExtensionSettingsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateCampaignExtensionSettingsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.MutateCampaignExtensionSettingsRequest,
-                com.google.ads.googleads.v12.services.MutateCampaignExtensionSettingsResponse>(
-                  this, METHODID_MUTATE_CAMPAIGN_EXTENSION_SETTINGS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service CampaignExtensionSettingService.
    * <pre>
    * Service to manage campaign extension settings.
    * </pre>
    */
-  public static final class CampaignExtensionSettingServiceStub extends io.grpc.stub.AbstractAsyncStub<CampaignExtensionSettingServiceStub> {
+  public static abstract class CampaignExtensionSettingServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return CampaignExtensionSettingServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service CampaignExtensionSettingService.
+   * <pre>
+   * Service to manage campaign extension settings.
+   * </pre>
+   */
+  public static final class CampaignExtensionSettingServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<CampaignExtensionSettingServiceStub> {
     private CampaignExtensionSettingServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -211,11 +215,13 @@ public final class CampaignExtensionSettingServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service CampaignExtensionSettingService.
    * <pre>
    * Service to manage campaign extension settings.
    * </pre>
    */
-  public static final class CampaignExtensionSettingServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CampaignExtensionSettingServiceBlockingStub> {
+  public static final class CampaignExtensionSettingServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<CampaignExtensionSettingServiceBlockingStub> {
     private CampaignExtensionSettingServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -268,11 +274,13 @@ public final class CampaignExtensionSettingServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service CampaignExtensionSettingService.
    * <pre>
    * Service to manage campaign extension settings.
    * </pre>
    */
-  public static final class CampaignExtensionSettingServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CampaignExtensionSettingServiceFutureStub> {
+  public static final class CampaignExtensionSettingServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<CampaignExtensionSettingServiceFutureStub> {
     private CampaignExtensionSettingServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -332,10 +340,10 @@ public final class CampaignExtensionSettingServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final CampaignExtensionSettingServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(CampaignExtensionSettingServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -362,6 +370,18 @@ public final class CampaignExtensionSettingServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateCampaignExtensionSettingsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.MutateCampaignExtensionSettingsRequest,
+              com.google.ads.googleads.v12.services.MutateCampaignExtensionSettingsResponse>(
+                service, METHODID_MUTATE_CAMPAIGN_EXTENSION_SETTINGS)))
+        .build();
   }
 
   private static abstract class CampaignExtensionSettingServiceBaseDescriptorSupplier

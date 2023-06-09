@@ -29,11 +29,13 @@ private static final long serialVersionUID = 0L;
     imageUrl_ = "";
     propertyType_ = "";
     listingType_ = "";
-    contextualKeywords_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    contextualKeywords_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     formattedPrice_ = "";
     androidAppLink_ = "";
     iosAppLink_ = "";
-    similarListingIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    similarListingIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -43,11 +45,6 @@ private static final long serialVersionUID = 0L;
     return new DynamicRealEstateAsset();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.common.AssetTypesProto.internal_static_google_ads_googleads_v13_common_DynamicRealEstateAsset_descriptor;
@@ -500,7 +497,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int CONTEXTUAL_KEYWORDS_FIELD_NUMBER = 10;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList contextualKeywords_;
+  private com.google.protobuf.LazyStringArrayList contextualKeywords_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * Contextual keywords, for example, For sale; Houses for sale.
@@ -714,7 +712,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int SIMILAR_LISTING_IDS_FIELD_NUMBER = 15;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList similarListingIds_;
+  private com.google.protobuf.LazyStringArrayList similarListingIds_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * Similar listing IDs.
@@ -1028,11 +1027,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.common.DynamicRealEstateAsset parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.common.DynamicRealEstateAsset parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1121,14 +1122,14 @@ private static final long serialVersionUID = 0L;
       imageUrl_ = "";
       propertyType_ = "";
       listingType_ = "";
-      contextualKeywords_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000200);
+      contextualKeywords_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       formattedPrice_ = "";
       androidAppLink_ = "";
       iosAppLink_ = "";
       iosAppStoreId_ = 0L;
-      similarListingIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00004000);
+      similarListingIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -1155,23 +1156,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v13.common.DynamicRealEstateAsset buildPartial() {
       com.google.ads.googleads.v13.common.DynamicRealEstateAsset result = new com.google.ads.googleads.v13.common.DynamicRealEstateAsset(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(com.google.ads.googleads.v13.common.DynamicRealEstateAsset result) {
-      if (((bitField0_ & 0x00000200) != 0)) {
-        contextualKeywords_ = contextualKeywords_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000200);
-      }
-      result.contextualKeywords_ = contextualKeywords_;
-      if (((bitField0_ & 0x00004000) != 0)) {
-        similarListingIds_ = similarListingIds_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00004000);
-      }
-      result.similarListingIds_ = similarListingIds_;
     }
 
     private void buildPartial0(com.google.ads.googleads.v13.common.DynamicRealEstateAsset result) {
@@ -1203,6 +1190,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.listingType_ = listingType_;
       }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        contextualKeywords_.makeImmutable();
+        result.contextualKeywords_ = contextualKeywords_;
+      }
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.formattedPrice_ = formattedPrice_;
       }
@@ -1214,6 +1205,10 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00002000) != 0)) {
         result.iosAppStoreId_ = iosAppStoreId_;
+      }
+      if (((from_bitField0_ & 0x00004000) != 0)) {
+        similarListingIds_.makeImmutable();
+        result.similarListingIds_ = similarListingIds_;
       }
     }
 
@@ -1309,7 +1304,7 @@ private static final long serialVersionUID = 0L;
       if (!other.contextualKeywords_.isEmpty()) {
         if (contextualKeywords_.isEmpty()) {
           contextualKeywords_ = other.contextualKeywords_;
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ |= 0x00000200;
         } else {
           ensureContextualKeywordsIsMutable();
           contextualKeywords_.addAll(other.contextualKeywords_);
@@ -1337,7 +1332,7 @@ private static final long serialVersionUID = 0L;
       if (!other.similarListingIds_.isEmpty()) {
         if (similarListingIds_.isEmpty()) {
           similarListingIds_ = other.similarListingIds_;
-          bitField0_ = (bitField0_ & ~0x00004000);
+          bitField0_ |= 0x00004000;
         } else {
           ensureSimilarListingIdsIsMutable();
           similarListingIds_.addAll(other.similarListingIds_);
@@ -2327,12 +2322,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.LazyStringList contextualKeywords_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList contextualKeywords_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureContextualKeywordsIsMutable() {
-      if (!((bitField0_ & 0x00000200) != 0)) {
+      if (!contextualKeywords_.isModifiable()) {
         contextualKeywords_ = new com.google.protobuf.LazyStringArrayList(contextualKeywords_);
-        bitField0_ |= 0x00000200;
-       }
+      }
+      bitField0_ |= 0x00000200;
     }
     /**
      * <pre>
@@ -2344,7 +2340,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getContextualKeywordsList() {
-      return contextualKeywords_.getUnmodifiableView();
+      contextualKeywords_.makeImmutable();
+      return contextualKeywords_;
     }
     /**
      * <pre>
@@ -2397,6 +2394,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureContextualKeywordsIsMutable();
       contextualKeywords_.set(index, value);
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2414,6 +2412,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureContextualKeywordsIsMutable();
       contextualKeywords_.add(value);
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2431,6 +2430,7 @@ private static final long serialVersionUID = 0L;
       ensureContextualKeywordsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, contextualKeywords_);
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2443,8 +2443,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearContextualKeywords() {
-      contextualKeywords_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000200);
+      contextualKeywords_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000200);;
       onChanged();
       return this;
     }
@@ -2463,6 +2464,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureContextualKeywordsIsMutable();
       contextualKeywords_.add(value);
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2780,7 +2782,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIosAppStoreId(long value) {
-      
+
       iosAppStoreId_ = value;
       bitField0_ |= 0x00002000;
       onChanged();
@@ -2803,12 +2805,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.LazyStringList similarListingIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList similarListingIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureSimilarListingIdsIsMutable() {
-      if (!((bitField0_ & 0x00004000) != 0)) {
+      if (!similarListingIds_.isModifiable()) {
         similarListingIds_ = new com.google.protobuf.LazyStringArrayList(similarListingIds_);
-        bitField0_ |= 0x00004000;
-       }
+      }
+      bitField0_ |= 0x00004000;
     }
     /**
      * <pre>
@@ -2820,7 +2823,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getSimilarListingIdsList() {
-      return similarListingIds_.getUnmodifiableView();
+      similarListingIds_.makeImmutable();
+      return similarListingIds_;
     }
     /**
      * <pre>
@@ -2873,6 +2877,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureSimilarListingIdsIsMutable();
       similarListingIds_.set(index, value);
+      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -2890,6 +2895,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureSimilarListingIdsIsMutable();
       similarListingIds_.add(value);
+      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -2907,6 +2913,7 @@ private static final long serialVersionUID = 0L;
       ensureSimilarListingIdsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, similarListingIds_);
+      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -2919,8 +2926,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSimilarListingIds() {
-      similarListingIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00004000);
+      similarListingIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00004000);;
       onChanged();
       return this;
     }
@@ -2939,6 +2947,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureSimilarListingIdsIsMutable();
       similarListingIds_.add(value);
+      bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }

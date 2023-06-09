@@ -56,6 +56,7 @@ public interface SuggestTravelAssetsRequestOrBuilder extends
    * The Google Maps Place IDs of hotels for which assets are requested. See
    * https://developers.google.com/places/web-service/place-id for more
    * information.
+   * .
    * </pre>
    *
    * <code>repeated string place_id = 3;</code>
@@ -68,6 +69,7 @@ public interface SuggestTravelAssetsRequestOrBuilder extends
    * The Google Maps Place IDs of hotels for which assets are requested. See
    * https://developers.google.com/places/web-service/place-id for more
    * information.
+   * .
    * </pre>
    *
    * <code>repeated string place_id = 3;</code>
@@ -79,6 +81,7 @@ public interface SuggestTravelAssetsRequestOrBuilder extends
    * The Google Maps Place IDs of hotels for which assets are requested. See
    * https://developers.google.com/places/web-service/place-id for more
    * information.
+   * .
    * </pre>
    *
    * <code>repeated string place_id = 3;</code>
@@ -91,6 +94,7 @@ public interface SuggestTravelAssetsRequestOrBuilder extends
    * The Google Maps Place IDs of hotels for which assets are requested. See
    * https://developers.google.com/places/web-service/place-id for more
    * information.
+   * .
    * </pre>
    *
    * <code>repeated string place_id = 3;</code>

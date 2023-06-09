@@ -27,7 +27,8 @@ private static final long serialVersionUID = 0L;
     timeZone_ = "";
     descriptiveName_ = "";
     currencyCode_ = "";
-    appliedLabels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    appliedLabels_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     status_ = 0;
   }
 
@@ -38,11 +39,6 @@ private static final long serialVersionUID = 0L;
     return new CustomerClient();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.resources.CustomerClientProto.internal_static_google_ads_googleads_v13_resources_CustomerClient_descriptor;
@@ -496,12 +492,14 @@ private static final long serialVersionUID = 0L;
 
   public static final int APPLIED_LABELS_FIELD_NUMBER = 21;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList appliedLabels_;
+  private com.google.protobuf.LazyStringArrayList appliedLabels_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * Output only. The resource names of the labels owned by the requesting
    * customer that are applied to the client customer. Label resource names have
    * the form:
+   *
    * `customers/{customer_id}/labels/{label_id}`
    * </pre>
    *
@@ -517,6 +515,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The resource names of the labels owned by the requesting
    * customer that are applied to the client customer. Label resource names have
    * the form:
+   *
    * `customers/{customer_id}/labels/{label_id}`
    * </pre>
    *
@@ -531,6 +530,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The resource names of the labels owned by the requesting
    * customer that are applied to the client customer. Label resource names have
    * the form:
+   *
    * `customers/{customer_id}/labels/{label_id}`
    * </pre>
    *
@@ -546,6 +546,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The resource names of the labels owned by the requesting
    * customer that are applied to the client customer. Label resource names have
    * the form:
+   *
    * `customers/{customer_id}/labels/{label_id}`
    * </pre>
    *
@@ -864,11 +865,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.resources.CustomerClient parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.resources.CustomerClient parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -960,8 +963,8 @@ private static final long serialVersionUID = 0L;
       descriptiveName_ = "";
       currencyCode_ = "";
       id_ = 0L;
-      appliedLabels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000400);
+      appliedLabels_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       status_ = 0;
       return this;
     }
@@ -989,18 +992,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v13.resources.CustomerClient buildPartial() {
       com.google.ads.googleads.v13.resources.CustomerClient result = new com.google.ads.googleads.v13.resources.CustomerClient(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(com.google.ads.googleads.v13.resources.CustomerClient result) {
-      if (((bitField0_ & 0x00000400) != 0)) {
-        appliedLabels_ = appliedLabels_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000400);
-      }
-      result.appliedLabels_ = appliedLabels_;
     }
 
     private void buildPartial0(com.google.ads.googleads.v13.resources.CustomerClient result) {
@@ -1044,6 +1038,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.id_ = id_;
         to_bitField0_ |= 0x00000100;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        appliedLabels_.makeImmutable();
+        result.appliedLabels_ = appliedLabels_;
       }
       if (((from_bitField0_ & 0x00000800) != 0)) {
         result.status_ = status_;
@@ -1138,7 +1136,7 @@ private static final long serialVersionUID = 0L;
       if (!other.appliedLabels_.isEmpty()) {
         if (appliedLabels_.isEmpty()) {
           appliedLabels_ = other.appliedLabels_;
-          bitField0_ = (bitField0_ & ~0x00000400);
+          bitField0_ |= 0x00000400;
         } else {
           ensureAppliedLabelsIsMutable();
           appliedLabels_.addAll(other.appliedLabels_);
@@ -1504,7 +1502,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setHidden(boolean value) {
-      
+
       hidden_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
@@ -1565,7 +1563,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLevel(long value) {
-      
+
       level_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
@@ -1731,7 +1729,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTestAccount(boolean value) {
-      
+
       testAccount_ = value;
       bitField0_ |= 0x00000020;
       onChanged();
@@ -1787,7 +1785,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setManager(boolean value) {
-      
+
       manager_ = value;
       bitField0_ |= 0x00000040;
       onChanged();
@@ -2055,7 +2053,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      
+
       id_ = value;
       bitField0_ |= 0x00000200;
       onChanged();
@@ -2076,18 +2074,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.LazyStringList appliedLabels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList appliedLabels_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureAppliedLabelsIsMutable() {
-      if (!((bitField0_ & 0x00000400) != 0)) {
+      if (!appliedLabels_.isModifiable()) {
         appliedLabels_ = new com.google.protobuf.LazyStringArrayList(appliedLabels_);
-        bitField0_ |= 0x00000400;
-       }
+      }
+      bitField0_ |= 0x00000400;
     }
     /**
      * <pre>
      * Output only. The resource names of the labels owned by the requesting
      * customer that are applied to the client customer. Label resource names have
      * the form:
+     *
      * `customers/{customer_id}/labels/{label_id}`
      * </pre>
      *
@@ -2096,13 +2096,15 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getAppliedLabelsList() {
-      return appliedLabels_.getUnmodifiableView();
+      appliedLabels_.makeImmutable();
+      return appliedLabels_;
     }
     /**
      * <pre>
      * Output only. The resource names of the labels owned by the requesting
      * customer that are applied to the client customer. Label resource names have
      * the form:
+     *
      * `customers/{customer_id}/labels/{label_id}`
      * </pre>
      *
@@ -2117,6 +2119,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The resource names of the labels owned by the requesting
      * customer that are applied to the client customer. Label resource names have
      * the form:
+     *
      * `customers/{customer_id}/labels/{label_id}`
      * </pre>
      *
@@ -2132,6 +2135,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The resource names of the labels owned by the requesting
      * customer that are applied to the client customer. Label resource names have
      * the form:
+     *
      * `customers/{customer_id}/labels/{label_id}`
      * </pre>
      *
@@ -2148,6 +2152,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The resource names of the labels owned by the requesting
      * customer that are applied to the client customer. Label resource names have
      * the form:
+     *
      * `customers/{customer_id}/labels/{label_id}`
      * </pre>
      *
@@ -2161,6 +2166,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureAppliedLabelsIsMutable();
       appliedLabels_.set(index, value);
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2169,6 +2175,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The resource names of the labels owned by the requesting
      * customer that are applied to the client customer. Label resource names have
      * the form:
+     *
      * `customers/{customer_id}/labels/{label_id}`
      * </pre>
      *
@@ -2181,6 +2188,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureAppliedLabelsIsMutable();
       appliedLabels_.add(value);
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2189,6 +2197,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The resource names of the labels owned by the requesting
      * customer that are applied to the client customer. Label resource names have
      * the form:
+     *
      * `customers/{customer_id}/labels/{label_id}`
      * </pre>
      *
@@ -2201,6 +2210,7 @@ private static final long serialVersionUID = 0L;
       ensureAppliedLabelsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, appliedLabels_);
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2209,6 +2219,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The resource names of the labels owned by the requesting
      * customer that are applied to the client customer. Label resource names have
      * the form:
+     *
      * `customers/{customer_id}/labels/{label_id}`
      * </pre>
      *
@@ -2216,8 +2227,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAppliedLabels() {
-      appliedLabels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000400);
+      appliedLabels_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000400);;
       onChanged();
       return this;
     }
@@ -2226,6 +2238,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The resource names of the labels owned by the requesting
      * customer that are applied to the client customer. Label resource names have
      * the form:
+     *
      * `customers/{customer_id}/labels/{label_id}`
      * </pre>
      *
@@ -2239,6 +2252,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureAppliedLabelsIsMutable();
       appliedLabels_.add(value);
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }

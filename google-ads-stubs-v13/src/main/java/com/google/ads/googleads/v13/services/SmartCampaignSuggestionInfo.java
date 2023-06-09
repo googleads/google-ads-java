@@ -34,11 +34,6 @@ private static final long serialVersionUID = 0L;
     return new SmartCampaignSuggestionInfo();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.services.SmartCampaignSuggestServiceProto.internal_static_google_ads_googleads_v13_services_SmartCampaignSuggestionInfo_descriptor;
@@ -127,11 +122,6 @@ private static final long serialVersionUID = 0L;
       return new LocationList();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.services.SmartCampaignSuggestServiceProto.internal_static_google_ads_googleads_v13_services_SmartCampaignSuggestionInfo_LocationList_descriptor;
@@ -317,11 +307,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.services.SmartCampaignSuggestionInfo.LocationList parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.services.SmartCampaignSuggestionInfo.LocationList parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1008,11 +1000,6 @@ private static final long serialVersionUID = 0L;
       return new BusinessContext();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.services.SmartCampaignSuggestServiceProto.internal_static_google_ads_googleads_v13_services_SmartCampaignSuggestionInfo_BusinessContext_descriptor;
@@ -1181,11 +1168,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.services.SmartCampaignSuggestionInfo.BusinessContext parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.services.SmartCampaignSuggestionInfo.BusinessContext parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1557,6 +1546,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int businessSettingCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object businessSetting_;
   public enum BusinessSettingCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -1598,6 +1588,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int geoTargetCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object geoTarget_;
   public enum GeoTargetCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -1911,6 +1902,7 @@ private static final long serialVersionUID = 0L;
    * Business Profile location resource names can be fetched through the
    * Business Profile API and adhere to the following format:
    * `locations/{locationId}`.
+   *
    * See the [Business Profile API]
    * (https://developers.google.com/my-business/reference/businessinformation/rest/v1/accounts.locations)
    * for additional details.
@@ -1928,6 +1920,7 @@ private static final long serialVersionUID = 0L;
    * Business Profile location resource names can be fetched through the
    * Business Profile API and adhere to the following format:
    * `locations/{locationId}`.
+   *
    * See the [Business Profile API]
    * (https://developers.google.com/my-business/reference/businessinformation/rest/v1/accounts.locations)
    * for additional details.
@@ -1959,6 +1952,7 @@ private static final long serialVersionUID = 0L;
    * Business Profile location resource names can be fetched through the
    * Business Profile API and adhere to the following format:
    * `locations/{locationId}`.
+   *
    * See the [Business Profile API]
    * (https://developers.google.com/my-business/reference/businessinformation/rest/v1/accounts.locations)
    * for additional details.
@@ -2293,11 +2287,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.services.SmartCampaignSuggestionInfo parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.services.SmartCampaignSuggestionInfo parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3775,6 +3771,7 @@ private static final long serialVersionUID = 0L;
      * Business Profile location resource names can be fetched through the
      * Business Profile API and adhere to the following format:
      * `locations/{locationId}`.
+     *
      * See the [Business Profile API]
      * (https://developers.google.com/my-business/reference/businessinformation/rest/v1/accounts.locations)
      * for additional details.
@@ -3793,6 +3790,7 @@ private static final long serialVersionUID = 0L;
      * Business Profile location resource names can be fetched through the
      * Business Profile API and adhere to the following format:
      * `locations/{locationId}`.
+     *
      * See the [Business Profile API]
      * (https://developers.google.com/my-business/reference/businessinformation/rest/v1/accounts.locations)
      * for additional details.
@@ -3825,6 +3823,7 @@ private static final long serialVersionUID = 0L;
      * Business Profile location resource names can be fetched through the
      * Business Profile API and adhere to the following format:
      * `locations/{locationId}`.
+     *
      * See the [Business Profile API]
      * (https://developers.google.com/my-business/reference/businessinformation/rest/v1/accounts.locations)
      * for additional details.
@@ -3858,6 +3857,7 @@ private static final long serialVersionUID = 0L;
      * Business Profile location resource names can be fetched through the
      * Business Profile API and adhere to the following format:
      * `locations/{locationId}`.
+     *
      * See the [Business Profile API]
      * (https://developers.google.com/my-business/reference/businessinformation/rest/v1/accounts.locations)
      * for additional details.
@@ -3881,6 +3881,7 @@ private static final long serialVersionUID = 0L;
      * Business Profile location resource names can be fetched through the
      * Business Profile API and adhere to the following format:
      * `locations/{locationId}`.
+     *
      * See the [Business Profile API]
      * (https://developers.google.com/my-business/reference/businessinformation/rest/v1/accounts.locations)
      * for additional details.
@@ -3903,6 +3904,7 @@ private static final long serialVersionUID = 0L;
      * Business Profile location resource names can be fetched through the
      * Business Profile API and adhere to the following format:
      * `locations/{locationId}`.
+     *
      * See the [Business Profile API]
      * (https://developers.google.com/my-business/reference/businessinformation/rest/v1/accounts.locations)
      * for additional details.

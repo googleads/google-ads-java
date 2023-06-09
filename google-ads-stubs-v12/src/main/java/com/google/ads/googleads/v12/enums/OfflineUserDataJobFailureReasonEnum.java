@@ -30,11 +30,6 @@ private static final long serialVersionUID = 0L;
     return new OfflineUserDataJobFailureReasonEnum();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.enums.OfflineUserDataJobFailureReasonProto.internal_static_google_ads_googleads_v12_enums_OfflineUserDataJobFailureReasonEnum_descriptor;
@@ -91,8 +86,9 @@ private static final long serialVersionUID = 0L;
     INSUFFICIENT_TRANSACTIONS(3),
     /**
      * <pre>
-     * The average transaction value is unusually high for your account. If
-     * this is intended, contact support to request an exception.
+     * The average transaction value is unusually high for your account. If this
+     *  is intended, contact support to request an exception. Learn more at
+     *  https://support.google.com/google-ads/answer/10018944#transaction_value
      * </pre>
      *
      * <code>HIGH_AVERAGE_TRANSACTION_VALUE = 4;</code>
@@ -100,8 +96,9 @@ private static final long serialVersionUID = 0L;
     HIGH_AVERAGE_TRANSACTION_VALUE(4),
     /**
      * <pre>
-     * The average transaction value is unusually low for your account. If
-     * this is intended, contact support to request an exception.
+     * The average transaction value is unusually low for your account. If this
+     * is intended, contact support to request an exception. Learn more at
+     * https://support.google.com/google-ads/answer/10018944#transaction_value
      * </pre>
      *
      * <code>LOW_AVERAGE_TRANSACTION_VALUE = 5;</code>
@@ -110,7 +107,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * There's a currency code that you haven't used before in your uploads. If
-     * this is intended, contact support to request an exception.
+     * this is intended, contact support to request an exception. Learn more at
+     * https://support.google.com/google-ads/answer/10018944#Unrecognized_currency
      * </pre>
      *
      * <code>NEWLY_OBSERVED_CURRENCY_CODE = 6;</code>
@@ -153,8 +151,9 @@ private static final long serialVersionUID = 0L;
     public static final int INSUFFICIENT_TRANSACTIONS_VALUE = 3;
     /**
      * <pre>
-     * The average transaction value is unusually high for your account. If
-     * this is intended, contact support to request an exception.
+     * The average transaction value is unusually high for your account. If this
+     *  is intended, contact support to request an exception. Learn more at
+     *  https://support.google.com/google-ads/answer/10018944#transaction_value
      * </pre>
      *
      * <code>HIGH_AVERAGE_TRANSACTION_VALUE = 4;</code>
@@ -162,8 +161,9 @@ private static final long serialVersionUID = 0L;
     public static final int HIGH_AVERAGE_TRANSACTION_VALUE_VALUE = 4;
     /**
      * <pre>
-     * The average transaction value is unusually low for your account. If
-     * this is intended, contact support to request an exception.
+     * The average transaction value is unusually low for your account. If this
+     * is intended, contact support to request an exception. Learn more at
+     * https://support.google.com/google-ads/answer/10018944#transaction_value
      * </pre>
      *
      * <code>LOW_AVERAGE_TRANSACTION_VALUE = 5;</code>
@@ -172,7 +172,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * There's a currency code that you haven't used before in your uploads. If
-     * this is intended, contact support to request an exception.
+     * this is intended, contact support to request an exception. Learn more at
+     * https://support.google.com/google-ads/answer/10018944#Unrecognized_currency
      * </pre>
      *
      * <code>NEWLY_OBSERVED_CURRENCY_CODE = 6;</code>
@@ -365,11 +366,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.enums.OfflineUserDataJobFailureReasonEnum parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.enums.OfflineUserDataJobFailureReasonEnum parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)

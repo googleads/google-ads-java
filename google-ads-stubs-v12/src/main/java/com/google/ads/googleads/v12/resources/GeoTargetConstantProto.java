@@ -33,29 +33,29 @@ public final class GeoTargetConstantProto {
       "eads.v12.resources\032?google/ads/googleads" +
       "/v12/enums/geo_target_constant_status.pr" +
       "oto\032\037google/api/field_behavior.proto\032\031go" +
-      "ogle/api/resource.proto\"\331\004\n\021GeoTargetCon" +
-      "stant\022I\n\rresource_name\030\001 \001(\tB2\340A\003\372A,\n*go" +
-      "ogleads.googleapis.com/GeoTargetConstant" +
-      "\022\024\n\002id\030\n \001(\003B\003\340A\003H\000\210\001\001\022\026\n\004name\030\013 \001(\tB\003\340A" +
-      "\003H\001\210\001\001\022\036\n\014country_code\030\014 \001(\tB\003\340A\003H\002\210\001\001\022\035" +
-      "\n\013target_type\030\r \001(\tB\003\340A\003H\003\210\001\001\022h\n\006status\030" +
-      "\007 \001(\0162S.google.ads.googleads.v12.enums.G" +
-      "eoTargetConstantStatusEnum.GeoTargetCons" +
-      "tantStatusB\003\340A\003\022 \n\016canonical_name\030\016 \001(\tB" +
-      "\003\340A\003H\004\210\001\001\022R\n\021parent_geo_target\030\t \001(\tB2\340A" +
-      "\003\372A,\n*googleads.googleapis.com/GeoTarget" +
-      "ConstantH\005\210\001\001:R\352AO\n*googleads.googleapis" +
-      ".com/GeoTargetConstant\022!geoTargetConstan" +
-      "ts/{criterion_id}B\005\n\003_idB\007\n\005_nameB\017\n\r_co" +
-      "untry_codeB\016\n\014_target_typeB\021\n\017_canonical" +
-      "_nameB\024\n\022_parent_geo_targetB\210\002\n&com.goog" +
-      "le.ads.googleads.v12.resourcesB\026GeoTarge" +
-      "tConstantProtoP\001ZKgoogle.golang.org/genp" +
-      "roto/googleapis/ads/googleads/v12/resour" +
-      "ces;resources\242\002\003GAA\252\002\"Google.Ads.GoogleA" +
-      "ds.V12.Resources\312\002\"Google\\Ads\\GoogleAds\\" +
-      "V12\\Resources\352\002&Google::Ads::GoogleAds::" +
-      "V12::Resourcesb\006proto3"
+      "ogle/api/resource.proto\"\341\004\n\021GeoTargetCon" +
+      "stant\022J\n\rresource_name\030\001 \001(\tB3\342A\001\003\372A,\n*g" +
+      "oogleads.googleapis.com/GeoTargetConstan" +
+      "t\022\025\n\002id\030\n \001(\003B\004\342A\001\003H\000\210\001\001\022\027\n\004name\030\013 \001(\tB\004" +
+      "\342A\001\003H\001\210\001\001\022\037\n\014country_code\030\014 \001(\tB\004\342A\001\003H\002\210" +
+      "\001\001\022\036\n\013target_type\030\r \001(\tB\004\342A\001\003H\003\210\001\001\022i\n\006st" +
+      "atus\030\007 \001(\0162S.google.ads.googleads.v12.en" +
+      "ums.GeoTargetConstantStatusEnum.GeoTarge" +
+      "tConstantStatusB\004\342A\001\003\022!\n\016canonical_name\030" +
+      "\016 \001(\tB\004\342A\001\003H\004\210\001\001\022S\n\021parent_geo_target\030\t " +
+      "\001(\tB3\342A\001\003\372A,\n*googleads.googleapis.com/G" +
+      "eoTargetConstantH\005\210\001\001:R\352AO\n*googleads.go" +
+      "ogleapis.com/GeoTargetConstant\022!geoTarge" +
+      "tConstants/{criterion_id}B\005\n\003_idB\007\n\005_nam" +
+      "eB\017\n\r_country_codeB\016\n\014_target_typeB\021\n\017_c" +
+      "anonical_nameB\024\n\022_parent_geo_targetB\210\002\n&" +
+      "com.google.ads.googleads.v12.resourcesB\026" +
+      "GeoTargetConstantProtoP\001ZKgoogle.golang." +
+      "org/genproto/googleapis/ads/googleads/v1" +
+      "2/resources;resources\242\002\003GAA\252\002\"Google.Ads" +
+      ".GoogleAds.V12.Resources\312\002\"Google\\Ads\\Go" +
+      "ogleAds\\V12\\Resources\352\002&Google::Ads::Goo" +
+      "gleAds::V12::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

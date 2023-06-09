@@ -7,6 +7,7 @@ package com.google.ads.googleads.v12.common;
  * <pre>
  * Policy finding attached to a resource (for example, alcohol policy associated
  * with a site that sells alcohol).
+ *
  * Each PolicyTopicEntry has a topic that indicates the specific ads policy
  * the entry is about and a type to indicate the effect that the entry will have
  * on serving. It may optionally have one or more evidences that indicate the
@@ -39,11 +40,6 @@ private static final long serialVersionUID = 0L;
     return new PolicyTopicEntry();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.common.PolicyProto.internal_static_google_ads_googleads_v12_common_PolicyTopicEntry_descriptor;
@@ -433,11 +429,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.common.PolicyTopicEntry parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.common.PolicyTopicEntry parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -483,6 +481,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Policy finding attached to a resource (for example, alcohol policy associated
    * with a site that sells alcohol).
+   *
    * Each PolicyTopicEntry has a topic that indicates the specific ads policy
    * the entry is about and a type to indicate the effect that the entry will have
    * on serving. It may optionally have one or more evidences that indicate the

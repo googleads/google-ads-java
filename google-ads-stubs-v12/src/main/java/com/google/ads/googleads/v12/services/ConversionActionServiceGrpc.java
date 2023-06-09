@@ -98,7 +98,7 @@ public final class ConversionActionServiceGrpc {
    * Service to manage conversion actions.
    * </pre>
    */
-  public static abstract class ConversionActionServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -123,30 +123,34 @@ public final class ConversionActionServiceGrpc {
      *   [StringLengthError]()
      * </pre>
      */
-    public void mutateConversionActions(com.google.ads.googleads.v12.services.MutateConversionActionsRequest request,
+    default void mutateConversionActions(com.google.ads.googleads.v12.services.MutateConversionActionsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.MutateConversionActionsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateConversionActionsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateConversionActionsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.MutateConversionActionsRequest,
-                com.google.ads.googleads.v12.services.MutateConversionActionsResponse>(
-                  this, METHODID_MUTATE_CONVERSION_ACTIONS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service ConversionActionService.
    * <pre>
    * Service to manage conversion actions.
    * </pre>
    */
-  public static final class ConversionActionServiceStub extends io.grpc.stub.AbstractAsyncStub<ConversionActionServiceStub> {
+  public static abstract class ConversionActionServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return ConversionActionServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service ConversionActionService.
+   * <pre>
+   * Service to manage conversion actions.
+   * </pre>
+   */
+  public static final class ConversionActionServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<ConversionActionServiceStub> {
     private ConversionActionServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -189,11 +193,13 @@ public final class ConversionActionServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service ConversionActionService.
    * <pre>
    * Service to manage conversion actions.
    * </pre>
    */
-  public static final class ConversionActionServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ConversionActionServiceBlockingStub> {
+  public static final class ConversionActionServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<ConversionActionServiceBlockingStub> {
     private ConversionActionServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -235,11 +241,13 @@ public final class ConversionActionServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service ConversionActionService.
    * <pre>
    * Service to manage conversion actions.
    * </pre>
    */
-  public static final class ConversionActionServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ConversionActionServiceFutureStub> {
+  public static final class ConversionActionServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<ConversionActionServiceFutureStub> {
     private ConversionActionServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -288,10 +296,10 @@ public final class ConversionActionServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final ConversionActionServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(ConversionActionServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -318,6 +326,18 @@ public final class ConversionActionServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateConversionActionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.MutateConversionActionsRequest,
+              com.google.ads.googleads.v12.services.MutateConversionActionsResponse>(
+                service, METHODID_MUTATE_CONVERSION_ACTIONS)))
+        .build();
   }
 
   private static abstract class ConversionActionServiceBaseDescriptorSupplier

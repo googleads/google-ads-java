@@ -11,6 +11,7 @@ public interface UserInterestOrBuilder extends
    * <pre>
    * Output only. The resource name of the user interest.
    * User interest resource names have the form:
+   *
    * `customers/{customer_id}/userInterests/{user_interest_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface UserInterestOrBuilder extends
    * <pre>
    * Output only. The resource name of the user interest.
    * User interest resource names have the form:
+   *
    * `customers/{customer_id}/userInterests/{user_interest_id}`
    * </pre>
    *

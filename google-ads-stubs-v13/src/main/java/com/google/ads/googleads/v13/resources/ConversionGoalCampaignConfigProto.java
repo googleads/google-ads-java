@@ -33,27 +33,27 @@ public final class ConversionGoalCampaignConfigProto {
       "le.ads.googleads.v13.resources\0326google/a" +
       "ds/googleads/v13/enums/goal_config_level" +
       ".proto\032\037google/api/field_behavior.proto\032" +
-      "\031google/api/resource.proto\"\346\003\n\034Conversio" +
-      "nGoalCampaignConfig\022T\n\rresource_name\030\001 \001" +
-      "(\tB=\340A\005\372A7\n5googleads.googleapis.com/Con" +
-      "versionGoalCampaignConfig\022;\n\010campaign\030\002 " +
-      "\001(\tB)\340A\005\372A#\n!googleads.googleapis.com/Ca" +
-      "mpaign\022^\n\021goal_config_level\030\003 \001(\0162C.goog" +
-      "le.ads.googleads.v13.enums.GoalConfigLev" +
-      "elEnum.GoalConfigLevel\022R\n\026custom_convers" +
-      "ion_goal\030\004 \001(\tB2\372A/\n-googleads.googleapi" +
-      "s.com/CustomConversionGoal:\177\352A|\n5googlea" +
-      "ds.googleapis.com/ConversionGoalCampaign" +
-      "Config\022Ccustomers/{customer_id}/conversi" +
-      "onGoalCampaignConfigs/{campaign_id}B\223\002\n&" +
-      "com.google.ads.googleads.v13.resourcesB!" +
-      "ConversionGoalCampaignConfigProtoP\001ZKgoo" +
-      "gle.golang.org/genproto/googleapis/ads/g" +
-      "oogleads/v13/resources;resources\242\002\003GAA\252\002" +
-      "\"Google.Ads.GoogleAds.V13.Resources\312\002\"Go" +
-      "ogle\\Ads\\GoogleAds\\V13\\Resources\352\002&Googl" +
-      "e::Ads::GoogleAds::V13::Resourcesb\006proto" +
-      "3"
+      "\031google/api/resource.proto\"\350\003\n\034Conversio" +
+      "nGoalCampaignConfig\022U\n\rresource_name\030\001 \001" +
+      "(\tB>\342A\001\005\372A7\n5googleads.googleapis.com/Co" +
+      "nversionGoalCampaignConfig\022<\n\010campaign\030\002" +
+      " \001(\tB*\342A\001\005\372A#\n!googleads.googleapis.com/" +
+      "Campaign\022^\n\021goal_config_level\030\003 \001(\0162C.go" +
+      "ogle.ads.googleads.v13.enums.GoalConfigL" +
+      "evelEnum.GoalConfigLevel\022R\n\026custom_conve" +
+      "rsion_goal\030\004 \001(\tB2\372A/\n-googleads.googlea" +
+      "pis.com/CustomConversionGoal:\177\352A|\n5googl" +
+      "eads.googleapis.com/ConversionGoalCampai" +
+      "gnConfig\022Ccustomers/{customer_id}/conver" +
+      "sionGoalCampaignConfigs/{campaign_id}B\223\002" +
+      "\n&com.google.ads.googleads.v13.resources" +
+      "B!ConversionGoalCampaignConfigProtoP\001ZKg" +
+      "oogle.golang.org/genproto/googleapis/ads" +
+      "/googleads/v13/resources;resources\242\002\003GAA" +
+      "\252\002\"Google.Ads.GoogleAds.V13.Resources\312\002\"" +
+      "Google\\Ads\\GoogleAds\\V13\\Resources\352\002&Goo" +
+      "gle::Ads::GoogleAds::V13::Resourcesb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

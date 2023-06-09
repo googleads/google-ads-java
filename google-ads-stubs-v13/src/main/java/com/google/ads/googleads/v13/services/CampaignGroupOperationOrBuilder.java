@@ -98,6 +98,7 @@ public interface CampaignGroupOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed campaign group is
    * expected, in this format:
+   *
    * `customers/{customer_id}/campaignGroups/{campaign_group_id}`
    * </pre>
    *
@@ -109,6 +110,7 @@ public interface CampaignGroupOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed campaign group is
    * expected, in this format:
+   *
    * `customers/{customer_id}/campaignGroups/{campaign_group_id}`
    * </pre>
    *
@@ -120,6 +122,7 @@ public interface CampaignGroupOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed campaign group is
    * expected, in this format:
+   *
    * `customers/{customer_id}/campaignGroups/{campaign_group_id}`
    * </pre>
    *
@@ -129,5 +132,5 @@ public interface CampaignGroupOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v13.services.CampaignGroupOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v13.services.CampaignGroupOperation.OperationCase getOperationCase();
 }

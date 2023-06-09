@@ -32,21 +32,21 @@ public final class ExpandedLandingPageViewProto {
       "anded_landing_page_view.proto\022\"google.ad" +
       "s.googleads.v13.resources\032\037google/api/fi" +
       "eld_behavior.proto\032\031google/api/resource." +
-      "proto\"\263\002\n\027ExpandedLandingPageView\022O\n\rres" +
-      "ource_name\030\001 \001(\tB8\340A\003\372A2\n0googleads.goog" +
-      "leapis.com/ExpandedLandingPageView\022$\n\022ex" +
-      "panded_final_url\030\003 \001(\tB\003\340A\003H\000\210\001\001:\211\001\352A\205\001\n" +
-      "0googleads.googleapis.com/ExpandedLandin" +
-      "gPageView\022Qcustomers/{customer_id}/expan" +
-      "dedLandingPageViews/{expanded_final_url_" +
-      "fingerprint}B\025\n\023_expanded_final_urlB\216\002\n&" +
-      "com.google.ads.googleads.v13.resourcesB\034" +
-      "ExpandedLandingPageViewProtoP\001ZKgoogle.g" +
-      "olang.org/genproto/googleapis/ads/google" +
-      "ads/v13/resources;resources\242\002\003GAA\252\002\"Goog" +
-      "le.Ads.GoogleAds.V13.Resources\312\002\"Google\\" +
-      "Ads\\GoogleAds\\V13\\Resources\352\002&Google::Ad" +
-      "s::GoogleAds::V13::Resourcesb\006proto3"
+      "proto\"\265\002\n\027ExpandedLandingPageView\022P\n\rres" +
+      "ource_name\030\001 \001(\tB9\342A\001\003\372A2\n0googleads.goo" +
+      "gleapis.com/ExpandedLandingPageView\022%\n\022e" +
+      "xpanded_final_url\030\003 \001(\tB\004\342A\001\003H\000\210\001\001:\211\001\352A\205" +
+      "\001\n0googleads.googleapis.com/ExpandedLand" +
+      "ingPageView\022Qcustomers/{customer_id}/exp" +
+      "andedLandingPageViews/{expanded_final_ur" +
+      "l_fingerprint}B\025\n\023_expanded_final_urlB\216\002" +
+      "\n&com.google.ads.googleads.v13.resources" +
+      "B\034ExpandedLandingPageViewProtoP\001ZKgoogle" +
+      ".golang.org/genproto/googleapis/ads/goog" +
+      "leads/v13/resources;resources\242\002\003GAA\252\002\"Go" +
+      "ogle.Ads.GoogleAds.V13.Resources\312\002\"Googl" +
+      "e\\Ads\\GoogleAds\\V13\\Resources\352\002&Google::" +
+      "Ads::GoogleAds::V13::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

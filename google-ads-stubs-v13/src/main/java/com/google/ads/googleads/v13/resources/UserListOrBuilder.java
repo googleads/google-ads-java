@@ -11,6 +11,7 @@ public interface UserListOrBuilder extends
    * <pre>
    * Immutable. The resource name of the user list.
    * User list resource names have the form:
+   *
    * `customers/{customer_id}/userLists/{user_list_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface UserListOrBuilder extends
    * <pre>
    * Immutable. The resource name of the user list.
    * User list resource names have the form:
+   *
    * `customers/{customer_id}/userLists/{user_list_id}`
    * </pre>
    *
@@ -55,6 +57,7 @@ public interface UserListOrBuilder extends
    * Output only. An option that indicates if a user may edit a list. Depends on
    * the list ownership and list type. For example, external remarketing user
    * lists are not editable.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -67,6 +70,7 @@ public interface UserListOrBuilder extends
    * Output only. An option that indicates if a user may edit a list. Depends on
    * the list ownership and list type. For example, external remarketing user
    * lists are not editable.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -197,6 +201,7 @@ public interface UserListOrBuilder extends
    * addition to the list. This field must be between 0 and 540 inclusive.
    * However, for CRM based userlists, this field can be set to 10000 which
    * means no expiration.
+   *
    * It'll be ignored for logical_user_list.
    * </pre>
    *
@@ -210,6 +215,7 @@ public interface UserListOrBuilder extends
    * addition to the list. This field must be between 0 and 540 inclusive.
    * However, for CRM based userlists, this field can be set to 10000 which
    * means no expiration.
+   *
    * It'll be ignored for logical_user_list.
    * </pre>
    *
@@ -223,6 +229,7 @@ public interface UserListOrBuilder extends
    * Output only. Estimated number of users in this user list, on the Google
    * Display Network. This value is null if the number of users has not yet been
    * determined.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -235,6 +242,7 @@ public interface UserListOrBuilder extends
    * Output only. Estimated number of users in this user list, on the Google
    * Display Network. This value is null if the number of users has not yet been
    * determined.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -247,6 +255,7 @@ public interface UserListOrBuilder extends
    * <pre>
    * Output only. Size range in terms of number of users of the UserList, on the
    * Google Display Network.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -258,6 +267,7 @@ public interface UserListOrBuilder extends
    * <pre>
    * Output only. Size range in terms of number of users of the UserList, on the
    * Google Display Network.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -271,6 +281,7 @@ public interface UserListOrBuilder extends
    * Output only. Estimated number of users in this user list in the google.com
    * domain. These are the users available for targeting in Search campaigns.
    * This value is null if the number of users has not yet been determined.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -283,6 +294,7 @@ public interface UserListOrBuilder extends
    * Output only. Estimated number of users in this user list in the google.com
    * domain. These are the users available for targeting in Search campaigns.
    * This value is null if the number of users has not yet been determined.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -295,6 +307,7 @@ public interface UserListOrBuilder extends
    * <pre>
    * Output only. Size range in terms of number of users of the UserList, for
    * Search ads.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -306,6 +319,7 @@ public interface UserListOrBuilder extends
    * <pre>
    * Output only. Size range in terms of number of users of the UserList, for
    * Search ads.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -317,6 +331,7 @@ public interface UserListOrBuilder extends
   /**
    * <pre>
    * Output only. Type of this list.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -327,6 +342,7 @@ public interface UserListOrBuilder extends
   /**
    * <pre>
    * Output only. Type of this list.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -362,6 +378,7 @@ public interface UserListOrBuilder extends
    * <pre>
    * Output only. Indicates the reason this account has been granted access to
    * the list. The reason can be SHARED, OWNED, LICENSED or SUBSCRIBED.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -373,6 +390,7 @@ public interface UserListOrBuilder extends
    * <pre>
    * Output only. Indicates the reason this account has been granted access to
    * the list. The reason can be SHARED, OWNED, LICENSED or SUBSCRIBED.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -429,6 +447,7 @@ public interface UserListOrBuilder extends
    * <pre>
    * Output only. Indicates this user list is eligible for Google Display
    * Network.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -440,6 +459,7 @@ public interface UserListOrBuilder extends
    * <pre>
    * Output only. Indicates this user list is eligible for Google Display
    * Network.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -453,6 +473,7 @@ public interface UserListOrBuilder extends
    * Output only. Indicates match rate for Customer Match lists. The range of
    * this field is [0-100]. This will be null for other list types or when it's
    * not possible to calculate the match rate.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -465,6 +486,7 @@ public interface UserListOrBuilder extends
    * Output only. Indicates match rate for Customer Match lists. The range of
    * this field is [0-100]. This will be null for other list types or when it's
    * not possible to calculate the match rate.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -611,5 +633,5 @@ public interface UserListOrBuilder extends
    */
   com.google.ads.googleads.v13.common.BasicUserListInfoOrBuilder getBasicUserListOrBuilder();
 
-  public com.google.ads.googleads.v13.resources.UserList.UserListCase getUserListCase();
+  com.google.ads.googleads.v13.resources.UserList.UserListCase getUserListCase();
 }

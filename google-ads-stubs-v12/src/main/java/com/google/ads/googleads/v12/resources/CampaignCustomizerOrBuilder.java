@@ -11,6 +11,7 @@ public interface CampaignCustomizerOrBuilder extends
    * <pre>
    * Immutable. The resource name of the campaign customizer.
    * Campaign customizer resource names have the form:
+   *
    * `customers/{customer_id}/campaignCustomizers/{campaign_id}~{customizer_attribute_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface CampaignCustomizerOrBuilder extends
    * <pre>
    * Immutable. The resource name of the campaign customizer.
    * Campaign customizer resource names have the form:
+   *
    * `customers/{customer_id}/campaignCustomizers/{campaign_id}~{customizer_attribute_id}`
    * </pre>
    *

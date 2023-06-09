@@ -51,11 +51,6 @@ private static final long serialVersionUID = 0L;
     return new ChangeStatus();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.resources.ChangeStatusProto.internal_static_google_ads_googleads_v13_resources_ChangeStatus_descriptor;
@@ -77,6 +72,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the change status.
    * Change status resource names have the form:
+   *
    * `customers/{customer_id}/changeStatus/{change_status_id}`
    * </pre>
    *
@@ -100,6 +96,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the change status.
    * Change status resource names have the form:
+   *
    * `customers/{customer_id}/changeStatus/{change_status_id}`
    * </pre>
    *
@@ -1521,11 +1518,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.resources.ChangeStatus parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.resources.ChangeStatus parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2036,6 +2035,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the change status.
      * Change status resource names have the form:
+     *
      * `customers/{customer_id}/changeStatus/{change_status_id}`
      * </pre>
      *
@@ -2058,6 +2058,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the change status.
      * Change status resource names have the form:
+     *
      * `customers/{customer_id}/changeStatus/{change_status_id}`
      * </pre>
      *
@@ -2081,6 +2082,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the change status.
      * Change status resource names have the form:
+     *
      * `customers/{customer_id}/changeStatus/{change_status_id}`
      * </pre>
      *
@@ -2100,6 +2102,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the change status.
      * Change status resource names have the form:
+     *
      * `customers/{customer_id}/changeStatus/{change_status_id}`
      * </pre>
      *
@@ -2116,6 +2119,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the change status.
      * Change status resource names have the form:
+     *
      * `customers/{customer_id}/changeStatus/{change_status_id}`
      * </pre>
      *

@@ -11,6 +11,7 @@ public interface OfflineUserDataJobOrBuilder extends
    * <pre>
    * Immutable. The resource name of the offline user data job.
    * Offline user data job resource names have the form:
+   *
    * `customers/{customer_id}/offlineUserDataJobs/{offline_user_data_job_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface OfflineUserDataJobOrBuilder extends
    * <pre>
    * Immutable. The resource name of the offline user data job.
    * Offline user data job resource names have the form:
+   *
    * `customers/{customer_id}/offlineUserDataJobs/{offline_user_data_job_id}`
    * </pre>
    *
@@ -207,5 +209,5 @@ public interface OfflineUserDataJobOrBuilder extends
    */
   com.google.ads.googleads.v12.common.StoreSalesMetadataOrBuilder getStoreSalesMetadataOrBuilder();
 
-  public com.google.ads.googleads.v12.resources.OfflineUserDataJob.MetadataCase getMetadataCase();
+  com.google.ads.googleads.v12.resources.OfflineUserDataJob.MetadataCase getMetadataCase();
 }

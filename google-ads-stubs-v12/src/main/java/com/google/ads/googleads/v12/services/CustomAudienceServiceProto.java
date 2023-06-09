@@ -50,39 +50,39 @@ public final class CustomAudienceServiceProto {
       "google/api/annotations.proto\032\027google/api" +
       "/client.proto\032\037google/api/field_behavior" +
       ".proto\032\031google/api/resource.proto\032 googl" +
-      "e/protobuf/field_mask.proto\"\244\001\n\034MutateCu" +
-      "stomAudiencesRequest\022\030\n\013customer_id\030\001 \001(" +
-      "\tB\003\340A\002\022S\n\noperations\030\002 \003(\0132:.google.ads." +
-      "googleads.v12.services.CustomAudienceOpe" +
-      "rationB\003\340A\002\022\025\n\rvalidate_only\030\003 \001(\010\"\243\002\n\027C" +
-      "ustomAudienceOperation\022/\n\013update_mask\030\004 " +
-      "\001(\0132\032.google.protobuf.FieldMask\022D\n\006creat" +
-      "e\030\001 \001(\01322.google.ads.googleads.v12.resou" +
-      "rces.CustomAudienceH\000\022D\n\006update\030\002 \001(\01322." +
-      "google.ads.googleads.v12.resources.Custo" +
-      "mAudienceH\000\022>\n\006remove\030\003 \001(\tB,\372A)\n\'google" +
-      "ads.googleapis.com/CustomAudienceH\000B\013\n\to" +
-      "peration\"o\n\035MutateCustomAudiencesRespons" +
-      "e\022N\n\007results\030\001 \003(\0132=.google.ads.googlead" +
-      "s.v12.services.MutateCustomAudienceResul" +
-      "t\"a\n\032MutateCustomAudienceResult\022C\n\rresou" +
-      "rce_name\030\001 \001(\tB,\372A)\n\'googleads.googleapi" +
-      "s.com/CustomAudience2\326\002\n\025CustomAudienceS" +
-      "ervice\022\365\001\n\025MutateCustomAudiences\022?.googl" +
-      "e.ads.googleads.v12.services.MutateCusto" +
-      "mAudiencesRequest\032@.google.ads.googleads" +
-      ".v12.services.MutateCustomAudiencesRespo" +
-      "nse\"Y\202\323\344\223\002:\"5/v12/customers/{customer_id" +
-      "=*}/customAudiences:mutate:\001*\332A\026customer" +
-      "_id,operations\032E\312A\030googleads.googleapis." +
-      "com\322A\'https://www.googleapis.com/auth/ad" +
-      "wordsB\206\002\n%com.google.ads.googleads.v12.s" +
-      "ervicesB\032CustomAudienceServiceProtoP\001ZIg" +
-      "oogle.golang.org/genproto/googleapis/ads" +
-      "/googleads/v12/services;services\242\002\003GAA\252\002" +
-      "!Google.Ads.GoogleAds.V12.Services\312\002!Goo" +
-      "gle\\Ads\\GoogleAds\\V12\\Services\352\002%Google:" +
-      ":Ads::GoogleAds::V12::Servicesb\006proto3"
+      "e/protobuf/field_mask.proto\"\246\001\n\034MutateCu" +
+      "stomAudiencesRequest\022\031\n\013customer_id\030\001 \001(" +
+      "\tB\004\342A\001\002\022T\n\noperations\030\002 \003(\0132:.google.ads" +
+      ".googleads.v12.services.CustomAudienceOp" +
+      "erationB\004\342A\001\002\022\025\n\rvalidate_only\030\003 \001(\010\"\243\002\n" +
+      "\027CustomAudienceOperation\022/\n\013update_mask\030" +
+      "\004 \001(\0132\032.google.protobuf.FieldMask\022D\n\006cre" +
+      "ate\030\001 \001(\01322.google.ads.googleads.v12.res" +
+      "ources.CustomAudienceH\000\022D\n\006update\030\002 \001(\0132" +
+      "2.google.ads.googleads.v12.resources.Cus" +
+      "tomAudienceH\000\022>\n\006remove\030\003 \001(\tB,\372A)\n\'goog" +
+      "leads.googleapis.com/CustomAudienceH\000B\013\n" +
+      "\toperation\"o\n\035MutateCustomAudiencesRespo" +
+      "nse\022N\n\007results\030\001 \003(\0132=.google.ads.google" +
+      "ads.v12.services.MutateCustomAudienceRes" +
+      "ult\"a\n\032MutateCustomAudienceResult\022C\n\rres" +
+      "ource_name\030\001 \001(\tB,\372A)\n\'googleads.googlea" +
+      "pis.com/CustomAudience2\326\002\n\025CustomAudienc" +
+      "eService\022\365\001\n\025MutateCustomAudiences\022?.goo" +
+      "gle.ads.googleads.v12.services.MutateCus" +
+      "tomAudiencesRequest\032@.google.ads.googlea" +
+      "ds.v12.services.MutateCustomAudiencesRes" +
+      "ponse\"Y\332A\026customer_id,operations\202\323\344\223\002:\"5" +
+      "/v12/customers/{customer_id=*}/customAud" +
+      "iences:mutate:\001*\032E\312A\030googleads.googleapi" +
+      "s.com\322A\'https://www.googleapis.com/auth/" +
+      "adwordsB\206\002\n%com.google.ads.googleads.v12" +
+      ".servicesB\032CustomAudienceServiceProtoP\001Z" +
+      "Igoogle.golang.org/genproto/googleapis/a" +
+      "ds/googleads/v12/services;services\242\002\003GAA" +
+      "\252\002!Google.Ads.GoogleAds.V12.Services\312\002!G" +
+      "oogle\\Ads\\GoogleAds\\V12\\Services\352\002%Googl" +
+      "e::Ads::GoogleAds::V12::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

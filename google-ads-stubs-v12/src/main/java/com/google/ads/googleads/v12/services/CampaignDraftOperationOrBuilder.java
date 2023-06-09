@@ -98,6 +98,7 @@ public interface CampaignDraftOperationOrBuilder extends
    * <pre>
    * Remove operation: The campaign draft is expected to have a valid
    * resource name, in this format:
+   *
    * `customers/{customer_id}/campaignDrafts/{base_campaign_id}~{draft_id}`
    * </pre>
    *
@@ -109,6 +110,7 @@ public interface CampaignDraftOperationOrBuilder extends
    * <pre>
    * Remove operation: The campaign draft is expected to have a valid
    * resource name, in this format:
+   *
    * `customers/{customer_id}/campaignDrafts/{base_campaign_id}~{draft_id}`
    * </pre>
    *
@@ -120,6 +122,7 @@ public interface CampaignDraftOperationOrBuilder extends
    * <pre>
    * Remove operation: The campaign draft is expected to have a valid
    * resource name, in this format:
+   *
    * `customers/{customer_id}/campaignDrafts/{base_campaign_id}~{draft_id}`
    * </pre>
    *
@@ -129,5 +132,5 @@ public interface CampaignDraftOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v12.services.CampaignDraftOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v12.services.CampaignDraftOperation.OperationCase getOperationCase();
 }

@@ -98,7 +98,7 @@ public final class AdGroupLabelServiceGrpc {
    * Service to manage labels on ad groups.
    * </pre>
    */
-  public static abstract class AdGroupLabelServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -118,30 +118,34 @@ public final class AdGroupLabelServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void mutateAdGroupLabels(com.google.ads.googleads.v12.services.MutateAdGroupLabelsRequest request,
+    default void mutateAdGroupLabels(com.google.ads.googleads.v12.services.MutateAdGroupLabelsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.MutateAdGroupLabelsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateAdGroupLabelsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateAdGroupLabelsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.MutateAdGroupLabelsRequest,
-                com.google.ads.googleads.v12.services.MutateAdGroupLabelsResponse>(
-                  this, METHODID_MUTATE_AD_GROUP_LABELS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service AdGroupLabelService.
    * <pre>
    * Service to manage labels on ad groups.
    * </pre>
    */
-  public static final class AdGroupLabelServiceStub extends io.grpc.stub.AbstractAsyncStub<AdGroupLabelServiceStub> {
+  public static abstract class AdGroupLabelServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return AdGroupLabelServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service AdGroupLabelService.
+   * <pre>
+   * Service to manage labels on ad groups.
+   * </pre>
+   */
+  public static final class AdGroupLabelServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<AdGroupLabelServiceStub> {
     private AdGroupLabelServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -179,11 +183,13 @@ public final class AdGroupLabelServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service AdGroupLabelService.
    * <pre>
    * Service to manage labels on ad groups.
    * </pre>
    */
-  public static final class AdGroupLabelServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<AdGroupLabelServiceBlockingStub> {
+  public static final class AdGroupLabelServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<AdGroupLabelServiceBlockingStub> {
     private AdGroupLabelServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -220,11 +226,13 @@ public final class AdGroupLabelServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service AdGroupLabelService.
    * <pre>
    * Service to manage labels on ad groups.
    * </pre>
    */
-  public static final class AdGroupLabelServiceFutureStub extends io.grpc.stub.AbstractFutureStub<AdGroupLabelServiceFutureStub> {
+  public static final class AdGroupLabelServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<AdGroupLabelServiceFutureStub> {
     private AdGroupLabelServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -268,10 +276,10 @@ public final class AdGroupLabelServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AdGroupLabelServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AdGroupLabelServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -298,6 +306,18 @@ public final class AdGroupLabelServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateAdGroupLabelsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.MutateAdGroupLabelsRequest,
+              com.google.ads.googleads.v12.services.MutateAdGroupLabelsResponse>(
+                service, METHODID_MUTATE_AD_GROUP_LABELS)))
+        .build();
   }
 
   private static abstract class AdGroupLabelServiceBaseDescriptorSupplier

@@ -31,11 +31,6 @@ private static final long serialVersionUID = 0L;
     return new WebpageInfo();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.common.CriteriaProto.internal_static_google_ads_googleads_v12_common_WebpageInfo_descriptor;
@@ -58,6 +53,7 @@ private static final long serialVersionUID = 0L;
    * The name of the criterion that is defined by this parameter. The name value
    * will be used for identifying, sorting and filtering criteria with this type
    * of parameters.
+   *
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -74,6 +70,7 @@ private static final long serialVersionUID = 0L;
    * The name of the criterion that is defined by this parameter. The name value
    * will be used for identifying, sorting and filtering criteria with this type
    * of parameters.
+   *
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -99,6 +96,7 @@ private static final long serialVersionUID = 0L;
    * The name of the criterion that is defined by this parameter. The name value
    * will be used for identifying, sorting and filtering criteria with this type
    * of parameters.
+   *
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -130,6 +128,7 @@ private static final long serialVersionUID = 0L;
    * webpage targeting conditions are and-ed together when evaluated
    * for targeting. An empty list of conditions indicates all pages of the
    * campaign's website are targeted.
+   *
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -146,6 +145,7 @@ private static final long serialVersionUID = 0L;
    * webpage targeting conditions are and-ed together when evaluated
    * for targeting. An empty list of conditions indicates all pages of the
    * campaign's website are targeted.
+   *
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -163,6 +163,7 @@ private static final long serialVersionUID = 0L;
    * webpage targeting conditions are and-ed together when evaluated
    * for targeting. An empty list of conditions indicates all pages of the
    * campaign's website are targeted.
+   *
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -179,6 +180,7 @@ private static final long serialVersionUID = 0L;
    * webpage targeting conditions are and-ed together when evaluated
    * for targeting. An empty list of conditions indicates all pages of the
    * campaign's website are targeted.
+   *
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -195,6 +197,7 @@ private static final long serialVersionUID = 0L;
    * webpage targeting conditions are and-ed together when evaluated
    * for targeting. An empty list of conditions indicates all pages of the
    * campaign's website are targeted.
+   *
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -419,11 +422,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.common.WebpageInfo parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.common.WebpageInfo parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -739,6 +744,7 @@ private static final long serialVersionUID = 0L;
      * The name of the criterion that is defined by this parameter. The name value
      * will be used for identifying, sorting and filtering criteria with this type
      * of parameters.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -754,6 +760,7 @@ private static final long serialVersionUID = 0L;
      * The name of the criterion that is defined by this parameter. The name value
      * will be used for identifying, sorting and filtering criteria with this type
      * of parameters.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -778,6 +785,7 @@ private static final long serialVersionUID = 0L;
      * The name of the criterion that is defined by this parameter. The name value
      * will be used for identifying, sorting and filtering criteria with this type
      * of parameters.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -803,6 +811,7 @@ private static final long serialVersionUID = 0L;
      * The name of the criterion that is defined by this parameter. The name value
      * will be used for identifying, sorting and filtering criteria with this type
      * of parameters.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -824,6 +833,7 @@ private static final long serialVersionUID = 0L;
      * The name of the criterion that is defined by this parameter. The name value
      * will be used for identifying, sorting and filtering criteria with this type
      * of parameters.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -842,6 +852,7 @@ private static final long serialVersionUID = 0L;
      * The name of the criterion that is defined by this parameter. The name value
      * will be used for identifying, sorting and filtering criteria with this type
      * of parameters.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -878,6 +889,7 @@ private static final long serialVersionUID = 0L;
      * webpage targeting conditions are and-ed together when evaluated
      * for targeting. An empty list of conditions indicates all pages of the
      * campaign's website are targeted.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -897,6 +909,7 @@ private static final long serialVersionUID = 0L;
      * webpage targeting conditions are and-ed together when evaluated
      * for targeting. An empty list of conditions indicates all pages of the
      * campaign's website are targeted.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -916,6 +929,7 @@ private static final long serialVersionUID = 0L;
      * webpage targeting conditions are and-ed together when evaluated
      * for targeting. An empty list of conditions indicates all pages of the
      * campaign's website are targeted.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -935,6 +949,7 @@ private static final long serialVersionUID = 0L;
      * webpage targeting conditions are and-ed together when evaluated
      * for targeting. An empty list of conditions indicates all pages of the
      * campaign's website are targeted.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -961,6 +976,7 @@ private static final long serialVersionUID = 0L;
      * webpage targeting conditions are and-ed together when evaluated
      * for targeting. An empty list of conditions indicates all pages of the
      * campaign's website are targeted.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -984,6 +1000,7 @@ private static final long serialVersionUID = 0L;
      * webpage targeting conditions are and-ed together when evaluated
      * for targeting. An empty list of conditions indicates all pages of the
      * campaign's website are targeted.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -1009,6 +1026,7 @@ private static final long serialVersionUID = 0L;
      * webpage targeting conditions are and-ed together when evaluated
      * for targeting. An empty list of conditions indicates all pages of the
      * campaign's website are targeted.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -1035,6 +1053,7 @@ private static final long serialVersionUID = 0L;
      * webpage targeting conditions are and-ed together when evaluated
      * for targeting. An empty list of conditions indicates all pages of the
      * campaign's website are targeted.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -1058,6 +1077,7 @@ private static final long serialVersionUID = 0L;
      * webpage targeting conditions are and-ed together when evaluated
      * for targeting. An empty list of conditions indicates all pages of the
      * campaign's website are targeted.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -1081,6 +1101,7 @@ private static final long serialVersionUID = 0L;
      * webpage targeting conditions are and-ed together when evaluated
      * for targeting. An empty list of conditions indicates all pages of the
      * campaign's website are targeted.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -1105,6 +1126,7 @@ private static final long serialVersionUID = 0L;
      * webpage targeting conditions are and-ed together when evaluated
      * for targeting. An empty list of conditions indicates all pages of the
      * campaign's website are targeted.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -1127,6 +1149,7 @@ private static final long serialVersionUID = 0L;
      * webpage targeting conditions are and-ed together when evaluated
      * for targeting. An empty list of conditions indicates all pages of the
      * campaign's website are targeted.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -1149,6 +1172,7 @@ private static final long serialVersionUID = 0L;
      * webpage targeting conditions are and-ed together when evaluated
      * for targeting. An empty list of conditions indicates all pages of the
      * campaign's website are targeted.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -1165,6 +1189,7 @@ private static final long serialVersionUID = 0L;
      * webpage targeting conditions are and-ed together when evaluated
      * for targeting. An empty list of conditions indicates all pages of the
      * campaign's website are targeted.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -1184,6 +1209,7 @@ private static final long serialVersionUID = 0L;
      * webpage targeting conditions are and-ed together when evaluated
      * for targeting. An empty list of conditions indicates all pages of the
      * campaign's website are targeted.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -1204,6 +1230,7 @@ private static final long serialVersionUID = 0L;
      * webpage targeting conditions are and-ed together when evaluated
      * for targeting. An empty list of conditions indicates all pages of the
      * campaign's website are targeted.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -1220,6 +1247,7 @@ private static final long serialVersionUID = 0L;
      * webpage targeting conditions are and-ed together when evaluated
      * for targeting. An empty list of conditions indicates all pages of the
      * campaign's website are targeted.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -1237,6 +1265,7 @@ private static final long serialVersionUID = 0L;
      * webpage targeting conditions are and-ed together when evaluated
      * for targeting. An empty list of conditions indicates all pages of the
      * campaign's website are targeted.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -1293,7 +1322,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCoveragePercentage(double value) {
-      
+
       coveragePercentage_ = value;
       bitField0_ |= 0x00000004;
       onChanged();

@@ -10,6 +10,7 @@ public interface RecommendationOrBuilder extends
   /**
    * <pre>
    * Immutable. The resource name of the recommendation.
+   *
    * `customers/{customer_id}/recommendations/{recommendation_id}`
    * </pre>
    *
@@ -20,6 +21,7 @@ public interface RecommendationOrBuilder extends
   /**
    * <pre>
    * Immutable. The resource name of the recommendation.
+   *
    * `customers/{customer_id}/recommendations/{recommendation_id}`
    * </pre>
    *
@@ -82,6 +84,7 @@ public interface RecommendationOrBuilder extends
    * <pre>
    * Output only. The budget targeted by this recommendation. This will be set
    * only when the recommendation affects a single campaign budget.
+   *
    * This field will be set for the following recommendation types:
    * CAMPAIGN_BUDGET, FORECASTING_CAMPAIGN_BUDGET, MARGINAL_ROI_CAMPAIGN_BUDGET,
    * MOVE_UNUSED_BUDGET
@@ -95,6 +98,7 @@ public interface RecommendationOrBuilder extends
    * <pre>
    * Output only. The budget targeted by this recommendation. This will be set
    * only when the recommendation affects a single campaign budget.
+   *
    * This field will be set for the following recommendation types:
    * CAMPAIGN_BUDGET, FORECASTING_CAMPAIGN_BUDGET, MARGINAL_ROI_CAMPAIGN_BUDGET,
    * MOVE_UNUSED_BUDGET
@@ -108,6 +112,7 @@ public interface RecommendationOrBuilder extends
    * <pre>
    * Output only. The budget targeted by this recommendation. This will be set
    * only when the recommendation affects a single campaign budget.
+   *
    * This field will be set for the following recommendation types:
    * CAMPAIGN_BUDGET, FORECASTING_CAMPAIGN_BUDGET, MARGINAL_ROI_CAMPAIGN_BUDGET,
    * MOVE_UNUSED_BUDGET
@@ -122,6 +127,7 @@ public interface RecommendationOrBuilder extends
   /**
    * <pre>
    * Output only. The campaign targeted by this recommendation.
+   *
    * This field will be set for the following recommendation types:
    * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
    * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
@@ -143,6 +149,7 @@ public interface RecommendationOrBuilder extends
   /**
    * <pre>
    * Output only. The campaign targeted by this recommendation.
+   *
    * This field will be set for the following recommendation types:
    * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
    * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
@@ -164,6 +171,7 @@ public interface RecommendationOrBuilder extends
   /**
    * <pre>
    * Output only. The campaign targeted by this recommendation.
+   *
    * This field will be set for the following recommendation types:
    * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
    * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
@@ -188,6 +196,7 @@ public interface RecommendationOrBuilder extends
    * <pre>
    * Output only. The ad group targeted by this recommendation. This will be set
    * only when the recommendation affects a single ad group.
+   *
    * This field will be set for the following recommendation types:
    * KEYWORD, OPTIMIZE_AD_ROTATION, RESPONSIVE_SEARCH_AD,
    * RESPONSIVE_SEARCH_AD_ASSET, TEXT_AD
@@ -201,6 +210,7 @@ public interface RecommendationOrBuilder extends
    * <pre>
    * Output only. The ad group targeted by this recommendation. This will be set
    * only when the recommendation affects a single ad group.
+   *
    * This field will be set for the following recommendation types:
    * KEYWORD, OPTIMIZE_AD_ROTATION, RESPONSIVE_SEARCH_AD,
    * RESPONSIVE_SEARCH_AD_ASSET, TEXT_AD
@@ -214,6 +224,7 @@ public interface RecommendationOrBuilder extends
    * <pre>
    * Output only. The ad group targeted by this recommendation. This will be set
    * only when the recommendation affects a single ad group.
+   *
    * This field will be set for the following recommendation types:
    * KEYWORD, OPTIMIZE_AD_ROTATION, RESPONSIVE_SEARCH_AD,
    * RESPONSIVE_SEARCH_AD_ASSET, TEXT_AD
@@ -543,7 +554,7 @@ public interface RecommendationOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The Sitelink extension recommendation.
+   * Output only. The Sitelink recommendation.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.Recommendation.SitelinkExtensionRecommendation sitelink_extension_recommendation = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -552,7 +563,7 @@ public interface RecommendationOrBuilder extends
   boolean hasSitelinkExtensionRecommendation();
   /**
    * <pre>
-   * Output only. The Sitelink extension recommendation.
+   * Output only. The Sitelink recommendation.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.Recommendation.SitelinkExtensionRecommendation sitelink_extension_recommendation = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -561,7 +572,7 @@ public interface RecommendationOrBuilder extends
   com.google.ads.googleads.v12.resources.Recommendation.SitelinkExtensionRecommendation getSitelinkExtensionRecommendation();
   /**
    * <pre>
-   * Output only. The Sitelink extension recommendation.
+   * Output only. The Sitelink recommendation.
    * </pre>
    *
    * <code>.google.ads.googleads.v12.resources.Recommendation.SitelinkExtensionRecommendation sitelink_extension_recommendation = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -952,5 +963,5 @@ public interface RecommendationOrBuilder extends
    */
   com.google.ads.googleads.v12.resources.Recommendation.ForecastingSetTargetRoasRecommendationOrBuilder getForecastingSetTargetRoasRecommendationOrBuilder();
 
-  public com.google.ads.googleads.v12.resources.Recommendation.RecommendationCase getRecommendationCase();
+  com.google.ads.googleads.v12.resources.Recommendation.RecommendationCase getRecommendationCase();
 }

@@ -10,6 +10,7 @@ public interface KeywordPlanAdGroupForecastOrBuilder extends
   /**
    * <pre>
    * The resource name of the Keyword Plan ad group related to the forecast.
+   *
    * `customers/{customer_id}/keywordPlanAdGroups/{keyword_plan_ad_group_id}`
    * </pre>
    *
@@ -20,6 +21,7 @@ public interface KeywordPlanAdGroupForecastOrBuilder extends
   /**
    * <pre>
    * The resource name of the Keyword Plan ad group related to the forecast.
+   *
    * `customers/{customer_id}/keywordPlanAdGroups/{keyword_plan_ad_group_id}`
    * </pre>
    *
@@ -30,6 +32,7 @@ public interface KeywordPlanAdGroupForecastOrBuilder extends
   /**
    * <pre>
    * The resource name of the Keyword Plan ad group related to the forecast.
+   *
    * `customers/{customer_id}/keywordPlanAdGroups/{keyword_plan_ad_group_id}`
    * </pre>
    *

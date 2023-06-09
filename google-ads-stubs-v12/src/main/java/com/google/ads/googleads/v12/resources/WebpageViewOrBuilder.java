@@ -11,6 +11,7 @@ public interface WebpageViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the webpage view.
    * Webpage view resource names have the form:
+   *
    * `customers/{customer_id}/webpageViews/{ad_group_id}~{criterion_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface WebpageViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the webpage view.
    * Webpage view resource names have the form:
+   *
    * `customers/{customer_id}/webpageViews/{ad_group_id}~{criterion_id}`
    * </pre>
    *

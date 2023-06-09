@@ -20,7 +20,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private PolicyValidationParameter() {
-    ignorablePolicyTopics_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    ignorablePolicyTopics_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     exemptPolicyViolationKeys_ = java.util.Collections.emptyList();
   }
 
@@ -31,11 +32,6 @@ private static final long serialVersionUID = 0L;
     return new PolicyValidationParameter();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.common.PolicyProto.internal_static_google_ads_googleads_v12_common_PolicyValidationParameter_descriptor;
@@ -51,12 +47,14 @@ private static final long serialVersionUID = 0L;
 
   public static final int IGNORABLE_POLICY_TOPICS_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList ignorablePolicyTopics_;
+  private com.google.protobuf.LazyStringArrayList ignorablePolicyTopics_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * The list of policy topics that should not cause a PolicyFindingError to
    * be reported. This field is currently only compatible with Enhanced Text Ad.
    * It corresponds to the PolicyTopicEntry.topic field.
+   *
    * Resources violating these policies will be saved, but will not be eligible
    * to serve. They may begin serving at a later time due to a change in
    * policies, re-review of the resource, or a change in advertiser
@@ -75,6 +73,7 @@ private static final long serialVersionUID = 0L;
    * The list of policy topics that should not cause a PolicyFindingError to
    * be reported. This field is currently only compatible with Enhanced Text Ad.
    * It corresponds to the PolicyTopicEntry.topic field.
+   *
    * Resources violating these policies will be saved, but will not be eligible
    * to serve. They may begin serving at a later time due to a change in
    * policies, re-review of the resource, or a change in advertiser
@@ -92,6 +91,7 @@ private static final long serialVersionUID = 0L;
    * The list of policy topics that should not cause a PolicyFindingError to
    * be reported. This field is currently only compatible with Enhanced Text Ad.
    * It corresponds to the PolicyTopicEntry.topic field.
+   *
    * Resources violating these policies will be saved, but will not be eligible
    * to serve. They may begin serving at a later time due to a change in
    * policies, re-review of the resource, or a change in advertiser
@@ -110,6 +110,7 @@ private static final long serialVersionUID = 0L;
    * The list of policy topics that should not cause a PolicyFindingError to
    * be reported. This field is currently only compatible with Enhanced Text Ad.
    * It corresponds to the PolicyTopicEntry.topic field.
+   *
    * Resources violating these policies will be saved, but will not be eligible
    * to serve. They may begin serving at a later time due to a change in
    * policies, re-review of the resource, or a change in advertiser
@@ -134,6 +135,7 @@ private static final long serialVersionUID = 0L;
    * PolicyViolationError to be reported. Not all policy violations are
    * exemptable, refer to the is_exemptible field in the returned
    * PolicyViolationError.
+   *
    * Resources violating these polices will be saved, but will not be eligible
    * to serve. They may begin serving at a later time due to a change in
    * policies, re-review of the resource, or a change in advertiser
@@ -152,6 +154,7 @@ private static final long serialVersionUID = 0L;
    * PolicyViolationError to be reported. Not all policy violations are
    * exemptable, refer to the is_exemptible field in the returned
    * PolicyViolationError.
+   *
    * Resources violating these polices will be saved, but will not be eligible
    * to serve. They may begin serving at a later time due to a change in
    * policies, re-review of the resource, or a change in advertiser
@@ -171,6 +174,7 @@ private static final long serialVersionUID = 0L;
    * PolicyViolationError to be reported. Not all policy violations are
    * exemptable, refer to the is_exemptible field in the returned
    * PolicyViolationError.
+   *
    * Resources violating these polices will be saved, but will not be eligible
    * to serve. They may begin serving at a later time due to a change in
    * policies, re-review of the resource, or a change in advertiser
@@ -189,6 +193,7 @@ private static final long serialVersionUID = 0L;
    * PolicyViolationError to be reported. Not all policy violations are
    * exemptable, refer to the is_exemptible field in the returned
    * PolicyViolationError.
+   *
    * Resources violating these polices will be saved, but will not be eligible
    * to serve. They may begin serving at a later time due to a change in
    * policies, re-review of the resource, or a change in advertiser
@@ -207,6 +212,7 @@ private static final long serialVersionUID = 0L;
    * PolicyViolationError to be reported. Not all policy violations are
    * exemptable, refer to the is_exemptible field in the returned
    * PolicyViolationError.
+   *
    * Resources violating these polices will be saved, but will not be eligible
    * to serve. They may begin serving at a later time due to a change in
    * policies, re-review of the resource, or a change in advertiser
@@ -349,11 +355,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.common.PolicyValidationParameter parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.common.PolicyValidationParameter parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -433,8 +441,8 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      ignorablePolicyTopics_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      ignorablePolicyTopics_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       if (exemptPolicyViolationKeysBuilder_ == null) {
         exemptPolicyViolationKeys_ = java.util.Collections.emptyList();
       } else {
@@ -475,11 +483,6 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.google.ads.googleads.v12.common.PolicyValidationParameter result) {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        ignorablePolicyTopics_ = ignorablePolicyTopics_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.ignorablePolicyTopics_ = ignorablePolicyTopics_;
       if (exemptPolicyViolationKeysBuilder_ == null) {
         if (((bitField0_ & 0x00000002) != 0)) {
           exemptPolicyViolationKeys_ = java.util.Collections.unmodifiableList(exemptPolicyViolationKeys_);
@@ -493,6 +496,10 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.google.ads.googleads.v12.common.PolicyValidationParameter result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        ignorablePolicyTopics_.makeImmutable();
+        result.ignorablePolicyTopics_ = ignorablePolicyTopics_;
+      }
     }
 
     @java.lang.Override
@@ -542,7 +549,7 @@ private static final long serialVersionUID = 0L;
       if (!other.ignorablePolicyTopics_.isEmpty()) {
         if (ignorablePolicyTopics_.isEmpty()) {
           ignorablePolicyTopics_ = other.ignorablePolicyTopics_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ |= 0x00000001;
         } else {
           ensureIgnorablePolicyTopicsIsMutable();
           ignorablePolicyTopics_.addAll(other.ignorablePolicyTopics_);
@@ -637,18 +644,20 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.google.protobuf.LazyStringList ignorablePolicyTopics_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList ignorablePolicyTopics_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureIgnorablePolicyTopicsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!ignorablePolicyTopics_.isModifiable()) {
         ignorablePolicyTopics_ = new com.google.protobuf.LazyStringArrayList(ignorablePolicyTopics_);
-        bitField0_ |= 0x00000001;
-       }
+      }
+      bitField0_ |= 0x00000001;
     }
     /**
      * <pre>
      * The list of policy topics that should not cause a PolicyFindingError to
      * be reported. This field is currently only compatible with Enhanced Text Ad.
      * It corresponds to the PolicyTopicEntry.topic field.
+     *
      * Resources violating these policies will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -660,13 +669,15 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getIgnorablePolicyTopicsList() {
-      return ignorablePolicyTopics_.getUnmodifiableView();
+      ignorablePolicyTopics_.makeImmutable();
+      return ignorablePolicyTopics_;
     }
     /**
      * <pre>
      * The list of policy topics that should not cause a PolicyFindingError to
      * be reported. This field is currently only compatible with Enhanced Text Ad.
      * It corresponds to the PolicyTopicEntry.topic field.
+     *
      * Resources violating these policies will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -684,6 +695,7 @@ private static final long serialVersionUID = 0L;
      * The list of policy topics that should not cause a PolicyFindingError to
      * be reported. This field is currently only compatible with Enhanced Text Ad.
      * It corresponds to the PolicyTopicEntry.topic field.
+     *
      * Resources violating these policies will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -702,6 +714,7 @@ private static final long serialVersionUID = 0L;
      * The list of policy topics that should not cause a PolicyFindingError to
      * be reported. This field is currently only compatible with Enhanced Text Ad.
      * It corresponds to the PolicyTopicEntry.topic field.
+     *
      * Resources violating these policies will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -721,6 +734,7 @@ private static final long serialVersionUID = 0L;
      * The list of policy topics that should not cause a PolicyFindingError to
      * be reported. This field is currently only compatible with Enhanced Text Ad.
      * It corresponds to the PolicyTopicEntry.topic field.
+     *
      * Resources violating these policies will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -737,6 +751,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureIgnorablePolicyTopicsIsMutable();
       ignorablePolicyTopics_.set(index, value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -745,6 +760,7 @@ private static final long serialVersionUID = 0L;
      * The list of policy topics that should not cause a PolicyFindingError to
      * be reported. This field is currently only compatible with Enhanced Text Ad.
      * It corresponds to the PolicyTopicEntry.topic field.
+     *
      * Resources violating these policies will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -760,6 +776,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureIgnorablePolicyTopicsIsMutable();
       ignorablePolicyTopics_.add(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -768,6 +785,7 @@ private static final long serialVersionUID = 0L;
      * The list of policy topics that should not cause a PolicyFindingError to
      * be reported. This field is currently only compatible with Enhanced Text Ad.
      * It corresponds to the PolicyTopicEntry.topic field.
+     *
      * Resources violating these policies will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -783,6 +801,7 @@ private static final long serialVersionUID = 0L;
       ensureIgnorablePolicyTopicsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, ignorablePolicyTopics_);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -791,6 +810,7 @@ private static final long serialVersionUID = 0L;
      * The list of policy topics that should not cause a PolicyFindingError to
      * be reported. This field is currently only compatible with Enhanced Text Ad.
      * It corresponds to the PolicyTopicEntry.topic field.
+     *
      * Resources violating these policies will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -801,8 +821,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIgnorablePolicyTopics() {
-      ignorablePolicyTopics_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      ignorablePolicyTopics_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000001);;
       onChanged();
       return this;
     }
@@ -811,6 +832,7 @@ private static final long serialVersionUID = 0L;
      * The list of policy topics that should not cause a PolicyFindingError to
      * be reported. This field is currently only compatible with Enhanced Text Ad.
      * It corresponds to the PolicyTopicEntry.topic field.
+     *
      * Resources violating these policies will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -827,6 +849,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureIgnorablePolicyTopicsIsMutable();
       ignorablePolicyTopics_.add(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -849,6 +872,7 @@ private static final long serialVersionUID = 0L;
      * PolicyViolationError to be reported. Not all policy violations are
      * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
+     *
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -870,6 +894,7 @@ private static final long serialVersionUID = 0L;
      * PolicyViolationError to be reported. Not all policy violations are
      * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
+     *
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -891,6 +916,7 @@ private static final long serialVersionUID = 0L;
      * PolicyViolationError to be reported. Not all policy violations are
      * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
+     *
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -912,6 +938,7 @@ private static final long serialVersionUID = 0L;
      * PolicyViolationError to be reported. Not all policy violations are
      * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
+     *
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -940,6 +967,7 @@ private static final long serialVersionUID = 0L;
      * PolicyViolationError to be reported. Not all policy violations are
      * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
+     *
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -965,6 +993,7 @@ private static final long serialVersionUID = 0L;
      * PolicyViolationError to be reported. Not all policy violations are
      * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
+     *
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -992,6 +1021,7 @@ private static final long serialVersionUID = 0L;
      * PolicyViolationError to be reported. Not all policy violations are
      * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
+     *
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -1020,6 +1050,7 @@ private static final long serialVersionUID = 0L;
      * PolicyViolationError to be reported. Not all policy violations are
      * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
+     *
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -1045,6 +1076,7 @@ private static final long serialVersionUID = 0L;
      * PolicyViolationError to be reported. Not all policy violations are
      * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
+     *
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -1070,6 +1102,7 @@ private static final long serialVersionUID = 0L;
      * PolicyViolationError to be reported. Not all policy violations are
      * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
+     *
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -1096,6 +1129,7 @@ private static final long serialVersionUID = 0L;
      * PolicyViolationError to be reported. Not all policy violations are
      * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
+     *
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -1120,6 +1154,7 @@ private static final long serialVersionUID = 0L;
      * PolicyViolationError to be reported. Not all policy violations are
      * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
+     *
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -1144,6 +1179,7 @@ private static final long serialVersionUID = 0L;
      * PolicyViolationError to be reported. Not all policy violations are
      * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
+     *
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -1162,6 +1198,7 @@ private static final long serialVersionUID = 0L;
      * PolicyViolationError to be reported. Not all policy violations are
      * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
+     *
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -1183,6 +1220,7 @@ private static final long serialVersionUID = 0L;
      * PolicyViolationError to be reported. Not all policy violations are
      * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
+     *
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -1205,6 +1243,7 @@ private static final long serialVersionUID = 0L;
      * PolicyViolationError to be reported. Not all policy violations are
      * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
+     *
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -1223,6 +1262,7 @@ private static final long serialVersionUID = 0L;
      * PolicyViolationError to be reported. Not all policy violations are
      * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
+     *
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser
@@ -1242,6 +1282,7 @@ private static final long serialVersionUID = 0L;
      * PolicyViolationError to be reported. Not all policy violations are
      * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
+     *
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
      * policies, re-review of the resource, or a change in advertiser

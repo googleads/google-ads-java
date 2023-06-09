@@ -98,6 +98,7 @@ public interface AdGroupAssetOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed ad group asset is
    * expected, in this format:
+   *
    * `customers/{customer_id}/adGroupAssets/{ad_group_id}~{asset_id}~{field_type}`
    * </pre>
    *
@@ -109,6 +110,7 @@ public interface AdGroupAssetOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed ad group asset is
    * expected, in this format:
+   *
    * `customers/{customer_id}/adGroupAssets/{ad_group_id}~{asset_id}~{field_type}`
    * </pre>
    *
@@ -120,6 +122,7 @@ public interface AdGroupAssetOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed ad group asset is
    * expected, in this format:
+   *
    * `customers/{customer_id}/adGroupAssets/{ad_group_id}~{asset_id}~{field_type}`
    * </pre>
    *
@@ -129,5 +132,5 @@ public interface AdGroupAssetOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v13.services.AdGroupAssetOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v13.services.AdGroupAssetOperation.OperationCase getOperationCase();
 }

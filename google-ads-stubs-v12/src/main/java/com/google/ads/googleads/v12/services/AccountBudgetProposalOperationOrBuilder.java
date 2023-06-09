@@ -12,6 +12,7 @@ public interface AccountBudgetProposalOperationOrBuilder extends
    * FieldMask that determines which budget fields are modified.  While budgets
    * may be modified, proposals that propose such modifications are final.
    * Therefore, update operations are not supported for proposals.
+   *
    * Proposals that modify budgets have the 'update' proposal type.  Specifying
    * a mask for any other proposal type is considered an error.
    * </pre>
@@ -25,6 +26,7 @@ public interface AccountBudgetProposalOperationOrBuilder extends
    * FieldMask that determines which budget fields are modified.  While budgets
    * may be modified, proposals that propose such modifications are final.
    * Therefore, update operations are not supported for proposals.
+   *
    * Proposals that modify budgets have the 'update' proposal type.  Specifying
    * a mask for any other proposal type is considered an error.
    * </pre>
@@ -38,6 +40,7 @@ public interface AccountBudgetProposalOperationOrBuilder extends
    * FieldMask that determines which budget fields are modified.  While budgets
    * may be modified, proposals that propose such modifications are final.
    * Therefore, update operations are not supported for proposals.
+   *
    * Proposals that modify budgets have the 'update' proposal type.  Specifying
    * a mask for any other proposal type is considered an error.
    * </pre>
@@ -86,6 +89,7 @@ public interface AccountBudgetProposalOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed proposal is expected,
    * in this format:
+   *
    * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
    * A request may be cancelled iff it is pending.
    * </pre>
@@ -98,6 +102,7 @@ public interface AccountBudgetProposalOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed proposal is expected,
    * in this format:
+   *
    * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
    * A request may be cancelled iff it is pending.
    * </pre>
@@ -110,6 +115,7 @@ public interface AccountBudgetProposalOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed proposal is expected,
    * in this format:
+   *
    * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
    * A request may be cancelled iff it is pending.
    * </pre>
@@ -120,5 +126,5 @@ public interface AccountBudgetProposalOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v12.services.AccountBudgetProposalOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v12.services.AccountBudgetProposalOperation.OperationCase getOperationCase();
 }

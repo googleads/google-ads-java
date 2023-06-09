@@ -52,44 +52,44 @@ public final class AdGroupCustomizerServiceProto {
       "nnotations.proto\032\027google/api/client.prot" +
       "o\032\037google/api/field_behavior.proto\032\031goog" +
       "le/api/resource.proto\032\027google/rpc/status" +
-      ".proto\"\257\002\n\037MutateAdGroupCustomizersReque" +
-      "st\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022V\n\noperatio" +
-      "ns\030\002 \003(\0132=.google.ads.googleads.v13.serv" +
-      "ices.AdGroupCustomizerOperationB\003\340A\002\022\027\n\017" +
-      "partial_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004" +
-      " \001(\010\022j\n\025response_content_type\030\005 \001(\0162K.go" +
-      "ogle.ads.googleads.v13.enums.ResponseCon" +
-      "tentTypeEnum.ResponseContentType\"\265\001\n\032AdG" +
-      "roupCustomizerOperation\022G\n\006create\030\001 \001(\0132" +
-      "5.google.ads.googleads.v13.resources.AdG" +
-      "roupCustomizerH\000\022A\n\006remove\030\002 \001(\tB/\372A,\n*g" +
-      "oogleads.googleapis.com/AdGroupCustomize" +
-      "rH\000B\013\n\toperation\"\250\001\n MutateAdGroupCustom" +
-      "izersResponse\022Q\n\007results\030\001 \003(\0132@.google." +
-      "ads.googleads.v13.services.MutateAdGroup" +
-      "CustomizerResult\0221\n\025partial_failure_erro" +
-      "r\030\002 \001(\0132\022.google.rpc.Status\"\273\001\n\035MutateAd" +
-      "GroupCustomizerResult\022F\n\rresource_name\030\001" +
-      " \001(\tB/\372A,\n*googleads.googleapis.com/AdGr" +
-      "oupCustomizer\022R\n\023ad_group_customizer\030\002 \001" +
-      "(\01325.google.ads.googleads.v13.resources." +
-      "AdGroupCustomizer2\345\002\n\030AdGroupCustomizerS" +
-      "ervice\022\201\002\n\030MutateAdGroupCustomizers\022B.go" +
-      "ogle.ads.googleads.v13.services.MutateAd" +
-      "GroupCustomizersRequest\032C.google.ads.goo" +
-      "gleads.v13.services.MutateAdGroupCustomi" +
-      "zersResponse\"\\\202\323\344\223\002=\"8/v13/customers/{cu" +
-      "stomer_id=*}/adGroupCustomizers:mutate:\001" +
-      "*\332A\026customer_id,operations\032E\312A\030googleads" +
-      ".googleapis.com\322A\'https://www.googleapis" +
-      ".com/auth/adwordsB\211\002\n%com.google.ads.goo" +
-      "gleads.v13.servicesB\035AdGroupCustomizerSe" +
-      "rviceProtoP\001ZIgoogle.golang.org/genproto" +
-      "/googleapis/ads/googleads/v13/services;s" +
-      "ervices\242\002\003GAA\252\002!Google.Ads.GoogleAds.V13" +
-      ".Services\312\002!Google\\Ads\\GoogleAds\\V13\\Ser" +
-      "vices\352\002%Google::Ads::GoogleAds::V13::Ser" +
-      "vicesb\006proto3"
+      ".proto\"\261\002\n\037MutateAdGroupCustomizersReque" +
+      "st\022\031\n\013customer_id\030\001 \001(\tB\004\342A\001\002\022W\n\noperati" +
+      "ons\030\002 \003(\0132=.google.ads.googleads.v13.ser" +
+      "vices.AdGroupCustomizerOperationB\004\342A\001\002\022\027" +
+      "\n\017partial_failure\030\003 \001(\010\022\025\n\rvalidate_only" +
+      "\030\004 \001(\010\022j\n\025response_content_type\030\005 \001(\0162K." +
+      "google.ads.googleads.v13.enums.ResponseC" +
+      "ontentTypeEnum.ResponseContentType\"\265\001\n\032A" +
+      "dGroupCustomizerOperation\022G\n\006create\030\001 \001(" +
+      "\01325.google.ads.googleads.v13.resources.A" +
+      "dGroupCustomizerH\000\022A\n\006remove\030\002 \001(\tB/\372A,\n" +
+      "*googleads.googleapis.com/AdGroupCustomi" +
+      "zerH\000B\013\n\toperation\"\250\001\n MutateAdGroupCust" +
+      "omizersResponse\022Q\n\007results\030\001 \003(\0132@.googl" +
+      "e.ads.googleads.v13.services.MutateAdGro" +
+      "upCustomizerResult\0221\n\025partial_failure_er" +
+      "ror\030\002 \001(\0132\022.google.rpc.Status\"\273\001\n\035Mutate" +
+      "AdGroupCustomizerResult\022F\n\rresource_name" +
+      "\030\001 \001(\tB/\372A,\n*googleads.googleapis.com/Ad" +
+      "GroupCustomizer\022R\n\023ad_group_customizer\030\002" +
+      " \001(\01325.google.ads.googleads.v13.resource" +
+      "s.AdGroupCustomizer2\345\002\n\030AdGroupCustomize" +
+      "rService\022\201\002\n\030MutateAdGroupCustomizers\022B." +
+      "google.ads.googleads.v13.services.Mutate" +
+      "AdGroupCustomizersRequest\032C.google.ads.g" +
+      "oogleads.v13.services.MutateAdGroupCusto" +
+      "mizersResponse\"\\\332A\026customer_id,operation" +
+      "s\202\323\344\223\002=\"8/v13/customers/{customer_id=*}/" +
+      "adGroupCustomizers:mutate:\001*\032E\312A\030googlea" +
+      "ds.googleapis.com\322A\'https://www.googleap" +
+      "is.com/auth/adwordsB\211\002\n%com.google.ads.g" +
+      "oogleads.v13.servicesB\035AdGroupCustomizer" +
+      "ServiceProtoP\001ZIgoogle.golang.org/genpro" +
+      "to/googleapis/ads/googleads/v13/services" +
+      ";services\242\002\003GAA\252\002!Google.Ads.GoogleAds.V" +
+      "13.Services\312\002!Google\\Ads\\GoogleAds\\V13\\S" +
+      "ervices\352\002%Google::Ads::GoogleAds::V13::S" +
+      "ervicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

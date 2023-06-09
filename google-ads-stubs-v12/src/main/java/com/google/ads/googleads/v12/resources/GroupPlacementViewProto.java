@@ -33,25 +33,25 @@ public final class GroupPlacementViewProto {
       "leads.v12.resources\0323google/ads/googlead" +
       "s/v12/enums/placement_type.proto\032\037google" +
       "/api/field_behavior.proto\032\031google/api/re" +
-      "source.proto\"\307\003\n\022GroupPlacementView\022J\n\rr" +
-      "esource_name\030\001 \001(\tB3\340A\003\372A-\n+googleads.go" +
-      "ogleapis.com/GroupPlacementView\022\033\n\tplace" +
-      "ment\030\006 \001(\tB\003\340A\003H\000\210\001\001\022\036\n\014display_name\030\007 \001" +
-      "(\tB\003\340A\003H\001\210\001\001\022\034\n\ntarget_url\030\010 \001(\tB\003\340A\003H\002\210" +
-      "\001\001\022\\\n\016placement_type\030\005 \001(\0162?.google.ads." +
-      "googleads.v12.enums.PlacementTypeEnum.Pl" +
-      "acementTypeB\003\340A\003:~\352A{\n+googleads.googlea" +
-      "pis.com/GroupPlacementView\022Lcustomers/{c" +
-      "ustomer_id}/groupPlacementViews/{ad_grou" +
-      "p_id}~{base64_placement}B\014\n\n_placementB\017" +
-      "\n\r_display_nameB\r\n\013_target_urlB\211\002\n&com.g" +
-      "oogle.ads.googleads.v12.resourcesB\027Group" +
-      "PlacementViewProtoP\001ZKgoogle.golang.org/" +
-      "genproto/googleapis/ads/googleads/v12/re" +
-      "sources;resources\242\002\003GAA\252\002\"Google.Ads.Goo" +
-      "gleAds.V12.Resources\312\002\"Google\\Ads\\Google" +
-      "Ads\\V12\\Resources\352\002&Google::Ads::GoogleA" +
-      "ds::V12::Resourcesb\006proto3"
+      "source.proto\"\314\003\n\022GroupPlacementView\022K\n\rr" +
+      "esource_name\030\001 \001(\tB4\342A\001\003\372A-\n+googleads.g" +
+      "oogleapis.com/GroupPlacementView\022\034\n\tplac" +
+      "ement\030\006 \001(\tB\004\342A\001\003H\000\210\001\001\022\037\n\014display_name\030\007" +
+      " \001(\tB\004\342A\001\003H\001\210\001\001\022\035\n\ntarget_url\030\010 \001(\tB\004\342A\001" +
+      "\003H\002\210\001\001\022]\n\016placement_type\030\005 \001(\0162?.google." +
+      "ads.googleads.v12.enums.PlacementTypeEnu" +
+      "m.PlacementTypeB\004\342A\001\003:~\352A{\n+googleads.go" +
+      "ogleapis.com/GroupPlacementView\022Lcustome" +
+      "rs/{customer_id}/groupPlacementViews/{ad" +
+      "_group_id}~{base64_placement}B\014\n\n_placem" +
+      "entB\017\n\r_display_nameB\r\n\013_target_urlB\211\002\n&" +
+      "com.google.ads.googleads.v12.resourcesB\027" +
+      "GroupPlacementViewProtoP\001ZKgoogle.golang" +
+      ".org/genproto/googleapis/ads/googleads/v" +
+      "12/resources;resources\242\002\003GAA\252\002\"Google.Ad" +
+      "s.GoogleAds.V12.Resources\312\002\"Google\\Ads\\G" +
+      "oogleAds\\V12\\Resources\352\002&Google::Ads::Go" +
+      "ogleAds::V12::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

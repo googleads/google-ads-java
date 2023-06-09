@@ -32,21 +32,21 @@ public final class ThirdPartyAppAnalyticsLinkProto {
       "rd_party_app_analytics_link.proto\022\"googl" +
       "e.ads.googleads.v12.resources\032\037google/ap" +
       "i/field_behavior.proto\032\031google/api/resou" +
-      "rce.proto\"\256\002\n\032ThirdPartyAppAnalyticsLink" +
-      "\022R\n\rresource_name\030\001 \001(\tB;\340A\005\372A5\n3googlea" +
-      "ds.googleapis.com/ThirdPartyAppAnalytics" +
-      "Link\022#\n\021shareable_link_id\030\003 \001(\tB\003\340A\003H\000\210\001" +
-      "\001:\200\001\352A}\n3googleads.googleapis.com/ThirdP" +
-      "artyAppAnalyticsLink\022Fcustomers/{custome" +
-      "r_id}/thirdPartyAppAnalyticsLinks/{custo" +
-      "mer_link_id}B\024\n\022_shareable_link_idB\221\002\n&c" +
-      "om.google.ads.googleads.v12.resourcesB\037T" +
-      "hirdPartyAppAnalyticsLinkProtoP\001ZKgoogle" +
-      ".golang.org/genproto/googleapis/ads/goog" +
-      "leads/v12/resources;resources\242\002\003GAA\252\002\"Go" +
-      "ogle.Ads.GoogleAds.V12.Resources\312\002\"Googl" +
-      "e\\Ads\\GoogleAds\\V12\\Resources\352\002&Google::" +
-      "Ads::GoogleAds::V12::Resourcesb\006proto3"
+      "rce.proto\"\260\002\n\032ThirdPartyAppAnalyticsLink" +
+      "\022S\n\rresource_name\030\001 \001(\tB<\342A\001\005\372A5\n3google" +
+      "ads.googleapis.com/ThirdPartyAppAnalytic" +
+      "sLink\022$\n\021shareable_link_id\030\003 \001(\tB\004\342A\001\003H\000" +
+      "\210\001\001:\200\001\352A}\n3googleads.googleapis.com/Thir" +
+      "dPartyAppAnalyticsLink\022Fcustomers/{custo" +
+      "mer_id}/thirdPartyAppAnalyticsLinks/{cus" +
+      "tomer_link_id}B\024\n\022_shareable_link_idB\221\002\n" +
+      "&com.google.ads.googleads.v12.resourcesB" +
+      "\037ThirdPartyAppAnalyticsLinkProtoP\001ZKgoog" +
+      "le.golang.org/genproto/googleapis/ads/go" +
+      "ogleads/v12/resources;resources\242\002\003GAA\252\002\"" +
+      "Google.Ads.GoogleAds.V12.Resources\312\002\"Goo" +
+      "gle\\Ads\\GoogleAds\\V12\\Resources\352\002&Google" +
+      "::Ads::GoogleAds::V12::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

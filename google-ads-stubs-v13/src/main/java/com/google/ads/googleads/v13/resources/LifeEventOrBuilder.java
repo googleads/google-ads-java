@@ -11,6 +11,7 @@ public interface LifeEventOrBuilder extends
    * <pre>
    * Output only. The resource name of the life event.
    * Life event resource names have the form:
+   *
    * `customers/{customer_id}/lifeEvents/{life_event_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface LifeEventOrBuilder extends
    * <pre>
    * Output only. The resource name of the life event.
    * Life event resource names have the form:
+   *
    * `customers/{customer_id}/lifeEvents/{life_event_id}`
    * </pre>
    *

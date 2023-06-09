@@ -32,11 +32,6 @@ private static final long serialVersionUID = 0L;
     return new CriterionCategoryLocaleAvailability();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.common.CriterionCategoryAvailabilityProto.internal_static_google_ads_googleads_v12_common_CriterionCategoryLocaleAvailability_descriptor;
@@ -88,7 +83,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object countryCode_ = "";
   /**
    * <pre>
-   * Code of the country.
+   * The ISO-3166-1 alpha-2 country code associated with the category.
    * </pre>
    *
    * <code>optional string country_code = 4;</code>
@@ -100,7 +95,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Code of the country.
+   * The ISO-3166-1 alpha-2 country code associated with the category.
    * </pre>
    *
    * <code>optional string country_code = 4;</code>
@@ -121,7 +116,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Code of the country.
+   * The ISO-3166-1 alpha-2 country code associated with the category.
    * </pre>
    *
    * <code>optional string country_code = 4;</code>
@@ -147,7 +142,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object languageCode_ = "";
   /**
    * <pre>
-   * Code of the language.
+   * ISO 639-1 code of the language associated with the category.
    * </pre>
    *
    * <code>optional string language_code = 5;</code>
@@ -159,7 +154,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Code of the language.
+   * ISO 639-1 code of the language associated with the category.
    * </pre>
    *
    * <code>optional string language_code = 5;</code>
@@ -180,7 +175,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Code of the language.
+   * ISO 639-1 code of the language associated with the category.
    * </pre>
    *
    * <code>optional string language_code = 5;</code>
@@ -339,11 +334,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.common.CriterionCategoryLocaleAvailability parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.common.CriterionCategoryLocaleAvailability parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -680,7 +677,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object countryCode_ = "";
     /**
      * <pre>
-     * Code of the country.
+     * The ISO-3166-1 alpha-2 country code associated with the category.
      * </pre>
      *
      * <code>optional string country_code = 4;</code>
@@ -691,7 +688,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Code of the country.
+     * The ISO-3166-1 alpha-2 country code associated with the category.
      * </pre>
      *
      * <code>optional string country_code = 4;</code>
@@ -711,7 +708,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Code of the country.
+     * The ISO-3166-1 alpha-2 country code associated with the category.
      * </pre>
      *
      * <code>optional string country_code = 4;</code>
@@ -732,7 +729,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Code of the country.
+     * The ISO-3166-1 alpha-2 country code associated with the category.
      * </pre>
      *
      * <code>optional string country_code = 4;</code>
@@ -749,7 +746,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Code of the country.
+     * The ISO-3166-1 alpha-2 country code associated with the category.
      * </pre>
      *
      * <code>optional string country_code = 4;</code>
@@ -763,7 +760,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Code of the country.
+     * The ISO-3166-1 alpha-2 country code associated with the category.
      * </pre>
      *
      * <code>optional string country_code = 4;</code>
@@ -783,7 +780,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object languageCode_ = "";
     /**
      * <pre>
-     * Code of the language.
+     * ISO 639-1 code of the language associated with the category.
      * </pre>
      *
      * <code>optional string language_code = 5;</code>
@@ -794,7 +791,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Code of the language.
+     * ISO 639-1 code of the language associated with the category.
      * </pre>
      *
      * <code>optional string language_code = 5;</code>
@@ -814,7 +811,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Code of the language.
+     * ISO 639-1 code of the language associated with the category.
      * </pre>
      *
      * <code>optional string language_code = 5;</code>
@@ -835,7 +832,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Code of the language.
+     * ISO 639-1 code of the language associated with the category.
      * </pre>
      *
      * <code>optional string language_code = 5;</code>
@@ -852,7 +849,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Code of the language.
+     * ISO 639-1 code of the language associated with the category.
      * </pre>
      *
      * <code>optional string language_code = 5;</code>
@@ -866,7 +863,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Code of the language.
+     * ISO 639-1 code of the language associated with the category.
      * </pre>
      *
      * <code>optional string language_code = 5;</code>

@@ -6,6 +6,7 @@ package com.google.ads.googleads.v12.resources;
 /**
  * <pre>
  * Represents a bidding data exclusion.
+ *
  * See "About data exclusions" at
  * https://support.google.com/google-ads/answer/10370710.
  * </pre>
@@ -30,7 +31,8 @@ private static final long serialVersionUID = 0L;
     name_ = "";
     description_ = "";
     devices_ = java.util.Collections.emptyList();
-    campaigns_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    campaigns_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     advertisingChannelTypes_ = java.util.Collections.emptyList();
   }
 
@@ -41,11 +43,6 @@ private static final long serialVersionUID = 0L;
     return new BiddingDataExclusion();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.resources.BiddingDataExclusionProto.internal_static_google_ads_googleads_v12_resources_BiddingDataExclusion_descriptor;
@@ -66,6 +63,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the data exclusion.
    * Data exclusion resource names have the form:
+   *
    * `customers/{customer_id}/biddingDataExclusions/{data_exclusion_id}`
    * </pre>
    *
@@ -89,6 +87,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the data exclusion.
    * Data exclusion resource names have the form:
+   *
    * `customers/{customer_id}/biddingDataExclusions/{data_exclusion_id}`
    * </pre>
    *
@@ -184,6 +183,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Required. The inclusive start time of the data exclusion in yyyy-MM-dd
    * HH:mm:ss format.
+   *
    * A data exclusion is backward looking and should be used for events that
    * start in the past and end either in the past or future.
    * </pre>
@@ -208,6 +208,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Required. The inclusive start time of the data exclusion in yyyy-MM-dd
    * HH:mm:ss format.
+   *
    * A data exclusion is backward looking and should be used for events that
    * start in the past and end either in the past or future.
    * </pre>
@@ -237,6 +238,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Required. The exclusive end time of the data exclusion in yyyy-MM-dd
    * HH:mm:ss format.
+   *
    * The length of [start_date_time, end_date_time) interval must be
    * within (0, 14 days].
    * </pre>
@@ -261,6 +263,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Required. The exclusive end time of the data exclusion in yyyy-MM-dd
    * HH:mm:ss format.
+   *
    * The length of [start_date_time, end_date_time) interval must be
    * within (0, 14 days].
    * </pre>
@@ -471,7 +474,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int CAMPAIGNS_FIELD_NUMBER = 10;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList campaigns_;
+  private com.google.protobuf.LazyStringArrayList campaigns_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * The data exclusion will apply to the campaigns listed when the scope of
@@ -886,11 +890,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.resources.BiddingDataExclusion parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.resources.BiddingDataExclusion parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -935,6 +941,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Represents a bidding data exclusion.
+   *
    * See "About data exclusions" at
    * https://support.google.com/google-ads/answer/10370710.
    * </pre>
@@ -982,8 +989,8 @@ private static final long serialVersionUID = 0L;
       description_ = "";
       devices_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000100);
-      campaigns_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000200);
+      campaigns_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       advertisingChannelTypes_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000400);
       return this;
@@ -1024,11 +1031,6 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000100);
       }
       result.devices_ = devices_;
-      if (((bitField0_ & 0x00000200) != 0)) {
-        campaigns_ = campaigns_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000200);
-      }
-      result.campaigns_ = campaigns_;
       if (((bitField0_ & 0x00000400) != 0)) {
         advertisingChannelTypes_ = java.util.Collections.unmodifiableList(advertisingChannelTypes_);
         bitField0_ = (bitField0_ & ~0x00000400);
@@ -1061,6 +1063,10 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.description_ = description_;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        campaigns_.makeImmutable();
+        result.campaigns_ = campaigns_;
       }
     }
 
@@ -1155,7 +1161,7 @@ private static final long serialVersionUID = 0L;
       if (!other.campaigns_.isEmpty()) {
         if (campaigns_.isEmpty()) {
           campaigns_ = other.campaigns_;
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ |= 0x00000200;
         } else {
           ensureCampaignsIsMutable();
           campaigns_.addAll(other.campaigns_);
@@ -1300,6 +1306,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the data exclusion.
      * Data exclusion resource names have the form:
+     *
      * `customers/{customer_id}/biddingDataExclusions/{data_exclusion_id}`
      * </pre>
      *
@@ -1322,6 +1329,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the data exclusion.
      * Data exclusion resource names have the form:
+     *
      * `customers/{customer_id}/biddingDataExclusions/{data_exclusion_id}`
      * </pre>
      *
@@ -1345,6 +1353,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the data exclusion.
      * Data exclusion resource names have the form:
+     *
      * `customers/{customer_id}/biddingDataExclusions/{data_exclusion_id}`
      * </pre>
      *
@@ -1364,6 +1373,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the data exclusion.
      * Data exclusion resource names have the form:
+     *
      * `customers/{customer_id}/biddingDataExclusions/{data_exclusion_id}`
      * </pre>
      *
@@ -1380,6 +1390,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the data exclusion.
      * Data exclusion resource names have the form:
+     *
      * `customers/{customer_id}/biddingDataExclusions/{data_exclusion_id}`
      * </pre>
      *
@@ -1420,7 +1431,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDataExclusionId(long value) {
-      
+
       dataExclusionId_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -1592,6 +1603,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Required. The inclusive start time of the data exclusion in yyyy-MM-dd
      * HH:mm:ss format.
+     *
      * A data exclusion is backward looking and should be used for events that
      * start in the past and end either in the past or future.
      * </pre>
@@ -1615,6 +1627,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Required. The inclusive start time of the data exclusion in yyyy-MM-dd
      * HH:mm:ss format.
+     *
      * A data exclusion is backward looking and should be used for events that
      * start in the past and end either in the past or future.
      * </pre>
@@ -1639,6 +1652,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Required. The inclusive start time of the data exclusion in yyyy-MM-dd
      * HH:mm:ss format.
+     *
      * A data exclusion is backward looking and should be used for events that
      * start in the past and end either in the past or future.
      * </pre>
@@ -1659,6 +1673,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Required. The inclusive start time of the data exclusion in yyyy-MM-dd
      * HH:mm:ss format.
+     *
      * A data exclusion is backward looking and should be used for events that
      * start in the past and end either in the past or future.
      * </pre>
@@ -1676,6 +1691,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Required. The inclusive start time of the data exclusion in yyyy-MM-dd
      * HH:mm:ss format.
+     *
      * A data exclusion is backward looking and should be used for events that
      * start in the past and end either in the past or future.
      * </pre>
@@ -1699,6 +1715,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Required. The exclusive end time of the data exclusion in yyyy-MM-dd
      * HH:mm:ss format.
+     *
      * The length of [start_date_time, end_date_time) interval must be
      * within (0, 14 days].
      * </pre>
@@ -1722,6 +1739,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Required. The exclusive end time of the data exclusion in yyyy-MM-dd
      * HH:mm:ss format.
+     *
      * The length of [start_date_time, end_date_time) interval must be
      * within (0, 14 days].
      * </pre>
@@ -1746,6 +1764,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Required. The exclusive end time of the data exclusion in yyyy-MM-dd
      * HH:mm:ss format.
+     *
      * The length of [start_date_time, end_date_time) interval must be
      * within (0, 14 days].
      * </pre>
@@ -1766,6 +1785,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Required. The exclusive end time of the data exclusion in yyyy-MM-dd
      * HH:mm:ss format.
+     *
      * The length of [start_date_time, end_date_time) interval must be
      * within (0, 14 days].
      * </pre>
@@ -1783,6 +1803,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Required. The exclusive end time of the data exclusion in yyyy-MM-dd
      * HH:mm:ss format.
+     *
      * The length of [start_date_time, end_date_time) interval must be
      * within (0, 14 days].
      * </pre>
@@ -2207,12 +2228,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.LazyStringList campaigns_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList campaigns_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureCampaignsIsMutable() {
-      if (!((bitField0_ & 0x00000200) != 0)) {
+      if (!campaigns_.isModifiable()) {
         campaigns_ = new com.google.protobuf.LazyStringArrayList(campaigns_);
-        bitField0_ |= 0x00000200;
-       }
+      }
+      bitField0_ |= 0x00000200;
     }
     /**
      * <pre>
@@ -2228,7 +2250,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getCampaignsList() {
-      return campaigns_.getUnmodifiableView();
+      campaigns_.makeImmutable();
+      return campaigns_;
     }
     /**
      * <pre>
@@ -2297,6 +2320,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureCampaignsIsMutable();
       campaigns_.set(index, value);
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2318,6 +2342,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureCampaignsIsMutable();
       campaigns_.add(value);
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2339,6 +2364,7 @@ private static final long serialVersionUID = 0L;
       ensureCampaignsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, campaigns_);
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2355,8 +2381,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCampaigns() {
-      campaigns_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000200);
+      campaigns_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000200);;
       onChanged();
       return this;
     }
@@ -2379,6 +2406,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureCampaignsIsMutable();
       campaigns_.add(value);
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }

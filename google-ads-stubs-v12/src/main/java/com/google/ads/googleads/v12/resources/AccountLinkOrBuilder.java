@@ -225,5 +225,5 @@ public interface AccountLinkOrBuilder extends
    */
   com.google.ads.googleads.v12.resources.AdvertisingPartnerLinkIdentifierOrBuilder getAdvertisingPartnerOrBuilder();
 
-  public com.google.ads.googleads.v12.resources.AccountLink.LinkedAccountCase getLinkedAccountCase();
+  com.google.ads.googleads.v12.resources.AccountLink.LinkedAccountCase getLinkedAccountCase();
 }

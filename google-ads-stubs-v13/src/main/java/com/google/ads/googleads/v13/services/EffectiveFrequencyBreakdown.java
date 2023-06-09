@@ -30,11 +30,6 @@ private static final long serialVersionUID = 0L;
     return new EffectiveFrequencyBreakdown();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.services.ReachPlanServiceProto.internal_static_google_ads_googleads_v13_services_EffectiveFrequencyBreakdown_descriptor;
@@ -70,6 +65,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The number of unique people reached at least effective_frequency times that
    * exactly matches the Targeting.
+   *
    * Note that a minimum number of unique people must be reached in order for
    * data to be reported. If the minimum number is not met, the on_target_reach
    * value will be rounded to 0.
@@ -89,6 +85,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Total number of unique people reached at least effective_frequency times.
    * This includes people that may fall outside the specified Targeting.
+   *
    * Note that a minimum number of unique people must be reached in order for
    * data to be reported. If the minimum number is not met, the total_reach
    * value will be rounded to 0.
@@ -327,11 +324,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.services.EffectiveFrequencyBreakdown parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.services.EffectiveFrequencyBreakdown parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -621,7 +620,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEffectiveFrequency(int value) {
-      
+
       effectiveFrequency_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
@@ -647,6 +646,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The number of unique people reached at least effective_frequency times that
      * exactly matches the Targeting.
+     *
      * Note that a minimum number of unique people must be reached in order for
      * data to be reported. If the minimum number is not met, the on_target_reach
      * value will be rounded to 0.
@@ -663,6 +663,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The number of unique people reached at least effective_frequency times that
      * exactly matches the Targeting.
+     *
      * Note that a minimum number of unique people must be reached in order for
      * data to be reported. If the minimum number is not met, the on_target_reach
      * value will be rounded to 0.
@@ -673,7 +674,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOnTargetReach(long value) {
-      
+
       onTargetReach_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -683,6 +684,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The number of unique people reached at least effective_frequency times that
      * exactly matches the Targeting.
+     *
      * Note that a minimum number of unique people must be reached in order for
      * data to be reported. If the minimum number is not met, the on_target_reach
      * value will be rounded to 0.
@@ -703,6 +705,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Total number of unique people reached at least effective_frequency times.
      * This includes people that may fall outside the specified Targeting.
+     *
      * Note that a minimum number of unique people must be reached in order for
      * data to be reported. If the minimum number is not met, the total_reach
      * value will be rounded to 0.
@@ -719,6 +722,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Total number of unique people reached at least effective_frequency times.
      * This includes people that may fall outside the specified Targeting.
+     *
      * Note that a minimum number of unique people must be reached in order for
      * data to be reported. If the minimum number is not met, the total_reach
      * value will be rounded to 0.
@@ -729,7 +733,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalReach(long value) {
-      
+
       totalReach_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
@@ -739,6 +743,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Total number of unique people reached at least effective_frequency times.
      * This includes people that may fall outside the specified Targeting.
+     *
      * Note that a minimum number of unique people must be reached in order for
      * data to be reported. If the minimum number is not met, the total_reach
      * value will be rounded to 0.
@@ -792,7 +797,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEffectiveCoviewReach(long value) {
-      
+
       effectiveCoviewReach_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
@@ -852,7 +857,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOnTargetEffectiveCoviewReach(long value) {
-      
+
       onTargetEffectiveCoviewReach_ = value;
       bitField0_ |= 0x00000010;
       onChanged();

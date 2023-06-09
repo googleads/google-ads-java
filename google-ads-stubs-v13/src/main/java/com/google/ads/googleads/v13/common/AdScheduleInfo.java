@@ -6,8 +6,10 @@ package com.google.ads.googleads.v13.common;
 /**
  * <pre>
  * Represents an AdSchedule criterion.
+ *
  * AdSchedule is specified as the day of the week and a time interval
  * within which ads will be shown.
+ *
  * No more than six AdSchedules can be added for the same day.
  * </pre>
  *
@@ -35,11 +37,6 @@ private static final long serialVersionUID = 0L;
     return new AdScheduleInfo();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.common.CriteriaProto.internal_static_google_ads_googleads_v13_common_AdScheduleInfo_descriptor;
@@ -59,6 +56,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Minutes after the start hour at which this schedule starts.
+   *
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -72,6 +70,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Minutes after the start hour at which this schedule starts.
+   *
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -90,6 +89,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Minutes after the end hour at which this schedule ends. The schedule is
    * exclusive of the end minute.
+   *
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -104,6 +104,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Minutes after the end hour at which this schedule ends. The schedule is
    * exclusive of the end minute.
+   *
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -122,6 +123,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Starting hour in 24 hour time.
    * This field must be between 0 and 23, inclusive.
+   *
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -137,6 +139,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Starting hour in 24 hour time.
    * This field must be between 0 and 23, inclusive.
+   *
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -155,6 +158,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Ending hour in 24 hour time; 24 signifies end of the day.
    * This field must be between 0 and 24, inclusive.
+   *
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -170,6 +174,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Ending hour in 24 hour time; 24 signifies end of the day.
    * This field must be between 0 and 24, inclusive.
+   *
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -187,6 +192,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Day of the week the schedule applies to.
+   *
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -200,6 +206,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Day of the week the schedule applies to.
+   *
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -372,11 +379,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.common.AdScheduleInfo parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.common.AdScheduleInfo parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -421,8 +430,10 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Represents an AdSchedule criterion.
+   *
    * AdSchedule is specified as the day of the week and a time interval
    * within which ads will be shown.
+   *
    * No more than six AdSchedules can be added for the same day.
    * </pre>
    *
@@ -649,6 +660,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Minutes after the start hour at which this schedule starts.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -662,6 +674,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Minutes after the start hour at which this schedule starts.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -679,6 +692,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Minutes after the start hour at which this schedule starts.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -694,6 +708,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Minutes after the start hour at which this schedule starts.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -714,6 +729,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Minutes after the start hour at which this schedule starts.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -733,6 +749,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Minutes after the end hour at which this schedule ends. The schedule is
      * exclusive of the end minute.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -747,6 +764,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Minutes after the end hour at which this schedule ends. The schedule is
      * exclusive of the end minute.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -765,6 +783,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Minutes after the end hour at which this schedule ends. The schedule is
      * exclusive of the end minute.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -781,6 +800,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Minutes after the end hour at which this schedule ends. The schedule is
      * exclusive of the end minute.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -802,6 +822,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Minutes after the end hour at which this schedule ends. The schedule is
      * exclusive of the end minute.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -821,6 +842,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Starting hour in 24 hour time.
      * This field must be between 0 and 23, inclusive.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -836,6 +858,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Starting hour in 24 hour time.
      * This field must be between 0 and 23, inclusive.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -851,6 +874,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Starting hour in 24 hour time.
      * This field must be between 0 and 23, inclusive.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -860,7 +884,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setStartHour(int value) {
-      
+
       startHour_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
@@ -870,6 +894,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Starting hour in 24 hour time.
      * This field must be between 0 and 23, inclusive.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -889,6 +914,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Ending hour in 24 hour time; 24 signifies end of the day.
      * This field must be between 0 and 24, inclusive.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -904,6 +930,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Ending hour in 24 hour time; 24 signifies end of the day.
      * This field must be between 0 and 24, inclusive.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -919,6 +946,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Ending hour in 24 hour time; 24 signifies end of the day.
      * This field must be between 0 and 24, inclusive.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -928,7 +956,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEndHour(int value) {
-      
+
       endHour_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
@@ -938,6 +966,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Ending hour in 24 hour time; 24 signifies end of the day.
      * This field must be between 0 and 24, inclusive.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -956,6 +985,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Day of the week the schedule applies to.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -969,6 +999,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Day of the week the schedule applies to.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -986,6 +1017,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Day of the week the schedule applies to.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -1001,6 +1033,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Day of the week the schedule applies to.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>
@@ -1021,6 +1054,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Day of the week the schedule applies to.
+     *
      * This field is required for CREATE operations and is prohibited on UPDATE
      * operations.
      * </pre>

@@ -52,47 +52,47 @@ public final class ConversionActionServiceProto {
       "ations.proto\032\027google/api/client.proto\032\037g" +
       "oogle/api/field_behavior.proto\032\031google/a" +
       "pi/resource.proto\032 google/protobuf/field" +
-      "_mask.proto\032\027google/rpc/status.proto\"\255\002\n" +
-      "\036MutateConversionActionsRequest\022\030\n\013custo" +
-      "mer_id\030\001 \001(\tB\003\340A\002\022U\n\noperations\030\002 \003(\0132<." +
-      "google.ads.googleads.v13.services.Conver" +
-      "sionActionOperationB\003\340A\002\022\027\n\017partial_fail" +
-      "ure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\022j\n\025resp" +
-      "onse_content_type\030\005 \001(\0162K.google.ads.goo" +
-      "gleads.v13.enums.ResponseContentTypeEnum" +
-      ".ResponseContentType\"\253\002\n\031ConversionActio" +
-      "nOperation\022/\n\013update_mask\030\004 \001(\0132\032.google" +
-      ".protobuf.FieldMask\022F\n\006create\030\001 \001(\01324.go" +
-      "ogle.ads.googleads.v13.resources.Convers" +
-      "ionActionH\000\022F\n\006update\030\002 \001(\01324.google.ads" +
-      ".googleads.v13.resources.ConversionActio" +
-      "nH\000\022@\n\006remove\030\003 \001(\tB.\372A+\n)googleads.goog" +
-      "leapis.com/ConversionActionH\000B\013\n\toperati" +
-      "on\"\246\001\n\037MutateConversionActionsResponse\0221" +
-      "\n\025partial_failure_error\030\003 \001(\0132\022.google.r" +
-      "pc.Status\022P\n\007results\030\002 \003(\0132?.google.ads." +
-      "googleads.v13.services.MutateConversionA" +
-      "ctionResult\"\266\001\n\034MutateConversionActionRe" +
-      "sult\022E\n\rresource_name\030\001 \001(\tB.\372A+\n)google" +
-      "ads.googleapis.com/ConversionAction\022O\n\021c" +
-      "onversion_action\030\002 \001(\01324.google.ads.goog" +
-      "leads.v13.resources.ConversionAction2\340\002\n" +
-      "\027ConversionActionService\022\375\001\n\027MutateConve" +
-      "rsionActions\022A.google.ads.googleads.v13." +
-      "services.MutateConversionActionsRequest\032" +
-      "B.google.ads.googleads.v13.services.Muta" +
-      "teConversionActionsResponse\"[\202\323\344\223\002<\"7/v1" +
-      "3/customers/{customer_id=*}/conversionAc" +
-      "tions:mutate:\001*\332A\026customer_id,operations" +
-      "\032E\312A\030googleads.googleapis.com\322A\'https://" +
-      "www.googleapis.com/auth/adwordsB\210\002\n%com." +
-      "google.ads.googleads.v13.servicesB\034Conve" +
-      "rsionActionServiceProtoP\001ZIgoogle.golang" +
-      ".org/genproto/googleapis/ads/googleads/v" +
-      "13/services;services\242\002\003GAA\252\002!Google.Ads." +
-      "GoogleAds.V13.Services\312\002!Google\\Ads\\Goog" +
-      "leAds\\V13\\Services\352\002%Google::Ads::Google" +
-      "Ads::V13::Servicesb\006proto3"
+      "_mask.proto\032\027google/rpc/status.proto\"\257\002\n" +
+      "\036MutateConversionActionsRequest\022\031\n\013custo" +
+      "mer_id\030\001 \001(\tB\004\342A\001\002\022V\n\noperations\030\002 \003(\0132<" +
+      ".google.ads.googleads.v13.services.Conve" +
+      "rsionActionOperationB\004\342A\001\002\022\027\n\017partial_fa" +
+      "ilure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\022j\n\025re" +
+      "sponse_content_type\030\005 \001(\0162K.google.ads.g" +
+      "oogleads.v13.enums.ResponseContentTypeEn" +
+      "um.ResponseContentType\"\253\002\n\031ConversionAct" +
+      "ionOperation\022/\n\013update_mask\030\004 \001(\0132\032.goog" +
+      "le.protobuf.FieldMask\022F\n\006create\030\001 \001(\01324." +
+      "google.ads.googleads.v13.resources.Conve" +
+      "rsionActionH\000\022F\n\006update\030\002 \001(\01324.google.a" +
+      "ds.googleads.v13.resources.ConversionAct" +
+      "ionH\000\022@\n\006remove\030\003 \001(\tB.\372A+\n)googleads.go" +
+      "ogleapis.com/ConversionActionH\000B\013\n\topera" +
+      "tion\"\246\001\n\037MutateConversionActionsResponse" +
+      "\0221\n\025partial_failure_error\030\003 \001(\0132\022.google" +
+      ".rpc.Status\022P\n\007results\030\002 \003(\0132?.google.ad" +
+      "s.googleads.v13.services.MutateConversio" +
+      "nActionResult\"\266\001\n\034MutateConversionAction" +
+      "Result\022E\n\rresource_name\030\001 \001(\tB.\372A+\n)goog" +
+      "leads.googleapis.com/ConversionAction\022O\n" +
+      "\021conversion_action\030\002 \001(\01324.google.ads.go" +
+      "ogleads.v13.resources.ConversionAction2\340" +
+      "\002\n\027ConversionActionService\022\375\001\n\027MutateCon" +
+      "versionActions\022A.google.ads.googleads.v1" +
+      "3.services.MutateConversionActionsReques" +
+      "t\032B.google.ads.googleads.v13.services.Mu" +
+      "tateConversionActionsResponse\"[\332A\026custom" +
+      "er_id,operations\202\323\344\223\002<\"7/v13/customers/{" +
+      "customer_id=*}/conversionActions:mutate:" +
+      "\001*\032E\312A\030googleads.googleapis.com\322A\'https:" +
+      "//www.googleapis.com/auth/adwordsB\210\002\n%co" +
+      "m.google.ads.googleads.v13.servicesB\034Con" +
+      "versionActionServiceProtoP\001ZIgoogle.gola" +
+      "ng.org/genproto/googleapis/ads/googleads" +
+      "/v13/services;services\242\002\003GAA\252\002!Google.Ad" +
+      "s.GoogleAds.V13.Services\312\002!Google\\Ads\\Go" +
+      "ogleAds\\V13\\Services\352\002%Google::Ads::Goog" +
+      "leAds::V13::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

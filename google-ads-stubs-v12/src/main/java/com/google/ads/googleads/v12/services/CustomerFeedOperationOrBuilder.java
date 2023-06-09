@@ -95,6 +95,7 @@ public interface CustomerFeedOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed customer feed is
    * expected, in this format:
+   *
    * `customers/{customer_id}/customerFeeds/{feed_id}`
    * </pre>
    *
@@ -106,6 +107,7 @@ public interface CustomerFeedOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed customer feed is
    * expected, in this format:
+   *
    * `customers/{customer_id}/customerFeeds/{feed_id}`
    * </pre>
    *
@@ -117,6 +119,7 @@ public interface CustomerFeedOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed customer feed is
    * expected, in this format:
+   *
    * `customers/{customer_id}/customerFeeds/{feed_id}`
    * </pre>
    *
@@ -126,5 +129,5 @@ public interface CustomerFeedOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v12.services.CustomerFeedOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v12.services.CustomerFeedOperation.OperationCase getOperationCase();
 }

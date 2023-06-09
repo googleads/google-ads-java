@@ -50,41 +50,41 @@ public final class CustomerUserAccessInvitationServiceProto {
       "r_user_access_invitation.proto\032\034google/a" +
       "pi/annotations.proto\032\027google/api/client." +
       "proto\032\037google/api/field_behavior.proto\032\031" +
-      "google/api/resource.proto\"\247\001\n)MutateCust" +
-      "omerUserAccessInvitationRequest\022\030\n\013custo" +
-      "mer_id\030\001 \001(\tB\003\340A\002\022`\n\toperation\030\002 \001(\0132H.g" +
-      "oogle.ads.googleads.v13.services.Custome" +
-      "rUserAccessInvitationOperationB\003\340A\002\"\326\001\n%" +
-      "CustomerUserAccessInvitationOperation\022R\n" +
-      "\006create\030\001 \001(\0132@.google.ads.googleads.v13" +
-      ".resources.CustomerUserAccessInvitationH" +
-      "\000\022L\n\006remove\030\002 \001(\tB:\372A7\n5googleads.google" +
-      "apis.com/CustomerUserAccessInvitationH\000B" +
-      "\013\n\toperation\"\211\001\n*MutateCustomerUserAcces" +
-      "sInvitationResponse\022[\n\006result\030\001 \001(\0132K.go" +
-      "ogle.ads.googleads.v13.services.MutateCu" +
-      "stomerUserAccessInvitationResult\"}\n(Muta" +
-      "teCustomerUserAccessInvitationResult\022Q\n\r" +
-      "resource_name\030\001 \001(\tB:\372A7\n5googleads.goog" +
-      "leapis.com/CustomerUserAccessInvitation2" +
-      "\230\003\n#CustomerUserAccessInvitationService\022" +
-      "\251\002\n\"MutateCustomerUserAccessInvitation\022L" +
+      "google/api/resource.proto\"\251\001\n)MutateCust" +
+      "omerUserAccessInvitationRequest\022\031\n\013custo" +
+      "mer_id\030\001 \001(\tB\004\342A\001\002\022a\n\toperation\030\002 \001(\0132H." +
+      "google.ads.googleads.v13.services.Custom" +
+      "erUserAccessInvitationOperationB\004\342A\001\002\"\326\001" +
+      "\n%CustomerUserAccessInvitationOperation\022" +
+      "R\n\006create\030\001 \001(\0132@.google.ads.googleads.v" +
+      "13.resources.CustomerUserAccessInvitatio" +
+      "nH\000\022L\n\006remove\030\002 \001(\tB:\372A7\n5googleads.goog" +
+      "leapis.com/CustomerUserAccessInvitationH" +
+      "\000B\013\n\toperation\"\211\001\n*MutateCustomerUserAcc" +
+      "essInvitationResponse\022[\n\006result\030\001 \001(\0132K." +
+      "google.ads.googleads.v13.services.Mutate" +
+      "CustomerUserAccessInvitationResult\"}\n(Mu" +
+      "tateCustomerUserAccessInvitationResult\022Q" +
+      "\n\rresource_name\030\001 \001(\tB:\372A7\n5googleads.go" +
+      "ogleapis.com/CustomerUserAccessInvitatio" +
+      "n2\230\003\n#CustomerUserAccessInvitationServic" +
+      "e\022\251\002\n\"MutateCustomerUserAccessInvitation" +
+      "\022L.google.ads.googleads.v13.services.Mut" +
+      "ateCustomerUserAccessInvitationRequest\032M" +
       ".google.ads.googleads.v13.services.Mutat" +
-      "eCustomerUserAccessInvitationRequest\032M.g" +
-      "oogle.ads.googleads.v13.services.MutateC" +
-      "ustomerUserAccessInvitationResponse\"f\202\323\344" +
-      "\223\002H\"C/v13/customers/{customer_id=*}/cust" +
-      "omerUserAccessInvitations:mutate:\001*\332A\025cu" +
-      "stomer_id,operation\032E\312A\030googleads.google" +
-      "apis.com\322A\'https://www.googleapis.com/au" +
-      "th/adwordsB\224\002\n%com.google.ads.googleads." +
-      "v13.servicesB(CustomerUserAccessInvitati" +
-      "onServiceProtoP\001ZIgoogle.golang.org/genp" +
-      "roto/googleapis/ads/googleads/v13/servic" +
-      "es;services\242\002\003GAA\252\002!Google.Ads.GoogleAds" +
-      ".V13.Services\312\002!Google\\Ads\\GoogleAds\\V13" +
-      "\\Services\352\002%Google::Ads::GoogleAds::V13:" +
-      ":Servicesb\006proto3"
+      "eCustomerUserAccessInvitationResponse\"f\332" +
+      "A\025customer_id,operation\202\323\344\223\002H\"C/v13/cust" +
+      "omers/{customer_id=*}/customerUserAccess" +
+      "Invitations:mutate:\001*\032E\312A\030googleads.goog" +
+      "leapis.com\322A\'https://www.googleapis.com/" +
+      "auth/adwordsB\224\002\n%com.google.ads.googlead" +
+      "s.v13.servicesB(CustomerUserAccessInvita" +
+      "tionServiceProtoP\001ZIgoogle.golang.org/ge" +
+      "nproto/googleapis/ads/googleads/v13/serv" +
+      "ices;services\242\002\003GAA\252\002!Google.Ads.GoogleA" +
+      "ds.V13.Services\312\002!Google\\Ads\\GoogleAds\\V" +
+      "13\\Services\352\002%Google::Ads::GoogleAds::V1" +
+      "3::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

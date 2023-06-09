@@ -32,7 +32,8 @@ private static final long serialVersionUID = 0L;
     formattedSalePrice_ = "";
     androidAppLink_ = "";
     iosAppLink_ = "";
-    similarDestinationIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    similarDestinationIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     customMapping_ = "";
   }
 
@@ -43,11 +44,6 @@ private static final long serialVersionUID = 0L;
     return new DynamicFlightsAsset();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.common.AssetTypesProto.internal_static_google_ads_googleads_v12_common_DynamicFlightsAsset_descriptor;
@@ -662,7 +658,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int SIMILAR_DESTINATION_IDS_FIELD_NUMBER = 14;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList similarDestinationIds_;
+  private com.google.protobuf.LazyStringArrayList similarDestinationIds_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * Similar destination IDs, for example, PAR,LON.
@@ -1024,11 +1021,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.common.DynamicFlightsAsset parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.common.DynamicFlightsAsset parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1121,8 +1120,8 @@ private static final long serialVersionUID = 0L;
       androidAppLink_ = "";
       iosAppLink_ = "";
       iosAppStoreId_ = 0L;
-      similarDestinationIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00002000);
+      similarDestinationIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       customMapping_ = "";
       return this;
     }
@@ -1150,18 +1149,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.DynamicFlightsAsset buildPartial() {
       com.google.ads.googleads.v12.common.DynamicFlightsAsset result = new com.google.ads.googleads.v12.common.DynamicFlightsAsset(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.common.DynamicFlightsAsset result) {
-      if (((bitField0_ & 0x00002000) != 0)) {
-        similarDestinationIds_ = similarDestinationIds_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00002000);
-      }
-      result.similarDestinationIds_ = similarDestinationIds_;
     }
 
     private void buildPartial0(com.google.ads.googleads.v12.common.DynamicFlightsAsset result) {
@@ -1204,6 +1194,10 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00001000) != 0)) {
         result.iosAppStoreId_ = iosAppStoreId_;
+      }
+      if (((from_bitField0_ & 0x00002000) != 0)) {
+        similarDestinationIds_.makeImmutable();
+        result.similarDestinationIds_ = similarDestinationIds_;
       }
       if (((from_bitField0_ & 0x00004000) != 0)) {
         result.customMapping_ = customMapping_;
@@ -1320,7 +1314,7 @@ private static final long serialVersionUID = 0L;
       if (!other.similarDestinationIds_.isEmpty()) {
         if (similarDestinationIds_.isEmpty()) {
           similarDestinationIds_ = other.similarDestinationIds_;
-          bitField0_ = (bitField0_ & ~0x00002000);
+          bitField0_ |= 0x00002000;
         } else {
           ensureSimilarDestinationIdsIsMutable();
           similarDestinationIds_.addAll(other.similarDestinationIds_);
@@ -2627,7 +2621,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIosAppStoreId(long value) {
-      
+
       iosAppStoreId_ = value;
       bitField0_ |= 0x00001000;
       onChanged();
@@ -2650,12 +2644,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.LazyStringList similarDestinationIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList similarDestinationIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureSimilarDestinationIdsIsMutable() {
-      if (!((bitField0_ & 0x00002000) != 0)) {
+      if (!similarDestinationIds_.isModifiable()) {
         similarDestinationIds_ = new com.google.protobuf.LazyStringArrayList(similarDestinationIds_);
-        bitField0_ |= 0x00002000;
-       }
+      }
+      bitField0_ |= 0x00002000;
     }
     /**
      * <pre>
@@ -2667,7 +2662,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getSimilarDestinationIdsList() {
-      return similarDestinationIds_.getUnmodifiableView();
+      similarDestinationIds_.makeImmutable();
+      return similarDestinationIds_;
     }
     /**
      * <pre>
@@ -2720,6 +2716,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureSimilarDestinationIdsIsMutable();
       similarDestinationIds_.set(index, value);
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -2737,6 +2734,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureSimilarDestinationIdsIsMutable();
       similarDestinationIds_.add(value);
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -2754,6 +2752,7 @@ private static final long serialVersionUID = 0L;
       ensureSimilarDestinationIdsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, similarDestinationIds_);
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -2766,8 +2765,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearSimilarDestinationIds() {
-      similarDestinationIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00002000);
+      similarDestinationIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00002000);;
       onChanged();
       return this;
     }
@@ -2786,6 +2786,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureSimilarDestinationIdsIsMutable();
       similarDestinationIds_.add(value);
+      bitField0_ |= 0x00002000;
       onChanged();
       return this;
     }

@@ -33,26 +33,26 @@ public final class CustomerClientLinkProto {
       "leads.v13.resources\0328google/ads/googlead" +
       "s/v13/enums/manager_link_status.proto\032\037g" +
       "oogle/api/field_behavior.proto\032\031google/a" +
-      "pi/resource.proto\"\365\003\n\022CustomerClientLink" +
-      "\022J\n\rresource_name\030\001 \001(\tB3\340A\005\372A-\n+googlea" +
-      "ds.googleapis.com/CustomerClientLink\022G\n\017" +
-      "client_customer\030\007 \001(\tB)\340A\005\372A#\n!googleads" +
-      ".googleapis.com/CustomerH\000\210\001\001\022!\n\017manager" +
-      "_link_id\030\010 \001(\003B\003\340A\003H\001\210\001\001\022W\n\006status\030\005 \001(\016" +
-      "2G.google.ads.googleads.v13.enums.Manage" +
-      "rLinkStatusEnum.ManagerLinkStatus\022\023\n\006hid" +
-      "den\030\t \001(\010H\002\210\001\001:\205\001\352A\201\001\n+googleads.googlea" +
-      "pis.com/CustomerClientLink\022Rcustomers/{c" +
-      "ustomer_id}/customerClientLinks/{client_" +
-      "customer_id}~{manager_link_id}B\022\n\020_clien" +
-      "t_customerB\022\n\020_manager_link_idB\t\n\007_hidde" +
-      "nB\211\002\n&com.google.ads.googleads.v13.resou" +
-      "rcesB\027CustomerClientLinkProtoP\001ZKgoogle." +
-      "golang.org/genproto/googleapis/ads/googl" +
-      "eads/v13/resources;resources\242\002\003GAA\252\002\"Goo" +
-      "gle.Ads.GoogleAds.V13.Resources\312\002\"Google" +
-      "\\Ads\\GoogleAds\\V13\\Resources\352\002&Google::A" +
-      "ds::GoogleAds::V13::Resourcesb\006proto3"
+      "pi/resource.proto\"\370\003\n\022CustomerClientLink" +
+      "\022K\n\rresource_name\030\001 \001(\tB4\342A\001\005\372A-\n+google" +
+      "ads.googleapis.com/CustomerClientLink\022H\n" +
+      "\017client_customer\030\007 \001(\tB*\342A\001\005\372A#\n!googlea" +
+      "ds.googleapis.com/CustomerH\000\210\001\001\022\"\n\017manag" +
+      "er_link_id\030\010 \001(\003B\004\342A\001\003H\001\210\001\001\022W\n\006status\030\005 " +
+      "\001(\0162G.google.ads.googleads.v13.enums.Man" +
+      "agerLinkStatusEnum.ManagerLinkStatus\022\023\n\006" +
+      "hidden\030\t \001(\010H\002\210\001\001:\205\001\352A\201\001\n+googleads.goog" +
+      "leapis.com/CustomerClientLink\022Rcustomers" +
+      "/{customer_id}/customerClientLinks/{clie" +
+      "nt_customer_id}~{manager_link_id}B\022\n\020_cl" +
+      "ient_customerB\022\n\020_manager_link_idB\t\n\007_hi" +
+      "ddenB\211\002\n&com.google.ads.googleads.v13.re" +
+      "sourcesB\027CustomerClientLinkProtoP\001ZKgoog" +
+      "le.golang.org/genproto/googleapis/ads/go" +
+      "ogleads/v13/resources;resources\242\002\003GAA\252\002\"" +
+      "Google.Ads.GoogleAds.V13.Resources\312\002\"Goo" +
+      "gle\\Ads\\GoogleAds\\V13\\Resources\352\002&Google" +
+      "::Ads::GoogleAds::V13::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -33,7 +33,8 @@ private static final long serialVersionUID = 0L;
     finalUrlSuffix_ = "";
     effectiveTargetCpaSource_ = 0;
     effectiveTargetRoasSource_ = 0;
-    labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    labels_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     excludedParentAssetFieldTypes_ = java.util.Collections.emptyList();
     excludedParentAssetSetTypes_ = java.util.Collections.emptyList();
   }
@@ -45,11 +46,6 @@ private static final long serialVersionUID = 0L;
     return new AdGroup();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.resources.AdGroupProto.internal_static_google_ads_googleads_v12_resources_AdGroup_descriptor;
@@ -105,11 +101,6 @@ private static final long serialVersionUID = 0L;
       return new AudienceSetting();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.AdGroupProto.internal_static_google_ads_googleads_v12_resources_AdGroup_AudienceSetting_descriptor;
@@ -250,11 +241,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.AdGroup.AudienceSetting parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.AdGroup.AudienceSetting parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -495,7 +488,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setUseAudienceGrouped(boolean value) {
-        
+
         useAudienceGrouped_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -589,6 +582,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the ad group.
    * Ad group resource names have the form:
+   *
    * `customers/{customer_id}/adGroups/{ad_group_id}`
    * </pre>
    *
@@ -612,6 +606,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the ad group.
    * Ad group resource names have the form:
+   *
    * `customers/{customer_id}/adGroups/{ad_group_id}`
    * </pre>
    *
@@ -666,9 +661,12 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The name of the ad group.
+   *
    * This field is required and should not be empty when creating new ad
    * groups.
+   *
    * It must contain fewer than 255 UTF-8 full-width characters.
+   *
    * It must not contain any null (code point 0x0), NL line feed
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
@@ -683,9 +681,12 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The name of the ad group.
+   *
    * This field is required and should not be empty when creating new ad
    * groups.
+   *
    * It must contain fewer than 255 UTF-8 full-width characters.
+   *
    * It must not contain any null (code point 0x0), NL line feed
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
@@ -709,9 +710,12 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The name of the ad group.
+   *
    * This field is required and should not be empty when creating new ad
    * groups.
+   *
    * It must contain fewer than 255 UTF-8 full-width characters.
+   *
    * It must not contain any null (code point 0x0), NL line feed
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
@@ -821,7 +825,9 @@ private static final long serialVersionUID = 0L;
    * name of the base ad group from which this ad group was created. If a draft
    * or experiment ad group does not have a base ad group, then this field is
    * null.
+   *
    * For base ad groups, this field equals the ad group resource name.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -838,7 +844,9 @@ private static final long serialVersionUID = 0L;
    * name of the base ad group from which this ad group was created. If a draft
    * or experiment ad group does not have a base ad group, then this field is
    * null.
+   *
    * For base ad groups, this field equals the ad group resource name.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -864,7 +872,9 @@ private static final long serialVersionUID = 0L;
    * name of the base ad group from which this ad group was created. If a draft
    * or experiment ad group does not have a base ad group, then this field is
    * null.
+   *
    * For base ad groups, this field equals the ad group resource name.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -1631,7 +1641,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int LABELS_FIELD_NUMBER = 49;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList labels_;
+  private com.google.protobuf.LazyStringArrayList labels_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * Output only. The resource names of labels attached to this ad group.
@@ -2451,11 +2462,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.resources.AdGroup parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.resources.AdGroup parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2580,8 +2593,8 @@ private static final long serialVersionUID = 0L;
       effectiveTargetCpaSource_ = 0;
       effectiveTargetRoas_ = 0D;
       effectiveTargetRoasSource_ = 0;
-      labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x08000000);
+      labels_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       excludedParentAssetFieldTypes_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x10000000);
       excludedParentAssetSetTypes_ = java.util.Collections.emptyList();
@@ -2628,11 +2641,6 @@ private static final long serialVersionUID = 0L;
       } else {
         result.urlCustomParameters_ = urlCustomParametersBuilder_.build();
       }
-      if (((bitField0_ & 0x08000000) != 0)) {
-        labels_ = labels_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x08000000);
-      }
-      result.labels_ = labels_;
       if (((bitField0_ & 0x10000000) != 0)) {
         excludedParentAssetFieldTypes_ = java.util.Collections.unmodifiableList(excludedParentAssetFieldTypes_);
         bitField0_ = (bitField0_ & ~0x10000000);
@@ -2747,6 +2755,10 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x04000000) != 0)) {
         result.effectiveTargetRoasSource_ = effectiveTargetRoasSource_;
+      }
+      if (((from_bitField0_ & 0x08000000) != 0)) {
+        labels_.makeImmutable();
+        result.labels_ = labels_;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -2914,7 +2926,7 @@ private static final long serialVersionUID = 0L;
       if (!other.labels_.isEmpty()) {
         if (labels_.isEmpty()) {
           labels_ = other.labels_;
-          bitField0_ = (bitField0_ & ~0x08000000);
+          bitField0_ |= 0x08000000;
         } else {
           ensureLabelsIsMutable();
           labels_.addAll(other.labels_);
@@ -3178,6 +3190,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the ad group.
      * Ad group resource names have the form:
+     *
      * `customers/{customer_id}/adGroups/{ad_group_id}`
      * </pre>
      *
@@ -3200,6 +3213,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the ad group.
      * Ad group resource names have the form:
+     *
      * `customers/{customer_id}/adGroups/{ad_group_id}`
      * </pre>
      *
@@ -3223,6 +3237,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the ad group.
      * Ad group resource names have the form:
+     *
      * `customers/{customer_id}/adGroups/{ad_group_id}`
      * </pre>
      *
@@ -3242,6 +3257,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the ad group.
      * Ad group resource names have the form:
+     *
      * `customers/{customer_id}/adGroups/{ad_group_id}`
      * </pre>
      *
@@ -3258,6 +3274,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the ad group.
      * Ad group resource names have the form:
+     *
      * `customers/{customer_id}/adGroups/{ad_group_id}`
      * </pre>
      *
@@ -3310,7 +3327,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      
+
       id_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -3335,9 +3352,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the ad group.
+     *
      * This field is required and should not be empty when creating new ad
      * groups.
+     *
      * It must contain fewer than 255 UTF-8 full-width characters.
+     *
      * It must not contain any null (code point 0x0), NL line feed
      * (code point 0xA) or carriage return (code point 0xD) characters.
      * </pre>
@@ -3351,9 +3371,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the ad group.
+     *
      * This field is required and should not be empty when creating new ad
      * groups.
+     *
      * It must contain fewer than 255 UTF-8 full-width characters.
+     *
      * It must not contain any null (code point 0x0), NL line feed
      * (code point 0xA) or carriage return (code point 0xD) characters.
      * </pre>
@@ -3376,9 +3399,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the ad group.
+     *
      * This field is required and should not be empty when creating new ad
      * groups.
+     *
      * It must contain fewer than 255 UTF-8 full-width characters.
+     *
      * It must not contain any null (code point 0x0), NL line feed
      * (code point 0xA) or carriage return (code point 0xD) characters.
      * </pre>
@@ -3402,9 +3428,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the ad group.
+     *
      * This field is required and should not be empty when creating new ad
      * groups.
+     *
      * It must contain fewer than 255 UTF-8 full-width characters.
+     *
      * It must not contain any null (code point 0x0), NL line feed
      * (code point 0xA) or carriage return (code point 0xD) characters.
      * </pre>
@@ -3424,9 +3453,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the ad group.
+     *
      * This field is required and should not be empty when creating new ad
      * groups.
+     *
      * It must contain fewer than 255 UTF-8 full-width characters.
+     *
      * It must not contain any null (code point 0x0), NL line feed
      * (code point 0xA) or carriage return (code point 0xD) characters.
      * </pre>
@@ -3443,9 +3475,12 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the ad group.
+     *
      * This field is required and should not be empty when creating new ad
      * groups.
+     *
      * It must contain fewer than 255 UTF-8 full-width characters.
+     *
      * It must not contain any null (code point 0x0), NL line feed
      * (code point 0xA) or carriage return (code point 0xD) characters.
      * </pre>
@@ -3690,7 +3725,9 @@ private static final long serialVersionUID = 0L;
      * name of the base ad group from which this ad group was created. If a draft
      * or experiment ad group does not have a base ad group, then this field is
      * null.
+     *
      * For base ad groups, this field equals the ad group resource name.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -3706,7 +3743,9 @@ private static final long serialVersionUID = 0L;
      * name of the base ad group from which this ad group was created. If a draft
      * or experiment ad group does not have a base ad group, then this field is
      * null.
+     *
      * For base ad groups, this field equals the ad group resource name.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -3731,7 +3770,9 @@ private static final long serialVersionUID = 0L;
      * name of the base ad group from which this ad group was created. If a draft
      * or experiment ad group does not have a base ad group, then this field is
      * null.
+     *
      * For base ad groups, this field equals the ad group resource name.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -3757,7 +3798,9 @@ private static final long serialVersionUID = 0L;
      * name of the base ad group from which this ad group was created. If a draft
      * or experiment ad group does not have a base ad group, then this field is
      * null.
+     *
      * For base ad groups, this field equals the ad group resource name.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -3779,7 +3822,9 @@ private static final long serialVersionUID = 0L;
      * name of the base ad group from which this ad group was created. If a draft
      * or experiment ad group does not have a base ad group, then this field is
      * null.
+     *
      * For base ad groups, this field equals the ad group resource name.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -3798,7 +3843,9 @@ private static final long serialVersionUID = 0L;
      * name of the base ad group from which this ad group was created. If a draft
      * or experiment ad group does not have a base ad group, then this field is
      * null.
+     *
      * For base ad groups, this field equals the ad group resource name.
+     *
      * This field is read-only.
      * </pre>
      *
@@ -4387,7 +4434,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCpcBidMicros(long value) {
-      
+
       cpcBidMicros_ = value;
       bitField0_ |= 0x00000400;
       onChanged();
@@ -4449,7 +4496,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEffectiveCpcBidMicros(long value) {
-      
+
       effectiveCpcBidMicros_ = value;
       bitField0_ |= 0x00000800;
       onChanged();
@@ -4507,7 +4554,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCpmBidMicros(long value) {
-      
+
       cpmBidMicros_ = value;
       bitField0_ |= 0x00001000;
       onChanged();
@@ -4575,7 +4622,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTargetCpaMicros(long value) {
-      
+
       targetCpaMicros_ = value;
       bitField0_ |= 0x00002000;
       onChanged();
@@ -4635,7 +4682,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCpvBidMicros(long value) {
-      
+
       cpvBidMicros_ = value;
       bitField0_ |= 0x00004000;
       onChanged();
@@ -4694,7 +4741,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTargetCpmMicros(long value) {
-      
+
       targetCpmMicros_ = value;
       bitField0_ |= 0x00008000;
       onChanged();
@@ -4763,7 +4810,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTargetRoas(double value) {
-      
+
       targetRoas_ = value;
       bitField0_ |= 0x00010000;
       onChanged();
@@ -4829,7 +4876,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPercentCpcBidMicros(long value) {
-      
+
       percentCpcBidMicros_ = value;
       bitField0_ |= 0x00020000;
       onChanged();
@@ -5541,7 +5588,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEffectiveTargetCpaMicros(long value) {
-      
+
       effectiveTargetCpaMicros_ = value;
       bitField0_ |= 0x00800000;
       onChanged();
@@ -5679,7 +5726,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setEffectiveTargetRoas(double value) {
-      
+
       effectiveTargetRoas_ = value;
       bitField0_ |= 0x02000000;
       onChanged();
@@ -5779,12 +5826,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.LazyStringList labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList labels_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureLabelsIsMutable() {
-      if (!((bitField0_ & 0x08000000) != 0)) {
+      if (!labels_.isModifiable()) {
         labels_ = new com.google.protobuf.LazyStringArrayList(labels_);
-        bitField0_ |= 0x08000000;
-       }
+      }
+      bitField0_ |= 0x08000000;
     }
     /**
      * <pre>
@@ -5796,7 +5844,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getLabelsList() {
-      return labels_.getUnmodifiableView();
+      labels_.makeImmutable();
+      return labels_;
     }
     /**
      * <pre>
@@ -5849,6 +5898,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureLabelsIsMutable();
       labels_.set(index, value);
+      bitField0_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -5866,6 +5916,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureLabelsIsMutable();
       labels_.add(value);
+      bitField0_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -5883,6 +5934,7 @@ private static final long serialVersionUID = 0L;
       ensureLabelsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, labels_);
+      bitField0_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -5895,8 +5947,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearLabels() {
-      labels_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x08000000);
+      labels_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x08000000);;
       onChanged();
       return this;
     }
@@ -5915,6 +5968,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureLabelsIsMutable();
       labels_.add(value);
+      bitField0_ |= 0x08000000;
       onChanged();
       return this;
     }

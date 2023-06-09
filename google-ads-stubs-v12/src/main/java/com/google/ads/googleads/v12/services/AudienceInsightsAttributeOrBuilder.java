@@ -283,5 +283,5 @@ public interface AudienceInsightsAttributeOrBuilder extends
    */
   com.google.ads.googleads.v12.common.YouTubeChannelInfoOrBuilder getYoutubeChannelOrBuilder();
 
-  public com.google.ads.googleads.v12.services.AudienceInsightsAttribute.AttributeCase getAttributeCase();
+  com.google.ads.googleads.v12.services.AudienceInsightsAttribute.AttributeCase getAttributeCase();
 }

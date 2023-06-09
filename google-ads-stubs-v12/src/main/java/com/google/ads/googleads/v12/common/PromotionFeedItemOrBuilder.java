@@ -479,7 +479,7 @@ public interface PromotionFeedItemOrBuilder extends
    */
   com.google.ads.googleads.v12.common.MoneyOrBuilder getOrdersOverAmountOrBuilder();
 
-  public com.google.ads.googleads.v12.common.PromotionFeedItem.DiscountTypeCase getDiscountTypeCase();
+  com.google.ads.googleads.v12.common.PromotionFeedItem.DiscountTypeCase getDiscountTypeCase();
 
-  public com.google.ads.googleads.v12.common.PromotionFeedItem.PromotionTriggerCase getPromotionTriggerCase();
+  com.google.ads.googleads.v12.common.PromotionFeedItem.PromotionTriggerCase getPromotionTriggerCase();
 }

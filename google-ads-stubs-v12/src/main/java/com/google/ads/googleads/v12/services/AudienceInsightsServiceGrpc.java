@@ -195,7 +195,7 @@ public final class AudienceInsightsServiceGrpc {
    * allowlisted customers only.
    * </pre>
    */
-  public static abstract class AudienceInsightsServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -211,7 +211,7 @@ public final class AudienceInsightsServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void generateInsightsFinderReport(com.google.ads.googleads.v12.services.GenerateInsightsFinderReportRequest request,
+    default void generateInsightsFinderReport(com.google.ads.googleads.v12.services.GenerateInsightsFinderReportRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.GenerateInsightsFinderReportResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGenerateInsightsFinderReportMethod(), responseObserver);
     }
@@ -230,7 +230,7 @@ public final class AudienceInsightsServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void listAudienceInsightsAttributes(com.google.ads.googleads.v12.services.ListAudienceInsightsAttributesRequest request,
+    default void listAudienceInsightsAttributes(com.google.ads.googleads.v12.services.ListAudienceInsightsAttributesRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.ListAudienceInsightsAttributesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAudienceInsightsAttributesMethod(), responseObserver);
     }
@@ -249,7 +249,7 @@ public final class AudienceInsightsServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void listInsightsEligibleDates(com.google.ads.googleads.v12.services.ListInsightsEligibleDatesRequest request,
+    default void listInsightsEligibleDates(com.google.ads.googleads.v12.services.ListInsightsEligibleDatesRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.ListInsightsEligibleDatesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListInsightsEligibleDatesMethod(), responseObserver);
     }
@@ -271,53 +271,38 @@ public final class AudienceInsightsServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void generateAudienceCompositionInsights(com.google.ads.googleads.v12.services.GenerateAudienceCompositionInsightsRequest request,
+    default void generateAudienceCompositionInsights(com.google.ads.googleads.v12.services.GenerateAudienceCompositionInsightsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.GenerateAudienceCompositionInsightsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGenerateAudienceCompositionInsightsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getGenerateInsightsFinderReportMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.GenerateInsightsFinderReportRequest,
-                com.google.ads.googleads.v12.services.GenerateInsightsFinderReportResponse>(
-                  this, METHODID_GENERATE_INSIGHTS_FINDER_REPORT)))
-          .addMethod(
-            getListAudienceInsightsAttributesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.ListAudienceInsightsAttributesRequest,
-                com.google.ads.googleads.v12.services.ListAudienceInsightsAttributesResponse>(
-                  this, METHODID_LIST_AUDIENCE_INSIGHTS_ATTRIBUTES)))
-          .addMethod(
-            getListInsightsEligibleDatesMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.ListInsightsEligibleDatesRequest,
-                com.google.ads.googleads.v12.services.ListInsightsEligibleDatesResponse>(
-                  this, METHODID_LIST_INSIGHTS_ELIGIBLE_DATES)))
-          .addMethod(
-            getGenerateAudienceCompositionInsightsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.GenerateAudienceCompositionInsightsRequest,
-                com.google.ads.googleads.v12.services.GenerateAudienceCompositionInsightsResponse>(
-                  this, METHODID_GENERATE_AUDIENCE_COMPOSITION_INSIGHTS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service AudienceInsightsService.
    * <pre>
    * Audience Insights Service helps users find information about groups of
    * people and how they can be reached with Google Ads. Accessible to
    * allowlisted customers only.
    * </pre>
    */
-  public static final class AudienceInsightsServiceStub extends io.grpc.stub.AbstractAsyncStub<AudienceInsightsServiceStub> {
+  public static abstract class AudienceInsightsServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return AudienceInsightsServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service AudienceInsightsService.
+   * <pre>
+   * Audience Insights Service helps users find information about groups of
+   * people and how they can be reached with Google Ads. Accessible to
+   * allowlisted customers only.
+   * </pre>
+   */
+  public static final class AudienceInsightsServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<AudienceInsightsServiceStub> {
     private AudienceInsightsServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -414,13 +399,15 @@ public final class AudienceInsightsServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service AudienceInsightsService.
    * <pre>
    * Audience Insights Service helps users find information about groups of
    * people and how they can be reached with Google Ads. Accessible to
    * allowlisted customers only.
    * </pre>
    */
-  public static final class AudienceInsightsServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<AudienceInsightsServiceBlockingStub> {
+  public static final class AudienceInsightsServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<AudienceInsightsServiceBlockingStub> {
     private AudienceInsightsServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -513,13 +500,15 @@ public final class AudienceInsightsServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service AudienceInsightsService.
    * <pre>
    * Audience Insights Service helps users find information about groups of
    * people and how they can be reached with Google Ads. Accessible to
    * allowlisted customers only.
    * </pre>
    */
-  public static final class AudienceInsightsServiceFutureStub extends io.grpc.stub.AbstractFutureStub<AudienceInsightsServiceFutureStub> {
+  public static final class AudienceInsightsServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<AudienceInsightsServiceFutureStub> {
     private AudienceInsightsServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -625,10 +614,10 @@ public final class AudienceInsightsServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AudienceInsightsServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AudienceInsightsServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -667,6 +656,39 @@ public final class AudienceInsightsServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getGenerateInsightsFinderReportMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.GenerateInsightsFinderReportRequest,
+              com.google.ads.googleads.v12.services.GenerateInsightsFinderReportResponse>(
+                service, METHODID_GENERATE_INSIGHTS_FINDER_REPORT)))
+        .addMethod(
+          getListAudienceInsightsAttributesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.ListAudienceInsightsAttributesRequest,
+              com.google.ads.googleads.v12.services.ListAudienceInsightsAttributesResponse>(
+                service, METHODID_LIST_AUDIENCE_INSIGHTS_ATTRIBUTES)))
+        .addMethod(
+          getListInsightsEligibleDatesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.ListInsightsEligibleDatesRequest,
+              com.google.ads.googleads.v12.services.ListInsightsEligibleDatesResponse>(
+                service, METHODID_LIST_INSIGHTS_ELIGIBLE_DATES)))
+        .addMethod(
+          getGenerateAudienceCompositionInsightsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.GenerateAudienceCompositionInsightsRequest,
+              com.google.ads.googleads.v12.services.GenerateAudienceCompositionInsightsResponse>(
+                service, METHODID_GENERATE_AUDIENCE_COMPOSITION_INSIGHTS)))
+        .build();
   }
 
   private static abstract class AudienceInsightsServiceBaseDescriptorSupplier

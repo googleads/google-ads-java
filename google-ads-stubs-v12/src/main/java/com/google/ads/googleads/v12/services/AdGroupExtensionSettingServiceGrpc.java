@@ -98,7 +98,7 @@ public final class AdGroupExtensionSettingServiceGrpc {
    * Service to manage ad group extension settings.
    * </pre>
    */
-  public static abstract class AdGroupExtensionSettingServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -135,30 +135,34 @@ public final class AdGroupExtensionSettingServiceGrpc {
      *   [UrlFieldError]()
      * </pre>
      */
-    public void mutateAdGroupExtensionSettings(com.google.ads.googleads.v12.services.MutateAdGroupExtensionSettingsRequest request,
+    default void mutateAdGroupExtensionSettings(com.google.ads.googleads.v12.services.MutateAdGroupExtensionSettingsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.MutateAdGroupExtensionSettingsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateAdGroupExtensionSettingsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateAdGroupExtensionSettingsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.MutateAdGroupExtensionSettingsRequest,
-                com.google.ads.googleads.v12.services.MutateAdGroupExtensionSettingsResponse>(
-                  this, METHODID_MUTATE_AD_GROUP_EXTENSION_SETTINGS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service AdGroupExtensionSettingService.
    * <pre>
    * Service to manage ad group extension settings.
    * </pre>
    */
-  public static final class AdGroupExtensionSettingServiceStub extends io.grpc.stub.AbstractAsyncStub<AdGroupExtensionSettingServiceStub> {
+  public static abstract class AdGroupExtensionSettingServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return AdGroupExtensionSettingServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service AdGroupExtensionSettingService.
+   * <pre>
+   * Service to manage ad group extension settings.
+   * </pre>
+   */
+  public static final class AdGroupExtensionSettingServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<AdGroupExtensionSettingServiceStub> {
     private AdGroupExtensionSettingServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -213,11 +217,13 @@ public final class AdGroupExtensionSettingServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service AdGroupExtensionSettingService.
    * <pre>
    * Service to manage ad group extension settings.
    * </pre>
    */
-  public static final class AdGroupExtensionSettingServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<AdGroupExtensionSettingServiceBlockingStub> {
+  public static final class AdGroupExtensionSettingServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<AdGroupExtensionSettingServiceBlockingStub> {
     private AdGroupExtensionSettingServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -271,11 +277,13 @@ public final class AdGroupExtensionSettingServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service AdGroupExtensionSettingService.
    * <pre>
    * Service to manage ad group extension settings.
    * </pre>
    */
-  public static final class AdGroupExtensionSettingServiceFutureStub extends io.grpc.stub.AbstractFutureStub<AdGroupExtensionSettingServiceFutureStub> {
+  public static final class AdGroupExtensionSettingServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<AdGroupExtensionSettingServiceFutureStub> {
     private AdGroupExtensionSettingServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -336,10 +344,10 @@ public final class AdGroupExtensionSettingServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AdGroupExtensionSettingServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AdGroupExtensionSettingServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -366,6 +374,18 @@ public final class AdGroupExtensionSettingServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateAdGroupExtensionSettingsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.MutateAdGroupExtensionSettingsRequest,
+              com.google.ads.googleads.v12.services.MutateAdGroupExtensionSettingsResponse>(
+                service, METHODID_MUTATE_AD_GROUP_EXTENSION_SETTINGS)))
+        .build();
   }
 
   private static abstract class AdGroupExtensionSettingServiceBaseDescriptorSupplier

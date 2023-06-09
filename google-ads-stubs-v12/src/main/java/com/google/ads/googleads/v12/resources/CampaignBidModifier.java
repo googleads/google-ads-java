@@ -31,11 +31,6 @@ private static final long serialVersionUID = 0L;
     return new CampaignBidModifier();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.resources.CampaignBidModifierProto.internal_static_google_ads_googleads_v12_resources_CampaignBidModifier_descriptor;
@@ -51,6 +46,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   private int criterionCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object criterion_;
   public enum CriterionCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -96,6 +92,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the campaign bid modifier.
    * Campaign bid modifier resource names have the form:
+   *
    * `customers/{customer_id}/campaignBidModifiers/{campaign_id}~{criterion_id}`
    * </pre>
    *
@@ -119,6 +116,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the campaign bid modifier.
    * Campaign bid modifier resource names have the form:
+   *
    * `customers/{customer_id}/campaignBidModifiers/{campaign_id}~{criterion_id}`
    * </pre>
    *
@@ -204,6 +202,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The ID of the criterion to bid modify.
+   *
    * This field is ignored for mutates.
    * </pre>
    *
@@ -217,6 +216,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The ID of the criterion to bid modify.
+   *
    * This field is ignored for mutates.
    * </pre>
    *
@@ -483,11 +483,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.resources.CampaignBidModifier parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.resources.CampaignBidModifier parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -797,6 +799,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the campaign bid modifier.
      * Campaign bid modifier resource names have the form:
+     *
      * `customers/{customer_id}/campaignBidModifiers/{campaign_id}~{criterion_id}`
      * </pre>
      *
@@ -819,6 +822,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the campaign bid modifier.
      * Campaign bid modifier resource names have the form:
+     *
      * `customers/{customer_id}/campaignBidModifiers/{campaign_id}~{criterion_id}`
      * </pre>
      *
@@ -842,6 +846,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the campaign bid modifier.
      * Campaign bid modifier resource names have the form:
+     *
      * `customers/{customer_id}/campaignBidModifiers/{campaign_id}~{criterion_id}`
      * </pre>
      *
@@ -861,6 +866,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the campaign bid modifier.
      * Campaign bid modifier resource names have the form:
+     *
      * `customers/{customer_id}/campaignBidModifiers/{campaign_id}~{criterion_id}`
      * </pre>
      *
@@ -877,6 +883,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the campaign bid modifier.
      * Campaign bid modifier resource names have the form:
+     *
      * `customers/{customer_id}/campaignBidModifiers/{campaign_id}~{criterion_id}`
      * </pre>
      *
@@ -1001,6 +1008,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The ID of the criterion to bid modify.
+     *
      * This field is ignored for mutates.
      * </pre>
      *
@@ -1014,6 +1022,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The ID of the criterion to bid modify.
+     *
      * This field is ignored for mutates.
      * </pre>
      *
@@ -1027,6 +1036,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The ID of the criterion to bid modify.
+     *
      * This field is ignored for mutates.
      * </pre>
      *
@@ -1035,7 +1045,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCriterionId(long value) {
-      
+
       criterionId_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
@@ -1044,6 +1054,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The ID of the criterion to bid modify.
+     *
      * This field is ignored for mutates.
      * </pre>
      *
@@ -1092,7 +1103,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBidModifier(double value) {
-      
+
       bidModifier_ = value;
       bitField0_ |= 0x00000008;
       onChanged();

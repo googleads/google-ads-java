@@ -98,7 +98,7 @@ public final class FeedServiceGrpc {
    * Service to manage feeds.
    * </pre>
    */
-  public static abstract class FeedServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -131,30 +131,34 @@ public final class FeedServiceGrpc {
      *   [StringLengthError]()
      * </pre>
      */
-    public void mutateFeeds(com.google.ads.googleads.v12.services.MutateFeedsRequest request,
+    default void mutateFeeds(com.google.ads.googleads.v12.services.MutateFeedsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.MutateFeedsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateFeedsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateFeedsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.MutateFeedsRequest,
-                com.google.ads.googleads.v12.services.MutateFeedsResponse>(
-                  this, METHODID_MUTATE_FEEDS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service FeedService.
    * <pre>
    * Service to manage feeds.
    * </pre>
    */
-  public static final class FeedServiceStub extends io.grpc.stub.AbstractAsyncStub<FeedServiceStub> {
+  public static abstract class FeedServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return FeedServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service FeedService.
+   * <pre>
+   * Service to manage feeds.
+   * </pre>
+   */
+  public static final class FeedServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<FeedServiceStub> {
     private FeedServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -205,11 +209,13 @@ public final class FeedServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service FeedService.
    * <pre>
    * Service to manage feeds.
    * </pre>
    */
-  public static final class FeedServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<FeedServiceBlockingStub> {
+  public static final class FeedServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<FeedServiceBlockingStub> {
     private FeedServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -259,11 +265,13 @@ public final class FeedServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service FeedService.
    * <pre>
    * Service to manage feeds.
    * </pre>
    */
-  public static final class FeedServiceFutureStub extends io.grpc.stub.AbstractFutureStub<FeedServiceFutureStub> {
+  public static final class FeedServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<FeedServiceFutureStub> {
     private FeedServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -320,10 +328,10 @@ public final class FeedServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final FeedServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(FeedServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -350,6 +358,18 @@ public final class FeedServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateFeedsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.MutateFeedsRequest,
+              com.google.ads.googleads.v12.services.MutateFeedsResponse>(
+                service, METHODID_MUTATE_FEEDS)))
+        .build();
   }
 
   private static abstract class FeedServiceBaseDescriptorSupplier

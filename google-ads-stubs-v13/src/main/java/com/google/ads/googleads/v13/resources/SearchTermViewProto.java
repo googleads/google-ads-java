@@ -33,25 +33,25 @@ public final class SearchTermViewProto {
       "s.v13.resources\032Agoogle/ads/googleads/v1" +
       "3/enums/search_term_targeting_status.pro" +
       "to\032\037google/api/field_behavior.proto\032\031goo" +
-      "gle/api/resource.proto\"\276\003\n\016SearchTermVie" +
-      "w\022F\n\rresource_name\030\001 \001(\tB/\340A\003\372A)\n\'google" +
-      "ads.googleapis.com/SearchTermView\022\035\n\013sea" +
-      "rch_term\030\005 \001(\tB\003\340A\003H\000\210\001\001\022?\n\010ad_group\030\006 \001" +
-      "(\tB(\340A\003\372A\"\n googleads.googleapis.com/AdG" +
-      "roupH\001\210\001\001\022l\n\006status\030\004 \001(\0162W.google.ads.g" +
-      "oogleads.v13.enums.SearchTermTargetingSt" +
-      "atusEnum.SearchTermTargetingStatusB\003\340A\003:" +
-      "y\352Av\n\'googleads.googleapis.com/SearchTer" +
-      "mView\022Kcustomers/{customer_id}/searchTer" +
-      "mViews/{campaign_id}~{ad_group_id}~{quer" +
-      "y}B\016\n\014_search_termB\013\n\t_ad_groupB\205\002\n&com." +
-      "google.ads.googleads.v13.resourcesB\023Sear" +
-      "chTermViewProtoP\001ZKgoogle.golang.org/gen" +
-      "proto/googleapis/ads/googleads/v13/resou" +
-      "rces;resources\242\002\003GAA\252\002\"Google.Ads.Google" +
-      "Ads.V13.Resources\312\002\"Google\\Ads\\GoogleAds" +
-      "\\V13\\Resources\352\002&Google::Ads::GoogleAds:" +
-      ":V13::Resourcesb\006proto3"
+      "gle/api/resource.proto\"\302\003\n\016SearchTermVie" +
+      "w\022G\n\rresource_name\030\001 \001(\tB0\342A\001\003\372A)\n\'googl" +
+      "eads.googleapis.com/SearchTermView\022\036\n\013se" +
+      "arch_term\030\005 \001(\tB\004\342A\001\003H\000\210\001\001\022@\n\010ad_group\030\006" +
+      " \001(\tB)\342A\001\003\372A\"\n googleads.googleapis.com/" +
+      "AdGroupH\001\210\001\001\022m\n\006status\030\004 \001(\0162W.google.ad" +
+      "s.googleads.v13.enums.SearchTermTargetin" +
+      "gStatusEnum.SearchTermTargetingStatusB\004\342" +
+      "A\001\003:y\352Av\n\'googleads.googleapis.com/Searc" +
+      "hTermView\022Kcustomers/{customer_id}/searc" +
+      "hTermViews/{campaign_id}~{ad_group_id}~{" +
+      "query}B\016\n\014_search_termB\013\n\t_ad_groupB\205\002\n&" +
+      "com.google.ads.googleads.v13.resourcesB\023" +
+      "SearchTermViewProtoP\001ZKgoogle.golang.org" +
+      "/genproto/googleapis/ads/googleads/v13/r" +
+      "esources;resources\242\002\003GAA\252\002\"Google.Ads.Go" +
+      "ogleAds.V13.Resources\312\002\"Google\\Ads\\Googl" +
+      "eAds\\V13\\Resources\352\002&Google::Ads::Google" +
+      "Ads::V13::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

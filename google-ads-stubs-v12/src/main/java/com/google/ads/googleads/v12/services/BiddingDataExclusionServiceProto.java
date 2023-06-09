@@ -53,48 +53,48 @@ public final class BiddingDataExclusionServiceProto {
       "t.proto\032\037google/api/field_behavior.proto" +
       "\032\031google/api/resource.proto\032 google/prot" +
       "obuf/field_mask.proto\032\027google/rpc/status" +
-      ".proto\"\265\002\n\"MutateBiddingDataExclusionsRe" +
-      "quest\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022Y\n\nopera" +
-      "tions\030\002 \003(\0132@.google.ads.googleads.v12.s" +
-      "ervices.BiddingDataExclusionOperationB\003\340" +
-      "A\002\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rvalidate_" +
-      "only\030\004 \001(\010\022j\n\025response_content_type\030\005 \001(" +
-      "\0162K.google.ads.googleads.v12.enums.Respo" +
-      "nseContentTypeEnum.ResponseContentType\"\273" +
-      "\002\n\035BiddingDataExclusionOperation\022/\n\013upda" +
-      "te_mask\030\004 \001(\0132\032.google.protobuf.FieldMas" +
-      "k\022J\n\006create\030\001 \001(\01328.google.ads.googleads" +
-      ".v12.resources.BiddingDataExclusionH\000\022J\n" +
-      "\006update\030\002 \001(\01328.google.ads.googleads.v12" +
-      ".resources.BiddingDataExclusionH\000\022D\n\006rem" +
-      "ove\030\003 \001(\tB2\372A/\n-googleads.googleapis.com" +
-      "/BiddingDataExclusionH\000B\013\n\toperation\"\257\001\n" +
-      "#MutateBiddingDataExclusionsResponse\0221\n\025" +
-      "partial_failure_error\030\003 \001(\0132\022.google.rpc" +
-      ".Status\022U\n\007results\030\002 \003(\0132D.google.ads.go" +
-      "ogleads.v12.services.MutateBiddingDataEx" +
-      "clusionsResult\"\310\001\n!MutateBiddingDataExcl" +
-      "usionsResult\022I\n\rresource_name\030\001 \001(\tB2\372A/" +
-      "\n-googleads.googleapis.com/BiddingDataEx" +
-      "clusion\022X\n\026bidding_data_exclusion\030\002 \001(\0132" +
-      "8.google.ads.googleads.v12.resources.Bid" +
-      "dingDataExclusion2\364\002\n\033BiddingDataExclusi" +
-      "onService\022\215\002\n\033MutateBiddingDataExclusion" +
-      "s\022E.google.ads.googleads.v12.services.Mu" +
-      "tateBiddingDataExclusionsRequest\032F.googl" +
-      "e.ads.googleads.v12.services.MutateBiddi" +
-      "ngDataExclusionsResponse\"_\202\323\344\223\002@\";/v12/c" +
-      "ustomers/{customer_id=*}/biddingDataExcl" +
-      "usions:mutate:\001*\332A\026customer_id,operation" +
-      "s\032E\312A\030googleads.googleapis.com\322A\'https:/" +
-      "/www.googleapis.com/auth/adwordsB\214\002\n%com" +
-      ".google.ads.googleads.v12.servicesB Bidd" +
-      "ingDataExclusionServiceProtoP\001ZIgoogle.g" +
-      "olang.org/genproto/googleapis/ads/google" +
-      "ads/v12/services;services\242\002\003GAA\252\002!Google" +
-      ".Ads.GoogleAds.V12.Services\312\002!Google\\Ads" +
-      "\\GoogleAds\\V12\\Services\352\002%Google::Ads::G" +
-      "oogleAds::V12::Servicesb\006proto3"
+      ".proto\"\267\002\n\"MutateBiddingDataExclusionsRe" +
+      "quest\022\031\n\013customer_id\030\001 \001(\tB\004\342A\001\002\022Z\n\noper" +
+      "ations\030\002 \003(\0132@.google.ads.googleads.v12." +
+      "services.BiddingDataExclusionOperationB\004" +
+      "\342A\001\002\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rvalidat" +
+      "e_only\030\004 \001(\010\022j\n\025response_content_type\030\005 " +
+      "\001(\0162K.google.ads.googleads.v12.enums.Res" +
+      "ponseContentTypeEnum.ResponseContentType" +
+      "\"\273\002\n\035BiddingDataExclusionOperation\022/\n\013up" +
+      "date_mask\030\004 \001(\0132\032.google.protobuf.FieldM" +
+      "ask\022J\n\006create\030\001 \001(\01328.google.ads.googlea" +
+      "ds.v12.resources.BiddingDataExclusionH\000\022" +
+      "J\n\006update\030\002 \001(\01328.google.ads.googleads.v" +
+      "12.resources.BiddingDataExclusionH\000\022D\n\006r" +
+      "emove\030\003 \001(\tB2\372A/\n-googleads.googleapis.c" +
+      "om/BiddingDataExclusionH\000B\013\n\toperation\"\257" +
+      "\001\n#MutateBiddingDataExclusionsResponse\0221" +
+      "\n\025partial_failure_error\030\003 \001(\0132\022.google.r" +
+      "pc.Status\022U\n\007results\030\002 \003(\0132D.google.ads." +
+      "googleads.v12.services.MutateBiddingData" +
+      "ExclusionsResult\"\310\001\n!MutateBiddingDataEx" +
+      "clusionsResult\022I\n\rresource_name\030\001 \001(\tB2\372" +
+      "A/\n-googleads.googleapis.com/BiddingData" +
+      "Exclusion\022X\n\026bidding_data_exclusion\030\002 \001(" +
+      "\01328.google.ads.googleads.v12.resources.B" +
+      "iddingDataExclusion2\364\002\n\033BiddingDataExclu" +
+      "sionService\022\215\002\n\033MutateBiddingDataExclusi" +
+      "ons\022E.google.ads.googleads.v12.services." +
+      "MutateBiddingDataExclusionsRequest\032F.goo" +
+      "gle.ads.googleads.v12.services.MutateBid" +
+      "dingDataExclusionsResponse\"_\332A\026customer_" +
+      "id,operations\202\323\344\223\002@\";/v12/customers/{cus" +
+      "tomer_id=*}/biddingDataExclusions:mutate" +
+      ":\001*\032E\312A\030googleads.googleapis.com\322A\'https" +
+      "://www.googleapis.com/auth/adwordsB\214\002\n%c" +
+      "om.google.ads.googleads.v12.servicesB Bi" +
+      "ddingDataExclusionServiceProtoP\001ZIgoogle" +
+      ".golang.org/genproto/googleapis/ads/goog" +
+      "leads/v12/services;services\242\002\003GAA\252\002!Goog" +
+      "le.Ads.GoogleAds.V12.Services\312\002!Google\\A" +
+      "ds\\GoogleAds\\V12\\Services\352\002%Google::Ads:" +
+      ":GoogleAds::V12::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

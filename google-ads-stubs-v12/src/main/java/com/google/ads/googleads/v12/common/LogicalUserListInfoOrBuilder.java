@@ -12,6 +12,7 @@ public interface LogicalUserListInfoOrBuilder extends
    * Logical list rules that define this user list. The rules are defined as a
    * logical operator (ALL/ANY/NONE) and a list of user lists. All the rules are
    * ANDed when they are evaluated.
+   *
    * Required for creating a logical user list.
    * </pre>
    *
@@ -24,6 +25,7 @@ public interface LogicalUserListInfoOrBuilder extends
    * Logical list rules that define this user list. The rules are defined as a
    * logical operator (ALL/ANY/NONE) and a list of user lists. All the rules are
    * ANDed when they are evaluated.
+   *
    * Required for creating a logical user list.
    * </pre>
    *
@@ -35,6 +37,7 @@ public interface LogicalUserListInfoOrBuilder extends
    * Logical list rules that define this user list. The rules are defined as a
    * logical operator (ALL/ANY/NONE) and a list of user lists. All the rules are
    * ANDed when they are evaluated.
+   *
    * Required for creating a logical user list.
    * </pre>
    *
@@ -46,6 +49,7 @@ public interface LogicalUserListInfoOrBuilder extends
    * Logical list rules that define this user list. The rules are defined as a
    * logical operator (ALL/ANY/NONE) and a list of user lists. All the rules are
    * ANDed when they are evaluated.
+   *
    * Required for creating a logical user list.
    * </pre>
    *
@@ -58,6 +62,7 @@ public interface LogicalUserListInfoOrBuilder extends
    * Logical list rules that define this user list. The rules are defined as a
    * logical operator (ALL/ANY/NONE) and a list of user lists. All the rules are
    * ANDed when they are evaluated.
+   *
    * Required for creating a logical user list.
    * </pre>
    *

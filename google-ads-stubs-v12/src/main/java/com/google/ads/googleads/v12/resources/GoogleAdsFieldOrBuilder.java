@@ -11,6 +11,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * <pre>
    * Output only. The resource name of the artifact.
    * Artifact resource names have the form:
+   *
    * `googleAdsFields/{name}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * <pre>
    * Output only. The resource name of the artifact.
    * Artifact resource names have the form:
+   *
    * `googleAdsFields/{name}`
    * </pre>
    *
@@ -192,6 +194,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * Output only. The names of all resources that are selectable with the
    * described artifact. Fields from these resources do not segment metrics when
    * included in search queries.
+   *
    * This field is only set for artifacts whose category is RESOURCE.
    * </pre>
    *
@@ -205,6 +208,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * Output only. The names of all resources that are selectable with the
    * described artifact. Fields from these resources do not segment metrics when
    * included in search queries.
+   *
    * This field is only set for artifacts whose category is RESOURCE.
    * </pre>
    *
@@ -217,6 +221,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * Output only. The names of all resources that are selectable with the
    * described artifact. Fields from these resources do not segment metrics when
    * included in search queries.
+   *
    * This field is only set for artifacts whose category is RESOURCE.
    * </pre>
    *
@@ -230,6 +235,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * Output only. The names of all resources that are selectable with the
    * described artifact. Fields from these resources do not segment metrics when
    * included in search queries.
+   *
    * This field is only set for artifacts whose category is RESOURCE.
    * </pre>
    *
@@ -345,6 +351,7 @@ public interface GoogleAdsFieldOrBuilder extends
   /**
    * <pre>
    * Output only. Values the artifact can assume if it is a field of type ENUM.
+   *
    * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
    * </pre>
    *
@@ -356,6 +363,7 @@ public interface GoogleAdsFieldOrBuilder extends
   /**
    * <pre>
    * Output only. Values the artifact can assume if it is a field of type ENUM.
+   *
    * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
    * </pre>
    *
@@ -366,6 +374,7 @@ public interface GoogleAdsFieldOrBuilder extends
   /**
    * <pre>
    * Output only. Values the artifact can assume if it is a field of type ENUM.
+   *
    * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
    * </pre>
    *
@@ -377,6 +386,7 @@ public interface GoogleAdsFieldOrBuilder extends
   /**
    * <pre>
    * Output only. Values the artifact can assume if it is a field of type ENUM.
+   *
    * This field is only set for artifacts of category SEGMENT or ATTRIBUTE.
    * </pre>
    *

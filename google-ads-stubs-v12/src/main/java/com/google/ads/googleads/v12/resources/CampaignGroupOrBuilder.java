@@ -11,6 +11,7 @@ public interface CampaignGroupOrBuilder extends
    * <pre>
    * Immutable. The resource name of the campaign group.
    * Campaign group resource names have the form:
+   *
    * `customers/{customer_id}/campaignGroups/{campaign_group_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface CampaignGroupOrBuilder extends
    * <pre>
    * Immutable. The resource name of the campaign group.
    * Campaign group resource names have the form:
+   *
    * `customers/{customer_id}/campaignGroups/{campaign_group_id}`
    * </pre>
    *
@@ -44,8 +46,10 @@ public interface CampaignGroupOrBuilder extends
   /**
    * <pre>
    * The name of the campaign group.
+   *
    * This field is required and should not be empty when creating new campaign
    * groups.
+   *
    * It must not contain any null (code point 0x0), NL line feed
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
@@ -57,8 +61,10 @@ public interface CampaignGroupOrBuilder extends
   /**
    * <pre>
    * The name of the campaign group.
+   *
    * This field is required and should not be empty when creating new campaign
    * groups.
+   *
    * It must not contain any null (code point 0x0), NL line feed
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
@@ -72,6 +78,7 @@ public interface CampaignGroupOrBuilder extends
   /**
    * <pre>
    * The status of the campaign group.
+   *
    * When a new campaign group is added, the status defaults to ENABLED.
    * </pre>
    *
@@ -82,6 +89,7 @@ public interface CampaignGroupOrBuilder extends
   /**
    * <pre>
    * The status of the campaign group.
+   *
    * When a new campaign group is added, the status defaults to ENABLED.
    * </pre>
    *

@@ -61,5 +61,5 @@ public interface UserDataOperationOrBuilder extends
    */
   com.google.ads.googleads.v13.common.UserDataOrBuilder getRemoveOrBuilder();
 
-  public com.google.ads.googleads.v13.services.UserDataOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v13.services.UserDataOperation.OperationCase getOperationCase();
 }

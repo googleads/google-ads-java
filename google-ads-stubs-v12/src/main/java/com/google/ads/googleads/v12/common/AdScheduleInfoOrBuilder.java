@@ -10,6 +10,7 @@ public interface AdScheduleInfoOrBuilder extends
   /**
    * <pre>
    * Minutes after the start hour at which this schedule starts.
+   *
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -21,6 +22,7 @@ public interface AdScheduleInfoOrBuilder extends
   /**
    * <pre>
    * Minutes after the start hour at which this schedule starts.
+   *
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -34,6 +36,7 @@ public interface AdScheduleInfoOrBuilder extends
    * <pre>
    * Minutes after the end hour at which this schedule ends. The schedule is
    * exclusive of the end minute.
+   *
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -46,6 +49,7 @@ public interface AdScheduleInfoOrBuilder extends
    * <pre>
    * Minutes after the end hour at which this schedule ends. The schedule is
    * exclusive of the end minute.
+   *
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -59,6 +63,7 @@ public interface AdScheduleInfoOrBuilder extends
    * <pre>
    * Starting hour in 24 hour time.
    * This field must be between 0 and 23, inclusive.
+   *
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -71,6 +76,7 @@ public interface AdScheduleInfoOrBuilder extends
    * <pre>
    * Starting hour in 24 hour time.
    * This field must be between 0 and 23, inclusive.
+   *
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -84,6 +90,7 @@ public interface AdScheduleInfoOrBuilder extends
    * <pre>
    * Ending hour in 24 hour time; 24 signifies end of the day.
    * This field must be between 0 and 24, inclusive.
+   *
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -96,6 +103,7 @@ public interface AdScheduleInfoOrBuilder extends
    * <pre>
    * Ending hour in 24 hour time; 24 signifies end of the day.
    * This field must be between 0 and 24, inclusive.
+   *
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -108,6 +116,7 @@ public interface AdScheduleInfoOrBuilder extends
   /**
    * <pre>
    * Day of the week the schedule applies to.
+   *
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -119,6 +128,7 @@ public interface AdScheduleInfoOrBuilder extends
   /**
    * <pre>
    * Day of the week the schedule applies to.
+   *
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>

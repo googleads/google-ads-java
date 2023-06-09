@@ -30,11 +30,6 @@ private static final long serialVersionUID = 0L;
     return new Forecast();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.services.ReachPlanServiceProto.internal_static_google_ads_googleads_v12_services_Forecast_descriptor;
@@ -57,6 +52,7 @@ private static final long serialVersionUID = 0L;
    * GenerateReachForecastRequest.min_effective_frequency or
    * GenerateReachForecastRequest.effective_frequency_limit times that exactly
    * matches the Targeting.
+   *
    * Note that a minimum number of unique people must be reached in order for
    * data to be reported. If the minimum number is not met, the on_target_reach
    * value will be rounded to 0.
@@ -75,6 +71,7 @@ private static final long serialVersionUID = 0L;
    * GenerateReachForecastRequest.min_effective_frequency or
    * GenerateReachForecastRequest.effective_frequency_limit times that exactly
    * matches the Targeting.
+   *
    * Note that a minimum number of unique people must be reached in order for
    * data to be reported. If the minimum number is not met, the on_target_reach
    * value will be rounded to 0.
@@ -96,6 +93,7 @@ private static final long serialVersionUID = 0L;
    * GenerateReachForecastRequest.min_effective_frequency or
    * GenerateReachForecastRequest.effective_frequency_limit times. This includes
    * people that may fall outside the specified Targeting.
+   *
    * Note that a minimum number of unique people must be reached in order for
    * data to be reported. If the minimum number is not met, the total_reach
    * value will be rounded to 0.
@@ -114,6 +112,7 @@ private static final long serialVersionUID = 0L;
    * GenerateReachForecastRequest.min_effective_frequency or
    * GenerateReachForecastRequest.effective_frequency_limit times. This includes
    * people that may fall outside the specified Targeting.
+   *
    * Note that a minimum number of unique people must be reached in order for
    * data to be reported. If the minimum number is not met, the total_reach
    * value will be rounded to 0.
@@ -676,11 +675,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.services.Forecast parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.services.Forecast parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1067,6 +1068,7 @@ private static final long serialVersionUID = 0L;
      * GenerateReachForecastRequest.min_effective_frequency or
      * GenerateReachForecastRequest.effective_frequency_limit times that exactly
      * matches the Targeting.
+     *
      * Note that a minimum number of unique people must be reached in order for
      * data to be reported. If the minimum number is not met, the on_target_reach
      * value will be rounded to 0.
@@ -1085,6 +1087,7 @@ private static final long serialVersionUID = 0L;
      * GenerateReachForecastRequest.min_effective_frequency or
      * GenerateReachForecastRequest.effective_frequency_limit times that exactly
      * matches the Targeting.
+     *
      * Note that a minimum number of unique people must be reached in order for
      * data to be reported. If the minimum number is not met, the on_target_reach
      * value will be rounded to 0.
@@ -1103,6 +1106,7 @@ private static final long serialVersionUID = 0L;
      * GenerateReachForecastRequest.min_effective_frequency or
      * GenerateReachForecastRequest.effective_frequency_limit times that exactly
      * matches the Targeting.
+     *
      * Note that a minimum number of unique people must be reached in order for
      * data to be reported. If the minimum number is not met, the on_target_reach
      * value will be rounded to 0.
@@ -1113,7 +1117,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOnTargetReach(long value) {
-      
+
       onTargetReach_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
@@ -1125,6 +1129,7 @@ private static final long serialVersionUID = 0L;
      * GenerateReachForecastRequest.min_effective_frequency or
      * GenerateReachForecastRequest.effective_frequency_limit times that exactly
      * matches the Targeting.
+     *
      * Note that a minimum number of unique people must be reached in order for
      * data to be reported. If the minimum number is not met, the on_target_reach
      * value will be rounded to 0.
@@ -1147,6 +1152,7 @@ private static final long serialVersionUID = 0L;
      * GenerateReachForecastRequest.min_effective_frequency or
      * GenerateReachForecastRequest.effective_frequency_limit times. This includes
      * people that may fall outside the specified Targeting.
+     *
      * Note that a minimum number of unique people must be reached in order for
      * data to be reported. If the minimum number is not met, the total_reach
      * value will be rounded to 0.
@@ -1165,6 +1171,7 @@ private static final long serialVersionUID = 0L;
      * GenerateReachForecastRequest.min_effective_frequency or
      * GenerateReachForecastRequest.effective_frequency_limit times. This includes
      * people that may fall outside the specified Targeting.
+     *
      * Note that a minimum number of unique people must be reached in order for
      * data to be reported. If the minimum number is not met, the total_reach
      * value will be rounded to 0.
@@ -1183,6 +1190,7 @@ private static final long serialVersionUID = 0L;
      * GenerateReachForecastRequest.min_effective_frequency or
      * GenerateReachForecastRequest.effective_frequency_limit times. This includes
      * people that may fall outside the specified Targeting.
+     *
      * Note that a minimum number of unique people must be reached in order for
      * data to be reported. If the minimum number is not met, the total_reach
      * value will be rounded to 0.
@@ -1193,7 +1201,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalReach(long value) {
-      
+
       totalReach_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -1205,6 +1213,7 @@ private static final long serialVersionUID = 0L;
      * GenerateReachForecastRequest.min_effective_frequency or
      * GenerateReachForecastRequest.effective_frequency_limit times. This includes
      * people that may fall outside the specified Targeting.
+     *
      * Note that a minimum number of unique people must be reached in order for
      * data to be reported. If the minimum number is not met, the total_reach
      * value will be rounded to 0.
@@ -1255,7 +1264,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOnTargetImpressions(long value) {
-      
+
       onTargetImpressions_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
@@ -1317,7 +1326,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalImpressions(long value) {
-      
+
       totalImpressions_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
@@ -1384,7 +1393,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setViewableImpressions(long value) {
-      
+
       viewableImpressions_ = value;
       bitField0_ |= 0x00000010;
       onChanged();
@@ -1812,7 +1821,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOnTargetCoviewReach(long value) {
-      
+
       onTargetCoviewReach_ = value;
       bitField0_ |= 0x00000040;
       onChanged();
@@ -1872,7 +1881,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalCoviewReach(long value) {
-      
+
       totalCoviewReach_ = value;
       bitField0_ |= 0x00000080;
       onChanged();
@@ -1932,7 +1941,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOnTargetCoviewImpressions(long value) {
-      
+
       onTargetCoviewImpressions_ = value;
       bitField0_ |= 0x00000100;
       onChanged();
@@ -1995,7 +2004,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalCoviewImpressions(long value) {
-      
+
       totalCoviewImpressions_ = value;
       bitField0_ |= 0x00000200;
       onChanged();

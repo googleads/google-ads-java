@@ -110,7 +110,7 @@ public final class AccountBudgetProposalServiceGrpc {
    * The REMOVE operation cancels a pending proposal.
    * </pre>
    */
-  public static abstract class AccountBudgetProposalServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -132,25 +132,14 @@ public final class AccountBudgetProposalServiceGrpc {
      *   [StringLengthError]()
      * </pre>
      */
-    public void mutateAccountBudgetProposal(com.google.ads.googleads.v12.services.MutateAccountBudgetProposalRequest request,
+    default void mutateAccountBudgetProposal(com.google.ads.googleads.v12.services.MutateAccountBudgetProposalRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.MutateAccountBudgetProposalResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateAccountBudgetProposalMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateAccountBudgetProposalMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.MutateAccountBudgetProposalRequest,
-                com.google.ads.googleads.v12.services.MutateAccountBudgetProposalResponse>(
-                  this, METHODID_MUTATE_ACCOUNT_BUDGET_PROPOSAL)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service AccountBudgetProposalService.
    * <pre>
    * A service for managing account-level budgets through proposals.
    * A proposal is a request to create a new budget or make changes to an
@@ -161,7 +150,28 @@ public final class AccountBudgetProposalServiceGrpc {
    * The REMOVE operation cancels a pending proposal.
    * </pre>
    */
-  public static final class AccountBudgetProposalServiceStub extends io.grpc.stub.AbstractAsyncStub<AccountBudgetProposalServiceStub> {
+  public static abstract class AccountBudgetProposalServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return AccountBudgetProposalServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service AccountBudgetProposalService.
+   * <pre>
+   * A service for managing account-level budgets through proposals.
+   * A proposal is a request to create a new budget or make changes to an
+   * existing one.
+   * Mutates:
+   * The CREATE operation creates a new proposal.
+   * UPDATE operations aren't supported.
+   * The REMOVE operation cancels a pending proposal.
+   * </pre>
+   */
+  public static final class AccountBudgetProposalServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<AccountBudgetProposalServiceStub> {
     private AccountBudgetProposalServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -201,6 +211,7 @@ public final class AccountBudgetProposalServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service AccountBudgetProposalService.
    * <pre>
    * A service for managing account-level budgets through proposals.
    * A proposal is a request to create a new budget or make changes to an
@@ -211,7 +222,8 @@ public final class AccountBudgetProposalServiceGrpc {
    * The REMOVE operation cancels a pending proposal.
    * </pre>
    */
-  public static final class AccountBudgetProposalServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<AccountBudgetProposalServiceBlockingStub> {
+  public static final class AccountBudgetProposalServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<AccountBudgetProposalServiceBlockingStub> {
     private AccountBudgetProposalServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -250,6 +262,7 @@ public final class AccountBudgetProposalServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service AccountBudgetProposalService.
    * <pre>
    * A service for managing account-level budgets through proposals.
    * A proposal is a request to create a new budget or make changes to an
@@ -260,7 +273,8 @@ public final class AccountBudgetProposalServiceGrpc {
    * The REMOVE operation cancels a pending proposal.
    * </pre>
    */
-  public static final class AccountBudgetProposalServiceFutureStub extends io.grpc.stub.AbstractFutureStub<AccountBudgetProposalServiceFutureStub> {
+  public static final class AccountBudgetProposalServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<AccountBudgetProposalServiceFutureStub> {
     private AccountBudgetProposalServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -306,10 +320,10 @@ public final class AccountBudgetProposalServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AccountBudgetProposalServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AccountBudgetProposalServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -336,6 +350,18 @@ public final class AccountBudgetProposalServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateAccountBudgetProposalMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.MutateAccountBudgetProposalRequest,
+              com.google.ads.googleads.v12.services.MutateAccountBudgetProposalResponse>(
+                service, METHODID_MUTATE_ACCOUNT_BUDGET_PROPOSAL)))
+        .build();
   }
 
   private static abstract class AccountBudgetProposalServiceBaseDescriptorSupplier

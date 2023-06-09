@@ -29,11 +29,6 @@ private static final long serialVersionUID = 0L;
     return new TargetCpaSimulationPoint();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.common.SimulationProto.internal_static_google_ads_googleads_v13_common_TargetCpaSimulationPoint_descriptor;
@@ -49,6 +44,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   private int targetCpaSimulationKeyValueCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object targetCpaSimulationKeyValue_;
   public enum TargetCpaSimulationKeyValueCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -647,11 +643,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.common.TargetCpaSimulationPoint parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.common.TargetCpaSimulationPoint parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1040,7 +1038,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRequiredBudgetAmountMicros(long value) {
-      
+
       requiredBudgetAmountMicros_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
@@ -1097,7 +1095,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBiddableConversions(double value) {
-      
+
       biddableConversions_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -1153,7 +1151,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBiddableConversionsValue(double value) {
-      
+
       biddableConversionsValue_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
@@ -1197,7 +1195,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAppInstalls(double value) {
-      
+
       appInstalls_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
@@ -1241,7 +1239,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setInAppActions(double value) {
-      
+
       inAppActions_ = value;
       bitField0_ |= 0x00000010;
       onChanged();
@@ -1297,7 +1295,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setClicks(long value) {
-      
+
       clicks_ = value;
       bitField0_ |= 0x00000020;
       onChanged();
@@ -1353,7 +1351,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCostMicros(long value) {
-      
+
       costMicros_ = value;
       bitField0_ |= 0x00000040;
       onChanged();
@@ -1409,7 +1407,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setImpressions(long value) {
-      
+
       impressions_ = value;
       bitField0_ |= 0x00000080;
       onChanged();
@@ -1468,7 +1466,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTopSlotImpressions(long value) {
-      
+
       topSlotImpressions_ = value;
       bitField0_ |= 0x00000100;
       onChanged();
@@ -1525,7 +1523,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTargetCpaMicros(long value) {
-      
+
       targetCpaSimulationKeyValueCase_ = 17;
       targetCpaSimulationKeyValue_ = value;
       onChanged();
@@ -1589,7 +1587,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTargetCpaScalingModifier(double value) {
-      
+
       targetCpaSimulationKeyValueCase_ = 18;
       targetCpaSimulationKeyValue_ = value;
       onChanged();

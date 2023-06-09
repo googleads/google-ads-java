@@ -34,5 +34,5 @@ public interface TargetCpmOrBuilder extends
    */
   com.google.ads.googleads.v13.common.TargetCpmTargetFrequencyGoalOrBuilder getTargetFrequencyGoalOrBuilder();
 
-  public com.google.ads.googleads.v13.common.TargetCpm.GoalCase getGoalCase();
+  com.google.ads.googleads.v13.common.TargetCpm.GoalCase getGoalCase();
 }

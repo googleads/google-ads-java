@@ -32,11 +32,6 @@ private static final long serialVersionUID = 0L;
     return new UserListRuleInfo();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.common.UserListsProto.internal_static_google_ads_googleads_v13_common_UserListRuleInfo_descriptor;
@@ -55,9 +50,11 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Rule type is used to determine how to group rule items.
+   *
    * The default is OR of ANDs (disjunctive normal form).
    * That is, rule items will be ANDed together within rule item groups and the
    * groups themselves will be ORed together.
+   *
    * OR of ANDs is the only supported type for FlexibleRuleUserList.
    * </pre>
    *
@@ -70,9 +67,11 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Rule type is used to determine how to group rule items.
+   *
    * The default is OR of ANDs (disjunctive normal form).
    * That is, rule items will be ANDed together within rule item groups and the
    * groups themselves will be ORed together.
+   *
    * OR of ANDs is the only supported type for FlexibleRuleUserList.
    * </pre>
    *
@@ -271,11 +270,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.common.UserListRuleInfo parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.common.UserListRuleInfo parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -553,9 +554,11 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Rule type is used to determine how to group rule items.
+     *
      * The default is OR of ANDs (disjunctive normal form).
      * That is, rule items will be ANDed together within rule item groups and the
      * groups themselves will be ORed together.
+     *
      * OR of ANDs is the only supported type for FlexibleRuleUserList.
      * </pre>
      *
@@ -568,9 +571,11 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Rule type is used to determine how to group rule items.
+     *
      * The default is OR of ANDs (disjunctive normal form).
      * That is, rule items will be ANDed together within rule item groups and the
      * groups themselves will be ORed together.
+     *
      * OR of ANDs is the only supported type for FlexibleRuleUserList.
      * </pre>
      *
@@ -587,9 +592,11 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Rule type is used to determine how to group rule items.
+     *
      * The default is OR of ANDs (disjunctive normal form).
      * That is, rule items will be ANDed together within rule item groups and the
      * groups themselves will be ORed together.
+     *
      * OR of ANDs is the only supported type for FlexibleRuleUserList.
      * </pre>
      *
@@ -604,9 +611,11 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Rule type is used to determine how to group rule items.
+     *
      * The default is OR of ANDs (disjunctive normal form).
      * That is, rule items will be ANDed together within rule item groups and the
      * groups themselves will be ORed together.
+     *
      * OR of ANDs is the only supported type for FlexibleRuleUserList.
      * </pre>
      *
@@ -626,9 +635,11 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Rule type is used to determine how to group rule items.
+     *
      * The default is OR of ANDs (disjunctive normal form).
      * That is, rule items will be ANDed together within rule item groups and the
      * groups themselves will be ORed together.
+     *
      * OR of ANDs is the only supported type for FlexibleRuleUserList.
      * </pre>
      *

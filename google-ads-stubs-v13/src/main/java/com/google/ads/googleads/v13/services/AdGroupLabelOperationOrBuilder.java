@@ -41,6 +41,7 @@ public interface AdGroupLabelOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the ad group label
    * being removed, in this format:
+   *
    * `customers/{customer_id}/adGroupLabels/{ad_group_id}~{label_id}`
    * </pre>
    *
@@ -52,6 +53,7 @@ public interface AdGroupLabelOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the ad group label
    * being removed, in this format:
+   *
    * `customers/{customer_id}/adGroupLabels/{ad_group_id}~{label_id}`
    * </pre>
    *
@@ -63,6 +65,7 @@ public interface AdGroupLabelOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the ad group label
    * being removed, in this format:
+   *
    * `customers/{customer_id}/adGroupLabels/{ad_group_id}~{label_id}`
    * </pre>
    *
@@ -72,5 +75,5 @@ public interface AdGroupLabelOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v13.services.AdGroupLabelOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v13.services.AdGroupLabelOperation.OperationCase getOperationCase();
 }

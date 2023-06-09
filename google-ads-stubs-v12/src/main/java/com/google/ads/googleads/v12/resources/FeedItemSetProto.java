@@ -35,29 +35,29 @@ public final class FeedItemSetProto {
       "oto\0329google/ads/googleads/v12/enums/feed" +
       "_item_set_status.proto\032\037google/api/field" +
       "_behavior.proto\032\031google/api/resource.pro" +
-      "to\"\365\004\n\013FeedItemSet\022C\n\rresource_name\030\001 \001(" +
-      "\tB,\340A\005\372A&\n$googleads.googleapis.com/Feed" +
-      "ItemSet\0223\n\004feed\030\002 \001(\tB%\340A\005\372A\037\n\035googleads" +
-      ".googleapis.com/Feed\022\035\n\020feed_item_set_id" +
-      "\030\003 \001(\003B\003\340A\003\022\024\n\014display_name\030\004 \001(\t\022\\\n\006sta" +
-      "tus\030\010 \001(\0162G.google.ads.googleads.v12.enu" +
-      "ms.FeedItemSetStatusEnum.FeedItemSetStat" +
-      "usB\003\340A\003\022`\n\033dynamic_location_set_filter\030\005" +
-      " \001(\01329.google.ads.googleads.v12.common.D" +
-      "ynamicLocationSetFilterH\000\022s\n%dynamic_aff" +
-      "iliate_location_set_filter\030\006 \001(\0132B.googl" +
-      "e.ads.googleads.v12.common.DynamicAffili" +
-      "ateLocationSetFilterH\000:l\352Ai\n$googleads.g" +
-      "oogleapis.com/FeedItemSet\022Acustomers/{cu" +
-      "stomer_id}/feedItemSets/{feed_id}~{feed_" +
-      "item_set_id}B\024\n\022dynamic_set_filterB\202\002\n&c" +
-      "om.google.ads.googleads.v12.resourcesB\020F" +
-      "eedItemSetProtoP\001ZKgoogle.golang.org/gen" +
-      "proto/googleapis/ads/googleads/v12/resou" +
-      "rces;resources\242\002\003GAA\252\002\"Google.Ads.Google" +
-      "Ads.V12.Resources\312\002\"Google\\Ads\\GoogleAds" +
-      "\\V12\\Resources\352\002&Google::Ads::GoogleAds:" +
-      ":V12::Resourcesb\006proto3"
+      "to\"\371\004\n\013FeedItemSet\022D\n\rresource_name\030\001 \001(" +
+      "\tB-\342A\001\005\372A&\n$googleads.googleapis.com/Fee" +
+      "dItemSet\0224\n\004feed\030\002 \001(\tB&\342A\001\005\372A\037\n\035googlea" +
+      "ds.googleapis.com/Feed\022\036\n\020feed_item_set_" +
+      "id\030\003 \001(\003B\004\342A\001\003\022\024\n\014display_name\030\004 \001(\t\022]\n\006" +
+      "status\030\010 \001(\0162G.google.ads.googleads.v12." +
+      "enums.FeedItemSetStatusEnum.FeedItemSetS" +
+      "tatusB\004\342A\001\003\022`\n\033dynamic_location_set_filt" +
+      "er\030\005 \001(\01329.google.ads.googleads.v12.comm" +
+      "on.DynamicLocationSetFilterH\000\022s\n%dynamic" +
+      "_affiliate_location_set_filter\030\006 \001(\0132B.g" +
+      "oogle.ads.googleads.v12.common.DynamicAf" +
+      "filiateLocationSetFilterH\000:l\352Ai\n$googlea" +
+      "ds.googleapis.com/FeedItemSet\022Acustomers" +
+      "/{customer_id}/feedItemSets/{feed_id}~{f" +
+      "eed_item_set_id}B\024\n\022dynamic_set_filterB\202" +
+      "\002\n&com.google.ads.googleads.v12.resource" +
+      "sB\020FeedItemSetProtoP\001ZKgoogle.golang.org" +
+      "/genproto/googleapis/ads/googleads/v12/r" +
+      "esources;resources\242\002\003GAA\252\002\"Google.Ads.Go" +
+      "ogleAds.V12.Resources\312\002\"Google\\Ads\\Googl" +
+      "eAds\\V12\\Resources\352\002&Google::Ads::Google" +
+      "Ads::V12::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

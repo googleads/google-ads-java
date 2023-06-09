@@ -52,43 +52,43 @@ public final class AdGroupServiceProto {
       "le/api/client.proto\032\037google/api/field_be" +
       "havior.proto\032\031google/api/resource.proto\032" +
       " google/protobuf/field_mask.proto\032\027googl" +
-      "e/rpc/status.proto\"\233\002\n\025MutateAdGroupsReq" +
-      "uest\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022L\n\noperat" +
-      "ions\030\002 \003(\01323.google.ads.googleads.v13.se" +
-      "rvices.AdGroupOperationB\003\340A\002\022\027\n\017partial_" +
-      "failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\022j\n\025" +
-      "response_content_type\030\005 \001(\0162K.google.ads" +
-      ".googleads.v13.enums.ResponseContentType" +
-      "Enum.ResponseContentType\"\207\002\n\020AdGroupOper" +
-      "ation\022/\n\013update_mask\030\004 \001(\0132\032.google.prot" +
-      "obuf.FieldMask\022=\n\006create\030\001 \001(\0132+.google." +
-      "ads.googleads.v13.resources.AdGroupH\000\022=\n" +
-      "\006update\030\002 \001(\0132+.google.ads.googleads.v13" +
-      ".resources.AdGroupH\000\0227\n\006remove\030\003 \001(\tB%\372A" +
-      "\"\n googleads.googleapis.com/AdGroupH\000B\013\n" +
-      "\toperation\"\224\001\n\026MutateAdGroupsResponse\0221\n" +
-      "\025partial_failure_error\030\003 \001(\0132\022.google.rp" +
-      "c.Status\022G\n\007results\030\002 \003(\01326.google.ads.g" +
-      "oogleads.v13.services.MutateAdGroupResul" +
-      "t\"\222\001\n\023MutateAdGroupResult\022<\n\rresource_na" +
-      "me\030\001 \001(\tB%\372A\"\n googleads.googleapis.com/" +
-      "AdGroup\022=\n\010ad_group\030\002 \001(\0132+.google.ads.g" +
-      "oogleads.v13.resources.AdGroup2\263\002\n\016AdGro" +
-      "upService\022\331\001\n\016MutateAdGroups\0228.google.ad" +
-      "s.googleads.v13.services.MutateAdGroupsR" +
-      "equest\0329.google.ads.googleads.v13.servic" +
-      "es.MutateAdGroupsResponse\"R\202\323\344\223\0023\"./v13/" +
-      "customers/{customer_id=*}/adGroups:mutat" +
-      "e:\001*\332A\026customer_id,operations\032E\312A\030google" +
-      "ads.googleapis.com\322A\'https://www.googlea" +
-      "pis.com/auth/adwordsB\377\001\n%com.google.ads." +
-      "googleads.v13.servicesB\023AdGroupServicePr" +
-      "otoP\001ZIgoogle.golang.org/genproto/google" +
-      "apis/ads/googleads/v13/services;services" +
-      "\242\002\003GAA\252\002!Google.Ads.GoogleAds.V13.Servic" +
-      "es\312\002!Google\\Ads\\GoogleAds\\V13\\Services\352\002" +
-      "%Google::Ads::GoogleAds::V13::Servicesb\006" +
-      "proto3"
+      "e/rpc/status.proto\"\235\002\n\025MutateAdGroupsReq" +
+      "uest\022\031\n\013customer_id\030\001 \001(\tB\004\342A\001\002\022M\n\nopera" +
+      "tions\030\002 \003(\01323.google.ads.googleads.v13.s" +
+      "ervices.AdGroupOperationB\004\342A\001\002\022\027\n\017partia" +
+      "l_failure\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\022j" +
+      "\n\025response_content_type\030\005 \001(\0162K.google.a" +
+      "ds.googleads.v13.enums.ResponseContentTy" +
+      "peEnum.ResponseContentType\"\207\002\n\020AdGroupOp" +
+      "eration\022/\n\013update_mask\030\004 \001(\0132\032.google.pr" +
+      "otobuf.FieldMask\022=\n\006create\030\001 \001(\0132+.googl" +
+      "e.ads.googleads.v13.resources.AdGroupH\000\022" +
+      "=\n\006update\030\002 \001(\0132+.google.ads.googleads.v" +
+      "13.resources.AdGroupH\000\0227\n\006remove\030\003 \001(\tB%" +
+      "\372A\"\n googleads.googleapis.com/AdGroupH\000B" +
+      "\013\n\toperation\"\224\001\n\026MutateAdGroupsResponse\022" +
+      "1\n\025partial_failure_error\030\003 \001(\0132\022.google." +
+      "rpc.Status\022G\n\007results\030\002 \003(\01326.google.ads" +
+      ".googleads.v13.services.MutateAdGroupRes" +
+      "ult\"\222\001\n\023MutateAdGroupResult\022<\n\rresource_" +
+      "name\030\001 \001(\tB%\372A\"\n googleads.googleapis.co" +
+      "m/AdGroup\022=\n\010ad_group\030\002 \001(\0132+.google.ads" +
+      ".googleads.v13.resources.AdGroup2\263\002\n\016AdG" +
+      "roupService\022\331\001\n\016MutateAdGroups\0228.google." +
+      "ads.googleads.v13.services.MutateAdGroup" +
+      "sRequest\0329.google.ads.googleads.v13.serv" +
+      "ices.MutateAdGroupsResponse\"R\332A\026customer" +
+      "_id,operations\202\323\344\223\0023\"./v13/customers/{cu" +
+      "stomer_id=*}/adGroups:mutate:\001*\032E\312A\030goog" +
+      "leads.googleapis.com\322A\'https://www.googl" +
+      "eapis.com/auth/adwordsB\377\001\n%com.google.ad" +
+      "s.googleads.v13.servicesB\023AdGroupService" +
+      "ProtoP\001ZIgoogle.golang.org/genproto/goog" +
+      "leapis/ads/googleads/v13/services;servic" +
+      "es\242\002\003GAA\252\002!Google.Ads.GoogleAds.V13.Serv" +
+      "ices\312\002!Google\\Ads\\GoogleAds\\V13\\Services" +
+      "\352\002%Google::Ads::GoogleAds::V13::Services" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

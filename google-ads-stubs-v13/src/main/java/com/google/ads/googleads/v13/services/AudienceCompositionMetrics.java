@@ -30,11 +30,6 @@ private static final long serialVersionUID = 0L;
     return new AudienceCompositionMetrics();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.services.AudienceInsightsServiceProto.internal_static_google_ads_googleads_v13_services_AudienceCompositionMetrics_descriptor;
@@ -261,11 +256,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.services.AudienceCompositionMetrics parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.services.AudienceCompositionMetrics parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -541,7 +538,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBaselineAudienceShare(double value) {
-      
+
       baselineAudienceShare_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
@@ -588,7 +585,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAudienceShare(double value) {
-      
+
       audienceShare_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -635,7 +632,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIndex(double value) {
-      
+
       index_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
@@ -680,7 +677,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setScore(double value) {
-      
+
       score_ = value;
       bitField0_ |= 0x00000008;
       onChanged();

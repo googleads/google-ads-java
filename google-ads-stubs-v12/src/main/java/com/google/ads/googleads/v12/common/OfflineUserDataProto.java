@@ -132,7 +132,7 @@ public final class OfflineUserDataProto {
       "attribute\030\002 \001(\01325.google.ads.googleads.v" +
       "12.common.TransactionAttribute\022F\n\016user_a" +
       "ttribute\030\003 \001(\0132..google.ads.googleads.v1" +
-      "2.common.UserAttribute\"\214\004\n\rUserAttribute" +
+      "2.common.UserAttribute\"\217\004\n\rUserAttribute" +
       "\022\"\n\025lifetime_value_micros\030\001 \001(\003H\000\210\001\001\022\"\n\025" +
       "lifetime_value_bucket\030\002 \001(\005H\001\210\001\001\022\037\n\027last" +
       "_purchase_date_time\030\003 \001(\t\022\036\n\026average_pur" +
@@ -140,44 +140,44 @@ public final class OfflineUserDataProto {
       "lue_micros\030\005 \001(\003\022\035\n\025acquisition_date_tim" +
       "e\030\006 \001(\t\022O\n\020shopping_loyalty\030\007 \001(\01320.goog" +
       "le.ads.googleads.v12.common.ShoppingLoya" +
-      "ltyH\002\210\001\001\022\034\n\017lifecycle_stage\030\010 \001(\tB\003\340A\001\022%" +
-      "\n\030first_purchase_date_time\030\t \001(\tB\003\340A\001\022M\n" +
-      "\017event_attribute\030\n \003(\0132/.google.ads.goog" +
-      "leads.v12.common.EventAttributeB\003\340A\001B\030\n\026" +
-      "_lifetime_value_microsB\030\n\026_lifetime_valu" +
-      "e_bucketB\023\n\021_shopping_loyalty\"\224\001\n\016EventA" +
-      "ttribute\022\022\n\005event\030\001 \001(\tB\003\340A\002\022\034\n\017event_da" +
-      "te_time\030\002 \001(\tB\003\340A\002\022P\n\016item_attribute\030\003 \003" +
-      "(\01323.google.ads.googleads.v12.common.Eve" +
-      "ntItemAttributeB\003\340A\002\"*\n\022EventItemAttribu" +
-      "te\022\024\n\007item_id\030\001 \001(\tB\003\340A\001\"=\n\017ShoppingLoya" +
-      "lty\022\031\n\014loyalty_tier\030\001 \001(\tH\000\210\001\001B\017\n\r_loyal" +
-      "ty_tier\"E\n\035CustomerMatchUserListMetadata" +
-      "\022\026\n\tuser_list\030\002 \001(\tH\000\210\001\001B\014\n\n_user_list\"\227" +
-      "\002\n\022StoreSalesMetadata\022\035\n\020loyalty_fractio" +
-      "n\030\005 \001(\001H\000\210\001\001\022(\n\033transaction_upload_fract" +
-      "ion\030\006 \001(\001H\001\210\001\001\022\027\n\ncustom_key\030\007 \001(\tH\002\210\001\001\022" +
-      "[\n\024third_party_metadata\030\003 \001(\0132=.google.a" +
-      "ds.googleads.v12.common.StoreSalesThirdP" +
-      "artyMetadataB\023\n\021_loyalty_fractionB\036\n\034_tr" +
-      "ansaction_upload_fractionB\r\n\013_custom_key" +
-      "\"\230\003\n\034StoreSalesThirdPartyMetadata\022(\n\033adv" +
-      "ertiser_upload_date_time\030\007 \001(\tH\000\210\001\001\022\'\n\032v" +
-      "alid_transaction_fraction\030\010 \001(\001H\001\210\001\001\022#\n\026" +
-      "partner_match_fraction\030\t \001(\001H\002\210\001\001\022$\n\027par" +
-      "tner_upload_fraction\030\n \001(\001H\003\210\001\001\022\"\n\025bridg" +
-      "e_map_version_id\030\013 \001(\tH\004\210\001\001\022\027\n\npartner_i" +
-      "d\030\014 \001(\003H\005\210\001\001B\036\n\034_advertiser_upload_date_" +
-      "timeB\035\n\033_valid_transaction_fractionB\031\n\027_" +
-      "partner_match_fractionB\032\n\030_partner_uploa" +
-      "d_fractionB\030\n\026_bridge_map_version_idB\r\n\013" +
-      "_partner_idB\364\001\n#com.google.ads.googleads" +
-      ".v12.commonB\024OfflineUserDataProtoP\001ZEgoo" +
-      "gle.golang.org/genproto/googleapis/ads/g" +
-      "oogleads/v12/common;common\242\002\003GAA\252\002\037Googl" +
-      "e.Ads.GoogleAds.V12.Common\312\002\037Google\\Ads\\" +
-      "GoogleAds\\V12\\Common\352\002#Google::Ads::Goog" +
-      "leAds::V12::Commonb\006proto3"
+      "ltyH\002\210\001\001\022\035\n\017lifecycle_stage\030\010 \001(\tB\004\342A\001\001\022" +
+      "&\n\030first_purchase_date_time\030\t \001(\tB\004\342A\001\001\022" +
+      "N\n\017event_attribute\030\n \003(\0132/.google.ads.go" +
+      "ogleads.v12.common.EventAttributeB\004\342A\001\001B" +
+      "\030\n\026_lifetime_value_microsB\030\n\026_lifetime_v" +
+      "alue_bucketB\023\n\021_shopping_loyalty\"\227\001\n\016Eve" +
+      "ntAttribute\022\023\n\005event\030\001 \001(\tB\004\342A\001\002\022\035\n\017even" +
+      "t_date_time\030\002 \001(\tB\004\342A\001\002\022Q\n\016item_attribut" +
+      "e\030\003 \003(\01323.google.ads.googleads.v12.commo" +
+      "n.EventItemAttributeB\004\342A\001\002\"+\n\022EventItemA" +
+      "ttribute\022\025\n\007item_id\030\001 \001(\tB\004\342A\001\001\"=\n\017Shopp" +
+      "ingLoyalty\022\031\n\014loyalty_tier\030\001 \001(\tH\000\210\001\001B\017\n" +
+      "\r_loyalty_tier\"E\n\035CustomerMatchUserListM" +
+      "etadata\022\026\n\tuser_list\030\002 \001(\tH\000\210\001\001B\014\n\n_user" +
+      "_list\"\227\002\n\022StoreSalesMetadata\022\035\n\020loyalty_" +
+      "fraction\030\005 \001(\001H\000\210\001\001\022(\n\033transaction_uploa" +
+      "d_fraction\030\006 \001(\001H\001\210\001\001\022\027\n\ncustom_key\030\007 \001(" +
+      "\tH\002\210\001\001\022[\n\024third_party_metadata\030\003 \001(\0132=.g" +
+      "oogle.ads.googleads.v12.common.StoreSale" +
+      "sThirdPartyMetadataB\023\n\021_loyalty_fraction" +
+      "B\036\n\034_transaction_upload_fractionB\r\n\013_cus" +
+      "tom_key\"\230\003\n\034StoreSalesThirdPartyMetadata" +
+      "\022(\n\033advertiser_upload_date_time\030\007 \001(\tH\000\210" +
+      "\001\001\022\'\n\032valid_transaction_fraction\030\010 \001(\001H\001" +
+      "\210\001\001\022#\n\026partner_match_fraction\030\t \001(\001H\002\210\001\001" +
+      "\022$\n\027partner_upload_fraction\030\n \001(\001H\003\210\001\001\022\"" +
+      "\n\025bridge_map_version_id\030\013 \001(\tH\004\210\001\001\022\027\n\npa" +
+      "rtner_id\030\014 \001(\003H\005\210\001\001B\036\n\034_advertiser_uploa" +
+      "d_date_timeB\035\n\033_valid_transaction_fracti" +
+      "onB\031\n\027_partner_match_fractionB\032\n\030_partne" +
+      "r_upload_fractionB\030\n\026_bridge_map_version" +
+      "_idB\r\n\013_partner_idB\364\001\n#com.google.ads.go" +
+      "ogleads.v12.commonB\024OfflineUserDataProto" +
+      "P\001ZEgoogle.golang.org/genproto/googleapi" +
+      "s/ads/googleads/v12/common;common\242\002\003GAA\252" +
+      "\002\037Google.Ads.GoogleAds.V12.Common\312\002\037Goog" +
+      "le\\Ads\\GoogleAds\\V12\\Common\352\002#Google::Ad" +
+      "s::GoogleAds::V12::Commonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -44,34 +44,34 @@ public final class UserDataServiceProto {
       "/common/offline_user_data.proto\032\034google/" +
       "api/annotations.proto\032\027google/api/client" +
       ".proto\032\037google/api/field_behavior.proto\"" +
-      "\371\001\n\025UploadUserDataRequest\022\030\n\013customer_id" +
-      "\030\001 \001(\tB\003\340A\002\022M\n\noperations\030\003 \003(\01324.google" +
-      ".ads.googleads.v13.services.UserDataOper" +
-      "ationB\003\340A\002\022k\n!customer_match_user_list_m" +
-      "etadata\030\002 \001(\0132>.google.ads.googleads.v13" +
-      ".common.CustomerMatchUserListMetadataH\000B" +
-      "\n\n\010metadata\"\232\001\n\021UserDataOperation\022;\n\006cre" +
-      "ate\030\001 \001(\0132).google.ads.googleads.v13.com" +
-      "mon.UserDataH\000\022;\n\006remove\030\002 \001(\0132).google." +
-      "ads.googleads.v13.common.UserDataH\000B\013\n\to" +
-      "peration\"\222\001\n\026UploadUserDataResponse\022\035\n\020u" +
-      "pload_date_time\030\003 \001(\tH\000\210\001\001\022&\n\031received_o" +
-      "perations_count\030\004 \001(\005H\001\210\001\001B\023\n\021_upload_da" +
-      "te_timeB\034\n\032_received_operations_count2\232\002" +
-      "\n\017UserDataService\022\277\001\n\016UploadUserData\0228.g" +
-      "oogle.ads.googleads.v13.services.UploadU" +
-      "serDataRequest\0329.google.ads.googleads.v1" +
-      "3.services.UploadUserDataResponse\"8\202\323\344\223\002" +
-      "2\"-/v13/customers/{customer_id=*}:upload" +
-      "UserData:\001*\032E\312A\030googleads.googleapis.com" +
-      "\322A\'https://www.googleapis.com/auth/adwor" +
-      "dsB\200\002\n%com.google.ads.googleads.v13.serv" +
-      "icesB\024UserDataServiceProtoP\001ZIgoogle.gol" +
-      "ang.org/genproto/googleapis/ads/googlead" +
-      "s/v13/services;services\242\002\003GAA\252\002!Google.A" +
-      "ds.GoogleAds.V13.Services\312\002!Google\\Ads\\G" +
-      "oogleAds\\V13\\Services\352\002%Google::Ads::Goo" +
-      "gleAds::V13::Servicesb\006proto3"
+      "\373\001\n\025UploadUserDataRequest\022\031\n\013customer_id" +
+      "\030\001 \001(\tB\004\342A\001\002\022N\n\noperations\030\003 \003(\01324.googl" +
+      "e.ads.googleads.v13.services.UserDataOpe" +
+      "rationB\004\342A\001\002\022k\n!customer_match_user_list" +
+      "_metadata\030\002 \001(\0132>.google.ads.googleads.v" +
+      "13.common.CustomerMatchUserListMetadataH" +
+      "\000B\n\n\010metadata\"\232\001\n\021UserDataOperation\022;\n\006c" +
+      "reate\030\001 \001(\0132).google.ads.googleads.v13.c" +
+      "ommon.UserDataH\000\022;\n\006remove\030\002 \001(\0132).googl" +
+      "e.ads.googleads.v13.common.UserDataH\000B\013\n" +
+      "\toperation\"\222\001\n\026UploadUserDataResponse\022\035\n" +
+      "\020upload_date_time\030\003 \001(\tH\000\210\001\001\022&\n\031received" +
+      "_operations_count\030\004 \001(\005H\001\210\001\001B\023\n\021_upload_" +
+      "date_timeB\034\n\032_received_operations_count2" +
+      "\232\002\n\017UserDataService\022\277\001\n\016UploadUserData\0228" +
+      ".google.ads.googleads.v13.services.Uploa" +
+      "dUserDataRequest\0329.google.ads.googleads." +
+      "v13.services.UploadUserDataResponse\"8\202\323\344" +
+      "\223\0022\"-/v13/customers/{customer_id=*}:uplo" +
+      "adUserData:\001*\032E\312A\030googleads.googleapis.c" +
+      "om\322A\'https://www.googleapis.com/auth/adw" +
+      "ordsB\200\002\n%com.google.ads.googleads.v13.se" +
+      "rvicesB\024UserDataServiceProtoP\001ZIgoogle.g" +
+      "olang.org/genproto/googleapis/ads/google" +
+      "ads/v13/services;services\242\002\003GAA\252\002!Google" +
+      ".Ads.GoogleAds.V13.Services\312\002!Google\\Ads" +
+      "\\GoogleAds\\V13\\Services\352\002%Google::Ads::G" +
+      "oogleAds::V13::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

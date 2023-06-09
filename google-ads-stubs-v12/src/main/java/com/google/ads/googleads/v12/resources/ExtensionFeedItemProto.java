@@ -38,66 +38,66 @@ public final class ExtensionFeedItemProto {
       "s/feed_item_status.proto\032<google/ads/goo" +
       "gleads/v12/enums/feed_item_target_device" +
       ".proto\032\037google/api/field_behavior.proto\032" +
-      "\031google/api/resource.proto\"\217\020\n\021Extension" +
-      "FeedItem\022I\n\rresource_name\030\001 \001(\tB2\340A\005\372A,\n" +
-      "*googleads.googleapis.com/ExtensionFeedI" +
-      "tem\022\024\n\002id\030\031 \001(\003B\003\340A\003H\002\210\001\001\022\\\n\016extension_t" +
-      "ype\030\r \001(\0162?.google.ads.googleads.v12.enu" +
-      "ms.ExtensionTypeEnum.ExtensionTypeB\003\340A\003\022" +
-      "\034\n\017start_date_time\030\032 \001(\tH\003\210\001\001\022\032\n\rend_dat" +
-      "e_time\030\033 \001(\tH\004\210\001\001\022E\n\014ad_schedules\030\020 \003(\0132" +
-      "/.google.ads.googleads.v12.common.AdSche" +
-      "duleInfo\022]\n\006device\030\021 \001(\0162M.google.ads.go" +
-      "ogleads.v12.enums.FeedItemTargetDeviceEn" +
-      "um.FeedItemTargetDevice\022Z\n\034targeted_geo_" +
-      "target_constant\030\036 \001(\tB/\372A,\n*googleads.go" +
-      "ogleapis.com/GeoTargetConstantH\005\210\001\001\022F\n\020t" +
-      "argeted_keyword\030\026 \001(\0132,.google.ads.googl" +
-      "eads.v12.common.KeywordInfo\022V\n\006status\030\004 " +
-      "\001(\0162A.google.ads.googleads.v12.enums.Fee" +
-      "dItemStatusEnum.FeedItemStatusB\003\340A\003\022O\n\022s" +
-      "itelink_feed_item\030\002 \001(\01321.google.ads.goo" +
-      "gleads.v12.common.SitelinkFeedItemH\000\022b\n\034" +
-      "structured_snippet_feed_item\030\003 \001(\0132:.goo" +
-      "gle.ads.googleads.v12.common.StructuredS" +
-      "nippetFeedItemH\000\022E\n\rapp_feed_item\030\007 \001(\0132" +
-      ",.google.ads.googleads.v12.common.AppFee" +
-      "dItemH\000\022G\n\016call_feed_item\030\010 \001(\0132-.google" +
-      ".ads.googleads.v12.common.CallFeedItemH\000" +
-      "\022M\n\021callout_feed_item\030\t \001(\01320.google.ads" +
-      ".googleads.v12.common.CalloutFeedItemH\000\022" +
-      "V\n\026text_message_feed_item\030\n \001(\01324.google" +
-      ".ads.googleads.v12.common.TextMessageFee" +
-      "dItemH\000\022I\n\017price_feed_item\030\013 \001(\0132..googl" +
-      "e.ads.googleads.v12.common.PriceFeedItem" +
-      "H\000\022Q\n\023promotion_feed_item\030\014 \001(\01322.google" +
-      ".ads.googleads.v12.common.PromotionFeedI" +
-      "temH\000\022T\n\022location_feed_item\030\016 \001(\01321.goog" +
-      "le.ads.googleads.v12.common.LocationFeed" +
-      "ItemB\003\340A\003H\000\022g\n\034affiliate_location_feed_i" +
-      "tem\030\017 \001(\0132:.google.ads.googleads.v12.com" +
-      "mon.AffiliateLocationFeedItemB\003\340A\003H\000\022X\n\027" +
-      "hotel_callout_feed_item\030\027 \001(\01325.google.a" +
-      "ds.googleads.v12.common.HotelCalloutFeed" +
-      "ItemH\000\022N\n\017image_feed_item\030\037 \001(\0132..google" +
-      ".ads.googleads.v12.common.ImageFeedItemB" +
-      "\003\340A\005H\000\022C\n\021targeted_campaign\030\034 \001(\tB&\372A#\n!" +
-      "googleads.googleapis.com/CampaignH\001\022B\n\021t" +
-      "argeted_ad_group\030\035 \001(\tB%\372A\"\n googleads.g" +
-      "oogleapis.com/AdGroupH\001:j\352Ag\n*googleads." +
-      "googleapis.com/ExtensionFeedItem\0229custom" +
-      "ers/{customer_id}/extensionFeedItems/{fe" +
-      "ed_item_id}B\013\n\textensionB\034\n\032serving_reso" +
-      "urce_targetingB\005\n\003_idB\022\n\020_start_date_tim" +
-      "eB\020\n\016_end_date_timeB\037\n\035_targeted_geo_tar" +
-      "get_constantB\210\002\n&com.google.ads.googlead" +
-      "s.v12.resourcesB\026ExtensionFeedItemProtoP" +
-      "\001ZKgoogle.golang.org/genproto/googleapis" +
-      "/ads/googleads/v12/resources;resources\242\002" +
-      "\003GAA\252\002\"Google.Ads.GoogleAds.V12.Resource" +
-      "s\312\002\"Google\\Ads\\GoogleAds\\V12\\Resources\352\002" +
-      "&Google::Ads::GoogleAds::V12::Resourcesb" +
-      "\006proto3"
+      "\031google/api/resource.proto\"\226\020\n\021Extension" +
+      "FeedItem\022J\n\rresource_name\030\001 \001(\tB3\342A\001\005\372A," +
+      "\n*googleads.googleapis.com/ExtensionFeed" +
+      "Item\022\025\n\002id\030\031 \001(\003B\004\342A\001\003H\002\210\001\001\022]\n\016extension" +
+      "_type\030\r \001(\0162?.google.ads.googleads.v12.e" +
+      "nums.ExtensionTypeEnum.ExtensionTypeB\004\342A" +
+      "\001\003\022\034\n\017start_date_time\030\032 \001(\tH\003\210\001\001\022\032\n\rend_" +
+      "date_time\030\033 \001(\tH\004\210\001\001\022E\n\014ad_schedules\030\020 \003" +
+      "(\0132/.google.ads.googleads.v12.common.AdS" +
+      "cheduleInfo\022]\n\006device\030\021 \001(\0162M.google.ads" +
+      ".googleads.v12.enums.FeedItemTargetDevic" +
+      "eEnum.FeedItemTargetDevice\022Z\n\034targeted_g" +
+      "eo_target_constant\030\036 \001(\tB/\372A,\n*googleads" +
+      ".googleapis.com/GeoTargetConstantH\005\210\001\001\022F" +
+      "\n\020targeted_keyword\030\026 \001(\0132,.google.ads.go" +
+      "ogleads.v12.common.KeywordInfo\022W\n\006status" +
+      "\030\004 \001(\0162A.google.ads.googleads.v12.enums." +
+      "FeedItemStatusEnum.FeedItemStatusB\004\342A\001\003\022" +
+      "O\n\022sitelink_feed_item\030\002 \001(\01321.google.ads" +
+      ".googleads.v12.common.SitelinkFeedItemH\000" +
+      "\022b\n\034structured_snippet_feed_item\030\003 \001(\0132:" +
+      ".google.ads.googleads.v12.common.Structu" +
+      "redSnippetFeedItemH\000\022E\n\rapp_feed_item\030\007 " +
+      "\001(\0132,.google.ads.googleads.v12.common.Ap" +
+      "pFeedItemH\000\022G\n\016call_feed_item\030\010 \001(\0132-.go" +
+      "ogle.ads.googleads.v12.common.CallFeedIt" +
+      "emH\000\022M\n\021callout_feed_item\030\t \001(\01320.google" +
+      ".ads.googleads.v12.common.CalloutFeedIte" +
+      "mH\000\022V\n\026text_message_feed_item\030\n \001(\01324.go" +
+      "ogle.ads.googleads.v12.common.TextMessag" +
+      "eFeedItemH\000\022I\n\017price_feed_item\030\013 \001(\0132..g" +
+      "oogle.ads.googleads.v12.common.PriceFeed" +
+      "ItemH\000\022Q\n\023promotion_feed_item\030\014 \001(\01322.go" +
+      "ogle.ads.googleads.v12.common.PromotionF" +
+      "eedItemH\000\022U\n\022location_feed_item\030\016 \001(\01321." +
+      "google.ads.googleads.v12.common.Location" +
+      "FeedItemB\004\342A\001\003H\000\022h\n\034affiliate_location_f" +
+      "eed_item\030\017 \001(\0132:.google.ads.googleads.v1" +
+      "2.common.AffiliateLocationFeedItemB\004\342A\001\003" +
+      "H\000\022X\n\027hotel_callout_feed_item\030\027 \001(\01325.go" +
+      "ogle.ads.googleads.v12.common.HotelCallo" +
+      "utFeedItemH\000\022O\n\017image_feed_item\030\037 \001(\0132.." +
+      "google.ads.googleads.v12.common.ImageFee" +
+      "dItemB\004\342A\001\005H\000\022C\n\021targeted_campaign\030\034 \001(\t" +
+      "B&\372A#\n!googleads.googleapis.com/Campaign" +
+      "H\001\022B\n\021targeted_ad_group\030\035 \001(\tB%\372A\"\n goog" +
+      "leads.googleapis.com/AdGroupH\001:j\352Ag\n*goo" +
+      "gleads.googleapis.com/ExtensionFeedItem\022" +
+      "9customers/{customer_id}/extensionFeedIt" +
+      "ems/{feed_item_id}B\013\n\textensionB\034\n\032servi" +
+      "ng_resource_targetingB\005\n\003_idB\022\n\020_start_d" +
+      "ate_timeB\020\n\016_end_date_timeB\037\n\035_targeted_" +
+      "geo_target_constantB\210\002\n&com.google.ads.g" +
+      "oogleads.v12.resourcesB\026ExtensionFeedIte" +
+      "mProtoP\001ZKgoogle.golang.org/genproto/goo" +
+      "gleapis/ads/googleads/v12/resources;reso" +
+      "urces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V12.R" +
+      "esources\312\002\"Google\\Ads\\GoogleAds\\V12\\Reso" +
+      "urces\352\002&Google::Ads::GoogleAds::V12::Res" +
+      "ourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -30,11 +30,6 @@ private static final long serialVersionUID = 0L;
     return new CustomerSkAdNetworkConversionValueSchema();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.resources.CustomerSkAdNetworkConversionValueSchemaProto.internal_static_google_ads_googleads_v13_resources_CustomerSkAdNetworkConversionValueSchema_descriptor;
@@ -74,9 +69,9 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. A time window (measured in hours) post install after which
+     * Output only. A time window (measured in hours) post-install, after which
      * the App Attribution Partner or advertiser stops calling
-     * updateConversionValue
+     * [updateConversionValue]
      * (https://developer.apple.com/documentation/storekit/skadnetwork/3566697-updateconversionvalue).
      * </pre>
      *
@@ -157,11 +152,6 @@ private static final long serialVersionUID = 0L;
       return new SkAdNetworkConversionValueSchema();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.resources.CustomerSkAdNetworkConversionValueSchemaProto.internal_static_google_ads_googleads_v13_resources_CustomerSkAdNetworkConversionValueSchema_SkAdNetworkConversionValueSchema_descriptor;
@@ -246,11 +236,6 @@ private static final long serialVersionUID = 0L;
         return new FineGrainedConversionValueMappings();
       }
 
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return com.google.ads.googleads.v13.resources.CustomerSkAdNetworkConversionValueSchemaProto.internal_static_google_ads_googleads_v13_resources_CustomerSkAdNetworkConversionValueSchema_SkAdNetworkConversionValueSchema_FineGrainedConversionValueMappings_descriptor;
@@ -446,11 +431,13 @@ private static final long serialVersionUID = 0L;
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
+
       public static com.google.ads.googleads.v13.resources.CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.FineGrainedConversionValueMappings parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
+
       public static com.google.ads.googleads.v13.resources.CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.FineGrainedConversionValueMappings parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -709,7 +696,7 @@ private static final long serialVersionUID = 0L;
          * @return This builder for chaining.
          */
         public Builder setFineGrainedConversionValue(int value) {
-          
+
           fineGrainedConversionValue_ = value;
           bitField0_ |= 0x00000001;
           onChanged();
@@ -1035,7 +1022,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Represent mapping from one conversion value to one or more conversion
+     * Represents mapping from one conversion value to one or more conversion
      * events.
      * </pre>
      *
@@ -1061,11 +1048,6 @@ private static final long serialVersionUID = 0L;
         return new ConversionValueMapping();
       }
 
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return com.google.ads.googleads.v13.resources.CustomerSkAdNetworkConversionValueSchemaProto.internal_static_google_ads_googleads_v13_resources_CustomerSkAdNetworkConversionValueSchema_SkAdNetworkConversionValueSchema_ConversionValueMapping_descriptor;
@@ -1312,11 +1294,13 @@ private static final long serialVersionUID = 0L;
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
+
       public static com.google.ads.googleads.v13.resources.CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.ConversionValueMapping parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
+
       public static com.google.ads.googleads.v13.resources.CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.ConversionValueMapping parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1360,7 +1344,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Represent mapping from one conversion value to one or more conversion
+       * Represents mapping from one conversion value to one or more conversion
        * events.
        * </pre>
        *
@@ -1627,7 +1611,7 @@ private static final long serialVersionUID = 0L;
          * @return This builder for chaining.
          */
         public Builder setMinTimePostInstallHours(long value) {
-          
+
           minTimePostInstallHours_ = value;
           bitField0_ |= 0x00000001;
           onChanged();
@@ -1674,7 +1658,7 @@ private static final long serialVersionUID = 0L;
          * @return This builder for chaining.
          */
         public Builder setMaxTimePostInstallHours(long value) {
-          
+
           maxTimePostInstallHours_ = value;
           bitField0_ |= 0x00000002;
           onChanged();
@@ -2227,9 +2211,9 @@ private static final long serialVersionUID = 0L;
        */
       long getEventCounter();
 
-      public com.google.ads.googleads.v13.resources.CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.Event.RevenueRateCase getRevenueRateCase();
+      com.google.ads.googleads.v13.resources.CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.Event.RevenueRateCase getRevenueRateCase();
 
-      public com.google.ads.googleads.v13.resources.CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.Event.EventRateCase getEventRateCase();
+      com.google.ads.googleads.v13.resources.CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.Event.EventRateCase getEventRateCase();
     }
     /**
      * <pre>
@@ -2259,11 +2243,6 @@ private static final long serialVersionUID = 0L;
         return new Event();
       }
 
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return com.google.ads.googleads.v13.resources.CustomerSkAdNetworkConversionValueSchemaProto.internal_static_google_ads_googleads_v13_resources_CustomerSkAdNetworkConversionValueSchema_SkAdNetworkConversionValueSchema_Event_descriptor;
@@ -2331,11 +2310,6 @@ private static final long serialVersionUID = 0L;
           return new RevenueRange();
         }
 
-        @java.lang.Override
-        public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-          return this.unknownFields;
-        }
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return com.google.ads.googleads.v13.resources.CustomerSkAdNetworkConversionValueSchemaProto.internal_static_google_ads_googleads_v13_resources_CustomerSkAdNetworkConversionValueSchema_SkAdNetworkConversionValueSchema_Event_RevenueRange_descriptor;
@@ -2507,11 +2481,13 @@ private static final long serialVersionUID = 0L;
           return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
         }
+
         public static com.google.ads.googleads.v13.resources.CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.Event.RevenueRange parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
         }
+
         public static com.google.ads.googleads.v13.resources.CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.Event.RevenueRange parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2764,7 +2740,7 @@ private static final long serialVersionUID = 0L;
            * @return This builder for chaining.
            */
           public Builder setMinEventRevenue(double value) {
-            
+
             minEventRevenue_ = value;
             bitField0_ |= 0x00000001;
             onChanged();
@@ -2814,7 +2790,7 @@ private static final long serialVersionUID = 0L;
            * @return This builder for chaining.
            */
           public Builder setMaxEventRevenue(double value) {
-            
+
             maxEventRevenue_ = value;
             bitField0_ |= 0x00000002;
             onChanged();
@@ -2952,11 +2928,6 @@ private static final long serialVersionUID = 0L;
           return new EventOccurrenceRange();
         }
 
-        @java.lang.Override
-        public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-          return this.unknownFields;
-        }
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return com.google.ads.googleads.v13.resources.CustomerSkAdNetworkConversionValueSchemaProto.internal_static_google_ads_googleads_v13_resources_CustomerSkAdNetworkConversionValueSchema_SkAdNetworkConversionValueSchema_Event_EventOccurrenceRange_descriptor;
@@ -3124,11 +3095,13 @@ private static final long serialVersionUID = 0L;
           return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
         }
+
         public static com.google.ads.googleads.v13.resources.CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.Event.EventOccurrenceRange parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
         }
+
         public static com.google.ads.googleads.v13.resources.CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.Event.EventOccurrenceRange parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3379,7 +3352,7 @@ private static final long serialVersionUID = 0L;
            * @return This builder for chaining.
            */
           public Builder setMinEventCount(long value) {
-            
+
             minEventCount_ = value;
             bitField0_ |= 0x00000001;
             onChanged();
@@ -3426,7 +3399,7 @@ private static final long serialVersionUID = 0L;
            * @return This builder for chaining.
            */
           public Builder setMaxEventCount(long value) {
-            
+
             maxEventCount_ = value;
             bitField0_ |= 0x00000002;
             onChanged();
@@ -3512,6 +3485,7 @@ private static final long serialVersionUID = 0L;
       }
 
       private int revenueRateCase_ = 0;
+      @SuppressWarnings("serial")
       private java.lang.Object revenueRate_;
       public enum RevenueRateCase
           implements com.google.protobuf.Internal.EnumLite,
@@ -3553,6 +3527,7 @@ private static final long serialVersionUID = 0L;
       }
 
       private int eventRateCase_ = 0;
+      @SuppressWarnings("serial")
       private java.lang.Object eventRate_;
       public enum EventRateCase
           implements com.google.protobuf.Internal.EnumLite,
@@ -4036,11 +4011,13 @@ private static final long serialVersionUID = 0L;
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
+
       public static com.google.ads.googleads.v13.resources.CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.Event parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
+
       public static com.google.ads.googleads.v13.resources.CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema.Event parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4778,7 +4755,7 @@ private static final long serialVersionUID = 0L;
          * @return This builder for chaining.
          */
         public Builder setEventRevenueValue(double value) {
-          
+
           revenueRateCase_ = 4;
           revenueRate_ = value;
           onChanged();
@@ -5014,7 +4991,7 @@ private static final long serialVersionUID = 0L;
          * @return This builder for chaining.
          */
         public Builder setEventCounter(long value) {
-          
+
           eventRateCase_ = 6;
           eventRate_ = value;
           onChanged();
@@ -5151,9 +5128,9 @@ private static final long serialVersionUID = 0L;
     private int measurementWindowHours_ = 0;
     /**
      * <pre>
-     * Output only. A time window (measured in hours) post install after which
+     * Output only. A time window (measured in hours) post-install, after which
      * the App Attribution Partner or advertiser stops calling
-     * updateConversionValue
+     * [updateConversionValue]
      * (https://developer.apple.com/documentation/storekit/skadnetwork/3566697-updateconversionvalue).
      * </pre>
      *
@@ -5358,11 +5335,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.resources.CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.resources.CustomerSkAdNetworkConversionValueSchema.SkAdNetworkConversionValueSchema parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -5744,9 +5723,9 @@ private static final long serialVersionUID = 0L;
       private int measurementWindowHours_ ;
       /**
        * <pre>
-       * Output only. A time window (measured in hours) post install after which
+       * Output only. A time window (measured in hours) post-install, after which
        * the App Attribution Partner or advertiser stops calling
-       * updateConversionValue
+       * [updateConversionValue]
        * (https://developer.apple.com/documentation/storekit/skadnetwork/3566697-updateconversionvalue).
        * </pre>
        *
@@ -5759,9 +5738,9 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. A time window (measured in hours) post install after which
+       * Output only. A time window (measured in hours) post-install, after which
        * the App Attribution Partner or advertiser stops calling
-       * updateConversionValue
+       * [updateConversionValue]
        * (https://developer.apple.com/documentation/storekit/skadnetwork/3566697-updateconversionvalue).
        * </pre>
        *
@@ -5770,7 +5749,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setMeasurementWindowHours(int value) {
-        
+
         measurementWindowHours_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -5778,9 +5757,9 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. A time window (measured in hours) post install after which
+       * Output only. A time window (measured in hours) post-install, after which
        * the App Attribution Partner or advertiser stops calling
-       * updateConversionValue
+       * [updateConversionValue]
        * (https://developer.apple.com/documentation/storekit/skadnetwork/3566697-updateconversionvalue).
        * </pre>
        *
@@ -6382,11 +6361,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.resources.CustomerSkAdNetworkConversionValueSchema parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.resources.CustomerSkAdNetworkConversionValueSchema parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)

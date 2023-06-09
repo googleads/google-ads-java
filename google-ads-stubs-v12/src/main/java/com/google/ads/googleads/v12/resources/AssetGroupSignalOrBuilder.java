@@ -11,6 +11,7 @@ public interface AssetGroupSignalOrBuilder extends
    * <pre>
    * Immutable. The resource name of the asset group signal.
    * Asset group signal resource name have the form:
+   *
    * `customers/{customer_id}/assetGroupSignals/{asset_group_id}~{signal_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface AssetGroupSignalOrBuilder extends
    * <pre>
    * Immutable. The resource name of the asset group signal.
    * Asset group signal resource name have the form:
+   *
    * `customers/{customer_id}/assetGroupSignals/{asset_group_id}~{signal_id}`
    * </pre>
    *

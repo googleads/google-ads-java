@@ -13,9 +13,11 @@ package com.google.ads.googleads.v12.resources;
  * without a prefix.  Since some effective details may differ from what the user
  * had originally requested (for example, spending limit), these differences are
  * juxtaposed through 'proposed_', 'approved_', and possibly 'adjusted_' fields.
+ *
  * This resource is mutated using AccountBudgetProposal and cannot be mutated
  * directly. A budget may have at most one pending proposal at any given time.
  * It is read through pending_proposal.
+ *
  * Once approved, a budget may be subject to adjustments, such as credit
  * adjustments.  Adjustments create differences between the 'approved' and
  * 'adjusted' fields, which would otherwise be identical.
@@ -50,11 +52,6 @@ private static final long serialVersionUID = 0L;
     return new AccountBudget();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.resources.AccountBudgetProto.internal_static_google_ads_googleads_v12_resources_AccountBudget_descriptor;
@@ -76,6 +73,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the proposal.
      * AccountBudgetProposal resource names have the form:
+     *
      * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
      * </pre>
      *
@@ -87,6 +85,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the proposal.
      * AccountBudgetProposal resource names have the form:
+     *
      * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
      * </pre>
      *
@@ -98,6 +97,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the proposal.
      * AccountBudgetProposal resource names have the form:
+     *
      * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
      * </pre>
      *
@@ -388,9 +388,9 @@ private static final long serialVersionUID = 0L;
      */
     com.google.ads.googleads.v12.enums.SpendingLimitTypeEnum.SpendingLimitType getSpendingLimitType();
 
-    public com.google.ads.googleads.v12.resources.AccountBudget.PendingAccountBudgetProposal.EndTimeCase getEndTimeCase();
+    com.google.ads.googleads.v12.resources.AccountBudget.PendingAccountBudgetProposal.EndTimeCase getEndTimeCase();
 
-    public com.google.ads.googleads.v12.resources.AccountBudget.PendingAccountBudgetProposal.SpendingLimitCase getSpendingLimitCase();
+    com.google.ads.googleads.v12.resources.AccountBudget.PendingAccountBudgetProposal.SpendingLimitCase getSpendingLimitCase();
   }
   /**
    * <pre>
@@ -426,11 +426,6 @@ private static final long serialVersionUID = 0L;
       return new PendingAccountBudgetProposal();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.AccountBudgetProto.internal_static_google_ads_googleads_v12_resources_AccountBudget_PendingAccountBudgetProposal_descriptor;
@@ -446,6 +441,7 @@ private static final long serialVersionUID = 0L;
 
     private int bitField0_;
     private int endTimeCase_ = 0;
+    @SuppressWarnings("serial")
     private java.lang.Object endTime_;
     public enum EndTimeCase
         implements com.google.protobuf.Internal.EnumLite,
@@ -487,6 +483,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private int spendingLimitCase_ = 0;
+    @SuppressWarnings("serial")
     private java.lang.Object spendingLimit_;
     public enum SpendingLimitCase
         implements com.google.protobuf.Internal.EnumLite,
@@ -534,6 +531,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the proposal.
      * AccountBudgetProposal resource names have the form:
+     *
      * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
      * </pre>
      *
@@ -548,6 +546,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the proposal.
      * AccountBudgetProposal resource names have the form:
+     *
      * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
      * </pre>
      *
@@ -571,6 +570,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the proposal.
      * AccountBudgetProposal resource names have the form:
+     *
      * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
      * </pre>
      *
@@ -1383,11 +1383,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.AccountBudget.PendingAccountBudgetProposal parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.AccountBudget.PendingAccountBudgetProposal parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1792,6 +1794,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Output only. The resource name of the proposal.
        * AccountBudgetProposal resource names have the form:
+       *
        * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
        * </pre>
        *
@@ -1805,6 +1808,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Output only. The resource name of the proposal.
        * AccountBudgetProposal resource names have the form:
+       *
        * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
        * </pre>
        *
@@ -1827,6 +1831,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Output only. The resource name of the proposal.
        * AccountBudgetProposal resource names have the form:
+       *
        * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
        * </pre>
        *
@@ -1850,6 +1855,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Output only. The resource name of the proposal.
        * AccountBudgetProposal resource names have the form:
+       *
        * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
        * </pre>
        *
@@ -1869,6 +1875,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Output only. The resource name of the proposal.
        * AccountBudgetProposal resource names have the form:
+       *
        * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
        * </pre>
        *
@@ -1885,6 +1892,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Output only. The resource name of the proposal.
        * AccountBudgetProposal resource names have the form:
+       *
        * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
        * </pre>
        *
@@ -2756,7 +2764,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setSpendingLimitMicros(long value) {
-        
+
         spendingLimitCase_ = 16;
         spendingLimit_ = value;
         onChanged();
@@ -2945,6 +2953,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   private int proposedEndTimeCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object proposedEndTime_;
   public enum ProposedEndTimeCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -2986,6 +2995,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int approvedEndTimeCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object approvedEndTime_;
   public enum ApprovedEndTimeCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -3027,6 +3037,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int proposedSpendingLimitCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object proposedSpendingLimit_;
   public enum ProposedSpendingLimitCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -3068,6 +3079,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int approvedSpendingLimitCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object approvedSpendingLimit_;
   public enum ApprovedSpendingLimitCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -3109,6 +3121,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int adjustedSpendingLimitCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object adjustedSpendingLimit_;
   public enum AdjustedSpendingLimitCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -3156,6 +3169,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the account-level budget.
    * AccountBudget resource names have the form:
+   *
    * `customers/{customer_id}/accountBudgets/{account_budget_id}`
    * </pre>
    *
@@ -3179,6 +3193,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the account-level budget.
    * AccountBudget resource names have the form:
+   *
    * `customers/{customer_id}/accountBudgets/{account_budget_id}`
    * </pre>
    *
@@ -3234,6 +3249,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the billing setup associated with this
    * account-level budget.  BillingSetup resource names have the form:
+   *
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
@@ -3248,6 +3264,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the billing setup associated with this
    * account-level budget.  BillingSetup resource names have the form:
+   *
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
@@ -3271,6 +3288,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the billing setup associated with this
    * account-level budget.  BillingSetup resource names have the form:
+   *
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
@@ -3449,6 +3467,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The approved start time of the account-level budget in
    * yyyy-MM-dd HH:mm:ss format.
+   *
    * For example, if a new budget is approved after the proposed start time,
    * the approved start time is the time of approval.
    * </pre>
@@ -3464,6 +3483,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The approved start time of the account-level budget in
    * yyyy-MM-dd HH:mm:ss format.
+   *
    * For example, if a new budget is approved after the proposed start time,
    * the approved start time is the time of approval.
    * </pre>
@@ -3488,6 +3508,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The approved start time of the account-level budget in
    * yyyy-MM-dd HH:mm:ss format.
+   *
    * For example, if a new budget is approved after the proposed start time,
    * the approved start time is the time of approval.
    * </pre>
@@ -3515,6 +3536,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The total adjustments amount.
+   *
    * An example of an adjustment is courtesy credits.
    * </pre>
    *
@@ -3531,6 +3553,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The value of Ads that have been served, in micros.
+   *
    * This includes overdelivery costs, in which case a credit might be
    * automatically applied to the budget (see total_adjustments_micros).
    * </pre>
@@ -4088,11 +4111,14 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The adjusted spending limit in micros.  One million is
    * equivalent to one unit.
+   *
    * If the approved spending limit is finite, the adjusted
    * spending limit may vary depending on the types of adjustments applied
    * to this budget, if applicable.
+   *
    * The different kinds of adjustments are described here:
    * https://support.google.com/google-ads/answer/1704323
+   *
    * For example, a debit adjustment reduces how much the account is
    * allowed to spend.
    * </pre>
@@ -4108,11 +4134,14 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The adjusted spending limit in micros.  One million is
    * equivalent to one unit.
+   *
    * If the approved spending limit is finite, the adjusted
    * spending limit may vary depending on the types of adjustments applied
    * to this budget, if applicable.
+   *
    * The different kinds of adjustments are described here:
    * https://support.google.com/google-ads/answer/1704323
+   *
    * For example, a debit adjustment reduces how much the account is
    * allowed to spend.
    * </pre>
@@ -4647,11 +4676,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.resources.AccountBudget parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.resources.AccountBudget parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4703,9 +4734,11 @@ private static final long serialVersionUID = 0L;
    * without a prefix.  Since some effective details may differ from what the user
    * had originally requested (for example, spending limit), these differences are
    * juxtaposed through 'proposed_', 'approved_', and possibly 'adjusted_' fields.
+   *
    * This resource is mutated using AccountBudgetProposal and cannot be mutated
    * directly. A budget may have at most one pending proposal at any given time.
    * It is read through pending_proposal.
+   *
    * Once approved, a budget may be subject to adjustments, such as credit
    * adjustments.  Adjustments create differences between the 'approved' and
    * 'adjusted' fields, which would otherwise be identical.
@@ -5271,6 +5304,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the account-level budget.
      * AccountBudget resource names have the form:
+     *
      * `customers/{customer_id}/accountBudgets/{account_budget_id}`
      * </pre>
      *
@@ -5293,6 +5327,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the account-level budget.
      * AccountBudget resource names have the form:
+     *
      * `customers/{customer_id}/accountBudgets/{account_budget_id}`
      * </pre>
      *
@@ -5316,6 +5351,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the account-level budget.
      * AccountBudget resource names have the form:
+     *
      * `customers/{customer_id}/accountBudgets/{account_budget_id}`
      * </pre>
      *
@@ -5335,6 +5371,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the account-level budget.
      * AccountBudget resource names have the form:
+     *
      * `customers/{customer_id}/accountBudgets/{account_budget_id}`
      * </pre>
      *
@@ -5351,6 +5388,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the account-level budget.
      * AccountBudget resource names have the form:
+     *
      * `customers/{customer_id}/accountBudgets/{account_budget_id}`
      * </pre>
      *
@@ -5403,7 +5441,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      
+
       id_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -5429,6 +5467,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the billing setup associated with this
      * account-level budget.  BillingSetup resource names have the form:
+     *
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
@@ -5442,6 +5481,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the billing setup associated with this
      * account-level budget.  BillingSetup resource names have the form:
+     *
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
@@ -5464,6 +5504,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the billing setup associated with this
      * account-level budget.  BillingSetup resource names have the form:
+     *
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
@@ -5487,6 +5528,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the billing setup associated with this
      * account-level budget.  BillingSetup resource names have the form:
+     *
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
@@ -5506,6 +5548,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the billing setup associated with this
      * account-level budget.  BillingSetup resource names have the form:
+     *
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
@@ -5522,6 +5565,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the billing setup associated with this
      * account-level budget.  BillingSetup resource names have the form:
+     *
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
@@ -5835,6 +5879,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The approved start time of the account-level budget in
      * yyyy-MM-dd HH:mm:ss format.
+     *
      * For example, if a new budget is approved after the proposed start time,
      * the approved start time is the time of approval.
      * </pre>
@@ -5849,6 +5894,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The approved start time of the account-level budget in
      * yyyy-MM-dd HH:mm:ss format.
+     *
      * For example, if a new budget is approved after the proposed start time,
      * the approved start time is the time of approval.
      * </pre>
@@ -5872,6 +5918,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The approved start time of the account-level budget in
      * yyyy-MM-dd HH:mm:ss format.
+     *
      * For example, if a new budget is approved after the proposed start time,
      * the approved start time is the time of approval.
      * </pre>
@@ -5896,6 +5943,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The approved start time of the account-level budget in
      * yyyy-MM-dd HH:mm:ss format.
+     *
      * For example, if a new budget is approved after the proposed start time,
      * the approved start time is the time of approval.
      * </pre>
@@ -5916,6 +5964,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The approved start time of the account-level budget in
      * yyyy-MM-dd HH:mm:ss format.
+     *
      * For example, if a new budget is approved after the proposed start time,
      * the approved start time is the time of approval.
      * </pre>
@@ -5933,6 +5982,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The approved start time of the account-level budget in
      * yyyy-MM-dd HH:mm:ss format.
+     *
      * For example, if a new budget is approved after the proposed start time,
      * the approved start time is the time of approval.
      * </pre>
@@ -5955,6 +6005,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The total adjustments amount.
+     *
      * An example of an adjustment is courtesy credits.
      * </pre>
      *
@@ -5968,6 +6019,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The total adjustments amount.
+     *
      * An example of an adjustment is courtesy credits.
      * </pre>
      *
@@ -5976,7 +6028,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalAdjustmentsMicros(long value) {
-      
+
       totalAdjustmentsMicros_ = value;
       bitField0_ |= 0x00000080;
       onChanged();
@@ -5985,6 +6037,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The total adjustments amount.
+     *
      * An example of an adjustment is courtesy credits.
      * </pre>
      *
@@ -6002,6 +6055,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The value of Ads that have been served, in micros.
+     *
      * This includes overdelivery costs, in which case a credit might be
      * automatically applied to the budget (see total_adjustments_micros).
      * </pre>
@@ -6016,6 +6070,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The value of Ads that have been served, in micros.
+     *
      * This includes overdelivery costs, in which case a credit might be
      * automatically applied to the budget (see total_adjustments_micros).
      * </pre>
@@ -6025,7 +6080,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAmountServedMicros(long value) {
-      
+
       amountServedMicros_ = value;
       bitField0_ |= 0x00000100;
       onChanged();
@@ -6034,6 +6089,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The value of Ads that have been served, in micros.
+     *
      * This includes overdelivery costs, in which case a credit might be
      * automatically applied to the budget (see total_adjustments_micros).
      * </pre>
@@ -6887,7 +6943,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setProposedSpendingLimitMicros(long value) {
-      
+
       proposedSpendingLimitCase_ = 30;
       proposedSpendingLimit_ = value;
       onChanged();
@@ -7055,7 +7111,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setApprovedSpendingLimitMicros(long value) {
-      
+
       approvedSpendingLimitCase_ = 31;
       approvedSpendingLimit_ = value;
       onChanged();
@@ -7191,11 +7247,14 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The adjusted spending limit in micros.  One million is
      * equivalent to one unit.
+     *
      * If the approved spending limit is finite, the adjusted
      * spending limit may vary depending on the types of adjustments applied
      * to this budget, if applicable.
+     *
      * The different kinds of adjustments are described here:
      * https://support.google.com/google-ads/answer/1704323
+     *
      * For example, a debit adjustment reduces how much the account is
      * allowed to spend.
      * </pre>
@@ -7210,11 +7269,14 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The adjusted spending limit in micros.  One million is
      * equivalent to one unit.
+     *
      * If the approved spending limit is finite, the adjusted
      * spending limit may vary depending on the types of adjustments applied
      * to this budget, if applicable.
+     *
      * The different kinds of adjustments are described here:
      * https://support.google.com/google-ads/answer/1704323
+     *
      * For example, a debit adjustment reduces how much the account is
      * allowed to spend.
      * </pre>
@@ -7232,11 +7294,14 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The adjusted spending limit in micros.  One million is
      * equivalent to one unit.
+     *
      * If the approved spending limit is finite, the adjusted
      * spending limit may vary depending on the types of adjustments applied
      * to this budget, if applicable.
+     *
      * The different kinds of adjustments are described here:
      * https://support.google.com/google-ads/answer/1704323
+     *
      * For example, a debit adjustment reduces how much the account is
      * allowed to spend.
      * </pre>
@@ -7246,7 +7311,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAdjustedSpendingLimitMicros(long value) {
-      
+
       adjustedSpendingLimitCase_ = 32;
       adjustedSpendingLimit_ = value;
       onChanged();
@@ -7256,11 +7321,14 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The adjusted spending limit in micros.  One million is
      * equivalent to one unit.
+     *
      * If the approved spending limit is finite, the adjusted
      * spending limit may vary depending on the types of adjustments applied
      * to this budget, if applicable.
+     *
      * The different kinds of adjustments are described here:
      * https://support.google.com/google-ads/answer/1704323
+     *
      * For example, a debit adjustment reduces how much the account is
      * allowed to spend.
      * </pre>

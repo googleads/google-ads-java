@@ -29,11 +29,6 @@ private static final long serialVersionUID = 0L;
     return new AudienceSegment();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.common.AudiencesProto.internal_static_google_ads_googleads_v13_common_AudienceSegment_descriptor;
@@ -48,6 +43,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int segmentCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object segment_;
   public enum SegmentCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -491,11 +487,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.common.AudienceSegment parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.common.AudienceSegment parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)

@@ -30,11 +30,6 @@ private static final long serialVersionUID = 0L;
     return new LogicalUserListInfo();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.common.UserListsProto.internal_static_google_ads_googleads_v13_common_LogicalUserListInfo_descriptor;
@@ -56,6 +51,7 @@ private static final long serialVersionUID = 0L;
    * Logical list rules that define this user list. The rules are defined as a
    * logical operator (ALL/ANY/NONE) and a list of user lists. All the rules are
    * ANDed when they are evaluated.
+   *
    * Required for creating a logical user list.
    * </pre>
    *
@@ -70,6 +66,7 @@ private static final long serialVersionUID = 0L;
    * Logical list rules that define this user list. The rules are defined as a
    * logical operator (ALL/ANY/NONE) and a list of user lists. All the rules are
    * ANDed when they are evaluated.
+   *
    * Required for creating a logical user list.
    * </pre>
    *
@@ -85,6 +82,7 @@ private static final long serialVersionUID = 0L;
    * Logical list rules that define this user list. The rules are defined as a
    * logical operator (ALL/ANY/NONE) and a list of user lists. All the rules are
    * ANDed when they are evaluated.
+   *
    * Required for creating a logical user list.
    * </pre>
    *
@@ -99,6 +97,7 @@ private static final long serialVersionUID = 0L;
    * Logical list rules that define this user list. The rules are defined as a
    * logical operator (ALL/ANY/NONE) and a list of user lists. All the rules are
    * ANDed when they are evaluated.
+   *
    * Required for creating a logical user list.
    * </pre>
    *
@@ -113,6 +112,7 @@ private static final long serialVersionUID = 0L;
    * Logical list rules that define this user list. The rules are defined as a
    * logical operator (ALL/ANY/NONE) and a list of user lists. All the rules are
    * ANDed when they are evaluated.
+   *
    * Required for creating a logical user list.
    * </pre>
    *
@@ -235,11 +235,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.common.LogicalUserListInfo parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.common.LogicalUserListInfo parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -517,6 +519,7 @@ private static final long serialVersionUID = 0L;
      * Logical list rules that define this user list. The rules are defined as a
      * logical operator (ALL/ANY/NONE) and a list of user lists. All the rules are
      * ANDed when they are evaluated.
+     *
      * Required for creating a logical user list.
      * </pre>
      *
@@ -534,6 +537,7 @@ private static final long serialVersionUID = 0L;
      * Logical list rules that define this user list. The rules are defined as a
      * logical operator (ALL/ANY/NONE) and a list of user lists. All the rules are
      * ANDed when they are evaluated.
+     *
      * Required for creating a logical user list.
      * </pre>
      *
@@ -551,6 +555,7 @@ private static final long serialVersionUID = 0L;
      * Logical list rules that define this user list. The rules are defined as a
      * logical operator (ALL/ANY/NONE) and a list of user lists. All the rules are
      * ANDed when they are evaluated.
+     *
      * Required for creating a logical user list.
      * </pre>
      *
@@ -568,6 +573,7 @@ private static final long serialVersionUID = 0L;
      * Logical list rules that define this user list. The rules are defined as a
      * logical operator (ALL/ANY/NONE) and a list of user lists. All the rules are
      * ANDed when they are evaluated.
+     *
      * Required for creating a logical user list.
      * </pre>
      *
@@ -592,6 +598,7 @@ private static final long serialVersionUID = 0L;
      * Logical list rules that define this user list. The rules are defined as a
      * logical operator (ALL/ANY/NONE) and a list of user lists. All the rules are
      * ANDed when they are evaluated.
+     *
      * Required for creating a logical user list.
      * </pre>
      *
@@ -613,6 +620,7 @@ private static final long serialVersionUID = 0L;
      * Logical list rules that define this user list. The rules are defined as a
      * logical operator (ALL/ANY/NONE) and a list of user lists. All the rules are
      * ANDed when they are evaluated.
+     *
      * Required for creating a logical user list.
      * </pre>
      *
@@ -636,6 +644,7 @@ private static final long serialVersionUID = 0L;
      * Logical list rules that define this user list. The rules are defined as a
      * logical operator (ALL/ANY/NONE) and a list of user lists. All the rules are
      * ANDed when they are evaluated.
+     *
      * Required for creating a logical user list.
      * </pre>
      *
@@ -660,6 +669,7 @@ private static final long serialVersionUID = 0L;
      * Logical list rules that define this user list. The rules are defined as a
      * logical operator (ALL/ANY/NONE) and a list of user lists. All the rules are
      * ANDed when they are evaluated.
+     *
      * Required for creating a logical user list.
      * </pre>
      *
@@ -681,6 +691,7 @@ private static final long serialVersionUID = 0L;
      * Logical list rules that define this user list. The rules are defined as a
      * logical operator (ALL/ANY/NONE) and a list of user lists. All the rules are
      * ANDed when they are evaluated.
+     *
      * Required for creating a logical user list.
      * </pre>
      *
@@ -702,6 +713,7 @@ private static final long serialVersionUID = 0L;
      * Logical list rules that define this user list. The rules are defined as a
      * logical operator (ALL/ANY/NONE) and a list of user lists. All the rules are
      * ANDed when they are evaluated.
+     *
      * Required for creating a logical user list.
      * </pre>
      *
@@ -724,6 +736,7 @@ private static final long serialVersionUID = 0L;
      * Logical list rules that define this user list. The rules are defined as a
      * logical operator (ALL/ANY/NONE) and a list of user lists. All the rules are
      * ANDed when they are evaluated.
+     *
      * Required for creating a logical user list.
      * </pre>
      *
@@ -744,6 +757,7 @@ private static final long serialVersionUID = 0L;
      * Logical list rules that define this user list. The rules are defined as a
      * logical operator (ALL/ANY/NONE) and a list of user lists. All the rules are
      * ANDed when they are evaluated.
+     *
      * Required for creating a logical user list.
      * </pre>
      *
@@ -764,6 +778,7 @@ private static final long serialVersionUID = 0L;
      * Logical list rules that define this user list. The rules are defined as a
      * logical operator (ALL/ANY/NONE) and a list of user lists. All the rules are
      * ANDed when they are evaluated.
+     *
      * Required for creating a logical user list.
      * </pre>
      *
@@ -778,6 +793,7 @@ private static final long serialVersionUID = 0L;
      * Logical list rules that define this user list. The rules are defined as a
      * logical operator (ALL/ANY/NONE) and a list of user lists. All the rules are
      * ANDed when they are evaluated.
+     *
      * Required for creating a logical user list.
      * </pre>
      *
@@ -795,6 +811,7 @@ private static final long serialVersionUID = 0L;
      * Logical list rules that define this user list. The rules are defined as a
      * logical operator (ALL/ANY/NONE) and a list of user lists. All the rules are
      * ANDed when they are evaluated.
+     *
      * Required for creating a logical user list.
      * </pre>
      *
@@ -813,6 +830,7 @@ private static final long serialVersionUID = 0L;
      * Logical list rules that define this user list. The rules are defined as a
      * logical operator (ALL/ANY/NONE) and a list of user lists. All the rules are
      * ANDed when they are evaluated.
+     *
      * Required for creating a logical user list.
      * </pre>
      *
@@ -827,6 +845,7 @@ private static final long serialVersionUID = 0L;
      * Logical list rules that define this user list. The rules are defined as a
      * logical operator (ALL/ANY/NONE) and a list of user lists. All the rules are
      * ANDed when they are evaluated.
+     *
      * Required for creating a logical user list.
      * </pre>
      *
@@ -842,6 +861,7 @@ private static final long serialVersionUID = 0L;
      * Logical list rules that define this user list. The rules are defined as a
      * logical operator (ALL/ANY/NONE) and a list of user lists. All the rules are
      * ANDed when they are evaluated.
+     *
      * Required for creating a logical user list.
      * </pre>
      *

@@ -11,6 +11,7 @@ public interface LanguageConstantOrBuilder extends
    * <pre>
    * Output only. The resource name of the language constant.
    * Language constant resource names have the form:
+   *
    * `languageConstants/{criterion_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface LanguageConstantOrBuilder extends
    * <pre>
    * Output only. The resource name of the language constant.
    * Language constant resource names have the form:
+   *
    * `languageConstants/{criterion_id}`
    * </pre>
    *

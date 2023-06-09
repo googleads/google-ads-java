@@ -7,6 +7,7 @@ package com.google.ads.googleads.v13.resources;
  * <pre>
  * A bidding strategy simulation. Supported combinations of simulation type
  * and simulation modification method are detailed below respectively.
+ *
  * 1. TARGET_CPA - UNIFORM
  * 2. TARGET_ROAS - UNIFORM
  * </pre>
@@ -37,11 +38,6 @@ private static final long serialVersionUID = 0L;
     return new BiddingStrategySimulation();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.resources.BiddingStrategySimulationProto.internal_static_google_ads_googleads_v13_resources_BiddingStrategySimulation_descriptor;
@@ -56,6 +52,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int pointListCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object pointList_;
   public enum PointListCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -103,6 +100,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the bidding strategy simulation.
    * Bidding strategy simulation resource names have the form:
+   *
    * `customers/{customer_id}/biddingStrategySimulations/{bidding_strategy_id}~{type}~{modification_method}~{start_date}~{end_date}`
    * </pre>
    *
@@ -126,6 +124,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the bidding strategy simulation.
    * Bidding strategy simulation resource names have the form:
+   *
    * `customers/{customer_id}/biddingStrategySimulations/{bidding_strategy_id}~{type}~{modification_method}~{start_date}~{end_date}`
    * </pre>
    *
@@ -597,11 +596,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.resources.BiddingStrategySimulation parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.resources.BiddingStrategySimulation parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -647,6 +648,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * A bidding strategy simulation. Supported combinations of simulation type
    * and simulation modification method are detailed below respectively.
+   *
    * 1. TARGET_CPA - UNIFORM
    * 2. TARGET_ROAS - UNIFORM
    * </pre>
@@ -953,6 +955,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the bidding strategy simulation.
      * Bidding strategy simulation resource names have the form:
+     *
      * `customers/{customer_id}/biddingStrategySimulations/{bidding_strategy_id}~{type}~{modification_method}~{start_date}~{end_date}`
      * </pre>
      *
@@ -975,6 +978,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the bidding strategy simulation.
      * Bidding strategy simulation resource names have the form:
+     *
      * `customers/{customer_id}/biddingStrategySimulations/{bidding_strategy_id}~{type}~{modification_method}~{start_date}~{end_date}`
      * </pre>
      *
@@ -998,6 +1002,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the bidding strategy simulation.
      * Bidding strategy simulation resource names have the form:
+     *
      * `customers/{customer_id}/biddingStrategySimulations/{bidding_strategy_id}~{type}~{modification_method}~{start_date}~{end_date}`
      * </pre>
      *
@@ -1017,6 +1022,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the bidding strategy simulation.
      * Bidding strategy simulation resource names have the form:
+     *
      * `customers/{customer_id}/biddingStrategySimulations/{bidding_strategy_id}~{type}~{modification_method}~{start_date}~{end_date}`
      * </pre>
      *
@@ -1033,6 +1039,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the bidding strategy simulation.
      * Bidding strategy simulation resource names have the form:
+     *
      * `customers/{customer_id}/biddingStrategySimulations/{bidding_strategy_id}~{type}~{modification_method}~{start_date}~{end_date}`
      * </pre>
      *
@@ -1073,7 +1080,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBiddingStrategyId(long value) {
-      
+
       biddingStrategyId_ = value;
       bitField0_ |= 0x00000002;
       onChanged();

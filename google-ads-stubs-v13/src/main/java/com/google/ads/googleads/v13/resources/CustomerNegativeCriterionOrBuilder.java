@@ -11,6 +11,7 @@ public interface CustomerNegativeCriterionOrBuilder extends
    * <pre>
    * Immutable. The resource name of the customer negative criterion.
    * Customer negative criterion resource names have the form:
+   *
    * `customers/{customer_id}/customerNegativeCriteria/{criterion_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface CustomerNegativeCriterionOrBuilder extends
    * <pre>
    * Immutable. The resource name of the customer negative criterion.
    * Customer negative criterion resource names have the form:
+   *
    * `customers/{customer_id}/customerNegativeCriteria/{criterion_id}`
    * </pre>
    *
@@ -231,5 +233,5 @@ public interface CustomerNegativeCriterionOrBuilder extends
    */
   com.google.ads.googleads.v13.common.YouTubeChannelInfoOrBuilder getYoutubeChannelOrBuilder();
 
-  public com.google.ads.googleads.v13.resources.CustomerNegativeCriterion.CriterionCase getCriterionCase();
+  com.google.ads.googleads.v13.resources.CustomerNegativeCriterion.CriterionCase getCriterionCase();
 }

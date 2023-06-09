@@ -33,22 +33,22 @@ public final class RemarketingActionProto {
       "ads.v12.resources\0321google/ads/googleads/" +
       "v12/common/tag_snippet.proto\032\037google/api" +
       "/field_behavior.proto\032\031google/api/resour" +
-      "ce.proto\"\324\002\n\021RemarketingAction\022I\n\rresour" +
-      "ce_name\030\001 \001(\tB2\340A\005\372A,\n*googleads.googlea" +
-      "pis.com/RemarketingAction\022\024\n\002id\030\005 \001(\003B\003\340" +
-      "A\003H\000\210\001\001\022\021\n\004name\030\006 \001(\tH\001\210\001\001\022F\n\014tag_snippe" +
-      "ts\030\004 \003(\0132+.google.ads.googleads.v12.comm" +
-      "on.TagSnippetB\003\340A\003:s\352Ap\n*googleads.googl" +
-      "eapis.com/RemarketingAction\022Bcustomers/{" +
-      "customer_id}/remarketingActions/{remarke" +
-      "ting_action_id}B\005\n\003_idB\007\n\005_nameB\210\002\n&com." +
-      "google.ads.googleads.v12.resourcesB\026Rema" +
-      "rketingActionProtoP\001ZKgoogle.golang.org/" +
-      "genproto/googleapis/ads/googleads/v12/re" +
-      "sources;resources\242\002\003GAA\252\002\"Google.Ads.Goo" +
-      "gleAds.V12.Resources\312\002\"Google\\Ads\\Google" +
-      "Ads\\V12\\Resources\352\002&Google::Ads::GoogleA" +
-      "ds::V12::Resourcesb\006proto3"
+      "ce.proto\"\327\002\n\021RemarketingAction\022J\n\rresour" +
+      "ce_name\030\001 \001(\tB3\342A\001\005\372A,\n*googleads.google" +
+      "apis.com/RemarketingAction\022\025\n\002id\030\005 \001(\003B\004" +
+      "\342A\001\003H\000\210\001\001\022\021\n\004name\030\006 \001(\tH\001\210\001\001\022G\n\014tag_snip" +
+      "pets\030\004 \003(\0132+.google.ads.googleads.v12.co" +
+      "mmon.TagSnippetB\004\342A\001\003:s\352Ap\n*googleads.go" +
+      "ogleapis.com/RemarketingAction\022Bcustomer" +
+      "s/{customer_id}/remarketingActions/{rema" +
+      "rketing_action_id}B\005\n\003_idB\007\n\005_nameB\210\002\n&c" +
+      "om.google.ads.googleads.v12.resourcesB\026R" +
+      "emarketingActionProtoP\001ZKgoogle.golang.o" +
+      "rg/genproto/googleapis/ads/googleads/v12" +
+      "/resources;resources\242\002\003GAA\252\002\"Google.Ads." +
+      "GoogleAds.V12.Resources\312\002\"Google\\Ads\\Goo" +
+      "gleAds\\V12\\Resources\352\002&Google::Ads::Goog" +
+      "leAds::V12::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

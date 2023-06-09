@@ -98,7 +98,7 @@ public final class CampaignBidModifierServiceGrpc {
    * Service to manage campaign bid modifiers.
    * </pre>
    */
-  public static abstract class CampaignBidModifierServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -129,30 +129,34 @@ public final class CampaignBidModifierServiceGrpc {
      *   [StringLengthError]()
      * </pre>
      */
-    public void mutateCampaignBidModifiers(com.google.ads.googleads.v12.services.MutateCampaignBidModifiersRequest request,
+    default void mutateCampaignBidModifiers(com.google.ads.googleads.v12.services.MutateCampaignBidModifiersRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.MutateCampaignBidModifiersResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateCampaignBidModifiersMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateCampaignBidModifiersMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.MutateCampaignBidModifiersRequest,
-                com.google.ads.googleads.v12.services.MutateCampaignBidModifiersResponse>(
-                  this, METHODID_MUTATE_CAMPAIGN_BID_MODIFIERS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service CampaignBidModifierService.
    * <pre>
    * Service to manage campaign bid modifiers.
    * </pre>
    */
-  public static final class CampaignBidModifierServiceStub extends io.grpc.stub.AbstractAsyncStub<CampaignBidModifierServiceStub> {
+  public static abstract class CampaignBidModifierServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return CampaignBidModifierServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service CampaignBidModifierService.
+   * <pre>
+   * Service to manage campaign bid modifiers.
+   * </pre>
+   */
+  public static final class CampaignBidModifierServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<CampaignBidModifierServiceStub> {
     private CampaignBidModifierServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -201,11 +205,13 @@ public final class CampaignBidModifierServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service CampaignBidModifierService.
    * <pre>
    * Service to manage campaign bid modifiers.
    * </pre>
    */
-  public static final class CampaignBidModifierServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CampaignBidModifierServiceBlockingStub> {
+  public static final class CampaignBidModifierServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<CampaignBidModifierServiceBlockingStub> {
     private CampaignBidModifierServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -253,11 +259,13 @@ public final class CampaignBidModifierServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service CampaignBidModifierService.
    * <pre>
    * Service to manage campaign bid modifiers.
    * </pre>
    */
-  public static final class CampaignBidModifierServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CampaignBidModifierServiceFutureStub> {
+  public static final class CampaignBidModifierServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<CampaignBidModifierServiceFutureStub> {
     private CampaignBidModifierServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -312,10 +320,10 @@ public final class CampaignBidModifierServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final CampaignBidModifierServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(CampaignBidModifierServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -342,6 +350,18 @@ public final class CampaignBidModifierServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateCampaignBidModifiersMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.MutateCampaignBidModifiersRequest,
+              com.google.ads.googleads.v12.services.MutateCampaignBidModifiersResponse>(
+                service, METHODID_MUTATE_CAMPAIGN_BID_MODIFIERS)))
+        .build();
   }
 
   private static abstract class CampaignBidModifierServiceBaseDescriptorSupplier

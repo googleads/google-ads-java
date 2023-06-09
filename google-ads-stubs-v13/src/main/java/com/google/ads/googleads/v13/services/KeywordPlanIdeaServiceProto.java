@@ -165,50 +165,50 @@ public final class KeywordPlanIdeaServiceProto {
       "alMetricsResult\022\021\n\004text\030\001 \001(\tH\000\210\001\001\022\026\n\016cl" +
       "ose_variants\030\003 \003(\t\022V\n\017keyword_metrics\030\002 " +
       "\001(\0132=.google.ads.googleads.v13.common.Ke" +
-      "ywordPlanHistoricalMetricsB\007\n\005_text\"g\n\034G" +
-      "enerateAdGroupThemesRequest\022\030\n\013customer_" +
-      "id\030\001 \001(\tB\003\340A\002\022\025\n\010keywords\030\002 \003(\tB\003\340A\002\022\026\n\t" +
-      "ad_groups\030\003 \003(\tB\003\340A\002\"\322\001\n\035GenerateAdGroup" +
-      "ThemesResponse\022a\n\034ad_group_keyword_sugge" +
-      "stions\030\001 \003(\0132;.google.ads.googleads.v13." +
-      "services.AdGroupKeywordSuggestion\022N\n\022unu" +
-      "sable_ad_groups\030\002 \003(\01322.google.ads.googl" +
-      "eads.v13.services.UnusableAdGroup\"\355\001\n\030Ad" +
-      "GroupKeywordSuggestion\022\024\n\014keyword_text\030\001" +
-      " \001(\t\022\036\n\026suggested_keyword_text\030\002 \001(\t\022c\n\024" +
-      "suggested_match_type\030\003 \001(\0162E.google.ads." +
-      "googleads.v13.enums.KeywordMatchTypeEnum" +
-      ".KeywordMatchType\022\032\n\022suggested_ad_group\030" +
-      "\004 \001(\t\022\032\n\022suggested_campaign\030\005 \001(\t\"5\n\017Unu" +
-      "sableAdGroup\022\020\n\010ad_group\030\001 \001(\t\022\020\n\010campai" +
-      "gn\030\002 \001(\t2\240\006\n\026KeywordPlanIdeaService\022\326\001\n\024" +
-      "GenerateKeywordIdeas\022>.google.ads.google" +
-      "ads.v13.services.GenerateKeywordIdeasReq" +
-      "uest\032>.google.ads.googleads.v13.services" +
-      ".GenerateKeywordIdeaResponse\">\202\323\344\223\0028\"3/v" +
-      "13/customers/{customer_id=*}:generateKey" +
-      "wordIdeas:\001*\022\207\002\n GenerateKeywordHistoric" +
-      "alMetrics\022J.google.ads.googleads.v13.ser" +
-      "vices.GenerateKeywordHistoricalMetricsRe" +
-      "quest\032K.google.ads.googleads.v13.service" +
-      "s.GenerateKeywordHistoricalMetricsRespon" +
-      "se\"J\202\323\344\223\002D\"?/v13/customers/{customer_id=" +
-      "*}:generateKeywordHistoricalMetrics:\001*\022\333" +
-      "\001\n\025GenerateAdGroupThemes\022?.google.ads.go" +
-      "ogleads.v13.services.GenerateAdGroupThem" +
-      "esRequest\032@.google.ads.googleads.v13.ser" +
-      "vices.GenerateAdGroupThemesResponse\"?\202\323\344" +
-      "\223\0029\"4/v13/customers/{customer_id=*}:gene" +
-      "rateAdGroupThemes:\001*\032E\312A\030googleads.googl" +
-      "eapis.com\322A\'https://www.googleapis.com/a" +
-      "uth/adwordsB\207\002\n%com.google.ads.googleads" +
-      ".v13.servicesB\033KeywordPlanIdeaServicePro" +
-      "toP\001ZIgoogle.golang.org/genproto/googlea" +
-      "pis/ads/googleads/v13/services;services\242" +
-      "\002\003GAA\252\002!Google.Ads.GoogleAds.V13.Service" +
-      "s\312\002!Google\\Ads\\GoogleAds\\V13\\Services\352\002%" +
-      "Google::Ads::GoogleAds::V13::Servicesb\006p" +
-      "roto3"
+      "ywordPlanHistoricalMetricsB\007\n\005_text\"j\n\034G" +
+      "enerateAdGroupThemesRequest\022\031\n\013customer_" +
+      "id\030\001 \001(\tB\004\342A\001\002\022\026\n\010keywords\030\002 \003(\tB\004\342A\001\002\022\027" +
+      "\n\tad_groups\030\003 \003(\tB\004\342A\001\002\"\322\001\n\035GenerateAdGr" +
+      "oupThemesResponse\022a\n\034ad_group_keyword_su" +
+      "ggestions\030\001 \003(\0132;.google.ads.googleads.v" +
+      "13.services.AdGroupKeywordSuggestion\022N\n\022" +
+      "unusable_ad_groups\030\002 \003(\01322.google.ads.go" +
+      "ogleads.v13.services.UnusableAdGroup\"\355\001\n" +
+      "\030AdGroupKeywordSuggestion\022\024\n\014keyword_tex" +
+      "t\030\001 \001(\t\022\036\n\026suggested_keyword_text\030\002 \001(\t\022" +
+      "c\n\024suggested_match_type\030\003 \001(\0162E.google.a" +
+      "ds.googleads.v13.enums.KeywordMatchTypeE" +
+      "num.KeywordMatchType\022\032\n\022suggested_ad_gro" +
+      "up\030\004 \001(\t\022\032\n\022suggested_campaign\030\005 \001(\t\"5\n\017" +
+      "UnusableAdGroup\022\020\n\010ad_group\030\001 \001(\t\022\020\n\010cam" +
+      "paign\030\002 \001(\t2\240\006\n\026KeywordPlanIdeaService\022\326" +
+      "\001\n\024GenerateKeywordIdeas\022>.google.ads.goo" +
+      "gleads.v13.services.GenerateKeywordIdeas" +
+      "Request\032>.google.ads.googleads.v13.servi" +
+      "ces.GenerateKeywordIdeaResponse\">\202\323\344\223\0028\"" +
+      "3/v13/customers/{customer_id=*}:generate" +
+      "KeywordIdeas:\001*\022\207\002\n GenerateKeywordHisto" +
+      "ricalMetrics\022J.google.ads.googleads.v13." +
+      "services.GenerateKeywordHistoricalMetric" +
+      "sRequest\032K.google.ads.googleads.v13.serv" +
+      "ices.GenerateKeywordHistoricalMetricsRes" +
+      "ponse\"J\202\323\344\223\002D\"?/v13/customers/{customer_" +
+      "id=*}:generateKeywordHistoricalMetrics:\001" +
+      "*\022\333\001\n\025GenerateAdGroupThemes\022?.google.ads" +
+      ".googleads.v13.services.GenerateAdGroupT" +
+      "hemesRequest\032@.google.ads.googleads.v13." +
+      "services.GenerateAdGroupThemesResponse\"?" +
+      "\202\323\344\223\0029\"4/v13/customers/{customer_id=*}:g" +
+      "enerateAdGroupThemes:\001*\032E\312A\030googleads.go" +
+      "ogleapis.com\322A\'https://www.googleapis.co" +
+      "m/auth/adwordsB\207\002\n%com.google.ads.google" +
+      "ads.v13.servicesB\033KeywordPlanIdeaService" +
+      "ProtoP\001ZIgoogle.golang.org/genproto/goog" +
+      "leapis/ads/googleads/v13/services;servic" +
+      "es\242\002\003GAA\252\002!Google.Ads.GoogleAds.V13.Serv" +
+      "ices\312\002!Google\\Ads\\GoogleAds\\V13\\Services" +
+      "\352\002%Google::Ads::GoogleAds::V13::Services" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

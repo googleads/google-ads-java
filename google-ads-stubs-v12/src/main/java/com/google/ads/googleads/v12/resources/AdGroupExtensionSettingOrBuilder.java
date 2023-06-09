@@ -11,6 +11,7 @@ public interface AdGroupExtensionSettingOrBuilder extends
    * <pre>
    * Immutable. The resource name of the ad group extension setting.
    * AdGroupExtensionSetting resource names have the form:
+   *
    * `customers/{customer_id}/adGroupExtensionSettings/{ad_group_id}~{extension_type}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface AdGroupExtensionSettingOrBuilder extends
    * <pre>
    * Immutable. The resource name of the ad group extension setting.
    * AdGroupExtensionSetting resource names have the form:
+   *
    * `customers/{customer_id}/adGroupExtensionSettings/{ad_group_id}~{extension_type}`
    * </pre>
    *
@@ -54,6 +56,7 @@ public interface AdGroupExtensionSettingOrBuilder extends
    * <pre>
    * Immutable. The resource name of the ad group. The linked extension feed
    * items will serve under this ad group. AdGroup resource names have the form:
+   *
    * `customers/{customer_id}/adGroups/{ad_group_id}`
    * </pre>
    *
@@ -65,6 +68,7 @@ public interface AdGroupExtensionSettingOrBuilder extends
    * <pre>
    * Immutable. The resource name of the ad group. The linked extension feed
    * items will serve under this ad group. AdGroup resource names have the form:
+   *
    * `customers/{customer_id}/adGroups/{ad_group_id}`
    * </pre>
    *
@@ -76,6 +80,7 @@ public interface AdGroupExtensionSettingOrBuilder extends
    * <pre>
    * Immutable. The resource name of the ad group. The linked extension feed
    * items will serve under this ad group. AdGroup resource names have the form:
+   *
    * `customers/{customer_id}/adGroups/{ad_group_id}`
    * </pre>
    *
@@ -89,6 +94,7 @@ public interface AdGroupExtensionSettingOrBuilder extends
    * <pre>
    * The resource names of the extension feed items to serve under the ad group.
    * ExtensionFeedItem resource names have the form:
+   *
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
@@ -101,6 +107,7 @@ public interface AdGroupExtensionSettingOrBuilder extends
    * <pre>
    * The resource names of the extension feed items to serve under the ad group.
    * ExtensionFeedItem resource names have the form:
+   *
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
@@ -112,6 +119,7 @@ public interface AdGroupExtensionSettingOrBuilder extends
    * <pre>
    * The resource names of the extension feed items to serve under the ad group.
    * ExtensionFeedItem resource names have the form:
+   *
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
@@ -124,6 +132,7 @@ public interface AdGroupExtensionSettingOrBuilder extends
    * <pre>
    * The resource names of the extension feed items to serve under the ad group.
    * ExtensionFeedItem resource names have the form:
+   *
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *

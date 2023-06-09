@@ -29,11 +29,6 @@ private static final long serialVersionUID = 0L;
     return new AssetLinkErrorEnum();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.errors.AssetLinkErrorProto.internal_static_google_ads_googleads_v12_errors_AssetLinkErrorEnum_descriptor;
@@ -242,7 +237,7 @@ private static final long serialVersionUID = 0L;
     CANNOT_LINK_TO_AUTOMATICALLY_CREATED_ASSET(20),
     /**
      * <pre>
-     * Automatically created links cannot be changed into adveritser links or
+     * Automatically created links cannot be changed into advertiser links or
      * the reverse.
      * </pre>
      *
@@ -438,7 +433,7 @@ private static final long serialVersionUID = 0L;
     public static final int CANNOT_LINK_TO_AUTOMATICALLY_CREATED_ASSET_VALUE = 20;
     /**
      * <pre>
-     * Automatically created links cannot be changed into adveritser links or
+     * Automatically created links cannot be changed into advertiser links or
      * the reverse.
      * </pre>
      *
@@ -647,11 +642,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.errors.AssetLinkErrorEnum parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.errors.AssetLinkErrorEnum parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)

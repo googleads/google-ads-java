@@ -11,6 +11,7 @@ public interface AdGroupBidModifierOrBuilder extends
    * <pre>
    * Immutable. The resource name of the ad group bid modifier.
    * Ad group bid modifier resource names have the form:
+   *
    * `customers/{customer_id}/adGroupBidModifiers/{ad_group_id}~{criterion_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface AdGroupBidModifierOrBuilder extends
    * <pre>
    * Immutable. The resource name of the ad group bid modifier.
    * Ad group bid modifier resource names have the form:
+   *
    * `customers/{customer_id}/adGroupBidModifiers/{ad_group_id}~{criterion_id}`
    * </pre>
    *
@@ -63,6 +65,7 @@ public interface AdGroupBidModifierOrBuilder extends
   /**
    * <pre>
    * Output only. The ID of the criterion to bid modify.
+   *
    * This field is ignored for mutates.
    * </pre>
    *
@@ -73,6 +76,7 @@ public interface AdGroupBidModifierOrBuilder extends
   /**
    * <pre>
    * Output only. The ID of the criterion to bid modify.
+   *
    * This field is ignored for mutates.
    * </pre>
    *
@@ -359,5 +363,5 @@ public interface AdGroupBidModifierOrBuilder extends
    */
   com.google.ads.googleads.v12.common.HotelCheckInDateRangeInfoOrBuilder getHotelCheckInDateRangeOrBuilder();
 
-  public com.google.ads.googleads.v12.resources.AdGroupBidModifier.CriterionCase getCriterionCase();
+  com.google.ads.googleads.v12.resources.AdGroupBidModifier.CriterionCase getCriterionCase();
 }

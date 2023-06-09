@@ -162,7 +162,7 @@ public final class MerchantCenterLinkServiceGrpc {
    * Merchant Center.
    * </pre>
    */
-  public static abstract class MerchantCenterLinkServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -176,7 +176,7 @@ public final class MerchantCenterLinkServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void listMerchantCenterLinks(com.google.ads.googleads.v12.services.ListMerchantCenterLinksRequest request,
+    default void listMerchantCenterLinks(com.google.ads.googleads.v12.services.ListMerchantCenterLinksRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.ListMerchantCenterLinksResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMerchantCenterLinksMethod(), responseObserver);
     }
@@ -193,7 +193,7 @@ public final class MerchantCenterLinkServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void getMerchantCenterLink(com.google.ads.googleads.v12.services.GetMerchantCenterLinkRequest request,
+    default void getMerchantCenterLink(com.google.ads.googleads.v12.services.GetMerchantCenterLinkRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.resources.MerchantCenterLink> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMerchantCenterLinkMethod(), responseObserver);
     }
@@ -211,45 +211,36 @@ public final class MerchantCenterLinkServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void mutateMerchantCenterLink(com.google.ads.googleads.v12.services.MutateMerchantCenterLinkRequest request,
+    default void mutateMerchantCenterLink(com.google.ads.googleads.v12.services.MutateMerchantCenterLinkRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.MutateMerchantCenterLinkResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateMerchantCenterLinkMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getListMerchantCenterLinksMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.ListMerchantCenterLinksRequest,
-                com.google.ads.googleads.v12.services.ListMerchantCenterLinksResponse>(
-                  this, METHODID_LIST_MERCHANT_CENTER_LINKS)))
-          .addMethod(
-            getGetMerchantCenterLinkMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.GetMerchantCenterLinkRequest,
-                com.google.ads.googleads.v12.resources.MerchantCenterLink>(
-                  this, METHODID_GET_MERCHANT_CENTER_LINK)))
-          .addMethod(
-            getMutateMerchantCenterLinkMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.MutateMerchantCenterLinkRequest,
-                com.google.ads.googleads.v12.services.MutateMerchantCenterLinkResponse>(
-                  this, METHODID_MUTATE_MERCHANT_CENTER_LINK)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service MerchantCenterLinkService.
    * <pre>
    * This service allows management of links between Google Ads and Google
    * Merchant Center.
    * </pre>
    */
-  public static final class MerchantCenterLinkServiceStub extends io.grpc.stub.AbstractAsyncStub<MerchantCenterLinkServiceStub> {
+  public static abstract class MerchantCenterLinkServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return MerchantCenterLinkServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service MerchantCenterLinkService.
+   * <pre>
+   * This service allows management of links between Google Ads and Google
+   * Merchant Center.
+   * </pre>
+   */
+  public static final class MerchantCenterLinkServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<MerchantCenterLinkServiceStub> {
     private MerchantCenterLinkServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -318,12 +309,14 @@ public final class MerchantCenterLinkServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service MerchantCenterLinkService.
    * <pre>
    * This service allows management of links between Google Ads and Google
    * Merchant Center.
    * </pre>
    */
-  public static final class MerchantCenterLinkServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<MerchantCenterLinkServiceBlockingStub> {
+  public static final class MerchantCenterLinkServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<MerchantCenterLinkServiceBlockingStub> {
     private MerchantCenterLinkServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -389,12 +382,14 @@ public final class MerchantCenterLinkServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service MerchantCenterLinkService.
    * <pre>
    * This service allows management of links between Google Ads and Google
    * Merchant Center.
    * </pre>
    */
-  public static final class MerchantCenterLinkServiceFutureStub extends io.grpc.stub.AbstractFutureStub<MerchantCenterLinkServiceFutureStub> {
+  public static final class MerchantCenterLinkServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<MerchantCenterLinkServiceFutureStub> {
     private MerchantCenterLinkServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -471,10 +466,10 @@ public final class MerchantCenterLinkServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final MerchantCenterLinkServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(MerchantCenterLinkServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -509,6 +504,32 @@ public final class MerchantCenterLinkServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getListMerchantCenterLinksMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.ListMerchantCenterLinksRequest,
+              com.google.ads.googleads.v12.services.ListMerchantCenterLinksResponse>(
+                service, METHODID_LIST_MERCHANT_CENTER_LINKS)))
+        .addMethod(
+          getGetMerchantCenterLinkMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.GetMerchantCenterLinkRequest,
+              com.google.ads.googleads.v12.resources.MerchantCenterLink>(
+                service, METHODID_GET_MERCHANT_CENTER_LINK)))
+        .addMethod(
+          getMutateMerchantCenterLinkMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.MutateMerchantCenterLinkRequest,
+              com.google.ads.googleads.v12.services.MutateMerchantCenterLinkResponse>(
+                service, METHODID_MUTATE_MERCHANT_CENTER_LINK)))
+        .build();
   }
 
   private static abstract class MerchantCenterLinkServiceBaseDescriptorSupplier

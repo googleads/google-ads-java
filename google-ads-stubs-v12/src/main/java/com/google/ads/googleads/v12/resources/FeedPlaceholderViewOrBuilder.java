@@ -11,6 +11,7 @@ public interface FeedPlaceholderViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the feed placeholder view.
    * Feed placeholder view resource names have the form:
+   *
    * `customers/{customer_id}/feedPlaceholderViews/{placeholder_type}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface FeedPlaceholderViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the feed placeholder view.
    * Feed placeholder view resource names have the form:
+   *
    * `customers/{customer_id}/feedPlaceholderViews/{placeholder_type}`
    * </pre>
    *

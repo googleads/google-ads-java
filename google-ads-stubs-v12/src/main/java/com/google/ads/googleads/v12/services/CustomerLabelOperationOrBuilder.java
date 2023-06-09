@@ -41,6 +41,7 @@ public interface CustomerLabelOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the customer-label relationship
    * being removed, in this format:
+   *
    * `customers/{customer_id}/customerLabels/{label_id}`
    * </pre>
    *
@@ -52,6 +53,7 @@ public interface CustomerLabelOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the customer-label relationship
    * being removed, in this format:
+   *
    * `customers/{customer_id}/customerLabels/{label_id}`
    * </pre>
    *
@@ -63,6 +65,7 @@ public interface CustomerLabelOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the customer-label relationship
    * being removed, in this format:
+   *
    * `customers/{customer_id}/customerLabels/{label_id}`
    * </pre>
    *
@@ -72,5 +75,5 @@ public interface CustomerLabelOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v12.services.CustomerLabelOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v12.services.CustomerLabelOperation.OperationCase getOperationCase();
 }

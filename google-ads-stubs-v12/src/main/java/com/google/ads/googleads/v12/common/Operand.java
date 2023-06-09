@@ -29,11 +29,6 @@ private static final long serialVersionUID = 0L;
     return new Operand();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.common.MatchingFunctionProto.internal_static_google_ads_googleads_v12_common_Operand_descriptor;
@@ -137,7 +132,7 @@ private static final long serialVersionUID = 0L;
      */
     double getDoubleValue();
 
-    public com.google.ads.googleads.v12.common.Operand.ConstantOperand.ConstantOperandValueCase getConstantOperandValueCase();
+    com.google.ads.googleads.v12.common.Operand.ConstantOperand.ConstantOperandValueCase getConstantOperandValueCase();
   }
   /**
    * <pre>
@@ -165,11 +160,6 @@ private static final long serialVersionUID = 0L;
       return new ConstantOperand();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.common.MatchingFunctionProto.internal_static_google_ads_googleads_v12_common_Operand_ConstantOperand_descriptor;
@@ -184,6 +174,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private int constantOperandValueCase_ = 0;
+    @SuppressWarnings("serial")
     private java.lang.Object constantOperandValue_;
     public enum ConstantOperandValueCase
         implements com.google.protobuf.Internal.EnumLite,
@@ -555,11 +546,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.common.Operand.ConstantOperand parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.common.Operand.ConstantOperand parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -980,7 +973,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setLongValue(long value) {
-        
+
         constantOperandValueCase_ = 6;
         constantOperandValue_ = value;
         onChanged();
@@ -1038,7 +1031,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setBooleanValue(boolean value) {
-        
+
         constantOperandValueCase_ = 7;
         constantOperandValue_ = value;
         onChanged();
@@ -1096,7 +1089,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setDoubleValue(double value) {
-        
+
         constantOperandValueCase_ = 8;
         constantOperandValue_ = value;
         onChanged();
@@ -1251,11 +1244,6 @@ private static final long serialVersionUID = 0L;
       return new FeedAttributeOperand();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.common.MatchingFunctionProto.internal_static_google_ads_googleads_v12_common_Operand_FeedAttributeOperand_descriptor;
@@ -1456,11 +1444,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.common.Operand.FeedAttributeOperand parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.common.Operand.FeedAttributeOperand parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1726,7 +1716,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setFeedId(long value) {
-        
+
         feedId_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -1782,7 +1772,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setFeedAttributeId(long value) {
-        
+
         feedAttributeId_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -1924,11 +1914,6 @@ private static final long serialVersionUID = 0L;
       return new FunctionOperand();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.common.MatchingFunctionProto.internal_static_google_ads_googleads_v12_common_Operand_FunctionOperand_descriptor;
@@ -2094,11 +2079,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.common.Operand.FunctionOperand parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.common.Operand.FunctionOperand parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2589,11 +2576,6 @@ private static final long serialVersionUID = 0L;
       return new RequestContextOperand();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.common.MatchingFunctionProto.internal_static_google_ads_googleads_v12_common_Operand_RequestContextOperand_descriptor;
@@ -2741,11 +2723,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.common.Operand.RequestContextOperand parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.common.Operand.RequestContextOperand parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3096,6 +3080,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int functionArgumentOperandCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object functionArgumentOperand_;
   public enum FunctionArgumentOperandCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -3482,11 +3467,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.common.Operand parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.common.Operand parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)

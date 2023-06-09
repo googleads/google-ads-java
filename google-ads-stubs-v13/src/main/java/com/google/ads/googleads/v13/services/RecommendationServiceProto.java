@@ -169,172 +169,173 @@ public final class RecommendationServiceProto {
       "ons.proto\032\027google/api/client.proto\032\037goog" +
       "le/api/field_behavior.proto\032\031google/api/" +
       "resource.proto\032\027google/rpc/status.proto\"" +
-      "\251\001\n\032ApplyRecommendationRequest\022\030\n\013custom" +
-      "er_id\030\001 \001(\tB\003\340A\002\022X\n\noperations\030\002 \003(\0132?.g" +
+      "\253\001\n\032ApplyRecommendationRequest\022\031\n\013custom" +
+      "er_id\030\001 \001(\tB\004\342A\001\002\022Y\n\noperations\030\002 \003(\0132?." +
+      "google.ads.googleads.v13.services.ApplyR" +
+      "ecommendationOperationB\004\342A\001\002\022\027\n\017partial_" +
+      "failure\030\003 \001(\010\"\345%\n\034ApplyRecommendationOpe" +
+      "ration\022C\n\rresource_name\030\001 \001(\tB,\372A)\n\'goog" +
+      "leads.googleapis.com/Recommendation\022s\n\017c" +
+      "ampaign_budget\030\002 \001(\0132X.google.ads.google" +
+      "ads.v13.services.ApplyRecommendationOper" +
+      "ation.CampaignBudgetParametersH\000\022c\n\007text" +
+      "_ad\030\003 \001(\0132P.google.ads.googleads.v13.ser" +
+      "vices.ApplyRecommendationOperation.TextA" +
+      "dParametersH\000\022d\n\007keyword\030\004 \001(\0132Q.google." +
+      "ads.googleads.v13.services.ApplyRecommen" +
+      "dationOperation.KeywordParametersH\000\022u\n\021t" +
+      "arget_cpa_opt_in\030\005 \001(\0132X.google.ads.goog" +
+      "leads.v13.services.ApplyRecommendationOp" +
+      "eration.TargetCpaOptInParametersH\000\022w\n\022ta" +
+      "rget_roas_opt_in\030\n \001(\0132Y.google.ads.goog" +
+      "leads.v13.services.ApplyRecommendationOp" +
+      "eration.TargetRoasOptInParametersH\000\022w\n\021c" +
+      "allout_extension\030\006 \001(\0132Z.google.ads.goog" +
+      "leads.v13.services.ApplyRecommendationOp" +
+      "eration.CalloutExtensionParametersH\000\022q\n\016" +
+      "call_extension\030\007 \001(\0132W.google.ads.google" +
+      "ads.v13.services.ApplyRecommendationOper" +
+      "ation.CallExtensionParametersH\000\022y\n\022sitel" +
+      "ink_extension\030\010 \001(\0132[.google.ads.googlea" +
+      "ds.v13.services.ApplyRecommendationOpera" +
+      "tion.SitelinkExtensionParametersH\000\022x\n\022mo" +
+      "ve_unused_budget\030\t \001(\0132Z.google.ads.goog" +
+      "leads.v13.services.ApplyRecommendationOp" +
+      "eration.MoveUnusedBudgetParametersH\000\022|\n\024" +
+      "responsive_search_ad\030\013 \001(\0132\\.google.ads." +
+      "googleads.v13.services.ApplyRecommendati" +
+      "onOperation.ResponsiveSearchAdParameters" +
+      "H\000\022\201\001\n\027use_broad_match_keyword\030\014 \001(\0132^.g" +
       "oogle.ads.googleads.v13.services.ApplyRe" +
-      "commendationOperationB\003\340A\002\022\027\n\017partial_fa" +
-      "ilure\030\003 \001(\010\"\337%\n\034ApplyRecommendationOpera" +
-      "tion\022C\n\rresource_name\030\001 \001(\tB,\372A)\n\'google" +
-      "ads.googleapis.com/Recommendation\022s\n\017cam" +
-      "paign_budget\030\002 \001(\0132X.google.ads.googlead" +
-      "s.v13.services.ApplyRecommendationOperat" +
-      "ion.CampaignBudgetParametersH\000\022c\n\007text_a" +
-      "d\030\003 \001(\0132P.google.ads.googleads.v13.servi" +
-      "ces.ApplyRecommendationOperation.TextAdP" +
-      "arametersH\000\022d\n\007keyword\030\004 \001(\0132Q.google.ad" +
-      "s.googleads.v13.services.ApplyRecommenda" +
-      "tionOperation.KeywordParametersH\000\022u\n\021tar" +
-      "get_cpa_opt_in\030\005 \001(\0132X.google.ads.google" +
-      "ads.v13.services.ApplyRecommendationOper" +
-      "ation.TargetCpaOptInParametersH\000\022w\n\022targ" +
-      "et_roas_opt_in\030\n \001(\0132Y.google.ads.google" +
-      "ads.v13.services.ApplyRecommendationOper" +
-      "ation.TargetRoasOptInParametersH\000\022w\n\021cal" +
-      "lout_extension\030\006 \001(\0132Z.google.ads.google" +
-      "ads.v13.services.ApplyRecommendationOper" +
-      "ation.CalloutExtensionParametersH\000\022q\n\016ca" +
-      "ll_extension\030\007 \001(\0132W.google.ads.googlead" +
-      "s.v13.services.ApplyRecommendationOperat" +
-      "ion.CallExtensionParametersH\000\022y\n\022sitelin" +
-      "k_extension\030\010 \001(\0132[.google.ads.googleads" +
-      ".v13.services.ApplyRecommendationOperati" +
-      "on.SitelinkExtensionParametersH\000\022x\n\022move" +
-      "_unused_budget\030\t \001(\0132Z.google.ads.google" +
-      "ads.v13.services.ApplyRecommendationOper" +
-      "ation.MoveUnusedBudgetParametersH\000\022|\n\024re" +
-      "sponsive_search_ad\030\013 \001(\0132\\.google.ads.go" +
-      "ogleads.v13.services.ApplyRecommendation" +
-      "Operation.ResponsiveSearchAdParametersH\000" +
-      "\022\201\001\n\027use_broad_match_keyword\030\014 \001(\0132^.goo" +
-      "gle.ads.googleads.v13.services.ApplyReco" +
-      "mmendationOperation.UseBroadMatchKeyword" +
-      "ParametersH\000\022\207\001\n\032responsive_search_ad_as" +
-      "set\030\r \001(\0132a.google.ads.googleads.v13.ser" +
-      "vices.ApplyRecommendationOperation.Respo" +
-      "nsiveSearchAdAssetParametersH\000\022\241\001\n(respo" +
-      "nsive_search_ad_improve_ad_strength\030\016 \001(" +
-      "\0132m.google.ads.googleads.v13.services.Ap" +
-      "plyRecommendationOperation.ResponsiveSea" +
-      "rchAdImproveAdStrengthParametersH\000\022\211\001\n\034r" +
-      "aise_target_cpa_bid_too_low\030\017 \001(\0132a.goog" +
-      "le.ads.googleads.v13.services.ApplyRecom" +
-      "mendationOperation.RaiseTargetCpaBidTooL" +
-      "owParametersH\000\022\211\001\n\033forecasting_set_targe" +
-      "t_roas\030\020 \001(\0132b.google.ads.googleads.v13." +
-      "services.ApplyRecommendationOperation.Fo" +
-      "recastingSetTargetRoasParametersH\000\022o\n\rca" +
-      "llout_asset\030\021 \001(\0132V.google.ads.googleads" +
-      ".v13.services.ApplyRecommendationOperati" +
-      "on.CalloutAssetParametersH\000\022i\n\ncall_asse" +
-      "t\030\022 \001(\0132S.google.ads.googleads.v13.servi" +
-      "ces.ApplyRecommendationOperation.CallAss" +
-      "etParametersH\000\022q\n\016sitelink_asset\030\023 \001(\0132W" +
-      ".google.ads.googleads.v13.services.Apply" +
-      "RecommendationOperation.SitelinkAssetPar" +
-      "ametersH\000\032^\n\030CampaignBudgetParameters\022%\n" +
-      "\030new_budget_amount_micros\030\002 \001(\003H\000\210\001\001B\033\n\031" +
-      "_new_budget_amount_micros\032\234\001\n\"Forecastin" +
-      "gSetTargetRoasParameters\022\030\n\013target_roas\030" +
-      "\001 \001(\001H\000\210\001\001\022*\n\035campaign_budget_amount_mic" +
-      "ros\030\002 \001(\003H\001\210\001\001B\016\n\014_target_roasB \n\036_campa" +
-      "ign_budget_amount_micros\032F\n\020TextAdParame" +
-      "ters\0222\n\002ad\030\001 \001(\0132&.google.ads.googleads." +
-      "v13.resources.Ad\032\302\001\n\021KeywordParameters\022\025" +
-      "\n\010ad_group\030\004 \001(\tH\000\210\001\001\022Y\n\nmatch_type\030\002 \001(" +
-      "\0162E.google.ads.googleads.v13.enums.Keywo" +
-      "rdMatchTypeEnum.KeywordMatchType\022\033\n\016cpc_" +
-      "bid_micros\030\005 \001(\003H\001\210\001\001B\013\n\t_ad_groupB\021\n\017_c" +
-      "pc_bid_micros\032\246\001\n\030TargetCpaOptInParamete" +
-      "rs\022\036\n\021target_cpa_micros\030\003 \001(\003H\000\210\001\001\022.\n!ne" +
-      "w_campaign_budget_amount_micros\030\004 \001(\003H\001\210" +
-      "\001\001B\024\n\022_target_cpa_microsB$\n\"_new_campaig" +
-      "n_budget_amount_micros\032\233\001\n\031TargetRoasOpt" +
-      "InParameters\022\030\n\013target_roas\030\001 \001(\001H\000\210\001\001\022." +
-      "\n!new_campaign_budget_amount_micros\030\002 \001(" +
-      "\003H\001\210\001\001B\016\n\014_target_roasB$\n\"_new_campaign_" +
-      "budget_amount_micros\032j\n\032CalloutExtension" +
-      "Parameters\022L\n\022callout_extensions\030\001 \003(\01320" +
-      ".google.ads.googleads.v13.common.Callout" +
-      "FeedItem\032a\n\027CallExtensionParameters\022F\n\017c" +
-      "all_extensions\030\001 \003(\0132-.google.ads.google" +
-      "ads.v13.common.CallFeedItem\032m\n\033SitelinkE" +
-      "xtensionParameters\022N\n\023sitelink_extension" +
-      "s\030\001 \003(\01321.google.ads.googleads.v13.commo" +
-      "n.SitelinkFeedItem\032\230\001\n\026CalloutAssetParam" +
-      "eters\022~\n\031ad_asset_apply_parameters\030\001 \001(\013" +
-      "2V.google.ads.googleads.v13.services.App" +
-      "lyRecommendationOperation.AdAssetApplyPa" +
-      "rametersB\003\340A\002\032\225\001\n\023CallAssetParameters\022~\n" +
+      "commendationOperation.UseBroadMatchKeywo" +
+      "rdParametersH\000\022\207\001\n\032responsive_search_ad_" +
+      "asset\030\r \001(\0132a.google.ads.googleads.v13.s" +
+      "ervices.ApplyRecommendationOperation.Res" +
+      "ponsiveSearchAdAssetParametersH\000\022\241\001\n(res" +
+      "ponsive_search_ad_improve_ad_strength\030\016 " +
+      "\001(\0132m.google.ads.googleads.v13.services." +
+      "ApplyRecommendationOperation.ResponsiveS" +
+      "earchAdImproveAdStrengthParametersH\000\022\211\001\n" +
+      "\034raise_target_cpa_bid_too_low\030\017 \001(\0132a.go" +
+      "ogle.ads.googleads.v13.services.ApplyRec" +
+      "ommendationOperation.RaiseTargetCpaBidTo" +
+      "oLowParametersH\000\022\211\001\n\033forecasting_set_tar" +
+      "get_roas\030\020 \001(\0132b.google.ads.googleads.v1" +
+      "3.services.ApplyRecommendationOperation." +
+      "ForecastingSetTargetRoasParametersH\000\022o\n\r" +
+      "callout_asset\030\021 \001(\0132V.google.ads.googlea" +
+      "ds.v13.services.ApplyRecommendationOpera" +
+      "tion.CalloutAssetParametersH\000\022i\n\ncall_as" +
+      "set\030\022 \001(\0132S.google.ads.googleads.v13.ser" +
+      "vices.ApplyRecommendationOperation.CallA" +
+      "ssetParametersH\000\022q\n\016sitelink_asset\030\023 \001(\013" +
+      "2W.google.ads.googleads.v13.services.App" +
+      "lyRecommendationOperation.SitelinkAssetP" +
+      "arametersH\000\032^\n\030CampaignBudgetParameters\022" +
+      "%\n\030new_budget_amount_micros\030\002 \001(\003H\000\210\001\001B\033" +
+      "\n\031_new_budget_amount_micros\032\234\001\n\"Forecast" +
+      "ingSetTargetRoasParameters\022\030\n\013target_roa" +
+      "s\030\001 \001(\001H\000\210\001\001\022*\n\035campaign_budget_amount_m" +
+      "icros\030\002 \001(\003H\001\210\001\001B\016\n\014_target_roasB \n\036_cam" +
+      "paign_budget_amount_micros\032F\n\020TextAdPara" +
+      "meters\0222\n\002ad\030\001 \001(\0132&.google.ads.googlead" +
+      "s.v13.resources.Ad\032\302\001\n\021KeywordParameters" +
+      "\022\025\n\010ad_group\030\004 \001(\tH\000\210\001\001\022Y\n\nmatch_type\030\002 " +
+      "\001(\0162E.google.ads.googleads.v13.enums.Key" +
+      "wordMatchTypeEnum.KeywordMatchType\022\033\n\016cp" +
+      "c_bid_micros\030\005 \001(\003H\001\210\001\001B\013\n\t_ad_groupB\021\n\017" +
+      "_cpc_bid_micros\032\246\001\n\030TargetCpaOptInParame" +
+      "ters\022\036\n\021target_cpa_micros\030\003 \001(\003H\000\210\001\001\022.\n!" +
+      "new_campaign_budget_amount_micros\030\004 \001(\003H" +
+      "\001\210\001\001B\024\n\022_target_cpa_microsB$\n\"_new_campa" +
+      "ign_budget_amount_micros\032\233\001\n\031TargetRoasO" +
+      "ptInParameters\022\030\n\013target_roas\030\001 \001(\001H\000\210\001\001" +
+      "\022.\n!new_campaign_budget_amount_micros\030\002 " +
+      "\001(\003H\001\210\001\001B\016\n\014_target_roasB$\n\"_new_campaig" +
+      "n_budget_amount_micros\032j\n\032CalloutExtensi" +
+      "onParameters\022L\n\022callout_extensions\030\001 \003(\013" +
+      "20.google.ads.googleads.v13.common.Callo" +
+      "utFeedItem\032a\n\027CallExtensionParameters\022F\n" +
+      "\017call_extensions\030\001 \003(\0132-.google.ads.goog" +
+      "leads.v13.common.CallFeedItem\032m\n\033Sitelin" +
+      "kExtensionParameters\022N\n\023sitelink_extensi" +
+      "ons\030\001 \003(\01321.google.ads.googleads.v13.com" +
+      "mon.SitelinkFeedItem\032\231\001\n\026CalloutAssetPar" +
+      "ameters\022\177\n\031ad_asset_apply_parameters\030\001 \001" +
+      "(\0132V.google.ads.googleads.v13.services.A" +
+      "pplyRecommendationOperation.AdAssetApply" +
+      "ParametersB\004\342A\001\002\032\226\001\n\023CallAssetParameters" +
+      "\022\177\n\031ad_asset_apply_parameters\030\001 \001(\0132V.go" +
+      "ogle.ads.googleads.v13.services.ApplyRec" +
+      "ommendationOperation.AdAssetApplyParamet" +
+      "ersB\004\342A\001\002\032\232\001\n\027SitelinkAssetParameters\022\177\n" +
       "\031ad_asset_apply_parameters\030\001 \001(\0132V.googl" +
       "e.ads.googleads.v13.services.ApplyRecomm" +
       "endationOperation.AdAssetApplyParameters" +
-      "B\003\340A\002\032\231\001\n\027SitelinkAssetParameters\022~\n\031ad_" +
-      "asset_apply_parameters\030\001 \001(\0132V.google.ad" +
-      "s.googleads.v13.services.ApplyRecommenda" +
-      "tionOperation.AdAssetApplyParametersB\003\340A" +
-      "\002\032\257\002\n\026AdAssetApplyParameters\022=\n\nnew_asse" +
-      "ts\030\001 \003(\0132).google.ads.googleads.v13.reso" +
-      "urces.Asset\022\027\n\017existing_assets\030\002 \003(\t\022u\n\005" +
-      "scope\030\003 \001(\0162a.google.ads.googleads.v13.s" +
-      "ervices.ApplyRecommendationOperation.AdA" +
-      "ssetApplyParameters.ApplyScopeB\003\340A\002\"F\n\nA" +
-      "pplyScope\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022" +
-      "\014\n\010CUSTOMER\020\002\022\014\n\010CAMPAIGN\020\003\032Z\n\032MoveUnuse" +
-      "dBudgetParameters\022\"\n\025budget_micros_to_mo" +
-      "ve\030\002 \001(\003H\000\210\001\001B\030\n\026_budget_micros_to_move\032" +
-      "_\n!ResponsiveSearchAdAssetParameters\022:\n\n" +
-      "updated_ad\030\001 \001(\0132&.google.ads.googleads." +
-      "v13.resources.Ad\032k\n-ResponsiveSearchAdIm" +
-      "proveAdStrengthParameters\022:\n\nupdated_ad\030" +
-      "\001 \001(\0132&.google.ads.googleads.v13.resourc" +
-      "es.Ad\032W\n\034ResponsiveSearchAdParameters\0227\n" +
-      "\002ad\030\001 \001(\0132&.google.ads.googleads.v13.res" +
-      "ources.AdB\003\340A\002\032C\n!RaiseTargetCpaBidTooLo" +
-      "wParameters\022\036\n\021target_multiplier\030\001 \001(\001B\003" +
-      "\340A\002\032d\n\036UseBroadMatchKeywordParameters\022%\n" +
-      "\030new_budget_amount_micros\030\001 \001(\003H\000\210\001\001B\033\n\031" +
-      "_new_budget_amount_microsB\022\n\020apply_param" +
-      "eters\"\237\001\n\033ApplyRecommendationResponse\022M\n" +
-      "\007results\030\001 \003(\0132<.google.ads.googleads.v1" +
-      "3.services.ApplyRecommendationResult\0221\n\025" +
-      "partial_failure_error\030\002 \001(\0132\022.google.rpc" +
-      ".Status\"`\n\031ApplyRecommendationResult\022C\n\r" +
-      "resource_name\030\001 \001(\tB,\372A)\n\'googleads.goog" +
-      "leapis.com/Recommendation\"\203\002\n\034DismissRec" +
-      "ommendationRequest\022\030\n\013customer_id\030\001 \001(\tB" +
-      "\003\340A\002\022w\n\noperations\030\003 \003(\0132^.google.ads.go" +
-      "ogleads.v13.services.DismissRecommendati" +
-      "onRequest.DismissRecommendationOperation" +
-      "B\003\340A\002\022\027\n\017partial_failure\030\002 \001(\010\0327\n\036Dismis" +
-      "sRecommendationOperation\022\025\n\rresource_nam" +
-      "e\030\001 \001(\t\"\367\001\n\035DismissRecommendationRespons" +
-      "e\022m\n\007results\030\001 \003(\0132\\.google.ads.googlead" +
-      "s.v13.services.DismissRecommendationResp" +
-      "onse.DismissRecommendationResult\0221\n\025part" +
-      "ial_failure_error\030\002 \001(\0132\022.google.rpc.Sta" +
-      "tus\0324\n\033DismissRecommendationResult\022\025\n\rre" +
-      "source_name\030\001 \001(\t2\310\004\n\025RecommendationServ" +
-      "ice\022\356\001\n\023ApplyRecommendation\022=.google.ads" +
-      ".googleads.v13.services.ApplyRecommendat" +
-      "ionRequest\032>.google.ads.googleads.v13.se" +
-      "rvices.ApplyRecommendationResponse\"X\202\323\344\223" +
-      "\0029\"4/v13/customers/{customer_id=*}/recom" +
-      "mendations:apply:\001*\332A\026customer_id,operat" +
-      "ions\022\366\001\n\025DismissRecommendation\022?.google." +
-      "ads.googleads.v13.services.DismissRecomm" +
-      "endationRequest\032@.google.ads.googleads.v" +
-      "13.services.DismissRecommendationRespons" +
-      "e\"Z\202\323\344\223\002;\"6/v13/customers/{customer_id=*" +
-      "}/recommendations:dismiss:\001*\332A\026customer_" +
-      "id,operations\032E\312A\030googleads.googleapis.c" +
-      "om\322A\'https://www.googleapis.com/auth/adw" +
-      "ordsB\206\002\n%com.google.ads.googleads.v13.se" +
-      "rvicesB\032RecommendationServiceProtoP\001ZIgo" +
-      "ogle.golang.org/genproto/googleapis/ads/" +
-      "googleads/v13/services;services\242\002\003GAA\252\002!" +
-      "Google.Ads.GoogleAds.V13.Services\312\002!Goog" +
-      "le\\Ads\\GoogleAds\\V13\\Services\352\002%Google::" +
-      "Ads::GoogleAds::V13::Servicesb\006proto3"
+      "B\004\342A\001\002\032\260\002\n\026AdAssetApplyParameters\022=\n\nnew" +
+      "_assets\030\001 \003(\0132).google.ads.googleads.v13" +
+      ".resources.Asset\022\027\n\017existing_assets\030\002 \003(" +
+      "\t\022v\n\005scope\030\003 \001(\0162a.google.ads.googleads." +
+      "v13.services.ApplyRecommendationOperatio" +
+      "n.AdAssetApplyParameters.ApplyScopeB\004\342A\001" +
+      "\002\"F\n\nApplyScope\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKN" +
+      "OWN\020\001\022\014\n\010CUSTOMER\020\002\022\014\n\010CAMPAIGN\020\003\032Z\n\032Mov" +
+      "eUnusedBudgetParameters\022\"\n\025budget_micros" +
+      "_to_move\030\002 \001(\003H\000\210\001\001B\030\n\026_budget_micros_to" +
+      "_move\032_\n!ResponsiveSearchAdAssetParamete" +
+      "rs\022:\n\nupdated_ad\030\001 \001(\0132&.google.ads.goog" +
+      "leads.v13.resources.Ad\032k\n-ResponsiveSear" +
+      "chAdImproveAdStrengthParameters\022:\n\nupdat" +
+      "ed_ad\030\001 \001(\0132&.google.ads.googleads.v13.r" +
+      "esources.Ad\032X\n\034ResponsiveSearchAdParamet" +
+      "ers\0228\n\002ad\030\001 \001(\0132&.google.ads.googleads.v" +
+      "13.resources.AdB\004\342A\001\002\032D\n!RaiseTargetCpaB" +
+      "idTooLowParameters\022\037\n\021target_multiplier\030" +
+      "\001 \001(\001B\004\342A\001\002\032d\n\036UseBroadMatchKeywordParam" +
+      "eters\022%\n\030new_budget_amount_micros\030\001 \001(\003H" +
+      "\000\210\001\001B\033\n\031_new_budget_amount_microsB\022\n\020app" +
+      "ly_parameters\"\237\001\n\033ApplyRecommendationRes" +
+      "ponse\022M\n\007results\030\001 \003(\0132<.google.ads.goog" +
+      "leads.v13.services.ApplyRecommendationRe" +
+      "sult\0221\n\025partial_failure_error\030\002 \001(\0132\022.go" +
+      "ogle.rpc.Status\"`\n\031ApplyRecommendationRe" +
+      "sult\022C\n\rresource_name\030\001 \001(\tB,\372A)\n\'google" +
+      "ads.googleapis.com/Recommendation\"\205\002\n\034Di" +
+      "smissRecommendationRequest\022\031\n\013customer_i" +
+      "d\030\001 \001(\tB\004\342A\001\002\022x\n\noperations\030\003 \003(\0132^.goog" +
+      "le.ads.googleads.v13.services.DismissRec" +
+      "ommendationRequest.DismissRecommendation" +
+      "OperationB\004\342A\001\002\022\027\n\017partial_failure\030\002 \001(\010" +
+      "\0327\n\036DismissRecommendationOperation\022\025\n\rre" +
+      "source_name\030\001 \001(\t\"\367\001\n\035DismissRecommendat" +
+      "ionResponse\022m\n\007results\030\001 \003(\0132\\.google.ad" +
+      "s.googleads.v13.services.DismissRecommen" +
+      "dationResponse.DismissRecommendationResu" +
+      "lt\0221\n\025partial_failure_error\030\002 \001(\0132\022.goog" +
+      "le.rpc.Status\0324\n\033DismissRecommendationRe" +
+      "sult\022\025\n\rresource_name\030\001 \001(\t2\310\004\n\025Recommen" +
+      "dationService\022\356\001\n\023ApplyRecommendation\022=." +
+      "google.ads.googleads.v13.services.ApplyR" +
+      "ecommendationRequest\032>.google.ads.google" +
+      "ads.v13.services.ApplyRecommendationResp" +
+      "onse\"X\332A\026customer_id,operations\202\323\344\223\0029\"4/" +
+      "v13/customers/{customer_id=*}/recommenda" +
+      "tions:apply:\001*\022\366\001\n\025DismissRecommendation" +
+      "\022?.google.ads.googleads.v13.services.Dis" +
+      "missRecommendationRequest\032@.google.ads.g" +
+      "oogleads.v13.services.DismissRecommendat" +
+      "ionResponse\"Z\332A\026customer_id,operations\202\323" +
+      "\344\223\002;\"6/v13/customers/{customer_id=*}/rec" +
+      "ommendations:dismiss:\001*\032E\312A\030googleads.go" +
+      "ogleapis.com\322A\'https://www.googleapis.co" +
+      "m/auth/adwordsB\206\002\n%com.google.ads.google" +
+      "ads.v13.servicesB\032RecommendationServiceP" +
+      "rotoP\001ZIgoogle.golang.org/genproto/googl" +
+      "eapis/ads/googleads/v13/services;service" +
+      "s\242\002\003GAA\252\002!Google.Ads.GoogleAds.V13.Servi" +
+      "ces\312\002!Google\\Ads\\GoogleAds\\V13\\Services\352" +
+      "\002%Google::Ads::GoogleAds::V13::Servicesb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

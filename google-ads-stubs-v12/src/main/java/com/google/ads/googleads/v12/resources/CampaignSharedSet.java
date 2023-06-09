@@ -34,11 +34,6 @@ private static final long serialVersionUID = 0L;
     return new CampaignSharedSet();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.resources.CampaignSharedSetProto.internal_static_google_ads_googleads_v12_resources_CampaignSharedSet_descriptor;
@@ -60,6 +55,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the campaign shared set.
    * Campaign shared set resource names have the form:
+   *
    * `customers/{customer_id}/campaignSharedSets/{campaign_id}~{shared_set_id}`
    * </pre>
    *
@@ -83,6 +79,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the campaign shared set.
    * Campaign shared set resource names have the form:
+   *
    * `customers/{customer_id}/campaignSharedSets/{campaign_id}~{shared_set_id}`
    * </pre>
    *
@@ -411,11 +408,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.resources.CampaignSharedSet parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.resources.CampaignSharedSet parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -681,6 +680,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the campaign shared set.
      * Campaign shared set resource names have the form:
+     *
      * `customers/{customer_id}/campaignSharedSets/{campaign_id}~{shared_set_id}`
      * </pre>
      *
@@ -703,6 +703,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the campaign shared set.
      * Campaign shared set resource names have the form:
+     *
      * `customers/{customer_id}/campaignSharedSets/{campaign_id}~{shared_set_id}`
      * </pre>
      *
@@ -726,6 +727,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the campaign shared set.
      * Campaign shared set resource names have the form:
+     *
      * `customers/{customer_id}/campaignSharedSets/{campaign_id}~{shared_set_id}`
      * </pre>
      *
@@ -745,6 +747,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the campaign shared set.
      * Campaign shared set resource names have the form:
+     *
      * `customers/{customer_id}/campaignSharedSets/{campaign_id}~{shared_set_id}`
      * </pre>
      *
@@ -761,6 +764,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the campaign shared set.
      * Campaign shared set resource names have the form:
+     *
      * `customers/{customer_id}/campaignSharedSets/{campaign_id}~{shared_set_id}`
      * </pre>
      *

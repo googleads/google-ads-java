@@ -21,7 +21,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private LeadFormSingleChoiceAnswers() {
-    answers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    answers_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -31,11 +32,6 @@ private static final long serialVersionUID = 0L;
     return new LeadFormSingleChoiceAnswers();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.common.AssetTypesProto.internal_static_google_ads_googleads_v12_common_LeadFormSingleChoiceAnswers_descriptor;
@@ -51,7 +47,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int ANSWERS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList answers_;
+  private com.google.protobuf.LazyStringArrayList answers_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * List of choices for a single question field. The order of entries defines
@@ -220,11 +217,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.common.LeadFormSingleChoiceAnswers parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.common.LeadFormSingleChoiceAnswers parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -305,8 +304,8 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      answers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      answers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -333,22 +332,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.common.LeadFormSingleChoiceAnswers buildPartial() {
       com.google.ads.googleads.v12.common.LeadFormSingleChoiceAnswers result = new com.google.ads.googleads.v12.common.LeadFormSingleChoiceAnswers(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.common.LeadFormSingleChoiceAnswers result) {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        answers_ = answers_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.answers_ = answers_;
-    }
-
     private void buildPartial0(com.google.ads.googleads.v12.common.LeadFormSingleChoiceAnswers result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        answers_.makeImmutable();
+        result.answers_ = answers_;
+      }
     }
 
     @java.lang.Override
@@ -398,7 +392,7 @@ private static final long serialVersionUID = 0L;
       if (!other.answers_.isEmpty()) {
         if (answers_.isEmpty()) {
           answers_ = other.answers_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ |= 0x00000001;
         } else {
           ensureAnswersIsMutable();
           answers_.addAll(other.answers_);
@@ -454,12 +448,13 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.google.protobuf.LazyStringList answers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList answers_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureAnswersIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!answers_.isModifiable()) {
         answers_ = new com.google.protobuf.LazyStringArrayList(answers_);
-        bitField0_ |= 0x00000001;
-       }
+      }
+      bitField0_ |= 0x00000001;
     }
     /**
      * <pre>
@@ -472,7 +467,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getAnswersList() {
-      return answers_.getUnmodifiableView();
+      answers_.makeImmutable();
+      return answers_;
     }
     /**
      * <pre>
@@ -529,6 +525,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureAnswersIsMutable();
       answers_.set(index, value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -547,6 +544,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureAnswersIsMutable();
       answers_.add(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -565,6 +563,7 @@ private static final long serialVersionUID = 0L;
       ensureAnswersIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, answers_);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -578,8 +577,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAnswers() {
-      answers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      answers_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000001);;
       onChanged();
       return this;
     }
@@ -599,6 +599,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureAnswersIsMutable();
       answers_.add(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

@@ -11,6 +11,7 @@ public interface PerStoreViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the per store view.
    * Per Store view resource names have the form:
+   *
    * `customers/{customer_id}/perStoreViews/{place_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface PerStoreViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the per store view.
    * Per Store view resource names have the form:
+   *
    * `customers/{customer_id}/perStoreViews/{place_id}`
    * </pre>
    *

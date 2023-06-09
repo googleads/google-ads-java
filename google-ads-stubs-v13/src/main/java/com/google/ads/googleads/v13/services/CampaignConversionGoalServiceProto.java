@@ -51,38 +51,38 @@ public final class CampaignConversionGoalServiceProto {
       ".proto\032\027google/api/client.proto\032\037google/" +
       "api/field_behavior.proto\032\031google/api/res" +
       "ource.proto\032 google/protobuf/field_mask." +
-      "proto\"\264\001\n$MutateCampaignConversionGoalsR" +
-      "equest\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022[\n\noper" +
-      "ations\030\002 \003(\0132B.google.ads.googleads.v13." +
-      "services.CampaignConversionGoalOperation" +
-      "B\003\340A\002\022\025\n\rvalidate_only\030\003 \001(\010\"\255\001\n\037Campaig" +
-      "nConversionGoalOperation\022/\n\013update_mask\030" +
-      "\002 \001(\0132\032.google.protobuf.FieldMask\022L\n\006upd" +
-      "ate\030\001 \001(\0132:.google.ads.googleads.v13.res" +
-      "ources.CampaignConversionGoalH\000B\013\n\topera" +
-      "tion\"\177\n%MutateCampaignConversionGoalsRes" +
-      "ponse\022V\n\007results\030\001 \003(\0132E.google.ads.goog" +
-      "leads.v13.services.MutateCampaignConvers" +
-      "ionGoalResult\"q\n\"MutateCampaignConversio" +
-      "nGoalResult\022K\n\rresource_name\030\001 \001(\tB4\372A1\n" +
-      "/googleads.googleapis.com/CampaignConver" +
-      "sionGoal2\376\002\n\035CampaignConversionGoalServi" +
-      "ce\022\225\002\n\035MutateCampaignConversionGoals\022G.g" +
-      "oogle.ads.googleads.v13.services.MutateC" +
-      "ampaignConversionGoalsRequest\032H.google.a" +
-      "ds.googleads.v13.services.MutateCampaign" +
-      "ConversionGoalsResponse\"a\202\323\344\223\002B\"=/v13/cu" +
-      "stomers/{customer_id=*}/campaignConversi" +
-      "onGoals:mutate:\001*\332A\026customer_id,operatio" +
-      "ns\032E\312A\030googleads.googleapis.com\322A\'https:" +
-      "//www.googleapis.com/auth/adwordsB\216\002\n%co" +
-      "m.google.ads.googleads.v13.servicesB\"Cam" +
-      "paignConversionGoalServiceProtoP\001ZIgoogl" +
-      "e.golang.org/genproto/googleapis/ads/goo" +
-      "gleads/v13/services;services\242\002\003GAA\252\002!Goo" +
-      "gle.Ads.GoogleAds.V13.Services\312\002!Google\\" +
-      "Ads\\GoogleAds\\V13\\Services\352\002%Google::Ads" +
-      "::GoogleAds::V13::Servicesb\006proto3"
+      "proto\"\266\001\n$MutateCampaignConversionGoalsR" +
+      "equest\022\031\n\013customer_id\030\001 \001(\tB\004\342A\001\002\022\\\n\nope" +
+      "rations\030\002 \003(\0132B.google.ads.googleads.v13" +
+      ".services.CampaignConversionGoalOperatio" +
+      "nB\004\342A\001\002\022\025\n\rvalidate_only\030\003 \001(\010\"\255\001\n\037Campa" +
+      "ignConversionGoalOperation\022/\n\013update_mas" +
+      "k\030\002 \001(\0132\032.google.protobuf.FieldMask\022L\n\006u" +
+      "pdate\030\001 \001(\0132:.google.ads.googleads.v13.r" +
+      "esources.CampaignConversionGoalH\000B\013\n\tope" +
+      "ration\"\177\n%MutateCampaignConversionGoalsR" +
+      "esponse\022V\n\007results\030\001 \003(\0132E.google.ads.go" +
+      "ogleads.v13.services.MutateCampaignConve" +
+      "rsionGoalResult\"q\n\"MutateCampaignConvers" +
+      "ionGoalResult\022K\n\rresource_name\030\001 \001(\tB4\372A" +
+      "1\n/googleads.googleapis.com/CampaignConv" +
+      "ersionGoal2\376\002\n\035CampaignConversionGoalSer" +
+      "vice\022\225\002\n\035MutateCampaignConversionGoals\022G" +
+      ".google.ads.googleads.v13.services.Mutat" +
+      "eCampaignConversionGoalsRequest\032H.google" +
+      ".ads.googleads.v13.services.MutateCampai" +
+      "gnConversionGoalsResponse\"a\332A\026customer_i" +
+      "d,operations\202\323\344\223\002B\"=/v13/customers/{cust" +
+      "omer_id=*}/campaignConversionGoals:mutat" +
+      "e:\001*\032E\312A\030googleads.googleapis.com\322A\'http" +
+      "s://www.googleapis.com/auth/adwordsB\216\002\n%" +
+      "com.google.ads.googleads.v13.servicesB\"C" +
+      "ampaignConversionGoalServiceProtoP\001ZIgoo" +
+      "gle.golang.org/genproto/googleapis/ads/g" +
+      "oogleads/v13/services;services\242\002\003GAA\252\002!G" +
+      "oogle.Ads.GoogleAds.V13.Services\312\002!Googl" +
+      "e\\Ads\\GoogleAds\\V13\\Services\352\002%Google::A" +
+      "ds::GoogleAds::V13::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

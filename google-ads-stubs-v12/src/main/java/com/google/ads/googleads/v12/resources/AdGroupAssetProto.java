@@ -35,29 +35,29 @@ public final class AdGroupAssetProto {
       "/googleads/v12/enums/asset_link_status.p" +
       "roto\0321google/ads/googleads/v12/enums/ass" +
       "et_source.proto\032\037google/api/field_behavi" +
-      "or.proto\032\031google/api/resource.proto\"\314\004\n\014" +
-      "AdGroupAsset\022D\n\rresource_name\030\001 \001(\tB-\340A\005" +
-      "\372A\'\n%googleads.googleapis.com/AdGroupAss" +
-      "et\022=\n\010ad_group\030\002 \001(\tB+\340A\002\340A\005\372A\"\n googlea" +
-      "ds.googleapis.com/AdGroup\0228\n\005asset\030\003 \001(\t" +
-      "B)\340A\002\340A\005\372A \n\036googleads.googleapis.com/As" +
-      "set\022]\n\nfield_type\030\004 \001(\0162A.google.ads.goo" +
-      "gleads.v12.enums.AssetFieldTypeEnum.Asse" +
-      "tFieldTypeB\006\340A\002\340A\005\022P\n\006source\030\006 \001(\0162;.goo" +
-      "gle.ads.googleads.v12.enums.AssetSourceE" +
-      "num.AssetSourceB\003\340A\003\022S\n\006status\030\005 \001(\0162C.g" +
-      "oogle.ads.googleads.v12.enums.AssetLinkS" +
-      "tatusEnum.AssetLinkStatus:w\352At\n%googlead" +
-      "s.googleapis.com/AdGroupAsset\022Kcustomers" +
-      "/{customer_id}/adGroupAssets/{ad_group_i" +
-      "d}~{asset_id}~{field_type}B\203\002\n&com.googl" +
-      "e.ads.googleads.v12.resourcesB\021AdGroupAs" +
-      "setProtoP\001ZKgoogle.golang.org/genproto/g" +
-      "oogleapis/ads/googleads/v12/resources;re" +
-      "sources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V12" +
-      ".Resources\312\002\"Google\\Ads\\GoogleAds\\V12\\Re" +
-      "sources\352\002&Google::Ads::GoogleAds::V12::R" +
-      "esourcesb\006proto3"
+      "or.proto\032\031google/api/resource.proto\"\313\004\n\014" +
+      "AdGroupAsset\022E\n\rresource_name\030\001 \001(\tB.\342A\001" +
+      "\005\372A\'\n%googleads.googleapis.com/AdGroupAs" +
+      "set\022<\n\010ad_group\030\002 \001(\tB*\342A\002\002\005\372A\"\n googlea" +
+      "ds.googleapis.com/AdGroup\0227\n\005asset\030\003 \001(\t" +
+      "B(\342A\002\002\005\372A \n\036googleads.googleapis.com/Ass" +
+      "et\022\\\n\nfield_type\030\004 \001(\0162A.google.ads.goog" +
+      "leads.v12.enums.AssetFieldTypeEnum.Asset" +
+      "FieldTypeB\005\342A\002\002\005\022Q\n\006source\030\006 \001(\0162;.googl" +
+      "e.ads.googleads.v12.enums.AssetSourceEnu" +
+      "m.AssetSourceB\004\342A\001\003\022S\n\006status\030\005 \001(\0162C.go" +
+      "ogle.ads.googleads.v12.enums.AssetLinkSt" +
+      "atusEnum.AssetLinkStatus:w\352At\n%googleads" +
+      ".googleapis.com/AdGroupAsset\022Kcustomers/" +
+      "{customer_id}/adGroupAssets/{ad_group_id" +
+      "}~{asset_id}~{field_type}B\203\002\n&com.google" +
+      ".ads.googleads.v12.resourcesB\021AdGroupAss" +
+      "etProtoP\001ZKgoogle.golang.org/genproto/go" +
+      "ogleapis/ads/googleads/v12/resources;res" +
+      "ources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V12." +
+      "Resources\312\002\"Google\\Ads\\GoogleAds\\V12\\Res" +
+      "ources\352\002&Google::Ads::GoogleAds::V12::Re" +
+      "sourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

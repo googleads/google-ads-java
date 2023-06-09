@@ -11,6 +11,7 @@ public interface TopicViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the topic view.
    * Topic view resource names have the form:
+   *
    * `customers/{customer_id}/topicViews/{ad_group_id}~{criterion_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface TopicViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the topic view.
    * Topic view resource names have the form:
+   *
    * `customers/{customer_id}/topicViews/{ad_group_id}~{criterion_id}`
    * </pre>
    *

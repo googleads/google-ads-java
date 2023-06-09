@@ -32,7 +32,8 @@ private static final long serialVersionUID = 0L;
     dueDate_ = "";
     currencyCode_ = "";
     correctedInvoice_ = "";
-    replacedInvoices_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    replacedInvoices_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     pdfUrl_ = "";
     accountBudgetSummaries_ = java.util.Collections.emptyList();
     accountSummaries_ = java.util.Collections.emptyList();
@@ -45,11 +46,6 @@ private static final long serialVersionUID = 0L;
     return new Invoice();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.resources.InvoiceProto.internal_static_google_ads_googleads_v12_resources_Invoice_descriptor;
@@ -392,7 +388,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Represents a summarized view at account level.
-   * AccountSummary fields are accessible only to customers on the allow-list.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v12.resources.Invoice.AccountSummary}
@@ -417,11 +412,6 @@ private static final long serialVersionUID = 0L;
       return new AccountSummary();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.InvoiceProto.internal_static_google_ads_googleads_v12_resources_Invoice_AccountSummary_descriptor;
@@ -1276,11 +1266,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.Invoice.AccountSummary parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.Invoice.AccountSummary parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1325,7 +1317,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Represents a summarized view at account level.
-     * AccountSummary fields are accessible only to customers on the allow-list.
      * </pre>
      *
      * Protobuf type {@code google.ads.googleads.v12.resources.Invoice.AccountSummary}
@@ -1833,7 +1824,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setBillingCorrectionSubtotalAmountMicros(long value) {
-        
+
         billingCorrectionSubtotalAmountMicros_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -1889,7 +1880,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setBillingCorrectionTaxAmountMicros(long value) {
-        
+
         billingCorrectionTaxAmountMicros_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
@@ -1945,7 +1936,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setBillingCorrectionTotalAmountMicros(long value) {
-        
+
         billingCorrectionTotalAmountMicros_ = value;
         bitField0_ |= 0x00000008;
         onChanged();
@@ -2001,7 +1992,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setCouponAdjustmentSubtotalAmountMicros(long value) {
-        
+
         couponAdjustmentSubtotalAmountMicros_ = value;
         bitField0_ |= 0x00000010;
         onChanged();
@@ -2057,7 +2048,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setCouponAdjustmentTaxAmountMicros(long value) {
-        
+
         couponAdjustmentTaxAmountMicros_ = value;
         bitField0_ |= 0x00000020;
         onChanged();
@@ -2113,7 +2104,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setCouponAdjustmentTotalAmountMicros(long value) {
-        
+
         couponAdjustmentTotalAmountMicros_ = value;
         bitField0_ |= 0x00000040;
         onChanged();
@@ -2169,7 +2160,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setExcessCreditAdjustmentSubtotalAmountMicros(long value) {
-        
+
         excessCreditAdjustmentSubtotalAmountMicros_ = value;
         bitField0_ |= 0x00000080;
         onChanged();
@@ -2225,7 +2216,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setExcessCreditAdjustmentTaxAmountMicros(long value) {
-        
+
         excessCreditAdjustmentTaxAmountMicros_ = value;
         bitField0_ |= 0x00000100;
         onChanged();
@@ -2281,7 +2272,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setExcessCreditAdjustmentTotalAmountMicros(long value) {
-        
+
         excessCreditAdjustmentTotalAmountMicros_ = value;
         bitField0_ |= 0x00000200;
         onChanged();
@@ -2337,7 +2328,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setRegulatoryCostsSubtotalAmountMicros(long value) {
-        
+
         regulatoryCostsSubtotalAmountMicros_ = value;
         bitField0_ |= 0x00000400;
         onChanged();
@@ -2393,7 +2384,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setRegulatoryCostsTaxAmountMicros(long value) {
-        
+
         regulatoryCostsTaxAmountMicros_ = value;
         bitField0_ |= 0x00000800;
         onChanged();
@@ -2449,7 +2440,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setRegulatoryCostsTotalAmountMicros(long value) {
-        
+
         regulatoryCostsTotalAmountMicros_ = value;
         bitField0_ |= 0x00001000;
         onChanged();
@@ -2508,7 +2499,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setSubtotalAmountMicros(long value) {
-        
+
         subtotalAmountMicros_ = value;
         bitField0_ |= 0x00002000;
         onChanged();
@@ -2568,7 +2559,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setTaxAmountMicros(long value) {
-        
+
         taxAmountMicros_ = value;
         bitField0_ |= 0x00004000;
         onChanged();
@@ -2631,7 +2622,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setTotalAmountMicros(long value) {
-        
+
         totalAmountMicros_ = value;
         bitField0_ |= 0x00008000;
         onChanged();
@@ -2726,6 +2717,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The resource name of the customer associated with this
      * account budget. This contains the customer ID, which appears on the
      * invoice PDF as "Account ID". Customer resource names have the form:
+     *
      * `customers/{customer_id}`
      * </pre>
      *
@@ -2738,6 +2730,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The resource name of the customer associated with this
      * account budget. This contains the customer ID, which appears on the
      * invoice PDF as "Account ID". Customer resource names have the form:
+     *
      * `customers/{customer_id}`
      * </pre>
      *
@@ -2750,6 +2743,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The resource name of the customer associated with this
      * account budget. This contains the customer ID, which appears on the
      * invoice PDF as "Account ID". Customer resource names have the form:
+     *
      * `customers/{customer_id}`
      * </pre>
      *
@@ -2795,6 +2789,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the account budget associated with this
      * summarized billable cost. AccountBudget resource names have the form:
+     *
      * `customers/{customer_id}/accountBudgets/{account_budget_id}`
      * </pre>
      *
@@ -2806,6 +2801,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the account budget associated with this
      * summarized billable cost. AccountBudget resource names have the form:
+     *
      * `customers/{customer_id}/accountBudgets/{account_budget_id}`
      * </pre>
      *
@@ -2817,6 +2813,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the account budget associated with this
      * summarized billable cost. AccountBudget resource names have the form:
+     *
      * `customers/{customer_id}/accountBudgets/{account_budget_id}`
      * </pre>
      *
@@ -2990,10 +2987,9 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. Accessible only to customers on the allow-list.
-     * The pretax served amount attributable to this budget during the service
-     * period, in micros. This is only useful to reconcile invoice and delivery
-     * data.
+     * Output only. The pretax served amount attributable to this budget during
+     * the service period, in micros. This is only useful to reconcile invoice
+     * and delivery data.
      * </pre>
      *
      * <code>optional int64 served_amount_micros = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3002,10 +2998,9 @@ private static final long serialVersionUID = 0L;
     boolean hasServedAmountMicros();
     /**
      * <pre>
-     * Output only. Accessible only to customers on the allow-list.
-     * The pretax served amount attributable to this budget during the service
-     * period, in micros. This is only useful to reconcile invoice and delivery
-     * data.
+     * Output only. The pretax served amount attributable to this budget during
+     * the service period, in micros. This is only useful to reconcile invoice
+     * and delivery data.
      * </pre>
      *
      * <code>optional int64 served_amount_micros = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3015,9 +3010,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. Accessible only to customers on the allow-list.
-     * The pretax billed amount attributable to this budget during the
-     * service period, in micros. This does not account for any adjustments.
+     * Output only. The pretax billed amount attributable to this budget during
+     * the service period, in micros. This does not account for any adjustments.
      * </pre>
      *
      * <code>optional int64 billed_amount_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3026,9 +3020,8 @@ private static final long serialVersionUID = 0L;
     boolean hasBilledAmountMicros();
     /**
      * <pre>
-     * Output only. Accessible only to customers on the allow-list.
-     * The pretax billed amount attributable to this budget during the
-     * service period, in micros. This does not account for any adjustments.
+     * Output only. The pretax billed amount attributable to this budget during
+     * the service period, in micros. This does not account for any adjustments.
      * </pre>
      *
      * <code>optional int64 billed_amount_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3038,9 +3031,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. Accessible only to customers on the allow-list.
-     * The pretax overdelivery amount attributable to this budget during the
-     * service period, in micros (negative value).
+     * Output only. The pretax overdelivery amount attributable to this budget
+     * during the service period, in micros (negative value).
      * </pre>
      *
      * <code>optional int64 overdelivery_amount_micros = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3049,9 +3041,8 @@ private static final long serialVersionUID = 0L;
     boolean hasOverdeliveryAmountMicros();
     /**
      * <pre>
-     * Output only. Accessible only to customers on the allow-list.
-     * The pretax overdelivery amount attributable to this budget during the
-     * service period, in micros (negative value).
+     * Output only. The pretax overdelivery amount attributable to this budget
+     * during the service period, in micros (negative value).
      * </pre>
      *
      * <code>optional int64 overdelivery_amount_micros = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3061,9 +3052,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. Accessible only to customers on the allow-list.
-     * The pretax invalid activity amount attributable to this budget in
-     * previous months, in micros (negative value).
+     * Output only. The pretax invalid activity amount attributable to this
+     * budget in previous months, in micros (negative value).
      * </pre>
      *
      * <code>optional int64 invalid_activity_amount_micros = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3072,9 +3062,8 @@ private static final long serialVersionUID = 0L;
     boolean hasInvalidActivityAmountMicros();
     /**
      * <pre>
-     * Output only. Accessible only to customers on the allow-list.
-     * The pretax invalid activity amount attributable to this budget in
-     * previous months, in micros (negative value).
+     * Output only. The pretax invalid activity amount attributable to this
+     * budget in previous months, in micros (negative value).
      * </pre>
      *
      * <code>optional int64 invalid_activity_amount_micros = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3113,11 +3102,6 @@ private static final long serialVersionUID = 0L;
       return new AccountBudgetSummary();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v12.resources.InvoiceProto.internal_static_google_ads_googleads_v12_resources_Invoice_AccountBudgetSummary_descriptor;
@@ -3140,6 +3124,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The resource name of the customer associated with this
      * account budget. This contains the customer ID, which appears on the
      * invoice PDF as "Account ID". Customer resource names have the form:
+     *
      * `customers/{customer_id}`
      * </pre>
      *
@@ -3155,6 +3140,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The resource name of the customer associated with this
      * account budget. This contains the customer ID, which appears on the
      * invoice PDF as "Account ID". Customer resource names have the form:
+     *
      * `customers/{customer_id}`
      * </pre>
      *
@@ -3179,6 +3165,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The resource name of the customer associated with this
      * account budget. This contains the customer ID, which appears on the
      * invoice PDF as "Account ID". Customer resource names have the form:
+     *
      * `customers/{customer_id}`
      * </pre>
      *
@@ -3269,6 +3256,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the account budget associated with this
      * summarized billable cost. AccountBudget resource names have the form:
+     *
      * `customers/{customer_id}/accountBudgets/{account_budget_id}`
      * </pre>
      *
@@ -3283,6 +3271,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the account budget associated with this
      * summarized billable cost. AccountBudget resource names have the form:
+     *
      * `customers/{customer_id}/accountBudgets/{account_budget_id}`
      * </pre>
      *
@@ -3306,6 +3295,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the account budget associated with this
      * summarized billable cost. AccountBudget resource names have the form:
+     *
      * `customers/{customer_id}/accountBudgets/{account_budget_id}`
      * </pre>
      *
@@ -3588,10 +3578,9 @@ private static final long serialVersionUID = 0L;
     private long servedAmountMicros_ = 0L;
     /**
      * <pre>
-     * Output only. Accessible only to customers on the allow-list.
-     * The pretax served amount attributable to this budget during the service
-     * period, in micros. This is only useful to reconcile invoice and delivery
-     * data.
+     * Output only. The pretax served amount attributable to this budget during
+     * the service period, in micros. This is only useful to reconcile invoice
+     * and delivery data.
      * </pre>
      *
      * <code>optional int64 served_amount_micros = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3603,10 +3592,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Accessible only to customers on the allow-list.
-     * The pretax served amount attributable to this budget during the service
-     * period, in micros. This is only useful to reconcile invoice and delivery
-     * data.
+     * Output only. The pretax served amount attributable to this budget during
+     * the service period, in micros. This is only useful to reconcile invoice
+     * and delivery data.
      * </pre>
      *
      * <code>optional int64 served_amount_micros = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3621,9 +3609,8 @@ private static final long serialVersionUID = 0L;
     private long billedAmountMicros_ = 0L;
     /**
      * <pre>
-     * Output only. Accessible only to customers on the allow-list.
-     * The pretax billed amount attributable to this budget during the
-     * service period, in micros. This does not account for any adjustments.
+     * Output only. The pretax billed amount attributable to this budget during
+     * the service period, in micros. This does not account for any adjustments.
      * </pre>
      *
      * <code>optional int64 billed_amount_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3635,9 +3622,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Accessible only to customers on the allow-list.
-     * The pretax billed amount attributable to this budget during the
-     * service period, in micros. This does not account for any adjustments.
+     * Output only. The pretax billed amount attributable to this budget during
+     * the service period, in micros. This does not account for any adjustments.
      * </pre>
      *
      * <code>optional int64 billed_amount_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3652,9 +3638,8 @@ private static final long serialVersionUID = 0L;
     private long overdeliveryAmountMicros_ = 0L;
     /**
      * <pre>
-     * Output only. Accessible only to customers on the allow-list.
-     * The pretax overdelivery amount attributable to this budget during the
-     * service period, in micros (negative value).
+     * Output only. The pretax overdelivery amount attributable to this budget
+     * during the service period, in micros (negative value).
      * </pre>
      *
      * <code>optional int64 overdelivery_amount_micros = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3666,9 +3651,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Accessible only to customers on the allow-list.
-     * The pretax overdelivery amount attributable to this budget during the
-     * service period, in micros (negative value).
+     * Output only. The pretax overdelivery amount attributable to this budget
+     * during the service period, in micros (negative value).
      * </pre>
      *
      * <code>optional int64 overdelivery_amount_micros = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3683,9 +3667,8 @@ private static final long serialVersionUID = 0L;
     private long invalidActivityAmountMicros_ = 0L;
     /**
      * <pre>
-     * Output only. Accessible only to customers on the allow-list.
-     * The pretax invalid activity amount attributable to this budget in
-     * previous months, in micros (negative value).
+     * Output only. The pretax invalid activity amount attributable to this
+     * budget in previous months, in micros (negative value).
      * </pre>
      *
      * <code>optional int64 invalid_activity_amount_micros = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3697,9 +3680,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Accessible only to customers on the allow-list.
-     * The pretax invalid activity amount attributable to this budget in
-     * previous months, in micros (negative value).
+     * Output only. The pretax invalid activity amount attributable to this
+     * budget in previous months, in micros (negative value).
      * </pre>
      *
      * <code>optional int64 invalid_activity_amount_micros = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4018,11 +4000,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v12.resources.Invoice.AccountBudgetSummary parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v12.resources.Invoice.AccountBudgetSummary parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -4418,6 +4402,7 @@ private static final long serialVersionUID = 0L;
        * Output only. The resource name of the customer associated with this
        * account budget. This contains the customer ID, which appears on the
        * invoice PDF as "Account ID". Customer resource names have the form:
+       *
        * `customers/{customer_id}`
        * </pre>
        *
@@ -4432,6 +4417,7 @@ private static final long serialVersionUID = 0L;
        * Output only. The resource name of the customer associated with this
        * account budget. This contains the customer ID, which appears on the
        * invoice PDF as "Account ID". Customer resource names have the form:
+       *
        * `customers/{customer_id}`
        * </pre>
        *
@@ -4455,6 +4441,7 @@ private static final long serialVersionUID = 0L;
        * Output only. The resource name of the customer associated with this
        * account budget. This contains the customer ID, which appears on the
        * invoice PDF as "Account ID". Customer resource names have the form:
+       *
        * `customers/{customer_id}`
        * </pre>
        *
@@ -4479,6 +4466,7 @@ private static final long serialVersionUID = 0L;
        * Output only. The resource name of the customer associated with this
        * account budget. This contains the customer ID, which appears on the
        * invoice PDF as "Account ID". Customer resource names have the form:
+       *
        * `customers/{customer_id}`
        * </pre>
        *
@@ -4499,6 +4487,7 @@ private static final long serialVersionUID = 0L;
        * Output only. The resource name of the customer associated with this
        * account budget. This contains the customer ID, which appears on the
        * invoice PDF as "Account ID". Customer resource names have the form:
+       *
        * `customers/{customer_id}`
        * </pre>
        *
@@ -4516,6 +4505,7 @@ private static final long serialVersionUID = 0L;
        * Output only. The resource name of the customer associated with this
        * account budget. This contains the customer ID, which appears on the
        * invoice PDF as "Account ID". Customer resource names have the form:
+       *
        * `customers/{customer_id}`
        * </pre>
        *
@@ -4647,6 +4637,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Output only. The resource name of the account budget associated with this
        * summarized billable cost. AccountBudget resource names have the form:
+       *
        * `customers/{customer_id}/accountBudgets/{account_budget_id}`
        * </pre>
        *
@@ -4660,6 +4651,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Output only. The resource name of the account budget associated with this
        * summarized billable cost. AccountBudget resource names have the form:
+       *
        * `customers/{customer_id}/accountBudgets/{account_budget_id}`
        * </pre>
        *
@@ -4682,6 +4674,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Output only. The resource name of the account budget associated with this
        * summarized billable cost. AccountBudget resource names have the form:
+       *
        * `customers/{customer_id}/accountBudgets/{account_budget_id}`
        * </pre>
        *
@@ -4705,6 +4698,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Output only. The resource name of the account budget associated with this
        * summarized billable cost. AccountBudget resource names have the form:
+       *
        * `customers/{customer_id}/accountBudgets/{account_budget_id}`
        * </pre>
        *
@@ -4724,6 +4718,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Output only. The resource name of the account budget associated with this
        * summarized billable cost. AccountBudget resource names have the form:
+       *
        * `customers/{customer_id}/accountBudgets/{account_budget_id}`
        * </pre>
        *
@@ -4740,6 +4735,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Output only. The resource name of the account budget associated with this
        * summarized billable cost. AccountBudget resource names have the form:
+       *
        * `customers/{customer_id}/accountBudgets/{account_budget_id}`
        * </pre>
        *
@@ -5013,7 +5009,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setSubtotalAmountMicros(long value) {
-        
+
         subtotalAmountMicros_ = value;
         bitField0_ |= 0x00000020;
         onChanged();
@@ -5073,7 +5069,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setTaxAmountMicros(long value) {
-        
+
         taxAmountMicros_ = value;
         bitField0_ |= 0x00000040;
         onChanged();
@@ -5136,7 +5132,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setTotalAmountMicros(long value) {
-        
+
         totalAmountMicros_ = value;
         bitField0_ |= 0x00000080;
         onChanged();
@@ -5335,10 +5331,9 @@ private static final long serialVersionUID = 0L;
       private long servedAmountMicros_ ;
       /**
        * <pre>
-       * Output only. Accessible only to customers on the allow-list.
-       * The pretax served amount attributable to this budget during the service
-       * period, in micros. This is only useful to reconcile invoice and delivery
-       * data.
+       * Output only. The pretax served amount attributable to this budget during
+       * the service period, in micros. This is only useful to reconcile invoice
+       * and delivery data.
        * </pre>
        *
        * <code>optional int64 served_amount_micros = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5350,10 +5345,9 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Accessible only to customers on the allow-list.
-       * The pretax served amount attributable to this budget during the service
-       * period, in micros. This is only useful to reconcile invoice and delivery
-       * data.
+       * Output only. The pretax served amount attributable to this budget during
+       * the service period, in micros. This is only useful to reconcile invoice
+       * and delivery data.
        * </pre>
        *
        * <code>optional int64 served_amount_micros = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5365,10 +5359,9 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Accessible only to customers on the allow-list.
-       * The pretax served amount attributable to this budget during the service
-       * period, in micros. This is only useful to reconcile invoice and delivery
-       * data.
+       * Output only. The pretax served amount attributable to this budget during
+       * the service period, in micros. This is only useful to reconcile invoice
+       * and delivery data.
        * </pre>
        *
        * <code>optional int64 served_amount_micros = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5376,7 +5369,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setServedAmountMicros(long value) {
-        
+
         servedAmountMicros_ = value;
         bitField0_ |= 0x00000200;
         onChanged();
@@ -5384,10 +5377,9 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Accessible only to customers on the allow-list.
-       * The pretax served amount attributable to this budget during the service
-       * period, in micros. This is only useful to reconcile invoice and delivery
-       * data.
+       * Output only. The pretax served amount attributable to this budget during
+       * the service period, in micros. This is only useful to reconcile invoice
+       * and delivery data.
        * </pre>
        *
        * <code>optional int64 served_amount_micros = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5403,9 +5395,8 @@ private static final long serialVersionUID = 0L;
       private long billedAmountMicros_ ;
       /**
        * <pre>
-       * Output only. Accessible only to customers on the allow-list.
-       * The pretax billed amount attributable to this budget during the
-       * service period, in micros. This does not account for any adjustments.
+       * Output only. The pretax billed amount attributable to this budget during
+       * the service period, in micros. This does not account for any adjustments.
        * </pre>
        *
        * <code>optional int64 billed_amount_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5417,9 +5408,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Accessible only to customers on the allow-list.
-       * The pretax billed amount attributable to this budget during the
-       * service period, in micros. This does not account for any adjustments.
+       * Output only. The pretax billed amount attributable to this budget during
+       * the service period, in micros. This does not account for any adjustments.
        * </pre>
        *
        * <code>optional int64 billed_amount_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5431,9 +5421,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Accessible only to customers on the allow-list.
-       * The pretax billed amount attributable to this budget during the
-       * service period, in micros. This does not account for any adjustments.
+       * Output only. The pretax billed amount attributable to this budget during
+       * the service period, in micros. This does not account for any adjustments.
        * </pre>
        *
        * <code>optional int64 billed_amount_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5441,7 +5430,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setBilledAmountMicros(long value) {
-        
+
         billedAmountMicros_ = value;
         bitField0_ |= 0x00000400;
         onChanged();
@@ -5449,9 +5438,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Accessible only to customers on the allow-list.
-       * The pretax billed amount attributable to this budget during the
-       * service period, in micros. This does not account for any adjustments.
+       * Output only. The pretax billed amount attributable to this budget during
+       * the service period, in micros. This does not account for any adjustments.
        * </pre>
        *
        * <code>optional int64 billed_amount_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5467,9 +5455,8 @@ private static final long serialVersionUID = 0L;
       private long overdeliveryAmountMicros_ ;
       /**
        * <pre>
-       * Output only. Accessible only to customers on the allow-list.
-       * The pretax overdelivery amount attributable to this budget during the
-       * service period, in micros (negative value).
+       * Output only. The pretax overdelivery amount attributable to this budget
+       * during the service period, in micros (negative value).
        * </pre>
        *
        * <code>optional int64 overdelivery_amount_micros = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5481,9 +5468,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Accessible only to customers on the allow-list.
-       * The pretax overdelivery amount attributable to this budget during the
-       * service period, in micros (negative value).
+       * Output only. The pretax overdelivery amount attributable to this budget
+       * during the service period, in micros (negative value).
        * </pre>
        *
        * <code>optional int64 overdelivery_amount_micros = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5495,9 +5481,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Accessible only to customers on the allow-list.
-       * The pretax overdelivery amount attributable to this budget during the
-       * service period, in micros (negative value).
+       * Output only. The pretax overdelivery amount attributable to this budget
+       * during the service period, in micros (negative value).
        * </pre>
        *
        * <code>optional int64 overdelivery_amount_micros = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5505,7 +5490,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setOverdeliveryAmountMicros(long value) {
-        
+
         overdeliveryAmountMicros_ = value;
         bitField0_ |= 0x00000800;
         onChanged();
@@ -5513,9 +5498,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Accessible only to customers on the allow-list.
-       * The pretax overdelivery amount attributable to this budget during the
-       * service period, in micros (negative value).
+       * Output only. The pretax overdelivery amount attributable to this budget
+       * during the service period, in micros (negative value).
        * </pre>
        *
        * <code>optional int64 overdelivery_amount_micros = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5531,9 +5515,8 @@ private static final long serialVersionUID = 0L;
       private long invalidActivityAmountMicros_ ;
       /**
        * <pre>
-       * Output only. Accessible only to customers on the allow-list.
-       * The pretax invalid activity amount attributable to this budget in
-       * previous months, in micros (negative value).
+       * Output only. The pretax invalid activity amount attributable to this
+       * budget in previous months, in micros (negative value).
        * </pre>
        *
        * <code>optional int64 invalid_activity_amount_micros = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5545,9 +5528,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Accessible only to customers on the allow-list.
-       * The pretax invalid activity amount attributable to this budget in
-       * previous months, in micros (negative value).
+       * Output only. The pretax invalid activity amount attributable to this
+       * budget in previous months, in micros (negative value).
        * </pre>
        *
        * <code>optional int64 invalid_activity_amount_micros = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5559,9 +5541,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Accessible only to customers on the allow-list.
-       * The pretax invalid activity amount attributable to this budget in
-       * previous months, in micros (negative value).
+       * Output only. The pretax invalid activity amount attributable to this
+       * budget in previous months, in micros (negative value).
        * </pre>
        *
        * <code>optional int64 invalid_activity_amount_micros = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5569,7 +5550,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setInvalidActivityAmountMicros(long value) {
-        
+
         invalidActivityAmountMicros_ = value;
         bitField0_ |= 0x00001000;
         onChanged();
@@ -5577,9 +5558,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. Accessible only to customers on the allow-list.
-       * The pretax invalid activity amount attributable to this budget in
-       * previous months, in micros (negative value).
+       * Output only. The pretax invalid activity amount attributable to this
+       * budget in previous months, in micros (negative value).
        * </pre>
        *
        * <code>optional int64 invalid_activity_amount_micros = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5664,6 +5644,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The resource name of the invoice. Multiple customers can share
    * a given invoice, so multiple resource names may point to the same invoice.
    * Invoice resource names have the form:
+   *
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
@@ -5688,6 +5669,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The resource name of the invoice. Multiple customers can share
    * a given invoice, so multiple resource names may point to the same invoice.
    * Invoice resource names have the form:
+   *
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
@@ -5803,6 +5785,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The resource name of this invoice's billing setup.
+   *
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
@@ -5816,6 +5799,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The resource name of this invoice's billing setup.
+   *
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
@@ -5838,6 +5822,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The resource name of this invoice's billing setup.
+   *
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
@@ -6421,6 +6406,7 @@ private static final long serialVersionUID = 0L;
    * off, or canceled by this invoice, if applicable. If `corrected_invoice` is
    * set, `replaced_invoices` will not be set. Invoice resource names have the
    * form:
+   *
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
@@ -6437,6 +6423,7 @@ private static final long serialVersionUID = 0L;
    * off, or canceled by this invoice, if applicable. If `corrected_invoice` is
    * set, `replaced_invoices` will not be set. Invoice resource names have the
    * form:
+   *
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
@@ -6462,6 +6449,7 @@ private static final long serialVersionUID = 0L;
    * off, or canceled by this invoice, if applicable. If `corrected_invoice` is
    * set, `replaced_invoices` will not be set. Invoice resource names have the
    * form:
+   *
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
@@ -6485,7 +6473,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int REPLACED_INVOICES_FIELD_NUMBER = 37;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList replacedInvoices_;
+  private com.google.protobuf.LazyStringArrayList replacedInvoices_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * Output only. The resource name of the original invoice(s) being rebilled or
@@ -6493,6 +6482,7 @@ private static final long serialVersionUID = 0L;
    * invoices due to invoice consolidation. The replaced invoices may not belong
    * to the same payments account. If `replaced_invoices` is set,
    * `corrected_invoice` will not be set. Invoice resource names have the form:
+   *
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
@@ -6510,6 +6500,7 @@ private static final long serialVersionUID = 0L;
    * invoices due to invoice consolidation. The replaced invoices may not belong
    * to the same payments account. If `replaced_invoices` is set,
    * `corrected_invoice` will not be set. Invoice resource names have the form:
+   *
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
@@ -6526,6 +6517,7 @@ private static final long serialVersionUID = 0L;
    * invoices due to invoice consolidation. The replaced invoices may not belong
    * to the same payments account. If `replaced_invoices` is set,
    * `corrected_invoice` will not be set. Invoice resource names have the form:
+   *
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
@@ -6543,6 +6535,7 @@ private static final long serialVersionUID = 0L;
    * invoices due to invoice consolidation. The replaced invoices may not belong
    * to the same payments account. If `replaced_invoices` is set,
    * `corrected_invoice` will not be set. Invoice resource names have the form:
+   *
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
@@ -7184,11 +7177,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.resources.Invoice parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.resources.Invoice parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -7294,8 +7289,8 @@ private static final long serialVersionUID = 0L;
       taxAmountMicros_ = 0L;
       totalAmountMicros_ = 0L;
       correctedInvoice_ = "";
-      replacedInvoices_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00100000);
+      replacedInvoices_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       pdfUrl_ = "";
       if (accountBudgetSummariesBuilder_ == null) {
         accountBudgetSummaries_ = java.util.Collections.emptyList();
@@ -7344,11 +7339,6 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(com.google.ads.googleads.v12.resources.Invoice result) {
-      if (((bitField0_ & 0x00100000) != 0)) {
-        replacedInvoices_ = replacedInvoices_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00100000);
-      }
-      result.replacedInvoices_ = replacedInvoices_;
       if (accountBudgetSummariesBuilder_ == null) {
         if (((bitField0_ & 0x00400000) != 0)) {
           accountBudgetSummaries_ = java.util.Collections.unmodifiableList(accountBudgetSummaries_);
@@ -7444,6 +7434,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00080000) != 0)) {
         result.correctedInvoice_ = correctedInvoice_;
         to_bitField0_ |= 0x00000400;
+      }
+      if (((from_bitField0_ & 0x00100000) != 0)) {
+        replacedInvoices_.makeImmutable();
+        result.replacedInvoices_ = replacedInvoices_;
       }
       if (((from_bitField0_ & 0x00200000) != 0)) {
         result.pdfUrl_ = pdfUrl_;
@@ -7577,7 +7571,7 @@ private static final long serialVersionUID = 0L;
       if (!other.replacedInvoices_.isEmpty()) {
         if (replacedInvoices_.isEmpty()) {
           replacedInvoices_ = other.replacedInvoices_;
-          bitField0_ = (bitField0_ & ~0x00100000);
+          bitField0_ |= 0x00100000;
         } else {
           ensureReplacedInvoicesIsMutable();
           replacedInvoices_.addAll(other.replacedInvoices_);
@@ -7829,6 +7823,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The resource name of the invoice. Multiple customers can share
      * a given invoice, so multiple resource names may point to the same invoice.
      * Invoice resource names have the form:
+     *
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
@@ -7852,6 +7847,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The resource name of the invoice. Multiple customers can share
      * a given invoice, so multiple resource names may point to the same invoice.
      * Invoice resource names have the form:
+     *
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
@@ -7876,6 +7872,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The resource name of the invoice. Multiple customers can share
      * a given invoice, so multiple resource names may point to the same invoice.
      * Invoice resource names have the form:
+     *
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
@@ -7896,6 +7893,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The resource name of the invoice. Multiple customers can share
      * a given invoice, so multiple resource names may point to the same invoice.
      * Invoice resource names have the form:
+     *
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
@@ -7913,6 +7911,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The resource name of the invoice. Multiple customers can share
      * a given invoice, so multiple resource names may point to the same invoice.
      * Invoice resource names have the form:
+     *
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
@@ -8116,6 +8115,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The resource name of this invoice's billing setup.
+     *
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
@@ -8128,6 +8128,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The resource name of this invoice's billing setup.
+     *
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
@@ -8149,6 +8150,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The resource name of this invoice's billing setup.
+     *
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
@@ -8171,6 +8173,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The resource name of this invoice's billing setup.
+     *
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
@@ -8189,6 +8192,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The resource name of this invoice's billing setup.
+     *
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
@@ -8204,6 +8208,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The resource name of this invoice's billing setup.
+     *
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
@@ -8967,7 +8972,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAdjustmentsSubtotalAmountMicros(long value) {
-      
+
       adjustmentsSubtotalAmountMicros_ = value;
       bitField0_ |= 0x00000400;
       onChanged();
@@ -9012,7 +9017,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAdjustmentsTaxAmountMicros(long value) {
-      
+
       adjustmentsTaxAmountMicros_ = value;
       bitField0_ |= 0x00000800;
       onChanged();
@@ -9056,7 +9061,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setAdjustmentsTotalAmountMicros(long value) {
-      
+
       adjustmentsTotalAmountMicros_ = value;
       bitField0_ |= 0x00001000;
       onChanged();
@@ -9102,7 +9107,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRegulatoryCostsSubtotalAmountMicros(long value) {
-      
+
       regulatoryCostsSubtotalAmountMicros_ = value;
       bitField0_ |= 0x00002000;
       onChanged();
@@ -9149,7 +9154,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRegulatoryCostsTaxAmountMicros(long value) {
-      
+
       regulatoryCostsTaxAmountMicros_ = value;
       bitField0_ |= 0x00004000;
       onChanged();
@@ -9194,7 +9199,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRegulatoryCostsTotalAmountMicros(long value) {
-      
+
       regulatoryCostsTotalAmountMicros_ = value;
       bitField0_ |= 0x00008000;
       onChanged();
@@ -9265,7 +9270,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSubtotalAmountMicros(long value) {
-      
+
       subtotalAmountMicros_ = value;
       bitField0_ |= 0x00010000;
       onChanged();
@@ -9332,7 +9337,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTaxAmountMicros(long value) {
-      
+
       taxAmountMicros_ = value;
       bitField0_ |= 0x00020000;
       onChanged();
@@ -9402,7 +9407,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setTotalAmountMicros(long value) {
-      
+
       totalAmountMicros_ = value;
       bitField0_ |= 0x00040000;
       onChanged();
@@ -9434,6 +9439,7 @@ private static final long serialVersionUID = 0L;
      * off, or canceled by this invoice, if applicable. If `corrected_invoice` is
      * set, `replaced_invoices` will not be set. Invoice resource names have the
      * form:
+     *
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
@@ -9449,6 +9455,7 @@ private static final long serialVersionUID = 0L;
      * off, or canceled by this invoice, if applicable. If `corrected_invoice` is
      * set, `replaced_invoices` will not be set. Invoice resource names have the
      * form:
+     *
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
@@ -9473,6 +9480,7 @@ private static final long serialVersionUID = 0L;
      * off, or canceled by this invoice, if applicable. If `corrected_invoice` is
      * set, `replaced_invoices` will not be set. Invoice resource names have the
      * form:
+     *
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
@@ -9498,6 +9506,7 @@ private static final long serialVersionUID = 0L;
      * off, or canceled by this invoice, if applicable. If `corrected_invoice` is
      * set, `replaced_invoices` will not be set. Invoice resource names have the
      * form:
+     *
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
@@ -9519,6 +9528,7 @@ private static final long serialVersionUID = 0L;
      * off, or canceled by this invoice, if applicable. If `corrected_invoice` is
      * set, `replaced_invoices` will not be set. Invoice resource names have the
      * form:
+     *
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
@@ -9537,6 +9547,7 @@ private static final long serialVersionUID = 0L;
      * off, or canceled by this invoice, if applicable. If `corrected_invoice` is
      * set, `replaced_invoices` will not be set. Invoice resource names have the
      * form:
+     *
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
@@ -9554,12 +9565,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.LazyStringList replacedInvoices_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList replacedInvoices_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureReplacedInvoicesIsMutable() {
-      if (!((bitField0_ & 0x00100000) != 0)) {
+      if (!replacedInvoices_.isModifiable()) {
         replacedInvoices_ = new com.google.protobuf.LazyStringArrayList(replacedInvoices_);
-        bitField0_ |= 0x00100000;
-       }
+      }
+      bitField0_ |= 0x00100000;
     }
     /**
      * <pre>
@@ -9568,6 +9580,7 @@ private static final long serialVersionUID = 0L;
      * invoices due to invoice consolidation. The replaced invoices may not belong
      * to the same payments account. If `replaced_invoices` is set,
      * `corrected_invoice` will not be set. Invoice resource names have the form:
+     *
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
@@ -9576,7 +9589,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getReplacedInvoicesList() {
-      return replacedInvoices_.getUnmodifiableView();
+      replacedInvoices_.makeImmutable();
+      return replacedInvoices_;
     }
     /**
      * <pre>
@@ -9585,6 +9599,7 @@ private static final long serialVersionUID = 0L;
      * invoices due to invoice consolidation. The replaced invoices may not belong
      * to the same payments account. If `replaced_invoices` is set,
      * `corrected_invoice` will not be set. Invoice resource names have the form:
+     *
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
@@ -9601,6 +9616,7 @@ private static final long serialVersionUID = 0L;
      * invoices due to invoice consolidation. The replaced invoices may not belong
      * to the same payments account. If `replaced_invoices` is set,
      * `corrected_invoice` will not be set. Invoice resource names have the form:
+     *
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
@@ -9618,6 +9634,7 @@ private static final long serialVersionUID = 0L;
      * invoices due to invoice consolidation. The replaced invoices may not belong
      * to the same payments account. If `replaced_invoices` is set,
      * `corrected_invoice` will not be set. Invoice resource names have the form:
+     *
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
@@ -9636,6 +9653,7 @@ private static final long serialVersionUID = 0L;
      * invoices due to invoice consolidation. The replaced invoices may not belong
      * to the same payments account. If `replaced_invoices` is set,
      * `corrected_invoice` will not be set. Invoice resource names have the form:
+     *
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
@@ -9649,6 +9667,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureReplacedInvoicesIsMutable();
       replacedInvoices_.set(index, value);
+      bitField0_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -9659,6 +9678,7 @@ private static final long serialVersionUID = 0L;
      * invoices due to invoice consolidation. The replaced invoices may not belong
      * to the same payments account. If `replaced_invoices` is set,
      * `corrected_invoice` will not be set. Invoice resource names have the form:
+     *
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
@@ -9671,6 +9691,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureReplacedInvoicesIsMutable();
       replacedInvoices_.add(value);
+      bitField0_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -9681,6 +9702,7 @@ private static final long serialVersionUID = 0L;
      * invoices due to invoice consolidation. The replaced invoices may not belong
      * to the same payments account. If `replaced_invoices` is set,
      * `corrected_invoice` will not be set. Invoice resource names have the form:
+     *
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
@@ -9693,6 +9715,7 @@ private static final long serialVersionUID = 0L;
       ensureReplacedInvoicesIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, replacedInvoices_);
+      bitField0_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -9703,6 +9726,7 @@ private static final long serialVersionUID = 0L;
      * invoices due to invoice consolidation. The replaced invoices may not belong
      * to the same payments account. If `replaced_invoices` is set,
      * `corrected_invoice` will not be set. Invoice resource names have the form:
+     *
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
@@ -9710,8 +9734,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearReplacedInvoices() {
-      replacedInvoices_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00100000);
+      replacedInvoices_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00100000);;
       onChanged();
       return this;
     }
@@ -9722,6 +9747,7 @@ private static final long serialVersionUID = 0L;
      * invoices due to invoice consolidation. The replaced invoices may not belong
      * to the same payments account. If `replaced_invoices` is set,
      * `corrected_invoice` will not be set. Invoice resource names have the form:
+     *
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
@@ -9735,6 +9761,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureReplacedInvoicesIsMutable();
       replacedInvoices_.add(value);
+      bitField0_ |= 0x00100000;
       onChanged();
       return this;
     }

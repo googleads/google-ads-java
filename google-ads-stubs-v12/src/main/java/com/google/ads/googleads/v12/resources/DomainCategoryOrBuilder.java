@@ -11,6 +11,7 @@ public interface DomainCategoryOrBuilder extends
    * <pre>
    * Output only. The resource name of the domain category.
    * Domain category resource names have the form:
+   *
    * `customers/{customer_id}/domainCategories/{campaign_id}~{category_base64}~{language_code}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface DomainCategoryOrBuilder extends
    * <pre>
    * Output only. The resource name of the domain category.
    * Domain category resource names have the form:
+   *
    * `customers/{customer_id}/domainCategories/{campaign_id}~{category_base64}~{language_code}`
    * </pre>
    *

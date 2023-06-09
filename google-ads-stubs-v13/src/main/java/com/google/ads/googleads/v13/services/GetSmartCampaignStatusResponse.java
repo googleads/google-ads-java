@@ -31,11 +31,6 @@ private static final long serialVersionUID = 0L;
     return new GetSmartCampaignStatusResponse();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.services.SmartCampaignSettingServiceProto.internal_static_google_ads_googleads_v13_services_GetSmartCampaignStatusResponse_descriptor;
@@ -50,6 +45,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int smartCampaignStatusDetailsCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object smartCampaignStatusDetails_;
   public enum SmartCampaignStatusDetailsCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -211,7 +207,7 @@ private static final long serialVersionUID = 0L;
   public static final int PAUSED_DETAILS_FIELD_NUMBER = 4;
   /**
    * <pre>
-   * Details relaed to paused Smart campaigns.
+   * Details related to paused Smart campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v13.services.SmartCampaignPausedDetails paused_details = 4;</code>
@@ -223,7 +219,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Details relaed to paused Smart campaigns.
+   * Details related to paused Smart campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v13.services.SmartCampaignPausedDetails paused_details = 4;</code>
@@ -238,7 +234,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Details relaed to paused Smart campaigns.
+   * Details related to paused Smart campaigns.
    * </pre>
    *
    * <code>.google.ads.googleads.v13.services.SmartCampaignPausedDetails paused_details = 4;</code>
@@ -529,11 +525,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.services.GetSmartCampaignStatusResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.services.GetSmartCampaignStatusResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1299,7 +1297,7 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v13.services.SmartCampaignPausedDetails, com.google.ads.googleads.v13.services.SmartCampaignPausedDetails.Builder, com.google.ads.googleads.v13.services.SmartCampaignPausedDetailsOrBuilder> pausedDetailsBuilder_;
     /**
      * <pre>
-     * Details relaed to paused Smart campaigns.
+     * Details related to paused Smart campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v13.services.SmartCampaignPausedDetails paused_details = 4;</code>
@@ -1311,7 +1309,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details relaed to paused Smart campaigns.
+     * Details related to paused Smart campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v13.services.SmartCampaignPausedDetails paused_details = 4;</code>
@@ -1333,7 +1331,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details relaed to paused Smart campaigns.
+     * Details related to paused Smart campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v13.services.SmartCampaignPausedDetails paused_details = 4;</code>
@@ -1353,7 +1351,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details relaed to paused Smart campaigns.
+     * Details related to paused Smart campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v13.services.SmartCampaignPausedDetails paused_details = 4;</code>
@@ -1371,7 +1369,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details relaed to paused Smart campaigns.
+     * Details related to paused Smart campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v13.services.SmartCampaignPausedDetails paused_details = 4;</code>
@@ -1398,7 +1396,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details relaed to paused Smart campaigns.
+     * Details related to paused Smart campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v13.services.SmartCampaignPausedDetails paused_details = 4;</code>
@@ -1421,7 +1419,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details relaed to paused Smart campaigns.
+     * Details related to paused Smart campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v13.services.SmartCampaignPausedDetails paused_details = 4;</code>
@@ -1431,7 +1429,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details relaed to paused Smart campaigns.
+     * Details related to paused Smart campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v13.services.SmartCampaignPausedDetails paused_details = 4;</code>
@@ -1449,7 +1447,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Details relaed to paused Smart campaigns.
+     * Details related to paused Smart campaigns.
      * </pre>
      *
      * <code>.google.ads.googleads.v13.services.SmartCampaignPausedDetails paused_details = 4;</code>

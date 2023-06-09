@@ -11,6 +11,7 @@ public interface GenderViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the gender view.
    * Gender view resource names have the form:
+   *
    * `customers/{customer_id}/genderViews/{ad_group_id}~{criterion_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface GenderViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the gender view.
    * Gender view resource names have the form:
+   *
    * `customers/{customer_id}/genderViews/{ad_group_id}~{criterion_id}`
    * </pre>
    *

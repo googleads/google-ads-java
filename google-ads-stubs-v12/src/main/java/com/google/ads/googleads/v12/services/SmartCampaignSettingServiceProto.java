@@ -53,44 +53,44 @@ public final class SmartCampaignSettingServiceProto {
       "t.proto\032\037google/api/field_behavior.proto" +
       "\032\031google/api/resource.proto\032 google/prot" +
       "obuf/field_mask.proto\032\027google/rpc/status" +
-      ".proto\"\265\002\n\"MutateSmartCampaignSettingsRe" +
-      "quest\022\030\n\013customer_id\030\001 \001(\tB\003\340A\002\022Y\n\nopera" +
-      "tions\030\002 \003(\0132@.google.ads.googleads.v12.s" +
-      "ervices.SmartCampaignSettingOperationB\003\340" +
-      "A\002\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rvalidate_" +
-      "only\030\004 \001(\010\022j\n\025response_content_type\030\005 \001(" +
-      "\0162K.google.ads.googleads.v12.enums.Respo" +
-      "nseContentTypeEnum.ResponseContentType\"\232" +
-      "\001\n\035SmartCampaignSettingOperation\022H\n\006upda" +
-      "te\030\001 \001(\01328.google.ads.googleads.v12.reso" +
-      "urces.SmartCampaignSetting\022/\n\013update_mas" +
-      "k\030\002 \001(\0132\032.google.protobuf.FieldMask\"\256\001\n#" +
-      "MutateSmartCampaignSettingsResponse\0221\n\025p" +
-      "artial_failure_error\030\001 \001(\0132\022.google.rpc." +
-      "Status\022T\n\007results\030\002 \003(\0132C.google.ads.goo" +
-      "gleads.v12.services.MutateSmartCampaignS" +
-      "ettingResult\"\307\001\n MutateSmartCampaignSett" +
-      "ingResult\022I\n\rresource_name\030\001 \001(\tB2\372A/\n-g" +
-      "oogleads.googleapis.com/SmartCampaignSet" +
-      "ting\022X\n\026smart_campaign_setting\030\002 \001(\01328.g" +
-      "oogle.ads.googleads.v12.resources.SmartC" +
-      "ampaignSetting2\364\002\n\033SmartCampaignSettingS" +
-      "ervice\022\215\002\n\033MutateSmartCampaignSettings\022E" +
-      ".google.ads.googleads.v12.services.Mutat" +
-      "eSmartCampaignSettingsRequest\032F.google.a" +
-      "ds.googleads.v12.services.MutateSmartCam" +
-      "paignSettingsResponse\"_\202\323\344\223\002@\";/v12/cust" +
-      "omers/{customer_id=*}/smartCampaignSetti" +
-      "ngs:mutate:\001*\332A\026customer_id,operations\032E" +
-      "\312A\030googleads.googleapis.com\322A\'https://ww" +
-      "w.googleapis.com/auth/adwordsB\214\002\n%com.go" +
-      "ogle.ads.googleads.v12.servicesB SmartCa" +
-      "mpaignSettingServiceProtoP\001ZIgoogle.gola" +
-      "ng.org/genproto/googleapis/ads/googleads" +
-      "/v12/services;services\242\002\003GAA\252\002!Google.Ad" +
-      "s.GoogleAds.V12.Services\312\002!Google\\Ads\\Go" +
-      "ogleAds\\V12\\Services\352\002%Google::Ads::Goog" +
-      "leAds::V12::Servicesb\006proto3"
+      ".proto\"\267\002\n\"MutateSmartCampaignSettingsRe" +
+      "quest\022\031\n\013customer_id\030\001 \001(\tB\004\342A\001\002\022Z\n\noper" +
+      "ations\030\002 \003(\0132@.google.ads.googleads.v12." +
+      "services.SmartCampaignSettingOperationB\004" +
+      "\342A\001\002\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rvalidat" +
+      "e_only\030\004 \001(\010\022j\n\025response_content_type\030\005 " +
+      "\001(\0162K.google.ads.googleads.v12.enums.Res" +
+      "ponseContentTypeEnum.ResponseContentType" +
+      "\"\232\001\n\035SmartCampaignSettingOperation\022H\n\006up" +
+      "date\030\001 \001(\01328.google.ads.googleads.v12.re" +
+      "sources.SmartCampaignSetting\022/\n\013update_m" +
+      "ask\030\002 \001(\0132\032.google.protobuf.FieldMask\"\256\001" +
+      "\n#MutateSmartCampaignSettingsResponse\0221\n" +
+      "\025partial_failure_error\030\001 \001(\0132\022.google.rp" +
+      "c.Status\022T\n\007results\030\002 \003(\0132C.google.ads.g" +
+      "oogleads.v12.services.MutateSmartCampaig" +
+      "nSettingResult\"\307\001\n MutateSmartCampaignSe" +
+      "ttingResult\022I\n\rresource_name\030\001 \001(\tB2\372A/\n" +
+      "-googleads.googleapis.com/SmartCampaignS" +
+      "etting\022X\n\026smart_campaign_setting\030\002 \001(\01328" +
+      ".google.ads.googleads.v12.resources.Smar" +
+      "tCampaignSetting2\364\002\n\033SmartCampaignSettin" +
+      "gService\022\215\002\n\033MutateSmartCampaignSettings" +
+      "\022E.google.ads.googleads.v12.services.Mut" +
+      "ateSmartCampaignSettingsRequest\032F.google" +
+      ".ads.googleads.v12.services.MutateSmartC" +
+      "ampaignSettingsResponse\"_\332A\026customer_id," +
+      "operations\202\323\344\223\002@\";/v12/customers/{custom" +
+      "er_id=*}/smartCampaignSettings:mutate:\001*" +
+      "\032E\312A\030googleads.googleapis.com\322A\'https://" +
+      "www.googleapis.com/auth/adwordsB\214\002\n%com." +
+      "google.ads.googleads.v12.servicesB Smart" +
+      "CampaignSettingServiceProtoP\001ZIgoogle.go" +
+      "lang.org/genproto/googleapis/ads/googlea" +
+      "ds/v12/services;services\242\002\003GAA\252\002!Google." +
+      "Ads.GoogleAds.V12.Services\312\002!Google\\Ads\\" +
+      "GoogleAds\\V12\\Services\352\002%Google::Ads::Go" +
+      "ogleAds::V12::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

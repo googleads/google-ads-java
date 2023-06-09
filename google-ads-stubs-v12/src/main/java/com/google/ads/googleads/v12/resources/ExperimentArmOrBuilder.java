@@ -11,6 +11,7 @@ public interface ExperimentArmOrBuilder extends
    * <pre>
    * Immutable. The resource name of the experiment arm.
    * Experiment arm resource names have the form:
+   *
    * `customers/{customer_id}/experimentArms/{TrialArm.trial_id}~{TrialArm.trial_arm_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface ExperimentArmOrBuilder extends
    * <pre>
    * Immutable. The resource name of the experiment arm.
    * Experiment arm resource names have the form:
+   *
    * `customers/{customer_id}/experimentArms/{TrialArm.trial_id}~{TrialArm.trial_arm_id}`
    * </pre>
    *

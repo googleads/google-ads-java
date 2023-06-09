@@ -52,46 +52,46 @@ public final class CustomerAssetServiceProto {
       ".proto\032\027google/api/client.proto\032\037google/" +
       "api/field_behavior.proto\032\031google/api/res" +
       "ource.proto\032 google/protobuf/field_mask." +
-      "proto\032\027google/rpc/status.proto\"\247\002\n\033Mutat" +
-      "eCustomerAssetsRequest\022\030\n\013customer_id\030\001 " +
-      "\001(\tB\003\340A\002\022R\n\noperations\030\002 \003(\01329.google.ad" +
-      "s.googleads.v12.services.CustomerAssetOp" +
-      "erationB\003\340A\002\022\027\n\017partial_failure\030\003 \001(\010\022\025\n" +
-      "\rvalidate_only\030\004 \001(\010\022j\n\025response_content" +
-      "_type\030\005 \001(\0162K.google.ads.googleads.v12.e" +
-      "nums.ResponseContentTypeEnum.ResponseCon" +
-      "tentType\"\237\002\n\026CustomerAssetOperation\022/\n\013u" +
-      "pdate_mask\030\004 \001(\0132\032.google.protobuf.Field" +
-      "Mask\022C\n\006create\030\001 \001(\01321.google.ads.google" +
-      "ads.v12.resources.CustomerAssetH\000\022C\n\006upd" +
-      "ate\030\003 \001(\01321.google.ads.googleads.v12.res" +
-      "ources.CustomerAssetH\000\022=\n\006remove\030\002 \001(\tB+" +
-      "\372A(\n&googleads.googleapis.com/CustomerAs" +
-      "setH\000B\013\n\toperation\"\240\001\n\034MutateCustomerAss" +
-      "etsResponse\0221\n\025partial_failure_error\030\001 \001" +
-      "(\0132\022.google.rpc.Status\022M\n\007results\030\002 \003(\0132" +
-      "<.google.ads.googleads.v12.services.Muta" +
-      "teCustomerAssetResult\"\252\001\n\031MutateCustomer" +
-      "AssetResult\022B\n\rresource_name\030\001 \001(\tB+\372A(\n" +
-      "&googleads.googleapis.com/CustomerAsset\022" +
-      "I\n\016customer_asset\030\002 \001(\01321.google.ads.goo" +
-      "gleads.v12.resources.CustomerAsset2\321\002\n\024C" +
-      "ustomerAssetService\022\361\001\n\024MutateCustomerAs" +
-      "sets\022>.google.ads.googleads.v12.services" +
-      ".MutateCustomerAssetsRequest\032?.google.ad" +
-      "s.googleads.v12.services.MutateCustomerA" +
-      "ssetsResponse\"X\202\323\344\223\0029\"4/v12/customers/{c" +
-      "ustomer_id=*}/customerAssets:mutate:\001*\332A" +
-      "\026customer_id,operations\032E\312A\030googleads.go" +
-      "ogleapis.com\322A\'https://www.googleapis.co" +
-      "m/auth/adwordsB\205\002\n%com.google.ads.google" +
-      "ads.v12.servicesB\031CustomerAssetServicePr" +
-      "otoP\001ZIgoogle.golang.org/genproto/google" +
-      "apis/ads/googleads/v12/services;services" +
-      "\242\002\003GAA\252\002!Google.Ads.GoogleAds.V12.Servic" +
-      "es\312\002!Google\\Ads\\GoogleAds\\V12\\Services\352\002" +
-      "%Google::Ads::GoogleAds::V12::Servicesb\006" +
-      "proto3"
+      "proto\032\027google/rpc/status.proto\"\251\002\n\033Mutat" +
+      "eCustomerAssetsRequest\022\031\n\013customer_id\030\001 " +
+      "\001(\tB\004\342A\001\002\022S\n\noperations\030\002 \003(\01329.google.a" +
+      "ds.googleads.v12.services.CustomerAssetO" +
+      "perationB\004\342A\001\002\022\027\n\017partial_failure\030\003 \001(\010\022" +
+      "\025\n\rvalidate_only\030\004 \001(\010\022j\n\025response_conte" +
+      "nt_type\030\005 \001(\0162K.google.ads.googleads.v12" +
+      ".enums.ResponseContentTypeEnum.ResponseC" +
+      "ontentType\"\237\002\n\026CustomerAssetOperation\022/\n" +
+      "\013update_mask\030\004 \001(\0132\032.google.protobuf.Fie" +
+      "ldMask\022C\n\006create\030\001 \001(\01321.google.ads.goog" +
+      "leads.v12.resources.CustomerAssetH\000\022C\n\006u" +
+      "pdate\030\003 \001(\01321.google.ads.googleads.v12.r" +
+      "esources.CustomerAssetH\000\022=\n\006remove\030\002 \001(\t" +
+      "B+\372A(\n&googleads.googleapis.com/Customer" +
+      "AssetH\000B\013\n\toperation\"\240\001\n\034MutateCustomerA" +
+      "ssetsResponse\0221\n\025partial_failure_error\030\001" +
+      " \001(\0132\022.google.rpc.Status\022M\n\007results\030\002 \003(" +
+      "\0132<.google.ads.googleads.v12.services.Mu" +
+      "tateCustomerAssetResult\"\252\001\n\031MutateCustom" +
+      "erAssetResult\022B\n\rresource_name\030\001 \001(\tB+\372A" +
+      "(\n&googleads.googleapis.com/CustomerAsse" +
+      "t\022I\n\016customer_asset\030\002 \001(\01321.google.ads.g" +
+      "oogleads.v12.resources.CustomerAsset2\321\002\n" +
+      "\024CustomerAssetService\022\361\001\n\024MutateCustomer" +
+      "Assets\022>.google.ads.googleads.v12.servic" +
+      "es.MutateCustomerAssetsRequest\032?.google." +
+      "ads.googleads.v12.services.MutateCustome" +
+      "rAssetsResponse\"X\332A\026customer_id,operatio" +
+      "ns\202\323\344\223\0029\"4/v12/customers/{customer_id=*}" +
+      "/customerAssets:mutate:\001*\032E\312A\030googleads." +
+      "googleapis.com\322A\'https://www.googleapis." +
+      "com/auth/adwordsB\205\002\n%com.google.ads.goog" +
+      "leads.v12.servicesB\031CustomerAssetService" +
+      "ProtoP\001ZIgoogle.golang.org/genproto/goog" +
+      "leapis/ads/googleads/v12/services;servic" +
+      "es\242\002\003GAA\252\002!Google.Ads.GoogleAds.V12.Serv" +
+      "ices\312\002!Google\\Ads\\GoogleAds\\V12\\Services" +
+      "\352\002%Google::Ads::GoogleAds::V12::Services" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

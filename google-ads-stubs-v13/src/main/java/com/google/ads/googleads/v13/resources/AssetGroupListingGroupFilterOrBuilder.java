@@ -11,6 +11,7 @@ public interface AssetGroupListingGroupFilterOrBuilder extends
    * <pre>
    * Immutable. The resource name of the asset group listing group filter.
    * Asset group listing group filter resource name have the form:
+   *
    * `customers/{customer_id}/assetGroupListingGroupFilters/{asset_group_id}~{listing_group_filter_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface AssetGroupListingGroupFilterOrBuilder extends
    * <pre>
    * Immutable. The resource name of the asset group listing group filter.
    * Asset group listing group filter resource name have the form:
+   *
    * `customers/{customer_id}/assetGroupListingGroupFilters/{asset_group_id}~{listing_group_filter_id}`
    * </pre>
    *

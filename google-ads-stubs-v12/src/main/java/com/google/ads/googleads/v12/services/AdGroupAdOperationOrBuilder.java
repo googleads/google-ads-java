@@ -119,6 +119,7 @@ public interface AdGroupAdOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed ad is expected,
    * in this format:
+   *
    * `customers/{customer_id}/adGroupAds/{ad_group_id}~{ad_id}`
    * </pre>
    *
@@ -130,6 +131,7 @@ public interface AdGroupAdOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed ad is expected,
    * in this format:
+   *
    * `customers/{customer_id}/adGroupAds/{ad_group_id}~{ad_id}`
    * </pre>
    *
@@ -141,6 +143,7 @@ public interface AdGroupAdOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed ad is expected,
    * in this format:
+   *
    * `customers/{customer_id}/adGroupAds/{ad_group_id}~{ad_id}`
    * </pre>
    *
@@ -150,5 +153,5 @@ public interface AdGroupAdOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v12.services.AdGroupAdOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v12.services.AdGroupAdOperation.OperationCase getOperationCase();
 }

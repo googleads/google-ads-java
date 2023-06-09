@@ -11,6 +11,7 @@ public interface KeywordThemeConstantOrBuilder extends
    * <pre>
    * Output only. The resource name of the keyword theme constant.
    * Keyword theme constant resource names have the form:
+   *
    * `keywordThemeConstants/{keyword_theme_id}~{sub_keyword_theme_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface KeywordThemeConstantOrBuilder extends
    * <pre>
    * Output only. The resource name of the keyword theme constant.
    * Keyword theme constant resource names have the form:
+   *
    * `keywordThemeConstants/{keyword_theme_id}~{sub_keyword_theme_id}`
    * </pre>
    *

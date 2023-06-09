@@ -11,6 +11,7 @@ public interface UserLocationViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the user location view.
    * UserLocation view resource names have the form:
+   *
    * `customers/{customer_id}/userLocationViews/{country_criterion_id}~{targeting_location}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface UserLocationViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the user location view.
    * UserLocation view resource names have the form:
+   *
    * `customers/{customer_id}/userLocationViews/{country_criterion_id}~{targeting_location}`
    * </pre>
    *

@@ -31,22 +31,22 @@ public final class LanguageConstantProto {
       "\n:google/ads/googleads/v12/resources/lan" +
       "guage_constant.proto\022\"google.ads.googlea" +
       "ds.v12.resources\032\037google/api/field_behav" +
-      "ior.proto\032\031google/api/resource.proto\"\272\002\n" +
-      "\020LanguageConstant\022H\n\rresource_name\030\001 \001(\t" +
-      "B1\340A\003\372A+\n)googleads.googleapis.com/Langu" +
-      "ageConstant\022\024\n\002id\030\006 \001(\003B\003\340A\003H\000\210\001\001\022\026\n\004cod" +
-      "e\030\007 \001(\tB\003\340A\003H\001\210\001\001\022\026\n\004name\030\010 \001(\tB\003\340A\003H\002\210\001" +
-      "\001\022\034\n\ntargetable\030\t \001(\010B\003\340A\003H\003\210\001\001:P\352AM\n)go" +
-      "ogleads.googleapis.com/LanguageConstant\022" +
-      " languageConstants/{criterion_id}B\005\n\003_id" +
-      "B\007\n\005_codeB\007\n\005_nameB\r\n\013_targetableB\207\002\n&co" +
-      "m.google.ads.googleads.v12.resourcesB\025La" +
-      "nguageConstantProtoP\001ZKgoogle.golang.org" +
-      "/genproto/googleapis/ads/googleads/v12/r" +
-      "esources;resources\242\002\003GAA\252\002\"Google.Ads.Go" +
-      "ogleAds.V12.Resources\312\002\"Google\\Ads\\Googl" +
-      "eAds\\V12\\Resources\352\002&Google::Ads::Google" +
-      "Ads::V12::Resourcesb\006proto3"
+      "ior.proto\032\031google/api/resource.proto\"\277\002\n" +
+      "\020LanguageConstant\022I\n\rresource_name\030\001 \001(\t" +
+      "B2\342A\001\003\372A+\n)googleads.googleapis.com/Lang" +
+      "uageConstant\022\025\n\002id\030\006 \001(\003B\004\342A\001\003H\000\210\001\001\022\027\n\004c" +
+      "ode\030\007 \001(\tB\004\342A\001\003H\001\210\001\001\022\027\n\004name\030\010 \001(\tB\004\342A\001\003" +
+      "H\002\210\001\001\022\035\n\ntargetable\030\t \001(\010B\004\342A\001\003H\003\210\001\001:P\352A" +
+      "M\n)googleads.googleapis.com/LanguageCons" +
+      "tant\022 languageConstants/{criterion_id}B\005" +
+      "\n\003_idB\007\n\005_codeB\007\n\005_nameB\r\n\013_targetableB\207" +
+      "\002\n&com.google.ads.googleads.v12.resource" +
+      "sB\025LanguageConstantProtoP\001ZKgoogle.golan" +
+      "g.org/genproto/googleapis/ads/googleads/" +
+      "v12/resources;resources\242\002\003GAA\252\002\"Google.A" +
+      "ds.GoogleAds.V12.Resources\312\002\"Google\\Ads\\" +
+      "GoogleAds\\V12\\Resources\352\002&Google::Ads::G" +
+      "oogleAds::V12::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

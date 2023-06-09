@@ -98,7 +98,7 @@ public final class CustomerUserAccessServiceGrpc {
    * This service manages the permissions of a user on a given customer.
    * </pre>
    */
-  public static abstract class CustomerUserAccessServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -116,30 +116,34 @@ public final class CustomerUserAccessServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void mutateCustomerUserAccess(com.google.ads.googleads.v12.services.MutateCustomerUserAccessRequest request,
+    default void mutateCustomerUserAccess(com.google.ads.googleads.v12.services.MutateCustomerUserAccessRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.MutateCustomerUserAccessResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateCustomerUserAccessMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getMutateCustomerUserAccessMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.MutateCustomerUserAccessRequest,
-                com.google.ads.googleads.v12.services.MutateCustomerUserAccessResponse>(
-                  this, METHODID_MUTATE_CUSTOMER_USER_ACCESS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service CustomerUserAccessService.
    * <pre>
    * This service manages the permissions of a user on a given customer.
    * </pre>
    */
-  public static final class CustomerUserAccessServiceStub extends io.grpc.stub.AbstractAsyncStub<CustomerUserAccessServiceStub> {
+  public static abstract class CustomerUserAccessServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return CustomerUserAccessServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service CustomerUserAccessService.
+   * <pre>
+   * This service manages the permissions of a user on a given customer.
+   * </pre>
+   */
+  public static final class CustomerUserAccessServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<CustomerUserAccessServiceStub> {
     private CustomerUserAccessServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -175,11 +179,13 @@ public final class CustomerUserAccessServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service CustomerUserAccessService.
    * <pre>
    * This service manages the permissions of a user on a given customer.
    * </pre>
    */
-  public static final class CustomerUserAccessServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CustomerUserAccessServiceBlockingStub> {
+  public static final class CustomerUserAccessServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<CustomerUserAccessServiceBlockingStub> {
     private CustomerUserAccessServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -214,11 +220,13 @@ public final class CustomerUserAccessServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service CustomerUserAccessService.
    * <pre>
    * This service manages the permissions of a user on a given customer.
    * </pre>
    */
-  public static final class CustomerUserAccessServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CustomerUserAccessServiceFutureStub> {
+  public static final class CustomerUserAccessServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<CustomerUserAccessServiceFutureStub> {
     private CustomerUserAccessServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -260,10 +268,10 @@ public final class CustomerUserAccessServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final CustomerUserAccessServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(CustomerUserAccessServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -290,6 +298,18 @@ public final class CustomerUserAccessServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getMutateCustomerUserAccessMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.MutateCustomerUserAccessRequest,
+              com.google.ads.googleads.v12.services.MutateCustomerUserAccessResponse>(
+                service, METHODID_MUTATE_CUSTOMER_USER_ACCESS)))
+        .build();
   }
 
   private static abstract class CustomerUserAccessServiceBaseDescriptorSupplier

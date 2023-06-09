@@ -11,6 +11,7 @@ public interface PaymentsAccountOrBuilder extends
    * <pre>
    * Output only. The resource name of the payments account.
    * PaymentsAccount resource names have the form:
+   *
    * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface PaymentsAccountOrBuilder extends
    * <pre>
    * Output only. The resource name of the payments account.
    * PaymentsAccount resource names have the form:
+   *
    * `customers/{customer_id}/paymentsAccounts/{payments_account_id}`
    * </pre>
    *

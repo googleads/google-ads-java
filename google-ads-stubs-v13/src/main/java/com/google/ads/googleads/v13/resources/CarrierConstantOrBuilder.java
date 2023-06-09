@@ -11,6 +11,7 @@ public interface CarrierConstantOrBuilder extends
    * <pre>
    * Output only. The resource name of the carrier criterion.
    * Carrier criterion resource names have the form:
+   *
    * `carrierConstants/{criterion_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface CarrierConstantOrBuilder extends
    * <pre>
    * Output only. The resource name of the carrier criterion.
    * Carrier criterion resource names have the form:
+   *
    * `carrierConstants/{criterion_id}`
    * </pre>
    *

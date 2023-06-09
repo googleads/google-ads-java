@@ -35,30 +35,30 @@ public final class CampaignAssetProto {
       "/googleads/v12/enums/asset_link_status.p" +
       "roto\0321google/ads/googleads/v12/enums/ass" +
       "et_source.proto\032\037google/api/field_behavi" +
-      "or.proto\032\031google/api/resource.proto\"\351\004\n\r" +
-      "CampaignAsset\022E\n\rresource_name\030\001 \001(\tB.\340A" +
-      "\005\372A(\n&googleads.googleapis.com/CampaignA" +
-      "sset\022@\n\010campaign\030\006 \001(\tB)\340A\005\372A#\n!googlead" +
-      "s.googleapis.com/CampaignH\000\210\001\001\022:\n\005asset\030" +
-      "\007 \001(\tB&\340A\005\372A \n\036googleads.googleapis.com/" +
-      "AssetH\001\210\001\001\022Z\n\nfield_type\030\004 \001(\0162A.google." +
-      "ads.googleads.v12.enums.AssetFieldTypeEn" +
-      "um.AssetFieldTypeB\003\340A\005\022P\n\006source\030\010 \001(\0162;" +
-      ".google.ads.googleads.v12.enums.AssetSou" +
-      "rceEnum.AssetSourceB\003\340A\003\022S\n\006status\030\005 \001(\016" +
-      "2C.google.ads.googleads.v12.enums.AssetL" +
-      "inkStatusEnum.AssetLinkStatus:y\352Av\n&goog" +
-      "leads.googleapis.com/CampaignAsset\022Lcust" +
-      "omers/{customer_id}/campaignAssets/{camp" +
-      "aign_id}~{asset_id}~{field_type}B\013\n\t_cam" +
-      "paignB\010\n\006_assetB\204\002\n&com.google.ads.googl" +
-      "eads.v12.resourcesB\022CampaignAssetProtoP\001" +
-      "ZKgoogle.golang.org/genproto/googleapis/" +
-      "ads/googleads/v12/resources;resources\242\002\003" +
-      "GAA\252\002\"Google.Ads.GoogleAds.V12.Resources" +
-      "\312\002\"Google\\Ads\\GoogleAds\\V12\\Resources\352\002&" +
-      "Google::Ads::GoogleAds::V12::Resourcesb\006" +
-      "proto3"
+      "or.proto\032\031google/api/resource.proto\"\356\004\n\r" +
+      "CampaignAsset\022F\n\rresource_name\030\001 \001(\tB/\342A" +
+      "\001\005\372A(\n&googleads.googleapis.com/Campaign" +
+      "Asset\022A\n\010campaign\030\006 \001(\tB*\342A\001\005\372A#\n!google" +
+      "ads.googleapis.com/CampaignH\000\210\001\001\022;\n\005asse" +
+      "t\030\007 \001(\tB\'\342A\001\005\372A \n\036googleads.googleapis.c" +
+      "om/AssetH\001\210\001\001\022[\n\nfield_type\030\004 \001(\0162A.goog" +
+      "le.ads.googleads.v12.enums.AssetFieldTyp" +
+      "eEnum.AssetFieldTypeB\004\342A\001\005\022Q\n\006source\030\010 \001" +
+      "(\0162;.google.ads.googleads.v12.enums.Asse" +
+      "tSourceEnum.AssetSourceB\004\342A\001\003\022S\n\006status\030" +
+      "\005 \001(\0162C.google.ads.googleads.v12.enums.A" +
+      "ssetLinkStatusEnum.AssetLinkStatus:y\352Av\n" +
+      "&googleads.googleapis.com/CampaignAsset\022" +
+      "Lcustomers/{customer_id}/campaignAssets/" +
+      "{campaign_id}~{asset_id}~{field_type}B\013\n" +
+      "\t_campaignB\010\n\006_assetB\204\002\n&com.google.ads." +
+      "googleads.v12.resourcesB\022CampaignAssetPr" +
+      "otoP\001ZKgoogle.golang.org/genproto/google" +
+      "apis/ads/googleads/v12/resources;resourc" +
+      "es\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V12.Reso" +
+      "urces\312\002\"Google\\Ads\\GoogleAds\\V12\\Resourc" +
+      "es\352\002&Google::Ads::GoogleAds::V12::Resour" +
+      "cesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

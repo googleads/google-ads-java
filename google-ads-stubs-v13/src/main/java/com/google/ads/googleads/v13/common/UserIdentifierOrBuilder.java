@@ -192,5 +192,5 @@ public interface UserIdentifierOrBuilder extends
    */
   com.google.ads.googleads.v13.common.OfflineUserAddressInfoOrBuilder getAddressInfoOrBuilder();
 
-  public com.google.ads.googleads.v13.common.UserIdentifier.IdentifierCase getIdentifierCase();
+  com.google.ads.googleads.v13.common.UserIdentifier.IdentifierCase getIdentifierCase();
 }

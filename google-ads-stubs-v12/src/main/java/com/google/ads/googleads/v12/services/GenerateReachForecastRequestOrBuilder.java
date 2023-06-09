@@ -93,6 +93,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user.
    * If not specified, no cap is applied.
+   *
    * This field is deprecated in v4 and will eventually be removed.
    * Use cookie_frequency_cap_setting instead.
    * </pre>
@@ -108,6 +109,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user.
    * If not specified, no cap is applied.
+   *
    * This field is deprecated in v4 and will eventually be removed.
    * Use cookie_frequency_cap_setting instead.
    * </pre>
@@ -124,6 +126,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user during a specified time interval.
    * If not specified, a default of 0 (no cap) is applied.
+   *
    * This field replaces the deprecated cookie_frequency_cap field.
    * </pre>
    *
@@ -138,6 +141,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user during a specified time interval.
    * If not specified, a default of 0 (no cap) is applied.
+   *
    * This field replaces the deprecated cookie_frequency_cap field.
    * </pre>
    *
@@ -152,6 +156,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user during a specified time interval.
    * If not specified, a default of 0 (no cap) is applied.
+   *
    * This field replaces the deprecated cookie_frequency_cap field.
    * </pre>
    *
@@ -165,6 +170,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * exposed to the ad) for the reported reach metrics [1-10].
    * This won't affect the targeting, but just the reporting.
    * If not specified, a default of 1 is applied.
+   *
    * This field cannot be combined with the effective_frequency_limit field.
    * </pre>
    *
@@ -178,6 +184,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * exposed to the ad) for the reported reach metrics [1-10].
    * This won't affect the targeting, but just the reporting.
    * If not specified, a default of 1 is applied.
+   *
    * This field cannot be combined with the effective_frequency_limit field.
    * </pre>
    *
@@ -193,8 +200,10 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * Forecast.effective_frequency_breakdowns.
    * If not specified, Forecast.effective_frequency_breakdowns will not be
    * provided.
+   *
    * The effective frequency value provided here will also be used as the
    * minimum effective frequency for the reported reach metrics.
+   *
    * This field cannot be combined with the min_effective_frequency field.
    * </pre>
    *
@@ -209,8 +218,10 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * Forecast.effective_frequency_breakdowns.
    * If not specified, Forecast.effective_frequency_breakdowns will not be
    * provided.
+   *
    * The effective frequency value provided here will also be used as the
    * minimum effective frequency for the reported reach metrics.
+   *
    * This field cannot be combined with the min_effective_frequency field.
    * </pre>
    *
@@ -225,8 +236,10 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * Forecast.effective_frequency_breakdowns.
    * If not specified, Forecast.effective_frequency_breakdowns will not be
    * provided.
+   *
    * The effective frequency value provided here will also be used as the
    * minimum effective frequency for the reported reach metrics.
+   *
    * This field cannot be combined with the min_effective_frequency field.
    * </pre>
    *
@@ -237,8 +250,10 @@ public interface GenerateReachForecastRequestOrBuilder extends
   /**
    * <pre>
    * The targeting to be applied to all products selected in the product mix.
+   *
    * This is planned targeting: execution details might vary based on the
    * advertising product, consult an implementation specialist.
+   *
    * See specific metrics for details on how targeting affects them.
    * </pre>
    *
@@ -249,8 +264,10 @@ public interface GenerateReachForecastRequestOrBuilder extends
   /**
    * <pre>
    * The targeting to be applied to all products selected in the product mix.
+   *
    * This is planned targeting: execution details might vary based on the
    * advertising product, consult an implementation specialist.
+   *
    * See specific metrics for details on how targeting affects them.
    * </pre>
    *
@@ -261,8 +278,10 @@ public interface GenerateReachForecastRequestOrBuilder extends
   /**
    * <pre>
    * The targeting to be applied to all products selected in the product mix.
+   *
    * This is planned targeting: execution details might vary based on the
    * advertising product, consult an implementation specialist.
+   *
    * See specific metrics for details on how targeting affects them.
    * </pre>
    *
@@ -349,7 +368,6 @@ public interface GenerateReachForecastRequestOrBuilder extends
   /**
    * <pre>
    * The name of the customer being planned for. This is a user-defined value.
-   * Required if targeting.audience_targeting is set.
    * </pre>
    *
    * <code>optional string customer_reach_group = 14;</code>
@@ -359,7 +377,6 @@ public interface GenerateReachForecastRequestOrBuilder extends
   /**
    * <pre>
    * The name of the customer being planned for. This is a user-defined value.
-   * Required if targeting.audience_targeting is set.
    * </pre>
    *
    * <code>optional string customer_reach_group = 14;</code>
@@ -369,7 +386,6 @@ public interface GenerateReachForecastRequestOrBuilder extends
   /**
    * <pre>
    * The name of the customer being planned for. This is a user-defined value.
-   * Required if targeting.audience_targeting is set.
    * </pre>
    *
    * <code>optional string customer_reach_group = 14;</code>

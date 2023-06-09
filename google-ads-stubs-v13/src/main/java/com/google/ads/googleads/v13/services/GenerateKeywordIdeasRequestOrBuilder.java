@@ -398,5 +398,5 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
    */
   com.google.ads.googleads.v13.services.SiteSeedOrBuilder getSiteSeedOrBuilder();
 
-  public com.google.ads.googleads.v13.services.GenerateKeywordIdeasRequest.SeedCase getSeedCase();
+  com.google.ads.googleads.v13.services.GenerateKeywordIdeasRequest.SeedCase getSeedCase();
 }

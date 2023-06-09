@@ -51,72 +51,72 @@ public final class AdGroupProto {
       "to\0328google/ads/googleads/v12/enums/targe" +
       "ting_dimension.proto\032\037google/api/field_b" +
       "ehavior.proto\032\031google/api/resource.proto" +
-      "\"\266\022\n\007AdGroup\022?\n\rresource_name\030\001 \001(\tB(\340A\005" +
-      "\372A\"\n googleads.googleapis.com/AdGroup\022\024\n" +
-      "\002id\030\" \001(\003B\003\340A\003H\000\210\001\001\022\021\n\004name\030# \001(\tH\001\210\001\001\022O" +
-      "\n\006status\030\005 \001(\0162?.google.ads.googleads.v1" +
-      "2.enums.AdGroupStatusEnum.AdGroupStatus\022" +
-      "N\n\004type\030\014 \001(\0162;.google.ads.googleads.v12" +
-      ".enums.AdGroupTypeEnum.AdGroupTypeB\003\340A\005\022" +
-      "i\n\020ad_rotation_mode\030\026 \001(\0162O.google.ads.g" +
-      "oogleads.v12.enums.AdGroupAdRotationMode" +
-      "Enum.AdGroupAdRotationMode\022D\n\rbase_ad_gr" +
-      "oup\030$ \001(\tB(\340A\003\372A\"\n googleads.googleapis." +
-      "com/AdGroupH\002\210\001\001\022\"\n\025tracking_url_templat" +
-      "e\030% \001(\tH\003\210\001\001\022O\n\025url_custom_parameters\030\006 " +
-      "\003(\01320.google.ads.googleads.v12.common.Cu" +
-      "stomParameter\022@\n\010campaign\030& \001(\tB)\340A\005\372A#\n" +
-      "!googleads.googleapis.com/CampaignH\004\210\001\001\022" +
-      "\033\n\016cpc_bid_micros\030\' \001(\003H\005\210\001\001\022*\n\030effectiv" +
-      "e_cpc_bid_micros\0309 \001(\003B\003\340A\003H\006\210\001\001\022\033\n\016cpm_" +
-      "bid_micros\030( \001(\003H\007\210\001\001\022\036\n\021target_cpa_micr" +
-      "os\030) \001(\003H\010\210\001\001\022\033\n\016cpv_bid_micros\030* \001(\003H\t\210" +
-      "\001\001\022\036\n\021target_cpm_micros\030+ \001(\003H\n\210\001\001\022\030\n\013ta" +
-      "rget_roas\030, \001(\001H\013\210\001\001\022#\n\026percent_cpc_bid_" +
-      "micros\030- \001(\003H\014\210\001\001\022f\n\037explorer_auto_optim" +
-      "izer_setting\030\025 \001(\0132=.google.ads.googlead" +
-      "s.v12.common.ExplorerAutoOptimizerSettin" +
-      "g\022o\n\034display_custom_bid_dimension\030\027 \001(\0162" +
-      "I.google.ads.googleads.v12.enums.Targeti" +
-      "ngDimensionEnum.TargetingDimension\022\035\n\020fi" +
-      "nal_url_suffix\030. \001(\tH\r\210\001\001\022L\n\021targeting_s" +
-      "etting\030\031 \001(\01321.google.ads.googleads.v12." +
-      "common.TargetingSetting\022Z\n\020audience_sett" +
-      "ing\0308 \001(\0132;.google.ads.googleads.v12.res" +
-      "ources.AdGroup.AudienceSettingB\003\340A\005\022-\n\033e" +
-      "ffective_target_cpa_micros\030/ \001(\003B\003\340A\003H\016\210" +
-      "\001\001\022i\n\033effective_target_cpa_source\030\035 \001(\0162" +
-      "?.google.ads.googleads.v12.enums.Bidding" +
-      "SourceEnum.BiddingSourceB\003\340A\003\022\'\n\025effecti" +
-      "ve_target_roas\0300 \001(\001B\003\340A\003H\017\210\001\001\022j\n\034effect" +
-      "ive_target_roas_source\030  \001(\0162?.google.ad" +
-      "s.googleads.v12.enums.BiddingSourceEnum." +
-      "BiddingSourceB\003\340A\003\022=\n\006labels\0301 \003(\tB-\340A\003\372" +
-      "A\'\n%googleads.googleapis.com/AdGroupLabe" +
-      "l\022l\n!excluded_parent_asset_field_types\0306" +
-      " \003(\0162A.google.ads.googleads.v12.enums.As" +
-      "setFieldTypeEnum.AssetFieldType\022f\n\037exclu" +
-      "ded_parent_asset_set_types\030: \003(\0162=.googl" +
-      "e.ads.googleads.v12.enums.AssetSetTypeEn" +
-      "um.AssetSetType\0324\n\017AudienceSetting\022!\n\024us" +
-      "e_audience_grouped\030\001 \001(\010B\003\340A\005:U\352AR\n goog" +
-      "leads.googleapis.com/AdGroup\022.customers/" +
-      "{customer_id}/adGroups/{ad_group_id}B\005\n\003" +
-      "_idB\007\n\005_nameB\020\n\016_base_ad_groupB\030\n\026_track" +
-      "ing_url_templateB\013\n\t_campaignB\021\n\017_cpc_bi" +
-      "d_microsB\033\n\031_effective_cpc_bid_microsB\021\n" +
-      "\017_cpm_bid_microsB\024\n\022_target_cpa_microsB\021" +
-      "\n\017_cpv_bid_microsB\024\n\022_target_cpm_microsB" +
-      "\016\n\014_target_roasB\031\n\027_percent_cpc_bid_micr" +
-      "osB\023\n\021_final_url_suffixB\036\n\034_effective_ta" +
-      "rget_cpa_microsB\030\n\026_effective_target_roa" +
-      "sB\376\001\n&com.google.ads.googleads.v12.resou" +
-      "rcesB\014AdGroupProtoP\001ZKgoogle.golang.org/" +
-      "genproto/googleapis/ads/googleads/v12/re" +
-      "sources;resources\242\002\003GAA\252\002\"Google.Ads.Goo" +
-      "gleAds.V12.Resources\312\002\"Google\\Ads\\Google" +
-      "Ads\\V12\\Resources\352\002&Google::Ads::GoogleA" +
-      "ds::V12::Resourcesb\006proto3"
+      "\"\303\022\n\007AdGroup\022@\n\rresource_name\030\001 \001(\tB)\342A\001" +
+      "\005\372A\"\n googleads.googleapis.com/AdGroup\022\025" +
+      "\n\002id\030\" \001(\003B\004\342A\001\003H\000\210\001\001\022\021\n\004name\030# \001(\tH\001\210\001\001" +
+      "\022O\n\006status\030\005 \001(\0162?.google.ads.googleads." +
+      "v12.enums.AdGroupStatusEnum.AdGroupStatu" +
+      "s\022O\n\004type\030\014 \001(\0162;.google.ads.googleads.v" +
+      "12.enums.AdGroupTypeEnum.AdGroupTypeB\004\342A" +
+      "\001\005\022i\n\020ad_rotation_mode\030\026 \001(\0162O.google.ad" +
+      "s.googleads.v12.enums.AdGroupAdRotationM" +
+      "odeEnum.AdGroupAdRotationMode\022E\n\rbase_ad" +
+      "_group\030$ \001(\tB)\342A\001\003\372A\"\n googleads.googlea" +
+      "pis.com/AdGroupH\002\210\001\001\022\"\n\025tracking_url_tem" +
+      "plate\030% \001(\tH\003\210\001\001\022O\n\025url_custom_parameter" +
+      "s\030\006 \003(\01320.google.ads.googleads.v12.commo" +
+      "n.CustomParameter\022A\n\010campaign\030& \001(\tB*\342A\001" +
+      "\005\372A#\n!googleads.googleapis.com/CampaignH" +
+      "\004\210\001\001\022\033\n\016cpc_bid_micros\030\' \001(\003H\005\210\001\001\022+\n\030eff" +
+      "ective_cpc_bid_micros\0309 \001(\003B\004\342A\001\003H\006\210\001\001\022\033" +
+      "\n\016cpm_bid_micros\030( \001(\003H\007\210\001\001\022\036\n\021target_cp" +
+      "a_micros\030) \001(\003H\010\210\001\001\022\033\n\016cpv_bid_micros\030* " +
+      "\001(\003H\t\210\001\001\022\036\n\021target_cpm_micros\030+ \001(\003H\n\210\001\001" +
+      "\022\030\n\013target_roas\030, \001(\001H\013\210\001\001\022#\n\026percent_cp" +
+      "c_bid_micros\030- \001(\003H\014\210\001\001\022f\n\037explorer_auto" +
+      "_optimizer_setting\030\025 \001(\0132=.google.ads.go" +
+      "ogleads.v12.common.ExplorerAutoOptimizer" +
+      "Setting\022o\n\034display_custom_bid_dimension\030" +
+      "\027 \001(\0162I.google.ads.googleads.v12.enums.T" +
+      "argetingDimensionEnum.TargetingDimension" +
+      "\022\035\n\020final_url_suffix\030. \001(\tH\r\210\001\001\022L\n\021targe" +
+      "ting_setting\030\031 \001(\01321.google.ads.googlead" +
+      "s.v12.common.TargetingSetting\022[\n\020audienc" +
+      "e_setting\0308 \001(\0132;.google.ads.googleads.v" +
+      "12.resources.AdGroup.AudienceSettingB\004\342A" +
+      "\001\005\022.\n\033effective_target_cpa_micros\030/ \001(\003B" +
+      "\004\342A\001\003H\016\210\001\001\022j\n\033effective_target_cpa_sourc" +
+      "e\030\035 \001(\0162?.google.ads.googleads.v12.enums" +
+      ".BiddingSourceEnum.BiddingSourceB\004\342A\001\003\022(" +
+      "\n\025effective_target_roas\0300 \001(\001B\004\342A\001\003H\017\210\001\001" +
+      "\022k\n\034effective_target_roas_source\030  \001(\0162?" +
+      ".google.ads.googleads.v12.enums.BiddingS" +
+      "ourceEnum.BiddingSourceB\004\342A\001\003\022>\n\006labels\030" +
+      "1 \003(\tB.\342A\001\003\372A\'\n%googleads.googleapis.com" +
+      "/AdGroupLabel\022l\n!excluded_parent_asset_f" +
+      "ield_types\0306 \003(\0162A.google.ads.googleads." +
+      "v12.enums.AssetFieldTypeEnum.AssetFieldT" +
+      "ype\022f\n\037excluded_parent_asset_set_types\030:" +
+      " \003(\0162=.google.ads.googleads.v12.enums.As" +
+      "setSetTypeEnum.AssetSetType\0325\n\017AudienceS" +
+      "etting\022\"\n\024use_audience_grouped\030\001 \001(\010B\004\342A" +
+      "\001\005:U\352AR\n googleads.googleapis.com/AdGrou" +
+      "p\022.customers/{customer_id}/adGroups/{ad_" +
+      "group_id}B\005\n\003_idB\007\n\005_nameB\020\n\016_base_ad_gr" +
+      "oupB\030\n\026_tracking_url_templateB\013\n\t_campai" +
+      "gnB\021\n\017_cpc_bid_microsB\033\n\031_effective_cpc_" +
+      "bid_microsB\021\n\017_cpm_bid_microsB\024\n\022_target" +
+      "_cpa_microsB\021\n\017_cpv_bid_microsB\024\n\022_targe" +
+      "t_cpm_microsB\016\n\014_target_roasB\031\n\027_percent" +
+      "_cpc_bid_microsB\023\n\021_final_url_suffixB\036\n\034" +
+      "_effective_target_cpa_microsB\030\n\026_effecti" +
+      "ve_target_roasB\376\001\n&com.google.ads.google" +
+      "ads.v12.resourcesB\014AdGroupProtoP\001ZKgoogl" +
+      "e.golang.org/genproto/googleapis/ads/goo" +
+      "gleads/v12/resources;resources\242\002\003GAA\252\002\"G" +
+      "oogle.Ads.GoogleAds.V12.Resources\312\002\"Goog" +
+      "le\\Ads\\GoogleAds\\V12\\Resources\352\002&Google:" +
+      ":Ads::GoogleAds::V12::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

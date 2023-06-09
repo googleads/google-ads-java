@@ -138,5 +138,5 @@ public interface UserListRuleItemInfoOrBuilder extends
    */
   com.google.ads.googleads.v12.common.UserListDateRuleItemInfoOrBuilder getDateRuleItemOrBuilder();
 
-  public com.google.ads.googleads.v12.common.UserListRuleItemInfo.RuleItemCase getRuleItemCase();
+  com.google.ads.googleads.v12.common.UserListRuleItemInfo.RuleItemCase getRuleItemCase();
 }

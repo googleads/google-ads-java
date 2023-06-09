@@ -11,6 +11,7 @@ public interface DetailedDemographicOrBuilder extends
    * <pre>
    * Output only. The resource name of the detailed demographic.
    * Detailed demographic resource names have the form:
+   *
    * `customers/{customer_id}/detailedDemographics/{detailed_demographic_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface DetailedDemographicOrBuilder extends
    * <pre>
    * Output only. The resource name of the detailed demographic.
    * Detailed demographic resource names have the form:
+   *
    * `customers/{customer_id}/detailedDemographics/{detailed_demographic_id}`
    * </pre>
    *

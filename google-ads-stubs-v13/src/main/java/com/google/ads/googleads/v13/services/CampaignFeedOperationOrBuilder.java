@@ -95,6 +95,7 @@ public interface CampaignFeedOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed campaign feed is
    * expected, in this format:
+   *
    * `customers/{customer_id}/campaignFeeds/{campaign_id}~{feed_id}`
    * </pre>
    *
@@ -106,6 +107,7 @@ public interface CampaignFeedOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed campaign feed is
    * expected, in this format:
+   *
    * `customers/{customer_id}/campaignFeeds/{campaign_id}~{feed_id}`
    * </pre>
    *
@@ -117,6 +119,7 @@ public interface CampaignFeedOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed campaign feed is
    * expected, in this format:
+   *
    * `customers/{customer_id}/campaignFeeds/{campaign_id}~{feed_id}`
    * </pre>
    *
@@ -126,5 +129,5 @@ public interface CampaignFeedOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v13.services.CampaignFeedOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v13.services.CampaignFeedOperation.OperationCase getOperationCase();
 }

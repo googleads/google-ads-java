@@ -180,5 +180,5 @@ public interface PolicyTopicEvidenceOrBuilder extends
    */
   com.google.ads.googleads.v13.common.PolicyTopicEvidence.DestinationNotWorkingOrBuilder getDestinationNotWorkingOrBuilder();
 
-  public com.google.ads.googleads.v13.common.PolicyTopicEvidence.ValueCase getValueCase();
+  com.google.ads.googleads.v13.common.PolicyTopicEvidence.ValueCase getValueCase();
 }

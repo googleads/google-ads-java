@@ -52,47 +52,47 @@ public final class BiddingStrategyServiceProto {
       "ions.proto\032\027google/api/client.proto\032\037goo" +
       "gle/api/field_behavior.proto\032\031google/api" +
       "/resource.proto\032 google/protobuf/field_m" +
-      "ask.proto\032\027google/rpc/status.proto\"\254\002\n\036M" +
-      "utateBiddingStrategiesRequest\022\030\n\013custome" +
-      "r_id\030\001 \001(\tB\003\340A\002\022T\n\noperations\030\002 \003(\0132;.go" +
-      "ogle.ads.googleads.v12.services.BiddingS" +
-      "trategyOperationB\003\340A\002\022\027\n\017partial_failure" +
-      "\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\022j\n\025respons" +
-      "e_content_type\030\005 \001(\0162K.google.ads.google" +
-      "ads.v12.enums.ResponseContentTypeEnum.Re" +
-      "sponseContentType\"\247\002\n\030BiddingStrategyOpe" +
-      "ration\022/\n\013update_mask\030\004 \001(\0132\032.google.pro" +
-      "tobuf.FieldMask\022E\n\006create\030\001 \001(\01323.google" +
-      ".ads.googleads.v12.resources.BiddingStra" +
-      "tegyH\000\022E\n\006update\030\002 \001(\01323.google.ads.goog" +
-      "leads.v12.resources.BiddingStrategyH\000\022?\n" +
-      "\006remove\030\003 \001(\tB-\372A*\n(googleads.googleapis" +
-      ".com/BiddingStrategyH\000B\013\n\toperation\"\245\001\n\037" +
-      "MutateBiddingStrategiesResponse\0221\n\025parti" +
-      "al_failure_error\030\003 \001(\0132\022.google.rpc.Stat" +
-      "us\022O\n\007results\030\002 \003(\0132>.google.ads.googlea" +
-      "ds.v12.services.MutateBiddingStrategyRes" +
-      "ult\"\262\001\n\033MutateBiddingStrategyResult\022D\n\rr" +
-      "esource_name\030\001 \001(\tB-\372A*\n(googleads.googl" +
-      "eapis.com/BiddingStrategy\022M\n\020bidding_str" +
-      "ategy\030\002 \001(\01323.google.ads.googleads.v12.r" +
-      "esources.BiddingStrategy2\337\002\n\026BiddingStra" +
-      "tegyService\022\375\001\n\027MutateBiddingStrategies\022" +
-      "A.google.ads.googleads.v12.services.Muta" +
-      "teBiddingStrategiesRequest\032B.google.ads." +
-      "googleads.v12.services.MutateBiddingStra" +
-      "tegiesResponse\"[\202\323\344\223\002<\"7/v12/customers/{" +
-      "customer_id=*}/biddingStrategies:mutate:" +
-      "\001*\332A\026customer_id,operations\032E\312A\030googlead" +
-      "s.googleapis.com\322A\'https://www.googleapi" +
-      "s.com/auth/adwordsB\207\002\n%com.google.ads.go" +
-      "ogleads.v12.servicesB\033BiddingStrategySer" +
-      "viceProtoP\001ZIgoogle.golang.org/genproto/" +
-      "googleapis/ads/googleads/v12/services;se" +
-      "rvices\242\002\003GAA\252\002!Google.Ads.GoogleAds.V12." +
-      "Services\312\002!Google\\Ads\\GoogleAds\\V12\\Serv" +
-      "ices\352\002%Google::Ads::GoogleAds::V12::Serv" +
-      "icesb\006proto3"
+      "ask.proto\032\027google/rpc/status.proto\"\256\002\n\036M" +
+      "utateBiddingStrategiesRequest\022\031\n\013custome" +
+      "r_id\030\001 \001(\tB\004\342A\001\002\022U\n\noperations\030\002 \003(\0132;.g" +
+      "oogle.ads.googleads.v12.services.Bidding" +
+      "StrategyOperationB\004\342A\001\002\022\027\n\017partial_failu" +
+      "re\030\003 \001(\010\022\025\n\rvalidate_only\030\004 \001(\010\022j\n\025respo" +
+      "nse_content_type\030\005 \001(\0162K.google.ads.goog" +
+      "leads.v12.enums.ResponseContentTypeEnum." +
+      "ResponseContentType\"\247\002\n\030BiddingStrategyO" +
+      "peration\022/\n\013update_mask\030\004 \001(\0132\032.google.p" +
+      "rotobuf.FieldMask\022E\n\006create\030\001 \001(\01323.goog" +
+      "le.ads.googleads.v12.resources.BiddingSt" +
+      "rategyH\000\022E\n\006update\030\002 \001(\01323.google.ads.go" +
+      "ogleads.v12.resources.BiddingStrategyH\000\022" +
+      "?\n\006remove\030\003 \001(\tB-\372A*\n(googleads.googleap" +
+      "is.com/BiddingStrategyH\000B\013\n\toperation\"\245\001" +
+      "\n\037MutateBiddingStrategiesResponse\0221\n\025par" +
+      "tial_failure_error\030\003 \001(\0132\022.google.rpc.St" +
+      "atus\022O\n\007results\030\002 \003(\0132>.google.ads.googl" +
+      "eads.v12.services.MutateBiddingStrategyR" +
+      "esult\"\262\001\n\033MutateBiddingStrategyResult\022D\n" +
+      "\rresource_name\030\001 \001(\tB-\372A*\n(googleads.goo" +
+      "gleapis.com/BiddingStrategy\022M\n\020bidding_s" +
+      "trategy\030\002 \001(\01323.google.ads.googleads.v12" +
+      ".resources.BiddingStrategy2\337\002\n\026BiddingSt" +
+      "rategyService\022\375\001\n\027MutateBiddingStrategie" +
+      "s\022A.google.ads.googleads.v12.services.Mu" +
+      "tateBiddingStrategiesRequest\032B.google.ad" +
+      "s.googleads.v12.services.MutateBiddingSt" +
+      "rategiesResponse\"[\332A\026customer_id,operati" +
+      "ons\202\323\344\223\002<\"7/v12/customers/{customer_id=*" +
+      "}/biddingStrategies:mutate:\001*\032E\312A\030google" +
+      "ads.googleapis.com\322A\'https://www.googlea" +
+      "pis.com/auth/adwordsB\207\002\n%com.google.ads." +
+      "googleads.v12.servicesB\033BiddingStrategyS" +
+      "erviceProtoP\001ZIgoogle.golang.org/genprot" +
+      "o/googleapis/ads/googleads/v12/services;" +
+      "services\242\002\003GAA\252\002!Google.Ads.GoogleAds.V1" +
+      "2.Services\312\002!Google\\Ads\\GoogleAds\\V12\\Se" +
+      "rvices\352\002%Google::Ads::GoogleAds::V12::Se" +
+      "rvicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

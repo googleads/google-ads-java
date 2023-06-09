@@ -34,11 +34,6 @@ private static final long serialVersionUID = 0L;
     return new UserInterest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.resources.UserInterestProto.internal_static_google_ads_googleads_v12_resources_UserInterest_descriptor;
@@ -60,6 +55,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the user interest.
    * User interest resource names have the form:
+   *
    * `customers/{customer_id}/userInterests/{user_interest_id}`
    * </pre>
    *
@@ -83,6 +79,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the user interest.
    * User interest resource names have the form:
+   *
    * `customers/{customer_id}/userInterests/{user_interest_id}`
    * </pre>
    *
@@ -560,11 +557,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.resources.UserInterest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.resources.UserInterest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -914,6 +913,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the user interest.
      * User interest resource names have the form:
+     *
      * `customers/{customer_id}/userInterests/{user_interest_id}`
      * </pre>
      *
@@ -936,6 +936,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the user interest.
      * User interest resource names have the form:
+     *
      * `customers/{customer_id}/userInterests/{user_interest_id}`
      * </pre>
      *
@@ -959,6 +960,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the user interest.
      * User interest resource names have the form:
+     *
      * `customers/{customer_id}/userInterests/{user_interest_id}`
      * </pre>
      *
@@ -978,6 +980,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the user interest.
      * User interest resource names have the form:
+     *
      * `customers/{customer_id}/userInterests/{user_interest_id}`
      * </pre>
      *
@@ -994,6 +997,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the user interest.
      * User interest resource names have the form:
+     *
      * `customers/{customer_id}/userInterests/{user_interest_id}`
      * </pre>
      *
@@ -1119,7 +1123,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setUserInterestId(long value) {
-      
+
       userInterestId_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
@@ -1384,7 +1388,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLaunchedToAll(boolean value) {
-      
+
       launchedToAll_ = value;
       bitField0_ |= 0x00000020;
       onChanged();

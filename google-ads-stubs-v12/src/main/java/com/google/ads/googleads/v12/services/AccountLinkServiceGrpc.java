@@ -131,7 +131,7 @@ public final class AccountLinkServiceGrpc {
    * accounts.
    * </pre>
    */
-  public static abstract class AccountLinkServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -149,7 +149,7 @@ public final class AccountLinkServiceGrpc {
      *   [ThirdPartyAppAnalyticsLinkError]()
      * </pre>
      */
-    public void createAccountLink(com.google.ads.googleads.v12.services.CreateAccountLinkRequest request,
+    default void createAccountLink(com.google.ads.googleads.v12.services.CreateAccountLinkRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.CreateAccountLinkResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateAccountLinkMethod(), responseObserver);
     }
@@ -172,38 +172,36 @@ public final class AccountLinkServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void mutateAccountLink(com.google.ads.googleads.v12.services.MutateAccountLinkRequest request,
+    default void mutateAccountLink(com.google.ads.googleads.v12.services.MutateAccountLinkRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.MutateAccountLinkResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getMutateAccountLinkMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getCreateAccountLinkMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.CreateAccountLinkRequest,
-                com.google.ads.googleads.v12.services.CreateAccountLinkResponse>(
-                  this, METHODID_CREATE_ACCOUNT_LINK)))
-          .addMethod(
-            getMutateAccountLinkMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.MutateAccountLinkRequest,
-                com.google.ads.googleads.v12.services.MutateAccountLinkResponse>(
-                  this, METHODID_MUTATE_ACCOUNT_LINK)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service AccountLinkService.
    * <pre>
    * This service allows management of links between Google Ads accounts and other
    * accounts.
    * </pre>
    */
-  public static final class AccountLinkServiceStub extends io.grpc.stub.AbstractAsyncStub<AccountLinkServiceStub> {
+  public static abstract class AccountLinkServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return AccountLinkServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service AccountLinkService.
+   * <pre>
+   * This service allows management of links between Google Ads accounts and other
+   * accounts.
+   * </pre>
+   */
+  public static final class AccountLinkServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<AccountLinkServiceStub> {
     private AccountLinkServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -263,12 +261,14 @@ public final class AccountLinkServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service AccountLinkService.
    * <pre>
    * This service allows management of links between Google Ads accounts and other
    * accounts.
    * </pre>
    */
-  public static final class AccountLinkServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<AccountLinkServiceBlockingStub> {
+  public static final class AccountLinkServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<AccountLinkServiceBlockingStub> {
     private AccountLinkServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -326,12 +326,14 @@ public final class AccountLinkServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service AccountLinkService.
    * <pre>
    * This service allows management of links between Google Ads accounts and other
    * accounts.
    * </pre>
    */
-  public static final class AccountLinkServiceFutureStub extends io.grpc.stub.AbstractFutureStub<AccountLinkServiceFutureStub> {
+  public static final class AccountLinkServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<AccountLinkServiceFutureStub> {
     private AccountLinkServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -398,10 +400,10 @@ public final class AccountLinkServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AccountLinkServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AccountLinkServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -432,6 +434,25 @@ public final class AccountLinkServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getCreateAccountLinkMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.CreateAccountLinkRequest,
+              com.google.ads.googleads.v12.services.CreateAccountLinkResponse>(
+                service, METHODID_CREATE_ACCOUNT_LINK)))
+        .addMethod(
+          getMutateAccountLinkMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.MutateAccountLinkRequest,
+              com.google.ads.googleads.v12.services.MutateAccountLinkResponse>(
+                service, METHODID_MUTATE_ACCOUNT_LINK)))
+        .build();
   }
 
   private static abstract class AccountLinkServiceBaseDescriptorSupplier

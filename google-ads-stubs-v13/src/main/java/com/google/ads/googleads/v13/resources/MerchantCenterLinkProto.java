@@ -33,25 +33,25 @@ public final class MerchantCenterLinkProto {
       "leads.v13.resources\032@google/ads/googlead" +
       "s/v13/enums/merchant_center_link_status." +
       "proto\032\037google/api/field_behavior.proto\032\031" +
-      "google/api/resource.proto\"\251\003\n\022MerchantCe" +
-      "nterLink\022J\n\rresource_name\030\001 \001(\tB3\340A\005\372A-\n" +
-      "+googleads.googleapis.com/MerchantCenter" +
-      "Link\022\024\n\002id\030\006 \001(\003B\003\340A\003H\000\210\001\001\022.\n\034merchant_c" +
-      "enter_account_name\030\007 \001(\tB\003\340A\003H\001\210\001\001\022e\n\006st" +
-      "atus\030\005 \001(\0162U.google.ads.googleads.v13.en" +
-      "ums.MerchantCenterLinkStatusEnum.Merchan" +
-      "tCenterLinkStatus:r\352Ao\n+googleads.google" +
-      "apis.com/MerchantCenterLink\022@customers/{" +
-      "customer_id}/merchantCenterLinks/{mercha" +
-      "nt_center_id}B\005\n\003_idB\037\n\035_merchant_center" +
-      "_account_nameB\211\002\n&com.google.ads.googlea" +
-      "ds.v13.resourcesB\027MerchantCenterLinkProt" +
-      "oP\001ZKgoogle.golang.org/genproto/googleap" +
-      "is/ads/googleads/v13/resources;resources" +
-      "\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V13.Resour" +
-      "ces\312\002\"Google\\Ads\\GoogleAds\\V13\\Resources" +
-      "\352\002&Google::Ads::GoogleAds::V13::Resource" +
-      "sb\006proto3"
+      "google/api/resource.proto\"\254\003\n\022MerchantCe" +
+      "nterLink\022K\n\rresource_name\030\001 \001(\tB4\342A\001\005\372A-" +
+      "\n+googleads.googleapis.com/MerchantCente" +
+      "rLink\022\025\n\002id\030\006 \001(\003B\004\342A\001\003H\000\210\001\001\022/\n\034merchant" +
+      "_center_account_name\030\007 \001(\tB\004\342A\001\003H\001\210\001\001\022e\n" +
+      "\006status\030\005 \001(\0162U.google.ads.googleads.v13" +
+      ".enums.MerchantCenterLinkStatusEnum.Merc" +
+      "hantCenterLinkStatus:r\352Ao\n+googleads.goo" +
+      "gleapis.com/MerchantCenterLink\022@customer" +
+      "s/{customer_id}/merchantCenterLinks/{mer" +
+      "chant_center_id}B\005\n\003_idB\037\n\035_merchant_cen" +
+      "ter_account_nameB\211\002\n&com.google.ads.goog" +
+      "leads.v13.resourcesB\027MerchantCenterLinkP" +
+      "rotoP\001ZKgoogle.golang.org/genproto/googl" +
+      "eapis/ads/googleads/v13/resources;resour" +
+      "ces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V13.Res" +
+      "ources\312\002\"Google\\Ads\\GoogleAds\\V13\\Resour" +
+      "ces\352\002&Google::Ads::GoogleAds::V13::Resou" +
+      "rcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -98,6 +98,7 @@ public interface BiddingStrategyOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed bidding strategy is
    * expected, in this format:
+   *
    * `customers/{customer_id}/biddingStrategies/{bidding_strategy_id}`
    * </pre>
    *
@@ -109,6 +110,7 @@ public interface BiddingStrategyOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed bidding strategy is
    * expected, in this format:
+   *
    * `customers/{customer_id}/biddingStrategies/{bidding_strategy_id}`
    * </pre>
    *
@@ -120,6 +122,7 @@ public interface BiddingStrategyOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed bidding strategy is
    * expected, in this format:
+   *
    * `customers/{customer_id}/biddingStrategies/{bidding_strategy_id}`
    * </pre>
    *
@@ -129,5 +132,5 @@ public interface BiddingStrategyOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v12.services.BiddingStrategyOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v12.services.BiddingStrategyOperation.OperationCase getOperationCase();
 }

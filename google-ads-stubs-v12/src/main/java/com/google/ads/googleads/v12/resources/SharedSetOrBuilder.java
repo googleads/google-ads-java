@@ -11,6 +11,7 @@ public interface SharedSetOrBuilder extends
    * <pre>
    * Immutable. The resource name of the shared set.
    * Shared set resource names have the form:
+   *
    * `customers/{customer_id}/sharedSets/{shared_set_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface SharedSetOrBuilder extends
    * <pre>
    * Immutable. The resource name of the shared set.
    * Shared set resource names have the form:
+   *
    * `customers/{customer_id}/sharedSets/{shared_set_id}`
    * </pre>
    *

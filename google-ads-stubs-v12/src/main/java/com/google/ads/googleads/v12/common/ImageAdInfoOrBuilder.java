@@ -259,5 +259,5 @@ public interface ImageAdInfoOrBuilder extends
    */
   long getAdIdToCopyImageFrom();
 
-  public com.google.ads.googleads.v12.common.ImageAdInfo.ImageCase getImageCase();
+  com.google.ads.googleads.v12.common.ImageAdInfo.ImageCase getImageCase();
 }

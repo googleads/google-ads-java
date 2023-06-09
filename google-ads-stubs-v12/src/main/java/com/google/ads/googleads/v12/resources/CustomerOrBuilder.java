@@ -11,6 +11,7 @@ public interface CustomerOrBuilder extends
    * <pre>
    * Immutable. The resource name of the customer.
    * Customer resource names have the form:
+   *
    * `customers/{customer_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface CustomerOrBuilder extends
    * <pre>
    * Immutable. The resource name of the customer.
    * Customer resource names have the form:
+   *
    * `customers/{customer_id}`
    * </pre>
    *
@@ -435,11 +437,14 @@ public interface CustomerOrBuilder extends
   /**
    * <pre>
    * Output only. Optimization score of the customer.
+   *
    * Optimization score is an estimate of how well a customer's campaigns are
    * set to perform. It ranges from 0% (0.0) to 100% (1.0). This field is null
    * for all manager customers, and for unscored non-manager customers.
+   *
    * See "About optimization score" at
    * https://support.google.com/google-ads/answer/9061546.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -450,11 +455,14 @@ public interface CustomerOrBuilder extends
   /**
    * <pre>
    * Output only. Optimization score of the customer.
+   *
    * Optimization score is an estimate of how well a customer's campaigns are
    * set to perform. It ranges from 0% (0.0) to 100% (1.0). This field is null
    * for all manager customers, and for unscored non-manager customers.
+   *
    * See "About optimization score" at
    * https://support.google.com/google-ads/answer/9061546.
+   *
    * This field is read-only.
    * </pre>
    *
@@ -466,12 +474,14 @@ public interface CustomerOrBuilder extends
   /**
    * <pre>
    * Output only. Optimization score weight of the customer.
+   *
    * Optimization score weight can be used to compare/aggregate optimization
    * scores across multiple non-manager customers. The aggregate optimization
    * score of a manager is computed as the sum over all of their customers of
    * `Customer.optimization_score * Customer.optimization_score_weight`. This
    * field is 0 for all manager customers, and for unscored non-manager
    * customers.
+   *
    * This field is read-only.
    * </pre>
    *

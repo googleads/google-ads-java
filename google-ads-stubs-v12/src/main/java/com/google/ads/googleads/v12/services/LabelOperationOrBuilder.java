@@ -92,6 +92,7 @@ public interface LabelOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the label being removed, in
    * this format:
+   *
    * `customers/{customer_id}/labels/{label_id}`
    * </pre>
    *
@@ -103,6 +104,7 @@ public interface LabelOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the label being removed, in
    * this format:
+   *
    * `customers/{customer_id}/labels/{label_id}`
    * </pre>
    *
@@ -114,6 +116,7 @@ public interface LabelOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the label being removed, in
    * this format:
+   *
    * `customers/{customer_id}/labels/{label_id}`
    * </pre>
    *
@@ -123,5 +126,5 @@ public interface LabelOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v12.services.LabelOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v12.services.LabelOperation.OperationCase getOperationCase();
 }

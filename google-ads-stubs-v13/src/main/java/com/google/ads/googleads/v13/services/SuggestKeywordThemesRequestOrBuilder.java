@@ -31,10 +31,13 @@ public interface SuggestKeywordThemesRequestOrBuilder extends
    * <pre>
    * Required. Information to get keyword theme suggestions.
    * Required fields:
+   *
    * * suggestion_info.final_url
    * * suggestion_info.language_code
    * * suggestion_info.geo_target
+   *
    * Recommended fields:
+   *
    * * suggestion_info.business_setting
    * </pre>
    *
@@ -46,10 +49,13 @@ public interface SuggestKeywordThemesRequestOrBuilder extends
    * <pre>
    * Required. Information to get keyword theme suggestions.
    * Required fields:
+   *
    * * suggestion_info.final_url
    * * suggestion_info.language_code
    * * suggestion_info.geo_target
+   *
    * Recommended fields:
+   *
    * * suggestion_info.business_setting
    * </pre>
    *
@@ -61,10 +67,13 @@ public interface SuggestKeywordThemesRequestOrBuilder extends
    * <pre>
    * Required. Information to get keyword theme suggestions.
    * Required fields:
+   *
    * * suggestion_info.final_url
    * * suggestion_info.language_code
    * * suggestion_info.geo_target
+   *
    * Recommended fields:
+   *
    * * suggestion_info.business_setting
    * </pre>
    *

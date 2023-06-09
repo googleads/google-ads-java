@@ -11,6 +11,7 @@ public interface KeywordPlanCampaignOrBuilder extends
    * <pre>
    * Immutable. The resource name of the Keyword Plan campaign.
    * KeywordPlanCampaign resource names have the form:
+   *
    * `customers/{customer_id}/keywordPlanCampaigns/{kp_campaign_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface KeywordPlanCampaignOrBuilder extends
    * <pre>
    * Immutable. The resource name of the Keyword Plan campaign.
    * KeywordPlanCampaign resource names have the form:
+   *
    * `customers/{customer_id}/keywordPlanCampaigns/{kp_campaign_id}`
    * </pre>
    *
@@ -82,6 +84,7 @@ public interface KeywordPlanCampaignOrBuilder extends
   /**
    * <pre>
    * The name of the Keyword Plan campaign.
+   *
    * This field is required and should not be empty when creating Keyword Plan
    * campaigns.
    * </pre>
@@ -93,6 +96,7 @@ public interface KeywordPlanCampaignOrBuilder extends
   /**
    * <pre>
    * The name of the Keyword Plan campaign.
+   *
    * This field is required and should not be empty when creating Keyword Plan
    * campaigns.
    * </pre>
@@ -104,6 +108,7 @@ public interface KeywordPlanCampaignOrBuilder extends
   /**
    * <pre>
    * The name of the Keyword Plan campaign.
+   *
    * This field is required and should not be empty when creating Keyword Plan
    * campaigns.
    * </pre>
@@ -162,6 +167,7 @@ public interface KeywordPlanCampaignOrBuilder extends
   /**
    * <pre>
    * Targeting network.
+   *
    * This field is required and should not be empty when creating Keyword Plan
    * campaigns.
    * </pre>
@@ -173,6 +179,7 @@ public interface KeywordPlanCampaignOrBuilder extends
   /**
    * <pre>
    * Targeting network.
+   *
    * This field is required and should not be empty when creating Keyword Plan
    * campaigns.
    * </pre>
@@ -186,6 +193,7 @@ public interface KeywordPlanCampaignOrBuilder extends
    * <pre>
    * A default max cpc bid in micros, and in the account currency, for all ad
    * groups under the campaign.
+   *
    * This field is required and should not be empty when creating Keyword Plan
    * campaigns.
    * </pre>
@@ -198,6 +206,7 @@ public interface KeywordPlanCampaignOrBuilder extends
    * <pre>
    * A default max cpc bid in micros, and in the account currency, for all ad
    * groups under the campaign.
+   *
    * This field is required and should not be empty when creating Keyword Plan
    * campaigns.
    * </pre>

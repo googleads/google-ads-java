@@ -30,11 +30,6 @@ private static final long serialVersionUID = 0L;
     return new AccountBudgetProposalOperation();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.services.AccountBudgetProposalServiceProto.internal_static_google_ads_googleads_v12_services_AccountBudgetProposalOperation_descriptor;
@@ -49,6 +44,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private int operationCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object operation_;
   public enum OperationCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -96,6 +92,7 @@ private static final long serialVersionUID = 0L;
    * FieldMask that determines which budget fields are modified.  While budgets
    * may be modified, proposals that propose such modifications are final.
    * Therefore, update operations are not supported for proposals.
+   *
    * Proposals that modify budgets have the 'update' proposal type.  Specifying
    * a mask for any other proposal type is considered an error.
    * </pre>
@@ -112,6 +109,7 @@ private static final long serialVersionUID = 0L;
    * FieldMask that determines which budget fields are modified.  While budgets
    * may be modified, proposals that propose such modifications are final.
    * Therefore, update operations are not supported for proposals.
+   *
    * Proposals that modify budgets have the 'update' proposal type.  Specifying
    * a mask for any other proposal type is considered an error.
    * </pre>
@@ -128,6 +126,7 @@ private static final long serialVersionUID = 0L;
    * FieldMask that determines which budget fields are modified.  While budgets
    * may be modified, proposals that propose such modifications are final.
    * Therefore, update operations are not supported for proposals.
+   *
    * Proposals that modify budgets have the 'update' proposal type.  Specifying
    * a mask for any other proposal type is considered an error.
    * </pre>
@@ -196,6 +195,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Remove operation: A resource name for the removed proposal is expected,
    * in this format:
+   *
    * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
    * A request may be cancelled iff it is pending.
    * </pre>
@@ -210,6 +210,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Remove operation: A resource name for the removed proposal is expected,
    * in this format:
+   *
    * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
    * A request may be cancelled iff it is pending.
    * </pre>
@@ -238,6 +239,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Remove operation: A resource name for the removed proposal is expected,
    * in this format:
+   *
    * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
    * A request may be cancelled iff it is pending.
    * </pre>
@@ -416,11 +418,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.services.AccountBudgetProposalOperation parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.services.AccountBudgetProposalOperation parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -709,6 +713,7 @@ private static final long serialVersionUID = 0L;
      * FieldMask that determines which budget fields are modified.  While budgets
      * may be modified, proposals that propose such modifications are final.
      * Therefore, update operations are not supported for proposals.
+     *
      * Proposals that modify budgets have the 'update' proposal type.  Specifying
      * a mask for any other proposal type is considered an error.
      * </pre>
@@ -724,6 +729,7 @@ private static final long serialVersionUID = 0L;
      * FieldMask that determines which budget fields are modified.  While budgets
      * may be modified, proposals that propose such modifications are final.
      * Therefore, update operations are not supported for proposals.
+     *
      * Proposals that modify budgets have the 'update' proposal type.  Specifying
      * a mask for any other proposal type is considered an error.
      * </pre>
@@ -743,6 +749,7 @@ private static final long serialVersionUID = 0L;
      * FieldMask that determines which budget fields are modified.  While budgets
      * may be modified, proposals that propose such modifications are final.
      * Therefore, update operations are not supported for proposals.
+     *
      * Proposals that modify budgets have the 'update' proposal type.  Specifying
      * a mask for any other proposal type is considered an error.
      * </pre>
@@ -767,6 +774,7 @@ private static final long serialVersionUID = 0L;
      * FieldMask that determines which budget fields are modified.  While budgets
      * may be modified, proposals that propose such modifications are final.
      * Therefore, update operations are not supported for proposals.
+     *
      * Proposals that modify budgets have the 'update' proposal type.  Specifying
      * a mask for any other proposal type is considered an error.
      * </pre>
@@ -789,6 +797,7 @@ private static final long serialVersionUID = 0L;
      * FieldMask that determines which budget fields are modified.  While budgets
      * may be modified, proposals that propose such modifications are final.
      * Therefore, update operations are not supported for proposals.
+     *
      * Proposals that modify budgets have the 'update' proposal type.  Specifying
      * a mask for any other proposal type is considered an error.
      * </pre>
@@ -816,6 +825,7 @@ private static final long serialVersionUID = 0L;
      * FieldMask that determines which budget fields are modified.  While budgets
      * may be modified, proposals that propose such modifications are final.
      * Therefore, update operations are not supported for proposals.
+     *
      * Proposals that modify budgets have the 'update' proposal type.  Specifying
      * a mask for any other proposal type is considered an error.
      * </pre>
@@ -837,6 +847,7 @@ private static final long serialVersionUID = 0L;
      * FieldMask that determines which budget fields are modified.  While budgets
      * may be modified, proposals that propose such modifications are final.
      * Therefore, update operations are not supported for proposals.
+     *
      * Proposals that modify budgets have the 'update' proposal type.  Specifying
      * a mask for any other proposal type is considered an error.
      * </pre>
@@ -853,6 +864,7 @@ private static final long serialVersionUID = 0L;
      * FieldMask that determines which budget fields are modified.  While budgets
      * may be modified, proposals that propose such modifications are final.
      * Therefore, update operations are not supported for proposals.
+     *
      * Proposals that modify budgets have the 'update' proposal type.  Specifying
      * a mask for any other proposal type is considered an error.
      * </pre>
@@ -872,6 +884,7 @@ private static final long serialVersionUID = 0L;
      * FieldMask that determines which budget fields are modified.  While budgets
      * may be modified, proposals that propose such modifications are final.
      * Therefore, update operations are not supported for proposals.
+     *
      * Proposals that modify budgets have the 'update' proposal type.  Specifying
      * a mask for any other proposal type is considered an error.
      * </pre>
@@ -1101,6 +1114,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Remove operation: A resource name for the removed proposal is expected,
      * in this format:
+     *
      * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
      * A request may be cancelled iff it is pending.
      * </pre>
@@ -1116,6 +1130,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Remove operation: A resource name for the removed proposal is expected,
      * in this format:
+     *
      * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
      * A request may be cancelled iff it is pending.
      * </pre>
@@ -1145,6 +1160,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Remove operation: A resource name for the removed proposal is expected,
      * in this format:
+     *
      * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
      * A request may be cancelled iff it is pending.
      * </pre>
@@ -1175,6 +1191,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Remove operation: A resource name for the removed proposal is expected,
      * in this format:
+     *
      * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
      * A request may be cancelled iff it is pending.
      * </pre>
@@ -1195,6 +1212,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Remove operation: A resource name for the removed proposal is expected,
      * in this format:
+     *
      * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
      * A request may be cancelled iff it is pending.
      * </pre>
@@ -1214,6 +1232,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Remove operation: A resource name for the removed proposal is expected,
      * in this format:
+     *
      * `customers/{customer_id}/accountBudgetProposals/{account_budget_proposal_id}`
      * A request may be cancelled iff it is pending.
      * </pre>

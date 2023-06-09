@@ -9,7 +9,7 @@ public interface SmartCampaignEligibleDetailsOrBuilder extends
 
   /**
    * <pre>
-   * The timestamp of the last impression observed in the last 8 hours for this
+   * The timestamp of the last impression observed in the last 48 hours for this
    * campaign.
    * The timestamp is in the customer’s timezone and in
    * “yyyy-MM-dd HH:mm:ss” format.
@@ -21,7 +21,7 @@ public interface SmartCampaignEligibleDetailsOrBuilder extends
   boolean hasLastImpressionDateTime();
   /**
    * <pre>
-   * The timestamp of the last impression observed in the last 8 hours for this
+   * The timestamp of the last impression observed in the last 48 hours for this
    * campaign.
    * The timestamp is in the customer’s timezone and in
    * “yyyy-MM-dd HH:mm:ss” format.
@@ -33,7 +33,7 @@ public interface SmartCampaignEligibleDetailsOrBuilder extends
   java.lang.String getLastImpressionDateTime();
   /**
    * <pre>
-   * The timestamp of the last impression observed in the last 8 hours for this
+   * The timestamp of the last impression observed in the last 48 hours for this
    * campaign.
    * The timestamp is in the customer’s timezone and in
    * “yyyy-MM-dd HH:mm:ss” format.

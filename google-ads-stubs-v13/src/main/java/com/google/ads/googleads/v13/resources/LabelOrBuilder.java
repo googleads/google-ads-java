@@ -53,7 +53,9 @@ public interface LabelOrBuilder extends
   /**
    * <pre>
    * The name of the label.
+   *
    * This field is required and should not be empty when creating a new label.
+   *
    * The length of this string should be between 1 and 80, inclusive.
    * </pre>
    *
@@ -64,7 +66,9 @@ public interface LabelOrBuilder extends
   /**
    * <pre>
    * The name of the label.
+   *
    * This field is required and should not be empty when creating a new label.
+   *
    * The length of this string should be between 1 and 80, inclusive.
    * </pre>
    *
@@ -75,7 +79,9 @@ public interface LabelOrBuilder extends
   /**
    * <pre>
    * The name of the label.
+   *
    * This field is required and should not be empty when creating a new label.
+   *
    * The length of this string should be between 1 and 80, inclusive.
    * </pre>
    *

@@ -71,5 +71,5 @@ public interface KeywordThemeInfoOrBuilder extends
   com.google.protobuf.ByteString
       getFreeFormKeywordThemeBytes();
 
-  public com.google.ads.googleads.v12.common.KeywordThemeInfo.KeywordThemeCase getKeywordThemeCase();
+  com.google.ads.googleads.v12.common.KeywordThemeInfo.KeywordThemeCase getKeywordThemeCase();
 }

@@ -11,6 +11,7 @@ public interface TopicConstantOrBuilder extends
    * <pre>
    * Output only. The resource name of the topic constant.
    * topic constant resource names have the form:
+   *
    * `topicConstants/{topic_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface TopicConstantOrBuilder extends
    * <pre>
    * Output only. The resource name of the topic constant.
    * topic constant resource names have the form:
+   *
    * `topicConstants/{topic_id}`
    * </pre>
    *

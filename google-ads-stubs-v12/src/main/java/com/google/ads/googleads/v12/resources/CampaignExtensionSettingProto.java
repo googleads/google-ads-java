@@ -35,29 +35,29 @@ public final class CampaignExtensionSettingProto {
       "ce.proto\0323google/ads/googleads/v12/enums" +
       "/extension_type.proto\032\037google/api/field_" +
       "behavior.proto\032\031google/api/resource.prot" +
-      "o\"\327\004\n\030CampaignExtensionSetting\022P\n\rresour" +
-      "ce_name\030\001 \001(\tB9\340A\005\372A3\n1googleads.googlea" +
-      "pis.com/CampaignExtensionSetting\022\\\n\016exte" +
-      "nsion_type\030\002 \001(\0162?.google.ads.googleads." +
-      "v12.enums.ExtensionTypeEnum.ExtensionTyp" +
-      "eB\003\340A\005\022@\n\010campaign\030\006 \001(\tB)\340A\005\372A#\n!google" +
-      "ads.googleapis.com/CampaignH\000\210\001\001\022M\n\024exte" +
-      "nsion_feed_items\030\007 \003(\tB/\372A,\n*googleads.g" +
-      "oogleapis.com/ExtensionFeedItem\022a\n\006devic" +
-      "e\030\005 \001(\0162Q.google.ads.googleads.v12.enums" +
-      ".ExtensionSettingDeviceEnum.ExtensionSet" +
-      "tingDevice:\211\001\352A\205\001\n1googleads.googleapis." +
-      "com/CampaignExtensionSetting\022Pcustomers/" +
-      "{customer_id}/campaignExtensionSettings/" +
-      "{campaign_id}~{extension_type}B\013\n\t_campa" +
-      "ignB\217\002\n&com.google.ads.googleads.v12.res" +
-      "ourcesB\035CampaignExtensionSettingProtoP\001Z" +
-      "Kgoogle.golang.org/genproto/googleapis/a" +
-      "ds/googleads/v12/resources;resources\242\002\003G" +
-      "AA\252\002\"Google.Ads.GoogleAds.V12.Resources\312" +
-      "\002\"Google\\Ads\\GoogleAds\\V12\\Resources\352\002&G" +
-      "oogle::Ads::GoogleAds::V12::Resourcesb\006p" +
-      "roto3"
+      "o\"\332\004\n\030CampaignExtensionSetting\022Q\n\rresour" +
+      "ce_name\030\001 \001(\tB:\342A\001\005\372A3\n1googleads.google" +
+      "apis.com/CampaignExtensionSetting\022]\n\016ext" +
+      "ension_type\030\002 \001(\0162?.google.ads.googleads" +
+      ".v12.enums.ExtensionTypeEnum.ExtensionTy" +
+      "peB\004\342A\001\005\022A\n\010campaign\030\006 \001(\tB*\342A\001\005\372A#\n!goo" +
+      "gleads.googleapis.com/CampaignH\000\210\001\001\022M\n\024e" +
+      "xtension_feed_items\030\007 \003(\tB/\372A,\n*googlead" +
+      "s.googleapis.com/ExtensionFeedItem\022a\n\006de" +
+      "vice\030\005 \001(\0162Q.google.ads.googleads.v12.en" +
+      "ums.ExtensionSettingDeviceEnum.Extension" +
+      "SettingDevice:\211\001\352A\205\001\n1googleads.googleap" +
+      "is.com/CampaignExtensionSetting\022Pcustome" +
+      "rs/{customer_id}/campaignExtensionSettin" +
+      "gs/{campaign_id}~{extension_type}B\013\n\t_ca" +
+      "mpaignB\217\002\n&com.google.ads.googleads.v12." +
+      "resourcesB\035CampaignExtensionSettingProto" +
+      "P\001ZKgoogle.golang.org/genproto/googleapi" +
+      "s/ads/googleads/v12/resources;resources\242" +
+      "\002\003GAA\252\002\"Google.Ads.GoogleAds.V12.Resourc" +
+      "es\312\002\"Google\\Ads\\GoogleAds\\V12\\Resources\352" +
+      "\002&Google::Ads::GoogleAds::V12::Resources" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

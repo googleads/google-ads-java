@@ -28,9 +28,9 @@ public interface FlexibleRuleUserListInfoOrBuilder extends
 
   /**
    * <pre>
-   * Actions that are located on the inclusive side.
-   * These are joined together by either AND/OR as specified by the
-   * inclusive_rule_operator.
+   * Rules representing users that should be included in the user list. These
+   * are located on the left side of the AND_NOT operator, and joined together
+   * by either AND/OR as specified by the inclusive_rule_operator.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo inclusive_operands = 2;</code>
@@ -39,9 +39,9 @@ public interface FlexibleRuleUserListInfoOrBuilder extends
       getInclusiveOperandsList();
   /**
    * <pre>
-   * Actions that are located on the inclusive side.
-   * These are joined together by either AND/OR as specified by the
-   * inclusive_rule_operator.
+   * Rules representing users that should be included in the user list. These
+   * are located on the left side of the AND_NOT operator, and joined together
+   * by either AND/OR as specified by the inclusive_rule_operator.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo inclusive_operands = 2;</code>
@@ -49,9 +49,9 @@ public interface FlexibleRuleUserListInfoOrBuilder extends
   com.google.ads.googleads.v12.common.FlexibleRuleOperandInfo getInclusiveOperands(int index);
   /**
    * <pre>
-   * Actions that are located on the inclusive side.
-   * These are joined together by either AND/OR as specified by the
-   * inclusive_rule_operator.
+   * Rules representing users that should be included in the user list. These
+   * are located on the left side of the AND_NOT operator, and joined together
+   * by either AND/OR as specified by the inclusive_rule_operator.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo inclusive_operands = 2;</code>
@@ -59,9 +59,9 @@ public interface FlexibleRuleUserListInfoOrBuilder extends
   int getInclusiveOperandsCount();
   /**
    * <pre>
-   * Actions that are located on the inclusive side.
-   * These are joined together by either AND/OR as specified by the
-   * inclusive_rule_operator.
+   * Rules representing users that should be included in the user list. These
+   * are located on the left side of the AND_NOT operator, and joined together
+   * by either AND/OR as specified by the inclusive_rule_operator.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo inclusive_operands = 2;</code>
@@ -70,9 +70,9 @@ public interface FlexibleRuleUserListInfoOrBuilder extends
       getInclusiveOperandsOrBuilderList();
   /**
    * <pre>
-   * Actions that are located on the inclusive side.
-   * These are joined together by either AND/OR as specified by the
-   * inclusive_rule_operator.
+   * Rules representing users that should be included in the user list. These
+   * are located on the left side of the AND_NOT operator, and joined together
+   * by either AND/OR as specified by the inclusive_rule_operator.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo inclusive_operands = 2;</code>
@@ -82,8 +82,9 @@ public interface FlexibleRuleUserListInfoOrBuilder extends
 
   /**
    * <pre>
-   * Actions that are located on the exclusive side.
-   * These are joined together with OR.
+   * Rules representing users that should be excluded from the user list. These
+   * are located on the right side of the AND_NOT operator, and joined together
+   * by OR.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo exclusive_operands = 3;</code>
@@ -92,8 +93,9 @@ public interface FlexibleRuleUserListInfoOrBuilder extends
       getExclusiveOperandsList();
   /**
    * <pre>
-   * Actions that are located on the exclusive side.
-   * These are joined together with OR.
+   * Rules representing users that should be excluded from the user list. These
+   * are located on the right side of the AND_NOT operator, and joined together
+   * by OR.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo exclusive_operands = 3;</code>
@@ -101,8 +103,9 @@ public interface FlexibleRuleUserListInfoOrBuilder extends
   com.google.ads.googleads.v12.common.FlexibleRuleOperandInfo getExclusiveOperands(int index);
   /**
    * <pre>
-   * Actions that are located on the exclusive side.
-   * These are joined together with OR.
+   * Rules representing users that should be excluded from the user list. These
+   * are located on the right side of the AND_NOT operator, and joined together
+   * by OR.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo exclusive_operands = 3;</code>
@@ -110,8 +113,9 @@ public interface FlexibleRuleUserListInfoOrBuilder extends
   int getExclusiveOperandsCount();
   /**
    * <pre>
-   * Actions that are located on the exclusive side.
-   * These are joined together with OR.
+   * Rules representing users that should be excluded from the user list. These
+   * are located on the right side of the AND_NOT operator, and joined together
+   * by OR.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo exclusive_operands = 3;</code>
@@ -120,8 +124,9 @@ public interface FlexibleRuleUserListInfoOrBuilder extends
       getExclusiveOperandsOrBuilderList();
   /**
    * <pre>
-   * Actions that are located on the exclusive side.
-   * These are joined together with OR.
+   * Rules representing users that should be excluded from the user list. These
+   * are located on the right side of the AND_NOT operator, and joined together
+   * by OR.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v12.common.FlexibleRuleOperandInfo exclusive_operands = 3;</code>

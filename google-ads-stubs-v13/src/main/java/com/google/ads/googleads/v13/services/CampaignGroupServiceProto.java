@@ -52,46 +52,46 @@ public final class CampaignGroupServiceProto {
       ".proto\032\027google/api/client.proto\032\037google/" +
       "api/field_behavior.proto\032\031google/api/res" +
       "ource.proto\032 google/protobuf/field_mask." +
-      "proto\032\027google/rpc/status.proto\"\247\002\n\033Mutat" +
-      "eCampaignGroupsRequest\022\030\n\013customer_id\030\001 " +
-      "\001(\tB\003\340A\002\022R\n\noperations\030\002 \003(\01329.google.ad" +
-      "s.googleads.v13.services.CampaignGroupOp" +
-      "erationB\003\340A\002\022\027\n\017partial_failure\030\003 \001(\010\022\025\n" +
-      "\rvalidate_only\030\004 \001(\010\022j\n\025response_content" +
-      "_type\030\005 \001(\0162K.google.ads.googleads.v13.e" +
-      "nums.ResponseContentTypeEnum.ResponseCon" +
-      "tentType\"\237\002\n\026CampaignGroupOperation\022/\n\013u" +
-      "pdate_mask\030\004 \001(\0132\032.google.protobuf.Field" +
-      "Mask\022C\n\006create\030\001 \001(\01321.google.ads.google" +
-      "ads.v13.resources.CampaignGroupH\000\022C\n\006upd" +
-      "ate\030\002 \001(\01321.google.ads.googleads.v13.res" +
-      "ources.CampaignGroupH\000\022=\n\006remove\030\003 \001(\tB+" +
-      "\372A(\n&googleads.googleapis.com/CampaignGr" +
-      "oupH\000B\013\n\toperation\"\240\001\n\034MutateCampaignGro" +
-      "upsResponse\022M\n\007results\030\002 \003(\0132<.google.ad" +
-      "s.googleads.v13.services.MutateCampaignG" +
-      "roupResult\0221\n\025partial_failure_error\030\003 \001(" +
-      "\0132\022.google.rpc.Status\"\255\001\n\031MutateCampaign" +
-      "GroupResult\022E\n\rresource_name\030\001 \001(\tB.\340A\002\372" +
-      "A(\n&googleads.googleapis.com/CampaignGro" +
-      "up\022I\n\016campaign_group\030\002 \001(\01321.google.ads." +
-      "googleads.v13.resources.CampaignGroup2\321\002" +
-      "\n\024CampaignGroupService\022\361\001\n\024MutateCampaig" +
-      "nGroups\022>.google.ads.googleads.v13.servi" +
-      "ces.MutateCampaignGroupsRequest\032?.google" +
-      ".ads.googleads.v13.services.MutateCampai" +
-      "gnGroupsResponse\"X\202\323\344\223\0029\"4/v13/customers" +
-      "/{customer_id=*}/campaignGroups:mutate:\001" +
-      "*\332A\026customer_id,operations\032E\312A\030googleads" +
-      ".googleapis.com\322A\'https://www.googleapis" +
-      ".com/auth/adwordsB\205\002\n%com.google.ads.goo" +
-      "gleads.v13.servicesB\031CampaignGroupServic" +
-      "eProtoP\001ZIgoogle.golang.org/genproto/goo" +
-      "gleapis/ads/googleads/v13/services;servi" +
-      "ces\242\002\003GAA\252\002!Google.Ads.GoogleAds.V13.Ser" +
-      "vices\312\002!Google\\Ads\\GoogleAds\\V13\\Service" +
-      "s\352\002%Google::Ads::GoogleAds::V13::Service" +
-      "sb\006proto3"
+      "proto\032\027google/rpc/status.proto\"\251\002\n\033Mutat" +
+      "eCampaignGroupsRequest\022\031\n\013customer_id\030\001 " +
+      "\001(\tB\004\342A\001\002\022S\n\noperations\030\002 \003(\01329.google.a" +
+      "ds.googleads.v13.services.CampaignGroupO" +
+      "perationB\004\342A\001\002\022\027\n\017partial_failure\030\003 \001(\010\022" +
+      "\025\n\rvalidate_only\030\004 \001(\010\022j\n\025response_conte" +
+      "nt_type\030\005 \001(\0162K.google.ads.googleads.v13" +
+      ".enums.ResponseContentTypeEnum.ResponseC" +
+      "ontentType\"\237\002\n\026CampaignGroupOperation\022/\n" +
+      "\013update_mask\030\004 \001(\0132\032.google.protobuf.Fie" +
+      "ldMask\022C\n\006create\030\001 \001(\01321.google.ads.goog" +
+      "leads.v13.resources.CampaignGroupH\000\022C\n\006u" +
+      "pdate\030\002 \001(\01321.google.ads.googleads.v13.r" +
+      "esources.CampaignGroupH\000\022=\n\006remove\030\003 \001(\t" +
+      "B+\372A(\n&googleads.googleapis.com/Campaign" +
+      "GroupH\000B\013\n\toperation\"\240\001\n\034MutateCampaignG" +
+      "roupsResponse\022M\n\007results\030\002 \003(\0132<.google." +
+      "ads.googleads.v13.services.MutateCampaig" +
+      "nGroupResult\0221\n\025partial_failure_error\030\003 " +
+      "\001(\0132\022.google.rpc.Status\"\256\001\n\031MutateCampai" +
+      "gnGroupResult\022F\n\rresource_name\030\001 \001(\tB/\342A" +
+      "\001\002\372A(\n&googleads.googleapis.com/Campaign" +
+      "Group\022I\n\016campaign_group\030\002 \001(\01321.google.a" +
+      "ds.googleads.v13.resources.CampaignGroup" +
+      "2\321\002\n\024CampaignGroupService\022\361\001\n\024MutateCamp" +
+      "aignGroups\022>.google.ads.googleads.v13.se" +
+      "rvices.MutateCampaignGroupsRequest\032?.goo" +
+      "gle.ads.googleads.v13.services.MutateCam" +
+      "paignGroupsResponse\"X\332A\026customer_id,oper" +
+      "ations\202\323\344\223\0029\"4/v13/customers/{customer_i" +
+      "d=*}/campaignGroups:mutate:\001*\032E\312A\030google" +
+      "ads.googleapis.com\322A\'https://www.googlea" +
+      "pis.com/auth/adwordsB\205\002\n%com.google.ads." +
+      "googleads.v13.servicesB\031CampaignGroupSer" +
+      "viceProtoP\001ZIgoogle.golang.org/genproto/" +
+      "googleapis/ads/googleads/v13/services;se" +
+      "rvices\242\002\003GAA\252\002!Google.Ads.GoogleAds.V13." +
+      "Services\312\002!Google\\Ads\\GoogleAds\\V13\\Serv" +
+      "ices\352\002%Google::Ads::GoogleAds::V13::Serv" +
+      "icesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

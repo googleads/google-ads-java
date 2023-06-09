@@ -11,6 +11,7 @@ public interface BiddingSeasonalityAdjustmentOrBuilder extends
    * <pre>
    * Immutable. The resource name of the seasonality adjustment.
    * Seasonality adjustment resource names have the form:
+   *
    * `customers/{customer_id}/biddingSeasonalityAdjustments/{seasonality_adjustment_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface BiddingSeasonalityAdjustmentOrBuilder extends
    * <pre>
    * Immutable. The resource name of the seasonality adjustment.
    * Seasonality adjustment resource names have the form:
+   *
    * `customers/{customer_id}/biddingSeasonalityAdjustments/{seasonality_adjustment_id}`
    * </pre>
    *
@@ -83,6 +85,7 @@ public interface BiddingSeasonalityAdjustmentOrBuilder extends
    * <pre>
    * Required. The inclusive start time of the seasonality adjustment in
    * yyyy-MM-dd HH:mm:ss format.
+   *
    * A seasonality adjustment is forward looking and should be used for events
    * that start and end in the future.
    * </pre>
@@ -95,6 +98,7 @@ public interface BiddingSeasonalityAdjustmentOrBuilder extends
    * <pre>
    * Required. The inclusive start time of the seasonality adjustment in
    * yyyy-MM-dd HH:mm:ss format.
+   *
    * A seasonality adjustment is forward looking and should be used for events
    * that start and end in the future.
    * </pre>
@@ -109,6 +113,7 @@ public interface BiddingSeasonalityAdjustmentOrBuilder extends
    * <pre>
    * Required. The exclusive end time of the seasonality adjustment in
    * yyyy-MM-dd HH:mm:ss format.
+   *
    * The length of [start_date_time, end_date_time) interval must be
    * within (0, 14 days].
    * </pre>
@@ -121,6 +126,7 @@ public interface BiddingSeasonalityAdjustmentOrBuilder extends
    * <pre>
    * Required. The exclusive end time of the seasonality adjustment in
    * yyyy-MM-dd HH:mm:ss format.
+   *
    * The length of [start_date_time, end_date_time) interval must be
    * within (0, 14 days].
    * </pre>

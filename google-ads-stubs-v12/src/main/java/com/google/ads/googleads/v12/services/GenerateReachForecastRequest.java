@@ -34,11 +34,6 @@ private static final long serialVersionUID = 0L;
     return new GenerateReachForecastRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.services.ReachPlanServiceProto.internal_static_google_ads_googleads_v12_services_GenerateReachForecastRequest_descriptor;
@@ -209,6 +204,7 @@ private static final long serialVersionUID = 0L;
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user.
    * If not specified, no cap is applied.
+   *
    * This field is deprecated in v4 and will eventually be removed.
    * Use cookie_frequency_cap_setting instead.
    * </pre>
@@ -227,6 +223,7 @@ private static final long serialVersionUID = 0L;
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user.
    * If not specified, no cap is applied.
+   *
    * This field is deprecated in v4 and will eventually be removed.
    * Use cookie_frequency_cap_setting instead.
    * </pre>
@@ -248,6 +245,7 @@ private static final long serialVersionUID = 0L;
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user during a specified time interval.
    * If not specified, a default of 0 (no cap) is applied.
+   *
    * This field replaces the deprecated cookie_frequency_cap field.
    * </pre>
    *
@@ -265,6 +263,7 @@ private static final long serialVersionUID = 0L;
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user during a specified time interval.
    * If not specified, a default of 0 (no cap) is applied.
+   *
    * This field replaces the deprecated cookie_frequency_cap field.
    * </pre>
    *
@@ -282,6 +281,7 @@ private static final long serialVersionUID = 0L;
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user during a specified time interval.
    * If not specified, a default of 0 (no cap) is applied.
+   *
    * This field replaces the deprecated cookie_frequency_cap field.
    * </pre>
    *
@@ -300,6 +300,7 @@ private static final long serialVersionUID = 0L;
    * exposed to the ad) for the reported reach metrics [1-10].
    * This won't affect the targeting, but just the reporting.
    * If not specified, a default of 1 is applied.
+   *
    * This field cannot be combined with the effective_frequency_limit field.
    * </pre>
    *
@@ -316,6 +317,7 @@ private static final long serialVersionUID = 0L;
    * exposed to the ad) for the reported reach metrics [1-10].
    * This won't affect the targeting, but just the reporting.
    * If not specified, a default of 1 is applied.
+   *
    * This field cannot be combined with the effective_frequency_limit field.
    * </pre>
    *
@@ -336,8 +338,10 @@ private static final long serialVersionUID = 0L;
    * Forecast.effective_frequency_breakdowns.
    * If not specified, Forecast.effective_frequency_breakdowns will not be
    * provided.
+   *
    * The effective frequency value provided here will also be used as the
    * minimum effective frequency for the reported reach metrics.
+   *
    * This field cannot be combined with the min_effective_frequency field.
    * </pre>
    *
@@ -355,8 +359,10 @@ private static final long serialVersionUID = 0L;
    * Forecast.effective_frequency_breakdowns.
    * If not specified, Forecast.effective_frequency_breakdowns will not be
    * provided.
+   *
    * The effective frequency value provided here will also be used as the
    * minimum effective frequency for the reported reach metrics.
+   *
    * This field cannot be combined with the min_effective_frequency field.
    * </pre>
    *
@@ -374,8 +380,10 @@ private static final long serialVersionUID = 0L;
    * Forecast.effective_frequency_breakdowns.
    * If not specified, Forecast.effective_frequency_breakdowns will not be
    * provided.
+   *
    * The effective frequency value provided here will also be used as the
    * minimum effective frequency for the reported reach metrics.
+   *
    * This field cannot be combined with the min_effective_frequency field.
    * </pre>
    *
@@ -391,8 +399,10 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The targeting to be applied to all products selected in the product mix.
+   *
    * This is planned targeting: execution details might vary based on the
    * advertising product, consult an implementation specialist.
+   *
    * See specific metrics for details on how targeting affects them.
    * </pre>
    *
@@ -406,8 +416,10 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The targeting to be applied to all products selected in the product mix.
+   *
    * This is planned targeting: execution details might vary based on the
    * advertising product, consult an implementation specialist.
+   *
    * See specific metrics for details on how targeting affects them.
    * </pre>
    *
@@ -421,8 +433,10 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The targeting to be applied to all products selected in the product mix.
+   *
    * This is planned targeting: execution details might vary based on the
    * advertising product, consult an implementation specialist.
+   *
    * See specific metrics for details on how targeting affects them.
    * </pre>
    *
@@ -543,7 +557,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The name of the customer being planned for. This is a user-defined value.
-   * Required if targeting.audience_targeting is set.
    * </pre>
    *
    * <code>optional string customer_reach_group = 14;</code>
@@ -556,7 +569,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The name of the customer being planned for. This is a user-defined value.
-   * Required if targeting.audience_targeting is set.
    * </pre>
    *
    * <code>optional string customer_reach_group = 14;</code>
@@ -578,7 +590,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The name of the customer being planned for. This is a user-defined value.
-   * Required if targeting.audience_targeting is set.
    * </pre>
    *
    * <code>optional string customer_reach_group = 14;</code>
@@ -862,11 +873,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.services.GenerateReachForecastRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.services.GenerateReachForecastRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1676,6 +1689,7 @@ private static final long serialVersionUID = 0L;
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user.
      * If not specified, no cap is applied.
+     *
      * This field is deprecated in v4 and will eventually be removed.
      * Use cookie_frequency_cap_setting instead.
      * </pre>
@@ -1694,6 +1708,7 @@ private static final long serialVersionUID = 0L;
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user.
      * If not specified, no cap is applied.
+     *
      * This field is deprecated in v4 and will eventually be removed.
      * Use cookie_frequency_cap_setting instead.
      * </pre>
@@ -1712,6 +1727,7 @@ private static final long serialVersionUID = 0L;
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user.
      * If not specified, no cap is applied.
+     *
      * This field is deprecated in v4 and will eventually be removed.
      * Use cookie_frequency_cap_setting instead.
      * </pre>
@@ -1721,7 +1737,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCookieFrequencyCap(int value) {
-      
+
       cookieFrequencyCap_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
@@ -1734,6 +1750,7 @@ private static final long serialVersionUID = 0L;
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user.
      * If not specified, no cap is applied.
+     *
      * This field is deprecated in v4 and will eventually be removed.
      * Use cookie_frequency_cap_setting instead.
      * </pre>
@@ -1758,6 +1775,7 @@ private static final long serialVersionUID = 0L;
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user during a specified time interval.
      * If not specified, a default of 0 (no cap) is applied.
+     *
      * This field replaces the deprecated cookie_frequency_cap field.
      * </pre>
      *
@@ -1774,6 +1792,7 @@ private static final long serialVersionUID = 0L;
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user during a specified time interval.
      * If not specified, a default of 0 (no cap) is applied.
+     *
      * This field replaces the deprecated cookie_frequency_cap field.
      * </pre>
      *
@@ -1794,6 +1813,7 @@ private static final long serialVersionUID = 0L;
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user during a specified time interval.
      * If not specified, a default of 0 (no cap) is applied.
+     *
      * This field replaces the deprecated cookie_frequency_cap field.
      * </pre>
      *
@@ -1819,6 +1839,7 @@ private static final long serialVersionUID = 0L;
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user during a specified time interval.
      * If not specified, a default of 0 (no cap) is applied.
+     *
      * This field replaces the deprecated cookie_frequency_cap field.
      * </pre>
      *
@@ -1842,6 +1863,7 @@ private static final long serialVersionUID = 0L;
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user during a specified time interval.
      * If not specified, a default of 0 (no cap) is applied.
+     *
      * This field replaces the deprecated cookie_frequency_cap field.
      * </pre>
      *
@@ -1870,6 +1892,7 @@ private static final long serialVersionUID = 0L;
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user during a specified time interval.
      * If not specified, a default of 0 (no cap) is applied.
+     *
      * This field replaces the deprecated cookie_frequency_cap field.
      * </pre>
      *
@@ -1892,6 +1915,7 @@ private static final long serialVersionUID = 0L;
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user during a specified time interval.
      * If not specified, a default of 0 (no cap) is applied.
+     *
      * This field replaces the deprecated cookie_frequency_cap field.
      * </pre>
      *
@@ -1909,6 +1933,7 @@ private static final long serialVersionUID = 0L;
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user during a specified time interval.
      * If not specified, a default of 0 (no cap) is applied.
+     *
      * This field replaces the deprecated cookie_frequency_cap field.
      * </pre>
      *
@@ -1929,6 +1954,7 @@ private static final long serialVersionUID = 0L;
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user during a specified time interval.
      * If not specified, a default of 0 (no cap) is applied.
+     *
      * This field replaces the deprecated cookie_frequency_cap field.
      * </pre>
      *
@@ -1955,6 +1981,7 @@ private static final long serialVersionUID = 0L;
      * exposed to the ad) for the reported reach metrics [1-10].
      * This won't affect the targeting, but just the reporting.
      * If not specified, a default of 1 is applied.
+     *
      * This field cannot be combined with the effective_frequency_limit field.
      * </pre>
      *
@@ -1971,6 +1998,7 @@ private static final long serialVersionUID = 0L;
      * exposed to the ad) for the reported reach metrics [1-10].
      * This won't affect the targeting, but just the reporting.
      * If not specified, a default of 1 is applied.
+     *
      * This field cannot be combined with the effective_frequency_limit field.
      * </pre>
      *
@@ -1987,6 +2015,7 @@ private static final long serialVersionUID = 0L;
      * exposed to the ad) for the reported reach metrics [1-10].
      * This won't affect the targeting, but just the reporting.
      * If not specified, a default of 1 is applied.
+     *
      * This field cannot be combined with the effective_frequency_limit field.
      * </pre>
      *
@@ -1995,7 +2024,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMinEffectiveFrequency(int value) {
-      
+
       minEffectiveFrequency_ = value;
       bitField0_ |= 0x00000020;
       onChanged();
@@ -2007,6 +2036,7 @@ private static final long serialVersionUID = 0L;
      * exposed to the ad) for the reported reach metrics [1-10].
      * This won't affect the targeting, but just the reporting.
      * If not specified, a default of 1 is applied.
+     *
      * This field cannot be combined with the effective_frequency_limit field.
      * </pre>
      *
@@ -2030,8 +2060,10 @@ private static final long serialVersionUID = 0L;
      * Forecast.effective_frequency_breakdowns.
      * If not specified, Forecast.effective_frequency_breakdowns will not be
      * provided.
+     *
      * The effective frequency value provided here will also be used as the
      * minimum effective frequency for the reported reach metrics.
+     *
      * This field cannot be combined with the min_effective_frequency field.
      * </pre>
      *
@@ -2048,8 +2080,10 @@ private static final long serialVersionUID = 0L;
      * Forecast.effective_frequency_breakdowns.
      * If not specified, Forecast.effective_frequency_breakdowns will not be
      * provided.
+     *
      * The effective frequency value provided here will also be used as the
      * minimum effective frequency for the reported reach metrics.
+     *
      * This field cannot be combined with the min_effective_frequency field.
      * </pre>
      *
@@ -2070,8 +2104,10 @@ private static final long serialVersionUID = 0L;
      * Forecast.effective_frequency_breakdowns.
      * If not specified, Forecast.effective_frequency_breakdowns will not be
      * provided.
+     *
      * The effective frequency value provided here will also be used as the
      * minimum effective frequency for the reported reach metrics.
+     *
      * This field cannot be combined with the min_effective_frequency field.
      * </pre>
      *
@@ -2097,8 +2133,10 @@ private static final long serialVersionUID = 0L;
      * Forecast.effective_frequency_breakdowns.
      * If not specified, Forecast.effective_frequency_breakdowns will not be
      * provided.
+     *
      * The effective frequency value provided here will also be used as the
      * minimum effective frequency for the reported reach metrics.
+     *
      * This field cannot be combined with the min_effective_frequency field.
      * </pre>
      *
@@ -2122,8 +2160,10 @@ private static final long serialVersionUID = 0L;
      * Forecast.effective_frequency_breakdowns.
      * If not specified, Forecast.effective_frequency_breakdowns will not be
      * provided.
+     *
      * The effective frequency value provided here will also be used as the
      * minimum effective frequency for the reported reach metrics.
+     *
      * This field cannot be combined with the min_effective_frequency field.
      * </pre>
      *
@@ -2152,8 +2192,10 @@ private static final long serialVersionUID = 0L;
      * Forecast.effective_frequency_breakdowns.
      * If not specified, Forecast.effective_frequency_breakdowns will not be
      * provided.
+     *
      * The effective frequency value provided here will also be used as the
      * minimum effective frequency for the reported reach metrics.
+     *
      * This field cannot be combined with the min_effective_frequency field.
      * </pre>
      *
@@ -2176,8 +2218,10 @@ private static final long serialVersionUID = 0L;
      * Forecast.effective_frequency_breakdowns.
      * If not specified, Forecast.effective_frequency_breakdowns will not be
      * provided.
+     *
      * The effective frequency value provided here will also be used as the
      * minimum effective frequency for the reported reach metrics.
+     *
      * This field cannot be combined with the min_effective_frequency field.
      * </pre>
      *
@@ -2195,8 +2239,10 @@ private static final long serialVersionUID = 0L;
      * Forecast.effective_frequency_breakdowns.
      * If not specified, Forecast.effective_frequency_breakdowns will not be
      * provided.
+     *
      * The effective frequency value provided here will also be used as the
      * minimum effective frequency for the reported reach metrics.
+     *
      * This field cannot be combined with the min_effective_frequency field.
      * </pre>
      *
@@ -2217,8 +2263,10 @@ private static final long serialVersionUID = 0L;
      * Forecast.effective_frequency_breakdowns.
      * If not specified, Forecast.effective_frequency_breakdowns will not be
      * provided.
+     *
      * The effective frequency value provided here will also be used as the
      * minimum effective frequency for the reported reach metrics.
+     *
      * This field cannot be combined with the min_effective_frequency field.
      * </pre>
      *
@@ -2244,8 +2292,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The targeting to be applied to all products selected in the product mix.
+     *
      * This is planned targeting: execution details might vary based on the
      * advertising product, consult an implementation specialist.
+     *
      * See specific metrics for details on how targeting affects them.
      * </pre>
      *
@@ -2258,8 +2308,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The targeting to be applied to all products selected in the product mix.
+     *
      * This is planned targeting: execution details might vary based on the
      * advertising product, consult an implementation specialist.
+     *
      * See specific metrics for details on how targeting affects them.
      * </pre>
      *
@@ -2276,8 +2328,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The targeting to be applied to all products selected in the product mix.
+     *
      * This is planned targeting: execution details might vary based on the
      * advertising product, consult an implementation specialist.
+     *
      * See specific metrics for details on how targeting affects them.
      * </pre>
      *
@@ -2299,8 +2353,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The targeting to be applied to all products selected in the product mix.
+     *
      * This is planned targeting: execution details might vary based on the
      * advertising product, consult an implementation specialist.
+     *
      * See specific metrics for details on how targeting affects them.
      * </pre>
      *
@@ -2320,8 +2376,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The targeting to be applied to all products selected in the product mix.
+     *
      * This is planned targeting: execution details might vary based on the
      * advertising product, consult an implementation specialist.
+     *
      * See specific metrics for details on how targeting affects them.
      * </pre>
      *
@@ -2346,8 +2404,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The targeting to be applied to all products selected in the product mix.
+     *
      * This is planned targeting: execution details might vary based on the
      * advertising product, consult an implementation specialist.
+     *
      * See specific metrics for details on how targeting affects them.
      * </pre>
      *
@@ -2366,8 +2426,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The targeting to be applied to all products selected in the product mix.
+     *
      * This is planned targeting: execution details might vary based on the
      * advertising product, consult an implementation specialist.
+     *
      * See specific metrics for details on how targeting affects them.
      * </pre>
      *
@@ -2381,8 +2443,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The targeting to be applied to all products selected in the product mix.
+     *
      * This is planned targeting: execution details might vary based on the
      * advertising product, consult an implementation specialist.
+     *
      * See specific metrics for details on how targeting affects them.
      * </pre>
      *
@@ -2399,8 +2463,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The targeting to be applied to all products selected in the product mix.
+     *
      * This is planned targeting: execution details might vary based on the
      * advertising product, consult an implementation specialist.
+     *
      * See specific metrics for details on how targeting affects them.
      * </pre>
      *
@@ -2909,7 +2975,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the customer being planned for. This is a user-defined value.
-     * Required if targeting.audience_targeting is set.
      * </pre>
      *
      * <code>optional string customer_reach_group = 14;</code>
@@ -2921,7 +2986,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the customer being planned for. This is a user-defined value.
-     * Required if targeting.audience_targeting is set.
      * </pre>
      *
      * <code>optional string customer_reach_group = 14;</code>
@@ -2942,7 +3006,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the customer being planned for. This is a user-defined value.
-     * Required if targeting.audience_targeting is set.
      * </pre>
      *
      * <code>optional string customer_reach_group = 14;</code>
@@ -2964,7 +3027,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the customer being planned for. This is a user-defined value.
-     * Required if targeting.audience_targeting is set.
      * </pre>
      *
      * <code>optional string customer_reach_group = 14;</code>
@@ -2982,7 +3044,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the customer being planned for. This is a user-defined value.
-     * Required if targeting.audience_targeting is set.
      * </pre>
      *
      * <code>optional string customer_reach_group = 14;</code>
@@ -2997,7 +3058,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The name of the customer being planned for. This is a user-defined value.
-     * Required if targeting.audience_targeting is set.
      * </pre>
      *
      * <code>optional string customer_reach_group = 14;</code>

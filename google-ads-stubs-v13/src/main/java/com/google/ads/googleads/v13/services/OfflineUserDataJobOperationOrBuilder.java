@@ -88,5 +88,5 @@ public interface OfflineUserDataJobOperationOrBuilder extends
    */
   boolean getRemoveAll();
 
-  public com.google.ads.googleads.v13.services.OfflineUserDataJobOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v13.services.OfflineUserDataJobOperation.OperationCase getOperationCase();
 }

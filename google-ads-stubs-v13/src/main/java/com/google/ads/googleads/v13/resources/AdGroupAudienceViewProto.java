@@ -32,19 +32,19 @@ public final class AdGroupAudienceViewProto {
       "group_audience_view.proto\022\"google.ads.go" +
       "ogleads.v13.resources\032\037google/api/field_" +
       "behavior.proto\032\031google/api/resource.prot" +
-      "o\"\340\001\n\023AdGroupAudienceView\022K\n\rresource_na" +
-      "me\030\001 \001(\tB4\340A\003\372A.\n,googleads.googleapis.c" +
-      "om/AdGroupAudienceView:|\352Ay\n,googleads.g" +
-      "oogleapis.com/AdGroupAudienceView\022Icusto" +
-      "mers/{customer_id}/adGroupAudienceViews/" +
-      "{ad_group_id}~{criterion_id}B\212\002\n&com.goo" +
-      "gle.ads.googleads.v13.resourcesB\030AdGroup" +
-      "AudienceViewProtoP\001ZKgoogle.golang.org/g" +
-      "enproto/googleapis/ads/googleads/v13/res" +
-      "ources;resources\242\002\003GAA\252\002\"Google.Ads.Goog" +
-      "leAds.V13.Resources\312\002\"Google\\Ads\\GoogleA" +
-      "ds\\V13\\Resources\352\002&Google::Ads::GoogleAd" +
-      "s::V13::Resourcesb\006proto3"
+      "o\"\341\001\n\023AdGroupAudienceView\022L\n\rresource_na" +
+      "me\030\001 \001(\tB5\342A\001\003\372A.\n,googleads.googleapis." +
+      "com/AdGroupAudienceView:|\352Ay\n,googleads." +
+      "googleapis.com/AdGroupAudienceView\022Icust" +
+      "omers/{customer_id}/adGroupAudienceViews" +
+      "/{ad_group_id}~{criterion_id}B\212\002\n&com.go" +
+      "ogle.ads.googleads.v13.resourcesB\030AdGrou" +
+      "pAudienceViewProtoP\001ZKgoogle.golang.org/" +
+      "genproto/googleapis/ads/googleads/v13/re" +
+      "sources;resources\242\002\003GAA\252\002\"Google.Ads.Goo" +
+      "gleAds.V13.Resources\312\002\"Google\\Ads\\Google" +
+      "Ads\\V13\\Resources\352\002&Google::Ads::GoogleA" +
+      "ds::V13::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

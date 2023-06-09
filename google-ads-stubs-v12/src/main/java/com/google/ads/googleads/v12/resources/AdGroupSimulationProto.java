@@ -36,39 +36,39 @@ public final class AdGroupSimulationProto {
       "tion_method.proto\0324google/ads/googleads/" +
       "v12/enums/simulation_type.proto\032\037google/" +
       "api/field_behavior.proto\032\031google/api/res" +
-      "ource.proto\"\364\007\n\021AdGroupSimulation\022I\n\rres" +
-      "ource_name\030\001 \001(\tB2\340A\003\372A,\n*googleads.goog" +
-      "leapis.com/AdGroupSimulation\022\035\n\013ad_group" +
-      "_id\030\014 \001(\003B\003\340A\003H\001\210\001\001\022T\n\004type\030\003 \001(\0162A.goog" +
-      "le.ads.googleads.v12.enums.SimulationTyp" +
-      "eEnum.SimulationTypeB\003\340A\003\022\177\n\023modificatio" +
-      "n_method\030\004 \001(\0162].google.ads.googleads.v1" +
-      "2.enums.SimulationModificationMethodEnum" +
-      ".SimulationModificationMethodB\003\340A\003\022\034\n\nst" +
-      "art_date\030\r \001(\tB\003\340A\003H\002\210\001\001\022\032\n\010end_date\030\016 \001" +
-      "(\tB\003\340A\003H\003\210\001\001\022]\n\022cpc_bid_point_list\030\010 \001(\013" +
-      "2:.google.ads.googleads.v12.common.CpcBi" +
-      "dSimulationPointListB\003\340A\003H\000\022]\n\022cpv_bid_p" +
-      "oint_list\030\n \001(\0132:.google.ads.googleads.v" +
-      "12.common.CpvBidSimulationPointListB\003\340A\003" +
-      "H\000\022c\n\025target_cpa_point_list\030\t \001(\0132=.goog" +
-      "le.ads.googleads.v12.common.TargetCpaSim" +
-      "ulationPointListB\003\340A\003H\000\022e\n\026target_roas_p" +
-      "oint_list\030\013 \001(\0132>.google.ads.googleads.v" +
-      "12.common.TargetRoasSimulationPointListB" +
-      "\003\340A\003H\000:\237\001\352A\233\001\n*googleads.googleapis.com/" +
-      "AdGroupSimulation\022mcustomers/{customer_i" +
-      "d}/adGroupSimulations/{ad_group_id}~{typ" +
-      "e}~{modification_method}~{start_date}~{e" +
-      "nd_date}B\014\n\npoint_listB\016\n\014_ad_group_idB\r" +
-      "\n\013_start_dateB\013\n\t_end_dateB\210\002\n&com.googl" +
-      "e.ads.googleads.v12.resourcesB\026AdGroupSi" +
-      "mulationProtoP\001ZKgoogle.golang.org/genpr" +
-      "oto/googleapis/ads/googleads/v12/resourc" +
-      "es;resources\242\002\003GAA\252\002\"Google.Ads.GoogleAd" +
-      "s.V12.Resources\312\002\"Google\\Ads\\GoogleAds\\V" +
-      "12\\Resources\352\002&Google::Ads::GoogleAds::V" +
-      "12::Resourcesb\006proto3"
+      "ource.proto\"\377\007\n\021AdGroupSimulation\022J\n\rres" +
+      "ource_name\030\001 \001(\tB3\342A\001\003\372A,\n*googleads.goo" +
+      "gleapis.com/AdGroupSimulation\022\036\n\013ad_grou" +
+      "p_id\030\014 \001(\003B\004\342A\001\003H\001\210\001\001\022U\n\004type\030\003 \001(\0162A.go" +
+      "ogle.ads.googleads.v12.enums.SimulationT" +
+      "ypeEnum.SimulationTypeB\004\342A\001\003\022\200\001\n\023modific" +
+      "ation_method\030\004 \001(\0162].google.ads.googlead" +
+      "s.v12.enums.SimulationModificationMethod" +
+      "Enum.SimulationModificationMethodB\004\342A\001\003\022" +
+      "\035\n\nstart_date\030\r \001(\tB\004\342A\001\003H\002\210\001\001\022\033\n\010end_da" +
+      "te\030\016 \001(\tB\004\342A\001\003H\003\210\001\001\022^\n\022cpc_bid_point_lis" +
+      "t\030\010 \001(\0132:.google.ads.googleads.v12.commo" +
+      "n.CpcBidSimulationPointListB\004\342A\001\003H\000\022^\n\022c" +
+      "pv_bid_point_list\030\n \001(\0132:.google.ads.goo" +
+      "gleads.v12.common.CpvBidSimulationPointL" +
+      "istB\004\342A\001\003H\000\022d\n\025target_cpa_point_list\030\t \001" +
+      "(\0132=.google.ads.googleads.v12.common.Tar" +
+      "getCpaSimulationPointListB\004\342A\001\003H\000\022f\n\026tar" +
+      "get_roas_point_list\030\013 \001(\0132>.google.ads.g" +
+      "oogleads.v12.common.TargetRoasSimulation" +
+      "PointListB\004\342A\001\003H\000:\237\001\352A\233\001\n*googleads.goog" +
+      "leapis.com/AdGroupSimulation\022mcustomers/" +
+      "{customer_id}/adGroupSimulations/{ad_gro" +
+      "up_id}~{type}~{modification_method}~{sta" +
+      "rt_date}~{end_date}B\014\n\npoint_listB\016\n\014_ad" +
+      "_group_idB\r\n\013_start_dateB\013\n\t_end_dateB\210\002" +
+      "\n&com.google.ads.googleads.v12.resources" +
+      "B\026AdGroupSimulationProtoP\001ZKgoogle.golan" +
+      "g.org/genproto/googleapis/ads/googleads/" +
+      "v12/resources;resources\242\002\003GAA\252\002\"Google.A" +
+      "ds.GoogleAds.V12.Resources\312\002\"Google\\Ads\\" +
+      "GoogleAds\\V12\\Resources\352\002&Google::Ads::G" +
+      "oogleAds::V12::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

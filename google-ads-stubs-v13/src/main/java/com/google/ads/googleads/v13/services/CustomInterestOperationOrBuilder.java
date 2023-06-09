@@ -94,5 +94,5 @@ public interface CustomInterestOperationOrBuilder extends
    */
   com.google.ads.googleads.v13.resources.CustomInterestOrBuilder getUpdateOrBuilder();
 
-  public com.google.ads.googleads.v13.services.CustomInterestOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v13.services.CustomInterestOperation.OperationCase getOperationCase();
 }

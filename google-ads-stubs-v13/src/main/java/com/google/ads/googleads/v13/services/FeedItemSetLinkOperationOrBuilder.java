@@ -41,6 +41,7 @@ public interface FeedItemSetLinkOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed feed item set link is
    * expected, in this format:
+   *
    * `customers/{customer_id}/feedItemSetLinks/{feed_id}_{feed_item_set_id}_{feed_item_id}`
    * </pre>
    *
@@ -52,6 +53,7 @@ public interface FeedItemSetLinkOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed feed item set link is
    * expected, in this format:
+   *
    * `customers/{customer_id}/feedItemSetLinks/{feed_id}_{feed_item_set_id}_{feed_item_id}`
    * </pre>
    *
@@ -63,6 +65,7 @@ public interface FeedItemSetLinkOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed feed item set link is
    * expected, in this format:
+   *
    * `customers/{customer_id}/feedItemSetLinks/{feed_id}_{feed_item_set_id}_{feed_item_id}`
    * </pre>
    *
@@ -72,5 +75,5 @@ public interface FeedItemSetLinkOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v13.services.FeedItemSetLinkOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v13.services.FeedItemSetLinkOperation.OperationCase getOperationCase();
 }

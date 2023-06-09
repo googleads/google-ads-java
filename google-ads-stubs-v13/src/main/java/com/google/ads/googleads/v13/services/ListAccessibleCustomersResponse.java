@@ -21,7 +21,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ListAccessibleCustomersResponse() {
-    resourceNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    resourceNames_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -31,11 +32,6 @@ private static final long serialVersionUID = 0L;
     return new ListAccessibleCustomersResponse();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.services.CustomerServiceProto.internal_static_google_ads_googleads_v13_services_ListAccessibleCustomersResponse_descriptor;
@@ -51,7 +47,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int RESOURCE_NAMES_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList resourceNames_;
+  private com.google.protobuf.LazyStringArrayList resourceNames_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * Resource name of customers directly accessible by the
@@ -220,11 +217,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.services.ListAccessibleCustomersResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.services.ListAccessibleCustomersResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -305,8 +304,8 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      resourceNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      resourceNames_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -333,22 +332,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v13.services.ListAccessibleCustomersResponse buildPartial() {
       com.google.ads.googleads.v13.services.ListAccessibleCustomersResponse result = new com.google.ads.googleads.v13.services.ListAccessibleCustomersResponse(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(com.google.ads.googleads.v13.services.ListAccessibleCustomersResponse result) {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        resourceNames_ = resourceNames_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.resourceNames_ = resourceNames_;
-    }
-
     private void buildPartial0(com.google.ads.googleads.v13.services.ListAccessibleCustomersResponse result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        resourceNames_.makeImmutable();
+        result.resourceNames_ = resourceNames_;
+      }
     }
 
     @java.lang.Override
@@ -398,7 +392,7 @@ private static final long serialVersionUID = 0L;
       if (!other.resourceNames_.isEmpty()) {
         if (resourceNames_.isEmpty()) {
           resourceNames_ = other.resourceNames_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ |= 0x00000001;
         } else {
           ensureResourceNamesIsMutable();
           resourceNames_.addAll(other.resourceNames_);
@@ -454,12 +448,13 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.google.protobuf.LazyStringList resourceNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList resourceNames_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureResourceNamesIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!resourceNames_.isModifiable()) {
         resourceNames_ = new com.google.protobuf.LazyStringArrayList(resourceNames_);
-        bitField0_ |= 0x00000001;
-       }
+      }
+      bitField0_ |= 0x00000001;
     }
     /**
      * <pre>
@@ -472,7 +467,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getResourceNamesList() {
-      return resourceNames_.getUnmodifiableView();
+      resourceNames_.makeImmutable();
+      return resourceNames_;
     }
     /**
      * <pre>
@@ -529,6 +525,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureResourceNamesIsMutable();
       resourceNames_.set(index, value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -547,6 +544,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureResourceNamesIsMutable();
       resourceNames_.add(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -565,6 +563,7 @@ private static final long serialVersionUID = 0L;
       ensureResourceNamesIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, resourceNames_);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -578,8 +577,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearResourceNames() {
-      resourceNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      resourceNames_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000001);;
       onChanged();
       return this;
     }
@@ -599,6 +599,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureResourceNamesIsMutable();
       resourceNames_.add(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }

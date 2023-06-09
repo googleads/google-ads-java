@@ -95,6 +95,7 @@ public interface ExperimentOperationOrBuilder extends
    * <pre>
    * Remove operation: The experiment is expected to have a valid
    * resource name, in this format:
+   *
    * `customers/{customer_id}/experiments/{campaign_experiment_id}`
    * </pre>
    *
@@ -106,6 +107,7 @@ public interface ExperimentOperationOrBuilder extends
    * <pre>
    * Remove operation: The experiment is expected to have a valid
    * resource name, in this format:
+   *
    * `customers/{customer_id}/experiments/{campaign_experiment_id}`
    * </pre>
    *
@@ -117,6 +119,7 @@ public interface ExperimentOperationOrBuilder extends
    * <pre>
    * Remove operation: The experiment is expected to have a valid
    * resource name, in this format:
+   *
    * `customers/{customer_id}/experiments/{campaign_experiment_id}`
    * </pre>
    *
@@ -126,5 +129,5 @@ public interface ExperimentOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v13.services.ExperimentOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v13.services.ExperimentOperation.OperationCase getOperationCase();
 }

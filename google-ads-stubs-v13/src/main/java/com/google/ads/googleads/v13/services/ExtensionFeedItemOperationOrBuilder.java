@@ -98,6 +98,7 @@ public interface ExtensionFeedItemOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed extension feed item
    * is expected, in this format:
+   *
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
@@ -109,6 +110,7 @@ public interface ExtensionFeedItemOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed extension feed item
    * is expected, in this format:
+   *
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
@@ -120,6 +122,7 @@ public interface ExtensionFeedItemOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed extension feed item
    * is expected, in this format:
+   *
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
@@ -129,5 +132,5 @@ public interface ExtensionFeedItemOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v13.services.ExtensionFeedItemOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v13.services.ExtensionFeedItemOperation.OperationCase getOperationCase();
 }

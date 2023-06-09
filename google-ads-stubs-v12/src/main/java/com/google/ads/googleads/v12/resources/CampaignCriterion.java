@@ -34,11 +34,6 @@ private static final long serialVersionUID = 0L;
     return new CampaignCriterion();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.resources.CampaignCriterionProto.internal_static_google_ads_googleads_v12_resources_CampaignCriterion_descriptor;
@@ -54,6 +49,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   private int criterionCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object criterion_;
   public enum CriterionCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -157,6 +153,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the campaign criterion.
    * Campaign criterion resource names have the form:
+   *
    * `customers/{customer_id}/campaignCriteria/{campaign_id}~{criterion_id}`
    * </pre>
    *
@@ -180,6 +177,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the campaign criterion.
    * Campaign criterion resource names have the form:
+   *
    * `customers/{customer_id}/campaignCriteria/{campaign_id}~{criterion_id}`
    * </pre>
    *
@@ -265,6 +263,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The ID of the criterion.
+   *
    * This field is ignored during mutate.
    * </pre>
    *
@@ -278,6 +277,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The ID of the criterion.
+   *
    * This field is ignored during mutate.
    * </pre>
    *
@@ -295,6 +295,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The display name of the criterion.
+   *
    * This field is ignored for mutates.
    * </pre>
    *
@@ -317,6 +318,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The display name of the criterion.
+   *
    * This field is ignored for mutates.
    * </pre>
    *
@@ -2411,11 +2413,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.resources.CampaignCriterion parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.resources.CampaignCriterion parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -3305,6 +3309,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the campaign criterion.
      * Campaign criterion resource names have the form:
+     *
      * `customers/{customer_id}/campaignCriteria/{campaign_id}~{criterion_id}`
      * </pre>
      *
@@ -3327,6 +3332,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the campaign criterion.
      * Campaign criterion resource names have the form:
+     *
      * `customers/{customer_id}/campaignCriteria/{campaign_id}~{criterion_id}`
      * </pre>
      *
@@ -3350,6 +3356,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the campaign criterion.
      * Campaign criterion resource names have the form:
+     *
      * `customers/{customer_id}/campaignCriteria/{campaign_id}~{criterion_id}`
      * </pre>
      *
@@ -3369,6 +3376,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the campaign criterion.
      * Campaign criterion resource names have the form:
+     *
      * `customers/{customer_id}/campaignCriteria/{campaign_id}~{criterion_id}`
      * </pre>
      *
@@ -3385,6 +3393,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the campaign criterion.
      * Campaign criterion resource names have the form:
+     *
      * `customers/{customer_id}/campaignCriteria/{campaign_id}~{criterion_id}`
      * </pre>
      *
@@ -3509,6 +3518,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The ID of the criterion.
+     *
      * This field is ignored during mutate.
      * </pre>
      *
@@ -3522,6 +3532,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The ID of the criterion.
+     *
      * This field is ignored during mutate.
      * </pre>
      *
@@ -3535,6 +3546,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The ID of the criterion.
+     *
      * This field is ignored during mutate.
      * </pre>
      *
@@ -3543,7 +3555,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCriterionId(long value) {
-      
+
       criterionId_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
@@ -3552,6 +3564,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The ID of the criterion.
+     *
      * This field is ignored during mutate.
      * </pre>
      *
@@ -3569,6 +3582,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The display name of the criterion.
+     *
      * This field is ignored for mutates.
      * </pre>
      *
@@ -3590,6 +3604,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The display name of the criterion.
+     *
      * This field is ignored for mutates.
      * </pre>
      *
@@ -3612,6 +3627,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The display name of the criterion.
+     *
      * This field is ignored for mutates.
      * </pre>
      *
@@ -3630,6 +3646,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The display name of the criterion.
+     *
      * This field is ignored for mutates.
      * </pre>
      *
@@ -3645,6 +3662,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The display name of the criterion.
+     *
      * This field is ignored for mutates.
      * </pre>
      *
@@ -3703,7 +3721,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setBidModifier(float value) {
-      
+
       bidModifier_ = value;
       bitField0_ |= 0x00000010;
       onChanged();
@@ -3761,7 +3779,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setNegative(boolean value) {
-      
+
       negative_ = value;
       bitField0_ |= 0x00000020;
       onChanged();

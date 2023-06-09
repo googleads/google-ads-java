@@ -88,5 +88,5 @@ public interface LeadFormCustomQuestionFieldOrBuilder extends
    */
   boolean getHasLocationAnswer();
 
-  public com.google.ads.googleads.v13.common.LeadFormCustomQuestionField.AnswersCase getAnswersCase();
+  com.google.ads.googleads.v13.common.LeadFormCustomQuestionField.AnswersCase getAnswersCase();
 }

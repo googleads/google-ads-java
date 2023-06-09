@@ -32,11 +32,6 @@ private static final long serialVersionUID = 0L;
     return new SuggestSmartCampaignBudgetOptionsResponse();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.services.SmartCampaignSuggestServiceProto.internal_static_google_ads_googleads_v13_services_SuggestSmartCampaignBudgetOptionsResponse_descriptor;
@@ -100,11 +95,6 @@ private static final long serialVersionUID = 0L;
       return new Metrics();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.services.SmartCampaignSuggestServiceProto.internal_static_google_ads_googleads_v13_services_SuggestSmartCampaignBudgetOptionsResponse_Metrics_descriptor;
@@ -270,11 +260,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.services.SuggestSmartCampaignBudgetOptionsResponse.Metrics parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.services.SuggestSmartCampaignBudgetOptionsResponse.Metrics parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -523,7 +515,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setMinDailyClicks(long value) {
-        
+
         minDailyClicks_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -567,7 +559,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setMaxDailyClicks(long value) {
-        
+
         maxDailyClicks_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -723,11 +715,6 @@ private static final long serialVersionUID = 0L;
       return new BudgetOption();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v13.services.SmartCampaignSuggestServiceProto.internal_static_google_ads_googleads_v13_services_SuggestSmartCampaignBudgetOptionsResponse_BudgetOption_descriptor;
@@ -925,11 +912,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static com.google.ads.googleads.v13.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static com.google.ads.googleads.v13.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1190,7 +1179,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setDailyAmountMicros(long value) {
-        
+
         dailyAmountMicros_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -1701,11 +1690,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.services.SuggestSmartCampaignBudgetOptionsResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.services.SuggestSmartCampaignBudgetOptionsResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)

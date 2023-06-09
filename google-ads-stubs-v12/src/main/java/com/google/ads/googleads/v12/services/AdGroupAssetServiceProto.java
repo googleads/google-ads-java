@@ -52,45 +52,45 @@ public final class AdGroupAssetServiceProto {
       ".proto\032\027google/api/client.proto\032\037google/" +
       "api/field_behavior.proto\032\031google/api/res" +
       "ource.proto\032 google/protobuf/field_mask." +
-      "proto\032\027google/rpc/status.proto\"\245\002\n\032Mutat" +
-      "eAdGroupAssetsRequest\022\030\n\013customer_id\030\001 \001" +
-      "(\tB\003\340A\002\022Q\n\noperations\030\002 \003(\01328.google.ads" +
-      ".googleads.v12.services.AdGroupAssetOper" +
-      "ationB\003\340A\002\022\027\n\017partial_failure\030\003 \001(\010\022\025\n\rv" +
-      "alidate_only\030\004 \001(\010\022j\n\025response_content_t" +
-      "ype\030\005 \001(\0162K.google.ads.googleads.v12.enu" +
-      "ms.ResponseContentTypeEnum.ResponseConte" +
-      "ntType\"\233\002\n\025AdGroupAssetOperation\022/\n\013upda" +
-      "te_mask\030\004 \001(\0132\032.google.protobuf.FieldMas" +
-      "k\022B\n\006create\030\001 \001(\01320.google.ads.googleads" +
-      ".v12.resources.AdGroupAssetH\000\022B\n\006update\030" +
-      "\003 \001(\01320.google.ads.googleads.v12.resourc" +
-      "es.AdGroupAssetH\000\022<\n\006remove\030\002 \001(\tB*\372A\'\n%" +
-      "googleads.googleapis.com/AdGroupAssetH\000B" +
-      "\013\n\toperation\"\236\001\n\033MutateAdGroupAssetsResp" +
-      "onse\0221\n\025partial_failure_error\030\001 \001(\0132\022.go" +
-      "ogle.rpc.Status\022L\n\007results\030\002 \003(\0132;.googl" +
-      "e.ads.googleads.v12.services.MutateAdGro" +
-      "upAssetResult\"\247\001\n\030MutateAdGroupAssetResu" +
-      "lt\022A\n\rresource_name\030\001 \001(\tB*\372A\'\n%googlead" +
-      "s.googleapis.com/AdGroupAsset\022H\n\016ad_grou" +
-      "p_asset\030\002 \001(\01320.google.ads.googleads.v12" +
-      ".resources.AdGroupAsset2\314\002\n\023AdGroupAsset" +
-      "Service\022\355\001\n\023MutateAdGroupAssets\022=.google" +
-      ".ads.googleads.v12.services.MutateAdGrou" +
-      "pAssetsRequest\032>.google.ads.googleads.v1" +
-      "2.services.MutateAdGroupAssetsResponse\"W" +
-      "\202\323\344\223\0028\"3/v12/customers/{customer_id=*}/a" +
-      "dGroupAssets:mutate:\001*\332A\026customer_id,ope" +
-      "rations\032E\312A\030googleads.googleapis.com\322A\'h" +
-      "ttps://www.googleapis.com/auth/adwordsB\204" +
-      "\002\n%com.google.ads.googleads.v12.services" +
-      "B\030AdGroupAssetServiceProtoP\001ZIgoogle.gol" +
-      "ang.org/genproto/googleapis/ads/googlead" +
-      "s/v12/services;services\242\002\003GAA\252\002!Google.A" +
-      "ds.GoogleAds.V12.Services\312\002!Google\\Ads\\G" +
-      "oogleAds\\V12\\Services\352\002%Google::Ads::Goo" +
-      "gleAds::V12::Servicesb\006proto3"
+      "proto\032\027google/rpc/status.proto\"\247\002\n\032Mutat" +
+      "eAdGroupAssetsRequest\022\031\n\013customer_id\030\001 \001" +
+      "(\tB\004\342A\001\002\022R\n\noperations\030\002 \003(\01328.google.ad" +
+      "s.googleads.v12.services.AdGroupAssetOpe" +
+      "rationB\004\342A\001\002\022\027\n\017partial_failure\030\003 \001(\010\022\025\n" +
+      "\rvalidate_only\030\004 \001(\010\022j\n\025response_content" +
+      "_type\030\005 \001(\0162K.google.ads.googleads.v12.e" +
+      "nums.ResponseContentTypeEnum.ResponseCon" +
+      "tentType\"\233\002\n\025AdGroupAssetOperation\022/\n\013up" +
+      "date_mask\030\004 \001(\0132\032.google.protobuf.FieldM" +
+      "ask\022B\n\006create\030\001 \001(\01320.google.ads.googlea" +
+      "ds.v12.resources.AdGroupAssetH\000\022B\n\006updat" +
+      "e\030\003 \001(\01320.google.ads.googleads.v12.resou" +
+      "rces.AdGroupAssetH\000\022<\n\006remove\030\002 \001(\tB*\372A\'" +
+      "\n%googleads.googleapis.com/AdGroupAssetH" +
+      "\000B\013\n\toperation\"\236\001\n\033MutateAdGroupAssetsRe" +
+      "sponse\0221\n\025partial_failure_error\030\001 \001(\0132\022." +
+      "google.rpc.Status\022L\n\007results\030\002 \003(\0132;.goo" +
+      "gle.ads.googleads.v12.services.MutateAdG" +
+      "roupAssetResult\"\247\001\n\030MutateAdGroupAssetRe" +
+      "sult\022A\n\rresource_name\030\001 \001(\tB*\372A\'\n%google" +
+      "ads.googleapis.com/AdGroupAsset\022H\n\016ad_gr" +
+      "oup_asset\030\002 \001(\01320.google.ads.googleads.v" +
+      "12.resources.AdGroupAsset2\314\002\n\023AdGroupAss" +
+      "etService\022\355\001\n\023MutateAdGroupAssets\022=.goog" +
+      "le.ads.googleads.v12.services.MutateAdGr" +
+      "oupAssetsRequest\032>.google.ads.googleads." +
+      "v12.services.MutateAdGroupAssetsResponse" +
+      "\"W\332A\026customer_id,operations\202\323\344\223\0028\"3/v12/" +
+      "customers/{customer_id=*}/adGroupAssets:" +
+      "mutate:\001*\032E\312A\030googleads.googleapis.com\322A" +
+      "\'https://www.googleapis.com/auth/adwords" +
+      "B\204\002\n%com.google.ads.googleads.v12.servic" +
+      "esB\030AdGroupAssetServiceProtoP\001ZIgoogle.g" +
+      "olang.org/genproto/googleapis/ads/google" +
+      "ads/v12/services;services\242\002\003GAA\252\002!Google" +
+      ".Ads.GoogleAds.V12.Services\312\002!Google\\Ads" +
+      "\\GoogleAds\\V12\\Services\352\002%Google::Ads::G" +
+      "oogleAds::V12::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

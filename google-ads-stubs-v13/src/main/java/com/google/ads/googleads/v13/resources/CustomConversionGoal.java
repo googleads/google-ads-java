@@ -22,7 +22,8 @@ private static final long serialVersionUID = 0L;
   private CustomConversionGoal() {
     resourceName_ = "";
     name_ = "";
-    conversionActions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    conversionActions_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     status_ = 0;
   }
 
@@ -33,11 +34,6 @@ private static final long serialVersionUID = 0L;
     return new CustomConversionGoal();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v13.resources.CustomConversionGoalProto.internal_static_google_ads_googleads_v13_resources_CustomConversionGoal_descriptor;
@@ -58,6 +54,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the custom conversion goal.
    * Custom conversion goal resource names have the form:
+   *
    * `customers/{customer_id}/customConversionGoals/{goal_id}`
    * </pre>
    *
@@ -81,6 +78,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the custom conversion goal.
    * Custom conversion goal resource names have the form:
+   *
    * `customers/{customer_id}/customConversionGoals/{goal_id}`
    * </pre>
    *
@@ -166,7 +164,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int CONVERSION_ACTIONS_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList conversionActions_;
+  private com.google.protobuf.LazyStringArrayList conversionActions_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * Conversion actions that the custom conversion goal makes biddable.
@@ -399,11 +398,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v13.resources.CustomConversionGoal parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v13.resources.CustomConversionGoal parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -486,8 +487,8 @@ private static final long serialVersionUID = 0L;
       resourceName_ = "";
       id_ = 0L;
       name_ = "";
-      conversionActions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000008);
+      conversionActions_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       status_ = 0;
       return this;
     }
@@ -515,18 +516,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v13.resources.CustomConversionGoal buildPartial() {
       com.google.ads.googleads.v13.resources.CustomConversionGoal result = new com.google.ads.googleads.v13.resources.CustomConversionGoal(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(com.google.ads.googleads.v13.resources.CustomConversionGoal result) {
-      if (((bitField0_ & 0x00000008) != 0)) {
-        conversionActions_ = conversionActions_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000008);
-      }
-      result.conversionActions_ = conversionActions_;
     }
 
     private void buildPartial0(com.google.ads.googleads.v13.resources.CustomConversionGoal result) {
@@ -539,6 +531,10 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.name_ = name_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        conversionActions_.makeImmutable();
+        result.conversionActions_ = conversionActions_;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.status_ = status_;
@@ -605,7 +601,7 @@ private static final long serialVersionUID = 0L;
       if (!other.conversionActions_.isEmpty()) {
         if (conversionActions_.isEmpty()) {
           conversionActions_ = other.conversionActions_;
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ |= 0x00000008;
         } else {
           ensureConversionActionsIsMutable();
           conversionActions_.addAll(other.conversionActions_);
@@ -689,6 +685,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the custom conversion goal.
      * Custom conversion goal resource names have the form:
+     *
      * `customers/{customer_id}/customConversionGoals/{goal_id}`
      * </pre>
      *
@@ -711,6 +708,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the custom conversion goal.
      * Custom conversion goal resource names have the form:
+     *
      * `customers/{customer_id}/customConversionGoals/{goal_id}`
      * </pre>
      *
@@ -734,6 +732,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the custom conversion goal.
      * Custom conversion goal resource names have the form:
+     *
      * `customers/{customer_id}/customConversionGoals/{goal_id}`
      * </pre>
      *
@@ -753,6 +752,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the custom conversion goal.
      * Custom conversion goal resource names have the form:
+     *
      * `customers/{customer_id}/customConversionGoals/{goal_id}`
      * </pre>
      *
@@ -769,6 +769,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the custom conversion goal.
      * Custom conversion goal resource names have the form:
+     *
      * `customers/{customer_id}/customConversionGoals/{goal_id}`
      * </pre>
      *
@@ -809,7 +810,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setId(long value) {
-      
+
       id_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -922,12 +923,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.LazyStringList conversionActions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList conversionActions_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureConversionActionsIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
+      if (!conversionActions_.isModifiable()) {
         conversionActions_ = new com.google.protobuf.LazyStringArrayList(conversionActions_);
-        bitField0_ |= 0x00000008;
-       }
+      }
+      bitField0_ |= 0x00000008;
     }
     /**
      * <pre>
@@ -939,7 +941,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getConversionActionsList() {
-      return conversionActions_.getUnmodifiableView();
+      conversionActions_.makeImmutable();
+      return conversionActions_;
     }
     /**
      * <pre>
@@ -992,6 +995,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureConversionActionsIsMutable();
       conversionActions_.set(index, value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1009,6 +1013,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureConversionActionsIsMutable();
       conversionActions_.add(value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1026,6 +1031,7 @@ private static final long serialVersionUID = 0L;
       ensureConversionActionsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, conversionActions_);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1038,8 +1044,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearConversionActions() {
-      conversionActions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000008);
+      conversionActions_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000008);;
       onChanged();
       return this;
     }
@@ -1058,6 +1065,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureConversionActionsIsMutable();
       conversionActions_.add(value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }

@@ -11,6 +11,7 @@ public interface CustomAudienceOrBuilder extends
    * <pre>
    * Immutable. The resource name of the custom audience.
    * Custom audience resource names have the form:
+   *
    * `customers/{customer_id}/customAudiences/{custom_audience_id}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface CustomAudienceOrBuilder extends
    * <pre>
    * Immutable. The resource name of the custom audience.
    * Custom audience resource names have the form:
+   *
    * `customers/{customer_id}/customAudiences/{custom_audience_id}`
    * </pre>
    *

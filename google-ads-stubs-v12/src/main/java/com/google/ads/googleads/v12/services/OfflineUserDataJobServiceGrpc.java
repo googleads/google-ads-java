@@ -160,7 +160,7 @@ public final class OfflineUserDataJobServiceGrpc {
    * Service to manage offline user data jobs.
    * </pre>
    */
-  public static abstract class OfflineUserDataJobServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
@@ -178,7 +178,7 @@ public final class OfflineUserDataJobServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void createOfflineUserDataJob(com.google.ads.googleads.v12.services.CreateOfflineUserDataJobRequest request,
+    default void createOfflineUserDataJob(com.google.ads.googleads.v12.services.CreateOfflineUserDataJobRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.CreateOfflineUserDataJobResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateOfflineUserDataJobMethod(), responseObserver);
     }
@@ -199,7 +199,7 @@ public final class OfflineUserDataJobServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void addOfflineUserDataJobOperations(com.google.ads.googleads.v12.services.AddOfflineUserDataJobOperationsRequest request,
+    default void addOfflineUserDataJobOperations(com.google.ads.googleads.v12.services.AddOfflineUserDataJobOperationsRequest request,
         io.grpc.stub.StreamObserver<com.google.ads.googleads.v12.services.AddOfflineUserDataJobOperationsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddOfflineUserDataJobOperationsMethod(), responseObserver);
     }
@@ -220,44 +220,34 @@ public final class OfflineUserDataJobServiceGrpc {
      *   [RequestError]()
      * </pre>
      */
-    public void runOfflineUserDataJob(com.google.ads.googleads.v12.services.RunOfflineUserDataJobRequest request,
+    default void runOfflineUserDataJob(com.google.ads.googleads.v12.services.RunOfflineUserDataJobRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRunOfflineUserDataJobMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getCreateOfflineUserDataJobMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.CreateOfflineUserDataJobRequest,
-                com.google.ads.googleads.v12.services.CreateOfflineUserDataJobResponse>(
-                  this, METHODID_CREATE_OFFLINE_USER_DATA_JOB)))
-          .addMethod(
-            getAddOfflineUserDataJobOperationsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.AddOfflineUserDataJobOperationsRequest,
-                com.google.ads.googleads.v12.services.AddOfflineUserDataJobOperationsResponse>(
-                  this, METHODID_ADD_OFFLINE_USER_DATA_JOB_OPERATIONS)))
-          .addMethod(
-            getRunOfflineUserDataJobMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.ads.googleads.v12.services.RunOfflineUserDataJobRequest,
-                com.google.longrunning.Operation>(
-                  this, METHODID_RUN_OFFLINE_USER_DATA_JOB)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service OfflineUserDataJobService.
    * <pre>
    * Service to manage offline user data jobs.
    * </pre>
    */
-  public static final class OfflineUserDataJobServiceStub extends io.grpc.stub.AbstractAsyncStub<OfflineUserDataJobServiceStub> {
+  public static abstract class OfflineUserDataJobServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return OfflineUserDataJobServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service OfflineUserDataJobService.
+   * <pre>
+   * Service to manage offline user data jobs.
+   * </pre>
+   */
+  public static final class OfflineUserDataJobServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<OfflineUserDataJobServiceStub> {
     private OfflineUserDataJobServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -337,11 +327,13 @@ public final class OfflineUserDataJobServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service OfflineUserDataJobService.
    * <pre>
    * Service to manage offline user data jobs.
    * </pre>
    */
-  public static final class OfflineUserDataJobServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<OfflineUserDataJobServiceBlockingStub> {
+  public static final class OfflineUserDataJobServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<OfflineUserDataJobServiceBlockingStub> {
     private OfflineUserDataJobServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -418,11 +410,13 @@ public final class OfflineUserDataJobServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service OfflineUserDataJobService.
    * <pre>
    * Service to manage offline user data jobs.
    * </pre>
    */
-  public static final class OfflineUserDataJobServiceFutureStub extends io.grpc.stub.AbstractFutureStub<OfflineUserDataJobServiceFutureStub> {
+  public static final class OfflineUserDataJobServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<OfflineUserDataJobServiceFutureStub> {
     private OfflineUserDataJobServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -510,10 +504,10 @@ public final class OfflineUserDataJobServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final OfflineUserDataJobServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(OfflineUserDataJobServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -548,6 +542,32 @@ public final class OfflineUserDataJobServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getCreateOfflineUserDataJobMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.CreateOfflineUserDataJobRequest,
+              com.google.ads.googleads.v12.services.CreateOfflineUserDataJobResponse>(
+                service, METHODID_CREATE_OFFLINE_USER_DATA_JOB)))
+        .addMethod(
+          getAddOfflineUserDataJobOperationsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.AddOfflineUserDataJobOperationsRequest,
+              com.google.ads.googleads.v12.services.AddOfflineUserDataJobOperationsResponse>(
+                service, METHODID_ADD_OFFLINE_USER_DATA_JOB_OPERATIONS)))
+        .addMethod(
+          getRunOfflineUserDataJobMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.ads.googleads.v12.services.RunOfflineUserDataJobRequest,
+              com.google.longrunning.Operation>(
+                service, METHODID_RUN_OFFLINE_USER_DATA_JOB)))
+        .build();
   }
 
   private static abstract class OfflineUserDataJobServiceBaseDescriptorSupplier

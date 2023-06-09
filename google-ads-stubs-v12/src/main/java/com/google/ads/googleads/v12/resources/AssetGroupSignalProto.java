@@ -33,22 +33,22 @@ public final class AssetGroupSignalProto {
       "ads.v12.resources\032.google/ads/googleads/" +
       "v12/common/criteria.proto\032\037google/api/fi" +
       "eld_behavior.proto\032\031google/api/resource." +
-      "proto\"\337\002\n\020AssetGroupSignal\022H\n\rresource_n" +
-      "ame\030\001 \001(\tB1\340A\005\372A+\n)googleads.googleapis." +
-      "com/AssetGroupSignal\022@\n\013asset_group\030\002 \001(" +
-      "\tB+\340A\005\372A%\n#googleads.googleapis.com/Asse" +
-      "tGroup\022D\n\010audience\030\003 \001(\0132-.google.ads.go" +
-      "ogleads.v12.common.AudienceInfoB\003\340A\005:y\352A" +
-      "v\n)googleads.googleapis.com/AssetGroupSi" +
-      "gnal\022Icustomers/{customer_id}/assetGroup" +
-      "Signals/{asset_group_id}~{criterion_id}B" +
-      "\207\002\n&com.google.ads.googleads.v12.resourc" +
-      "esB\025AssetGroupSignalProtoP\001ZKgoogle.gola" +
-      "ng.org/genproto/googleapis/ads/googleads" +
-      "/v12/resources;resources\242\002\003GAA\252\002\"Google." +
-      "Ads.GoogleAds.V12.Resources\312\002\"Google\\Ads" +
-      "\\GoogleAds\\V12\\Resources\352\002&Google::Ads::" +
-      "GoogleAds::V12::Resourcesb\006proto3"
+      "proto\"\342\002\n\020AssetGroupSignal\022I\n\rresource_n" +
+      "ame\030\001 \001(\tB2\342A\001\005\372A+\n)googleads.googleapis" +
+      ".com/AssetGroupSignal\022A\n\013asset_group\030\002 \001" +
+      "(\tB,\342A\001\005\372A%\n#googleads.googleapis.com/As" +
+      "setGroup\022E\n\010audience\030\003 \001(\0132-.google.ads." +
+      "googleads.v12.common.AudienceInfoB\004\342A\001\005:" +
+      "y\352Av\n)googleads.googleapis.com/AssetGrou" +
+      "pSignal\022Icustomers/{customer_id}/assetGr" +
+      "oupSignals/{asset_group_id}~{criterion_i" +
+      "d}B\207\002\n&com.google.ads.googleads.v12.reso" +
+      "urcesB\025AssetGroupSignalProtoP\001ZKgoogle.g" +
+      "olang.org/genproto/googleapis/ads/google" +
+      "ads/v12/resources;resources\242\002\003GAA\252\002\"Goog" +
+      "le.Ads.GoogleAds.V12.Resources\312\002\"Google\\" +
+      "Ads\\GoogleAds\\V12\\Resources\352\002&Google::Ad" +
+      "s::GoogleAds::V12::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

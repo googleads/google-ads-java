@@ -31,21 +31,21 @@ public final class CarrierConstantProto {
       "\n9google/ads/googleads/v12/resources/car" +
       "rier_constant.proto\022\"google.ads.googlead" +
       "s.v12.resources\032\037google/api/field_behavi" +
-      "or.proto\032\031google/api/resource.proto\"\231\002\n\017" +
-      "CarrierConstant\022G\n\rresource_name\030\001 \001(\tB0" +
-      "\340A\003\372A*\n(googleads.googleapis.com/Carrier" +
-      "Constant\022\024\n\002id\030\005 \001(\003B\003\340A\003H\000\210\001\001\022\026\n\004name\030\006" +
-      " \001(\tB\003\340A\003H\001\210\001\001\022\036\n\014country_code\030\007 \001(\tB\003\340A" +
-      "\003H\002\210\001\001:N\352AK\n(googleads.googleapis.com/Ca" +
-      "rrierConstant\022\037carrierConstants/{criteri" +
-      "on_id}B\005\n\003_idB\007\n\005_nameB\017\n\r_country_codeB" +
-      "\206\002\n&com.google.ads.googleads.v12.resourc" +
-      "esB\024CarrierConstantProtoP\001ZKgoogle.golan" +
-      "g.org/genproto/googleapis/ads/googleads/" +
-      "v12/resources;resources\242\002\003GAA\252\002\"Google.A" +
-      "ds.GoogleAds.V12.Resources\312\002\"Google\\Ads\\" +
-      "GoogleAds\\V12\\Resources\352\002&Google::Ads::G" +
-      "oogleAds::V12::Resourcesb\006proto3"
+      "or.proto\032\031google/api/resource.proto\"\235\002\n\017" +
+      "CarrierConstant\022H\n\rresource_name\030\001 \001(\tB1" +
+      "\342A\001\003\372A*\n(googleads.googleapis.com/Carrie" +
+      "rConstant\022\025\n\002id\030\005 \001(\003B\004\342A\001\003H\000\210\001\001\022\027\n\004name" +
+      "\030\006 \001(\tB\004\342A\001\003H\001\210\001\001\022\037\n\014country_code\030\007 \001(\tB" +
+      "\004\342A\001\003H\002\210\001\001:N\352AK\n(googleads.googleapis.co" +
+      "m/CarrierConstant\022\037carrierConstants/{cri" +
+      "terion_id}B\005\n\003_idB\007\n\005_nameB\017\n\r_country_c" +
+      "odeB\206\002\n&com.google.ads.googleads.v12.res" +
+      "ourcesB\024CarrierConstantProtoP\001ZKgoogle.g" +
+      "olang.org/genproto/googleapis/ads/google" +
+      "ads/v12/resources;resources\242\002\003GAA\252\002\"Goog" +
+      "le.Ads.GoogleAds.V12.Resources\312\002\"Google\\" +
+      "Ads\\GoogleAds\\V12\\Resources\352\002&Google::Ad" +
+      "s::GoogleAds::V12::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

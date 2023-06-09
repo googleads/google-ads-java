@@ -11,6 +11,7 @@ public interface SmartCampaignSearchTermViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the Smart campaign search term view.
    * Smart campaign search term view resource names have the form:
+   *
    * `customers/{customer_id}/smartCampaignSearchTermViews/{campaign_id}~{URL-base64_search_term}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface SmartCampaignSearchTermViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the Smart campaign search term view.
    * Smart campaign search term view resource names have the form:
+   *
    * `customers/{customer_id}/smartCampaignSearchTermViews/{campaign_id}~{URL-base64_search_term}`
    * </pre>
    *

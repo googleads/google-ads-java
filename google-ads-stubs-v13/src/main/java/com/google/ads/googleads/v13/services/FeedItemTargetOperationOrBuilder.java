@@ -41,6 +41,7 @@ public interface FeedItemTargetOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed feed item target is
    * expected, in this format:
+   *
    * `customers/{customer_id}/feedItemTargets/{feed_id}~{feed_item_id}~{feed_item_target_type}~{feed_item_target_id}`
    * </pre>
    *
@@ -52,6 +53,7 @@ public interface FeedItemTargetOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed feed item target is
    * expected, in this format:
+   *
    * `customers/{customer_id}/feedItemTargets/{feed_id}~{feed_item_id}~{feed_item_target_type}~{feed_item_target_id}`
    * </pre>
    *
@@ -63,6 +65,7 @@ public interface FeedItemTargetOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed feed item target is
    * expected, in this format:
+   *
    * `customers/{customer_id}/feedItemTargets/{feed_id}~{feed_item_id}~{feed_item_target_type}~{feed_item_target_id}`
    * </pre>
    *
@@ -72,5 +75,5 @@ public interface FeedItemTargetOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v13.services.FeedItemTargetOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v13.services.FeedItemTargetOperation.OperationCase getOperationCase();
 }

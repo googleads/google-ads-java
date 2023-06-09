@@ -10,6 +10,7 @@ public interface PlannedProductForecastOrBuilder extends
   /**
    * <pre>
    * Number of unique people reached that exactly matches the Targeting.
+   *
    * Note that a minimum number of unique people must be reached in order for
    * data to be reported. If the minimum number is not met, the on_target_reach
    * value will be rounded to 0.
@@ -24,6 +25,7 @@ public interface PlannedProductForecastOrBuilder extends
    * <pre>
    * Number of unique people reached. This includes people that may fall
    * outside the specified Targeting.
+   *
    * Note that a minimum number of unique people must be reached in order for
    * data to be reported. If the minimum number is not met, the total_reach
    * value will be rounded to 0.

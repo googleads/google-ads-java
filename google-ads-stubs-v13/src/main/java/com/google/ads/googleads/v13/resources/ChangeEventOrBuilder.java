@@ -11,6 +11,7 @@ public interface ChangeEventOrBuilder extends
    * <pre>
    * Output only. The resource name of the change event.
    * Change event resource names have the form:
+   *
    * `customers/{customer_id}/changeEvents/{timestamp_micros}~{command_index}~{mutate_index}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface ChangeEventOrBuilder extends
    * <pre>
    * Output only. The resource name of the change event.
    * Change event resource names have the form:
+   *
    * `customers/{customer_id}/changeEvents/{timestamp_micros}~{command_index}~{mutate_index}`
    * </pre>
    *

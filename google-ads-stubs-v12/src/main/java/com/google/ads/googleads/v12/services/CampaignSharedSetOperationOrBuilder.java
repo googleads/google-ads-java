@@ -41,6 +41,7 @@ public interface CampaignSharedSetOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed campaign shared set is
    * expected, in this format:
+   *
    * `customers/{customer_id}/campaignSharedSets/{campaign_id}~{shared_set_id}`
    * </pre>
    *
@@ -52,6 +53,7 @@ public interface CampaignSharedSetOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed campaign shared set is
    * expected, in this format:
+   *
    * `customers/{customer_id}/campaignSharedSets/{campaign_id}~{shared_set_id}`
    * </pre>
    *
@@ -63,6 +65,7 @@ public interface CampaignSharedSetOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the removed campaign shared set is
    * expected, in this format:
+   *
    * `customers/{customer_id}/campaignSharedSets/{campaign_id}~{shared_set_id}`
    * </pre>
    *
@@ -72,5 +75,5 @@ public interface CampaignSharedSetOperationOrBuilder extends
   com.google.protobuf.ByteString
       getRemoveBytes();
 
-  public com.google.ads.googleads.v12.services.CampaignSharedSetOperation.OperationCase getOperationCase();
+  com.google.ads.googleads.v12.services.CampaignSharedSetOperation.OperationCase getOperationCase();
 }

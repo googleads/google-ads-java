@@ -22,7 +22,8 @@ private static final long serialVersionUID = 0L;
   private CustomerExtensionSetting() {
     resourceName_ = "";
     extensionType_ = 0;
-    extensionFeedItems_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    extensionFeedItems_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     device_ = 0;
   }
 
@@ -33,11 +34,6 @@ private static final long serialVersionUID = 0L;
     return new CustomerExtensionSetting();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v12.resources.CustomerExtensionSettingProto.internal_static_google_ads_googleads_v12_resources_CustomerExtensionSetting_descriptor;
@@ -58,6 +54,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the customer extension setting.
    * CustomerExtensionSetting resource names have the form:
+   *
    * `customers/{customer_id}/customerExtensionSettings/{extension_type}`
    * </pre>
    *
@@ -81,6 +78,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. The resource name of the customer extension setting.
    * CustomerExtensionSetting resource names have the form:
+   *
    * `customers/{customer_id}/customerExtensionSettings/{extension_type}`
    * </pre>
    *
@@ -130,11 +128,13 @@ private static final long serialVersionUID = 0L;
 
   public static final int EXTENSION_FEED_ITEMS_FIELD_NUMBER = 5;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList extensionFeedItems_;
+  private com.google.protobuf.LazyStringArrayList extensionFeedItems_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * The resource names of the extension feed items to serve under the customer.
    * ExtensionFeedItem resource names have the form:
+   *
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
@@ -149,6 +149,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The resource names of the extension feed items to serve under the customer.
    * ExtensionFeedItem resource names have the form:
+   *
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
@@ -162,6 +163,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The resource names of the extension feed items to serve under the customer.
    * ExtensionFeedItem resource names have the form:
+   *
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
@@ -176,6 +178,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The resource names of the extension feed items to serve under the customer.
    * ExtensionFeedItem resource names have the form:
+   *
    * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
    * </pre>
    *
@@ -359,11 +362,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static com.google.ads.googleads.v12.resources.CustomerExtensionSetting parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static com.google.ads.googleads.v12.resources.CustomerExtensionSetting parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -445,8 +450,8 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       resourceName_ = "";
       extensionType_ = 0;
-      extensionFeedItems_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000004);
+      extensionFeedItems_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       device_ = 0;
       return this;
     }
@@ -474,18 +479,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v12.resources.CustomerExtensionSetting buildPartial() {
       com.google.ads.googleads.v12.resources.CustomerExtensionSetting result = new com.google.ads.googleads.v12.resources.CustomerExtensionSetting(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(com.google.ads.googleads.v12.resources.CustomerExtensionSetting result) {
-      if (((bitField0_ & 0x00000004) != 0)) {
-        extensionFeedItems_ = extensionFeedItems_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000004);
-      }
-      result.extensionFeedItems_ = extensionFeedItems_;
     }
 
     private void buildPartial0(com.google.ads.googleads.v12.resources.CustomerExtensionSetting result) {
@@ -495,6 +491,10 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.extensionType_ = extensionType_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        extensionFeedItems_.makeImmutable();
+        result.extensionFeedItems_ = extensionFeedItems_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.device_ = device_;
@@ -556,7 +556,7 @@ private static final long serialVersionUID = 0L;
       if (!other.extensionFeedItems_.isEmpty()) {
         if (extensionFeedItems_.isEmpty()) {
           extensionFeedItems_ = other.extensionFeedItems_;
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ |= 0x00000004;
         } else {
           ensureExtensionFeedItemsIsMutable();
           extensionFeedItems_.addAll(other.extensionFeedItems_);
@@ -635,6 +635,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the customer extension setting.
      * CustomerExtensionSetting resource names have the form:
+     *
      * `customers/{customer_id}/customerExtensionSettings/{extension_type}`
      * </pre>
      *
@@ -657,6 +658,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the customer extension setting.
      * CustomerExtensionSetting resource names have the form:
+     *
      * `customers/{customer_id}/customerExtensionSettings/{extension_type}`
      * </pre>
      *
@@ -680,6 +682,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the customer extension setting.
      * CustomerExtensionSetting resource names have the form:
+     *
      * `customers/{customer_id}/customerExtensionSettings/{extension_type}`
      * </pre>
      *
@@ -699,6 +702,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the customer extension setting.
      * CustomerExtensionSetting resource names have the form:
+     *
      * `customers/{customer_id}/customerExtensionSettings/{extension_type}`
      * </pre>
      *
@@ -715,6 +719,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. The resource name of the customer extension setting.
      * CustomerExtensionSetting resource names have the form:
+     *
      * `customers/{customer_id}/customerExtensionSettings/{extension_type}`
      * </pre>
      *
@@ -805,17 +810,19 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.LazyStringList extensionFeedItems_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList extensionFeedItems_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureExtensionFeedItemsIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!extensionFeedItems_.isModifiable()) {
         extensionFeedItems_ = new com.google.protobuf.LazyStringArrayList(extensionFeedItems_);
-        bitField0_ |= 0x00000004;
-       }
+      }
+      bitField0_ |= 0x00000004;
     }
     /**
      * <pre>
      * The resource names of the extension feed items to serve under the customer.
      * ExtensionFeedItem resource names have the form:
+     *
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
@@ -824,12 +831,14 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getExtensionFeedItemsList() {
-      return extensionFeedItems_.getUnmodifiableView();
+      extensionFeedItems_.makeImmutable();
+      return extensionFeedItems_;
     }
     /**
      * <pre>
      * The resource names of the extension feed items to serve under the customer.
      * ExtensionFeedItem resource names have the form:
+     *
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
@@ -843,6 +852,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The resource names of the extension feed items to serve under the customer.
      * ExtensionFeedItem resource names have the form:
+     *
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
@@ -857,6 +867,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The resource names of the extension feed items to serve under the customer.
      * ExtensionFeedItem resource names have the form:
+     *
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
@@ -872,6 +883,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The resource names of the extension feed items to serve under the customer.
      * ExtensionFeedItem resource names have the form:
+     *
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
@@ -885,6 +897,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureExtensionFeedItemsIsMutable();
       extensionFeedItems_.set(index, value);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -892,6 +905,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The resource names of the extension feed items to serve under the customer.
      * ExtensionFeedItem resource names have the form:
+     *
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
@@ -904,6 +918,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureExtensionFeedItemsIsMutable();
       extensionFeedItems_.add(value);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -911,6 +926,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The resource names of the extension feed items to serve under the customer.
      * ExtensionFeedItem resource names have the form:
+     *
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
@@ -923,6 +939,7 @@ private static final long serialVersionUID = 0L;
       ensureExtensionFeedItemsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, extensionFeedItems_);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -930,6 +947,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The resource names of the extension feed items to serve under the customer.
      * ExtensionFeedItem resource names have the form:
+     *
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
@@ -937,8 +955,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearExtensionFeedItems() {
-      extensionFeedItems_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000004);
+      extensionFeedItems_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000004);;
       onChanged();
       return this;
     }
@@ -946,6 +965,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The resource names of the extension feed items to serve under the customer.
      * ExtensionFeedItem resource names have the form:
+     *
      * `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
      * </pre>
      *
@@ -959,6 +979,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureExtensionFeedItemsIsMutable();
       extensionFeedItems_.add(value);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }

@@ -11,6 +11,7 @@ public interface LandingPageViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the landing page view.
    * Landing page view resource names have the form:
+   *
    * `customers/{customer_id}/landingPageViews/{unexpanded_final_url_fingerprint}`
    * </pre>
    *
@@ -22,6 +23,7 @@ public interface LandingPageViewOrBuilder extends
    * <pre>
    * Output only. The resource name of the landing page view.
    * Landing page view resource names have the form:
+   *
    * `customers/{customer_id}/landingPageViews/{unexpanded_final_url_fingerprint}`
    * </pre>
    *

@@ -3955,5 +3955,5 @@ public interface ErrorCodeOrBuilder extends
    */
   com.google.ads.googleads.v12.errors.AudienceInsightsErrorEnum.AudienceInsightsError getAudienceInsightsError();
 
-  public com.google.ads.googleads.v12.errors.ErrorCode.ErrorCodeCase getErrorCodeCase();
+  com.google.ads.googleads.v12.errors.ErrorCode.ErrorCodeCase getErrorCodeCase();
 }
