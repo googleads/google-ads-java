@@ -26,15 +26,15 @@ import com.google.ads.googleads.v14.enums.DayOfWeekEnum.DayOfWeek;
 import com.google.ads.googleads.v14.enums.MinuteOfHourEnum.MinuteOfHour;
 import com.google.ads.googleads.v14.errors.GoogleAdsError;
 import com.google.ads.googleads.v14.errors.GoogleAdsException;
+import com.google.ads.googleads.v14.resources.Asset;
 import com.google.ads.googleads.v14.resources.CustomerAsset;
+import com.google.ads.googleads.v14.services.AssetOperation;
 import com.google.ads.googleads.v14.services.AssetServiceClient;
 import com.google.ads.googleads.v14.services.CustomerAssetOperation;
 import com.google.ads.googleads.v14.services.CustomerAssetServiceClient;
 import com.google.ads.googleads.v14.services.MutateAssetsResponse;
 import com.google.ads.googleads.v14.services.MutateCustomerAssetsResponse;
 import com.google.ads.googleads.v14.utils.ResourceNames;
-import com.google.ads.googleads.v14.resources.Asset;
-import com.google.ads.googleads.v14.services.AssetOperation;
 import com.google.common.collect.ImmutableList;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -117,7 +117,7 @@ public class AddCall {
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
    * @param phoneCountry the phone country (2-letter code).
-   * @param phoneNumber the raw phone number, e.g. '(123) 456-7890'.
+   * @param phoneNumber the raw phone number, e.g. '(800) 555-0100'.
    * @param conversionActionId the conversion action ID to attribute conversions to.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
@@ -142,7 +142,7 @@ public class AddCall {
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
    * @param phoneCountry the phone country (2-letter code).
-   * @param phoneNumber the raw phone number, e.g. '(123) 456-7890'.
+   * @param phoneNumber the raw phone number, e.g. '(800) 555-0100'.
    * @param conversionActionId the conversion action ID to attribute conversions to.
    * @return resource name of the newly created asset.
    */

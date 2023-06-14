@@ -154,7 +154,9 @@ public class UploadStoreSalesTransactions {
   private static final String CUSTOM_VALUE = null;
 
   public static void main(String[] args)
-      throws InterruptedException, ExecutionException, TimeoutException,
+      throws InterruptedException,
+          ExecutionException,
+          TimeoutException,
           UnsupportedEncodingException {
     UploadStoreSalesTransactionsParams params = new UploadStoreSalesTransactionsParams();
     if (!params.parseArguments(args)) {
@@ -284,7 +286,9 @@ public class UploadStoreSalesTransactions {
       String countryCode,
       String languageCode,
       int quantity)
-      throws InterruptedException, ExecutionException, TimeoutException,
+      throws InterruptedException,
+          ExecutionException,
+          TimeoutException,
           UnsupportedEncodingException {
     String offlineUserDataJobResourceName;
     try (OfflineUserDataJobServiceClient offlineUserDataJobServiceClient =
@@ -444,7 +448,9 @@ public class UploadStoreSalesTransactions {
       String countryCode,
       String languageCode,
       Integer quantity)
-      throws InterruptedException, ExecutionException, TimeoutException,
+      throws InterruptedException,
+          ExecutionException,
+          TimeoutException,
           UnsupportedEncodingException {
     // Constructs the operation for each transaction.
     List<OfflineUserDataJobOperation> userDataJobOperations =
@@ -492,12 +498,11 @@ public class UploadStoreSalesTransactions {
       // Checks if any warnings occurred and displays details.
       if (response.hasWarning()) {
         // Converts the Any in response back to a GoogleAdsFailure object.
-        GoogleAdsFailure warningsFailure = ErrorUtils.getInstance()
-            .getGoogleAdsFailure(response.getWarning());
+        GoogleAdsFailure warningsFailure =
+            ErrorUtils.getInstance().getGoogleAdsFailure(response.getWarning());
         // Prints some information about the warnings encountered.
         System.out.println(
-            System.out.printf(
-                "Encountered %d warning(s).%n", warningsFailure.getErrorsCount()));
+            System.out.printf("Encountered %d warning(s).%n", warningsFailure.getErrorsCount()));
       }
       // [END enable_warnings_2]
     } else {
@@ -540,7 +545,7 @@ public class UploadStoreSalesTransactions {
                     UserIdentifier.newBuilder()
                         .setHashedEmail(
                             // Email addresses must be normalized and hashed.
-                            normalizeAndHash(sha256Digest, "customer@example.com"))
+                            normalizeAndHash(sha256Digest, "dana@example.com"))
                         .build(),
                     UserIdentifier.newBuilder()
                         .setAddressInfo(OfflineUserAddressInfo.newBuilder().setState("NY"))
@@ -571,8 +576,8 @@ public class UploadStoreSalesTransactions {
                 UserIdentifier.newBuilder()
                     .setAddressInfo(
                         OfflineUserAddressInfo.newBuilder()
-                            .setHashedFirstName(normalizeAndHash(sha256Digest, "John"))
-                            .setHashedLastName(normalizeAndHash(sha256Digest, "Doe"))
+                            .setHashedFirstName(normalizeAndHash(sha256Digest, "Dana"))
+                            .setHashedLastName(normalizeAndHash(sha256Digest, "Quinn"))
                             .setCountryCode("US")
                             .setPostalCode("10011")))
             .setTransactionAttribute(

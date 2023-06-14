@@ -46,7 +46,11 @@ public class UploadCallConversion {
     @Parameter(names = ArgumentNames.CONVERSION_ACTION_ID)
     private String conversionActionId;
 
-    @Parameter(names = ArgumentNames.CALLER_ID)
+    @Parameter(
+        names = ArgumentNames.CALLER_ID,
+        description =
+            "The caller ID from which this call was placed. Caller ID is expected to be in E.164"
+                + " format with preceding '+' sign, e.g. \"+18005550100\"")
     private String callerId;
 
     @Parameter(

@@ -75,7 +75,7 @@ public class AddSmartCampaign {
   private static final String COUNTRY_CODE = "US";
   private static final String LANGUAGE_CODE = "en";
   private static final String LANDING_PAGE_URL = "http://www.example.com";
-  private static final String PHONE_NUMBER = "555-555-5555";
+  private static final String PHONE_NUMBER = "800-555-0100";
   private static final long BUDGET_TEMPORARY_ID = -1;
   private static final long SMART_CAMPAIGN_TEMPORARY_ID = -2;
   private static final long AD_GROUP_TEMPORARY_ID = -3;

@@ -121,7 +121,7 @@ public class AddCallAd {
    * @param customerId the client customer ID.
    * @param adGroupId the ad group ID to add a call ad to.
    * @param phoneCountry the phone country (2-letter code).
-   * @param phoneNumber the raw phone number, e.g. '(123) 456-7890'.
+   * @param phoneNumber the raw phone number, e.g. '(800) 555-0100'.
    * @param conversionActionId the conversion action ID to attribute conversions to.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
