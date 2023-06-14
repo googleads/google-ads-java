@@ -166,8 +166,8 @@ public class UploadConversionEnhancement {
         UserIdentifier.newBuilder()
             .setAddressInfo(
                 OfflineUserAddressInfo.newBuilder()
-                    .setHashedFirstName(normalizeAndHash(sha256Digest, "Joanna"))
-                    .setHashedLastName(normalizeAndHash(sha256Digest, "Smith"))
+                    .setHashedFirstName(normalizeAndHash(sha256Digest, "Dana"))
+                    .setHashedLastName(normalizeAndHash(sha256Digest, "Quinn"))
                     .setHashedStreetAddress(
                         normalizeAndHash(sha256Digest, "1600 Amphitheatre Pkwy"))
                     .setCity("Mountain View")
@@ -183,7 +183,7 @@ public class UploadConversionEnhancement {
         UserIdentifier.newBuilder()
             .setUserIdentifierSource(UserIdentifierSource.FIRST_PARTY)
             // Uses the normalize and hash method specifically for email addresses.
-            .setHashedEmail(normalizeAndHashEmailAddress(sha256Digest, "joannasmith@example.com"))
+            .setHashedEmail(normalizeAndHashEmailAddress(sha256Digest, "dana@example.com"))
             .build();
 
     // Adds the user identifiers to the enhancement adjustment.

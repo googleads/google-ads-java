@@ -375,28 +375,28 @@ public class AddCustomerMatchUserList {
     // The first user data has an email address and a phone number.
     Map<String, String> rawRecord1 =
         ImmutableMap.<String, String>builder()
-            .put("email", "test@gmail.com")
+            .put("email", "dana@example.com")
             // Phone number to be converted to E.164 format, with a leading '+' as required. This
             // includes whitespace that will be removed later.
-            .put("phone", "+1 234 5678910")
+            .put("phone", "+1 800 5550101")
             .build();
     // The second user data has an email address, a mailing address, and a phone number.
     Map<String, String> rawRecord2 =
         ImmutableMap.<String, String>builder()
-            // Email address that includes a period (.) before the Gmail domain.
-            .put("email", "test.2@gmail.com")
+            // Email address that includes a period (.) before the domain.
+            .put("email", "alex.2@example.com")
             // Address that includes all four required elements: first name, last name, country
             // code, and postal code.
-            .put("firstName", "John")
-            .put("lastName", "Doe")
+            .put("firstName", "Alex")
+            .put("lastName", "Quinn")
             .put("countryCode", "US")
-            .put("postalCode", "10011")
+            .put("postalCode", "94045")
             // Phone number to be converted to E.164 format, with a leading '+' as required.
-            .put("phone", "+1 234 5678911")
+            .put("phone", "+1 800 5550102")
             .build();
     // The third user data only has an email address.
     Map<String, String> rawRecord3 =
-        ImmutableMap.<String, String>builder().put("email", "test3@gmail.com").build();
+        ImmutableMap.<String, String>builder().put("email", "charlie@example.com").build();
     // Adds the raw records to the raw input list.
     rawRecords.add(rawRecord1);
     rawRecords.add(rawRecord2);
