@@ -83,6 +83,7 @@ public class GetCampaigns {
    * @param customerId the client customer ID.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
+  // [START get_campaigns]
   private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
     try (GoogleAdsServiceClient googleAdsServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
@@ -108,4 +109,5 @@ public class GetCampaigns {
       }
     }
   }
+  // [END get_campaigns]
 }
