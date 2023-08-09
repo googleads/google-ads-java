@@ -83,6 +83,7 @@ import com.google.ads.googleads.v14.resources.CampaignFeedName;
 import com.google.ads.googleads.v14.resources.CampaignGroupName;
 import com.google.ads.googleads.v14.resources.CampaignLabelName;
 import com.google.ads.googleads.v14.resources.CampaignName;
+import com.google.ads.googleads.v14.resources.CampaignSearchTermInsightName;
 import com.google.ads.googleads.v14.resources.CampaignSharedSetName;
 import com.google.ads.googleads.v14.resources.CampaignSimulationName;
 import com.google.ads.googleads.v14.resources.CarrierConstantName;
@@ -111,6 +112,7 @@ import com.google.ads.googleads.v14.resources.CustomerLabelName;
 import com.google.ads.googleads.v14.resources.CustomerManagerLinkName;
 import com.google.ads.googleads.v14.resources.CustomerName;
 import com.google.ads.googleads.v14.resources.CustomerNegativeCriterionName;
+import com.google.ads.googleads.v14.resources.CustomerSearchTermInsightName;
 import com.google.ads.googleads.v14.resources.CustomerSkAdNetworkConversionValueSchemaName;
 import com.google.ads.googleads.v14.resources.CustomerUserAccessInvitationName;
 import com.google.ads.googleads.v14.resources.CustomerUserAccessName;
@@ -620,10 +622,17 @@ public class ResourceNames {
     return CampaignGroupName.format(String.valueOf(customerId), String.valueOf(campaignGroupId));
   }
 
-  /** Returns the campaign label for the specified components. */
+  /** Returns the campaign label resource name for the specified components. */
   public static String campaignLabel(long customerId, long campaignId, long labelId) {
     return CampaignLabelName.format(
         String.valueOf(customerId), String.valueOf(campaignId), String.valueOf(labelId));
+  }
+
+  /** Returns the campaign search term insight resource name for the specified components. */
+  public static String campaignSearchTermInsightName(
+      long customerId, long campaignId, long clusterId) {
+    return CampaignSearchTermInsightName.format(
+        String.valueOf(customerId), String.valueOf(campaignId), String.valueOf(clusterId));
   }
 
   /** Returns the campaign shared set resource name for the specified components. */
@@ -726,6 +735,12 @@ public class ResourceNames {
   public static String customerCustomizer(long customerId, long customizerAttributeId) {
     return CustomerCustomizerName.format(
         String.valueOf(customerId), String.valueOf(customizerAttributeId));
+  }
+
+  /** Returns the customer search term insight resource name for the specified components. */
+  public static String customerSearchTermInsightName(long customerId, long clusterId) {
+    return CustomerSearchTermInsightName.format(
+        String.valueOf(customerId), String.valueOf(clusterId));
   }
 
   /**

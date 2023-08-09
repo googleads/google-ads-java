@@ -382,12 +382,70 @@ public interface InvoiceOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The pretax subtotal amount, in micros. This equals the
-   * sum of the AccountBudgetSummary subtotal amounts,
-   * Invoice.adjustments_subtotal_amount_micros, and
-   * Invoice.regulatory_costs_subtotal_amount_micros.
-   * Starting with v6, the Invoice.regulatory_costs_subtotal_amount_micros is no
-   * longer included.
+   * Output only. The pretax subtotal amount of invoice level export charges, in
+   * micros.
+   * </pre>
+   *
+   * <code>optional int64 export_charge_subtotal_amount_micros = 40 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the exportChargeSubtotalAmountMicros field is set.
+   */
+  boolean hasExportChargeSubtotalAmountMicros();
+  /**
+   * <pre>
+   * Output only. The pretax subtotal amount of invoice level export charges, in
+   * micros.
+   * </pre>
+   *
+   * <code>optional int64 export_charge_subtotal_amount_micros = 40 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The exportChargeSubtotalAmountMicros.
+   */
+  long getExportChargeSubtotalAmountMicros();
+
+  /**
+   * <pre>
+   * Output only. The sum of taxes on the invoice level export charges, in
+   * micros.
+   * </pre>
+   *
+   * <code>optional int64 export_charge_tax_amount_micros = 41 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the exportChargeTaxAmountMicros field is set.
+   */
+  boolean hasExportChargeTaxAmountMicros();
+  /**
+   * <pre>
+   * Output only. The sum of taxes on the invoice level export charges, in
+   * micros.
+   * </pre>
+   *
+   * <code>optional int64 export_charge_tax_amount_micros = 41 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The exportChargeTaxAmountMicros.
+   */
+  long getExportChargeTaxAmountMicros();
+
+  /**
+   * <pre>
+   * Output only. The total amount of invoice level export charges, in micros.
+   * </pre>
+   *
+   * <code>optional int64 export_charge_total_amount_micros = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the exportChargeTotalAmountMicros field is set.
+   */
+  boolean hasExportChargeTotalAmountMicros();
+  /**
+   * <pre>
+   * Output only. The total amount of invoice level export charges, in micros.
+   * </pre>
+   *
+   * <code>optional int64 export_charge_total_amount_micros = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The exportChargeTotalAmountMicros.
+   */
+  long getExportChargeTotalAmountMicros();
+
+  /**
+   * <pre>
+   * Output only. The pretax subtotal amount, in micros. This is equal to the
+   * sum of the AccountBudgetSummary subtotal amounts and
+   * Invoice.adjustments_subtotal_amount_micros.
    * </pre>
    *
    * <code>optional int64 subtotal_amount_micros = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -396,12 +454,9 @@ public interface InvoiceOrBuilder extends
   boolean hasSubtotalAmountMicros();
   /**
    * <pre>
-   * Output only. The pretax subtotal amount, in micros. This equals the
-   * sum of the AccountBudgetSummary subtotal amounts,
-   * Invoice.adjustments_subtotal_amount_micros, and
-   * Invoice.regulatory_costs_subtotal_amount_micros.
-   * Starting with v6, the Invoice.regulatory_costs_subtotal_amount_micros is no
-   * longer included.
+   * Output only. The pretax subtotal amount, in micros. This is equal to the
+   * sum of the AccountBudgetSummary subtotal amounts and
+   * Invoice.adjustments_subtotal_amount_micros.
    * </pre>
    *
    * <code>optional int64 subtotal_amount_micros = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -435,10 +490,10 @@ public interface InvoiceOrBuilder extends
   /**
    * <pre>
    * Output only. The total amount, in micros. This equals the sum of
-   * Invoice.subtotal_amount_micros and Invoice.tax_amount_micros.
-   * Starting with v6, Invoice.regulatory_costs_subtotal_amount_micros is
-   * also added as it is no longer already included in
-   * Invoice.tax_amount_micros.
+   * Invoice.subtotal_amount_micros, Invoice.tax_amount_micros,
+   * Invoice.regulatory_costs_subtotal_amount_micros, and
+   * Invoice.export_charge_subtotal_amount_micros (which is separated into a
+   * separate line item starting with V14.1).
    * </pre>
    *
    * <code>optional int64 total_amount_micros = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -448,10 +503,10 @@ public interface InvoiceOrBuilder extends
   /**
    * <pre>
    * Output only. The total amount, in micros. This equals the sum of
-   * Invoice.subtotal_amount_micros and Invoice.tax_amount_micros.
-   * Starting with v6, Invoice.regulatory_costs_subtotal_amount_micros is
-   * also added as it is no longer already included in
-   * Invoice.tax_amount_micros.
+   * Invoice.subtotal_amount_micros, Invoice.tax_amount_micros,
+   * Invoice.regulatory_costs_subtotal_amount_micros, and
+   * Invoice.export_charge_subtotal_amount_micros (which is separated into a
+   * separate line item starting with V14.1).
    * </pre>
    *
    * <code>optional int64 total_amount_micros = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

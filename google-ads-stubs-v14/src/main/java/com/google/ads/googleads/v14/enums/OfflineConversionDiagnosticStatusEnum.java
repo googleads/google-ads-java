@@ -44,7 +44,7 @@ private static final long serialVersionUID = 0L;
 
   /**
    * <pre>
-   * Next id: 8
+   * Possible statuses of the offline ingestion setup.
    * </pre>
    *
    * Protobuf enum {@code google.ads.googleads.v14.enums.OfflineConversionDiagnosticStatusEnum.OfflineConversionDiagnosticStatus}

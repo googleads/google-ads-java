@@ -114,6 +114,64 @@ public interface SegmentsOrBuilder extends
 
   /**
    * <pre>
+   * Resource name of the ad group.
+   * </pre>
+   *
+   * <code>optional string ad_group = 158;</code>
+   * @return Whether the adGroup field is set.
+   */
+  boolean hasAdGroup();
+  /**
+   * <pre>
+   * Resource name of the ad group.
+   * </pre>
+   *
+   * <code>optional string ad_group = 158;</code>
+   * @return The adGroup.
+   */
+  java.lang.String getAdGroup();
+  /**
+   * <pre>
+   * Resource name of the ad group.
+   * </pre>
+   *
+   * <code>optional string ad_group = 158;</code>
+   * @return The bytes for adGroup.
+   */
+  com.google.protobuf.ByteString
+      getAdGroupBytes();
+
+  /**
+   * <pre>
+   * Resource name of the asset group.
+   * </pre>
+   *
+   * <code>optional string asset_group = 159;</code>
+   * @return Whether the assetGroup field is set.
+   */
+  boolean hasAssetGroup();
+  /**
+   * <pre>
+   * Resource name of the asset group.
+   * </pre>
+   *
+   * <code>optional string asset_group = 159;</code>
+   * @return The assetGroup.
+   */
+  java.lang.String getAssetGroup();
+  /**
+   * <pre>
+   * Resource name of the asset group.
+   * </pre>
+   *
+   * <code>optional string asset_group = 159;</code>
+   * @return The bytes for assetGroup.
+   */
+  com.google.protobuf.ByteString
+      getAssetGroupBytes();
+
+  /**
+   * <pre>
    * Domain (visible URL) of a participant in the Auction Insights report.
    * </pre>
    *
@@ -167,6 +225,35 @@ public interface SegmentsOrBuilder extends
    * <code>.google.ads.googleads.v14.common.BudgetCampaignAssociationStatus budget_campaign_association_status = 134;</code>
    */
   com.google.ads.googleads.v14.common.BudgetCampaignAssociationStatusOrBuilder getBudgetCampaignAssociationStatusOrBuilder();
+
+  /**
+   * <pre>
+   * Resource name of the campaign.
+   * </pre>
+   *
+   * <code>optional string campaign = 157;</code>
+   * @return Whether the campaign field is set.
+   */
+  boolean hasCampaign();
+  /**
+   * <pre>
+   * Resource name of the campaign.
+   * </pre>
+   *
+   * <code>optional string campaign = 157;</code>
+   * @return The campaign.
+   */
+  java.lang.String getCampaign();
+  /**
+   * <pre>
+   * Resource name of the campaign.
+   * </pre>
+   *
+   * <code>optional string campaign = 157;</code>
+   * @return The bytes for campaign.
+   */
+  com.google.protobuf.ByteString
+      getCampaignBytes();
 
   /**
    * <pre>
@@ -2068,6 +2155,67 @@ public interface SegmentsOrBuilder extends
 
   /**
    * <pre>
+   * A search term subcategory. An empty string denotes the catch-all
+   * subcategory for search terms that didn't fit into another subcategory.
+   * </pre>
+   *
+   * <code>optional string search_subcategory = 155;</code>
+   * @return Whether the searchSubcategory field is set.
+   */
+  boolean hasSearchSubcategory();
+  /**
+   * <pre>
+   * A search term subcategory. An empty string denotes the catch-all
+   * subcategory for search terms that didn't fit into another subcategory.
+   * </pre>
+   *
+   * <code>optional string search_subcategory = 155;</code>
+   * @return The searchSubcategory.
+   */
+  java.lang.String getSearchSubcategory();
+  /**
+   * <pre>
+   * A search term subcategory. An empty string denotes the catch-all
+   * subcategory for search terms that didn't fit into another subcategory.
+   * </pre>
+   *
+   * <code>optional string search_subcategory = 155;</code>
+   * @return The bytes for searchSubcategory.
+   */
+  com.google.protobuf.ByteString
+      getSearchSubcategoryBytes();
+
+  /**
+   * <pre>
+   * A search term.
+   * </pre>
+   *
+   * <code>optional string search_term = 156;</code>
+   * @return Whether the searchTerm field is set.
+   */
+  boolean hasSearchTerm();
+  /**
+   * <pre>
+   * A search term.
+   * </pre>
+   *
+   * <code>optional string search_term = 156;</code>
+   * @return The searchTerm.
+   */
+  java.lang.String getSearchTerm();
+  /**
+   * <pre>
+   * A search term.
+   * </pre>
+   *
+   * <code>optional string search_term = 156;</code>
+   * @return The bytes for searchTerm.
+   */
+  com.google.protobuf.ByteString
+      getSearchTermBytes();
+
+  /**
+   * <pre>
    * Match type of the keyword that triggered the ad, including variants.
    * </pre>
    *
@@ -2381,4 +2529,27 @@ public interface SegmentsOrBuilder extends
    * <code>optional .google.ads.googleads.v14.common.AssetInteractionTarget asset_interaction_target = 139;</code>
    */
   com.google.ads.googleads.v14.common.AssetInteractionTargetOrBuilder getAssetInteractionTargetOrBuilder();
+
+  /**
+   * <pre>
+   * This is for segmenting conversions by whether the user is a new customer
+   * or a returning customer. This segmentation is typically used to measure
+   * the impact of customer acquisition goal.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.enums.ConvertingUserPriorEngagementTypeAndLtvBucketEnum.ConvertingUserPriorEngagementTypeAndLtvBucket new_versus_returning_customers = 160;</code>
+   * @return The enum numeric value on the wire for newVersusReturningCustomers.
+   */
+  int getNewVersusReturningCustomersValue();
+  /**
+   * <pre>
+   * This is for segmenting conversions by whether the user is a new customer
+   * or a returning customer. This segmentation is typically used to measure
+   * the impact of customer acquisition goal.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.enums.ConvertingUserPriorEngagementTypeAndLtvBucketEnum.ConvertingUserPriorEngagementTypeAndLtvBucket new_versus_returning_customers = 160;</code>
+   * @return The newVersusReturningCustomers.
+   */
+  com.google.ads.googleads.v14.enums.ConvertingUserPriorEngagementTypeAndLtvBucketEnum.ConvertingUserPriorEngagementTypeAndLtvBucket getNewVersusReturningCustomers();
 }

@@ -2209,6 +2209,8 @@ private static final long serialVersionUID = 0L;
     CUSTOM_AUDIENCE(74),
     COMBINED_AUDIENCE(75),
     AUDIENCE(79),
+    LOCATION(82),
+    LANGUAGE(83),
     CRITERION_NOT_SET(0);
     private final int value;
     private CriterionCase(int value) {
@@ -2247,6 +2249,8 @@ private static final long serialVersionUID = 0L;
         case 74: return CUSTOM_AUDIENCE;
         case 75: return COMBINED_AUDIENCE;
         case 79: return AUDIENCE;
+        case 82: return LOCATION;
+        case 83: return LANGUAGE;
         case 0: return CRITERION_NOT_SET;
         default: return null;
       }
@@ -4378,6 +4382,92 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v14.common.AudienceInfo.getDefaultInstance();
   }
 
+  public static final int LOCATION_FIELD_NUMBER = 82;
+  /**
+   * <pre>
+   * Immutable. Location.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.common.LocationInfo location = 82 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the location field is set.
+   */
+  @java.lang.Override
+  public boolean hasLocation() {
+    return criterionCase_ == 82;
+  }
+  /**
+   * <pre>
+   * Immutable. Location.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.common.LocationInfo location = 82 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The location.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v14.common.LocationInfo getLocation() {
+    if (criterionCase_ == 82) {
+       return (com.google.ads.googleads.v14.common.LocationInfo) criterion_;
+    }
+    return com.google.ads.googleads.v14.common.LocationInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Immutable. Location.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.common.LocationInfo location = 82 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v14.common.LocationInfoOrBuilder getLocationOrBuilder() {
+    if (criterionCase_ == 82) {
+       return (com.google.ads.googleads.v14.common.LocationInfo) criterion_;
+    }
+    return com.google.ads.googleads.v14.common.LocationInfo.getDefaultInstance();
+  }
+
+  public static final int LANGUAGE_FIELD_NUMBER = 83;
+  /**
+   * <pre>
+   * Immutable. Language.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.common.LanguageInfo language = 83 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the language field is set.
+   */
+  @java.lang.Override
+  public boolean hasLanguage() {
+    return criterionCase_ == 83;
+  }
+  /**
+   * <pre>
+   * Immutable. Language.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.common.LanguageInfo language = 83 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The language.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v14.common.LanguageInfo getLanguage() {
+    if (criterionCase_ == 83) {
+       return (com.google.ads.googleads.v14.common.LanguageInfo) criterion_;
+    }
+    return com.google.ads.googleads.v14.common.LanguageInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Immutable. Language.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.common.LanguageInfo language = 83 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v14.common.LanguageInfoOrBuilder getLanguageOrBuilder() {
+    if (criterionCase_ == 83) {
+       return (com.google.ads.googleads.v14.common.LanguageInfo) criterion_;
+    }
+    return com.google.ads.googleads.v14.common.LanguageInfo.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -4547,6 +4637,12 @@ private static final long serialVersionUID = 0L;
     }
     if (criterionCase_ == 79) {
       output.writeMessage(79, (com.google.ads.googleads.v14.common.AudienceInfo) criterion_);
+    }
+    if (criterionCase_ == 82) {
+      output.writeMessage(82, (com.google.ads.googleads.v14.common.LocationInfo) criterion_);
+    }
+    if (criterionCase_ == 83) {
+      output.writeMessage(83, (com.google.ads.googleads.v14.common.LanguageInfo) criterion_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -4776,6 +4872,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(79, (com.google.ads.googleads.v14.common.AudienceInfo) criterion_);
     }
+    if (criterionCase_ == 82) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(82, (com.google.ads.googleads.v14.common.LocationInfo) criterion_);
+    }
+    if (criterionCase_ == 83) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(83, (com.google.ads.googleads.v14.common.LanguageInfo) criterion_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -4979,6 +5083,14 @@ private static final long serialVersionUID = 0L;
       case 79:
         if (!getAudience()
             .equals(other.getAudience())) return false;
+        break;
+      case 82:
+        if (!getLocation()
+            .equals(other.getLocation())) return false;
+        break;
+      case 83:
+        if (!getLanguage()
+            .equals(other.getLanguage())) return false;
         break;
       case 0:
       default:
@@ -5193,6 +5305,14 @@ private static final long serialVersionUID = 0L;
       case 79:
         hash = (37 * hash) + AUDIENCE_FIELD_NUMBER;
         hash = (53 * hash) + getAudience().hashCode();
+        break;
+      case 82:
+        hash = (37 * hash) + LOCATION_FIELD_NUMBER;
+        hash = (53 * hash) + getLocation().hashCode();
+        break;
+      case 83:
+        hash = (37 * hash) + LANGUAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getLanguage().hashCode();
         break;
       case 0:
       default:
@@ -5444,6 +5564,12 @@ private static final long serialVersionUID = 0L;
       }
       if (audienceBuilder_ != null) {
         audienceBuilder_.clear();
+      }
+      if (locationBuilder_ != null) {
+        locationBuilder_.clear();
+      }
+      if (languageBuilder_ != null) {
+        languageBuilder_.clear();
       }
       criterionCase_ = 0;
       criterion_ = null;
@@ -5701,6 +5827,14 @@ private static final long serialVersionUID = 0L;
       if (criterionCase_ == 79 &&
           audienceBuilder_ != null) {
         result.criterion_ = audienceBuilder_.build();
+      }
+      if (criterionCase_ == 82 &&
+          locationBuilder_ != null) {
+        result.criterion_ = locationBuilder_.build();
+      }
+      if (criterionCase_ == 83 &&
+          languageBuilder_ != null) {
+        result.criterion_ = languageBuilder_.build();
       }
     }
 
@@ -5985,6 +6119,14 @@ private static final long serialVersionUID = 0L;
         }
         case AUDIENCE: {
           mergeAudience(other.getAudience());
+          break;
+        }
+        case LOCATION: {
+          mergeLocation(other.getLocation());
+          break;
+        }
+        case LANGUAGE: {
+          mergeLanguage(other.getLanguage());
           break;
         }
         case CRITERION_NOT_SET: {
@@ -6335,6 +6477,20 @@ private static final long serialVersionUID = 0L;
               criterionCase_ = 79;
               break;
             } // case 634
+            case 658: {
+              input.readMessage(
+                  getLocationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              criterionCase_ = 82;
+              break;
+            } // case 658
+            case 666: {
+              input.readMessage(
+                  getLanguageFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              criterionCase_ = 83;
+              break;
+            } // case 666
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -13221,6 +13377,362 @@ private static final long serialVersionUID = 0L;
       criterionCase_ = 79;
       onChanged();
       return audienceBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v14.common.LocationInfo, com.google.ads.googleads.v14.common.LocationInfo.Builder, com.google.ads.googleads.v14.common.LocationInfoOrBuilder> locationBuilder_;
+    /**
+     * <pre>
+     * Immutable. Location.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.common.LocationInfo location = 82 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the location field is set.
+     */
+    @java.lang.Override
+    public boolean hasLocation() {
+      return criterionCase_ == 82;
+    }
+    /**
+     * <pre>
+     * Immutable. Location.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.common.LocationInfo location = 82 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The location.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v14.common.LocationInfo getLocation() {
+      if (locationBuilder_ == null) {
+        if (criterionCase_ == 82) {
+          return (com.google.ads.googleads.v14.common.LocationInfo) criterion_;
+        }
+        return com.google.ads.googleads.v14.common.LocationInfo.getDefaultInstance();
+      } else {
+        if (criterionCase_ == 82) {
+          return locationBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v14.common.LocationInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Immutable. Location.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.common.LocationInfo location = 82 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder setLocation(com.google.ads.googleads.v14.common.LocationInfo value) {
+      if (locationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        criterion_ = value;
+        onChanged();
+      } else {
+        locationBuilder_.setMessage(value);
+      }
+      criterionCase_ = 82;
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. Location.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.common.LocationInfo location = 82 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder setLocation(
+        com.google.ads.googleads.v14.common.LocationInfo.Builder builderForValue) {
+      if (locationBuilder_ == null) {
+        criterion_ = builderForValue.build();
+        onChanged();
+      } else {
+        locationBuilder_.setMessage(builderForValue.build());
+      }
+      criterionCase_ = 82;
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. Location.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.common.LocationInfo location = 82 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder mergeLocation(com.google.ads.googleads.v14.common.LocationInfo value) {
+      if (locationBuilder_ == null) {
+        if (criterionCase_ == 82 &&
+            criterion_ != com.google.ads.googleads.v14.common.LocationInfo.getDefaultInstance()) {
+          criterion_ = com.google.ads.googleads.v14.common.LocationInfo.newBuilder((com.google.ads.googleads.v14.common.LocationInfo) criterion_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          criterion_ = value;
+        }
+        onChanged();
+      } else {
+        if (criterionCase_ == 82) {
+          locationBuilder_.mergeFrom(value);
+        } else {
+          locationBuilder_.setMessage(value);
+        }
+      }
+      criterionCase_ = 82;
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. Location.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.common.LocationInfo location = 82 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder clearLocation() {
+      if (locationBuilder_ == null) {
+        if (criterionCase_ == 82) {
+          criterionCase_ = 0;
+          criterion_ = null;
+          onChanged();
+        }
+      } else {
+        if (criterionCase_ == 82) {
+          criterionCase_ = 0;
+          criterion_ = null;
+        }
+        locationBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. Location.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.common.LocationInfo location = 82 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public com.google.ads.googleads.v14.common.LocationInfo.Builder getLocationBuilder() {
+      return getLocationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Immutable. Location.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.common.LocationInfo location = 82 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v14.common.LocationInfoOrBuilder getLocationOrBuilder() {
+      if ((criterionCase_ == 82) && (locationBuilder_ != null)) {
+        return locationBuilder_.getMessageOrBuilder();
+      } else {
+        if (criterionCase_ == 82) {
+          return (com.google.ads.googleads.v14.common.LocationInfo) criterion_;
+        }
+        return com.google.ads.googleads.v14.common.LocationInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Immutable. Location.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.common.LocationInfo location = 82 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v14.common.LocationInfo, com.google.ads.googleads.v14.common.LocationInfo.Builder, com.google.ads.googleads.v14.common.LocationInfoOrBuilder> 
+        getLocationFieldBuilder() {
+      if (locationBuilder_ == null) {
+        if (!(criterionCase_ == 82)) {
+          criterion_ = com.google.ads.googleads.v14.common.LocationInfo.getDefaultInstance();
+        }
+        locationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v14.common.LocationInfo, com.google.ads.googleads.v14.common.LocationInfo.Builder, com.google.ads.googleads.v14.common.LocationInfoOrBuilder>(
+                (com.google.ads.googleads.v14.common.LocationInfo) criterion_,
+                getParentForChildren(),
+                isClean());
+        criterion_ = null;
+      }
+      criterionCase_ = 82;
+      onChanged();
+      return locationBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v14.common.LanguageInfo, com.google.ads.googleads.v14.common.LanguageInfo.Builder, com.google.ads.googleads.v14.common.LanguageInfoOrBuilder> languageBuilder_;
+    /**
+     * <pre>
+     * Immutable. Language.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.common.LanguageInfo language = 83 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the language field is set.
+     */
+    @java.lang.Override
+    public boolean hasLanguage() {
+      return criterionCase_ == 83;
+    }
+    /**
+     * <pre>
+     * Immutable. Language.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.common.LanguageInfo language = 83 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The language.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v14.common.LanguageInfo getLanguage() {
+      if (languageBuilder_ == null) {
+        if (criterionCase_ == 83) {
+          return (com.google.ads.googleads.v14.common.LanguageInfo) criterion_;
+        }
+        return com.google.ads.googleads.v14.common.LanguageInfo.getDefaultInstance();
+      } else {
+        if (criterionCase_ == 83) {
+          return languageBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v14.common.LanguageInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Immutable. Language.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.common.LanguageInfo language = 83 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder setLanguage(com.google.ads.googleads.v14.common.LanguageInfo value) {
+      if (languageBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        criterion_ = value;
+        onChanged();
+      } else {
+        languageBuilder_.setMessage(value);
+      }
+      criterionCase_ = 83;
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. Language.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.common.LanguageInfo language = 83 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder setLanguage(
+        com.google.ads.googleads.v14.common.LanguageInfo.Builder builderForValue) {
+      if (languageBuilder_ == null) {
+        criterion_ = builderForValue.build();
+        onChanged();
+      } else {
+        languageBuilder_.setMessage(builderForValue.build());
+      }
+      criterionCase_ = 83;
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. Language.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.common.LanguageInfo language = 83 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder mergeLanguage(com.google.ads.googleads.v14.common.LanguageInfo value) {
+      if (languageBuilder_ == null) {
+        if (criterionCase_ == 83 &&
+            criterion_ != com.google.ads.googleads.v14.common.LanguageInfo.getDefaultInstance()) {
+          criterion_ = com.google.ads.googleads.v14.common.LanguageInfo.newBuilder((com.google.ads.googleads.v14.common.LanguageInfo) criterion_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          criterion_ = value;
+        }
+        onChanged();
+      } else {
+        if (criterionCase_ == 83) {
+          languageBuilder_.mergeFrom(value);
+        } else {
+          languageBuilder_.setMessage(value);
+        }
+      }
+      criterionCase_ = 83;
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. Language.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.common.LanguageInfo language = 83 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder clearLanguage() {
+      if (languageBuilder_ == null) {
+        if (criterionCase_ == 83) {
+          criterionCase_ = 0;
+          criterion_ = null;
+          onChanged();
+        }
+      } else {
+        if (criterionCase_ == 83) {
+          criterionCase_ = 0;
+          criterion_ = null;
+        }
+        languageBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. Language.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.common.LanguageInfo language = 83 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public com.google.ads.googleads.v14.common.LanguageInfo.Builder getLanguageBuilder() {
+      return getLanguageFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Immutable. Language.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.common.LanguageInfo language = 83 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v14.common.LanguageInfoOrBuilder getLanguageOrBuilder() {
+      if ((criterionCase_ == 83) && (languageBuilder_ != null)) {
+        return languageBuilder_.getMessageOrBuilder();
+      } else {
+        if (criterionCase_ == 83) {
+          return (com.google.ads.googleads.v14.common.LanguageInfo) criterion_;
+        }
+        return com.google.ads.googleads.v14.common.LanguageInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Immutable. Language.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.common.LanguageInfo language = 83 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v14.common.LanguageInfo, com.google.ads.googleads.v14.common.LanguageInfo.Builder, com.google.ads.googleads.v14.common.LanguageInfoOrBuilder> 
+        getLanguageFieldBuilder() {
+      if (languageBuilder_ == null) {
+        if (!(criterionCase_ == 83)) {
+          criterion_ = com.google.ads.googleads.v14.common.LanguageInfo.getDefaultInstance();
+        }
+        languageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v14.common.LanguageInfo, com.google.ads.googleads.v14.common.LanguageInfo.Builder, com.google.ads.googleads.v14.common.LanguageInfoOrBuilder>(
+                (com.google.ads.googleads.v14.common.LanguageInfo) criterion_,
+                getParentForChildren(),
+                isClean());
+        criterion_ = null;
+      }
+      criterionCase_ = 83;
+      onChanged();
+      return languageBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

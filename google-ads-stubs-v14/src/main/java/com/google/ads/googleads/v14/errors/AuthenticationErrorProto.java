@@ -30,8 +30,8 @@ public final class AuthenticationErrorProto {
     java.lang.String[] descriptorData = {
       "\n:google/ads/googleads/v14/errors/authen" +
       "tication_error.proto\022\037google.ads.googlea" +
-      "ds.v14.errors\"\350\004\n\027AuthenticationErrorEnu" +
-      "m\"\314\004\n\023AuthenticationError\022\017\n\013UNSPECIFIED" +
+      "ds.v14.errors\"\336\005\n\027AuthenticationErrorEnu" +
+      "m\"\302\005\n\023AuthenticationError\022\017\n\013UNSPECIFIED" +
       "\020\000\022\013\n\007UNKNOWN\020\001\022\030\n\024AUTHENTICATION_ERROR\020" +
       "\002\022\036\n\032CLIENT_CUSTOMER_ID_INVALID\020\005\022\026\n\022CUS" +
       "TOMER_NOT_FOUND\020\010\022\032\n\026GOOGLE_ACCOUNT_DELE" +
@@ -45,14 +45,17 @@ public final class AuthenticationErrorProto {
       "AUTH_TOKEN_HEADER_INVALID\020\023\022\030\n\024LOGIN_COO" +
       "KIE_INVALID\020\024\022\023\n\017USER_ID_INVALID\020\026\022&\n\"TW" +
       "O_STEP_VERIFICATION_NOT_ENROLLED\020\027\022$\n AD" +
-      "VANCED_PROTECTION_NOT_ENROLLED\020\030B\370\001\n#com" +
-      ".google.ads.googleads.v14.errorsB\030Authen" +
-      "ticationErrorProtoP\001ZEgoogle.golang.org/" +
-      "genproto/googleapis/ads/googleads/v14/er" +
-      "rors;errors\242\002\003GAA\252\002\037Google.Ads.GoogleAds" +
-      ".V14.Errors\312\002\037Google\\Ads\\GoogleAds\\V14\\E" +
-      "rrors\352\002#Google::Ads::GoogleAds::V14::Err" +
-      "orsb\006proto3"
+      "VANCED_PROTECTION_NOT_ENROLLED\020\030\022\037\n\033ORGA" +
+      "NIZATION_NOT_RECOGNIZED\020\032\022\035\n\031ORGANIZATIO" +
+      "N_NOT_APPROVED\020\033\0224\n0ORGANIZATION_NOT_ASS" +
+      "OCIATED_WITH_DEVELOPER_TOKEN\020\034B\370\001\n#com.g" +
+      "oogle.ads.googleads.v14.errorsB\030Authenti" +
+      "cationErrorProtoP\001ZEgoogle.golang.org/ge" +
+      "nproto/googleapis/ads/googleads/v14/erro" +
+      "rs;errors\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V" +
+      "14.Errors\312\002\037Google\\Ads\\GoogleAds\\V14\\Err" +
+      "ors\352\002#Google::Ads::GoogleAds::V14::Error" +
+      "sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

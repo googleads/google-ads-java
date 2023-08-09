@@ -30,7 +30,7 @@ public final class CriterionErrorProto {
     java.lang.String[] descriptorData = {
       "\n5google/ads/googleads/v14/errors/criter" +
       "ion_error.proto\022\037google.ads.googleads.v1" +
-      "4.errors\"\245-\n\022CriterionErrorEnum\"\216-\n\016Crit" +
+      "4.errors\"\271.\n\022CriterionErrorEnum\"\242.\n\016Crit" +
       "erionError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001" +
       "\022\032\n\026CONCRETE_TYPE_REQUIRED\020\002\022\035\n\031INVALID_" +
       "EXCLUDED_CATEGORY\020\003\022\030\n\024INVALID_KEYWORD_T" +
@@ -175,13 +175,17 @@ public final class CriterionErrorProto {
       "IPLE_NEGATIVE_KEYWORD_LIST_PER_ACCOUNT\020\223" +
       "\001\022/\n*CUSTOMER_CANNOT_ADD_CRITERION_OF_TH" +
       "IS_TYPE\020\225\001\022$\n\037CANNOT_TARGET_SIMILAR_USER" +
-      "_LIST\020\227\001B\363\001\n#com.google.ads.googleads.v1" +
-      "4.errorsB\023CriterionErrorProtoP\001ZEgoogle." +
-      "golang.org/genproto/googleapis/ads/googl" +
-      "eads/v14/errors;errors\242\002\003GAA\252\002\037Google.Ad" +
-      "s.GoogleAds.V14.Errors\312\002\037Google\\Ads\\Goog" +
-      "leAds\\V14\\Errors\352\002#Google::Ads::GoogleAd" +
-      "s::V14::Errorsb\006proto3"
+      "_LIST\020\227\001\022G\nBCANNOT_ADD_AUDIENCE_SEGMENT_" +
+      "CRITERION_WHEN_AUDIENCE_GROUPED_IS_SET\020\230" +
+      "\001\022&\n!ONE_AUDIENCE_ALLOWED_PER_AD_GROUP\020\231" +
+      "\001\022!\n\034INVALID_DETAILED_DEMOGRAPHIC\020\232\001B\363\001\n" +
+      "#com.google.ads.googleads.v14.errorsB\023Cr" +
+      "iterionErrorProtoP\001ZEgoogle.golang.org/g" +
+      "enproto/googleapis/ads/googleads/v14/err" +
+      "ors;errors\242\002\003GAA\252\002\037Google.Ads.GoogleAds." +
+      "V14.Errors\312\002\037Google\\Ads\\GoogleAds\\V14\\Er" +
+      "rors\352\002#Google::Ads::GoogleAds::V14::Erro" +
+      "rsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

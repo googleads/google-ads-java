@@ -135,17 +135,15 @@ public interface RecommendationOrBuilder extends
    * MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
    * RESPONSIVE_SEARCH_AD,
    * RESPONSIVE_SEARCH_AD_ASSET,
-   * SEARCH_PARTNERS_OPT_IN,
-   * DISPLAY_EXPANSION_OPT_IN, SITELINK_EXTENSION, TARGET_CPA_OPT_IN,
-   * TARGET_ROAS_OPT_IN, TEXT_AD,
-   * UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX ,
-   * RAISE_TARGET_CPA_BID_TOO_LOW, FORECASTING_SET_TARGET_ROAS
+   * SEARCH_PARTNERS_OPT_IN, DISPLAY_EXPANSION_OPT_IN, SITELINK_EXTENSION,
+   * TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN, TEXT_AD,
+   * UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX,
+   * RAISE_TARGET_CPA_BID_TOO_LOW, FORECASTING_SET_TARGET_ROAS,
    * SHOPPING_ADD_AGE_GROUP, SHOPPING_ADD_COLOR, SHOPPING_ADD_GENDER,
    * SHOPPING_ADD_SIZE, SHOPPING_ADD_GTIN, SHOPPING_ADD_MORE_IDENTIFIERS,
    * SHOPPING_ADD_PRODUCTS_TO_CAMPAIGN, SHOPPING_FIX_DISAPPROVED_PRODUCTS,
-   * SHOPPING_MIGRATE_REGULAR_SHOPPING_CAMPAIGN_OFFERS_TO_PERFORMANCE_MAX
-   *  DYNAMIC_IMAGE_EXTENSION_OPT_IN, RAISE_TARGET_CPA,
-   * LOWER_TARGET_ROAS
+   * SHOPPING_MIGRATE_REGULAR_SHOPPING_CAMPAIGN_OFFERS_TO_PERFORMANCE_MAX,
+   * DYNAMIC_IMAGE_EXTENSION_OPT_IN, RAISE_TARGET_CPA, LOWER_TARGET_ROAS,
    * </pre>
    *
    * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -163,17 +161,15 @@ public interface RecommendationOrBuilder extends
    * MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
    * RESPONSIVE_SEARCH_AD,
    * RESPONSIVE_SEARCH_AD_ASSET,
-   * SEARCH_PARTNERS_OPT_IN,
-   * DISPLAY_EXPANSION_OPT_IN, SITELINK_EXTENSION, TARGET_CPA_OPT_IN,
-   * TARGET_ROAS_OPT_IN, TEXT_AD,
-   * UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX ,
-   * RAISE_TARGET_CPA_BID_TOO_LOW, FORECASTING_SET_TARGET_ROAS
+   * SEARCH_PARTNERS_OPT_IN, DISPLAY_EXPANSION_OPT_IN, SITELINK_EXTENSION,
+   * TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN, TEXT_AD,
+   * UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX,
+   * RAISE_TARGET_CPA_BID_TOO_LOW, FORECASTING_SET_TARGET_ROAS,
    * SHOPPING_ADD_AGE_GROUP, SHOPPING_ADD_COLOR, SHOPPING_ADD_GENDER,
    * SHOPPING_ADD_SIZE, SHOPPING_ADD_GTIN, SHOPPING_ADD_MORE_IDENTIFIERS,
    * SHOPPING_ADD_PRODUCTS_TO_CAMPAIGN, SHOPPING_FIX_DISAPPROVED_PRODUCTS,
-   * SHOPPING_MIGRATE_REGULAR_SHOPPING_CAMPAIGN_OFFERS_TO_PERFORMANCE_MAX
-   *  DYNAMIC_IMAGE_EXTENSION_OPT_IN, RAISE_TARGET_CPA,
-   * LOWER_TARGET_ROAS
+   * SHOPPING_MIGRATE_REGULAR_SHOPPING_CAMPAIGN_OFFERS_TO_PERFORMANCE_MAX,
+   * DYNAMIC_IMAGE_EXTENSION_OPT_IN, RAISE_TARGET_CPA, LOWER_TARGET_ROAS,
    * </pre>
    *
    * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -191,17 +187,15 @@ public interface RecommendationOrBuilder extends
    * MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
    * RESPONSIVE_SEARCH_AD,
    * RESPONSIVE_SEARCH_AD_ASSET,
-   * SEARCH_PARTNERS_OPT_IN,
-   * DISPLAY_EXPANSION_OPT_IN, SITELINK_EXTENSION, TARGET_CPA_OPT_IN,
-   * TARGET_ROAS_OPT_IN, TEXT_AD,
-   * UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX ,
-   * RAISE_TARGET_CPA_BID_TOO_LOW, FORECASTING_SET_TARGET_ROAS
+   * SEARCH_PARTNERS_OPT_IN, DISPLAY_EXPANSION_OPT_IN, SITELINK_EXTENSION,
+   * TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN, TEXT_AD,
+   * UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX,
+   * RAISE_TARGET_CPA_BID_TOO_LOW, FORECASTING_SET_TARGET_ROAS,
    * SHOPPING_ADD_AGE_GROUP, SHOPPING_ADD_COLOR, SHOPPING_ADD_GENDER,
    * SHOPPING_ADD_SIZE, SHOPPING_ADD_GTIN, SHOPPING_ADD_MORE_IDENTIFIERS,
    * SHOPPING_ADD_PRODUCTS_TO_CAMPAIGN, SHOPPING_FIX_DISAPPROVED_PRODUCTS,
-   * SHOPPING_MIGRATE_REGULAR_SHOPPING_CAMPAIGN_OFFERS_TO_PERFORMANCE_MAX
-   *  DYNAMIC_IMAGE_EXTENSION_OPT_IN, RAISE_TARGET_CPA,
-   * LOWER_TARGET_ROAS
+   * SHOPPING_MIGRATE_REGULAR_SHOPPING_CAMPAIGN_OFFERS_TO_PERFORMANCE_MAX,
+   * DYNAMIC_IMAGE_EXTENSION_OPT_IN, RAISE_TARGET_CPA, LOWER_TARGET_ROAS,
    * </pre>
    *
    * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -1457,6 +1451,90 @@ public interface RecommendationOrBuilder extends
    * <code>.google.ads.googleads.v14.resources.Recommendation.LowerTargetRoasRecommendation lower_target_roas_recommendation = 56 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v14.resources.Recommendation.LowerTargetRoasRecommendationOrBuilder getLowerTargetRoasRecommendationOrBuilder();
+
+  /**
+   * <pre>
+   * Output only. The Performance Max Opt In recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.resources.Recommendation.PerformanceMaxOptInRecommendation performance_max_opt_in_recommendation = 57 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the performanceMaxOptInRecommendation field is set.
+   */
+  boolean hasPerformanceMaxOptInRecommendation();
+  /**
+   * <pre>
+   * Output only. The Performance Max Opt In recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.resources.Recommendation.PerformanceMaxOptInRecommendation performance_max_opt_in_recommendation = 57 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The performanceMaxOptInRecommendation.
+   */
+  com.google.ads.googleads.v14.resources.Recommendation.PerformanceMaxOptInRecommendation getPerformanceMaxOptInRecommendation();
+  /**
+   * <pre>
+   * Output only. The Performance Max Opt In recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.resources.Recommendation.PerformanceMaxOptInRecommendation performance_max_opt_in_recommendation = 57 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.ads.googleads.v14.resources.Recommendation.PerformanceMaxOptInRecommendationOrBuilder getPerformanceMaxOptInRecommendationOrBuilder();
+
+  /**
+   * <pre>
+   * Output only. The improve Performance Max ad strength recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.resources.Recommendation.ImprovePerformanceMaxAdStrengthRecommendation improve_performance_max_ad_strength_recommendation = 58 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the improvePerformanceMaxAdStrengthRecommendation field is set.
+   */
+  boolean hasImprovePerformanceMaxAdStrengthRecommendation();
+  /**
+   * <pre>
+   * Output only. The improve Performance Max ad strength recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.resources.Recommendation.ImprovePerformanceMaxAdStrengthRecommendation improve_performance_max_ad_strength_recommendation = 58 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The improvePerformanceMaxAdStrengthRecommendation.
+   */
+  com.google.ads.googleads.v14.resources.Recommendation.ImprovePerformanceMaxAdStrengthRecommendation getImprovePerformanceMaxAdStrengthRecommendation();
+  /**
+   * <pre>
+   * Output only. The improve Performance Max ad strength recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.resources.Recommendation.ImprovePerformanceMaxAdStrengthRecommendation improve_performance_max_ad_strength_recommendation = 58 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.ads.googleads.v14.resources.Recommendation.ImprovePerformanceMaxAdStrengthRecommendationOrBuilder getImprovePerformanceMaxAdStrengthRecommendationOrBuilder();
+
+  /**
+   * <pre>
+   * Output only. The Dynamic Search Ads to Performance Max migration
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.resources.Recommendation.MigrateDynamicSearchAdsCampaignToPerformanceMaxRecommendation migrate_dynamic_search_ads_campaign_to_performance_max_recommendation = 59 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the migrateDynamicSearchAdsCampaignToPerformanceMaxRecommendation field is set.
+   */
+  boolean hasMigrateDynamicSearchAdsCampaignToPerformanceMaxRecommendation();
+  /**
+   * <pre>
+   * Output only. The Dynamic Search Ads to Performance Max migration
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.resources.Recommendation.MigrateDynamicSearchAdsCampaignToPerformanceMaxRecommendation migrate_dynamic_search_ads_campaign_to_performance_max_recommendation = 59 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The migrateDynamicSearchAdsCampaignToPerformanceMaxRecommendation.
+   */
+  com.google.ads.googleads.v14.resources.Recommendation.MigrateDynamicSearchAdsCampaignToPerformanceMaxRecommendation getMigrateDynamicSearchAdsCampaignToPerformanceMaxRecommendation();
+  /**
+   * <pre>
+   * Output only. The Dynamic Search Ads to Performance Max migration
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.resources.Recommendation.MigrateDynamicSearchAdsCampaignToPerformanceMaxRecommendation migrate_dynamic_search_ads_campaign_to_performance_max_recommendation = 59 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.ads.googleads.v14.resources.Recommendation.MigrateDynamicSearchAdsCampaignToPerformanceMaxRecommendationOrBuilder getMigrateDynamicSearchAdsCampaignToPerformanceMaxRecommendationOrBuilder();
 
   com.google.ads.googleads.v14.resources.Recommendation.RecommendationCase getRecommendationCase();
 }

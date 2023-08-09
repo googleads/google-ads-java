@@ -430,6 +430,32 @@ private static final long serialVersionUID = 0L;
      * <code>LOWER_TARGET_ROAS = 45;</code>
      */
     LOWER_TARGET_ROAS(45),
+    /**
+     * <pre>
+     * Recommendation to opt into Performance Max campaigns.
+     * </pre>
+     *
+     * <code>PERFORMANCE_MAX_OPT_IN = 46;</code>
+     */
+    PERFORMANCE_MAX_OPT_IN(46),
+    /**
+     * <pre>
+     * Recommendation to improve the asset group strength of a Performance Max
+     * campaign to an "Excellent" rating.
+     * </pre>
+     *
+     * <code>IMPROVE_PERFORMANCE_MAX_AD_STRENGTH = 47;</code>
+     */
+    IMPROVE_PERFORMANCE_MAX_AD_STRENGTH(47),
+    /**
+     * <pre>
+     * Recommendation to migrate Dynamic Search Ads to Performance Max
+     * campaigns.
+     * </pre>
+     *
+     * <code>MIGRATE_DYNAMIC_SEARCH_ADS_CAMPAIGN_TO_PERFORMANCE_MAX = 48;</code>
+     */
+    MIGRATE_DYNAMIC_SEARCH_ADS_CAMPAIGN_TO_PERFORMANCE_MAX(48),
     UNRECOGNIZED(-1),
     ;
 
@@ -812,6 +838,32 @@ private static final long serialVersionUID = 0L;
      * <code>LOWER_TARGET_ROAS = 45;</code>
      */
     public static final int LOWER_TARGET_ROAS_VALUE = 45;
+    /**
+     * <pre>
+     * Recommendation to opt into Performance Max campaigns.
+     * </pre>
+     *
+     * <code>PERFORMANCE_MAX_OPT_IN = 46;</code>
+     */
+    public static final int PERFORMANCE_MAX_OPT_IN_VALUE = 46;
+    /**
+     * <pre>
+     * Recommendation to improve the asset group strength of a Performance Max
+     * campaign to an "Excellent" rating.
+     * </pre>
+     *
+     * <code>IMPROVE_PERFORMANCE_MAX_AD_STRENGTH = 47;</code>
+     */
+    public static final int IMPROVE_PERFORMANCE_MAX_AD_STRENGTH_VALUE = 47;
+    /**
+     * <pre>
+     * Recommendation to migrate Dynamic Search Ads to Performance Max
+     * campaigns.
+     * </pre>
+     *
+     * <code>MIGRATE_DYNAMIC_SEARCH_ADS_CAMPAIGN_TO_PERFORMANCE_MAX = 48;</code>
+     */
+    public static final int MIGRATE_DYNAMIC_SEARCH_ADS_CAMPAIGN_TO_PERFORMANCE_MAX_VALUE = 48;
 
 
     public final int getNumber() {
@@ -881,6 +933,9 @@ private static final long serialVersionUID = 0L;
         case 43: return DYNAMIC_IMAGE_EXTENSION_OPT_IN;
         case 44: return RAISE_TARGET_CPA;
         case 45: return LOWER_TARGET_ROAS;
+        case 46: return PERFORMANCE_MAX_OPT_IN;
+        case 47: return IMPROVE_PERFORMANCE_MAX_AD_STRENGTH;
+        case 48: return MIGRATE_DYNAMIC_SEARCH_ADS_CAMPAIGN_TO_PERFORMANCE_MAX;
         default: return null;
       }
     }

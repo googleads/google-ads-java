@@ -3873,6 +3873,34 @@ public interface ErrorCodeOrBuilder extends
 
   /**
    * <pre>
+   * The reasons for the Search term insight error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.errors.SearchTermInsightErrorEnum.SearchTermInsightError search_term_insight_error = 174;</code>
+   * @return Whether the searchTermInsightError field is set.
+   */
+  boolean hasSearchTermInsightError();
+  /**
+   * <pre>
+   * The reasons for the Search term insight error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.errors.SearchTermInsightErrorEnum.SearchTermInsightError search_term_insight_error = 174;</code>
+   * @return The enum numeric value on the wire for searchTermInsightError.
+   */
+  int getSearchTermInsightErrorValue();
+  /**
+   * <pre>
+   * The reasons for the Search term insight error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.errors.SearchTermInsightErrorEnum.SearchTermInsightError search_term_insight_error = 174;</code>
+   * @return The searchTermInsightError.
+   */
+  com.google.ads.googleads.v14.errors.SearchTermInsightErrorEnum.SearchTermInsightError getSearchTermInsightError();
+
+  /**
+   * <pre>
    * The reasons for the Smart campaign error
    * </pre>
    *

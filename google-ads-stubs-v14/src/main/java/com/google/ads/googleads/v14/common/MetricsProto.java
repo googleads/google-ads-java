@@ -19,6 +19,11 @@ public final class MetricsProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v14_common_Metrics_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v14_common_SearchVolumeRange_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v14_common_SearchVolumeRange_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -33,7 +38,7 @@ public final class MetricsProto {
       "\032;google/ads/googleads/v14/enums/interac" +
       "tion_event_type.proto\0329google/ads/google" +
       "ads/v14/enums/quality_score_bucket.proto" +
-      "\"\240\\\n\007Metrics\0220\n\"absolute_top_impression_" +
+      "\"\244^\n\007Metrics\0220\n\"absolute_top_impression_" +
       "percentage\030\267\001 \001(\001H\000\210\001\001\022\035\n\017active_view_cp" +
       "m\030\270\001 \001(\001H\001\210\001\001\022\035\n\017active_view_ctr\030\271\001 \001(\001H" +
       "\002\210\001\001\022%\n\027active_view_impressions\030\272\001 \001(\003H\003" +
@@ -45,296 +50,304 @@ public final class MetricsProto {
       "ns_from_interactions_rate\030\277\001 \001(\001H\010\210\001\001\022#\n" +
       "\025all_conversions_value\030\300\001 \001(\001H\t\210\001\001\0221\n(al" +
       "l_conversions_value_by_conversion_date\030\360" +
-      "\001 \001(\001\022\035\n\017all_conversions\030\301\001 \001(\001H\n\210\001\001\022+\n\"" +
-      "all_conversions_by_conversion_date\030\361\001 \001(" +
-      "\001\022,\n\036all_conversions_value_per_cost\030\302\001 \001" +
-      "(\001H\013\210\001\001\0220\n\"all_conversions_from_click_to" +
-      "_call\030\303\001 \001(\001H\014\210\001\001\022-\n\037all_conversions_fro" +
-      "m_directions\030\304\001 \001(\001H\r\210\001\001\022E\n7all_conversi" +
-      "ons_from_interactions_value_per_interact" +
-      "ion\030\305\001 \001(\001H\016\210\001\001\022\'\n\031all_conversions_from_" +
-      "menu\030\306\001 \001(\001H\017\210\001\001\022(\n\032all_conversions_from" +
-      "_order\030\307\001 \001(\001H\020\210\001\001\0223\n%all_conversions_fr" +
-      "om_other_engagement\030\310\001 \001(\001H\021\210\001\001\022.\n all_c" +
-      "onversions_from_store_visit\030\311\001 \001(\001H\022\210\001\001\022" +
-      "0\n\"all_conversions_from_store_website\030\312\001" +
-      " \001(\001H\023\210\001\001\022G\n9auction_insight_search_abso" +
-      "lute_top_impression_percentage\030\202\002 \001(\001H\024\210" +
-      "\001\001\0225\n\'auction_insight_search_impression_" +
-      "share\030\203\002 \001(\001H\025\210\001\001\0225\n\'auction_insight_sea" +
-      "rch_outranking_share\030\204\002 \001(\001H\026\210\001\001\0221\n#auct" +
-      "ion_insight_search_overlap_rate\030\205\002 \001(\001H\027" +
-      "\210\001\001\0228\n*auction_insight_search_position_a" +
-      "bove_rate\030\206\002 \001(\001H\030\210\001\001\022>\n0auction_insight" +
-      "_search_top_impression_percentage\030\207\002 \001(\001" +
-      "H\031\210\001\001\022\032\n\014average_cost\030\313\001 \001(\001H\032\210\001\001\022\031\n\013ave" +
-      "rage_cpc\030\314\001 \001(\001H\033\210\001\001\022\031\n\013average_cpe\030\315\001 \001" +
-      "(\001H\034\210\001\001\022\031\n\013average_cpm\030\316\001 \001(\001H\035\210\001\001\022\031\n\013av" +
-      "erage_cpv\030\317\001 \001(\001H\036\210\001\001\022 \n\022average_page_vi" +
-      "ews\030\320\001 \001(\001H\037\210\001\001\022\"\n\024average_time_on_site\030" +
-      "\321\001 \001(\001H \210\001\001\022\'\n\031benchmark_average_max_cpc" +
-      "\030\322\001 \001(\001H!\210\001\001\022.\n biddable_app_install_con" +
-      "versions\030\376\001 \001(\001H\"\210\001\001\0223\n%biddable_app_pos" +
-      "t_install_conversions\030\377\001 \001(\001H#\210\001\001\022\033\n\rben" +
-      "chmark_ctr\030\323\001 \001(\001H$\210\001\001\022\031\n\013bounce_rate\030\324\001" +
-      " \001(\001H%\210\001\001\022\024\n\006clicks\030\203\001 \001(\003H&\210\001\001\022\035\n\017combi" +
-      "ned_clicks\030\234\001 \001(\003H\'\210\001\001\022\'\n\031combined_click" +
-      "s_per_query\030\235\001 \001(\001H(\210\001\001\022\036\n\020combined_quer" +
-      "ies\030\236\001 \001(\003H)\210\001\001\0222\n$content_budget_lost_i" +
-      "mpression_share\030\237\001 \001(\001H*\210\001\001\022&\n\030content_i" +
-      "mpression_share\030\240\001 \001(\001H+\210\001\001\0228\n*conversio" +
-      "n_last_received_request_date_time\030\241\001 \001(\t" +
-      "H,\210\001\001\022-\n\037conversion_last_conversion_date" +
-      "\030\242\001 \001(\tH-\210\001\001\0220\n\"content_rank_lost_impres" +
-      "sion_share\030\243\001 \001(\001H.\210\001\001\0220\n\"conversions_fr" +
-      "om_interactions_rate\030\244\001 \001(\001H/\210\001\001\022\037\n\021conv" +
-      "ersions_value\030\245\001 \001(\001H0\210\001\001\022-\n$conversions" +
-      "_value_by_conversion_date\030\362\001 \001(\001\022(\n\032conv" +
-      "ersions_value_per_cost\030\246\001 \001(\001H1\210\001\001\022A\n3co" +
-      "nversions_from_interactions_value_per_in" +
-      "teraction\030\247\001 \001(\001H2\210\001\001\022\031\n\013conversions\030\250\001 " +
-      "\001(\001H3\210\001\001\022\'\n\036conversions_by_conversion_da" +
-      "te\030\363\001 \001(\001\022\031\n\013cost_micros\030\251\001 \001(\003H4\210\001\001\022&\n\030" +
-      "cost_per_all_conversions\030\252\001 \001(\001H5\210\001\001\022!\n\023" +
-      "cost_per_conversion\030\253\001 \001(\001H6\210\001\001\022:\n,cost_" +
-      "per_current_model_attributed_conversion\030" +
-      "\254\001 \001(\001H7\210\001\001\022&\n\030cross_device_conversions\030" +
-      "\255\001 \001(\001H8\210\001\001\022\021\n\003ctr\030\256\001 \001(\001H9\210\001\001\0222\n$curren" +
-      "t_model_attributed_conversions\030\257\001 \001(\001H:\210" +
-      "\001\001\022I\n;current_model_attributed_conversio" +
-      "ns_from_interactions_rate\030\260\001 \001(\001H;\210\001\001\022Z\n" +
-      "Lcurrent_model_attributed_conversions_fr" +
-      "om_interactions_value_per_interaction\030\261\001" +
-      " \001(\001H<\210\001\001\0228\n*current_model_attributed_co" +
-      "nversions_value\030\262\001 \001(\001H=\210\001\001\022A\n3current_m" +
-      "odel_attributed_conversions_value_per_co" +
-      "st\030\263\001 \001(\001H>\210\001\001\022\035\n\017engagement_rate\030\264\001 \001(\001" +
-      "H?\210\001\001\022\031\n\013engagements\030\265\001 \001(\003H@\210\001\001\022-\n\037hote" +
-      "l_average_lead_value_micros\030\325\001 \001(\001HA\210\001\001\022" +
-      "*\n\034hotel_commission_rate_micros\030\200\002 \001(\003HB" +
-      "\210\001\001\022,\n\036hotel_expected_commission_cost\030\201\002" +
-      " \001(\001HC\210\001\001\022/\n!hotel_price_difference_perc" +
-      "entage\030\326\001 \001(\001HD\210\001\001\022(\n\032hotel_eligible_imp" +
-      "ressions\030\327\001 \001(\003HE\210\001\001\022t\n!historical_creat" +
-      "ive_quality_score\030P \001(\0162I.google.ads.goo" +
-      "gleads.v14.enums.QualityScoreBucketEnum." +
-      "QualityScoreBucket\022x\n%historical_landing" +
-      "_page_quality_score\030Q \001(\0162I.google.ads.g" +
-      "oogleads.v14.enums.QualityScoreBucketEnu" +
-      "m.QualityScoreBucket\022&\n\030historical_quali" +
-      "ty_score\030\330\001 \001(\003HF\210\001\001\022r\n\037historical_searc" +
-      "h_predicted_ctr\030S \001(\0162I.google.ads.googl" +
-      "eads.v14.enums.QualityScoreBucketEnum.Qu" +
-      "alityScoreBucket\022\034\n\016gmail_forwards\030\331\001 \001(" +
-      "\003HG\210\001\001\022\031\n\013gmail_saves\030\332\001 \001(\003HH\210\001\001\022$\n\026gma" +
-      "il_secondary_clicks\030\333\001 \001(\003HI\210\001\001\022*\n\034impre" +
-      "ssions_from_store_reach\030\334\001 \001(\003HJ\210\001\001\022\031\n\013i" +
-      "mpressions\030\335\001 \001(\003HK\210\001\001\022\036\n\020interaction_ra" +
-      "te\030\336\001 \001(\001HL\210\001\001\022\032\n\014interactions\030\337\001 \001(\003HM\210" +
-      "\001\001\022n\n\027interaction_event_types\030d \003(\0162M.go" +
-      "ogle.ads.googleads.v14.enums.Interaction" +
-      "EventTypeEnum.InteractionEventType\022 \n\022in" +
-      "valid_click_rate\030\340\001 \001(\001HN\210\001\001\022\034\n\016invalid_" +
-      "clicks\030\341\001 \001(\003HO\210\001\001\022\033\n\rmessage_chats\030\342\001 \001" +
-      "(\003HP\210\001\001\022!\n\023message_impressions\030\343\001 \001(\003HQ\210" +
-      "\001\001\022\037\n\021message_chat_rate\030\344\001 \001(\001HR\210\001\001\022/\n!m" +
-      "obile_friendly_clicks_percentage\030\345\001 \001(\001H" +
-      "S\210\001\001\022\'\n\031optimization_score_uplift\030\367\001 \001(\001" +
-      "HT\210\001\001\022$\n\026optimization_score_url\030\370\001 \001(\tHU" +
-      "\210\001\001\022\034\n\016organic_clicks\030\346\001 \001(\003HV\210\001\001\022&\n\030org" +
-      "anic_clicks_per_query\030\347\001 \001(\001HW\210\001\001\022!\n\023org" +
-      "anic_impressions\030\350\001 \001(\003HX\210\001\001\022+\n\035organic_" +
-      "impressions_per_query\030\351\001 \001(\001HY\210\001\001\022\035\n\017org" +
-      "anic_queries\030\352\001 \001(\003HZ\210\001\001\022\"\n\024percent_new_" +
-      "visitors\030\353\001 \001(\001H[\210\001\001\022\031\n\013phone_calls\030\354\001 \001" +
-      "(\003H\\\210\001\001\022\037\n\021phone_impressions\030\355\001 \001(\003H]\210\001\001" +
-      "\022 \n\022phone_through_rate\030\356\001 \001(\001H^\210\001\001\022\032\n\014re" +
-      "lative_ctr\030\357\001 \001(\001H_\210\001\001\0222\n$search_absolut" +
-      "e_top_impression_share\030\210\001 \001(\001H`\210\001\001\022>\n0se" +
-      "arch_budget_lost_absolute_top_impression" +
-      "_share\030\211\001 \001(\001Ha\210\001\001\0221\n#search_budget_lost" +
-      "_impression_share\030\212\001 \001(\001Hb\210\001\001\0225\n\'search_" +
-      "budget_lost_top_impression_share\030\213\001 \001(\001H" +
-      "c\210\001\001\022 \n\022search_click_share\030\214\001 \001(\001Hd\210\001\001\0221" +
-      "\n#search_exact_match_impression_share\030\215\001" +
-      " \001(\001He\210\001\001\022%\n\027search_impression_share\030\216\001 " +
-      "\001(\001Hf\210\001\001\022<\n.search_rank_lost_absolute_to" +
-      "p_impression_share\030\217\001 \001(\001Hg\210\001\001\022/\n!search" +
-      "_rank_lost_impression_share\030\220\001 \001(\001Hh\210\001\001\022" +
-      "3\n%search_rank_lost_top_impression_share" +
-      "\030\221\001 \001(\001Hi\210\001\001\022)\n\033search_top_impression_sh" +
-      "are\030\222\001 \001(\001Hj\210\001\001\022\031\n\013speed_score\030\223\001 \001(\003Hk\210" +
-      "\001\001\022\'\n\031average_target_cpa_micros\030\242\002 \001(\003Hl" +
-      "\210\001\001\022!\n\023average_target_roas\030\372\001 \001(\001Hm\210\001\001\022\'" +
-      "\n\031top_impression_percentage\030\224\001 \001(\001Hn\210\001\001\022" +
-      ">\n0valid_accelerated_mobile_pages_clicks" +
-      "_percentage\030\225\001 \001(\001Ho\210\001\001\022\'\n\031value_per_all" +
-      "_conversions\030\226\001 \001(\001Hp\210\001\001\022:\n,value_per_al" +
-      "l_conversions_by_conversion_date\030\364\001 \001(\001H" +
-      "q\210\001\001\022\"\n\024value_per_conversion\030\227\001 \001(\001Hr\210\001\001" +
-      "\0226\n(value_per_conversions_by_conversion_" +
-      "date\030\365\001 \001(\001Hs\210\001\001\022;\n-value_per_current_mo" +
-      "del_attributed_conversion\030\230\001 \001(\001Ht\210\001\001\022&\n" +
-      "\030video_quartile_p100_rate\030\204\001 \001(\001Hu\210\001\001\022%\n" +
-      "\027video_quartile_p25_rate\030\205\001 \001(\001Hv\210\001\001\022%\n\027" +
-      "video_quartile_p50_rate\030\206\001 \001(\001Hw\210\001\001\022%\n\027v" +
-      "ideo_quartile_p75_rate\030\207\001 \001(\001Hx\210\001\001\022\035\n\017vi" +
-      "deo_view_rate\030\231\001 \001(\001Hy\210\001\001\022\031\n\013video_views" +
-      "\030\232\001 \001(\003Hz\210\001\001\022&\n\030view_through_conversions" +
-      "\030\233\001 \001(\003H{\210\001\001\022\"\n\031sk_ad_network_conversion" +
-      "s\030\366\001 \001(\003\022#\n\032publisher_purchased_clicks\030\210" +
-      "\002 \001(\003\022!\n\030publisher_organic_clicks\030\211\002 \001(\003" +
-      "\022!\n\030publisher_unknown_clicks\030\212\002 \001(\003\022?\n1a" +
-      "ll_conversions_from_location_asset_click" +
-      "_to_call\030\213\002 \001(\001H|\210\001\001\022<\n.all_conversions_" +
-      "from_location_asset_directions\030\214\002 \001(\001H}\210" +
-      "\001\001\0226\n(all_conversions_from_location_asse" +
-      "t_menu\030\215\002 \001(\001H~\210\001\001\0227\n)all_conversions_fr" +
-      "om_location_asset_order\030\216\002 \001(\001H\177\210\001\001\022C\n4a" +
-      "ll_conversions_from_location_asset_other" +
-      "_engagement\030\217\002 \001(\001H\200\001\210\001\001\022?\n0all_conversi" +
-      "ons_from_location_asset_store_visits\030\220\002 " +
-      "\001(\001H\201\001\210\001\001\022:\n+all_conversions_from_locati" +
-      "on_asset_website\030\221\002 \001(\001H\202\001\210\001\001\022C\n4eligibl" +
-      "e_impressions_from_location_asset_store_" +
-      "reach\030\222\002 \001(\003H\203\001\210\001\001\022I\n:view_through_conve" +
-      "rsions_from_location_asset_click_to_call" +
-      "\030\223\002 \001(\001H\204\001\210\001\001\022F\n7view_through_conversion" +
-      "s_from_location_asset_directions\030\224\002 \001(\001H" +
-      "\205\001\210\001\001\022@\n1view_through_conversions_from_l" +
-      "ocation_asset_menu\030\225\002 \001(\001H\206\001\210\001\001\022A\n2view_" +
-      "through_conversions_from_location_asset_" +
-      "order\030\226\002 \001(\001H\207\001\210\001\001\022L\n=view_through_conve" +
-      "rsions_from_location_asset_other_engagem" +
-      "ent\030\227\002 \001(\001H\210\001\210\001\001\022H\n9view_through_convers" +
-      "ions_from_location_asset_store_visits\030\230\002" +
-      " \001(\001H\211\001\210\001\001\022C\n4view_through_conversions_f" +
-      "rom_location_asset_website\030\231\002 \001(\001H\212\001\210\001\001B" +
-      "%\n#_absolute_top_impression_percentageB\022" +
-      "\n\020_active_view_cpmB\022\n\020_active_view_ctrB\032" +
-      "\n\030_active_view_impressionsB\034\n\032_active_vi" +
-      "ew_measurabilityB%\n#_active_view_measura" +
-      "ble_cost_microsB%\n#_active_view_measurab" +
-      "le_impressionsB\032\n\030_active_view_viewabili" +
-      "tyB)\n\'_all_conversions_from_interactions" +
-      "_rateB\030\n\026_all_conversions_valueB\022\n\020_all_" +
-      "conversionsB!\n\037_all_conversions_value_pe" +
-      "r_costB%\n#_all_conversions_from_click_to" +
-      "_callB\"\n _all_conversions_from_direction" +
-      "sB:\n8_all_conversions_from_interactions_" +
-      "value_per_interactionB\034\n\032_all_conversion" +
-      "s_from_menuB\035\n\033_all_conversions_from_ord" +
-      "erB(\n&_all_conversions_from_other_engage" +
-      "mentB#\n!_all_conversions_from_store_visi" +
-      "tB%\n#_all_conversions_from_store_website" +
-      "B<\n:_auction_insight_search_absolute_top" +
-      "_impression_percentageB*\n(_auction_insig" +
-      "ht_search_impression_shareB*\n(_auction_i" +
-      "nsight_search_outranking_shareB&\n$_aucti" +
-      "on_insight_search_overlap_rateB-\n+_aucti" +
-      "on_insight_search_position_above_rateB3\n" +
-      "1_auction_insight_search_top_impression_" +
-      "percentageB\017\n\r_average_costB\016\n\014_average_" +
-      "cpcB\016\n\014_average_cpeB\016\n\014_average_cpmB\016\n\014_" +
-      "average_cpvB\025\n\023_average_page_viewsB\027\n\025_a" +
-      "verage_time_on_siteB\034\n\032_benchmark_averag" +
-      "e_max_cpcB#\n!_biddable_app_install_conve" +
-      "rsionsB(\n&_biddable_app_post_install_con" +
-      "versionsB\020\n\016_benchmark_ctrB\016\n\014_bounce_ra" +
-      "teB\t\n\007_clicksB\022\n\020_combined_clicksB\034\n\032_co" +
-      "mbined_clicks_per_queryB\023\n\021_combined_que" +
-      "riesB\'\n%_content_budget_lost_impression_" +
-      "shareB\033\n\031_content_impression_shareB-\n+_c" +
-      "onversion_last_received_request_date_tim" +
-      "eB\"\n _conversion_last_conversion_dateB%\n" +
-      "#_content_rank_lost_impression_shareB%\n#" +
-      "_conversions_from_interactions_rateB\024\n\022_" +
-      "conversions_valueB\035\n\033_conversions_value_" +
-      "per_costB6\n4_conversions_from_interactio" +
-      "ns_value_per_interactionB\016\n\014_conversions" +
-      "B\016\n\014_cost_microsB\033\n\031_cost_per_all_conver" +
-      "sionsB\026\n\024_cost_per_conversionB/\n-_cost_p" +
-      "er_current_model_attributed_conversionB\033" +
-      "\n\031_cross_device_conversionsB\006\n\004_ctrB\'\n%_" +
-      "current_model_attributed_conversionsB>\n<" +
-      "_current_model_attributed_conversions_fr" +
-      "om_interactions_rateBO\nM_current_model_a" +
-      "ttributed_conversions_from_interactions_" +
-      "value_per_interactionB-\n+_current_model_" +
-      "attributed_conversions_valueB6\n4_current" +
-      "_model_attributed_conversions_value_per_" +
-      "costB\022\n\020_engagement_rateB\016\n\014_engagements" +
-      "B\"\n _hotel_average_lead_value_microsB\037\n\035" +
-      "_hotel_commission_rate_microsB!\n\037_hotel_" +
-      "expected_commission_costB$\n\"_hotel_price" +
-      "_difference_percentageB\035\n\033_hotel_eligibl" +
-      "e_impressionsB\033\n\031_historical_quality_sco" +
-      "reB\021\n\017_gmail_forwardsB\016\n\014_gmail_savesB\031\n" +
-      "\027_gmail_secondary_clicksB\037\n\035_impressions" +
-      "_from_store_reachB\016\n\014_impressionsB\023\n\021_in" +
-      "teraction_rateB\017\n\r_interactionsB\025\n\023_inva" +
-      "lid_click_rateB\021\n\017_invalid_clicksB\020\n\016_me" +
-      "ssage_chatsB\026\n\024_message_impressionsB\024\n\022_" +
-      "message_chat_rateB$\n\"_mobile_friendly_cl" +
-      "icks_percentageB\034\n\032_optimization_score_u" +
-      "pliftB\031\n\027_optimization_score_urlB\021\n\017_org" +
-      "anic_clicksB\033\n\031_organic_clicks_per_query" +
-      "B\026\n\024_organic_impressionsB \n\036_organic_imp" +
-      "ressions_per_queryB\022\n\020_organic_queriesB\027" +
-      "\n\025_percent_new_visitorsB\016\n\014_phone_callsB" +
-      "\024\n\022_phone_impressionsB\025\n\023_phone_through_" +
-      "rateB\017\n\r_relative_ctrB\'\n%_search_absolut" +
-      "e_top_impression_shareB3\n1_search_budget" +
-      "_lost_absolute_top_impression_shareB&\n$_" +
-      "search_budget_lost_impression_shareB*\n(_" +
-      "search_budget_lost_top_impression_shareB" +
-      "\025\n\023_search_click_shareB&\n$_search_exact_" +
-      "match_impression_shareB\032\n\030_search_impres" +
-      "sion_shareB1\n/_search_rank_lost_absolute" +
-      "_top_impression_shareB$\n\"_search_rank_lo" +
-      "st_impression_shareB(\n&_search_rank_lost" +
-      "_top_impression_shareB\036\n\034_search_top_imp" +
-      "ression_shareB\016\n\014_speed_scoreB\034\n\032_averag" +
-      "e_target_cpa_microsB\026\n\024_average_target_r" +
-      "oasB\034\n\032_top_impression_percentageB3\n1_va" +
-      "lid_accelerated_mobile_pages_clicks_perc" +
-      "entageB\034\n\032_value_per_all_conversionsB/\n-" +
-      "_value_per_all_conversions_by_conversion" +
-      "_dateB\027\n\025_value_per_conversionB+\n)_value" +
-      "_per_conversions_by_conversion_dateB0\n._" +
-      "value_per_current_model_attributed_conve" +
-      "rsionB\033\n\031_video_quartile_p100_rateB\032\n\030_v" +
-      "ideo_quartile_p25_rateB\032\n\030_video_quartil" +
-      "e_p50_rateB\032\n\030_video_quartile_p75_rateB\022" +
-      "\n\020_video_view_rateB\016\n\014_video_viewsB\033\n\031_v" +
-      "iew_through_conversionsB4\n2_all_conversi" +
-      "ons_from_location_asset_click_to_callB1\n" +
-      "/_all_conversions_from_location_asset_di" +
-      "rectionsB+\n)_all_conversions_from_locati" +
-      "on_asset_menuB,\n*_all_conversions_from_l" +
-      "ocation_asset_orderB7\n5_all_conversions_" +
-      "from_location_asset_other_engagementB3\n1" +
-      "_all_conversions_from_location_asset_sto" +
-      "re_visitsB.\n,_all_conversions_from_locat" +
-      "ion_asset_websiteB7\n5_eligible_impressio" +
-      "ns_from_location_asset_store_reachB=\n;_v" +
-      "iew_through_conversions_from_location_as" +
-      "set_click_to_callB:\n8_view_through_conve" +
-      "rsions_from_location_asset_directionsB4\n" +
-      "2_view_through_conversions_from_location" +
-      "_asset_menuB5\n3_view_through_conversions" +
-      "_from_location_asset_orderB@\n>_view_thro" +
-      "ugh_conversions_from_location_asset_othe" +
-      "r_engagementB<\n:_view_through_conversion" +
-      "s_from_location_asset_store_visitsB7\n5_v" +
-      "iew_through_conversions_from_location_as" +
-      "set_websiteB\354\001\n#com.google.ads.googleads" +
-      ".v14.commonB\014MetricsProtoP\001ZEgoogle.gola" +
-      "ng.org/genproto/googleapis/ads/googleads" +
-      "/v14/common;common\242\002\003GAA\252\002\037Google.Ads.Go" +
-      "ogleAds.V14.Common\312\002\037Google\\Ads\\GoogleAd" +
-      "s\\V14\\Common\352\002#Google::Ads::GoogleAds::V" +
-      "14::Commonb\006proto3"
+      "\001 \001(\001\022-\n\037all_new_customer_lifetime_value" +
+      "\030\246\002 \001(\001H\n\210\001\001\022\035\n\017all_conversions\030\301\001 \001(\001H\013" +
+      "\210\001\001\022+\n\"all_conversions_by_conversion_dat" +
+      "e\030\361\001 \001(\001\022,\n\036all_conversions_value_per_co" +
+      "st\030\302\001 \001(\001H\014\210\001\001\0220\n\"all_conversions_from_c" +
+      "lick_to_call\030\303\001 \001(\001H\r\210\001\001\022-\n\037all_conversi" +
+      "ons_from_directions\030\304\001 \001(\001H\016\210\001\001\022E\n7all_c" +
+      "onversions_from_interactions_value_per_i" +
+      "nteraction\030\305\001 \001(\001H\017\210\001\001\022\'\n\031all_conversion" +
+      "s_from_menu\030\306\001 \001(\001H\020\210\001\001\022(\n\032all_conversio" +
+      "ns_from_order\030\307\001 \001(\001H\021\210\001\001\0223\n%all_convers" +
+      "ions_from_other_engagement\030\310\001 \001(\001H\022\210\001\001\022." +
+      "\n all_conversions_from_store_visit\030\311\001 \001(" +
+      "\001H\023\210\001\001\0220\n\"all_conversions_from_store_web" +
+      "site\030\312\001 \001(\001H\024\210\001\001\022G\n9auction_insight_sear" +
+      "ch_absolute_top_impression_percentage\030\202\002" +
+      " \001(\001H\025\210\001\001\0225\n\'auction_insight_search_impr" +
+      "ession_share\030\203\002 \001(\001H\026\210\001\001\0225\n\'auction_insi" +
+      "ght_search_outranking_share\030\204\002 \001(\001H\027\210\001\001\022" +
+      "1\n#auction_insight_search_overlap_rate\030\205" +
+      "\002 \001(\001H\030\210\001\001\0228\n*auction_insight_search_pos" +
+      "ition_above_rate\030\206\002 \001(\001H\031\210\001\001\022>\n0auction_" +
+      "insight_search_top_impression_percentage" +
+      "\030\207\002 \001(\001H\032\210\001\001\022\032\n\014average_cost\030\313\001 \001(\001H\033\210\001\001" +
+      "\022\031\n\013average_cpc\030\314\001 \001(\001H\034\210\001\001\022\031\n\013average_c" +
+      "pe\030\315\001 \001(\001H\035\210\001\001\022\031\n\013average_cpm\030\316\001 \001(\001H\036\210\001" +
+      "\001\022\031\n\013average_cpv\030\317\001 \001(\001H\037\210\001\001\022 \n\022average_" +
+      "page_views\030\320\001 \001(\001H \210\001\001\022\"\n\024average_time_o" +
+      "n_site\030\321\001 \001(\001H!\210\001\001\022\'\n\031benchmark_average_" +
+      "max_cpc\030\322\001 \001(\001H\"\210\001\001\022.\n biddable_app_inst" +
+      "all_conversions\030\376\001 \001(\001H#\210\001\001\0223\n%biddable_" +
+      "app_post_install_conversions\030\377\001 \001(\001H$\210\001\001" +
+      "\022\033\n\rbenchmark_ctr\030\323\001 \001(\001H%\210\001\001\022\031\n\013bounce_" +
+      "rate\030\324\001 \001(\001H&\210\001\001\022\024\n\006clicks\030\203\001 \001(\003H\'\210\001\001\022\035" +
+      "\n\017combined_clicks\030\234\001 \001(\003H(\210\001\001\022\'\n\031combine" +
+      "d_clicks_per_query\030\235\001 \001(\001H)\210\001\001\022\036\n\020combin" +
+      "ed_queries\030\236\001 \001(\003H*\210\001\001\0222\n$content_budget" +
+      "_lost_impression_share\030\237\001 \001(\001H+\210\001\001\022&\n\030co" +
+      "ntent_impression_share\030\240\001 \001(\001H,\210\001\001\0228\n*co" +
+      "nversion_last_received_request_date_time" +
+      "\030\241\001 \001(\tH-\210\001\001\022-\n\037conversion_last_conversi" +
+      "on_date\030\242\001 \001(\tH.\210\001\001\0220\n\"content_rank_lost" +
+      "_impression_share\030\243\001 \001(\001H/\210\001\001\0220\n\"convers" +
+      "ions_from_interactions_rate\030\244\001 \001(\001H0\210\001\001\022" +
+      "\037\n\021conversions_value\030\245\001 \001(\001H1\210\001\001\022-\n$conv" +
+      "ersions_value_by_conversion_date\030\362\001 \001(\001\022" +
+      ")\n\033new_customer_lifetime_value\030\245\002 \001(\001H2\210" +
+      "\001\001\022(\n\032conversions_value_per_cost\030\246\001 \001(\001H" +
+      "3\210\001\001\022A\n3conversions_from_interactions_va" +
+      "lue_per_interaction\030\247\001 \001(\001H4\210\001\001\022\031\n\013conve" +
+      "rsions\030\250\001 \001(\001H5\210\001\001\022\'\n\036conversions_by_con" +
+      "version_date\030\363\001 \001(\001\022\031\n\013cost_micros\030\251\001 \001(" +
+      "\003H6\210\001\001\022&\n\030cost_per_all_conversions\030\252\001 \001(" +
+      "\001H7\210\001\001\022!\n\023cost_per_conversion\030\253\001 \001(\001H8\210\001" +
+      "\001\022:\n,cost_per_current_model_attributed_c" +
+      "onversion\030\254\001 \001(\001H9\210\001\001\022&\n\030cross_device_co" +
+      "nversions\030\255\001 \001(\001H:\210\001\001\022\021\n\003ctr\030\256\001 \001(\001H;\210\001\001" +
+      "\0222\n$current_model_attributed_conversions" +
+      "\030\257\001 \001(\001H<\210\001\001\022I\n;current_model_attributed" +
+      "_conversions_from_interactions_rate\030\260\001 \001" +
+      "(\001H=\210\001\001\022Z\nLcurrent_model_attributed_conv" +
+      "ersions_from_interactions_value_per_inte" +
+      "raction\030\261\001 \001(\001H>\210\001\001\0228\n*current_model_att" +
+      "ributed_conversions_value\030\262\001 \001(\001H?\210\001\001\022A\n" +
+      "3current_model_attributed_conversions_va" +
+      "lue_per_cost\030\263\001 \001(\001H@\210\001\001\022\035\n\017engagement_r" +
+      "ate\030\264\001 \001(\001HA\210\001\001\022\031\n\013engagements\030\265\001 \001(\003HB\210" +
+      "\001\001\022-\n\037hotel_average_lead_value_micros\030\325\001" +
+      " \001(\001HC\210\001\001\022*\n\034hotel_commission_rate_micro" +
+      "s\030\200\002 \001(\003HD\210\001\001\022,\n\036hotel_expected_commissi" +
+      "on_cost\030\201\002 \001(\001HE\210\001\001\022/\n!hotel_price_diffe" +
+      "rence_percentage\030\326\001 \001(\001HF\210\001\001\022(\n\032hotel_el" +
+      "igible_impressions\030\327\001 \001(\003HG\210\001\001\022t\n!histor" +
+      "ical_creative_quality_score\030P \001(\0162I.goog" +
+      "le.ads.googleads.v14.enums.QualityScoreB" +
+      "ucketEnum.QualityScoreBucket\022x\n%historic" +
+      "al_landing_page_quality_score\030Q \001(\0162I.go" +
+      "ogle.ads.googleads.v14.enums.QualityScor" +
+      "eBucketEnum.QualityScoreBucket\022&\n\030histor" +
+      "ical_quality_score\030\330\001 \001(\003HH\210\001\001\022r\n\037histor" +
+      "ical_search_predicted_ctr\030S \001(\0162I.google" +
+      ".ads.googleads.v14.enums.QualityScoreBuc" +
+      "ketEnum.QualityScoreBucket\022\034\n\016gmail_forw" +
+      "ards\030\331\001 \001(\003HI\210\001\001\022\031\n\013gmail_saves\030\332\001 \001(\003HJ" +
+      "\210\001\001\022$\n\026gmail_secondary_clicks\030\333\001 \001(\003HK\210\001" +
+      "\001\022*\n\034impressions_from_store_reach\030\334\001 \001(\003" +
+      "HL\210\001\001\022\031\n\013impressions\030\335\001 \001(\003HM\210\001\001\022\036\n\020inte" +
+      "raction_rate\030\336\001 \001(\001HN\210\001\001\022\032\n\014interactions" +
+      "\030\337\001 \001(\003HO\210\001\001\022n\n\027interaction_event_types\030" +
+      "d \003(\0162M.google.ads.googleads.v14.enums.I" +
+      "nteractionEventTypeEnum.InteractionEvent" +
+      "Type\022 \n\022invalid_click_rate\030\340\001 \001(\001HP\210\001\001\022\034" +
+      "\n\016invalid_clicks\030\341\001 \001(\003HQ\210\001\001\022\033\n\rmessage_" +
+      "chats\030\342\001 \001(\003HR\210\001\001\022!\n\023message_impressions" +
+      "\030\343\001 \001(\003HS\210\001\001\022\037\n\021message_chat_rate\030\344\001 \001(\001" +
+      "HT\210\001\001\022/\n!mobile_friendly_clicks_percenta" +
+      "ge\030\345\001 \001(\001HU\210\001\001\022\'\n\031optimization_score_upl" +
+      "ift\030\367\001 \001(\001HV\210\001\001\022$\n\026optimization_score_ur" +
+      "l\030\370\001 \001(\tHW\210\001\001\022\034\n\016organic_clicks\030\346\001 \001(\003HX" +
+      "\210\001\001\022&\n\030organic_clicks_per_query\030\347\001 \001(\001HY" +
+      "\210\001\001\022!\n\023organic_impressions\030\350\001 \001(\003HZ\210\001\001\022+" +
+      "\n\035organic_impressions_per_query\030\351\001 \001(\001H[" +
+      "\210\001\001\022\035\n\017organic_queries\030\352\001 \001(\003H\\\210\001\001\022\"\n\024pe" +
+      "rcent_new_visitors\030\353\001 \001(\001H]\210\001\001\022\031\n\013phone_" +
+      "calls\030\354\001 \001(\003H^\210\001\001\022\037\n\021phone_impressions\030\355" +
+      "\001 \001(\003H_\210\001\001\022 \n\022phone_through_rate\030\356\001 \001(\001H" +
+      "`\210\001\001\022\032\n\014relative_ctr\030\357\001 \001(\001Ha\210\001\001\0222\n$sear" +
+      "ch_absolute_top_impression_share\030\210\001 \001(\001H" +
+      "b\210\001\001\022>\n0search_budget_lost_absolute_top_" +
+      "impression_share\030\211\001 \001(\001Hc\210\001\001\0221\n#search_b" +
+      "udget_lost_impression_share\030\212\001 \001(\001Hd\210\001\001\022" +
+      "5\n\'search_budget_lost_top_impression_sha" +
+      "re\030\213\001 \001(\001He\210\001\001\022 \n\022search_click_share\030\214\001 " +
+      "\001(\001Hf\210\001\001\0221\n#search_exact_match_impressio" +
+      "n_share\030\215\001 \001(\001Hg\210\001\001\022%\n\027search_impression" +
+      "_share\030\216\001 \001(\001Hh\210\001\001\022<\n.search_rank_lost_a" +
+      "bsolute_top_impression_share\030\217\001 \001(\001Hi\210\001\001" +
+      "\022/\n!search_rank_lost_impression_share\030\220\001" +
+      " \001(\001Hj\210\001\001\0223\n%search_rank_lost_top_impres" +
+      "sion_share\030\221\001 \001(\001Hk\210\001\001\022)\n\033search_top_imp" +
+      "ression_share\030\222\001 \001(\001Hl\210\001\001\022O\n\rsearch_volu" +
+      "me\030\247\002 \001(\01322.google.ads.googleads.v14.com" +
+      "mon.SearchVolumeRangeHm\210\001\001\022\031\n\013speed_scor" +
+      "e\030\223\001 \001(\003Hn\210\001\001\022\'\n\031average_target_cpa_micr" +
+      "os\030\242\002 \001(\003Ho\210\001\001\022!\n\023average_target_roas\030\372\001" +
+      " \001(\001Hp\210\001\001\022\'\n\031top_impression_percentage\030\224" +
+      "\001 \001(\001Hq\210\001\001\022>\n0valid_accelerated_mobile_p" +
+      "ages_clicks_percentage\030\225\001 \001(\001Hr\210\001\001\022\'\n\031va" +
+      "lue_per_all_conversions\030\226\001 \001(\001Hs\210\001\001\022:\n,v" +
+      "alue_per_all_conversions_by_conversion_d" +
+      "ate\030\364\001 \001(\001Ht\210\001\001\022\"\n\024value_per_conversion\030" +
+      "\227\001 \001(\001Hu\210\001\001\0226\n(value_per_conversions_by_" +
+      "conversion_date\030\365\001 \001(\001Hv\210\001\001\022;\n-value_per" +
+      "_current_model_attributed_conversion\030\230\001 " +
+      "\001(\001Hw\210\001\001\022&\n\030video_quartile_p100_rate\030\204\001 " +
+      "\001(\001Hx\210\001\001\022%\n\027video_quartile_p25_rate\030\205\001 \001" +
+      "(\001Hy\210\001\001\022%\n\027video_quartile_p50_rate\030\206\001 \001(" +
+      "\001Hz\210\001\001\022%\n\027video_quartile_p75_rate\030\207\001 \001(\001" +
+      "H{\210\001\001\022\035\n\017video_view_rate\030\231\001 \001(\001H|\210\001\001\022\031\n\013" +
+      "video_views\030\232\001 \001(\003H}\210\001\001\022&\n\030view_through_" +
+      "conversions\030\233\001 \001(\003H~\210\001\001\022\"\n\031sk_ad_network" +
+      "_conversions\030\366\001 \001(\003\022#\n\032publisher_purchas" +
+      "ed_clicks\030\210\002 \001(\003\022!\n\030publisher_organic_cl" +
+      "icks\030\211\002 \001(\003\022!\n\030publisher_unknown_clicks\030" +
+      "\212\002 \001(\003\022?\n1all_conversions_from_location_" +
+      "asset_click_to_call\030\213\002 \001(\001H\177\210\001\001\022=\n.all_c" +
+      "onversions_from_location_asset_direction" +
+      "s\030\214\002 \001(\001H\200\001\210\001\001\0227\n(all_conversions_from_l" +
+      "ocation_asset_menu\030\215\002 \001(\001H\201\001\210\001\001\0228\n)all_c" +
+      "onversions_from_location_asset_order\030\216\002 " +
+      "\001(\001H\202\001\210\001\001\022C\n4all_conversions_from_locati" +
+      "on_asset_other_engagement\030\217\002 \001(\001H\203\001\210\001\001\022?" +
+      "\n0all_conversions_from_location_asset_st" +
+      "ore_visits\030\220\002 \001(\001H\204\001\210\001\001\022:\n+all_conversio" +
+      "ns_from_location_asset_website\030\221\002 \001(\001H\205\001" +
+      "\210\001\001\022C\n4eligible_impressions_from_locatio" +
+      "n_asset_store_reach\030\222\002 \001(\003H\206\001\210\001\001\022I\n:view" +
+      "_through_conversions_from_location_asset" +
+      "_click_to_call\030\223\002 \001(\001H\207\001\210\001\001\022F\n7view_thro" +
+      "ugh_conversions_from_location_asset_dire" +
+      "ctions\030\224\002 \001(\001H\210\001\210\001\001\022@\n1view_through_conv" +
+      "ersions_from_location_asset_menu\030\225\002 \001(\001H" +
+      "\211\001\210\001\001\022A\n2view_through_conversions_from_l" +
+      "ocation_asset_order\030\226\002 \001(\001H\212\001\210\001\001\022L\n=view" +
+      "_through_conversions_from_location_asset" +
+      "_other_engagement\030\227\002 \001(\001H\213\001\210\001\001\022H\n9view_t" +
+      "hrough_conversions_from_location_asset_s" +
+      "tore_visits\030\230\002 \001(\001H\214\001\210\001\001\022C\n4view_through" +
+      "_conversions_from_location_asset_website" +
+      "\030\231\002 \001(\001H\215\001\210\001\001B%\n#_absolute_top_impressio" +
+      "n_percentageB\022\n\020_active_view_cpmB\022\n\020_act" +
+      "ive_view_ctrB\032\n\030_active_view_impressions" +
+      "B\034\n\032_active_view_measurabilityB%\n#_activ" +
+      "e_view_measurable_cost_microsB%\n#_active" +
+      "_view_measurable_impressionsB\032\n\030_active_" +
+      "view_viewabilityB)\n\'_all_conversions_fro" +
+      "m_interactions_rateB\030\n\026_all_conversions_" +
+      "valueB\"\n _all_new_customer_lifetime_valu" +
+      "eB\022\n\020_all_conversionsB!\n\037_all_conversion" +
+      "s_value_per_costB%\n#_all_conversions_fro" +
+      "m_click_to_callB\"\n _all_conversions_from" +
+      "_directionsB:\n8_all_conversions_from_int" +
+      "eractions_value_per_interactionB\034\n\032_all_" +
+      "conversions_from_menuB\035\n\033_all_conversion" +
+      "s_from_orderB(\n&_all_conversions_from_ot" +
+      "her_engagementB#\n!_all_conversions_from_" +
+      "store_visitB%\n#_all_conversions_from_sto" +
+      "re_websiteB<\n:_auction_insight_search_ab" +
+      "solute_top_impression_percentageB*\n(_auc" +
+      "tion_insight_search_impression_shareB*\n(" +
+      "_auction_insight_search_outranking_share" +
+      "B&\n$_auction_insight_search_overlap_rate" +
+      "B-\n+_auction_insight_search_position_abo" +
+      "ve_rateB3\n1_auction_insight_search_top_i" +
+      "mpression_percentageB\017\n\r_average_costB\016\n" +
+      "\014_average_cpcB\016\n\014_average_cpeB\016\n\014_averag" +
+      "e_cpmB\016\n\014_average_cpvB\025\n\023_average_page_v" +
+      "iewsB\027\n\025_average_time_on_siteB\034\n\032_benchm" +
+      "ark_average_max_cpcB#\n!_biddable_app_ins" +
+      "tall_conversionsB(\n&_biddable_app_post_i" +
+      "nstall_conversionsB\020\n\016_benchmark_ctrB\016\n\014" +
+      "_bounce_rateB\t\n\007_clicksB\022\n\020_combined_cli" +
+      "cksB\034\n\032_combined_clicks_per_queryB\023\n\021_co" +
+      "mbined_queriesB\'\n%_content_budget_lost_i" +
+      "mpression_shareB\033\n\031_content_impression_s" +
+      "hareB-\n+_conversion_last_received_reques" +
+      "t_date_timeB\"\n _conversion_last_conversi" +
+      "on_dateB%\n#_content_rank_lost_impression" +
+      "_shareB%\n#_conversions_from_interactions" +
+      "_rateB\024\n\022_conversions_valueB\036\n\034_new_cust" +
+      "omer_lifetime_valueB\035\n\033_conversions_valu" +
+      "e_per_costB6\n4_conversions_from_interact" +
+      "ions_value_per_interactionB\016\n\014_conversio" +
+      "nsB\016\n\014_cost_microsB\033\n\031_cost_per_all_conv" +
+      "ersionsB\026\n\024_cost_per_conversionB/\n-_cost" +
+      "_per_current_model_attributed_conversion" +
+      "B\033\n\031_cross_device_conversionsB\006\n\004_ctrB\'\n" +
+      "%_current_model_attributed_conversionsB>" +
+      "\n<_current_model_attributed_conversions_" +
+      "from_interactions_rateBO\nM_current_model" +
+      "_attributed_conversions_from_interaction" +
+      "s_value_per_interactionB-\n+_current_mode" +
+      "l_attributed_conversions_valueB6\n4_curre" +
+      "nt_model_attributed_conversions_value_pe" +
+      "r_costB\022\n\020_engagement_rateB\016\n\014_engagemen" +
+      "tsB\"\n _hotel_average_lead_value_microsB\037" +
+      "\n\035_hotel_commission_rate_microsB!\n\037_hote" +
+      "l_expected_commission_costB$\n\"_hotel_pri" +
+      "ce_difference_percentageB\035\n\033_hotel_eligi" +
+      "ble_impressionsB\033\n\031_historical_quality_s" +
+      "coreB\021\n\017_gmail_forwardsB\016\n\014_gmail_savesB" +
+      "\031\n\027_gmail_secondary_clicksB\037\n\035_impressio" +
+      "ns_from_store_reachB\016\n\014_impressionsB\023\n\021_" +
+      "interaction_rateB\017\n\r_interactionsB\025\n\023_in" +
+      "valid_click_rateB\021\n\017_invalid_clicksB\020\n\016_" +
+      "message_chatsB\026\n\024_message_impressionsB\024\n" +
+      "\022_message_chat_rateB$\n\"_mobile_friendly_" +
+      "clicks_percentageB\034\n\032_optimization_score" +
+      "_upliftB\031\n\027_optimization_score_urlB\021\n\017_o" +
+      "rganic_clicksB\033\n\031_organic_clicks_per_que" +
+      "ryB\026\n\024_organic_impressionsB \n\036_organic_i" +
+      "mpressions_per_queryB\022\n\020_organic_queries" +
+      "B\027\n\025_percent_new_visitorsB\016\n\014_phone_call" +
+      "sB\024\n\022_phone_impressionsB\025\n\023_phone_throug" +
+      "h_rateB\017\n\r_relative_ctrB\'\n%_search_absol" +
+      "ute_top_impression_shareB3\n1_search_budg" +
+      "et_lost_absolute_top_impression_shareB&\n" +
+      "$_search_budget_lost_impression_shareB*\n" +
+      "(_search_budget_lost_top_impression_shar" +
+      "eB\025\n\023_search_click_shareB&\n$_search_exac" +
+      "t_match_impression_shareB\032\n\030_search_impr" +
+      "ession_shareB1\n/_search_rank_lost_absolu" +
+      "te_top_impression_shareB$\n\"_search_rank_" +
+      "lost_impression_shareB(\n&_search_rank_lo" +
+      "st_top_impression_shareB\036\n\034_search_top_i" +
+      "mpression_shareB\020\n\016_search_volumeB\016\n\014_sp" +
+      "eed_scoreB\034\n\032_average_target_cpa_microsB" +
+      "\026\n\024_average_target_roasB\034\n\032_top_impressi" +
+      "on_percentageB3\n1_valid_accelerated_mobi" +
+      "le_pages_clicks_percentageB\034\n\032_value_per" +
+      "_all_conversionsB/\n-_value_per_all_conve" +
+      "rsions_by_conversion_dateB\027\n\025_value_per_" +
+      "conversionB+\n)_value_per_conversions_by_" +
+      "conversion_dateB0\n._value_per_current_mo" +
+      "del_attributed_conversionB\033\n\031_video_quar" +
+      "tile_p100_rateB\032\n\030_video_quartile_p25_ra" +
+      "teB\032\n\030_video_quartile_p50_rateB\032\n\030_video" +
+      "_quartile_p75_rateB\022\n\020_video_view_rateB\016" +
+      "\n\014_video_viewsB\033\n\031_view_through_conversi" +
+      "onsB4\n2_all_conversions_from_location_as" +
+      "set_click_to_callB1\n/_all_conversions_fr" +
+      "om_location_asset_directionsB+\n)_all_con" +
+      "versions_from_location_asset_menuB,\n*_al" +
+      "l_conversions_from_location_asset_orderB" +
+      "7\n5_all_conversions_from_location_asset_" +
+      "other_engagementB3\n1_all_conversions_fro" +
+      "m_location_asset_store_visitsB.\n,_all_co" +
+      "nversions_from_location_asset_websiteB7\n" +
+      "5_eligible_impressions_from_location_ass" +
+      "et_store_reachB=\n;_view_through_conversi" +
+      "ons_from_location_asset_click_to_callB:\n" +
+      "8_view_through_conversions_from_location" +
+      "_asset_directionsB4\n2_view_through_conve" +
+      "rsions_from_location_asset_menuB5\n3_view" +
+      "_through_conversions_from_location_asset" +
+      "_orderB@\n>_view_through_conversions_from" +
+      "_location_asset_other_engagementB<\n:_vie" +
+      "w_through_conversions_from_location_asse" +
+      "t_store_visitsB7\n5_view_through_conversi" +
+      "ons_from_location_asset_website\"G\n\021Searc" +
+      "hVolumeRange\022\020\n\003min\030\001 \001(\003H\000\210\001\001\022\020\n\003max\030\002 " +
+      "\001(\003H\001\210\001\001B\006\n\004_minB\006\n\004_maxB\354\001\n#com.google." +
+      "ads.googleads.v14.commonB\014MetricsProtoP\001" +
+      "ZEgoogle.golang.org/genproto/googleapis/" +
+      "ads/googleads/v14/common;common\242\002\003GAA\252\002\037" +
+      "Google.Ads.GoogleAds.V14.Common\312\002\037Google" +
+      "\\Ads\\GoogleAds\\V14\\Common\352\002#Google::Ads:" +
+      ":GoogleAds::V14::Commonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -347,7 +360,13 @@ public final class MetricsProto {
     internal_static_google_ads_googleads_v14_common_Metrics_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v14_common_Metrics_descriptor,
-        new java.lang.String[] { "AbsoluteTopImpressionPercentage", "ActiveViewCpm", "ActiveViewCtr", "ActiveViewImpressions", "ActiveViewMeasurability", "ActiveViewMeasurableCostMicros", "ActiveViewMeasurableImpressions", "ActiveViewViewability", "AllConversionsFromInteractionsRate", "AllConversionsValue", "AllConversionsValueByConversionDate", "AllConversions", "AllConversionsByConversionDate", "AllConversionsValuePerCost", "AllConversionsFromClickToCall", "AllConversionsFromDirections", "AllConversionsFromInteractionsValuePerInteraction", "AllConversionsFromMenu", "AllConversionsFromOrder", "AllConversionsFromOtherEngagement", "AllConversionsFromStoreVisit", "AllConversionsFromStoreWebsite", "AuctionInsightSearchAbsoluteTopImpressionPercentage", "AuctionInsightSearchImpressionShare", "AuctionInsightSearchOutrankingShare", "AuctionInsightSearchOverlapRate", "AuctionInsightSearchPositionAboveRate", "AuctionInsightSearchTopImpressionPercentage", "AverageCost", "AverageCpc", "AverageCpe", "AverageCpm", "AverageCpv", "AveragePageViews", "AverageTimeOnSite", "BenchmarkAverageMaxCpc", "BiddableAppInstallConversions", "BiddableAppPostInstallConversions", "BenchmarkCtr", "BounceRate", "Clicks", "CombinedClicks", "CombinedClicksPerQuery", "CombinedQueries", "ContentBudgetLostImpressionShare", "ContentImpressionShare", "ConversionLastReceivedRequestDateTime", "ConversionLastConversionDate", "ContentRankLostImpressionShare", "ConversionsFromInteractionsRate", "ConversionsValue", "ConversionsValueByConversionDate", "ConversionsValuePerCost", "ConversionsFromInteractionsValuePerInteraction", "Conversions", "ConversionsByConversionDate", "CostMicros", "CostPerAllConversions", "CostPerConversion", "CostPerCurrentModelAttributedConversion", "CrossDeviceConversions", "Ctr", "CurrentModelAttributedConversions", "CurrentModelAttributedConversionsFromInteractionsRate", "CurrentModelAttributedConversionsFromInteractionsValuePerInteraction", "CurrentModelAttributedConversionsValue", "CurrentModelAttributedConversionsValuePerCost", "EngagementRate", "Engagements", "HotelAverageLeadValueMicros", "HotelCommissionRateMicros", "HotelExpectedCommissionCost", "HotelPriceDifferencePercentage", "HotelEligibleImpressions", "HistoricalCreativeQualityScore", "HistoricalLandingPageQualityScore", "HistoricalQualityScore", "HistoricalSearchPredictedCtr", "GmailForwards", "GmailSaves", "GmailSecondaryClicks", "ImpressionsFromStoreReach", "Impressions", "InteractionRate", "Interactions", "InteractionEventTypes", "InvalidClickRate", "InvalidClicks", "MessageChats", "MessageImpressions", "MessageChatRate", "MobileFriendlyClicksPercentage", "OptimizationScoreUplift", "OptimizationScoreUrl", "OrganicClicks", "OrganicClicksPerQuery", "OrganicImpressions", "OrganicImpressionsPerQuery", "OrganicQueries", "PercentNewVisitors", "PhoneCalls", "PhoneImpressions", "PhoneThroughRate", "RelativeCtr", "SearchAbsoluteTopImpressionShare", "SearchBudgetLostAbsoluteTopImpressionShare", "SearchBudgetLostImpressionShare", "SearchBudgetLostTopImpressionShare", "SearchClickShare", "SearchExactMatchImpressionShare", "SearchImpressionShare", "SearchRankLostAbsoluteTopImpressionShare", "SearchRankLostImpressionShare", "SearchRankLostTopImpressionShare", "SearchTopImpressionShare", "SpeedScore", "AverageTargetCpaMicros", "AverageTargetRoas", "TopImpressionPercentage", "ValidAcceleratedMobilePagesClicksPercentage", "ValuePerAllConversions", "ValuePerAllConversionsByConversionDate", "ValuePerConversion", "ValuePerConversionsByConversionDate", "ValuePerCurrentModelAttributedConversion", "VideoQuartileP100Rate", "VideoQuartileP25Rate", "VideoQuartileP50Rate", "VideoQuartileP75Rate", "VideoViewRate", "VideoViews", "ViewThroughConversions", "SkAdNetworkConversions", "PublisherPurchasedClicks", "PublisherOrganicClicks", "PublisherUnknownClicks", "AllConversionsFromLocationAssetClickToCall", "AllConversionsFromLocationAssetDirections", "AllConversionsFromLocationAssetMenu", "AllConversionsFromLocationAssetOrder", "AllConversionsFromLocationAssetOtherEngagement", "AllConversionsFromLocationAssetStoreVisits", "AllConversionsFromLocationAssetWebsite", "EligibleImpressionsFromLocationAssetStoreReach", "ViewThroughConversionsFromLocationAssetClickToCall", "ViewThroughConversionsFromLocationAssetDirections", "ViewThroughConversionsFromLocationAssetMenu", "ViewThroughConversionsFromLocationAssetOrder", "ViewThroughConversionsFromLocationAssetOtherEngagement", "ViewThroughConversionsFromLocationAssetStoreVisits", "ViewThroughConversionsFromLocationAssetWebsite", "AbsoluteTopImpressionPercentage", "ActiveViewCpm", "ActiveViewCtr", "ActiveViewImpressions", "ActiveViewMeasurability", "ActiveViewMeasurableCostMicros", "ActiveViewMeasurableImpressions", "ActiveViewViewability", "AllConversionsFromInteractionsRate", "AllConversionsValue", "AllConversions", "AllConversionsValuePerCost", "AllConversionsFromClickToCall", "AllConversionsFromDirections", "AllConversionsFromInteractionsValuePerInteraction", "AllConversionsFromMenu", "AllConversionsFromOrder", "AllConversionsFromOtherEngagement", "AllConversionsFromStoreVisit", "AllConversionsFromStoreWebsite", "AuctionInsightSearchAbsoluteTopImpressionPercentage", "AuctionInsightSearchImpressionShare", "AuctionInsightSearchOutrankingShare", "AuctionInsightSearchOverlapRate", "AuctionInsightSearchPositionAboveRate", "AuctionInsightSearchTopImpressionPercentage", "AverageCost", "AverageCpc", "AverageCpe", "AverageCpm", "AverageCpv", "AveragePageViews", "AverageTimeOnSite", "BenchmarkAverageMaxCpc", "BiddableAppInstallConversions", "BiddableAppPostInstallConversions", "BenchmarkCtr", "BounceRate", "Clicks", "CombinedClicks", "CombinedClicksPerQuery", "CombinedQueries", "ContentBudgetLostImpressionShare", "ContentImpressionShare", "ConversionLastReceivedRequestDateTime", "ConversionLastConversionDate", "ContentRankLostImpressionShare", "ConversionsFromInteractionsRate", "ConversionsValue", "ConversionsValuePerCost", "ConversionsFromInteractionsValuePerInteraction", "Conversions", "CostMicros", "CostPerAllConversions", "CostPerConversion", "CostPerCurrentModelAttributedConversion", "CrossDeviceConversions", "Ctr", "CurrentModelAttributedConversions", "CurrentModelAttributedConversionsFromInteractionsRate", "CurrentModelAttributedConversionsFromInteractionsValuePerInteraction", "CurrentModelAttributedConversionsValue", "CurrentModelAttributedConversionsValuePerCost", "EngagementRate", "Engagements", "HotelAverageLeadValueMicros", "HotelCommissionRateMicros", "HotelExpectedCommissionCost", "HotelPriceDifferencePercentage", "HotelEligibleImpressions", "HistoricalQualityScore", "GmailForwards", "GmailSaves", "GmailSecondaryClicks", "ImpressionsFromStoreReach", "Impressions", "InteractionRate", "Interactions", "InvalidClickRate", "InvalidClicks", "MessageChats", "MessageImpressions", "MessageChatRate", "MobileFriendlyClicksPercentage", "OptimizationScoreUplift", "OptimizationScoreUrl", "OrganicClicks", "OrganicClicksPerQuery", "OrganicImpressions", "OrganicImpressionsPerQuery", "OrganicQueries", "PercentNewVisitors", "PhoneCalls", "PhoneImpressions", "PhoneThroughRate", "RelativeCtr", "SearchAbsoluteTopImpressionShare", "SearchBudgetLostAbsoluteTopImpressionShare", "SearchBudgetLostImpressionShare", "SearchBudgetLostTopImpressionShare", "SearchClickShare", "SearchExactMatchImpressionShare", "SearchImpressionShare", "SearchRankLostAbsoluteTopImpressionShare", "SearchRankLostImpressionShare", "SearchRankLostTopImpressionShare", "SearchTopImpressionShare", "SpeedScore", "AverageTargetCpaMicros", "AverageTargetRoas", "TopImpressionPercentage", "ValidAcceleratedMobilePagesClicksPercentage", "ValuePerAllConversions", "ValuePerAllConversionsByConversionDate", "ValuePerConversion", "ValuePerConversionsByConversionDate", "ValuePerCurrentModelAttributedConversion", "VideoQuartileP100Rate", "VideoQuartileP25Rate", "VideoQuartileP50Rate", "VideoQuartileP75Rate", "VideoViewRate", "VideoViews", "ViewThroughConversions", "AllConversionsFromLocationAssetClickToCall", "AllConversionsFromLocationAssetDirections", "AllConversionsFromLocationAssetMenu", "AllConversionsFromLocationAssetOrder", "AllConversionsFromLocationAssetOtherEngagement", "AllConversionsFromLocationAssetStoreVisits", "AllConversionsFromLocationAssetWebsite", "EligibleImpressionsFromLocationAssetStoreReach", "ViewThroughConversionsFromLocationAssetClickToCall", "ViewThroughConversionsFromLocationAssetDirections", "ViewThroughConversionsFromLocationAssetMenu", "ViewThroughConversionsFromLocationAssetOrder", "ViewThroughConversionsFromLocationAssetOtherEngagement", "ViewThroughConversionsFromLocationAssetStoreVisits", "ViewThroughConversionsFromLocationAssetWebsite", });
+        new java.lang.String[] { "AbsoluteTopImpressionPercentage", "ActiveViewCpm", "ActiveViewCtr", "ActiveViewImpressions", "ActiveViewMeasurability", "ActiveViewMeasurableCostMicros", "ActiveViewMeasurableImpressions", "ActiveViewViewability", "AllConversionsFromInteractionsRate", "AllConversionsValue", "AllConversionsValueByConversionDate", "AllNewCustomerLifetimeValue", "AllConversions", "AllConversionsByConversionDate", "AllConversionsValuePerCost", "AllConversionsFromClickToCall", "AllConversionsFromDirections", "AllConversionsFromInteractionsValuePerInteraction", "AllConversionsFromMenu", "AllConversionsFromOrder", "AllConversionsFromOtherEngagement", "AllConversionsFromStoreVisit", "AllConversionsFromStoreWebsite", "AuctionInsightSearchAbsoluteTopImpressionPercentage", "AuctionInsightSearchImpressionShare", "AuctionInsightSearchOutrankingShare", "AuctionInsightSearchOverlapRate", "AuctionInsightSearchPositionAboveRate", "AuctionInsightSearchTopImpressionPercentage", "AverageCost", "AverageCpc", "AverageCpe", "AverageCpm", "AverageCpv", "AveragePageViews", "AverageTimeOnSite", "BenchmarkAverageMaxCpc", "BiddableAppInstallConversions", "BiddableAppPostInstallConversions", "BenchmarkCtr", "BounceRate", "Clicks", "CombinedClicks", "CombinedClicksPerQuery", "CombinedQueries", "ContentBudgetLostImpressionShare", "ContentImpressionShare", "ConversionLastReceivedRequestDateTime", "ConversionLastConversionDate", "ContentRankLostImpressionShare", "ConversionsFromInteractionsRate", "ConversionsValue", "ConversionsValueByConversionDate", "NewCustomerLifetimeValue", "ConversionsValuePerCost", "ConversionsFromInteractionsValuePerInteraction", "Conversions", "ConversionsByConversionDate", "CostMicros", "CostPerAllConversions", "CostPerConversion", "CostPerCurrentModelAttributedConversion", "CrossDeviceConversions", "Ctr", "CurrentModelAttributedConversions", "CurrentModelAttributedConversionsFromInteractionsRate", "CurrentModelAttributedConversionsFromInteractionsValuePerInteraction", "CurrentModelAttributedConversionsValue", "CurrentModelAttributedConversionsValuePerCost", "EngagementRate", "Engagements", "HotelAverageLeadValueMicros", "HotelCommissionRateMicros", "HotelExpectedCommissionCost", "HotelPriceDifferencePercentage", "HotelEligibleImpressions", "HistoricalCreativeQualityScore", "HistoricalLandingPageQualityScore", "HistoricalQualityScore", "HistoricalSearchPredictedCtr", "GmailForwards", "GmailSaves", "GmailSecondaryClicks", "ImpressionsFromStoreReach", "Impressions", "InteractionRate", "Interactions", "InteractionEventTypes", "InvalidClickRate", "InvalidClicks", "MessageChats", "MessageImpressions", "MessageChatRate", "MobileFriendlyClicksPercentage", "OptimizationScoreUplift", "OptimizationScoreUrl", "OrganicClicks", "OrganicClicksPerQuery", "OrganicImpressions", "OrganicImpressionsPerQuery", "OrganicQueries", "PercentNewVisitors", "PhoneCalls", "PhoneImpressions", "PhoneThroughRate", "RelativeCtr", "SearchAbsoluteTopImpressionShare", "SearchBudgetLostAbsoluteTopImpressionShare", "SearchBudgetLostImpressionShare", "SearchBudgetLostTopImpressionShare", "SearchClickShare", "SearchExactMatchImpressionShare", "SearchImpressionShare", "SearchRankLostAbsoluteTopImpressionShare", "SearchRankLostImpressionShare", "SearchRankLostTopImpressionShare", "SearchTopImpressionShare", "SearchVolume", "SpeedScore", "AverageTargetCpaMicros", "AverageTargetRoas", "TopImpressionPercentage", "ValidAcceleratedMobilePagesClicksPercentage", "ValuePerAllConversions", "ValuePerAllConversionsByConversionDate", "ValuePerConversion", "ValuePerConversionsByConversionDate", "ValuePerCurrentModelAttributedConversion", "VideoQuartileP100Rate", "VideoQuartileP25Rate", "VideoQuartileP50Rate", "VideoQuartileP75Rate", "VideoViewRate", "VideoViews", "ViewThroughConversions", "SkAdNetworkConversions", "PublisherPurchasedClicks", "PublisherOrganicClicks", "PublisherUnknownClicks", "AllConversionsFromLocationAssetClickToCall", "AllConversionsFromLocationAssetDirections", "AllConversionsFromLocationAssetMenu", "AllConversionsFromLocationAssetOrder", "AllConversionsFromLocationAssetOtherEngagement", "AllConversionsFromLocationAssetStoreVisits", "AllConversionsFromLocationAssetWebsite", "EligibleImpressionsFromLocationAssetStoreReach", "ViewThroughConversionsFromLocationAssetClickToCall", "ViewThroughConversionsFromLocationAssetDirections", "ViewThroughConversionsFromLocationAssetMenu", "ViewThroughConversionsFromLocationAssetOrder", "ViewThroughConversionsFromLocationAssetOtherEngagement", "ViewThroughConversionsFromLocationAssetStoreVisits", "ViewThroughConversionsFromLocationAssetWebsite", "AbsoluteTopImpressionPercentage", "ActiveViewCpm", "ActiveViewCtr", "ActiveViewImpressions", "ActiveViewMeasurability", "ActiveViewMeasurableCostMicros", "ActiveViewMeasurableImpressions", "ActiveViewViewability", "AllConversionsFromInteractionsRate", "AllConversionsValue", "AllNewCustomerLifetimeValue", "AllConversions", "AllConversionsValuePerCost", "AllConversionsFromClickToCall", "AllConversionsFromDirections", "AllConversionsFromInteractionsValuePerInteraction", "AllConversionsFromMenu", "AllConversionsFromOrder", "AllConversionsFromOtherEngagement", "AllConversionsFromStoreVisit", "AllConversionsFromStoreWebsite", "AuctionInsightSearchAbsoluteTopImpressionPercentage", "AuctionInsightSearchImpressionShare", "AuctionInsightSearchOutrankingShare", "AuctionInsightSearchOverlapRate", "AuctionInsightSearchPositionAboveRate", "AuctionInsightSearchTopImpressionPercentage", "AverageCost", "AverageCpc", "AverageCpe", "AverageCpm", "AverageCpv", "AveragePageViews", "AverageTimeOnSite", "BenchmarkAverageMaxCpc", "BiddableAppInstallConversions", "BiddableAppPostInstallConversions", "BenchmarkCtr", "BounceRate", "Clicks", "CombinedClicks", "CombinedClicksPerQuery", "CombinedQueries", "ContentBudgetLostImpressionShare", "ContentImpressionShare", "ConversionLastReceivedRequestDateTime", "ConversionLastConversionDate", "ContentRankLostImpressionShare", "ConversionsFromInteractionsRate", "ConversionsValue", "NewCustomerLifetimeValue", "ConversionsValuePerCost", "ConversionsFromInteractionsValuePerInteraction", "Conversions", "CostMicros", "CostPerAllConversions", "CostPerConversion", "CostPerCurrentModelAttributedConversion", "CrossDeviceConversions", "Ctr", "CurrentModelAttributedConversions", "CurrentModelAttributedConversionsFromInteractionsRate", "CurrentModelAttributedConversionsFromInteractionsValuePerInteraction", "CurrentModelAttributedConversionsValue", "CurrentModelAttributedConversionsValuePerCost", "EngagementRate", "Engagements", "HotelAverageLeadValueMicros", "HotelCommissionRateMicros", "HotelExpectedCommissionCost", "HotelPriceDifferencePercentage", "HotelEligibleImpressions", "HistoricalQualityScore", "GmailForwards", "GmailSaves", "GmailSecondaryClicks", "ImpressionsFromStoreReach", "Impressions", "InteractionRate", "Interactions", "InvalidClickRate", "InvalidClicks", "MessageChats", "MessageImpressions", "MessageChatRate", "MobileFriendlyClicksPercentage", "OptimizationScoreUplift", "OptimizationScoreUrl", "OrganicClicks", "OrganicClicksPerQuery", "OrganicImpressions", "OrganicImpressionsPerQuery", "OrganicQueries", "PercentNewVisitors", "PhoneCalls", "PhoneImpressions", "PhoneThroughRate", "RelativeCtr", "SearchAbsoluteTopImpressionShare", "SearchBudgetLostAbsoluteTopImpressionShare", "SearchBudgetLostImpressionShare", "SearchBudgetLostTopImpressionShare", "SearchClickShare", "SearchExactMatchImpressionShare", "SearchImpressionShare", "SearchRankLostAbsoluteTopImpressionShare", "SearchRankLostImpressionShare", "SearchRankLostTopImpressionShare", "SearchTopImpressionShare", "SearchVolume", "SpeedScore", "AverageTargetCpaMicros", "AverageTargetRoas", "TopImpressionPercentage", "ValidAcceleratedMobilePagesClicksPercentage", "ValuePerAllConversions", "ValuePerAllConversionsByConversionDate", "ValuePerConversion", "ValuePerConversionsByConversionDate", "ValuePerCurrentModelAttributedConversion", "VideoQuartileP100Rate", "VideoQuartileP25Rate", "VideoQuartileP50Rate", "VideoQuartileP75Rate", "VideoViewRate", "VideoViews", "ViewThroughConversions", "AllConversionsFromLocationAssetClickToCall", "AllConversionsFromLocationAssetDirections", "AllConversionsFromLocationAssetMenu", "AllConversionsFromLocationAssetOrder", "AllConversionsFromLocationAssetOtherEngagement", "AllConversionsFromLocationAssetStoreVisits", "AllConversionsFromLocationAssetWebsite", "EligibleImpressionsFromLocationAssetStoreReach", "ViewThroughConversionsFromLocationAssetClickToCall", "ViewThroughConversionsFromLocationAssetDirections", "ViewThroughConversionsFromLocationAssetMenu", "ViewThroughConversionsFromLocationAssetOrder", "ViewThroughConversionsFromLocationAssetOtherEngagement", "ViewThroughConversionsFromLocationAssetStoreVisits", "ViewThroughConversionsFromLocationAssetWebsite", });
+    internal_static_google_ads_googleads_v14_common_SearchVolumeRange_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_google_ads_googleads_v14_common_SearchVolumeRange_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v14_common_SearchVolumeRange_descriptor,
+        new java.lang.String[] { "Min", "Max", "Min", "Max", });
     com.google.ads.googleads.v14.enums.InteractionEventTypeProto.getDescriptor();
     com.google.ads.googleads.v14.enums.QualityScoreBucketProto.getDescriptor();
   }

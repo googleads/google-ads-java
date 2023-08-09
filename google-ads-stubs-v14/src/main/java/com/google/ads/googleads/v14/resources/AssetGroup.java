@@ -30,6 +30,8 @@ private static final long serialVersionUID = 0L;
     finalMobileUrls_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     status_ = 0;
+    primaryStatus_ = 0;
+    primaryStatusReasons_ = java.util.Collections.emptyList();
     path1_ = "";
     path2_ = "";
     adStrength_ = 0;
@@ -365,6 +367,122 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.google.ads.googleads.v14.enums.AssetGroupStatusEnum.AssetGroupStatus.UNRECOGNIZED : result;
   }
 
+  public static final int PRIMARY_STATUS_FIELD_NUMBER = 11;
+  private int primaryStatus_ = 0;
+  /**
+   * <pre>
+   * Output only. The primary status of the asset group. Provides insights into
+   * why an asset group is not serving or not serving optimally.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusEnum.AssetGroupPrimaryStatus primary_status = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for primaryStatus.
+   */
+  @java.lang.Override public int getPrimaryStatusValue() {
+    return primaryStatus_;
+  }
+  /**
+   * <pre>
+   * Output only. The primary status of the asset group. Provides insights into
+   * why an asset group is not serving or not serving optimally.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusEnum.AssetGroupPrimaryStatus primary_status = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The primaryStatus.
+   */
+  @java.lang.Override public com.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusEnum.AssetGroupPrimaryStatus getPrimaryStatus() {
+    com.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusEnum.AssetGroupPrimaryStatus result = com.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusEnum.AssetGroupPrimaryStatus.forNumber(primaryStatus_);
+    return result == null ? com.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusEnum.AssetGroupPrimaryStatus.UNRECOGNIZED : result;
+  }
+
+  public static final int PRIMARY_STATUS_REASONS_FIELD_NUMBER = 12;
+  @SuppressWarnings("serial")
+  private java.util.List<java.lang.Integer> primaryStatusReasons_;
+  private static final com.google.protobuf.Internal.ListAdapter.Converter<
+      java.lang.Integer, com.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason> primaryStatusReasons_converter_ =
+          new com.google.protobuf.Internal.ListAdapter.Converter<
+              java.lang.Integer, com.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason>() {
+            public com.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason convert(java.lang.Integer from) {
+              com.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason result = com.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason.forNumber(from);
+              return result == null ? com.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason.UNRECOGNIZED : result;
+            }
+          };
+  /**
+   * <pre>
+   * Output only. Provides reasons into why an asset group is not serving or not
+   * serving optimally. It will be empty when the asset group is serving without
+   * issues.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason primary_status_reasons = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return A list containing the primaryStatusReasons.
+   */
+  @java.lang.Override
+  public java.util.List<com.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason> getPrimaryStatusReasonsList() {
+    return new com.google.protobuf.Internal.ListAdapter<
+        java.lang.Integer, com.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason>(primaryStatusReasons_, primaryStatusReasons_converter_);
+  }
+  /**
+   * <pre>
+   * Output only. Provides reasons into why an asset group is not serving or not
+   * serving optimally. It will be empty when the asset group is serving without
+   * issues.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason primary_status_reasons = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The count of primaryStatusReasons.
+   */
+  @java.lang.Override
+  public int getPrimaryStatusReasonsCount() {
+    return primaryStatusReasons_.size();
+  }
+  /**
+   * <pre>
+   * Output only. Provides reasons into why an asset group is not serving or not
+   * serving optimally. It will be empty when the asset group is serving without
+   * issues.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason primary_status_reasons = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @param index The index of the element to return.
+   * @return The primaryStatusReasons at the given index.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason getPrimaryStatusReasons(int index) {
+    return primaryStatusReasons_converter_.convert(primaryStatusReasons_.get(index));
+  }
+  /**
+   * <pre>
+   * Output only. Provides reasons into why an asset group is not serving or not
+   * serving optimally. It will be empty when the asset group is serving without
+   * issues.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason primary_status_reasons = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return A list containing the enum numeric values on the wire for primaryStatusReasons.
+   */
+  @java.lang.Override
+  public java.util.List<java.lang.Integer>
+  getPrimaryStatusReasonsValueList() {
+    return primaryStatusReasons_;
+  }
+  /**
+   * <pre>
+   * Output only. Provides reasons into why an asset group is not serving or not
+   * serving optimally. It will be empty when the asset group is serving without
+   * issues.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason primary_status_reasons = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of primaryStatusReasons at the given index.
+   */
+  @java.lang.Override
+  public int getPrimaryStatusReasonsValue(int index) {
+    return primaryStatusReasons_.get(index);
+  }
+  private int primaryStatusReasonsMemoizedSerializedSize;
+
   public static final int PATH1_FIELD_NUMBER = 7;
   @SuppressWarnings("serial")
   private volatile java.lang.Object path1_ = "";
@@ -503,6 +621,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    getSerializedSize();
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
@@ -532,6 +651,16 @@ private static final long serialVersionUID = 0L;
     }
     if (adStrength_ != com.google.ads.googleads.v14.enums.AdStrengthEnum.AdStrength.UNSPECIFIED.getNumber()) {
       output.writeEnum(10, adStrength_);
+    }
+    if (primaryStatus_ != com.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusEnum.AssetGroupPrimaryStatus.UNSPECIFIED.getNumber()) {
+      output.writeEnum(11, primaryStatus_);
+    }
+    if (getPrimaryStatusReasonsList().size() > 0) {
+      output.writeUInt32NoTag(98);
+      output.writeUInt32NoTag(primaryStatusReasonsMemoizedSerializedSize);
+    }
+    for (int i = 0; i < primaryStatusReasons_.size(); i++) {
+      output.writeEnumNoTag(primaryStatusReasons_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -585,6 +714,22 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(10, adStrength_);
     }
+    if (primaryStatus_ != com.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusEnum.AssetGroupPrimaryStatus.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(11, primaryStatus_);
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < primaryStatusReasons_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeEnumSizeNoTag(primaryStatusReasons_.get(i));
+      }
+      size += dataSize;
+      if (!getPrimaryStatusReasonsList().isEmpty()) {  size += 1;
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32SizeNoTag(dataSize);
+      }primaryStatusReasonsMemoizedSerializedSize = dataSize;
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -613,6 +758,8 @@ private static final long serialVersionUID = 0L;
     if (!getFinalMobileUrlsList()
         .equals(other.getFinalMobileUrlsList())) return false;
     if (status_ != other.status_) return false;
+    if (primaryStatus_ != other.primaryStatus_) return false;
+    if (!primaryStatusReasons_.equals(other.primaryStatusReasons_)) return false;
     if (!getPath1()
         .equals(other.getPath1())) return false;
     if (!getPath2()
@@ -648,6 +795,12 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + STATUS_FIELD_NUMBER;
     hash = (53 * hash) + status_;
+    hash = (37 * hash) + PRIMARY_STATUS_FIELD_NUMBER;
+    hash = (53 * hash) + primaryStatus_;
+    if (getPrimaryStatusReasonsCount() > 0) {
+      hash = (37 * hash) + PRIMARY_STATUS_REASONS_FIELD_NUMBER;
+      hash = (53 * hash) + primaryStatusReasons_.hashCode();
+    }
     hash = (37 * hash) + PATH1_FIELD_NUMBER;
     hash = (53 * hash) + getPath1().hashCode();
     hash = (37 * hash) + PATH2_FIELD_NUMBER;
@@ -800,6 +953,9 @@ private static final long serialVersionUID = 0L;
       finalMobileUrls_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       status_ = 0;
+      primaryStatus_ = 0;
+      primaryStatusReasons_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000100);
       path1_ = "";
       path2_ = "";
       adStrength_ = 0;
@@ -829,9 +985,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v14.resources.AssetGroup buildPartial() {
       com.google.ads.googleads.v14.resources.AssetGroup result = new com.google.ads.googleads.v14.resources.AssetGroup(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v14.resources.AssetGroup result) {
+      if (((bitField0_ & 0x00000100) != 0)) {
+        primaryStatusReasons_ = java.util.Collections.unmodifiableList(primaryStatusReasons_);
+        bitField0_ = (bitField0_ & ~0x00000100);
+      }
+      result.primaryStatusReasons_ = primaryStatusReasons_;
     }
 
     private void buildPartial0(com.google.ads.googleads.v14.resources.AssetGroup result) {
@@ -860,12 +1025,15 @@ private static final long serialVersionUID = 0L;
         result.status_ = status_;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.path1_ = path1_;
-      }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
-        result.path2_ = path2_;
+        result.primaryStatus_ = primaryStatus_;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.path1_ = path1_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.path2_ = path2_;
+      }
+      if (((from_bitField0_ & 0x00000800) != 0)) {
         result.adStrength_ = adStrength_;
       }
     }
@@ -955,14 +1123,27 @@ private static final long serialVersionUID = 0L;
       if (other.status_ != 0) {
         setStatusValue(other.getStatusValue());
       }
+      if (other.primaryStatus_ != 0) {
+        setPrimaryStatusValue(other.getPrimaryStatusValue());
+      }
+      if (!other.primaryStatusReasons_.isEmpty()) {
+        if (primaryStatusReasons_.isEmpty()) {
+          primaryStatusReasons_ = other.primaryStatusReasons_;
+          bitField0_ = (bitField0_ & ~0x00000100);
+        } else {
+          ensurePrimaryStatusReasonsIsMutable();
+          primaryStatusReasons_.addAll(other.primaryStatusReasons_);
+        }
+        onChanged();
+      }
       if (!other.getPath1().isEmpty()) {
         path1_ = other.path1_;
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000200;
         onChanged();
       }
       if (!other.getPath2().isEmpty()) {
         path2_ = other.path2_;
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000400;
         onChanged();
       }
       if (other.adStrength_ != 0) {
@@ -1028,12 +1209,12 @@ private static final long serialVersionUID = 0L;
             } // case 48
             case 58: {
               path1_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000200;
               break;
             } // case 58
             case 66: {
               path2_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000100;
+              bitField0_ |= 0x00000400;
               break;
             } // case 66
             case 72: {
@@ -1043,9 +1224,31 @@ private static final long serialVersionUID = 0L;
             } // case 72
             case 80: {
               adStrength_ = input.readEnum();
-              bitField0_ |= 0x00000200;
+              bitField0_ |= 0x00000800;
               break;
             } // case 80
+            case 88: {
+              primaryStatus_ = input.readEnum();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 88
+            case 96: {
+              int tmpRaw = input.readEnum();
+              ensurePrimaryStatusReasonsIsMutable();
+              primaryStatusReasons_.add(tmpRaw);
+              break;
+            } // case 96
+            case 98: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int tmpRaw = input.readEnum();
+                ensurePrimaryStatusReasonsIsMutable();
+                primaryStatusReasons_.add(tmpRaw);
+              }
+              input.popLimit(oldLimit);
+              break;
+            } // case 98
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1802,6 +2005,296 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int primaryStatus_ = 0;
+    /**
+     * <pre>
+     * Output only. The primary status of the asset group. Provides insights into
+     * why an asset group is not serving or not serving optimally.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusEnum.AssetGroupPrimaryStatus primary_status = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for primaryStatus.
+     */
+    @java.lang.Override public int getPrimaryStatusValue() {
+      return primaryStatus_;
+    }
+    /**
+     * <pre>
+     * Output only. The primary status of the asset group. Provides insights into
+     * why an asset group is not serving or not serving optimally.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusEnum.AssetGroupPrimaryStatus primary_status = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for primaryStatus to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPrimaryStatusValue(int value) {
+      primaryStatus_ = value;
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The primary status of the asset group. Provides insights into
+     * why an asset group is not serving or not serving optimally.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusEnum.AssetGroupPrimaryStatus primary_status = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The primaryStatus.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusEnum.AssetGroupPrimaryStatus getPrimaryStatus() {
+      com.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusEnum.AssetGroupPrimaryStatus result = com.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusEnum.AssetGroupPrimaryStatus.forNumber(primaryStatus_);
+      return result == null ? com.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusEnum.AssetGroupPrimaryStatus.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Output only. The primary status of the asset group. Provides insights into
+     * why an asset group is not serving or not serving optimally.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusEnum.AssetGroupPrimaryStatus primary_status = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The primaryStatus to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPrimaryStatus(com.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusEnum.AssetGroupPrimaryStatus value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000080;
+      primaryStatus_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The primary status of the asset group. Provides insights into
+     * why an asset group is not serving or not serving optimally.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusEnum.AssetGroupPrimaryStatus primary_status = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPrimaryStatus() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      primaryStatus_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<java.lang.Integer> primaryStatusReasons_ =
+      java.util.Collections.emptyList();
+    private void ensurePrimaryStatusReasonsIsMutable() {
+      if (!((bitField0_ & 0x00000100) != 0)) {
+        primaryStatusReasons_ = new java.util.ArrayList<java.lang.Integer>(primaryStatusReasons_);
+        bitField0_ |= 0x00000100;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. Provides reasons into why an asset group is not serving or not
+     * serving optimally. It will be empty when the asset group is serving without
+     * issues.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason primary_status_reasons = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return A list containing the primaryStatusReasons.
+     */
+    public java.util.List<com.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason> getPrimaryStatusReasonsList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason>(primaryStatusReasons_, primaryStatusReasons_converter_);
+    }
+    /**
+     * <pre>
+     * Output only. Provides reasons into why an asset group is not serving or not
+     * serving optimally. It will be empty when the asset group is serving without
+     * issues.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason primary_status_reasons = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The count of primaryStatusReasons.
+     */
+    public int getPrimaryStatusReasonsCount() {
+      return primaryStatusReasons_.size();
+    }
+    /**
+     * <pre>
+     * Output only. Provides reasons into why an asset group is not serving or not
+     * serving optimally. It will be empty when the asset group is serving without
+     * issues.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason primary_status_reasons = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param index The index of the element to return.
+     * @return The primaryStatusReasons at the given index.
+     */
+    public com.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason getPrimaryStatusReasons(int index) {
+      return primaryStatusReasons_converter_.convert(primaryStatusReasons_.get(index));
+    }
+    /**
+     * <pre>
+     * Output only. Provides reasons into why an asset group is not serving or not
+     * serving optimally. It will be empty when the asset group is serving without
+     * issues.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason primary_status_reasons = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param index The index to set the value at.
+     * @param value The primaryStatusReasons to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPrimaryStatusReasons(
+        int index, com.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensurePrimaryStatusReasonsIsMutable();
+      primaryStatusReasons_.set(index, value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Provides reasons into why an asset group is not serving or not
+     * serving optimally. It will be empty when the asset group is serving without
+     * issues.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason primary_status_reasons = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The primaryStatusReasons to add.
+     * @return This builder for chaining.
+     */
+    public Builder addPrimaryStatusReasons(com.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensurePrimaryStatusReasonsIsMutable();
+      primaryStatusReasons_.add(value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Provides reasons into why an asset group is not serving or not
+     * serving optimally. It will be empty when the asset group is serving without
+     * issues.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason primary_status_reasons = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param values The primaryStatusReasons to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllPrimaryStatusReasons(
+        java.lang.Iterable<? extends com.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason> values) {
+      ensurePrimaryStatusReasonsIsMutable();
+      for (com.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason value : values) {
+        primaryStatusReasons_.add(value.getNumber());
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Provides reasons into why an asset group is not serving or not
+     * serving optimally. It will be empty when the asset group is serving without
+     * issues.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason primary_status_reasons = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPrimaryStatusReasons() {
+      primaryStatusReasons_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000100);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Provides reasons into why an asset group is not serving or not
+     * serving optimally. It will be empty when the asset group is serving without
+     * issues.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason primary_status_reasons = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return A list containing the enum numeric values on the wire for primaryStatusReasons.
+     */
+    public java.util.List<java.lang.Integer>
+    getPrimaryStatusReasonsValueList() {
+      return java.util.Collections.unmodifiableList(primaryStatusReasons_);
+    }
+    /**
+     * <pre>
+     * Output only. Provides reasons into why an asset group is not serving or not
+     * serving optimally. It will be empty when the asset group is serving without
+     * issues.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason primary_status_reasons = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of primaryStatusReasons at the given index.
+     */
+    public int getPrimaryStatusReasonsValue(int index) {
+      return primaryStatusReasons_.get(index);
+    }
+    /**
+     * <pre>
+     * Output only. Provides reasons into why an asset group is not serving or not
+     * serving optimally. It will be empty when the asset group is serving without
+     * issues.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason primary_status_reasons = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for primaryStatusReasons to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPrimaryStatusReasonsValue(
+        int index, int value) {
+      ensurePrimaryStatusReasonsIsMutable();
+      primaryStatusReasons_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Provides reasons into why an asset group is not serving or not
+     * serving optimally. It will be empty when the asset group is serving without
+     * issues.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason primary_status_reasons = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for primaryStatusReasons to add.
+     * @return This builder for chaining.
+     */
+    public Builder addPrimaryStatusReasonsValue(int value) {
+      ensurePrimaryStatusReasonsIsMutable();
+      primaryStatusReasons_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Provides reasons into why an asset group is not serving or not
+     * serving optimally. It will be empty when the asset group is serving without
+     * issues.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason primary_status_reasons = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param values The enum numeric values on the wire for primaryStatusReasons to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllPrimaryStatusReasonsValue(
+        java.lang.Iterable<java.lang.Integer> values) {
+      ensurePrimaryStatusReasonsIsMutable();
+      for (int value : values) {
+        primaryStatusReasons_.add(value);
+      }
+      onChanged();
+      return this;
+    }
+
     private java.lang.Object path1_ = "";
     /**
      * <pre>
@@ -1860,7 +2353,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       path1_ = value;
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1875,7 +2368,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearPath1() {
       path1_ = getDefaultInstance().getPath1();
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000200);
       onChanged();
       return this;
     }
@@ -1894,7 +2387,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       path1_ = value;
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1957,7 +2450,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       path2_ = value;
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -1972,7 +2465,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearPath2() {
       path2_ = getDefaultInstance().getPath2();
-      bitField0_ = (bitField0_ & ~0x00000100);
+      bitField0_ = (bitField0_ & ~0x00000400);
       onChanged();
       return this;
     }
@@ -1991,7 +2484,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       path2_ = value;
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2019,7 +2512,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setAdStrengthValue(int value) {
       adStrength_ = value;
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -2049,7 +2542,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000800;
       adStrength_ = value.getNumber();
       onChanged();
       return this;
@@ -2063,7 +2556,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearAdStrength() {
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00000800);
       adStrength_ = 0;
       onChanged();
       return this;

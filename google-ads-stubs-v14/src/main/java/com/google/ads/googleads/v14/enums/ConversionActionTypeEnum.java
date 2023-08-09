@@ -376,7 +376,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Conversions created from website events (such as form submissions or page
-     * loads), that don't use individually coded event snippets.
+     * loads), that don't use individually coded event snippets. Read only.
      * </pre>
      *
      * <code>WEBPAGE_CODELESS = 37;</code>
@@ -744,7 +744,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Conversions created from website events (such as form submissions or page
-     * loads), that don't use individually coded event snippets.
+     * loads), that don't use individually coded event snippets. Read only.
      * </pre>
      *
      * <code>WEBPAGE_CODELESS = 37;</code>

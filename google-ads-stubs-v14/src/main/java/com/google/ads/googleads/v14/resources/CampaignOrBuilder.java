@@ -469,6 +469,33 @@ public interface CampaignOrBuilder extends
 
   /**
    * <pre>
+   * Settings for Discovery campaign.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.resources.Campaign.DiscoveryCampaignSettings discovery_campaign_settings = 87;</code>
+   * @return Whether the discoveryCampaignSettings field is set.
+   */
+  boolean hasDiscoveryCampaignSettings();
+  /**
+   * <pre>
+   * Settings for Discovery campaign.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.resources.Campaign.DiscoveryCampaignSettings discovery_campaign_settings = 87;</code>
+   * @return The discoveryCampaignSettings.
+   */
+  com.google.ads.googleads.v14.resources.Campaign.DiscoveryCampaignSettings getDiscoveryCampaignSettings();
+  /**
+   * <pre>
+   * Settings for Discovery campaign.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.resources.Campaign.DiscoveryCampaignSettings discovery_campaign_settings = 87;</code>
+   */
+  com.google.ads.googleads.v14.resources.Campaign.DiscoveryCampaignSettingsOrBuilder getDiscoveryCampaignSettingsOrBuilder();
+
+  /**
+   * <pre>
    * Settings for Real-Time Bidding, a feature only available for campaigns
    * targeting the Ad Exchange network.
    * </pre>
@@ -1157,6 +1184,9 @@ public interface CampaignOrBuilder extends
    * <pre>
    * Selective optimization setting for this campaign, which includes a set of
    * conversion actions to optimize this campaign towards.
+   * This feature only applies to app campaigns that use MULTI_CHANNEL as
+   * AdvertisingChannelType and APP_CAMPAIGN or APP_CAMPAIGN_FOR_ENGAGEMENT as
+   * AdvertisingChannelSubType.
    * </pre>
    *
    * <code>.google.ads.googleads.v14.resources.Campaign.SelectiveOptimization selective_optimization = 45;</code>
@@ -1167,6 +1197,9 @@ public interface CampaignOrBuilder extends
    * <pre>
    * Selective optimization setting for this campaign, which includes a set of
    * conversion actions to optimize this campaign towards.
+   * This feature only applies to app campaigns that use MULTI_CHANNEL as
+   * AdvertisingChannelType and APP_CAMPAIGN or APP_CAMPAIGN_FOR_ENGAGEMENT as
+   * AdvertisingChannelSubType.
    * </pre>
    *
    * <code>.google.ads.googleads.v14.resources.Campaign.SelectiveOptimization selective_optimization = 45;</code>
@@ -1177,6 +1210,9 @@ public interface CampaignOrBuilder extends
    * <pre>
    * Selective optimization setting for this campaign, which includes a set of
    * conversion actions to optimize this campaign towards.
+   * This feature only applies to app campaigns that use MULTI_CHANNEL as
+   * AdvertisingChannelType and APP_CAMPAIGN or APP_CAMPAIGN_FOR_ENGAGEMENT as
+   * AdvertisingChannelSubType.
    * </pre>
    *
    * <code>.google.ads.googleads.v14.resources.Campaign.SelectiveOptimization selective_optimization = 45;</code>
@@ -1727,31 +1763,28 @@ public interface CampaignOrBuilder extends
 
   /**
    * <pre>
-   * Output only. A bidding strategy that pays a configurable amount per video
-   * view.
+   * A bidding strategy that pays a configurable amount per video view.
    * </pre>
    *
-   * <code>.google.ads.googleads.v14.common.ManualCpv manual_cpv = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>.google.ads.googleads.v14.common.ManualCpv manual_cpv = 37;</code>
    * @return Whether the manualCpv field is set.
    */
   boolean hasManualCpv();
   /**
    * <pre>
-   * Output only. A bidding strategy that pays a configurable amount per video
-   * view.
+   * A bidding strategy that pays a configurable amount per video view.
    * </pre>
    *
-   * <code>.google.ads.googleads.v14.common.ManualCpv manual_cpv = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>.google.ads.googleads.v14.common.ManualCpv manual_cpv = 37;</code>
    * @return The manualCpv.
    */
   com.google.ads.googleads.v14.common.ManualCpv getManualCpv();
   /**
    * <pre>
-   * Output only. A bidding strategy that pays a configurable amount per video
-   * view.
+   * A bidding strategy that pays a configurable amount per video view.
    * </pre>
    *
-   * <code>.google.ads.googleads.v14.common.ManualCpv manual_cpv = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>.google.ads.googleads.v14.common.ManualCpv manual_cpv = 37;</code>
    */
   com.google.ads.googleads.v14.common.ManualCpvOrBuilder getManualCpvOrBuilder();
 

@@ -30,45 +30,61 @@ public final class AssetGroupAssetProto {
     java.lang.String[] descriptorData = {
       "\n:google/ads/googleads/v14/resources/ass" +
       "et_group_asset.proto\022\"google.ads.googlea" +
-      "ds.v14.resources\0324google/ads/googleads/v" +
-      "14/common/policy_summary.proto\0325google/a" +
-      "ds/googleads/v14/enums/asset_field_type." +
-      "proto\0326google/ads/googleads/v14/enums/as" +
-      "set_link_status.proto\032<google/ads/google" +
-      "ads/v14/enums/asset_performance_label.pr" +
-      "oto\032\037google/api/field_behavior.proto\032\031go" +
-      "ogle/api/resource.proto\"\305\005\n\017AssetGroupAs" +
-      "set\022H\n\rresource_name\030\001 \001(\tB1\342A\001\005\372A*\n(goo" +
-      "gleads.googleapis.com/AssetGroupAsset\022A\n" +
-      "\013asset_group\030\002 \001(\tB,\342A\001\005\372A%\n#googleads.g" +
-      "oogleapis.com/AssetGroup\0226\n\005asset\030\003 \001(\tB" +
-      "\'\342A\001\005\372A \n\036googleads.googleapis.com/Asset" +
-      "\022U\n\nfield_type\030\004 \001(\0162A.google.ads.google" +
-      "ads.v14.enums.AssetFieldTypeEnum.AssetFi" +
-      "eldType\022S\n\006status\030\005 \001(\0162C.google.ads.goo" +
-      "gleads.v14.enums.AssetLinkStatusEnum.Ass" +
-      "etLinkStatus\022p\n\021performance_label\030\006 \001(\0162" +
-      "O.google.ads.googleads.v14.enums.AssetPe" +
-      "rformanceLabelEnum.AssetPerformanceLabel" +
-      "B\004\342A\001\003\022L\n\016policy_summary\030\007 \001(\0132..google." +
-      "ads.googleads.v14.common.PolicySummaryB\004" +
-      "\342A\001\003:\200\001\352A}\n(googleads.googleapis.com/Ass" +
-      "etGroupAsset\022Qcustomers/{customer_id}/as" +
-      "setGroupAssets/{asset_group_id}~{asset_i" +
-      "d}~{field_type}B\206\002\n&com.google.ads.googl" +
-      "eads.v14.resourcesB\024AssetGroupAssetProto" +
-      "P\001ZKgoogle.golang.org/genproto/googleapi" +
-      "s/ads/googleads/v14/resources;resources\242" +
-      "\002\003GAA\252\002\"Google.Ads.GoogleAds.V14.Resourc" +
-      "es\312\002\"Google\\Ads\\GoogleAds\\V14\\Resources\352" +
-      "\002&Google::Ads::GoogleAds::V14::Resources" +
-      "b\006proto3"
+      "ds.v14.resources\0322google/ads/googleads/v" +
+      "14/common/asset_policy.proto\0324google/ads" +
+      "/googleads/v14/common/policy_summary.pro" +
+      "to\0325google/ads/googleads/v14/enums/asset" +
+      "_field_type.proto\032>google/ads/googleads/" +
+      "v14/enums/asset_link_primary_status.prot" +
+      "o\032Egoogle/ads/googleads/v14/enums/asset_" +
+      "link_primary_status_reason.proto\0326google" +
+      "/ads/googleads/v14/enums/asset_link_stat" +
+      "us.proto\032<google/ads/googleads/v14/enums" +
+      "/asset_performance_label.proto\032\037google/a" +
+      "pi/field_behavior.proto\032\031google/api/reso" +
+      "urce.proto\"\242\010\n\017AssetGroupAsset\022H\n\rresour" +
+      "ce_name\030\001 \001(\tB1\342A\001\005\372A*\n(googleads.google" +
+      "apis.com/AssetGroupAsset\022A\n\013asset_group\030" +
+      "\002 \001(\tB,\342A\001\005\372A%\n#googleads.googleapis.com" +
+      "/AssetGroup\0226\n\005asset\030\003 \001(\tB\'\342A\001\005\372A \n\036goo" +
+      "gleads.googleapis.com/Asset\022U\n\nfield_typ" +
+      "e\030\004 \001(\0162A.google.ads.googleads.v14.enums" +
+      ".AssetFieldTypeEnum.AssetFieldType\022S\n\006st" +
+      "atus\030\005 \001(\0162C.google.ads.googleads.v14.en" +
+      "ums.AssetLinkStatusEnum.AssetLinkStatus\022" +
+      "o\n\016primary_status\030\010 \001(\0162Q.google.ads.goo" +
+      "gleads.v14.enums.AssetLinkPrimaryStatusE" +
+      "num.AssetLinkPrimaryStatusB\004\342A\001\003\022\203\001\n\026pri" +
+      "mary_status_reasons\030\t \003(\0162].google.ads.g" +
+      "oogleads.v14.enums.AssetLinkPrimaryStatu" +
+      "sReasonEnum.AssetLinkPrimaryStatusReason" +
+      "B\004\342A\001\003\022d\n\026primary_status_details\030\n \003(\0132>" +
+      ".google.ads.googleads.v14.common.AssetLi" +
+      "nkPrimaryStatusDetailsB\004\342A\001\003\022p\n\021performa" +
+      "nce_label\030\006 \001(\0162O.google.ads.googleads.v" +
+      "14.enums.AssetPerformanceLabelEnum.Asset" +
+      "PerformanceLabelB\004\342A\001\003\022L\n\016policy_summary" +
+      "\030\007 \001(\0132..google.ads.googleads.v14.common" +
+      ".PolicySummaryB\004\342A\001\003:\200\001\352A}\n(googleads.go" +
+      "ogleapis.com/AssetGroupAsset\022Qcustomers/" +
+      "{customer_id}/assetGroupAssets/{asset_gr" +
+      "oup_id}~{asset_id}~{field_type}B\206\002\n&com." +
+      "google.ads.googleads.v14.resourcesB\024Asse" +
+      "tGroupAssetProtoP\001ZKgoogle.golang.org/ge" +
+      "nproto/googleapis/ads/googleads/v14/reso" +
+      "urces;resources\242\002\003GAA\252\002\"Google.Ads.Googl" +
+      "eAds.V14.Resources\312\002\"Google\\Ads\\GoogleAd" +
+      "s\\V14\\Resources\352\002&Google::Ads::GoogleAds" +
+      "::V14::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.ads.googleads.v14.common.AssetPolicyProto.getDescriptor(),
           com.google.ads.googleads.v14.common.PolicySummaryProto.getDescriptor(),
           com.google.ads.googleads.v14.enums.AssetFieldTypeProto.getDescriptor(),
+          com.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusProto.getDescriptor(),
+          com.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonProto.getDescriptor(),
           com.google.ads.googleads.v14.enums.AssetLinkStatusProto.getDescriptor(),
           com.google.ads.googleads.v14.enums.AssetPerformanceLabelProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
@@ -79,7 +95,7 @@ public final class AssetGroupAssetProto {
     internal_static_google_ads_googleads_v14_resources_AssetGroupAsset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v14_resources_AssetGroupAsset_descriptor,
-        new java.lang.String[] { "ResourceName", "AssetGroup", "Asset", "FieldType", "Status", "PerformanceLabel", "PolicySummary", });
+        new java.lang.String[] { "ResourceName", "AssetGroup", "Asset", "FieldType", "Status", "PrimaryStatus", "PrimaryStatusReasons", "PrimaryStatusDetails", "PerformanceLabel", "PolicySummary", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
@@ -87,8 +103,11 @@ public final class AssetGroupAssetProto {
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.ads.googleads.v14.common.AssetPolicyProto.getDescriptor();
     com.google.ads.googleads.v14.common.PolicySummaryProto.getDescriptor();
     com.google.ads.googleads.v14.enums.AssetFieldTypeProto.getDescriptor();
+    com.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusProto.getDescriptor();
+    com.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonProto.getDescriptor();
     com.google.ads.googleads.v14.enums.AssetLinkStatusProto.getDescriptor();
     com.google.ads.googleads.v14.enums.AssetPerformanceLabelProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();

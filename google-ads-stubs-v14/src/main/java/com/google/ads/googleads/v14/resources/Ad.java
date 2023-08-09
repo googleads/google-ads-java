@@ -87,6 +87,7 @@ private static final long serialVersionUID = 0L;
     APP_PRE_REGISTRATION_AD(50),
     DISCOVERY_MULTI_ASSET_AD(51),
     DISCOVERY_CAROUSEL_AD(52),
+    DISCOVERY_VIDEO_RESPONSIVE_AD(60),
     TRAVEL_AD(54),
     ADDATA_NOT_SET(0);
     private final int value;
@@ -128,6 +129,7 @@ private static final long serialVersionUID = 0L;
         case 50: return APP_PRE_REGISTRATION_AD;
         case 51: return DISCOVERY_MULTI_ASSET_AD;
         case 52: return DISCOVERY_CAROUSEL_AD;
+        case 60: return DISCOVERY_VIDEO_RESPONSIVE_AD;
         case 54: return TRAVEL_AD;
         case 0: return ADDATA_NOT_SET;
         default: return null;
@@ -1910,6 +1912,49 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v14.common.DiscoveryCarouselAdInfo.getDefaultInstance();
   }
 
+  public static final int DISCOVERY_VIDEO_RESPONSIVE_AD_FIELD_NUMBER = 60;
+  /**
+   * <pre>
+   * Details pertaining to a discovery video responsive ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo discovery_video_responsive_ad = 60;</code>
+   * @return Whether the discoveryVideoResponsiveAd field is set.
+   */
+  @java.lang.Override
+  public boolean hasDiscoveryVideoResponsiveAd() {
+    return adDataCase_ == 60;
+  }
+  /**
+   * <pre>
+   * Details pertaining to a discovery video responsive ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo discovery_video_responsive_ad = 60;</code>
+   * @return The discoveryVideoResponsiveAd.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo getDiscoveryVideoResponsiveAd() {
+    if (adDataCase_ == 60) {
+       return (com.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo) adData_;
+    }
+    return com.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Details pertaining to a discovery video responsive ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo discovery_video_responsive_ad = 60;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfoOrBuilder getDiscoveryVideoResponsiveAdOrBuilder() {
+    if (adDataCase_ == 60) {
+       return (com.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo) adData_;
+    }
+    return com.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo.getDefaultInstance();
+  }
+
   public static final int TRAVEL_AD_FIELD_NUMBER = 54;
   /**
    * <pre>
@@ -2084,6 +2129,9 @@ private static final long serialVersionUID = 0L;
     if (adDataCase_ == 54) {
       output.writeMessage(54, (com.google.ads.googleads.v14.common.TravelAdInfo) adData_);
     }
+    if (adDataCase_ == 60) {
+      output.writeMessage(60, (com.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo) adData_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -2252,6 +2300,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(54, (com.google.ads.googleads.v14.common.TravelAdInfo) adData_);
     }
+    if (adDataCase_ == 60) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(60, (com.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo) adData_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -2405,6 +2457,10 @@ private static final long serialVersionUID = 0L;
       case 52:
         if (!getDiscoveryCarouselAd()
             .equals(other.getDiscoveryCarouselAd())) return false;
+        break;
+      case 60:
+        if (!getDiscoveryVideoResponsiveAd()
+            .equals(other.getDiscoveryVideoResponsiveAd())) return false;
         break;
       case 54:
         if (!getTravelAd()
@@ -2570,6 +2626,10 @@ private static final long serialVersionUID = 0L;
       case 52:
         hash = (37 * hash) + DISCOVERY_CAROUSEL_AD_FIELD_NUMBER;
         hash = (53 * hash) + getDiscoveryCarouselAd().hashCode();
+        break;
+      case 60:
+        hash = (37 * hash) + DISCOVERY_VIDEO_RESPONSIVE_AD_FIELD_NUMBER;
+        hash = (53 * hash) + getDiscoveryVideoResponsiveAd().hashCode();
         break;
       case 54:
         hash = (37 * hash) + TRAVEL_AD_FIELD_NUMBER;
@@ -2818,6 +2878,9 @@ private static final long serialVersionUID = 0L;
       if (discoveryCarouselAdBuilder_ != null) {
         discoveryCarouselAdBuilder_.clear();
       }
+      if (discoveryVideoResponsiveAdBuilder_ != null) {
+        discoveryVideoResponsiveAdBuilder_.clear();
+      }
       if (travelAdBuilder_ != null) {
         travelAdBuilder_.clear();
       }
@@ -3035,6 +3098,10 @@ private static final long serialVersionUID = 0L;
       if (adDataCase_ == 52 &&
           discoveryCarouselAdBuilder_ != null) {
         result.adData_ = discoveryCarouselAdBuilder_.build();
+      }
+      if (adDataCase_ == 60 &&
+          discoveryVideoResponsiveAdBuilder_ != null) {
+        result.adData_ = discoveryVideoResponsiveAdBuilder_.build();
       }
       if (adDataCase_ == 54 &&
           travelAdBuilder_ != null) {
@@ -3315,6 +3382,10 @@ private static final long serialVersionUID = 0L;
         }
         case DISCOVERY_CAROUSEL_AD: {
           mergeDiscoveryCarouselAd(other.getDiscoveryCarouselAd());
+          break;
+        }
+        case DISCOVERY_VIDEO_RESPONSIVE_AD: {
+          mergeDiscoveryVideoResponsiveAd(other.getDiscoveryVideoResponsiveAd());
           break;
         }
         case TRAVEL_AD: {
@@ -3620,6 +3691,13 @@ private static final long serialVersionUID = 0L;
               adDataCase_ = 54;
               break;
             } // case 434
+            case 482: {
+              input.readMessage(
+                  getDiscoveryVideoResponsiveAdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              adDataCase_ = 60;
+              break;
+            } // case 482
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -10011,6 +10089,184 @@ private static final long serialVersionUID = 0L;
       adDataCase_ = 52;
       onChanged();
       return discoveryCarouselAdBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo, com.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo.Builder, com.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfoOrBuilder> discoveryVideoResponsiveAdBuilder_;
+    /**
+     * <pre>
+     * Details pertaining to a discovery video responsive ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo discovery_video_responsive_ad = 60;</code>
+     * @return Whether the discoveryVideoResponsiveAd field is set.
+     */
+    @java.lang.Override
+    public boolean hasDiscoveryVideoResponsiveAd() {
+      return adDataCase_ == 60;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a discovery video responsive ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo discovery_video_responsive_ad = 60;</code>
+     * @return The discoveryVideoResponsiveAd.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo getDiscoveryVideoResponsiveAd() {
+      if (discoveryVideoResponsiveAdBuilder_ == null) {
+        if (adDataCase_ == 60) {
+          return (com.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo) adData_;
+        }
+        return com.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo.getDefaultInstance();
+      } else {
+        if (adDataCase_ == 60) {
+          return discoveryVideoResponsiveAdBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Details pertaining to a discovery video responsive ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo discovery_video_responsive_ad = 60;</code>
+     */
+    public Builder setDiscoveryVideoResponsiveAd(com.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo value) {
+      if (discoveryVideoResponsiveAdBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        adData_ = value;
+        onChanged();
+      } else {
+        discoveryVideoResponsiveAdBuilder_.setMessage(value);
+      }
+      adDataCase_ = 60;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a discovery video responsive ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo discovery_video_responsive_ad = 60;</code>
+     */
+    public Builder setDiscoveryVideoResponsiveAd(
+        com.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo.Builder builderForValue) {
+      if (discoveryVideoResponsiveAdBuilder_ == null) {
+        adData_ = builderForValue.build();
+        onChanged();
+      } else {
+        discoveryVideoResponsiveAdBuilder_.setMessage(builderForValue.build());
+      }
+      adDataCase_ = 60;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a discovery video responsive ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo discovery_video_responsive_ad = 60;</code>
+     */
+    public Builder mergeDiscoveryVideoResponsiveAd(com.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo value) {
+      if (discoveryVideoResponsiveAdBuilder_ == null) {
+        if (adDataCase_ == 60 &&
+            adData_ != com.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo.getDefaultInstance()) {
+          adData_ = com.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo.newBuilder((com.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo) adData_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          adData_ = value;
+        }
+        onChanged();
+      } else {
+        if (adDataCase_ == 60) {
+          discoveryVideoResponsiveAdBuilder_.mergeFrom(value);
+        } else {
+          discoveryVideoResponsiveAdBuilder_.setMessage(value);
+        }
+      }
+      adDataCase_ = 60;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a discovery video responsive ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo discovery_video_responsive_ad = 60;</code>
+     */
+    public Builder clearDiscoveryVideoResponsiveAd() {
+      if (discoveryVideoResponsiveAdBuilder_ == null) {
+        if (adDataCase_ == 60) {
+          adDataCase_ = 0;
+          adData_ = null;
+          onChanged();
+        }
+      } else {
+        if (adDataCase_ == 60) {
+          adDataCase_ = 0;
+          adData_ = null;
+        }
+        discoveryVideoResponsiveAdBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a discovery video responsive ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo discovery_video_responsive_ad = 60;</code>
+     */
+    public com.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo.Builder getDiscoveryVideoResponsiveAdBuilder() {
+      return getDiscoveryVideoResponsiveAdFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Details pertaining to a discovery video responsive ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo discovery_video_responsive_ad = 60;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfoOrBuilder getDiscoveryVideoResponsiveAdOrBuilder() {
+      if ((adDataCase_ == 60) && (discoveryVideoResponsiveAdBuilder_ != null)) {
+        return discoveryVideoResponsiveAdBuilder_.getMessageOrBuilder();
+      } else {
+        if (adDataCase_ == 60) {
+          return (com.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo) adData_;
+        }
+        return com.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Details pertaining to a discovery video responsive ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo discovery_video_responsive_ad = 60;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo, com.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo.Builder, com.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfoOrBuilder> 
+        getDiscoveryVideoResponsiveAdFieldBuilder() {
+      if (discoveryVideoResponsiveAdBuilder_ == null) {
+        if (!(adDataCase_ == 60)) {
+          adData_ = com.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo.getDefaultInstance();
+        }
+        discoveryVideoResponsiveAdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo, com.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo.Builder, com.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfoOrBuilder>(
+                (com.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo) adData_,
+                getParentForChildren(),
+                isClean());
+        adData_ = null;
+      }
+      adDataCase_ = 60;
+      onChanged();
+      return discoveryVideoResponsiveAdBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

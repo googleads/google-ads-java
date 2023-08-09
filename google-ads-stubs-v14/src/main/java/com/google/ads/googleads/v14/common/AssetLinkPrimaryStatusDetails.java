@@ -12,7 +12,6 @@ package com.google.ads.googleads.v14.common;
  * annotated with it.  For instance, when the reason is ASSET_DISAPPROVED, the
  * details field will contain additional information about the offline
  * evaluation errors which led to the asset being disapproved.
- * Next Id: 4
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails}
@@ -418,7 +417,6 @@ private static final long serialVersionUID = 0L;
    * annotated with it.  For instance, when the reason is ASSET_DISAPPROVED, the
    * details field will contain additional information about the offline
    * evaluation errors which led to the asset being disapproved.
-   * Next Id: 4
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails}

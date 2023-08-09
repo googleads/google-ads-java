@@ -7,7 +7,6 @@ package com.google.ads.googleads.v14.enums;
  * <pre>
  * Indicates the key issue that results in a shopping campaign targeting zero
  * products.
- * Next Id: 5
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v14.enums.ShoppingAddProductsToCampaignRecommendationEnum}
@@ -396,7 +395,6 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Indicates the key issue that results in a shopping campaign targeting zero
    * products.
-   * Next Id: 5
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v14.enums.ShoppingAddProductsToCampaignRecommendationEnum}

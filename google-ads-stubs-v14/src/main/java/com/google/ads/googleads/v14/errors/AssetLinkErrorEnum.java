@@ -253,6 +253,22 @@ private static final long serialVersionUID = 0L;
      * <code>CANNOT_LINK_LOCATION_LEAD_FORM_WITHOUT_LOCATION_ASSET = 22;</code>
      */
     CANNOT_LINK_LOCATION_LEAD_FORM_WITHOUT_LOCATION_ASSET(22),
+    /**
+     * <pre>
+     * Customer is not verified.
+     * </pre>
+     *
+     * <code>CUSTOMER_NOT_VERIFIED = 23;</code>
+     */
+    CUSTOMER_NOT_VERIFIED(23),
+    /**
+     * <pre>
+     * Call to action value is not supported.
+     * </pre>
+     *
+     * <code>UNSUPPORTED_CALL_TO_ACTION = 24;</code>
+     */
+    UNSUPPORTED_CALL_TO_ACTION(24),
     UNRECOGNIZED(-1),
     ;
 
@@ -458,6 +474,22 @@ private static final long serialVersionUID = 0L;
      * <code>CANNOT_LINK_LOCATION_LEAD_FORM_WITHOUT_LOCATION_ASSET = 22;</code>
      */
     public static final int CANNOT_LINK_LOCATION_LEAD_FORM_WITHOUT_LOCATION_ASSET_VALUE = 22;
+    /**
+     * <pre>
+     * Customer is not verified.
+     * </pre>
+     *
+     * <code>CUSTOMER_NOT_VERIFIED = 23;</code>
+     */
+    public static final int CUSTOMER_NOT_VERIFIED_VALUE = 23;
+    /**
+     * <pre>
+     * Call to action value is not supported.
+     * </pre>
+     *
+     * <code>UNSUPPORTED_CALL_TO_ACTION = 24;</code>
+     */
+    public static final int UNSUPPORTED_CALL_TO_ACTION_VALUE = 24;
 
 
     public final int getNumber() {
@@ -507,6 +539,8 @@ private static final long serialVersionUID = 0L;
         case 20: return CANNOT_LINK_TO_AUTOMATICALLY_CREATED_ASSET;
         case 21: return CANNOT_MODIFY_ASSET_LINK_SOURCE;
         case 22: return CANNOT_LINK_LOCATION_LEAD_FORM_WITHOUT_LOCATION_ASSET;
+        case 23: return CUSTOMER_NOT_VERIFIED;
+        case 24: return UNSUPPORTED_CALL_TO_ACTION;
         default: return null;
       }
     }

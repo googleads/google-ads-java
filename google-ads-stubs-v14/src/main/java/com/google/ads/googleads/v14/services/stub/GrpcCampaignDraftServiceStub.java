@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,8 +29,8 @@ import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
 import com.google.api.gax.rpc.OperationCallable;
+import com.google.api.gax.rpc.RequestParamsBuilder;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.common.collect.ImmutableMap;
 import com.google.longrunning.Operation;
 import com.google.longrunning.stub.GrpcOperationsStub;
 import com.google.protobuf.Empty;
@@ -149,9 +149,9 @@ public class GrpcCampaignDraftServiceStub extends CampaignDraftServiceStub {
                 .setMethodDescriptor(mutateCampaignDraftsMethodDescriptor)
                 .setParamsExtractor(
                     request -> {
-                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                      params.put("customer_id", String.valueOf(request.getCustomerId()));
-                      return params.build();
+                      RequestParamsBuilder builder = RequestParamsBuilder.create();
+                      builder.add("customer_id", String.valueOf(request.getCustomerId()));
+                      return builder.build();
                     })
                 .build();
     GrpcCallSettings<PromoteCampaignDraftRequest, Operation> promoteCampaignDraftTransportSettings =
@@ -159,9 +159,9 @@ public class GrpcCampaignDraftServiceStub extends CampaignDraftServiceStub {
             .setMethodDescriptor(promoteCampaignDraftMethodDescriptor)
             .setParamsExtractor(
                 request -> {
-                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                  params.put("campaign_draft", String.valueOf(request.getCampaignDraft()));
-                  return params.build();
+                  RequestParamsBuilder builder = RequestParamsBuilder.create();
+                  builder.add("campaign_draft", String.valueOf(request.getCampaignDraft()));
+                  return builder.build();
                 })
             .build();
     GrpcCallSettings<ListCampaignDraftAsyncErrorsRequest, ListCampaignDraftAsyncErrorsResponse>
@@ -172,9 +172,9 @@ public class GrpcCampaignDraftServiceStub extends CampaignDraftServiceStub {
                 .setMethodDescriptor(listCampaignDraftAsyncErrorsMethodDescriptor)
                 .setParamsExtractor(
                     request -> {
-                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                      params.put("resource_name", String.valueOf(request.getResourceName()));
-                      return params.build();
+                      RequestParamsBuilder builder = RequestParamsBuilder.create();
+                      builder.add("resource_name", String.valueOf(request.getResourceName()));
+                      return builder.build();
                     })
                 .build();
 

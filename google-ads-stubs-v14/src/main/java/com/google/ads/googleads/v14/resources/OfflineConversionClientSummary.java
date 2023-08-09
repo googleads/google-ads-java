@@ -8,7 +8,6 @@ package com.google.ads.googleads.v14.resources;
  * Offline conversion upload diagnostic summarized by client. This proto
  * contains general information, breakdown by date/job and alerts for offline
  * conversion upload results.
- * Next tag: 10
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v14.resources.OfflineConversionClientSummary}
@@ -642,7 +641,6 @@ private static final long serialVersionUID = 0L;
    * Offline conversion upload diagnostic summarized by client. This proto
    * contains general information, breakdown by date/job and alerts for offline
    * conversion upload results.
-   * Next tag: 10
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v14.resources.OfflineConversionClientSummary}

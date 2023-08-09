@@ -139,6 +139,70 @@ private static final long serialVersionUID = 0L;
      * <code>SHOP_NOW = 10;</code>
      */
     SHOP_NOW(10),
+    /**
+     * <pre>
+     * The call to action type is buy now.
+     * </pre>
+     *
+     * <code>BUY_NOW = 11;</code>
+     */
+    BUY_NOW(11),
+    /**
+     * <pre>
+     * The call to action type is donate now.
+     * </pre>
+     *
+     * <code>DONATE_NOW = 12;</code>
+     */
+    DONATE_NOW(12),
+    /**
+     * <pre>
+     * The call to action type is order now.
+     * </pre>
+     *
+     * <code>ORDER_NOW = 13;</code>
+     */
+    ORDER_NOW(13),
+    /**
+     * <pre>
+     * The call to action type is play now.
+     * </pre>
+     *
+     * <code>PLAY_NOW = 14;</code>
+     */
+    PLAY_NOW(14),
+    /**
+     * <pre>
+     * The call to action type is see more.
+     * </pre>
+     *
+     * <code>SEE_MORE = 15;</code>
+     */
+    SEE_MORE(15),
+    /**
+     * <pre>
+     * The call to action type is start now.
+     * </pre>
+     *
+     * <code>START_NOW = 16;</code>
+     */
+    START_NOW(16),
+    /**
+     * <pre>
+     * The call to action type is visit site.
+     * </pre>
+     *
+     * <code>VISIT_SITE = 17;</code>
+     */
+    VISIT_SITE(17),
+    /**
+     * <pre>
+     * The call to action type is watch now.
+     * </pre>
+     *
+     * <code>WATCH_NOW = 18;</code>
+     */
+    WATCH_NOW(18),
     UNRECOGNIZED(-1),
     ;
 
@@ -230,6 +294,70 @@ private static final long serialVersionUID = 0L;
      * <code>SHOP_NOW = 10;</code>
      */
     public static final int SHOP_NOW_VALUE = 10;
+    /**
+     * <pre>
+     * The call to action type is buy now.
+     * </pre>
+     *
+     * <code>BUY_NOW = 11;</code>
+     */
+    public static final int BUY_NOW_VALUE = 11;
+    /**
+     * <pre>
+     * The call to action type is donate now.
+     * </pre>
+     *
+     * <code>DONATE_NOW = 12;</code>
+     */
+    public static final int DONATE_NOW_VALUE = 12;
+    /**
+     * <pre>
+     * The call to action type is order now.
+     * </pre>
+     *
+     * <code>ORDER_NOW = 13;</code>
+     */
+    public static final int ORDER_NOW_VALUE = 13;
+    /**
+     * <pre>
+     * The call to action type is play now.
+     * </pre>
+     *
+     * <code>PLAY_NOW = 14;</code>
+     */
+    public static final int PLAY_NOW_VALUE = 14;
+    /**
+     * <pre>
+     * The call to action type is see more.
+     * </pre>
+     *
+     * <code>SEE_MORE = 15;</code>
+     */
+    public static final int SEE_MORE_VALUE = 15;
+    /**
+     * <pre>
+     * The call to action type is start now.
+     * </pre>
+     *
+     * <code>START_NOW = 16;</code>
+     */
+    public static final int START_NOW_VALUE = 16;
+    /**
+     * <pre>
+     * The call to action type is visit site.
+     * </pre>
+     *
+     * <code>VISIT_SITE = 17;</code>
+     */
+    public static final int VISIT_SITE_VALUE = 17;
+    /**
+     * <pre>
+     * The call to action type is watch now.
+     * </pre>
+     *
+     * <code>WATCH_NOW = 18;</code>
+     */
+    public static final int WATCH_NOW_VALUE = 18;
 
 
     public final int getNumber() {
@@ -267,6 +395,14 @@ private static final long serialVersionUID = 0L;
         case 8: return DOWNLOAD;
         case 9: return BOOK_NOW;
         case 10: return SHOP_NOW;
+        case 11: return BUY_NOW;
+        case 12: return DONATE_NOW;
+        case 13: return ORDER_NOW;
+        case 14: return PLAY_NOW;
+        case 15: return SEE_MORE;
+        case 16: return START_NOW;
+        case 17: return VISIT_SITE;
+        case 18: return WATCH_NOW;
         default: return null;
       }
     }

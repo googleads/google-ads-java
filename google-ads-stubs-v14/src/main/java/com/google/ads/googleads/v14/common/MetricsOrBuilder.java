@@ -230,6 +230,37 @@ public interface MetricsOrBuilder extends
 
   /**
    * <pre>
+   * All of new customers' lifetime conversion value. If you have set up
+   * customer acquisition goal at either account level or campaign level, this
+   * will include the additional conversion value from new customers for both
+   * biddable and non-biddable conversions. If your campaign has adopted the
+   * customer acquisition goal and selected "bid higher for new customers",
+   * these values will be included in "all_conversions_value". See
+   * https://support.google.com/google-ads/answer/12080169 for more details.
+   * </pre>
+   *
+   * <code>optional double all_new_customer_lifetime_value = 294;</code>
+   * @return Whether the allNewCustomerLifetimeValue field is set.
+   */
+  boolean hasAllNewCustomerLifetimeValue();
+  /**
+   * <pre>
+   * All of new customers' lifetime conversion value. If you have set up
+   * customer acquisition goal at either account level or campaign level, this
+   * will include the additional conversion value from new customers for both
+   * biddable and non-biddable conversions. If your campaign has adopted the
+   * customer acquisition goal and selected "bid higher for new customers",
+   * these values will be included in "all_conversions_value". See
+   * https://support.google.com/google-ads/answer/12080169 for more details.
+   * </pre>
+   *
+   * <code>optional double all_new_customer_lifetime_value = 294;</code>
+   * @return The allNewCustomerLifetimeValue.
+   */
+  double getAllNewCustomerLifetimeValue();
+
+  /**
+   * <pre>
    * The total number of conversions. This includes all conversions regardless
    * of the value of include_in_conversions_metric.
    * </pre>
@@ -1203,6 +1234,37 @@ public interface MetricsOrBuilder extends
    * @return The conversionsValueByConversionDate.
    */
   double getConversionsValueByConversionDate();
+
+  /**
+   * <pre>
+   * New customers' lifetime conversion value. If you have set up
+   * customer acquisition goal at either account level or campaign level, this
+   * will include the additional conversion value from new customers for
+   * biddable conversions. If your campaign has adopted the customer
+   * acquisition goal and selected "bid higher for new customers", these values
+   * will be included in "conversions_value" for optimization. See
+   * https://support.google.com/google-ads/answer/12080169 for more details.
+   * </pre>
+   *
+   * <code>optional double new_customer_lifetime_value = 293;</code>
+   * @return Whether the newCustomerLifetimeValue field is set.
+   */
+  boolean hasNewCustomerLifetimeValue();
+  /**
+   * <pre>
+   * New customers' lifetime conversion value. If you have set up
+   * customer acquisition goal at either account level or campaign level, this
+   * will include the additional conversion value from new customers for
+   * biddable conversions. If your campaign has adopted the customer
+   * acquisition goal and selected "bid higher for new customers", these values
+   * will be included in "conversions_value" for optimization. See
+   * https://support.google.com/google-ads/answer/12080169 for more details.
+   * </pre>
+   *
+   * <code>optional double new_customer_lifetime_value = 293;</code>
+   * @return The newCustomerLifetimeValue.
+   */
+  double getNewCustomerLifetimeValue();
 
   /**
    * <pre>
@@ -2682,6 +2744,33 @@ public interface MetricsOrBuilder extends
    * @return The searchTopImpressionShare.
    */
   double getSearchTopImpressionShare();
+
+  /**
+   * <pre>
+   * Search volume range for a search term insight category.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v14.common.SearchVolumeRange search_volume = 295;</code>
+   * @return Whether the searchVolume field is set.
+   */
+  boolean hasSearchVolume();
+  /**
+   * <pre>
+   * Search volume range for a search term insight category.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v14.common.SearchVolumeRange search_volume = 295;</code>
+   * @return The searchVolume.
+   */
+  com.google.ads.googleads.v14.common.SearchVolumeRange getSearchVolume();
+  /**
+   * <pre>
+   * Search volume range for a search term insight category.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v14.common.SearchVolumeRange search_volume = 295;</code>
+   */
+  com.google.ads.googleads.v14.common.SearchVolumeRangeOrBuilder getSearchVolumeOrBuilder();
 
   /**
    * <pre>

@@ -6,7 +6,7 @@ package com.google.ads.googleads.v14.services;
 /**
  * <pre>
  * Request message for
- * [CustomerUserAccessInvitation.MutateCustomerUserAccessInvitation][]
+ * [CustomerUserAccessInvitationService.MutateCustomerUserAccessInvitation][google.ads.googleads.v14.services.CustomerUserAccessInvitationService.MutateCustomerUserAccessInvitation]
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v14.services.MutateCustomerUserAccessInvitationRequest}
@@ -304,7 +304,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Request message for
-   * [CustomerUserAccessInvitation.MutateCustomerUserAccessInvitation][]
+   * [CustomerUserAccessInvitationService.MutateCustomerUserAccessInvitation][google.ads.googleads.v14.services.CustomerUserAccessInvitationService.MutateCustomerUserAccessInvitation]
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v14.services.MutateCustomerUserAccessInvitationRequest}

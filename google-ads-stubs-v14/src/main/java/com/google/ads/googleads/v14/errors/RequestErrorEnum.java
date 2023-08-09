@@ -265,6 +265,14 @@ private static final long serialVersionUID = 0L;
      * <code>UNSUPPORTED_VERSION = 38;</code>
      */
     UNSUPPORTED_VERSION(38),
+    /**
+     * <pre>
+     * The Google Cloud project in the request was not found.
+     * </pre>
+     *
+     * <code>CLOUD_PROJECT_NOT_FOUND = 39;</code>
+     */
+    CLOUD_PROJECT_NOT_FOUND(39),
     UNRECOGNIZED(-1),
     ;
 
@@ -482,6 +490,14 @@ private static final long serialVersionUID = 0L;
      * <code>UNSUPPORTED_VERSION = 38;</code>
      */
     public static final int UNSUPPORTED_VERSION_VALUE = 38;
+    /**
+     * <pre>
+     * The Google Cloud project in the request was not found.
+     * </pre>
+     *
+     * <code>CLOUD_PROJECT_NOT_FOUND = 39;</code>
+     */
+    public static final int CLOUD_PROJECT_NOT_FOUND_VALUE = 39;
 
 
     public final int getNumber() {
@@ -534,6 +550,7 @@ private static final long serialVersionUID = 0L;
         case 32: return TOTAL_RESULTS_COUNT_NOT_ORIGINALLY_REQUESTED;
         case 33: return RPC_DEADLINE_TOO_SHORT;
         case 38: return UNSUPPORTED_VERSION;
+        case 39: return CLOUD_PROJECT_NOT_FOUND;
         default: return null;
       }
     }

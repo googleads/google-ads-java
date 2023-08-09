@@ -322,6 +322,63 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
+     * Output only. Pretax export charge subtotal amount, in micros.
+     * </pre>
+     *
+     * <code>optional int64 export_charge_subtotal_amount_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the exportChargeSubtotalAmountMicros field is set.
+     */
+    boolean hasExportChargeSubtotalAmountMicros();
+    /**
+     * <pre>
+     * Output only. Pretax export charge subtotal amount, in micros.
+     * </pre>
+     *
+     * <code>optional int64 export_charge_subtotal_amount_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The exportChargeSubtotalAmountMicros.
+     */
+    long getExportChargeSubtotalAmountMicros();
+
+    /**
+     * <pre>
+     * Output only. Tax on export charge, in micros.
+     * </pre>
+     *
+     * <code>optional int64 export_charge_tax_amount_micros = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the exportChargeTaxAmountMicros field is set.
+     */
+    boolean hasExportChargeTaxAmountMicros();
+    /**
+     * <pre>
+     * Output only. Tax on export charge, in micros.
+     * </pre>
+     *
+     * <code>optional int64 export_charge_tax_amount_micros = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The exportChargeTaxAmountMicros.
+     */
+    long getExportChargeTaxAmountMicros();
+
+    /**
+     * <pre>
+     * Output only. Total export charge amount, in micros.
+     * </pre>
+     *
+     * <code>optional int64 export_charge_total_amount_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the exportChargeTotalAmountMicros field is set.
+     */
+    boolean hasExportChargeTotalAmountMicros();
+    /**
+     * <pre>
+     * Output only. Total export charge amount, in micros.
+     * </pre>
+     *
+     * <code>optional int64 export_charge_total_amount_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The exportChargeTotalAmountMicros.
+     */
+    long getExportChargeTotalAmountMicros();
+
+    /**
+     * <pre>
      * Output only. Total pretax subtotal amount attributable to the account
      * during the service period, in micros.
      * </pre>
@@ -809,6 +866,87 @@ private static final long serialVersionUID = 0L;
       return regulatoryCostsTotalAmountMicros_;
     }
 
+    public static final int EXPORT_CHARGE_SUBTOTAL_AMOUNT_MICROS_FIELD_NUMBER = 17;
+    private long exportChargeSubtotalAmountMicros_ = 0L;
+    /**
+     * <pre>
+     * Output only. Pretax export charge subtotal amount, in micros.
+     * </pre>
+     *
+     * <code>optional int64 export_charge_subtotal_amount_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the exportChargeSubtotalAmountMicros field is set.
+     */
+    @java.lang.Override
+    public boolean hasExportChargeSubtotalAmountMicros() {
+      return ((bitField0_ & 0x00002000) != 0);
+    }
+    /**
+     * <pre>
+     * Output only. Pretax export charge subtotal amount, in micros.
+     * </pre>
+     *
+     * <code>optional int64 export_charge_subtotal_amount_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The exportChargeSubtotalAmountMicros.
+     */
+    @java.lang.Override
+    public long getExportChargeSubtotalAmountMicros() {
+      return exportChargeSubtotalAmountMicros_;
+    }
+
+    public static final int EXPORT_CHARGE_TAX_AMOUNT_MICROS_FIELD_NUMBER = 18;
+    private long exportChargeTaxAmountMicros_ = 0L;
+    /**
+     * <pre>
+     * Output only. Tax on export charge, in micros.
+     * </pre>
+     *
+     * <code>optional int64 export_charge_tax_amount_micros = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the exportChargeTaxAmountMicros field is set.
+     */
+    @java.lang.Override
+    public boolean hasExportChargeTaxAmountMicros() {
+      return ((bitField0_ & 0x00004000) != 0);
+    }
+    /**
+     * <pre>
+     * Output only. Tax on export charge, in micros.
+     * </pre>
+     *
+     * <code>optional int64 export_charge_tax_amount_micros = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The exportChargeTaxAmountMicros.
+     */
+    @java.lang.Override
+    public long getExportChargeTaxAmountMicros() {
+      return exportChargeTaxAmountMicros_;
+    }
+
+    public static final int EXPORT_CHARGE_TOTAL_AMOUNT_MICROS_FIELD_NUMBER = 19;
+    private long exportChargeTotalAmountMicros_ = 0L;
+    /**
+     * <pre>
+     * Output only. Total export charge amount, in micros.
+     * </pre>
+     *
+     * <code>optional int64 export_charge_total_amount_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the exportChargeTotalAmountMicros field is set.
+     */
+    @java.lang.Override
+    public boolean hasExportChargeTotalAmountMicros() {
+      return ((bitField0_ & 0x00008000) != 0);
+    }
+    /**
+     * <pre>
+     * Output only. Total export charge amount, in micros.
+     * </pre>
+     *
+     * <code>optional int64 export_charge_total_amount_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The exportChargeTotalAmountMicros.
+     */
+    @java.lang.Override
+    public long getExportChargeTotalAmountMicros() {
+      return exportChargeTotalAmountMicros_;
+    }
+
     public static final int SUBTOTAL_AMOUNT_MICROS_FIELD_NUMBER = 14;
     private long subtotalAmountMicros_ = 0L;
     /**
@@ -822,7 +960,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasSubtotalAmountMicros() {
-      return ((bitField0_ & 0x00002000) != 0);
+      return ((bitField0_ & 0x00010000) != 0);
     }
     /**
      * <pre>
@@ -851,7 +989,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasTaxAmountMicros() {
-      return ((bitField0_ & 0x00004000) != 0);
+      return ((bitField0_ & 0x00020000) != 0);
     }
     /**
      * <pre>
@@ -881,7 +1019,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasTotalAmountMicros() {
-      return ((bitField0_ & 0x00008000) != 0);
+      return ((bitField0_ & 0x00040000) != 0);
     }
     /**
      * <pre>
@@ -951,14 +1089,23 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00001000) != 0)) {
         output.writeInt64(13, regulatoryCostsTotalAmountMicros_);
       }
-      if (((bitField0_ & 0x00002000) != 0)) {
+      if (((bitField0_ & 0x00010000) != 0)) {
         output.writeInt64(14, subtotalAmountMicros_);
       }
-      if (((bitField0_ & 0x00004000) != 0)) {
+      if (((bitField0_ & 0x00020000) != 0)) {
         output.writeInt64(15, taxAmountMicros_);
       }
-      if (((bitField0_ & 0x00008000) != 0)) {
+      if (((bitField0_ & 0x00040000) != 0)) {
         output.writeInt64(16, totalAmountMicros_);
+      }
+      if (((bitField0_ & 0x00002000) != 0)) {
+        output.writeInt64(17, exportChargeSubtotalAmountMicros_);
+      }
+      if (((bitField0_ & 0x00004000) != 0)) {
+        output.writeInt64(18, exportChargeTaxAmountMicros_);
+      }
+      if (((bitField0_ & 0x00008000) != 0)) {
+        output.writeInt64(19, exportChargeTotalAmountMicros_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1020,17 +1167,29 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(13, regulatoryCostsTotalAmountMicros_);
       }
-      if (((bitField0_ & 0x00002000) != 0)) {
+      if (((bitField0_ & 0x00010000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(14, subtotalAmountMicros_);
       }
-      if (((bitField0_ & 0x00004000) != 0)) {
+      if (((bitField0_ & 0x00020000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(15, taxAmountMicros_);
       }
-      if (((bitField0_ & 0x00008000) != 0)) {
+      if (((bitField0_ & 0x00040000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(16, totalAmountMicros_);
+      }
+      if (((bitField0_ & 0x00002000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(17, exportChargeSubtotalAmountMicros_);
+      }
+      if (((bitField0_ & 0x00004000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(18, exportChargeTaxAmountMicros_);
+      }
+      if (((bitField0_ & 0x00008000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(19, exportChargeTotalAmountMicros_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1111,6 +1270,21 @@ private static final long serialVersionUID = 0L;
       if (hasRegulatoryCostsTotalAmountMicros()) {
         if (getRegulatoryCostsTotalAmountMicros()
             != other.getRegulatoryCostsTotalAmountMicros()) return false;
+      }
+      if (hasExportChargeSubtotalAmountMicros() != other.hasExportChargeSubtotalAmountMicros()) return false;
+      if (hasExportChargeSubtotalAmountMicros()) {
+        if (getExportChargeSubtotalAmountMicros()
+            != other.getExportChargeSubtotalAmountMicros()) return false;
+      }
+      if (hasExportChargeTaxAmountMicros() != other.hasExportChargeTaxAmountMicros()) return false;
+      if (hasExportChargeTaxAmountMicros()) {
+        if (getExportChargeTaxAmountMicros()
+            != other.getExportChargeTaxAmountMicros()) return false;
+      }
+      if (hasExportChargeTotalAmountMicros() != other.hasExportChargeTotalAmountMicros()) return false;
+      if (hasExportChargeTotalAmountMicros()) {
+        if (getExportChargeTotalAmountMicros()
+            != other.getExportChargeTotalAmountMicros()) return false;
       }
       if (hasSubtotalAmountMicros() != other.hasSubtotalAmountMicros()) return false;
       if (hasSubtotalAmountMicros()) {
@@ -1201,6 +1375,21 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + REGULATORY_COSTS_TOTAL_AMOUNT_MICROS_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
             getRegulatoryCostsTotalAmountMicros());
+      }
+      if (hasExportChargeSubtotalAmountMicros()) {
+        hash = (37 * hash) + EXPORT_CHARGE_SUBTOTAL_AMOUNT_MICROS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getExportChargeSubtotalAmountMicros());
+      }
+      if (hasExportChargeTaxAmountMicros()) {
+        hash = (37 * hash) + EXPORT_CHARGE_TAX_AMOUNT_MICROS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getExportChargeTaxAmountMicros());
+      }
+      if (hasExportChargeTotalAmountMicros()) {
+        hash = (37 * hash) + EXPORT_CHARGE_TOTAL_AMOUNT_MICROS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getExportChargeTotalAmountMicros());
       }
       if (hasSubtotalAmountMicros()) {
         hash = (37 * hash) + SUBTOTAL_AMOUNT_MICROS_FIELD_NUMBER;
@@ -1365,6 +1554,9 @@ private static final long serialVersionUID = 0L;
         regulatoryCostsSubtotalAmountMicros_ = 0L;
         regulatoryCostsTaxAmountMicros_ = 0L;
         regulatoryCostsTotalAmountMicros_ = 0L;
+        exportChargeSubtotalAmountMicros_ = 0L;
+        exportChargeTaxAmountMicros_ = 0L;
+        exportChargeTotalAmountMicros_ = 0L;
         subtotalAmountMicros_ = 0L;
         taxAmountMicros_ = 0L;
         totalAmountMicros_ = 0L;
@@ -1455,16 +1647,28 @@ private static final long serialVersionUID = 0L;
           to_bitField0_ |= 0x00001000;
         }
         if (((from_bitField0_ & 0x00002000) != 0)) {
-          result.subtotalAmountMicros_ = subtotalAmountMicros_;
+          result.exportChargeSubtotalAmountMicros_ = exportChargeSubtotalAmountMicros_;
           to_bitField0_ |= 0x00002000;
         }
         if (((from_bitField0_ & 0x00004000) != 0)) {
-          result.taxAmountMicros_ = taxAmountMicros_;
+          result.exportChargeTaxAmountMicros_ = exportChargeTaxAmountMicros_;
           to_bitField0_ |= 0x00004000;
         }
         if (((from_bitField0_ & 0x00008000) != 0)) {
-          result.totalAmountMicros_ = totalAmountMicros_;
+          result.exportChargeTotalAmountMicros_ = exportChargeTotalAmountMicros_;
           to_bitField0_ |= 0x00008000;
+        }
+        if (((from_bitField0_ & 0x00010000) != 0)) {
+          result.subtotalAmountMicros_ = subtotalAmountMicros_;
+          to_bitField0_ |= 0x00010000;
+        }
+        if (((from_bitField0_ & 0x00020000) != 0)) {
+          result.taxAmountMicros_ = taxAmountMicros_;
+          to_bitField0_ |= 0x00020000;
+        }
+        if (((from_bitField0_ & 0x00040000) != 0)) {
+          result.totalAmountMicros_ = totalAmountMicros_;
+          to_bitField0_ |= 0x00040000;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -1553,6 +1757,15 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasRegulatoryCostsTotalAmountMicros()) {
           setRegulatoryCostsTotalAmountMicros(other.getRegulatoryCostsTotalAmountMicros());
+        }
+        if (other.hasExportChargeSubtotalAmountMicros()) {
+          setExportChargeSubtotalAmountMicros(other.getExportChargeSubtotalAmountMicros());
+        }
+        if (other.hasExportChargeTaxAmountMicros()) {
+          setExportChargeTaxAmountMicros(other.getExportChargeTaxAmountMicros());
+        }
+        if (other.hasExportChargeTotalAmountMicros()) {
+          setExportChargeTotalAmountMicros(other.getExportChargeTotalAmountMicros());
         }
         if (other.hasSubtotalAmountMicros()) {
           setSubtotalAmountMicros(other.getSubtotalAmountMicros());
@@ -1656,19 +1869,34 @@ private static final long serialVersionUID = 0L;
               } // case 104
               case 112: {
                 subtotalAmountMicros_ = input.readInt64();
-                bitField0_ |= 0x00002000;
+                bitField0_ |= 0x00010000;
                 break;
               } // case 112
               case 120: {
                 taxAmountMicros_ = input.readInt64();
-                bitField0_ |= 0x00004000;
+                bitField0_ |= 0x00020000;
                 break;
               } // case 120
               case 128: {
                 totalAmountMicros_ = input.readInt64();
-                bitField0_ |= 0x00008000;
+                bitField0_ |= 0x00040000;
                 break;
               } // case 128
+              case 136: {
+                exportChargeSubtotalAmountMicros_ = input.readInt64();
+                bitField0_ |= 0x00002000;
+                break;
+              } // case 136
+              case 144: {
+                exportChargeTaxAmountMicros_ = input.readInt64();
+                bitField0_ |= 0x00004000;
+                break;
+              } // case 144
+              case 152: {
+                exportChargeTotalAmountMicros_ = input.readInt64();
+                bitField0_ |= 0x00008000;
+                break;
+              } // case 152
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2461,6 +2689,174 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      private long exportChargeSubtotalAmountMicros_ ;
+      /**
+       * <pre>
+       * Output only. Pretax export charge subtotal amount, in micros.
+       * </pre>
+       *
+       * <code>optional int64 export_charge_subtotal_amount_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the exportChargeSubtotalAmountMicros field is set.
+       */
+      @java.lang.Override
+      public boolean hasExportChargeSubtotalAmountMicros() {
+        return ((bitField0_ & 0x00002000) != 0);
+      }
+      /**
+       * <pre>
+       * Output only. Pretax export charge subtotal amount, in micros.
+       * </pre>
+       *
+       * <code>optional int64 export_charge_subtotal_amount_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The exportChargeSubtotalAmountMicros.
+       */
+      @java.lang.Override
+      public long getExportChargeSubtotalAmountMicros() {
+        return exportChargeSubtotalAmountMicros_;
+      }
+      /**
+       * <pre>
+       * Output only. Pretax export charge subtotal amount, in micros.
+       * </pre>
+       *
+       * <code>optional int64 export_charge_subtotal_amount_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The exportChargeSubtotalAmountMicros to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExportChargeSubtotalAmountMicros(long value) {
+
+        exportChargeSubtotalAmountMicros_ = value;
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Pretax export charge subtotal amount, in micros.
+       * </pre>
+       *
+       * <code>optional int64 export_charge_subtotal_amount_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExportChargeSubtotalAmountMicros() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        exportChargeSubtotalAmountMicros_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long exportChargeTaxAmountMicros_ ;
+      /**
+       * <pre>
+       * Output only. Tax on export charge, in micros.
+       * </pre>
+       *
+       * <code>optional int64 export_charge_tax_amount_micros = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the exportChargeTaxAmountMicros field is set.
+       */
+      @java.lang.Override
+      public boolean hasExportChargeTaxAmountMicros() {
+        return ((bitField0_ & 0x00004000) != 0);
+      }
+      /**
+       * <pre>
+       * Output only. Tax on export charge, in micros.
+       * </pre>
+       *
+       * <code>optional int64 export_charge_tax_amount_micros = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The exportChargeTaxAmountMicros.
+       */
+      @java.lang.Override
+      public long getExportChargeTaxAmountMicros() {
+        return exportChargeTaxAmountMicros_;
+      }
+      /**
+       * <pre>
+       * Output only. Tax on export charge, in micros.
+       * </pre>
+       *
+       * <code>optional int64 export_charge_tax_amount_micros = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The exportChargeTaxAmountMicros to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExportChargeTaxAmountMicros(long value) {
+
+        exportChargeTaxAmountMicros_ = value;
+        bitField0_ |= 0x00004000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Tax on export charge, in micros.
+       * </pre>
+       *
+       * <code>optional int64 export_charge_tax_amount_micros = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExportChargeTaxAmountMicros() {
+        bitField0_ = (bitField0_ & ~0x00004000);
+        exportChargeTaxAmountMicros_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long exportChargeTotalAmountMicros_ ;
+      /**
+       * <pre>
+       * Output only. Total export charge amount, in micros.
+       * </pre>
+       *
+       * <code>optional int64 export_charge_total_amount_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the exportChargeTotalAmountMicros field is set.
+       */
+      @java.lang.Override
+      public boolean hasExportChargeTotalAmountMicros() {
+        return ((bitField0_ & 0x00008000) != 0);
+      }
+      /**
+       * <pre>
+       * Output only. Total export charge amount, in micros.
+       * </pre>
+       *
+       * <code>optional int64 export_charge_total_amount_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The exportChargeTotalAmountMicros.
+       */
+      @java.lang.Override
+      public long getExportChargeTotalAmountMicros() {
+        return exportChargeTotalAmountMicros_;
+      }
+      /**
+       * <pre>
+       * Output only. Total export charge amount, in micros.
+       * </pre>
+       *
+       * <code>optional int64 export_charge_total_amount_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The exportChargeTotalAmountMicros to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExportChargeTotalAmountMicros(long value) {
+
+        exportChargeTotalAmountMicros_ = value;
+        bitField0_ |= 0x00008000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Total export charge amount, in micros.
+       * </pre>
+       *
+       * <code>optional int64 export_charge_total_amount_micros = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExportChargeTotalAmountMicros() {
+        bitField0_ = (bitField0_ & ~0x00008000);
+        exportChargeTotalAmountMicros_ = 0L;
+        onChanged();
+        return this;
+      }
+
       private long subtotalAmountMicros_ ;
       /**
        * <pre>
@@ -2473,7 +2869,7 @@ private static final long serialVersionUID = 0L;
        */
       @java.lang.Override
       public boolean hasSubtotalAmountMicros() {
-        return ((bitField0_ & 0x00002000) != 0);
+        return ((bitField0_ & 0x00010000) != 0);
       }
       /**
        * <pre>
@@ -2501,7 +2897,7 @@ private static final long serialVersionUID = 0L;
       public Builder setSubtotalAmountMicros(long value) {
 
         subtotalAmountMicros_ = value;
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00010000;
         onChanged();
         return this;
       }
@@ -2515,7 +2911,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearSubtotalAmountMicros() {
-        bitField0_ = (bitField0_ & ~0x00002000);
+        bitField0_ = (bitField0_ & ~0x00010000);
         subtotalAmountMicros_ = 0L;
         onChanged();
         return this;
@@ -2533,7 +2929,7 @@ private static final long serialVersionUID = 0L;
        */
       @java.lang.Override
       public boolean hasTaxAmountMicros() {
-        return ((bitField0_ & 0x00004000) != 0);
+        return ((bitField0_ & 0x00020000) != 0);
       }
       /**
        * <pre>
@@ -2561,7 +2957,7 @@ private static final long serialVersionUID = 0L;
       public Builder setTaxAmountMicros(long value) {
 
         taxAmountMicros_ = value;
-        bitField0_ |= 0x00004000;
+        bitField0_ |= 0x00020000;
         onChanged();
         return this;
       }
@@ -2575,7 +2971,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearTaxAmountMicros() {
-        bitField0_ = (bitField0_ & ~0x00004000);
+        bitField0_ = (bitField0_ & ~0x00020000);
         taxAmountMicros_ = 0L;
         onChanged();
         return this;
@@ -2594,7 +2990,7 @@ private static final long serialVersionUID = 0L;
        */
       @java.lang.Override
       public boolean hasTotalAmountMicros() {
-        return ((bitField0_ & 0x00008000) != 0);
+        return ((bitField0_ & 0x00040000) != 0);
       }
       /**
        * <pre>
@@ -2624,7 +3020,7 @@ private static final long serialVersionUID = 0L;
       public Builder setTotalAmountMicros(long value) {
 
         totalAmountMicros_ = value;
-        bitField0_ |= 0x00008000;
+        bitField0_ |= 0x00040000;
         onChanged();
         return this;
       }
@@ -2639,7 +3035,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearTotalAmountMicros() {
-        bitField0_ = (bitField0_ & ~0x00008000);
+        bitField0_ = (bitField0_ & ~0x00040000);
         totalAmountMicros_ = 0L;
         onChanged();
         return this;
@@ -8487,16 +8883,98 @@ private static final long serialVersionUID = 0L;
     return regulatoryCostsTotalAmountMicros_;
   }
 
+  public static final int EXPORT_CHARGE_SUBTOTAL_AMOUNT_MICROS_FIELD_NUMBER = 40;
+  private long exportChargeSubtotalAmountMicros_ = 0L;
+  /**
+   * <pre>
+   * Output only. The pretax subtotal amount of invoice level export charges, in
+   * micros.
+   * </pre>
+   *
+   * <code>optional int64 export_charge_subtotal_amount_micros = 40 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the exportChargeSubtotalAmountMicros field is set.
+   */
+  @java.lang.Override
+  public boolean hasExportChargeSubtotalAmountMicros() {
+    return ((bitField0_ & 0x00000080) != 0);
+  }
+  /**
+   * <pre>
+   * Output only. The pretax subtotal amount of invoice level export charges, in
+   * micros.
+   * </pre>
+   *
+   * <code>optional int64 export_charge_subtotal_amount_micros = 40 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The exportChargeSubtotalAmountMicros.
+   */
+  @java.lang.Override
+  public long getExportChargeSubtotalAmountMicros() {
+    return exportChargeSubtotalAmountMicros_;
+  }
+
+  public static final int EXPORT_CHARGE_TAX_AMOUNT_MICROS_FIELD_NUMBER = 41;
+  private long exportChargeTaxAmountMicros_ = 0L;
+  /**
+   * <pre>
+   * Output only. The sum of taxes on the invoice level export charges, in
+   * micros.
+   * </pre>
+   *
+   * <code>optional int64 export_charge_tax_amount_micros = 41 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the exportChargeTaxAmountMicros field is set.
+   */
+  @java.lang.Override
+  public boolean hasExportChargeTaxAmountMicros() {
+    return ((bitField0_ & 0x00000100) != 0);
+  }
+  /**
+   * <pre>
+   * Output only. The sum of taxes on the invoice level export charges, in
+   * micros.
+   * </pre>
+   *
+   * <code>optional int64 export_charge_tax_amount_micros = 41 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The exportChargeTaxAmountMicros.
+   */
+  @java.lang.Override
+  public long getExportChargeTaxAmountMicros() {
+    return exportChargeTaxAmountMicros_;
+  }
+
+  public static final int EXPORT_CHARGE_TOTAL_AMOUNT_MICROS_FIELD_NUMBER = 42;
+  private long exportChargeTotalAmountMicros_ = 0L;
+  /**
+   * <pre>
+   * Output only. The total amount of invoice level export charges, in micros.
+   * </pre>
+   *
+   * <code>optional int64 export_charge_total_amount_micros = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the exportChargeTotalAmountMicros field is set.
+   */
+  @java.lang.Override
+  public boolean hasExportChargeTotalAmountMicros() {
+    return ((bitField0_ & 0x00000200) != 0);
+  }
+  /**
+   * <pre>
+   * Output only. The total amount of invoice level export charges, in micros.
+   * </pre>
+   *
+   * <code>optional int64 export_charge_total_amount_micros = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The exportChargeTotalAmountMicros.
+   */
+  @java.lang.Override
+  public long getExportChargeTotalAmountMicros() {
+    return exportChargeTotalAmountMicros_;
+  }
+
   public static final int SUBTOTAL_AMOUNT_MICROS_FIELD_NUMBER = 33;
   private long subtotalAmountMicros_ = 0L;
   /**
    * <pre>
-   * Output only. The pretax subtotal amount, in micros. This equals the
-   * sum of the AccountBudgetSummary subtotal amounts,
-   * Invoice.adjustments_subtotal_amount_micros, and
-   * Invoice.regulatory_costs_subtotal_amount_micros.
-   * Starting with v6, the Invoice.regulatory_costs_subtotal_amount_micros is no
-   * longer included.
+   * Output only. The pretax subtotal amount, in micros. This is equal to the
+   * sum of the AccountBudgetSummary subtotal amounts and
+   * Invoice.adjustments_subtotal_amount_micros.
    * </pre>
    *
    * <code>optional int64 subtotal_amount_micros = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -8504,16 +8982,13 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasSubtotalAmountMicros() {
-    return ((bitField0_ & 0x00000080) != 0);
+    return ((bitField0_ & 0x00000400) != 0);
   }
   /**
    * <pre>
-   * Output only. The pretax subtotal amount, in micros. This equals the
-   * sum of the AccountBudgetSummary subtotal amounts,
-   * Invoice.adjustments_subtotal_amount_micros, and
-   * Invoice.regulatory_costs_subtotal_amount_micros.
-   * Starting with v6, the Invoice.regulatory_costs_subtotal_amount_micros is no
-   * longer included.
+   * Output only. The pretax subtotal amount, in micros. This is equal to the
+   * sum of the AccountBudgetSummary subtotal amounts and
+   * Invoice.adjustments_subtotal_amount_micros.
    * </pre>
    *
    * <code>optional int64 subtotal_amount_micros = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -8538,7 +9013,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasTaxAmountMicros() {
-    return ((bitField0_ & 0x00000100) != 0);
+    return ((bitField0_ & 0x00000800) != 0);
   }
   /**
    * <pre>
@@ -8560,10 +9035,10 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The total amount, in micros. This equals the sum of
-   * Invoice.subtotal_amount_micros and Invoice.tax_amount_micros.
-   * Starting with v6, Invoice.regulatory_costs_subtotal_amount_micros is
-   * also added as it is no longer already included in
-   * Invoice.tax_amount_micros.
+   * Invoice.subtotal_amount_micros, Invoice.tax_amount_micros,
+   * Invoice.regulatory_costs_subtotal_amount_micros, and
+   * Invoice.export_charge_subtotal_amount_micros (which is separated into a
+   * separate line item starting with V14.1).
    * </pre>
    *
    * <code>optional int64 total_amount_micros = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -8571,15 +9046,15 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasTotalAmountMicros() {
-    return ((bitField0_ & 0x00000200) != 0);
+    return ((bitField0_ & 0x00001000) != 0);
   }
   /**
    * <pre>
    * Output only. The total amount, in micros. This equals the sum of
-   * Invoice.subtotal_amount_micros and Invoice.tax_amount_micros.
-   * Starting with v6, Invoice.regulatory_costs_subtotal_amount_micros is
-   * also added as it is no longer already included in
-   * Invoice.tax_amount_micros.
+   * Invoice.subtotal_amount_micros, Invoice.tax_amount_micros,
+   * Invoice.regulatory_costs_subtotal_amount_micros, and
+   * Invoice.export_charge_subtotal_amount_micros (which is separated into a
+   * separate line item starting with V14.1).
    * </pre>
    *
    * <code>optional int64 total_amount_micros = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -8608,7 +9083,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasCorrectedInvoice() {
-    return ((bitField0_ & 0x00000400) != 0);
+    return ((bitField0_ & 0x00002000) != 0);
   }
   /**
    * <pre>
@@ -8755,7 +9230,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasPdfUrl() {
-    return ((bitField0_ & 0x00000800) != 0);
+    return ((bitField0_ & 0x00004000) != 0);
   }
   /**
    * <pre>
@@ -9000,26 +9475,35 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000040) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 31, currencyCode_);
     }
-    if (((bitField0_ & 0x00000080) != 0)) {
+    if (((bitField0_ & 0x00000400) != 0)) {
       output.writeInt64(33, subtotalAmountMicros_);
     }
-    if (((bitField0_ & 0x00000100) != 0)) {
+    if (((bitField0_ & 0x00000800) != 0)) {
       output.writeInt64(34, taxAmountMicros_);
     }
-    if (((bitField0_ & 0x00000200) != 0)) {
+    if (((bitField0_ & 0x00001000) != 0)) {
       output.writeInt64(35, totalAmountMicros_);
     }
-    if (((bitField0_ & 0x00000400) != 0)) {
+    if (((bitField0_ & 0x00002000) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 36, correctedInvoice_);
     }
     for (int i = 0; i < replacedInvoices_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 37, replacedInvoices_.getRaw(i));
     }
-    if (((bitField0_ & 0x00000800) != 0)) {
+    if (((bitField0_ & 0x00004000) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 38, pdfUrl_);
     }
     for (int i = 0; i < accountSummaries_.size(); i++) {
       output.writeMessage(39, accountSummaries_.get(i));
+    }
+    if (((bitField0_ & 0x00000080) != 0)) {
+      output.writeInt64(40, exportChargeSubtotalAmountMicros_);
+    }
+    if (((bitField0_ & 0x00000100) != 0)) {
+      output.writeInt64(41, exportChargeTaxAmountMicros_);
+    }
+    if (((bitField0_ & 0x00000200) != 0)) {
+      output.writeInt64(42, exportChargeTotalAmountMicros_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -9090,19 +9574,19 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000040) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(31, currencyCode_);
     }
-    if (((bitField0_ & 0x00000080) != 0)) {
+    if (((bitField0_ & 0x00000400) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(33, subtotalAmountMicros_);
     }
-    if (((bitField0_ & 0x00000100) != 0)) {
+    if (((bitField0_ & 0x00000800) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(34, taxAmountMicros_);
     }
-    if (((bitField0_ & 0x00000200) != 0)) {
+    if (((bitField0_ & 0x00001000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(35, totalAmountMicros_);
     }
-    if (((bitField0_ & 0x00000400) != 0)) {
+    if (((bitField0_ & 0x00002000) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(36, correctedInvoice_);
     }
     {
@@ -9113,12 +9597,24 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 2 * getReplacedInvoicesList().size();
     }
-    if (((bitField0_ & 0x00000800) != 0)) {
+    if (((bitField0_ & 0x00004000) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(38, pdfUrl_);
     }
     for (int i = 0; i < accountSummaries_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(39, accountSummaries_.get(i));
+    }
+    if (((bitField0_ & 0x00000080) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(40, exportChargeSubtotalAmountMicros_);
+    }
+    if (((bitField0_ & 0x00000100) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(41, exportChargeTaxAmountMicros_);
+    }
+    if (((bitField0_ & 0x00000200) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(42, exportChargeTotalAmountMicros_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -9190,6 +9686,21 @@ private static final long serialVersionUID = 0L;
         != other.getRegulatoryCostsTaxAmountMicros()) return false;
     if (getRegulatoryCostsTotalAmountMicros()
         != other.getRegulatoryCostsTotalAmountMicros()) return false;
+    if (hasExportChargeSubtotalAmountMicros() != other.hasExportChargeSubtotalAmountMicros()) return false;
+    if (hasExportChargeSubtotalAmountMicros()) {
+      if (getExportChargeSubtotalAmountMicros()
+          != other.getExportChargeSubtotalAmountMicros()) return false;
+    }
+    if (hasExportChargeTaxAmountMicros() != other.hasExportChargeTaxAmountMicros()) return false;
+    if (hasExportChargeTaxAmountMicros()) {
+      if (getExportChargeTaxAmountMicros()
+          != other.getExportChargeTaxAmountMicros()) return false;
+    }
+    if (hasExportChargeTotalAmountMicros() != other.hasExportChargeTotalAmountMicros()) return false;
+    if (hasExportChargeTotalAmountMicros()) {
+      if (getExportChargeTotalAmountMicros()
+          != other.getExportChargeTotalAmountMicros()) return false;
+    }
     if (hasSubtotalAmountMicros() != other.hasSubtotalAmountMicros()) return false;
     if (hasSubtotalAmountMicros()) {
       if (getSubtotalAmountMicros()
@@ -9286,6 +9797,21 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + REGULATORY_COSTS_TOTAL_AMOUNT_MICROS_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getRegulatoryCostsTotalAmountMicros());
+    if (hasExportChargeSubtotalAmountMicros()) {
+      hash = (37 * hash) + EXPORT_CHARGE_SUBTOTAL_AMOUNT_MICROS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getExportChargeSubtotalAmountMicros());
+    }
+    if (hasExportChargeTaxAmountMicros()) {
+      hash = (37 * hash) + EXPORT_CHARGE_TAX_AMOUNT_MICROS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getExportChargeTaxAmountMicros());
+    }
+    if (hasExportChargeTotalAmountMicros()) {
+      hash = (37 * hash) + EXPORT_CHARGE_TOTAL_AMOUNT_MICROS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getExportChargeTotalAmountMicros());
+    }
     if (hasSubtotalAmountMicros()) {
       hash = (37 * hash) + SUBTOTAL_AMOUNT_MICROS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -9478,6 +10004,9 @@ private static final long serialVersionUID = 0L;
       regulatoryCostsSubtotalAmountMicros_ = 0L;
       regulatoryCostsTaxAmountMicros_ = 0L;
       regulatoryCostsTotalAmountMicros_ = 0L;
+      exportChargeSubtotalAmountMicros_ = 0L;
+      exportChargeTaxAmountMicros_ = 0L;
+      exportChargeTotalAmountMicros_ = 0L;
       subtotalAmountMicros_ = 0L;
       taxAmountMicros_ = 0L;
       totalAmountMicros_ = 0L;
@@ -9491,14 +10020,14 @@ private static final long serialVersionUID = 0L;
         accountBudgetSummaries_ = null;
         accountBudgetSummariesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00400000);
+      bitField0_ = (bitField0_ & ~0x02000000);
       if (accountSummariesBuilder_ == null) {
         accountSummaries_ = java.util.Collections.emptyList();
       } else {
         accountSummaries_ = null;
         accountSummariesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00800000);
+      bitField0_ = (bitField0_ & ~0x04000000);
       return this;
     }
 
@@ -9533,18 +10062,18 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartialRepeatedFields(com.google.ads.googleads.v14.resources.Invoice result) {
       if (accountBudgetSummariesBuilder_ == null) {
-        if (((bitField0_ & 0x00400000) != 0)) {
+        if (((bitField0_ & 0x02000000) != 0)) {
           accountBudgetSummaries_ = java.util.Collections.unmodifiableList(accountBudgetSummaries_);
-          bitField0_ = (bitField0_ & ~0x00400000);
+          bitField0_ = (bitField0_ & ~0x02000000);
         }
         result.accountBudgetSummaries_ = accountBudgetSummaries_;
       } else {
         result.accountBudgetSummaries_ = accountBudgetSummariesBuilder_.build();
       }
       if (accountSummariesBuilder_ == null) {
-        if (((bitField0_ & 0x00800000) != 0)) {
+        if (((bitField0_ & 0x04000000) != 0)) {
           accountSummaries_ = java.util.Collections.unmodifiableList(accountSummaries_);
-          bitField0_ = (bitField0_ & ~0x00800000);
+          bitField0_ = (bitField0_ & ~0x04000000);
         }
         result.accountSummaries_ = accountSummaries_;
       } else {
@@ -9613,28 +10142,40 @@ private static final long serialVersionUID = 0L;
         result.regulatoryCostsTotalAmountMicros_ = regulatoryCostsTotalAmountMicros_;
       }
       if (((from_bitField0_ & 0x00010000) != 0)) {
-        result.subtotalAmountMicros_ = subtotalAmountMicros_;
+        result.exportChargeSubtotalAmountMicros_ = exportChargeSubtotalAmountMicros_;
         to_bitField0_ |= 0x00000080;
       }
       if (((from_bitField0_ & 0x00020000) != 0)) {
-        result.taxAmountMicros_ = taxAmountMicros_;
+        result.exportChargeTaxAmountMicros_ = exportChargeTaxAmountMicros_;
         to_bitField0_ |= 0x00000100;
       }
       if (((from_bitField0_ & 0x00040000) != 0)) {
-        result.totalAmountMicros_ = totalAmountMicros_;
+        result.exportChargeTotalAmountMicros_ = exportChargeTotalAmountMicros_;
         to_bitField0_ |= 0x00000200;
       }
       if (((from_bitField0_ & 0x00080000) != 0)) {
-        result.correctedInvoice_ = correctedInvoice_;
+        result.subtotalAmountMicros_ = subtotalAmountMicros_;
         to_bitField0_ |= 0x00000400;
       }
       if (((from_bitField0_ & 0x00100000) != 0)) {
+        result.taxAmountMicros_ = taxAmountMicros_;
+        to_bitField0_ |= 0x00000800;
+      }
+      if (((from_bitField0_ & 0x00200000) != 0)) {
+        result.totalAmountMicros_ = totalAmountMicros_;
+        to_bitField0_ |= 0x00001000;
+      }
+      if (((from_bitField0_ & 0x00400000) != 0)) {
+        result.correctedInvoice_ = correctedInvoice_;
+        to_bitField0_ |= 0x00002000;
+      }
+      if (((from_bitField0_ & 0x00800000) != 0)) {
         replacedInvoices_.makeImmutable();
         result.replacedInvoices_ = replacedInvoices_;
       }
-      if (((from_bitField0_ & 0x00200000) != 0)) {
+      if (((from_bitField0_ & 0x01000000) != 0)) {
         result.pdfUrl_ = pdfUrl_;
-        to_bitField0_ |= 0x00000800;
+        to_bitField0_ |= 0x00004000;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -9747,6 +10288,15 @@ private static final long serialVersionUID = 0L;
       if (other.getRegulatoryCostsTotalAmountMicros() != 0L) {
         setRegulatoryCostsTotalAmountMicros(other.getRegulatoryCostsTotalAmountMicros());
       }
+      if (other.hasExportChargeSubtotalAmountMicros()) {
+        setExportChargeSubtotalAmountMicros(other.getExportChargeSubtotalAmountMicros());
+      }
+      if (other.hasExportChargeTaxAmountMicros()) {
+        setExportChargeTaxAmountMicros(other.getExportChargeTaxAmountMicros());
+      }
+      if (other.hasExportChargeTotalAmountMicros()) {
+        setExportChargeTotalAmountMicros(other.getExportChargeTotalAmountMicros());
+      }
       if (other.hasSubtotalAmountMicros()) {
         setSubtotalAmountMicros(other.getSubtotalAmountMicros());
       }
@@ -9758,13 +10308,13 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasCorrectedInvoice()) {
         correctedInvoice_ = other.correctedInvoice_;
-        bitField0_ |= 0x00080000;
+        bitField0_ |= 0x00400000;
         onChanged();
       }
       if (!other.replacedInvoices_.isEmpty()) {
         if (replacedInvoices_.isEmpty()) {
           replacedInvoices_ = other.replacedInvoices_;
-          bitField0_ |= 0x00100000;
+          bitField0_ |= 0x00800000;
         } else {
           ensureReplacedInvoicesIsMutable();
           replacedInvoices_.addAll(other.replacedInvoices_);
@@ -9773,14 +10323,14 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasPdfUrl()) {
         pdfUrl_ = other.pdfUrl_;
-        bitField0_ |= 0x00200000;
+        bitField0_ |= 0x01000000;
         onChanged();
       }
       if (accountBudgetSummariesBuilder_ == null) {
         if (!other.accountBudgetSummaries_.isEmpty()) {
           if (accountBudgetSummaries_.isEmpty()) {
             accountBudgetSummaries_ = other.accountBudgetSummaries_;
-            bitField0_ = (bitField0_ & ~0x00400000);
+            bitField0_ = (bitField0_ & ~0x02000000);
           } else {
             ensureAccountBudgetSummariesIsMutable();
             accountBudgetSummaries_.addAll(other.accountBudgetSummaries_);
@@ -9793,7 +10343,7 @@ private static final long serialVersionUID = 0L;
             accountBudgetSummariesBuilder_.dispose();
             accountBudgetSummariesBuilder_ = null;
             accountBudgetSummaries_ = other.accountBudgetSummaries_;
-            bitField0_ = (bitField0_ & ~0x00400000);
+            bitField0_ = (bitField0_ & ~0x02000000);
             accountBudgetSummariesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getAccountBudgetSummariesFieldBuilder() : null;
@@ -9806,7 +10356,7 @@ private static final long serialVersionUID = 0L;
         if (!other.accountSummaries_.isEmpty()) {
           if (accountSummaries_.isEmpty()) {
             accountSummaries_ = other.accountSummaries_;
-            bitField0_ = (bitField0_ & ~0x00800000);
+            bitField0_ = (bitField0_ & ~0x04000000);
           } else {
             ensureAccountSummariesIsMutable();
             accountSummaries_.addAll(other.accountSummaries_);
@@ -9819,7 +10369,7 @@ private static final long serialVersionUID = 0L;
             accountSummariesBuilder_.dispose();
             accountSummariesBuilder_ = null;
             accountSummaries_ = other.accountSummaries_;
-            bitField0_ = (bitField0_ & ~0x00800000);
+            bitField0_ = (bitField0_ & ~0x04000000);
             accountSummariesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getAccountSummariesFieldBuilder() : null;
@@ -9951,22 +10501,22 @@ private static final long serialVersionUID = 0L;
             } // case 250
             case 264: {
               subtotalAmountMicros_ = input.readInt64();
-              bitField0_ |= 0x00010000;
+              bitField0_ |= 0x00080000;
               break;
             } // case 264
             case 272: {
               taxAmountMicros_ = input.readInt64();
-              bitField0_ |= 0x00020000;
+              bitField0_ |= 0x00100000;
               break;
             } // case 272
             case 280: {
               totalAmountMicros_ = input.readInt64();
-              bitField0_ |= 0x00040000;
+              bitField0_ |= 0x00200000;
               break;
             } // case 280
             case 290: {
               correctedInvoice_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00080000;
+              bitField0_ |= 0x00400000;
               break;
             } // case 290
             case 298: {
@@ -9977,7 +10527,7 @@ private static final long serialVersionUID = 0L;
             } // case 298
             case 306: {
               pdfUrl_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00200000;
+              bitField0_ |= 0x01000000;
               break;
             } // case 306
             case 314: {
@@ -9993,6 +10543,21 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 314
+            case 320: {
+              exportChargeSubtotalAmountMicros_ = input.readInt64();
+              bitField0_ |= 0x00010000;
+              break;
+            } // case 320
+            case 328: {
+              exportChargeTaxAmountMicros_ = input.readInt64();
+              bitField0_ |= 0x00020000;
+              break;
+            } // case 328
+            case 336: {
+              exportChargeTotalAmountMicros_ = input.readInt64();
+              bitField0_ |= 0x00040000;
+              break;
+            } // case 336
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -11413,15 +11978,188 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private long exportChargeSubtotalAmountMicros_ ;
+    /**
+     * <pre>
+     * Output only. The pretax subtotal amount of invoice level export charges, in
+     * micros.
+     * </pre>
+     *
+     * <code>optional int64 export_charge_subtotal_amount_micros = 40 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the exportChargeSubtotalAmountMicros field is set.
+     */
+    @java.lang.Override
+    public boolean hasExportChargeSubtotalAmountMicros() {
+      return ((bitField0_ & 0x00010000) != 0);
+    }
+    /**
+     * <pre>
+     * Output only. The pretax subtotal amount of invoice level export charges, in
+     * micros.
+     * </pre>
+     *
+     * <code>optional int64 export_charge_subtotal_amount_micros = 40 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The exportChargeSubtotalAmountMicros.
+     */
+    @java.lang.Override
+    public long getExportChargeSubtotalAmountMicros() {
+      return exportChargeSubtotalAmountMicros_;
+    }
+    /**
+     * <pre>
+     * Output only. The pretax subtotal amount of invoice level export charges, in
+     * micros.
+     * </pre>
+     *
+     * <code>optional int64 export_charge_subtotal_amount_micros = 40 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The exportChargeSubtotalAmountMicros to set.
+     * @return This builder for chaining.
+     */
+    public Builder setExportChargeSubtotalAmountMicros(long value) {
+
+      exportChargeSubtotalAmountMicros_ = value;
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The pretax subtotal amount of invoice level export charges, in
+     * micros.
+     * </pre>
+     *
+     * <code>optional int64 export_charge_subtotal_amount_micros = 40 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearExportChargeSubtotalAmountMicros() {
+      bitField0_ = (bitField0_ & ~0x00010000);
+      exportChargeSubtotalAmountMicros_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long exportChargeTaxAmountMicros_ ;
+    /**
+     * <pre>
+     * Output only. The sum of taxes on the invoice level export charges, in
+     * micros.
+     * </pre>
+     *
+     * <code>optional int64 export_charge_tax_amount_micros = 41 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the exportChargeTaxAmountMicros field is set.
+     */
+    @java.lang.Override
+    public boolean hasExportChargeTaxAmountMicros() {
+      return ((bitField0_ & 0x00020000) != 0);
+    }
+    /**
+     * <pre>
+     * Output only. The sum of taxes on the invoice level export charges, in
+     * micros.
+     * </pre>
+     *
+     * <code>optional int64 export_charge_tax_amount_micros = 41 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The exportChargeTaxAmountMicros.
+     */
+    @java.lang.Override
+    public long getExportChargeTaxAmountMicros() {
+      return exportChargeTaxAmountMicros_;
+    }
+    /**
+     * <pre>
+     * Output only. The sum of taxes on the invoice level export charges, in
+     * micros.
+     * </pre>
+     *
+     * <code>optional int64 export_charge_tax_amount_micros = 41 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The exportChargeTaxAmountMicros to set.
+     * @return This builder for chaining.
+     */
+    public Builder setExportChargeTaxAmountMicros(long value) {
+
+      exportChargeTaxAmountMicros_ = value;
+      bitField0_ |= 0x00020000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The sum of taxes on the invoice level export charges, in
+     * micros.
+     * </pre>
+     *
+     * <code>optional int64 export_charge_tax_amount_micros = 41 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearExportChargeTaxAmountMicros() {
+      bitField0_ = (bitField0_ & ~0x00020000);
+      exportChargeTaxAmountMicros_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long exportChargeTotalAmountMicros_ ;
+    /**
+     * <pre>
+     * Output only. The total amount of invoice level export charges, in micros.
+     * </pre>
+     *
+     * <code>optional int64 export_charge_total_amount_micros = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the exportChargeTotalAmountMicros field is set.
+     */
+    @java.lang.Override
+    public boolean hasExportChargeTotalAmountMicros() {
+      return ((bitField0_ & 0x00040000) != 0);
+    }
+    /**
+     * <pre>
+     * Output only. The total amount of invoice level export charges, in micros.
+     * </pre>
+     *
+     * <code>optional int64 export_charge_total_amount_micros = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The exportChargeTotalAmountMicros.
+     */
+    @java.lang.Override
+    public long getExportChargeTotalAmountMicros() {
+      return exportChargeTotalAmountMicros_;
+    }
+    /**
+     * <pre>
+     * Output only. The total amount of invoice level export charges, in micros.
+     * </pre>
+     *
+     * <code>optional int64 export_charge_total_amount_micros = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The exportChargeTotalAmountMicros to set.
+     * @return This builder for chaining.
+     */
+    public Builder setExportChargeTotalAmountMicros(long value) {
+
+      exportChargeTotalAmountMicros_ = value;
+      bitField0_ |= 0x00040000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The total amount of invoice level export charges, in micros.
+     * </pre>
+     *
+     * <code>optional int64 export_charge_total_amount_micros = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearExportChargeTotalAmountMicros() {
+      bitField0_ = (bitField0_ & ~0x00040000);
+      exportChargeTotalAmountMicros_ = 0L;
+      onChanged();
+      return this;
+    }
+
     private long subtotalAmountMicros_ ;
     /**
      * <pre>
-     * Output only. The pretax subtotal amount, in micros. This equals the
-     * sum of the AccountBudgetSummary subtotal amounts,
-     * Invoice.adjustments_subtotal_amount_micros, and
-     * Invoice.regulatory_costs_subtotal_amount_micros.
-     * Starting with v6, the Invoice.regulatory_costs_subtotal_amount_micros is no
-     * longer included.
+     * Output only. The pretax subtotal amount, in micros. This is equal to the
+     * sum of the AccountBudgetSummary subtotal amounts and
+     * Invoice.adjustments_subtotal_amount_micros.
      * </pre>
      *
      * <code>optional int64 subtotal_amount_micros = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -11429,16 +12167,13 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasSubtotalAmountMicros() {
-      return ((bitField0_ & 0x00010000) != 0);
+      return ((bitField0_ & 0x00080000) != 0);
     }
     /**
      * <pre>
-     * Output only. The pretax subtotal amount, in micros. This equals the
-     * sum of the AccountBudgetSummary subtotal amounts,
-     * Invoice.adjustments_subtotal_amount_micros, and
-     * Invoice.regulatory_costs_subtotal_amount_micros.
-     * Starting with v6, the Invoice.regulatory_costs_subtotal_amount_micros is no
-     * longer included.
+     * Output only. The pretax subtotal amount, in micros. This is equal to the
+     * sum of the AccountBudgetSummary subtotal amounts and
+     * Invoice.adjustments_subtotal_amount_micros.
      * </pre>
      *
      * <code>optional int64 subtotal_amount_micros = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -11450,12 +12185,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The pretax subtotal amount, in micros. This equals the
-     * sum of the AccountBudgetSummary subtotal amounts,
-     * Invoice.adjustments_subtotal_amount_micros, and
-     * Invoice.regulatory_costs_subtotal_amount_micros.
-     * Starting with v6, the Invoice.regulatory_costs_subtotal_amount_micros is no
-     * longer included.
+     * Output only. The pretax subtotal amount, in micros. This is equal to the
+     * sum of the AccountBudgetSummary subtotal amounts and
+     * Invoice.adjustments_subtotal_amount_micros.
      * </pre>
      *
      * <code>optional int64 subtotal_amount_micros = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -11465,25 +12197,22 @@ private static final long serialVersionUID = 0L;
     public Builder setSubtotalAmountMicros(long value) {
 
       subtotalAmountMicros_ = value;
-      bitField0_ |= 0x00010000;
+      bitField0_ |= 0x00080000;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Output only. The pretax subtotal amount, in micros. This equals the
-     * sum of the AccountBudgetSummary subtotal amounts,
-     * Invoice.adjustments_subtotal_amount_micros, and
-     * Invoice.regulatory_costs_subtotal_amount_micros.
-     * Starting with v6, the Invoice.regulatory_costs_subtotal_amount_micros is no
-     * longer included.
+     * Output only. The pretax subtotal amount, in micros. This is equal to the
+     * sum of the AccountBudgetSummary subtotal amounts and
+     * Invoice.adjustments_subtotal_amount_micros.
      * </pre>
      *
      * <code>optional int64 subtotal_amount_micros = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearSubtotalAmountMicros() {
-      bitField0_ = (bitField0_ & ~0x00010000);
+      bitField0_ = (bitField0_ & ~0x00080000);
       subtotalAmountMicros_ = 0L;
       onChanged();
       return this;
@@ -11502,7 +12231,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasTaxAmountMicros() {
-      return ((bitField0_ & 0x00020000) != 0);
+      return ((bitField0_ & 0x00100000) != 0);
     }
     /**
      * <pre>
@@ -11532,7 +12261,7 @@ private static final long serialVersionUID = 0L;
     public Builder setTaxAmountMicros(long value) {
 
       taxAmountMicros_ = value;
-      bitField0_ |= 0x00020000;
+      bitField0_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -11547,7 +12276,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTaxAmountMicros() {
-      bitField0_ = (bitField0_ & ~0x00020000);
+      bitField0_ = (bitField0_ & ~0x00100000);
       taxAmountMicros_ = 0L;
       onChanged();
       return this;
@@ -11557,10 +12286,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The total amount, in micros. This equals the sum of
-     * Invoice.subtotal_amount_micros and Invoice.tax_amount_micros.
-     * Starting with v6, Invoice.regulatory_costs_subtotal_amount_micros is
-     * also added as it is no longer already included in
-     * Invoice.tax_amount_micros.
+     * Invoice.subtotal_amount_micros, Invoice.tax_amount_micros,
+     * Invoice.regulatory_costs_subtotal_amount_micros, and
+     * Invoice.export_charge_subtotal_amount_micros (which is separated into a
+     * separate line item starting with V14.1).
      * </pre>
      *
      * <code>optional int64 total_amount_micros = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -11568,15 +12297,15 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasTotalAmountMicros() {
-      return ((bitField0_ & 0x00040000) != 0);
+      return ((bitField0_ & 0x00200000) != 0);
     }
     /**
      * <pre>
      * Output only. The total amount, in micros. This equals the sum of
-     * Invoice.subtotal_amount_micros and Invoice.tax_amount_micros.
-     * Starting with v6, Invoice.regulatory_costs_subtotal_amount_micros is
-     * also added as it is no longer already included in
-     * Invoice.tax_amount_micros.
+     * Invoice.subtotal_amount_micros, Invoice.tax_amount_micros,
+     * Invoice.regulatory_costs_subtotal_amount_micros, and
+     * Invoice.export_charge_subtotal_amount_micros (which is separated into a
+     * separate line item starting with V14.1).
      * </pre>
      *
      * <code>optional int64 total_amount_micros = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -11589,10 +12318,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The total amount, in micros. This equals the sum of
-     * Invoice.subtotal_amount_micros and Invoice.tax_amount_micros.
-     * Starting with v6, Invoice.regulatory_costs_subtotal_amount_micros is
-     * also added as it is no longer already included in
-     * Invoice.tax_amount_micros.
+     * Invoice.subtotal_amount_micros, Invoice.tax_amount_micros,
+     * Invoice.regulatory_costs_subtotal_amount_micros, and
+     * Invoice.export_charge_subtotal_amount_micros (which is separated into a
+     * separate line item starting with V14.1).
      * </pre>
      *
      * <code>optional int64 total_amount_micros = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -11602,24 +12331,24 @@ private static final long serialVersionUID = 0L;
     public Builder setTotalAmountMicros(long value) {
 
       totalAmountMicros_ = value;
-      bitField0_ |= 0x00040000;
+      bitField0_ |= 0x00200000;
       onChanged();
       return this;
     }
     /**
      * <pre>
      * Output only. The total amount, in micros. This equals the sum of
-     * Invoice.subtotal_amount_micros and Invoice.tax_amount_micros.
-     * Starting with v6, Invoice.regulatory_costs_subtotal_amount_micros is
-     * also added as it is no longer already included in
-     * Invoice.tax_amount_micros.
+     * Invoice.subtotal_amount_micros, Invoice.tax_amount_micros,
+     * Invoice.regulatory_costs_subtotal_amount_micros, and
+     * Invoice.export_charge_subtotal_amount_micros (which is separated into a
+     * separate line item starting with V14.1).
      * </pre>
      *
      * <code>optional int64 total_amount_micros = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearTotalAmountMicros() {
-      bitField0_ = (bitField0_ & ~0x00040000);
+      bitField0_ = (bitField0_ & ~0x00200000);
       totalAmountMicros_ = 0L;
       onChanged();
       return this;
@@ -11640,7 +12369,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the correctedInvoice field is set.
      */
     public boolean hasCorrectedInvoice() {
-      return ((bitField0_ & 0x00080000) != 0);
+      return ((bitField0_ & 0x00400000) != 0);
     }
     /**
      * <pre>
@@ -11711,7 +12440,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       correctedInvoice_ = value;
-      bitField0_ |= 0x00080000;
+      bitField0_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -11730,7 +12459,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearCorrectedInvoice() {
       correctedInvoice_ = getDefaultInstance().getCorrectedInvoice();
-      bitField0_ = (bitField0_ & ~0x00080000);
+      bitField0_ = (bitField0_ & ~0x00400000);
       onChanged();
       return this;
     }
@@ -11753,7 +12482,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       correctedInvoice_ = value;
-      bitField0_ |= 0x00080000;
+      bitField0_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -11764,7 +12493,7 @@ private static final long serialVersionUID = 0L;
       if (!replacedInvoices_.isModifiable()) {
         replacedInvoices_ = new com.google.protobuf.LazyStringArrayList(replacedInvoices_);
       }
-      bitField0_ |= 0x00100000;
+      bitField0_ |= 0x00800000;
     }
     /**
      * <pre>
@@ -11860,7 +12589,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureReplacedInvoicesIsMutable();
       replacedInvoices_.set(index, value);
-      bitField0_ |= 0x00100000;
+      bitField0_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -11884,7 +12613,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureReplacedInvoicesIsMutable();
       replacedInvoices_.add(value);
-      bitField0_ |= 0x00100000;
+      bitField0_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -11908,7 +12637,7 @@ private static final long serialVersionUID = 0L;
       ensureReplacedInvoicesIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, replacedInvoices_);
-      bitField0_ |= 0x00100000;
+      bitField0_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -11929,7 +12658,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearReplacedInvoices() {
       replacedInvoices_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00100000);;
+      bitField0_ = (bitField0_ & ~0x00800000);;
       onChanged();
       return this;
     }
@@ -11954,7 +12683,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureReplacedInvoicesIsMutable();
       replacedInvoices_.add(value);
-      bitField0_ |= 0x00100000;
+      bitField0_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -11970,7 +12699,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the pdfUrl field is set.
      */
     public boolean hasPdfUrl() {
-      return ((bitField0_ & 0x00200000) != 0);
+      return ((bitField0_ & 0x01000000) != 0);
     }
     /**
      * <pre>
@@ -12029,7 +12758,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       pdfUrl_ = value;
-      bitField0_ |= 0x00200000;
+      bitField0_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -12044,7 +12773,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearPdfUrl() {
       pdfUrl_ = getDefaultInstance().getPdfUrl();
-      bitField0_ = (bitField0_ & ~0x00200000);
+      bitField0_ = (bitField0_ & ~0x01000000);
       onChanged();
       return this;
     }
@@ -12063,7 +12792,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       pdfUrl_ = value;
-      bitField0_ |= 0x00200000;
+      bitField0_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -12071,9 +12800,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v14.resources.Invoice.AccountBudgetSummary> accountBudgetSummaries_ =
       java.util.Collections.emptyList();
     private void ensureAccountBudgetSummariesIsMutable() {
-      if (!((bitField0_ & 0x00400000) != 0)) {
+      if (!((bitField0_ & 0x02000000) != 0)) {
         accountBudgetSummaries_ = new java.util.ArrayList<com.google.ads.googleads.v14.resources.Invoice.AccountBudgetSummary>(accountBudgetSummaries_);
-        bitField0_ |= 0x00400000;
+        bitField0_ |= 0x02000000;
        }
     }
 
@@ -12278,7 +13007,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearAccountBudgetSummaries() {
       if (accountBudgetSummariesBuilder_ == null) {
         accountBudgetSummaries_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00400000);
+        bitField0_ = (bitField0_ & ~0x02000000);
         onChanged();
       } else {
         accountBudgetSummariesBuilder_.clear();
@@ -12390,7 +13119,7 @@ private static final long serialVersionUID = 0L;
         accountBudgetSummariesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v14.resources.Invoice.AccountBudgetSummary, com.google.ads.googleads.v14.resources.Invoice.AccountBudgetSummary.Builder, com.google.ads.googleads.v14.resources.Invoice.AccountBudgetSummaryOrBuilder>(
                 accountBudgetSummaries_,
-                ((bitField0_ & 0x00400000) != 0),
+                ((bitField0_ & 0x02000000) != 0),
                 getParentForChildren(),
                 isClean());
         accountBudgetSummaries_ = null;
@@ -12401,9 +13130,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v14.resources.Invoice.AccountSummary> accountSummaries_ =
       java.util.Collections.emptyList();
     private void ensureAccountSummariesIsMutable() {
-      if (!((bitField0_ & 0x00800000) != 0)) {
+      if (!((bitField0_ & 0x04000000) != 0)) {
         accountSummaries_ = new java.util.ArrayList<com.google.ads.googleads.v14.resources.Invoice.AccountSummary>(accountSummaries_);
-        bitField0_ |= 0x00800000;
+        bitField0_ |= 0x04000000;
        }
     }
 
@@ -12608,7 +13337,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearAccountSummaries() {
       if (accountSummariesBuilder_ == null) {
         accountSummaries_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00800000);
+        bitField0_ = (bitField0_ & ~0x04000000);
         onChanged();
       } else {
         accountSummariesBuilder_.clear();
@@ -12720,7 +13449,7 @@ private static final long serialVersionUID = 0L;
         accountSummariesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v14.resources.Invoice.AccountSummary, com.google.ads.googleads.v14.resources.Invoice.AccountSummary.Builder, com.google.ads.googleads.v14.resources.Invoice.AccountSummaryOrBuilder>(
                 accountSummaries_,
-                ((bitField0_ & 0x00800000) != 0),
+                ((bitField0_ & 0x04000000) != 0),
                 getParentForChildren(),
                 isClean());
         accountSummaries_ = null;

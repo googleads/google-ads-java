@@ -30,8 +30,8 @@ public final class AuthorizationErrorProto {
     java.lang.String[] descriptorData = {
       "\n9google/ads/googleads/v14/errors/author" +
       "ization_error.proto\022\037google.ads.googlead" +
-      "s.v14.errors\"\364\003\n\026AuthorizationErrorEnum\"" +
-      "\331\003\n\022AuthorizationError\022\017\n\013UNSPECIFIED\020\000\022" +
+      "s.v14.errors\"\236\004\n\026AuthorizationErrorEnum\"" +
+      "\203\004\n\022AuthorizationError\022\017\n\013UNSPECIFIED\020\000\022" +
       "\013\n\007UNKNOWN\020\001\022\032\n\026USER_PERMISSION_DENIED\020\002" +
       "\022$\n DEVELOPER_TOKEN_NOT_ON_ALLOWLIST\020\r\022\036" +
       "\n\032DEVELOPER_TOKEN_PROHIBITED\020\004\022\024\n\020PROJEC" +
@@ -42,14 +42,15 @@ public final class AuthorizationErrorProto {
       "D\020\n\022=\n9INVALID_LOGIN_CUSTOMER_ID_SERVING" +
       "_CUSTOMER_ID_COMBINATION\020\013\022\031\n\025SERVICE_AC" +
       "CESS_DENIED\020\014\022\"\n\036ACCESS_DENIED_FOR_ACCOU" +
-      "NT_TYPE\020\031\022\030\n\024METRIC_ACCESS_DENIED\020\032B\367\001\n#" +
-      "com.google.ads.googleads.v14.errorsB\027Aut" +
-      "horizationErrorProtoP\001ZEgoogle.golang.or" +
-      "g/genproto/googleapis/ads/googleads/v14/" +
-      "errors;errors\242\002\003GAA\252\002\037Google.Ads.GoogleA" +
-      "ds.V14.Errors\312\002\037Google\\Ads\\GoogleAds\\V14" +
-      "\\Errors\352\002#Google::Ads::GoogleAds::V14::E" +
-      "rrorsb\006proto3"
+      "NT_TYPE\020\031\022\030\n\024METRIC_ACCESS_DENIED\020\032\022(\n$C" +
+      "LOUD_PROJECT_NOT_UNDER_ORGANIZATION\020\033B\367\001" +
+      "\n#com.google.ads.googleads.v14.errorsB\027A" +
+      "uthorizationErrorProtoP\001ZEgoogle.golang." +
+      "org/genproto/googleapis/ads/googleads/v1" +
+      "4/errors;errors\242\002\003GAA\252\002\037Google.Ads.Googl" +
+      "eAds.V14.Errors\312\002\037Google\\Ads\\GoogleAds\\V" +
+      "14\\Errors\352\002#Google::Ads::GoogleAds::V14:" +
+      ":Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -115,6 +115,138 @@ public interface AssetGroupAssetOrBuilder extends
 
   /**
    * <pre>
+   * Output only. Provides the PrimaryStatus of this asset link.
+   * Primary status is meant essentially to differentiate between the plain
+   * "status" field, which has advertiser set values of enabled, paused, or
+   * removed.  The primary status takes into account other signals (for assets
+   * its mainly policy and quality approvals) to come up with a more
+   * comprehensive status to indicate its serving state.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusEnum.AssetLinkPrimaryStatus primary_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for primaryStatus.
+   */
+  int getPrimaryStatusValue();
+  /**
+   * <pre>
+   * Output only. Provides the PrimaryStatus of this asset link.
+   * Primary status is meant essentially to differentiate between the plain
+   * "status" field, which has advertiser set values of enabled, paused, or
+   * removed.  The primary status takes into account other signals (for assets
+   * its mainly policy and quality approvals) to come up with a more
+   * comprehensive status to indicate its serving state.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusEnum.AssetLinkPrimaryStatus primary_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The primaryStatus.
+   */
+  com.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusEnum.AssetLinkPrimaryStatus getPrimaryStatus();
+
+  /**
+   * <pre>
+   * Output only. Provides a list of reasons for why an asset is not serving or
+   * not serving at full capacity.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason primary_status_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return A list containing the primaryStatusReasons.
+   */
+  java.util.List<com.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason> getPrimaryStatusReasonsList();
+  /**
+   * <pre>
+   * Output only. Provides a list of reasons for why an asset is not serving or
+   * not serving at full capacity.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason primary_status_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The count of primaryStatusReasons.
+   */
+  int getPrimaryStatusReasonsCount();
+  /**
+   * <pre>
+   * Output only. Provides a list of reasons for why an asset is not serving or
+   * not serving at full capacity.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason primary_status_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @param index The index of the element to return.
+   * @return The primaryStatusReasons at the given index.
+   */
+  com.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason getPrimaryStatusReasons(int index);
+  /**
+   * <pre>
+   * Output only. Provides a list of reasons for why an asset is not serving or
+   * not serving at full capacity.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason primary_status_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return A list containing the enum numeric values on the wire for primaryStatusReasons.
+   */
+  java.util.List<java.lang.Integer>
+  getPrimaryStatusReasonsValueList();
+  /**
+   * <pre>
+   * Output only. Provides a list of reasons for why an asset is not serving or
+   * not serving at full capacity.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason primary_status_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of primaryStatusReasons at the given index.
+   */
+  int getPrimaryStatusReasonsValue(int index);
+
+  /**
+   * <pre>
+   * Output only. Provides the details of the primary status and its associated
+   * reasons.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails primary_status_details = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  java.util.List<com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails> 
+      getPrimaryStatusDetailsList();
+  /**
+   * <pre>
+   * Output only. Provides the details of the primary status and its associated
+   * reasons.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails primary_status_details = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails getPrimaryStatusDetails(int index);
+  /**
+   * <pre>
+   * Output only. Provides the details of the primary status and its associated
+   * reasons.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails primary_status_details = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  int getPrimaryStatusDetailsCount();
+  /**
+   * <pre>
+   * Output only. Provides the details of the primary status and its associated
+   * reasons.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails primary_status_details = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  java.util.List<? extends com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetailsOrBuilder> 
+      getPrimaryStatusDetailsOrBuilderList();
+  /**
+   * <pre>
+   * Output only. Provides the details of the primary status and its associated
+   * reasons.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails primary_status_details = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetailsOrBuilder getPrimaryStatusDetailsOrBuilder(
+      int index);
+
+  /**
+   * <pre>
    * Output only. The performance of this asset group asset.
    * </pre>
    *

@@ -29,8 +29,8 @@ public final class AdTypeProto {
   static {
     java.lang.String[] descriptorData = {
       "\n,google/ads/googleads/v14/enums/ad_type" +
-      ".proto\022\036google.ads.googleads.v14.enums\"\360" +
-      "\005\n\nAdTypeEnum\"\341\005\n\006AdType\022\017\n\013UNSPECIFIED\020" +
+      ".proto\022\036google.ads.googleads.v14.enums\"\223" +
+      "\006\n\nAdTypeEnum\"\204\006\n\006AdType\022\017\n\013UNSPECIFIED\020" +
       "\000\022\013\n\007UNKNOWN\020\001\022\013\n\007TEXT_AD\020\002\022\024\n\020EXPANDED_" +
       "TEXT_AD\020\003\022\036\n\032EXPANDED_DYNAMIC_SEARCH_AD\020" +
       "\007\022\014\n\010HOTEL_AD\020\010\022\025\n\021SHOPPING_SMART_AD\020\t\022\027" +
@@ -48,13 +48,14 @@ public final class AdTypeProto {
       "ART_CAMPAIGN_AD\020\037\022\013\n\007CALL_AD\020 \022\033\n\027APP_PR" +
       "E_REGISTRATION_AD\020!\022\024\n\020IN_FEED_VIDEO_AD\020" +
       "\"\022\034\n\030DISCOVERY_MULTI_ASSET_AD\020#\022\031\n\025DISCO" +
-      "VERY_CAROUSEL_AD\020$\022\r\n\tTRAVEL_AD\020%B\345\001\n\"co" +
-      "m.google.ads.googleads.v14.enumsB\013AdType" +
-      "ProtoP\001ZCgoogle.golang.org/genproto/goog" +
-      "leapis/ads/googleads/v14/enums;enums\242\002\003G" +
-      "AA\252\002\036Google.Ads.GoogleAds.V14.Enums\312\002\036Go" +
-      "ogle\\Ads\\GoogleAds\\V14\\Enums\352\002\"Google::A" +
-      "ds::GoogleAds::V14::Enumsb\006proto3"
+      "VERY_CAROUSEL_AD\020$\022\r\n\tTRAVEL_AD\020%\022!\n\035DIS" +
+      "COVERY_VIDEO_RESPONSIVE_AD\020&B\345\001\n\"com.goo" +
+      "gle.ads.googleads.v14.enumsB\013AdTypeProto" +
+      "P\001ZCgoogle.golang.org/genproto/googleapi" +
+      "s/ads/googleads/v14/enums;enums\242\002\003GAA\252\002\036" +
+      "Google.Ads.GoogleAds.V14.Enums\312\002\036Google\\" +
+      "Ads\\GoogleAds\\V14\\Enums\352\002\"Google::Ads::G" +
+      "oogleAds::V14::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
