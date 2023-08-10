@@ -6,7 +6,7 @@ package com.google.ads.googleads.v14.services;
 /**
  * <pre>
  * Request message for
- * [SmartCampaignSuggestService.SuggestSmartCampaignBudgets][].
+ * [SmartCampaignSuggestService.SuggestSmartCampaignBudgetOptions][google.ads.googleads.v14.services.SmartCampaignSuggestService.SuggestSmartCampaignBudgetOptions].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v14.services.SuggestSmartCampaignBudgetOptionsRequest}
@@ -437,7 +437,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Request message for
-   * [SmartCampaignSuggestService.SuggestSmartCampaignBudgets][].
+   * [SmartCampaignSuggestService.SuggestSmartCampaignBudgetOptions][google.ads.googleads.v14.services.SmartCampaignSuggestService.SuggestSmartCampaignBudgetOptions].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v14.services.SuggestSmartCampaignBudgetOptionsRequest}

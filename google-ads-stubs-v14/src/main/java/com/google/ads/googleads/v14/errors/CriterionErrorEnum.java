@@ -1236,6 +1236,31 @@ private static final long serialVersionUID = 0L;
      * <code>CANNOT_TARGET_SIMILAR_USER_LIST = 151;</code>
      */
     CANNOT_TARGET_SIMILAR_USER_LIST(151),
+    /**
+     * <pre>
+     * Audience segment criteria cannot be added when use_audience_grouped bit
+     * is set.
+     * </pre>
+     *
+     * <code>CANNOT_ADD_AUDIENCE_SEGMENT_CRITERION_WHEN_AUDIENCE_GROUPED_IS_SET = 152;</code>
+     */
+    CANNOT_ADD_AUDIENCE_SEGMENT_CRITERION_WHEN_AUDIENCE_GROUPED_IS_SET(152),
+    /**
+     * <pre>
+     * Only one audience is allowed in an ad group.
+     * </pre>
+     *
+     * <code>ONE_AUDIENCE_ALLOWED_PER_AD_GROUP = 153;</code>
+     */
+    ONE_AUDIENCE_ALLOWED_PER_AD_GROUP(153),
+    /**
+     * <pre>
+     * Invalid detailed demographics criterion.
+     * </pre>
+     *
+     * <code>INVALID_DETAILED_DEMOGRAPHIC = 154;</code>
+     */
+    INVALID_DETAILED_DEMOGRAPHIC(154),
     UNRECOGNIZED(-1),
     ;
 
@@ -2424,6 +2449,31 @@ private static final long serialVersionUID = 0L;
      * <code>CANNOT_TARGET_SIMILAR_USER_LIST = 151;</code>
      */
     public static final int CANNOT_TARGET_SIMILAR_USER_LIST_VALUE = 151;
+    /**
+     * <pre>
+     * Audience segment criteria cannot be added when use_audience_grouped bit
+     * is set.
+     * </pre>
+     *
+     * <code>CANNOT_ADD_AUDIENCE_SEGMENT_CRITERION_WHEN_AUDIENCE_GROUPED_IS_SET = 152;</code>
+     */
+    public static final int CANNOT_ADD_AUDIENCE_SEGMENT_CRITERION_WHEN_AUDIENCE_GROUPED_IS_SET_VALUE = 152;
+    /**
+     * <pre>
+     * Only one audience is allowed in an ad group.
+     * </pre>
+     *
+     * <code>ONE_AUDIENCE_ALLOWED_PER_AD_GROUP = 153;</code>
+     */
+    public static final int ONE_AUDIENCE_ALLOWED_PER_AD_GROUP_VALUE = 153;
+    /**
+     * <pre>
+     * Invalid detailed demographics criterion.
+     * </pre>
+     *
+     * <code>INVALID_DETAILED_DEMOGRAPHIC = 154;</code>
+     */
+    public static final int INVALID_DETAILED_DEMOGRAPHIC_VALUE = 154;
 
 
     public final int getNumber() {
@@ -2593,6 +2643,9 @@ private static final long serialVersionUID = 0L;
         case 147: return CANNOT_HAVE_MULTIPLE_NEGATIVE_KEYWORD_LIST_PER_ACCOUNT;
         case 149: return CUSTOMER_CANNOT_ADD_CRITERION_OF_THIS_TYPE;
         case 151: return CANNOT_TARGET_SIMILAR_USER_LIST;
+        case 152: return CANNOT_ADD_AUDIENCE_SEGMENT_CRITERION_WHEN_AUDIENCE_GROUPED_IS_SET;
+        case 153: return ONE_AUDIENCE_ALLOWED_PER_AD_GROUP;
+        case 154: return INVALID_DETAILED_DEMOGRAPHIC;
         default: return null;
       }
     }

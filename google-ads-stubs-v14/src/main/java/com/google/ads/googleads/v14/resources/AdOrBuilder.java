@@ -1148,6 +1148,33 @@ public interface AdOrBuilder extends
 
   /**
    * <pre>
+   * Details pertaining to a discovery video responsive ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo discovery_video_responsive_ad = 60;</code>
+   * @return Whether the discoveryVideoResponsiveAd field is set.
+   */
+  boolean hasDiscoveryVideoResponsiveAd();
+  /**
+   * <pre>
+   * Details pertaining to a discovery video responsive ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo discovery_video_responsive_ad = 60;</code>
+   * @return The discoveryVideoResponsiveAd.
+   */
+  com.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo getDiscoveryVideoResponsiveAd();
+  /**
+   * <pre>
+   * Details pertaining to a discovery video responsive ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfo discovery_video_responsive_ad = 60;</code>
+   */
+  com.google.ads.googleads.v14.common.DiscoveryVideoResponsiveAdInfoOrBuilder getDiscoveryVideoResponsiveAdOrBuilder();
+
+  /**
+   * <pre>
    * Details pertaining to a travel ad.
    * </pre>
    *

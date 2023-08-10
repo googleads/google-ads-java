@@ -156,4 +156,31 @@ public interface AssetGroupListingGroupFilterOrBuilder extends
    */
   com.google.protobuf.ByteString
       getParentListingGroupFilterBytes();
+
+  /**
+   * <pre>
+   * Output only. The path of dimensions defining this listing group filter.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPath path = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the path field is set.
+   */
+  boolean hasPath();
+  /**
+   * <pre>
+   * Output only. The path of dimensions defining this listing group filter.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPath path = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The path.
+   */
+  com.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPath getPath();
+  /**
+   * <pre>
+   * Output only. The path of dimensions defining this listing group filter.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPath path = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPathOrBuilder getPathOrBuilder();
 }

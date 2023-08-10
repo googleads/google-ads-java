@@ -87,4 +87,31 @@ public interface ListingGroupInfoOrBuilder extends
    */
   com.google.protobuf.ByteString
       getParentAdGroupCriterionBytes();
+
+  /**
+   * <pre>
+   * The path of dimensions defining this listing group.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v14.common.ListingDimensionPath path = 5;</code>
+   * @return Whether the path field is set.
+   */
+  boolean hasPath();
+  /**
+   * <pre>
+   * The path of dimensions defining this listing group.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v14.common.ListingDimensionPath path = 5;</code>
+   * @return The path.
+   */
+  com.google.ads.googleads.v14.common.ListingDimensionPath getPath();
+  /**
+   * <pre>
+   * The path of dimensions defining this listing group.
+   * </pre>
+   *
+   * <code>optional .google.ads.googleads.v14.common.ListingDimensionPath path = 5;</code>
+   */
+  com.google.ads.googleads.v14.common.ListingDimensionPathOrBuilder getPathOrBuilder();
 }

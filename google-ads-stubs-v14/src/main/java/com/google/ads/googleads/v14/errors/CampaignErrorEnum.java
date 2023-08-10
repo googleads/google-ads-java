@@ -657,6 +657,23 @@ private static final long serialVersionUID = 0L;
      * <code>CONVERSION_LAG_TOO_HIGH = 82;</code>
      */
     CONVERSION_LAG_TOO_HIGH(82),
+    /**
+     * <pre>
+     * The advertiser set as an advertising partner is not an actively linked
+     * advertiser to this customer.
+     * </pre>
+     *
+     * <code>NOT_LINKED_ADVERTISING_PARTNER = 83;</code>
+     */
+    NOT_LINKED_ADVERTISING_PARTNER(83),
+    /**
+     * <pre>
+     * Invalid number of advertising partner IDs.
+     * </pre>
+     *
+     * <code>INVALID_NUMBER_OF_ADVERTISING_PARTNER_IDS = 84;</code>
+     */
+    INVALID_NUMBER_OF_ADVERTISING_PARTNER_IDS(84),
     UNRECOGNIZED(-1),
     ;
 
@@ -1266,6 +1283,23 @@ private static final long serialVersionUID = 0L;
      * <code>CONVERSION_LAG_TOO_HIGH = 82;</code>
      */
     public static final int CONVERSION_LAG_TOO_HIGH_VALUE = 82;
+    /**
+     * <pre>
+     * The advertiser set as an advertising partner is not an actively linked
+     * advertiser to this customer.
+     * </pre>
+     *
+     * <code>NOT_LINKED_ADVERTISING_PARTNER = 83;</code>
+     */
+    public static final int NOT_LINKED_ADVERTISING_PARTNER_VALUE = 83;
+    /**
+     * <pre>
+     * Invalid number of advertising partner IDs.
+     * </pre>
+     *
+     * <code>INVALID_NUMBER_OF_ADVERTISING_PARTNER_IDS = 84;</code>
+     */
+    public static final int INVALID_NUMBER_OF_ADVERTISING_PARTNER_IDS_VALUE = 84;
 
 
     public final int getNumber() {
@@ -1364,6 +1398,8 @@ private static final long serialVersionUID = 0L;
         case 80: return NOT_COMPATIBLE_WITH_BIDDING_STRATEGY_TYPE;
         case 81: return NOT_COMPATIBLE_WITH_GOOGLE_ATTRIBUTION_CONVERSIONS;
         case 82: return CONVERSION_LAG_TOO_HIGH;
+        case 83: return NOT_LINKED_ADVERTISING_PARTNER;
+        case 84: return INVALID_NUMBER_OF_ADVERTISING_PARTNER_IDS;
         default: return null;
       }
     }

@@ -164,6 +164,11 @@ public final class AdTypeInfosProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v14_common_DiscoveryCarouselAdInfo_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v14_common_DiscoveryVideoResponsiveAdInfo_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v14_common_DiscoveryVideoResponsiveAdInfo_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -406,13 +411,27 @@ public final class AdTypeInfosProto {
       "on.AdTextAssetB\004\342A\001\002\022\033\n\023call_to_action_t" +
       "ext\030\005 \001(\t\022[\n\016carousel_cards\030\006 \003(\0132=.goog" +
       "le.ads.googleads.v14.common.AdDiscoveryC" +
-      "arouselCardAssetB\004\342A\001\002B\360\001\n#com.google.ad" +
-      "s.googleads.v14.commonB\020AdTypeInfosProto" +
-      "P\001ZEgoogle.golang.org/genproto/googleapi" +
-      "s/ads/googleads/v14/common;common\242\002\003GAA\252" +
-      "\002\037Google.Ads.GoogleAds.V14.Common\312\002\037Goog" +
-      "le\\Ads\\GoogleAds\\V14\\Common\352\002#Google::Ad" +
-      "s::GoogleAds::V14::Commonb\006proto3"
+      "arouselCardAssetB\004\342A\001\002\"\262\004\n\036DiscoveryVide" +
+      "oResponsiveAdInfo\022?\n\theadlines\030\001 \003(\0132,.g" +
+      "oogle.ads.googleads.v14.common.AdTextAss" +
+      "et\022D\n\016long_headlines\030\002 \003(\0132,.google.ads." +
+      "googleads.v14.common.AdTextAsset\022B\n\014desc" +
+      "riptions\030\003 \003(\0132,.google.ads.googleads.v1" +
+      "4.common.AdTextAsset\022=\n\006videos\030\004 \003(\0132-.g" +
+      "oogle.ads.googleads.v14.common.AdVideoAs" +
+      "set\022B\n\013logo_images\030\005 \003(\0132-.google.ads.go" +
+      "ogleads.v14.common.AdImageAsset\022\023\n\013bread" +
+      "crumb1\030\006 \001(\t\022\023\n\013breadcrumb2\030\007 \001(\t\022I\n\rbus" +
+      "iness_name\030\010 \001(\0132,.google.ads.googleads." +
+      "v14.common.AdTextAssetB\004\342A\001\002\022M\n\017call_to_" +
+      "actions\030\t \003(\01324.google.ads.googleads.v14" +
+      ".common.AdCallToActionAssetB\360\001\n#com.goog" +
+      "le.ads.googleads.v14.commonB\020AdTypeInfos" +
+      "ProtoP\001ZEgoogle.golang.org/genproto/goog" +
+      "leapis/ads/googleads/v14/common;common\242\002" +
+      "\003GAA\252\002\037Google.Ads.GoogleAds.V14.Common\312\002" +
+      "\037Google\\Ads\\GoogleAds\\V14\\Common\352\002#Googl" +
+      "e::Ads::GoogleAds::V14::Commonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -606,6 +625,12 @@ public final class AdTypeInfosProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v14_common_DiscoveryCarouselAdInfo_descriptor,
         new java.lang.String[] { "BusinessName", "LogoImage", "Headline", "Description", "CallToActionText", "CarouselCards", });
+    internal_static_google_ads_googleads_v14_common_DiscoveryVideoResponsiveAdInfo_descriptor =
+      getDescriptor().getMessageTypes().get(30);
+    internal_static_google_ads_googleads_v14_common_DiscoveryVideoResponsiveAdInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v14_common_DiscoveryVideoResponsiveAdInfo_descriptor,
+        new java.lang.String[] { "Headlines", "LongHeadlines", "Descriptions", "Videos", "LogoImages", "Breadcrumb1", "Breadcrumb2", "BusinessName", "CallToActions", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);

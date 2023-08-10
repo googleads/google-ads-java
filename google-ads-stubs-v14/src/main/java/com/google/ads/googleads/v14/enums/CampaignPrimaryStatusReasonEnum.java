@@ -332,6 +332,30 @@ private static final long serialVersionUID = 0L;
      * <code>APP_PARTIALLY_RELEASED = 33;</code>
      */
     APP_PARTIALLY_RELEASED(33),
+    /**
+     * <pre>
+     * At least one asset group in this campaign is disapproved.
+     * </pre>
+     *
+     * <code>HAS_ASSET_GROUPS_DISAPPROVED = 34;</code>
+     */
+    HAS_ASSET_GROUPS_DISAPPROVED(34),
+    /**
+     * <pre>
+     * At least one asset group in this campaign is limited by policy.
+     * </pre>
+     *
+     * <code>HAS_ASSET_GROUPS_LIMITED_BY_POLICY = 35;</code>
+     */
+    HAS_ASSET_GROUPS_LIMITED_BY_POLICY(35),
+    /**
+     * <pre>
+     * Most asset groups in this campaign are pending review.
+     * </pre>
+     *
+     * <code>MOST_ASSET_GROUPS_UNDER_REVIEW = 36;</code>
+     */
+    MOST_ASSET_GROUPS_UNDER_REVIEW(36),
     UNRECOGNIZED(-1),
     ;
 
@@ -614,6 +638,30 @@ private static final long serialVersionUID = 0L;
      * <code>APP_PARTIALLY_RELEASED = 33;</code>
      */
     public static final int APP_PARTIALLY_RELEASED_VALUE = 33;
+    /**
+     * <pre>
+     * At least one asset group in this campaign is disapproved.
+     * </pre>
+     *
+     * <code>HAS_ASSET_GROUPS_DISAPPROVED = 34;</code>
+     */
+    public static final int HAS_ASSET_GROUPS_DISAPPROVED_VALUE = 34;
+    /**
+     * <pre>
+     * At least one asset group in this campaign is limited by policy.
+     * </pre>
+     *
+     * <code>HAS_ASSET_GROUPS_LIMITED_BY_POLICY = 35;</code>
+     */
+    public static final int HAS_ASSET_GROUPS_LIMITED_BY_POLICY_VALUE = 35;
+    /**
+     * <pre>
+     * Most asset groups in this campaign are pending review.
+     * </pre>
+     *
+     * <code>MOST_ASSET_GROUPS_UNDER_REVIEW = 36;</code>
+     */
+    public static final int MOST_ASSET_GROUPS_UNDER_REVIEW_VALUE = 36;
 
 
     public final int getNumber() {
@@ -674,6 +722,9 @@ private static final long serialVersionUID = 0L;
         case 31: return CAMPAIGN_GROUP_ALL_GROUP_BUDGETS_ENDED;
         case 32: return APP_NOT_RELEASED;
         case 33: return APP_PARTIALLY_RELEASED;
+        case 34: return HAS_ASSET_GROUPS_DISAPPROVED;
+        case 35: return HAS_ASSET_GROUPS_LIMITED_BY_POLICY;
+        case 36: return MOST_ASSET_GROUPS_UNDER_REVIEW;
         default: return null;
       }
     }

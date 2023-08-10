@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,8 +32,8 @@ import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
 import com.google.api.gax.rpc.OperationCallable;
+import com.google.api.gax.rpc.RequestParamsBuilder;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.common.collect.ImmutableMap;
 import com.google.longrunning.Operation;
 import com.google.longrunning.stub.GrpcOperationsStub;
 import com.google.protobuf.Empty;
@@ -156,9 +156,9 @@ public class GrpcBatchJobServiceStub extends BatchJobServiceStub {
                 .setMethodDescriptor(mutateBatchJobMethodDescriptor)
                 .setParamsExtractor(
                     request -> {
-                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                      params.put("customer_id", String.valueOf(request.getCustomerId()));
-                      return params.build();
+                      RequestParamsBuilder builder = RequestParamsBuilder.create();
+                      builder.add("customer_id", String.valueOf(request.getCustomerId()));
+                      return builder.build();
                     })
                 .build();
     GrpcCallSettings<ListBatchJobResultsRequest, ListBatchJobResultsResponse>
@@ -167,9 +167,9 @@ public class GrpcBatchJobServiceStub extends BatchJobServiceStub {
                 .setMethodDescriptor(listBatchJobResultsMethodDescriptor)
                 .setParamsExtractor(
                     request -> {
-                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                      params.put("resource_name", String.valueOf(request.getResourceName()));
-                      return params.build();
+                      RequestParamsBuilder builder = RequestParamsBuilder.create();
+                      builder.add("resource_name", String.valueOf(request.getResourceName()));
+                      return builder.build();
                     })
                 .build();
     GrpcCallSettings<RunBatchJobRequest, Operation> runBatchJobTransportSettings =
@@ -177,9 +177,9 @@ public class GrpcBatchJobServiceStub extends BatchJobServiceStub {
             .setMethodDescriptor(runBatchJobMethodDescriptor)
             .setParamsExtractor(
                 request -> {
-                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                  params.put("resource_name", String.valueOf(request.getResourceName()));
-                  return params.build();
+                  RequestParamsBuilder builder = RequestParamsBuilder.create();
+                  builder.add("resource_name", String.valueOf(request.getResourceName()));
+                  return builder.build();
                 })
             .build();
     GrpcCallSettings<AddBatchJobOperationsRequest, AddBatchJobOperationsResponse>
@@ -189,9 +189,9 @@ public class GrpcBatchJobServiceStub extends BatchJobServiceStub {
                 .setMethodDescriptor(addBatchJobOperationsMethodDescriptor)
                 .setParamsExtractor(
                     request -> {
-                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                      params.put("resource_name", String.valueOf(request.getResourceName()));
-                      return params.build();
+                      RequestParamsBuilder builder = RequestParamsBuilder.create();
+                      builder.add("resource_name", String.valueOf(request.getResourceName()));
+                      return builder.build();
                     })
                 .build();
 

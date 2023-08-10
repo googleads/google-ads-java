@@ -1412,5 +1412,59 @@ public interface AdGroupCriterionOrBuilder extends
    */
   com.google.ads.googleads.v14.common.AudienceInfoOrBuilder getAudienceOrBuilder();
 
+  /**
+   * <pre>
+   * Immutable. Location.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.common.LocationInfo location = 82 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the location field is set.
+   */
+  boolean hasLocation();
+  /**
+   * <pre>
+   * Immutable. Location.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.common.LocationInfo location = 82 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The location.
+   */
+  com.google.ads.googleads.v14.common.LocationInfo getLocation();
+  /**
+   * <pre>
+   * Immutable. Location.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.common.LocationInfo location = 82 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   */
+  com.google.ads.googleads.v14.common.LocationInfoOrBuilder getLocationOrBuilder();
+
+  /**
+   * <pre>
+   * Immutable. Language.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.common.LanguageInfo language = 83 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the language field is set.
+   */
+  boolean hasLanguage();
+  /**
+   * <pre>
+   * Immutable. Language.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.common.LanguageInfo language = 83 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The language.
+   */
+  com.google.ads.googleads.v14.common.LanguageInfo getLanguage();
+  /**
+   * <pre>
+   * Immutable. Language.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.common.LanguageInfo language = 83 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   */
+  com.google.ads.googleads.v14.common.LanguageInfoOrBuilder getLanguageOrBuilder();
+
   com.google.ads.googleads.v14.resources.AdGroupCriterion.CriterionCase getCriterionCase();
 }

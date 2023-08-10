@@ -658,4 +658,31 @@ public interface CustomerOrBuilder extends
    */
   com.google.ads.googleads.v14.resources.OfflineConversionClientSummaryOrBuilder getOfflineConversionClientSummariesOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * Output only. Customer Agreement Setting for a customer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.resources.CustomerAgreementSetting customer_agreement_setting = 44 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the customerAgreementSetting field is set.
+   */
+  boolean hasCustomerAgreementSetting();
+  /**
+   * <pre>
+   * Output only. Customer Agreement Setting for a customer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.resources.CustomerAgreementSetting customer_agreement_setting = 44 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The customerAgreementSetting.
+   */
+  com.google.ads.googleads.v14.resources.CustomerAgreementSetting getCustomerAgreementSetting();
+  /**
+   * <pre>
+   * Output only. Customer Agreement Setting for a customer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.resources.CustomerAgreementSetting customer_agreement_setting = 44 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.ads.googleads.v14.resources.CustomerAgreementSettingOrBuilder getCustomerAgreementSettingOrBuilder();
 }

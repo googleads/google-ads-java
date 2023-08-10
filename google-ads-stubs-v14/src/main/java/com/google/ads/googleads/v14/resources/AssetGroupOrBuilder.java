@@ -202,6 +202,86 @@ public interface AssetGroupOrBuilder extends
 
   /**
    * <pre>
+   * Output only. The primary status of the asset group. Provides insights into
+   * why an asset group is not serving or not serving optimally.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusEnum.AssetGroupPrimaryStatus primary_status = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for primaryStatus.
+   */
+  int getPrimaryStatusValue();
+  /**
+   * <pre>
+   * Output only. The primary status of the asset group. Provides insights into
+   * why an asset group is not serving or not serving optimally.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusEnum.AssetGroupPrimaryStatus primary_status = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The primaryStatus.
+   */
+  com.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusEnum.AssetGroupPrimaryStatus getPrimaryStatus();
+
+  /**
+   * <pre>
+   * Output only. Provides reasons into why an asset group is not serving or not
+   * serving optimally. It will be empty when the asset group is serving without
+   * issues.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason primary_status_reasons = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return A list containing the primaryStatusReasons.
+   */
+  java.util.List<com.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason> getPrimaryStatusReasonsList();
+  /**
+   * <pre>
+   * Output only. Provides reasons into why an asset group is not serving or not
+   * serving optimally. It will be empty when the asset group is serving without
+   * issues.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason primary_status_reasons = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The count of primaryStatusReasons.
+   */
+  int getPrimaryStatusReasonsCount();
+  /**
+   * <pre>
+   * Output only. Provides reasons into why an asset group is not serving or not
+   * serving optimally. It will be empty when the asset group is serving without
+   * issues.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason primary_status_reasons = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @param index The index of the element to return.
+   * @return The primaryStatusReasons at the given index.
+   */
+  com.google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason getPrimaryStatusReasons(int index);
+  /**
+   * <pre>
+   * Output only. Provides reasons into why an asset group is not serving or not
+   * serving optimally. It will be empty when the asset group is serving without
+   * issues.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason primary_status_reasons = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return A list containing the enum numeric values on the wire for primaryStatusReasons.
+   */
+  java.util.List<java.lang.Integer>
+  getPrimaryStatusReasonsValueList();
+  /**
+   * <pre>
+   * Output only. Provides reasons into why an asset group is not serving or not
+   * serving optimally. It will be empty when the asset group is serving without
+   * issues.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v14.enums.AssetGroupPrimaryStatusReasonEnum.AssetGroupPrimaryStatusReason primary_status_reasons = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of primaryStatusReasons at the given index.
+   */
+  int getPrimaryStatusReasonsValue(int index);
+
+  /**
+   * <pre>
    * First part of text that may appear appended to the url displayed in
    * the ad.
    * </pre>

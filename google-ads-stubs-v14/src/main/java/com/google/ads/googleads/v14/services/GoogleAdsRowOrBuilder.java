@@ -1521,6 +1521,33 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
+   * The campaign search term insight referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.resources.CampaignSearchTermInsight campaign_search_term_insight = 204;</code>
+   * @return Whether the campaignSearchTermInsight field is set.
+   */
+  boolean hasCampaignSearchTermInsight();
+  /**
+   * <pre>
+   * The campaign search term insight referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.resources.CampaignSearchTermInsight campaign_search_term_insight = 204;</code>
+   * @return The campaignSearchTermInsight.
+   */
+  com.google.ads.googleads.v14.resources.CampaignSearchTermInsight getCampaignSearchTermInsight();
+  /**
+   * <pre>
+   * The campaign search term insight referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.resources.CampaignSearchTermInsight campaign_search_term_insight = 204;</code>
+   */
+  com.google.ads.googleads.v14.resources.CampaignSearchTermInsightOrBuilder getCampaignSearchTermInsightOrBuilder();
+
+  /**
+   * <pre>
    * Campaign Shared Set referenced in AWQL query.
    * </pre>
    *
@@ -2328,6 +2355,33 @@ public interface GoogleAdsRowOrBuilder extends
    * <code>.google.ads.googleads.v14.resources.CustomerNegativeCriterion customer_negative_criterion = 88;</code>
    */
   com.google.ads.googleads.v14.resources.CustomerNegativeCriterionOrBuilder getCustomerNegativeCriterionOrBuilder();
+
+  /**
+   * <pre>
+   * The customer search term insight referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.resources.CustomerSearchTermInsight customer_search_term_insight = 205;</code>
+   * @return Whether the customerSearchTermInsight field is set.
+   */
+  boolean hasCustomerSearchTermInsight();
+  /**
+   * <pre>
+   * The customer search term insight referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.resources.CustomerSearchTermInsight customer_search_term_insight = 205;</code>
+   * @return The customerSearchTermInsight.
+   */
+  com.google.ads.googleads.v14.resources.CustomerSearchTermInsight getCustomerSearchTermInsight();
+  /**
+   * <pre>
+   * The customer search term insight referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.resources.CustomerSearchTermInsight customer_search_term_insight = 205;</code>
+   */
+  com.google.ads.googleads.v14.resources.CustomerSearchTermInsightOrBuilder getCustomerSearchTermInsightOrBuilder();
 
   /**
    * <pre>

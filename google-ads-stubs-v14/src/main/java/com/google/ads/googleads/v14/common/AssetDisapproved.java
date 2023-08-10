@@ -6,7 +6,6 @@ package com.google.ads.googleads.v14.common;
 /**
  * <pre>
  * Details related to AssetLinkPrimaryStatusReasonPB.ASSET_DISAPPROVED
- * Next Id: 2
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v14.common.AssetDisapproved}
@@ -296,7 +295,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Details related to AssetLinkPrimaryStatusReasonPB.ASSET_DISAPPROVED
-   * Next Id: 2
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v14.common.AssetDisapproved}

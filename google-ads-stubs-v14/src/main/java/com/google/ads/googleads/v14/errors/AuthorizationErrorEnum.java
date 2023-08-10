@@ -189,6 +189,14 @@ private static final long serialVersionUID = 0L;
      * <code>METRIC_ACCESS_DENIED = 26;</code>
      */
     METRIC_ACCESS_DENIED(26),
+    /**
+     * <pre>
+     * The Google Cloud project is not under the required organization.
+     * </pre>
+     *
+     * <code>CLOUD_PROJECT_NOT_UNDER_ORGANIZATION = 27;</code>
+     */
+    CLOUD_PROJECT_NOT_UNDER_ORGANIZATION(27),
     UNRECOGNIZED(-1),
     ;
 
@@ -330,6 +338,14 @@ private static final long serialVersionUID = 0L;
      * <code>METRIC_ACCESS_DENIED = 26;</code>
      */
     public static final int METRIC_ACCESS_DENIED_VALUE = 26;
+    /**
+     * <pre>
+     * The Google Cloud project is not under the required organization.
+     * </pre>
+     *
+     * <code>CLOUD_PROJECT_NOT_UNDER_ORGANIZATION = 27;</code>
+     */
+    public static final int CLOUD_PROJECT_NOT_UNDER_ORGANIZATION_VALUE = 27;
 
 
     public final int getNumber() {
@@ -372,6 +388,7 @@ private static final long serialVersionUID = 0L;
         case 12: return SERVICE_ACCESS_DENIED;
         case 25: return ACCESS_DENIED_FOR_ACCOUNT_TYPE;
         case 26: return METRIC_ACCESS_DENIED;
+        case 27: return CLOUD_PROJECT_NOT_UNDER_ORGANIZATION;
         default: return null;
       }
     }

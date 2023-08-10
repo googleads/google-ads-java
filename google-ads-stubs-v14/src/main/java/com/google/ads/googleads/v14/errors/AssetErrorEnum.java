@@ -357,6 +357,14 @@ private static final long serialVersionUID = 0L;
      * <code>LEAD_FORM_LOCATION_ANSWER_TYPE_DISALLOWED = 37;</code>
      */
     LEAD_FORM_LOCATION_ANSWER_TYPE_DISALLOWED(37),
+    /**
+     * <pre>
+     * Page Feed label text contains invalid characters.
+     * </pre>
+     *
+     * <code>PAGE_FEED_INVALID_LABEL_TEXT = 38;</code>
+     */
+    PAGE_FEED_INVALID_LABEL_TEXT(38),
     UNRECOGNIZED(-1),
     ;
 
@@ -666,6 +674,14 @@ private static final long serialVersionUID = 0L;
      * <code>LEAD_FORM_LOCATION_ANSWER_TYPE_DISALLOWED = 37;</code>
      */
     public static final int LEAD_FORM_LOCATION_ANSWER_TYPE_DISALLOWED_VALUE = 37;
+    /**
+     * <pre>
+     * Page Feed label text contains invalid characters.
+     * </pre>
+     *
+     * <code>PAGE_FEED_INVALID_LABEL_TEXT = 38;</code>
+     */
+    public static final int PAGE_FEED_INVALID_LABEL_TEXT_VALUE = 38;
 
 
     public final int getNumber() {
@@ -729,6 +745,7 @@ private static final long serialVersionUID = 0L;
         case 35: return CANNOT_MODIFY_ASSET_SOURCE;
         case 36: return CANNOT_MODIFY_AUTOMATICALLY_CREATED_ASSET;
         case 37: return LEAD_FORM_LOCATION_ANSWER_TYPE_DISALLOWED;
+        case 38: return PAGE_FEED_INVALID_LABEL_TEXT;
         default: return null;
       }
     }

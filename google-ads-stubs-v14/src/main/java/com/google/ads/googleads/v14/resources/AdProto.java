@@ -40,7 +40,7 @@ public final class AdProto {
       "leads/v14/enums/device.proto\032Agoogle/ads" +
       "/googleads/v14/enums/system_managed_enti" +
       "ty_source.proto\032\037google/api/field_behavi" +
-      "or.proto\032\031google/api/resource.proto\"\253\027\n\002" +
+      "or.proto\032\031google/api/resource.proto\"\225\030\n\002" +
       "Ad\022;\n\rresource_name\030% \001(\tB$\342A\001\005\372A\035\n\033goog" +
       "leads.googleapis.com/Ad\022\025\n\002id\030( \001(\003B\004\342A\001" +
       "\003H\001\210\001\001\022\022\n\nfinal_urls\030) \003(\t\022D\n\016final_app_" +
@@ -109,20 +109,22 @@ public final class AdProto {
       "ds.v14.common.DiscoveryMultiAssetAdInfoH" +
       "\000\022Y\n\025discovery_carousel_ad\0304 \001(\01328.googl" +
       "e.ads.googleads.v14.common.DiscoveryCaro" +
-      "uselAdInfoH\000\022B\n\ttravel_ad\0306 \001(\0132-.google" +
-      ".ads.googleads.v14.common.TravelAdInfoH\000" +
-      ":E\352AB\n\033googleads.googleapis.com/Ad\022#cust" +
-      "omers/{customer_id}/ads/{ad_id}B\t\n\007ad_da" +
-      "taB\005\n\003_idB\030\n\026_tracking_url_templateB\023\n\021_" +
-      "final_url_suffixB\016\n\014_display_urlB\026\n\024_add" +
-      "ed_by_google_adsB\007\n\005_nameB\371\001\n&com.google" +
-      ".ads.googleads.v14.resourcesB\007AdProtoP\001Z" +
-      "Kgoogle.golang.org/genproto/googleapis/a" +
-      "ds/googleads/v14/resources;resources\242\002\003G" +
-      "AA\252\002\"Google.Ads.GoogleAds.V14.Resources\312" +
-      "\002\"Google\\Ads\\GoogleAds\\V14\\Resources\352\002&G" +
-      "oogle::Ads::GoogleAds::V14::Resourcesb\006p" +
-      "roto3"
+      "uselAdInfoH\000\022h\n\035discovery_video_responsi" +
+      "ve_ad\030< \001(\0132?.google.ads.googleads.v14.c" +
+      "ommon.DiscoveryVideoResponsiveAdInfoH\000\022B" +
+      "\n\ttravel_ad\0306 \001(\0132-.google.ads.googleads" +
+      ".v14.common.TravelAdInfoH\000:E\352AB\n\033googlea" +
+      "ds.googleapis.com/Ad\022#customers/{custome" +
+      "r_id}/ads/{ad_id}B\t\n\007ad_dataB\005\n\003_idB\030\n\026_" +
+      "tracking_url_templateB\023\n\021_final_url_suff" +
+      "ixB\016\n\014_display_urlB\026\n\024_added_by_google_a" +
+      "dsB\007\n\005_nameB\371\001\n&com.google.ads.googleads" +
+      ".v14.resourcesB\007AdProtoP\001ZKgoogle.golang" +
+      ".org/genproto/googleapis/ads/googleads/v" +
+      "14/resources;resources\242\002\003GAA\252\002\"Google.Ad" +
+      "s.GoogleAds.V14.Resources\312\002\"Google\\Ads\\G" +
+      "oogleAds\\V14\\Resources\352\002&Google::Ads::Go" +
+      "ogleAds::V14::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -142,7 +144,7 @@ public final class AdProto {
     internal_static_google_ads_googleads_v14_resources_Ad_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v14_resources_Ad_descriptor,
-        new java.lang.String[] { "ResourceName", "Id", "FinalUrls", "FinalAppUrls", "FinalMobileUrls", "TrackingUrlTemplate", "FinalUrlSuffix", "UrlCustomParameters", "DisplayUrl", "Type", "AddedByGoogleAds", "DevicePreference", "UrlCollections", "Name", "SystemManagedResourceSource", "TextAd", "ExpandedTextAd", "CallAd", "ExpandedDynamicSearchAd", "HotelAd", "ShoppingSmartAd", "ShoppingProductAd", "ImageAd", "VideoAd", "VideoResponsiveAd", "ResponsiveSearchAd", "LegacyResponsiveDisplayAd", "AppAd", "LegacyAppInstallAd", "ResponsiveDisplayAd", "LocalAd", "DisplayUploadAd", "AppEngagementAd", "ShoppingComparisonListingAd", "SmartCampaignAd", "AppPreRegistrationAd", "DiscoveryMultiAssetAd", "DiscoveryCarouselAd", "TravelAd", "AdData", "Id", "TrackingUrlTemplate", "FinalUrlSuffix", "DisplayUrl", "AddedByGoogleAds", "Name", });
+        new java.lang.String[] { "ResourceName", "Id", "FinalUrls", "FinalAppUrls", "FinalMobileUrls", "TrackingUrlTemplate", "FinalUrlSuffix", "UrlCustomParameters", "DisplayUrl", "Type", "AddedByGoogleAds", "DevicePreference", "UrlCollections", "Name", "SystemManagedResourceSource", "TextAd", "ExpandedTextAd", "CallAd", "ExpandedDynamicSearchAd", "HotelAd", "ShoppingSmartAd", "ShoppingProductAd", "ImageAd", "VideoAd", "VideoResponsiveAd", "ResponsiveSearchAd", "LegacyResponsiveDisplayAd", "AppAd", "LegacyAppInstallAd", "ResponsiveDisplayAd", "LocalAd", "DisplayUploadAd", "AppEngagementAd", "ShoppingComparisonListingAd", "SmartCampaignAd", "AppPreRegistrationAd", "DiscoveryMultiAssetAd", "DiscoveryCarouselAd", "DiscoveryVideoResponsiveAd", "TravelAd", "AdData", "Id", "TrackingUrlTemplate", "FinalUrlSuffix", "DisplayUrl", "AddedByGoogleAds", "Name", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);

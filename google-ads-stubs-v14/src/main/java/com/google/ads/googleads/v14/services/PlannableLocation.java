@@ -173,7 +173,7 @@ private static final long serialVersionUID = 0L;
    * If present, will always be a GeoTargetConstant ID. Additional information
    * such as country name is provided by
    * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v14.services.ReachPlanService.ListPlannableLocations]
-   * or [GoogleAdsService.Search/SearchStream][].
+   * or GoogleAdsService.Search/SearchStream.
    * </pre>
    *
    * <code>optional int64 parent_country_id = 6;</code>
@@ -189,7 +189,7 @@ private static final long serialVersionUID = 0L;
    * If present, will always be a GeoTargetConstant ID. Additional information
    * such as country name is provided by
    * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v14.services.ReachPlanService.ListPlannableLocations]
-   * or [GoogleAdsService.Search/SearchStream][].
+   * or GoogleAdsService.Search/SearchStream.
    * </pre>
    *
    * <code>optional int64 parent_country_id = 6;</code>
@@ -265,7 +265,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The location's type. Location types correspond to target_type returned by
-   * searching location type in [GoogleAdsService.Search/SearchStream][].
+   * searching location type in GoogleAdsService.Search/SearchStream.
    * </pre>
    *
    * <code>optional string location_type = 8;</code>
@@ -278,7 +278,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The location's type. Location types correspond to target_type returned by
-   * searching location type in [GoogleAdsService.Search/SearchStream][].
+   * searching location type in GoogleAdsService.Search/SearchStream.
    * </pre>
    *
    * <code>optional string location_type = 8;</code>
@@ -300,7 +300,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The location's type. Location types correspond to target_type returned by
-   * searching location type in [GoogleAdsService.Search/SearchStream][].
+   * searching location type in GoogleAdsService.Search/SearchStream.
    * </pre>
    *
    * <code>optional string location_type = 8;</code>
@@ -992,7 +992,7 @@ private static final long serialVersionUID = 0L;
      * If present, will always be a GeoTargetConstant ID. Additional information
      * such as country name is provided by
      * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v14.services.ReachPlanService.ListPlannableLocations]
-     * or [GoogleAdsService.Search/SearchStream][].
+     * or GoogleAdsService.Search/SearchStream.
      * </pre>
      *
      * <code>optional int64 parent_country_id = 6;</code>
@@ -1008,7 +1008,7 @@ private static final long serialVersionUID = 0L;
      * If present, will always be a GeoTargetConstant ID. Additional information
      * such as country name is provided by
      * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v14.services.ReachPlanService.ListPlannableLocations]
-     * or [GoogleAdsService.Search/SearchStream][].
+     * or GoogleAdsService.Search/SearchStream.
      * </pre>
      *
      * <code>optional int64 parent_country_id = 6;</code>
@@ -1024,7 +1024,7 @@ private static final long serialVersionUID = 0L;
      * If present, will always be a GeoTargetConstant ID. Additional information
      * such as country name is provided by
      * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v14.services.ReachPlanService.ListPlannableLocations]
-     * or [GoogleAdsService.Search/SearchStream][].
+     * or GoogleAdsService.Search/SearchStream.
      * </pre>
      *
      * <code>optional int64 parent_country_id = 6;</code>
@@ -1044,7 +1044,7 @@ private static final long serialVersionUID = 0L;
      * If present, will always be a GeoTargetConstant ID. Additional information
      * such as country name is provided by
      * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v14.services.ReachPlanService.ListPlannableLocations]
-     * or [GoogleAdsService.Search/SearchStream][].
+     * or GoogleAdsService.Search/SearchStream.
      * </pre>
      *
      * <code>optional int64 parent_country_id = 6;</code>
@@ -1164,7 +1164,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The location's type. Location types correspond to target_type returned by
-     * searching location type in [GoogleAdsService.Search/SearchStream][].
+     * searching location type in GoogleAdsService.Search/SearchStream.
      * </pre>
      *
      * <code>optional string location_type = 8;</code>
@@ -1176,7 +1176,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The location's type. Location types correspond to target_type returned by
-     * searching location type in [GoogleAdsService.Search/SearchStream][].
+     * searching location type in GoogleAdsService.Search/SearchStream.
      * </pre>
      *
      * <code>optional string location_type = 8;</code>
@@ -1197,7 +1197,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The location's type. Location types correspond to target_type returned by
-     * searching location type in [GoogleAdsService.Search/SearchStream][].
+     * searching location type in GoogleAdsService.Search/SearchStream.
      * </pre>
      *
      * <code>optional string location_type = 8;</code>
@@ -1219,7 +1219,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The location's type. Location types correspond to target_type returned by
-     * searching location type in [GoogleAdsService.Search/SearchStream][].
+     * searching location type in GoogleAdsService.Search/SearchStream.
      * </pre>
      *
      * <code>optional string location_type = 8;</code>
@@ -1237,7 +1237,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The location's type. Location types correspond to target_type returned by
-     * searching location type in [GoogleAdsService.Search/SearchStream][].
+     * searching location type in GoogleAdsService.Search/SearchStream.
      * </pre>
      *
      * <code>optional string location_type = 8;</code>
@@ -1252,7 +1252,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The location's type. Location types correspond to target_type returned by
-     * searching location type in [GoogleAdsService.Search/SearchStream][].
+     * searching location type in GoogleAdsService.Search/SearchStream.
      * </pre>
      *
      * <code>optional string location_type = 8;</code>

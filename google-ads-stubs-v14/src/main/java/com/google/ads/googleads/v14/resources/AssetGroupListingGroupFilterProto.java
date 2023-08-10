@@ -20,6 +20,11 @@ public final class AssetGroupListingGroupFilterProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v14_resources_AssetGroupListingGroupFilter_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v14_resources_ListingGroupFilterDimensionPath_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v14_resources_ListingGroupFilterDimensionPath_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_google_ads_googleads_v14_resources_ListingGroupFilterDimension_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -85,7 +90,7 @@ public final class AssetGroupListingGroupFilterProto {
       "ype_enum.proto\032Bgoogle/ads/googleads/v14" +
       "/enums/listing_group_filter_vertical.pro" +
       "to\032\037google/api/field_behavior.proto\032\031goo" +
-      "gle/api/resource.proto\"\376\005\n\034AssetGroupLis" +
+      "gle/api/resource.proto\"\327\006\n\034AssetGroupLis" +
       "tingGroupFilter\022U\n\rresource_name\030\001 \001(\tB>" +
       "\342A\001\005\372A7\n5googleads.googleapis.com/AssetG" +
       "roupListingGroupFilter\022A\n\013asset_group\030\002 " +
@@ -100,62 +105,67 @@ public final class AssetGroupListingGroupFilterProto {
       "oogleads.v14.resources.ListingGroupFilte" +
       "rDimension\022c\n\033parent_listing_group_filte" +
       "r\030\007 \001(\tB>\342A\001\005\372A7\n5googleads.googleapis.c" +
-      "om/AssetGroupListingGroupFilter:\235\001\352A\231\001\n5" +
-      "googleads.googleapis.com/AssetGroupListi" +
-      "ngGroupFilter\022`customers/{customer_id}/a" +
-      "ssetGroupListingGroupFilters/{asset_grou" +
-      "p_id}~{listing_group_filter_id}\"\307\r\n\033List" +
-      "ingGroupFilterDimension\022z\n\030product_biddi" +
-      "ng_category\030\001 \001(\0132V.google.ads.googleads" +
-      ".v14.resources.ListingGroupFilterDimensi" +
-      "on.ProductBiddingCategoryH\000\022e\n\rproduct_b" +
-      "rand\030\002 \001(\0132L.google.ads.googleads.v14.re" +
+      "om/AssetGroupListingGroupFilter\022W\n\004path\030" +
+      "\010 \001(\0132C.google.ads.googleads.v14.resourc" +
+      "es.ListingGroupFilterDimensionPathB\004\342A\001\003" +
+      ":\235\001\352A\231\001\n5googleads.googleapis.com/AssetG" +
+      "roupListingGroupFilter\022`customers/{custo" +
+      "mer_id}/assetGroupListingGroupFilters/{a" +
+      "sset_group_id}~{listing_group_filter_id}" +
+      "\"|\n\037ListingGroupFilterDimensionPath\022Y\n\nd" +
+      "imensions\030\001 \003(\0132?.google.ads.googleads.v" +
+      "14.resources.ListingGroupFilterDimension" +
+      "B\004\342A\001\003\"\307\r\n\033ListingGroupFilterDimension\022z" +
+      "\n\030product_bidding_category\030\001 \001(\0132V.googl" +
+      "e.ads.googleads.v14.resources.ListingGro" +
+      "upFilterDimension.ProductBiddingCategory" +
+      "H\000\022e\n\rproduct_brand\030\002 \001(\0132L.google.ads.g" +
+      "oogleads.v14.resources.ListingGroupFilte" +
+      "rDimension.ProductBrandH\000\022i\n\017product_cha" +
+      "nnel\030\003 \001(\0132N.google.ads.googleads.v14.re" +
       "sources.ListingGroupFilterDimension.Prod" +
-      "uctBrandH\000\022i\n\017product_channel\030\003 \001(\0132N.go" +
-      "ogle.ads.googleads.v14.resources.Listing" +
-      "GroupFilterDimension.ProductChannelH\000\022m\n" +
-      "\021product_condition\030\004 \001(\0132P.google.ads.go" +
-      "ogleads.v14.resources.ListingGroupFilter" +
-      "Dimension.ProductConditionH\000\022z\n\030product_" +
-      "custom_attribute\030\005 \001(\0132V.google.ads.goog" +
-      "leads.v14.resources.ListingGroupFilterDi" +
-      "mension.ProductCustomAttributeH\000\022h\n\017prod" +
-      "uct_item_id\030\006 \001(\0132M.google.ads.googleads" +
-      ".v14.resources.ListingGroupFilterDimensi" +
-      "on.ProductItemIdH\000\022c\n\014product_type\030\007 \001(\013" +
-      "2K.google.ads.googleads.v14.resources.Li" +
-      "stingGroupFilterDimension.ProductTypeH\000\032" +
-      "\263\001\n\026ProductBiddingCategory\022\017\n\002id\030\001 \001(\003H\000" +
-      "\210\001\001\022\200\001\n\005level\030\002 \001(\0162q.google.ads.googlea" +
-      "ds.v14.enums.ListingGroupFilterBiddingCa" +
-      "tegoryLevelEnum.ListingGroupFilterBiddin" +
-      "gCategoryLevelB\005\n\003_id\032,\n\014ProductBrand\022\022\n" +
-      "\005value\030\001 \001(\tH\000\210\001\001B\010\n\006_value\032\210\001\n\016ProductC" +
-      "hannel\022v\n\007channel\030\001 \001(\0162e.google.ads.goo" +
-      "gleads.v14.enums.ListingGroupFilterProdu" +
-      "ctChannelEnum.ListingGroupFilterProductC" +
-      "hannel\032\220\001\n\020ProductCondition\022|\n\tcondition" +
-      "\030\001 \001(\0162i.google.ads.googleads.v14.enums." +
-      "ListingGroupFilterProductConditionEnum.L" +
-      "istingGroupFilterProductCondition\032\271\001\n\026Pr" +
-      "oductCustomAttribute\022\022\n\005value\030\001 \001(\tH\000\210\001\001" +
-      "\022\200\001\n\005index\030\002 \001(\0162q.google.ads.googleads." +
-      "v14.enums.ListingGroupFilterCustomAttrib" +
-      "uteIndexEnum.ListingGroupFilterCustomAtt" +
-      "ributeIndexB\010\n\006_value\032-\n\rProductItemId\022\022" +
-      "\n\005value\030\001 \001(\tH\000\210\001\001B\010\n\006_value\032\245\001\n\013Product" +
-      "Type\022\022\n\005value\030\001 \001(\tH\000\210\001\001\022x\n\005level\030\002 \001(\0162" +
-      "i.google.ads.googleads.v14.enums.Listing" +
-      "GroupFilterProductTypeLevelEnum.ListingG" +
-      "roupFilterProductTypeLevelB\010\n\006_valueB\013\n\t" +
-      "dimensionB\223\002\n&com.google.ads.googleads.v" +
-      "14.resourcesB!AssetGroupListingGroupFilt" +
-      "erProtoP\001ZKgoogle.golang.org/genproto/go" +
-      "ogleapis/ads/googleads/v14/resources;res" +
-      "ources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V14." +
-      "Resources\312\002\"Google\\Ads\\GoogleAds\\V14\\Res" +
-      "ources\352\002&Google::Ads::GoogleAds::V14::Re" +
-      "sourcesb\006proto3"
+      "uctChannelH\000\022m\n\021product_condition\030\004 \001(\0132" +
+      "P.google.ads.googleads.v14.resources.Lis" +
+      "tingGroupFilterDimension.ProductConditio" +
+      "nH\000\022z\n\030product_custom_attribute\030\005 \001(\0132V." +
+      "google.ads.googleads.v14.resources.Listi" +
+      "ngGroupFilterDimension.ProductCustomAttr" +
+      "ibuteH\000\022h\n\017product_item_id\030\006 \001(\0132M.googl" +
+      "e.ads.googleads.v14.resources.ListingGro" +
+      "upFilterDimension.ProductItemIdH\000\022c\n\014pro" +
+      "duct_type\030\007 \001(\0132K.google.ads.googleads.v" +
+      "14.resources.ListingGroupFilterDimension" +
+      ".ProductTypeH\000\032\263\001\n\026ProductBiddingCategor" +
+      "y\022\017\n\002id\030\001 \001(\003H\000\210\001\001\022\200\001\n\005level\030\002 \001(\0162q.goo" +
+      "gle.ads.googleads.v14.enums.ListingGroup" +
+      "FilterBiddingCategoryLevelEnum.ListingGr" +
+      "oupFilterBiddingCategoryLevelB\005\n\003_id\032,\n\014" +
+      "ProductBrand\022\022\n\005value\030\001 \001(\tH\000\210\001\001B\010\n\006_val" +
+      "ue\032\210\001\n\016ProductChannel\022v\n\007channel\030\001 \001(\0162e" +
+      ".google.ads.googleads.v14.enums.ListingG" +
+      "roupFilterProductChannelEnum.ListingGrou" +
+      "pFilterProductChannel\032\220\001\n\020ProductConditi" +
+      "on\022|\n\tcondition\030\001 \001(\0162i.google.ads.googl" +
+      "eads.v14.enums.ListingGroupFilterProduct" +
+      "ConditionEnum.ListingGroupFilterProductC" +
+      "ondition\032\271\001\n\026ProductCustomAttribute\022\022\n\005v" +
+      "alue\030\001 \001(\tH\000\210\001\001\022\200\001\n\005index\030\002 \001(\0162q.google" +
+      ".ads.googleads.v14.enums.ListingGroupFil" +
+      "terCustomAttributeIndexEnum.ListingGroup" +
+      "FilterCustomAttributeIndexB\010\n\006_value\032-\n\r" +
+      "ProductItemId\022\022\n\005value\030\001 \001(\tH\000\210\001\001B\010\n\006_va" +
+      "lue\032\245\001\n\013ProductType\022\022\n\005value\030\001 \001(\tH\000\210\001\001\022" +
+      "x\n\005level\030\002 \001(\0162i.google.ads.googleads.v1" +
+      "4.enums.ListingGroupFilterProductTypeLev" +
+      "elEnum.ListingGroupFilterProductTypeLeve" +
+      "lB\010\n\006_valueB\013\n\tdimensionB\223\002\n&com.google." +
+      "ads.googleads.v14.resourcesB!AssetGroupL" +
+      "istingGroupFilterProtoP\001ZKgoogle.golang." +
+      "org/genproto/googleapis/ads/googleads/v1" +
+      "4/resources;resources\242\002\003GAA\252\002\"Google.Ads" +
+      ".GoogleAds.V14.Resources\312\002\"Google\\Ads\\Go" +
+      "ogleAds\\V14\\Resources\352\002&Google::Ads::Goo" +
+      "gleAds::V14::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -175,9 +185,15 @@ public final class AssetGroupListingGroupFilterProto {
     internal_static_google_ads_googleads_v14_resources_AssetGroupListingGroupFilter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v14_resources_AssetGroupListingGroupFilter_descriptor,
-        new java.lang.String[] { "ResourceName", "AssetGroup", "Id", "Type", "Vertical", "CaseValue", "ParentListingGroupFilter", });
-    internal_static_google_ads_googleads_v14_resources_ListingGroupFilterDimension_descriptor =
+        new java.lang.String[] { "ResourceName", "AssetGroup", "Id", "Type", "Vertical", "CaseValue", "ParentListingGroupFilter", "Path", });
+    internal_static_google_ads_googleads_v14_resources_ListingGroupFilterDimensionPath_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_google_ads_googleads_v14_resources_ListingGroupFilterDimensionPath_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v14_resources_ListingGroupFilterDimensionPath_descriptor,
+        new java.lang.String[] { "Dimensions", });
+    internal_static_google_ads_googleads_v14_resources_ListingGroupFilterDimension_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_google_ads_googleads_v14_resources_ListingGroupFilterDimension_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v14_resources_ListingGroupFilterDimension_descriptor,

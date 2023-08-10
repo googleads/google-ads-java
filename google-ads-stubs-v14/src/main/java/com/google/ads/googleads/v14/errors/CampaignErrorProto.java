@@ -30,7 +30,7 @@ public final class CampaignErrorProto {
     java.lang.String[] descriptorData = {
       "\n4google/ads/googleads/v14/errors/campai" +
       "gn_error.proto\022\037google.ads.googleads.v14" +
-      ".errors\"\321\027\n\021CampaignErrorEnum\"\273\027\n\rCampai" +
+      ".errors\"\244\030\n\021CampaignErrorEnum\"\216\030\n\rCampai" +
       "gnError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022!\n" +
       "\035CANNOT_TARGET_CONTENT_NETWORK\020\003\022 \n\034CANN" +
       "OT_TARGET_SEARCH_NETWORK\020\004\0226\n2CANNOT_TAR" +
@@ -105,14 +105,16 @@ public final class CampaignErrorProto {
       "_TRACKING_NOT_ENABLED\020O\022-\n)NOT_COMPATIBL" +
       "E_WITH_BIDDING_STRATEGY_TYPE\020P\0226\n2NOT_CO" +
       "MPATIBLE_WITH_GOOGLE_ATTRIBUTION_CONVERS" +
-      "IONS\020Q\022\033\n\027CONVERSION_LAG_TOO_HIGH\020RB\362\001\n#" +
-      "com.google.ads.googleads.v14.errorsB\022Cam" +
-      "paignErrorProtoP\001ZEgoogle.golang.org/gen" +
-      "proto/googleapis/ads/googleads/v14/error" +
-      "s;errors\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V1" +
-      "4.Errors\312\002\037Google\\Ads\\GoogleAds\\V14\\Erro" +
-      "rs\352\002#Google::Ads::GoogleAds::V14::Errors" +
-      "b\006proto3"
+      "IONS\020Q\022\033\n\027CONVERSION_LAG_TOO_HIGH\020R\022\"\n\036N" +
+      "OT_LINKED_ADVERTISING_PARTNER\020S\022-\n)INVAL" +
+      "ID_NUMBER_OF_ADVERTISING_PARTNER_IDS\020TB\362" +
+      "\001\n#com.google.ads.googleads.v14.errorsB\022" +
+      "CampaignErrorProtoP\001ZEgoogle.golang.org/" +
+      "genproto/googleapis/ads/googleads/v14/er" +
+      "rors;errors\242\002\003GAA\252\002\037Google.Ads.GoogleAds" +
+      ".V14.Errors\312\002\037Google\\Ads\\GoogleAds\\V14\\E" +
+      "rrors\352\002#Google::Ads::GoogleAds::V14::Err" +
+      "orsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -6,7 +6,6 @@ package com.google.ads.googleads.v14.resources;
 /**
  * <pre>
  * Alert for offline conversion client summary.
- * Next tag: 3
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v14.resources.OfflineConversionUploadAlert}
@@ -274,7 +273,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Alert for offline conversion client summary.
-   * Next tag: 3
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v14.resources.OfflineConversionUploadAlert}

@@ -1,3 +1,12 @@
+26.1.0 - 2023-08-10
+-------------------
+- Add support and examples for Google Ads API v14.1.
+- Modify the following examples in the `planning` package to demonstrate how
+  to use planning services without first creating a keyword plan:
+  - Remove `AddKeywordPlan`.
+  - Add `GenerateForecastMetrics`.
+  - Add `GenerateHistoricalMetrics`.
+
 26.0.0 - 2023-06-09
 -------------------
 - Add support and examples for Google Ads API v14.

@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,8 +27,8 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
+import com.google.api.gax.rpc.RequestParamsBuilder;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.common.collect.ImmutableMap;
 import com.google.longrunning.stub.GrpcOperationsStub;
 import io.grpc.MethodDescriptor;
 import io.grpc.protobuf.ProtoUtils;
@@ -153,9 +153,9 @@ public class GrpcSmartCampaignSuggestServiceStub extends SmartCampaignSuggestSer
                 .setMethodDescriptor(suggestSmartCampaignBudgetOptionsMethodDescriptor)
                 .setParamsExtractor(
                     request -> {
-                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                      params.put("customer_id", String.valueOf(request.getCustomerId()));
-                      return params.build();
+                      RequestParamsBuilder builder = RequestParamsBuilder.create();
+                      builder.add("customer_id", String.valueOf(request.getCustomerId()));
+                      return builder.build();
                     })
                 .build();
     GrpcCallSettings<SuggestSmartCampaignAdRequest, SuggestSmartCampaignAdResponse>
@@ -165,9 +165,9 @@ public class GrpcSmartCampaignSuggestServiceStub extends SmartCampaignSuggestSer
                 .setMethodDescriptor(suggestSmartCampaignAdMethodDescriptor)
                 .setParamsExtractor(
                     request -> {
-                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                      params.put("customer_id", String.valueOf(request.getCustomerId()));
-                      return params.build();
+                      RequestParamsBuilder builder = RequestParamsBuilder.create();
+                      builder.add("customer_id", String.valueOf(request.getCustomerId()));
+                      return builder.build();
                     })
                 .build();
     GrpcCallSettings<SuggestKeywordThemesRequest, SuggestKeywordThemesResponse>
@@ -176,9 +176,9 @@ public class GrpcSmartCampaignSuggestServiceStub extends SmartCampaignSuggestSer
                 .setMethodDescriptor(suggestKeywordThemesMethodDescriptor)
                 .setParamsExtractor(
                     request -> {
-                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                      params.put("customer_id", String.valueOf(request.getCustomerId()));
-                      return params.build();
+                      RequestParamsBuilder builder = RequestParamsBuilder.create();
+                      builder.add("customer_id", String.valueOf(request.getCustomerId()));
+                      return builder.build();
                     })
                 .build();
 

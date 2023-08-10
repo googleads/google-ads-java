@@ -55,7 +55,7 @@ private static final long serialVersionUID = 0L;
    * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v14.services.ReachPlanService.ListPlannableProducts].
    * </pre>
    *
-   * <code>optional string plannable_product_code = 3;</code>
+   * <code>optional string plannable_product_code = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return Whether the plannableProductCode field is set.
    */
   @java.lang.Override
@@ -70,7 +70,7 @@ private static final long serialVersionUID = 0L;
    * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v14.services.ReachPlanService.ListPlannableProducts].
    * </pre>
    *
-   * <code>optional string plannable_product_code = 3;</code>
+   * <code>optional string plannable_product_code = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The plannableProductCode.
    */
   @java.lang.Override
@@ -94,7 +94,7 @@ private static final long serialVersionUID = 0L;
    * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v14.services.ReachPlanService.ListPlannableProducts].
    * </pre>
    *
-   * <code>optional string plannable_product_code = 3;</code>
+   * <code>optional string plannable_product_code = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for plannableProductCode.
    */
   @java.lang.Override
@@ -121,7 +121,7 @@ private static final long serialVersionUID = 0L;
    * For example: 1 000 000$ = 1 000 000 000 000 micros.
    * </pre>
    *
-   * <code>optional int64 budget_micros = 4;</code>
+   * <code>optional int64 budget_micros = 4 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return Whether the budgetMicros field is set.
    */
   @java.lang.Override
@@ -135,7 +135,7 @@ private static final long serialVersionUID = 0L;
    * For example: 1 000 000$ = 1 000 000 000 000 micros.
    * </pre>
    *
-   * <code>optional int64 budget_micros = 4;</code>
+   * <code>optional int64 budget_micros = 4 [(.google.api.field_behavior) = REQUIRED];</code>
    * @return The budgetMicros.
    */
   @java.lang.Override
@@ -600,7 +600,7 @@ private static final long serialVersionUID = 0L;
      * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v14.services.ReachPlanService.ListPlannableProducts].
      * </pre>
      *
-     * <code>optional string plannable_product_code = 3;</code>
+     * <code>optional string plannable_product_code = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return Whether the plannableProductCode field is set.
      */
     public boolean hasPlannableProductCode() {
@@ -614,7 +614,7 @@ private static final long serialVersionUID = 0L;
      * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v14.services.ReachPlanService.ListPlannableProducts].
      * </pre>
      *
-     * <code>optional string plannable_product_code = 3;</code>
+     * <code>optional string plannable_product_code = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return The plannableProductCode.
      */
     public java.lang.String getPlannableProductCode() {
@@ -637,7 +637,7 @@ private static final long serialVersionUID = 0L;
      * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v14.services.ReachPlanService.ListPlannableProducts].
      * </pre>
      *
-     * <code>optional string plannable_product_code = 3;</code>
+     * <code>optional string plannable_product_code = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return The bytes for plannableProductCode.
      */
     public com.google.protobuf.ByteString
@@ -661,7 +661,7 @@ private static final long serialVersionUID = 0L;
      * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v14.services.ReachPlanService.ListPlannableProducts].
      * </pre>
      *
-     * <code>optional string plannable_product_code = 3;</code>
+     * <code>optional string plannable_product_code = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param value The plannableProductCode to set.
      * @return This builder for chaining.
      */
@@ -681,7 +681,7 @@ private static final long serialVersionUID = 0L;
      * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v14.services.ReachPlanService.ListPlannableProducts].
      * </pre>
      *
-     * <code>optional string plannable_product_code = 3;</code>
+     * <code>optional string plannable_product_code = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return This builder for chaining.
      */
     public Builder clearPlannableProductCode() {
@@ -698,7 +698,7 @@ private static final long serialVersionUID = 0L;
      * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v14.services.ReachPlanService.ListPlannableProducts].
      * </pre>
      *
-     * <code>optional string plannable_product_code = 3;</code>
+     * <code>optional string plannable_product_code = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param value The bytes for plannableProductCode to set.
      * @return This builder for chaining.
      */
@@ -720,7 +720,7 @@ private static final long serialVersionUID = 0L;
      * For example: 1 000 000$ = 1 000 000 000 000 micros.
      * </pre>
      *
-     * <code>optional int64 budget_micros = 4;</code>
+     * <code>optional int64 budget_micros = 4 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return Whether the budgetMicros field is set.
      */
     @java.lang.Override
@@ -734,7 +734,7 @@ private static final long serialVersionUID = 0L;
      * For example: 1 000 000$ = 1 000 000 000 000 micros.
      * </pre>
      *
-     * <code>optional int64 budget_micros = 4;</code>
+     * <code>optional int64 budget_micros = 4 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return The budgetMicros.
      */
     @java.lang.Override
@@ -748,7 +748,7 @@ private static final long serialVersionUID = 0L;
      * For example: 1 000 000$ = 1 000 000 000 000 micros.
      * </pre>
      *
-     * <code>optional int64 budget_micros = 4;</code>
+     * <code>optional int64 budget_micros = 4 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param value The budgetMicros to set.
      * @return This builder for chaining.
      */
@@ -766,7 +766,7 @@ private static final long serialVersionUID = 0L;
      * For example: 1 000 000$ = 1 000 000 000 000 micros.
      * </pre>
      *
-     * <code>optional int64 budget_micros = 4;</code>
+     * <code>optional int64 budget_micros = 4 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return This builder for chaining.
      */
     public Builder clearBudgetMicros() {

@@ -6,7 +6,7 @@ package com.google.ads.googleads.v14.services;
 /**
  * <pre>
  * Request message for
- * [ConversionGoalCampaignConfigService.MutateConversionGoalCampaignConfig][].
+ * [ConversionGoalCampaignConfigService.MutateConversionGoalCampaignConfigs][google.ads.googleads.v14.services.ConversionGoalCampaignConfigService.MutateConversionGoalCampaignConfigs].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v14.services.MutateConversionGoalCampaignConfigsRequest}
@@ -399,7 +399,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Request message for
-   * [ConversionGoalCampaignConfigService.MutateConversionGoalCampaignConfig][].
+   * [ConversionGoalCampaignConfigService.MutateConversionGoalCampaignConfigs][google.ads.googleads.v14.services.ConversionGoalCampaignConfigService.MutateConversionGoalCampaignConfigs].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v14.services.MutateConversionGoalCampaignConfigsRequest}

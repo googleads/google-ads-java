@@ -30,7 +30,7 @@ public final class RecommendationTypeProto {
     java.lang.String[] descriptorData = {
       "\n8google/ads/googleads/v14/enums/recomme" +
       "ndation_type.proto\022\036google.ads.googleads" +
-      ".v14.enums\"\306\n\n\026RecommendationTypeEnum\"\253\n" +
+      ".v14.enums\"\307\013\n\026RecommendationTypeEnum\"\254\013" +
       "\n\022RecommendationType\022\017\n\013UNSPECIFIED\020\000\022\013\n" +
       "\007UNKNOWN\020\001\022\023\n\017CAMPAIGN_BUDGET\020\002\022\013\n\007KEYWO" +
       "RD\020\003\022\013\n\007TEXT_AD\020\004\022\025\n\021TARGET_CPA_OPT_IN\020\005" +
@@ -64,13 +64,16 @@ public final class RecommendationTypeProto {
       "PPING_CAMPAIGN_OFFERS_TO_PERFORMANCE_MAX" +
       "\020*\022\"\n\036DYNAMIC_IMAGE_EXTENSION_OPT_IN\020+\022\024" +
       "\n\020RAISE_TARGET_CPA\020,\022\025\n\021LOWER_TARGET_ROA" +
-      "S\020-B\361\001\n\"com.google.ads.googleads.v14.enu" +
-      "msB\027RecommendationTypeProtoP\001ZCgoogle.go" +
-      "lang.org/genproto/googleapis/ads/googlea" +
-      "ds/v14/enums;enums\242\002\003GAA\252\002\036Google.Ads.Go" +
-      "ogleAds.V14.Enums\312\002\036Google\\Ads\\GoogleAds" +
-      "\\V14\\Enums\352\002\"Google::Ads::GoogleAds::V14" +
-      "::Enumsb\006proto3"
+      "S\020-\022\032\n\026PERFORMANCE_MAX_OPT_IN\020.\022\'\n#IMPRO" +
+      "VE_PERFORMANCE_MAX_AD_STRENGTH\020/\022:\n6MIGR" +
+      "ATE_DYNAMIC_SEARCH_ADS_CAMPAIGN_TO_PERFO" +
+      "RMANCE_MAX\0200B\361\001\n\"com.google.ads.googlead" +
+      "s.v14.enumsB\027RecommendationTypeProtoP\001ZC" +
+      "google.golang.org/genproto/googleapis/ad" +
+      "s/googleads/v14/enums;enums\242\002\003GAA\252\002\036Goog" +
+      "le.Ads.GoogleAds.V14.Enums\312\002\036Google\\Ads\\" +
+      "GoogleAds\\V14\\Enums\352\002\"Google::Ads::Googl" +
+      "eAds::V14::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

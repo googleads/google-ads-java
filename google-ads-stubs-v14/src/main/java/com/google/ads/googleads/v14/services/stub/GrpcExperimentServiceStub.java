@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 Google LLC
+ * Copyright 2023 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -34,8 +34,8 @@ import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
 import com.google.api.gax.rpc.OperationCallable;
+import com.google.api.gax.rpc.RequestParamsBuilder;
 import com.google.api.gax.rpc.UnaryCallable;
-import com.google.common.collect.ImmutableMap;
 import com.google.longrunning.Operation;
 import com.google.longrunning.stub.GrpcOperationsStub;
 import com.google.protobuf.Empty;
@@ -187,9 +187,9 @@ public class GrpcExperimentServiceStub extends ExperimentServiceStub {
                 .setMethodDescriptor(mutateExperimentsMethodDescriptor)
                 .setParamsExtractor(
                     request -> {
-                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                      params.put("customer_id", String.valueOf(request.getCustomerId()));
-                      return params.build();
+                      RequestParamsBuilder builder = RequestParamsBuilder.create();
+                      builder.add("customer_id", String.valueOf(request.getCustomerId()));
+                      return builder.build();
                     })
                 .build();
     GrpcCallSettings<EndExperimentRequest, Empty> endExperimentTransportSettings =
@@ -197,9 +197,9 @@ public class GrpcExperimentServiceStub extends ExperimentServiceStub {
             .setMethodDescriptor(endExperimentMethodDescriptor)
             .setParamsExtractor(
                 request -> {
-                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                  params.put("experiment", String.valueOf(request.getExperiment()));
-                  return params.build();
+                  RequestParamsBuilder builder = RequestParamsBuilder.create();
+                  builder.add("experiment", String.valueOf(request.getExperiment()));
+                  return builder.build();
                 })
             .build();
     GrpcCallSettings<ListExperimentAsyncErrorsRequest, ListExperimentAsyncErrorsResponse>
@@ -209,9 +209,9 @@ public class GrpcExperimentServiceStub extends ExperimentServiceStub {
                 .setMethodDescriptor(listExperimentAsyncErrorsMethodDescriptor)
                 .setParamsExtractor(
                     request -> {
-                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                      params.put("resource_name", String.valueOf(request.getResourceName()));
-                      return params.build();
+                      RequestParamsBuilder builder = RequestParamsBuilder.create();
+                      builder.add("resource_name", String.valueOf(request.getResourceName()));
+                      return builder.build();
                     })
                 .build();
     GrpcCallSettings<GraduateExperimentRequest, Empty> graduateExperimentTransportSettings =
@@ -219,9 +219,9 @@ public class GrpcExperimentServiceStub extends ExperimentServiceStub {
             .setMethodDescriptor(graduateExperimentMethodDescriptor)
             .setParamsExtractor(
                 request -> {
-                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                  params.put("experiment", String.valueOf(request.getExperiment()));
-                  return params.build();
+                  RequestParamsBuilder builder = RequestParamsBuilder.create();
+                  builder.add("experiment", String.valueOf(request.getExperiment()));
+                  return builder.build();
                 })
             .build();
     GrpcCallSettings<ScheduleExperimentRequest, Operation> scheduleExperimentTransportSettings =
@@ -229,9 +229,9 @@ public class GrpcExperimentServiceStub extends ExperimentServiceStub {
             .setMethodDescriptor(scheduleExperimentMethodDescriptor)
             .setParamsExtractor(
                 request -> {
-                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                  params.put("resource_name", String.valueOf(request.getResourceName()));
-                  return params.build();
+                  RequestParamsBuilder builder = RequestParamsBuilder.create();
+                  builder.add("resource_name", String.valueOf(request.getResourceName()));
+                  return builder.build();
                 })
             .build();
     GrpcCallSettings<PromoteExperimentRequest, Operation> promoteExperimentTransportSettings =
@@ -239,9 +239,9 @@ public class GrpcExperimentServiceStub extends ExperimentServiceStub {
             .setMethodDescriptor(promoteExperimentMethodDescriptor)
             .setParamsExtractor(
                 request -> {
-                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                  params.put("resource_name", String.valueOf(request.getResourceName()));
-                  return params.build();
+                  RequestParamsBuilder builder = RequestParamsBuilder.create();
+                  builder.add("resource_name", String.valueOf(request.getResourceName()));
+                  return builder.build();
                 })
             .build();
 

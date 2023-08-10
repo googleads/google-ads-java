@@ -1098,6 +1098,44 @@ private static final long serialVersionUID = 0L;
     return offlineConversionClientSummaries_.get(index);
   }
 
+  public static final int CUSTOMER_AGREEMENT_SETTING_FIELD_NUMBER = 44;
+  private com.google.ads.googleads.v14.resources.CustomerAgreementSetting customerAgreementSetting_;
+  /**
+   * <pre>
+   * Output only. Customer Agreement Setting for a customer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.resources.CustomerAgreementSetting customer_agreement_setting = 44 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the customerAgreementSetting field is set.
+   */
+  @java.lang.Override
+  public boolean hasCustomerAgreementSetting() {
+    return customerAgreementSetting_ != null;
+  }
+  /**
+   * <pre>
+   * Output only. Customer Agreement Setting for a customer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.resources.CustomerAgreementSetting customer_agreement_setting = 44 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The customerAgreementSetting.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v14.resources.CustomerAgreementSetting getCustomerAgreementSetting() {
+    return customerAgreementSetting_ == null ? com.google.ads.googleads.v14.resources.CustomerAgreementSetting.getDefaultInstance() : customerAgreementSetting_;
+  }
+  /**
+   * <pre>
+   * Output only. Customer Agreement Setting for a customer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.resources.CustomerAgreementSetting customer_agreement_setting = 44 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v14.resources.CustomerAgreementSettingOrBuilder getCustomerAgreementSettingOrBuilder() {
+    return customerAgreementSetting_ == null ? com.google.ads.googleads.v14.resources.CustomerAgreementSetting.getDefaultInstance() : customerAgreementSetting_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1185,6 +1223,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < offlineConversionClientSummaries_.size(); i++) {
       output.writeMessage(43, offlineConversionClientSummaries_.get(i));
+    }
+    if (customerAgreementSetting_ != null) {
+      output.writeMessage(44, getCustomerAgreementSetting());
     }
     getUnknownFields().writeTo(output);
   }
@@ -1286,6 +1327,10 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < offlineConversionClientSummaries_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(43, offlineConversionClientSummaries_.get(i));
+    }
+    if (customerAgreementSetting_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(44, getCustomerAgreementSetting());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1402,6 +1447,11 @@ private static final long serialVersionUID = 0L;
     }
     if (!getOfflineConversionClientSummariesList()
         .equals(other.getOfflineConversionClientSummariesList())) return false;
+    if (hasCustomerAgreementSetting() != other.hasCustomerAgreementSetting()) return false;
+    if (hasCustomerAgreementSetting()) {
+      if (!getCustomerAgreementSetting()
+          .equals(other.getCustomerAgreementSetting())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1507,6 +1557,10 @@ private static final long serialVersionUID = 0L;
     if (getOfflineConversionClientSummariesCount() > 0) {
       hash = (37 * hash) + OFFLINE_CONVERSION_CLIENT_SUMMARIES_FIELD_NUMBER;
       hash = (53 * hash) + getOfflineConversionClientSummariesList().hashCode();
+    }
+    if (hasCustomerAgreementSetting()) {
+      hash = (37 * hash) + CUSTOMER_AGREEMENT_SETTING_FIELD_NUMBER;
+      hash = (53 * hash) + getCustomerAgreementSetting().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1685,6 +1739,11 @@ private static final long serialVersionUID = 0L;
         offlineConversionClientSummariesBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00400000);
+      customerAgreementSetting_ = null;
+      if (customerAgreementSettingBuilder_ != null) {
+        customerAgreementSettingBuilder_.dispose();
+        customerAgreementSettingBuilder_ = null;
+      }
       return this;
     }
 
@@ -1820,6 +1879,11 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00200000) != 0)) {
         result.imageAssetAutoMigrationDoneDateTime_ = imageAssetAutoMigrationDoneDateTime_;
         to_bitField0_ |= 0x00004000;
+      }
+      if (((from_bitField0_ & 0x00800000) != 0)) {
+        result.customerAgreementSetting_ = customerAgreementSettingBuilder_ == null
+            ? customerAgreementSetting_
+            : customerAgreementSettingBuilder_.build();
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -1982,6 +2046,9 @@ private static final long serialVersionUID = 0L;
             offlineConversionClientSummariesBuilder_.addAllMessages(other.offlineConversionClientSummaries_);
           }
         }
+      }
+      if (other.hasCustomerAgreementSetting()) {
+        mergeCustomerAgreementSetting(other.getCustomerAgreementSetting());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -2150,6 +2217,13 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 346
+            case 354: {
+              input.readMessage(
+                  getCustomerAgreementSettingFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00800000;
+              break;
+            } // case 354
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -4675,6 +4749,161 @@ private static final long serialVersionUID = 0L;
         offlineConversionClientSummaries_ = null;
       }
       return offlineConversionClientSummariesBuilder_;
+    }
+
+    private com.google.ads.googleads.v14.resources.CustomerAgreementSetting customerAgreementSetting_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v14.resources.CustomerAgreementSetting, com.google.ads.googleads.v14.resources.CustomerAgreementSetting.Builder, com.google.ads.googleads.v14.resources.CustomerAgreementSettingOrBuilder> customerAgreementSettingBuilder_;
+    /**
+     * <pre>
+     * Output only. Customer Agreement Setting for a customer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.resources.CustomerAgreementSetting customer_agreement_setting = 44 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the customerAgreementSetting field is set.
+     */
+    public boolean hasCustomerAgreementSetting() {
+      return ((bitField0_ & 0x00800000) != 0);
+    }
+    /**
+     * <pre>
+     * Output only. Customer Agreement Setting for a customer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.resources.CustomerAgreementSetting customer_agreement_setting = 44 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The customerAgreementSetting.
+     */
+    public com.google.ads.googleads.v14.resources.CustomerAgreementSetting getCustomerAgreementSetting() {
+      if (customerAgreementSettingBuilder_ == null) {
+        return customerAgreementSetting_ == null ? com.google.ads.googleads.v14.resources.CustomerAgreementSetting.getDefaultInstance() : customerAgreementSetting_;
+      } else {
+        return customerAgreementSettingBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. Customer Agreement Setting for a customer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.resources.CustomerAgreementSetting customer_agreement_setting = 44 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setCustomerAgreementSetting(com.google.ads.googleads.v14.resources.CustomerAgreementSetting value) {
+      if (customerAgreementSettingBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        customerAgreementSetting_ = value;
+      } else {
+        customerAgreementSettingBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00800000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Customer Agreement Setting for a customer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.resources.CustomerAgreementSetting customer_agreement_setting = 44 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setCustomerAgreementSetting(
+        com.google.ads.googleads.v14.resources.CustomerAgreementSetting.Builder builderForValue) {
+      if (customerAgreementSettingBuilder_ == null) {
+        customerAgreementSetting_ = builderForValue.build();
+      } else {
+        customerAgreementSettingBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00800000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Customer Agreement Setting for a customer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.resources.CustomerAgreementSetting customer_agreement_setting = 44 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder mergeCustomerAgreementSetting(com.google.ads.googleads.v14.resources.CustomerAgreementSetting value) {
+      if (customerAgreementSettingBuilder_ == null) {
+        if (((bitField0_ & 0x00800000) != 0) &&
+          customerAgreementSetting_ != null &&
+          customerAgreementSetting_ != com.google.ads.googleads.v14.resources.CustomerAgreementSetting.getDefaultInstance()) {
+          getCustomerAgreementSettingBuilder().mergeFrom(value);
+        } else {
+          customerAgreementSetting_ = value;
+        }
+      } else {
+        customerAgreementSettingBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00800000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Customer Agreement Setting for a customer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.resources.CustomerAgreementSetting customer_agreement_setting = 44 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder clearCustomerAgreementSetting() {
+      bitField0_ = (bitField0_ & ~0x00800000);
+      customerAgreementSetting_ = null;
+      if (customerAgreementSettingBuilder_ != null) {
+        customerAgreementSettingBuilder_.dispose();
+        customerAgreementSettingBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Customer Agreement Setting for a customer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.resources.CustomerAgreementSetting customer_agreement_setting = 44 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.ads.googleads.v14.resources.CustomerAgreementSetting.Builder getCustomerAgreementSettingBuilder() {
+      bitField0_ |= 0x00800000;
+      onChanged();
+      return getCustomerAgreementSettingFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Output only. Customer Agreement Setting for a customer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.resources.CustomerAgreementSetting customer_agreement_setting = 44 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.ads.googleads.v14.resources.CustomerAgreementSettingOrBuilder getCustomerAgreementSettingOrBuilder() {
+      if (customerAgreementSettingBuilder_ != null) {
+        return customerAgreementSettingBuilder_.getMessageOrBuilder();
+      } else {
+        return customerAgreementSetting_ == null ?
+            com.google.ads.googleads.v14.resources.CustomerAgreementSetting.getDefaultInstance() : customerAgreementSetting_;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. Customer Agreement Setting for a customer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.resources.CustomerAgreementSetting customer_agreement_setting = 44 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v14.resources.CustomerAgreementSetting, com.google.ads.googleads.v14.resources.CustomerAgreementSetting.Builder, com.google.ads.googleads.v14.resources.CustomerAgreementSettingOrBuilder> 
+        getCustomerAgreementSettingFieldBuilder() {
+      if (customerAgreementSettingBuilder_ == null) {
+        customerAgreementSettingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v14.resources.CustomerAgreementSetting, com.google.ads.googleads.v14.resources.CustomerAgreementSetting.Builder, com.google.ads.googleads.v14.resources.CustomerAgreementSettingOrBuilder>(
+                getCustomerAgreementSetting(),
+                getParentForChildren(),
+                isClean());
+        customerAgreementSetting_ = null;
+      }
+      return customerAgreementSettingBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

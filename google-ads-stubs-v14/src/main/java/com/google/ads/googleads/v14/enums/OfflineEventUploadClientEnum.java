@@ -44,7 +44,7 @@ private static final long serialVersionUID = 0L;
 
   /**
    * <pre>
-   * Next id: 5
+   * Type of client.
    * </pre>
    *
    * Protobuf enum {@code google.ads.googleads.v14.enums.OfflineEventUploadClientEnum.OfflineEventUploadClient}

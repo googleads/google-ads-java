@@ -30,8 +30,8 @@ public final class CampaignPrimaryStatusReasonProto {
     java.lang.String[] descriptorData = {
       "\nCgoogle/ads/googleads/v14/enums/campaig" +
       "n_primary_status_reason.proto\022\036google.ad" +
-      "s.googleads.v14.enums\"\326\007\n\037CampaignPrimar" +
-      "yStatusReasonEnum\"\262\007\n\033CampaignPrimarySta" +
+      "s.googleads.v14.enums\"\304\010\n\037CampaignPrimar" +
+      "yStatusReasonEnum\"\240\010\n\033CampaignPrimarySta" +
       "tusReason\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022" +
       "\024\n\020CAMPAIGN_REMOVED\020\002\022\023\n\017CAMPAIGN_PAUSED" +
       "\020\003\022\024\n\020CAMPAIGN_PENDING\020\004\022\022\n\016CAMPAIGN_END" +
@@ -55,13 +55,16 @@ public final class CampaignPrimaryStatusReasonProto {
       "RIA\020\035\022\031\n\025CAMPAIGN_GROUP_PAUSED\020\036\022*\n&CAMP" +
       "AIGN_GROUP_ALL_GROUP_BUDGETS_ENDED\020\037\022\024\n\020" +
       "APP_NOT_RELEASED\020 \022\032\n\026APP_PARTIALLY_RELE" +
-      "ASED\020!B\372\001\n\"com.google.ads.googleads.v14." +
-      "enumsB CampaignPrimaryStatusReasonProtoP" +
-      "\001ZCgoogle.golang.org/genproto/googleapis" +
-      "/ads/googleads/v14/enums;enums\242\002\003GAA\252\002\036G" +
-      "oogle.Ads.GoogleAds.V14.Enums\312\002\036Google\\A" +
-      "ds\\GoogleAds\\V14\\Enums\352\002\"Google::Ads::Go" +
-      "ogleAds::V14::Enumsb\006proto3"
+      "ASED\020!\022 \n\034HAS_ASSET_GROUPS_DISAPPROVED\020\"" +
+      "\022&\n\"HAS_ASSET_GROUPS_LIMITED_BY_POLICY\020#" +
+      "\022\"\n\036MOST_ASSET_GROUPS_UNDER_REVIEW\020$B\372\001\n" +
+      "\"com.google.ads.googleads.v14.enumsB Cam" +
+      "paignPrimaryStatusReasonProtoP\001ZCgoogle." +
+      "golang.org/genproto/googleapis/ads/googl" +
+      "eads/v14/enums;enums\242\002\003GAA\252\002\036Google.Ads." +
+      "GoogleAds.V14.Enums\312\002\036Google\\Ads\\GoogleA" +
+      "ds\\V14\\Enums\352\002\"Google::Ads::GoogleAds::V" +
+      "14::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

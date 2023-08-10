@@ -6,7 +6,7 @@ package com.google.ads.googleads.v14.services;
 /**
  * <pre>
  * Response message for
- * [TravelSuggestAssetsService.SuggestTravelAssets][].
+ * [TravelAssetSuggestionService.SuggestTravelAssets][google.ads.googleads.v14.services.TravelAssetSuggestionService.SuggestTravelAssets].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v14.services.SuggestTravelAssetsResponse}
@@ -267,7 +267,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Response message for
-   * [TravelSuggestAssetsService.SuggestTravelAssets][].
+   * [TravelAssetSuggestionService.SuggestTravelAssets][google.ads.googleads.v14.services.TravelAssetSuggestionService.SuggestTravelAssets].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v14.services.SuggestTravelAssetsResponse}

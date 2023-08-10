@@ -2170,6 +2170,44 @@ private static final long serialVersionUID = 0L;
     return campaignLabel_ == null ? com.google.ads.googleads.v14.resources.CampaignLabel.getDefaultInstance() : campaignLabel_;
   }
 
+  public static final int CAMPAIGN_SEARCH_TERM_INSIGHT_FIELD_NUMBER = 204;
+  private com.google.ads.googleads.v14.resources.CampaignSearchTermInsight campaignSearchTermInsight_;
+  /**
+   * <pre>
+   * The campaign search term insight referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.resources.CampaignSearchTermInsight campaign_search_term_insight = 204;</code>
+   * @return Whether the campaignSearchTermInsight field is set.
+   */
+  @java.lang.Override
+  public boolean hasCampaignSearchTermInsight() {
+    return campaignSearchTermInsight_ != null;
+  }
+  /**
+   * <pre>
+   * The campaign search term insight referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.resources.CampaignSearchTermInsight campaign_search_term_insight = 204;</code>
+   * @return The campaignSearchTermInsight.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v14.resources.CampaignSearchTermInsight getCampaignSearchTermInsight() {
+    return campaignSearchTermInsight_ == null ? com.google.ads.googleads.v14.resources.CampaignSearchTermInsight.getDefaultInstance() : campaignSearchTermInsight_;
+  }
+  /**
+   * <pre>
+   * The campaign search term insight referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.resources.CampaignSearchTermInsight campaign_search_term_insight = 204;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v14.resources.CampaignSearchTermInsightOrBuilder getCampaignSearchTermInsightOrBuilder() {
+    return campaignSearchTermInsight_ == null ? com.google.ads.googleads.v14.resources.CampaignSearchTermInsight.getDefaultInstance() : campaignSearchTermInsight_;
+  }
+
   public static final int CAMPAIGN_SHARED_SET_FIELD_NUMBER = 30;
   private com.google.ads.googleads.v14.resources.CampaignSharedSet campaignSharedSet_;
   /**
@@ -3308,6 +3346,44 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public com.google.ads.googleads.v14.resources.CustomerNegativeCriterionOrBuilder getCustomerNegativeCriterionOrBuilder() {
     return customerNegativeCriterion_ == null ? com.google.ads.googleads.v14.resources.CustomerNegativeCriterion.getDefaultInstance() : customerNegativeCriterion_;
+  }
+
+  public static final int CUSTOMER_SEARCH_TERM_INSIGHT_FIELD_NUMBER = 205;
+  private com.google.ads.googleads.v14.resources.CustomerSearchTermInsight customerSearchTermInsight_;
+  /**
+   * <pre>
+   * The customer search term insight referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.resources.CustomerSearchTermInsight customer_search_term_insight = 205;</code>
+   * @return Whether the customerSearchTermInsight field is set.
+   */
+  @java.lang.Override
+  public boolean hasCustomerSearchTermInsight() {
+    return customerSearchTermInsight_ != null;
+  }
+  /**
+   * <pre>
+   * The customer search term insight referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.resources.CustomerSearchTermInsight customer_search_term_insight = 205;</code>
+   * @return The customerSearchTermInsight.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v14.resources.CustomerSearchTermInsight getCustomerSearchTermInsight() {
+    return customerSearchTermInsight_ == null ? com.google.ads.googleads.v14.resources.CustomerSearchTermInsight.getDefaultInstance() : customerSearchTermInsight_;
+  }
+  /**
+   * <pre>
+   * The customer search term insight referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.resources.CustomerSearchTermInsight customer_search_term_insight = 205;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v14.resources.CustomerSearchTermInsightOrBuilder getCustomerSearchTermInsightOrBuilder() {
+    return customerSearchTermInsight_ == null ? com.google.ads.googleads.v14.resources.CustomerSearchTermInsight.getDefaultInstance() : customerSearchTermInsight_;
   }
 
   public static final int CUSTOMER_USER_ACCESS_FIELD_NUMBER = 146;
@@ -6575,6 +6651,12 @@ private static final long serialVersionUID = 0L;
     if (qualifyingQuestion_ != null) {
       output.writeMessage(202, getQualifyingQuestion());
     }
+    if (campaignSearchTermInsight_ != null) {
+      output.writeMessage(204, getCampaignSearchTermInsight());
+    }
+    if (customerSearchTermInsight_ != null) {
+      output.writeMessage(205, getCustomerSearchTermInsight());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -7220,6 +7302,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(202, getQualifyingQuestion());
     }
+    if (campaignSearchTermInsight_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(204, getCampaignSearchTermInsight());
+    }
+    if (customerSearchTermInsight_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(205, getCustomerSearchTermInsight());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -7515,6 +7605,11 @@ private static final long serialVersionUID = 0L;
       if (!getCampaignLabel()
           .equals(other.getCampaignLabel())) return false;
     }
+    if (hasCampaignSearchTermInsight() != other.hasCampaignSearchTermInsight()) return false;
+    if (hasCampaignSearchTermInsight()) {
+      if (!getCampaignSearchTermInsight()
+          .equals(other.getCampaignSearchTermInsight())) return false;
+    }
     if (hasCampaignSharedSet() != other.hasCampaignSharedSet()) return false;
     if (hasCampaignSharedSet()) {
       if (!getCampaignSharedSet()
@@ -7664,6 +7759,11 @@ private static final long serialVersionUID = 0L;
     if (hasCustomerNegativeCriterion()) {
       if (!getCustomerNegativeCriterion()
           .equals(other.getCustomerNegativeCriterion())) return false;
+    }
+    if (hasCustomerSearchTermInsight() != other.hasCustomerSearchTermInsight()) return false;
+    if (hasCustomerSearchTermInsight()) {
+      if (!getCustomerSearchTermInsight()
+          .equals(other.getCustomerSearchTermInsight())) return false;
     }
     if (hasCustomerUserAccess() != other.hasCustomerUserAccess()) return false;
     if (hasCustomerUserAccess()) {
@@ -8265,6 +8365,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CAMPAIGN_LABEL_FIELD_NUMBER;
       hash = (53 * hash) + getCampaignLabel().hashCode();
     }
+    if (hasCampaignSearchTermInsight()) {
+      hash = (37 * hash) + CAMPAIGN_SEARCH_TERM_INSIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + getCampaignSearchTermInsight().hashCode();
+    }
     if (hasCampaignSharedSet()) {
       hash = (37 * hash) + CAMPAIGN_SHARED_SET_FIELD_NUMBER;
       hash = (53 * hash) + getCampaignSharedSet().hashCode();
@@ -8384,6 +8488,10 @@ private static final long serialVersionUID = 0L;
     if (hasCustomerNegativeCriterion()) {
       hash = (37 * hash) + CUSTOMER_NEGATIVE_CRITERION_FIELD_NUMBER;
       hash = (53 * hash) + getCustomerNegativeCriterion().hashCode();
+    }
+    if (hasCustomerSearchTermInsight()) {
+      hash = (37 * hash) + CUSTOMER_SEARCH_TERM_INSIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + getCustomerSearchTermInsight().hashCode();
     }
     if (hasCustomerUserAccess()) {
       hash = (37 * hash) + CUSTOMER_USER_ACCESS_FIELD_NUMBER;
@@ -8816,6 +8924,7 @@ private static final long serialVersionUID = 0L;
       bitField2_ = 0;
       bitField3_ = 0;
       bitField4_ = 0;
+      bitField5_ = 0;
       accountBudget_ = null;
       if (accountBudgetBuilder_ != null) {
         accountBudgetBuilder_.dispose();
@@ -9096,6 +9205,11 @@ private static final long serialVersionUID = 0L;
         campaignLabelBuilder_.dispose();
         campaignLabelBuilder_ = null;
       }
+      campaignSearchTermInsight_ = null;
+      if (campaignSearchTermInsightBuilder_ != null) {
+        campaignSearchTermInsightBuilder_.dispose();
+        campaignSearchTermInsightBuilder_ = null;
+      }
       campaignSharedSet_ = null;
       if (campaignSharedSetBuilder_ != null) {
         campaignSharedSetBuilder_.dispose();
@@ -9245,6 +9359,11 @@ private static final long serialVersionUID = 0L;
       if (customerNegativeCriterionBuilder_ != null) {
         customerNegativeCriterionBuilder_.dispose();
         customerNegativeCriterionBuilder_ = null;
+      }
+      customerSearchTermInsight_ = null;
+      if (customerSearchTermInsightBuilder_ != null) {
+        customerSearchTermInsightBuilder_.dispose();
+        customerSearchTermInsightBuilder_ = null;
       }
       customerUserAccess_ = null;
       if (customerUserAccessBuilder_ != null) {
@@ -9642,6 +9761,7 @@ private static final long serialVersionUID = 0L;
       if (bitField2_ != 0) { buildPartial2(result); }
       if (bitField3_ != 0) { buildPartial3(result); }
       if (bitField4_ != 0) { buildPartial4(result); }
+      if (bitField5_ != 0) { buildPartial5(result); }
       onBuilt();
       return result;
     }
@@ -9933,528 +10053,542 @@ private static final long serialVersionUID = 0L;
             : campaignLabelBuilder_.build();
       }
       if (((from_bitField1_ & 0x01000000) != 0)) {
+        result.campaignSearchTermInsight_ = campaignSearchTermInsightBuilder_ == null
+            ? campaignSearchTermInsight_
+            : campaignSearchTermInsightBuilder_.build();
+      }
+      if (((from_bitField1_ & 0x02000000) != 0)) {
         result.campaignSharedSet_ = campaignSharedSetBuilder_ == null
             ? campaignSharedSet_
             : campaignSharedSetBuilder_.build();
       }
-      if (((from_bitField1_ & 0x02000000) != 0)) {
+      if (((from_bitField1_ & 0x04000000) != 0)) {
         result.campaignSimulation_ = campaignSimulationBuilder_ == null
             ? campaignSimulation_
             : campaignSimulationBuilder_.build();
       }
-      if (((from_bitField1_ & 0x04000000) != 0)) {
+      if (((from_bitField1_ & 0x08000000) != 0)) {
         result.carrierConstant_ = carrierConstantBuilder_ == null
             ? carrierConstant_
             : carrierConstantBuilder_.build();
       }
-      if (((from_bitField1_ & 0x08000000) != 0)) {
+      if (((from_bitField1_ & 0x10000000) != 0)) {
         result.changeEvent_ = changeEventBuilder_ == null
             ? changeEvent_
             : changeEventBuilder_.build();
       }
-      if (((from_bitField1_ & 0x10000000) != 0)) {
+      if (((from_bitField1_ & 0x20000000) != 0)) {
         result.changeStatus_ = changeStatusBuilder_ == null
             ? changeStatus_
             : changeStatusBuilder_.build();
       }
-      if (((from_bitField1_ & 0x20000000) != 0)) {
+      if (((from_bitField1_ & 0x40000000) != 0)) {
         result.combinedAudience_ = combinedAudienceBuilder_ == null
             ? combinedAudience_
             : combinedAudienceBuilder_.build();
       }
-      if (((from_bitField1_ & 0x40000000) != 0)) {
+      if (((from_bitField1_ & 0x80000000) != 0)) {
         result.audience_ = audienceBuilder_ == null
             ? audience_
             : audienceBuilder_.build();
-      }
-      if (((from_bitField1_ & 0x80000000) != 0)) {
-        result.conversionAction_ = conversionActionBuilder_ == null
-            ? conversionAction_
-            : conversionActionBuilder_.build();
       }
     }
 
     private void buildPartial2(com.google.ads.googleads.v14.services.GoogleAdsRow result) {
       int from_bitField2_ = bitField2_;
       if (((from_bitField2_ & 0x00000001) != 0)) {
+        result.conversionAction_ = conversionActionBuilder_ == null
+            ? conversionAction_
+            : conversionActionBuilder_.build();
+      }
+      if (((from_bitField2_ & 0x00000002) != 0)) {
         result.conversionCustomVariable_ = conversionCustomVariableBuilder_ == null
             ? conversionCustomVariable_
             : conversionCustomVariableBuilder_.build();
       }
-      if (((from_bitField2_ & 0x00000002) != 0)) {
+      if (((from_bitField2_ & 0x00000004) != 0)) {
         result.conversionGoalCampaignConfig_ = conversionGoalCampaignConfigBuilder_ == null
             ? conversionGoalCampaignConfig_
             : conversionGoalCampaignConfigBuilder_.build();
       }
-      if (((from_bitField2_ & 0x00000004) != 0)) {
+      if (((from_bitField2_ & 0x00000008) != 0)) {
         result.conversionValueRule_ = conversionValueRuleBuilder_ == null
             ? conversionValueRule_
             : conversionValueRuleBuilder_.build();
       }
-      if (((from_bitField2_ & 0x00000008) != 0)) {
+      if (((from_bitField2_ & 0x00000010) != 0)) {
         result.conversionValueRuleSet_ = conversionValueRuleSetBuilder_ == null
             ? conversionValueRuleSet_
             : conversionValueRuleSetBuilder_.build();
       }
-      if (((from_bitField2_ & 0x00000010) != 0)) {
+      if (((from_bitField2_ & 0x00000020) != 0)) {
         result.clickView_ = clickViewBuilder_ == null
             ? clickView_
             : clickViewBuilder_.build();
       }
-      if (((from_bitField2_ & 0x00000020) != 0)) {
+      if (((from_bitField2_ & 0x00000040) != 0)) {
         result.currencyConstant_ = currencyConstantBuilder_ == null
             ? currencyConstant_
             : currencyConstantBuilder_.build();
       }
-      if (((from_bitField2_ & 0x00000040) != 0)) {
+      if (((from_bitField2_ & 0x00000080) != 0)) {
         result.customAudience_ = customAudienceBuilder_ == null
             ? customAudience_
             : customAudienceBuilder_.build();
       }
-      if (((from_bitField2_ & 0x00000080) != 0)) {
+      if (((from_bitField2_ & 0x00000100) != 0)) {
         result.customConversionGoal_ = customConversionGoalBuilder_ == null
             ? customConversionGoal_
             : customConversionGoalBuilder_.build();
       }
-      if (((from_bitField2_ & 0x00000100) != 0)) {
+      if (((from_bitField2_ & 0x00000200) != 0)) {
         result.customInterest_ = customInterestBuilder_ == null
             ? customInterest_
             : customInterestBuilder_.build();
       }
-      if (((from_bitField2_ & 0x00000200) != 0)) {
+      if (((from_bitField2_ & 0x00000400) != 0)) {
         result.customer_ = customerBuilder_ == null
             ? customer_
             : customerBuilder_.build();
       }
-      if (((from_bitField2_ & 0x00000400) != 0)) {
+      if (((from_bitField2_ & 0x00000800) != 0)) {
         result.customerAsset_ = customerAssetBuilder_ == null
             ? customerAsset_
             : customerAssetBuilder_.build();
       }
-      if (((from_bitField2_ & 0x00000800) != 0)) {
+      if (((from_bitField2_ & 0x00001000) != 0)) {
         result.customerAssetSet_ = customerAssetSetBuilder_ == null
             ? customerAssetSet_
             : customerAssetSetBuilder_.build();
       }
-      if (((from_bitField2_ & 0x00001000) != 0)) {
+      if (((from_bitField2_ & 0x00002000) != 0)) {
         result.accessibleBiddingStrategy_ = accessibleBiddingStrategyBuilder_ == null
             ? accessibleBiddingStrategy_
             : accessibleBiddingStrategyBuilder_.build();
       }
-      if (((from_bitField2_ & 0x00002000) != 0)) {
+      if (((from_bitField2_ & 0x00004000) != 0)) {
         result.customerCustomizer_ = customerCustomizerBuilder_ == null
             ? customerCustomizer_
             : customerCustomizerBuilder_.build();
       }
-      if (((from_bitField2_ & 0x00004000) != 0)) {
+      if (((from_bitField2_ & 0x00008000) != 0)) {
         result.customerManagerLink_ = customerManagerLinkBuilder_ == null
             ? customerManagerLink_
             : customerManagerLinkBuilder_.build();
       }
-      if (((from_bitField2_ & 0x00008000) != 0)) {
+      if (((from_bitField2_ & 0x00010000) != 0)) {
         result.customerClientLink_ = customerClientLinkBuilder_ == null
             ? customerClientLink_
             : customerClientLinkBuilder_.build();
       }
-      if (((from_bitField2_ & 0x00010000) != 0)) {
+      if (((from_bitField2_ & 0x00020000) != 0)) {
         result.customerClient_ = customerClientBuilder_ == null
             ? customerClient_
             : customerClientBuilder_.build();
       }
-      if (((from_bitField2_ & 0x00020000) != 0)) {
+      if (((from_bitField2_ & 0x00040000) != 0)) {
         result.customerConversionGoal_ = customerConversionGoalBuilder_ == null
             ? customerConversionGoal_
             : customerConversionGoalBuilder_.build();
       }
-      if (((from_bitField2_ & 0x00040000) != 0)) {
+      if (((from_bitField2_ & 0x00080000) != 0)) {
         result.customerExtensionSetting_ = customerExtensionSettingBuilder_ == null
             ? customerExtensionSetting_
             : customerExtensionSettingBuilder_.build();
       }
-      if (((from_bitField2_ & 0x00080000) != 0)) {
+      if (((from_bitField2_ & 0x00100000) != 0)) {
         result.customerFeed_ = customerFeedBuilder_ == null
             ? customerFeed_
             : customerFeedBuilder_.build();
       }
-      if (((from_bitField2_ & 0x00100000) != 0)) {
+      if (((from_bitField2_ & 0x00200000) != 0)) {
         result.customerLabel_ = customerLabelBuilder_ == null
             ? customerLabel_
             : customerLabelBuilder_.build();
       }
-      if (((from_bitField2_ & 0x00200000) != 0)) {
+      if (((from_bitField2_ & 0x00400000) != 0)) {
         result.customerNegativeCriterion_ = customerNegativeCriterionBuilder_ == null
             ? customerNegativeCriterion_
             : customerNegativeCriterionBuilder_.build();
       }
-      if (((from_bitField2_ & 0x00400000) != 0)) {
+      if (((from_bitField2_ & 0x00800000) != 0)) {
+        result.customerSearchTermInsight_ = customerSearchTermInsightBuilder_ == null
+            ? customerSearchTermInsight_
+            : customerSearchTermInsightBuilder_.build();
+      }
+      if (((from_bitField2_ & 0x01000000) != 0)) {
         result.customerUserAccess_ = customerUserAccessBuilder_ == null
             ? customerUserAccess_
             : customerUserAccessBuilder_.build();
       }
-      if (((from_bitField2_ & 0x00800000) != 0)) {
+      if (((from_bitField2_ & 0x02000000) != 0)) {
         result.customerUserAccessInvitation_ = customerUserAccessInvitationBuilder_ == null
             ? customerUserAccessInvitation_
             : customerUserAccessInvitationBuilder_.build();
       }
-      if (((from_bitField2_ & 0x01000000) != 0)) {
+      if (((from_bitField2_ & 0x04000000) != 0)) {
         result.customizerAttribute_ = customizerAttributeBuilder_ == null
             ? customizerAttribute_
             : customizerAttributeBuilder_.build();
       }
-      if (((from_bitField2_ & 0x02000000) != 0)) {
+      if (((from_bitField2_ & 0x08000000) != 0)) {
         result.detailPlacementView_ = detailPlacementViewBuilder_ == null
             ? detailPlacementView_
             : detailPlacementViewBuilder_.build();
       }
-      if (((from_bitField2_ & 0x04000000) != 0)) {
+      if (((from_bitField2_ & 0x10000000) != 0)) {
         result.detailedDemographic_ = detailedDemographicBuilder_ == null
             ? detailedDemographic_
             : detailedDemographicBuilder_.build();
       }
-      if (((from_bitField2_ & 0x08000000) != 0)) {
+      if (((from_bitField2_ & 0x20000000) != 0)) {
         result.displayKeywordView_ = displayKeywordViewBuilder_ == null
             ? displayKeywordView_
             : displayKeywordViewBuilder_.build();
       }
-      if (((from_bitField2_ & 0x10000000) != 0)) {
+      if (((from_bitField2_ & 0x40000000) != 0)) {
         result.distanceView_ = distanceViewBuilder_ == null
             ? distanceView_
             : distanceViewBuilder_.build();
       }
-      if (((from_bitField2_ & 0x20000000) != 0)) {
+      if (((from_bitField2_ & 0x80000000) != 0)) {
         result.dynamicSearchAdsSearchTermView_ = dynamicSearchAdsSearchTermViewBuilder_ == null
             ? dynamicSearchAdsSearchTermView_
             : dynamicSearchAdsSearchTermViewBuilder_.build();
-      }
-      if (((from_bitField2_ & 0x40000000) != 0)) {
-        result.expandedLandingPageView_ = expandedLandingPageViewBuilder_ == null
-            ? expandedLandingPageView_
-            : expandedLandingPageViewBuilder_.build();
-      }
-      if (((from_bitField2_ & 0x80000000) != 0)) {
-        result.extensionFeedItem_ = extensionFeedItemBuilder_ == null
-            ? extensionFeedItem_
-            : extensionFeedItemBuilder_.build();
       }
     }
 
     private void buildPartial3(com.google.ads.googleads.v14.services.GoogleAdsRow result) {
       int from_bitField3_ = bitField3_;
       if (((from_bitField3_ & 0x00000001) != 0)) {
+        result.expandedLandingPageView_ = expandedLandingPageViewBuilder_ == null
+            ? expandedLandingPageView_
+            : expandedLandingPageViewBuilder_.build();
+      }
+      if (((from_bitField3_ & 0x00000002) != 0)) {
+        result.extensionFeedItem_ = extensionFeedItemBuilder_ == null
+            ? extensionFeedItem_
+            : extensionFeedItemBuilder_.build();
+      }
+      if (((from_bitField3_ & 0x00000004) != 0)) {
         result.feed_ = feedBuilder_ == null
             ? feed_
             : feedBuilder_.build();
       }
-      if (((from_bitField3_ & 0x00000002) != 0)) {
+      if (((from_bitField3_ & 0x00000008) != 0)) {
         result.feedItem_ = feedItemBuilder_ == null
             ? feedItem_
             : feedItemBuilder_.build();
       }
-      if (((from_bitField3_ & 0x00000004) != 0)) {
+      if (((from_bitField3_ & 0x00000010) != 0)) {
         result.feedItemSet_ = feedItemSetBuilder_ == null
             ? feedItemSet_
             : feedItemSetBuilder_.build();
       }
-      if (((from_bitField3_ & 0x00000008) != 0)) {
+      if (((from_bitField3_ & 0x00000020) != 0)) {
         result.feedItemSetLink_ = feedItemSetLinkBuilder_ == null
             ? feedItemSetLink_
             : feedItemSetLinkBuilder_.build();
       }
-      if (((from_bitField3_ & 0x00000010) != 0)) {
+      if (((from_bitField3_ & 0x00000040) != 0)) {
         result.feedItemTarget_ = feedItemTargetBuilder_ == null
             ? feedItemTarget_
             : feedItemTargetBuilder_.build();
       }
-      if (((from_bitField3_ & 0x00000020) != 0)) {
+      if (((from_bitField3_ & 0x00000080) != 0)) {
         result.feedMapping_ = feedMappingBuilder_ == null
             ? feedMapping_
             : feedMappingBuilder_.build();
       }
-      if (((from_bitField3_ & 0x00000040) != 0)) {
+      if (((from_bitField3_ & 0x00000100) != 0)) {
         result.feedPlaceholderView_ = feedPlaceholderViewBuilder_ == null
             ? feedPlaceholderView_
             : feedPlaceholderViewBuilder_.build();
       }
-      if (((from_bitField3_ & 0x00000080) != 0)) {
+      if (((from_bitField3_ & 0x00000200) != 0)) {
         result.genderView_ = genderViewBuilder_ == null
             ? genderView_
             : genderViewBuilder_.build();
       }
-      if (((from_bitField3_ & 0x00000100) != 0)) {
+      if (((from_bitField3_ & 0x00000400) != 0)) {
         result.geoTargetConstant_ = geoTargetConstantBuilder_ == null
             ? geoTargetConstant_
             : geoTargetConstantBuilder_.build();
       }
-      if (((from_bitField3_ & 0x00000200) != 0)) {
+      if (((from_bitField3_ & 0x00000800) != 0)) {
         result.geographicView_ = geographicViewBuilder_ == null
             ? geographicView_
             : geographicViewBuilder_.build();
       }
-      if (((from_bitField3_ & 0x00000400) != 0)) {
+      if (((from_bitField3_ & 0x00001000) != 0)) {
         result.groupPlacementView_ = groupPlacementViewBuilder_ == null
             ? groupPlacementView_
             : groupPlacementViewBuilder_.build();
       }
-      if (((from_bitField3_ & 0x00000800) != 0)) {
+      if (((from_bitField3_ & 0x00002000) != 0)) {
         result.hotelGroupView_ = hotelGroupViewBuilder_ == null
             ? hotelGroupView_
             : hotelGroupViewBuilder_.build();
       }
-      if (((from_bitField3_ & 0x00001000) != 0)) {
+      if (((from_bitField3_ & 0x00004000) != 0)) {
         result.hotelPerformanceView_ = hotelPerformanceViewBuilder_ == null
             ? hotelPerformanceView_
             : hotelPerformanceViewBuilder_.build();
       }
-      if (((from_bitField3_ & 0x00002000) != 0)) {
+      if (((from_bitField3_ & 0x00008000) != 0)) {
         result.hotelReconciliation_ = hotelReconciliationBuilder_ == null
             ? hotelReconciliation_
             : hotelReconciliationBuilder_.build();
       }
-      if (((from_bitField3_ & 0x00004000) != 0)) {
+      if (((from_bitField3_ & 0x00010000) != 0)) {
         result.incomeRangeView_ = incomeRangeViewBuilder_ == null
             ? incomeRangeView_
             : incomeRangeViewBuilder_.build();
       }
-      if (((from_bitField3_ & 0x00008000) != 0)) {
+      if (((from_bitField3_ & 0x00020000) != 0)) {
         result.keywordView_ = keywordViewBuilder_ == null
             ? keywordView_
             : keywordViewBuilder_.build();
       }
-      if (((from_bitField3_ & 0x00010000) != 0)) {
+      if (((from_bitField3_ & 0x00040000) != 0)) {
         result.keywordPlan_ = keywordPlanBuilder_ == null
             ? keywordPlan_
             : keywordPlanBuilder_.build();
       }
-      if (((from_bitField3_ & 0x00020000) != 0)) {
+      if (((from_bitField3_ & 0x00080000) != 0)) {
         result.keywordPlanCampaign_ = keywordPlanCampaignBuilder_ == null
             ? keywordPlanCampaign_
             : keywordPlanCampaignBuilder_.build();
       }
-      if (((from_bitField3_ & 0x00040000) != 0)) {
+      if (((from_bitField3_ & 0x00100000) != 0)) {
         result.keywordPlanCampaignKeyword_ = keywordPlanCampaignKeywordBuilder_ == null
             ? keywordPlanCampaignKeyword_
             : keywordPlanCampaignKeywordBuilder_.build();
       }
-      if (((from_bitField3_ & 0x00080000) != 0)) {
+      if (((from_bitField3_ & 0x00200000) != 0)) {
         result.keywordPlanAdGroup_ = keywordPlanAdGroupBuilder_ == null
             ? keywordPlanAdGroup_
             : keywordPlanAdGroupBuilder_.build();
       }
-      if (((from_bitField3_ & 0x00100000) != 0)) {
+      if (((from_bitField3_ & 0x00400000) != 0)) {
         result.keywordPlanAdGroupKeyword_ = keywordPlanAdGroupKeywordBuilder_ == null
             ? keywordPlanAdGroupKeyword_
             : keywordPlanAdGroupKeywordBuilder_.build();
       }
-      if (((from_bitField3_ & 0x00200000) != 0)) {
+      if (((from_bitField3_ & 0x00800000) != 0)) {
         result.keywordThemeConstant_ = keywordThemeConstantBuilder_ == null
             ? keywordThemeConstant_
             : keywordThemeConstantBuilder_.build();
       }
-      if (((from_bitField3_ & 0x00400000) != 0)) {
+      if (((from_bitField3_ & 0x01000000) != 0)) {
         result.label_ = labelBuilder_ == null
             ? label_
             : labelBuilder_.build();
       }
-      if (((from_bitField3_ & 0x00800000) != 0)) {
+      if (((from_bitField3_ & 0x02000000) != 0)) {
         result.landingPageView_ = landingPageViewBuilder_ == null
             ? landingPageView_
             : landingPageViewBuilder_.build();
       }
-      if (((from_bitField3_ & 0x01000000) != 0)) {
+      if (((from_bitField3_ & 0x04000000) != 0)) {
         result.languageConstant_ = languageConstantBuilder_ == null
             ? languageConstant_
             : languageConstantBuilder_.build();
       }
-      if (((from_bitField3_ & 0x02000000) != 0)) {
+      if (((from_bitField3_ & 0x08000000) != 0)) {
         result.locationView_ = locationViewBuilder_ == null
             ? locationView_
             : locationViewBuilder_.build();
       }
-      if (((from_bitField3_ & 0x04000000) != 0)) {
+      if (((from_bitField3_ & 0x10000000) != 0)) {
         result.managedPlacementView_ = managedPlacementViewBuilder_ == null
             ? managedPlacementView_
             : managedPlacementViewBuilder_.build();
       }
-      if (((from_bitField3_ & 0x08000000) != 0)) {
+      if (((from_bitField3_ & 0x20000000) != 0)) {
         result.mediaFile_ = mediaFileBuilder_ == null
             ? mediaFile_
             : mediaFileBuilder_.build();
       }
-      if (((from_bitField3_ & 0x10000000) != 0)) {
+      if (((from_bitField3_ & 0x40000000) != 0)) {
         result.mobileAppCategoryConstant_ = mobileAppCategoryConstantBuilder_ == null
             ? mobileAppCategoryConstant_
             : mobileAppCategoryConstantBuilder_.build();
       }
-      if (((from_bitField3_ & 0x20000000) != 0)) {
+      if (((from_bitField3_ & 0x80000000) != 0)) {
         result.mobileDeviceConstant_ = mobileDeviceConstantBuilder_ == null
             ? mobileDeviceConstant_
             : mobileDeviceConstantBuilder_.build();
-      }
-      if (((from_bitField3_ & 0x40000000) != 0)) {
-        result.offlineUserDataJob_ = offlineUserDataJobBuilder_ == null
-            ? offlineUserDataJob_
-            : offlineUserDataJobBuilder_.build();
-      }
-      if (((from_bitField3_ & 0x80000000) != 0)) {
-        result.operatingSystemVersionConstant_ = operatingSystemVersionConstantBuilder_ == null
-            ? operatingSystemVersionConstant_
-            : operatingSystemVersionConstantBuilder_.build();
       }
     }
 
     private void buildPartial4(com.google.ads.googleads.v14.services.GoogleAdsRow result) {
       int from_bitField4_ = bitField4_;
       if (((from_bitField4_ & 0x00000001) != 0)) {
+        result.offlineUserDataJob_ = offlineUserDataJobBuilder_ == null
+            ? offlineUserDataJob_
+            : offlineUserDataJobBuilder_.build();
+      }
+      if (((from_bitField4_ & 0x00000002) != 0)) {
+        result.operatingSystemVersionConstant_ = operatingSystemVersionConstantBuilder_ == null
+            ? operatingSystemVersionConstant_
+            : operatingSystemVersionConstantBuilder_.build();
+      }
+      if (((from_bitField4_ & 0x00000004) != 0)) {
         result.paidOrganicSearchTermView_ = paidOrganicSearchTermViewBuilder_ == null
             ? paidOrganicSearchTermView_
             : paidOrganicSearchTermViewBuilder_.build();
       }
-      if (((from_bitField4_ & 0x00000002) != 0)) {
+      if (((from_bitField4_ & 0x00000008) != 0)) {
         result.qualifyingQuestion_ = qualifyingQuestionBuilder_ == null
             ? qualifyingQuestion_
             : qualifyingQuestionBuilder_.build();
       }
-      if (((from_bitField4_ & 0x00000004) != 0)) {
+      if (((from_bitField4_ & 0x00000010) != 0)) {
         result.parentalStatusView_ = parentalStatusViewBuilder_ == null
             ? parentalStatusView_
             : parentalStatusViewBuilder_.build();
       }
-      if (((from_bitField4_ & 0x00000008) != 0)) {
+      if (((from_bitField4_ & 0x00000020) != 0)) {
         result.perStoreView_ = perStoreViewBuilder_ == null
             ? perStoreView_
             : perStoreViewBuilder_.build();
       }
-      if (((from_bitField4_ & 0x00000010) != 0)) {
+      if (((from_bitField4_ & 0x00000040) != 0)) {
         result.productBiddingCategoryConstant_ = productBiddingCategoryConstantBuilder_ == null
             ? productBiddingCategoryConstant_
             : productBiddingCategoryConstantBuilder_.build();
       }
-      if (((from_bitField4_ & 0x00000020) != 0)) {
+      if (((from_bitField4_ & 0x00000080) != 0)) {
         result.productGroupView_ = productGroupViewBuilder_ == null
             ? productGroupView_
             : productGroupViewBuilder_.build();
       }
-      if (((from_bitField4_ & 0x00000040) != 0)) {
+      if (((from_bitField4_ & 0x00000100) != 0)) {
         result.productLink_ = productLinkBuilder_ == null
             ? productLink_
             : productLinkBuilder_.build();
       }
-      if (((from_bitField4_ & 0x00000080) != 0)) {
+      if (((from_bitField4_ & 0x00000200) != 0)) {
         result.recommendation_ = recommendationBuilder_ == null
             ? recommendation_
             : recommendationBuilder_.build();
       }
-      if (((from_bitField4_ & 0x00000100) != 0)) {
+      if (((from_bitField4_ & 0x00000400) != 0)) {
         result.searchTermView_ = searchTermViewBuilder_ == null
             ? searchTermView_
             : searchTermViewBuilder_.build();
       }
-      if (((from_bitField4_ & 0x00000200) != 0)) {
+      if (((from_bitField4_ & 0x00000800) != 0)) {
         result.sharedCriterion_ = sharedCriterionBuilder_ == null
             ? sharedCriterion_
             : sharedCriterionBuilder_.build();
       }
-      if (((from_bitField4_ & 0x00000400) != 0)) {
+      if (((from_bitField4_ & 0x00001000) != 0)) {
         result.sharedSet_ = sharedSetBuilder_ == null
             ? sharedSet_
             : sharedSetBuilder_.build();
       }
-      if (((from_bitField4_ & 0x00000800) != 0)) {
+      if (((from_bitField4_ & 0x00002000) != 0)) {
         result.smartCampaignSetting_ = smartCampaignSettingBuilder_ == null
             ? smartCampaignSetting_
             : smartCampaignSettingBuilder_.build();
       }
-      if (((from_bitField4_ & 0x00001000) != 0)) {
+      if (((from_bitField4_ & 0x00004000) != 0)) {
         result.shoppingPerformanceView_ = shoppingPerformanceViewBuilder_ == null
             ? shoppingPerformanceView_
             : shoppingPerformanceViewBuilder_.build();
       }
-      if (((from_bitField4_ & 0x00002000) != 0)) {
+      if (((from_bitField4_ & 0x00008000) != 0)) {
         result.smartCampaignSearchTermView_ = smartCampaignSearchTermViewBuilder_ == null
             ? smartCampaignSearchTermView_
             : smartCampaignSearchTermViewBuilder_.build();
       }
-      if (((from_bitField4_ & 0x00004000) != 0)) {
+      if (((from_bitField4_ & 0x00010000) != 0)) {
         result.thirdPartyAppAnalyticsLink_ = thirdPartyAppAnalyticsLinkBuilder_ == null
             ? thirdPartyAppAnalyticsLink_
             : thirdPartyAppAnalyticsLinkBuilder_.build();
       }
-      if (((from_bitField4_ & 0x00008000) != 0)) {
+      if (((from_bitField4_ & 0x00020000) != 0)) {
         result.topicView_ = topicViewBuilder_ == null
             ? topicView_
             : topicViewBuilder_.build();
       }
-      if (((from_bitField4_ & 0x00010000) != 0)) {
+      if (((from_bitField4_ & 0x00040000) != 0)) {
         result.travelActivityGroupView_ = travelActivityGroupViewBuilder_ == null
             ? travelActivityGroupView_
             : travelActivityGroupViewBuilder_.build();
       }
-      if (((from_bitField4_ & 0x00020000) != 0)) {
+      if (((from_bitField4_ & 0x00080000) != 0)) {
         result.travelActivityPerformanceView_ = travelActivityPerformanceViewBuilder_ == null
             ? travelActivityPerformanceView_
             : travelActivityPerformanceViewBuilder_.build();
       }
-      if (((from_bitField4_ & 0x00040000) != 0)) {
+      if (((from_bitField4_ & 0x00100000) != 0)) {
         result.experiment_ = experimentBuilder_ == null
             ? experiment_
             : experimentBuilder_.build();
       }
-      if (((from_bitField4_ & 0x00080000) != 0)) {
+      if (((from_bitField4_ & 0x00200000) != 0)) {
         result.experimentArm_ = experimentArmBuilder_ == null
             ? experimentArm_
             : experimentArmBuilder_.build();
       }
-      if (((from_bitField4_ & 0x00100000) != 0)) {
+      if (((from_bitField4_ & 0x00400000) != 0)) {
         result.userInterest_ = userInterestBuilder_ == null
             ? userInterest_
             : userInterestBuilder_.build();
       }
-      if (((from_bitField4_ & 0x00200000) != 0)) {
+      if (((from_bitField4_ & 0x00800000) != 0)) {
         result.lifeEvent_ = lifeEventBuilder_ == null
             ? lifeEvent_
             : lifeEventBuilder_.build();
       }
-      if (((from_bitField4_ & 0x00400000) != 0)) {
+      if (((from_bitField4_ & 0x01000000) != 0)) {
         result.userList_ = userListBuilder_ == null
             ? userList_
             : userListBuilder_.build();
       }
-      if (((from_bitField4_ & 0x00800000) != 0)) {
+      if (((from_bitField4_ & 0x02000000) != 0)) {
         result.userLocationView_ = userLocationViewBuilder_ == null
             ? userLocationView_
             : userLocationViewBuilder_.build();
       }
-      if (((from_bitField4_ & 0x01000000) != 0)) {
+      if (((from_bitField4_ & 0x04000000) != 0)) {
         result.remarketingAction_ = remarketingActionBuilder_ == null
             ? remarketingAction_
             : remarketingActionBuilder_.build();
       }
-      if (((from_bitField4_ & 0x02000000) != 0)) {
+      if (((from_bitField4_ & 0x08000000) != 0)) {
         result.topicConstant_ = topicConstantBuilder_ == null
             ? topicConstant_
             : topicConstantBuilder_.build();
       }
-      if (((from_bitField4_ & 0x04000000) != 0)) {
+      if (((from_bitField4_ & 0x10000000) != 0)) {
         result.video_ = videoBuilder_ == null
             ? video_
             : videoBuilder_.build();
       }
-      if (((from_bitField4_ & 0x08000000) != 0)) {
+      if (((from_bitField4_ & 0x20000000) != 0)) {
         result.webpageView_ = webpageViewBuilder_ == null
             ? webpageView_
             : webpageViewBuilder_.build();
       }
-      if (((from_bitField4_ & 0x10000000) != 0)) {
+      if (((from_bitField4_ & 0x40000000) != 0)) {
         result.leadFormSubmissionData_ = leadFormSubmissionDataBuilder_ == null
             ? leadFormSubmissionData_
             : leadFormSubmissionDataBuilder_.build();
       }
-      if (((from_bitField4_ & 0x20000000) != 0)) {
+      if (((from_bitField4_ & 0x80000000) != 0)) {
         result.metrics_ = metricsBuilder_ == null
             ? metrics_
             : metricsBuilder_.build();
       }
-      if (((from_bitField4_ & 0x40000000) != 0)) {
+    }
+
+    private void buildPartial5(com.google.ads.googleads.v14.services.GoogleAdsRow result) {
+      int from_bitField5_ = bitField5_;
+      if (((from_bitField5_ & 0x00000001) != 0)) {
         result.segments_ = segmentsBuilder_ == null
             ? segments_
             : segmentsBuilder_.build();
@@ -10673,6 +10807,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasCampaignLabel()) {
         mergeCampaignLabel(other.getCampaignLabel());
       }
+      if (other.hasCampaignSearchTermInsight()) {
+        mergeCampaignSearchTermInsight(other.getCampaignSearchTermInsight());
+      }
       if (other.hasCampaignSharedSet()) {
         mergeCampaignSharedSet(other.getCampaignSharedSet());
       }
@@ -10762,6 +10899,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasCustomerNegativeCriterion()) {
         mergeCustomerNegativeCriterion(other.getCustomerNegativeCriterion());
+      }
+      if (other.hasCustomerSearchTermInsight()) {
+        mergeCustomerSearchTermInsight(other.getCustomerSearchTermInsight());
       }
       if (other.hasCustomerUserAccess()) {
         mergeCustomerUserAccess(other.getCustomerUserAccess());
@@ -11012,7 +11152,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getCustomerFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField2_ |= 0x00000200;
+              bitField2_ |= 0x00000400;
               break;
             } // case 10
             case 18: {
@@ -11033,7 +11173,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getMetricsFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField4_ |= 0x20000000;
+              bitField4_ |= 0x80000000;
               break;
             } // case 34
             case 130: {
@@ -11075,21 +11215,21 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getKeywordViewFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField3_ |= 0x00008000;
+              bitField3_ |= 0x00020000;
               break;
             } // case 170
             case 178: {
               input.readMessage(
                   getRecommendationFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField4_ |= 0x00000080;
+              bitField4_ |= 0x00000200;
               break;
             } // case 178
             case 186: {
               input.readMessage(
                   getGeoTargetConstantFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField3_ |= 0x00000100;
+              bitField3_ |= 0x00000400;
               break;
             } // case 186
             case 194: {
@@ -11117,77 +11257,77 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getSharedSetFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField4_ |= 0x00000400;
+              bitField4_ |= 0x00001000;
               break;
             } // case 218
             case 234: {
               input.readMessage(
                   getSharedCriterionFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField4_ |= 0x00000200;
+              bitField4_ |= 0x00000800;
               break;
             } // case 234
             case 242: {
               input.readMessage(
                   getCampaignSharedSetFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField1_ |= 0x01000000;
+              bitField1_ |= 0x02000000;
               break;
             } // case 242
             case 250: {
               input.readMessage(
                   getTopicConstantFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField4_ |= 0x02000000;
+              bitField4_ |= 0x08000000;
               break;
             } // case 250
             case 258: {
               input.readMessage(
                   getKeywordPlanFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField3_ |= 0x00010000;
+              bitField3_ |= 0x00040000;
               break;
             } // case 258
             case 266: {
               input.readMessage(
                   getKeywordPlanCampaignFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField3_ |= 0x00020000;
+              bitField3_ |= 0x00080000;
               break;
             } // case 266
             case 282: {
               input.readMessage(
                   getKeywordPlanAdGroupFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField3_ |= 0x00080000;
+              bitField3_ |= 0x00200000;
               break;
             } // case 282
             case 298: {
               input.readMessage(
                   getChangeStatusFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField1_ |= 0x10000000;
+              bitField1_ |= 0x20000000;
               break;
             } // case 298
             case 306: {
               input.readMessage(
                   getUserListFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField4_ |= 0x00400000;
+              bitField4_ |= 0x01000000;
               break;
             } // case 306
             case 314: {
               input.readMessage(
                   getVideoFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField4_ |= 0x04000000;
+              bitField4_ |= 0x10000000;
               break;
             } // case 314
             case 322: {
               input.readMessage(
                   getGenderViewFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField3_ |= 0x00000080;
+              bitField3_ |= 0x00000200;
               break;
             } // case 322
             case 330: {
@@ -11215,28 +11355,28 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getTopicViewFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField4_ |= 0x00008000;
+              bitField4_ |= 0x00020000;
               break;
             } // case 354
             case 362: {
               input.readMessage(
                   getParentalStatusViewFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField4_ |= 0x00000004;
+              bitField4_ |= 0x00000010;
               break;
             } // case 362
             case 370: {
               input.readMessage(
                   getFeedFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField3_ |= 0x00000001;
+              bitField3_ |= 0x00000004;
               break;
             } // case 370
             case 378: {
               input.readMessage(
                   getDisplayKeywordViewFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField2_ |= 0x08000000;
+              bitField2_ |= 0x20000000;
               break;
             } // case 378
             case 386: {
@@ -11257,42 +11397,42 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getFeedItemFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField3_ |= 0x00000002;
+              bitField3_ |= 0x00000008;
               break;
             } // case 402
             case 410: {
               input.readMessage(
                   getHotelGroupViewFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField3_ |= 0x00000800;
+              bitField3_ |= 0x00002000;
               break;
             } // case 410
             case 418: {
               input.readMessage(
                   getLabelFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField3_ |= 0x00400000;
+              bitField3_ |= 0x01000000;
               break;
             } // case 418
             case 426: {
               input.readMessage(
                   getManagedPlacementViewFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField3_ |= 0x04000000;
+              bitField3_ |= 0x10000000;
               break;
             } // case 426
             case 434: {
               input.readMessage(
                   getProductGroupViewFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField4_ |= 0x00000020;
+              bitField4_ |= 0x00000080;
               break;
             } // case 434
             case 442: {
               input.readMessage(
                   getLanguageConstantFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField3_ |= 0x01000000;
+              bitField3_ |= 0x04000000;
               break;
             } // case 442
             case 458: {
@@ -11306,35 +11446,35 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getFeedMappingFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField3_ |= 0x00000020;
+              bitField3_ |= 0x00000080;
               break;
             } // case 466
             case 474: {
               input.readMessage(
                   getUserInterestFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField4_ |= 0x00100000;
+              bitField4_ |= 0x00400000;
               break;
             } // case 474
             case 482: {
               input.readMessage(
                   getRemarketingActionFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField4_ |= 0x01000000;
+              bitField4_ |= 0x04000000;
               break;
             } // case 482
             case 490: {
               input.readMessage(
                   getCustomerManagerLinkFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField2_ |= 0x00004000;
+              bitField2_ |= 0x00008000;
               break;
             } // case 490
             case 498: {
               input.readMessage(
                   getCustomerClientLinkFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField2_ |= 0x00008000;
+              bitField2_ |= 0x00010000;
               break;
             } // case 498
             case 506: {
@@ -11348,14 +11488,14 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getCustomerFeedFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField2_ |= 0x00080000;
+              bitField2_ |= 0x00100000;
               break;
             } // case 514
             case 530: {
               input.readMessage(
                   getCarrierConstantFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField1_ |= 0x04000000;
+              bitField1_ |= 0x08000000;
               break;
             } // case 530
             case 538: {
@@ -11369,7 +11509,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getSearchTermViewFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField4_ |= 0x00000100;
+              bitField4_ |= 0x00000400;
               break;
             } // case 546
             case 554: {
@@ -11383,42 +11523,42 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getCustomerClientFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField2_ |= 0x00010000;
+              bitField2_ |= 0x00020000;
               break;
             } // case 562
             case 570: {
               input.readMessage(
                   getHotelPerformanceViewFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField3_ |= 0x00001000;
+              bitField3_ |= 0x00004000;
               break;
             } // case 570
             case 682: {
               input.readMessage(
                   getExtensionFeedItemFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField2_ |= 0x80000000;
+              bitField3_ |= 0x00000002;
               break;
             } // case 682
             case 690: {
               input.readMessage(
                   getOperatingSystemVersionConstantFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField3_ |= 0x80000000;
+              bitField4_ |= 0x00000002;
               break;
             } // case 690
             case 698: {
               input.readMessage(
                   getMobileAppCategoryConstantFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField3_ |= 0x10000000;
+              bitField3_ |= 0x40000000;
               break;
             } // case 698
             case 706: {
               input.readMessage(
                   getCustomerNegativeCriterionFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField2_ |= 0x00200000;
+              bitField2_ |= 0x00400000;
               break;
             } // case 706
             case 714: {
@@ -11432,7 +11572,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getMediaFileFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField3_ |= 0x08000000;
+              bitField3_ |= 0x20000000;
               break;
             } // case 722
             case 730: {
@@ -11446,35 +11586,35 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getFeedPlaceholderViewFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField3_ |= 0x00000040;
+              bitField3_ |= 0x00000100;
               break;
             } // case 778
             case 786: {
               input.readMessage(
                   getMobileDeviceConstantFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField3_ |= 0x20000000;
+              bitField3_ |= 0x80000000;
               break;
             } // case 786
             case 818: {
               input.readMessage(
                   getSegmentsFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField4_ |= 0x40000000;
+              bitField5_ |= 0x00000001;
               break;
             } // case 818
             case 826: {
               input.readMessage(
                   getConversionActionFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField1_ |= 0x80000000;
+              bitField2_ |= 0x00000001;
               break;
             } // case 826
             case 834: {
               input.readMessage(
                   getCustomInterestFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField2_ |= 0x00000100;
+              bitField2_ |= 0x00000200;
               break;
             } // case 834
             case 842: {
@@ -11488,7 +11628,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getDynamicSearchAdsSearchTermViewFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField2_ |= 0x20000000;
+              bitField2_ |= 0x80000000;
               break;
             } // case 850
             case 858: {
@@ -11509,7 +11649,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getProductBiddingCategoryConstantFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField4_ |= 0x00000010;
+              bitField4_ |= 0x00000040;
               break;
             } // case 874
             case 882: {
@@ -11537,7 +11677,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getCustomerExtensionSettingFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField2_ |= 0x00040000;
+              bitField2_ |= 0x00080000;
               break;
             } // case 914
             case 922: {
@@ -11551,28 +11691,28 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getFeedItemTargetFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField3_ |= 0x00000010;
+              bitField3_ |= 0x00000040;
               break;
             } // case 930
             case 938: {
               input.readMessage(
                   getShoppingPerformanceViewFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField4_ |= 0x00001000;
+              bitField4_ |= 0x00004000;
               break;
             } // case 938
             case 946: {
               input.readMessage(
                   getDetailPlacementViewFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField2_ |= 0x02000000;
+              bitField2_ |= 0x08000000;
               break;
             } // case 946
             case 954: {
               input.readMessage(
                   getGroupPlacementViewFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField3_ |= 0x00000400;
+              bitField3_ |= 0x00001000;
               break;
             } // case 954
             case 962: {
@@ -11593,49 +11733,49 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getClickViewFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField2_ |= 0x00000010;
+              bitField2_ |= 0x00000020;
               break;
             } // case 978
             case 986: {
               input.readMessage(
                   getLocationViewFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField3_ |= 0x02000000;
+              bitField3_ |= 0x08000000;
               break;
             } // case 986
             case 994: {
               input.readMessage(
                   getCustomerLabelFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField2_ |= 0x00100000;
+              bitField2_ |= 0x00200000;
               break;
             } // case 994
             case 1002: {
               input.readMessage(
                   getGeographicViewFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField3_ |= 0x00000200;
+              bitField3_ |= 0x00000800;
               break;
             } // case 1002
             case 1010: {
               input.readMessage(
                   getLandingPageViewFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField3_ |= 0x00800000;
+              bitField3_ |= 0x02000000;
               break;
             } // case 1010
             case 1026: {
               input.readMessage(
                   getExpandedLandingPageViewFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField2_ |= 0x40000000;
+              bitField3_ |= 0x00000001;
               break;
             } // case 1026
             case 1034: {
               input.readMessage(
                   getPaidOrganicSearchTermViewFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField4_ |= 0x00000001;
+              bitField4_ |= 0x00000004;
               break;
             } // case 1034
             case 1042: {
@@ -11656,42 +11796,42 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getDistanceViewFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField2_ |= 0x10000000;
+              bitField2_ |= 0x40000000;
               break;
             } // case 1058
             case 1066: {
               input.readMessage(
                   getExperimentFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField4_ |= 0x00040000;
+              bitField4_ |= 0x00100000;
               break;
             } // case 1066
             case 1074: {
               input.readMessage(
                   getCurrencyConstantFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField2_ |= 0x00000020;
+              bitField2_ |= 0x00000040;
               break;
             } // case 1074
             case 1082: {
               input.readMessage(
                   getUserLocationViewFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField4_ |= 0x00800000;
+              bitField4_ |= 0x02000000;
               break;
             } // case 1082
             case 1098: {
               input.readMessage(
                   getOfflineUserDataJobFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField3_ |= 0x40000000;
+              bitField4_ |= 0x00000001;
               break;
             } // case 1098
             case 1106: {
               input.readMessage(
                   getIncomeRangeViewFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField3_ |= 0x00004000;
+              bitField3_ |= 0x00010000;
               break;
             } // case 1106
             case 1114: {
@@ -11705,14 +11845,14 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getKeywordPlanCampaignKeywordFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField3_ |= 0x00040000;
+              bitField3_ |= 0x00100000;
               break;
             } // case 1122
             case 1130: {
               input.readMessage(
                   getKeywordPlanAdGroupKeywordFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField3_ |= 0x00100000;
+              bitField3_ |= 0x00400000;
               break;
             } // case 1130
             case 1138: {
@@ -11733,56 +11873,56 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getThirdPartyAppAnalyticsLinkFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField4_ |= 0x00004000;
+              bitField4_ |= 0x00010000;
               break;
             } // case 1154
             case 1162: {
               input.readMessage(
                   getChangeEventFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField1_ |= 0x08000000;
+              bitField1_ |= 0x10000000;
               break;
             } // case 1162
             case 1170: {
               input.readMessage(
                   getCustomerUserAccessFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField2_ |= 0x00400000;
+              bitField2_ |= 0x01000000;
               break;
             } // case 1170
             case 1178: {
               input.readMessage(
                   getCustomAudienceFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField2_ |= 0x00000040;
+              bitField2_ |= 0x00000080;
               break;
             } // case 1178
             case 1186: {
               input.readMessage(
                   getCombinedAudienceFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField1_ |= 0x20000000;
+              bitField1_ |= 0x40000000;
               break;
             } // case 1186
             case 1194: {
               input.readMessage(
                   getFeedItemSetFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField3_ |= 0x00000004;
+              bitField3_ |= 0x00000010;
               break;
             } // case 1194
             case 1202: {
               input.readMessage(
                   getCustomerUserAccessInvitationFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField2_ |= 0x00800000;
+              bitField2_ |= 0x02000000;
               break;
             } // case 1202
             case 1210: {
               input.readMessage(
                   getFeedItemSetLinkFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField3_ |= 0x00000008;
+              bitField3_ |= 0x00000020;
               break;
             } // case 1210
             case 1218: {
@@ -11796,7 +11936,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getConversionCustomVariableFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField2_ |= 0x00000001;
+              bitField2_ |= 0x00000002;
               break;
             } // case 1226
             case 1234: {
@@ -11810,14 +11950,14 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getCustomerAssetFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField2_ |= 0x00000400;
+              bitField2_ |= 0x00000800;
               break;
             } // case 1242
             case 1258: {
               input.readMessage(
                   getCampaignSimulationFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField1_ |= 0x02000000;
+              bitField1_ |= 0x04000000;
               break;
             } // case 1258
             case 1266: {
@@ -11845,49 +11985,49 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getLifeEventFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField4_ |= 0x00200000;
+              bitField4_ |= 0x00800000;
               break;
             } // case 1290
             case 1298: {
               input.readMessage(
                   getWebpageViewFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField4_ |= 0x08000000;
+              bitField4_ |= 0x20000000;
               break;
             } // case 1298
             case 1306: {
               input.readMessage(
                   getKeywordThemeConstantFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField3_ |= 0x00200000;
+              bitField3_ |= 0x00800000;
               break;
             } // case 1306
             case 1314: {
               input.readMessage(
                   getConversionValueRuleFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField2_ |= 0x00000004;
+              bitField2_ |= 0x00000008;
               break;
             } // case 1314
             case 1322: {
               input.readMessage(
                   getConversionValueRuleSetFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField2_ |= 0x00000008;
+              bitField2_ |= 0x00000010;
               break;
             } // case 1322
             case 1330: {
               input.readMessage(
                   getDetailedDemographicFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField2_ |= 0x04000000;
+              bitField2_ |= 0x10000000;
               break;
             } // case 1330
             case 1338: {
               input.readMessage(
                   getSmartCampaignSettingFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField4_ |= 0x00000800;
+              bitField4_ |= 0x00002000;
               break;
             } // case 1338
             case 1346: {
@@ -11901,14 +12041,14 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getAccessibleBiddingStrategyFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField2_ |= 0x00001000;
+              bitField2_ |= 0x00002000;
               break;
             } // case 1354
             case 1362: {
               input.readMessage(
                   getSmartCampaignSearchTermViewFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField4_ |= 0x00002000;
+              bitField4_ |= 0x00008000;
               break;
             } // case 1362
             case 1378: {
@@ -11929,7 +12069,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getCustomerConversionGoalFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField2_ |= 0x00020000;
+              bitField2_ |= 0x00040000;
               break;
             } // case 1394
             case 1402: {
@@ -11943,21 +12083,21 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getCustomConversionGoalFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField2_ |= 0x00000080;
+              bitField2_ |= 0x00000100;
               break;
             } // case 1410
             case 1418: {
               input.readMessage(
                   getConversionGoalCampaignConfigFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField2_ |= 0x00000002;
+              bitField2_ |= 0x00000004;
               break;
             } // case 1418
             case 1426: {
               input.readMessage(
                   getCustomizerAttributeFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField2_ |= 0x01000000;
+              bitField2_ |= 0x04000000;
               break;
             } // case 1426
             case 1434: {
@@ -11992,14 +12132,14 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getExperimentArmFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField4_ |= 0x00080000;
+              bitField4_ |= 0x00200000;
               break;
             } // case 1466
             case 1474: {
               input.readMessage(
                   getCustomerCustomizerFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField2_ |= 0x00002000;
+              bitField2_ |= 0x00004000;
               break;
             } // case 1474
             case 1482: {
@@ -12027,7 +12167,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getHotelReconciliationFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField3_ |= 0x00002000;
+              bitField3_ |= 0x00008000;
               break;
             } // case 1506
             case 1514: {
@@ -12041,7 +12181,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getAudienceFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField1_ |= 0x40000000;
+              bitField1_ |= 0x80000000;
               break;
             } // case 1522
             case 1530: {
@@ -12055,7 +12195,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getLeadFormSubmissionDataFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField4_ |= 0x10000000;
+              bitField4_ |= 0x40000000;
               break;
             } // case 1538
             case 1546: {
@@ -12069,14 +12209,14 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getProductLinkFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField4_ |= 0x00000040;
+              bitField4_ |= 0x00000100;
               break;
             } // case 1554
             case 1562: {
               input.readMessage(
                   getCustomerAssetSetFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField2_ |= 0x00000800;
+              bitField2_ |= 0x00001000;
               break;
             } // case 1562
             case 1570: {
@@ -12097,30 +12237,44 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getPerStoreViewFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField4_ |= 0x00000008;
+              bitField4_ |= 0x00000020;
               break;
             } // case 1586
             case 1602: {
               input.readMessage(
                   getTravelActivityPerformanceViewFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField4_ |= 0x00020000;
+              bitField4_ |= 0x00080000;
               break;
             } // case 1602
             case 1610: {
               input.readMessage(
                   getTravelActivityGroupViewFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField4_ |= 0x00010000;
+              bitField4_ |= 0x00040000;
               break;
             } // case 1610
             case 1618: {
               input.readMessage(
                   getQualifyingQuestionFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField4_ |= 0x00000002;
+              bitField4_ |= 0x00000008;
               break;
             } // case 1618
+            case 1634: {
+              input.readMessage(
+                  getCampaignSearchTermInsightFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x01000000;
+              break;
+            } // case 1634
+            case 1642: {
+              input.readMessage(
+                  getCustomerSearchTermInsightFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField2_ |= 0x00800000;
+              break;
+            } // case 1642
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -12141,6 +12295,7 @@ private static final long serialVersionUID = 0L;
     private int bitField2_;
     private int bitField3_;
     private int bitField4_;
+    private int bitField5_;
 
     private com.google.ads.googleads.v14.resources.AccountBudget accountBudget_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -20822,6 +20977,161 @@ private static final long serialVersionUID = 0L;
       return campaignLabelBuilder_;
     }
 
+    private com.google.ads.googleads.v14.resources.CampaignSearchTermInsight campaignSearchTermInsight_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v14.resources.CampaignSearchTermInsight, com.google.ads.googleads.v14.resources.CampaignSearchTermInsight.Builder, com.google.ads.googleads.v14.resources.CampaignSearchTermInsightOrBuilder> campaignSearchTermInsightBuilder_;
+    /**
+     * <pre>
+     * The campaign search term insight referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.resources.CampaignSearchTermInsight campaign_search_term_insight = 204;</code>
+     * @return Whether the campaignSearchTermInsight field is set.
+     */
+    public boolean hasCampaignSearchTermInsight() {
+      return ((bitField1_ & 0x01000000) != 0);
+    }
+    /**
+     * <pre>
+     * The campaign search term insight referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.resources.CampaignSearchTermInsight campaign_search_term_insight = 204;</code>
+     * @return The campaignSearchTermInsight.
+     */
+    public com.google.ads.googleads.v14.resources.CampaignSearchTermInsight getCampaignSearchTermInsight() {
+      if (campaignSearchTermInsightBuilder_ == null) {
+        return campaignSearchTermInsight_ == null ? com.google.ads.googleads.v14.resources.CampaignSearchTermInsight.getDefaultInstance() : campaignSearchTermInsight_;
+      } else {
+        return campaignSearchTermInsightBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The campaign search term insight referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.resources.CampaignSearchTermInsight campaign_search_term_insight = 204;</code>
+     */
+    public Builder setCampaignSearchTermInsight(com.google.ads.googleads.v14.resources.CampaignSearchTermInsight value) {
+      if (campaignSearchTermInsightBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        campaignSearchTermInsight_ = value;
+      } else {
+        campaignSearchTermInsightBuilder_.setMessage(value);
+      }
+      bitField1_ |= 0x01000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The campaign search term insight referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.resources.CampaignSearchTermInsight campaign_search_term_insight = 204;</code>
+     */
+    public Builder setCampaignSearchTermInsight(
+        com.google.ads.googleads.v14.resources.CampaignSearchTermInsight.Builder builderForValue) {
+      if (campaignSearchTermInsightBuilder_ == null) {
+        campaignSearchTermInsight_ = builderForValue.build();
+      } else {
+        campaignSearchTermInsightBuilder_.setMessage(builderForValue.build());
+      }
+      bitField1_ |= 0x01000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The campaign search term insight referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.resources.CampaignSearchTermInsight campaign_search_term_insight = 204;</code>
+     */
+    public Builder mergeCampaignSearchTermInsight(com.google.ads.googleads.v14.resources.CampaignSearchTermInsight value) {
+      if (campaignSearchTermInsightBuilder_ == null) {
+        if (((bitField1_ & 0x01000000) != 0) &&
+          campaignSearchTermInsight_ != null &&
+          campaignSearchTermInsight_ != com.google.ads.googleads.v14.resources.CampaignSearchTermInsight.getDefaultInstance()) {
+          getCampaignSearchTermInsightBuilder().mergeFrom(value);
+        } else {
+          campaignSearchTermInsight_ = value;
+        }
+      } else {
+        campaignSearchTermInsightBuilder_.mergeFrom(value);
+      }
+      bitField1_ |= 0x01000000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The campaign search term insight referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.resources.CampaignSearchTermInsight campaign_search_term_insight = 204;</code>
+     */
+    public Builder clearCampaignSearchTermInsight() {
+      bitField1_ = (bitField1_ & ~0x01000000);
+      campaignSearchTermInsight_ = null;
+      if (campaignSearchTermInsightBuilder_ != null) {
+        campaignSearchTermInsightBuilder_.dispose();
+        campaignSearchTermInsightBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The campaign search term insight referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.resources.CampaignSearchTermInsight campaign_search_term_insight = 204;</code>
+     */
+    public com.google.ads.googleads.v14.resources.CampaignSearchTermInsight.Builder getCampaignSearchTermInsightBuilder() {
+      bitField1_ |= 0x01000000;
+      onChanged();
+      return getCampaignSearchTermInsightFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The campaign search term insight referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.resources.CampaignSearchTermInsight campaign_search_term_insight = 204;</code>
+     */
+    public com.google.ads.googleads.v14.resources.CampaignSearchTermInsightOrBuilder getCampaignSearchTermInsightOrBuilder() {
+      if (campaignSearchTermInsightBuilder_ != null) {
+        return campaignSearchTermInsightBuilder_.getMessageOrBuilder();
+      } else {
+        return campaignSearchTermInsight_ == null ?
+            com.google.ads.googleads.v14.resources.CampaignSearchTermInsight.getDefaultInstance() : campaignSearchTermInsight_;
+      }
+    }
+    /**
+     * <pre>
+     * The campaign search term insight referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.resources.CampaignSearchTermInsight campaign_search_term_insight = 204;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v14.resources.CampaignSearchTermInsight, com.google.ads.googleads.v14.resources.CampaignSearchTermInsight.Builder, com.google.ads.googleads.v14.resources.CampaignSearchTermInsightOrBuilder> 
+        getCampaignSearchTermInsightFieldBuilder() {
+      if (campaignSearchTermInsightBuilder_ == null) {
+        campaignSearchTermInsightBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v14.resources.CampaignSearchTermInsight, com.google.ads.googleads.v14.resources.CampaignSearchTermInsight.Builder, com.google.ads.googleads.v14.resources.CampaignSearchTermInsightOrBuilder>(
+                getCampaignSearchTermInsight(),
+                getParentForChildren(),
+                isClean());
+        campaignSearchTermInsight_ = null;
+      }
+      return campaignSearchTermInsightBuilder_;
+    }
+
     private com.google.ads.googleads.v14.resources.CampaignSharedSet campaignSharedSet_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v14.resources.CampaignSharedSet, com.google.ads.googleads.v14.resources.CampaignSharedSet.Builder, com.google.ads.googleads.v14.resources.CampaignSharedSetOrBuilder> campaignSharedSetBuilder_;
@@ -20834,7 +21144,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the campaignSharedSet field is set.
      */
     public boolean hasCampaignSharedSet() {
-      return ((bitField1_ & 0x01000000) != 0);
+      return ((bitField1_ & 0x02000000) != 0);
     }
     /**
      * <pre>
@@ -20867,7 +21177,7 @@ private static final long serialVersionUID = 0L;
       } else {
         campaignSharedSetBuilder_.setMessage(value);
       }
-      bitField1_ |= 0x01000000;
+      bitField1_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -20885,7 +21195,7 @@ private static final long serialVersionUID = 0L;
       } else {
         campaignSharedSetBuilder_.setMessage(builderForValue.build());
       }
-      bitField1_ |= 0x01000000;
+      bitField1_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -20898,7 +21208,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCampaignSharedSet(com.google.ads.googleads.v14.resources.CampaignSharedSet value) {
       if (campaignSharedSetBuilder_ == null) {
-        if (((bitField1_ & 0x01000000) != 0) &&
+        if (((bitField1_ & 0x02000000) != 0) &&
           campaignSharedSet_ != null &&
           campaignSharedSet_ != com.google.ads.googleads.v14.resources.CampaignSharedSet.getDefaultInstance()) {
           getCampaignSharedSetBuilder().mergeFrom(value);
@@ -20908,7 +21218,7 @@ private static final long serialVersionUID = 0L;
       } else {
         campaignSharedSetBuilder_.mergeFrom(value);
       }
-      bitField1_ |= 0x01000000;
+      bitField1_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -20920,7 +21230,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CampaignSharedSet campaign_shared_set = 30;</code>
      */
     public Builder clearCampaignSharedSet() {
-      bitField1_ = (bitField1_ & ~0x01000000);
+      bitField1_ = (bitField1_ & ~0x02000000);
       campaignSharedSet_ = null;
       if (campaignSharedSetBuilder_ != null) {
         campaignSharedSetBuilder_.dispose();
@@ -20937,7 +21247,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CampaignSharedSet campaign_shared_set = 30;</code>
      */
     public com.google.ads.googleads.v14.resources.CampaignSharedSet.Builder getCampaignSharedSetBuilder() {
-      bitField1_ |= 0x01000000;
+      bitField1_ |= 0x02000000;
       onChanged();
       return getCampaignSharedSetFieldBuilder().getBuilder();
     }
@@ -20989,7 +21299,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the campaignSimulation field is set.
      */
     public boolean hasCampaignSimulation() {
-      return ((bitField1_ & 0x02000000) != 0);
+      return ((bitField1_ & 0x04000000) != 0);
     }
     /**
      * <pre>
@@ -21022,7 +21332,7 @@ private static final long serialVersionUID = 0L;
       } else {
         campaignSimulationBuilder_.setMessage(value);
       }
-      bitField1_ |= 0x02000000;
+      bitField1_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -21040,7 +21350,7 @@ private static final long serialVersionUID = 0L;
       } else {
         campaignSimulationBuilder_.setMessage(builderForValue.build());
       }
-      bitField1_ |= 0x02000000;
+      bitField1_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -21053,7 +21363,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCampaignSimulation(com.google.ads.googleads.v14.resources.CampaignSimulation value) {
       if (campaignSimulationBuilder_ == null) {
-        if (((bitField1_ & 0x02000000) != 0) &&
+        if (((bitField1_ & 0x04000000) != 0) &&
           campaignSimulation_ != null &&
           campaignSimulation_ != com.google.ads.googleads.v14.resources.CampaignSimulation.getDefaultInstance()) {
           getCampaignSimulationBuilder().mergeFrom(value);
@@ -21063,7 +21373,7 @@ private static final long serialVersionUID = 0L;
       } else {
         campaignSimulationBuilder_.mergeFrom(value);
       }
-      bitField1_ |= 0x02000000;
+      bitField1_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -21075,7 +21385,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CampaignSimulation campaign_simulation = 157;</code>
      */
     public Builder clearCampaignSimulation() {
-      bitField1_ = (bitField1_ & ~0x02000000);
+      bitField1_ = (bitField1_ & ~0x04000000);
       campaignSimulation_ = null;
       if (campaignSimulationBuilder_ != null) {
         campaignSimulationBuilder_.dispose();
@@ -21092,7 +21402,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CampaignSimulation campaign_simulation = 157;</code>
      */
     public com.google.ads.googleads.v14.resources.CampaignSimulation.Builder getCampaignSimulationBuilder() {
-      bitField1_ |= 0x02000000;
+      bitField1_ |= 0x04000000;
       onChanged();
       return getCampaignSimulationFieldBuilder().getBuilder();
     }
@@ -21144,7 +21454,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the carrierConstant field is set.
      */
     public boolean hasCarrierConstant() {
-      return ((bitField1_ & 0x04000000) != 0);
+      return ((bitField1_ & 0x08000000) != 0);
     }
     /**
      * <pre>
@@ -21177,7 +21487,7 @@ private static final long serialVersionUID = 0L;
       } else {
         carrierConstantBuilder_.setMessage(value);
       }
-      bitField1_ |= 0x04000000;
+      bitField1_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -21195,7 +21505,7 @@ private static final long serialVersionUID = 0L;
       } else {
         carrierConstantBuilder_.setMessage(builderForValue.build());
       }
-      bitField1_ |= 0x04000000;
+      bitField1_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -21208,7 +21518,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCarrierConstant(com.google.ads.googleads.v14.resources.CarrierConstant value) {
       if (carrierConstantBuilder_ == null) {
-        if (((bitField1_ & 0x04000000) != 0) &&
+        if (((bitField1_ & 0x08000000) != 0) &&
           carrierConstant_ != null &&
           carrierConstant_ != com.google.ads.googleads.v14.resources.CarrierConstant.getDefaultInstance()) {
           getCarrierConstantBuilder().mergeFrom(value);
@@ -21218,7 +21528,7 @@ private static final long serialVersionUID = 0L;
       } else {
         carrierConstantBuilder_.mergeFrom(value);
       }
-      bitField1_ |= 0x04000000;
+      bitField1_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -21230,7 +21540,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CarrierConstant carrier_constant = 66;</code>
      */
     public Builder clearCarrierConstant() {
-      bitField1_ = (bitField1_ & ~0x04000000);
+      bitField1_ = (bitField1_ & ~0x08000000);
       carrierConstant_ = null;
       if (carrierConstantBuilder_ != null) {
         carrierConstantBuilder_.dispose();
@@ -21247,7 +21557,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CarrierConstant carrier_constant = 66;</code>
      */
     public com.google.ads.googleads.v14.resources.CarrierConstant.Builder getCarrierConstantBuilder() {
-      bitField1_ |= 0x04000000;
+      bitField1_ |= 0x08000000;
       onChanged();
       return getCarrierConstantFieldBuilder().getBuilder();
     }
@@ -21299,7 +21609,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the changeEvent field is set.
      */
     public boolean hasChangeEvent() {
-      return ((bitField1_ & 0x08000000) != 0);
+      return ((bitField1_ & 0x10000000) != 0);
     }
     /**
      * <pre>
@@ -21332,7 +21642,7 @@ private static final long serialVersionUID = 0L;
       } else {
         changeEventBuilder_.setMessage(value);
       }
-      bitField1_ |= 0x08000000;
+      bitField1_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -21350,7 +21660,7 @@ private static final long serialVersionUID = 0L;
       } else {
         changeEventBuilder_.setMessage(builderForValue.build());
       }
-      bitField1_ |= 0x08000000;
+      bitField1_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -21363,7 +21673,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeChangeEvent(com.google.ads.googleads.v14.resources.ChangeEvent value) {
       if (changeEventBuilder_ == null) {
-        if (((bitField1_ & 0x08000000) != 0) &&
+        if (((bitField1_ & 0x10000000) != 0) &&
           changeEvent_ != null &&
           changeEvent_ != com.google.ads.googleads.v14.resources.ChangeEvent.getDefaultInstance()) {
           getChangeEventBuilder().mergeFrom(value);
@@ -21373,7 +21683,7 @@ private static final long serialVersionUID = 0L;
       } else {
         changeEventBuilder_.mergeFrom(value);
       }
-      bitField1_ |= 0x08000000;
+      bitField1_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -21385,7 +21695,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.ChangeEvent change_event = 145;</code>
      */
     public Builder clearChangeEvent() {
-      bitField1_ = (bitField1_ & ~0x08000000);
+      bitField1_ = (bitField1_ & ~0x10000000);
       changeEvent_ = null;
       if (changeEventBuilder_ != null) {
         changeEventBuilder_.dispose();
@@ -21402,7 +21712,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.ChangeEvent change_event = 145;</code>
      */
     public com.google.ads.googleads.v14.resources.ChangeEvent.Builder getChangeEventBuilder() {
-      bitField1_ |= 0x08000000;
+      bitField1_ |= 0x10000000;
       onChanged();
       return getChangeEventFieldBuilder().getBuilder();
     }
@@ -21454,7 +21764,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the changeStatus field is set.
      */
     public boolean hasChangeStatus() {
-      return ((bitField1_ & 0x10000000) != 0);
+      return ((bitField1_ & 0x20000000) != 0);
     }
     /**
      * <pre>
@@ -21487,7 +21797,7 @@ private static final long serialVersionUID = 0L;
       } else {
         changeStatusBuilder_.setMessage(value);
       }
-      bitField1_ |= 0x10000000;
+      bitField1_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -21505,7 +21815,7 @@ private static final long serialVersionUID = 0L;
       } else {
         changeStatusBuilder_.setMessage(builderForValue.build());
       }
-      bitField1_ |= 0x10000000;
+      bitField1_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -21518,7 +21828,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeChangeStatus(com.google.ads.googleads.v14.resources.ChangeStatus value) {
       if (changeStatusBuilder_ == null) {
-        if (((bitField1_ & 0x10000000) != 0) &&
+        if (((bitField1_ & 0x20000000) != 0) &&
           changeStatus_ != null &&
           changeStatus_ != com.google.ads.googleads.v14.resources.ChangeStatus.getDefaultInstance()) {
           getChangeStatusBuilder().mergeFrom(value);
@@ -21528,7 +21838,7 @@ private static final long serialVersionUID = 0L;
       } else {
         changeStatusBuilder_.mergeFrom(value);
       }
-      bitField1_ |= 0x10000000;
+      bitField1_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -21540,7 +21850,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.ChangeStatus change_status = 37;</code>
      */
     public Builder clearChangeStatus() {
-      bitField1_ = (bitField1_ & ~0x10000000);
+      bitField1_ = (bitField1_ & ~0x20000000);
       changeStatus_ = null;
       if (changeStatusBuilder_ != null) {
         changeStatusBuilder_.dispose();
@@ -21557,7 +21867,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.ChangeStatus change_status = 37;</code>
      */
     public com.google.ads.googleads.v14.resources.ChangeStatus.Builder getChangeStatusBuilder() {
-      bitField1_ |= 0x10000000;
+      bitField1_ |= 0x20000000;
       onChanged();
       return getChangeStatusFieldBuilder().getBuilder();
     }
@@ -21609,7 +21919,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the combinedAudience field is set.
      */
     public boolean hasCombinedAudience() {
-      return ((bitField1_ & 0x20000000) != 0);
+      return ((bitField1_ & 0x40000000) != 0);
     }
     /**
      * <pre>
@@ -21642,7 +21952,7 @@ private static final long serialVersionUID = 0L;
       } else {
         combinedAudienceBuilder_.setMessage(value);
       }
-      bitField1_ |= 0x20000000;
+      bitField1_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -21660,7 +21970,7 @@ private static final long serialVersionUID = 0L;
       } else {
         combinedAudienceBuilder_.setMessage(builderForValue.build());
       }
-      bitField1_ |= 0x20000000;
+      bitField1_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -21673,7 +21983,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCombinedAudience(com.google.ads.googleads.v14.resources.CombinedAudience value) {
       if (combinedAudienceBuilder_ == null) {
-        if (((bitField1_ & 0x20000000) != 0) &&
+        if (((bitField1_ & 0x40000000) != 0) &&
           combinedAudience_ != null &&
           combinedAudience_ != com.google.ads.googleads.v14.resources.CombinedAudience.getDefaultInstance()) {
           getCombinedAudienceBuilder().mergeFrom(value);
@@ -21683,7 +21993,7 @@ private static final long serialVersionUID = 0L;
       } else {
         combinedAudienceBuilder_.mergeFrom(value);
       }
-      bitField1_ |= 0x20000000;
+      bitField1_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -21695,7 +22005,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CombinedAudience combined_audience = 148;</code>
      */
     public Builder clearCombinedAudience() {
-      bitField1_ = (bitField1_ & ~0x20000000);
+      bitField1_ = (bitField1_ & ~0x40000000);
       combinedAudience_ = null;
       if (combinedAudienceBuilder_ != null) {
         combinedAudienceBuilder_.dispose();
@@ -21712,7 +22022,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CombinedAudience combined_audience = 148;</code>
      */
     public com.google.ads.googleads.v14.resources.CombinedAudience.Builder getCombinedAudienceBuilder() {
-      bitField1_ |= 0x20000000;
+      bitField1_ |= 0x40000000;
       onChanged();
       return getCombinedAudienceFieldBuilder().getBuilder();
     }
@@ -21764,7 +22074,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the audience field is set.
      */
     public boolean hasAudience() {
-      return ((bitField1_ & 0x40000000) != 0);
+      return ((bitField1_ & 0x80000000) != 0);
     }
     /**
      * <pre>
@@ -21797,7 +22107,7 @@ private static final long serialVersionUID = 0L;
       } else {
         audienceBuilder_.setMessage(value);
       }
-      bitField1_ |= 0x40000000;
+      bitField1_ |= 0x80000000;
       onChanged();
       return this;
     }
@@ -21815,7 +22125,7 @@ private static final long serialVersionUID = 0L;
       } else {
         audienceBuilder_.setMessage(builderForValue.build());
       }
-      bitField1_ |= 0x40000000;
+      bitField1_ |= 0x80000000;
       onChanged();
       return this;
     }
@@ -21828,7 +22138,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAudience(com.google.ads.googleads.v14.resources.Audience value) {
       if (audienceBuilder_ == null) {
-        if (((bitField1_ & 0x40000000) != 0) &&
+        if (((bitField1_ & 0x80000000) != 0) &&
           audience_ != null &&
           audience_ != com.google.ads.googleads.v14.resources.Audience.getDefaultInstance()) {
           getAudienceBuilder().mergeFrom(value);
@@ -21838,7 +22148,7 @@ private static final long serialVersionUID = 0L;
       } else {
         audienceBuilder_.mergeFrom(value);
       }
-      bitField1_ |= 0x40000000;
+      bitField1_ |= 0x80000000;
       onChanged();
       return this;
     }
@@ -21850,7 +22160,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.Audience audience = 190;</code>
      */
     public Builder clearAudience() {
-      bitField1_ = (bitField1_ & ~0x40000000);
+      bitField1_ = (bitField1_ & ~0x80000000);
       audience_ = null;
       if (audienceBuilder_ != null) {
         audienceBuilder_.dispose();
@@ -21867,7 +22177,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.Audience audience = 190;</code>
      */
     public com.google.ads.googleads.v14.resources.Audience.Builder getAudienceBuilder() {
-      bitField1_ |= 0x40000000;
+      bitField1_ |= 0x80000000;
       onChanged();
       return getAudienceFieldBuilder().getBuilder();
     }
@@ -21919,7 +22229,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the conversionAction field is set.
      */
     public boolean hasConversionAction() {
-      return ((bitField1_ & 0x80000000) != 0);
+      return ((bitField2_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -21952,7 +22262,7 @@ private static final long serialVersionUID = 0L;
       } else {
         conversionActionBuilder_.setMessage(value);
       }
-      bitField1_ |= 0x80000000;
+      bitField2_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -21970,7 +22280,7 @@ private static final long serialVersionUID = 0L;
       } else {
         conversionActionBuilder_.setMessage(builderForValue.build());
       }
-      bitField1_ |= 0x80000000;
+      bitField2_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -21983,7 +22293,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeConversionAction(com.google.ads.googleads.v14.resources.ConversionAction value) {
       if (conversionActionBuilder_ == null) {
-        if (((bitField1_ & 0x80000000) != 0) &&
+        if (((bitField2_ & 0x00000001) != 0) &&
           conversionAction_ != null &&
           conversionAction_ != com.google.ads.googleads.v14.resources.ConversionAction.getDefaultInstance()) {
           getConversionActionBuilder().mergeFrom(value);
@@ -21993,7 +22303,7 @@ private static final long serialVersionUID = 0L;
       } else {
         conversionActionBuilder_.mergeFrom(value);
       }
-      bitField1_ |= 0x80000000;
+      bitField2_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -22005,7 +22315,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.ConversionAction conversion_action = 103;</code>
      */
     public Builder clearConversionAction() {
-      bitField1_ = (bitField1_ & ~0x80000000);
+      bitField2_ = (bitField2_ & ~0x00000001);
       conversionAction_ = null;
       if (conversionActionBuilder_ != null) {
         conversionActionBuilder_.dispose();
@@ -22022,7 +22332,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.ConversionAction conversion_action = 103;</code>
      */
     public com.google.ads.googleads.v14.resources.ConversionAction.Builder getConversionActionBuilder() {
-      bitField1_ |= 0x80000000;
+      bitField2_ |= 0x00000001;
       onChanged();
       return getConversionActionFieldBuilder().getBuilder();
     }
@@ -22074,7 +22384,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the conversionCustomVariable field is set.
      */
     public boolean hasConversionCustomVariable() {
-      return ((bitField2_ & 0x00000001) != 0);
+      return ((bitField2_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -22107,7 +22417,7 @@ private static final long serialVersionUID = 0L;
       } else {
         conversionCustomVariableBuilder_.setMessage(value);
       }
-      bitField2_ |= 0x00000001;
+      bitField2_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -22125,7 +22435,7 @@ private static final long serialVersionUID = 0L;
       } else {
         conversionCustomVariableBuilder_.setMessage(builderForValue.build());
       }
-      bitField2_ |= 0x00000001;
+      bitField2_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -22138,7 +22448,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeConversionCustomVariable(com.google.ads.googleads.v14.resources.ConversionCustomVariable value) {
       if (conversionCustomVariableBuilder_ == null) {
-        if (((bitField2_ & 0x00000001) != 0) &&
+        if (((bitField2_ & 0x00000002) != 0) &&
           conversionCustomVariable_ != null &&
           conversionCustomVariable_ != com.google.ads.googleads.v14.resources.ConversionCustomVariable.getDefaultInstance()) {
           getConversionCustomVariableBuilder().mergeFrom(value);
@@ -22148,7 +22458,7 @@ private static final long serialVersionUID = 0L;
       } else {
         conversionCustomVariableBuilder_.mergeFrom(value);
       }
-      bitField2_ |= 0x00000001;
+      bitField2_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -22160,7 +22470,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.ConversionCustomVariable conversion_custom_variable = 153;</code>
      */
     public Builder clearConversionCustomVariable() {
-      bitField2_ = (bitField2_ & ~0x00000001);
+      bitField2_ = (bitField2_ & ~0x00000002);
       conversionCustomVariable_ = null;
       if (conversionCustomVariableBuilder_ != null) {
         conversionCustomVariableBuilder_.dispose();
@@ -22177,7 +22487,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.ConversionCustomVariable conversion_custom_variable = 153;</code>
      */
     public com.google.ads.googleads.v14.resources.ConversionCustomVariable.Builder getConversionCustomVariableBuilder() {
-      bitField2_ |= 0x00000001;
+      bitField2_ |= 0x00000002;
       onChanged();
       return getConversionCustomVariableFieldBuilder().getBuilder();
     }
@@ -22229,7 +22539,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the conversionGoalCampaignConfig field is set.
      */
     public boolean hasConversionGoalCampaignConfig() {
-      return ((bitField2_ & 0x00000002) != 0);
+      return ((bitField2_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -22262,7 +22572,7 @@ private static final long serialVersionUID = 0L;
       } else {
         conversionGoalCampaignConfigBuilder_.setMessage(value);
       }
-      bitField2_ |= 0x00000002;
+      bitField2_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -22280,7 +22590,7 @@ private static final long serialVersionUID = 0L;
       } else {
         conversionGoalCampaignConfigBuilder_.setMessage(builderForValue.build());
       }
-      bitField2_ |= 0x00000002;
+      bitField2_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -22293,7 +22603,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeConversionGoalCampaignConfig(com.google.ads.googleads.v14.resources.ConversionGoalCampaignConfig value) {
       if (conversionGoalCampaignConfigBuilder_ == null) {
-        if (((bitField2_ & 0x00000002) != 0) &&
+        if (((bitField2_ & 0x00000004) != 0) &&
           conversionGoalCampaignConfig_ != null &&
           conversionGoalCampaignConfig_ != com.google.ads.googleads.v14.resources.ConversionGoalCampaignConfig.getDefaultInstance()) {
           getConversionGoalCampaignConfigBuilder().mergeFrom(value);
@@ -22303,7 +22613,7 @@ private static final long serialVersionUID = 0L;
       } else {
         conversionGoalCampaignConfigBuilder_.mergeFrom(value);
       }
-      bitField2_ |= 0x00000002;
+      bitField2_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -22315,7 +22625,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.ConversionGoalCampaignConfig conversion_goal_campaign_config = 177;</code>
      */
     public Builder clearConversionGoalCampaignConfig() {
-      bitField2_ = (bitField2_ & ~0x00000002);
+      bitField2_ = (bitField2_ & ~0x00000004);
       conversionGoalCampaignConfig_ = null;
       if (conversionGoalCampaignConfigBuilder_ != null) {
         conversionGoalCampaignConfigBuilder_.dispose();
@@ -22332,7 +22642,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.ConversionGoalCampaignConfig conversion_goal_campaign_config = 177;</code>
      */
     public com.google.ads.googleads.v14.resources.ConversionGoalCampaignConfig.Builder getConversionGoalCampaignConfigBuilder() {
-      bitField2_ |= 0x00000002;
+      bitField2_ |= 0x00000004;
       onChanged();
       return getConversionGoalCampaignConfigFieldBuilder().getBuilder();
     }
@@ -22384,7 +22694,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the conversionValueRule field is set.
      */
     public boolean hasConversionValueRule() {
-      return ((bitField2_ & 0x00000004) != 0);
+      return ((bitField2_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -22417,7 +22727,7 @@ private static final long serialVersionUID = 0L;
       } else {
         conversionValueRuleBuilder_.setMessage(value);
       }
-      bitField2_ |= 0x00000004;
+      bitField2_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -22435,7 +22745,7 @@ private static final long serialVersionUID = 0L;
       } else {
         conversionValueRuleBuilder_.setMessage(builderForValue.build());
       }
-      bitField2_ |= 0x00000004;
+      bitField2_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -22448,7 +22758,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeConversionValueRule(com.google.ads.googleads.v14.resources.ConversionValueRule value) {
       if (conversionValueRuleBuilder_ == null) {
-        if (((bitField2_ & 0x00000004) != 0) &&
+        if (((bitField2_ & 0x00000008) != 0) &&
           conversionValueRule_ != null &&
           conversionValueRule_ != com.google.ads.googleads.v14.resources.ConversionValueRule.getDefaultInstance()) {
           getConversionValueRuleBuilder().mergeFrom(value);
@@ -22458,7 +22768,7 @@ private static final long serialVersionUID = 0L;
       } else {
         conversionValueRuleBuilder_.mergeFrom(value);
       }
-      bitField2_ |= 0x00000004;
+      bitField2_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -22470,7 +22780,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.ConversionValueRule conversion_value_rule = 164;</code>
      */
     public Builder clearConversionValueRule() {
-      bitField2_ = (bitField2_ & ~0x00000004);
+      bitField2_ = (bitField2_ & ~0x00000008);
       conversionValueRule_ = null;
       if (conversionValueRuleBuilder_ != null) {
         conversionValueRuleBuilder_.dispose();
@@ -22487,7 +22797,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.ConversionValueRule conversion_value_rule = 164;</code>
      */
     public com.google.ads.googleads.v14.resources.ConversionValueRule.Builder getConversionValueRuleBuilder() {
-      bitField2_ |= 0x00000004;
+      bitField2_ |= 0x00000008;
       onChanged();
       return getConversionValueRuleFieldBuilder().getBuilder();
     }
@@ -22539,7 +22849,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the conversionValueRuleSet field is set.
      */
     public boolean hasConversionValueRuleSet() {
-      return ((bitField2_ & 0x00000008) != 0);
+      return ((bitField2_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -22572,7 +22882,7 @@ private static final long serialVersionUID = 0L;
       } else {
         conversionValueRuleSetBuilder_.setMessage(value);
       }
-      bitField2_ |= 0x00000008;
+      bitField2_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -22590,7 +22900,7 @@ private static final long serialVersionUID = 0L;
       } else {
         conversionValueRuleSetBuilder_.setMessage(builderForValue.build());
       }
-      bitField2_ |= 0x00000008;
+      bitField2_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -22603,7 +22913,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeConversionValueRuleSet(com.google.ads.googleads.v14.resources.ConversionValueRuleSet value) {
       if (conversionValueRuleSetBuilder_ == null) {
-        if (((bitField2_ & 0x00000008) != 0) &&
+        if (((bitField2_ & 0x00000010) != 0) &&
           conversionValueRuleSet_ != null &&
           conversionValueRuleSet_ != com.google.ads.googleads.v14.resources.ConversionValueRuleSet.getDefaultInstance()) {
           getConversionValueRuleSetBuilder().mergeFrom(value);
@@ -22613,7 +22923,7 @@ private static final long serialVersionUID = 0L;
       } else {
         conversionValueRuleSetBuilder_.mergeFrom(value);
       }
-      bitField2_ |= 0x00000008;
+      bitField2_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -22625,7 +22935,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.ConversionValueRuleSet conversion_value_rule_set = 165;</code>
      */
     public Builder clearConversionValueRuleSet() {
-      bitField2_ = (bitField2_ & ~0x00000008);
+      bitField2_ = (bitField2_ & ~0x00000010);
       conversionValueRuleSet_ = null;
       if (conversionValueRuleSetBuilder_ != null) {
         conversionValueRuleSetBuilder_.dispose();
@@ -22642,7 +22952,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.ConversionValueRuleSet conversion_value_rule_set = 165;</code>
      */
     public com.google.ads.googleads.v14.resources.ConversionValueRuleSet.Builder getConversionValueRuleSetBuilder() {
-      bitField2_ |= 0x00000008;
+      bitField2_ |= 0x00000010;
       onChanged();
       return getConversionValueRuleSetFieldBuilder().getBuilder();
     }
@@ -22694,7 +23004,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the clickView field is set.
      */
     public boolean hasClickView() {
-      return ((bitField2_ & 0x00000010) != 0);
+      return ((bitField2_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -22727,7 +23037,7 @@ private static final long serialVersionUID = 0L;
       } else {
         clickViewBuilder_.setMessage(value);
       }
-      bitField2_ |= 0x00000010;
+      bitField2_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -22745,7 +23055,7 @@ private static final long serialVersionUID = 0L;
       } else {
         clickViewBuilder_.setMessage(builderForValue.build());
       }
-      bitField2_ |= 0x00000010;
+      bitField2_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -22758,7 +23068,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeClickView(com.google.ads.googleads.v14.resources.ClickView value) {
       if (clickViewBuilder_ == null) {
-        if (((bitField2_ & 0x00000010) != 0) &&
+        if (((bitField2_ & 0x00000020) != 0) &&
           clickView_ != null &&
           clickView_ != com.google.ads.googleads.v14.resources.ClickView.getDefaultInstance()) {
           getClickViewBuilder().mergeFrom(value);
@@ -22768,7 +23078,7 @@ private static final long serialVersionUID = 0L;
       } else {
         clickViewBuilder_.mergeFrom(value);
       }
-      bitField2_ |= 0x00000010;
+      bitField2_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -22780,7 +23090,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.ClickView click_view = 122;</code>
      */
     public Builder clearClickView() {
-      bitField2_ = (bitField2_ & ~0x00000010);
+      bitField2_ = (bitField2_ & ~0x00000020);
       clickView_ = null;
       if (clickViewBuilder_ != null) {
         clickViewBuilder_.dispose();
@@ -22797,7 +23107,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.ClickView click_view = 122;</code>
      */
     public com.google.ads.googleads.v14.resources.ClickView.Builder getClickViewBuilder() {
-      bitField2_ |= 0x00000010;
+      bitField2_ |= 0x00000020;
       onChanged();
       return getClickViewFieldBuilder().getBuilder();
     }
@@ -22849,7 +23159,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the currencyConstant field is set.
      */
     public boolean hasCurrencyConstant() {
-      return ((bitField2_ & 0x00000020) != 0);
+      return ((bitField2_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -22882,7 +23192,7 @@ private static final long serialVersionUID = 0L;
       } else {
         currencyConstantBuilder_.setMessage(value);
       }
-      bitField2_ |= 0x00000020;
+      bitField2_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -22900,7 +23210,7 @@ private static final long serialVersionUID = 0L;
       } else {
         currencyConstantBuilder_.setMessage(builderForValue.build());
       }
-      bitField2_ |= 0x00000020;
+      bitField2_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -22913,7 +23223,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCurrencyConstant(com.google.ads.googleads.v14.resources.CurrencyConstant value) {
       if (currencyConstantBuilder_ == null) {
-        if (((bitField2_ & 0x00000020) != 0) &&
+        if (((bitField2_ & 0x00000040) != 0) &&
           currencyConstant_ != null &&
           currencyConstant_ != com.google.ads.googleads.v14.resources.CurrencyConstant.getDefaultInstance()) {
           getCurrencyConstantBuilder().mergeFrom(value);
@@ -22923,7 +23233,7 @@ private static final long serialVersionUID = 0L;
       } else {
         currencyConstantBuilder_.mergeFrom(value);
       }
-      bitField2_ |= 0x00000020;
+      bitField2_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -22935,7 +23245,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CurrencyConstant currency_constant = 134;</code>
      */
     public Builder clearCurrencyConstant() {
-      bitField2_ = (bitField2_ & ~0x00000020);
+      bitField2_ = (bitField2_ & ~0x00000040);
       currencyConstant_ = null;
       if (currencyConstantBuilder_ != null) {
         currencyConstantBuilder_.dispose();
@@ -22952,7 +23262,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CurrencyConstant currency_constant = 134;</code>
      */
     public com.google.ads.googleads.v14.resources.CurrencyConstant.Builder getCurrencyConstantBuilder() {
-      bitField2_ |= 0x00000020;
+      bitField2_ |= 0x00000040;
       onChanged();
       return getCurrencyConstantFieldBuilder().getBuilder();
     }
@@ -23004,7 +23314,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the customAudience field is set.
      */
     public boolean hasCustomAudience() {
-      return ((bitField2_ & 0x00000040) != 0);
+      return ((bitField2_ & 0x00000080) != 0);
     }
     /**
      * <pre>
@@ -23037,7 +23347,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customAudienceBuilder_.setMessage(value);
       }
-      bitField2_ |= 0x00000040;
+      bitField2_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -23055,7 +23365,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customAudienceBuilder_.setMessage(builderForValue.build());
       }
-      bitField2_ |= 0x00000040;
+      bitField2_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -23068,7 +23378,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCustomAudience(com.google.ads.googleads.v14.resources.CustomAudience value) {
       if (customAudienceBuilder_ == null) {
-        if (((bitField2_ & 0x00000040) != 0) &&
+        if (((bitField2_ & 0x00000080) != 0) &&
           customAudience_ != null &&
           customAudience_ != com.google.ads.googleads.v14.resources.CustomAudience.getDefaultInstance()) {
           getCustomAudienceBuilder().mergeFrom(value);
@@ -23078,7 +23388,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customAudienceBuilder_.mergeFrom(value);
       }
-      bitField2_ |= 0x00000040;
+      bitField2_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -23090,7 +23400,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CustomAudience custom_audience = 147;</code>
      */
     public Builder clearCustomAudience() {
-      bitField2_ = (bitField2_ & ~0x00000040);
+      bitField2_ = (bitField2_ & ~0x00000080);
       customAudience_ = null;
       if (customAudienceBuilder_ != null) {
         customAudienceBuilder_.dispose();
@@ -23107,7 +23417,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CustomAudience custom_audience = 147;</code>
      */
     public com.google.ads.googleads.v14.resources.CustomAudience.Builder getCustomAudienceBuilder() {
-      bitField2_ |= 0x00000040;
+      bitField2_ |= 0x00000080;
       onChanged();
       return getCustomAudienceFieldBuilder().getBuilder();
     }
@@ -23159,7 +23469,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the customConversionGoal field is set.
      */
     public boolean hasCustomConversionGoal() {
-      return ((bitField2_ & 0x00000080) != 0);
+      return ((bitField2_ & 0x00000100) != 0);
     }
     /**
      * <pre>
@@ -23192,7 +23502,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customConversionGoalBuilder_.setMessage(value);
       }
-      bitField2_ |= 0x00000080;
+      bitField2_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -23210,7 +23520,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customConversionGoalBuilder_.setMessage(builderForValue.build());
       }
-      bitField2_ |= 0x00000080;
+      bitField2_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -23223,7 +23533,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCustomConversionGoal(com.google.ads.googleads.v14.resources.CustomConversionGoal value) {
       if (customConversionGoalBuilder_ == null) {
-        if (((bitField2_ & 0x00000080) != 0) &&
+        if (((bitField2_ & 0x00000100) != 0) &&
           customConversionGoal_ != null &&
           customConversionGoal_ != com.google.ads.googleads.v14.resources.CustomConversionGoal.getDefaultInstance()) {
           getCustomConversionGoalBuilder().mergeFrom(value);
@@ -23233,7 +23543,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customConversionGoalBuilder_.mergeFrom(value);
       }
-      bitField2_ |= 0x00000080;
+      bitField2_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -23245,7 +23555,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CustomConversionGoal custom_conversion_goal = 176;</code>
      */
     public Builder clearCustomConversionGoal() {
-      bitField2_ = (bitField2_ & ~0x00000080);
+      bitField2_ = (bitField2_ & ~0x00000100);
       customConversionGoal_ = null;
       if (customConversionGoalBuilder_ != null) {
         customConversionGoalBuilder_.dispose();
@@ -23262,7 +23572,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CustomConversionGoal custom_conversion_goal = 176;</code>
      */
     public com.google.ads.googleads.v14.resources.CustomConversionGoal.Builder getCustomConversionGoalBuilder() {
-      bitField2_ |= 0x00000080;
+      bitField2_ |= 0x00000100;
       onChanged();
       return getCustomConversionGoalFieldBuilder().getBuilder();
     }
@@ -23314,7 +23624,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the customInterest field is set.
      */
     public boolean hasCustomInterest() {
-      return ((bitField2_ & 0x00000100) != 0);
+      return ((bitField2_ & 0x00000200) != 0);
     }
     /**
      * <pre>
@@ -23347,7 +23657,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customInterestBuilder_.setMessage(value);
       }
-      bitField2_ |= 0x00000100;
+      bitField2_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -23365,7 +23675,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customInterestBuilder_.setMessage(builderForValue.build());
       }
-      bitField2_ |= 0x00000100;
+      bitField2_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -23378,7 +23688,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCustomInterest(com.google.ads.googleads.v14.resources.CustomInterest value) {
       if (customInterestBuilder_ == null) {
-        if (((bitField2_ & 0x00000100) != 0) &&
+        if (((bitField2_ & 0x00000200) != 0) &&
           customInterest_ != null &&
           customInterest_ != com.google.ads.googleads.v14.resources.CustomInterest.getDefaultInstance()) {
           getCustomInterestBuilder().mergeFrom(value);
@@ -23388,7 +23698,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customInterestBuilder_.mergeFrom(value);
       }
-      bitField2_ |= 0x00000100;
+      bitField2_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -23400,7 +23710,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CustomInterest custom_interest = 104;</code>
      */
     public Builder clearCustomInterest() {
-      bitField2_ = (bitField2_ & ~0x00000100);
+      bitField2_ = (bitField2_ & ~0x00000200);
       customInterest_ = null;
       if (customInterestBuilder_ != null) {
         customInterestBuilder_.dispose();
@@ -23417,7 +23727,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CustomInterest custom_interest = 104;</code>
      */
     public com.google.ads.googleads.v14.resources.CustomInterest.Builder getCustomInterestBuilder() {
-      bitField2_ |= 0x00000100;
+      bitField2_ |= 0x00000200;
       onChanged();
       return getCustomInterestFieldBuilder().getBuilder();
     }
@@ -23469,7 +23779,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the customer field is set.
      */
     public boolean hasCustomer() {
-      return ((bitField2_ & 0x00000200) != 0);
+      return ((bitField2_ & 0x00000400) != 0);
     }
     /**
      * <pre>
@@ -23502,7 +23812,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerBuilder_.setMessage(value);
       }
-      bitField2_ |= 0x00000200;
+      bitField2_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -23520,7 +23830,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerBuilder_.setMessage(builderForValue.build());
       }
-      bitField2_ |= 0x00000200;
+      bitField2_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -23533,7 +23843,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCustomer(com.google.ads.googleads.v14.resources.Customer value) {
       if (customerBuilder_ == null) {
-        if (((bitField2_ & 0x00000200) != 0) &&
+        if (((bitField2_ & 0x00000400) != 0) &&
           customer_ != null &&
           customer_ != com.google.ads.googleads.v14.resources.Customer.getDefaultInstance()) {
           getCustomerBuilder().mergeFrom(value);
@@ -23543,7 +23853,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerBuilder_.mergeFrom(value);
       }
-      bitField2_ |= 0x00000200;
+      bitField2_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -23555,7 +23865,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.Customer customer = 1;</code>
      */
     public Builder clearCustomer() {
-      bitField2_ = (bitField2_ & ~0x00000200);
+      bitField2_ = (bitField2_ & ~0x00000400);
       customer_ = null;
       if (customerBuilder_ != null) {
         customerBuilder_.dispose();
@@ -23572,7 +23882,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.Customer customer = 1;</code>
      */
     public com.google.ads.googleads.v14.resources.Customer.Builder getCustomerBuilder() {
-      bitField2_ |= 0x00000200;
+      bitField2_ |= 0x00000400;
       onChanged();
       return getCustomerFieldBuilder().getBuilder();
     }
@@ -23624,7 +23934,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the customerAsset field is set.
      */
     public boolean hasCustomerAsset() {
-      return ((bitField2_ & 0x00000400) != 0);
+      return ((bitField2_ & 0x00000800) != 0);
     }
     /**
      * <pre>
@@ -23657,7 +23967,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerAssetBuilder_.setMessage(value);
       }
-      bitField2_ |= 0x00000400;
+      bitField2_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -23675,7 +23985,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerAssetBuilder_.setMessage(builderForValue.build());
       }
-      bitField2_ |= 0x00000400;
+      bitField2_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -23688,7 +23998,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCustomerAsset(com.google.ads.googleads.v14.resources.CustomerAsset value) {
       if (customerAssetBuilder_ == null) {
-        if (((bitField2_ & 0x00000400) != 0) &&
+        if (((bitField2_ & 0x00000800) != 0) &&
           customerAsset_ != null &&
           customerAsset_ != com.google.ads.googleads.v14.resources.CustomerAsset.getDefaultInstance()) {
           getCustomerAssetBuilder().mergeFrom(value);
@@ -23698,7 +24008,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerAssetBuilder_.mergeFrom(value);
       }
-      bitField2_ |= 0x00000400;
+      bitField2_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -23710,7 +24020,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CustomerAsset customer_asset = 155;</code>
      */
     public Builder clearCustomerAsset() {
-      bitField2_ = (bitField2_ & ~0x00000400);
+      bitField2_ = (bitField2_ & ~0x00000800);
       customerAsset_ = null;
       if (customerAssetBuilder_ != null) {
         customerAssetBuilder_.dispose();
@@ -23727,7 +24037,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CustomerAsset customer_asset = 155;</code>
      */
     public com.google.ads.googleads.v14.resources.CustomerAsset.Builder getCustomerAssetBuilder() {
-      bitField2_ |= 0x00000400;
+      bitField2_ |= 0x00000800;
       onChanged();
       return getCustomerAssetFieldBuilder().getBuilder();
     }
@@ -23779,7 +24089,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the customerAssetSet field is set.
      */
     public boolean hasCustomerAssetSet() {
-      return ((bitField2_ & 0x00000800) != 0);
+      return ((bitField2_ & 0x00001000) != 0);
     }
     /**
      * <pre>
@@ -23812,7 +24122,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerAssetSetBuilder_.setMessage(value);
       }
-      bitField2_ |= 0x00000800;
+      bitField2_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -23830,7 +24140,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerAssetSetBuilder_.setMessage(builderForValue.build());
       }
-      bitField2_ |= 0x00000800;
+      bitField2_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -23843,7 +24153,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCustomerAssetSet(com.google.ads.googleads.v14.resources.CustomerAssetSet value) {
       if (customerAssetSetBuilder_ == null) {
-        if (((bitField2_ & 0x00000800) != 0) &&
+        if (((bitField2_ & 0x00001000) != 0) &&
           customerAssetSet_ != null &&
           customerAssetSet_ != com.google.ads.googleads.v14.resources.CustomerAssetSet.getDefaultInstance()) {
           getCustomerAssetSetBuilder().mergeFrom(value);
@@ -23853,7 +24163,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerAssetSetBuilder_.mergeFrom(value);
       }
-      bitField2_ |= 0x00000800;
+      bitField2_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -23865,7 +24175,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CustomerAssetSet customer_asset_set = 195;</code>
      */
     public Builder clearCustomerAssetSet() {
-      bitField2_ = (bitField2_ & ~0x00000800);
+      bitField2_ = (bitField2_ & ~0x00001000);
       customerAssetSet_ = null;
       if (customerAssetSetBuilder_ != null) {
         customerAssetSetBuilder_.dispose();
@@ -23882,7 +24192,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CustomerAssetSet customer_asset_set = 195;</code>
      */
     public com.google.ads.googleads.v14.resources.CustomerAssetSet.Builder getCustomerAssetSetBuilder() {
-      bitField2_ |= 0x00000800;
+      bitField2_ |= 0x00001000;
       onChanged();
       return getCustomerAssetSetFieldBuilder().getBuilder();
     }
@@ -23934,7 +24244,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the accessibleBiddingStrategy field is set.
      */
     public boolean hasAccessibleBiddingStrategy() {
-      return ((bitField2_ & 0x00001000) != 0);
+      return ((bitField2_ & 0x00002000) != 0);
     }
     /**
      * <pre>
@@ -23967,7 +24277,7 @@ private static final long serialVersionUID = 0L;
       } else {
         accessibleBiddingStrategyBuilder_.setMessage(value);
       }
-      bitField2_ |= 0x00001000;
+      bitField2_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -23985,7 +24295,7 @@ private static final long serialVersionUID = 0L;
       } else {
         accessibleBiddingStrategyBuilder_.setMessage(builderForValue.build());
       }
-      bitField2_ |= 0x00001000;
+      bitField2_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -23998,7 +24308,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeAccessibleBiddingStrategy(com.google.ads.googleads.v14.resources.AccessibleBiddingStrategy value) {
       if (accessibleBiddingStrategyBuilder_ == null) {
-        if (((bitField2_ & 0x00001000) != 0) &&
+        if (((bitField2_ & 0x00002000) != 0) &&
           accessibleBiddingStrategy_ != null &&
           accessibleBiddingStrategy_ != com.google.ads.googleads.v14.resources.AccessibleBiddingStrategy.getDefaultInstance()) {
           getAccessibleBiddingStrategyBuilder().mergeFrom(value);
@@ -24008,7 +24318,7 @@ private static final long serialVersionUID = 0L;
       } else {
         accessibleBiddingStrategyBuilder_.mergeFrom(value);
       }
-      bitField2_ |= 0x00001000;
+      bitField2_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -24020,7 +24330,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.AccessibleBiddingStrategy accessible_bidding_strategy = 169;</code>
      */
     public Builder clearAccessibleBiddingStrategy() {
-      bitField2_ = (bitField2_ & ~0x00001000);
+      bitField2_ = (bitField2_ & ~0x00002000);
       accessibleBiddingStrategy_ = null;
       if (accessibleBiddingStrategyBuilder_ != null) {
         accessibleBiddingStrategyBuilder_.dispose();
@@ -24037,7 +24347,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.AccessibleBiddingStrategy accessible_bidding_strategy = 169;</code>
      */
     public com.google.ads.googleads.v14.resources.AccessibleBiddingStrategy.Builder getAccessibleBiddingStrategyBuilder() {
-      bitField2_ |= 0x00001000;
+      bitField2_ |= 0x00002000;
       onChanged();
       return getAccessibleBiddingStrategyFieldBuilder().getBuilder();
     }
@@ -24089,7 +24399,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the customerCustomizer field is set.
      */
     public boolean hasCustomerCustomizer() {
-      return ((bitField2_ & 0x00002000) != 0);
+      return ((bitField2_ & 0x00004000) != 0);
     }
     /**
      * <pre>
@@ -24122,7 +24432,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerCustomizerBuilder_.setMessage(value);
       }
-      bitField2_ |= 0x00002000;
+      bitField2_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -24140,7 +24450,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerCustomizerBuilder_.setMessage(builderForValue.build());
       }
-      bitField2_ |= 0x00002000;
+      bitField2_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -24153,7 +24463,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCustomerCustomizer(com.google.ads.googleads.v14.resources.CustomerCustomizer value) {
       if (customerCustomizerBuilder_ == null) {
-        if (((bitField2_ & 0x00002000) != 0) &&
+        if (((bitField2_ & 0x00004000) != 0) &&
           customerCustomizer_ != null &&
           customerCustomizer_ != com.google.ads.googleads.v14.resources.CustomerCustomizer.getDefaultInstance()) {
           getCustomerCustomizerBuilder().mergeFrom(value);
@@ -24163,7 +24473,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerCustomizerBuilder_.mergeFrom(value);
       }
-      bitField2_ |= 0x00002000;
+      bitField2_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -24175,7 +24485,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CustomerCustomizer customer_customizer = 184;</code>
      */
     public Builder clearCustomerCustomizer() {
-      bitField2_ = (bitField2_ & ~0x00002000);
+      bitField2_ = (bitField2_ & ~0x00004000);
       customerCustomizer_ = null;
       if (customerCustomizerBuilder_ != null) {
         customerCustomizerBuilder_.dispose();
@@ -24192,7 +24502,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CustomerCustomizer customer_customizer = 184;</code>
      */
     public com.google.ads.googleads.v14.resources.CustomerCustomizer.Builder getCustomerCustomizerBuilder() {
-      bitField2_ |= 0x00002000;
+      bitField2_ |= 0x00004000;
       onChanged();
       return getCustomerCustomizerFieldBuilder().getBuilder();
     }
@@ -24244,7 +24554,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the customerManagerLink field is set.
      */
     public boolean hasCustomerManagerLink() {
-      return ((bitField2_ & 0x00004000) != 0);
+      return ((bitField2_ & 0x00008000) != 0);
     }
     /**
      * <pre>
@@ -24277,7 +24587,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerManagerLinkBuilder_.setMessage(value);
       }
-      bitField2_ |= 0x00004000;
+      bitField2_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -24295,7 +24605,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerManagerLinkBuilder_.setMessage(builderForValue.build());
       }
-      bitField2_ |= 0x00004000;
+      bitField2_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -24308,7 +24618,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCustomerManagerLink(com.google.ads.googleads.v14.resources.CustomerManagerLink value) {
       if (customerManagerLinkBuilder_ == null) {
-        if (((bitField2_ & 0x00004000) != 0) &&
+        if (((bitField2_ & 0x00008000) != 0) &&
           customerManagerLink_ != null &&
           customerManagerLink_ != com.google.ads.googleads.v14.resources.CustomerManagerLink.getDefaultInstance()) {
           getCustomerManagerLinkBuilder().mergeFrom(value);
@@ -24318,7 +24628,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerManagerLinkBuilder_.mergeFrom(value);
       }
-      bitField2_ |= 0x00004000;
+      bitField2_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -24330,7 +24640,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CustomerManagerLink customer_manager_link = 61;</code>
      */
     public Builder clearCustomerManagerLink() {
-      bitField2_ = (bitField2_ & ~0x00004000);
+      bitField2_ = (bitField2_ & ~0x00008000);
       customerManagerLink_ = null;
       if (customerManagerLinkBuilder_ != null) {
         customerManagerLinkBuilder_.dispose();
@@ -24347,7 +24657,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CustomerManagerLink customer_manager_link = 61;</code>
      */
     public com.google.ads.googleads.v14.resources.CustomerManagerLink.Builder getCustomerManagerLinkBuilder() {
-      bitField2_ |= 0x00004000;
+      bitField2_ |= 0x00008000;
       onChanged();
       return getCustomerManagerLinkFieldBuilder().getBuilder();
     }
@@ -24399,7 +24709,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the customerClientLink field is set.
      */
     public boolean hasCustomerClientLink() {
-      return ((bitField2_ & 0x00008000) != 0);
+      return ((bitField2_ & 0x00010000) != 0);
     }
     /**
      * <pre>
@@ -24432,7 +24742,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerClientLinkBuilder_.setMessage(value);
       }
-      bitField2_ |= 0x00008000;
+      bitField2_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -24450,7 +24760,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerClientLinkBuilder_.setMessage(builderForValue.build());
       }
-      bitField2_ |= 0x00008000;
+      bitField2_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -24463,7 +24773,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCustomerClientLink(com.google.ads.googleads.v14.resources.CustomerClientLink value) {
       if (customerClientLinkBuilder_ == null) {
-        if (((bitField2_ & 0x00008000) != 0) &&
+        if (((bitField2_ & 0x00010000) != 0) &&
           customerClientLink_ != null &&
           customerClientLink_ != com.google.ads.googleads.v14.resources.CustomerClientLink.getDefaultInstance()) {
           getCustomerClientLinkBuilder().mergeFrom(value);
@@ -24473,7 +24783,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerClientLinkBuilder_.mergeFrom(value);
       }
-      bitField2_ |= 0x00008000;
+      bitField2_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -24485,7 +24795,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CustomerClientLink customer_client_link = 62;</code>
      */
     public Builder clearCustomerClientLink() {
-      bitField2_ = (bitField2_ & ~0x00008000);
+      bitField2_ = (bitField2_ & ~0x00010000);
       customerClientLink_ = null;
       if (customerClientLinkBuilder_ != null) {
         customerClientLinkBuilder_.dispose();
@@ -24502,7 +24812,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CustomerClientLink customer_client_link = 62;</code>
      */
     public com.google.ads.googleads.v14.resources.CustomerClientLink.Builder getCustomerClientLinkBuilder() {
-      bitField2_ |= 0x00008000;
+      bitField2_ |= 0x00010000;
       onChanged();
       return getCustomerClientLinkFieldBuilder().getBuilder();
     }
@@ -24554,7 +24864,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the customerClient field is set.
      */
     public boolean hasCustomerClient() {
-      return ((bitField2_ & 0x00010000) != 0);
+      return ((bitField2_ & 0x00020000) != 0);
     }
     /**
      * <pre>
@@ -24587,7 +24897,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerClientBuilder_.setMessage(value);
       }
-      bitField2_ |= 0x00010000;
+      bitField2_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -24605,7 +24915,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerClientBuilder_.setMessage(builderForValue.build());
       }
-      bitField2_ |= 0x00010000;
+      bitField2_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -24618,7 +24928,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCustomerClient(com.google.ads.googleads.v14.resources.CustomerClient value) {
       if (customerClientBuilder_ == null) {
-        if (((bitField2_ & 0x00010000) != 0) &&
+        if (((bitField2_ & 0x00020000) != 0) &&
           customerClient_ != null &&
           customerClient_ != com.google.ads.googleads.v14.resources.CustomerClient.getDefaultInstance()) {
           getCustomerClientBuilder().mergeFrom(value);
@@ -24628,7 +24938,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerClientBuilder_.mergeFrom(value);
       }
-      bitField2_ |= 0x00010000;
+      bitField2_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -24640,7 +24950,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CustomerClient customer_client = 70;</code>
      */
     public Builder clearCustomerClient() {
-      bitField2_ = (bitField2_ & ~0x00010000);
+      bitField2_ = (bitField2_ & ~0x00020000);
       customerClient_ = null;
       if (customerClientBuilder_ != null) {
         customerClientBuilder_.dispose();
@@ -24657,7 +24967,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CustomerClient customer_client = 70;</code>
      */
     public com.google.ads.googleads.v14.resources.CustomerClient.Builder getCustomerClientBuilder() {
-      bitField2_ |= 0x00010000;
+      bitField2_ |= 0x00020000;
       onChanged();
       return getCustomerClientFieldBuilder().getBuilder();
     }
@@ -24709,7 +25019,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the customerConversionGoal field is set.
      */
     public boolean hasCustomerConversionGoal() {
-      return ((bitField2_ & 0x00020000) != 0);
+      return ((bitField2_ & 0x00040000) != 0);
     }
     /**
      * <pre>
@@ -24742,7 +25052,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerConversionGoalBuilder_.setMessage(value);
       }
-      bitField2_ |= 0x00020000;
+      bitField2_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -24760,7 +25070,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerConversionGoalBuilder_.setMessage(builderForValue.build());
       }
-      bitField2_ |= 0x00020000;
+      bitField2_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -24773,7 +25083,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCustomerConversionGoal(com.google.ads.googleads.v14.resources.CustomerConversionGoal value) {
       if (customerConversionGoalBuilder_ == null) {
-        if (((bitField2_ & 0x00020000) != 0) &&
+        if (((bitField2_ & 0x00040000) != 0) &&
           customerConversionGoal_ != null &&
           customerConversionGoal_ != com.google.ads.googleads.v14.resources.CustomerConversionGoal.getDefaultInstance()) {
           getCustomerConversionGoalBuilder().mergeFrom(value);
@@ -24783,7 +25093,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerConversionGoalBuilder_.mergeFrom(value);
       }
-      bitField2_ |= 0x00020000;
+      bitField2_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -24795,7 +25105,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CustomerConversionGoal customer_conversion_goal = 174;</code>
      */
     public Builder clearCustomerConversionGoal() {
-      bitField2_ = (bitField2_ & ~0x00020000);
+      bitField2_ = (bitField2_ & ~0x00040000);
       customerConversionGoal_ = null;
       if (customerConversionGoalBuilder_ != null) {
         customerConversionGoalBuilder_.dispose();
@@ -24812,7 +25122,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CustomerConversionGoal customer_conversion_goal = 174;</code>
      */
     public com.google.ads.googleads.v14.resources.CustomerConversionGoal.Builder getCustomerConversionGoalBuilder() {
-      bitField2_ |= 0x00020000;
+      bitField2_ |= 0x00040000;
       onChanged();
       return getCustomerConversionGoalFieldBuilder().getBuilder();
     }
@@ -24864,7 +25174,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the customerExtensionSetting field is set.
      */
     public boolean hasCustomerExtensionSetting() {
-      return ((bitField2_ & 0x00040000) != 0);
+      return ((bitField2_ & 0x00080000) != 0);
     }
     /**
      * <pre>
@@ -24897,7 +25207,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerExtensionSettingBuilder_.setMessage(value);
       }
-      bitField2_ |= 0x00040000;
+      bitField2_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -24915,7 +25225,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerExtensionSettingBuilder_.setMessage(builderForValue.build());
       }
-      bitField2_ |= 0x00040000;
+      bitField2_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -24928,7 +25238,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCustomerExtensionSetting(com.google.ads.googleads.v14.resources.CustomerExtensionSetting value) {
       if (customerExtensionSettingBuilder_ == null) {
-        if (((bitField2_ & 0x00040000) != 0) &&
+        if (((bitField2_ & 0x00080000) != 0) &&
           customerExtensionSetting_ != null &&
           customerExtensionSetting_ != com.google.ads.googleads.v14.resources.CustomerExtensionSetting.getDefaultInstance()) {
           getCustomerExtensionSettingBuilder().mergeFrom(value);
@@ -24938,7 +25248,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerExtensionSettingBuilder_.mergeFrom(value);
       }
-      bitField2_ |= 0x00040000;
+      bitField2_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -24950,7 +25260,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CustomerExtensionSetting customer_extension_setting = 114;</code>
      */
     public Builder clearCustomerExtensionSetting() {
-      bitField2_ = (bitField2_ & ~0x00040000);
+      bitField2_ = (bitField2_ & ~0x00080000);
       customerExtensionSetting_ = null;
       if (customerExtensionSettingBuilder_ != null) {
         customerExtensionSettingBuilder_.dispose();
@@ -24967,7 +25277,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CustomerExtensionSetting customer_extension_setting = 114;</code>
      */
     public com.google.ads.googleads.v14.resources.CustomerExtensionSetting.Builder getCustomerExtensionSettingBuilder() {
-      bitField2_ |= 0x00040000;
+      bitField2_ |= 0x00080000;
       onChanged();
       return getCustomerExtensionSettingFieldBuilder().getBuilder();
     }
@@ -25019,7 +25329,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the customerFeed field is set.
      */
     public boolean hasCustomerFeed() {
-      return ((bitField2_ & 0x00080000) != 0);
+      return ((bitField2_ & 0x00100000) != 0);
     }
     /**
      * <pre>
@@ -25052,7 +25362,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerFeedBuilder_.setMessage(value);
       }
-      bitField2_ |= 0x00080000;
+      bitField2_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -25070,7 +25380,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerFeedBuilder_.setMessage(builderForValue.build());
       }
-      bitField2_ |= 0x00080000;
+      bitField2_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -25083,7 +25393,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCustomerFeed(com.google.ads.googleads.v14.resources.CustomerFeed value) {
       if (customerFeedBuilder_ == null) {
-        if (((bitField2_ & 0x00080000) != 0) &&
+        if (((bitField2_ & 0x00100000) != 0) &&
           customerFeed_ != null &&
           customerFeed_ != com.google.ads.googleads.v14.resources.CustomerFeed.getDefaultInstance()) {
           getCustomerFeedBuilder().mergeFrom(value);
@@ -25093,7 +25403,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerFeedBuilder_.mergeFrom(value);
       }
-      bitField2_ |= 0x00080000;
+      bitField2_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -25105,7 +25415,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CustomerFeed customer_feed = 64;</code>
      */
     public Builder clearCustomerFeed() {
-      bitField2_ = (bitField2_ & ~0x00080000);
+      bitField2_ = (bitField2_ & ~0x00100000);
       customerFeed_ = null;
       if (customerFeedBuilder_ != null) {
         customerFeedBuilder_.dispose();
@@ -25122,7 +25432,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CustomerFeed customer_feed = 64;</code>
      */
     public com.google.ads.googleads.v14.resources.CustomerFeed.Builder getCustomerFeedBuilder() {
-      bitField2_ |= 0x00080000;
+      bitField2_ |= 0x00100000;
       onChanged();
       return getCustomerFeedFieldBuilder().getBuilder();
     }
@@ -25174,7 +25484,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the customerLabel field is set.
      */
     public boolean hasCustomerLabel() {
-      return ((bitField2_ & 0x00100000) != 0);
+      return ((bitField2_ & 0x00200000) != 0);
     }
     /**
      * <pre>
@@ -25207,7 +25517,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerLabelBuilder_.setMessage(value);
       }
-      bitField2_ |= 0x00100000;
+      bitField2_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -25225,7 +25535,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerLabelBuilder_.setMessage(builderForValue.build());
       }
-      bitField2_ |= 0x00100000;
+      bitField2_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -25238,7 +25548,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCustomerLabel(com.google.ads.googleads.v14.resources.CustomerLabel value) {
       if (customerLabelBuilder_ == null) {
-        if (((bitField2_ & 0x00100000) != 0) &&
+        if (((bitField2_ & 0x00200000) != 0) &&
           customerLabel_ != null &&
           customerLabel_ != com.google.ads.googleads.v14.resources.CustomerLabel.getDefaultInstance()) {
           getCustomerLabelBuilder().mergeFrom(value);
@@ -25248,7 +25558,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerLabelBuilder_.mergeFrom(value);
       }
-      bitField2_ |= 0x00100000;
+      bitField2_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -25260,7 +25570,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CustomerLabel customer_label = 124;</code>
      */
     public Builder clearCustomerLabel() {
-      bitField2_ = (bitField2_ & ~0x00100000);
+      bitField2_ = (bitField2_ & ~0x00200000);
       customerLabel_ = null;
       if (customerLabelBuilder_ != null) {
         customerLabelBuilder_.dispose();
@@ -25277,7 +25587,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CustomerLabel customer_label = 124;</code>
      */
     public com.google.ads.googleads.v14.resources.CustomerLabel.Builder getCustomerLabelBuilder() {
-      bitField2_ |= 0x00100000;
+      bitField2_ |= 0x00200000;
       onChanged();
       return getCustomerLabelFieldBuilder().getBuilder();
     }
@@ -25329,7 +25639,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the customerNegativeCriterion field is set.
      */
     public boolean hasCustomerNegativeCriterion() {
-      return ((bitField2_ & 0x00200000) != 0);
+      return ((bitField2_ & 0x00400000) != 0);
     }
     /**
      * <pre>
@@ -25362,7 +25672,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerNegativeCriterionBuilder_.setMessage(value);
       }
-      bitField2_ |= 0x00200000;
+      bitField2_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -25380,7 +25690,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerNegativeCriterionBuilder_.setMessage(builderForValue.build());
       }
-      bitField2_ |= 0x00200000;
+      bitField2_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -25393,7 +25703,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCustomerNegativeCriterion(com.google.ads.googleads.v14.resources.CustomerNegativeCriterion value) {
       if (customerNegativeCriterionBuilder_ == null) {
-        if (((bitField2_ & 0x00200000) != 0) &&
+        if (((bitField2_ & 0x00400000) != 0) &&
           customerNegativeCriterion_ != null &&
           customerNegativeCriterion_ != com.google.ads.googleads.v14.resources.CustomerNegativeCriterion.getDefaultInstance()) {
           getCustomerNegativeCriterionBuilder().mergeFrom(value);
@@ -25403,7 +25713,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerNegativeCriterionBuilder_.mergeFrom(value);
       }
-      bitField2_ |= 0x00200000;
+      bitField2_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -25415,7 +25725,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CustomerNegativeCriterion customer_negative_criterion = 88;</code>
      */
     public Builder clearCustomerNegativeCriterion() {
-      bitField2_ = (bitField2_ & ~0x00200000);
+      bitField2_ = (bitField2_ & ~0x00400000);
       customerNegativeCriterion_ = null;
       if (customerNegativeCriterionBuilder_ != null) {
         customerNegativeCriterionBuilder_.dispose();
@@ -25432,7 +25742,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CustomerNegativeCriterion customer_negative_criterion = 88;</code>
      */
     public com.google.ads.googleads.v14.resources.CustomerNegativeCriterion.Builder getCustomerNegativeCriterionBuilder() {
-      bitField2_ |= 0x00200000;
+      bitField2_ |= 0x00400000;
       onChanged();
       return getCustomerNegativeCriterionFieldBuilder().getBuilder();
     }
@@ -25472,6 +25782,161 @@ private static final long serialVersionUID = 0L;
       return customerNegativeCriterionBuilder_;
     }
 
+    private com.google.ads.googleads.v14.resources.CustomerSearchTermInsight customerSearchTermInsight_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v14.resources.CustomerSearchTermInsight, com.google.ads.googleads.v14.resources.CustomerSearchTermInsight.Builder, com.google.ads.googleads.v14.resources.CustomerSearchTermInsightOrBuilder> customerSearchTermInsightBuilder_;
+    /**
+     * <pre>
+     * The customer search term insight referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.resources.CustomerSearchTermInsight customer_search_term_insight = 205;</code>
+     * @return Whether the customerSearchTermInsight field is set.
+     */
+    public boolean hasCustomerSearchTermInsight() {
+      return ((bitField2_ & 0x00800000) != 0);
+    }
+    /**
+     * <pre>
+     * The customer search term insight referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.resources.CustomerSearchTermInsight customer_search_term_insight = 205;</code>
+     * @return The customerSearchTermInsight.
+     */
+    public com.google.ads.googleads.v14.resources.CustomerSearchTermInsight getCustomerSearchTermInsight() {
+      if (customerSearchTermInsightBuilder_ == null) {
+        return customerSearchTermInsight_ == null ? com.google.ads.googleads.v14.resources.CustomerSearchTermInsight.getDefaultInstance() : customerSearchTermInsight_;
+      } else {
+        return customerSearchTermInsightBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The customer search term insight referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.resources.CustomerSearchTermInsight customer_search_term_insight = 205;</code>
+     */
+    public Builder setCustomerSearchTermInsight(com.google.ads.googleads.v14.resources.CustomerSearchTermInsight value) {
+      if (customerSearchTermInsightBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        customerSearchTermInsight_ = value;
+      } else {
+        customerSearchTermInsightBuilder_.setMessage(value);
+      }
+      bitField2_ |= 0x00800000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The customer search term insight referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.resources.CustomerSearchTermInsight customer_search_term_insight = 205;</code>
+     */
+    public Builder setCustomerSearchTermInsight(
+        com.google.ads.googleads.v14.resources.CustomerSearchTermInsight.Builder builderForValue) {
+      if (customerSearchTermInsightBuilder_ == null) {
+        customerSearchTermInsight_ = builderForValue.build();
+      } else {
+        customerSearchTermInsightBuilder_.setMessage(builderForValue.build());
+      }
+      bitField2_ |= 0x00800000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The customer search term insight referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.resources.CustomerSearchTermInsight customer_search_term_insight = 205;</code>
+     */
+    public Builder mergeCustomerSearchTermInsight(com.google.ads.googleads.v14.resources.CustomerSearchTermInsight value) {
+      if (customerSearchTermInsightBuilder_ == null) {
+        if (((bitField2_ & 0x00800000) != 0) &&
+          customerSearchTermInsight_ != null &&
+          customerSearchTermInsight_ != com.google.ads.googleads.v14.resources.CustomerSearchTermInsight.getDefaultInstance()) {
+          getCustomerSearchTermInsightBuilder().mergeFrom(value);
+        } else {
+          customerSearchTermInsight_ = value;
+        }
+      } else {
+        customerSearchTermInsightBuilder_.mergeFrom(value);
+      }
+      bitField2_ |= 0x00800000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The customer search term insight referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.resources.CustomerSearchTermInsight customer_search_term_insight = 205;</code>
+     */
+    public Builder clearCustomerSearchTermInsight() {
+      bitField2_ = (bitField2_ & ~0x00800000);
+      customerSearchTermInsight_ = null;
+      if (customerSearchTermInsightBuilder_ != null) {
+        customerSearchTermInsightBuilder_.dispose();
+        customerSearchTermInsightBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The customer search term insight referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.resources.CustomerSearchTermInsight customer_search_term_insight = 205;</code>
+     */
+    public com.google.ads.googleads.v14.resources.CustomerSearchTermInsight.Builder getCustomerSearchTermInsightBuilder() {
+      bitField2_ |= 0x00800000;
+      onChanged();
+      return getCustomerSearchTermInsightFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The customer search term insight referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.resources.CustomerSearchTermInsight customer_search_term_insight = 205;</code>
+     */
+    public com.google.ads.googleads.v14.resources.CustomerSearchTermInsightOrBuilder getCustomerSearchTermInsightOrBuilder() {
+      if (customerSearchTermInsightBuilder_ != null) {
+        return customerSearchTermInsightBuilder_.getMessageOrBuilder();
+      } else {
+        return customerSearchTermInsight_ == null ?
+            com.google.ads.googleads.v14.resources.CustomerSearchTermInsight.getDefaultInstance() : customerSearchTermInsight_;
+      }
+    }
+    /**
+     * <pre>
+     * The customer search term insight referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.resources.CustomerSearchTermInsight customer_search_term_insight = 205;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v14.resources.CustomerSearchTermInsight, com.google.ads.googleads.v14.resources.CustomerSearchTermInsight.Builder, com.google.ads.googleads.v14.resources.CustomerSearchTermInsightOrBuilder> 
+        getCustomerSearchTermInsightFieldBuilder() {
+      if (customerSearchTermInsightBuilder_ == null) {
+        customerSearchTermInsightBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v14.resources.CustomerSearchTermInsight, com.google.ads.googleads.v14.resources.CustomerSearchTermInsight.Builder, com.google.ads.googleads.v14.resources.CustomerSearchTermInsightOrBuilder>(
+                getCustomerSearchTermInsight(),
+                getParentForChildren(),
+                isClean());
+        customerSearchTermInsight_ = null;
+      }
+      return customerSearchTermInsightBuilder_;
+    }
+
     private com.google.ads.googleads.v14.resources.CustomerUserAccess customerUserAccess_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v14.resources.CustomerUserAccess, com.google.ads.googleads.v14.resources.CustomerUserAccess.Builder, com.google.ads.googleads.v14.resources.CustomerUserAccessOrBuilder> customerUserAccessBuilder_;
@@ -25484,7 +25949,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the customerUserAccess field is set.
      */
     public boolean hasCustomerUserAccess() {
-      return ((bitField2_ & 0x00400000) != 0);
+      return ((bitField2_ & 0x01000000) != 0);
     }
     /**
      * <pre>
@@ -25517,7 +25982,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerUserAccessBuilder_.setMessage(value);
       }
-      bitField2_ |= 0x00400000;
+      bitField2_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -25535,7 +26000,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerUserAccessBuilder_.setMessage(builderForValue.build());
       }
-      bitField2_ |= 0x00400000;
+      bitField2_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -25548,7 +26013,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCustomerUserAccess(com.google.ads.googleads.v14.resources.CustomerUserAccess value) {
       if (customerUserAccessBuilder_ == null) {
-        if (((bitField2_ & 0x00400000) != 0) &&
+        if (((bitField2_ & 0x01000000) != 0) &&
           customerUserAccess_ != null &&
           customerUserAccess_ != com.google.ads.googleads.v14.resources.CustomerUserAccess.getDefaultInstance()) {
           getCustomerUserAccessBuilder().mergeFrom(value);
@@ -25558,7 +26023,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerUserAccessBuilder_.mergeFrom(value);
       }
-      bitField2_ |= 0x00400000;
+      bitField2_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -25570,7 +26035,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CustomerUserAccess customer_user_access = 146;</code>
      */
     public Builder clearCustomerUserAccess() {
-      bitField2_ = (bitField2_ & ~0x00400000);
+      bitField2_ = (bitField2_ & ~0x01000000);
       customerUserAccess_ = null;
       if (customerUserAccessBuilder_ != null) {
         customerUserAccessBuilder_.dispose();
@@ -25587,7 +26052,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CustomerUserAccess customer_user_access = 146;</code>
      */
     public com.google.ads.googleads.v14.resources.CustomerUserAccess.Builder getCustomerUserAccessBuilder() {
-      bitField2_ |= 0x00400000;
+      bitField2_ |= 0x01000000;
       onChanged();
       return getCustomerUserAccessFieldBuilder().getBuilder();
     }
@@ -25639,7 +26104,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the customerUserAccessInvitation field is set.
      */
     public boolean hasCustomerUserAccessInvitation() {
-      return ((bitField2_ & 0x00800000) != 0);
+      return ((bitField2_ & 0x02000000) != 0);
     }
     /**
      * <pre>
@@ -25672,7 +26137,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerUserAccessInvitationBuilder_.setMessage(value);
       }
-      bitField2_ |= 0x00800000;
+      bitField2_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -25690,7 +26155,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerUserAccessInvitationBuilder_.setMessage(builderForValue.build());
       }
-      bitField2_ |= 0x00800000;
+      bitField2_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -25703,7 +26168,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCustomerUserAccessInvitation(com.google.ads.googleads.v14.resources.CustomerUserAccessInvitation value) {
       if (customerUserAccessInvitationBuilder_ == null) {
-        if (((bitField2_ & 0x00800000) != 0) &&
+        if (((bitField2_ & 0x02000000) != 0) &&
           customerUserAccessInvitation_ != null &&
           customerUserAccessInvitation_ != com.google.ads.googleads.v14.resources.CustomerUserAccessInvitation.getDefaultInstance()) {
           getCustomerUserAccessInvitationBuilder().mergeFrom(value);
@@ -25713,7 +26178,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customerUserAccessInvitationBuilder_.mergeFrom(value);
       }
-      bitField2_ |= 0x00800000;
+      bitField2_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -25725,7 +26190,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CustomerUserAccessInvitation customer_user_access_invitation = 150;</code>
      */
     public Builder clearCustomerUserAccessInvitation() {
-      bitField2_ = (bitField2_ & ~0x00800000);
+      bitField2_ = (bitField2_ & ~0x02000000);
       customerUserAccessInvitation_ = null;
       if (customerUserAccessInvitationBuilder_ != null) {
         customerUserAccessInvitationBuilder_.dispose();
@@ -25742,7 +26207,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CustomerUserAccessInvitation customer_user_access_invitation = 150;</code>
      */
     public com.google.ads.googleads.v14.resources.CustomerUserAccessInvitation.Builder getCustomerUserAccessInvitationBuilder() {
-      bitField2_ |= 0x00800000;
+      bitField2_ |= 0x02000000;
       onChanged();
       return getCustomerUserAccessInvitationFieldBuilder().getBuilder();
     }
@@ -25794,7 +26259,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the customizerAttribute field is set.
      */
     public boolean hasCustomizerAttribute() {
-      return ((bitField2_ & 0x01000000) != 0);
+      return ((bitField2_ & 0x04000000) != 0);
     }
     /**
      * <pre>
@@ -25827,7 +26292,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customizerAttributeBuilder_.setMessage(value);
       }
-      bitField2_ |= 0x01000000;
+      bitField2_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -25845,7 +26310,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customizerAttributeBuilder_.setMessage(builderForValue.build());
       }
-      bitField2_ |= 0x01000000;
+      bitField2_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -25858,7 +26323,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCustomizerAttribute(com.google.ads.googleads.v14.resources.CustomizerAttribute value) {
       if (customizerAttributeBuilder_ == null) {
-        if (((bitField2_ & 0x01000000) != 0) &&
+        if (((bitField2_ & 0x04000000) != 0) &&
           customizerAttribute_ != null &&
           customizerAttribute_ != com.google.ads.googleads.v14.resources.CustomizerAttribute.getDefaultInstance()) {
           getCustomizerAttributeBuilder().mergeFrom(value);
@@ -25868,7 +26333,7 @@ private static final long serialVersionUID = 0L;
       } else {
         customizerAttributeBuilder_.mergeFrom(value);
       }
-      bitField2_ |= 0x01000000;
+      bitField2_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -25880,7 +26345,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CustomizerAttribute customizer_attribute = 178;</code>
      */
     public Builder clearCustomizerAttribute() {
-      bitField2_ = (bitField2_ & ~0x01000000);
+      bitField2_ = (bitField2_ & ~0x04000000);
       customizerAttribute_ = null;
       if (customizerAttributeBuilder_ != null) {
         customizerAttributeBuilder_.dispose();
@@ -25897,7 +26362,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.CustomizerAttribute customizer_attribute = 178;</code>
      */
     public com.google.ads.googleads.v14.resources.CustomizerAttribute.Builder getCustomizerAttributeBuilder() {
-      bitField2_ |= 0x01000000;
+      bitField2_ |= 0x04000000;
       onChanged();
       return getCustomizerAttributeFieldBuilder().getBuilder();
     }
@@ -25949,7 +26414,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the detailPlacementView field is set.
      */
     public boolean hasDetailPlacementView() {
-      return ((bitField2_ & 0x02000000) != 0);
+      return ((bitField2_ & 0x08000000) != 0);
     }
     /**
      * <pre>
@@ -25982,7 +26447,7 @@ private static final long serialVersionUID = 0L;
       } else {
         detailPlacementViewBuilder_.setMessage(value);
       }
-      bitField2_ |= 0x02000000;
+      bitField2_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -26000,7 +26465,7 @@ private static final long serialVersionUID = 0L;
       } else {
         detailPlacementViewBuilder_.setMessage(builderForValue.build());
       }
-      bitField2_ |= 0x02000000;
+      bitField2_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -26013,7 +26478,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDetailPlacementView(com.google.ads.googleads.v14.resources.DetailPlacementView value) {
       if (detailPlacementViewBuilder_ == null) {
-        if (((bitField2_ & 0x02000000) != 0) &&
+        if (((bitField2_ & 0x08000000) != 0) &&
           detailPlacementView_ != null &&
           detailPlacementView_ != com.google.ads.googleads.v14.resources.DetailPlacementView.getDefaultInstance()) {
           getDetailPlacementViewBuilder().mergeFrom(value);
@@ -26023,7 +26488,7 @@ private static final long serialVersionUID = 0L;
       } else {
         detailPlacementViewBuilder_.mergeFrom(value);
       }
-      bitField2_ |= 0x02000000;
+      bitField2_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -26035,7 +26500,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.DetailPlacementView detail_placement_view = 118;</code>
      */
     public Builder clearDetailPlacementView() {
-      bitField2_ = (bitField2_ & ~0x02000000);
+      bitField2_ = (bitField2_ & ~0x08000000);
       detailPlacementView_ = null;
       if (detailPlacementViewBuilder_ != null) {
         detailPlacementViewBuilder_.dispose();
@@ -26052,7 +26517,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.DetailPlacementView detail_placement_view = 118;</code>
      */
     public com.google.ads.googleads.v14.resources.DetailPlacementView.Builder getDetailPlacementViewBuilder() {
-      bitField2_ |= 0x02000000;
+      bitField2_ |= 0x08000000;
       onChanged();
       return getDetailPlacementViewFieldBuilder().getBuilder();
     }
@@ -26104,7 +26569,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the detailedDemographic field is set.
      */
     public boolean hasDetailedDemographic() {
-      return ((bitField2_ & 0x04000000) != 0);
+      return ((bitField2_ & 0x10000000) != 0);
     }
     /**
      * <pre>
@@ -26137,7 +26602,7 @@ private static final long serialVersionUID = 0L;
       } else {
         detailedDemographicBuilder_.setMessage(value);
       }
-      bitField2_ |= 0x04000000;
+      bitField2_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -26155,7 +26620,7 @@ private static final long serialVersionUID = 0L;
       } else {
         detailedDemographicBuilder_.setMessage(builderForValue.build());
       }
-      bitField2_ |= 0x04000000;
+      bitField2_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -26168,7 +26633,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDetailedDemographic(com.google.ads.googleads.v14.resources.DetailedDemographic value) {
       if (detailedDemographicBuilder_ == null) {
-        if (((bitField2_ & 0x04000000) != 0) &&
+        if (((bitField2_ & 0x10000000) != 0) &&
           detailedDemographic_ != null &&
           detailedDemographic_ != com.google.ads.googleads.v14.resources.DetailedDemographic.getDefaultInstance()) {
           getDetailedDemographicBuilder().mergeFrom(value);
@@ -26178,7 +26643,7 @@ private static final long serialVersionUID = 0L;
       } else {
         detailedDemographicBuilder_.mergeFrom(value);
       }
-      bitField2_ |= 0x04000000;
+      bitField2_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -26190,7 +26655,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.DetailedDemographic detailed_demographic = 166;</code>
      */
     public Builder clearDetailedDemographic() {
-      bitField2_ = (bitField2_ & ~0x04000000);
+      bitField2_ = (bitField2_ & ~0x10000000);
       detailedDemographic_ = null;
       if (detailedDemographicBuilder_ != null) {
         detailedDemographicBuilder_.dispose();
@@ -26207,7 +26672,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.DetailedDemographic detailed_demographic = 166;</code>
      */
     public com.google.ads.googleads.v14.resources.DetailedDemographic.Builder getDetailedDemographicBuilder() {
-      bitField2_ |= 0x04000000;
+      bitField2_ |= 0x10000000;
       onChanged();
       return getDetailedDemographicFieldBuilder().getBuilder();
     }
@@ -26259,7 +26724,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the displayKeywordView field is set.
      */
     public boolean hasDisplayKeywordView() {
-      return ((bitField2_ & 0x08000000) != 0);
+      return ((bitField2_ & 0x20000000) != 0);
     }
     /**
      * <pre>
@@ -26292,7 +26757,7 @@ private static final long serialVersionUID = 0L;
       } else {
         displayKeywordViewBuilder_.setMessage(value);
       }
-      bitField2_ |= 0x08000000;
+      bitField2_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -26310,7 +26775,7 @@ private static final long serialVersionUID = 0L;
       } else {
         displayKeywordViewBuilder_.setMessage(builderForValue.build());
       }
-      bitField2_ |= 0x08000000;
+      bitField2_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -26323,7 +26788,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDisplayKeywordView(com.google.ads.googleads.v14.resources.DisplayKeywordView value) {
       if (displayKeywordViewBuilder_ == null) {
-        if (((bitField2_ & 0x08000000) != 0) &&
+        if (((bitField2_ & 0x20000000) != 0) &&
           displayKeywordView_ != null &&
           displayKeywordView_ != com.google.ads.googleads.v14.resources.DisplayKeywordView.getDefaultInstance()) {
           getDisplayKeywordViewBuilder().mergeFrom(value);
@@ -26333,7 +26798,7 @@ private static final long serialVersionUID = 0L;
       } else {
         displayKeywordViewBuilder_.mergeFrom(value);
       }
-      bitField2_ |= 0x08000000;
+      bitField2_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -26345,7 +26810,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.DisplayKeywordView display_keyword_view = 47;</code>
      */
     public Builder clearDisplayKeywordView() {
-      bitField2_ = (bitField2_ & ~0x08000000);
+      bitField2_ = (bitField2_ & ~0x20000000);
       displayKeywordView_ = null;
       if (displayKeywordViewBuilder_ != null) {
         displayKeywordViewBuilder_.dispose();
@@ -26362,7 +26827,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.DisplayKeywordView display_keyword_view = 47;</code>
      */
     public com.google.ads.googleads.v14.resources.DisplayKeywordView.Builder getDisplayKeywordViewBuilder() {
-      bitField2_ |= 0x08000000;
+      bitField2_ |= 0x20000000;
       onChanged();
       return getDisplayKeywordViewFieldBuilder().getBuilder();
     }
@@ -26414,7 +26879,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the distanceView field is set.
      */
     public boolean hasDistanceView() {
-      return ((bitField2_ & 0x10000000) != 0);
+      return ((bitField2_ & 0x40000000) != 0);
     }
     /**
      * <pre>
@@ -26447,7 +26912,7 @@ private static final long serialVersionUID = 0L;
       } else {
         distanceViewBuilder_.setMessage(value);
       }
-      bitField2_ |= 0x10000000;
+      bitField2_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -26465,7 +26930,7 @@ private static final long serialVersionUID = 0L;
       } else {
         distanceViewBuilder_.setMessage(builderForValue.build());
       }
-      bitField2_ |= 0x10000000;
+      bitField2_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -26478,7 +26943,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDistanceView(com.google.ads.googleads.v14.resources.DistanceView value) {
       if (distanceViewBuilder_ == null) {
-        if (((bitField2_ & 0x10000000) != 0) &&
+        if (((bitField2_ & 0x40000000) != 0) &&
           distanceView_ != null &&
           distanceView_ != com.google.ads.googleads.v14.resources.DistanceView.getDefaultInstance()) {
           getDistanceViewBuilder().mergeFrom(value);
@@ -26488,7 +26953,7 @@ private static final long serialVersionUID = 0L;
       } else {
         distanceViewBuilder_.mergeFrom(value);
       }
-      bitField2_ |= 0x10000000;
+      bitField2_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -26500,7 +26965,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.DistanceView distance_view = 132;</code>
      */
     public Builder clearDistanceView() {
-      bitField2_ = (bitField2_ & ~0x10000000);
+      bitField2_ = (bitField2_ & ~0x40000000);
       distanceView_ = null;
       if (distanceViewBuilder_ != null) {
         distanceViewBuilder_.dispose();
@@ -26517,7 +26982,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.DistanceView distance_view = 132;</code>
      */
     public com.google.ads.googleads.v14.resources.DistanceView.Builder getDistanceViewBuilder() {
-      bitField2_ |= 0x10000000;
+      bitField2_ |= 0x40000000;
       onChanged();
       return getDistanceViewFieldBuilder().getBuilder();
     }
@@ -26569,7 +27034,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the dynamicSearchAdsSearchTermView field is set.
      */
     public boolean hasDynamicSearchAdsSearchTermView() {
-      return ((bitField2_ & 0x20000000) != 0);
+      return ((bitField2_ & 0x80000000) != 0);
     }
     /**
      * <pre>
@@ -26602,7 +27067,7 @@ private static final long serialVersionUID = 0L;
       } else {
         dynamicSearchAdsSearchTermViewBuilder_.setMessage(value);
       }
-      bitField2_ |= 0x20000000;
+      bitField2_ |= 0x80000000;
       onChanged();
       return this;
     }
@@ -26620,7 +27085,7 @@ private static final long serialVersionUID = 0L;
       } else {
         dynamicSearchAdsSearchTermViewBuilder_.setMessage(builderForValue.build());
       }
-      bitField2_ |= 0x20000000;
+      bitField2_ |= 0x80000000;
       onChanged();
       return this;
     }
@@ -26633,7 +27098,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeDynamicSearchAdsSearchTermView(com.google.ads.googleads.v14.resources.DynamicSearchAdsSearchTermView value) {
       if (dynamicSearchAdsSearchTermViewBuilder_ == null) {
-        if (((bitField2_ & 0x20000000) != 0) &&
+        if (((bitField2_ & 0x80000000) != 0) &&
           dynamicSearchAdsSearchTermView_ != null &&
           dynamicSearchAdsSearchTermView_ != com.google.ads.googleads.v14.resources.DynamicSearchAdsSearchTermView.getDefaultInstance()) {
           getDynamicSearchAdsSearchTermViewBuilder().mergeFrom(value);
@@ -26643,7 +27108,7 @@ private static final long serialVersionUID = 0L;
       } else {
         dynamicSearchAdsSearchTermViewBuilder_.mergeFrom(value);
       }
-      bitField2_ |= 0x20000000;
+      bitField2_ |= 0x80000000;
       onChanged();
       return this;
     }
@@ -26655,7 +27120,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.DynamicSearchAdsSearchTermView dynamic_search_ads_search_term_view = 106;</code>
      */
     public Builder clearDynamicSearchAdsSearchTermView() {
-      bitField2_ = (bitField2_ & ~0x20000000);
+      bitField2_ = (bitField2_ & ~0x80000000);
       dynamicSearchAdsSearchTermView_ = null;
       if (dynamicSearchAdsSearchTermViewBuilder_ != null) {
         dynamicSearchAdsSearchTermViewBuilder_.dispose();
@@ -26672,7 +27137,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.DynamicSearchAdsSearchTermView dynamic_search_ads_search_term_view = 106;</code>
      */
     public com.google.ads.googleads.v14.resources.DynamicSearchAdsSearchTermView.Builder getDynamicSearchAdsSearchTermViewBuilder() {
-      bitField2_ |= 0x20000000;
+      bitField2_ |= 0x80000000;
       onChanged();
       return getDynamicSearchAdsSearchTermViewFieldBuilder().getBuilder();
     }
@@ -26724,7 +27189,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the expandedLandingPageView field is set.
      */
     public boolean hasExpandedLandingPageView() {
-      return ((bitField2_ & 0x40000000) != 0);
+      return ((bitField3_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -26757,7 +27222,7 @@ private static final long serialVersionUID = 0L;
       } else {
         expandedLandingPageViewBuilder_.setMessage(value);
       }
-      bitField2_ |= 0x40000000;
+      bitField3_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -26775,7 +27240,7 @@ private static final long serialVersionUID = 0L;
       } else {
         expandedLandingPageViewBuilder_.setMessage(builderForValue.build());
       }
-      bitField2_ |= 0x40000000;
+      bitField3_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -26788,7 +27253,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeExpandedLandingPageView(com.google.ads.googleads.v14.resources.ExpandedLandingPageView value) {
       if (expandedLandingPageViewBuilder_ == null) {
-        if (((bitField2_ & 0x40000000) != 0) &&
+        if (((bitField3_ & 0x00000001) != 0) &&
           expandedLandingPageView_ != null &&
           expandedLandingPageView_ != com.google.ads.googleads.v14.resources.ExpandedLandingPageView.getDefaultInstance()) {
           getExpandedLandingPageViewBuilder().mergeFrom(value);
@@ -26798,7 +27263,7 @@ private static final long serialVersionUID = 0L;
       } else {
         expandedLandingPageViewBuilder_.mergeFrom(value);
       }
-      bitField2_ |= 0x40000000;
+      bitField3_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -26810,7 +27275,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.ExpandedLandingPageView expanded_landing_page_view = 128;</code>
      */
     public Builder clearExpandedLandingPageView() {
-      bitField2_ = (bitField2_ & ~0x40000000);
+      bitField3_ = (bitField3_ & ~0x00000001);
       expandedLandingPageView_ = null;
       if (expandedLandingPageViewBuilder_ != null) {
         expandedLandingPageViewBuilder_.dispose();
@@ -26827,7 +27292,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.ExpandedLandingPageView expanded_landing_page_view = 128;</code>
      */
     public com.google.ads.googleads.v14.resources.ExpandedLandingPageView.Builder getExpandedLandingPageViewBuilder() {
-      bitField2_ |= 0x40000000;
+      bitField3_ |= 0x00000001;
       onChanged();
       return getExpandedLandingPageViewFieldBuilder().getBuilder();
     }
@@ -26879,7 +27344,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the extensionFeedItem field is set.
      */
     public boolean hasExtensionFeedItem() {
-      return ((bitField2_ & 0x80000000) != 0);
+      return ((bitField3_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -26912,7 +27377,7 @@ private static final long serialVersionUID = 0L;
       } else {
         extensionFeedItemBuilder_.setMessage(value);
       }
-      bitField2_ |= 0x80000000;
+      bitField3_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -26930,7 +27395,7 @@ private static final long serialVersionUID = 0L;
       } else {
         extensionFeedItemBuilder_.setMessage(builderForValue.build());
       }
-      bitField2_ |= 0x80000000;
+      bitField3_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -26943,7 +27408,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeExtensionFeedItem(com.google.ads.googleads.v14.resources.ExtensionFeedItem value) {
       if (extensionFeedItemBuilder_ == null) {
-        if (((bitField2_ & 0x80000000) != 0) &&
+        if (((bitField3_ & 0x00000002) != 0) &&
           extensionFeedItem_ != null &&
           extensionFeedItem_ != com.google.ads.googleads.v14.resources.ExtensionFeedItem.getDefaultInstance()) {
           getExtensionFeedItemBuilder().mergeFrom(value);
@@ -26953,7 +27418,7 @@ private static final long serialVersionUID = 0L;
       } else {
         extensionFeedItemBuilder_.mergeFrom(value);
       }
-      bitField2_ |= 0x80000000;
+      bitField3_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -26965,7 +27430,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.ExtensionFeedItem extension_feed_item = 85;</code>
      */
     public Builder clearExtensionFeedItem() {
-      bitField2_ = (bitField2_ & ~0x80000000);
+      bitField3_ = (bitField3_ & ~0x00000002);
       extensionFeedItem_ = null;
       if (extensionFeedItemBuilder_ != null) {
         extensionFeedItemBuilder_.dispose();
@@ -26982,7 +27447,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.ExtensionFeedItem extension_feed_item = 85;</code>
      */
     public com.google.ads.googleads.v14.resources.ExtensionFeedItem.Builder getExtensionFeedItemBuilder() {
-      bitField2_ |= 0x80000000;
+      bitField3_ |= 0x00000002;
       onChanged();
       return getExtensionFeedItemFieldBuilder().getBuilder();
     }
@@ -27034,7 +27499,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the feed field is set.
      */
     public boolean hasFeed() {
-      return ((bitField3_ & 0x00000001) != 0);
+      return ((bitField3_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -27067,7 +27532,7 @@ private static final long serialVersionUID = 0L;
       } else {
         feedBuilder_.setMessage(value);
       }
-      bitField3_ |= 0x00000001;
+      bitField3_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -27085,7 +27550,7 @@ private static final long serialVersionUID = 0L;
       } else {
         feedBuilder_.setMessage(builderForValue.build());
       }
-      bitField3_ |= 0x00000001;
+      bitField3_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -27098,7 +27563,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeFeed(com.google.ads.googleads.v14.resources.Feed value) {
       if (feedBuilder_ == null) {
-        if (((bitField3_ & 0x00000001) != 0) &&
+        if (((bitField3_ & 0x00000004) != 0) &&
           feed_ != null &&
           feed_ != com.google.ads.googleads.v14.resources.Feed.getDefaultInstance()) {
           getFeedBuilder().mergeFrom(value);
@@ -27108,7 +27573,7 @@ private static final long serialVersionUID = 0L;
       } else {
         feedBuilder_.mergeFrom(value);
       }
-      bitField3_ |= 0x00000001;
+      bitField3_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -27120,7 +27585,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.Feed feed = 46;</code>
      */
     public Builder clearFeed() {
-      bitField3_ = (bitField3_ & ~0x00000001);
+      bitField3_ = (bitField3_ & ~0x00000004);
       feed_ = null;
       if (feedBuilder_ != null) {
         feedBuilder_.dispose();
@@ -27137,7 +27602,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.Feed feed = 46;</code>
      */
     public com.google.ads.googleads.v14.resources.Feed.Builder getFeedBuilder() {
-      bitField3_ |= 0x00000001;
+      bitField3_ |= 0x00000004;
       onChanged();
       return getFeedFieldBuilder().getBuilder();
     }
@@ -27189,7 +27654,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the feedItem field is set.
      */
     public boolean hasFeedItem() {
-      return ((bitField3_ & 0x00000002) != 0);
+      return ((bitField3_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -27222,7 +27687,7 @@ private static final long serialVersionUID = 0L;
       } else {
         feedItemBuilder_.setMessage(value);
       }
-      bitField3_ |= 0x00000002;
+      bitField3_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -27240,7 +27705,7 @@ private static final long serialVersionUID = 0L;
       } else {
         feedItemBuilder_.setMessage(builderForValue.build());
       }
-      bitField3_ |= 0x00000002;
+      bitField3_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -27253,7 +27718,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeFeedItem(com.google.ads.googleads.v14.resources.FeedItem value) {
       if (feedItemBuilder_ == null) {
-        if (((bitField3_ & 0x00000002) != 0) &&
+        if (((bitField3_ & 0x00000008) != 0) &&
           feedItem_ != null &&
           feedItem_ != com.google.ads.googleads.v14.resources.FeedItem.getDefaultInstance()) {
           getFeedItemBuilder().mergeFrom(value);
@@ -27263,7 +27728,7 @@ private static final long serialVersionUID = 0L;
       } else {
         feedItemBuilder_.mergeFrom(value);
       }
-      bitField3_ |= 0x00000002;
+      bitField3_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -27275,7 +27740,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.FeedItem feed_item = 50;</code>
      */
     public Builder clearFeedItem() {
-      bitField3_ = (bitField3_ & ~0x00000002);
+      bitField3_ = (bitField3_ & ~0x00000008);
       feedItem_ = null;
       if (feedItemBuilder_ != null) {
         feedItemBuilder_.dispose();
@@ -27292,7 +27757,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.FeedItem feed_item = 50;</code>
      */
     public com.google.ads.googleads.v14.resources.FeedItem.Builder getFeedItemBuilder() {
-      bitField3_ |= 0x00000002;
+      bitField3_ |= 0x00000008;
       onChanged();
       return getFeedItemFieldBuilder().getBuilder();
     }
@@ -27344,7 +27809,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the feedItemSet field is set.
      */
     public boolean hasFeedItemSet() {
-      return ((bitField3_ & 0x00000004) != 0);
+      return ((bitField3_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -27377,7 +27842,7 @@ private static final long serialVersionUID = 0L;
       } else {
         feedItemSetBuilder_.setMessage(value);
       }
-      bitField3_ |= 0x00000004;
+      bitField3_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -27395,7 +27860,7 @@ private static final long serialVersionUID = 0L;
       } else {
         feedItemSetBuilder_.setMessage(builderForValue.build());
       }
-      bitField3_ |= 0x00000004;
+      bitField3_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -27408,7 +27873,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeFeedItemSet(com.google.ads.googleads.v14.resources.FeedItemSet value) {
       if (feedItemSetBuilder_ == null) {
-        if (((bitField3_ & 0x00000004) != 0) &&
+        if (((bitField3_ & 0x00000010) != 0) &&
           feedItemSet_ != null &&
           feedItemSet_ != com.google.ads.googleads.v14.resources.FeedItemSet.getDefaultInstance()) {
           getFeedItemSetBuilder().mergeFrom(value);
@@ -27418,7 +27883,7 @@ private static final long serialVersionUID = 0L;
       } else {
         feedItemSetBuilder_.mergeFrom(value);
       }
-      bitField3_ |= 0x00000004;
+      bitField3_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -27430,7 +27895,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.FeedItemSet feed_item_set = 149;</code>
      */
     public Builder clearFeedItemSet() {
-      bitField3_ = (bitField3_ & ~0x00000004);
+      bitField3_ = (bitField3_ & ~0x00000010);
       feedItemSet_ = null;
       if (feedItemSetBuilder_ != null) {
         feedItemSetBuilder_.dispose();
@@ -27447,7 +27912,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.FeedItemSet feed_item_set = 149;</code>
      */
     public com.google.ads.googleads.v14.resources.FeedItemSet.Builder getFeedItemSetBuilder() {
-      bitField3_ |= 0x00000004;
+      bitField3_ |= 0x00000010;
       onChanged();
       return getFeedItemSetFieldBuilder().getBuilder();
     }
@@ -27499,7 +27964,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the feedItemSetLink field is set.
      */
     public boolean hasFeedItemSetLink() {
-      return ((bitField3_ & 0x00000008) != 0);
+      return ((bitField3_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -27532,7 +27997,7 @@ private static final long serialVersionUID = 0L;
       } else {
         feedItemSetLinkBuilder_.setMessage(value);
       }
-      bitField3_ |= 0x00000008;
+      bitField3_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -27550,7 +28015,7 @@ private static final long serialVersionUID = 0L;
       } else {
         feedItemSetLinkBuilder_.setMessage(builderForValue.build());
       }
-      bitField3_ |= 0x00000008;
+      bitField3_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -27563,7 +28028,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeFeedItemSetLink(com.google.ads.googleads.v14.resources.FeedItemSetLink value) {
       if (feedItemSetLinkBuilder_ == null) {
-        if (((bitField3_ & 0x00000008) != 0) &&
+        if (((bitField3_ & 0x00000020) != 0) &&
           feedItemSetLink_ != null &&
           feedItemSetLink_ != com.google.ads.googleads.v14.resources.FeedItemSetLink.getDefaultInstance()) {
           getFeedItemSetLinkBuilder().mergeFrom(value);
@@ -27573,7 +28038,7 @@ private static final long serialVersionUID = 0L;
       } else {
         feedItemSetLinkBuilder_.mergeFrom(value);
       }
-      bitField3_ |= 0x00000008;
+      bitField3_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -27585,7 +28050,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.FeedItemSetLink feed_item_set_link = 151;</code>
      */
     public Builder clearFeedItemSetLink() {
-      bitField3_ = (bitField3_ & ~0x00000008);
+      bitField3_ = (bitField3_ & ~0x00000020);
       feedItemSetLink_ = null;
       if (feedItemSetLinkBuilder_ != null) {
         feedItemSetLinkBuilder_.dispose();
@@ -27602,7 +28067,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.FeedItemSetLink feed_item_set_link = 151;</code>
      */
     public com.google.ads.googleads.v14.resources.FeedItemSetLink.Builder getFeedItemSetLinkBuilder() {
-      bitField3_ |= 0x00000008;
+      bitField3_ |= 0x00000020;
       onChanged();
       return getFeedItemSetLinkFieldBuilder().getBuilder();
     }
@@ -27654,7 +28119,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the feedItemTarget field is set.
      */
     public boolean hasFeedItemTarget() {
-      return ((bitField3_ & 0x00000010) != 0);
+      return ((bitField3_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -27687,7 +28152,7 @@ private static final long serialVersionUID = 0L;
       } else {
         feedItemTargetBuilder_.setMessage(value);
       }
-      bitField3_ |= 0x00000010;
+      bitField3_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -27705,7 +28170,7 @@ private static final long serialVersionUID = 0L;
       } else {
         feedItemTargetBuilder_.setMessage(builderForValue.build());
       }
-      bitField3_ |= 0x00000010;
+      bitField3_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -27718,7 +28183,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeFeedItemTarget(com.google.ads.googleads.v14.resources.FeedItemTarget value) {
       if (feedItemTargetBuilder_ == null) {
-        if (((bitField3_ & 0x00000010) != 0) &&
+        if (((bitField3_ & 0x00000040) != 0) &&
           feedItemTarget_ != null &&
           feedItemTarget_ != com.google.ads.googleads.v14.resources.FeedItemTarget.getDefaultInstance()) {
           getFeedItemTargetBuilder().mergeFrom(value);
@@ -27728,7 +28193,7 @@ private static final long serialVersionUID = 0L;
       } else {
         feedItemTargetBuilder_.mergeFrom(value);
       }
-      bitField3_ |= 0x00000010;
+      bitField3_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -27740,7 +28205,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.FeedItemTarget feed_item_target = 116;</code>
      */
     public Builder clearFeedItemTarget() {
-      bitField3_ = (bitField3_ & ~0x00000010);
+      bitField3_ = (bitField3_ & ~0x00000040);
       feedItemTarget_ = null;
       if (feedItemTargetBuilder_ != null) {
         feedItemTargetBuilder_.dispose();
@@ -27757,7 +28222,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.FeedItemTarget feed_item_target = 116;</code>
      */
     public com.google.ads.googleads.v14.resources.FeedItemTarget.Builder getFeedItemTargetBuilder() {
-      bitField3_ |= 0x00000010;
+      bitField3_ |= 0x00000040;
       onChanged();
       return getFeedItemTargetFieldBuilder().getBuilder();
     }
@@ -27809,7 +28274,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the feedMapping field is set.
      */
     public boolean hasFeedMapping() {
-      return ((bitField3_ & 0x00000020) != 0);
+      return ((bitField3_ & 0x00000080) != 0);
     }
     /**
      * <pre>
@@ -27842,7 +28307,7 @@ private static final long serialVersionUID = 0L;
       } else {
         feedMappingBuilder_.setMessage(value);
       }
-      bitField3_ |= 0x00000020;
+      bitField3_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -27860,7 +28325,7 @@ private static final long serialVersionUID = 0L;
       } else {
         feedMappingBuilder_.setMessage(builderForValue.build());
       }
-      bitField3_ |= 0x00000020;
+      bitField3_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -27873,7 +28338,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeFeedMapping(com.google.ads.googleads.v14.resources.FeedMapping value) {
       if (feedMappingBuilder_ == null) {
-        if (((bitField3_ & 0x00000020) != 0) &&
+        if (((bitField3_ & 0x00000080) != 0) &&
           feedMapping_ != null &&
           feedMapping_ != com.google.ads.googleads.v14.resources.FeedMapping.getDefaultInstance()) {
           getFeedMappingBuilder().mergeFrom(value);
@@ -27883,7 +28348,7 @@ private static final long serialVersionUID = 0L;
       } else {
         feedMappingBuilder_.mergeFrom(value);
       }
-      bitField3_ |= 0x00000020;
+      bitField3_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -27895,7 +28360,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.FeedMapping feed_mapping = 58;</code>
      */
     public Builder clearFeedMapping() {
-      bitField3_ = (bitField3_ & ~0x00000020);
+      bitField3_ = (bitField3_ & ~0x00000080);
       feedMapping_ = null;
       if (feedMappingBuilder_ != null) {
         feedMappingBuilder_.dispose();
@@ -27912,7 +28377,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.FeedMapping feed_mapping = 58;</code>
      */
     public com.google.ads.googleads.v14.resources.FeedMapping.Builder getFeedMappingBuilder() {
-      bitField3_ |= 0x00000020;
+      bitField3_ |= 0x00000080;
       onChanged();
       return getFeedMappingFieldBuilder().getBuilder();
     }
@@ -27964,7 +28429,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the feedPlaceholderView field is set.
      */
     public boolean hasFeedPlaceholderView() {
-      return ((bitField3_ & 0x00000040) != 0);
+      return ((bitField3_ & 0x00000100) != 0);
     }
     /**
      * <pre>
@@ -27997,7 +28462,7 @@ private static final long serialVersionUID = 0L;
       } else {
         feedPlaceholderViewBuilder_.setMessage(value);
       }
-      bitField3_ |= 0x00000040;
+      bitField3_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -28015,7 +28480,7 @@ private static final long serialVersionUID = 0L;
       } else {
         feedPlaceholderViewBuilder_.setMessage(builderForValue.build());
       }
-      bitField3_ |= 0x00000040;
+      bitField3_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -28028,7 +28493,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeFeedPlaceholderView(com.google.ads.googleads.v14.resources.FeedPlaceholderView value) {
       if (feedPlaceholderViewBuilder_ == null) {
-        if (((bitField3_ & 0x00000040) != 0) &&
+        if (((bitField3_ & 0x00000100) != 0) &&
           feedPlaceholderView_ != null &&
           feedPlaceholderView_ != com.google.ads.googleads.v14.resources.FeedPlaceholderView.getDefaultInstance()) {
           getFeedPlaceholderViewBuilder().mergeFrom(value);
@@ -28038,7 +28503,7 @@ private static final long serialVersionUID = 0L;
       } else {
         feedPlaceholderViewBuilder_.mergeFrom(value);
       }
-      bitField3_ |= 0x00000040;
+      bitField3_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -28050,7 +28515,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.FeedPlaceholderView feed_placeholder_view = 97;</code>
      */
     public Builder clearFeedPlaceholderView() {
-      bitField3_ = (bitField3_ & ~0x00000040);
+      bitField3_ = (bitField3_ & ~0x00000100);
       feedPlaceholderView_ = null;
       if (feedPlaceholderViewBuilder_ != null) {
         feedPlaceholderViewBuilder_.dispose();
@@ -28067,7 +28532,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.FeedPlaceholderView feed_placeholder_view = 97;</code>
      */
     public com.google.ads.googleads.v14.resources.FeedPlaceholderView.Builder getFeedPlaceholderViewBuilder() {
-      bitField3_ |= 0x00000040;
+      bitField3_ |= 0x00000100;
       onChanged();
       return getFeedPlaceholderViewFieldBuilder().getBuilder();
     }
@@ -28119,7 +28584,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the genderView field is set.
      */
     public boolean hasGenderView() {
-      return ((bitField3_ & 0x00000080) != 0);
+      return ((bitField3_ & 0x00000200) != 0);
     }
     /**
      * <pre>
@@ -28152,7 +28617,7 @@ private static final long serialVersionUID = 0L;
       } else {
         genderViewBuilder_.setMessage(value);
       }
-      bitField3_ |= 0x00000080;
+      bitField3_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -28170,7 +28635,7 @@ private static final long serialVersionUID = 0L;
       } else {
         genderViewBuilder_.setMessage(builderForValue.build());
       }
-      bitField3_ |= 0x00000080;
+      bitField3_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -28183,7 +28648,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeGenderView(com.google.ads.googleads.v14.resources.GenderView value) {
       if (genderViewBuilder_ == null) {
-        if (((bitField3_ & 0x00000080) != 0) &&
+        if (((bitField3_ & 0x00000200) != 0) &&
           genderView_ != null &&
           genderView_ != com.google.ads.googleads.v14.resources.GenderView.getDefaultInstance()) {
           getGenderViewBuilder().mergeFrom(value);
@@ -28193,7 +28658,7 @@ private static final long serialVersionUID = 0L;
       } else {
         genderViewBuilder_.mergeFrom(value);
       }
-      bitField3_ |= 0x00000080;
+      bitField3_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -28205,7 +28670,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.GenderView gender_view = 40;</code>
      */
     public Builder clearGenderView() {
-      bitField3_ = (bitField3_ & ~0x00000080);
+      bitField3_ = (bitField3_ & ~0x00000200);
       genderView_ = null;
       if (genderViewBuilder_ != null) {
         genderViewBuilder_.dispose();
@@ -28222,7 +28687,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.GenderView gender_view = 40;</code>
      */
     public com.google.ads.googleads.v14.resources.GenderView.Builder getGenderViewBuilder() {
-      bitField3_ |= 0x00000080;
+      bitField3_ |= 0x00000200;
       onChanged();
       return getGenderViewFieldBuilder().getBuilder();
     }
@@ -28274,7 +28739,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the geoTargetConstant field is set.
      */
     public boolean hasGeoTargetConstant() {
-      return ((bitField3_ & 0x00000100) != 0);
+      return ((bitField3_ & 0x00000400) != 0);
     }
     /**
      * <pre>
@@ -28307,7 +28772,7 @@ private static final long serialVersionUID = 0L;
       } else {
         geoTargetConstantBuilder_.setMessage(value);
       }
-      bitField3_ |= 0x00000100;
+      bitField3_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -28325,7 +28790,7 @@ private static final long serialVersionUID = 0L;
       } else {
         geoTargetConstantBuilder_.setMessage(builderForValue.build());
       }
-      bitField3_ |= 0x00000100;
+      bitField3_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -28338,7 +28803,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeGeoTargetConstant(com.google.ads.googleads.v14.resources.GeoTargetConstant value) {
       if (geoTargetConstantBuilder_ == null) {
-        if (((bitField3_ & 0x00000100) != 0) &&
+        if (((bitField3_ & 0x00000400) != 0) &&
           geoTargetConstant_ != null &&
           geoTargetConstant_ != com.google.ads.googleads.v14.resources.GeoTargetConstant.getDefaultInstance()) {
           getGeoTargetConstantBuilder().mergeFrom(value);
@@ -28348,7 +28813,7 @@ private static final long serialVersionUID = 0L;
       } else {
         geoTargetConstantBuilder_.mergeFrom(value);
       }
-      bitField3_ |= 0x00000100;
+      bitField3_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -28360,7 +28825,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.GeoTargetConstant geo_target_constant = 23;</code>
      */
     public Builder clearGeoTargetConstant() {
-      bitField3_ = (bitField3_ & ~0x00000100);
+      bitField3_ = (bitField3_ & ~0x00000400);
       geoTargetConstant_ = null;
       if (geoTargetConstantBuilder_ != null) {
         geoTargetConstantBuilder_.dispose();
@@ -28377,7 +28842,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.GeoTargetConstant geo_target_constant = 23;</code>
      */
     public com.google.ads.googleads.v14.resources.GeoTargetConstant.Builder getGeoTargetConstantBuilder() {
-      bitField3_ |= 0x00000100;
+      bitField3_ |= 0x00000400;
       onChanged();
       return getGeoTargetConstantFieldBuilder().getBuilder();
     }
@@ -28429,7 +28894,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the geographicView field is set.
      */
     public boolean hasGeographicView() {
-      return ((bitField3_ & 0x00000200) != 0);
+      return ((bitField3_ & 0x00000800) != 0);
     }
     /**
      * <pre>
@@ -28462,7 +28927,7 @@ private static final long serialVersionUID = 0L;
       } else {
         geographicViewBuilder_.setMessage(value);
       }
-      bitField3_ |= 0x00000200;
+      bitField3_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -28480,7 +28945,7 @@ private static final long serialVersionUID = 0L;
       } else {
         geographicViewBuilder_.setMessage(builderForValue.build());
       }
-      bitField3_ |= 0x00000200;
+      bitField3_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -28493,7 +28958,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeGeographicView(com.google.ads.googleads.v14.resources.GeographicView value) {
       if (geographicViewBuilder_ == null) {
-        if (((bitField3_ & 0x00000200) != 0) &&
+        if (((bitField3_ & 0x00000800) != 0) &&
           geographicView_ != null &&
           geographicView_ != com.google.ads.googleads.v14.resources.GeographicView.getDefaultInstance()) {
           getGeographicViewBuilder().mergeFrom(value);
@@ -28503,7 +28968,7 @@ private static final long serialVersionUID = 0L;
       } else {
         geographicViewBuilder_.mergeFrom(value);
       }
-      bitField3_ |= 0x00000200;
+      bitField3_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -28515,7 +28980,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.GeographicView geographic_view = 125;</code>
      */
     public Builder clearGeographicView() {
-      bitField3_ = (bitField3_ & ~0x00000200);
+      bitField3_ = (bitField3_ & ~0x00000800);
       geographicView_ = null;
       if (geographicViewBuilder_ != null) {
         geographicViewBuilder_.dispose();
@@ -28532,7 +28997,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.GeographicView geographic_view = 125;</code>
      */
     public com.google.ads.googleads.v14.resources.GeographicView.Builder getGeographicViewBuilder() {
-      bitField3_ |= 0x00000200;
+      bitField3_ |= 0x00000800;
       onChanged();
       return getGeographicViewFieldBuilder().getBuilder();
     }
@@ -28584,7 +29049,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the groupPlacementView field is set.
      */
     public boolean hasGroupPlacementView() {
-      return ((bitField3_ & 0x00000400) != 0);
+      return ((bitField3_ & 0x00001000) != 0);
     }
     /**
      * <pre>
@@ -28617,7 +29082,7 @@ private static final long serialVersionUID = 0L;
       } else {
         groupPlacementViewBuilder_.setMessage(value);
       }
-      bitField3_ |= 0x00000400;
+      bitField3_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -28635,7 +29100,7 @@ private static final long serialVersionUID = 0L;
       } else {
         groupPlacementViewBuilder_.setMessage(builderForValue.build());
       }
-      bitField3_ |= 0x00000400;
+      bitField3_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -28648,7 +29113,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeGroupPlacementView(com.google.ads.googleads.v14.resources.GroupPlacementView value) {
       if (groupPlacementViewBuilder_ == null) {
-        if (((bitField3_ & 0x00000400) != 0) &&
+        if (((bitField3_ & 0x00001000) != 0) &&
           groupPlacementView_ != null &&
           groupPlacementView_ != com.google.ads.googleads.v14.resources.GroupPlacementView.getDefaultInstance()) {
           getGroupPlacementViewBuilder().mergeFrom(value);
@@ -28658,7 +29123,7 @@ private static final long serialVersionUID = 0L;
       } else {
         groupPlacementViewBuilder_.mergeFrom(value);
       }
-      bitField3_ |= 0x00000400;
+      bitField3_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -28670,7 +29135,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.GroupPlacementView group_placement_view = 119;</code>
      */
     public Builder clearGroupPlacementView() {
-      bitField3_ = (bitField3_ & ~0x00000400);
+      bitField3_ = (bitField3_ & ~0x00001000);
       groupPlacementView_ = null;
       if (groupPlacementViewBuilder_ != null) {
         groupPlacementViewBuilder_.dispose();
@@ -28687,7 +29152,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.GroupPlacementView group_placement_view = 119;</code>
      */
     public com.google.ads.googleads.v14.resources.GroupPlacementView.Builder getGroupPlacementViewBuilder() {
-      bitField3_ |= 0x00000400;
+      bitField3_ |= 0x00001000;
       onChanged();
       return getGroupPlacementViewFieldBuilder().getBuilder();
     }
@@ -28739,7 +29204,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the hotelGroupView field is set.
      */
     public boolean hasHotelGroupView() {
-      return ((bitField3_ & 0x00000800) != 0);
+      return ((bitField3_ & 0x00002000) != 0);
     }
     /**
      * <pre>
@@ -28772,7 +29237,7 @@ private static final long serialVersionUID = 0L;
       } else {
         hotelGroupViewBuilder_.setMessage(value);
       }
-      bitField3_ |= 0x00000800;
+      bitField3_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -28790,7 +29255,7 @@ private static final long serialVersionUID = 0L;
       } else {
         hotelGroupViewBuilder_.setMessage(builderForValue.build());
       }
-      bitField3_ |= 0x00000800;
+      bitField3_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -28803,7 +29268,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeHotelGroupView(com.google.ads.googleads.v14.resources.HotelGroupView value) {
       if (hotelGroupViewBuilder_ == null) {
-        if (((bitField3_ & 0x00000800) != 0) &&
+        if (((bitField3_ & 0x00002000) != 0) &&
           hotelGroupView_ != null &&
           hotelGroupView_ != com.google.ads.googleads.v14.resources.HotelGroupView.getDefaultInstance()) {
           getHotelGroupViewBuilder().mergeFrom(value);
@@ -28813,7 +29278,7 @@ private static final long serialVersionUID = 0L;
       } else {
         hotelGroupViewBuilder_.mergeFrom(value);
       }
-      bitField3_ |= 0x00000800;
+      bitField3_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -28825,7 +29290,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.HotelGroupView hotel_group_view = 51;</code>
      */
     public Builder clearHotelGroupView() {
-      bitField3_ = (bitField3_ & ~0x00000800);
+      bitField3_ = (bitField3_ & ~0x00002000);
       hotelGroupView_ = null;
       if (hotelGroupViewBuilder_ != null) {
         hotelGroupViewBuilder_.dispose();
@@ -28842,7 +29307,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.HotelGroupView hotel_group_view = 51;</code>
      */
     public com.google.ads.googleads.v14.resources.HotelGroupView.Builder getHotelGroupViewBuilder() {
-      bitField3_ |= 0x00000800;
+      bitField3_ |= 0x00002000;
       onChanged();
       return getHotelGroupViewFieldBuilder().getBuilder();
     }
@@ -28894,7 +29359,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the hotelPerformanceView field is set.
      */
     public boolean hasHotelPerformanceView() {
-      return ((bitField3_ & 0x00001000) != 0);
+      return ((bitField3_ & 0x00004000) != 0);
     }
     /**
      * <pre>
@@ -28927,7 +29392,7 @@ private static final long serialVersionUID = 0L;
       } else {
         hotelPerformanceViewBuilder_.setMessage(value);
       }
-      bitField3_ |= 0x00001000;
+      bitField3_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -28945,7 +29410,7 @@ private static final long serialVersionUID = 0L;
       } else {
         hotelPerformanceViewBuilder_.setMessage(builderForValue.build());
       }
-      bitField3_ |= 0x00001000;
+      bitField3_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -28958,7 +29423,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeHotelPerformanceView(com.google.ads.googleads.v14.resources.HotelPerformanceView value) {
       if (hotelPerformanceViewBuilder_ == null) {
-        if (((bitField3_ & 0x00001000) != 0) &&
+        if (((bitField3_ & 0x00004000) != 0) &&
           hotelPerformanceView_ != null &&
           hotelPerformanceView_ != com.google.ads.googleads.v14.resources.HotelPerformanceView.getDefaultInstance()) {
           getHotelPerformanceViewBuilder().mergeFrom(value);
@@ -28968,7 +29433,7 @@ private static final long serialVersionUID = 0L;
       } else {
         hotelPerformanceViewBuilder_.mergeFrom(value);
       }
-      bitField3_ |= 0x00001000;
+      bitField3_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -28980,7 +29445,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.HotelPerformanceView hotel_performance_view = 71;</code>
      */
     public Builder clearHotelPerformanceView() {
-      bitField3_ = (bitField3_ & ~0x00001000);
+      bitField3_ = (bitField3_ & ~0x00004000);
       hotelPerformanceView_ = null;
       if (hotelPerformanceViewBuilder_ != null) {
         hotelPerformanceViewBuilder_.dispose();
@@ -28997,7 +29462,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.HotelPerformanceView hotel_performance_view = 71;</code>
      */
     public com.google.ads.googleads.v14.resources.HotelPerformanceView.Builder getHotelPerformanceViewBuilder() {
-      bitField3_ |= 0x00001000;
+      bitField3_ |= 0x00004000;
       onChanged();
       return getHotelPerformanceViewFieldBuilder().getBuilder();
     }
@@ -29049,7 +29514,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the hotelReconciliation field is set.
      */
     public boolean hasHotelReconciliation() {
-      return ((bitField3_ & 0x00002000) != 0);
+      return ((bitField3_ & 0x00008000) != 0);
     }
     /**
      * <pre>
@@ -29082,7 +29547,7 @@ private static final long serialVersionUID = 0L;
       } else {
         hotelReconciliationBuilder_.setMessage(value);
       }
-      bitField3_ |= 0x00002000;
+      bitField3_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -29100,7 +29565,7 @@ private static final long serialVersionUID = 0L;
       } else {
         hotelReconciliationBuilder_.setMessage(builderForValue.build());
       }
-      bitField3_ |= 0x00002000;
+      bitField3_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -29113,7 +29578,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeHotelReconciliation(com.google.ads.googleads.v14.resources.HotelReconciliation value) {
       if (hotelReconciliationBuilder_ == null) {
-        if (((bitField3_ & 0x00002000) != 0) &&
+        if (((bitField3_ & 0x00008000) != 0) &&
           hotelReconciliation_ != null &&
           hotelReconciliation_ != com.google.ads.googleads.v14.resources.HotelReconciliation.getDefaultInstance()) {
           getHotelReconciliationBuilder().mergeFrom(value);
@@ -29123,7 +29588,7 @@ private static final long serialVersionUID = 0L;
       } else {
         hotelReconciliationBuilder_.mergeFrom(value);
       }
-      bitField3_ |= 0x00002000;
+      bitField3_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -29135,7 +29600,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.HotelReconciliation hotel_reconciliation = 188;</code>
      */
     public Builder clearHotelReconciliation() {
-      bitField3_ = (bitField3_ & ~0x00002000);
+      bitField3_ = (bitField3_ & ~0x00008000);
       hotelReconciliation_ = null;
       if (hotelReconciliationBuilder_ != null) {
         hotelReconciliationBuilder_.dispose();
@@ -29152,7 +29617,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.HotelReconciliation hotel_reconciliation = 188;</code>
      */
     public com.google.ads.googleads.v14.resources.HotelReconciliation.Builder getHotelReconciliationBuilder() {
-      bitField3_ |= 0x00002000;
+      bitField3_ |= 0x00008000;
       onChanged();
       return getHotelReconciliationFieldBuilder().getBuilder();
     }
@@ -29204,7 +29669,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the incomeRangeView field is set.
      */
     public boolean hasIncomeRangeView() {
-      return ((bitField3_ & 0x00004000) != 0);
+      return ((bitField3_ & 0x00010000) != 0);
     }
     /**
      * <pre>
@@ -29237,7 +29702,7 @@ private static final long serialVersionUID = 0L;
       } else {
         incomeRangeViewBuilder_.setMessage(value);
       }
-      bitField3_ |= 0x00004000;
+      bitField3_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -29255,7 +29720,7 @@ private static final long serialVersionUID = 0L;
       } else {
         incomeRangeViewBuilder_.setMessage(builderForValue.build());
       }
-      bitField3_ |= 0x00004000;
+      bitField3_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -29268,7 +29733,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeIncomeRangeView(com.google.ads.googleads.v14.resources.IncomeRangeView value) {
       if (incomeRangeViewBuilder_ == null) {
-        if (((bitField3_ & 0x00004000) != 0) &&
+        if (((bitField3_ & 0x00010000) != 0) &&
           incomeRangeView_ != null &&
           incomeRangeView_ != com.google.ads.googleads.v14.resources.IncomeRangeView.getDefaultInstance()) {
           getIncomeRangeViewBuilder().mergeFrom(value);
@@ -29278,7 +29743,7 @@ private static final long serialVersionUID = 0L;
       } else {
         incomeRangeViewBuilder_.mergeFrom(value);
       }
-      bitField3_ |= 0x00004000;
+      bitField3_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -29290,7 +29755,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.IncomeRangeView income_range_view = 138;</code>
      */
     public Builder clearIncomeRangeView() {
-      bitField3_ = (bitField3_ & ~0x00004000);
+      bitField3_ = (bitField3_ & ~0x00010000);
       incomeRangeView_ = null;
       if (incomeRangeViewBuilder_ != null) {
         incomeRangeViewBuilder_.dispose();
@@ -29307,7 +29772,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.IncomeRangeView income_range_view = 138;</code>
      */
     public com.google.ads.googleads.v14.resources.IncomeRangeView.Builder getIncomeRangeViewBuilder() {
-      bitField3_ |= 0x00004000;
+      bitField3_ |= 0x00010000;
       onChanged();
       return getIncomeRangeViewFieldBuilder().getBuilder();
     }
@@ -29359,7 +29824,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the keywordView field is set.
      */
     public boolean hasKeywordView() {
-      return ((bitField3_ & 0x00008000) != 0);
+      return ((bitField3_ & 0x00020000) != 0);
     }
     /**
      * <pre>
@@ -29392,7 +29857,7 @@ private static final long serialVersionUID = 0L;
       } else {
         keywordViewBuilder_.setMessage(value);
       }
-      bitField3_ |= 0x00008000;
+      bitField3_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -29410,7 +29875,7 @@ private static final long serialVersionUID = 0L;
       } else {
         keywordViewBuilder_.setMessage(builderForValue.build());
       }
-      bitField3_ |= 0x00008000;
+      bitField3_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -29423,7 +29888,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeKeywordView(com.google.ads.googleads.v14.resources.KeywordView value) {
       if (keywordViewBuilder_ == null) {
-        if (((bitField3_ & 0x00008000) != 0) &&
+        if (((bitField3_ & 0x00020000) != 0) &&
           keywordView_ != null &&
           keywordView_ != com.google.ads.googleads.v14.resources.KeywordView.getDefaultInstance()) {
           getKeywordViewBuilder().mergeFrom(value);
@@ -29433,7 +29898,7 @@ private static final long serialVersionUID = 0L;
       } else {
         keywordViewBuilder_.mergeFrom(value);
       }
-      bitField3_ |= 0x00008000;
+      bitField3_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -29445,7 +29910,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.KeywordView keyword_view = 21;</code>
      */
     public Builder clearKeywordView() {
-      bitField3_ = (bitField3_ & ~0x00008000);
+      bitField3_ = (bitField3_ & ~0x00020000);
       keywordView_ = null;
       if (keywordViewBuilder_ != null) {
         keywordViewBuilder_.dispose();
@@ -29462,7 +29927,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.KeywordView keyword_view = 21;</code>
      */
     public com.google.ads.googleads.v14.resources.KeywordView.Builder getKeywordViewBuilder() {
-      bitField3_ |= 0x00008000;
+      bitField3_ |= 0x00020000;
       onChanged();
       return getKeywordViewFieldBuilder().getBuilder();
     }
@@ -29514,7 +29979,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the keywordPlan field is set.
      */
     public boolean hasKeywordPlan() {
-      return ((bitField3_ & 0x00010000) != 0);
+      return ((bitField3_ & 0x00040000) != 0);
     }
     /**
      * <pre>
@@ -29547,7 +30012,7 @@ private static final long serialVersionUID = 0L;
       } else {
         keywordPlanBuilder_.setMessage(value);
       }
-      bitField3_ |= 0x00010000;
+      bitField3_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -29565,7 +30030,7 @@ private static final long serialVersionUID = 0L;
       } else {
         keywordPlanBuilder_.setMessage(builderForValue.build());
       }
-      bitField3_ |= 0x00010000;
+      bitField3_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -29578,7 +30043,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeKeywordPlan(com.google.ads.googleads.v14.resources.KeywordPlan value) {
       if (keywordPlanBuilder_ == null) {
-        if (((bitField3_ & 0x00010000) != 0) &&
+        if (((bitField3_ & 0x00040000) != 0) &&
           keywordPlan_ != null &&
           keywordPlan_ != com.google.ads.googleads.v14.resources.KeywordPlan.getDefaultInstance()) {
           getKeywordPlanBuilder().mergeFrom(value);
@@ -29588,7 +30053,7 @@ private static final long serialVersionUID = 0L;
       } else {
         keywordPlanBuilder_.mergeFrom(value);
       }
-      bitField3_ |= 0x00010000;
+      bitField3_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -29600,7 +30065,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.KeywordPlan keyword_plan = 32;</code>
      */
     public Builder clearKeywordPlan() {
-      bitField3_ = (bitField3_ & ~0x00010000);
+      bitField3_ = (bitField3_ & ~0x00040000);
       keywordPlan_ = null;
       if (keywordPlanBuilder_ != null) {
         keywordPlanBuilder_.dispose();
@@ -29617,7 +30082,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.KeywordPlan keyword_plan = 32;</code>
      */
     public com.google.ads.googleads.v14.resources.KeywordPlan.Builder getKeywordPlanBuilder() {
-      bitField3_ |= 0x00010000;
+      bitField3_ |= 0x00040000;
       onChanged();
       return getKeywordPlanFieldBuilder().getBuilder();
     }
@@ -29669,7 +30134,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the keywordPlanCampaign field is set.
      */
     public boolean hasKeywordPlanCampaign() {
-      return ((bitField3_ & 0x00020000) != 0);
+      return ((bitField3_ & 0x00080000) != 0);
     }
     /**
      * <pre>
@@ -29702,7 +30167,7 @@ private static final long serialVersionUID = 0L;
       } else {
         keywordPlanCampaignBuilder_.setMessage(value);
       }
-      bitField3_ |= 0x00020000;
+      bitField3_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -29720,7 +30185,7 @@ private static final long serialVersionUID = 0L;
       } else {
         keywordPlanCampaignBuilder_.setMessage(builderForValue.build());
       }
-      bitField3_ |= 0x00020000;
+      bitField3_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -29733,7 +30198,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeKeywordPlanCampaign(com.google.ads.googleads.v14.resources.KeywordPlanCampaign value) {
       if (keywordPlanCampaignBuilder_ == null) {
-        if (((bitField3_ & 0x00020000) != 0) &&
+        if (((bitField3_ & 0x00080000) != 0) &&
           keywordPlanCampaign_ != null &&
           keywordPlanCampaign_ != com.google.ads.googleads.v14.resources.KeywordPlanCampaign.getDefaultInstance()) {
           getKeywordPlanCampaignBuilder().mergeFrom(value);
@@ -29743,7 +30208,7 @@ private static final long serialVersionUID = 0L;
       } else {
         keywordPlanCampaignBuilder_.mergeFrom(value);
       }
-      bitField3_ |= 0x00020000;
+      bitField3_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -29755,7 +30220,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.KeywordPlanCampaign keyword_plan_campaign = 33;</code>
      */
     public Builder clearKeywordPlanCampaign() {
-      bitField3_ = (bitField3_ & ~0x00020000);
+      bitField3_ = (bitField3_ & ~0x00080000);
       keywordPlanCampaign_ = null;
       if (keywordPlanCampaignBuilder_ != null) {
         keywordPlanCampaignBuilder_.dispose();
@@ -29772,7 +30237,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.KeywordPlanCampaign keyword_plan_campaign = 33;</code>
      */
     public com.google.ads.googleads.v14.resources.KeywordPlanCampaign.Builder getKeywordPlanCampaignBuilder() {
-      bitField3_ |= 0x00020000;
+      bitField3_ |= 0x00080000;
       onChanged();
       return getKeywordPlanCampaignFieldBuilder().getBuilder();
     }
@@ -29824,7 +30289,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the keywordPlanCampaignKeyword field is set.
      */
     public boolean hasKeywordPlanCampaignKeyword() {
-      return ((bitField3_ & 0x00040000) != 0);
+      return ((bitField3_ & 0x00100000) != 0);
     }
     /**
      * <pre>
@@ -29857,7 +30322,7 @@ private static final long serialVersionUID = 0L;
       } else {
         keywordPlanCampaignKeywordBuilder_.setMessage(value);
       }
-      bitField3_ |= 0x00040000;
+      bitField3_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -29875,7 +30340,7 @@ private static final long serialVersionUID = 0L;
       } else {
         keywordPlanCampaignKeywordBuilder_.setMessage(builderForValue.build());
       }
-      bitField3_ |= 0x00040000;
+      bitField3_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -29888,7 +30353,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeKeywordPlanCampaignKeyword(com.google.ads.googleads.v14.resources.KeywordPlanCampaignKeyword value) {
       if (keywordPlanCampaignKeywordBuilder_ == null) {
-        if (((bitField3_ & 0x00040000) != 0) &&
+        if (((bitField3_ & 0x00100000) != 0) &&
           keywordPlanCampaignKeyword_ != null &&
           keywordPlanCampaignKeyword_ != com.google.ads.googleads.v14.resources.KeywordPlanCampaignKeyword.getDefaultInstance()) {
           getKeywordPlanCampaignKeywordBuilder().mergeFrom(value);
@@ -29898,7 +30363,7 @@ private static final long serialVersionUID = 0L;
       } else {
         keywordPlanCampaignKeywordBuilder_.mergeFrom(value);
       }
-      bitField3_ |= 0x00040000;
+      bitField3_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -29910,7 +30375,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.KeywordPlanCampaignKeyword keyword_plan_campaign_keyword = 140;</code>
      */
     public Builder clearKeywordPlanCampaignKeyword() {
-      bitField3_ = (bitField3_ & ~0x00040000);
+      bitField3_ = (bitField3_ & ~0x00100000);
       keywordPlanCampaignKeyword_ = null;
       if (keywordPlanCampaignKeywordBuilder_ != null) {
         keywordPlanCampaignKeywordBuilder_.dispose();
@@ -29927,7 +30392,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.KeywordPlanCampaignKeyword keyword_plan_campaign_keyword = 140;</code>
      */
     public com.google.ads.googleads.v14.resources.KeywordPlanCampaignKeyword.Builder getKeywordPlanCampaignKeywordBuilder() {
-      bitField3_ |= 0x00040000;
+      bitField3_ |= 0x00100000;
       onChanged();
       return getKeywordPlanCampaignKeywordFieldBuilder().getBuilder();
     }
@@ -29979,7 +30444,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the keywordPlanAdGroup field is set.
      */
     public boolean hasKeywordPlanAdGroup() {
-      return ((bitField3_ & 0x00080000) != 0);
+      return ((bitField3_ & 0x00200000) != 0);
     }
     /**
      * <pre>
@@ -30012,7 +30477,7 @@ private static final long serialVersionUID = 0L;
       } else {
         keywordPlanAdGroupBuilder_.setMessage(value);
       }
-      bitField3_ |= 0x00080000;
+      bitField3_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -30030,7 +30495,7 @@ private static final long serialVersionUID = 0L;
       } else {
         keywordPlanAdGroupBuilder_.setMessage(builderForValue.build());
       }
-      bitField3_ |= 0x00080000;
+      bitField3_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -30043,7 +30508,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeKeywordPlanAdGroup(com.google.ads.googleads.v14.resources.KeywordPlanAdGroup value) {
       if (keywordPlanAdGroupBuilder_ == null) {
-        if (((bitField3_ & 0x00080000) != 0) &&
+        if (((bitField3_ & 0x00200000) != 0) &&
           keywordPlanAdGroup_ != null &&
           keywordPlanAdGroup_ != com.google.ads.googleads.v14.resources.KeywordPlanAdGroup.getDefaultInstance()) {
           getKeywordPlanAdGroupBuilder().mergeFrom(value);
@@ -30053,7 +30518,7 @@ private static final long serialVersionUID = 0L;
       } else {
         keywordPlanAdGroupBuilder_.mergeFrom(value);
       }
-      bitField3_ |= 0x00080000;
+      bitField3_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -30065,7 +30530,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.KeywordPlanAdGroup keyword_plan_ad_group = 35;</code>
      */
     public Builder clearKeywordPlanAdGroup() {
-      bitField3_ = (bitField3_ & ~0x00080000);
+      bitField3_ = (bitField3_ & ~0x00200000);
       keywordPlanAdGroup_ = null;
       if (keywordPlanAdGroupBuilder_ != null) {
         keywordPlanAdGroupBuilder_.dispose();
@@ -30082,7 +30547,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.KeywordPlanAdGroup keyword_plan_ad_group = 35;</code>
      */
     public com.google.ads.googleads.v14.resources.KeywordPlanAdGroup.Builder getKeywordPlanAdGroupBuilder() {
-      bitField3_ |= 0x00080000;
+      bitField3_ |= 0x00200000;
       onChanged();
       return getKeywordPlanAdGroupFieldBuilder().getBuilder();
     }
@@ -30134,7 +30599,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the keywordPlanAdGroupKeyword field is set.
      */
     public boolean hasKeywordPlanAdGroupKeyword() {
-      return ((bitField3_ & 0x00100000) != 0);
+      return ((bitField3_ & 0x00400000) != 0);
     }
     /**
      * <pre>
@@ -30167,7 +30632,7 @@ private static final long serialVersionUID = 0L;
       } else {
         keywordPlanAdGroupKeywordBuilder_.setMessage(value);
       }
-      bitField3_ |= 0x00100000;
+      bitField3_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -30185,7 +30650,7 @@ private static final long serialVersionUID = 0L;
       } else {
         keywordPlanAdGroupKeywordBuilder_.setMessage(builderForValue.build());
       }
-      bitField3_ |= 0x00100000;
+      bitField3_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -30198,7 +30663,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeKeywordPlanAdGroupKeyword(com.google.ads.googleads.v14.resources.KeywordPlanAdGroupKeyword value) {
       if (keywordPlanAdGroupKeywordBuilder_ == null) {
-        if (((bitField3_ & 0x00100000) != 0) &&
+        if (((bitField3_ & 0x00400000) != 0) &&
           keywordPlanAdGroupKeyword_ != null &&
           keywordPlanAdGroupKeyword_ != com.google.ads.googleads.v14.resources.KeywordPlanAdGroupKeyword.getDefaultInstance()) {
           getKeywordPlanAdGroupKeywordBuilder().mergeFrom(value);
@@ -30208,7 +30673,7 @@ private static final long serialVersionUID = 0L;
       } else {
         keywordPlanAdGroupKeywordBuilder_.mergeFrom(value);
       }
-      bitField3_ |= 0x00100000;
+      bitField3_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -30220,7 +30685,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.KeywordPlanAdGroupKeyword keyword_plan_ad_group_keyword = 141;</code>
      */
     public Builder clearKeywordPlanAdGroupKeyword() {
-      bitField3_ = (bitField3_ & ~0x00100000);
+      bitField3_ = (bitField3_ & ~0x00400000);
       keywordPlanAdGroupKeyword_ = null;
       if (keywordPlanAdGroupKeywordBuilder_ != null) {
         keywordPlanAdGroupKeywordBuilder_.dispose();
@@ -30237,7 +30702,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.KeywordPlanAdGroupKeyword keyword_plan_ad_group_keyword = 141;</code>
      */
     public com.google.ads.googleads.v14.resources.KeywordPlanAdGroupKeyword.Builder getKeywordPlanAdGroupKeywordBuilder() {
-      bitField3_ |= 0x00100000;
+      bitField3_ |= 0x00400000;
       onChanged();
       return getKeywordPlanAdGroupKeywordFieldBuilder().getBuilder();
     }
@@ -30289,7 +30754,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the keywordThemeConstant field is set.
      */
     public boolean hasKeywordThemeConstant() {
-      return ((bitField3_ & 0x00200000) != 0);
+      return ((bitField3_ & 0x00800000) != 0);
     }
     /**
      * <pre>
@@ -30322,7 +30787,7 @@ private static final long serialVersionUID = 0L;
       } else {
         keywordThemeConstantBuilder_.setMessage(value);
       }
-      bitField3_ |= 0x00200000;
+      bitField3_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -30340,7 +30805,7 @@ private static final long serialVersionUID = 0L;
       } else {
         keywordThemeConstantBuilder_.setMessage(builderForValue.build());
       }
-      bitField3_ |= 0x00200000;
+      bitField3_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -30353,7 +30818,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeKeywordThemeConstant(com.google.ads.googleads.v14.resources.KeywordThemeConstant value) {
       if (keywordThemeConstantBuilder_ == null) {
-        if (((bitField3_ & 0x00200000) != 0) &&
+        if (((bitField3_ & 0x00800000) != 0) &&
           keywordThemeConstant_ != null &&
           keywordThemeConstant_ != com.google.ads.googleads.v14.resources.KeywordThemeConstant.getDefaultInstance()) {
           getKeywordThemeConstantBuilder().mergeFrom(value);
@@ -30363,7 +30828,7 @@ private static final long serialVersionUID = 0L;
       } else {
         keywordThemeConstantBuilder_.mergeFrom(value);
       }
-      bitField3_ |= 0x00200000;
+      bitField3_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -30375,7 +30840,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.KeywordThemeConstant keyword_theme_constant = 163;</code>
      */
     public Builder clearKeywordThemeConstant() {
-      bitField3_ = (bitField3_ & ~0x00200000);
+      bitField3_ = (bitField3_ & ~0x00800000);
       keywordThemeConstant_ = null;
       if (keywordThemeConstantBuilder_ != null) {
         keywordThemeConstantBuilder_.dispose();
@@ -30392,7 +30857,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.KeywordThemeConstant keyword_theme_constant = 163;</code>
      */
     public com.google.ads.googleads.v14.resources.KeywordThemeConstant.Builder getKeywordThemeConstantBuilder() {
-      bitField3_ |= 0x00200000;
+      bitField3_ |= 0x00800000;
       onChanged();
       return getKeywordThemeConstantFieldBuilder().getBuilder();
     }
@@ -30444,7 +30909,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the label field is set.
      */
     public boolean hasLabel() {
-      return ((bitField3_ & 0x00400000) != 0);
+      return ((bitField3_ & 0x01000000) != 0);
     }
     /**
      * <pre>
@@ -30477,7 +30942,7 @@ private static final long serialVersionUID = 0L;
       } else {
         labelBuilder_.setMessage(value);
       }
-      bitField3_ |= 0x00400000;
+      bitField3_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -30495,7 +30960,7 @@ private static final long serialVersionUID = 0L;
       } else {
         labelBuilder_.setMessage(builderForValue.build());
       }
-      bitField3_ |= 0x00400000;
+      bitField3_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -30508,7 +30973,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeLabel(com.google.ads.googleads.v14.resources.Label value) {
       if (labelBuilder_ == null) {
-        if (((bitField3_ & 0x00400000) != 0) &&
+        if (((bitField3_ & 0x01000000) != 0) &&
           label_ != null &&
           label_ != com.google.ads.googleads.v14.resources.Label.getDefaultInstance()) {
           getLabelBuilder().mergeFrom(value);
@@ -30518,7 +30983,7 @@ private static final long serialVersionUID = 0L;
       } else {
         labelBuilder_.mergeFrom(value);
       }
-      bitField3_ |= 0x00400000;
+      bitField3_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -30530,7 +30995,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.Label label = 52;</code>
      */
     public Builder clearLabel() {
-      bitField3_ = (bitField3_ & ~0x00400000);
+      bitField3_ = (bitField3_ & ~0x01000000);
       label_ = null;
       if (labelBuilder_ != null) {
         labelBuilder_.dispose();
@@ -30547,7 +31012,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.Label label = 52;</code>
      */
     public com.google.ads.googleads.v14.resources.Label.Builder getLabelBuilder() {
-      bitField3_ |= 0x00400000;
+      bitField3_ |= 0x01000000;
       onChanged();
       return getLabelFieldBuilder().getBuilder();
     }
@@ -30599,7 +31064,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the landingPageView field is set.
      */
     public boolean hasLandingPageView() {
-      return ((bitField3_ & 0x00800000) != 0);
+      return ((bitField3_ & 0x02000000) != 0);
     }
     /**
      * <pre>
@@ -30632,7 +31097,7 @@ private static final long serialVersionUID = 0L;
       } else {
         landingPageViewBuilder_.setMessage(value);
       }
-      bitField3_ |= 0x00800000;
+      bitField3_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -30650,7 +31115,7 @@ private static final long serialVersionUID = 0L;
       } else {
         landingPageViewBuilder_.setMessage(builderForValue.build());
       }
-      bitField3_ |= 0x00800000;
+      bitField3_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -30663,7 +31128,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeLandingPageView(com.google.ads.googleads.v14.resources.LandingPageView value) {
       if (landingPageViewBuilder_ == null) {
-        if (((bitField3_ & 0x00800000) != 0) &&
+        if (((bitField3_ & 0x02000000) != 0) &&
           landingPageView_ != null &&
           landingPageView_ != com.google.ads.googleads.v14.resources.LandingPageView.getDefaultInstance()) {
           getLandingPageViewBuilder().mergeFrom(value);
@@ -30673,7 +31138,7 @@ private static final long serialVersionUID = 0L;
       } else {
         landingPageViewBuilder_.mergeFrom(value);
       }
-      bitField3_ |= 0x00800000;
+      bitField3_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -30685,7 +31150,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.LandingPageView landing_page_view = 126;</code>
      */
     public Builder clearLandingPageView() {
-      bitField3_ = (bitField3_ & ~0x00800000);
+      bitField3_ = (bitField3_ & ~0x02000000);
       landingPageView_ = null;
       if (landingPageViewBuilder_ != null) {
         landingPageViewBuilder_.dispose();
@@ -30702,7 +31167,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.LandingPageView landing_page_view = 126;</code>
      */
     public com.google.ads.googleads.v14.resources.LandingPageView.Builder getLandingPageViewBuilder() {
-      bitField3_ |= 0x00800000;
+      bitField3_ |= 0x02000000;
       onChanged();
       return getLandingPageViewFieldBuilder().getBuilder();
     }
@@ -30754,7 +31219,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the languageConstant field is set.
      */
     public boolean hasLanguageConstant() {
-      return ((bitField3_ & 0x01000000) != 0);
+      return ((bitField3_ & 0x04000000) != 0);
     }
     /**
      * <pre>
@@ -30787,7 +31252,7 @@ private static final long serialVersionUID = 0L;
       } else {
         languageConstantBuilder_.setMessage(value);
       }
-      bitField3_ |= 0x01000000;
+      bitField3_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -30805,7 +31270,7 @@ private static final long serialVersionUID = 0L;
       } else {
         languageConstantBuilder_.setMessage(builderForValue.build());
       }
-      bitField3_ |= 0x01000000;
+      bitField3_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -30818,7 +31283,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeLanguageConstant(com.google.ads.googleads.v14.resources.LanguageConstant value) {
       if (languageConstantBuilder_ == null) {
-        if (((bitField3_ & 0x01000000) != 0) &&
+        if (((bitField3_ & 0x04000000) != 0) &&
           languageConstant_ != null &&
           languageConstant_ != com.google.ads.googleads.v14.resources.LanguageConstant.getDefaultInstance()) {
           getLanguageConstantBuilder().mergeFrom(value);
@@ -30828,7 +31293,7 @@ private static final long serialVersionUID = 0L;
       } else {
         languageConstantBuilder_.mergeFrom(value);
       }
-      bitField3_ |= 0x01000000;
+      bitField3_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -30840,7 +31305,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.LanguageConstant language_constant = 55;</code>
      */
     public Builder clearLanguageConstant() {
-      bitField3_ = (bitField3_ & ~0x01000000);
+      bitField3_ = (bitField3_ & ~0x04000000);
       languageConstant_ = null;
       if (languageConstantBuilder_ != null) {
         languageConstantBuilder_.dispose();
@@ -30857,7 +31322,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.LanguageConstant language_constant = 55;</code>
      */
     public com.google.ads.googleads.v14.resources.LanguageConstant.Builder getLanguageConstantBuilder() {
-      bitField3_ |= 0x01000000;
+      bitField3_ |= 0x04000000;
       onChanged();
       return getLanguageConstantFieldBuilder().getBuilder();
     }
@@ -30909,7 +31374,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the locationView field is set.
      */
     public boolean hasLocationView() {
-      return ((bitField3_ & 0x02000000) != 0);
+      return ((bitField3_ & 0x08000000) != 0);
     }
     /**
      * <pre>
@@ -30942,7 +31407,7 @@ private static final long serialVersionUID = 0L;
       } else {
         locationViewBuilder_.setMessage(value);
       }
-      bitField3_ |= 0x02000000;
+      bitField3_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -30960,7 +31425,7 @@ private static final long serialVersionUID = 0L;
       } else {
         locationViewBuilder_.setMessage(builderForValue.build());
       }
-      bitField3_ |= 0x02000000;
+      bitField3_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -30973,7 +31438,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeLocationView(com.google.ads.googleads.v14.resources.LocationView value) {
       if (locationViewBuilder_ == null) {
-        if (((bitField3_ & 0x02000000) != 0) &&
+        if (((bitField3_ & 0x08000000) != 0) &&
           locationView_ != null &&
           locationView_ != com.google.ads.googleads.v14.resources.LocationView.getDefaultInstance()) {
           getLocationViewBuilder().mergeFrom(value);
@@ -30983,7 +31448,7 @@ private static final long serialVersionUID = 0L;
       } else {
         locationViewBuilder_.mergeFrom(value);
       }
-      bitField3_ |= 0x02000000;
+      bitField3_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -30995,7 +31460,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.LocationView location_view = 123;</code>
      */
     public Builder clearLocationView() {
-      bitField3_ = (bitField3_ & ~0x02000000);
+      bitField3_ = (bitField3_ & ~0x08000000);
       locationView_ = null;
       if (locationViewBuilder_ != null) {
         locationViewBuilder_.dispose();
@@ -31012,7 +31477,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.LocationView location_view = 123;</code>
      */
     public com.google.ads.googleads.v14.resources.LocationView.Builder getLocationViewBuilder() {
-      bitField3_ |= 0x02000000;
+      bitField3_ |= 0x08000000;
       onChanged();
       return getLocationViewFieldBuilder().getBuilder();
     }
@@ -31064,7 +31529,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the managedPlacementView field is set.
      */
     public boolean hasManagedPlacementView() {
-      return ((bitField3_ & 0x04000000) != 0);
+      return ((bitField3_ & 0x10000000) != 0);
     }
     /**
      * <pre>
@@ -31097,7 +31562,7 @@ private static final long serialVersionUID = 0L;
       } else {
         managedPlacementViewBuilder_.setMessage(value);
       }
-      bitField3_ |= 0x04000000;
+      bitField3_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -31115,7 +31580,7 @@ private static final long serialVersionUID = 0L;
       } else {
         managedPlacementViewBuilder_.setMessage(builderForValue.build());
       }
-      bitField3_ |= 0x04000000;
+      bitField3_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -31128,7 +31593,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeManagedPlacementView(com.google.ads.googleads.v14.resources.ManagedPlacementView value) {
       if (managedPlacementViewBuilder_ == null) {
-        if (((bitField3_ & 0x04000000) != 0) &&
+        if (((bitField3_ & 0x10000000) != 0) &&
           managedPlacementView_ != null &&
           managedPlacementView_ != com.google.ads.googleads.v14.resources.ManagedPlacementView.getDefaultInstance()) {
           getManagedPlacementViewBuilder().mergeFrom(value);
@@ -31138,7 +31603,7 @@ private static final long serialVersionUID = 0L;
       } else {
         managedPlacementViewBuilder_.mergeFrom(value);
       }
-      bitField3_ |= 0x04000000;
+      bitField3_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -31150,7 +31615,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.ManagedPlacementView managed_placement_view = 53;</code>
      */
     public Builder clearManagedPlacementView() {
-      bitField3_ = (bitField3_ & ~0x04000000);
+      bitField3_ = (bitField3_ & ~0x10000000);
       managedPlacementView_ = null;
       if (managedPlacementViewBuilder_ != null) {
         managedPlacementViewBuilder_.dispose();
@@ -31167,7 +31632,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.ManagedPlacementView managed_placement_view = 53;</code>
      */
     public com.google.ads.googleads.v14.resources.ManagedPlacementView.Builder getManagedPlacementViewBuilder() {
-      bitField3_ |= 0x04000000;
+      bitField3_ |= 0x10000000;
       onChanged();
       return getManagedPlacementViewFieldBuilder().getBuilder();
     }
@@ -31219,7 +31684,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the mediaFile field is set.
      */
     public boolean hasMediaFile() {
-      return ((bitField3_ & 0x08000000) != 0);
+      return ((bitField3_ & 0x20000000) != 0);
     }
     /**
      * <pre>
@@ -31252,7 +31717,7 @@ private static final long serialVersionUID = 0L;
       } else {
         mediaFileBuilder_.setMessage(value);
       }
-      bitField3_ |= 0x08000000;
+      bitField3_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -31270,7 +31735,7 @@ private static final long serialVersionUID = 0L;
       } else {
         mediaFileBuilder_.setMessage(builderForValue.build());
       }
-      bitField3_ |= 0x08000000;
+      bitField3_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -31283,7 +31748,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeMediaFile(com.google.ads.googleads.v14.resources.MediaFile value) {
       if (mediaFileBuilder_ == null) {
-        if (((bitField3_ & 0x08000000) != 0) &&
+        if (((bitField3_ & 0x20000000) != 0) &&
           mediaFile_ != null &&
           mediaFile_ != com.google.ads.googleads.v14.resources.MediaFile.getDefaultInstance()) {
           getMediaFileBuilder().mergeFrom(value);
@@ -31293,7 +31758,7 @@ private static final long serialVersionUID = 0L;
       } else {
         mediaFileBuilder_.mergeFrom(value);
       }
-      bitField3_ |= 0x08000000;
+      bitField3_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -31305,7 +31770,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.MediaFile media_file = 90;</code>
      */
     public Builder clearMediaFile() {
-      bitField3_ = (bitField3_ & ~0x08000000);
+      bitField3_ = (bitField3_ & ~0x20000000);
       mediaFile_ = null;
       if (mediaFileBuilder_ != null) {
         mediaFileBuilder_.dispose();
@@ -31322,7 +31787,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.MediaFile media_file = 90;</code>
      */
     public com.google.ads.googleads.v14.resources.MediaFile.Builder getMediaFileBuilder() {
-      bitField3_ |= 0x08000000;
+      bitField3_ |= 0x20000000;
       onChanged();
       return getMediaFileFieldBuilder().getBuilder();
     }
@@ -31374,7 +31839,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the mobileAppCategoryConstant field is set.
      */
     public boolean hasMobileAppCategoryConstant() {
-      return ((bitField3_ & 0x10000000) != 0);
+      return ((bitField3_ & 0x40000000) != 0);
     }
     /**
      * <pre>
@@ -31407,7 +31872,7 @@ private static final long serialVersionUID = 0L;
       } else {
         mobileAppCategoryConstantBuilder_.setMessage(value);
       }
-      bitField3_ |= 0x10000000;
+      bitField3_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -31425,7 +31890,7 @@ private static final long serialVersionUID = 0L;
       } else {
         mobileAppCategoryConstantBuilder_.setMessage(builderForValue.build());
       }
-      bitField3_ |= 0x10000000;
+      bitField3_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -31438,7 +31903,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeMobileAppCategoryConstant(com.google.ads.googleads.v14.resources.MobileAppCategoryConstant value) {
       if (mobileAppCategoryConstantBuilder_ == null) {
-        if (((bitField3_ & 0x10000000) != 0) &&
+        if (((bitField3_ & 0x40000000) != 0) &&
           mobileAppCategoryConstant_ != null &&
           mobileAppCategoryConstant_ != com.google.ads.googleads.v14.resources.MobileAppCategoryConstant.getDefaultInstance()) {
           getMobileAppCategoryConstantBuilder().mergeFrom(value);
@@ -31448,7 +31913,7 @@ private static final long serialVersionUID = 0L;
       } else {
         mobileAppCategoryConstantBuilder_.mergeFrom(value);
       }
-      bitField3_ |= 0x10000000;
+      bitField3_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -31460,7 +31925,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.MobileAppCategoryConstant mobile_app_category_constant = 87;</code>
      */
     public Builder clearMobileAppCategoryConstant() {
-      bitField3_ = (bitField3_ & ~0x10000000);
+      bitField3_ = (bitField3_ & ~0x40000000);
       mobileAppCategoryConstant_ = null;
       if (mobileAppCategoryConstantBuilder_ != null) {
         mobileAppCategoryConstantBuilder_.dispose();
@@ -31477,7 +31942,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.MobileAppCategoryConstant mobile_app_category_constant = 87;</code>
      */
     public com.google.ads.googleads.v14.resources.MobileAppCategoryConstant.Builder getMobileAppCategoryConstantBuilder() {
-      bitField3_ |= 0x10000000;
+      bitField3_ |= 0x40000000;
       onChanged();
       return getMobileAppCategoryConstantFieldBuilder().getBuilder();
     }
@@ -31529,7 +31994,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the mobileDeviceConstant field is set.
      */
     public boolean hasMobileDeviceConstant() {
-      return ((bitField3_ & 0x20000000) != 0);
+      return ((bitField3_ & 0x80000000) != 0);
     }
     /**
      * <pre>
@@ -31562,7 +32027,7 @@ private static final long serialVersionUID = 0L;
       } else {
         mobileDeviceConstantBuilder_.setMessage(value);
       }
-      bitField3_ |= 0x20000000;
+      bitField3_ |= 0x80000000;
       onChanged();
       return this;
     }
@@ -31580,7 +32045,7 @@ private static final long serialVersionUID = 0L;
       } else {
         mobileDeviceConstantBuilder_.setMessage(builderForValue.build());
       }
-      bitField3_ |= 0x20000000;
+      bitField3_ |= 0x80000000;
       onChanged();
       return this;
     }
@@ -31593,7 +32058,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeMobileDeviceConstant(com.google.ads.googleads.v14.resources.MobileDeviceConstant value) {
       if (mobileDeviceConstantBuilder_ == null) {
-        if (((bitField3_ & 0x20000000) != 0) &&
+        if (((bitField3_ & 0x80000000) != 0) &&
           mobileDeviceConstant_ != null &&
           mobileDeviceConstant_ != com.google.ads.googleads.v14.resources.MobileDeviceConstant.getDefaultInstance()) {
           getMobileDeviceConstantBuilder().mergeFrom(value);
@@ -31603,7 +32068,7 @@ private static final long serialVersionUID = 0L;
       } else {
         mobileDeviceConstantBuilder_.mergeFrom(value);
       }
-      bitField3_ |= 0x20000000;
+      bitField3_ |= 0x80000000;
       onChanged();
       return this;
     }
@@ -31615,7 +32080,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.MobileDeviceConstant mobile_device_constant = 98;</code>
      */
     public Builder clearMobileDeviceConstant() {
-      bitField3_ = (bitField3_ & ~0x20000000);
+      bitField3_ = (bitField3_ & ~0x80000000);
       mobileDeviceConstant_ = null;
       if (mobileDeviceConstantBuilder_ != null) {
         mobileDeviceConstantBuilder_.dispose();
@@ -31632,7 +32097,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.MobileDeviceConstant mobile_device_constant = 98;</code>
      */
     public com.google.ads.googleads.v14.resources.MobileDeviceConstant.Builder getMobileDeviceConstantBuilder() {
-      bitField3_ |= 0x20000000;
+      bitField3_ |= 0x80000000;
       onChanged();
       return getMobileDeviceConstantFieldBuilder().getBuilder();
     }
@@ -31684,7 +32149,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the offlineUserDataJob field is set.
      */
     public boolean hasOfflineUserDataJob() {
-      return ((bitField3_ & 0x40000000) != 0);
+      return ((bitField4_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -31717,7 +32182,7 @@ private static final long serialVersionUID = 0L;
       } else {
         offlineUserDataJobBuilder_.setMessage(value);
       }
-      bitField3_ |= 0x40000000;
+      bitField4_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -31735,7 +32200,7 @@ private static final long serialVersionUID = 0L;
       } else {
         offlineUserDataJobBuilder_.setMessage(builderForValue.build());
       }
-      bitField3_ |= 0x40000000;
+      bitField4_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -31748,7 +32213,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeOfflineUserDataJob(com.google.ads.googleads.v14.resources.OfflineUserDataJob value) {
       if (offlineUserDataJobBuilder_ == null) {
-        if (((bitField3_ & 0x40000000) != 0) &&
+        if (((bitField4_ & 0x00000001) != 0) &&
           offlineUserDataJob_ != null &&
           offlineUserDataJob_ != com.google.ads.googleads.v14.resources.OfflineUserDataJob.getDefaultInstance()) {
           getOfflineUserDataJobBuilder().mergeFrom(value);
@@ -31758,7 +32223,7 @@ private static final long serialVersionUID = 0L;
       } else {
         offlineUserDataJobBuilder_.mergeFrom(value);
       }
-      bitField3_ |= 0x40000000;
+      bitField4_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -31770,7 +32235,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.OfflineUserDataJob offline_user_data_job = 137;</code>
      */
     public Builder clearOfflineUserDataJob() {
-      bitField3_ = (bitField3_ & ~0x40000000);
+      bitField4_ = (bitField4_ & ~0x00000001);
       offlineUserDataJob_ = null;
       if (offlineUserDataJobBuilder_ != null) {
         offlineUserDataJobBuilder_.dispose();
@@ -31787,7 +32252,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.OfflineUserDataJob offline_user_data_job = 137;</code>
      */
     public com.google.ads.googleads.v14.resources.OfflineUserDataJob.Builder getOfflineUserDataJobBuilder() {
-      bitField3_ |= 0x40000000;
+      bitField4_ |= 0x00000001;
       onChanged();
       return getOfflineUserDataJobFieldBuilder().getBuilder();
     }
@@ -31839,7 +32304,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the operatingSystemVersionConstant field is set.
      */
     public boolean hasOperatingSystemVersionConstant() {
-      return ((bitField3_ & 0x80000000) != 0);
+      return ((bitField4_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -31872,7 +32337,7 @@ private static final long serialVersionUID = 0L;
       } else {
         operatingSystemVersionConstantBuilder_.setMessage(value);
       }
-      bitField3_ |= 0x80000000;
+      bitField4_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -31890,7 +32355,7 @@ private static final long serialVersionUID = 0L;
       } else {
         operatingSystemVersionConstantBuilder_.setMessage(builderForValue.build());
       }
-      bitField3_ |= 0x80000000;
+      bitField4_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -31903,7 +32368,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeOperatingSystemVersionConstant(com.google.ads.googleads.v14.resources.OperatingSystemVersionConstant value) {
       if (operatingSystemVersionConstantBuilder_ == null) {
-        if (((bitField3_ & 0x80000000) != 0) &&
+        if (((bitField4_ & 0x00000002) != 0) &&
           operatingSystemVersionConstant_ != null &&
           operatingSystemVersionConstant_ != com.google.ads.googleads.v14.resources.OperatingSystemVersionConstant.getDefaultInstance()) {
           getOperatingSystemVersionConstantBuilder().mergeFrom(value);
@@ -31913,7 +32378,7 @@ private static final long serialVersionUID = 0L;
       } else {
         operatingSystemVersionConstantBuilder_.mergeFrom(value);
       }
-      bitField3_ |= 0x80000000;
+      bitField4_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -31925,7 +32390,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.OperatingSystemVersionConstant operating_system_version_constant = 86;</code>
      */
     public Builder clearOperatingSystemVersionConstant() {
-      bitField3_ = (bitField3_ & ~0x80000000);
+      bitField4_ = (bitField4_ & ~0x00000002);
       operatingSystemVersionConstant_ = null;
       if (operatingSystemVersionConstantBuilder_ != null) {
         operatingSystemVersionConstantBuilder_.dispose();
@@ -31942,7 +32407,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.OperatingSystemVersionConstant operating_system_version_constant = 86;</code>
      */
     public com.google.ads.googleads.v14.resources.OperatingSystemVersionConstant.Builder getOperatingSystemVersionConstantBuilder() {
-      bitField3_ |= 0x80000000;
+      bitField4_ |= 0x00000002;
       onChanged();
       return getOperatingSystemVersionConstantFieldBuilder().getBuilder();
     }
@@ -31994,7 +32459,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the paidOrganicSearchTermView field is set.
      */
     public boolean hasPaidOrganicSearchTermView() {
-      return ((bitField4_ & 0x00000001) != 0);
+      return ((bitField4_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -32027,7 +32492,7 @@ private static final long serialVersionUID = 0L;
       } else {
         paidOrganicSearchTermViewBuilder_.setMessage(value);
       }
-      bitField4_ |= 0x00000001;
+      bitField4_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -32045,7 +32510,7 @@ private static final long serialVersionUID = 0L;
       } else {
         paidOrganicSearchTermViewBuilder_.setMessage(builderForValue.build());
       }
-      bitField4_ |= 0x00000001;
+      bitField4_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -32058,7 +32523,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergePaidOrganicSearchTermView(com.google.ads.googleads.v14.resources.PaidOrganicSearchTermView value) {
       if (paidOrganicSearchTermViewBuilder_ == null) {
-        if (((bitField4_ & 0x00000001) != 0) &&
+        if (((bitField4_ & 0x00000004) != 0) &&
           paidOrganicSearchTermView_ != null &&
           paidOrganicSearchTermView_ != com.google.ads.googleads.v14.resources.PaidOrganicSearchTermView.getDefaultInstance()) {
           getPaidOrganicSearchTermViewBuilder().mergeFrom(value);
@@ -32068,7 +32533,7 @@ private static final long serialVersionUID = 0L;
       } else {
         paidOrganicSearchTermViewBuilder_.mergeFrom(value);
       }
-      bitField4_ |= 0x00000001;
+      bitField4_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -32080,7 +32545,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.PaidOrganicSearchTermView paid_organic_search_term_view = 129;</code>
      */
     public Builder clearPaidOrganicSearchTermView() {
-      bitField4_ = (bitField4_ & ~0x00000001);
+      bitField4_ = (bitField4_ & ~0x00000004);
       paidOrganicSearchTermView_ = null;
       if (paidOrganicSearchTermViewBuilder_ != null) {
         paidOrganicSearchTermViewBuilder_.dispose();
@@ -32097,7 +32562,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.PaidOrganicSearchTermView paid_organic_search_term_view = 129;</code>
      */
     public com.google.ads.googleads.v14.resources.PaidOrganicSearchTermView.Builder getPaidOrganicSearchTermViewBuilder() {
-      bitField4_ |= 0x00000001;
+      bitField4_ |= 0x00000004;
       onChanged();
       return getPaidOrganicSearchTermViewFieldBuilder().getBuilder();
     }
@@ -32149,7 +32614,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the qualifyingQuestion field is set.
      */
     public boolean hasQualifyingQuestion() {
-      return ((bitField4_ & 0x00000002) != 0);
+      return ((bitField4_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -32182,7 +32647,7 @@ private static final long serialVersionUID = 0L;
       } else {
         qualifyingQuestionBuilder_.setMessage(value);
       }
-      bitField4_ |= 0x00000002;
+      bitField4_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -32200,7 +32665,7 @@ private static final long serialVersionUID = 0L;
       } else {
         qualifyingQuestionBuilder_.setMessage(builderForValue.build());
       }
-      bitField4_ |= 0x00000002;
+      bitField4_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -32213,7 +32678,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeQualifyingQuestion(com.google.ads.googleads.v14.resources.QualifyingQuestion value) {
       if (qualifyingQuestionBuilder_ == null) {
-        if (((bitField4_ & 0x00000002) != 0) &&
+        if (((bitField4_ & 0x00000008) != 0) &&
           qualifyingQuestion_ != null &&
           qualifyingQuestion_ != com.google.ads.googleads.v14.resources.QualifyingQuestion.getDefaultInstance()) {
           getQualifyingQuestionBuilder().mergeFrom(value);
@@ -32223,7 +32688,7 @@ private static final long serialVersionUID = 0L;
       } else {
         qualifyingQuestionBuilder_.mergeFrom(value);
       }
-      bitField4_ |= 0x00000002;
+      bitField4_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -32235,7 +32700,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.QualifyingQuestion qualifying_question = 202;</code>
      */
     public Builder clearQualifyingQuestion() {
-      bitField4_ = (bitField4_ & ~0x00000002);
+      bitField4_ = (bitField4_ & ~0x00000008);
       qualifyingQuestion_ = null;
       if (qualifyingQuestionBuilder_ != null) {
         qualifyingQuestionBuilder_.dispose();
@@ -32252,7 +32717,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.QualifyingQuestion qualifying_question = 202;</code>
      */
     public com.google.ads.googleads.v14.resources.QualifyingQuestion.Builder getQualifyingQuestionBuilder() {
-      bitField4_ |= 0x00000002;
+      bitField4_ |= 0x00000008;
       onChanged();
       return getQualifyingQuestionFieldBuilder().getBuilder();
     }
@@ -32304,7 +32769,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the parentalStatusView field is set.
      */
     public boolean hasParentalStatusView() {
-      return ((bitField4_ & 0x00000004) != 0);
+      return ((bitField4_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -32337,7 +32802,7 @@ private static final long serialVersionUID = 0L;
       } else {
         parentalStatusViewBuilder_.setMessage(value);
       }
-      bitField4_ |= 0x00000004;
+      bitField4_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -32355,7 +32820,7 @@ private static final long serialVersionUID = 0L;
       } else {
         parentalStatusViewBuilder_.setMessage(builderForValue.build());
       }
-      bitField4_ |= 0x00000004;
+      bitField4_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -32368,7 +32833,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeParentalStatusView(com.google.ads.googleads.v14.resources.ParentalStatusView value) {
       if (parentalStatusViewBuilder_ == null) {
-        if (((bitField4_ & 0x00000004) != 0) &&
+        if (((bitField4_ & 0x00000010) != 0) &&
           parentalStatusView_ != null &&
           parentalStatusView_ != com.google.ads.googleads.v14.resources.ParentalStatusView.getDefaultInstance()) {
           getParentalStatusViewBuilder().mergeFrom(value);
@@ -32378,7 +32843,7 @@ private static final long serialVersionUID = 0L;
       } else {
         parentalStatusViewBuilder_.mergeFrom(value);
       }
-      bitField4_ |= 0x00000004;
+      bitField4_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -32390,7 +32855,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.ParentalStatusView parental_status_view = 45;</code>
      */
     public Builder clearParentalStatusView() {
-      bitField4_ = (bitField4_ & ~0x00000004);
+      bitField4_ = (bitField4_ & ~0x00000010);
       parentalStatusView_ = null;
       if (parentalStatusViewBuilder_ != null) {
         parentalStatusViewBuilder_.dispose();
@@ -32407,7 +32872,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.ParentalStatusView parental_status_view = 45;</code>
      */
     public com.google.ads.googleads.v14.resources.ParentalStatusView.Builder getParentalStatusViewBuilder() {
-      bitField4_ |= 0x00000004;
+      bitField4_ |= 0x00000010;
       onChanged();
       return getParentalStatusViewFieldBuilder().getBuilder();
     }
@@ -32459,7 +32924,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the perStoreView field is set.
      */
     public boolean hasPerStoreView() {
-      return ((bitField4_ & 0x00000008) != 0);
+      return ((bitField4_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -32492,7 +32957,7 @@ private static final long serialVersionUID = 0L;
       } else {
         perStoreViewBuilder_.setMessage(value);
       }
-      bitField4_ |= 0x00000008;
+      bitField4_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -32510,7 +32975,7 @@ private static final long serialVersionUID = 0L;
       } else {
         perStoreViewBuilder_.setMessage(builderForValue.build());
       }
-      bitField4_ |= 0x00000008;
+      bitField4_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -32523,7 +32988,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergePerStoreView(com.google.ads.googleads.v14.resources.PerStoreView value) {
       if (perStoreViewBuilder_ == null) {
-        if (((bitField4_ & 0x00000008) != 0) &&
+        if (((bitField4_ & 0x00000020) != 0) &&
           perStoreView_ != null &&
           perStoreView_ != com.google.ads.googleads.v14.resources.PerStoreView.getDefaultInstance()) {
           getPerStoreViewBuilder().mergeFrom(value);
@@ -32533,7 +32998,7 @@ private static final long serialVersionUID = 0L;
       } else {
         perStoreViewBuilder_.mergeFrom(value);
       }
-      bitField4_ |= 0x00000008;
+      bitField4_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -32545,7 +33010,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.PerStoreView per_store_view = 198;</code>
      */
     public Builder clearPerStoreView() {
-      bitField4_ = (bitField4_ & ~0x00000008);
+      bitField4_ = (bitField4_ & ~0x00000020);
       perStoreView_ = null;
       if (perStoreViewBuilder_ != null) {
         perStoreViewBuilder_.dispose();
@@ -32562,7 +33027,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.PerStoreView per_store_view = 198;</code>
      */
     public com.google.ads.googleads.v14.resources.PerStoreView.Builder getPerStoreViewBuilder() {
-      bitField4_ |= 0x00000008;
+      bitField4_ |= 0x00000020;
       onChanged();
       return getPerStoreViewFieldBuilder().getBuilder();
     }
@@ -32614,7 +33079,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the productBiddingCategoryConstant field is set.
      */
     public boolean hasProductBiddingCategoryConstant() {
-      return ((bitField4_ & 0x00000010) != 0);
+      return ((bitField4_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -32647,7 +33112,7 @@ private static final long serialVersionUID = 0L;
       } else {
         productBiddingCategoryConstantBuilder_.setMessage(value);
       }
-      bitField4_ |= 0x00000010;
+      bitField4_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -32665,7 +33130,7 @@ private static final long serialVersionUID = 0L;
       } else {
         productBiddingCategoryConstantBuilder_.setMessage(builderForValue.build());
       }
-      bitField4_ |= 0x00000010;
+      bitField4_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -32678,7 +33143,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeProductBiddingCategoryConstant(com.google.ads.googleads.v14.resources.ProductBiddingCategoryConstant value) {
       if (productBiddingCategoryConstantBuilder_ == null) {
-        if (((bitField4_ & 0x00000010) != 0) &&
+        if (((bitField4_ & 0x00000040) != 0) &&
           productBiddingCategoryConstant_ != null &&
           productBiddingCategoryConstant_ != com.google.ads.googleads.v14.resources.ProductBiddingCategoryConstant.getDefaultInstance()) {
           getProductBiddingCategoryConstantBuilder().mergeFrom(value);
@@ -32688,7 +33153,7 @@ private static final long serialVersionUID = 0L;
       } else {
         productBiddingCategoryConstantBuilder_.mergeFrom(value);
       }
-      bitField4_ |= 0x00000010;
+      bitField4_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -32700,7 +33165,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.ProductBiddingCategoryConstant product_bidding_category_constant = 109;</code>
      */
     public Builder clearProductBiddingCategoryConstant() {
-      bitField4_ = (bitField4_ & ~0x00000010);
+      bitField4_ = (bitField4_ & ~0x00000040);
       productBiddingCategoryConstant_ = null;
       if (productBiddingCategoryConstantBuilder_ != null) {
         productBiddingCategoryConstantBuilder_.dispose();
@@ -32717,7 +33182,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.ProductBiddingCategoryConstant product_bidding_category_constant = 109;</code>
      */
     public com.google.ads.googleads.v14.resources.ProductBiddingCategoryConstant.Builder getProductBiddingCategoryConstantBuilder() {
-      bitField4_ |= 0x00000010;
+      bitField4_ |= 0x00000040;
       onChanged();
       return getProductBiddingCategoryConstantFieldBuilder().getBuilder();
     }
@@ -32769,7 +33234,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the productGroupView field is set.
      */
     public boolean hasProductGroupView() {
-      return ((bitField4_ & 0x00000020) != 0);
+      return ((bitField4_ & 0x00000080) != 0);
     }
     /**
      * <pre>
@@ -32802,7 +33267,7 @@ private static final long serialVersionUID = 0L;
       } else {
         productGroupViewBuilder_.setMessage(value);
       }
-      bitField4_ |= 0x00000020;
+      bitField4_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -32820,7 +33285,7 @@ private static final long serialVersionUID = 0L;
       } else {
         productGroupViewBuilder_.setMessage(builderForValue.build());
       }
-      bitField4_ |= 0x00000020;
+      bitField4_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -32833,7 +33298,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeProductGroupView(com.google.ads.googleads.v14.resources.ProductGroupView value) {
       if (productGroupViewBuilder_ == null) {
-        if (((bitField4_ & 0x00000020) != 0) &&
+        if (((bitField4_ & 0x00000080) != 0) &&
           productGroupView_ != null &&
           productGroupView_ != com.google.ads.googleads.v14.resources.ProductGroupView.getDefaultInstance()) {
           getProductGroupViewBuilder().mergeFrom(value);
@@ -32843,7 +33308,7 @@ private static final long serialVersionUID = 0L;
       } else {
         productGroupViewBuilder_.mergeFrom(value);
       }
-      bitField4_ |= 0x00000020;
+      bitField4_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -32855,7 +33320,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.ProductGroupView product_group_view = 54;</code>
      */
     public Builder clearProductGroupView() {
-      bitField4_ = (bitField4_ & ~0x00000020);
+      bitField4_ = (bitField4_ & ~0x00000080);
       productGroupView_ = null;
       if (productGroupViewBuilder_ != null) {
         productGroupViewBuilder_.dispose();
@@ -32872,7 +33337,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.ProductGroupView product_group_view = 54;</code>
      */
     public com.google.ads.googleads.v14.resources.ProductGroupView.Builder getProductGroupViewBuilder() {
-      bitField4_ |= 0x00000020;
+      bitField4_ |= 0x00000080;
       onChanged();
       return getProductGroupViewFieldBuilder().getBuilder();
     }
@@ -32924,7 +33389,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the productLink field is set.
      */
     public boolean hasProductLink() {
-      return ((bitField4_ & 0x00000040) != 0);
+      return ((bitField4_ & 0x00000100) != 0);
     }
     /**
      * <pre>
@@ -32957,7 +33422,7 @@ private static final long serialVersionUID = 0L;
       } else {
         productLinkBuilder_.setMessage(value);
       }
-      bitField4_ |= 0x00000040;
+      bitField4_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -32975,7 +33440,7 @@ private static final long serialVersionUID = 0L;
       } else {
         productLinkBuilder_.setMessage(builderForValue.build());
       }
-      bitField4_ |= 0x00000040;
+      bitField4_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -32988,7 +33453,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeProductLink(com.google.ads.googleads.v14.resources.ProductLink value) {
       if (productLinkBuilder_ == null) {
-        if (((bitField4_ & 0x00000040) != 0) &&
+        if (((bitField4_ & 0x00000100) != 0) &&
           productLink_ != null &&
           productLink_ != com.google.ads.googleads.v14.resources.ProductLink.getDefaultInstance()) {
           getProductLinkBuilder().mergeFrom(value);
@@ -32998,7 +33463,7 @@ private static final long serialVersionUID = 0L;
       } else {
         productLinkBuilder_.mergeFrom(value);
       }
-      bitField4_ |= 0x00000040;
+      bitField4_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -33010,7 +33475,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.ProductLink product_link = 194;</code>
      */
     public Builder clearProductLink() {
-      bitField4_ = (bitField4_ & ~0x00000040);
+      bitField4_ = (bitField4_ & ~0x00000100);
       productLink_ = null;
       if (productLinkBuilder_ != null) {
         productLinkBuilder_.dispose();
@@ -33027,7 +33492,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.ProductLink product_link = 194;</code>
      */
     public com.google.ads.googleads.v14.resources.ProductLink.Builder getProductLinkBuilder() {
-      bitField4_ |= 0x00000040;
+      bitField4_ |= 0x00000100;
       onChanged();
       return getProductLinkFieldBuilder().getBuilder();
     }
@@ -33079,7 +33544,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the recommendation field is set.
      */
     public boolean hasRecommendation() {
-      return ((bitField4_ & 0x00000080) != 0);
+      return ((bitField4_ & 0x00000200) != 0);
     }
     /**
      * <pre>
@@ -33112,7 +33577,7 @@ private static final long serialVersionUID = 0L;
       } else {
         recommendationBuilder_.setMessage(value);
       }
-      bitField4_ |= 0x00000080;
+      bitField4_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -33130,7 +33595,7 @@ private static final long serialVersionUID = 0L;
       } else {
         recommendationBuilder_.setMessage(builderForValue.build());
       }
-      bitField4_ |= 0x00000080;
+      bitField4_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -33143,7 +33608,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeRecommendation(com.google.ads.googleads.v14.resources.Recommendation value) {
       if (recommendationBuilder_ == null) {
-        if (((bitField4_ & 0x00000080) != 0) &&
+        if (((bitField4_ & 0x00000200) != 0) &&
           recommendation_ != null &&
           recommendation_ != com.google.ads.googleads.v14.resources.Recommendation.getDefaultInstance()) {
           getRecommendationBuilder().mergeFrom(value);
@@ -33153,7 +33618,7 @@ private static final long serialVersionUID = 0L;
       } else {
         recommendationBuilder_.mergeFrom(value);
       }
-      bitField4_ |= 0x00000080;
+      bitField4_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -33165,7 +33630,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.Recommendation recommendation = 22;</code>
      */
     public Builder clearRecommendation() {
-      bitField4_ = (bitField4_ & ~0x00000080);
+      bitField4_ = (bitField4_ & ~0x00000200);
       recommendation_ = null;
       if (recommendationBuilder_ != null) {
         recommendationBuilder_.dispose();
@@ -33182,7 +33647,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.Recommendation recommendation = 22;</code>
      */
     public com.google.ads.googleads.v14.resources.Recommendation.Builder getRecommendationBuilder() {
-      bitField4_ |= 0x00000080;
+      bitField4_ |= 0x00000200;
       onChanged();
       return getRecommendationFieldBuilder().getBuilder();
     }
@@ -33234,7 +33699,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the searchTermView field is set.
      */
     public boolean hasSearchTermView() {
-      return ((bitField4_ & 0x00000100) != 0);
+      return ((bitField4_ & 0x00000400) != 0);
     }
     /**
      * <pre>
@@ -33267,7 +33732,7 @@ private static final long serialVersionUID = 0L;
       } else {
         searchTermViewBuilder_.setMessage(value);
       }
-      bitField4_ |= 0x00000100;
+      bitField4_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -33285,7 +33750,7 @@ private static final long serialVersionUID = 0L;
       } else {
         searchTermViewBuilder_.setMessage(builderForValue.build());
       }
-      bitField4_ |= 0x00000100;
+      bitField4_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -33298,7 +33763,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeSearchTermView(com.google.ads.googleads.v14.resources.SearchTermView value) {
       if (searchTermViewBuilder_ == null) {
-        if (((bitField4_ & 0x00000100) != 0) &&
+        if (((bitField4_ & 0x00000400) != 0) &&
           searchTermView_ != null &&
           searchTermView_ != com.google.ads.googleads.v14.resources.SearchTermView.getDefaultInstance()) {
           getSearchTermViewBuilder().mergeFrom(value);
@@ -33308,7 +33773,7 @@ private static final long serialVersionUID = 0L;
       } else {
         searchTermViewBuilder_.mergeFrom(value);
       }
-      bitField4_ |= 0x00000100;
+      bitField4_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -33320,7 +33785,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.SearchTermView search_term_view = 68;</code>
      */
     public Builder clearSearchTermView() {
-      bitField4_ = (bitField4_ & ~0x00000100);
+      bitField4_ = (bitField4_ & ~0x00000400);
       searchTermView_ = null;
       if (searchTermViewBuilder_ != null) {
         searchTermViewBuilder_.dispose();
@@ -33337,7 +33802,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.SearchTermView search_term_view = 68;</code>
      */
     public com.google.ads.googleads.v14.resources.SearchTermView.Builder getSearchTermViewBuilder() {
-      bitField4_ |= 0x00000100;
+      bitField4_ |= 0x00000400;
       onChanged();
       return getSearchTermViewFieldBuilder().getBuilder();
     }
@@ -33389,7 +33854,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the sharedCriterion field is set.
      */
     public boolean hasSharedCriterion() {
-      return ((bitField4_ & 0x00000200) != 0);
+      return ((bitField4_ & 0x00000800) != 0);
     }
     /**
      * <pre>
@@ -33422,7 +33887,7 @@ private static final long serialVersionUID = 0L;
       } else {
         sharedCriterionBuilder_.setMessage(value);
       }
-      bitField4_ |= 0x00000200;
+      bitField4_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -33440,7 +33905,7 @@ private static final long serialVersionUID = 0L;
       } else {
         sharedCriterionBuilder_.setMessage(builderForValue.build());
       }
-      bitField4_ |= 0x00000200;
+      bitField4_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -33453,7 +33918,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeSharedCriterion(com.google.ads.googleads.v14.resources.SharedCriterion value) {
       if (sharedCriterionBuilder_ == null) {
-        if (((bitField4_ & 0x00000200) != 0) &&
+        if (((bitField4_ & 0x00000800) != 0) &&
           sharedCriterion_ != null &&
           sharedCriterion_ != com.google.ads.googleads.v14.resources.SharedCriterion.getDefaultInstance()) {
           getSharedCriterionBuilder().mergeFrom(value);
@@ -33463,7 +33928,7 @@ private static final long serialVersionUID = 0L;
       } else {
         sharedCriterionBuilder_.mergeFrom(value);
       }
-      bitField4_ |= 0x00000200;
+      bitField4_ |= 0x00000800;
       onChanged();
       return this;
     }
@@ -33475,7 +33940,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.SharedCriterion shared_criterion = 29;</code>
      */
     public Builder clearSharedCriterion() {
-      bitField4_ = (bitField4_ & ~0x00000200);
+      bitField4_ = (bitField4_ & ~0x00000800);
       sharedCriterion_ = null;
       if (sharedCriterionBuilder_ != null) {
         sharedCriterionBuilder_.dispose();
@@ -33492,7 +33957,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.SharedCriterion shared_criterion = 29;</code>
      */
     public com.google.ads.googleads.v14.resources.SharedCriterion.Builder getSharedCriterionBuilder() {
-      bitField4_ |= 0x00000200;
+      bitField4_ |= 0x00000800;
       onChanged();
       return getSharedCriterionFieldBuilder().getBuilder();
     }
@@ -33544,7 +34009,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the sharedSet field is set.
      */
     public boolean hasSharedSet() {
-      return ((bitField4_ & 0x00000400) != 0);
+      return ((bitField4_ & 0x00001000) != 0);
     }
     /**
      * <pre>
@@ -33577,7 +34042,7 @@ private static final long serialVersionUID = 0L;
       } else {
         sharedSetBuilder_.setMessage(value);
       }
-      bitField4_ |= 0x00000400;
+      bitField4_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -33595,7 +34060,7 @@ private static final long serialVersionUID = 0L;
       } else {
         sharedSetBuilder_.setMessage(builderForValue.build());
       }
-      bitField4_ |= 0x00000400;
+      bitField4_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -33608,7 +34073,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeSharedSet(com.google.ads.googleads.v14.resources.SharedSet value) {
       if (sharedSetBuilder_ == null) {
-        if (((bitField4_ & 0x00000400) != 0) &&
+        if (((bitField4_ & 0x00001000) != 0) &&
           sharedSet_ != null &&
           sharedSet_ != com.google.ads.googleads.v14.resources.SharedSet.getDefaultInstance()) {
           getSharedSetBuilder().mergeFrom(value);
@@ -33618,7 +34083,7 @@ private static final long serialVersionUID = 0L;
       } else {
         sharedSetBuilder_.mergeFrom(value);
       }
-      bitField4_ |= 0x00000400;
+      bitField4_ |= 0x00001000;
       onChanged();
       return this;
     }
@@ -33630,7 +34095,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.SharedSet shared_set = 27;</code>
      */
     public Builder clearSharedSet() {
-      bitField4_ = (bitField4_ & ~0x00000400);
+      bitField4_ = (bitField4_ & ~0x00001000);
       sharedSet_ = null;
       if (sharedSetBuilder_ != null) {
         sharedSetBuilder_.dispose();
@@ -33647,7 +34112,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.SharedSet shared_set = 27;</code>
      */
     public com.google.ads.googleads.v14.resources.SharedSet.Builder getSharedSetBuilder() {
-      bitField4_ |= 0x00000400;
+      bitField4_ |= 0x00001000;
       onChanged();
       return getSharedSetFieldBuilder().getBuilder();
     }
@@ -33699,7 +34164,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the smartCampaignSetting field is set.
      */
     public boolean hasSmartCampaignSetting() {
-      return ((bitField4_ & 0x00000800) != 0);
+      return ((bitField4_ & 0x00002000) != 0);
     }
     /**
      * <pre>
@@ -33732,7 +34197,7 @@ private static final long serialVersionUID = 0L;
       } else {
         smartCampaignSettingBuilder_.setMessage(value);
       }
-      bitField4_ |= 0x00000800;
+      bitField4_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -33750,7 +34215,7 @@ private static final long serialVersionUID = 0L;
       } else {
         smartCampaignSettingBuilder_.setMessage(builderForValue.build());
       }
-      bitField4_ |= 0x00000800;
+      bitField4_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -33763,7 +34228,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeSmartCampaignSetting(com.google.ads.googleads.v14.resources.SmartCampaignSetting value) {
       if (smartCampaignSettingBuilder_ == null) {
-        if (((bitField4_ & 0x00000800) != 0) &&
+        if (((bitField4_ & 0x00002000) != 0) &&
           smartCampaignSetting_ != null &&
           smartCampaignSetting_ != com.google.ads.googleads.v14.resources.SmartCampaignSetting.getDefaultInstance()) {
           getSmartCampaignSettingBuilder().mergeFrom(value);
@@ -33773,7 +34238,7 @@ private static final long serialVersionUID = 0L;
       } else {
         smartCampaignSettingBuilder_.mergeFrom(value);
       }
-      bitField4_ |= 0x00000800;
+      bitField4_ |= 0x00002000;
       onChanged();
       return this;
     }
@@ -33785,7 +34250,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.SmartCampaignSetting smart_campaign_setting = 167;</code>
      */
     public Builder clearSmartCampaignSetting() {
-      bitField4_ = (bitField4_ & ~0x00000800);
+      bitField4_ = (bitField4_ & ~0x00002000);
       smartCampaignSetting_ = null;
       if (smartCampaignSettingBuilder_ != null) {
         smartCampaignSettingBuilder_.dispose();
@@ -33802,7 +34267,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.SmartCampaignSetting smart_campaign_setting = 167;</code>
      */
     public com.google.ads.googleads.v14.resources.SmartCampaignSetting.Builder getSmartCampaignSettingBuilder() {
-      bitField4_ |= 0x00000800;
+      bitField4_ |= 0x00002000;
       onChanged();
       return getSmartCampaignSettingFieldBuilder().getBuilder();
     }
@@ -33854,7 +34319,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the shoppingPerformanceView field is set.
      */
     public boolean hasShoppingPerformanceView() {
-      return ((bitField4_ & 0x00001000) != 0);
+      return ((bitField4_ & 0x00004000) != 0);
     }
     /**
      * <pre>
@@ -33887,7 +34352,7 @@ private static final long serialVersionUID = 0L;
       } else {
         shoppingPerformanceViewBuilder_.setMessage(value);
       }
-      bitField4_ |= 0x00001000;
+      bitField4_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -33905,7 +34370,7 @@ private static final long serialVersionUID = 0L;
       } else {
         shoppingPerformanceViewBuilder_.setMessage(builderForValue.build());
       }
-      bitField4_ |= 0x00001000;
+      bitField4_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -33918,7 +34383,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeShoppingPerformanceView(com.google.ads.googleads.v14.resources.ShoppingPerformanceView value) {
       if (shoppingPerformanceViewBuilder_ == null) {
-        if (((bitField4_ & 0x00001000) != 0) &&
+        if (((bitField4_ & 0x00004000) != 0) &&
           shoppingPerformanceView_ != null &&
           shoppingPerformanceView_ != com.google.ads.googleads.v14.resources.ShoppingPerformanceView.getDefaultInstance()) {
           getShoppingPerformanceViewBuilder().mergeFrom(value);
@@ -33928,7 +34393,7 @@ private static final long serialVersionUID = 0L;
       } else {
         shoppingPerformanceViewBuilder_.mergeFrom(value);
       }
-      bitField4_ |= 0x00001000;
+      bitField4_ |= 0x00004000;
       onChanged();
       return this;
     }
@@ -33940,7 +34405,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.ShoppingPerformanceView shopping_performance_view = 117;</code>
      */
     public Builder clearShoppingPerformanceView() {
-      bitField4_ = (bitField4_ & ~0x00001000);
+      bitField4_ = (bitField4_ & ~0x00004000);
       shoppingPerformanceView_ = null;
       if (shoppingPerformanceViewBuilder_ != null) {
         shoppingPerformanceViewBuilder_.dispose();
@@ -33957,7 +34422,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.ShoppingPerformanceView shopping_performance_view = 117;</code>
      */
     public com.google.ads.googleads.v14.resources.ShoppingPerformanceView.Builder getShoppingPerformanceViewBuilder() {
-      bitField4_ |= 0x00001000;
+      bitField4_ |= 0x00004000;
       onChanged();
       return getShoppingPerformanceViewFieldBuilder().getBuilder();
     }
@@ -34009,7 +34474,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the smartCampaignSearchTermView field is set.
      */
     public boolean hasSmartCampaignSearchTermView() {
-      return ((bitField4_ & 0x00002000) != 0);
+      return ((bitField4_ & 0x00008000) != 0);
     }
     /**
      * <pre>
@@ -34042,7 +34507,7 @@ private static final long serialVersionUID = 0L;
       } else {
         smartCampaignSearchTermViewBuilder_.setMessage(value);
       }
-      bitField4_ |= 0x00002000;
+      bitField4_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -34060,7 +34525,7 @@ private static final long serialVersionUID = 0L;
       } else {
         smartCampaignSearchTermViewBuilder_.setMessage(builderForValue.build());
       }
-      bitField4_ |= 0x00002000;
+      bitField4_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -34073,7 +34538,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeSmartCampaignSearchTermView(com.google.ads.googleads.v14.resources.SmartCampaignSearchTermView value) {
       if (smartCampaignSearchTermViewBuilder_ == null) {
-        if (((bitField4_ & 0x00002000) != 0) &&
+        if (((bitField4_ & 0x00008000) != 0) &&
           smartCampaignSearchTermView_ != null &&
           smartCampaignSearchTermView_ != com.google.ads.googleads.v14.resources.SmartCampaignSearchTermView.getDefaultInstance()) {
           getSmartCampaignSearchTermViewBuilder().mergeFrom(value);
@@ -34083,7 +34548,7 @@ private static final long serialVersionUID = 0L;
       } else {
         smartCampaignSearchTermViewBuilder_.mergeFrom(value);
       }
-      bitField4_ |= 0x00002000;
+      bitField4_ |= 0x00008000;
       onChanged();
       return this;
     }
@@ -34095,7 +34560,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.SmartCampaignSearchTermView smart_campaign_search_term_view = 170;</code>
      */
     public Builder clearSmartCampaignSearchTermView() {
-      bitField4_ = (bitField4_ & ~0x00002000);
+      bitField4_ = (bitField4_ & ~0x00008000);
       smartCampaignSearchTermView_ = null;
       if (smartCampaignSearchTermViewBuilder_ != null) {
         smartCampaignSearchTermViewBuilder_.dispose();
@@ -34112,7 +34577,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.SmartCampaignSearchTermView smart_campaign_search_term_view = 170;</code>
      */
     public com.google.ads.googleads.v14.resources.SmartCampaignSearchTermView.Builder getSmartCampaignSearchTermViewBuilder() {
-      bitField4_ |= 0x00002000;
+      bitField4_ |= 0x00008000;
       onChanged();
       return getSmartCampaignSearchTermViewFieldBuilder().getBuilder();
     }
@@ -34164,7 +34629,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the thirdPartyAppAnalyticsLink field is set.
      */
     public boolean hasThirdPartyAppAnalyticsLink() {
-      return ((bitField4_ & 0x00004000) != 0);
+      return ((bitField4_ & 0x00010000) != 0);
     }
     /**
      * <pre>
@@ -34197,7 +34662,7 @@ private static final long serialVersionUID = 0L;
       } else {
         thirdPartyAppAnalyticsLinkBuilder_.setMessage(value);
       }
-      bitField4_ |= 0x00004000;
+      bitField4_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -34215,7 +34680,7 @@ private static final long serialVersionUID = 0L;
       } else {
         thirdPartyAppAnalyticsLinkBuilder_.setMessage(builderForValue.build());
       }
-      bitField4_ |= 0x00004000;
+      bitField4_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -34228,7 +34693,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeThirdPartyAppAnalyticsLink(com.google.ads.googleads.v14.resources.ThirdPartyAppAnalyticsLink value) {
       if (thirdPartyAppAnalyticsLinkBuilder_ == null) {
-        if (((bitField4_ & 0x00004000) != 0) &&
+        if (((bitField4_ & 0x00010000) != 0) &&
           thirdPartyAppAnalyticsLink_ != null &&
           thirdPartyAppAnalyticsLink_ != com.google.ads.googleads.v14.resources.ThirdPartyAppAnalyticsLink.getDefaultInstance()) {
           getThirdPartyAppAnalyticsLinkBuilder().mergeFrom(value);
@@ -34238,7 +34703,7 @@ private static final long serialVersionUID = 0L;
       } else {
         thirdPartyAppAnalyticsLinkBuilder_.mergeFrom(value);
       }
-      bitField4_ |= 0x00004000;
+      bitField4_ |= 0x00010000;
       onChanged();
       return this;
     }
@@ -34250,7 +34715,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.ThirdPartyAppAnalyticsLink third_party_app_analytics_link = 144;</code>
      */
     public Builder clearThirdPartyAppAnalyticsLink() {
-      bitField4_ = (bitField4_ & ~0x00004000);
+      bitField4_ = (bitField4_ & ~0x00010000);
       thirdPartyAppAnalyticsLink_ = null;
       if (thirdPartyAppAnalyticsLinkBuilder_ != null) {
         thirdPartyAppAnalyticsLinkBuilder_.dispose();
@@ -34267,7 +34732,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.ThirdPartyAppAnalyticsLink third_party_app_analytics_link = 144;</code>
      */
     public com.google.ads.googleads.v14.resources.ThirdPartyAppAnalyticsLink.Builder getThirdPartyAppAnalyticsLinkBuilder() {
-      bitField4_ |= 0x00004000;
+      bitField4_ |= 0x00010000;
       onChanged();
       return getThirdPartyAppAnalyticsLinkFieldBuilder().getBuilder();
     }
@@ -34319,7 +34784,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the topicView field is set.
      */
     public boolean hasTopicView() {
-      return ((bitField4_ & 0x00008000) != 0);
+      return ((bitField4_ & 0x00020000) != 0);
     }
     /**
      * <pre>
@@ -34352,7 +34817,7 @@ private static final long serialVersionUID = 0L;
       } else {
         topicViewBuilder_.setMessage(value);
       }
-      bitField4_ |= 0x00008000;
+      bitField4_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -34370,7 +34835,7 @@ private static final long serialVersionUID = 0L;
       } else {
         topicViewBuilder_.setMessage(builderForValue.build());
       }
-      bitField4_ |= 0x00008000;
+      bitField4_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -34383,7 +34848,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeTopicView(com.google.ads.googleads.v14.resources.TopicView value) {
       if (topicViewBuilder_ == null) {
-        if (((bitField4_ & 0x00008000) != 0) &&
+        if (((bitField4_ & 0x00020000) != 0) &&
           topicView_ != null &&
           topicView_ != com.google.ads.googleads.v14.resources.TopicView.getDefaultInstance()) {
           getTopicViewBuilder().mergeFrom(value);
@@ -34393,7 +34858,7 @@ private static final long serialVersionUID = 0L;
       } else {
         topicViewBuilder_.mergeFrom(value);
       }
-      bitField4_ |= 0x00008000;
+      bitField4_ |= 0x00020000;
       onChanged();
       return this;
     }
@@ -34405,7 +34870,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.TopicView topic_view = 44;</code>
      */
     public Builder clearTopicView() {
-      bitField4_ = (bitField4_ & ~0x00008000);
+      bitField4_ = (bitField4_ & ~0x00020000);
       topicView_ = null;
       if (topicViewBuilder_ != null) {
         topicViewBuilder_.dispose();
@@ -34422,7 +34887,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.TopicView topic_view = 44;</code>
      */
     public com.google.ads.googleads.v14.resources.TopicView.Builder getTopicViewBuilder() {
-      bitField4_ |= 0x00008000;
+      bitField4_ |= 0x00020000;
       onChanged();
       return getTopicViewFieldBuilder().getBuilder();
     }
@@ -34474,7 +34939,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the travelActivityGroupView field is set.
      */
     public boolean hasTravelActivityGroupView() {
-      return ((bitField4_ & 0x00010000) != 0);
+      return ((bitField4_ & 0x00040000) != 0);
     }
     /**
      * <pre>
@@ -34507,7 +34972,7 @@ private static final long serialVersionUID = 0L;
       } else {
         travelActivityGroupViewBuilder_.setMessage(value);
       }
-      bitField4_ |= 0x00010000;
+      bitField4_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -34525,7 +34990,7 @@ private static final long serialVersionUID = 0L;
       } else {
         travelActivityGroupViewBuilder_.setMessage(builderForValue.build());
       }
-      bitField4_ |= 0x00010000;
+      bitField4_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -34538,7 +35003,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeTravelActivityGroupView(com.google.ads.googleads.v14.resources.TravelActivityGroupView value) {
       if (travelActivityGroupViewBuilder_ == null) {
-        if (((bitField4_ & 0x00010000) != 0) &&
+        if (((bitField4_ & 0x00040000) != 0) &&
           travelActivityGroupView_ != null &&
           travelActivityGroupView_ != com.google.ads.googleads.v14.resources.TravelActivityGroupView.getDefaultInstance()) {
           getTravelActivityGroupViewBuilder().mergeFrom(value);
@@ -34548,7 +35013,7 @@ private static final long serialVersionUID = 0L;
       } else {
         travelActivityGroupViewBuilder_.mergeFrom(value);
       }
-      bitField4_ |= 0x00010000;
+      bitField4_ |= 0x00040000;
       onChanged();
       return this;
     }
@@ -34560,7 +35025,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.TravelActivityGroupView travel_activity_group_view = 201;</code>
      */
     public Builder clearTravelActivityGroupView() {
-      bitField4_ = (bitField4_ & ~0x00010000);
+      bitField4_ = (bitField4_ & ~0x00040000);
       travelActivityGroupView_ = null;
       if (travelActivityGroupViewBuilder_ != null) {
         travelActivityGroupViewBuilder_.dispose();
@@ -34577,7 +35042,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.TravelActivityGroupView travel_activity_group_view = 201;</code>
      */
     public com.google.ads.googleads.v14.resources.TravelActivityGroupView.Builder getTravelActivityGroupViewBuilder() {
-      bitField4_ |= 0x00010000;
+      bitField4_ |= 0x00040000;
       onChanged();
       return getTravelActivityGroupViewFieldBuilder().getBuilder();
     }
@@ -34629,7 +35094,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the travelActivityPerformanceView field is set.
      */
     public boolean hasTravelActivityPerformanceView() {
-      return ((bitField4_ & 0x00020000) != 0);
+      return ((bitField4_ & 0x00080000) != 0);
     }
     /**
      * <pre>
@@ -34662,7 +35127,7 @@ private static final long serialVersionUID = 0L;
       } else {
         travelActivityPerformanceViewBuilder_.setMessage(value);
       }
-      bitField4_ |= 0x00020000;
+      bitField4_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -34680,7 +35145,7 @@ private static final long serialVersionUID = 0L;
       } else {
         travelActivityPerformanceViewBuilder_.setMessage(builderForValue.build());
       }
-      bitField4_ |= 0x00020000;
+      bitField4_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -34693,7 +35158,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeTravelActivityPerformanceView(com.google.ads.googleads.v14.resources.TravelActivityPerformanceView value) {
       if (travelActivityPerformanceViewBuilder_ == null) {
-        if (((bitField4_ & 0x00020000) != 0) &&
+        if (((bitField4_ & 0x00080000) != 0) &&
           travelActivityPerformanceView_ != null &&
           travelActivityPerformanceView_ != com.google.ads.googleads.v14.resources.TravelActivityPerformanceView.getDefaultInstance()) {
           getTravelActivityPerformanceViewBuilder().mergeFrom(value);
@@ -34703,7 +35168,7 @@ private static final long serialVersionUID = 0L;
       } else {
         travelActivityPerformanceViewBuilder_.mergeFrom(value);
       }
-      bitField4_ |= 0x00020000;
+      bitField4_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -34715,7 +35180,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.TravelActivityPerformanceView travel_activity_performance_view = 200;</code>
      */
     public Builder clearTravelActivityPerformanceView() {
-      bitField4_ = (bitField4_ & ~0x00020000);
+      bitField4_ = (bitField4_ & ~0x00080000);
       travelActivityPerformanceView_ = null;
       if (travelActivityPerformanceViewBuilder_ != null) {
         travelActivityPerformanceViewBuilder_.dispose();
@@ -34732,7 +35197,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.TravelActivityPerformanceView travel_activity_performance_view = 200;</code>
      */
     public com.google.ads.googleads.v14.resources.TravelActivityPerformanceView.Builder getTravelActivityPerformanceViewBuilder() {
-      bitField4_ |= 0x00020000;
+      bitField4_ |= 0x00080000;
       onChanged();
       return getTravelActivityPerformanceViewFieldBuilder().getBuilder();
     }
@@ -34784,7 +35249,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the experiment field is set.
      */
     public boolean hasExperiment() {
-      return ((bitField4_ & 0x00040000) != 0);
+      return ((bitField4_ & 0x00100000) != 0);
     }
     /**
      * <pre>
@@ -34817,7 +35282,7 @@ private static final long serialVersionUID = 0L;
       } else {
         experimentBuilder_.setMessage(value);
       }
-      bitField4_ |= 0x00040000;
+      bitField4_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -34835,7 +35300,7 @@ private static final long serialVersionUID = 0L;
       } else {
         experimentBuilder_.setMessage(builderForValue.build());
       }
-      bitField4_ |= 0x00040000;
+      bitField4_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -34848,7 +35313,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeExperiment(com.google.ads.googleads.v14.resources.Experiment value) {
       if (experimentBuilder_ == null) {
-        if (((bitField4_ & 0x00040000) != 0) &&
+        if (((bitField4_ & 0x00100000) != 0) &&
           experiment_ != null &&
           experiment_ != com.google.ads.googleads.v14.resources.Experiment.getDefaultInstance()) {
           getExperimentBuilder().mergeFrom(value);
@@ -34858,7 +35323,7 @@ private static final long serialVersionUID = 0L;
       } else {
         experimentBuilder_.mergeFrom(value);
       }
-      bitField4_ |= 0x00040000;
+      bitField4_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -34870,7 +35335,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.Experiment experiment = 133;</code>
      */
     public Builder clearExperiment() {
-      bitField4_ = (bitField4_ & ~0x00040000);
+      bitField4_ = (bitField4_ & ~0x00100000);
       experiment_ = null;
       if (experimentBuilder_ != null) {
         experimentBuilder_.dispose();
@@ -34887,7 +35352,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.Experiment experiment = 133;</code>
      */
     public com.google.ads.googleads.v14.resources.Experiment.Builder getExperimentBuilder() {
-      bitField4_ |= 0x00040000;
+      bitField4_ |= 0x00100000;
       onChanged();
       return getExperimentFieldBuilder().getBuilder();
     }
@@ -34939,7 +35404,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the experimentArm field is set.
      */
     public boolean hasExperimentArm() {
-      return ((bitField4_ & 0x00080000) != 0);
+      return ((bitField4_ & 0x00200000) != 0);
     }
     /**
      * <pre>
@@ -34972,7 +35437,7 @@ private static final long serialVersionUID = 0L;
       } else {
         experimentArmBuilder_.setMessage(value);
       }
-      bitField4_ |= 0x00080000;
+      bitField4_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -34990,7 +35455,7 @@ private static final long serialVersionUID = 0L;
       } else {
         experimentArmBuilder_.setMessage(builderForValue.build());
       }
-      bitField4_ |= 0x00080000;
+      bitField4_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -35003,7 +35468,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeExperimentArm(com.google.ads.googleads.v14.resources.ExperimentArm value) {
       if (experimentArmBuilder_ == null) {
-        if (((bitField4_ & 0x00080000) != 0) &&
+        if (((bitField4_ & 0x00200000) != 0) &&
           experimentArm_ != null &&
           experimentArm_ != com.google.ads.googleads.v14.resources.ExperimentArm.getDefaultInstance()) {
           getExperimentArmBuilder().mergeFrom(value);
@@ -35013,7 +35478,7 @@ private static final long serialVersionUID = 0L;
       } else {
         experimentArmBuilder_.mergeFrom(value);
       }
-      bitField4_ |= 0x00080000;
+      bitField4_ |= 0x00200000;
       onChanged();
       return this;
     }
@@ -35025,7 +35490,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.ExperimentArm experiment_arm = 183;</code>
      */
     public Builder clearExperimentArm() {
-      bitField4_ = (bitField4_ & ~0x00080000);
+      bitField4_ = (bitField4_ & ~0x00200000);
       experimentArm_ = null;
       if (experimentArmBuilder_ != null) {
         experimentArmBuilder_.dispose();
@@ -35042,7 +35507,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.ExperimentArm experiment_arm = 183;</code>
      */
     public com.google.ads.googleads.v14.resources.ExperimentArm.Builder getExperimentArmBuilder() {
-      bitField4_ |= 0x00080000;
+      bitField4_ |= 0x00200000;
       onChanged();
       return getExperimentArmFieldBuilder().getBuilder();
     }
@@ -35094,7 +35559,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the userInterest field is set.
      */
     public boolean hasUserInterest() {
-      return ((bitField4_ & 0x00100000) != 0);
+      return ((bitField4_ & 0x00400000) != 0);
     }
     /**
      * <pre>
@@ -35127,7 +35592,7 @@ private static final long serialVersionUID = 0L;
       } else {
         userInterestBuilder_.setMessage(value);
       }
-      bitField4_ |= 0x00100000;
+      bitField4_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -35145,7 +35610,7 @@ private static final long serialVersionUID = 0L;
       } else {
         userInterestBuilder_.setMessage(builderForValue.build());
       }
-      bitField4_ |= 0x00100000;
+      bitField4_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -35158,7 +35623,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeUserInterest(com.google.ads.googleads.v14.resources.UserInterest value) {
       if (userInterestBuilder_ == null) {
-        if (((bitField4_ & 0x00100000) != 0) &&
+        if (((bitField4_ & 0x00400000) != 0) &&
           userInterest_ != null &&
           userInterest_ != com.google.ads.googleads.v14.resources.UserInterest.getDefaultInstance()) {
           getUserInterestBuilder().mergeFrom(value);
@@ -35168,7 +35633,7 @@ private static final long serialVersionUID = 0L;
       } else {
         userInterestBuilder_.mergeFrom(value);
       }
-      bitField4_ |= 0x00100000;
+      bitField4_ |= 0x00400000;
       onChanged();
       return this;
     }
@@ -35180,7 +35645,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.UserInterest user_interest = 59;</code>
      */
     public Builder clearUserInterest() {
-      bitField4_ = (bitField4_ & ~0x00100000);
+      bitField4_ = (bitField4_ & ~0x00400000);
       userInterest_ = null;
       if (userInterestBuilder_ != null) {
         userInterestBuilder_.dispose();
@@ -35197,7 +35662,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.UserInterest user_interest = 59;</code>
      */
     public com.google.ads.googleads.v14.resources.UserInterest.Builder getUserInterestBuilder() {
-      bitField4_ |= 0x00100000;
+      bitField4_ |= 0x00400000;
       onChanged();
       return getUserInterestFieldBuilder().getBuilder();
     }
@@ -35249,7 +35714,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the lifeEvent field is set.
      */
     public boolean hasLifeEvent() {
-      return ((bitField4_ & 0x00200000) != 0);
+      return ((bitField4_ & 0x00800000) != 0);
     }
     /**
      * <pre>
@@ -35282,7 +35747,7 @@ private static final long serialVersionUID = 0L;
       } else {
         lifeEventBuilder_.setMessage(value);
       }
-      bitField4_ |= 0x00200000;
+      bitField4_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -35300,7 +35765,7 @@ private static final long serialVersionUID = 0L;
       } else {
         lifeEventBuilder_.setMessage(builderForValue.build());
       }
-      bitField4_ |= 0x00200000;
+      bitField4_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -35313,7 +35778,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeLifeEvent(com.google.ads.googleads.v14.resources.LifeEvent value) {
       if (lifeEventBuilder_ == null) {
-        if (((bitField4_ & 0x00200000) != 0) &&
+        if (((bitField4_ & 0x00800000) != 0) &&
           lifeEvent_ != null &&
           lifeEvent_ != com.google.ads.googleads.v14.resources.LifeEvent.getDefaultInstance()) {
           getLifeEventBuilder().mergeFrom(value);
@@ -35323,7 +35788,7 @@ private static final long serialVersionUID = 0L;
       } else {
         lifeEventBuilder_.mergeFrom(value);
       }
-      bitField4_ |= 0x00200000;
+      bitField4_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -35335,7 +35800,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.LifeEvent life_event = 161;</code>
      */
     public Builder clearLifeEvent() {
-      bitField4_ = (bitField4_ & ~0x00200000);
+      bitField4_ = (bitField4_ & ~0x00800000);
       lifeEvent_ = null;
       if (lifeEventBuilder_ != null) {
         lifeEventBuilder_.dispose();
@@ -35352,7 +35817,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.LifeEvent life_event = 161;</code>
      */
     public com.google.ads.googleads.v14.resources.LifeEvent.Builder getLifeEventBuilder() {
-      bitField4_ |= 0x00200000;
+      bitField4_ |= 0x00800000;
       onChanged();
       return getLifeEventFieldBuilder().getBuilder();
     }
@@ -35404,7 +35869,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the userList field is set.
      */
     public boolean hasUserList() {
-      return ((bitField4_ & 0x00400000) != 0);
+      return ((bitField4_ & 0x01000000) != 0);
     }
     /**
      * <pre>
@@ -35437,7 +35902,7 @@ private static final long serialVersionUID = 0L;
       } else {
         userListBuilder_.setMessage(value);
       }
-      bitField4_ |= 0x00400000;
+      bitField4_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -35455,7 +35920,7 @@ private static final long serialVersionUID = 0L;
       } else {
         userListBuilder_.setMessage(builderForValue.build());
       }
-      bitField4_ |= 0x00400000;
+      bitField4_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -35468,7 +35933,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeUserList(com.google.ads.googleads.v14.resources.UserList value) {
       if (userListBuilder_ == null) {
-        if (((bitField4_ & 0x00400000) != 0) &&
+        if (((bitField4_ & 0x01000000) != 0) &&
           userList_ != null &&
           userList_ != com.google.ads.googleads.v14.resources.UserList.getDefaultInstance()) {
           getUserListBuilder().mergeFrom(value);
@@ -35478,7 +35943,7 @@ private static final long serialVersionUID = 0L;
       } else {
         userListBuilder_.mergeFrom(value);
       }
-      bitField4_ |= 0x00400000;
+      bitField4_ |= 0x01000000;
       onChanged();
       return this;
     }
@@ -35490,7 +35955,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.UserList user_list = 38;</code>
      */
     public Builder clearUserList() {
-      bitField4_ = (bitField4_ & ~0x00400000);
+      bitField4_ = (bitField4_ & ~0x01000000);
       userList_ = null;
       if (userListBuilder_ != null) {
         userListBuilder_.dispose();
@@ -35507,7 +35972,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.UserList user_list = 38;</code>
      */
     public com.google.ads.googleads.v14.resources.UserList.Builder getUserListBuilder() {
-      bitField4_ |= 0x00400000;
+      bitField4_ |= 0x01000000;
       onChanged();
       return getUserListFieldBuilder().getBuilder();
     }
@@ -35559,7 +36024,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the userLocationView field is set.
      */
     public boolean hasUserLocationView() {
-      return ((bitField4_ & 0x00800000) != 0);
+      return ((bitField4_ & 0x02000000) != 0);
     }
     /**
      * <pre>
@@ -35592,7 +36057,7 @@ private static final long serialVersionUID = 0L;
       } else {
         userLocationViewBuilder_.setMessage(value);
       }
-      bitField4_ |= 0x00800000;
+      bitField4_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -35610,7 +36075,7 @@ private static final long serialVersionUID = 0L;
       } else {
         userLocationViewBuilder_.setMessage(builderForValue.build());
       }
-      bitField4_ |= 0x00800000;
+      bitField4_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -35623,7 +36088,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeUserLocationView(com.google.ads.googleads.v14.resources.UserLocationView value) {
       if (userLocationViewBuilder_ == null) {
-        if (((bitField4_ & 0x00800000) != 0) &&
+        if (((bitField4_ & 0x02000000) != 0) &&
           userLocationView_ != null &&
           userLocationView_ != com.google.ads.googleads.v14.resources.UserLocationView.getDefaultInstance()) {
           getUserLocationViewBuilder().mergeFrom(value);
@@ -35633,7 +36098,7 @@ private static final long serialVersionUID = 0L;
       } else {
         userLocationViewBuilder_.mergeFrom(value);
       }
-      bitField4_ |= 0x00800000;
+      bitField4_ |= 0x02000000;
       onChanged();
       return this;
     }
@@ -35645,7 +36110,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.UserLocationView user_location_view = 135;</code>
      */
     public Builder clearUserLocationView() {
-      bitField4_ = (bitField4_ & ~0x00800000);
+      bitField4_ = (bitField4_ & ~0x02000000);
       userLocationView_ = null;
       if (userLocationViewBuilder_ != null) {
         userLocationViewBuilder_.dispose();
@@ -35662,7 +36127,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.UserLocationView user_location_view = 135;</code>
      */
     public com.google.ads.googleads.v14.resources.UserLocationView.Builder getUserLocationViewBuilder() {
-      bitField4_ |= 0x00800000;
+      bitField4_ |= 0x02000000;
       onChanged();
       return getUserLocationViewFieldBuilder().getBuilder();
     }
@@ -35714,7 +36179,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the remarketingAction field is set.
      */
     public boolean hasRemarketingAction() {
-      return ((bitField4_ & 0x01000000) != 0);
+      return ((bitField4_ & 0x04000000) != 0);
     }
     /**
      * <pre>
@@ -35747,7 +36212,7 @@ private static final long serialVersionUID = 0L;
       } else {
         remarketingActionBuilder_.setMessage(value);
       }
-      bitField4_ |= 0x01000000;
+      bitField4_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -35765,7 +36230,7 @@ private static final long serialVersionUID = 0L;
       } else {
         remarketingActionBuilder_.setMessage(builderForValue.build());
       }
-      bitField4_ |= 0x01000000;
+      bitField4_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -35778,7 +36243,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeRemarketingAction(com.google.ads.googleads.v14.resources.RemarketingAction value) {
       if (remarketingActionBuilder_ == null) {
-        if (((bitField4_ & 0x01000000) != 0) &&
+        if (((bitField4_ & 0x04000000) != 0) &&
           remarketingAction_ != null &&
           remarketingAction_ != com.google.ads.googleads.v14.resources.RemarketingAction.getDefaultInstance()) {
           getRemarketingActionBuilder().mergeFrom(value);
@@ -35788,7 +36253,7 @@ private static final long serialVersionUID = 0L;
       } else {
         remarketingActionBuilder_.mergeFrom(value);
       }
-      bitField4_ |= 0x01000000;
+      bitField4_ |= 0x04000000;
       onChanged();
       return this;
     }
@@ -35800,7 +36265,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.RemarketingAction remarketing_action = 60;</code>
      */
     public Builder clearRemarketingAction() {
-      bitField4_ = (bitField4_ & ~0x01000000);
+      bitField4_ = (bitField4_ & ~0x04000000);
       remarketingAction_ = null;
       if (remarketingActionBuilder_ != null) {
         remarketingActionBuilder_.dispose();
@@ -35817,7 +36282,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.RemarketingAction remarketing_action = 60;</code>
      */
     public com.google.ads.googleads.v14.resources.RemarketingAction.Builder getRemarketingActionBuilder() {
-      bitField4_ |= 0x01000000;
+      bitField4_ |= 0x04000000;
       onChanged();
       return getRemarketingActionFieldBuilder().getBuilder();
     }
@@ -35869,7 +36334,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the topicConstant field is set.
      */
     public boolean hasTopicConstant() {
-      return ((bitField4_ & 0x02000000) != 0);
+      return ((bitField4_ & 0x08000000) != 0);
     }
     /**
      * <pre>
@@ -35902,7 +36367,7 @@ private static final long serialVersionUID = 0L;
       } else {
         topicConstantBuilder_.setMessage(value);
       }
-      bitField4_ |= 0x02000000;
+      bitField4_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -35920,7 +36385,7 @@ private static final long serialVersionUID = 0L;
       } else {
         topicConstantBuilder_.setMessage(builderForValue.build());
       }
-      bitField4_ |= 0x02000000;
+      bitField4_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -35933,7 +36398,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeTopicConstant(com.google.ads.googleads.v14.resources.TopicConstant value) {
       if (topicConstantBuilder_ == null) {
-        if (((bitField4_ & 0x02000000) != 0) &&
+        if (((bitField4_ & 0x08000000) != 0) &&
           topicConstant_ != null &&
           topicConstant_ != com.google.ads.googleads.v14.resources.TopicConstant.getDefaultInstance()) {
           getTopicConstantBuilder().mergeFrom(value);
@@ -35943,7 +36408,7 @@ private static final long serialVersionUID = 0L;
       } else {
         topicConstantBuilder_.mergeFrom(value);
       }
-      bitField4_ |= 0x02000000;
+      bitField4_ |= 0x08000000;
       onChanged();
       return this;
     }
@@ -35955,7 +36420,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.TopicConstant topic_constant = 31;</code>
      */
     public Builder clearTopicConstant() {
-      bitField4_ = (bitField4_ & ~0x02000000);
+      bitField4_ = (bitField4_ & ~0x08000000);
       topicConstant_ = null;
       if (topicConstantBuilder_ != null) {
         topicConstantBuilder_.dispose();
@@ -35972,7 +36437,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.TopicConstant topic_constant = 31;</code>
      */
     public com.google.ads.googleads.v14.resources.TopicConstant.Builder getTopicConstantBuilder() {
-      bitField4_ |= 0x02000000;
+      bitField4_ |= 0x08000000;
       onChanged();
       return getTopicConstantFieldBuilder().getBuilder();
     }
@@ -36024,7 +36489,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the video field is set.
      */
     public boolean hasVideo() {
-      return ((bitField4_ & 0x04000000) != 0);
+      return ((bitField4_ & 0x10000000) != 0);
     }
     /**
      * <pre>
@@ -36057,7 +36522,7 @@ private static final long serialVersionUID = 0L;
       } else {
         videoBuilder_.setMessage(value);
       }
-      bitField4_ |= 0x04000000;
+      bitField4_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -36075,7 +36540,7 @@ private static final long serialVersionUID = 0L;
       } else {
         videoBuilder_.setMessage(builderForValue.build());
       }
-      bitField4_ |= 0x04000000;
+      bitField4_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -36088,7 +36553,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeVideo(com.google.ads.googleads.v14.resources.Video value) {
       if (videoBuilder_ == null) {
-        if (((bitField4_ & 0x04000000) != 0) &&
+        if (((bitField4_ & 0x10000000) != 0) &&
           video_ != null &&
           video_ != com.google.ads.googleads.v14.resources.Video.getDefaultInstance()) {
           getVideoBuilder().mergeFrom(value);
@@ -36098,7 +36563,7 @@ private static final long serialVersionUID = 0L;
       } else {
         videoBuilder_.mergeFrom(value);
       }
-      bitField4_ |= 0x04000000;
+      bitField4_ |= 0x10000000;
       onChanged();
       return this;
     }
@@ -36110,7 +36575,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.Video video = 39;</code>
      */
     public Builder clearVideo() {
-      bitField4_ = (bitField4_ & ~0x04000000);
+      bitField4_ = (bitField4_ & ~0x10000000);
       video_ = null;
       if (videoBuilder_ != null) {
         videoBuilder_.dispose();
@@ -36127,7 +36592,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.Video video = 39;</code>
      */
     public com.google.ads.googleads.v14.resources.Video.Builder getVideoBuilder() {
-      bitField4_ |= 0x04000000;
+      bitField4_ |= 0x10000000;
       onChanged();
       return getVideoFieldBuilder().getBuilder();
     }
@@ -36179,7 +36644,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the webpageView field is set.
      */
     public boolean hasWebpageView() {
-      return ((bitField4_ & 0x08000000) != 0);
+      return ((bitField4_ & 0x20000000) != 0);
     }
     /**
      * <pre>
@@ -36212,7 +36677,7 @@ private static final long serialVersionUID = 0L;
       } else {
         webpageViewBuilder_.setMessage(value);
       }
-      bitField4_ |= 0x08000000;
+      bitField4_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -36230,7 +36695,7 @@ private static final long serialVersionUID = 0L;
       } else {
         webpageViewBuilder_.setMessage(builderForValue.build());
       }
-      bitField4_ |= 0x08000000;
+      bitField4_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -36243,7 +36708,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeWebpageView(com.google.ads.googleads.v14.resources.WebpageView value) {
       if (webpageViewBuilder_ == null) {
-        if (((bitField4_ & 0x08000000) != 0) &&
+        if (((bitField4_ & 0x20000000) != 0) &&
           webpageView_ != null &&
           webpageView_ != com.google.ads.googleads.v14.resources.WebpageView.getDefaultInstance()) {
           getWebpageViewBuilder().mergeFrom(value);
@@ -36253,7 +36718,7 @@ private static final long serialVersionUID = 0L;
       } else {
         webpageViewBuilder_.mergeFrom(value);
       }
-      bitField4_ |= 0x08000000;
+      bitField4_ |= 0x20000000;
       onChanged();
       return this;
     }
@@ -36265,7 +36730,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.WebpageView webpage_view = 162;</code>
      */
     public Builder clearWebpageView() {
-      bitField4_ = (bitField4_ & ~0x08000000);
+      bitField4_ = (bitField4_ & ~0x20000000);
       webpageView_ = null;
       if (webpageViewBuilder_ != null) {
         webpageViewBuilder_.dispose();
@@ -36282,7 +36747,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.WebpageView webpage_view = 162;</code>
      */
     public com.google.ads.googleads.v14.resources.WebpageView.Builder getWebpageViewBuilder() {
-      bitField4_ |= 0x08000000;
+      bitField4_ |= 0x20000000;
       onChanged();
       return getWebpageViewFieldBuilder().getBuilder();
     }
@@ -36334,7 +36799,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the leadFormSubmissionData field is set.
      */
     public boolean hasLeadFormSubmissionData() {
-      return ((bitField4_ & 0x10000000) != 0);
+      return ((bitField4_ & 0x40000000) != 0);
     }
     /**
      * <pre>
@@ -36367,7 +36832,7 @@ private static final long serialVersionUID = 0L;
       } else {
         leadFormSubmissionDataBuilder_.setMessage(value);
       }
-      bitField4_ |= 0x10000000;
+      bitField4_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -36385,7 +36850,7 @@ private static final long serialVersionUID = 0L;
       } else {
         leadFormSubmissionDataBuilder_.setMessage(builderForValue.build());
       }
-      bitField4_ |= 0x10000000;
+      bitField4_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -36398,7 +36863,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeLeadFormSubmissionData(com.google.ads.googleads.v14.resources.LeadFormSubmissionData value) {
       if (leadFormSubmissionDataBuilder_ == null) {
-        if (((bitField4_ & 0x10000000) != 0) &&
+        if (((bitField4_ & 0x40000000) != 0) &&
           leadFormSubmissionData_ != null &&
           leadFormSubmissionData_ != com.google.ads.googleads.v14.resources.LeadFormSubmissionData.getDefaultInstance()) {
           getLeadFormSubmissionDataBuilder().mergeFrom(value);
@@ -36408,7 +36873,7 @@ private static final long serialVersionUID = 0L;
       } else {
         leadFormSubmissionDataBuilder_.mergeFrom(value);
       }
-      bitField4_ |= 0x10000000;
+      bitField4_ |= 0x40000000;
       onChanged();
       return this;
     }
@@ -36420,7 +36885,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.LeadFormSubmissionData lead_form_submission_data = 192;</code>
      */
     public Builder clearLeadFormSubmissionData() {
-      bitField4_ = (bitField4_ & ~0x10000000);
+      bitField4_ = (bitField4_ & ~0x40000000);
       leadFormSubmissionData_ = null;
       if (leadFormSubmissionDataBuilder_ != null) {
         leadFormSubmissionDataBuilder_.dispose();
@@ -36437,7 +36902,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.resources.LeadFormSubmissionData lead_form_submission_data = 192;</code>
      */
     public com.google.ads.googleads.v14.resources.LeadFormSubmissionData.Builder getLeadFormSubmissionDataBuilder() {
-      bitField4_ |= 0x10000000;
+      bitField4_ |= 0x40000000;
       onChanged();
       return getLeadFormSubmissionDataFieldBuilder().getBuilder();
     }
@@ -36489,7 +36954,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the metrics field is set.
      */
     public boolean hasMetrics() {
-      return ((bitField4_ & 0x20000000) != 0);
+      return ((bitField4_ & 0x80000000) != 0);
     }
     /**
      * <pre>
@@ -36522,7 +36987,7 @@ private static final long serialVersionUID = 0L;
       } else {
         metricsBuilder_.setMessage(value);
       }
-      bitField4_ |= 0x20000000;
+      bitField4_ |= 0x80000000;
       onChanged();
       return this;
     }
@@ -36540,7 +37005,7 @@ private static final long serialVersionUID = 0L;
       } else {
         metricsBuilder_.setMessage(builderForValue.build());
       }
-      bitField4_ |= 0x20000000;
+      bitField4_ |= 0x80000000;
       onChanged();
       return this;
     }
@@ -36553,7 +37018,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeMetrics(com.google.ads.googleads.v14.common.Metrics value) {
       if (metricsBuilder_ == null) {
-        if (((bitField4_ & 0x20000000) != 0) &&
+        if (((bitField4_ & 0x80000000) != 0) &&
           metrics_ != null &&
           metrics_ != com.google.ads.googleads.v14.common.Metrics.getDefaultInstance()) {
           getMetricsBuilder().mergeFrom(value);
@@ -36563,7 +37028,7 @@ private static final long serialVersionUID = 0L;
       } else {
         metricsBuilder_.mergeFrom(value);
       }
-      bitField4_ |= 0x20000000;
+      bitField4_ |= 0x80000000;
       onChanged();
       return this;
     }
@@ -36575,7 +37040,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.common.Metrics metrics = 4;</code>
      */
     public Builder clearMetrics() {
-      bitField4_ = (bitField4_ & ~0x20000000);
+      bitField4_ = (bitField4_ & ~0x80000000);
       metrics_ = null;
       if (metricsBuilder_ != null) {
         metricsBuilder_.dispose();
@@ -36592,7 +37057,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.common.Metrics metrics = 4;</code>
      */
     public com.google.ads.googleads.v14.common.Metrics.Builder getMetricsBuilder() {
-      bitField4_ |= 0x20000000;
+      bitField4_ |= 0x80000000;
       onChanged();
       return getMetricsFieldBuilder().getBuilder();
     }
@@ -36644,7 +37109,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the segments field is set.
      */
     public boolean hasSegments() {
-      return ((bitField4_ & 0x40000000) != 0);
+      return ((bitField5_ & 0x00000001) != 0);
     }
     /**
      * <pre>
@@ -36677,7 +37142,7 @@ private static final long serialVersionUID = 0L;
       } else {
         segmentsBuilder_.setMessage(value);
       }
-      bitField4_ |= 0x40000000;
+      bitField5_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -36695,7 +37160,7 @@ private static final long serialVersionUID = 0L;
       } else {
         segmentsBuilder_.setMessage(builderForValue.build());
       }
-      bitField4_ |= 0x40000000;
+      bitField5_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -36708,7 +37173,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeSegments(com.google.ads.googleads.v14.common.Segments value) {
       if (segmentsBuilder_ == null) {
-        if (((bitField4_ & 0x40000000) != 0) &&
+        if (((bitField5_ & 0x00000001) != 0) &&
           segments_ != null &&
           segments_ != com.google.ads.googleads.v14.common.Segments.getDefaultInstance()) {
           getSegmentsBuilder().mergeFrom(value);
@@ -36718,7 +37183,7 @@ private static final long serialVersionUID = 0L;
       } else {
         segmentsBuilder_.mergeFrom(value);
       }
-      bitField4_ |= 0x40000000;
+      bitField5_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -36730,7 +37195,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.common.Segments segments = 102;</code>
      */
     public Builder clearSegments() {
-      bitField4_ = (bitField4_ & ~0x40000000);
+      bitField5_ = (bitField5_ & ~0x00000001);
       segments_ = null;
       if (segmentsBuilder_ != null) {
         segmentsBuilder_.dispose();
@@ -36747,7 +37212,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.common.Segments segments = 102;</code>
      */
     public com.google.ads.googleads.v14.common.Segments.Builder getSegmentsBuilder() {
-      bitField4_ |= 0x40000000;
+      bitField5_ |= 0x00000001;
       onChanged();
       return getSegmentsFieldBuilder().getBuilder();
     }

@@ -54,6 +54,11 @@ public final class CustomerProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v14_resources_OfflineConversionUploadError_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v14_resources_CustomerAgreementSetting_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v14_resources_CustomerAgreementSetting_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -90,7 +95,7 @@ public final class CustomerProto {
       "g_format_error.proto\0329google/ads/googlea" +
       "ds/v14/errors/string_length_error.proto\032" +
       "\037google/api/field_behavior.proto\032\031google" +
-      "/api/resource.proto\"\267\016\n\010Customer\022A\n\rreso" +
+      "/api/resource.proto\"\237\017\n\010Customer\022A\n\rreso" +
       "urce_name\030\001 \001(\tB*\342A\001\005\372A#\n!googleads.goog" +
       "leapis.com/Customer\022\025\n\002id\030\023 \001(\003B\004\342A\001\003H\000\210" +
       "\001\001\022\035\n\020descriptive_name\030\024 \001(\tH\001\210\001\001\022 \n\rcur" +
@@ -125,100 +130,104 @@ public final class CustomerProto {
       "e_date_time\030) \001(\tB\004\342A\001\003H\016\210\001\001\022u\n#offline_" +
       "conversion_client_summaries\030+ \003(\0132B.goog" +
       "le.ads.googleads.v14.resources.OfflineCo" +
-      "nversionClientSummaryB\004\342A\001\003:?\352A<\n!google" +
-      "ads.googleapis.com/Customer\022\027customers/{" +
-      "customer_id}B\005\n\003_idB\023\n\021_descriptive_name" +
-      "B\020\n\016_currency_codeB\014\n\n_time_zoneB\030\n\026_tra" +
-      "cking_url_templateB\023\n\021_final_url_suffixB" +
-      "\027\n\025_auto_tagging_enabledB\025\n\023_has_partner" +
-      "s_badgeB\n\n\010_managerB\017\n\r_test_accountB\025\n\023" +
-      "_optimization_scoreB%\n#_location_asset_a" +
-      "uto_migration_doneB\"\n _image_asset_auto_" +
-      "migration_doneB/\n-_location_asset_auto_m" +
-      "igration_done_date_timeB,\n*_image_asset_" +
-      "auto_migration_done_date_time\"\234\002\n\024CallRe" +
-      "portingSetting\022#\n\026call_reporting_enabled" +
-      "\030\n \001(\010H\000\210\001\001\022.\n!call_conversion_reporting" +
-      "_enabled\030\013 \001(\010H\001\210\001\001\022S\n\026call_conversion_a" +
-      "ction\030\014 \001(\tB.\372A+\n)googleads.googleapis.c" +
-      "om/ConversionActionH\002\210\001\001B\031\n\027_call_report" +
-      "ing_enabledB$\n\"_call_conversion_reportin" +
-      "g_enabledB\031\n\027_call_conversion_action\"\324\003\n" +
-      "\031ConversionTrackingSetting\022)\n\026conversion" +
-      "_tracking_id\030\003 \001(\003B\004\342A\001\003H\000\210\001\001\0227\n$cross_a" +
-      "ccount_conversion_tracking_id\030\004 \001(\003B\004\342A\001" +
-      "\003H\001\210\001\001\022*\n\034accepted_customer_data_terms\030\005" +
-      " \001(\010B\004\342A\001\003\022\177\n\032conversion_tracking_status" +
-      "\030\006 \001(\0162U.google.ads.googleads.v14.enums." +
-      "ConversionTrackingStatusEnum.ConversionT" +
-      "rackingStatusB\004\342A\001\003\0224\n&enhanced_conversi" +
-      "ons_for_leads_enabled\030\007 \001(\010B\004\342A\001\003\022,\n\036goo" +
-      "gle_ads_conversion_customer\030\010 \001(\tB\004\342A\001\003B" +
-      "\031\n\027_conversion_tracking_idB\'\n%_cross_acc" +
-      "ount_conversion_tracking_id\"Z\n\022Remarketi" +
-      "ngSetting\022)\n\026google_global_site_tag\030\002 \001(" +
-      "\tB\004\342A\001\003H\000\210\001\001B\031\n\027_google_global_site_tag\"" +
-      "\260\005\n\036OfflineConversionClientSummary\022k\n\006cl" +
-      "ient\030\001 \001(\0162U.google.ads.googleads.v14.en" +
-      "ums.OfflineEventUploadClientEnum.Offline" +
-      "EventUploadClientB\004\342A\001\003\022}\n\006status\030\002 \001(\0162" +
-      "g.google.ads.googleads.v14.enums.Offline" +
-      "ConversionDiagnosticStatusEnum.OfflineCo" +
-      "nversionDiagnosticStatusB\004\342A\001\003\022\037\n\021total_" +
-      "event_count\030\003 \001(\003B\004\342A\001\003\022$\n\026successful_ev" +
-      "ent_count\030\004 \001(\003B\004\342A\001\003\022\032\n\014success_rate\030\005 " +
-      "\001(\001B\004\342A\001\003\022#\n\025last_upload_date_time\030\006 \001(\t" +
-      "B\004\342A\001\003\022a\n\017daily_summaries\030\007 \003(\0132B.google" +
-      ".ads.googleads.v14.resources.OfflineConv" +
-      "ersionUploadSummaryB\004\342A\001\003\022_\n\rjob_summari" +
-      "es\030\010 \003(\0132B.google.ads.googleads.v14.reso" +
-      "urces.OfflineConversionUploadSummaryB\004\342A" +
-      "\001\003\022V\n\006alerts\030\t \003(\0132@.google.ads.googlead" +
-      "s.v14.resources.OfflineConversionUploadA" +
-      "lertB\004\342A\001\003\"\242\001\n\036OfflineConversionUploadSu" +
-      "mmary\022\036\n\020successful_count\030\003 \001(\003B\004\342A\001\003\022\032\n" +
-      "\014failed_count\030\004 \001(\003B\004\342A\001\003\022\026\n\006job_id\030\001 \001(" +
-      "\003B\004\342A\001\003H\000\022\033\n\013upload_date\030\002 \001(\tB\004\342A\001\003H\000B\017" +
-      "\n\rdimension_key\"\225\001\n\034OfflineConversionUpl" +
-      "oadAlert\022U\n\005error\030\001 \001(\0132@.google.ads.goo" +
-      "gleads.v14.resources.OfflineConversionUp" +
-      "loadErrorB\004\342A\001\003\022\036\n\020error_percentage\030\002 \001(" +
-      "\001B\004\342A\001\003\"\367\010\n\034OfflineConversionUploadError" +
-      "\022s\n\025collection_size_error\030\001 \001(\0162L.google" +
-      ".ads.googleads.v14.errors.CollectionSize" +
-      "ErrorEnum.CollectionSizeErrorB\004\342A\001\003H\000\022\230\001" +
-      "\n\"conversion_adjustment_upload_error\030\002 \001" +
-      "(\0162d.google.ads.googleads.v14.errors.Con" +
-      "versionAdjustmentUploadErrorEnum.Convers" +
-      "ionAdjustmentUploadErrorB\004\342A\001\003H\000\022y\n\027conv" +
-      "ersion_upload_error\030\003 \001(\0162P.google.ads.g" +
-      "oogleads.v14.errors.ConversionUploadErro" +
-      "rEnum.ConversionUploadErrorB\004\342A\001\003H\000\022T\n\nd" +
-      "ate_error\030\004 \001(\01628.google.ads.googleads.v" +
-      "14.errors.DateErrorEnum.DateErrorB\004\342A\001\003H" +
-      "\000\022`\n\016distinct_error\030\005 \001(\0162@.google.ads.g" +
-      "oogleads.v14.errors.DistinctErrorEnum.Di" +
-      "stinctErrorB\004\342A\001\003H\000\022W\n\013field_error\030\006 \001(\016" +
-      "2:.google.ads.googleads.v14.errors.Field" +
-      "ErrorEnum.FieldErrorB\004\342A\001\003H\000\022Z\n\014mutate_e" +
-      "rror\030\007 \001(\0162<.google.ads.googleads.v14.er" +
-      "rors.MutateErrorEnum.MutateErrorB\004\342A\001\003H\000" +
-      "\022s\n\025not_allowlisted_error\030\010 \001(\0162L.google" +
-      ".ads.googleads.v14.errors.NotAllowlisted" +
-      "ErrorEnum.NotAllowlistedErrorB\004\342A\001\003H\000\022m\n" +
-      "\023string_format_error\030\t \001(\0162H.google.ads." +
-      "googleads.v14.errors.StringFormatErrorEn" +
-      "um.StringFormatErrorB\004\342A\001\003H\000\022m\n\023string_l" +
-      "ength_error\030\n \001(\0162H.google.ads.googleads" +
-      ".v14.errors.StringLengthErrorEnum.String" +
-      "LengthErrorB\004\342A\001\003H\000B\014\n\nerror_codeB\377\001\n&co" +
-      "m.google.ads.googleads.v14.resourcesB\rCu" +
-      "stomerProtoP\001ZKgoogle.golang.org/genprot" +
-      "o/googleapis/ads/googleads/v14/resources" +
-      ";resources\242\002\003GAA\252\002\"Google.Ads.GoogleAds." +
-      "V14.Resources\312\002\"Google\\Ads\\GoogleAds\\V14" +
-      "\\Resources\352\002&Google::Ads::GoogleAds::V14" +
-      "::Resourcesb\006proto3"
+      "nversionClientSummaryB\004\342A\001\003\022f\n\032customer_" +
+      "agreement_setting\030, \001(\0132<.google.ads.goo" +
+      "gleads.v14.resources.CustomerAgreementSe" +
+      "ttingB\004\342A\001\003:?\352A<\n!googleads.googleapis.c" +
+      "om/Customer\022\027customers/{customer_id}B\005\n\003" +
+      "_idB\023\n\021_descriptive_nameB\020\n\016_currency_co" +
+      "deB\014\n\n_time_zoneB\030\n\026_tracking_url_templa" +
+      "teB\023\n\021_final_url_suffixB\027\n\025_auto_tagging" +
+      "_enabledB\025\n\023_has_partners_badgeB\n\n\010_mana" +
+      "gerB\017\n\r_test_accountB\025\n\023_optimization_sc" +
+      "oreB%\n#_location_asset_auto_migration_do" +
+      "neB\"\n _image_asset_auto_migration_doneB/" +
+      "\n-_location_asset_auto_migration_done_da" +
+      "te_timeB,\n*_image_asset_auto_migration_d" +
+      "one_date_time\"\234\002\n\024CallReportingSetting\022#" +
+      "\n\026call_reporting_enabled\030\n \001(\010H\000\210\001\001\022.\n!c" +
+      "all_conversion_reporting_enabled\030\013 \001(\010H\001" +
+      "\210\001\001\022S\n\026call_conversion_action\030\014 \001(\tB.\372A+" +
+      "\n)googleads.googleapis.com/ConversionAct" +
+      "ionH\002\210\001\001B\031\n\027_call_reporting_enabledB$\n\"_" +
+      "call_conversion_reporting_enabledB\031\n\027_ca" +
+      "ll_conversion_action\"\324\003\n\031ConversionTrack" +
+      "ingSetting\022)\n\026conversion_tracking_id\030\003 \001" +
+      "(\003B\004\342A\001\003H\000\210\001\001\0227\n$cross_account_conversio" +
+      "n_tracking_id\030\004 \001(\003B\004\342A\001\003H\001\210\001\001\022*\n\034accept" +
+      "ed_customer_data_terms\030\005 \001(\010B\004\342A\001\003\022\177\n\032co" +
+      "nversion_tracking_status\030\006 \001(\0162U.google." +
+      "ads.googleads.v14.enums.ConversionTracki" +
+      "ngStatusEnum.ConversionTrackingStatusB\004\342" +
+      "A\001\003\0224\n&enhanced_conversions_for_leads_en" +
+      "abled\030\007 \001(\010B\004\342A\001\003\022,\n\036google_ads_conversi" +
+      "on_customer\030\010 \001(\tB\004\342A\001\003B\031\n\027_conversion_t" +
+      "racking_idB\'\n%_cross_account_conversion_" +
+      "tracking_id\"Z\n\022RemarketingSetting\022)\n\026goo" +
+      "gle_global_site_tag\030\002 \001(\tB\004\342A\001\003H\000\210\001\001B\031\n\027" +
+      "_google_global_site_tag\"\260\005\n\036OfflineConve" +
+      "rsionClientSummary\022k\n\006client\030\001 \001(\0162U.goo" +
+      "gle.ads.googleads.v14.enums.OfflineEvent" +
+      "UploadClientEnum.OfflineEventUploadClien" +
+      "tB\004\342A\001\003\022}\n\006status\030\002 \001(\0162g.google.ads.goo" +
+      "gleads.v14.enums.OfflineConversionDiagno" +
+      "sticStatusEnum.OfflineConversionDiagnost" +
+      "icStatusB\004\342A\001\003\022\037\n\021total_event_count\030\003 \001(" +
+      "\003B\004\342A\001\003\022$\n\026successful_event_count\030\004 \001(\003B" +
+      "\004\342A\001\003\022\032\n\014success_rate\030\005 \001(\001B\004\342A\001\003\022#\n\025las" +
+      "t_upload_date_time\030\006 \001(\tB\004\342A\001\003\022a\n\017daily_" +
+      "summaries\030\007 \003(\0132B.google.ads.googleads.v" +
+      "14.resources.OfflineConversionUploadSumm" +
+      "aryB\004\342A\001\003\022_\n\rjob_summaries\030\010 \003(\0132B.googl" +
+      "e.ads.googleads.v14.resources.OfflineCon" +
+      "versionUploadSummaryB\004\342A\001\003\022V\n\006alerts\030\t \003" +
+      "(\0132@.google.ads.googleads.v14.resources." +
+      "OfflineConversionUploadAlertB\004\342A\001\003\"\242\001\n\036O" +
+      "fflineConversionUploadSummary\022\036\n\020success" +
+      "ful_count\030\003 \001(\003B\004\342A\001\003\022\032\n\014failed_count\030\004 " +
+      "\001(\003B\004\342A\001\003\022\026\n\006job_id\030\001 \001(\003B\004\342A\001\003H\000\022\033\n\013upl" +
+      "oad_date\030\002 \001(\tB\004\342A\001\003H\000B\017\n\rdimension_key\"" +
+      "\225\001\n\034OfflineConversionUploadAlert\022U\n\005erro" +
+      "r\030\001 \001(\0132@.google.ads.googleads.v14.resou" +
+      "rces.OfflineConversionUploadErrorB\004\342A\001\003\022" +
+      "\036\n\020error_percentage\030\002 \001(\001B\004\342A\001\003\"\367\010\n\034Offl" +
+      "ineConversionUploadError\022s\n\025collection_s" +
+      "ize_error\030\001 \001(\0162L.google.ads.googleads.v" +
+      "14.errors.CollectionSizeErrorEnum.Collec" +
+      "tionSizeErrorB\004\342A\001\003H\000\022\230\001\n\"conversion_adj" +
+      "ustment_upload_error\030\002 \001(\0162d.google.ads." +
+      "googleads.v14.errors.ConversionAdjustmen" +
+      "tUploadErrorEnum.ConversionAdjustmentUpl" +
+      "oadErrorB\004\342A\001\003H\000\022y\n\027conversion_upload_er" +
+      "ror\030\003 \001(\0162P.google.ads.googleads.v14.err" +
+      "ors.ConversionUploadErrorEnum.Conversion" +
+      "UploadErrorB\004\342A\001\003H\000\022T\n\ndate_error\030\004 \001(\0162" +
+      "8.google.ads.googleads.v14.errors.DateEr" +
+      "rorEnum.DateErrorB\004\342A\001\003H\000\022`\n\016distinct_er" +
+      "ror\030\005 \001(\0162@.google.ads.googleads.v14.err" +
+      "ors.DistinctErrorEnum.DistinctErrorB\004\342A\001" +
+      "\003H\000\022W\n\013field_error\030\006 \001(\0162:.google.ads.go" +
+      "ogleads.v14.errors.FieldErrorEnum.FieldE" +
+      "rrorB\004\342A\001\003H\000\022Z\n\014mutate_error\030\007 \001(\0162<.goo" +
+      "gle.ads.googleads.v14.errors.MutateError" +
+      "Enum.MutateErrorB\004\342A\001\003H\000\022s\n\025not_allowlis" +
+      "ted_error\030\010 \001(\0162L.google.ads.googleads.v" +
+      "14.errors.NotAllowlistedErrorEnum.NotAll" +
+      "owlistedErrorB\004\342A\001\003H\000\022m\n\023string_format_e" +
+      "rror\030\t \001(\0162H.google.ads.googleads.v14.er" +
+      "rors.StringFormatErrorEnum.StringFormatE" +
+      "rrorB\004\342A\001\003H\000\022m\n\023string_length_error\030\n \001(" +
+      "\0162H.google.ads.googleads.v14.errors.Stri" +
+      "ngLengthErrorEnum.StringLengthErrorB\004\342A\001" +
+      "\003H\000B\014\n\nerror_code\"B\n\030CustomerAgreementSe" +
+      "tting\022&\n\030accepted_lead_form_terms\030\001 \001(\010B" +
+      "\004\342A\001\003B\377\001\n&com.google.ads.googleads.v14.r" +
+      "esourcesB\rCustomerProtoP\001ZKgoogle.golang" +
+      ".org/genproto/googleapis/ads/googleads/v" +
+      "14/resources;resources\242\002\003GAA\252\002\"Google.Ad" +
+      "s.GoogleAds.V14.Resources\312\002\"Google\\Ads\\G" +
+      "oogleAds\\V14\\Resources\352\002&Google::Ads::Go" +
+      "ogleAds::V14::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -246,7 +255,7 @@ public final class CustomerProto {
     internal_static_google_ads_googleads_v14_resources_Customer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v14_resources_Customer_descriptor,
-        new java.lang.String[] { "ResourceName", "Id", "DescriptiveName", "CurrencyCode", "TimeZone", "TrackingUrlTemplate", "FinalUrlSuffix", "AutoTaggingEnabled", "HasPartnersBadge", "Manager", "TestAccount", "CallReportingSetting", "ConversionTrackingSetting", "RemarketingSetting", "PayPerConversionEligibilityFailureReasons", "OptimizationScore", "OptimizationScoreWeight", "Status", "LocationAssetAutoMigrationDone", "ImageAssetAutoMigrationDone", "LocationAssetAutoMigrationDoneDateTime", "ImageAssetAutoMigrationDoneDateTime", "OfflineConversionClientSummaries", "Id", "DescriptiveName", "CurrencyCode", "TimeZone", "TrackingUrlTemplate", "FinalUrlSuffix", "AutoTaggingEnabled", "HasPartnersBadge", "Manager", "TestAccount", "OptimizationScore", "LocationAssetAutoMigrationDone", "ImageAssetAutoMigrationDone", "LocationAssetAutoMigrationDoneDateTime", "ImageAssetAutoMigrationDoneDateTime", });
+        new java.lang.String[] { "ResourceName", "Id", "DescriptiveName", "CurrencyCode", "TimeZone", "TrackingUrlTemplate", "FinalUrlSuffix", "AutoTaggingEnabled", "HasPartnersBadge", "Manager", "TestAccount", "CallReportingSetting", "ConversionTrackingSetting", "RemarketingSetting", "PayPerConversionEligibilityFailureReasons", "OptimizationScore", "OptimizationScoreWeight", "Status", "LocationAssetAutoMigrationDone", "ImageAssetAutoMigrationDone", "LocationAssetAutoMigrationDoneDateTime", "ImageAssetAutoMigrationDoneDateTime", "OfflineConversionClientSummaries", "CustomerAgreementSetting", "Id", "DescriptiveName", "CurrencyCode", "TimeZone", "TrackingUrlTemplate", "FinalUrlSuffix", "AutoTaggingEnabled", "HasPartnersBadge", "Manager", "TestAccount", "OptimizationScore", "LocationAssetAutoMigrationDone", "ImageAssetAutoMigrationDone", "LocationAssetAutoMigrationDoneDateTime", "ImageAssetAutoMigrationDoneDateTime", });
     internal_static_google_ads_googleads_v14_resources_CallReportingSetting_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_google_ads_googleads_v14_resources_CallReportingSetting_fieldAccessorTable = new
@@ -289,6 +298,12 @@ public final class CustomerProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v14_resources_OfflineConversionUploadError_descriptor,
         new java.lang.String[] { "CollectionSizeError", "ConversionAdjustmentUploadError", "ConversionUploadError", "DateError", "DistinctError", "FieldError", "MutateError", "NotAllowlistedError", "StringFormatError", "StringLengthError", "ErrorCode", });
+    internal_static_google_ads_googleads_v14_resources_CustomerAgreementSetting_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_google_ads_googleads_v14_resources_CustomerAgreementSetting_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v14_resources_CustomerAgreementSetting_descriptor,
+        new java.lang.String[] { "AcceptedLeadFormTerms", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);

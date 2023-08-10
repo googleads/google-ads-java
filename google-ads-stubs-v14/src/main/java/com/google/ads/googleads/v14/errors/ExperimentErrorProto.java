@@ -30,7 +30,7 @@ public final class ExperimentErrorProto {
     java.lang.String[] descriptorData = {
       "\n6google/ads/googleads/v14/errors/experi" +
       "ment_error.proto\022\037google.ads.googleads.v" +
-      "14.errors\"\304\007\n\023ExperimentErrorEnum\"\254\007\n\017Ex" +
+      "14.errors\"\310\010\n\023ExperimentErrorEnum\"\260\010\n\017Ex" +
       "perimentError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOW" +
       "N\020\001\022!\n\035CANNOT_SET_START_DATE_IN_PAST\020\002\022\036" +
       "\n\032END_DATE_BEFORE_START_DATE\020\003\022 \n\034START_" +
@@ -54,13 +54,17 @@ public final class ExperimentErrorProto {
       "CREATE_EXPERIMENT_CAMPAIGN_WITH_SHARED_B" +
       "UDGET\020\027\0228\n4CANNOT_CREATE_EXPERIMENT_CAMP" +
       "AIGN_WITH_CUSTOM_BUDGET\020\030\022\035\n\031STATUS_TRAN" +
-      "SITION_INVALID\020\031B\364\001\n#com.google.ads.goog" +
-      "leads.v14.errorsB\024ExperimentErrorProtoP\001" +
-      "ZEgoogle.golang.org/genproto/googleapis/" +
-      "ads/googleads/v14/errors;errors\242\002\003GAA\252\002\037" +
-      "Google.Ads.GoogleAds.V14.Errors\312\002\037Google" +
-      "\\Ads\\GoogleAds\\V14\\Errors\352\002#Google::Ads:" +
-      ":GoogleAds::V14::Errorsb\006proto3"
+      "SITION_INVALID\020\031\022&\n\"DUPLICATE_EXPERIMENT" +
+      "_CAMPAIGN_NAME\020\032\022(\n$CANNOT_REMOVE_IN_CRE" +
+      "ATION_EXPERIMENT\020\033\0220\n,CANNOT_ADD_CAMPAIG" +
+      "N_WITH_DEPRECATED_AD_TYPES\020\034B\364\001\n#com.goo" +
+      "gle.ads.googleads.v14.errorsB\024Experiment" +
+      "ErrorProtoP\001ZEgoogle.golang.org/genproto" +
+      "/googleapis/ads/googleads/v14/errors;err" +
+      "ors\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V14.Err" +
+      "ors\312\002\037Google\\Ads\\GoogleAds\\V14\\Errors\352\002#" +
+      "Google::Ads::GoogleAds::V14::Errorsb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

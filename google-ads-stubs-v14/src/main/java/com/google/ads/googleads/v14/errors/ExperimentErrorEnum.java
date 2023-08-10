@@ -265,6 +265,31 @@ private static final long serialVersionUID = 0L;
      * <code>STATUS_TRANSITION_INVALID = 25;</code>
      */
     STATUS_TRANSITION_INVALID(25),
+    /**
+     * <pre>
+     * The experiment campaign name conflicts with a pre-existing campaign.
+     * </pre>
+     *
+     * <code>DUPLICATE_EXPERIMENT_CAMPAIGN_NAME = 26;</code>
+     */
+    DUPLICATE_EXPERIMENT_CAMPAIGN_NAME(26),
+    /**
+     * <pre>
+     * Cannot remove in creation experiments.
+     * </pre>
+     *
+     * <code>CANNOT_REMOVE_IN_CREATION_EXPERIMENT = 27;</code>
+     */
+    CANNOT_REMOVE_IN_CREATION_EXPERIMENT(27),
+    /**
+     * <pre>
+     * Cannot add campaign with deprecated ad types. Deprecated ad types:
+     * ENHANCED_DISPLAY, GALLERY, GMAIL, KEYWORDLESS, TEXT.
+     * </pre>
+     *
+     * <code>CANNOT_ADD_CAMPAIGN_WITH_DEPRECATED_AD_TYPES = 28;</code>
+     */
+    CANNOT_ADD_CAMPAIGN_WITH_DEPRECATED_AD_TYPES(28),
     UNRECOGNIZED(-1),
     ;
 
@@ -482,6 +507,31 @@ private static final long serialVersionUID = 0L;
      * <code>STATUS_TRANSITION_INVALID = 25;</code>
      */
     public static final int STATUS_TRANSITION_INVALID_VALUE = 25;
+    /**
+     * <pre>
+     * The experiment campaign name conflicts with a pre-existing campaign.
+     * </pre>
+     *
+     * <code>DUPLICATE_EXPERIMENT_CAMPAIGN_NAME = 26;</code>
+     */
+    public static final int DUPLICATE_EXPERIMENT_CAMPAIGN_NAME_VALUE = 26;
+    /**
+     * <pre>
+     * Cannot remove in creation experiments.
+     * </pre>
+     *
+     * <code>CANNOT_REMOVE_IN_CREATION_EXPERIMENT = 27;</code>
+     */
+    public static final int CANNOT_REMOVE_IN_CREATION_EXPERIMENT_VALUE = 27;
+    /**
+     * <pre>
+     * Cannot add campaign with deprecated ad types. Deprecated ad types:
+     * ENHANCED_DISPLAY, GALLERY, GMAIL, KEYWORDLESS, TEXT.
+     * </pre>
+     *
+     * <code>CANNOT_ADD_CAMPAIGN_WITH_DEPRECATED_AD_TYPES = 28;</code>
+     */
+    public static final int CANNOT_ADD_CAMPAIGN_WITH_DEPRECATED_AD_TYPES_VALUE = 28;
 
 
     public final int getNumber() {
@@ -534,6 +584,9 @@ private static final long serialVersionUID = 0L;
         case 23: return CANNOT_CREATE_EXPERIMENT_CAMPAIGN_WITH_SHARED_BUDGET;
         case 24: return CANNOT_CREATE_EXPERIMENT_CAMPAIGN_WITH_CUSTOM_BUDGET;
         case 25: return STATUS_TRANSITION_INVALID;
+        case 26: return DUPLICATE_EXPERIMENT_CAMPAIGN_NAME;
+        case 27: return CANNOT_REMOVE_IN_CREATION_EXPERIMENT;
+        case 28: return CANNOT_ADD_CAMPAIGN_WITH_DEPRECATED_AD_TYPES;
         default: return null;
       }
     }

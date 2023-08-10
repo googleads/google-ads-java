@@ -6,7 +6,7 @@ package com.google.ads.googleads.v14.services;
 /**
  * <pre>
  * Request message for
- * [SmartCampaignSettingService.MutateSmartCampaignSetting][].
+ * [SmartCampaignSettingService.MutateSmartCampaignSettings][google.ads.googleads.v14.services.SmartCampaignSettingService.MutateSmartCampaignSettings].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v14.services.MutateSmartCampaignSettingsRequest}
@@ -429,7 +429,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Request message for
-   * [SmartCampaignSettingService.MutateSmartCampaignSetting][].
+   * [SmartCampaignSettingService.MutateSmartCampaignSettings][google.ads.googleads.v14.services.SmartCampaignSettingService.MutateSmartCampaignSettings].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v14.services.MutateSmartCampaignSettingsRequest}

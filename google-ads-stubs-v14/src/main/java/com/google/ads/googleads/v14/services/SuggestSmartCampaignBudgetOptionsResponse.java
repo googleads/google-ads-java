@@ -6,9 +6,9 @@ package com.google.ads.googleads.v14.services;
 /**
  * <pre>
  * Response message for
- * [SmartCampaignSuggestService.SuggestSmartCampaignBudgets][]. Depending on
- * whether the system could suggest the options, either all of the options or
- * none of them might be returned.
+ * [SmartCampaignSuggestService.SuggestSmartCampaignBudgetOptions][google.ads.googleads.v14.services.SmartCampaignSuggestService.SuggestSmartCampaignBudgetOptions].
+ * Depending on whether the system could suggest the options, either all of the
+ * options or none of them might be returned.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v14.services.SuggestSmartCampaignBudgetOptionsResponse}
@@ -1741,9 +1741,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Response message for
-   * [SmartCampaignSuggestService.SuggestSmartCampaignBudgets][]. Depending on
-   * whether the system could suggest the options, either all of the options or
-   * none of them might be returned.
+   * [SmartCampaignSuggestService.SuggestSmartCampaignBudgetOptions][google.ads.googleads.v14.services.SmartCampaignSuggestService.SuggestSmartCampaignBudgetOptions].
+   * Depending on whether the system could suggest the options, either all of the
+   * options or none of them might be returned.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v14.services.SuggestSmartCampaignBudgetOptionsResponse}

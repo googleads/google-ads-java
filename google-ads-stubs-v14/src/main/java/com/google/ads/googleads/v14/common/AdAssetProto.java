@@ -39,6 +39,11 @@ public final class AdAssetProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v14_common_AdDiscoveryCarouselCardAsset_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v14_common_AdCallToActionAsset_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v14_common_AdCallToActionAsset_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -68,13 +73,14 @@ public final class AdAssetProto {
       "\001\001B\010\n\006_asset\"2\n\022AdMediaBundleAsset\022\022\n\005as" +
       "set\030\002 \001(\tH\000\210\001\001B\010\n\006_asset\"<\n\034AdDiscoveryC" +
       "arouselCardAsset\022\022\n\005asset\030\001 \001(\tH\000\210\001\001B\010\n\006" +
-      "_assetB\354\001\n#com.google.ads.googleads.v14." +
-      "commonB\014AdAssetProtoP\001ZEgoogle.golang.or" +
-      "g/genproto/googleapis/ads/googleads/v14/" +
-      "common;common\242\002\003GAA\252\002\037Google.Ads.GoogleA" +
-      "ds.V14.Common\312\002\037Google\\Ads\\GoogleAds\\V14" +
-      "\\Common\352\002#Google::Ads::GoogleAds::V14::C" +
-      "ommonb\006proto3"
+      "_asset\"3\n\023AdCallToActionAsset\022\022\n\005asset\030\001" +
+      " \001(\tH\000\210\001\001B\010\n\006_assetB\354\001\n#com.google.ads.g" +
+      "oogleads.v14.commonB\014AdAssetProtoP\001ZEgoo" +
+      "gle.golang.org/genproto/googleapis/ads/g" +
+      "oogleads/v14/common;common\242\002\003GAA\252\002\037Googl" +
+      "e.Ads.GoogleAds.V14.Common\312\002\037Google\\Ads\\" +
+      "GoogleAds\\V14\\Common\352\002#Google::Ads::Goog" +
+      "leAds::V14::Commonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -112,6 +118,12 @@ public final class AdAssetProto {
     internal_static_google_ads_googleads_v14_common_AdDiscoveryCarouselCardAsset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v14_common_AdDiscoveryCarouselCardAsset_descriptor,
+        new java.lang.String[] { "Asset", "Asset", });
+    internal_static_google_ads_googleads_v14_common_AdCallToActionAsset_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_google_ads_googleads_v14_common_AdCallToActionAsset_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v14_common_AdCallToActionAsset_descriptor,
         new java.lang.String[] { "Asset", "Asset", });
     com.google.ads.googleads.v14.common.AssetPolicyProto.getDescriptor();
     com.google.ads.googleads.v14.enums.AssetPerformanceLabelProto.getDescriptor();

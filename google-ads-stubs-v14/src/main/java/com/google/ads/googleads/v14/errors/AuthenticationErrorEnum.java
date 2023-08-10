@@ -216,6 +216,32 @@ private static final long serialVersionUID = 0L;
      * <code>ADVANCED_PROTECTION_NOT_ENROLLED = 24;</code>
      */
     ADVANCED_PROTECTION_NOT_ENROLLED(24),
+    /**
+     * <pre>
+     * The Cloud organization associated with the project is not recognized.
+     * </pre>
+     *
+     * <code>ORGANIZATION_NOT_RECOGNIZED = 26;</code>
+     */
+    ORGANIZATION_NOT_RECOGNIZED(26),
+    /**
+     * <pre>
+     * The Cloud organization associated with the project is not approved for
+     * prod access.
+     * </pre>
+     *
+     * <code>ORGANIZATION_NOT_APPROVED = 27;</code>
+     */
+    ORGANIZATION_NOT_APPROVED(27),
+    /**
+     * <pre>
+     * The Cloud organization associated with the project is not associated with
+     * the developer token.
+     * </pre>
+     *
+     * <code>ORGANIZATION_NOT_ASSOCIATED_WITH_DEVELOPER_TOKEN = 28;</code>
+     */
+    ORGANIZATION_NOT_ASSOCIATED_WITH_DEVELOPER_TOKEN(28),
     UNRECOGNIZED(-1),
     ;
 
@@ -384,6 +410,32 @@ private static final long serialVersionUID = 0L;
      * <code>ADVANCED_PROTECTION_NOT_ENROLLED = 24;</code>
      */
     public static final int ADVANCED_PROTECTION_NOT_ENROLLED_VALUE = 24;
+    /**
+     * <pre>
+     * The Cloud organization associated with the project is not recognized.
+     * </pre>
+     *
+     * <code>ORGANIZATION_NOT_RECOGNIZED = 26;</code>
+     */
+    public static final int ORGANIZATION_NOT_RECOGNIZED_VALUE = 26;
+    /**
+     * <pre>
+     * The Cloud organization associated with the project is not approved for
+     * prod access.
+     * </pre>
+     *
+     * <code>ORGANIZATION_NOT_APPROVED = 27;</code>
+     */
+    public static final int ORGANIZATION_NOT_APPROVED_VALUE = 27;
+    /**
+     * <pre>
+     * The Cloud organization associated with the project is not associated with
+     * the developer token.
+     * </pre>
+     *
+     * <code>ORGANIZATION_NOT_ASSOCIATED_WITH_DEVELOPER_TOKEN = 28;</code>
+     */
+    public static final int ORGANIZATION_NOT_ASSOCIATED_WITH_DEVELOPER_TOKEN_VALUE = 28;
 
 
     public final int getNumber() {
@@ -430,6 +482,9 @@ private static final long serialVersionUID = 0L;
         case 22: return USER_ID_INVALID;
         case 23: return TWO_STEP_VERIFICATION_NOT_ENROLLED;
         case 24: return ADVANCED_PROTECTION_NOT_ENROLLED;
+        case 26: return ORGANIZATION_NOT_RECOGNIZED;
+        case 27: return ORGANIZATION_NOT_APPROVED;
+        case 28: return ORGANIZATION_NOT_ASSOCIATED_WITH_DEVELOPER_TOKEN;
         default: return null;
       }
     }

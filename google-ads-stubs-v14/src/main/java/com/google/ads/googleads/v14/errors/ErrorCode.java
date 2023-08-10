@@ -186,6 +186,7 @@ private static final long serialVersionUID = 0L;
     CUSTOMER_USER_ACCESS_ERROR(138),
     CUSTOM_AUDIENCE_ERROR(139),
     AUDIENCE_ERROR(164),
+    SEARCH_TERM_INSIGHT_ERROR(174),
     SMART_CAMPAIGN_ERROR(147),
     EXPERIMENT_ARM_ERROR(156),
     AUDIENCE_INSIGHTS_ERROR(167),
@@ -346,6 +347,7 @@ private static final long serialVersionUID = 0L;
         case 138: return CUSTOMER_USER_ACCESS_ERROR;
         case 139: return CUSTOM_AUDIENCE_ERROR;
         case 164: return AUDIENCE_ERROR;
+        case 174: return SEARCH_TERM_INSIGHT_ERROR;
         case 147: return SMART_CAMPAIGN_ERROR;
         case 156: return EXPERIMENT_ARM_ERROR;
         case 167: return AUDIENCE_INSIGHTS_ERROR;
@@ -6300,6 +6302,49 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v14.errors.AudienceErrorEnum.AudienceError.UNSPECIFIED;
   }
 
+  public static final int SEARCH_TERM_INSIGHT_ERROR_FIELD_NUMBER = 174;
+  /**
+   * <pre>
+   * The reasons for the Search term insight error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.errors.SearchTermInsightErrorEnum.SearchTermInsightError search_term_insight_error = 174;</code>
+   * @return Whether the searchTermInsightError field is set.
+   */
+  public boolean hasSearchTermInsightError() {
+    return errorCodeCase_ == 174;
+  }
+  /**
+   * <pre>
+   * The reasons for the Search term insight error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.errors.SearchTermInsightErrorEnum.SearchTermInsightError search_term_insight_error = 174;</code>
+   * @return The enum numeric value on the wire for searchTermInsightError.
+   */
+  public int getSearchTermInsightErrorValue() {
+    if (errorCodeCase_ == 174) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the Search term insight error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.errors.SearchTermInsightErrorEnum.SearchTermInsightError search_term_insight_error = 174;</code>
+   * @return The searchTermInsightError.
+   */
+  public com.google.ads.googleads.v14.errors.SearchTermInsightErrorEnum.SearchTermInsightError getSearchTermInsightError() {
+    if (errorCodeCase_ == 174) {
+      com.google.ads.googleads.v14.errors.SearchTermInsightErrorEnum.SearchTermInsightError result = com.google.ads.googleads.v14.errors.SearchTermInsightErrorEnum.SearchTermInsightError.forNumber(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v14.errors.SearchTermInsightErrorEnum.SearchTermInsightError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v14.errors.SearchTermInsightErrorEnum.SearchTermInsightError.UNSPECIFIED;
+  }
+
   public static final int SMART_CAMPAIGN_ERROR_FIELD_NUMBER = 147;
   /**
    * <pre>
@@ -6958,6 +7003,9 @@ private static final long serialVersionUID = 0L;
     if (errorCodeCase_ == 171) {
       output.writeEnum(171, ((java.lang.Integer) errorCode_));
     }
+    if (errorCodeCase_ == 174) {
+      output.writeEnum(174, ((java.lang.Integer) errorCode_));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -7539,6 +7587,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(171, ((java.lang.Integer) errorCode_));
     }
+    if (errorCodeCase_ == 174) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(174, ((java.lang.Integer) errorCode_));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -8107,6 +8159,10 @@ private static final long serialVersionUID = 0L;
       case 164:
         if (getAudienceErrorValue()
             != other.getAudienceErrorValue()) return false;
+        break;
+      case 174:
+        if (getSearchTermInsightErrorValue()
+            != other.getSearchTermInsightErrorValue()) return false;
         break;
       case 147:
         if (getSmartCampaignErrorValue()
@@ -8694,6 +8750,10 @@ private static final long serialVersionUID = 0L;
       case 164:
         hash = (37 * hash) + AUDIENCE_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getAudienceErrorValue();
+        break;
+      case 174:
+        hash = (37 * hash) + SEARCH_TERM_INSIGHT_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getSearchTermInsightErrorValue();
         break;
       case 147:
         hash = (37 * hash) + SMART_CAMPAIGN_ERROR_FIELD_NUMBER;
@@ -9515,6 +9575,10 @@ private static final long serialVersionUID = 0L;
         }
         case AUDIENCE_ERROR: {
           setAudienceErrorValue(other.getAudienceErrorValue());
+          break;
+        }
+        case SEARCH_TERM_INSIGHT_ERROR: {
+          setSearchTermInsightErrorValue(other.getSearchTermInsightErrorValue());
           break;
         }
         case SMART_CAMPAIGN_ERROR: {
@@ -10425,6 +10489,12 @@ private static final long serialVersionUID = 0L;
               errorCode_ = rawValue;
               break;
             } // case 1368
+            case 1392: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 174;
+              errorCode_ = rawValue;
+              break;
+            } // case 1392
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -23426,6 +23496,100 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearAudienceError() {
       if (errorCodeCase_ == 164) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the Search term insight error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.errors.SearchTermInsightErrorEnum.SearchTermInsightError search_term_insight_error = 174;</code>
+     * @return Whether the searchTermInsightError field is set.
+     */
+    @java.lang.Override
+    public boolean hasSearchTermInsightError() {
+      return errorCodeCase_ == 174;
+    }
+    /**
+     * <pre>
+     * The reasons for the Search term insight error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.errors.SearchTermInsightErrorEnum.SearchTermInsightError search_term_insight_error = 174;</code>
+     * @return The enum numeric value on the wire for searchTermInsightError.
+     */
+    @java.lang.Override
+    public int getSearchTermInsightErrorValue() {
+      if (errorCodeCase_ == 174) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the Search term insight error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.errors.SearchTermInsightErrorEnum.SearchTermInsightError search_term_insight_error = 174;</code>
+     * @param value The enum numeric value on the wire for searchTermInsightError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSearchTermInsightErrorValue(int value) {
+      errorCodeCase_ = 174;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the Search term insight error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.errors.SearchTermInsightErrorEnum.SearchTermInsightError search_term_insight_error = 174;</code>
+     * @return The searchTermInsightError.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v14.errors.SearchTermInsightErrorEnum.SearchTermInsightError getSearchTermInsightError() {
+      if (errorCodeCase_ == 174) {
+        com.google.ads.googleads.v14.errors.SearchTermInsightErrorEnum.SearchTermInsightError result = com.google.ads.googleads.v14.errors.SearchTermInsightErrorEnum.SearchTermInsightError.forNumber(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v14.errors.SearchTermInsightErrorEnum.SearchTermInsightError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v14.errors.SearchTermInsightErrorEnum.SearchTermInsightError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the Search term insight error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.errors.SearchTermInsightErrorEnum.SearchTermInsightError search_term_insight_error = 174;</code>
+     * @param value The searchTermInsightError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSearchTermInsightError(com.google.ads.googleads.v14.errors.SearchTermInsightErrorEnum.SearchTermInsightError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 174;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the Search term insight error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.errors.SearchTermInsightErrorEnum.SearchTermInsightError search_term_insight_error = 174;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSearchTermInsightError() {
+      if (errorCodeCase_ == 174) {
         errorCodeCase_ = 0;
         errorCode_ = null;
         onChanged();

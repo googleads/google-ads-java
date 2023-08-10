@@ -26,6 +26,9 @@ private static final long serialVersionUID = 0L;
     asset_ = "";
     fieldType_ = 0;
     status_ = 0;
+    primaryStatus_ = 0;
+    primaryStatusReasons_ = java.util.Collections.emptyList();
+    primaryStatusDetails_ = java.util.Collections.emptyList();
     performanceLabel_ = 0;
   }
 
@@ -250,6 +253,191 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.google.ads.googleads.v14.enums.AssetLinkStatusEnum.AssetLinkStatus.UNRECOGNIZED : result;
   }
 
+  public static final int PRIMARY_STATUS_FIELD_NUMBER = 8;
+  private int primaryStatus_ = 0;
+  /**
+   * <pre>
+   * Output only. Provides the PrimaryStatus of this asset link.
+   * Primary status is meant essentially to differentiate between the plain
+   * "status" field, which has advertiser set values of enabled, paused, or
+   * removed.  The primary status takes into account other signals (for assets
+   * its mainly policy and quality approvals) to come up with a more
+   * comprehensive status to indicate its serving state.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusEnum.AssetLinkPrimaryStatus primary_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for primaryStatus.
+   */
+  @java.lang.Override public int getPrimaryStatusValue() {
+    return primaryStatus_;
+  }
+  /**
+   * <pre>
+   * Output only. Provides the PrimaryStatus of this asset link.
+   * Primary status is meant essentially to differentiate between the plain
+   * "status" field, which has advertiser set values of enabled, paused, or
+   * removed.  The primary status takes into account other signals (for assets
+   * its mainly policy and quality approvals) to come up with a more
+   * comprehensive status to indicate its serving state.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusEnum.AssetLinkPrimaryStatus primary_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The primaryStatus.
+   */
+  @java.lang.Override public com.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusEnum.AssetLinkPrimaryStatus getPrimaryStatus() {
+    com.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusEnum.AssetLinkPrimaryStatus result = com.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusEnum.AssetLinkPrimaryStatus.forNumber(primaryStatus_);
+    return result == null ? com.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusEnum.AssetLinkPrimaryStatus.UNRECOGNIZED : result;
+  }
+
+  public static final int PRIMARY_STATUS_REASONS_FIELD_NUMBER = 9;
+  @SuppressWarnings("serial")
+  private java.util.List<java.lang.Integer> primaryStatusReasons_;
+  private static final com.google.protobuf.Internal.ListAdapter.Converter<
+      java.lang.Integer, com.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason> primaryStatusReasons_converter_ =
+          new com.google.protobuf.Internal.ListAdapter.Converter<
+              java.lang.Integer, com.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason>() {
+            public com.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason convert(java.lang.Integer from) {
+              com.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason result = com.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason.forNumber(from);
+              return result == null ? com.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason.UNRECOGNIZED : result;
+            }
+          };
+  /**
+   * <pre>
+   * Output only. Provides a list of reasons for why an asset is not serving or
+   * not serving at full capacity.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason primary_status_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return A list containing the primaryStatusReasons.
+   */
+  @java.lang.Override
+  public java.util.List<com.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason> getPrimaryStatusReasonsList() {
+    return new com.google.protobuf.Internal.ListAdapter<
+        java.lang.Integer, com.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason>(primaryStatusReasons_, primaryStatusReasons_converter_);
+  }
+  /**
+   * <pre>
+   * Output only. Provides a list of reasons for why an asset is not serving or
+   * not serving at full capacity.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason primary_status_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The count of primaryStatusReasons.
+   */
+  @java.lang.Override
+  public int getPrimaryStatusReasonsCount() {
+    return primaryStatusReasons_.size();
+  }
+  /**
+   * <pre>
+   * Output only. Provides a list of reasons for why an asset is not serving or
+   * not serving at full capacity.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason primary_status_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @param index The index of the element to return.
+   * @return The primaryStatusReasons at the given index.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason getPrimaryStatusReasons(int index) {
+    return primaryStatusReasons_converter_.convert(primaryStatusReasons_.get(index));
+  }
+  /**
+   * <pre>
+   * Output only. Provides a list of reasons for why an asset is not serving or
+   * not serving at full capacity.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason primary_status_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return A list containing the enum numeric values on the wire for primaryStatusReasons.
+   */
+  @java.lang.Override
+  public java.util.List<java.lang.Integer>
+  getPrimaryStatusReasonsValueList() {
+    return primaryStatusReasons_;
+  }
+  /**
+   * <pre>
+   * Output only. Provides a list of reasons for why an asset is not serving or
+   * not serving at full capacity.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason primary_status_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @param index The index of the value to return.
+   * @return The enum numeric value on the wire of primaryStatusReasons at the given index.
+   */
+  @java.lang.Override
+  public int getPrimaryStatusReasonsValue(int index) {
+    return primaryStatusReasons_.get(index);
+  }
+  private int primaryStatusReasonsMemoizedSerializedSize;
+
+  public static final int PRIMARY_STATUS_DETAILS_FIELD_NUMBER = 10;
+  @SuppressWarnings("serial")
+  private java.util.List<com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails> primaryStatusDetails_;
+  /**
+   * <pre>
+   * Output only. Provides the details of the primary status and its associated
+   * reasons.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails primary_status_details = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails> getPrimaryStatusDetailsList() {
+    return primaryStatusDetails_;
+  }
+  /**
+   * <pre>
+   * Output only. Provides the details of the primary status and its associated
+   * reasons.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails primary_status_details = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetailsOrBuilder> 
+      getPrimaryStatusDetailsOrBuilderList() {
+    return primaryStatusDetails_;
+  }
+  /**
+   * <pre>
+   * Output only. Provides the details of the primary status and its associated
+   * reasons.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails primary_status_details = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  @java.lang.Override
+  public int getPrimaryStatusDetailsCount() {
+    return primaryStatusDetails_.size();
+  }
+  /**
+   * <pre>
+   * Output only. Provides the details of the primary status and its associated
+   * reasons.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails primary_status_details = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails getPrimaryStatusDetails(int index) {
+    return primaryStatusDetails_.get(index);
+  }
+  /**
+   * <pre>
+   * Output only. Provides the details of the primary status and its associated
+   * reasons.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails primary_status_details = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetailsOrBuilder getPrimaryStatusDetailsOrBuilder(
+      int index) {
+    return primaryStatusDetails_.get(index);
+  }
+
   public static final int PERFORMANCE_LABEL_FIELD_NUMBER = 6;
   private int performanceLabel_ = 0;
   /**
@@ -328,6 +516,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    getSerializedSize();
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
@@ -348,6 +537,19 @@ private static final long serialVersionUID = 0L;
     }
     if (policySummary_ != null) {
       output.writeMessage(7, getPolicySummary());
+    }
+    if (primaryStatus_ != com.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusEnum.AssetLinkPrimaryStatus.UNSPECIFIED.getNumber()) {
+      output.writeEnum(8, primaryStatus_);
+    }
+    if (getPrimaryStatusReasonsList().size() > 0) {
+      output.writeUInt32NoTag(74);
+      output.writeUInt32NoTag(primaryStatusReasonsMemoizedSerializedSize);
+    }
+    for (int i = 0; i < primaryStatusReasons_.size(); i++) {
+      output.writeEnumNoTag(primaryStatusReasons_.get(i));
+    }
+    for (int i = 0; i < primaryStatusDetails_.size(); i++) {
+      output.writeMessage(10, primaryStatusDetails_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -383,6 +585,26 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getPolicySummary());
     }
+    if (primaryStatus_ != com.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusEnum.AssetLinkPrimaryStatus.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(8, primaryStatus_);
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < primaryStatusReasons_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeEnumSizeNoTag(primaryStatusReasons_.get(i));
+      }
+      size += dataSize;
+      if (!getPrimaryStatusReasonsList().isEmpty()) {  size += 1;
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32SizeNoTag(dataSize);
+      }primaryStatusReasonsMemoizedSerializedSize = dataSize;
+    }
+    for (int i = 0; i < primaryStatusDetails_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, primaryStatusDetails_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -406,6 +628,10 @@ private static final long serialVersionUID = 0L;
         .equals(other.getAsset())) return false;
     if (fieldType_ != other.fieldType_) return false;
     if (status_ != other.status_) return false;
+    if (primaryStatus_ != other.primaryStatus_) return false;
+    if (!primaryStatusReasons_.equals(other.primaryStatusReasons_)) return false;
+    if (!getPrimaryStatusDetailsList()
+        .equals(other.getPrimaryStatusDetailsList())) return false;
     if (performanceLabel_ != other.performanceLabel_) return false;
     if (hasPolicySummary() != other.hasPolicySummary()) return false;
     if (hasPolicySummary()) {
@@ -433,6 +659,16 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + fieldType_;
     hash = (37 * hash) + STATUS_FIELD_NUMBER;
     hash = (53 * hash) + status_;
+    hash = (37 * hash) + PRIMARY_STATUS_FIELD_NUMBER;
+    hash = (53 * hash) + primaryStatus_;
+    if (getPrimaryStatusReasonsCount() > 0) {
+      hash = (37 * hash) + PRIMARY_STATUS_REASONS_FIELD_NUMBER;
+      hash = (53 * hash) + primaryStatusReasons_.hashCode();
+    }
+    if (getPrimaryStatusDetailsCount() > 0) {
+      hash = (37 * hash) + PRIMARY_STATUS_DETAILS_FIELD_NUMBER;
+      hash = (53 * hash) + getPrimaryStatusDetailsList().hashCode();
+    }
     hash = (37 * hash) + PERFORMANCE_LABEL_FIELD_NUMBER;
     hash = (53 * hash) + performanceLabel_;
     if (hasPolicySummary()) {
@@ -580,6 +816,16 @@ private static final long serialVersionUID = 0L;
       asset_ = "";
       fieldType_ = 0;
       status_ = 0;
+      primaryStatus_ = 0;
+      primaryStatusReasons_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000040);
+      if (primaryStatusDetailsBuilder_ == null) {
+        primaryStatusDetails_ = java.util.Collections.emptyList();
+      } else {
+        primaryStatusDetails_ = null;
+        primaryStatusDetailsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000080);
       performanceLabel_ = 0;
       policySummary_ = null;
       if (policySummaryBuilder_ != null) {
@@ -612,9 +858,27 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v14.resources.AssetGroupAsset buildPartial() {
       com.google.ads.googleads.v14.resources.AssetGroupAsset result = new com.google.ads.googleads.v14.resources.AssetGroupAsset(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.google.ads.googleads.v14.resources.AssetGroupAsset result) {
+      if (((bitField0_ & 0x00000040) != 0)) {
+        primaryStatusReasons_ = java.util.Collections.unmodifiableList(primaryStatusReasons_);
+        bitField0_ = (bitField0_ & ~0x00000040);
+      }
+      result.primaryStatusReasons_ = primaryStatusReasons_;
+      if (primaryStatusDetailsBuilder_ == null) {
+        if (((bitField0_ & 0x00000080) != 0)) {
+          primaryStatusDetails_ = java.util.Collections.unmodifiableList(primaryStatusDetails_);
+          bitField0_ = (bitField0_ & ~0x00000080);
+        }
+        result.primaryStatusDetails_ = primaryStatusDetails_;
+      } else {
+        result.primaryStatusDetails_ = primaryStatusDetailsBuilder_.build();
+      }
     }
 
     private void buildPartial0(com.google.ads.googleads.v14.resources.AssetGroupAsset result) {
@@ -635,9 +899,12 @@ private static final long serialVersionUID = 0L;
         result.status_ = status_;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.primaryStatus_ = primaryStatus_;
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
         result.performanceLabel_ = performanceLabel_;
       }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
+      if (((from_bitField0_ & 0x00000200) != 0)) {
         result.policySummary_ = policySummaryBuilder_ == null
             ? policySummary_
             : policySummaryBuilder_.build();
@@ -709,6 +976,45 @@ private static final long serialVersionUID = 0L;
       if (other.status_ != 0) {
         setStatusValue(other.getStatusValue());
       }
+      if (other.primaryStatus_ != 0) {
+        setPrimaryStatusValue(other.getPrimaryStatusValue());
+      }
+      if (!other.primaryStatusReasons_.isEmpty()) {
+        if (primaryStatusReasons_.isEmpty()) {
+          primaryStatusReasons_ = other.primaryStatusReasons_;
+          bitField0_ = (bitField0_ & ~0x00000040);
+        } else {
+          ensurePrimaryStatusReasonsIsMutable();
+          primaryStatusReasons_.addAll(other.primaryStatusReasons_);
+        }
+        onChanged();
+      }
+      if (primaryStatusDetailsBuilder_ == null) {
+        if (!other.primaryStatusDetails_.isEmpty()) {
+          if (primaryStatusDetails_.isEmpty()) {
+            primaryStatusDetails_ = other.primaryStatusDetails_;
+            bitField0_ = (bitField0_ & ~0x00000080);
+          } else {
+            ensurePrimaryStatusDetailsIsMutable();
+            primaryStatusDetails_.addAll(other.primaryStatusDetails_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.primaryStatusDetails_.isEmpty()) {
+          if (primaryStatusDetailsBuilder_.isEmpty()) {
+            primaryStatusDetailsBuilder_.dispose();
+            primaryStatusDetailsBuilder_ = null;
+            primaryStatusDetails_ = other.primaryStatusDetails_;
+            bitField0_ = (bitField0_ & ~0x00000080);
+            primaryStatusDetailsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getPrimaryStatusDetailsFieldBuilder() : null;
+          } else {
+            primaryStatusDetailsBuilder_.addAllMessages(other.primaryStatusDetails_);
+          }
+        }
+      }
       if (other.performanceLabel_ != 0) {
         setPerformanceLabelValue(other.getPerformanceLabelValue());
       }
@@ -768,16 +1074,51 @@ private static final long serialVersionUID = 0L;
             } // case 40
             case 48: {
               performanceLabel_ = input.readEnum();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000100;
               break;
             } // case 48
             case 58: {
               input.readMessage(
                   getPolicySummaryFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000200;
               break;
             } // case 58
+            case 64: {
+              primaryStatus_ = input.readEnum();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 64
+            case 72: {
+              int tmpRaw = input.readEnum();
+              ensurePrimaryStatusReasonsIsMutable();
+              primaryStatusReasons_.add(tmpRaw);
+              break;
+            } // case 72
+            case 74: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int tmpRaw = input.readEnum();
+                ensurePrimaryStatusReasonsIsMutable();
+                primaryStatusReasons_.add(tmpRaw);
+              }
+              input.popLimit(oldLimit);
+              break;
+            } // case 74
+            case 82: {
+              com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails m =
+                  input.readMessage(
+                      com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails.parser(),
+                      extensionRegistry);
+              if (primaryStatusDetailsBuilder_ == null) {
+                ensurePrimaryStatusDetailsIsMutable();
+                primaryStatusDetails_.add(m);
+              } else {
+                primaryStatusDetailsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 82
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1237,6 +1578,634 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private int primaryStatus_ = 0;
+    /**
+     * <pre>
+     * Output only. Provides the PrimaryStatus of this asset link.
+     * Primary status is meant essentially to differentiate between the plain
+     * "status" field, which has advertiser set values of enabled, paused, or
+     * removed.  The primary status takes into account other signals (for assets
+     * its mainly policy and quality approvals) to come up with a more
+     * comprehensive status to indicate its serving state.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusEnum.AssetLinkPrimaryStatus primary_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for primaryStatus.
+     */
+    @java.lang.Override public int getPrimaryStatusValue() {
+      return primaryStatus_;
+    }
+    /**
+     * <pre>
+     * Output only. Provides the PrimaryStatus of this asset link.
+     * Primary status is meant essentially to differentiate between the plain
+     * "status" field, which has advertiser set values of enabled, paused, or
+     * removed.  The primary status takes into account other signals (for assets
+     * its mainly policy and quality approvals) to come up with a more
+     * comprehensive status to indicate its serving state.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusEnum.AssetLinkPrimaryStatus primary_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for primaryStatus to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPrimaryStatusValue(int value) {
+      primaryStatus_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Provides the PrimaryStatus of this asset link.
+     * Primary status is meant essentially to differentiate between the plain
+     * "status" field, which has advertiser set values of enabled, paused, or
+     * removed.  The primary status takes into account other signals (for assets
+     * its mainly policy and quality approvals) to come up with a more
+     * comprehensive status to indicate its serving state.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusEnum.AssetLinkPrimaryStatus primary_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The primaryStatus.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusEnum.AssetLinkPrimaryStatus getPrimaryStatus() {
+      com.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusEnum.AssetLinkPrimaryStatus result = com.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusEnum.AssetLinkPrimaryStatus.forNumber(primaryStatus_);
+      return result == null ? com.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusEnum.AssetLinkPrimaryStatus.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Output only. Provides the PrimaryStatus of this asset link.
+     * Primary status is meant essentially to differentiate between the plain
+     * "status" field, which has advertiser set values of enabled, paused, or
+     * removed.  The primary status takes into account other signals (for assets
+     * its mainly policy and quality approvals) to come up with a more
+     * comprehensive status to indicate its serving state.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusEnum.AssetLinkPrimaryStatus primary_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The primaryStatus to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPrimaryStatus(com.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusEnum.AssetLinkPrimaryStatus value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000020;
+      primaryStatus_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Provides the PrimaryStatus of this asset link.
+     * Primary status is meant essentially to differentiate between the plain
+     * "status" field, which has advertiser set values of enabled, paused, or
+     * removed.  The primary status takes into account other signals (for assets
+     * its mainly policy and quality approvals) to come up with a more
+     * comprehensive status to indicate its serving state.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusEnum.AssetLinkPrimaryStatus primary_status = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPrimaryStatus() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      primaryStatus_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<java.lang.Integer> primaryStatusReasons_ =
+      java.util.Collections.emptyList();
+    private void ensurePrimaryStatusReasonsIsMutable() {
+      if (!((bitField0_ & 0x00000040) != 0)) {
+        primaryStatusReasons_ = new java.util.ArrayList<java.lang.Integer>(primaryStatusReasons_);
+        bitField0_ |= 0x00000040;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. Provides a list of reasons for why an asset is not serving or
+     * not serving at full capacity.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason primary_status_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return A list containing the primaryStatusReasons.
+     */
+    public java.util.List<com.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason> getPrimaryStatusReasonsList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason>(primaryStatusReasons_, primaryStatusReasons_converter_);
+    }
+    /**
+     * <pre>
+     * Output only. Provides a list of reasons for why an asset is not serving or
+     * not serving at full capacity.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason primary_status_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The count of primaryStatusReasons.
+     */
+    public int getPrimaryStatusReasonsCount() {
+      return primaryStatusReasons_.size();
+    }
+    /**
+     * <pre>
+     * Output only. Provides a list of reasons for why an asset is not serving or
+     * not serving at full capacity.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason primary_status_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param index The index of the element to return.
+     * @return The primaryStatusReasons at the given index.
+     */
+    public com.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason getPrimaryStatusReasons(int index) {
+      return primaryStatusReasons_converter_.convert(primaryStatusReasons_.get(index));
+    }
+    /**
+     * <pre>
+     * Output only. Provides a list of reasons for why an asset is not serving or
+     * not serving at full capacity.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason primary_status_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param index The index to set the value at.
+     * @param value The primaryStatusReasons to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPrimaryStatusReasons(
+        int index, com.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensurePrimaryStatusReasonsIsMutable();
+      primaryStatusReasons_.set(index, value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Provides a list of reasons for why an asset is not serving or
+     * not serving at full capacity.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason primary_status_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The primaryStatusReasons to add.
+     * @return This builder for chaining.
+     */
+    public Builder addPrimaryStatusReasons(com.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      ensurePrimaryStatusReasonsIsMutable();
+      primaryStatusReasons_.add(value.getNumber());
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Provides a list of reasons for why an asset is not serving or
+     * not serving at full capacity.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason primary_status_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param values The primaryStatusReasons to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllPrimaryStatusReasons(
+        java.lang.Iterable<? extends com.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason> values) {
+      ensurePrimaryStatusReasonsIsMutable();
+      for (com.google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason value : values) {
+        primaryStatusReasons_.add(value.getNumber());
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Provides a list of reasons for why an asset is not serving or
+     * not serving at full capacity.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason primary_status_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPrimaryStatusReasons() {
+      primaryStatusReasons_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000040);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Provides a list of reasons for why an asset is not serving or
+     * not serving at full capacity.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason primary_status_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return A list containing the enum numeric values on the wire for primaryStatusReasons.
+     */
+    public java.util.List<java.lang.Integer>
+    getPrimaryStatusReasonsValueList() {
+      return java.util.Collections.unmodifiableList(primaryStatusReasons_);
+    }
+    /**
+     * <pre>
+     * Output only. Provides a list of reasons for why an asset is not serving or
+     * not serving at full capacity.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason primary_status_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of primaryStatusReasons at the given index.
+     */
+    public int getPrimaryStatusReasonsValue(int index) {
+      return primaryStatusReasons_.get(index);
+    }
+    /**
+     * <pre>
+     * Output only. Provides a list of reasons for why an asset is not serving or
+     * not serving at full capacity.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason primary_status_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for primaryStatusReasons to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPrimaryStatusReasonsValue(
+        int index, int value) {
+      ensurePrimaryStatusReasonsIsMutable();
+      primaryStatusReasons_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Provides a list of reasons for why an asset is not serving or
+     * not serving at full capacity.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason primary_status_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for primaryStatusReasons to add.
+     * @return This builder for chaining.
+     */
+    public Builder addPrimaryStatusReasonsValue(int value) {
+      ensurePrimaryStatusReasonsIsMutable();
+      primaryStatusReasons_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Provides a list of reasons for why an asset is not serving or
+     * not serving at full capacity.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.enums.AssetLinkPrimaryStatusReasonEnum.AssetLinkPrimaryStatusReason primary_status_reasons = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param values The enum numeric values on the wire for primaryStatusReasons to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllPrimaryStatusReasonsValue(
+        java.lang.Iterable<java.lang.Integer> values) {
+      ensurePrimaryStatusReasonsIsMutable();
+      for (int value : values) {
+        primaryStatusReasons_.add(value);
+      }
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails> primaryStatusDetails_ =
+      java.util.Collections.emptyList();
+    private void ensurePrimaryStatusDetailsIsMutable() {
+      if (!((bitField0_ & 0x00000080) != 0)) {
+        primaryStatusDetails_ = new java.util.ArrayList<com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails>(primaryStatusDetails_);
+        bitField0_ |= 0x00000080;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails, com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails.Builder, com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetailsOrBuilder> primaryStatusDetailsBuilder_;
+
+    /**
+     * <pre>
+     * Output only. Provides the details of the primary status and its associated
+     * reasons.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails primary_status_details = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public java.util.List<com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails> getPrimaryStatusDetailsList() {
+      if (primaryStatusDetailsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(primaryStatusDetails_);
+      } else {
+        return primaryStatusDetailsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. Provides the details of the primary status and its associated
+     * reasons.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails primary_status_details = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public int getPrimaryStatusDetailsCount() {
+      if (primaryStatusDetailsBuilder_ == null) {
+        return primaryStatusDetails_.size();
+      } else {
+        return primaryStatusDetailsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. Provides the details of the primary status and its associated
+     * reasons.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails primary_status_details = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails getPrimaryStatusDetails(int index) {
+      if (primaryStatusDetailsBuilder_ == null) {
+        return primaryStatusDetails_.get(index);
+      } else {
+        return primaryStatusDetailsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Output only. Provides the details of the primary status and its associated
+     * reasons.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails primary_status_details = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setPrimaryStatusDetails(
+        int index, com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails value) {
+      if (primaryStatusDetailsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePrimaryStatusDetailsIsMutable();
+        primaryStatusDetails_.set(index, value);
+        onChanged();
+      } else {
+        primaryStatusDetailsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Provides the details of the primary status and its associated
+     * reasons.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails primary_status_details = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setPrimaryStatusDetails(
+        int index, com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails.Builder builderForValue) {
+      if (primaryStatusDetailsBuilder_ == null) {
+        ensurePrimaryStatusDetailsIsMutable();
+        primaryStatusDetails_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        primaryStatusDetailsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Provides the details of the primary status and its associated
+     * reasons.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails primary_status_details = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder addPrimaryStatusDetails(com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails value) {
+      if (primaryStatusDetailsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePrimaryStatusDetailsIsMutable();
+        primaryStatusDetails_.add(value);
+        onChanged();
+      } else {
+        primaryStatusDetailsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Provides the details of the primary status and its associated
+     * reasons.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails primary_status_details = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder addPrimaryStatusDetails(
+        int index, com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails value) {
+      if (primaryStatusDetailsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePrimaryStatusDetailsIsMutable();
+        primaryStatusDetails_.add(index, value);
+        onChanged();
+      } else {
+        primaryStatusDetailsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Provides the details of the primary status and its associated
+     * reasons.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails primary_status_details = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder addPrimaryStatusDetails(
+        com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails.Builder builderForValue) {
+      if (primaryStatusDetailsBuilder_ == null) {
+        ensurePrimaryStatusDetailsIsMutable();
+        primaryStatusDetails_.add(builderForValue.build());
+        onChanged();
+      } else {
+        primaryStatusDetailsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Provides the details of the primary status and its associated
+     * reasons.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails primary_status_details = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder addPrimaryStatusDetails(
+        int index, com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails.Builder builderForValue) {
+      if (primaryStatusDetailsBuilder_ == null) {
+        ensurePrimaryStatusDetailsIsMutable();
+        primaryStatusDetails_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        primaryStatusDetailsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Provides the details of the primary status and its associated
+     * reasons.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails primary_status_details = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder addAllPrimaryStatusDetails(
+        java.lang.Iterable<? extends com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails> values) {
+      if (primaryStatusDetailsBuilder_ == null) {
+        ensurePrimaryStatusDetailsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, primaryStatusDetails_);
+        onChanged();
+      } else {
+        primaryStatusDetailsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Provides the details of the primary status and its associated
+     * reasons.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails primary_status_details = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder clearPrimaryStatusDetails() {
+      if (primaryStatusDetailsBuilder_ == null) {
+        primaryStatusDetails_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+      } else {
+        primaryStatusDetailsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Provides the details of the primary status and its associated
+     * reasons.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails primary_status_details = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder removePrimaryStatusDetails(int index) {
+      if (primaryStatusDetailsBuilder_ == null) {
+        ensurePrimaryStatusDetailsIsMutable();
+        primaryStatusDetails_.remove(index);
+        onChanged();
+      } else {
+        primaryStatusDetailsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Provides the details of the primary status and its associated
+     * reasons.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails primary_status_details = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails.Builder getPrimaryStatusDetailsBuilder(
+        int index) {
+      return getPrimaryStatusDetailsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Output only. Provides the details of the primary status and its associated
+     * reasons.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails primary_status_details = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetailsOrBuilder getPrimaryStatusDetailsOrBuilder(
+        int index) {
+      if (primaryStatusDetailsBuilder_ == null) {
+        return primaryStatusDetails_.get(index);  } else {
+        return primaryStatusDetailsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Output only. Provides the details of the primary status and its associated
+     * reasons.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails primary_status_details = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public java.util.List<? extends com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetailsOrBuilder> 
+         getPrimaryStatusDetailsOrBuilderList() {
+      if (primaryStatusDetailsBuilder_ != null) {
+        return primaryStatusDetailsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(primaryStatusDetails_);
+      }
+    }
+    /**
+     * <pre>
+     * Output only. Provides the details of the primary status and its associated
+     * reasons.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails primary_status_details = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails.Builder addPrimaryStatusDetailsBuilder() {
+      return getPrimaryStatusDetailsFieldBuilder().addBuilder(
+          com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Output only. Provides the details of the primary status and its associated
+     * reasons.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails primary_status_details = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails.Builder addPrimaryStatusDetailsBuilder(
+        int index) {
+      return getPrimaryStatusDetailsFieldBuilder().addBuilder(
+          index, com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Output only. Provides the details of the primary status and its associated
+     * reasons.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails primary_status_details = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public java.util.List<com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails.Builder> 
+         getPrimaryStatusDetailsBuilderList() {
+      return getPrimaryStatusDetailsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails, com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails.Builder, com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetailsOrBuilder> 
+        getPrimaryStatusDetailsFieldBuilder() {
+      if (primaryStatusDetailsBuilder_ == null) {
+        primaryStatusDetailsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails, com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetails.Builder, com.google.ads.googleads.v14.common.AssetLinkPrimaryStatusDetailsOrBuilder>(
+                primaryStatusDetails_,
+                ((bitField0_ & 0x00000080) != 0),
+                getParentForChildren(),
+                isClean());
+        primaryStatusDetails_ = null;
+      }
+      return primaryStatusDetailsBuilder_;
+    }
+
     private int performanceLabel_ = 0;
     /**
      * <pre>
@@ -1260,7 +2229,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setPerformanceLabelValue(int value) {
       performanceLabel_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -1290,7 +2259,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000100;
       performanceLabel_ = value.getNumber();
       onChanged();
       return this;
@@ -1304,7 +2273,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearPerformanceLabel() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000100);
       performanceLabel_ = 0;
       onChanged();
       return this;
@@ -1322,7 +2291,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the policySummary field is set.
      */
     public boolean hasPolicySummary() {
-      return ((bitField0_ & 0x00000040) != 0);
+      return ((bitField0_ & 0x00000200) != 0);
     }
     /**
      * <pre>
@@ -1355,7 +2324,7 @@ private static final long serialVersionUID = 0L;
       } else {
         policySummaryBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1373,7 +2342,7 @@ private static final long serialVersionUID = 0L;
       } else {
         policySummaryBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1386,7 +2355,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergePolicySummary(com.google.ads.googleads.v14.common.PolicySummary value) {
       if (policySummaryBuilder_ == null) {
-        if (((bitField0_ & 0x00000040) != 0) &&
+        if (((bitField0_ & 0x00000200) != 0) &&
           policySummary_ != null &&
           policySummary_ != com.google.ads.googleads.v14.common.PolicySummary.getDefaultInstance()) {
           getPolicySummaryBuilder().mergeFrom(value);
@@ -1396,7 +2365,7 @@ private static final long serialVersionUID = 0L;
       } else {
         policySummaryBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -1408,7 +2377,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.common.PolicySummary policy_summary = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearPolicySummary() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000200);
       policySummary_ = null;
       if (policySummaryBuilder_ != null) {
         policySummaryBuilder_.dispose();
@@ -1425,7 +2394,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v14.common.PolicySummary policy_summary = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.ads.googleads.v14.common.PolicySummary.Builder getPolicySummaryBuilder() {
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000200;
       onChanged();
       return getPolicySummaryFieldBuilder().getBuilder();
     }

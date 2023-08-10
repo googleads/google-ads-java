@@ -310,6 +310,14 @@ private static final long serialVersionUID = 0L;
      * <code>TRAVEL_AD = 37;</code>
      */
     TRAVEL_AD(37),
+    /**
+     * <pre>
+     * Discovery video responsive ad.
+     * </pre>
+     *
+     * <code>DISCOVERY_VIDEO_RESPONSIVE_AD = 38;</code>
+     */
+    DISCOVERY_VIDEO_RESPONSIVE_AD(38),
     UNRECOGNIZED(-1),
     ;
 
@@ -572,6 +580,14 @@ private static final long serialVersionUID = 0L;
      * <code>TRAVEL_AD = 37;</code>
      */
     public static final int TRAVEL_AD_VALUE = 37;
+    /**
+     * <pre>
+     * Discovery video responsive ad.
+     * </pre>
+     *
+     * <code>DISCOVERY_VIDEO_RESPONSIVE_AD = 38;</code>
+     */
+    public static final int DISCOVERY_VIDEO_RESPONSIVE_AD_VALUE = 38;
 
 
     public final int getNumber() {
@@ -630,6 +646,7 @@ private static final long serialVersionUID = 0L;
         case 35: return DISCOVERY_MULTI_ASSET_AD;
         case 36: return DISCOVERY_CAROUSEL_AD;
         case 37: return TRAVEL_AD;
+        case 38: return DISCOVERY_VIDEO_RESPONSIVE_AD;
         default: return null;
       }
     }

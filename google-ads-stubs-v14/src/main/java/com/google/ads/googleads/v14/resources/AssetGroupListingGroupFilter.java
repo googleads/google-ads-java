@@ -309,6 +309,44 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int PATH_FIELD_NUMBER = 8;
+  private com.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPath path_;
+  /**
+   * <pre>
+   * Output only. The path of dimensions defining this listing group filter.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPath path = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the path field is set.
+   */
+  @java.lang.Override
+  public boolean hasPath() {
+    return path_ != null;
+  }
+  /**
+   * <pre>
+   * Output only. The path of dimensions defining this listing group filter.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPath path = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The path.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPath getPath() {
+    return path_ == null ? com.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPath.getDefaultInstance() : path_;
+  }
+  /**
+   * <pre>
+   * Output only. The path of dimensions defining this listing group filter.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPath path = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPathOrBuilder getPathOrBuilder() {
+    return path_ == null ? com.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPath.getDefaultInstance() : path_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -344,6 +382,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(parentListingGroupFilter_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, parentListingGroupFilter_);
     }
+    if (path_ != null) {
+      output.writeMessage(8, getPath());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -378,6 +419,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(parentListingGroupFilter_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, parentListingGroupFilter_);
     }
+    if (path_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(8, getPath());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -408,6 +453,11 @@ private static final long serialVersionUID = 0L;
     }
     if (!getParentListingGroupFilter()
         .equals(other.getParentListingGroupFilter())) return false;
+    if (hasPath() != other.hasPath()) return false;
+    if (hasPath()) {
+      if (!getPath()
+          .equals(other.getPath())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -436,6 +486,10 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + PARENT_LISTING_GROUP_FILTER_FIELD_NUMBER;
     hash = (53 * hash) + getParentListingGroupFilter().hashCode();
+    if (hasPath()) {
+      hash = (37 * hash) + PATH_FIELD_NUMBER;
+      hash = (53 * hash) + getPath().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -583,6 +637,11 @@ private static final long serialVersionUID = 0L;
         caseValueBuilder_ = null;
       }
       parentListingGroupFilter_ = "";
+      path_ = null;
+      if (pathBuilder_ != null) {
+        pathBuilder_.dispose();
+        pathBuilder_ = null;
+      }
       return this;
     }
 
@@ -638,6 +697,11 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.parentListingGroupFilter_ = parentListingGroupFilter_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
+        result.path_ = pathBuilder_ == null
+            ? path_
+            : pathBuilder_.build();
       }
     }
 
@@ -712,6 +776,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000040;
         onChanged();
       }
+      if (other.hasPath()) {
+        mergePath(other.getPath());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -775,6 +842,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000040;
               break;
             } // case 58
+            case 66: {
+              input.readMessage(
+                  getPathFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 66
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1450,6 +1524,161 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000040;
       onChanged();
       return this;
+    }
+
+    private com.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPath path_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPath, com.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPath.Builder, com.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPathOrBuilder> pathBuilder_;
+    /**
+     * <pre>
+     * Output only. The path of dimensions defining this listing group filter.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPath path = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the path field is set.
+     */
+    public boolean hasPath() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <pre>
+     * Output only. The path of dimensions defining this listing group filter.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPath path = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The path.
+     */
+    public com.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPath getPath() {
+      if (pathBuilder_ == null) {
+        return path_ == null ? com.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPath.getDefaultInstance() : path_;
+      } else {
+        return pathBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The path of dimensions defining this listing group filter.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPath path = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setPath(com.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPath value) {
+      if (pathBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        path_ = value;
+      } else {
+        pathBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The path of dimensions defining this listing group filter.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPath path = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setPath(
+        com.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPath.Builder builderForValue) {
+      if (pathBuilder_ == null) {
+        path_ = builderForValue.build();
+      } else {
+        pathBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The path of dimensions defining this listing group filter.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPath path = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder mergePath(com.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPath value) {
+      if (pathBuilder_ == null) {
+        if (((bitField0_ & 0x00000080) != 0) &&
+          path_ != null &&
+          path_ != com.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPath.getDefaultInstance()) {
+          getPathBuilder().mergeFrom(value);
+        } else {
+          path_ = value;
+        }
+      } else {
+        pathBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The path of dimensions defining this listing group filter.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPath path = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder clearPath() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      path_ = null;
+      if (pathBuilder_ != null) {
+        pathBuilder_.dispose();
+        pathBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The path of dimensions defining this listing group filter.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPath path = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPath.Builder getPathBuilder() {
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return getPathFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Output only. The path of dimensions defining this listing group filter.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPath path = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPathOrBuilder getPathOrBuilder() {
+      if (pathBuilder_ != null) {
+        return pathBuilder_.getMessageOrBuilder();
+      } else {
+        return path_ == null ?
+            com.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPath.getDefaultInstance() : path_;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The path of dimensions defining this listing group filter.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPath path = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPath, com.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPath.Builder, com.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPathOrBuilder> 
+        getPathFieldBuilder() {
+      if (pathBuilder_ == null) {
+        pathBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPath, com.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPath.Builder, com.google.ads.googleads.v14.resources.ListingGroupFilterDimensionPathOrBuilder>(
+                getPath(),
+                getParentForChildren(),
+                isClean());
+        path_ = null;
+      }
+      return pathBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -5,7 +5,8 @@ package com.google.ads.googleads.v14.services;
 
 /**
  * <pre>
- * Request message for [AudienceInsightsService.ListAudienceInsightsDates][].
+ * Request message for
+ * [AudienceInsightsService.ListInsightsEligibleDates][google.ads.googleads.v14.services.AudienceInsightsService.ListInsightsEligibleDates].
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v14.services.ListInsightsEligibleDatesRequest}
@@ -190,7 +191,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Request message for [AudienceInsightsService.ListAudienceInsightsDates][].
+   * Request message for
+   * [AudienceInsightsService.ListInsightsEligibleDates][google.ads.googleads.v14.services.AudienceInsightsService.ListInsightsEligibleDates].
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v14.services.ListInsightsEligibleDatesRequest}

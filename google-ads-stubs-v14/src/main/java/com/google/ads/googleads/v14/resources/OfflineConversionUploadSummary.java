@@ -6,7 +6,6 @@ package com.google.ads.googleads.v14.resources;
 /**
  * <pre>
  * Historical upload summary, grouped by upload date or job.
- * Next tag: 5
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v14.resources.OfflineConversionUploadSummary}
@@ -422,7 +421,6 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Historical upload summary, grouped by upload date or job.
-   * Next tag: 5
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v14.resources.OfflineConversionUploadSummary}

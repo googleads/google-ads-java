@@ -10174,7 +10174,6 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Scope to apply the assets to.
-     * Next ID: 4
      * </pre>
      *
      * Protobuf enum {@code google.ads.googleads.v14.services.ApplyRecommendationOperation.AdAssetApplyParameters.ApplyScope}
