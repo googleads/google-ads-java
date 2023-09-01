@@ -28,7 +28,7 @@ import static nl.javadude.gradle.plugins.license.DownloadLicensesExtension.licen
 plugins {
     id 'com.google.api-ads.java-conventions'
     id 'com.google.protobuf' version '0.8.15'
-    id "com.github.hierynomus.license-report" version "0.15.0"
+    id "com.github.hierynomus.license-report" version "0.16.1"
 }
 
 description = 'Google Ads API client library for Java'
