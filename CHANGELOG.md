@@ -1,3 +1,9 @@
+27.0.0 - 2023-09-21
+-------------------
+- Remove support for v12 of Google Ads API.
+- Update to version 3.14.0 of
+  `com.google.cloud:google-cloud-shared-dependencies`.
+
 26.1.0 - 2023-08-10
 -------------------
 - Add support and examples for Google Ads API v14.1.

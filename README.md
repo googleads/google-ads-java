@@ -13,22 +13,17 @@ This project hosts the Java client library for the Google Ads API.
   * Java 1.8+
   * Maven 3.0+
 
-## Compatible dependencies
-
-  * [Protobuf](https://github.com/protocolbuffers/protobuf) 3.19.6+
-  * [Guava](https://github.com/google/guava) 31.0.1+
-
 ## Maven artifacts
 
     <dependency>
       <groupId>com.google.api-ads</groupId>
       <artifactId>google-ads</artifactId>
-      <version>26.1.0</version>
+      <version>27.0.0</version>
     </dependency>
 
 ## Gradle dependency
 
-    implementation 'com.google.api-ads:google-ads:26.1.0'
+    implementation 'com.google.api-ads:google-ads:27.0.0'
 
 ## Documentation
 
