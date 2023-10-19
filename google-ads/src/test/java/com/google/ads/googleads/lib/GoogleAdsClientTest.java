@@ -20,6 +20,7 @@ import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
+import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
@@ -27,16 +28,16 @@ import com.google.ads.googleads.lib.GoogleAdsClient.Builder;
 import com.google.ads.googleads.lib.GoogleAdsClient.Builder.AdsEnvironmentVariable;
 import com.google.ads.googleads.lib.GoogleAdsClient.Builder.ConfigPropertyKey;
 import com.google.ads.googleads.lib.catalog.ApiCatalog;
-import com.google.ads.googleads.v14.errors.GoogleAdsError;
-import com.google.ads.googleads.v14.errors.GoogleAdsException;
-import com.google.ads.googleads.v14.errors.GoogleAdsFailure;
-import com.google.ads.googleads.v14.services.GoogleAdsRow;
-import com.google.ads.googleads.v14.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v14.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v14.services.MockGoogleAdsService;
-import com.google.ads.googleads.v14.services.SearchGoogleAdsResponse;
-import com.google.ads.googleads.v14.services.SearchGoogleAdsStreamRequest;
-import com.google.ads.googleads.v14.services.SearchGoogleAdsStreamResponse;
+import com.google.ads.googleads.v15.errors.GoogleAdsError;
+import com.google.ads.googleads.v15.errors.GoogleAdsException;
+import com.google.ads.googleads.v15.errors.GoogleAdsFailure;
+import com.google.ads.googleads.v15.services.GoogleAdsRow;
+import com.google.ads.googleads.v15.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v15.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v15.services.MockGoogleAdsService;
+import com.google.ads.googleads.v15.services.SearchGoogleAdsResponse;
+import com.google.ads.googleads.v15.services.SearchGoogleAdsStreamRequest;
+import com.google.ads.googleads.v15.services.SearchGoogleAdsStreamResponse;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.GrpcStatusCode;
 import com.google.api.gax.grpc.InstantiatingGrpcChannelProvider;
@@ -173,6 +174,59 @@ public class GoogleAdsClientTest {
     GoogleAdsClient client =
         GoogleAdsClient.newBuilder().fromPropertiesFile(propertiesFile).build();
     assertGoogleAdsClient(client, true);
+  }
+
+  /**
+   * Tests building a client from a properties file that does not contain an entry for the developer
+   * token property.
+   */
+  @Test
+  public void testBuildFromPropertiesFile_withoutDeveloperToken_withUseCloudOrgForApiAccess()
+      throws IOException {
+    // Create a properties file in the temporary folder.
+    File propertiesFile = folder.newFile("ads.properties");
+    // Remove the developer token property.
+    testProperties.remove(ConfigPropertyKey.DEVELOPER_TOKEN.getPropertyKey());
+    try (FileWriter propertiesFileWriter = new FileWriter(propertiesFile)) {
+      testProperties.store(propertiesFileWriter, null);
+    }
+
+    // Build a new client from the file.
+    GoogleAdsClient client =
+        GoogleAdsClient.newBuilder()
+            .fromPropertiesFile(propertiesFile)
+            .setUseCloudOrgForApiAccess(true)
+            .build();
+    assertGoogleAdsClient(client, LOGIN_CUSTOMER_ID, true);
+  }
+
+  /** Tests that clients can only use exactly one of dev token or Cloud org for API access. */
+  @Test
+  public void testDevTokenAndUseCloudOrgForApiAccessAreExclusive_failIfBothOrNeither() {
+    GoogleAdsClient.Builder builder = GoogleAdsClient.newBuilder().fromProperties(testProperties);
+    // Confirms developer token is set on the builder.
+    assertNotNull("dev token not set from test properties", builder.getDeveloperToken());
+    // Opts into using Cloud org for API access.
+    builder.setUseCloudOrgForApiAccess(true);
+    // Confirms build() fails.
+    Throwable exception =
+        assertThrows(
+            "Should fail when both dev token is set and using Cloud org for API access",
+            IllegalStateException.class,
+            () -> builder.build());
+    // Checks the exception message.
+    MatcherAssert.assertThat(exception.getMessage(), Matchers.containsString("not both"));
+
+    // Clears dev token and opts out of using Cloud org for API access.
+    builder.setDeveloperToken(null).setUseCloudOrgForApiAccess(false);
+    // Confirms build() fails.
+    exception =
+        assertThrows(
+            "Should fail when neither dev token is set nor using Cloud org for API access",
+            IllegalStateException.class,
+            () -> builder.build());
+    // Checks the exception message.
+    MatcherAssert.assertThat(exception.getMessage(), Matchers.containsString("not both"));
   }
 
   /**
@@ -328,6 +382,7 @@ public class GoogleAdsClientTest {
     thrown.expectMessage("both");
     builder.fromEnvironment();
   }
+
   /**
    * Verifies that a proper exception is thrown when neither refresh token nor service account
    * secrets path are specified in properties.
@@ -619,10 +674,20 @@ public class GoogleAdsClientTest {
         ConfigPropertyKey.SERVICE_ACCOUNT_USER.getPropertyKey(), SERVICE_ACCOUNT_USER);
 
     // Builds the client.
-    GoogleAdsClient client = GoogleAdsClient.newBuilder().fromProperties(testProperties).build();
+    GoogleAdsClient clientWithServiceAccountUser =
+        GoogleAdsClient.newBuilder().fromProperties(testProperties).build();
 
     // Asserts client and credentials match expectations.
-    assertGoogleAdsClient(client, false);
+    assertGoogleAdsClient(clientWithServiceAccountUser, false);
+
+    // Repeats the test above but without a service account user.
+    testProperties.remove(ConfigPropertyKey.SERVICE_ACCOUNT_USER);
+    // Builds the client.
+    GoogleAdsClient clientWithoutServiceAccountUser =
+        GoogleAdsClient.newBuilder().fromProperties(testProperties).build();
+
+    // Asserts client and credentials match expectations.
+    assertGoogleAdsClient(clientWithoutServiceAccountUser, false);
   }
 
   /**
@@ -899,7 +964,12 @@ public class GoogleAdsClientTest {
           channelProvider.toBuilder().getMaxInboundMessageSize());
     }
 
-    assertEquals("Developer token", DEVELOPER_TOKEN, client.getDeveloperToken());
+    if (client.getDeveloperToken() == null) {
+      assertTrue(
+          "Developer token is null but use cloud org is false", client.isUseCloudOrgForApiAccess());
+    } else {
+      assertEquals("developer token", DEVELOPER_TOKEN, client.getDeveloperToken());
+    }
     assertEquals("Login customer id", loginCustomerId, client.getLoginCustomerId());
   }
 

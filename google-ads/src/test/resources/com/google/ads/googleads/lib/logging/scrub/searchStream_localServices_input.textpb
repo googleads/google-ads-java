@@ -1,0 +1,20 @@
+results {
+  local_services_lead {
+    contact_details {
+      phone_number: "+1 800 5550102"
+      email: "alex.2@example.com"
+      consumer_name: "Alex Quinn"
+    }
+  }
+  local_services_lead_conversation {
+    conversation_channel: SMS
+    id: 123456789
+    message_details: {
+      text: "foo bar"
+    }
+
+  }
+}
+field_mask {
+  paths: ["local_services_lead.contact_details.phone_number", "local_services_lead.contact_details.email", "local_services_lead.contact_details.consumer_name", "local_services_lead_conversation.conversation_channel", "local_services_lead_conversation.id", "local_services_lead_conversation.message_details.text"]
+}

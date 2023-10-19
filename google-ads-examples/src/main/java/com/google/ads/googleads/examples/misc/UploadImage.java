@@ -34,7 +34,17 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Arrays;
 
-/** Uploads an image. */
+/**
+ * Uploads an image.
+ *
+ * <p>This code example uses version v14 of the Google Ads API. Google Ads is migrating from
+ * individual media files to assets, and version v15 of the API removed support for MediaFileService
+ * as part of this migration. Once your Ads account is migrated, this code example will stop
+ * working, and you should use {@link UploadImageAsset} instead. This code example will be removed
+ * once the migration completes. See
+ * https://ads-developers.googleblog.com/2023/07/image-and-location-auto-migration.html for more
+ * details.
+ */
 public class UploadImage {
 
   private static class UploadImageParams extends CodeSampleParams {
@@ -91,7 +101,8 @@ public class UploadImage {
    */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId) throws IOException {
 
-    byte[] imageData = ByteStreams.toByteArray(new URL("https://gaagl.page.link/Eit5").openStream());
+    byte[] imageData =
+        ByteStreams.toByteArray(new URL("https://gaagl.page.link/Eit5").openStream());
 
     MediaImage image = MediaImage.newBuilder().setData(ByteString.copyFrom(imageData)).build();
 
@@ -106,7 +117,7 @@ public class UploadImage {
     MediaFileOperation op = MediaFileOperation.newBuilder().setCreate(file).build();
 
     try (MediaFileServiceClient mediaFileServiceClient =
-        googleAdsClient.getLatestVersion().createMediaFileServiceClient()) {
+        googleAdsClient.getVersion14().createMediaFileServiceClient()) {
       MutateMediaFilesResponse response =
           mediaFileServiceClient.mutateMediaFiles(Long.toString(customerId), Arrays.asList(op));
       System.out.printf("Added %d images:%n", response.getResultsCount());

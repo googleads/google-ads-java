@@ -16,10 +16,10 @@ package com.google.ads.googleads.lib.logging.scrub;
 
 import static org.junit.Assert.assertEquals;
 
-import com.google.ads.googleads.v14.resources.CustomerUserAccessInvitation;
-import com.google.ads.googleads.v14.services.CreateCustomerClientRequest;
-import com.google.ads.googleads.v14.services.SearchGoogleAdsResponse;
-import com.google.ads.googleads.v14.services.SearchGoogleAdsStreamResponse;
+import com.google.ads.googleads.v15.resources.CustomerUserAccessInvitation;
+import com.google.ads.googleads.v15.services.CreateCustomerClientRequest;
+import com.google.ads.googleads.v15.services.SearchGoogleAdsResponse;
+import com.google.ads.googleads.v15.services.SearchGoogleAdsStreamResponse;
 import com.google.common.io.Resources;
 import com.google.protobuf.Message;
 import com.google.protobuf.TextFormat;
@@ -120,6 +120,12 @@ public class LogScrubberTest {
           "getCustomerUserAccessInvitation_scrubsEmailAddress_expected.textpb",
           "getCustomerUserAccessInvitation_scrubsEmailAddress_input.textpb",
           CustomerUserAccessInvitation.class
+        },
+        new Object[] {
+          "search stream masks local services",
+          "searchStream_localServices_expected.textpb",
+          "searchStream_localServices_input.textpb",
+          SearchGoogleAdsResponse.class
         });
   }
 

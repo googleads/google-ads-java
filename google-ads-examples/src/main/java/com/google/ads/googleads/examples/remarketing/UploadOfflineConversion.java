@@ -18,17 +18,17 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v14.errors.GoogleAdsError;
-import com.google.ads.googleads.v14.errors.GoogleAdsException;
-import com.google.ads.googleads.v14.errors.GoogleAdsFailure;
-import com.google.ads.googleads.v14.services.ClickConversion;
-import com.google.ads.googleads.v14.services.ClickConversionResult;
-import com.google.ads.googleads.v14.services.ConversionUploadServiceClient;
-import com.google.ads.googleads.v14.services.CustomVariable;
-import com.google.ads.googleads.v14.services.UploadClickConversionsRequest;
-import com.google.ads.googleads.v14.services.UploadClickConversionsResponse;
-import com.google.ads.googleads.v14.utils.ErrorUtils;
-import com.google.ads.googleads.v14.utils.ResourceNames;
+import com.google.ads.googleads.v15.errors.GoogleAdsError;
+import com.google.ads.googleads.v15.errors.GoogleAdsException;
+import com.google.ads.googleads.v15.errors.GoogleAdsFailure;
+import com.google.ads.googleads.v15.services.ClickConversion;
+import com.google.ads.googleads.v15.services.ClickConversionResult;
+import com.google.ads.googleads.v15.services.ConversionUploadServiceClient;
+import com.google.ads.googleads.v15.services.CustomVariable;
+import com.google.ads.googleads.v15.services.UploadClickConversionsRequest;
+import com.google.ads.googleads.v15.services.UploadClickConversionsResponse;
+import com.google.ads.googleads.v15.utils.ErrorUtils;
+import com.google.ads.googleads.v15.utils.ResourceNames;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Arrays;
@@ -240,8 +240,7 @@ public class UploadOfflineConversion {
     }
 
     if (orderId != null) {
-      // Sets the order ID (unique transaction ID), if provided. An order ID is required in order to
-      // upload enhancements as shown in the UploadConversionEnhancement example.
+      // Sets the order ID (unique transaction ID), if provided.
       clickConversionBuilder.setOrderId(orderId);
     }
 
@@ -251,6 +250,12 @@ public class UploadOfflineConversion {
     try (ConversionUploadServiceClient conversionUploadServiceClient =
         googleAdsClient.getLatestVersion().createConversionUploadServiceClient()) {
       // Uploads the click conversion. Partial failure should always be set to true.
+
+      // NOTE: This request contains a single conversion as a demonstration.  However, if you have
+      // multiple conversions to upload, it's best to upload multiple conversions per request
+      // instead of sending a separate request per conversion. See the following for per-request
+      // limits:
+      // https://developers.google.com/google-ads/api/docs/best-practices/quotas#conversion_upload_service
       UploadClickConversionsResponse response =
           conversionUploadServiceClient.uploadClickConversions(
               UploadClickConversionsRequest.newBuilder()

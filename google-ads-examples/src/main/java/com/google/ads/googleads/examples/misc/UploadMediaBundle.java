@@ -36,6 +36,15 @@ import java.util.Arrays;
 /**
  * Uploads an HTML5 zip file as a media bundle. More information about media bundles can be found at
  * https://developers.google.com/google-ads/api/docs/assets/overview.
+ *
+ * <p>This code example uses version v14 of the Google Ads API. Google Ads is migrating from
+ * individual media files to assets, and version v15 of the API removed support for MediaFileService
+ * as part of this migration. Once your Ads account is migrated, this code example will stop
+ * working, and you should use an approach similar to {@link UploadImageAsset}, but set the type to
+ * {@code MEDIA_BUNDLE} and set the {@code media_bundle_asset} field of the asset. This code example
+ * will be removed once the migration completes. See
+ * https://ads-developers.googleblog.com/2023/07/image-and-location-auto-migration.html for more
+ * details.
  */
 public class UploadMediaBundle {
 
@@ -115,7 +124,7 @@ public class UploadMediaBundle {
 
     // Issues a mutate request to add the media file.
     try (MediaFileServiceClient mediaFileServiceClient =
-        googleAdsClient.getLatestVersion().createMediaFileServiceClient()) {
+        googleAdsClient.getVersion14().createMediaFileServiceClient()) {
       MutateMediaFilesResponse response =
           mediaFileServiceClient.mutateMediaFiles(Long.toString(customerId), Arrays.asList(op));
       System.out.printf(

@@ -18,26 +18,26 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v14.enums.ListingGroupFilterProductConditionEnum.ListingGroupFilterProductCondition;
-import com.google.ads.googleads.v14.enums.ListingGroupFilterTypeEnum.ListingGroupFilterType;
-import com.google.ads.googleads.v14.enums.ListingGroupFilterVerticalEnum.ListingGroupFilterVertical;
-import com.google.ads.googleads.v14.errors.GoogleAdsError;
-import com.google.ads.googleads.v14.errors.GoogleAdsException;
-import com.google.ads.googleads.v14.resources.AssetGroupListingGroupFilter;
-import com.google.ads.googleads.v14.resources.ListingGroupFilterDimension;
-import com.google.ads.googleads.v14.resources.ListingGroupFilterDimension.ProductBrand;
-import com.google.ads.googleads.v14.resources.ListingGroupFilterDimension.ProductCondition;
-import com.google.ads.googleads.v14.services.AssetGroupListingGroupFilterOperation;
-import com.google.ads.googleads.v14.services.GoogleAdsRow;
-import com.google.ads.googleads.v14.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v14.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v14.services.MutateGoogleAdsRequest;
-import com.google.ads.googleads.v14.services.MutateGoogleAdsResponse;
-import com.google.ads.googleads.v14.services.MutateOperation;
-import com.google.ads.googleads.v14.services.MutateOperationResponse;
-import com.google.ads.googleads.v14.services.MutateOperationResponse.ResponseCase;
-import com.google.ads.googleads.v14.services.SearchGoogleAdsRequest;
-import com.google.ads.googleads.v14.utils.ResourceNames;
+import com.google.ads.googleads.v15.enums.ListingGroupFilterListingSourceEnum.ListingGroupFilterListingSource;
+import com.google.ads.googleads.v15.enums.ListingGroupFilterProductConditionEnum.ListingGroupFilterProductCondition;
+import com.google.ads.googleads.v15.enums.ListingGroupFilterTypeEnum.ListingGroupFilterType;
+import com.google.ads.googleads.v15.errors.GoogleAdsError;
+import com.google.ads.googleads.v15.errors.GoogleAdsException;
+import com.google.ads.googleads.v15.resources.AssetGroupListingGroupFilter;
+import com.google.ads.googleads.v15.resources.ListingGroupFilterDimension;
+import com.google.ads.googleads.v15.resources.ListingGroupFilterDimension.ProductBrand;
+import com.google.ads.googleads.v15.resources.ListingGroupFilterDimension.ProductCondition;
+import com.google.ads.googleads.v15.services.AssetGroupListingGroupFilterOperation;
+import com.google.ads.googleads.v15.services.GoogleAdsRow;
+import com.google.ads.googleads.v15.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v15.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v15.services.MutateGoogleAdsRequest;
+import com.google.ads.googleads.v15.services.MutateGoogleAdsResponse;
+import com.google.ads.googleads.v15.services.MutateOperation;
+import com.google.ads.googleads.v15.services.MutateOperationResponse;
+import com.google.ads.googleads.v15.services.MutateOperationResponse.ResponseCase;
+import com.google.ads.googleads.v15.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v15.utils.ResourceNames;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -174,6 +174,7 @@ public class AddPerformanceMaxProductListingGroupTree {
     private List<MutateOperation> removeAll() {
       return removeDescendantsAndFilter(rootResourceName);
     }
+
     // [END add_performance_max_product_listing_group_tree_2]
 
     // [START add_performance_max_product_listing_group_tree_3]
@@ -204,6 +205,7 @@ public class AddPerformanceMaxProductListingGroupTree {
       return operations;
     }
   }
+
   // [END add_performance_max_product_listing_group_tree_3]
 
   /**
@@ -255,9 +257,9 @@ public class AddPerformanceMaxProductListingGroupTree {
               // Unlike AddPerformanceMaxRetailCampaign, the type for the root node here must be
               // SUBDIVISION because it will have child partitions under it.
               .setType(ListingGroupFilterType.SUBDIVISION)
-              // Specifies that this is in the shopping vertical because it is a Performance Max
-              // campaign for retail.
-              .setVertical(ListingGroupFilterVertical.SHOPPING)
+              // Specifies that this uses the shopping listing source because it is a Performance
+              // Max campaign for retail.
+              .setListingSource(ListingGroupFilterListingSource.SHOPPING)
               // Note the case_value is not set because it should be undefined for the root node.
               .build();
       AssetGroupListingGroupFilterOperation operation =
@@ -266,6 +268,7 @@ public class AddPerformanceMaxProductListingGroupTree {
           .setAssetGroupListingGroupFilterOperation(operation)
           .build();
     }
+
     // [END add_performance_max_product_listing_group_tree_4]
 
     // [START add_performance_max_product_listing_group_tree_5]
@@ -292,9 +295,9 @@ public class AddPerformanceMaxProductListingGroupTree {
               // Uses the SUBDIVISION type to indicate that the AssetGroupListingGroupFilter
               // will have children.
               .setType(ListingGroupFilterType.SUBDIVISION)
-              // Specifies that this is in the shopping vertical because it is a Performance Max
-              // campaign for retail.
-              .setVertical(ListingGroupFilterVertical.SHOPPING)
+              // Specifies that this uses the shopping listing source because it is a Performance
+              // Max campaign for retail.
+              .setListingSource(ListingGroupFilterListingSource.SHOPPING)
               .setCaseValue(dimension)
               .build();
       AssetGroupListingGroupFilterOperation filterOperation =
@@ -303,6 +306,7 @@ public class AddPerformanceMaxProductListingGroupTree {
           .setAssetGroupListingGroupFilterOperation(filterOperation)
           .build();
     }
+
     // [END add_performance_max_product_listing_group_tree_5]
 
     // [START add_performance_max_product_listing_group_tree_6]
@@ -329,9 +333,9 @@ public class AddPerformanceMaxProductListingGroupTree {
               // Uses the UNIT_INCLUDED type to indicate that the AssetGroupListingGroupFilter
               // won't have children.
               .setType(ListingGroupFilterType.UNIT_INCLUDED)
-              // Specifies that this is in the shopping vertical because it is a Performance Max
-              // campaign for retail.
-              .setVertical(ListingGroupFilterVertical.SHOPPING)
+              // Specifies that this uses the shopping listing source because it is a Performance
+              // Max campaign for retail.
+              .setListingSource(ListingGroupFilterListingSource.SHOPPING)
               .setCaseValue(dimension)
               .build();
       AssetGroupListingGroupFilterOperation filterOperation =
@@ -405,9 +409,7 @@ public class AddPerformanceMaxProductListingGroupTree {
             .build();
     operations.add(
         createOperationFactory.createUnit(
-            TEMPORARY_ID_LISTING_GROUP_ROOT,
-            createOperationFactory.nextId(),
-            newProductDimension));
+            TEMPORARY_ID_LISTING_GROUP_ROOT, createOperationFactory.nextId(), newProductDimension));
 
     // Creates an operation to add a leaf node for used products.
     ListingGroupFilterDimension usedProductDimension =
@@ -446,9 +448,7 @@ public class AddPerformanceMaxProductListingGroupTree {
             .build();
     operations.add(
         createOperationFactory.createUnit(
-            otherSubdivisionId,
-            createOperationFactory.nextId(),
-            coolBrandProductDimension));
+            otherSubdivisionId, createOperationFactory.nextId(), coolBrandProductDimension));
 
     // Creates an operation to add a leaf node for products with the brand "CheapBrand".
     ListingGroupFilterDimension cheapBrandProductDimension =
@@ -457,9 +457,7 @@ public class AddPerformanceMaxProductListingGroupTree {
             .build();
     operations.add(
         createOperationFactory.createUnit(
-            otherSubdivisionId,
-            createOperationFactory.nextId(),
-            cheapBrandProductDimension));
+            otherSubdivisionId, createOperationFactory.nextId(), cheapBrandProductDimension));
 
     // Creates an operation to add a leaf node for other products in the ProductBrand subdivision.
     ListingGroupFilterDimension otherBrandProductDimension =
@@ -468,9 +466,7 @@ public class AddPerformanceMaxProductListingGroupTree {
             .build();
     operations.add(
         createOperationFactory.createUnit(
-            otherSubdivisionId,
-            createOperationFactory.nextId(),
-            otherBrandProductDimension));
+            otherSubdivisionId, createOperationFactory.nextId(), otherBrandProductDimension));
 
     try (GoogleAdsServiceClient googleAdsServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
@@ -483,6 +479,7 @@ public class AddPerformanceMaxProductListingGroupTree {
       printResponseDetails(request, response);
     }
   }
+
   // [END add_performance_max_product_listing_group_tree]
 
   // [START add_performance_max_product_listing_group_tree_7]
@@ -521,6 +518,7 @@ public class AddPerformanceMaxProductListingGroupTree {
     }
     return resources;
   }
+
   // [END add_performance_max_product_listing_group_tree_7]
 
   /**

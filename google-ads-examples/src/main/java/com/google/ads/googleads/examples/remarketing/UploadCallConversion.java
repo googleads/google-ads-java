@@ -18,17 +18,19 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v14.errors.GoogleAdsError;
-import com.google.ads.googleads.v14.errors.GoogleAdsException;
-import com.google.ads.googleads.v14.errors.GoogleAdsFailure;
-import com.google.ads.googleads.v14.services.CallConversion;
-import com.google.ads.googleads.v14.services.CallConversionResult;
-import com.google.ads.googleads.v14.services.ConversionUploadServiceClient;
-import com.google.ads.googleads.v14.services.CustomVariable;
-import com.google.ads.googleads.v14.services.UploadCallConversionsRequest;
-import com.google.ads.googleads.v14.services.UploadCallConversionsResponse;
-import com.google.ads.googleads.v14.utils.ErrorUtils;
-import com.google.ads.googleads.v14.utils.ResourceNames;
+import com.google.ads.googleads.v15.common.Consent;
+import com.google.ads.googleads.v15.enums.ConsentStatusEnum.ConsentStatus;
+import com.google.ads.googleads.v15.errors.GoogleAdsError;
+import com.google.ads.googleads.v15.errors.GoogleAdsException;
+import com.google.ads.googleads.v15.errors.GoogleAdsFailure;
+import com.google.ads.googleads.v15.services.CallConversion;
+import com.google.ads.googleads.v15.services.CallConversionResult;
+import com.google.ads.googleads.v15.services.ConversionUploadServiceClient;
+import com.google.ads.googleads.v15.services.CustomVariable;
+import com.google.ads.googleads.v15.services.UploadCallConversionsRequest;
+import com.google.ads.googleads.v15.services.UploadCallConversionsResponse;
+import com.google.ads.googleads.v15.utils.ErrorUtils;
+import com.google.ads.googleads.v15.utils.ResourceNames;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -75,6 +77,9 @@ public class UploadCallConversion {
 
     @Parameter(names = ArgumentNames.CONVERSION_CUSTOM_VARIABLE_VALUE)
     private String conversionCustomVariableValue;
+
+    @Parameter(names = ArgumentNames.AD_USER_DATA_CONSENT, required = false)
+    private ConsentStatus adUserDataConsent;
   }
 
   public static void main(String[] args) {
@@ -92,6 +97,8 @@ public class UploadCallConversion {
       // associate with the call conversion upload.
       params.conversionCustomVariableId = null;
       params.conversionCustomVariableValue = null;
+      // Optionally specify the ad user data consent.
+      params.adUserDataConsent = null;
     }
 
     GoogleAdsClient googleAdsClient = null;
@@ -116,7 +123,8 @@ public class UploadCallConversion {
               params.callStartDateTime,
               params.conversionValue,
               params.conversionCustomVariableId,
-              params.conversionCustomVariableValue);
+              params.conversionCustomVariableValue,
+              params.adUserDataConsent);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -146,6 +154,7 @@ public class UploadCallConversion {
    *     the upload.
    * @param conversionCustomVariableValue the value of the conversion custom variable to associate
    *     with the upload.
+   * @param adUserDataConsent the ad user data consent.
    */
   // [START upload_call_conversion]
   private void runExample(
@@ -156,7 +165,8 @@ public class UploadCallConversion {
       String callStartDateTime,
       double conversionValue,
       Long conversionCustomVariableId,
-      String conversionCustomVariableValue) {
+      String conversionCustomVariableValue,
+      ConsentStatus adUserDataConsent) {
     // Create a call conversion by specifying currency as USD.
     CallConversion.Builder conversionBuilder =
         CallConversion.newBuilder()
@@ -174,12 +184,25 @@ public class UploadCallConversion {
               .setValue(conversionCustomVariableValue));
     }
 
+    // Sets the consent information, if provided.
+    if (adUserDataConsent != null) {
+      // Specifies whether user consent was obtained for the data you are uploading. See
+      // https://www.google.com/about/company/user-consent-policy for details.
+      conversionBuilder.setConsent(Consent.newBuilder().setAdUserData(adUserDataConsent));
+    }
+
     CallConversion conversion = conversionBuilder.build();
 
     // Uploads the call conversion to the API.
     try (ConversionUploadServiceClient conversionUploadServiceClient =
         googleAdsClient.getLatestVersion().createConversionUploadServiceClient()) {
       // Partial failure MUST be enabled for this request.
+
+      // NOTE: This request contains a single conversion as a demonstration.  However, if you have
+      // multiple conversions to upload, it's best to upload multiple conversions per request
+      // instead of sending a separate request per conversion. See the following for per-request
+      // limits:
+      // https://developers.google.com/google-ads/api/docs/best-practices/quotas#conversion_upload_service
       UploadCallConversionsResponse response =
           conversionUploadServiceClient.uploadCallConversions(
               UploadCallConversionsRequest.newBuilder()

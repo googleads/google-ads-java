@@ -20,42 +20,42 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v14.common.ListingGroupInfo;
-import com.google.ads.googleads.v14.common.ManualCpc;
-import com.google.ads.googleads.v14.common.ShoppingProductAdInfo;
-import com.google.ads.googleads.v14.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
-import com.google.ads.googleads.v14.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus;
-import com.google.ads.googleads.v14.enums.AdGroupStatusEnum.AdGroupStatus;
-import com.google.ads.googleads.v14.enums.AdGroupTypeEnum.AdGroupType;
-import com.google.ads.googleads.v14.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
-import com.google.ads.googleads.v14.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
-import com.google.ads.googleads.v14.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v14.enums.ListingGroupTypeEnum.ListingGroupType;
-import com.google.ads.googleads.v14.errors.GoogleAdsError;
-import com.google.ads.googleads.v14.errors.GoogleAdsException;
-import com.google.ads.googleads.v14.resources.Ad;
-import com.google.ads.googleads.v14.resources.AdGroup;
-import com.google.ads.googleads.v14.resources.AdGroupAd;
-import com.google.ads.googleads.v14.resources.AdGroupCriterion;
-import com.google.ads.googleads.v14.resources.Campaign;
-import com.google.ads.googleads.v14.resources.Campaign.ShoppingSetting;
-import com.google.ads.googleads.v14.resources.CampaignBudget;
-import com.google.ads.googleads.v14.services.AdGroupAdOperation;
-import com.google.ads.googleads.v14.services.AdGroupAdServiceClient;
-import com.google.ads.googleads.v14.services.AdGroupCriterionOperation;
-import com.google.ads.googleads.v14.services.AdGroupCriterionServiceClient;
-import com.google.ads.googleads.v14.services.AdGroupOperation;
-import com.google.ads.googleads.v14.services.AdGroupServiceClient;
-import com.google.ads.googleads.v14.services.CampaignBudgetOperation;
-import com.google.ads.googleads.v14.services.CampaignBudgetServiceClient;
-import com.google.ads.googleads.v14.services.CampaignOperation;
-import com.google.ads.googleads.v14.services.CampaignServiceClient;
-import com.google.ads.googleads.v14.services.MutateAdGroupAdResult;
-import com.google.ads.googleads.v14.services.MutateAdGroupCriterionResult;
-import com.google.ads.googleads.v14.services.MutateAdGroupResult;
-import com.google.ads.googleads.v14.services.MutateCampaignBudgetsResponse;
-import com.google.ads.googleads.v14.services.MutateCampaignResult;
-import com.google.ads.googleads.v14.services.MutateCampaignsResponse;
+import com.google.ads.googleads.v15.common.ListingGroupInfo;
+import com.google.ads.googleads.v15.common.ManualCpc;
+import com.google.ads.googleads.v15.common.ShoppingProductAdInfo;
+import com.google.ads.googleads.v15.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
+import com.google.ads.googleads.v15.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus;
+import com.google.ads.googleads.v15.enums.AdGroupStatusEnum.AdGroupStatus;
+import com.google.ads.googleads.v15.enums.AdGroupTypeEnum.AdGroupType;
+import com.google.ads.googleads.v15.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
+import com.google.ads.googleads.v15.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
+import com.google.ads.googleads.v15.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v15.enums.ListingGroupTypeEnum.ListingGroupType;
+import com.google.ads.googleads.v15.errors.GoogleAdsError;
+import com.google.ads.googleads.v15.errors.GoogleAdsException;
+import com.google.ads.googleads.v15.resources.Ad;
+import com.google.ads.googleads.v15.resources.AdGroup;
+import com.google.ads.googleads.v15.resources.AdGroupAd;
+import com.google.ads.googleads.v15.resources.AdGroupCriterion;
+import com.google.ads.googleads.v15.resources.Campaign;
+import com.google.ads.googleads.v15.resources.Campaign.ShoppingSetting;
+import com.google.ads.googleads.v15.resources.CampaignBudget;
+import com.google.ads.googleads.v15.services.AdGroupAdOperation;
+import com.google.ads.googleads.v15.services.AdGroupAdServiceClient;
+import com.google.ads.googleads.v15.services.AdGroupCriterionOperation;
+import com.google.ads.googleads.v15.services.AdGroupCriterionServiceClient;
+import com.google.ads.googleads.v15.services.AdGroupOperation;
+import com.google.ads.googleads.v15.services.AdGroupServiceClient;
+import com.google.ads.googleads.v15.services.CampaignBudgetOperation;
+import com.google.ads.googleads.v15.services.CampaignBudgetServiceClient;
+import com.google.ads.googleads.v15.services.CampaignOperation;
+import com.google.ads.googleads.v15.services.CampaignServiceClient;
+import com.google.ads.googleads.v15.services.MutateAdGroupAdResult;
+import com.google.ads.googleads.v15.services.MutateAdGroupCriterionResult;
+import com.google.ads.googleads.v15.services.MutateAdGroupResult;
+import com.google.ads.googleads.v15.services.MutateCampaignBudgetsResponse;
+import com.google.ads.googleads.v15.services.MutateCampaignResult;
+import com.google.ads.googleads.v15.services.MutateCampaignsResponse;
 import com.google.common.collect.ImmutableList;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -217,8 +217,6 @@ public class AddShoppingProductAd {
     // Configures the shopping settings.
     ShoppingSetting shoppingSetting =
         ShoppingSetting.newBuilder()
-            // Sets the sales country of products to include in the campaign.
-            .setSalesCountry("US")
             // Sets the priority of the campaign. Higher numbers take priority over lower numbers.
             // For Shopping product ad campaigns, allowed values are between 0 and 2, inclusive.
             .setCampaignPriority(0)
@@ -264,6 +262,7 @@ public class AddShoppingProductAd {
       return result.getResourceName();
     }
   }
+
   // [END add_shopping_product_ad_2]
 
   /**
@@ -307,6 +306,7 @@ public class AddShoppingProductAd {
       return mutateAdGroupResult.getResourceName();
     }
   }
+
   // [END add_shopping_product_ad_1]
 
   /**
@@ -351,6 +351,7 @@ public class AddShoppingProductAd {
       return mutateAdGroupAdResult.getResourceName();
     }
   }
+
   // [END add_shopping_product_ad]
 
   /**

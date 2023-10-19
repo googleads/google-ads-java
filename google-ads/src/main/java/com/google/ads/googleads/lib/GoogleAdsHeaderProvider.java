@@ -49,6 +49,7 @@ public abstract class GoogleAdsHeaderProvider implements HeaderProvider {
   }
 
   /** Returns the configured developer token. */
+  @Nullable
   public abstract String getDeveloperToken();
 
   /** Returns the configured login customer ID. */
@@ -63,7 +64,9 @@ public abstract class GoogleAdsHeaderProvider implements HeaderProvider {
   @Memoized
   public ImmutableMap<String, String> getHeaders() {
     Map<String, String> headers = new HashMap<>();
-    headers.put("developer-token", getDeveloperToken());
+    if (getDeveloperToken() != null) {
+      headers.put("developer-token", getDeveloperToken());
+    }
     if (getLoginCustomerId() != null) {
       headers.put("login-customer-id", String.valueOf(getLoginCustomerId()));
     }
