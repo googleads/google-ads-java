@@ -20,42 +20,42 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v14.common.AdImageAsset;
-import com.google.ads.googleads.v14.common.AdTextAsset;
-import com.google.ads.googleads.v14.common.ImageAsset;
-import com.google.ads.googleads.v14.common.ManualCpc;
-import com.google.ads.googleads.v14.common.ResponsiveDisplayAdInfo;
-import com.google.ads.googleads.v14.common.UserListInfo;
-import com.google.ads.googleads.v14.enums.AdGroupStatusEnum.AdGroupStatus;
-import com.google.ads.googleads.v14.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
-import com.google.ads.googleads.v14.enums.AssetTypeEnum.AssetType;
-import com.google.ads.googleads.v14.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v14.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting;
-import com.google.ads.googleads.v14.errors.GoogleAdsError;
-import com.google.ads.googleads.v14.errors.GoogleAdsException;
-import com.google.ads.googleads.v14.resources.Ad;
-import com.google.ads.googleads.v14.resources.AdGroup;
-import com.google.ads.googleads.v14.resources.AdGroupAd;
-import com.google.ads.googleads.v14.resources.AdGroupCriterion;
-import com.google.ads.googleads.v14.resources.Asset;
-import com.google.ads.googleads.v14.resources.Campaign;
-import com.google.ads.googleads.v14.resources.Campaign.ShoppingSetting;
-import com.google.ads.googleads.v14.services.AdGroupAdOperation;
-import com.google.ads.googleads.v14.services.AdGroupAdServiceClient;
-import com.google.ads.googleads.v14.services.AdGroupCriterionOperation;
-import com.google.ads.googleads.v14.services.AdGroupCriterionServiceClient;
-import com.google.ads.googleads.v14.services.AdGroupOperation;
-import com.google.ads.googleads.v14.services.AdGroupServiceClient;
-import com.google.ads.googleads.v14.services.AssetOperation;
-import com.google.ads.googleads.v14.services.AssetServiceClient;
-import com.google.ads.googleads.v14.services.CampaignOperation;
-import com.google.ads.googleads.v14.services.CampaignServiceClient;
-import com.google.ads.googleads.v14.services.MutateAdGroupAdsResponse;
-import com.google.ads.googleads.v14.services.MutateAdGroupCriteriaResponse;
-import com.google.ads.googleads.v14.services.MutateAdGroupsResponse;
-import com.google.ads.googleads.v14.services.MutateAssetsResponse;
-import com.google.ads.googleads.v14.services.MutateCampaignsResponse;
-import com.google.ads.googleads.v14.utils.ResourceNames;
+import com.google.ads.googleads.v15.common.AdImageAsset;
+import com.google.ads.googleads.v15.common.AdTextAsset;
+import com.google.ads.googleads.v15.common.ImageAsset;
+import com.google.ads.googleads.v15.common.ManualCpc;
+import com.google.ads.googleads.v15.common.ResponsiveDisplayAdInfo;
+import com.google.ads.googleads.v15.common.UserListInfo;
+import com.google.ads.googleads.v15.enums.AdGroupStatusEnum.AdGroupStatus;
+import com.google.ads.googleads.v15.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
+import com.google.ads.googleads.v15.enums.AssetTypeEnum.AssetType;
+import com.google.ads.googleads.v15.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v15.enums.DisplayAdFormatSettingEnum.DisplayAdFormatSetting;
+import com.google.ads.googleads.v15.errors.GoogleAdsError;
+import com.google.ads.googleads.v15.errors.GoogleAdsException;
+import com.google.ads.googleads.v15.resources.Ad;
+import com.google.ads.googleads.v15.resources.AdGroup;
+import com.google.ads.googleads.v15.resources.AdGroupAd;
+import com.google.ads.googleads.v15.resources.AdGroupCriterion;
+import com.google.ads.googleads.v15.resources.Asset;
+import com.google.ads.googleads.v15.resources.Campaign;
+import com.google.ads.googleads.v15.resources.Campaign.ShoppingSetting;
+import com.google.ads.googleads.v15.services.AdGroupAdOperation;
+import com.google.ads.googleads.v15.services.AdGroupAdServiceClient;
+import com.google.ads.googleads.v15.services.AdGroupCriterionOperation;
+import com.google.ads.googleads.v15.services.AdGroupCriterionServiceClient;
+import com.google.ads.googleads.v15.services.AdGroupOperation;
+import com.google.ads.googleads.v15.services.AdGroupServiceClient;
+import com.google.ads.googleads.v15.services.AssetOperation;
+import com.google.ads.googleads.v15.services.AssetServiceClient;
+import com.google.ads.googleads.v15.services.CampaignOperation;
+import com.google.ads.googleads.v15.services.CampaignServiceClient;
+import com.google.ads.googleads.v15.services.MutateAdGroupAdsResponse;
+import com.google.ads.googleads.v15.services.MutateAdGroupCriteriaResponse;
+import com.google.ads.googleads.v15.services.MutateAdGroupsResponse;
+import com.google.ads.googleads.v15.services.MutateAssetsResponse;
+import com.google.ads.googleads.v15.services.MutateCampaignsResponse;
+import com.google.ads.googleads.v15.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import com.google.common.io.ByteStreams;
 import com.google.protobuf.ByteString;
@@ -184,11 +184,6 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
                 ShoppingSetting.newBuilder()
                     .setCampaignPriority(0)
                     .setMerchantId(merchantCenterAccountId)
-                    // Display Network campaigns do not support partition by country. The only
-                    // supported value is "ZZ". This signals that products from all countries are
-                    // available in the campaign. The actual products which serve are based on
-                    // the products tagged in the user list entry.
-                    .setSalesCountry("ZZ")
                     .setEnableLocal(true)
                     .build())
             .build();
@@ -208,6 +203,7 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
       return campaignResourceName;
     }
   }
+
   // [END add_merchant_center_dynamic_remarketing_campaign_2]
 
   /**
@@ -244,6 +240,7 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
       return adGroupResourceName;
     }
   }
+
   // [END add_merchant_center_dynamic_remarketing_campaign_1]
 
   /**
@@ -329,6 +326,7 @@ public class AddMerchantCenterDynamicRemarketingCampaign {
           response.getResults(0).getResourceName());
     }
   }
+
   // [END add_merchant_center_dynamic_remarketing_campaign]
 
   /**

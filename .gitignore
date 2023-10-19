@@ -50,3 +50,7 @@ google-ads/*/buildNumber.properties
 buildSrc/.gradle/
 */build/
 
+# VSCode build output and settings
+.vscode/
+*/bin/
+

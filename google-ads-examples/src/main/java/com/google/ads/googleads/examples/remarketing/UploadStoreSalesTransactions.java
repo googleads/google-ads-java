@@ -18,27 +18,29 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v14.common.OfflineUserAddressInfo;
-import com.google.ads.googleads.v14.common.StoreSalesMetadata;
-import com.google.ads.googleads.v14.common.StoreSalesThirdPartyMetadata;
-import com.google.ads.googleads.v14.common.TransactionAttribute;
-import com.google.ads.googleads.v14.common.UserData;
-import com.google.ads.googleads.v14.common.UserIdentifier;
-import com.google.ads.googleads.v14.enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus;
-import com.google.ads.googleads.v14.enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType;
-import com.google.ads.googleads.v14.errors.GoogleAdsError;
-import com.google.ads.googleads.v14.errors.GoogleAdsException;
-import com.google.ads.googleads.v14.errors.GoogleAdsFailure;
-import com.google.ads.googleads.v14.resources.OfflineUserDataJob;
-import com.google.ads.googleads.v14.services.AddOfflineUserDataJobOperationsRequest;
-import com.google.ads.googleads.v14.services.AddOfflineUserDataJobOperationsResponse;
-import com.google.ads.googleads.v14.services.CreateOfflineUserDataJobResponse;
-import com.google.ads.googleads.v14.services.GoogleAdsRow;
-import com.google.ads.googleads.v14.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v14.services.OfflineUserDataJobOperation;
-import com.google.ads.googleads.v14.services.OfflineUserDataJobServiceClient;
-import com.google.ads.googleads.v14.utils.ErrorUtils;
-import com.google.ads.googleads.v14.utils.ResourceNames;
+import com.google.ads.googleads.v15.common.Consent;
+import com.google.ads.googleads.v15.common.OfflineUserAddressInfo;
+import com.google.ads.googleads.v15.common.StoreSalesMetadata;
+import com.google.ads.googleads.v15.common.StoreSalesThirdPartyMetadata;
+import com.google.ads.googleads.v15.common.TransactionAttribute;
+import com.google.ads.googleads.v15.common.UserData;
+import com.google.ads.googleads.v15.common.UserIdentifier;
+import com.google.ads.googleads.v15.enums.ConsentStatusEnum.ConsentStatus;
+import com.google.ads.googleads.v15.enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus;
+import com.google.ads.googleads.v15.enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType;
+import com.google.ads.googleads.v15.errors.GoogleAdsError;
+import com.google.ads.googleads.v15.errors.GoogleAdsException;
+import com.google.ads.googleads.v15.errors.GoogleAdsFailure;
+import com.google.ads.googleads.v15.resources.OfflineUserDataJob;
+import com.google.ads.googleads.v15.services.AddOfflineUserDataJobOperationsRequest;
+import com.google.ads.googleads.v15.services.AddOfflineUserDataJobOperationsResponse;
+import com.google.ads.googleads.v15.services.CreateOfflineUserDataJobResponse;
+import com.google.ads.googleads.v15.services.GoogleAdsRow;
+import com.google.ads.googleads.v15.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v15.services.OfflineUserDataJobOperation;
+import com.google.ads.googleads.v15.services.OfflineUserDataJobServiceClient;
+import com.google.ads.googleads.v15.utils.ErrorUtils;
+import com.google.ads.googleads.v15.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -148,6 +150,12 @@ public class UploadStoreSalesTransactions {
             "The number of items sold. Can only be set when at least one other item attribute has"
                 + " been provided. Only required if uploading with item attributes.")
     private int quantity;
+
+    @Parameter(names = ArgumentNames.AD_PERSONALIZATION_CONSENT, required = false)
+    private ConsentStatus adPersonalizationConsent;
+
+    @Parameter(names = ArgumentNames.AD_USER_DATA_CONSENT, required = false)
+    private ConsentStatus adUserDataConsent;
   }
 
   /** Specifies the value to use if uploading data with custom key and values. */
@@ -169,6 +177,9 @@ public class UploadStoreSalesTransactions {
       params.conversionActionId = Long.parseLong("INSERT_CONVERSION_ACTION_ID_HERE");
       // OPTIONAL (but recommended): Specify an external ID for the job.
       // params.externalId = Long.parseLong("INSERT_EXTERNAL_ID_HERE");
+
+      // OPTIONAL: specify the ad user data consent.
+      // params.adUserDataConsent = ConsentStatus.valueOf("INSERT_AD_USER_DATA_CONSENT_HERE");
 
       // OPTIONAL: If uploading data with custom key and values, also specify the following value:
       // params.customKey = "INSERT_CUSTOM_KEY_HERE";
@@ -222,6 +233,8 @@ public class UploadStoreSalesTransactions {
               params.offlineUserDataJobType,
               params.externalId,
               params.conversionActionId,
+              params.adPersonalizationConsent,
+              params.adUserDataConsent,
               params.customKey,
               params.advertiserUploadDateTime,
               params.bridgeMapVersionId,
@@ -257,6 +270,8 @@ public class UploadStoreSalesTransactions {
    *     STORE_SALES_UPLOAD_THIRD_PARTY}. Otherwise, use {@code STORE_SALES_UPLOAD_FIRST_PARTY}.
    * @param externalId optional (but recommended) external ID for the offline user data job.
    * @param conversionActionId the ID of a store sales conversion action.
+   * @param adPersonalizationConsent the ad personalization consent status.
+   * @param adUserDataConsent the ad user data consent status.
    * @param customKey to segment store sales conversions. Only required after creating a custom key
    *     and custom values in the account.
    * @param advertiserUploadDateTime date and time the advertiser uploaded data to the partner. Only
@@ -277,6 +292,8 @@ public class UploadStoreSalesTransactions {
       OfflineUserDataJobType offlineUserDataJobType,
       Long externalId,
       long conversionActionId,
+      ConsentStatus adPersonalizationConsent,
+      ConsentStatus adUserDataConsent,
       String customKey,
       String advertiserUploadDateTime,
       String bridgeMapVersionId,
@@ -311,6 +328,8 @@ public class UploadStoreSalesTransactions {
           customerId,
           offlineUserDataJobResourceName,
           conversionActionId,
+          adPersonalizationConsent,
+          adUserDataConsent,
           customKey,
           itemId,
           merchantCenterAccountId,
@@ -442,6 +461,8 @@ public class UploadStoreSalesTransactions {
       long customerId,
       String offlineUserDataJobResourceName,
       long conversionActionId,
+      ConsentStatus adPersonalizationConsent,
+      ConsentStatus adUserDataConsent,
       String customKey,
       String itemId,
       Long merchantId,
@@ -457,6 +478,8 @@ public class UploadStoreSalesTransactions {
         buildOfflineUserDataJobOperations(
             customerId,
             conversionActionId,
+            adPersonalizationConsent,
+            adUserDataConsent,
             customKey,
             itemId,
             merchantId,
@@ -520,6 +543,8 @@ public class UploadStoreSalesTransactions {
   private List<OfflineUserDataJobOperation> buildOfflineUserDataJobOperations(
       long customerId,
       long conversionActionId,
+      ConsentStatus adPersonalizationConsent,
+      ConsentStatus adUserDataConsent,
       String customKey,
       String itemId,
       Long merchantId,
@@ -563,6 +588,20 @@ public class UploadStoreSalesTransactions {
                     // use the account's timezone as default. Examples: "2018-03-05 09:15:00"
                     // or "2018-02-01 14:34:30+03:00".
                     .setTransactionDateTime("2020-05-01 23:52:12"));
+
+    // Adds consent information if specified.
+    if (adPersonalizationConsent != null || adUserDataConsent != null) {
+      Consent.Builder consentBuilder = Consent.newBuilder();
+      if (adPersonalizationConsent != null) {
+        consentBuilder.setAdPersonalization(adPersonalizationConsent);
+      }
+      if (adUserDataConsent != null) {
+        consentBuilder.setAdUserData(adUserDataConsent);
+      }
+      // Specifies whether user consent was obtained for the data you are uploading. See
+      // https://www.google.com/about/company/user-consent-policy for details.
+      userDataWithEmailAddress.setConsent(consentBuilder);
+    }
 
     // Optional: If uploading data with custom key and values, also assign the custom value.
     if (customKey != null) {

@@ -18,7 +18,6 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -30,15 +29,20 @@ import org.junit.runners.JUnit4;
 @RunWith(JUnit4.class)
 public class GoogleAdsHeaderProviderTest {
 
-  /** Verifies that the developer token is not nullable. */
+  /** Verifies that the developer token is nullable and when null is not present in headers. */
   @Test
-  public void requiresDeveloperToken() {
-    try {
-      GoogleAdsHeaderProvider.newBuilder().build();
-      fail();
-    } catch (IllegalStateException ex) {
-      // expected
-    }
+  public void developerTokenOptional() {
+    GoogleAdsHeaderProvider provider = GoogleAdsHeaderProvider.newBuilder().build();
+    assertNull(provider.getDeveloperToken());
+    assertFalse(provider.getHeaders().containsKey("developer-token"));
+  }
+
+  /** Verifies that the developer token is set and present in the headers when provided. */
+  @Test
+  public void developerToken_includesIfSet() {
+    GoogleAdsHeaderProvider provider =
+        GoogleAdsHeaderProvider.newBuilder().setDeveloperToken("test").build();
+    assertEquals("Developer token incorrect", "test", provider.getHeaders().get("developer-token"));
   }
 
   /** Verifies that the customer ID is nullable and when null is not present in headers. */
@@ -87,14 +91,6 @@ public class GoogleAdsHeaderProviderTest {
     assertEquals("Incorrect linked customer id", 123, (long) provider.getLinkedCustomerId());
     assertEquals(
         "Missing linked customer id", "123", provider.getHeaders().get("linked-customer-id"));
-  }
-
-  /** Verifies that the developer token is set and present in the headers. */
-  @Test
-  public void developerToken_includesInHeaderSet() {
-    GoogleAdsHeaderProvider provider =
-        GoogleAdsHeaderProvider.newBuilder().setDeveloperToken("test").build();
-    assertEquals("Developer token incorrect", "test", provider.getHeaders().get("developer-token"));
   }
 
   /** Verifies that the API client version header is sent */

@@ -56,6 +56,30 @@ public class ReflectionScrubber {
               "SearchGoogleAdsStreamResponse",
               new SearchResponseScrubber("change_event.user_email"))
           .put("SearchGoogleAdsResponse", new SearchResponseScrubber("change_event.user_email"))
+          .put(
+              "SearchGoogleAdsStreamResponse",
+              new SearchResponseScrubber("local_services_lead.contact_details.consumer_name"))
+          .put(
+              "SearchGoogleAdsResponse",
+              new SearchResponseScrubber("local_services_lead.contact_details.consumer_name"))
+          .put(
+              "SearchGoogleAdsStreamResponse",
+              new SearchResponseScrubber("local_services_lead.contact_details.email"))
+          .put(
+              "SearchGoogleAdsResponse",
+              new SearchResponseScrubber("local_services_lead.contact_details.email"))
+          .put(
+              "SearchGoogleAdsStreamResponse",
+              new SearchResponseScrubber("local_services_lead.contact_details.phone_number"))
+          .put(
+              "SearchGoogleAdsResponse",
+              new SearchResponseScrubber("local_services_lead.contact_details.phone_number"))
+          .put(
+              "SearchGoogleAdsStreamResponse",
+              new SearchResponseScrubber("local_services_lead_conversation.message_details.text"))
+          .put(
+              "SearchGoogleAdsResponse",
+              new SearchResponseScrubber("local_services_lead_conversation.message_details.text"))
           .put("CreateCustomerClientRequest", new ReflectionFieldAccessor("email_address"))
           .put("CustomerUserAccess", new ReflectionFieldAccessor("email_address"))
           .put("CustomerUserAccess", new ReflectionFieldAccessor("inviter_user_email_address"))

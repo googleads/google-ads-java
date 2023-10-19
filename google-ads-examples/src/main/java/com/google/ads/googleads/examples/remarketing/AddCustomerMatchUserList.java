@@ -20,33 +20,35 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v14.common.CrmBasedUserListInfo;
-import com.google.ads.googleads.v14.common.CustomerMatchUserListMetadata;
-import com.google.ads.googleads.v14.common.OfflineUserAddressInfo;
-import com.google.ads.googleads.v14.common.UserData;
-import com.google.ads.googleads.v14.common.UserIdentifier;
-import com.google.ads.googleads.v14.enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType;
-import com.google.ads.googleads.v14.enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus;
-import com.google.ads.googleads.v14.enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType;
-import com.google.ads.googleads.v14.errors.GoogleAdsError;
-import com.google.ads.googleads.v14.errors.GoogleAdsException;
-import com.google.ads.googleads.v14.errors.GoogleAdsFailure;
-import com.google.ads.googleads.v14.resources.OfflineUserDataJob;
-import com.google.ads.googleads.v14.resources.UserList;
-import com.google.ads.googleads.v14.services.AddOfflineUserDataJobOperationsRequest;
-import com.google.ads.googleads.v14.services.AddOfflineUserDataJobOperationsResponse;
-import com.google.ads.googleads.v14.services.CreateOfflineUserDataJobResponse;
-import com.google.ads.googleads.v14.services.GoogleAdsRow;
-import com.google.ads.googleads.v14.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v14.services.MutateUserListsResponse;
-import com.google.ads.googleads.v14.services.OfflineUserDataJobOperation;
-import com.google.ads.googleads.v14.services.OfflineUserDataJobServiceClient;
-import com.google.ads.googleads.v14.services.SearchGoogleAdsStreamRequest;
-import com.google.ads.googleads.v14.services.SearchGoogleAdsStreamResponse;
-import com.google.ads.googleads.v14.services.UserListOperation;
-import com.google.ads.googleads.v14.services.UserListServiceClient;
-import com.google.ads.googleads.v14.utils.ErrorUtils;
-import com.google.ads.googleads.v14.utils.ResourceNames;
+import com.google.ads.googleads.v15.common.Consent;
+import com.google.ads.googleads.v15.common.CrmBasedUserListInfo;
+import com.google.ads.googleads.v15.common.CustomerMatchUserListMetadata;
+import com.google.ads.googleads.v15.common.OfflineUserAddressInfo;
+import com.google.ads.googleads.v15.common.UserData;
+import com.google.ads.googleads.v15.common.UserIdentifier;
+import com.google.ads.googleads.v15.enums.ConsentStatusEnum.ConsentStatus;
+import com.google.ads.googleads.v15.enums.CustomerMatchUploadKeyTypeEnum.CustomerMatchUploadKeyType;
+import com.google.ads.googleads.v15.enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus;
+import com.google.ads.googleads.v15.enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType;
+import com.google.ads.googleads.v15.errors.GoogleAdsError;
+import com.google.ads.googleads.v15.errors.GoogleAdsException;
+import com.google.ads.googleads.v15.errors.GoogleAdsFailure;
+import com.google.ads.googleads.v15.resources.OfflineUserDataJob;
+import com.google.ads.googleads.v15.resources.UserList;
+import com.google.ads.googleads.v15.services.AddOfflineUserDataJobOperationsRequest;
+import com.google.ads.googleads.v15.services.AddOfflineUserDataJobOperationsResponse;
+import com.google.ads.googleads.v15.services.CreateOfflineUserDataJobResponse;
+import com.google.ads.googleads.v15.services.GoogleAdsRow;
+import com.google.ads.googleads.v15.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v15.services.MutateUserListsResponse;
+import com.google.ads.googleads.v15.services.OfflineUserDataJobOperation;
+import com.google.ads.googleads.v15.services.OfflineUserDataJobServiceClient;
+import com.google.ads.googleads.v15.services.SearchGoogleAdsStreamRequest;
+import com.google.ads.googleads.v15.services.SearchGoogleAdsStreamResponse;
+import com.google.ads.googleads.v15.services.UserListOperation;
+import com.google.ads.googleads.v15.services.UserListServiceClient;
+import com.google.ads.googleads.v15.utils.ErrorUtils;
+import com.google.ads.googleads.v15.utils.ResourceNames;
 import com.google.api.gax.rpc.ServerStream;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
@@ -114,6 +116,12 @@ public class AddCustomerMatchUserList {
             "The ID of an existing OfflineUserDataJob in the PENDING state. If not specified, this"
                 + " example will create a new job.")
     private Long offlineUserDataJobId;
+
+    @Parameter(names = ArgumentNames.AD_PERSONALIZATION_CONSENT, required = false)
+    private ConsentStatus adPersonalizationConsent;
+
+    @Parameter(names = ArgumentNames.AD_USER_DATA_CONSENT, required = false)
+    private ConsentStatus adUserDataConsent;
   }
 
   public static void main(String[] args) throws UnsupportedEncodingException {
@@ -128,6 +136,9 @@ public class AddCustomerMatchUserList {
       // Optional parameters:
       // params.userListId = Long.parseLong("INSERT_USER_LIST_ID_HERE");
       // params.offlineUserDataJobId = Long.parseLong("INSERT_OFFLINE_USER_DATA_JOB_ID_HERE");
+      // params.adPersonalizationConsent =
+      //     ConsentStatus.valueOf("INSERT_AD_USER_PERSONALIZATION_CONSENT_HERE");
+      // params.adUserDataConsent = ConsentStatus.valueOf("INSERT_AD_USER_DATA_CONSENT_HERE");
     }
 
     GoogleAdsClient googleAdsClient = null;
@@ -149,7 +160,9 @@ public class AddCustomerMatchUserList {
               params.customerId,
               params.runJob,
               params.userListId,
-              params.offlineUserDataJobId);
+              params.offlineUserDataJobId,
+              params.adPersonalizationConsent,
+              params.adUserDataConsent);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -177,6 +190,9 @@ public class AddCustomerMatchUserList {
    *     list.
    * @param offlineUserDataJobId optional ID of an existing OfflineUserDataJob in the PENDING state.
    *     If {@code null}, creates a new job.
+   * @param adPersonalizationConsent consent status for ad personalization for all members in the
+   *     job.
+   * @param adUserDataConsent consent status for ad user data for all members in the job.
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private void runExample(
@@ -184,7 +200,9 @@ public class AddCustomerMatchUserList {
       long customerId,
       boolean runJob,
       Long userListId,
-      Long offlineUserDataJobId)
+      Long offlineUserDataJobId,
+      ConsentStatus adPersonalizationConsent,
+      ConsentStatus adUserDataConsent)
       throws UnsupportedEncodingException {
     String userListResourceName = null;
     if (offlineUserDataJobId == null) {
@@ -199,7 +217,13 @@ public class AddCustomerMatchUserList {
 
     // Adds members to the user list.
     addUsersToCustomerMatchUserList(
-        googleAdsClient, customerId, runJob, userListResourceName, offlineUserDataJobId);
+        googleAdsClient,
+        customerId,
+        runJob,
+        userListResourceName,
+        offlineUserDataJobId,
+        adPersonalizationConsent,
+        adUserDataConsent);
   }
 
   /**
@@ -244,6 +268,7 @@ public class AddCustomerMatchUserList {
       return response.getResults(0).getResourceName();
     }
   }
+
   // [END add_customer_match_user_list_3]
 
   /**
@@ -257,6 +282,10 @@ public class AddCustomerMatchUserList {
    *     to.
    * @param offlineUserDataJobId optional ID of an existing OfflineUserDataJob in the PENDING state.
    *     If {@code null}, creates a new job.
+   * @param adPersonalizationConsent consent status for ad personalization for all members in the
+   *     job. Only used if {@code offlineUserDataJobId} is {@code null}.
+   * @param adUserDataConsent consent status for ad user data for all members in the job. Only used
+   *     if {@code offlineUserDataJobId} is {@code null}.
    */
   // [START add_customer_match_user_list]
   private void addUsersToCustomerMatchUserList(
@@ -264,24 +293,40 @@ public class AddCustomerMatchUserList {
       long customerId,
       boolean runJob,
       String userListResourceName,
-      Long offlineUserDataJobId)
+      Long offlineUserDataJobId,
+      ConsentStatus adPersonalizationConsent,
+      ConsentStatus adUserDataConsent)
       throws UnsupportedEncodingException {
     try (OfflineUserDataJobServiceClient offlineUserDataJobServiceClient =
         googleAdsClient.getLatestVersion().createOfflineUserDataJobServiceClient()) {
       String offlineUserDataJobResourceName;
       if (offlineUserDataJobId == null) {
         // Creates a new offline user data job.
-        OfflineUserDataJob offlineUserDataJob =
+        OfflineUserDataJob.Builder offlineUserDataJobBuilder =
             OfflineUserDataJob.newBuilder()
                 .setType(OfflineUserDataJobType.CUSTOMER_MATCH_USER_LIST)
                 .setCustomerMatchUserListMetadata(
-                    CustomerMatchUserListMetadata.newBuilder().setUserList(userListResourceName))
-                .build();
+                    CustomerMatchUserListMetadata.newBuilder().setUserList(userListResourceName));
+        // Adds consent information to the job if specified.
+        if (adPersonalizationConsent != null || adUserDataConsent != null) {
+          Consent.Builder consentBuilder = Consent.newBuilder();
+          if (adPersonalizationConsent != null) {
+            consentBuilder.setAdPersonalization(adPersonalizationConsent);
+          }
+          if (adUserDataConsent != null) {
+            consentBuilder.setAdUserData(adUserDataConsent);
+          }
+          // Specifies whether user consent was obtained for the data you are uploading. See
+          // https://www.google.com/about/company/user-consent-policy for details.
+          offlineUserDataJobBuilder
+              .getCustomerMatchUserListMetadataBuilder()
+              .setConsent(consentBuilder);
+        }
 
         // Issues a request to create the offline user data job.
         CreateOfflineUserDataJobResponse createOfflineUserDataJobResponse =
             offlineUserDataJobServiceClient.createOfflineUserDataJob(
-                Long.toString(customerId), offlineUserDataJob);
+                Long.toString(customerId), offlineUserDataJobBuilder.build());
         offlineUserDataJobResourceName = createOfflineUserDataJobResponse.getResourceName();
         System.out.printf(
             "Created an offline user data job with resource name: %s.%n",
@@ -350,6 +395,7 @@ public class AddCustomerMatchUserList {
       checkJobStatus(googleAdsClient, customerId, offlineUserDataJobResourceName);
     }
   }
+
   // [END add_customer_match_user_list]
 
   /**
@@ -586,6 +632,7 @@ public class AddCustomerMatchUserList {
       }
     }
   }
+
   // [END add_customer_match_user_list_4]
 
   /**

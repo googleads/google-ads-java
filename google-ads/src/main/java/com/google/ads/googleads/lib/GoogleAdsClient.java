@@ -106,7 +106,8 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
     clientBuilder
         .setEndpoint(DEFAULT_ENDPOINT)
         .setTransportChannelProvider(transportChannelProvider)
-        .setDefaultTransportChannelProvider(transportChannelProvider);
+        .setDefaultTransportChannelProvider(transportChannelProvider)
+        .setUseCloudOrgForApiAccess(false);
     return clientBuilder;
   }
 
@@ -120,7 +121,14 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
   public abstract Credentials getCredentials();
 
   /** Returns the developer token. */
+  @Nullable
   public abstract String getDeveloperToken();
+
+  /**
+   * Whether to use the Google Cloud Organization of your Google Cloud project instead of developer
+   * token to determine your Google Ads API access level.
+   */
+  abstract boolean isUseCloudOrgForApiAccess();
 
   /** Returns the endpoint to use. Defaults to DEFAULT_ENDPOINT. */
   public abstract String getEndpoint();
@@ -387,6 +395,18 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
       }
     }
 
+    /**
+     * Gets whether to use the Google Cloud Organization of your Google Cloud project instead of
+     * developer token to determine your Google Ads API access level.
+     */
+    public abstract boolean isUseCloudOrgForApiAccess();
+
+    /**
+     * Specifies whether to use the Google Cloud Organization of your Google Cloud project instead
+     * of developer token to determine your Google Ads API access level.
+     */
+    public abstract Builder setUseCloudOrgForApiAccess(boolean useCloudOrgForApiAccess);
+
     /** Returns the login customer ID currently configured. */
     public abstract Long getLoginCustomerId();
 
@@ -566,6 +586,24 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
       } else {
         // The last action by the user was to invoke setCredentials(Credentials), so no further
         // action is needed.
+      }
+
+      // Verifies that the client will use exactly one of dev token or Cloud org for API access.
+      final String errorSuffix =
+          "You must set either the developer token or set use Cloud org for API access to true, but"
+              + " not both.";
+      if (getDeveloperToken() == null) {
+        // If dev token is null, verifies that the client is using Cloud org for API access.
+        Preconditions.checkState(
+            isUseCloudOrgForApiAccess(),
+            "Developer token is null but not using cloud org for API access. %s",
+            errorSuffix);
+      } else {
+        // If dev token is not null, verifies that the client is not using Cloud org for API access.
+        Preconditions.checkState(
+            !isUseCloudOrgForApiAccess(),
+            "Developer token is not null but using Cloud org for API access. %s",
+            errorSuffix);
       }
 
       // Provides the credentials to the primer to preemptively get these ready for usage.

@@ -40,6 +40,10 @@ import java.io.IOException;
  *
  * <p>To run this example, you must use the Merchant Center UI or the Content API for Shopping to
  * send a link request between your Merchant Center and Google Ads accounts.
+ *
+ * <p>This code example uses version v14 of the Google Ads API. Version v15 of the Google Ads API
+ * replaces MerchantCenterLinkService with ProductLinkInvitationService and ProductLinkService. We
+ * will add new code examples using these services shortly.
  */
 public class ApproveMerchantCenterLink {
 
@@ -107,7 +111,7 @@ public class ApproveMerchantCenterLink {
     // Approves a pending link request for a Google Ads account with customerId from a Merchant
     // Center account with merchantCenterAccountId.
     try (MerchantCenterLinkServiceClient merchantCenterLinkService =
-        googleAdsClient.getLatestVersion().createMerchantCenterLinkServiceClient()) {
+        googleAdsClient.getVersion14().createMerchantCenterLinkServiceClient()) {
       // [START approve_merchant_center_link]
       ListMerchantCenterLinksResponse response =
           merchantCenterLinkService.listMerchantCenterLinks(

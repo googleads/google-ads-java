@@ -21,6 +21,8 @@ public final class ArgumentNames {
   public static final String ACCESS_ROLE = "--accessRole";
   public static final String AD_GROUP_ID = "--adGroupId";
   public static final String AD_ID = "--adId";
+  public static final String AD_PERSONALIZATION_CONSENT = "--adPersonalizationConsent";
+  public static final String AD_USER_DATA_CONSENT = "--adUserDataConsent";
   public static final String ADJUSTMENT_DATE_TIME = "--adjustmentDateTime";
   public static final String ADJUSTMENT_TYPE = "--adjustmentType";
   public static final String ADVERTISER_UPLOAD_DATE_TIME = "--advertiserUploadDateTime";
