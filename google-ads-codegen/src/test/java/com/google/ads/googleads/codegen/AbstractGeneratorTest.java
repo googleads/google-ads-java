@@ -18,28 +18,24 @@ import static org.junit.Assert.assertEquals;
 
 import com.google.common.io.Resources;
 import com.squareup.javapoet.JavaFile;
-import com.squareup.javapoet.TypeSpec;
+import java.io.File;
 import java.io.IOException;
 import java.nio.charset.Charset;
-import javax.annotation.processing.Filer;
-import javax.annotation.processing.Messager;
 import org.junit.Rule;
 import org.junit.rules.TemporaryFolder;
 import org.junit.runner.RunWith;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.MockitoJUnitRunner;
 
 /**
  * Defines a generic test case for code generators which write code via {@link
- * Utils#writeGeneratedClassToFile(String, TypeSpec, Messager, Filer)}.
+ * Utils#writeGeneratedClassToFile(JavaFile, File)}.
  *
  * <p>Provides Mockito support for validating that the serialized code matches expectations.
  */
 @RunWith(MockitoJUnitRunner.class)
 public abstract class AbstractGeneratorTest {
 
-  @Rule
-  public TemporaryFolder temporaryFolder = new TemporaryFolder();
-
+  @Rule public TemporaryFolder temporaryFolder = new TemporaryFolder();
 
   /** Calls invokeCodeGenClass and returns the generated code as a String. */
   protected String generateCode() {
@@ -55,8 +51,11 @@ public abstract class AbstractGeneratorTest {
     }
   }
 
-  /** Abstracts the code generator implementation.
-   * @return*/
+  /**
+   * Abstracts the code generator implementation.
+   *
+   * @return
+   */
   protected abstract JavaFile invokeCodeGenClass();
 
   /** Loads a resource (i.e. expected generated code) as a String. */

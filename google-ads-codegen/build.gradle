@@ -26,8 +26,8 @@ dependencies {
     implementation 'org.slf4j:slf4j-api:1.7.25'
     implementation 'com.squareup:javapoet:1.11.1'
     testImplementation 'com.google.api:gax-grpc::testlib'
-    testImplementation 'org.hamcrest:java-hamcrest:2.0.0.0'
-    testImplementation 'org.mockito:mockito-all:1.9.5'
+    testImplementation 'org.hamcrest:hamcrest:2.2'
+    testImplementation 'org.mockito:mockito-core:4.11.0'
     // Finds all the stubs modules and adds these as dependencies.
     // This saves us from having to update these each time a new API version is
     // added.

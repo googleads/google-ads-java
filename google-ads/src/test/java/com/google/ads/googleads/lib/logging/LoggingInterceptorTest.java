@@ -14,8 +14,8 @@
 
 package com.google.ads.googleads.lib.logging;
 
-import static org.mockito.Matchers.any;
-import static org.mockito.Matchers.eq;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -50,7 +50,7 @@ import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.MockitoJUnitRunner;
 import org.slf4j.Logger;
 
 /**
@@ -593,9 +593,7 @@ public class LoggingInterceptorTest {
 
   private void enableAllLevels(Logger logger) {
     when(logger.isDebugEnabled()).thenReturn(true);
-    when(logger.isErrorEnabled()).thenReturn(true);
     when(logger.isInfoEnabled()).thenReturn(true);
-    when(logger.isTraceEnabled()).thenReturn(true);
     when(logger.isWarnEnabled()).thenReturn(true);
   }
 
