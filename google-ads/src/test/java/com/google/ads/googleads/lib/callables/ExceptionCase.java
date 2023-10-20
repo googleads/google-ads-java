@@ -31,7 +31,7 @@ import java.util.stream.Collectors;
 import org.mockito.ArgumentMatcher;
 
 /** Abstracts a test case for exception transformation. */
-public abstract class ExceptionCase extends ArgumentMatcher<Throwable> {
+public abstract class ExceptionCase implements ArgumentMatcher<Throwable> {
 
   /** Gets all test cases. */
   public static List<ExceptionCase> getCases() {
@@ -59,7 +59,7 @@ public abstract class ExceptionCase extends ArgumentMatcher<Throwable> {
    * <p>Handles most cases where the exceptions can be directly compared with Objects.equals().
    */
   @Override
-  public boolean matches(Object actual) {
+  public boolean matches(Throwable actual) {
     return Objects.equals(actual, getInputThrowable());
   }
 
@@ -98,7 +98,7 @@ public abstract class ExceptionCase extends ArgumentMatcher<Throwable> {
       }
 
       @Override
-      public boolean matches(Object actual) {
+      public boolean matches(Throwable actual) {
         if (actual == null) {
           return false;
         }
