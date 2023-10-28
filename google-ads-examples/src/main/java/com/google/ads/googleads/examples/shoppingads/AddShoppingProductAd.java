@@ -240,7 +240,8 @@ public class AddShoppingProductAd {
             // Sets the bidding strategy to Manual CPC (with eCPC disabled). eCPC for standard
             // Shopping campaigns is deprecated. If eCPC is set to true, Google Ads ignores the
             // the setting and behaves as if the setting was false. See this blog post for more
-            // information: https://ads-developers.googleblog.com/2023/09/google-ads-shopping-campaign-enhanced.html
+            // information:
+            // https://ads-developers.googleblog.com/2023/09/google-ads-shopping-campaign-enhanced.html
             // Recommendation: Use one of the automated bidding strategies for Shopping campaigns
             // to help you optimize your advertising spend. More information can be found here:
             // https://support.google.com/google-ads/answer/6309029.
