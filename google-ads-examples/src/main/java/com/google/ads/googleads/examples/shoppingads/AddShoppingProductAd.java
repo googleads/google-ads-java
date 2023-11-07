@@ -237,11 +237,15 @@ public class AddShoppingProductAd {
             // the ads from immediately serving. Set to ENABLED once you've added
             // targeting and the ads are ready to serve.
             .setStatus(CampaignStatus.PAUSED)
-            // Sets the bidding strategy to Manual CPC (with eCPC enabled)
+            // Sets the bidding strategy to Manual CPC (with eCPC disabled). eCPC for standard
+            // Shopping campaigns is deprecated. If eCPC is set to true, Google Ads ignores the
+            // setting and behaves as if the setting was false. See this blog post for more
+            // information:
+            // https://ads-developers.googleblog.com/2023/09/google-ads-shopping-campaign-enhanced.html
             // Recommendation: Use one of the automated bidding strategies for Shopping campaigns
             // to help you optimize your advertising spend. More information can be found here:
             // https://support.google.com/google-ads/answer/6309029.
-            .setManualCpc(ManualCpc.newBuilder().setEnhancedCpcEnabled(true).build())
+            .setManualCpc(ManualCpc.newBuilder().setEnhancedCpcEnabled(false).build())
             // Sets the budget.
             .setCampaignBudget(budgetResourceName)
             .build();
