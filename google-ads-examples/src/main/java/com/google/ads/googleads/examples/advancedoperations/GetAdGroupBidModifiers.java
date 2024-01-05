@@ -20,9 +20,7 @@ import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v15.errors.GoogleAdsError;
 import com.google.ads.googleads.v15.errors.GoogleAdsException;
-import com.google.ads.googleads.v15.resources.AdGroup;
 import com.google.ads.googleads.v15.resources.AdGroupBidModifier;
-import com.google.ads.googleads.v15.resources.Campaign;
 import com.google.ads.googleads.v15.services.GoogleAdsRow;
 import com.google.ads.googleads.v15.services.GoogleAdsServiceClient;
 import com.google.ads.googleads.v15.services.GoogleAdsServiceClient.SearchPagedResponse;
@@ -134,15 +132,26 @@ public class GetAdGroupBidModifiers {
       // bid modifiers in each row.
       for (GoogleAdsRow googleAdsRow : searchPagedResponse.iterateAll()) {
         AdGroupBidModifier adGroupBidModifier = googleAdsRow.getAdGroupBidModifier();
-        AdGroup adGroup = googleAdsRow.getAdGroup();
-        Campaign campaign = googleAdsRow.getCampaign();
         System.out.printf(
-            "Ad group bid modifier with criterion ID %d, bid modifier value %.2f "
-                + "was found in an ad group with ID %d of campaign ID %d.%n",
+            "Ad group bid modifier with criterion ID %d in ad group ID %d of campaign ID %d ",
             adGroupBidModifier.getCriterionId(),
-            adGroupBidModifier.getBidModifier(),
-            adGroup.getId(),
-            campaign.getId());
+            googleAdsRow.getAdGroup().getId(),
+            googleAdsRow.getCampaign().getId());
+        // When working with an 'optional' protocol buffer field such as AdGroup.bidModifier, use
+        // hasXX() to check if the field is set, and only retrieve the value using getXX() if
+        // hasXX() returns true. See the protocol buffer documentation on field presence for more
+        // information:
+        // https://protobuf.dev/programming-guides/field_presence/#presence-in-proto3-apis
+        if (adGroupBidModifier.hasBidModifier()) {
+          // Prints the bid modifier value since it is set.
+          System.out.printf(
+              "has a bid modifier value of %.2f.%n", adGroupBidModifier.getBidModifier());
+        } else {
+          // Does not print the bid modifier value since it is not set. Printing the result of
+          // adGroupBidModifier.getBidModifier() in this case would be misleading, since it will
+          // be 0.
+          System.out.println("does NOT have a bid modifier value.");
+        }
         // Gets a detailed message specific to the type of criterion.
         String criterionDetails =
             "  - Criterion type: " + adGroupBidModifier.getCriterionCase() + " ";
