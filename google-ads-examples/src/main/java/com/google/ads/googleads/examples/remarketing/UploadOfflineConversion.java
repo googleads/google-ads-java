@@ -18,6 +18,8 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
+import com.google.ads.googleads.v15.common.Consent;
+import com.google.ads.googleads.v15.enums.ConsentStatusEnum.ConsentStatus;
 import com.google.ads.googleads.v15.errors.GoogleAdsError;
 import com.google.ads.googleads.v15.errors.GoogleAdsException;
 import com.google.ads.googleads.v15.errors.GoogleAdsFailure;
@@ -99,6 +101,13 @@ public class UploadOfflineConversion {
     // Optional: Specify the unique order ID for the click conversion.
     @Parameter(names = ArgumentNames.ORDER_ID)
     private String orderId;
+
+    // Optional: Specify the ad user data consent for the click.
+    @Parameter(
+        names = ArgumentNames.AD_USER_DATA_CONSENT,
+        required = false,
+        description = "The ad user data consent for the click.")
+    private ConsentStatus adUserDataConsent;
   }
 
   public static void main(String[] args) {
@@ -121,6 +130,8 @@ public class UploadOfflineConversion {
       params.conversionCustomVariableValue = null;
       // Optionally specify the order ID for the click conversion.
       params.orderId = null;
+      // Optional: specify the ad user data consent for the click.
+      params.adUserDataConsent = null;
     }
 
     GoogleAdsClient googleAdsClient = null;
@@ -148,7 +159,8 @@ public class UploadOfflineConversion {
               params.conversionValue,
               params.conversionCustomVariableId,
               params.conversionCustomVariableValue,
-              params.orderId);
+              params.orderId,
+              params.adUserDataConsent);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -184,6 +196,7 @@ public class UploadOfflineConversion {
    * @param conversionCustomVariableValue the value of the conversion custom variable to associate
    *     with the upload.
    * @param orderId the unique ID (transaction ID) of the conversion.
+   * @param adUserDataConsent the ad user data consent for the click.
    */
   // [START upload_offline_conversion]
   private void runExample(
@@ -197,7 +210,8 @@ public class UploadOfflineConversion {
       Double conversionValue,
       Long conversionCustomVariableId,
       String conversionCustomVariableValue,
-      String orderId) {
+      String orderId,
+      ConsentStatus adUserDataConsent) {
     // Verifies that exactly one of gclid, gbraid, and wbraid is specified, as required.
     // See https://developers.google.com/google-ads/api/docs/conversions/upload-clicks for details.
     long numberOfIdsSpecified =
@@ -244,6 +258,12 @@ public class UploadOfflineConversion {
       clickConversionBuilder.setOrderId(orderId);
     }
 
+    // Sets the consent information, if provided.
+    if (adUserDataConsent != null) {
+      // Specifies whether user consent was obtained for the data you are uploading. See
+      // https://www.google.com/about/company/user-consent-policy for details.
+      clickConversionBuilder.setConsent(Consent.newBuilder().setAdUserData(adUserDataConsent));
+    }
     ClickConversion clickConversion = clickConversionBuilder.build();
 
     // Creates the conversion upload service client.
