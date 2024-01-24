@@ -14,6 +14,8 @@
 
 package com.google.ads.googleads.lib.utils;
 
+import com.google.common.annotations.VisibleForTesting;
+import com.google.common.collect.ImmutableSet;
 import com.google.protobuf.Any;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.Message;
@@ -21,6 +23,7 @@ import com.google.rpc.Status;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
@@ -79,9 +82,25 @@ public abstract class AbstractErrorUtils<
    * empty list otherwise.
    *
    * <p>This method supports <code>XXXService.mutate(request)</code> where the request contains a
-   * list of operations named "operations". It also supports <code>
+   * list of operations named "operations". It also supports:
+   *
+   * <ul>
+   *   <li><code>
    * GoogleAdsService.mutateGoogleAds(request)</code>, where the request contains a list of <code>
    * MutateOperation</code>s named "mutate_operations".
+   *   <li><code>
+   * ConversionAdjustmentUploadService.uploadConversionAdjustments(request)</code>, where the
+   *       request contains a list of <code>
+   * ConversionAdjustment</code>s named "conversion_adjustments".
+   *   <li><code>
+   * UploadClickConversionsRequest.uploadClickConversions(request)</code>, where the request
+   *       contains a list of <code>
+   * ClickConversion</code>s named "conversions".
+   *   <li><code>
+   * UploadCallConversionsRequest.uploadCallConversions(request)</code>, where the request contains
+   *       a list of <code>
+   * CallConversion</code>s named "conversions".
+   * </ul>
    *
    * @param operationIndex the index of the operation, starting from 0.
    * @param partialFailureStatus a partialFailure status, with the detail list containing {@link
@@ -227,6 +246,24 @@ public abstract class AbstractErrorUtils<
     private final String fieldName;
     private final Optional<Long> index;
 
+    /**
+     * The set of field names that represent the list of operations in a request. Most methods use
+     * the standard name of "operations", but there are exceptions.
+     */
+    @VisibleForTesting
+    static final Set<String> OPERATION_FIELD_NAMES =
+        ImmutableSet.<String>builder()
+            // The standard field name.
+            .add("operations")
+            // GoogleAdsService.mutate field name.
+            .add("mutate_operations")
+            // ConversionUploadService.uploadClickConversions and
+            // ConversionUploadService.uploadCallConversions field name.
+            .add("conversions")
+            // ConversionAdjustmentService.uploadConversionAdjustments field name.
+            .add("conversion_adjustments")
+            .build();
+
     public ErrorPath(GoogleAdsErrorType error, String fieldName, Optional<Long> index) {
       this.error = error;
       this.fieldName = fieldName;
@@ -241,12 +278,17 @@ public abstract class AbstractErrorUtils<
       return fieldName;
     }
 
+    /** Returns the index portion of this error path element. */
     public Optional<Long> getIndex() {
       return index;
     }
 
+    /**
+     * Returns if the field represents the portion of the error path that identifies the index of an
+     * operation in a request.
+     */
     public boolean isOperationIndex() {
-      return "operations".equals(getFieldName()) || "mutate_operations".equals(getFieldName());
+      return OPERATION_FIELD_NAMES.contains(getFieldName());
     }
   }
 
