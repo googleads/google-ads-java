@@ -334,8 +334,8 @@ public class AbstractErrorUtilsTest {
           .append(
               "Review each service/request combination. If the request does not contain an"
                   + " operations list, add the request to this test's list of request descriptors"
-                  + " to ignore. Otherwise, update the ErrorPath implementation to properly handle"
-                  + " the request's operations list.");
+                  + " to ignore. Otherwise, add the operations list field name to"
+                  + " OPERATION_FIELD_NAMES in ErrorPath.");
       fail(failureBuilder.toString());
     }
   }
