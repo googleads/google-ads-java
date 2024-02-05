@@ -14,16 +14,39 @@
 
 package com.google.ads.googleads.lib.utils;
 
+import static com.google.ads.googleads.lib.utils.AbstractErrorUtils.ErrorPath.OPERATION_FIELD_NAMES;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
+import com.google.ads.googleads.lib.GoogleAdsAllVersions;
 import com.google.ads.googleads.lib.test.errors.MockError;
 import com.google.ads.googleads.lib.test.errors.MockFailure;
 import com.google.ads.googleads.lib.test.errors.MockPath;
+import com.google.ads.googleads.lib.utils.AbstractErrorUtils.ErrorPath;
+import com.google.ads.googleads.v15.services.GenerateAdGroupThemesRequest;
+import com.google.ads.googleads.v15.services.GenerateAudienceCompositionInsightsRequest;
+import com.google.ads.googleads.v15.services.GenerateKeywordHistoricalMetricsRequest;
+import com.google.ads.googleads.v15.services.GenerateKeywordIdeasRequest;
+import com.google.ads.googleads.v15.services.GenerateReachForecastRequest;
+import com.google.ads.googleads.v15.services.GraduateExperimentRequest;
+import com.google.ads.googleads.v15.services.ListAudienceInsightsAttributesRequest;
+import com.google.ads.googleads.v15.services.SuggestBrandsRequest;
+import com.google.ads.googleads.v15.services.SuggestTravelAssetsRequest;
+import com.google.common.collect.ImmutableSet;
+import com.google.common.collect.Multimap;
+import com.google.common.collect.Multimaps;
 import com.google.protobuf.Any;
+import com.google.protobuf.Descriptors.Descriptor;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.rpc.Status;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
+import java.util.TreeMap;
+import java.util.stream.Collectors;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -38,9 +61,11 @@ public class AbstractErrorUtilsTest {
     this.operationsFieldName = operationsFieldName;
   }
 
-  @Parameterized.Parameters
+  @Parameterized.Parameters(name = "operationsFieldName={0}")
   public static String[] parameters() {
-    return new String[] {"operations", "mutate_operations"};
+    return new String[] {
+      "operations", "mutate_operations", "conversions", "conversion_adjustments"
+    };
   }
 
   @Test
@@ -198,6 +223,120 @@ public class AbstractErrorUtilsTest {
           error,
           errorLocation.getFieldName(),
           Optional.ofNullable(errorLocation.hasIndex() ? errorLocation.getIndex() : null));
+    }
+  }
+
+  /**
+   * Identifies any request type with a field that potentially contains a list of operations, but
+   * the field is not handled by the utility methods in {@link ErrorPath} that identify the portion
+   * of the path that contains an operation index.
+   *
+   * <p>The intent of this test is to automatically alert library owners when a change in the API
+   * necessitates updating the error utility.
+   */
+  @Test
+  public void ensureAllOperationFieldNamesDetected() throws NoSuchMethodException {
+    // NOTE: This test uses certain assumptions in combination with protobuf descriptor inspection
+    // to try to find potential problems introduced by new request types. If this test fails, review
+    // the detailed failure message for next steps.
+
+    // The set of request descriptors for known special cases where the request has repeated fields
+    // but does not contain an operations collection.
+    final Set<Descriptor> requestDescriptorsToIgnore =
+        ImmutableSet.<Descriptor>builder()
+            .add(ListAudienceInsightsAttributesRequest.getDescriptor())
+            .add(GenerateAudienceCompositionInsightsRequest.getDescriptor())
+            .add(SuggestBrandsRequest.getDescriptor())
+            .add(GenerateKeywordIdeasRequest.getDescriptor())
+            .add(GenerateKeywordHistoricalMetricsRequest.getDescriptor())
+            .add(GenerateAdGroupThemesRequest.getDescriptor())
+            .add(GenerateReachForecastRequest.getDescriptor())
+            .add(GraduateExperimentRequest.getDescriptor())
+            .add(SuggestTravelAssetsRequest.getDescriptor())
+            .build();
+
+    // Gets the class for the latest version of the Google Ads API.
+    Class<?> latestVersionClass =
+        GoogleAdsAllVersions.class.getMethod("getLatestVersion").getReturnType();
+    // Collects the list of service client creation methods for further inspection.
+    List<? extends Class<?>> serviceClientTypes =
+        Arrays.stream(latestVersionClass.getMethods())
+            .filter(m -> m.getName().matches("create.*ServiceClient"))
+            .map(Method::getReturnType)
+            .collect(Collectors.toList());
+
+    // A multimap of service name to the list of the service's request names where the request
+    // potentially has a field containing the list of operations but the field's name is not in the
+    // list of known operation fields and the request type is not in the list of request types to
+    // ignore.
+    Multimap<String, String> unmappedRequestsByService =
+        Multimaps.newListMultimap(new TreeMap<>(), ArrayList::new);
+
+    // Processes each service client.
+    for (Class<?> serviceClientType : serviceClientTypes) {
+      // Finds each method of the service client that accepts a request type and inspect its request
+      // type.
+      List<String> unmappedRequests =
+          Arrays.stream(serviceClientType.getMethods())
+              // Keeps the service client methods that have a single request parameter.
+              .filter(
+                  m ->
+                      m.getParameterCount() == 1
+                          && m.getParameterTypes()[0].getTypeName().endsWith("Request"))
+              // Gets the type of the request parameter.
+              .map(m -> m.getParameterTypes()[0])
+              // Invokes the getDescriptor method for easier inspection of the request type.
+              .map(
+                  msgClass -> {
+                    try {
+                      return (Descriptor) msgClass.getMethod("getDescriptor").invoke(new Object[0]);
+                    } catch (ReflectiveOperationException refExc) {
+                      throw new RuntimeException(
+                          "Failed to invoke getDescriptor on: " + msgClass, refExc);
+                    }
+                  })
+              // Keeps the request descriptor only if it is not one of the known exceptions.
+              .filter(desc -> !requestDescriptorsToIgnore.contains(desc))
+              // Keeps the request descriptor if it contains at least one repeated field. Request
+              // types with no repeated fields cannot have a list of operations, so they are
+              // irrelevant for this test.
+              .filter(desc -> desc.getFields().stream().anyMatch(fldDesc -> fldDesc.isRepeated()))
+              // Keeps the request descriptor if it does not have any fields that match the known
+              // list of operation field names.
+              .filter(
+                  desc ->
+                      desc.getFields().stream()
+                          .noneMatch(fldDesc -> OPERATION_FIELD_NAMES.contains(fldDesc.getName())))
+              // Gets the name of the request type.
+              .map(desc -> desc.getName())
+              // Adds all unmapped request type names to the list for this service client.
+              .collect(Collectors.toList());
+
+      // Only adds an entry for the service client if there are unmapped request types.
+      if (!unmappedRequests.isEmpty()) {
+        unmappedRequestsByService.putAll(serviceClientType.getName(), unmappedRequests);
+      }
+    }
+
+    if (!unmappedRequestsByService.isEmpty()) {
+      // Fails the test with a detailed error message containing all request types that are not
+      // properly handled by the error utility.
+      StringBuilder failureBuilder = new StringBuilder();
+      failureBuilder
+          .append(
+              "No known operations field found for the following service/request combinations: ")
+          .append(String.format("%n"))
+          .append(
+              unmappedRequestsByService.entries().stream()
+                  .map(entry -> entry.getKey() + "." + entry.getValue())
+                  .collect(Collectors.joining(String.format("%n"))))
+          .append(String.format("%n"))
+          .append(
+              "Review each service/request combination. If the request does not contain an"
+                  + " operations list, add the request to this test's list of request descriptors"
+                  + " to ignore. Otherwise, add the operations list field name to"
+                  + " OPERATION_FIELD_NAMES in ErrorPath.");
+      fail(failureBuilder.toString());
     }
   }
 }

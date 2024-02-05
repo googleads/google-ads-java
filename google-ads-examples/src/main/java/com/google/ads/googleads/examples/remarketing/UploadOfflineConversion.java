@@ -31,6 +31,9 @@ import com.google.ads.googleads.v15.services.UploadClickConversionsRequest;
 import com.google.ads.googleads.v15.services.UploadClickConversionsResponse;
 import com.google.ads.googleads.v15.utils.ErrorUtils;
 import com.google.ads.googleads.v15.utils.ResourceNames;
+import com.google.protobuf.InvalidProtocolBufferException;
+import com.google.protobuf.util.JsonFormat;
+import com.google.protobuf.util.JsonFormat.Printer;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Arrays;
@@ -110,7 +113,7 @@ public class UploadOfflineConversion {
     private ConsentStatus adUserDataConsent;
   }
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws InvalidProtocolBufferException {
     UploadOfflineConversionParams params = new UploadOfflineConversionParams();
     if (!params.parseArguments(args)) {
 
@@ -211,7 +214,8 @@ public class UploadOfflineConversion {
       Long conversionCustomVariableId,
       String conversionCustomVariableValue,
       String orderId,
-      ConsentStatus adUserDataConsent) {
+      ConsentStatus adUserDataConsent)
+      throws InvalidProtocolBufferException {
     // Verifies that exactly one of gclid, gbraid, and wbraid is specified, as required.
     // See https://developers.google.com/google-ads/api/docs/conversions/upload-clicks for details.
     long numberOfIdsSpecified =
@@ -289,18 +293,38 @@ public class UploadOfflineConversion {
       if (response.hasPartialFailureError()) {
         GoogleAdsFailure googleAdsFailure =
             ErrorUtils.getInstance().getGoogleAdsFailure(response.getPartialFailureError());
-        googleAdsFailure
-            .getErrorsList()
-            .forEach(e -> System.out.println("Partial failure occurred: " + e.getMessage()));
-      }
-
-      // Prints the result.
-      ClickConversionResult result = response.getResults(0);
-      // Only prints valid results.
-      if (result.hasGclid()) {
-        System.out.printf(
-            "Uploaded conversion that occurred at '%s' from Google Click ID '%s' to '%s'.%n",
-            result.getConversionDateTime(), result.getGclid(), result.getConversionAction());
+        // Constructs a protocol buffer printer that will print error details in a concise format.
+        Printer errorPrinter = JsonFormat.printer().omittingInsignificantWhitespace();
+        for (int operationIndex = 0;
+            operationIndex < response.getResultsCount();
+            operationIndex++) {
+          ClickConversionResult conversionResult = response.getResults(operationIndex);
+          if (ErrorUtils.getInstance().isPartialFailureResult(conversionResult)) {
+            // Prints the errors for the failed operation.
+            System.out.printf("Operation %d failed with the following errors:%n", operationIndex);
+            for (GoogleAdsError resultError :
+                ErrorUtils.getInstance().getGoogleAdsErrors(operationIndex, googleAdsFailure)) {
+              // Prints the error with newlines and extra spaces removed.
+              System.out.printf("  %s%n", errorPrinter.print(resultError));
+            }
+          } else {
+            // Prints the information about the successful operation.
+            StringBuilder clickInfoBuilder =
+                new StringBuilder("conversion that occurred at ")
+                    .append(String.format("'%s' ", conversionResult.getConversionDateTime()))
+                    .append("with ");
+            if (conversionResult.hasGclid()) {
+              clickInfoBuilder.append(String.format("gclid '%s'", conversionResult.getGclid()));
+            } else if (!conversionResult.getGbraid().isEmpty()) {
+              clickInfoBuilder.append(String.format("gbraid '%s'", conversionResult.getGbraid()));
+            } else if (!conversionResult.getWbraid().isEmpty()) {
+              clickInfoBuilder.append(String.format("wbraid '%s'", conversionResult.getWbraid()));
+            } else {
+              clickInfoBuilder.append("no click ID");
+            }
+            System.out.printf("Operation %d for %s succeeded.%n", operationIndex, clickInfoBuilder);
+          }
+        }
       }
     }
   }
