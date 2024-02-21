@@ -15,7 +15,7 @@ public final class CampaignExtensionSettingServiceGrpc {
 
   private CampaignExtensionSettingServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.CampaignExtensionSettingService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.CampaignExtensionSettingService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.MutateCampaignExtensionSettingsRequest,
@@ -407,9 +407,9 @@ public final class CampaignExtensionSettingServiceGrpc {
   private static final class CampaignExtensionSettingServiceMethodDescriptorSupplier
       extends CampaignExtensionSettingServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    CampaignExtensionSettingServiceMethodDescriptorSupplier(String methodName) {
+    CampaignExtensionSettingServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

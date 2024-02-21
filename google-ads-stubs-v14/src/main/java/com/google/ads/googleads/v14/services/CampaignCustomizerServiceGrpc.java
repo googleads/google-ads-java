@@ -15,7 +15,7 @@ public final class CampaignCustomizerServiceGrpc {
 
   private CampaignCustomizerServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.CampaignCustomizerService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.CampaignCustomizerService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.MutateCampaignCustomizersRequest,
@@ -295,9 +295,9 @@ public final class CampaignCustomizerServiceGrpc {
   private static final class CampaignCustomizerServiceMethodDescriptorSupplier
       extends CampaignCustomizerServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    CampaignCustomizerServiceMethodDescriptorSupplier(String methodName) {
+    CampaignCustomizerServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

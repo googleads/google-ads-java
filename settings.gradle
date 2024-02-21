@@ -43,3 +43,4 @@ if (!startParameter.projectProperties.containsKey("release")) {
 // append new modules here as required. There should *not* be a newline at EOF.
 include ':google-ads-stubs-v14'
 include ':google-ads-stubs-v15'
+include ':google-ads-stubs-v16'

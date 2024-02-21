@@ -15,7 +15,7 @@ public final class CustomerSkAdNetworkConversionValueSchemaServiceGrpc {
 
   private CustomerSkAdNetworkConversionValueSchemaServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.CustomerSkAdNetworkConversionValueSchemaService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.CustomerSkAdNetworkConversionValueSchemaService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.MutateCustomerSkAdNetworkConversionValueSchemaRequest,
@@ -315,9 +315,9 @@ public final class CustomerSkAdNetworkConversionValueSchemaServiceGrpc {
   private static final class CustomerSkAdNetworkConversionValueSchemaServiceMethodDescriptorSupplier
       extends CustomerSkAdNetworkConversionValueSchemaServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    CustomerSkAdNetworkConversionValueSchemaServiceMethodDescriptorSupplier(String methodName) {
+    CustomerSkAdNetworkConversionValueSchemaServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

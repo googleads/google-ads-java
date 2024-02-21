@@ -15,12 +15,12 @@
 package com.google.ads.googleads.examples.targeting;
 
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v15.errors.GoogleAdsError;
-import com.google.ads.googleads.v15.errors.GoogleAdsException;
-import com.google.ads.googleads.v15.services.GeoTargetConstantServiceClient;
-import com.google.ads.googleads.v15.services.GeoTargetConstantSuggestion;
-import com.google.ads.googleads.v15.services.SuggestGeoTargetConstantsRequest;
-import com.google.ads.googleads.v15.services.SuggestGeoTargetConstantsResponse;
+import com.google.ads.googleads.v16.errors.GoogleAdsError;
+import com.google.ads.googleads.v16.errors.GoogleAdsException;
+import com.google.ads.googleads.v16.services.GeoTargetConstantServiceClient;
+import com.google.ads.googleads.v16.services.GeoTargetConstantSuggestion;
+import com.google.ads.googleads.v16.services.SuggestGeoTargetConstantsRequest;
+import com.google.ads.googleads.v16.services.SuggestGeoTargetConstantsResponse;
 import com.google.common.collect.ImmutableList;
 import java.io.FileNotFoundException;
 import java.io.IOException;

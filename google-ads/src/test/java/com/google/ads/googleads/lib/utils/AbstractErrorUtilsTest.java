@@ -23,15 +23,16 @@ import com.google.ads.googleads.lib.test.errors.MockError;
 import com.google.ads.googleads.lib.test.errors.MockFailure;
 import com.google.ads.googleads.lib.test.errors.MockPath;
 import com.google.ads.googleads.lib.utils.AbstractErrorUtils.ErrorPath;
-import com.google.ads.googleads.v15.services.GenerateAdGroupThemesRequest;
-import com.google.ads.googleads.v15.services.GenerateAudienceCompositionInsightsRequest;
-import com.google.ads.googleads.v15.services.GenerateKeywordHistoricalMetricsRequest;
-import com.google.ads.googleads.v15.services.GenerateKeywordIdeasRequest;
-import com.google.ads.googleads.v15.services.GenerateReachForecastRequest;
-import com.google.ads.googleads.v15.services.GraduateExperimentRequest;
-import com.google.ads.googleads.v15.services.ListAudienceInsightsAttributesRequest;
-import com.google.ads.googleads.v15.services.SuggestBrandsRequest;
-import com.google.ads.googleads.v15.services.SuggestTravelAssetsRequest;
+import com.google.ads.googleads.v16.services.GenerateAdGroupThemesRequest;
+import com.google.ads.googleads.v16.services.GenerateAudienceCompositionInsightsRequest;
+import com.google.ads.googleads.v16.services.GenerateKeywordHistoricalMetricsRequest;
+import com.google.ads.googleads.v16.services.GenerateKeywordIdeasRequest;
+import com.google.ads.googleads.v16.services.GenerateReachForecastRequest;
+import com.google.ads.googleads.v16.services.GenerateRecommendationsRequest;
+import com.google.ads.googleads.v16.services.GraduateExperimentRequest;
+import com.google.ads.googleads.v16.services.ListAudienceInsightsAttributesRequest;
+import com.google.ads.googleads.v16.services.SuggestBrandsRequest;
+import com.google.ads.googleads.v16.services.SuggestTravelAssetsRequest;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Multimaps;
@@ -253,6 +254,7 @@ public class AbstractErrorUtilsTest {
             .add(GenerateReachForecastRequest.getDescriptor())
             .add(GraduateExperimentRequest.getDescriptor())
             .add(SuggestTravelAssetsRequest.getDescriptor())
+            .add(GenerateRecommendationsRequest.getDescriptor())
             .build();
 
     // Gets the class for the latest version of the Google Ads API.

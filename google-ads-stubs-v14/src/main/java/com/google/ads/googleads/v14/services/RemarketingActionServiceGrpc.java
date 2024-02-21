@@ -15,7 +15,7 @@ public final class RemarketingActionServiceGrpc {
 
   private RemarketingActionServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.RemarketingActionService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.RemarketingActionService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.MutateRemarketingActionsRequest,
@@ -323,9 +323,9 @@ public final class RemarketingActionServiceGrpc {
   private static final class RemarketingActionServiceMethodDescriptorSupplier
       extends RemarketingActionServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    RemarketingActionServiceMethodDescriptorSupplier(String methodName) {
+    RemarketingActionServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

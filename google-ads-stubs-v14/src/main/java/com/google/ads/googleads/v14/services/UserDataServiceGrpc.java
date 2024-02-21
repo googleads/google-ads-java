@@ -20,7 +20,7 @@ public final class UserDataServiceGrpc {
 
   private UserDataServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.UserDataService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.UserDataService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.UploadUserDataRequest,
@@ -369,9 +369,9 @@ public final class UserDataServiceGrpc {
   private static final class UserDataServiceMethodDescriptorSupplier
       extends UserDataServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    UserDataServiceMethodDescriptorSupplier(String methodName) {
+    UserDataServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

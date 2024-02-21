@@ -21,7 +21,7 @@ public final class AccountBudgetProposalServiceGrpc {
 
   private AccountBudgetProposalServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.AccountBudgetProposalService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.AccountBudgetProposalService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.MutateAccountBudgetProposalRequest,
@@ -387,9 +387,9 @@ public final class AccountBudgetProposalServiceGrpc {
   private static final class AccountBudgetProposalServiceMethodDescriptorSupplier
       extends AccountBudgetProposalServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    AccountBudgetProposalServiceMethodDescriptorSupplier(String methodName) {
+    AccountBudgetProposalServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

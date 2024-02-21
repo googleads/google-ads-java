@@ -15,6 +15,7 @@
 package com.google.ads.googleads.codegen;
 
 import static org.junit.Assert.assertEquals;
+
 import com.google.ads.googleads.lib.stubs.annotations.VersionDescriptor;
 import com.google.ads.googleads.lib.stubs.exceptions.BaseGoogleAdsException;
 import com.google.api.gax.rpc.ApiException;
@@ -43,16 +44,16 @@ public class RunCodeGeneratorsTest {
       ImmutableMap.<String, String>builder()
           .put(
               "/com/google/ads/googleads/lib/catalog/VersionFactory.java",
-              "/com/google/ads/googleads/codegen/RunCodeGeneratorsTest/VersionFactory.java.expected")
+              "/com/google/ads/googleads/codegen/RunCodeGeneratorsTest_VersionFactory.java.expected")
           .put(
               "/com/google/ads/googleads/lib/catalog/GeneratedCatalog.java",
-              "/com/google/ads/googleads/codegen/RunCodeGeneratorsTest/GeneratedCatalog.java.expected")
+              "/com/google/ads/googleads/codegen/RunCodeGeneratorsTest_GeneratedCatalog.java.expected")
           .put(
               "/com/google/ads/googleads/lib/GoogleAdsAllVersions.java",
-              "/com/google/ads/googleads/codegen/RunCodeGeneratorsTest/GoogleAdsAllVersions.java.expected")
+              "/com/google/ads/googleads/codegen/RunCodeGeneratorsTest_GoogleAdsAllVersions.java.expected")
           .put(
               "/com/google/ads/googleads/lib/AbstractGoogleAdsClient.java",
-              "/com/google/ads/googleads/codegen/RunCodeGeneratorsTest/AbstractGoogleAdsClient.java.expected")
+              "/com/google/ads/googleads/codegen/RunCodeGeneratorsTest_AbstractGoogleAdsClient.java.expected")
           .build();
 
   @Rule public TemporaryFolder temporaryFolder = new TemporaryFolder();

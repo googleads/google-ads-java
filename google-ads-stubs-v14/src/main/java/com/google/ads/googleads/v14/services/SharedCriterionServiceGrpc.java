@@ -15,7 +15,7 @@ public final class SharedCriterionServiceGrpc {
 
   private SharedCriterionServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.SharedCriterionService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.SharedCriterionService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.MutateSharedCriteriaRequest,
@@ -375,9 +375,9 @@ public final class SharedCriterionServiceGrpc {
   private static final class SharedCriterionServiceMethodDescriptorSupplier
       extends SharedCriterionServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    SharedCriterionServiceMethodDescriptorSupplier(String methodName) {
+    SharedCriterionServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

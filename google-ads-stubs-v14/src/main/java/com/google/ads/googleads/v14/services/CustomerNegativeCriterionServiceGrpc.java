@@ -15,7 +15,7 @@ public final class CustomerNegativeCriterionServiceGrpc {
 
   private CustomerNegativeCriterionServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.CustomerNegativeCriterionService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.CustomerNegativeCriterionService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.MutateCustomerNegativeCriteriaRequest,
@@ -335,9 +335,9 @@ public final class CustomerNegativeCriterionServiceGrpc {
   private static final class CustomerNegativeCriterionServiceMethodDescriptorSupplier
       extends CustomerNegativeCriterionServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    CustomerNegativeCriterionServiceMethodDescriptorSupplier(String methodName) {
+    CustomerNegativeCriterionServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

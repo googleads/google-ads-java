@@ -16,7 +16,7 @@ public final class MerchantCenterLinkServiceGrpc {
 
   private MerchantCenterLinkServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.MerchantCenterLinkService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.MerchantCenterLinkService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.ListMerchantCenterLinksRequest,
@@ -555,9 +555,9 @@ public final class MerchantCenterLinkServiceGrpc {
   private static final class MerchantCenterLinkServiceMethodDescriptorSupplier
       extends MerchantCenterLinkServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    MerchantCenterLinkServiceMethodDescriptorSupplier(String methodName) {
+    MerchantCenterLinkServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

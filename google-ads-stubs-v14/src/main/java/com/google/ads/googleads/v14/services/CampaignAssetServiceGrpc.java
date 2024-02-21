@@ -15,7 +15,7 @@ public final class CampaignAssetServiceGrpc {
 
   private CampaignAssetServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.CampaignAssetService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.CampaignAssetService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.MutateCampaignAssetsRequest,
@@ -347,9 +347,9 @@ public final class CampaignAssetServiceGrpc {
   private static final class CampaignAssetServiceMethodDescriptorSupplier
       extends CampaignAssetServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    CampaignAssetServiceMethodDescriptorSupplier(String methodName) {
+    CampaignAssetServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

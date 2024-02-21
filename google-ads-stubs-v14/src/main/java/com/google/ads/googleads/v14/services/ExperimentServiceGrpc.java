@@ -15,7 +15,7 @@ public final class ExperimentServiceGrpc {
 
   private ExperimentServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.ExperimentService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.ExperimentService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.MutateExperimentsRequest,
@@ -1000,9 +1000,9 @@ public final class ExperimentServiceGrpc {
   private static final class ExperimentServiceMethodDescriptorSupplier
       extends ExperimentServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    ExperimentServiceMethodDescriptorSupplier(String methodName) {
+    ExperimentServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

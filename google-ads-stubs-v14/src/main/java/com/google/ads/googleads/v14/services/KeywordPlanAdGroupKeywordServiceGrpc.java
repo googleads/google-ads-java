@@ -19,7 +19,7 @@ public final class KeywordPlanAdGroupKeywordServiceGrpc {
 
   private KeywordPlanAdGroupKeywordServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.KeywordPlanAdGroupKeywordService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.KeywordPlanAdGroupKeywordService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.MutateKeywordPlanAdGroupKeywordsRequest,
@@ -371,9 +371,9 @@ public final class KeywordPlanAdGroupKeywordServiceGrpc {
   private static final class KeywordPlanAdGroupKeywordServiceMethodDescriptorSupplier
       extends KeywordPlanAdGroupKeywordServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    KeywordPlanAdGroupKeywordServiceMethodDescriptorSupplier(String methodName) {
+    KeywordPlanAdGroupKeywordServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

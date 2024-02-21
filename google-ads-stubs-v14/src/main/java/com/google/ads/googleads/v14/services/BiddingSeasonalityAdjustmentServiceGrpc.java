@@ -15,7 +15,7 @@ public final class BiddingSeasonalityAdjustmentServiceGrpc {
 
   private BiddingSeasonalityAdjustmentServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.BiddingSeasonalityAdjustmentService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.BiddingSeasonalityAdjustmentService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.MutateBiddingSeasonalityAdjustmentsRequest,
@@ -295,9 +295,9 @@ public final class BiddingSeasonalityAdjustmentServiceGrpc {
   private static final class BiddingSeasonalityAdjustmentServiceMethodDescriptorSupplier
       extends BiddingSeasonalityAdjustmentServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    BiddingSeasonalityAdjustmentServiceMethodDescriptorSupplier(String methodName) {
+    BiddingSeasonalityAdjustmentServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

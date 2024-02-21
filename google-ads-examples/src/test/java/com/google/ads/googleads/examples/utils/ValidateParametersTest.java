@@ -55,10 +55,16 @@ public class ValidateParametersTest {
             .filter(f -> f.getAnnotation(Parameter.class) != null)
             .collect(Collectors.toSet());
 
-    // Asserts that the above discovered at least 300 annotated fields. Examples contain closer to
-    // 400 such fields as of the writing of this test, but this leaves some room in case we decide
+    // Asserts that the above discovered at least 250 annotated fields. Examples contain closer to
+    // 300 such fields as of the writing of this test, but this leaves some room in case we decide
     // to remove some examples.
-    assertThat("parameters", annotatedFields.size(), is(greaterThan(300)));
+    assertThat(
+        "Did not discover the minimal number of annotated parameter fields. Verify that the minimum"
+            + " number of fields in this test is accurate. This test may fail if you just deleted"
+            + " examples, in which case you should update the minimum in this test after analyzing"
+            + " the remaining examples.",
+        annotatedFields.size(),
+        is(greaterThan(250)));
     for (Field field : annotatedFields) {
       assertEquals("field is final: " + field, 0, field.getModifiers() & Modifier.FINAL);
     }

@@ -15,7 +15,7 @@ public final class BiddingStrategyServiceGrpc {
 
   private BiddingStrategyServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.BiddingStrategyService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.BiddingStrategyService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.MutateBiddingStrategiesRequest,
@@ -403,9 +403,9 @@ public final class BiddingStrategyServiceGrpc {
   private static final class BiddingStrategyServiceMethodDescriptorSupplier
       extends BiddingStrategyServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    BiddingStrategyServiceMethodDescriptorSupplier(String methodName) {
+    BiddingStrategyServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

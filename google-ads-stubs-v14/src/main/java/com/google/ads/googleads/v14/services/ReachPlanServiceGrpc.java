@@ -19,7 +19,7 @@ public final class ReachPlanServiceGrpc {
 
   private ReachPlanServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.ReachPlanService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.ReachPlanService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.ListPlannableLocationsRequest,
@@ -585,9 +585,9 @@ public final class ReachPlanServiceGrpc {
   private static final class ReachPlanServiceMethodDescriptorSupplier
       extends ReachPlanServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    ReachPlanServiceMethodDescriptorSupplier(String methodName) {
+    ReachPlanServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

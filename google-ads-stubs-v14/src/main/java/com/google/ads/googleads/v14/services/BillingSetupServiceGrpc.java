@@ -21,7 +21,7 @@ public final class BillingSetupServiceGrpc {
 
   private BillingSetupServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.BillingSetupService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.BillingSetupService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.MutateBillingSetupRequest,
@@ -371,9 +371,9 @@ public final class BillingSetupServiceGrpc {
   private static final class BillingSetupServiceMethodDescriptorSupplier
       extends BillingSetupServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    BillingSetupServiceMethodDescriptorSupplier(String methodName) {
+    BillingSetupServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

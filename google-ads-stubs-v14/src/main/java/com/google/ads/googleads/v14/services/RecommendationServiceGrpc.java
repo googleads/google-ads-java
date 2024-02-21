@@ -15,7 +15,7 @@ public final class RecommendationServiceGrpc {
 
   private RecommendationServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.RecommendationService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.RecommendationService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.ApplyRecommendationRequest,
@@ -456,9 +456,9 @@ public final class RecommendationServiceGrpc {
   private static final class RecommendationServiceMethodDescriptorSupplier
       extends RecommendationServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    RecommendationServiceMethodDescriptorSupplier(String methodName) {
+    RecommendationServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

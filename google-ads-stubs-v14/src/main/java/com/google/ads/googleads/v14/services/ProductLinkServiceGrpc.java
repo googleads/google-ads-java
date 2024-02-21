@@ -16,7 +16,7 @@ public final class ProductLinkServiceGrpc {
 
   private ProductLinkServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.ProductLinkService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.ProductLinkService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.CreateProductLinkRequest,
@@ -458,9 +458,9 @@ public final class ProductLinkServiceGrpc {
   private static final class ProductLinkServiceMethodDescriptorSupplier
       extends ProductLinkServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    ProductLinkServiceMethodDescriptorSupplier(String methodName) {
+    ProductLinkServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
