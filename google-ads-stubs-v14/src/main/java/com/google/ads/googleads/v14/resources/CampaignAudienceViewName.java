@@ -1,5 +1,5 @@
 /*
- * Copyright 2023 Google LLC
+ * Copyright 2024 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -160,7 +160,7 @@ public class CampaignAudienceViewName implements ResourceName {
     if (o == this) {
       return true;
     }
-    if (o != null || getClass() == o.getClass()) {
+    if (o != null && getClass() == o.getClass()) {
       CampaignAudienceViewName that = ((CampaignAudienceViewName) o);
       return Objects.equals(this.customerId, that.customerId)
           && Objects.equals(this.campaignId, that.campaignId)

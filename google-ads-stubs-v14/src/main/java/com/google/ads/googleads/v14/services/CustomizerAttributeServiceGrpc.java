@@ -15,7 +15,7 @@ public final class CustomizerAttributeServiceGrpc {
 
   private CustomizerAttributeServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.CustomizerAttributeService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.CustomizerAttributeService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.MutateCustomizerAttributesRequest,
@@ -295,9 +295,9 @@ public final class CustomizerAttributeServiceGrpc {
   private static final class CustomizerAttributeServiceMethodDescriptorSupplier
       extends CustomizerAttributeServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    CustomizerAttributeServiceMethodDescriptorSupplier(String methodName) {
+    CustomizerAttributeServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

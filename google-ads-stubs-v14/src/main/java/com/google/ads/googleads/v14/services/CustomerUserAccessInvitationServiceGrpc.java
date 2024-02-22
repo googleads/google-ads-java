@@ -16,7 +16,7 @@ public final class CustomerUserAccessInvitationServiceGrpc {
 
   private CustomerUserAccessInvitationServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.CustomerUserAccessInvitationService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.CustomerUserAccessInvitationService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.MutateCustomerUserAccessInvitationRequest,
@@ -329,9 +329,9 @@ public final class CustomerUserAccessInvitationServiceGrpc {
   private static final class CustomerUserAccessInvitationServiceMethodDescriptorSupplier
       extends CustomerUserAccessInvitationServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    CustomerUserAccessInvitationServiceMethodDescriptorSupplier(String methodName) {
+    CustomerUserAccessInvitationServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

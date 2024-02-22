@@ -15,7 +15,7 @@ public final class CampaignDraftServiceGrpc {
 
   private CampaignDraftServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.CampaignDraftService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.CampaignDraftService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.MutateCampaignDraftsRequest,
@@ -605,9 +605,9 @@ public final class CampaignDraftServiceGrpc {
   private static final class CampaignDraftServiceMethodDescriptorSupplier
       extends CampaignDraftServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    CampaignDraftServiceMethodDescriptorSupplier(String methodName) {
+    CampaignDraftServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

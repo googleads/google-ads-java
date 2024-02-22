@@ -15,7 +15,7 @@ public final class FeedItemTargetServiceGrpc {
 
   private FeedItemTargetServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.FeedItemTargetService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.FeedItemTargetService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.MutateFeedItemTargetsRequest,
@@ -371,9 +371,9 @@ public final class FeedItemTargetServiceGrpc {
   private static final class FeedItemTargetServiceMethodDescriptorSupplier
       extends FeedItemTargetServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    FeedItemTargetServiceMethodDescriptorSupplier(String methodName) {
+    FeedItemTargetServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

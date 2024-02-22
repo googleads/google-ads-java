@@ -15,7 +15,7 @@ public final class ConversionUploadServiceGrpc {
 
   private ConversionUploadServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.ConversionUploadService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.ConversionUploadService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.UploadClickConversionsRequest,
@@ -444,9 +444,9 @@ public final class ConversionUploadServiceGrpc {
   private static final class ConversionUploadServiceMethodDescriptorSupplier
       extends ConversionUploadServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    ConversionUploadServiceMethodDescriptorSupplier(String methodName) {
+    ConversionUploadServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

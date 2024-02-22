@@ -15,7 +15,7 @@ public final class GeoTargetConstantServiceGrpc {
 
   private GeoTargetConstantServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.GeoTargetConstantService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.GeoTargetConstantService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.SuggestGeoTargetConstantsRequest,
@@ -323,9 +323,9 @@ public final class GeoTargetConstantServiceGrpc {
   private static final class GeoTargetConstantServiceMethodDescriptorSupplier
       extends GeoTargetConstantServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    GeoTargetConstantServiceMethodDescriptorSupplier(String methodName) {
+    GeoTargetConstantServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

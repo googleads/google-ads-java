@@ -15,7 +15,7 @@ public final class ConversionCustomVariableServiceGrpc {
 
   private ConversionCustomVariableServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.ConversionCustomVariableService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.ConversionCustomVariableService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.MutateConversionCustomVariablesRequest,
@@ -331,9 +331,9 @@ public final class ConversionCustomVariableServiceGrpc {
   private static final class ConversionCustomVariableServiceMethodDescriptorSupplier
       extends ConversionCustomVariableServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    ConversionCustomVariableServiceMethodDescriptorSupplier(String methodName) {
+    ConversionCustomVariableServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

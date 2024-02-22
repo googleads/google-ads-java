@@ -15,7 +15,7 @@ public final class BatchJobServiceGrpc {
 
   private BatchJobServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.BatchJobService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.BatchJobService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.MutateBatchJobRequest,
@@ -694,9 +694,9 @@ public final class BatchJobServiceGrpc {
   private static final class BatchJobServiceMethodDescriptorSupplier
       extends BatchJobServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    BatchJobServiceMethodDescriptorSupplier(String methodName) {
+    BatchJobServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

@@ -15,7 +15,7 @@ public final class ConversionValueRuleServiceGrpc {
 
   private ConversionValueRuleServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.ConversionValueRuleService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.ConversionValueRuleService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.MutateConversionValueRulesRequest,
@@ -295,9 +295,9 @@ public final class ConversionValueRuleServiceGrpc {
   private static final class ConversionValueRuleServiceMethodDescriptorSupplier
       extends ConversionValueRuleServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    ConversionValueRuleServiceMethodDescriptorSupplier(String methodName) {
+    ConversionValueRuleServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

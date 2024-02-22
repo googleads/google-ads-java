@@ -1,5 +1,5 @@
 /*
- * Copyright 2023 Google LLC
+ * Copyright 2024 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -58,19 +58,76 @@ import javax.annotation.Generated;
  * such as threads. In the example above, try-with-resources is used, which automatically calls
  * close().
  *
- * <p>The surface of this class includes several types of Java methods for each of the API's
- * methods:
- *
- * <ol>
- *   <li>A "flattened" method. With this type of method, the fields of the request type have been
- *       converted into function parameters. It may be the case that not all fields are available as
- *       parameters, and not every API method will have a flattened method entry point.
- *   <li>A "request object" method. This type of method only takes one parameter, a request object,
- *       which must be constructed before the call. Not every API method will have a request object
- *       method.
- *   <li>A "callable" method. This type of method takes no parameters and returns an immutable API
- *       callable object, which can be used to initiate calls to the service.
- * </ol>
+ * <table>
+ *    <caption>Methods</caption>
+ *    <tr>
+ *      <th>Method</th>
+ *      <th>Description</th>
+ *      <th>Method Variants</th>
+ *    </tr>
+ *    <tr>
+ *      <td><p> Search</td>
+ *      <td><p> Returns all rows that match the search query.
+ * <p>  List of thrown errors:   [AuthenticationError]()   [AuthorizationError]()   [ChangeEventError]()   [ChangeStatusError]()   [ClickViewError]()   [HeaderError]()   [InternalError]()   [QueryError]()   [QuotaError]()   [RequestError]()</td>
+ *      <td>
+ *      <p>Request object method variants only take one parameter, a request object, which must be constructed before the call.</p>
+ *      <ul>
+ *           <li><p> search(SearchGoogleAdsRequest request)
+ *      </ul>
+ *      <p>"Flattened" method variants have converted the fields of the request object into function parameters to enable multiple ways to call the same method.</p>
+ *      <ul>
+ *           <li><p> search(String customerId, String query)
+ *      </ul>
+ *      <p>Callable method variants take no parameters and return an immutable API callable object, which can be used to initiate calls to the service.</p>
+ *      <ul>
+ *           <li><p> searchPagedCallable()
+ *           <li><p> searchCallable()
+ *      </ul>
+ *       </td>
+ *    </tr>
+ *    <tr>
+ *      <td><p> SearchStream</td>
+ *      <td><p> Returns all rows that match the search stream query.
+ * <p>  List of thrown errors:   [AuthenticationError]()   [AuthorizationError]()   [ChangeEventError]()   [ChangeStatusError]()   [ClickViewError]()   [HeaderError]()   [InternalError]()   [QueryError]()   [QuotaError]()   [RequestError]()</td>
+ *      <td>
+ *      <p>Callable method variants take no parameters and return an immutable API callable object, which can be used to initiate calls to the service.</p>
+ *      <ul>
+ *           <li><p> searchStreamCallable()
+ *      </ul>
+ *       </td>
+ *    </tr>
+ *    <tr>
+ *      <td><p> Mutate</td>
+ *      <td><p> Creates, updates, or removes resources. This method supports atomic transactions with multiple types of resources. For example, you can atomically create a campaign and a campaign budget, or perform up to thousands of mutates atomically.
+ * <p>  This method is essentially a wrapper around a series of mutate methods. The only features it offers over calling those methods directly are:
+ * <p>  - Atomic transactions - Temp resource names (described below) - Somewhat reduced latency over making a series of mutate calls
+ * <p>  Note: Only resources that support atomic transactions are included, so this method can't replace all calls to individual services.
+ * <p>  ## Atomic Transaction Benefits
+ * <p>  Atomicity makes error handling much easier. If you're making a series of changes and one fails, it can leave your account in an inconsistent state. With atomicity, you either reach the chosen state directly, or the request fails and you can retry.
+ * <p>  ## Temp Resource Names
+ * <p>  Temp resource names are a special type of resource name used to create a resource and reference that resource in the same request. For example, if a campaign budget is created with `resource_name` equal to `customers/123/campaignBudgets/-1`, that resource name can be reused in the `Campaign.budget` field in the same request. That way, the two resources are created and linked atomically.
+ * <p>  To create a temp resource name, put a negative number in the part of the name that the server would normally allocate.
+ * <p>  Note:
+ * <p>  - Resources must be created with a temp name before the name can be reused.   For example, the previous CampaignBudget+Campaign example would fail if   the mutate order was reversed. - Temp names are not remembered across requests. - There's no limit to the number of temp names in a request. - Each temp name must use a unique negative number, even if the resource   types differ.
+ * <p>  ## Latency
+ * <p>  It's important to group mutates by resource type or the request may time out and fail. Latency is roughly equal to a series of calls to individual mutate methods, where each change in resource type is a new call. For example, mutating 10 campaigns then 10 ad groups is like 2 calls, while mutating 1 campaign, 1 ad group, 1 campaign, 1 ad group is like 4 calls.
+ * <p>  List of thrown errors:   [AdCustomizerError]()   [AdError]()   [AdGroupAdError]()   [AdGroupCriterionError]()   [AdGroupError]()   [AssetError]()   [AuthenticationError]()   [AuthorizationError]()   [BiddingError]()   [CampaignBudgetError]()   [CampaignCriterionError]()   [CampaignError]()   [CampaignExperimentError]()   [CampaignSharedSetError]()   [CollectionSizeError]()   [ContextError]()   [ConversionActionError]()   [CriterionError]()   [CustomerFeedError]()   [DatabaseError]()   [DateError]()   [DateRangeError]()   [DistinctError]()   [ExtensionFeedItemError]()   [ExtensionSettingError]()   [FeedAttributeReferenceError]()   [FeedError]()   [FeedItemError]()   [FeedItemSetError]()   [FieldError]()   [FieldMaskError]()   [FunctionParsingError]()   [HeaderError]()   [ImageError]()   [InternalError]()   [KeywordPlanAdGroupKeywordError]()   [KeywordPlanCampaignError]()   [KeywordPlanError]()   [LabelError]()   [ListOperationError]()   [MediaUploadError]()   [MutateError]()   [NewResourceCreationError]()   [NullError]()   [OperationAccessDeniedError]()   [PolicyFindingError]()   [PolicyViolationError]()   [QuotaError]()   [RangeError]()   [RequestError]()   [ResourceCountLimitExceededError]()   [SettingError]()   [SharedSetError]()   [SizeLimitError]()   [StringFormatError]()   [StringLengthError]()   [UrlFieldError]()   [UserListError]()   [YoutubeVideoRegistrationError]()</td>
+ *      <td>
+ *      <p>Request object method variants only take one parameter, a request object, which must be constructed before the call.</p>
+ *      <ul>
+ *           <li><p> mutate(MutateGoogleAdsRequest request)
+ *      </ul>
+ *      <p>"Flattened" method variants have converted the fields of the request object into function parameters to enable multiple ways to call the same method.</p>
+ *      <ul>
+ *           <li><p> mutate(String customerId, List&lt;MutateOperation&gt; mutateOperations)
+ *      </ul>
+ *      <p>Callable method variants take no parameters and return an immutable API callable object, which can be used to initiate calls to the service.</p>
+ *      <ul>
+ *           <li><p> mutateCallable()
+ *      </ul>
+ *       </td>
+ *    </tr>
+ *  </table>
  *
  * <p>See the individual methods for example code.
  *

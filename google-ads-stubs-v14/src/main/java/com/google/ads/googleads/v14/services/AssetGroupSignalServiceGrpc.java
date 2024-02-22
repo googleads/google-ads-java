@@ -15,7 +15,7 @@ public final class AssetGroupSignalServiceGrpc {
 
   private AssetGroupSignalServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.AssetGroupSignalService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.AssetGroupSignalService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.MutateAssetGroupSignalsRequest,
@@ -295,9 +295,9 @@ public final class AssetGroupSignalServiceGrpc {
   private static final class AssetGroupSignalServiceMethodDescriptorSupplier
       extends AssetGroupSignalServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    AssetGroupSignalServiceMethodDescriptorSupplier(String methodName) {
+    AssetGroupSignalServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

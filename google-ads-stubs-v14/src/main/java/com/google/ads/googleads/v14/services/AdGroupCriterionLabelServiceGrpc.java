@@ -15,7 +15,7 @@ public final class AdGroupCriterionLabelServiceGrpc {
 
   private AdGroupCriterionLabelServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.AdGroupCriterionLabelService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.AdGroupCriterionLabelService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.MutateAdGroupCriterionLabelsRequest,
@@ -331,9 +331,9 @@ public final class AdGroupCriterionLabelServiceGrpc {
   private static final class AdGroupCriterionLabelServiceMethodDescriptorSupplier
       extends AdGroupCriterionLabelServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    AdGroupCriterionLabelServiceMethodDescriptorSupplier(String methodName) {
+    AdGroupCriterionLabelServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

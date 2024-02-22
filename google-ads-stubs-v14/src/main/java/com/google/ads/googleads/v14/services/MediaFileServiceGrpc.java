@@ -15,7 +15,7 @@ public final class MediaFileServiceGrpc {
 
   private MediaFileServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.MediaFileService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.MediaFileService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.MutateMediaFilesRequest,
@@ -379,9 +379,9 @@ public final class MediaFileServiceGrpc {
   private static final class MediaFileServiceMethodDescriptorSupplier
       extends MediaFileServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    MediaFileServiceMethodDescriptorSupplier(String methodName) {
+    MediaFileServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

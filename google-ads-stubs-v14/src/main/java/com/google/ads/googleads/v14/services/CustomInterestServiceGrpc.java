@@ -15,7 +15,7 @@ public final class CustomInterestServiceGrpc {
 
   private CustomInterestServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.CustomInterestService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.CustomInterestService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.MutateCustomInterestsRequest,
@@ -339,9 +339,9 @@ public final class CustomInterestServiceGrpc {
   private static final class CustomInterestServiceMethodDescriptorSupplier
       extends CustomInterestServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    CustomInterestServiceMethodDescriptorSupplier(String methodName) {
+    CustomInterestServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

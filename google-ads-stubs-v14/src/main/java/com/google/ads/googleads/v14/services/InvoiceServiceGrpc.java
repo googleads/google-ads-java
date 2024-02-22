@@ -15,7 +15,7 @@ public final class InvoiceServiceGrpc {
 
   private InvoiceServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.InvoiceService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.InvoiceService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.ListInvoicesRequest,
@@ -327,9 +327,9 @@ public final class InvoiceServiceGrpc {
   private static final class InvoiceServiceMethodDescriptorSupplier
       extends InvoiceServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    InvoiceServiceMethodDescriptorSupplier(String methodName) {
+    InvoiceServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

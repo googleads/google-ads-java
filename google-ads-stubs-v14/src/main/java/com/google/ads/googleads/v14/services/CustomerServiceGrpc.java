@@ -15,7 +15,7 @@ public final class CustomerServiceGrpc {
 
   private CustomerServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.CustomerService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.CustomerService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.MutateCustomerRequest,
@@ -581,9 +581,9 @@ public final class CustomerServiceGrpc {
   private static final class CustomerServiceMethodDescriptorSupplier
       extends CustomerServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    CustomerServiceMethodDescriptorSupplier(String methodName) {
+    CustomerServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

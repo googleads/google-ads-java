@@ -15,7 +15,7 @@ public final class CustomAudienceServiceGrpc {
 
   private CustomAudienceServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.CustomAudienceService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.CustomAudienceService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.MutateCustomAudiencesRequest,
@@ -347,9 +347,9 @@ public final class CustomAudienceServiceGrpc {
   private static final class CustomAudienceServiceMethodDescriptorSupplier
       extends CustomAudienceServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    CustomAudienceServiceMethodDescriptorSupplier(String methodName) {
+    CustomAudienceServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

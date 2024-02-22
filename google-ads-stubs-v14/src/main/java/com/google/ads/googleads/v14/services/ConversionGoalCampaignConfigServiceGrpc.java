@@ -15,7 +15,7 @@ public final class ConversionGoalCampaignConfigServiceGrpc {
 
   private ConversionGoalCampaignConfigServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.ConversionGoalCampaignConfigService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.ConversionGoalCampaignConfigService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.MutateConversionGoalCampaignConfigsRequest,
@@ -295,9 +295,9 @@ public final class ConversionGoalCampaignConfigServiceGrpc {
   private static final class ConversionGoalCampaignConfigServiceMethodDescriptorSupplier
       extends ConversionGoalCampaignConfigServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    ConversionGoalCampaignConfigServiceMethodDescriptorSupplier(String methodName) {
+    ConversionGoalCampaignConfigServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

@@ -1,5 +1,5 @@
 /*
- * Copyright 2023 Google LLC
+ * Copyright 2024 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -139,7 +139,7 @@ public class ExtensionFeedItemName implements ResourceName {
     if (o == this) {
       return true;
     }
-    if (o != null || getClass() == o.getClass()) {
+    if (o != null && getClass() == o.getClass()) {
       ExtensionFeedItemName that = ((ExtensionFeedItemName) o);
       return Objects.equals(this.customerId, that.customerId)
           && Objects.equals(this.feedItemId, that.feedItemId);

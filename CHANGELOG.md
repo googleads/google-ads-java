@@ -1,3 +1,11 @@
+30.0.0 - 2024-02-23
+-------------------
+- Add support and examples for Google Ads API v16.
+- Update to version 3.25.0 of
+  `com.google.cloud:google-cloud-shared-dependencies`.
+- Fix partial error handling for click conversion uploads (#770).
+- Remove references to extensions in examples.
+
 29.0.0 - 2024-01-16
 -------------------
 - Remove support for v13 of Google Ads API.

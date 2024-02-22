@@ -15,7 +15,7 @@ public final class TravelAssetSuggestionServiceGrpc {
 
   private TravelAssetSuggestionServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.TravelAssetSuggestionService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.TravelAssetSuggestionService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.SuggestTravelAssetsRequest,
@@ -303,9 +303,9 @@ public final class TravelAssetSuggestionServiceGrpc {
   private static final class TravelAssetSuggestionServiceMethodDescriptorSupplier
       extends TravelAssetSuggestionServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    TravelAssetSuggestionServiceMethodDescriptorSupplier(String methodName) {
+    TravelAssetSuggestionServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

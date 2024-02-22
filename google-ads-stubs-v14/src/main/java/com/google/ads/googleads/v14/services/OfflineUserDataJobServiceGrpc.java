@@ -15,7 +15,7 @@ public final class OfflineUserDataJobServiceGrpc {
 
   private OfflineUserDataJobServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "google.ads.googleads.v14.services.OfflineUserDataJobService";
+  public static final java.lang.String SERVICE_NAME = "google.ads.googleads.v14.services.OfflineUserDataJobService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v14.services.CreateOfflineUserDataJobRequest,
@@ -593,9 +593,9 @@ public final class OfflineUserDataJobServiceGrpc {
   private static final class OfflineUserDataJobServiceMethodDescriptorSupplier
       extends OfflineUserDataJobServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    OfflineUserDataJobServiceMethodDescriptorSupplier(String methodName) {
+    OfflineUserDataJobServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
