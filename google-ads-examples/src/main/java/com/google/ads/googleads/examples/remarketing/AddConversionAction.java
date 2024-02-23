@@ -96,6 +96,9 @@ public class AddConversionAction {
     // Creates a ConversionAction.
     ConversionAction conversionAction =
         ConversionAction.newBuilder()
+            // Note that conversion action names must be unique. If a conversion action already
+            // exists with the specified conversion_action_name the create operation will fail with
+            // a ConversionActionError.DUPLICATE_NAME error.
             .setName("Earth to Mars Cruises Conversion #" + getPrintableDateTime())
             .setCategory(ConversionActionCategory.DEFAULT)
             .setType(ConversionActionType.WEBPAGE)
