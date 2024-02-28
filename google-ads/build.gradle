@@ -55,7 +55,7 @@ sourceSets.test.java.srcDir new File(buildDir, 'generated/source/proto/test')
 
 protobuf {
     protoc {
-        artifact = 'com.google.protobuf:protoc:3.23.2'
+        artifact = 'com.google.protobuf:protoc:3.25.2'
     }
 }
 
@@ -68,8 +68,7 @@ dependencies {
     testImplementation 'com.google.api:gax-grpc::testlib'
     testImplementation 'io.grpc:grpc-context'
     testImplementation 'com.google.truth:truth:0.27'
-    implementation 'com.google.auto.value:auto-value-annotations:1.10.4'
-    testImplementation 'com.google.auto.value:auto-value-annotations:1.10.4'
+    implementation 'com.google.auto.value:auto-value-annotations'
     testImplementation testFixtures(project(':google-ads-codegen'))
 }
 
