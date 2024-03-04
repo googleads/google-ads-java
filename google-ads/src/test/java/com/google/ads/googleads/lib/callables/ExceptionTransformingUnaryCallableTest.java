@@ -23,6 +23,7 @@ import com.google.api.core.SettableApiFuture;
 import com.google.api.gax.grpc.GrpcCallContext;
 import com.google.api.gax.rpc.ApiCallContext;
 import com.google.api.gax.rpc.UnaryCallable;
+import com.google.common.util.concurrent.MoreExecutors;
 import java.util.concurrent.ExecutionException;
 import org.junit.Before;
 import org.junit.Test;
@@ -58,7 +59,7 @@ public class ExceptionTransformingUnaryCallableTest {
     // Sets up the class we're going to test.
     callable =
         new ExceptionTransformingUnaryCallable(
-            mockCallable, new GoogleAdsExceptionTransformation());
+            mockCallable, new GoogleAdsExceptionTransformation(), MoreExecutors.directExecutor());
 
     // Mocks out the gRPC callable implementation.
     innerFuture = SettableApiFuture.create();

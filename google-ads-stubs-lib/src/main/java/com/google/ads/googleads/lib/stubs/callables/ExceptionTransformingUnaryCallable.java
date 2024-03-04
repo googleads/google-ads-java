@@ -23,6 +23,7 @@ import com.google.api.gax.rpc.ApiCallContext;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.base.Preconditions;
 import java.util.concurrent.CancellationException;
+import java.util.concurrent.Executor;
 
 /**
  * Wrapper around a {@link UnaryCallable} which invokes an {@link ExceptionTransformation} for
@@ -36,11 +37,24 @@ public class ExceptionTransformingUnaryCallable<RequestT, ResponseT>
 
   private final UnaryCallable<RequestT, ResponseT> callable;
   private final ExceptionTransformation transformation;
+  private final Executor transformationExecutor;
 
+  /**
+   * Constructs a new instance. The {@code transformationExecutor} should be the executor for the
+   * callable's {@code ClientContext}.
+   *
+   * @param callable the Callable that may throw an exception.
+   * @param transformation the transformation to perform on any thrown exceptions.
+   * @param transformationExecutor the Executor to use to execute the {@code transformation}.
+   */
   public ExceptionTransformingUnaryCallable(
-      UnaryCallable<RequestT, ResponseT> callable, ExceptionTransformation transformation) {
-    this.callable = Preconditions.checkNotNull(callable);
-    this.transformation = transformation;
+      UnaryCallable<RequestT, ResponseT> callable,
+      ExceptionTransformation transformation,
+      Executor transformationExecutor) {
+    this.callable = Preconditions.checkNotNull(callable, "Null callable");
+    this.transformation = Preconditions.checkNotNull(transformation, "Null transformation");
+    this.transformationExecutor =
+        Preconditions.checkNotNull(transformationExecutor, "Null transformation executor");
   }
 
   @Override
@@ -49,7 +63,7 @@ public class ExceptionTransformingUnaryCallable<RequestT, ResponseT>
     ApiFuture<ResponseT> innerCallFuture = callable.futureCall(request, context);
     ExceptionTransformingFuture transformingFuture =
         new ExceptionTransformingFuture(innerCallFuture);
-    ApiFutures.addCallback(innerCallFuture, transformingFuture);
+    ApiFutures.addCallback(innerCallFuture, transformingFuture, transformationExecutor);
     return transformingFuture;
   }
 
