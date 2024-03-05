@@ -68,7 +68,8 @@ public class GrpcGoogleAdsCallableFactory implements GrpcStubCallableFactory {
       ClientContext clientContext) {
     UnaryCallable<RequestT, ResponseT> callable =
         GrpcCallableFactory.createBaseUnaryCallable(grpcCallSettings, callSettings, clientContext);
-    return new ExceptionTransformingUnaryCallable<>(callable, googleAdsExceptionTransformation);
+    return new ExceptionTransformingUnaryCallable<>(
+        callable, googleAdsExceptionTransformation, clientContext.getExecutor());
   }
 
   @Override
