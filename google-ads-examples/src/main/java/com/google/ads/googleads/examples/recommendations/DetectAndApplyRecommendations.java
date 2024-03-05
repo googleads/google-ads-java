@@ -139,7 +139,7 @@ public class DetectAndApplyRecommendations {
           Recommendation recommendation = googleAdsRow.getRecommendation();
           System.out.printf(
               "Keyword recommendation '%s' was found for campaign '%s'%n",
-              recommendation.getCampaign());
+              recommendation.getResourceName(), recommendation.getCampaign());
           KeywordInfo keyword = recommendation.getKeywordRecommendation().getKeyword();
           System.out.printf("\tKeyword = '%s'%n", keyword.getText());
           System.out.printf("\tMatch type = '%s'%n", keyword.getMatchType());
