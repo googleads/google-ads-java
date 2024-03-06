@@ -18,9 +18,12 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
+import com.google.ads.googleads.v16.common.KeywordInfo;
 import com.google.ads.googleads.v16.errors.GoogleAdsError;
 import com.google.ads.googleads.v16.errors.GoogleAdsException;
+import com.google.ads.googleads.v16.resources.Recommendation;
 import com.google.ads.googleads.v16.services.ApplyRecommendationOperation;
+import com.google.ads.googleads.v16.services.ApplyRecommendationOperation.Builder;
 import com.google.ads.googleads.v16.services.ApplyRecommendationResponse;
 import com.google.ads.googleads.v16.services.ApplyRecommendationResult;
 import com.google.ads.googleads.v16.services.GoogleAdsRow;
@@ -33,28 +36,24 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 /**
- * The auto-apply feature, which automatically applies recommendations as they become eligible, is
- * currently supported by the Google Ads UI but not by the Google Ads API. See
- * https://support.google.com/google-ads/answer/10279006 for more information on using auto-apply in
- * the Google Ads UI.
+ * This example shows how to retrieve recommendations and apply them in a batch.
  *
- * <p>This example demonstrates how an alternative can be implemented with the features that are
- * currently supported by the Google Ads API. It periodically retrieves and applies `KEYWORD`
- * recommendations with default parameters.
+ * <p>Recommendations should be applied shortly after they're retrieved. Depending on the
+ * recommendation type, a recommendation can become obsolete quickly, and obsolete recommendations
+ * throw an error when applied. For more details, see:
+ * https://developers.google.com/google-ads/api/docs/recommendations#take_action
+ *
+ * <p>As of Google Ads API v15 users can subscribe to certain recommendation types to apply them
+ * automatically. For more details, see:
+ * https://developers.google.com/google-ads/api/docs/recommendations#auto-apply
+ *
+ * <p>As of Google Ads API v16 users can proactively generate certain recommendation types during
+ * the campaign construction process. For more details see:
+ * https://developers.google.com/google-ads/api/docs/recommendations#recommendations-in-campaign-construction
  */
 public class DetectAndApplyRecommendations {
-  // The maximum number of recommendations to periodically retrieve and apply.  In a real
-  // application, such a limit would typically not be used.
-  private static final int MAX_RESULT_SIZE = 2;
-  // The number of times to retrieve and apply recommendations. In a real application, such a
-  // limit would typically not be used.
-  private static final int NUMBER_OF_RUNS = 3;
-  // The time to wait between two runs. In a real application, this would typically be set to
-  // minutes or hours instead of seconds.
-  private static final int PERIOD_IN_SECONDS = 5;
 
   private static class DetectAndApplyRecommendationsParams extends CodeSampleParams {
 
@@ -116,56 +115,76 @@ public class DetectAndApplyRecommendations {
             googleAdsClient.getLatestVersion().createRecommendationServiceClient()) {
       // Creates a query that retrieves keyword recommendations.
       String query =
-          "SELECT recommendation.resource_name "
+          "SELECT recommendation.resource_name, "
+              + "  recommendation.campaign, "
+              + "  recommendation.keyword_recommendation "
               + "FROM recommendation "
-              + "WHERE recommendation.type = KEYWORD "
-              + "LIMIT "
-              + MAX_RESULT_SIZE;
-      for (int i = 0; i < NUMBER_OF_RUNS; i++) {
-        // Constructs the SearchGoogleAdsStreamRequest.
-        SearchGoogleAdsStreamRequest request =
-            SearchGoogleAdsStreamRequest.newBuilder()
-                .setCustomerId(Long.toString(customerId))
-                .setQuery(query)
-                .build();
+              + "WHERE recommendation.type = KEYWORD";
+      // Constructs the SearchGoogleAdsStreamRequest.
+      SearchGoogleAdsStreamRequest request =
+          SearchGoogleAdsStreamRequest.newBuilder()
+              .setCustomerId(Long.toString(customerId))
+              .setQuery(query)
+              .build();
 
-        // Issues the search stream request.
-        ServerStream<SearchGoogleAdsStreamResponse> stream =
-            googleAdsServiceClient.searchStreamCallable().call(request);
+      // Issues the search stream request to detect keyword recommendations that exist for the
+      // customer account.
+      ServerStream<SearchGoogleAdsStreamResponse> stream =
+          googleAdsServiceClient.searchStreamCallable().call(request);
 
-        // Creates apply operations for all the recommendations found.
-        List<ApplyRecommendationOperation> applyRecommendationOperations = new ArrayList<>();
-        for (SearchGoogleAdsStreamResponse response : stream) {
-          for (GoogleAdsRow googleAdsRow : response.getResultsList()) {
-            applyRecommendationOperations.add(
-                ApplyRecommendationOperation.newBuilder()
-                    .setResourceName(googleAdsRow.getRecommendation().getResourceName())
-                    .build());
-          }
-        }
-
-        if (applyRecommendationOperations.isEmpty()) {
-          System.out.println("No recommendations found.");
-        } else {
-          // Sends the apply recommendation request and prints information.
-          ApplyRecommendationResponse applyRecommendationsResponse =
-              recommendationServiceClient.applyRecommendation(
-                  Long.toString(customerId), applyRecommendationOperations);
-          for (ApplyRecommendationResult applyRecommendationResult :
-              applyRecommendationsResponse.getResultsList()) {
-            System.out.printf(
-                "Applied recommendation with resource name: '%s'.%n",
-                applyRecommendationResult.getResourceName());
-          }
-        }
-
-        if (i < NUMBER_OF_RUNS - 1) {
+      // Creates apply operations for all the recommendations found.
+      List<ApplyRecommendationOperation> applyRecommendationOperations = new ArrayList<>();
+      for (SearchGoogleAdsStreamResponse response : stream) {
+        for (GoogleAdsRow googleAdsRow : response.getResultsList()) {
+          Recommendation recommendation = googleAdsRow.getRecommendation();
           System.out.printf(
-              "Waiting %d seconds before checking for additional recommendations.%n",
-              PERIOD_IN_SECONDS);
-          Thread.sleep(TimeUnit.SECONDS.toMillis(PERIOD_IN_SECONDS));
+              "Keyword recommendation '%s' was found for campaign '%s'%n",
+              recommendation.getResourceName(), recommendation.getCampaign());
+          KeywordInfo keyword = recommendation.getKeywordRecommendation().getKeyword();
+          System.out.printf("\tKeyword = '%s'%n", keyword.getText());
+          System.out.printf("\tMatch type = '%s'%n", keyword.getMatchType());
+
+          // Creates an ApplyRecommendationOperation that will apply this recommendation, and adds
+          // it to the list of operations.
+          applyRecommendationOperations.add(buildRecommendationOperation(recommendation));
         }
       }
+
+      // If there are operations present, sends a request to apply the recommendations.
+      if (applyRecommendationOperations.isEmpty()) {
+        System.out.println("No recommendations found.");
+      } else {
+        // [START apply_recommendation]
+        // Issues a mutate request to apply the recommendations.
+        ApplyRecommendationResponse applyRecommendationsResponse =
+            recommendationServiceClient.applyRecommendation(
+                Long.toString(customerId), applyRecommendationOperations);
+        for (ApplyRecommendationResult applyRecommendationResult :
+            applyRecommendationsResponse.getResultsList()) {
+          System.out.printf(
+              "Applied recommendation with resource name: '%s'.%n",
+              applyRecommendationResult.getResourceName());
+        }
+        // [END apply_recommendation]
+      }
     }
+  }
+
+  /** Creates and returns an ApplyRecommendationOperation to apply the given recommendation. */
+  private ApplyRecommendationOperation buildRecommendationOperation(Recommendation recommendation) {
+    // If you have a recommendation ID instead of a resource name, you can create a resource name
+    // like this:
+    // String resourceName = ResourceNames.recommendation(customerId, recommendationId);
+
+    // Creates a builder to construct the operation.
+    Builder operationBuilder = ApplyRecommendationOperation.newBuilder();
+
+    // Each recommendation type has optional parameters to override the recommended values. Below is
+    // an example showing how to override a recommended ad when a TextAdRecommendation is applied.
+    // operationBuilder.getTextAdBuilder().getAdBuilder().setResourceName("INSERT_AD_RESOURCE_NAME");
+
+    // Sets the operation's resource name to the resource name of the recommendation to apply.
+    operationBuilder.setResourceName(recommendation.getResourceName());
+    return operationBuilder.build();
   }
 }
