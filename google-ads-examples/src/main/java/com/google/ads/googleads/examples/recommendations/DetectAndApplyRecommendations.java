@@ -109,6 +109,7 @@ public class DetectAndApplyRecommendations {
    */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId)
       throws InterruptedException {
+    // [START detect_keyword_recommendations]
     try (GoogleAdsServiceClient googleAdsServiceClient =
             googleAdsClient.getLatestVersion().createGoogleAdsServiceClient();
         RecommendationServiceClient recommendationServiceClient =
@@ -149,6 +150,7 @@ public class DetectAndApplyRecommendations {
           applyRecommendationOperations.add(buildRecommendationOperation(recommendation));
         }
       }
+      // [END detect_keyword_recommendations]
 
       // If there are operations present, sends a request to apply the recommendations.
       if (applyRecommendationOperations.isEmpty()) {
@@ -170,6 +172,7 @@ public class DetectAndApplyRecommendations {
     }
   }
 
+  // [START build_apply_recommendation_operation]
   /** Creates and returns an ApplyRecommendationOperation to apply the given recommendation. */
   private ApplyRecommendationOperation buildRecommendationOperation(Recommendation recommendation) {
     // If you have a recommendation ID instead of a resource name, you can create a resource name
@@ -187,4 +190,5 @@ public class DetectAndApplyRecommendations {
     operationBuilder.setResourceName(recommendation.getResourceName());
     return operationBuilder.build();
   }
+  // [END build_apply_recommendation_operation]
 }
