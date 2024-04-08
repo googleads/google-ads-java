@@ -25,12 +25,14 @@ import com.google.ads.googleads.v16.errors.GoogleAdsFailure;
 import com.google.ads.googleads.v16.services.ConversionAdjustment;
 import com.google.ads.googleads.v16.services.ConversionAdjustmentResult;
 import com.google.ads.googleads.v16.services.ConversionAdjustmentUploadServiceClient;
-import com.google.ads.googleads.v16.services.GclidDateTimePair;
 import com.google.ads.googleads.v16.services.RestatementValue;
 import com.google.ads.googleads.v16.services.UploadConversionAdjustmentsRequest;
 import com.google.ads.googleads.v16.services.UploadConversionAdjustmentsResponse;
 import com.google.ads.googleads.v16.utils.ErrorUtils;
 import com.google.ads.googleads.v16.utils.ResourceNames;
+import com.google.protobuf.InvalidProtocolBufferException;
+import com.google.protobuf.util.JsonFormat;
+import com.google.protobuf.util.JsonFormat.Printer;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import javax.annotation.Nullable;
@@ -48,8 +50,14 @@ public class UploadConversionAdjustment {
     @Parameter(names = ArgumentNames.CONVERSION_ACTION_ID, required = true)
     private long conversionActionId;
 
-    @Parameter(names = ArgumentNames.GCLID, required = true)
-    private String gclid;
+    @Parameter(
+        names = ArgumentNames.ORDER_ID,
+        required = true,
+        description =
+            "The transaction ID of the conversion to adjust. Required if the conversion being"
+                + " adjusted meets the criteria described at"
+                + " https://developers.google.com/google-ads/api/docs/conversions/upload-adjustments#requirements.")
+    private String orderId;
 
     @Parameter(
         names = ArgumentNames.ADJUSTMENT_TYPE,
@@ -57,15 +65,6 @@ public class UploadConversionAdjustment {
         description =
             "RETRACTION negates a conversion, and RESTATEMENT changes the value of a conversion.")
     private String adjustmentType;
-
-    @Parameter(
-        names = ArgumentNames.CONVERSION_DATE_TIME,
-        required = true,
-        description =
-            "The date time at which the conversion occurred. "
-                + "Must be after the click time, and must include the time zone offset. "
-                + "The format is  'yyyy-mm-dd hh:mm:ss+|-hh:mm', e.g. '2019-01-01 12:32:45-08:00'.")
-    private String conversionDateTime;
 
     @Parameter(
         names = ArgumentNames.ADJUSTMENT_DATE_TIME,
@@ -84,7 +83,7 @@ public class UploadConversionAdjustment {
     private Float restatementValue;
   }
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws InvalidProtocolBufferException {
     UploadConversionAdjustmentParams params = new UploadConversionAdjustmentParams();
     if (!params.parseArguments(args)) {
 
@@ -92,9 +91,8 @@ public class UploadConversionAdjustment {
       // into the code here. See the parameter class definition above for descriptions.
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
       params.conversionActionId = Long.parseLong("INSERT_CONVERSION_ACTION_ID_HERE");
-      params.gclid = "INSERT_GCL_ID_HERE";
+      params.orderId = "INSERT_ORDER_ID_HERE";
       params.adjustmentType = "INSERT_ADJUSTMENT_TYPE_HERE";
-      params.conversionDateTime = "INSERT_CONVERSION_DATE_TIME_HERE";
       params.adjustmentDateTime = "INSERT_ADJUSTMENT_DATE_TIME_HERE";
 
       // Optional: Specify a restatement value for adjustments of type RESTATEMENT.
@@ -119,9 +117,8 @@ public class UploadConversionAdjustment {
               googleAdsClient,
               params.customerId,
               params.conversionActionId,
-              params.gclid,
+              params.orderId,
               params.adjustmentType,
-              params.conversionDateTime,
               params.adjustmentDateTime,
               params.restatementValue);
     } catch (GoogleAdsException gae) {
@@ -146,9 +143,9 @@ public class UploadConversionAdjustment {
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
    * @param conversionActionId conversion action ID associated with this conversion.
-   * @param gclid the GCLID for the conversion.
+   * @param orderId the orderId for the conversion. Strongly recommended instead of using {@code
+   *     gclid} and {@code conversionDateTime}.
    * @param adjustmentType the type of adjustment, e.g. RETRACTION, RESTATEMENT.
-   * @param conversionDateTime date and time of the conversion.
    * @param adjustmentDateTime date and time of the adjustment.
    * @param restatementValue the adjusted value for adjustment type RESTATEMENT.
    */
@@ -157,26 +154,29 @@ public class UploadConversionAdjustment {
       GoogleAdsClient googleAdsClient,
       long customerId,
       long conversionActionId,
-      String gclid,
+      String orderId,
       String adjustmentType,
-      String conversionDateTime,
       String adjustmentDateTime,
-      @Nullable Float restatementValue) {
+      @Nullable Float restatementValue)
+      throws InvalidProtocolBufferException {
     // Gets the conversion adjustment enum value from the adjustmentType String.
     ConversionAdjustmentType conversionAdjustmentType =
         ConversionAdjustmentType.valueOf(adjustmentType);
 
-    // Associates conversion adjustments with the existing conversion action.
-    // The GCLID should have been uploaded before with a conversion.
+    // Applies the conversion adjustment to the existing conversion.
     ConversionAdjustment conversionAdjustment =
         ConversionAdjustment.newBuilder()
             .setConversionAction(ResourceNames.conversionAction(customerId, conversionActionId))
             .setAdjustmentType(conversionAdjustmentType)
-            .setGclidDateTimePair(
-                GclidDateTimePair.newBuilder()
-                    .setGclid(gclid)
-                    .setConversionDateTime(conversionDateTime)
-                    .build())
+            // Sets the orderId to identify the conversion to adjust.
+            .setOrderId(orderId)
+            // As an alternative to setting orderId, you can provide a GclidDateTimePair, but
+            // setting orderId instead is strongly recommended.
+            // .setGclidDateTimePair(
+            //     GclidDateTimePair.newBuilder()
+            //         .setGclid(gclid)
+            //         .setConversionDateTime(conversionDateTime)
+            //         .build())
             .setAdjustmentDateTime(adjustmentDateTime)
             .build();
 
@@ -194,28 +194,40 @@ public class UploadConversionAdjustment {
     try (ConversionAdjustmentUploadServiceClient conversionUploadServiceClient =
         googleAdsClient.getLatestVersion().createConversionAdjustmentUploadServiceClient()) {
       // Uploads the click conversion. Partial failure should always be set to true.
+      UploadConversionAdjustmentsRequest request =
+          UploadConversionAdjustmentsRequest.newBuilder()
+              .setCustomerId(Long.toString(customerId))
+              // Enables partial failure (must be true).
+              .setPartialFailure(true)
+              .addConversionAdjustments(conversionAdjustment)
+              .build();
       UploadConversionAdjustmentsResponse response =
-          conversionUploadServiceClient.uploadConversionAdjustments(
-              UploadConversionAdjustmentsRequest.newBuilder()
-                  .setCustomerId(Long.toString(customerId))
-                  .addConversionAdjustments(conversionAdjustment)
-                  // Enables partial failure (must be true).
-                  .setPartialFailure(true)
-                  .build());
+          conversionUploadServiceClient.uploadConversionAdjustments(request);
 
-      // Prints any partial errors returned.
-      if (response.hasPartialFailureError()) {
-        GoogleAdsFailure googleAdsFailure =
-            ErrorUtils.getInstance().getGoogleAdsFailure(response.getPartialFailureError());
-        googleAdsFailure
-            .getErrorsList()
-            .forEach(e -> System.out.println("Partial failure occurred: " + e.getMessage()));
-      } else {
-        // Prints the result.
-        ConversionAdjustmentResult result = response.getResults(0);
-        System.out.printf(
-            "Uploaded conversion adjustment of '%s' for Google Click ID '%s'.%n",
-            result.getConversionAction(), result.getGclidDateTimePair().getGclid());
+      // Extracts the partial failure error if present on the response.
+      ErrorUtils errorUtils = ErrorUtils.getInstance();
+      GoogleAdsFailure googleAdsFailure =
+          response.hasPartialFailureError()
+              ? errorUtils.getGoogleAdsFailure(response.getPartialFailureError())
+              : null;
+
+      // Constructs a protocol buffer printer that will print error details in a concise format.
+      final Printer errorPrinter = JsonFormat.printer().omittingInsignificantWhitespace();
+      // Prints the results for each adjustment, including any partial errors returned.
+      for (int opIndex = 0; opIndex < request.getConversionAdjustmentsCount(); opIndex++) {
+        ConversionAdjustmentResult result = response.getResults(opIndex);
+        if (errorUtils.isPartialFailureResult(result)) {
+          // The operation failed. Prints the error details.
+          for (GoogleAdsError googleAdsError :
+              errorUtils.getGoogleAdsErrors(opIndex, googleAdsFailure)) {
+            System.out.printf(
+                "%4d: Partial failure occurred: %s%n", opIndex, errorPrinter.print(googleAdsError));
+          }
+        } else {
+          System.out.printf(
+              "%4d: Uploaded conversion adjustment for conversion action '%s' and order ID '%s'.%n",
+              opIndex, result.getConversionAction(), result.getOrderId());
+        }
       }
     }
   }

@@ -141,7 +141,44 @@ public abstract class AbstractErrorUtils<
     return result;
   }
 
-  /** Provides a convenience method to get all failed operation indices. */
+  /**
+   * Provides a convenience method to get <em>distinct</em> failed operation indices. Returns a list
+   * of {@link Long} objects because this method may be used with {@code BatchJobResult} objects,
+   * which have an {@code operationIndex} of type {@code long}.
+   *
+   * <p><b>IMPORTANT:</b> Make sure you use {@code Long} objects to check for the existence of an
+   * item in this list. For example, the following lookup <em>will return {@code false}</em> due to
+   * autoboxing, even if the list contains {@code Long.valueOf(25)}.
+   *
+   * <p><em>Incorrect</em> approach:<br>
+   *
+   * <pre>
+   *   List<Long> failedIndices = getFailedOperationIndices(googleAdsFailure);
+   *   int intOpIndex = 25;
+   *   // The JVM will autobox intOpIndex as an Integer, not a Long, so contains(intOpIndex) will
+   *   // return false. In fact, it will return false for ANY int value because the {@code equals}
+   *   // method of {@link Long} and {@link Integer} returns false if the argument is not a Long or
+   *   // is not an Integer, respectively.
+   *   if (failedIndices.contains(intOpIndex)) {
+   *     // This block will never execute.
+   *     // ... handle error
+   *   }
+   * </pre>
+   *
+   * <p><em>Correct</em> approach. Casts the int index to long so the JVM will autobox into a Long
+   * value:<br>
+   *
+   * <pre>
+   *   List<Long> failedIndices = getFailedOperationIndices(googleAdsFailure);
+   *   int intOpIndex = 25;
+   *   // Casts the int value to a long for correctness. This will also work correctly if the
+   *   // argument is Long.valueOf(intOpIndex).
+   *   if (failedIndices.contains((long) intOpIndex)) {
+   *     // This block will execute if failedIndices contains 25.
+   *     // ... handle error
+   *   }
+   * </pre>
+   */
   public List<Long> getFailedOperationIndices(GoogleAdsFailureT googleAdsFailureT) {
     return StreamSupport.stream(getErrorPaths(googleAdsFailureT).spliterator(), false)
         .filter(ErrorPath::isOperationIndex)
