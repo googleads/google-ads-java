@@ -19,6 +19,7 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.v16.enums.IdentityVerificationProgramEnum.IdentityVerificationProgram;
+import com.google.ads.googleads.v16.enums.IdentityVerificationProgramStatusEnum.IdentityVerificationProgramStatus;
 import com.google.ads.googleads.v16.errors.GoogleAdsError;
 import com.google.ads.googleads.v16.errors.GoogleAdsException;
 import com.google.ads.googleads.v16.services.GetIdentityVerificationResponse;
@@ -91,25 +92,7 @@ public class VerifyAdvertiserIdentity {
       IdentityVerification identityVerification =
           getIdentityVerification(customerId, identityVerificationServiceClient);
 
-      if (identityVerification != null) {
-        if (identityVerification.hasVerificationProgress()
-            && identityVerification.getVerificationProgress().getActionUrl().isEmpty()) {
-          // Starts an identity verification session.
-          startIdentityVerification(customerId, identityVerificationServiceClient);
-
-          // Calls getIdentityVerification again to retrieve the verification progress after
-          // starting an identity verification session.
-          getIdentityVerification(customerId, identityVerificationServiceClient);
-        } else {
-          // If there is an identity verification session in progress, there is no need to start
-          // another one by calling startIdentityVerification.
-          System.out.println("There is an advertiser identify verification session in progress.");
-          System.out.printf(
-              "The URL for the verification process is '%s' and it will expire at '%s'%n",
-              identityVerification.getVerificationProgress().getActionUrl(),
-              identityVerification.getVerificationProgress().getInvitationLinkExpirationTime());
-        }
-      } else {
+      if (identityVerification == null) {
         // If getIdentityVerification returned an empty response, the account is not enrolled in
         // mandatory identity verification.
         System.out.printf(
@@ -118,6 +101,38 @@ public class VerifyAdvertiserIdentity {
         System.out.println(
             "See https://support.google.com/adspolicy/answer/9703665 for details on how and when an"
                 + " account is required to undergo the advertiser identity verification program.");
+        return;
+      }
+
+      IdentityVerificationProgramStatus programStatus =
+          identityVerification.getVerificationProgress().getProgramStatus();
+      switch (programStatus) {
+        case UNSPECIFIED:
+          // Starts an identity verification session.
+          startIdentityVerification(customerId, identityVerificationServiceClient);
+
+          // Calls getIdentityVerification again to retrieve the verification progress after
+          // starting an identity verification session.
+          getIdentityVerification(customerId, identityVerificationServiceClient);
+          break;
+        case PENDING_USER_ACTION:
+          // If there is an identity verification session in progress, there is no need to start
+          // another one by calling startIdentityVerification.
+          System.out.println("There is an advertiser identify verification session in progress.");
+          System.out.printf(
+              "The URL for the verification process is '%s' and it will expire at '%s'%n",
+              identityVerification.getVerificationProgress().getActionUrl(),
+              identityVerification.getVerificationProgress().getInvitationLinkExpirationTime());
+          break;
+        case PENDING_REVIEW:
+          System.out.println("The verification is under review.");
+          break;
+        case SUCCESS:
+          System.out.println("The verification already completed.");
+          break;
+        default:
+          throw new IllegalStateException(
+              "The identity verification has an unexpected status: " + programStatus);
       }
     }
   }
