@@ -55,7 +55,7 @@ sourceSets.test.java.srcDir new File(buildDir, 'generated/source/proto/test')
 
 protobuf {
     protoc {
-        artifact = 'com.google.protobuf:protoc:3.25.2'
+        artifact = 'com.google.protobuf:protoc:3.25.3'
     }
 }
 

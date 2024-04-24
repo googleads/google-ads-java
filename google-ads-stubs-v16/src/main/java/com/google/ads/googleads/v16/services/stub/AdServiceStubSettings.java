@@ -109,15 +109,6 @@ public class AdServiceStubSettings extends StubSettings<AdServiceStubSettings> {
             "Transport not supported: %s", getTransportChannelProvider().getTransportName()));
   }
 
-  /** Returns the endpoint set by the user or the the service's default endpoint. */
-  @Override
-  public String getEndpoint() {
-    if (super.getEndpoint() != null) {
-      return super.getEndpoint();
-    }
-    return getDefaultEndpoint();
-  }
-
   /** Returns the default service name. */
   @Override
   public String getServiceName() {
@@ -302,15 +293,6 @@ public class AdServiceStubSettings extends StubSettings<AdServiceStubSettings> {
     /** Returns the builder for the settings used for calls to mutateAds. */
     public UnaryCallSettings.Builder<MutateAdsRequest, MutateAdsResponse> mutateAdsSettings() {
       return mutateAdsSettings;
-    }
-
-    /** Returns the endpoint set by the user or the the service's default endpoint. */
-    @Override
-    public String getEndpoint() {
-      if (super.getEndpoint() != null) {
-        return super.getEndpoint();
-      }
-      return getDefaultEndpoint();
     }
 
     @Override

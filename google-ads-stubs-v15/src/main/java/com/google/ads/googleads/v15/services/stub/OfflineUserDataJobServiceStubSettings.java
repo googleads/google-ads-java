@@ -23,7 +23,6 @@ import com.google.ads.googleads.v15.services.CreateOfflineUserDataJobRequest;
 import com.google.ads.googleads.v15.services.CreateOfflineUserDataJobResponse;
 import com.google.ads.googleads.v15.services.RunOfflineUserDataJobRequest;
 import com.google.api.core.ApiFunction;
-import com.google.api.core.BetaApi;
 import com.google.api.gax.core.GaxProperties;
 import com.google.api.gax.core.GoogleCredentialsProvider;
 import com.google.api.gax.core.InstantiatingExecutorProvider;
@@ -142,15 +141,6 @@ public class OfflineUserDataJobServiceStubSettings
     throw new UnsupportedOperationException(
         String.format(
             "Transport not supported: %s", getTransportChannelProvider().getTransportName()));
-  }
-
-  /** Returns the endpoint set by the user or the the service's default endpoint. */
-  @Override
-  public String getEndpoint() {
-    if (super.getEndpoint() != null) {
-      return super.getEndpoint();
-    }
-    return getDefaultEndpoint();
   }
 
   /** Returns the default service name. */
@@ -407,21 +397,10 @@ public class OfflineUserDataJobServiceStubSettings
     }
 
     /** Returns the builder for the settings used for calls to runOfflineUserDataJob. */
-    @BetaApi(
-        "The surface for use by generated code is not stable yet and may change in the future.")
     public OperationCallSettings.Builder<
             RunOfflineUserDataJobRequest, Empty, OfflineUserDataJobMetadata>
         runOfflineUserDataJobOperationSettings() {
       return runOfflineUserDataJobOperationSettings;
-    }
-
-    /** Returns the endpoint set by the user or the the service's default endpoint. */
-    @Override
-    public String getEndpoint() {
-      if (super.getEndpoint() != null) {
-        return super.getEndpoint();
-      }
-      return getDefaultEndpoint();
     }
 
     @Override

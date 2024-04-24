@@ -123,15 +123,6 @@ public class CustomerServiceStubSettings extends StubSettings<CustomerServiceStu
             "Transport not supported: %s", getTransportChannelProvider().getTransportName()));
   }
 
-  /** Returns the endpoint set by the user or the the service's default endpoint. */
-  @Override
-  public String getEndpoint() {
-    if (super.getEndpoint() != null) {
-      return super.getEndpoint();
-    }
-    return getDefaultEndpoint();
-  }
-
   /** Returns the default service name. */
   @Override
   public String getServiceName() {
@@ -346,15 +337,6 @@ public class CustomerServiceStubSettings extends StubSettings<CustomerServiceStu
     public UnaryCallSettings.Builder<CreateCustomerClientRequest, CreateCustomerClientResponse>
         createCustomerClientSettings() {
       return createCustomerClientSettings;
-    }
-
-    /** Returns the endpoint set by the user or the the service's default endpoint. */
-    @Override
-    public String getEndpoint() {
-      if (super.getEndpoint() != null) {
-        return super.getEndpoint();
-      }
-      return getDefaultEndpoint();
     }
 
     @Override

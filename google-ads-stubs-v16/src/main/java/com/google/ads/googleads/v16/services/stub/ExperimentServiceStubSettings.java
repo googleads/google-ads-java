@@ -30,7 +30,6 @@ import com.google.ads.googleads.v16.services.ScheduleExperimentMetadata;
 import com.google.ads.googleads.v16.services.ScheduleExperimentRequest;
 import com.google.api.core.ApiFunction;
 import com.google.api.core.ApiFuture;
-import com.google.api.core.BetaApi;
 import com.google.api.gax.core.GaxProperties;
 import com.google.api.gax.core.GoogleCredentialsProvider;
 import com.google.api.gax.core.InstantiatingExecutorProvider;
@@ -252,15 +251,6 @@ public class ExperimentServiceStubSettings extends StubSettings<ExperimentServic
     throw new UnsupportedOperationException(
         String.format(
             "Transport not supported: %s", getTransportChannelProvider().getTransportName()));
-  }
-
-  /** Returns the endpoint set by the user or the the service's default endpoint. */
-  @Override
-  public String getEndpoint() {
-    if (super.getEndpoint() != null) {
-      return super.getEndpoint();
-    }
-    return getDefaultEndpoint();
   }
 
   /** Returns the default service name. */
@@ -595,8 +585,6 @@ public class ExperimentServiceStubSettings extends StubSettings<ExperimentServic
     }
 
     /** Returns the builder for the settings used for calls to scheduleExperiment. */
-    @BetaApi(
-        "The surface for use by generated code is not stable yet and may change in the future.")
     public OperationCallSettings.Builder<
             ScheduleExperimentRequest, Empty, ScheduleExperimentMetadata>
         scheduleExperimentOperationSettings() {
@@ -610,20 +598,9 @@ public class ExperimentServiceStubSettings extends StubSettings<ExperimentServic
     }
 
     /** Returns the builder for the settings used for calls to promoteExperiment. */
-    @BetaApi(
-        "The surface for use by generated code is not stable yet and may change in the future.")
     public OperationCallSettings.Builder<PromoteExperimentRequest, Empty, PromoteExperimentMetadata>
         promoteExperimentOperationSettings() {
       return promoteExperimentOperationSettings;
-    }
-
-    /** Returns the endpoint set by the user or the the service's default endpoint. */
-    @Override
-    public String getEndpoint() {
-      if (super.getEndpoint() != null) {
-        return super.getEndpoint();
-      }
-      return getDefaultEndpoint();
     }
 
     @Override

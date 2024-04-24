@@ -104,15 +104,6 @@ public class SharedSetServiceStubSettings extends StubSettings<SharedSetServiceS
             "Transport not supported: %s", getTransportChannelProvider().getTransportName()));
   }
 
-  /** Returns the endpoint set by the user or the the service's default endpoint. */
-  @Override
-  public String getEndpoint() {
-    if (super.getEndpoint() != null) {
-      return super.getEndpoint();
-    }
-    return getDefaultEndpoint();
-  }
-
   /** Returns the default service name. */
   @Override
   public String getServiceName() {
@@ -286,15 +277,6 @@ public class SharedSetServiceStubSettings extends StubSettings<SharedSetServiceS
     public UnaryCallSettings.Builder<MutateSharedSetsRequest, MutateSharedSetsResponse>
         mutateSharedSetsSettings() {
       return mutateSharedSetsSettings;
-    }
-
-    /** Returns the endpoint set by the user or the the service's default endpoint. */
-    @Override
-    public String getEndpoint() {
-      if (super.getEndpoint() != null) {
-        return super.getEndpoint();
-      }
-      return getDefaultEndpoint();
     }
 
     @Override
