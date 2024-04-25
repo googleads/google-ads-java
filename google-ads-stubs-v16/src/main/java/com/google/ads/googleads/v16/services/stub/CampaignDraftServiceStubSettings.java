@@ -25,7 +25,6 @@ import com.google.ads.googleads.v16.services.MutateCampaignDraftsResponse;
 import com.google.ads.googleads.v16.services.PromoteCampaignDraftRequest;
 import com.google.api.core.ApiFunction;
 import com.google.api.core.ApiFuture;
-import com.google.api.core.BetaApi;
 import com.google.api.gax.core.GaxProperties;
 import com.google.api.gax.core.GoogleCredentialsProvider;
 import com.google.api.gax.core.InstantiatingExecutorProvider;
@@ -229,15 +228,6 @@ public class CampaignDraftServiceStubSettings
     throw new UnsupportedOperationException(
         String.format(
             "Transport not supported: %s", getTransportChannelProvider().getTransportName()));
-  }
-
-  /** Returns the endpoint set by the user or the the service's default endpoint. */
-  @Override
-  public String getEndpoint() {
-    if (super.getEndpoint() != null) {
-      return super.getEndpoint();
-    }
-    return getDefaultEndpoint();
   }
 
   /** Returns the default service name. */
@@ -487,8 +477,6 @@ public class CampaignDraftServiceStubSettings
     }
 
     /** Returns the builder for the settings used for calls to promoteCampaignDraft. */
-    @BetaApi(
-        "The surface for use by generated code is not stable yet and may change in the future.")
     public OperationCallSettings.Builder<PromoteCampaignDraftRequest, Empty, Empty>
         promoteCampaignDraftOperationSettings() {
       return promoteCampaignDraftOperationSettings;
@@ -501,15 +489,6 @@ public class CampaignDraftServiceStubSettings
             ListCampaignDraftAsyncErrorsPagedResponse>
         listCampaignDraftAsyncErrorsSettings() {
       return listCampaignDraftAsyncErrorsSettings;
-    }
-
-    /** Returns the endpoint set by the user or the the service's default endpoint. */
-    @Override
-    public String getEndpoint() {
-      if (super.getEndpoint() != null) {
-        return super.getEndpoint();
-      }
-      return getDefaultEndpoint();
     }
 
     @Override

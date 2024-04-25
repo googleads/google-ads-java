@@ -24,6 +24,7 @@ import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.InvalidArgumentException;
 import com.google.protobuf.AbstractMessage;
+import com.google.rpc.Status;
 import io.grpc.StatusRuntimeException;
 import java.io.IOException;
 import java.util.Arrays;
@@ -83,6 +84,7 @@ public class CustomerSkAdNetworkConversionValueSchemaServiceClientTest {
     MutateCustomerSkAdNetworkConversionValueSchemaResponse expectedResponse =
         MutateCustomerSkAdNetworkConversionValueSchemaResponse.newBuilder()
             .setResult(MutateCustomerSkAdNetworkConversionValueSchemaResult.newBuilder().build())
+            .setWarning(Status.newBuilder().build())
             .build();
     mockCustomerSkAdNetworkConversionValueSchemaService.addResponse(expectedResponse);
 
@@ -91,6 +93,7 @@ public class CustomerSkAdNetworkConversionValueSchemaServiceClientTest {
             .setCustomerId("customerId-1581184615")
             .setOperation(CustomerSkAdNetworkConversionValueSchemaOperation.newBuilder().build())
             .setValidateOnly(true)
+            .setEnableWarnings(true)
             .build();
 
     MutateCustomerSkAdNetworkConversionValueSchemaResponse actualResponse =
@@ -106,6 +109,7 @@ public class CustomerSkAdNetworkConversionValueSchemaServiceClientTest {
     Assert.assertEquals(request.getCustomerId(), actualRequest.getCustomerId());
     Assert.assertEquals(request.getOperation(), actualRequest.getOperation());
     Assert.assertEquals(request.getValidateOnly(), actualRequest.getValidateOnly());
+    Assert.assertEquals(request.getEnableWarnings(), actualRequest.getEnableWarnings());
     Assert.assertTrue(
         channelProvider.isHeaderSent(
             ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
@@ -123,6 +127,7 @@ public class CustomerSkAdNetworkConversionValueSchemaServiceClientTest {
               .setCustomerId("customerId-1581184615")
               .setOperation(CustomerSkAdNetworkConversionValueSchemaOperation.newBuilder().build())
               .setValidateOnly(true)
+              .setEnableWarnings(true)
               .build();
       client.mutateCustomerSkAdNetworkConversionValueSchema(request);
       Assert.fail("No exception raised");

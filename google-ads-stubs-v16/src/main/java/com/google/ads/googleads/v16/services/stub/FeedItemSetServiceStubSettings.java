@@ -105,15 +105,6 @@ public class FeedItemSetServiceStubSettings extends StubSettings<FeedItemSetServ
             "Transport not supported: %s", getTransportChannelProvider().getTransportName()));
   }
 
-  /** Returns the endpoint set by the user or the the service's default endpoint. */
-  @Override
-  public String getEndpoint() {
-    if (super.getEndpoint() != null) {
-      return super.getEndpoint();
-    }
-    return getDefaultEndpoint();
-  }
-
   /** Returns the default service name. */
   @Override
   public String getServiceName() {
@@ -288,15 +279,6 @@ public class FeedItemSetServiceStubSettings extends StubSettings<FeedItemSetServ
     public UnaryCallSettings.Builder<MutateFeedItemSetsRequest, MutateFeedItemSetsResponse>
         mutateFeedItemSetsSettings() {
       return mutateFeedItemSetsSettings;
-    }
-
-    /** Returns the endpoint set by the user or the the service's default endpoint. */
-    @Override
-    public String getEndpoint() {
-      if (super.getEndpoint() != null) {
-        return super.getEndpoint();
-      }
-      return getDefaultEndpoint();
     }
 
     @Override

@@ -45,6 +45,7 @@ import javax.annotation.Generated;
  *           .setCustomerId("customerId-1581184615")
  *           .setOperation(CustomerSkAdNetworkConversionValueSchemaOperation.newBuilder().build())
  *           .setValidateOnly(true)
+ *           .setEnableWarnings(true)
  *           .build();
  *   MutateCustomerSkAdNetworkConversionValueSchemaResponse response =
  *       customerSkAdNetworkConversionValueSchemaServiceClient
@@ -213,6 +214,7 @@ public class CustomerSkAdNetworkConversionValueSchemaServiceClient implements Ba
    *           .setCustomerId("customerId-1581184615")
    *           .setOperation(CustomerSkAdNetworkConversionValueSchemaOperation.newBuilder().build())
    *           .setValidateOnly(true)
+   *           .setEnableWarnings(true)
    *           .build();
    *   MutateCustomerSkAdNetworkConversionValueSchemaResponse response =
    *       customerSkAdNetworkConversionValueSchemaServiceClient
@@ -252,6 +254,7 @@ public class CustomerSkAdNetworkConversionValueSchemaServiceClient implements Ba
    *           .setCustomerId("customerId-1581184615")
    *           .setOperation(CustomerSkAdNetworkConversionValueSchemaOperation.newBuilder().build())
    *           .setValidateOnly(true)
+   *           .setEnableWarnings(true)
    *           .build();
    *   ApiFuture<MutateCustomerSkAdNetworkConversionValueSchemaResponse> future =
    *       customerSkAdNetworkConversionValueSchemaServiceClient

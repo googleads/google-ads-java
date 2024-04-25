@@ -29,7 +29,6 @@ import com.google.ads.googleads.v16.services.MutateBatchJobResponse;
 import com.google.ads.googleads.v16.services.RunBatchJobRequest;
 import com.google.api.core.ApiFunction;
 import com.google.api.core.ApiFuture;
-import com.google.api.core.BetaApi;
 import com.google.api.gax.core.GaxProperties;
 import com.google.api.gax.core.GoogleCredentialsProvider;
 import com.google.api.gax.core.InstantiatingExecutorProvider;
@@ -217,15 +216,6 @@ public class BatchJobServiceStubSettings extends StubSettings<BatchJobServiceStu
     throw new UnsupportedOperationException(
         String.format(
             "Transport not supported: %s", getTransportChannelProvider().getTransportName()));
-  }
-
-  /** Returns the endpoint set by the user or the the service's default endpoint. */
-  @Override
-  public String getEndpoint() {
-    if (super.getEndpoint() != null) {
-      return super.getEndpoint();
-    }
-    return getDefaultEndpoint();
   }
 
   /** Returns the default service name. */
@@ -490,8 +480,6 @@ public class BatchJobServiceStubSettings extends StubSettings<BatchJobServiceStu
     }
 
     /** Returns the builder for the settings used for calls to runBatchJob. */
-    @BetaApi(
-        "The surface for use by generated code is not stable yet and may change in the future.")
     public OperationCallSettings.Builder<RunBatchJobRequest, Empty, BatchJob.BatchJobMetadata>
         runBatchJobOperationSettings() {
       return runBatchJobOperationSettings;
@@ -501,15 +489,6 @@ public class BatchJobServiceStubSettings extends StubSettings<BatchJobServiceStu
     public UnaryCallSettings.Builder<AddBatchJobOperationsRequest, AddBatchJobOperationsResponse>
         addBatchJobOperationsSettings() {
       return addBatchJobOperationsSettings;
-    }
-
-    /** Returns the endpoint set by the user or the the service's default endpoint. */
-    @Override
-    public String getEndpoint() {
-      if (super.getEndpoint() != null) {
-        return super.getEndpoint();
-      }
-      return getDefaultEndpoint();
     }
 
     @Override

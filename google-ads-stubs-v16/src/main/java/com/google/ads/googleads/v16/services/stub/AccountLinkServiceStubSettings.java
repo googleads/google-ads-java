@@ -115,15 +115,6 @@ public class AccountLinkServiceStubSettings extends StubSettings<AccountLinkServ
             "Transport not supported: %s", getTransportChannelProvider().getTransportName()));
   }
 
-  /** Returns the endpoint set by the user or the the service's default endpoint. */
-  @Override
-  public String getEndpoint() {
-    if (super.getEndpoint() != null) {
-      return super.getEndpoint();
-    }
-    return getDefaultEndpoint();
-  }
-
   /** Returns the default service name. */
   @Override
   public String getServiceName() {
@@ -316,15 +307,6 @@ public class AccountLinkServiceStubSettings extends StubSettings<AccountLinkServ
     public UnaryCallSettings.Builder<MutateAccountLinkRequest, MutateAccountLinkResponse>
         mutateAccountLinkSettings() {
       return mutateAccountLinkSettings;
-    }
-
-    /** Returns the endpoint set by the user or the the service's default endpoint. */
-    @Override
-    public String getEndpoint() {
-      if (super.getEndpoint() != null) {
-        return super.getEndpoint();
-      }
-      return getDefaultEndpoint();
     }
 
     @Override
