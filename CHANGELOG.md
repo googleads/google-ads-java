@@ -1,8 +1,9 @@
 31.0.0 - 2024-02-25
 -------------------
+- Add support and examples for Google Ads API v16.1.
+- Remove support for v14 of Google Ads API.
 - Update to version 3.29.0 of
   `google-cloud-shared-dependencies`.
-- Remove support for v14 of Google Ads API.
 - Remove the following examples:
   - accountmanagement/ApproveMerchantCenterLink.java
   - accountmanagement/RejectMerchantCenterLink.java
