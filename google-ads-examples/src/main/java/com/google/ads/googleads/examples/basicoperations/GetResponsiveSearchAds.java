@@ -18,16 +18,16 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v16.common.AdTextAsset;
-import com.google.ads.googleads.v16.common.ResponsiveSearchAdInfo;
-import com.google.ads.googleads.v16.errors.GoogleAdsError;
-import com.google.ads.googleads.v16.errors.GoogleAdsException;
-import com.google.ads.googleads.v16.resources.Ad;
-import com.google.ads.googleads.v16.resources.AdGroupAd;
-import com.google.ads.googleads.v16.services.GoogleAdsRow;
-import com.google.ads.googleads.v16.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v16.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v16.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v17.common.AdTextAsset;
+import com.google.ads.googleads.v17.common.ResponsiveSearchAdInfo;
+import com.google.ads.googleads.v17.errors.GoogleAdsError;
+import com.google.ads.googleads.v17.errors.GoogleAdsException;
+import com.google.ads.googleads.v17.resources.Ad;
+import com.google.ads.googleads.v17.resources.AdGroupAd;
+import com.google.ads.googleads.v17.services.GoogleAdsRow;
+import com.google.ads.googleads.v17.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v17.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v17.services.SearchGoogleAdsRequest;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
@@ -39,8 +39,6 @@ import javax.annotation.Nullable;
  * search ads, run AddResponsiveSearchAd.java. To get ad groups, run GetAdGroups.java.
  */
 public class GetResponsiveSearchAds {
-
-  private static final int PAGE_SIZE = 1_000;
 
   private static class GetResponsiveSearchAdsParams extends CodeSampleParams {
 
@@ -118,12 +116,10 @@ public class GetResponsiveSearchAds {
         searchQuery += String.format(" AND ad_group.id = %d", adGroupId);
       }
 
-      // Creates a request that will retrieve all ad group ads using pages of the specified page
-      // size.
+      // Creates a request that will retrieve all ad group ads.
       SearchGoogleAdsRequest request =
           SearchGoogleAdsRequest.newBuilder()
               .setCustomerId(Long.toString(customerId))
-              .setPageSize(PAGE_SIZE)
               .setQuery(searchQuery)
               .build();
       // Issues the search request.

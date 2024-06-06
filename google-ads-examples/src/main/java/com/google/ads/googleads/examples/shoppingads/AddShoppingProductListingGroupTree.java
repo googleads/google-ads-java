@@ -18,25 +18,25 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v16.common.ListingDimensionInfo;
-import com.google.ads.googleads.v16.common.ListingGroupInfo;
-import com.google.ads.googleads.v16.common.ProductBrandInfo;
-import com.google.ads.googleads.v16.common.ProductConditionInfo;
-import com.google.ads.googleads.v16.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus;
-import com.google.ads.googleads.v16.enums.ListingGroupTypeEnum.ListingGroupType;
-import com.google.ads.googleads.v16.enums.ProductConditionEnum.ProductCondition;
-import com.google.ads.googleads.v16.errors.GoogleAdsError;
-import com.google.ads.googleads.v16.errors.GoogleAdsException;
-import com.google.ads.googleads.v16.resources.AdGroupCriterion;
-import com.google.ads.googleads.v16.services.AdGroupCriterionOperation;
-import com.google.ads.googleads.v16.services.AdGroupCriterionServiceClient;
-import com.google.ads.googleads.v16.services.GoogleAdsRow;
-import com.google.ads.googleads.v16.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v16.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v16.services.MutateAdGroupCriteriaResponse;
-import com.google.ads.googleads.v16.services.MutateAdGroupCriterionResult;
-import com.google.ads.googleads.v16.services.SearchGoogleAdsRequest;
-import com.google.ads.googleads.v16.utils.ResourceNames;
+import com.google.ads.googleads.v17.common.ListingDimensionInfo;
+import com.google.ads.googleads.v17.common.ListingGroupInfo;
+import com.google.ads.googleads.v17.common.ProductBrandInfo;
+import com.google.ads.googleads.v17.common.ProductConditionInfo;
+import com.google.ads.googleads.v17.enums.AdGroupCriterionStatusEnum.AdGroupCriterionStatus;
+import com.google.ads.googleads.v17.enums.ListingGroupTypeEnum.ListingGroupType;
+import com.google.ads.googleads.v17.enums.ProductConditionEnum.ProductCondition;
+import com.google.ads.googleads.v17.errors.GoogleAdsError;
+import com.google.ads.googleads.v17.errors.GoogleAdsException;
+import com.google.ads.googleads.v17.resources.AdGroupCriterion;
+import com.google.ads.googleads.v17.services.AdGroupCriterionOperation;
+import com.google.ads.googleads.v17.services.AdGroupCriterionServiceClient;
+import com.google.ads.googleads.v17.services.GoogleAdsRow;
+import com.google.ads.googleads.v17.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v17.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v17.services.MutateAdGroupCriteriaResponse;
+import com.google.ads.googleads.v17.services.MutateAdGroupCriterionResult;
+import com.google.ads.googleads.v17.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v17.utils.ResourceNames;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -57,8 +57,6 @@ import java.util.List;
  * </pre>
  */
 public class AddShoppingProductListingGroupTree {
-
-  private static final int PAGE_SIZE = 1_000;
 
   private static class AddShoppingListingGroupParams extends CodeSampleParams {
 
@@ -270,6 +268,7 @@ public class AddShoppingProductListingGroupTree {
       }
     }
   }
+
   // [END add_shopping_product_listing_group_tree]
 
   /**
@@ -297,7 +296,6 @@ public class AddShoppingProductListingGroupTree {
       SearchGoogleAdsRequest request =
           SearchGoogleAdsRequest.newBuilder()
               .setCustomerId(Long.toString(customerId))
-              .setPageSize(PAGE_SIZE)
               .setQuery(searchQuery)
               .build();
 

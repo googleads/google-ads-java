@@ -18,25 +18,23 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v16.common.PolicyTopicEntry;
-import com.google.ads.googleads.v16.common.PolicyTopicEvidence;
-import com.google.ads.googleads.v16.common.PolicyTopicEvidence.TextList;
-import com.google.ads.googleads.v16.errors.GoogleAdsError;
-import com.google.ads.googleads.v16.errors.GoogleAdsException;
-import com.google.ads.googleads.v16.resources.Ad;
-import com.google.ads.googleads.v16.resources.AdGroupAd;
-import com.google.ads.googleads.v16.resources.AdGroupAdPolicySummary;
-import com.google.ads.googleads.v16.services.GoogleAdsRow;
-import com.google.ads.googleads.v16.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v16.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v16.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v17.common.PolicyTopicEntry;
+import com.google.ads.googleads.v17.common.PolicyTopicEvidence;
+import com.google.ads.googleads.v17.common.PolicyTopicEvidence.TextList;
+import com.google.ads.googleads.v17.errors.GoogleAdsError;
+import com.google.ads.googleads.v17.errors.GoogleAdsException;
+import com.google.ads.googleads.v17.resources.Ad;
+import com.google.ads.googleads.v17.resources.AdGroupAd;
+import com.google.ads.googleads.v17.resources.AdGroupAdPolicySummary;
+import com.google.ads.googleads.v17.services.GoogleAdsRow;
+import com.google.ads.googleads.v17.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v17.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v17.services.SearchGoogleAdsRequest;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /** Retrieves all the disapproved ads in a given campaign. */
 public class GetAllDisapprovedAds {
-
-  private static final int PAGE_SIZE = 1_000;
 
   private static class GetAllDisapprovedAdsParams extends CodeSampleParams {
 
@@ -108,11 +106,10 @@ public class GetAllDisapprovedAds {
                   + "WHERE campaign.id = %d "
                   + "AND ad_group_ad.policy_summary.approval_status = 'DISAPPROVED'",
               campaignId);
-      // Creates a request that will retrieve all ads using pages of the specified page size.
+      // Creates a request that will retrieve all disapproved ads.
       SearchGoogleAdsRequest request =
           SearchGoogleAdsRequest.newBuilder()
               .setCustomerId(Long.toString(customerId))
-              .setPageSize(PAGE_SIZE)
               .setQuery(searchQuery)
               .setReturnTotalResultsCount(true)
               .build();

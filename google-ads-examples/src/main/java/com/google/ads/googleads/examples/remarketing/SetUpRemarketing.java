@@ -21,38 +21,38 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.utils.FieldMasks;
-import com.google.ads.googleads.v16.common.FlexibleRuleOperandInfo;
-import com.google.ads.googleads.v16.common.FlexibleRuleUserListInfo;
-import com.google.ads.googleads.v16.common.RuleBasedUserListInfo;
-import com.google.ads.googleads.v16.common.UserListInfo;
-import com.google.ads.googleads.v16.common.UserListRuleInfo;
-import com.google.ads.googleads.v16.common.UserListRuleItemGroupInfo;
-import com.google.ads.googleads.v16.common.UserListRuleItemInfo;
-import com.google.ads.googleads.v16.common.UserListStringRuleItemInfo;
-import com.google.ads.googleads.v16.enums.UserListFlexibleRuleOperatorEnum.UserListFlexibleRuleOperator;
-import com.google.ads.googleads.v16.enums.UserListMembershipStatusEnum.UserListMembershipStatus;
-import com.google.ads.googleads.v16.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus;
-import com.google.ads.googleads.v16.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator;
-import com.google.ads.googleads.v16.errors.GoogleAdsError;
-import com.google.ads.googleads.v16.errors.GoogleAdsException;
-import com.google.ads.googleads.v16.resources.AdGroupCriterion;
-import com.google.ads.googleads.v16.resources.CampaignCriterion;
-import com.google.ads.googleads.v16.resources.UserList;
-import com.google.ads.googleads.v16.services.AdGroupCriterionOperation;
-import com.google.ads.googleads.v16.services.AdGroupCriterionServiceClient;
-import com.google.ads.googleads.v16.services.CampaignCriterionOperation;
-import com.google.ads.googleads.v16.services.CampaignCriterionServiceClient;
-import com.google.ads.googleads.v16.services.GoogleAdsRow;
-import com.google.ads.googleads.v16.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v16.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v16.services.MutateAdGroupCriteriaResponse;
-import com.google.ads.googleads.v16.services.MutateAdGroupCriterionResult;
-import com.google.ads.googleads.v16.services.MutateCampaignCriteriaResponse;
-import com.google.ads.googleads.v16.services.MutateUserListsResponse;
-import com.google.ads.googleads.v16.services.SearchGoogleAdsRequest;
-import com.google.ads.googleads.v16.services.UserListOperation;
-import com.google.ads.googleads.v16.services.UserListServiceClient;
-import com.google.ads.googleads.v16.utils.ResourceNames;
+import com.google.ads.googleads.v17.common.FlexibleRuleOperandInfo;
+import com.google.ads.googleads.v17.common.FlexibleRuleUserListInfo;
+import com.google.ads.googleads.v17.common.RuleBasedUserListInfo;
+import com.google.ads.googleads.v17.common.UserListInfo;
+import com.google.ads.googleads.v17.common.UserListRuleInfo;
+import com.google.ads.googleads.v17.common.UserListRuleItemGroupInfo;
+import com.google.ads.googleads.v17.common.UserListRuleItemInfo;
+import com.google.ads.googleads.v17.common.UserListStringRuleItemInfo;
+import com.google.ads.googleads.v17.enums.UserListFlexibleRuleOperatorEnum.UserListFlexibleRuleOperator;
+import com.google.ads.googleads.v17.enums.UserListMembershipStatusEnum.UserListMembershipStatus;
+import com.google.ads.googleads.v17.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus;
+import com.google.ads.googleads.v17.enums.UserListStringRuleItemOperatorEnum.UserListStringRuleItemOperator;
+import com.google.ads.googleads.v17.errors.GoogleAdsError;
+import com.google.ads.googleads.v17.errors.GoogleAdsException;
+import com.google.ads.googleads.v17.resources.AdGroupCriterion;
+import com.google.ads.googleads.v17.resources.CampaignCriterion;
+import com.google.ads.googleads.v17.resources.UserList;
+import com.google.ads.googleads.v17.services.AdGroupCriterionOperation;
+import com.google.ads.googleads.v17.services.AdGroupCriterionServiceClient;
+import com.google.ads.googleads.v17.services.CampaignCriterionOperation;
+import com.google.ads.googleads.v17.services.CampaignCriterionServiceClient;
+import com.google.ads.googleads.v17.services.GoogleAdsRow;
+import com.google.ads.googleads.v17.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v17.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v17.services.MutateAdGroupCriteriaResponse;
+import com.google.ads.googleads.v17.services.MutateAdGroupCriterionResult;
+import com.google.ads.googleads.v17.services.MutateCampaignCriteriaResponse;
+import com.google.ads.googleads.v17.services.MutateUserListsResponse;
+import com.google.ads.googleads.v17.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v17.services.UserListOperation;
+import com.google.ads.googleads.v17.services.UserListServiceClient;
+import com.google.ads.googleads.v17.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -69,8 +69,6 @@ import java.util.List;
  * illustrative purposes.
  */
 public class SetUpRemarketing {
-
-  private static final int PAGE_SIZE = 1000;
 
   private static class SetUpRemarketingParams extends CodeSampleParams {
 
@@ -137,6 +135,7 @@ public class SetUpRemarketing {
       System.exit(1);
     }
   }
+
   /**
    * Runs the example.
    *
@@ -233,6 +232,7 @@ public class SetUpRemarketing {
       return userListResourceName;
     }
   }
+
   // [END setup_remarketing]
 
   /**
@@ -274,6 +274,7 @@ public class SetUpRemarketing {
       return adGroupCriterionResourceName;
     }
   }
+
   // [END setup_remarketing_1]
 
   /**
@@ -356,6 +357,7 @@ public class SetUpRemarketing {
       }
     }
   }
+
   // [END setup_remarketing_3]
 
   /**
@@ -377,7 +379,6 @@ public class SetUpRemarketing {
       SearchGoogleAdsRequest request =
           SearchGoogleAdsRequest.newBuilder()
               .setCustomerId(Long.toString(customerId))
-              .setPageSize(PAGE_SIZE)
               .setQuery(
                   "SELECT ad_group_criterion.criterion_id"
                       + " FROM ad_group_criterion"
@@ -399,6 +400,7 @@ public class SetUpRemarketing {
     }
     return userListCriteria;
   }
+
   // [END setup_remarketing_2]
 
   /**
@@ -440,6 +442,7 @@ public class SetUpRemarketing {
       return campaignCriterionResourceName;
     }
   }
+
   // [END setup_remarketing_4]
 
   /**

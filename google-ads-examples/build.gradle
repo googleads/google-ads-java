@@ -42,7 +42,6 @@ plugins {
 
 dependencies {
   implementation project(':google-ads')
-  implementation 'org.apache.commons:commons-lang3:3.11'
   implementation 'com.beust:jcommander:1.72'
   implementation 'joda-time:joda-time:2.8.2'
   runtimeOnly 'org.apache.logging.log4j:log4j-slf4j-impl:2.16.0'

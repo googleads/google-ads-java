@@ -18,26 +18,26 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v16.enums.ListingGroupFilterListingSourceEnum.ListingGroupFilterListingSource;
-import com.google.ads.googleads.v16.enums.ListingGroupFilterProductConditionEnum.ListingGroupFilterProductCondition;
-import com.google.ads.googleads.v16.enums.ListingGroupFilterTypeEnum.ListingGroupFilterType;
-import com.google.ads.googleads.v16.errors.GoogleAdsError;
-import com.google.ads.googleads.v16.errors.GoogleAdsException;
-import com.google.ads.googleads.v16.resources.AssetGroupListingGroupFilter;
-import com.google.ads.googleads.v16.resources.ListingGroupFilterDimension;
-import com.google.ads.googleads.v16.resources.ListingGroupFilterDimension.ProductBrand;
-import com.google.ads.googleads.v16.resources.ListingGroupFilterDimension.ProductCondition;
-import com.google.ads.googleads.v16.services.AssetGroupListingGroupFilterOperation;
-import com.google.ads.googleads.v16.services.GoogleAdsRow;
-import com.google.ads.googleads.v16.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v16.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v16.services.MutateGoogleAdsRequest;
-import com.google.ads.googleads.v16.services.MutateGoogleAdsResponse;
-import com.google.ads.googleads.v16.services.MutateOperation;
-import com.google.ads.googleads.v16.services.MutateOperationResponse;
-import com.google.ads.googleads.v16.services.MutateOperationResponse.ResponseCase;
-import com.google.ads.googleads.v16.services.SearchGoogleAdsRequest;
-import com.google.ads.googleads.v16.utils.ResourceNames;
+import com.google.ads.googleads.v17.enums.ListingGroupFilterListingSourceEnum.ListingGroupFilterListingSource;
+import com.google.ads.googleads.v17.enums.ListingGroupFilterProductConditionEnum.ListingGroupFilterProductCondition;
+import com.google.ads.googleads.v17.enums.ListingGroupFilterTypeEnum.ListingGroupFilterType;
+import com.google.ads.googleads.v17.errors.GoogleAdsError;
+import com.google.ads.googleads.v17.errors.GoogleAdsException;
+import com.google.ads.googleads.v17.resources.AssetGroupListingGroupFilter;
+import com.google.ads.googleads.v17.resources.ListingGroupFilterDimension;
+import com.google.ads.googleads.v17.resources.ListingGroupFilterDimension.ProductBrand;
+import com.google.ads.googleads.v17.resources.ListingGroupFilterDimension.ProductCondition;
+import com.google.ads.googleads.v17.services.AssetGroupListingGroupFilterOperation;
+import com.google.ads.googleads.v17.services.GoogleAdsRow;
+import com.google.ads.googleads.v17.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v17.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v17.services.MutateGoogleAdsRequest;
+import com.google.ads.googleads.v17.services.MutateGoogleAdsResponse;
+import com.google.ads.googleads.v17.services.MutateOperation;
+import com.google.ads.googleads.v17.services.MutateOperationResponse;
+import com.google.ads.googleads.v17.services.MutateOperationResponse.ResponseCase;
+import com.google.ads.googleads.v17.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v17.utils.ResourceNames;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -48,7 +48,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.LongStream;
-import org.apache.commons.lang3.StringUtils;
 
 /**
  * This example shows how to add product partitions to a Performance Max retail campaign.
@@ -63,8 +62,6 @@ import org.apache.commons.lang3.StringUtils;
 public class AddPerformanceMaxProductListingGroupTree {
 
   private final int TEMPORARY_ID_LISTING_GROUP_ROOT = -1;
-
-  private static final int PAGE_SIZE = 10_000;
 
   private static class AddPerformanceMaxProductListingGroupTreeParams extends CodeSampleParams {
 
@@ -504,7 +501,6 @@ public class AddPerformanceMaxProductListingGroupTree {
     SearchGoogleAdsRequest request =
         SearchGoogleAdsRequest.newBuilder()
             .setCustomerId(Long.toString(customerId))
-            .setPageSize(PAGE_SIZE)
             .setQuery(query)
             .build();
 
@@ -548,11 +544,17 @@ public class AddPerformanceMaxProductListingGroupTree {
       AssetGroupListingGroupFilterOperation assetOperation =
           operationRequest.getAssetGroupListingGroupFilterOperation();
 
-      String operationType =
-          StringUtils.capitalize(assetOperation.getOperationCase().toString().toLowerCase());
+      // Converts the type of operation (for example, "CREATE") to title case.
+      String operationTypeString = assetOperation.getOperationCase().toString();
+      String operationTypeTitleCase =
+          String.format(
+              "%S%s",
+              operationTypeString.substring(0, 1), operationTypeString.substring(1).toLowerCase());
+
+      // Prints information about the completed operation.
       System.out.printf(
           "%sd a(n) AssetGroupListingGroupFilter with resource name: '%s'%n",
-          operationType, resourceName);
+          operationTypeTitleCase, resourceName);
     }
   }
 }

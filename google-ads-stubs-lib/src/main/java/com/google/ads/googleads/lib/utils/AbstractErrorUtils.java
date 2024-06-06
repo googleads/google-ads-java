@@ -299,6 +299,8 @@ public abstract class AbstractErrorUtils<
             .add("conversions")
             // ConversionAdjustmentService.uploadConversionAdjustments field name.
             .add("conversion_adjustments")
+            // LocalLeadServices.appendLeadConversationRequest field name.
+            .add("conversations")
             .build();
 
     public ErrorPath(GoogleAdsErrorType error, String fieldName, Optional<Long> index) {
